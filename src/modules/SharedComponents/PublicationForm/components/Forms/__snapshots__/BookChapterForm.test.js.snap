@@ -319,7 +319,7 @@ exports[`BookChapterForm component 1`] = `
                       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-controls="<dynamic>"
@@ -1473,7 +1473,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-controls="<dynamic>"
@@ -1650,7 +1650,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                         Org affiliation
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                       >
                         <div
@@ -2123,7 +2123,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                   Language
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-controls="<dynamic>"
@@ -2189,7 +2189,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-controls="<dynamic>"
@@ -2359,7 +2359,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                      
                   </span>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   >
                     <div
                       aria-controls="<dynamic>"
@@ -3179,7 +3179,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-controls="<dynamic>"
@@ -3356,7 +3356,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                         Org affiliation
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                       >
                         <div
@@ -3898,7 +3898,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                   Language
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-controls="<dynamic>"
@@ -3964,7 +3964,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-controls="<dynamic>"
@@ -4134,7 +4134,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                      
                   </span>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   >
                     <div
                       aria-controls="<dynamic>"
@@ -4960,7 +4960,7 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
                       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-controls="<dynamic>"
@@ -6125,7 +6125,7 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-controls="<dynamic>"
