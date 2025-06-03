@@ -145,7 +145,7 @@ export const MediaPreview = ({ ...props }) => {
                 <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
                     <ReactPlayer
                         id="previewVideo"
-                        style={{ position: 'absolute', top: 0, left: 0 }}
+                        style={{ backgroundColor: 'black', position: 'absolute', top: 0, left: 0 }}
                         onReady={onVideoLoad}
                         width={'100%'}
                         height={'100%'}
