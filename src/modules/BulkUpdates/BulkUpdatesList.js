@@ -2,26 +2,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { DataGrid } from '@mui/x-data-grid';
 
-import MaterialTable, { MTableBodyRow } from '@material-table/core';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-
-import { tableIcons } from './BulkUpdatesListIcons';
 
 import componentsLocale from 'locale/components';
 
 const classes = {
     text: {
         fontSize: 13,
+        py: 2,
     },
 };
 
-export const getColumns = classes => {
-    const {
-        components: { bulkUpdatesList },
-    } = componentsLocale;
+const {
+    components: { bulkUpdatesList },
+} = componentsLocale;
 
+const getColumns = () => {
     const getDateTime = date =>
         !!date
             ? moment
@@ -32,92 +31,103 @@ export const getColumns = classes => {
 
     return [
         {
-            title: bulkUpdatesList.columns.createdAt.title,
+            headerName: bulkUpdatesList.columns.createdAt.title,
             field: 'buj_created_at',
-            editable: 'never',
-            render: rowData => (
+            disableColumnMenu: true,
+            minWidth: 120,
+            renderCell: params => (
                 <Typography data-testid="buj-created-at" id="buj-created-at" sx={{ ...classes.text }}>
-                    {getDateTime(rowData.buj_created_at)}
+                    {getDateTime(params.value)}
                 </Typography>
             ),
         },
         {
-            title: bulkUpdatesList.columns.startedAt.title,
+            headerName: bulkUpdatesList.columns.startedAt.title,
             field: 'buj_started_at',
-            editable: 'never',
-            render: rowData => (
+            disableColumnMenu: true,
+            minWidth: 120,
+            renderCell: params => (
                 <Typography data-testid="buj-started-at" id="buj-started-at" sx={{ ...classes.text }}>
-                    {getDateTime(rowData.buj_started_at)}
+                    {getDateTime(params.value)}
                 </Typography>
             ),
         },
         {
-            title: bulkUpdatesList.columns.finishedAt.title,
+            headerName: bulkUpdatesList.columns.finishedAt.title,
             field: 'buj_finished_at',
-            editable: 'never',
-            render: rowData => (
+            disableColumnMenu: true,
+            minWidth: 120,
+            renderCell: params => (
                 <Typography data-testid="buj-finished-at" id="buj-finished-at" sx={{ ...classes.text }}>
-                    {getDateTime(rowData.buj_finished_at)}
+                    {getDateTime(params.value)}
                 </Typography>
             ),
         },
         {
-            title: bulkUpdatesList.columns.user.title,
-            field: 'fez_user',
-            editable: 'never',
-            render: rowData => (
+            headerName: bulkUpdatesList.columns.user.title,
+            field: 'user',
+            disableColumnMenu: true,
+            minWidth: 100,
+            valueGetter: (params, row) => row.fez_user.usr_username,
+            renderCell: params => (
                 <Typography data-testid="fez-user-username" id="fez-user-username" sx={{ ...classes.text }}>
-                    {rowData.fez_user.usr_username}
+                    {params.value}
                 </Typography>
             ),
         },
         {
-            title: bulkUpdatesList.columns.name.title,
-            field: 'fez_user',
-            editable: 'never',
-            render: rowData => (
+            headerName: bulkUpdatesList.columns.name.title,
+            field: 'name',
+            disableColumnMenu: true,
+            minWidth: 120,
+            valueGetter: (params, row) => row.fez_user.usr_full_name,
+            renderCell: params => (
                 <Typography data-testid="fez-user-fullname" id="fez-user-fullname" sx={{ ...classes.text }}>
-                    {rowData.fez_user.usr_full_name}
+                    {params.value}
                 </Typography>
             ),
         },
         {
-            title: bulkUpdatesList.columns.status.title,
+            headerName: bulkUpdatesList.columns.status.title,
             field: 'buj_status',
-            editable: 'never',
-            render: rowData => (
+            disableColumnMenu: true,
+            minWidth: 65,
+            renderCell: params => (
                 <Typography data-testid="buj-status" id="buj-status" sx={{ ...classes.text }}>
-                    {rowData.buj_status}
+                    {params.value}
                 </Typography>
             ),
         },
         {
-            title: bulkUpdatesList.columns.failedRecords.title,
+            headerName: bulkUpdatesList.columns.failedRecords.title,
             field: 'buj_failed_records',
-            editable: 'never',
-            render: rowData => (
+            disableColumnMenu: true,
+            minWidth: 100,
+            renderCell: params => (
                 <Typography data-testid="buj-failed-records" id="buj-failed-records" sx={{ ...classes.text }}>
-                    {rowData.buj_failed_records}
+                    {params.value}
                 </Typography>
             ),
         },
         {
-            title: bulkUpdatesList.columns.processedCount.title,
+            headerName: bulkUpdatesList.columns.processedCount.title,
             field: 'buj_processed_count',
-            editable: 'never',
-            render: rowData => (
+            disableColumnMenu: true,
+            minWidth: 50,
+            renderCell: params => (
                 <Typography data-testid="buj-processed-count" id="buj-processed-count" sx={{ ...classes.text }}>
-                    {rowData.buj_processed_count}
+                    {params.value}
                 </Typography>
             ),
         },
         {
-            title: bulkUpdatesList.columns.totalCount.title,
+            headerName: bulkUpdatesList.columns.totalCount.title,
             field: 'buj_total_count',
-            editable: 'never',
-            render: rowData => (
+            disableColumnMenu: true,
+            minWidth: 50,
+            renderCell: params => (
                 <Typography data-testid="buj-total-count" id="buj-total-count" sx={{ ...classes.text }}>
-                    {rowData.buj_total_count}
+                    {params.value}
                 </Typography>
             ),
         },
@@ -125,45 +135,42 @@ export const getColumns = classes => {
 };
 
 export const BulkUpdatesList = ({ list }) => {
-    const {
-        components: { bulkUpdatesList },
-    } = componentsLocale;
-
-    const materialTableRef = React.createRef();
-    const columns = React.createRef();
-    columns.current = getColumns(classes);
-
     const [data] = React.useState(list);
 
     return (
-        <div id="bulk-updates-list" data-testid="bulk-updates-list">
-            <MaterialTable
-                tableRef={materialTableRef}
-                columns={columns.current}
-                components={{
-                    Container: props => <Paper {...props} style={{ padding: 16 }} />,
-                    Row: props => (
-                        <MTableBodyRow
-                            {...props}
-                            sx={{ ...classes.text }}
-                            id={`bulk-updates-list-item-${props.index}`}
-                            data-testid={`bulk-updates-list-item-${props.index}`}
-                        />
-                    ),
+        <Paper
+            id="bulk-updates-list"
+            data-testid="bulk-updates-list"
+            sx={{ display: 'flex', flexDirection: 'column', p: 2 }}
+        >
+            <DataGrid
+                columns={getColumns()}
+                rows={data}
+                getRowId={row => row.buj_id}
+                sortingOrder={['asc', 'desc']}
+                hideFooter
+                autosizeOnMount
+                autoSizeOptions={{
+                    includeOutliers: true,
+                    includeHeaders: true,
                 }}
-                data={data}
-                icons={tableIcons}
-                title={bulkUpdatesList.tableTitle}
-                options={{
-                    actionsColumnIndex: -1,
-                    grouping: false,
-                    draggable: false,
-                    paging: false,
-                    search: false,
-                    toolbar: false,
+                sx={{
+                    border: 0,
+                    '& .MuiDataGrid-columnHeaderTitle': {
+                        whiteSpace: 'normal',
+                        lineHeight: 'normal',
+                    },
+                }}
+                initialState={{
+                    sorting: {
+                        sortModel: [{ field: 'buj_created_at', sort: 'desc' }],
+                    },
+                }}
+                localeText={{
+                    noRowsLabel: bulkUpdatesList.noRowLabel,
                 }}
             />
-        </div>
+        </Paper>
     );
 };
 

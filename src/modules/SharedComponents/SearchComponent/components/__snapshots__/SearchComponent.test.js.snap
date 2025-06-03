@@ -458,7 +458,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-controls="<dynamic>"
@@ -573,7 +573,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
@@ -908,7 +908,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-controls="<dynamic>"
@@ -1023,7 +1023,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
@@ -1505,7 +1505,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-controls="<dynamic>"
@@ -1620,7 +1620,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
@@ -2027,7 +2027,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-controls="<dynamic>"
@@ -2142,7 +2142,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
@@ -2577,7 +2577,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Any field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-controls="<dynamic>"
@@ -2691,7 +2691,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
@@ -3051,7 +3051,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-controls="<dynamic>"
@@ -3166,7 +3166,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
@@ -3578,7 +3578,7 @@ exports[`SearchComponent should update advanced search row on search text change
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Any field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-controls="<dynamic>"
@@ -3692,7 +3692,7 @@ exports[`SearchComponent should update advanced search row on search text change
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
@@ -4052,7 +4052,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-controls="<dynamic>"
@@ -4167,7 +4167,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
@@ -4783,7 +4783,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-controls="<dynamic>"
@@ -4898,7 +4898,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
