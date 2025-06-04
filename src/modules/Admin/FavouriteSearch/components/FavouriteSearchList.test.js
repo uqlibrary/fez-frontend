@@ -1,6 +1,6 @@
 import React from 'react';
 import FavouriteSearchList from './FavouriteSearchList';
-import { rtlRender, fireEvent, act } from 'test-utils';
+import { rtlRender, fireEvent, userEvent, act, preview } from 'test-utils';
 import { waitFor } from '@testing-library/dom';
 
 function setup(testProps = {}, renderer = rtlRender) {
@@ -15,13 +15,16 @@ function setup(testProps = {}, renderer = rtlRender) {
 }
 
 describe('FavouriteSearchList', () => {
+    const getRows = () => document.querySelectorAll('.MuiDataGrid-row');
+    const getRow = index => getRows()[index || 0];
+
     it('should render empty list', () => {
         const { getByText } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();
     });
 
     it('should render rows for favourite search', () => {
-        const { getByTestId } = setup({
+        setup({
             list: [
                 {
                     fvs_id: 1,
@@ -32,7 +35,7 @@ describe('FavouriteSearchList', () => {
             ],
         });
 
-        expect(getByTestId('mtablebodyrow')).toBeInTheDocument();
+        expect(getRow()).toBeInTheDocument();
     });
 
     it('should render edit component for favourite search row on clicking edit button', () => {
@@ -46,7 +49,7 @@ describe('FavouriteSearchList', () => {
                 },
             ],
         });
-        const listItem = getByTestId('mtablebodyrow');
+        const listItem = getRow();
         fireEvent.click(getByTestId('favourite-search-list-item-0-edit', listItem));
 
         expect(getByTestId('favourite-search-list-edit-item-0')).toBeInTheDocument();
@@ -63,7 +66,7 @@ describe('FavouriteSearchList', () => {
                 },
             ],
         });
-        const listItem = getByTestId('mtablebodyrow');
+        const listItem = getRow();
         fireEvent.click(getByTestId('favourite-search-list-item-0-edit', listItem));
 
         fireEvent.change(getByTestId('fvs-description-input'), { target: { value: '' } });
@@ -82,7 +85,7 @@ describe('FavouriteSearchList', () => {
                 },
             ],
         });
-        const listItem = getByTestId('mtablebodyrow');
+        const listItem = getRow();
         fireEvent.click(getByTestId('favourite-search-list-item-0-edit', listItem));
 
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: '' } });
@@ -119,7 +122,7 @@ describe('FavouriteSearchList', () => {
                 },
             ],
         });
-        const listItem = getByTestId('mtablebodyrow');
+        const listItem = getRow();
 
         expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('test');
         expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('test');
@@ -152,7 +155,7 @@ describe('FavouriteSearchList', () => {
             ],
             handleRowUpdate: jest.fn(() => Promise.reject()),
         });
-        const listItem = getByTestId('mtablebodyrow');
+        const listItem = getRow();
 
         expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('test');
         expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('test');
@@ -162,8 +165,8 @@ describe('FavouriteSearchList', () => {
         fireEvent.change(getByTestId('fvs-description-input'), { target: { value: 'testing' } });
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing-testing' } });
 
-        fireEvent.click(getByRole('button', { name: 'Save' }));
-
+        fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
+        preview.debug();
         await waitFor(() => getByTestId('fvs-description-0'));
 
         expect(getByTestId('fvs-description-0')).toHaveTextContent('test');
@@ -171,7 +174,7 @@ describe('FavouriteSearchList', () => {
     });
 
     it('should delete favourite search item', async () => {
-        const { getByRole, getAllByTestId, getByTestId } = setup({
+        const { getByTestId } = setup({
             list: [
                 {
                     fvs_id: 1,
@@ -187,11 +190,10 @@ describe('FavouriteSearchList', () => {
                 },
             ],
         });
-        expect(getAllByTestId('mtablebodyrow').length).toBe(2);
+        expect(getRows().length).toBe(2);
 
         fireEvent.click(getByTestId('favourite-search-list-item-0-delete'));
-
-        fireEvent.click(getByRole('button', { name: 'Save' }));
+        fireEvent.click(getByTestId('favourite-search-list-item-0-confirmDeleteOk'));
 
         await waitFor(() => getByTestId('fvs-description-0'), { timeout: 1500 });
 
