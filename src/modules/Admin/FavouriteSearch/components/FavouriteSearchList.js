@@ -238,7 +238,7 @@ const classes = {
     */
 // };
 
-export const FavouriteSearchList = ({ /* handleRowDelete, handleRowUpdate,*/ list }) => {
+export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) => {
     const {
         components: { favouriteSearchList },
     } = componentsLocale;
@@ -262,7 +262,15 @@ export const FavouriteSearchList = ({ /* handleRowDelete, handleRowUpdate,*/ lis
     };
 
     const handleDeleteClick = id => () => {
-        setRows(rows.filter(row => row.id !== id));
+        const oldData = rows.find(row => row.fvs_id === id);
+        handleRowDelete(oldData)
+            .then(() => {
+                setRows(rows.filter(row => row.fvs_id !== id));
+            })
+            .catch(e => {
+                console.error('Error deleting row:', e);
+                setRows(prevRows => prevRows);
+            });
     };
 
     const handleCancelClick = id => () => {
@@ -271,17 +279,26 @@ export const FavouriteSearchList = ({ /* handleRowDelete, handleRowUpdate,*/ lis
             [id]: { mode: GridRowModes.View, ignoreModifications: true },
         });
 
-        const editedRow = rows.find(row => row.id === id);
+        const editedRow = rows.find(row => row.fvs_id === id);
         if (editedRow?.isNew) {
-            setRows(rows.filter(row => row.id !== id));
+            setRows(rows.filter(row => row.fvs_id !== id));
         }
     };
 
-    const processRowUpdate = newRow => {
-        // here, figure out why editing a row causes every row to duplicate to this row
-        const updatedRow = { ...newRow, isNew: false };
-        setRows(rows.map(row => (row.id === newRow.id ? updatedRow : row)));
-        return updatedRow;
+    const processRowUpdate = (newData, oldData) => {
+        console.log('processRowUpdate', newData, oldData);
+        const res = handleRowUpdate(newData, oldData)
+            .then(() => {
+                return new Promise(resolve => {
+                    resolve(newData);
+                });
+            })
+            .catch(e => {
+                console.error('Error updating row:', e);
+                return oldData;
+            });
+        console.log('processRowUpdate result:', res);
+        return res;
     };
 
     const handleRowModesModelChange = newRowModesModel => {
@@ -294,7 +311,6 @@ export const FavouriteSearchList = ({ /* handleRowDelete, handleRowUpdate,*/ lis
             headerName: favouriteSearchList.columns.realLink.title,
             editable: false,
             renderCell: props => {
-                console.log(props);
                 return (
                     <ExternalLink
                         id={`fvs-search-parameters-${props.id}`}
@@ -326,7 +342,6 @@ export const FavouriteSearchList = ({ /* handleRowDelete, handleRowUpdate,*/ lis
                 </Typography>
             ),
             renderEditCell: props => {
-                console.log(props);
                 return (
                     <TextField
                         InputProps={{
@@ -415,7 +430,6 @@ export const FavouriteSearchList = ({ /* handleRowDelete, handleRowUpdate,*/ lis
                 />
             ),
             preProcessEditCellProps: params => {
-                console.log(params);
                 return {
                     ...params.props,
                     error:
@@ -440,7 +454,6 @@ export const FavouriteSearchList = ({ /* handleRowDelete, handleRowUpdate,*/ lis
             width: 96,
             cellClassName: 'cell-styled',
             getActions: params => {
-                console.log(params);
                 const isInEditMode = rowModesModel[params.id]?.mode === GridRowModes.Edit;
 
                 if (isInEditMode) {
