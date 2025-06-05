@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { GridRowModes, DataGrid, GridActionsCellItem, GridRowEditStopReasons } from '@mui/x-data-grid';
+import { GridRowModes, DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -38,11 +38,6 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
     const [rowModesModel, setRowModesModel] = React.useState({});
     const [deleteRowId, setDeleteRowId] = React.useState(null);
 
-    const handleRowEditStop = (params, event) => {
-        if (params.reason === GridRowEditStopReasons.rowFocusOut) {
-            event.defaultMuiPrevented = true;
-        }
-    };
     const processRowUpdate = (newData, oldData) => {
         setLoading(true);
         const res = handleRowUpdate(newData, oldData)
@@ -64,9 +59,10 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
         setRowModesModel(newRowModesModel);
     };
 
-    // const columns = React.useMemo(() => {
     const handleEditClick = id => () => {
-        setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.Edit } });
+        setRowModesModel({
+            [id]: { mode: GridRowModes.Edit },
+        });
     };
 
     const handleSaveClick = id => () => {
@@ -82,8 +78,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                 setDeleteRowId(null);
                 setLoading(false);
             })
-            .catch(e => {
-                console.error('Error deleting row:', e);
+            .catch(() => {
                 setLoading(false);
                 setDeleteRowId(null);
                 setRows(prevRows => prevRows);
@@ -100,10 +95,6 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
             [id]: { mode: GridRowModes.View, ignoreModifications: true },
         });
 
-        const editedRow = rows.find(row => row.fvs_id === id);
-        if (editedRow?.isNew) {
-            setRows(rows.filter(row => row.fvs_id !== id));
-        }
         setDeleteRowId(null);
     };
 
@@ -122,7 +113,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                             sx={{ ...classes.h6text }}
                             component={'h6'}
                         >
-                            Are you sure you want to delete this row?
+                            {favouriteSearchList.deleteConfirmLabel}
                         </Typography>
                     );
                 }
@@ -253,6 +244,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                             value: e.target.value,
                         });
                     }}
+                    error={props.error}
                     errorText={props.error ? favouriteSearchList.columns.alias.validationMessage.invalid : ''}
                 />
             ),
@@ -274,6 +266,10 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
             width: 96,
             cellClassName: 'cell-styled',
             getActions: params => {
+                const isAnyInEditMdode = Object.values(rowModesModel).some(
+                    rowMode => rowMode.mode === GridRowModes.Edit,
+                );
+                const isAnyDeleting = !!deleteRowId;
                 const isInEditMode = rowModesModel[params.id]?.mode === GridRowModes.Edit;
                 const isDeleting = params.id === deleteRowId;
                 const index = rows.findIndex(row => row.fvs_id === params.id);
@@ -286,9 +282,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                                 color: 'primary.main',
                             }}
                             onClick={!isDeleting ? handleSaveClick(params.id) : handleDeleteRow(params.id)}
-                            data-testid={`favourite-search-list-item-${index}-${
-                                isInEditMode ? 'save' : 'confirmDeleteOk'
-                            }`}
+                            data-testid={`favourite-search-list-item-${index}-save`}
                         />,
                         <GridActionsCellItem
                             icon={<tableIcons.Clear />}
@@ -296,9 +290,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                             className="textPrimary"
                             onClick={handleCancelClick(params.id)}
                             color="inherit"
-                            data-testid={`favourite-search-list-item-${index}-${
-                                isInEditMode ? 'cancel' : 'confirmDeleteCancel'
-                            }`}
+                            data-testid={`favourite-search-list-item-${index}-cancel`}
                         />,
                     ];
                 }
@@ -311,6 +303,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                         onClick={handleEditClick(params.id)}
                         color="inherit"
                         data-testid={`favourite-search-list-item-${index}-edit`}
+                        disabled={isAnyInEditMdode || isAnyDeleting}
                     />,
                     <GridActionsCellItem
                         icon={<tableIcons.Delete />}
@@ -318,6 +311,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                         onClick={handleDeleteClick(params.id)}
                         color="inherit"
                         data-testid={`favourite-search-list-item-${index}-delete`}
+                        disabled={isAnyInEditMdode || isAnyDeleting}
                     />,
                 ];
             },
@@ -342,8 +336,8 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                 rowModesModel={rowModesModel}
                 loading={loading}
                 onRowModesModelChange={handleRowModesModelChange}
-                onRowEditStop={handleRowEditStop}
                 processRowUpdate={processRowUpdate}
+                localeText={{ noRowsLabel: favouriteSearchList.noRowsLabel }}
                 sx={{
                     border: 0,
                     '& .cell-styled': {
@@ -353,14 +347,12 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                         ...classes.text,
                     },
                 }}
-                autosizeOnMount
                 disableDensitySelector
                 disableColumnMenu
                 disableColumnFilter
                 disableColumnSelector
                 disableSelectionOnClick
                 disableRowSelectionOnClick
-                pagination={false}
             />
         </Paper>
     );
