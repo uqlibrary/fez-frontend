@@ -20,10 +20,10 @@ const classes = {
     },
     h6text: {
         display: 'block',
-        marginBlockStart: '2.33em',
-        marginBlockEnd: '2.33em',
-        marginInlineStart: '0px',
-        marginInlineEnd: '0px',
+        marginBlockStart: 0,
+        marginBlockEnd: 0,
+        marginInlineStart: 0,
+        marginInlineEnd: 0,
         fontWeight: 400,
         fontSize: 20,
     },
@@ -174,6 +174,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                                 value: e.target.value,
                             });
                         }}
+                        sx={{ alignSelf: 'center' }}
                     />
                 );
             },
@@ -246,6 +247,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                     }}
                     error={props.error}
                     errorText={props.error ? favouriteSearchList.columns.alias.validationMessage.invalid : ''}
+                    sx={{ alignSelf: 'center' }}
                 />
             ),
             preProcessEditCellProps: params => {
@@ -341,7 +343,6 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                 sx={{
                     border: 0,
                     '& .cell-styled': {
-                        paddingY: 2,
                         lineHeight: 1.43,
                         alignContent: 'center',
                         ...classes.text,
