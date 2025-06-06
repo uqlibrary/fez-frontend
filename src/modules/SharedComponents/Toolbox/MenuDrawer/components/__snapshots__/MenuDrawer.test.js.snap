@@ -151,7 +151,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
       >
         CRICOS Provider No: 
         <a
-          class=" css-1oqhn84"
+          class="css-1oqhn84"
           data-analyticsid="cricos-link"
           data-testid="cricos-link"
           href="http://www.uq.edu.au/about/cricos-link"
@@ -322,7 +322,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         >
           CRICOS Provider No: 
           <a
-            class=" css-1oqhn84"
+            class="css-1oqhn84"
             data-analyticsid="cricos-link"
             data-testid="cricos-link"
             href="http://www.uq.edu.au/about/cricos-link"

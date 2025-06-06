@@ -136,6 +136,18 @@ export const mui1theme = createTheme({
                 noSsr: true,
             },
         },
+        MuiDataGrid: {
+            styleOverrides: {
+                root: {
+                    '& .MuiDataGrid-columnHeader:focus, .MuiDataGrid-cell:focus': {
+                        outline: 'none',
+                    },
+                    '& .MuiDataGrid-columnHeader:focus-within, .MuiDataGrid-cell:focus-within': {
+                        outline: 'none',
+                    },
+                },
+            },
+        },
     },
     graphs: {
         color1: '#d72865',
