@@ -25,7 +25,7 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
      
     <a
       aria-label="Check publisher's OA archiving policy in a new window"
-      class=" css-1oqhn84"
+      class="css-1oqhn84"
       data-analyticsid="rek-journal-name-sherpa-link"
       data-testid="rek-journal-name-sherpa-link"
       href="https://example.com/"
@@ -70,7 +70,7 @@ exports[`Journal Name Component test  should render without era journal listed 1
      
     <a
       aria-label="Check publisher's OA archiving policy in a new window"
-      class=" css-1oqhn84"
+      class="css-1oqhn84"
       data-analyticsid="rek-journal-name-sherpa-link"
       data-testid="rek-journal-name-sherpa-link"
       href="https://example.com/"

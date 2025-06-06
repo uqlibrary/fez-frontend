@@ -57,7 +57,7 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 1`] =
           class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-controls=":r1:"
@@ -188,7 +188,7 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 2 1`]
           class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-controls=":r4:"
@@ -319,7 +319,7 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 3 1`]
           class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-controls=":r7:"

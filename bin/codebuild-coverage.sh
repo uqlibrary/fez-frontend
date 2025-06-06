@@ -12,8 +12,8 @@ npm run pretest:unit:ci
 
 # Copy output artifact test reports into common location
 mkdir -p coverage/all
-[[ -e $CODEBUILD_SRC_DIR_TestArtifact1/cypress/coverage-final.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact1/cypress/coverage-final.json coverage/all/cypress.json
-[[ -e $CODEBUILD_SRC_DIR_TestArtifact2/playwright/coverage-final.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact2/playwright/coverage-final.json coverage/all/playwright.json
+[[ -e $CODEBUILD_SRC_DIR_TestArtifact1/cypress/coverage-final.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact1/cypress/coverage-final.json coverage/all/cypress-1.json
+[[ -e $CODEBUILD_SRC_DIR_TestArtifact2/cypress/coverage-final.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact2/cypress/coverage-final.json coverage/all/cypress-2.json
 [[ -e $CODEBUILD_SRC_DIR_TestArtifact3/jest/coverage-final.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact3/jest/coverage-final.json coverage/all/jest.json
 [[ -e $CODEBUILD_SRC_DIR_TestArtifact3/jest-serial/coverage-final.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact3/jest-serial/coverage-final.json coverage/all/jest-serial.json
 

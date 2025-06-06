@@ -3363,6 +3363,7 @@ export default {
         },
         bulkUpdatesList: {
             tableTitle: '',
+            noRowLabel: 'No records to display',
             columns: {
                 startedAt: {
                     title: 'Started at',

@@ -3033,7 +3033,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-8 css-167c4fm-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-0-download-link"
                     data-testid="file-name-0-download-link"
                     href="http://localhost/view/UQ:676287/audio.wav"
@@ -3192,7 +3192,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-8 css-167c4fm-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-1-download-link"
                     data-testid="file-name-1-download-link"
                     href="http://localhost/view/UQ:676287/audiotest_xt.mp3"
@@ -3827,7 +3827,7 @@ exports[`Files Component  should render component 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-0-download-link"
                     data-testid="file-name-0-download-link"
                     href="http://localhost/view/UQ:185044/CH7409_movie_1.mov?dsi_version=6184c7e506d64459e5a3fff2c5e6a8fb"
@@ -4454,7 +4454,7 @@ exports[`Files Component  should render component 2`] = `
                     >
                       <p
                         aria-label=""
-                        class=" css-17zaxj"
+                        class="css-17zaxj"
                         data-mui-internal-clone-element="true"
                         data-testid="file-name-5-tooltip"
                       >
@@ -4714,7 +4714,7 @@ exports[`Files Component  should render component for public users 1`] = `
                     >
                       <p
                         aria-label=""
-                        class=" css-17zaxj"
+                        class="css-17zaxj"
                         data-mui-internal-clone-element="true"
                         data-testid="file-name-0-tooltip"
                       >
@@ -4912,7 +4912,7 @@ exports[`Files Component  should render files based on security policy correctly
                     >
                       <p
                         aria-label=""
-                        class=" css-17zaxj"
+                        class="css-17zaxj"
                         data-mui-internal-clone-element="true"
                         data-testid="file-name-0-tooltip"
                       >
@@ -5492,7 +5492,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-8 css-167c4fm-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-3-download-link"
                     data-testid="file-name-3-download-link"
                     href="http://localhost/view/UQ:1/test.mp3"
@@ -5746,7 +5746,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-mimetype-5"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="thumbnail-link"
                 data-testid="thumbnail-link"
                 href="http://localhost/view/UQ:1/test.pdf"
@@ -5791,7 +5791,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-5-download-link"
                     data-testid="file-name-5-download-link"
                     href="http://localhost/view/UQ:1/test.pdf"
@@ -5913,7 +5913,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-6-download-link"
                     data-testid="file-name-6-download-link"
                     href="http://localhost/view/UQ:1/random.txt"
