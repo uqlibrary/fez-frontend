@@ -25,7 +25,6 @@
         "@babel/register": "^7.22.15",
         "@cypress/code-coverage": "^3.12.15",
         "@googlemaps/jest-mocks": "^2.21.4",
-        "@playwright/test": "^1.52.0",
         "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
         "@sentry/webpack-plugin": "^2.16.0",
         "@testing-library/jest-dom": "^6.1.5",
@@ -89,7 +88,6 @@
         "jsdom": "^20.0.3",
         "mini-css-extract-plugin": "^2.7.2",
         "mockdate": "^3.0.5",
-        "monocart-reporter": "^2.9.18",
         "postcss-loader": "^4.2.0",
         "prettier": "^1.19.1",
         "prettier-eslint": "^16.2.0",
@@ -225,8 +223,6 @@
         "test:e2e:ci": "cross-env NODE_ENV=cc start-server-and-test 'npm run start:mock' http-get://localhost:3000",
         "test:e2e:ci1": "npm run test:e2e:ci 'cypress run --record false --spec $(paste -sd, bin/group1.txt)'",
         "test:e2e:ci2": "npm run test:e2e:ci 'cypress run --record false --spec $(paste -sd, bin/group2.txt)'",
-        "test:e2e:ci3": "npm run test:e2e:ci 'cypress run --record false --spec $(paste -sd, bin/covered-by-pw.txt)'",
-        "test:e2e:ci4": "npm run test:e2e:ci 'cypress run --record false --spec $(paste -sd, bin/all-except-covered-by-pw.txt)'",
         "test:e2e:ci1:dashboard": "npm run test:e2e:ci 'cypress run --spec $(paste -sd, bin/group1.txt) --record --parallel --config video=true --group group-1 --ci-build-id $CI_BUILD_NUMBER'",
         "test:e2e:ci2:dashboard": "npm run test:e2e:ci 'cypress run --spec $(paste -sd, bin/group2.txt) --record --parallel --config video=true --group group-2 --ci-build-id $CI_BUILD_NUMBER'",
         "posttest:e2e:cc": "rm -rf .nyc_output",
@@ -245,9 +241,7 @@
         "test:unit:update": "npm run test:unit -- --updateSnapshot",
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged",
         "tsc": "./node_modules/typescript/bin/tsc",
-        "tsc:watch": "./node_modules/typescript/bin/tsc --watch",
-        "test:e2e:pw": "playwright test",
-        "test:e2e:ci:pw": "npm run test:e2e:ci 'playwright test'"
+        "tsc:watch": "./node_modules/typescript/bin/tsc --watch"
     },
     "engines": {
         "npm": ">=10.2.3",
