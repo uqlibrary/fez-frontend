@@ -13,6 +13,7 @@ import { tableIcons } from './FavouriteSearchListIcons';
 import locale from 'locale/global';
 import { APP_URL, PATH_PREFIX } from 'config';
 import componentsLocale from 'locale/components';
+import { useDecoratedDataGrid } from './hooks';
 
 const classes = {
     text: {
@@ -33,70 +34,48 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
     const {
         components: { favouriteSearchList },
     } = componentsLocale;
-    const [loading, setLoading] = React.useState(false);
-    const [rows, setRows] = React.useState(list);
-    const [rowModesModel, setRowModesModel] = React.useState({});
-    const [deleteRowId, setDeleteRowId] = React.useState(null);
 
-    const processRowUpdate = (newData, oldData) => {
-        setLoading(true);
-        const res = handleRowUpdate(newData, oldData)
-            .then(() => {
-                return new Promise(resolve => {
-                    setLoading(false);
-                    resolve(newData);
-                });
-            })
-            .catch(e => {
-                console.error('Error updating row:', e);
-                setLoading(false);
-                return oldData;
-            });
-        return res;
-    };
+    const _handleRowUpdate = React.useCallback(
+        (newData, oldData) =>
+            handleRowUpdate(newData, oldData)
+                .then(() => {
+                    return new Promise(resolve => {
+                        resolve(newData);
+                    });
+                })
+                .catch(() => {
+                    return oldData;
+                }),
+        [handleRowUpdate],
+    );
 
-    const handleRowModesModelChange = newRowModesModel => {
-        setRowModesModel(newRowModesModel);
-    };
+    const _handleRowDelete = React.useCallback(
+        (rows, rowToDelete) =>
+            handleRowDelete(rowToDelete)
+                .then(() => {
+                    return new Promise(resolve => {
+                        resolve(rows.filter(row => row.fvs_id !== rowToDelete.fvs_id));
+                    });
+                })
+                .catch(() => {
+                    return rows;
+                }),
+        [handleRowDelete],
+    );
 
-    const handleEditClick = id => () => {
-        setRowModesModel({
-            [id]: { mode: GridRowModes.Edit },
-        });
-    };
-
-    const handleSaveClick = id => () => {
-        setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.View } });
-    };
-
-    const handleDeleteRow = id => () => {
-        setLoading(true);
-        const oldData = rows.find(row => row.fvs_id === id);
-        handleRowDelete(oldData)
-            .then(() => {
-                setRows(rows.filter(row => row.fvs_id !== id));
-                setDeleteRowId(null);
-                setLoading(false);
-            })
-            .catch(() => {
-                setLoading(false);
-                setDeleteRowId(null);
-                setRows(prevRows => prevRows);
-            });
-    };
-
-    const handleDeleteClick = id => () => {
-        setDeleteRowId(id);
-    };
-
-    const handleCancelClick = id => () => {
-        setRowModesModel({
-            ...rowModesModel,
-            [id]: { mode: GridRowModes.View, ignoreModifications: true },
-        });
-
-        setDeleteRowId(null);
-    };
+    const {
+        loading,
+        deleteRowId,
+        rows,
+        rowModesModel,
+        handleUpdateRow,
+        handleDeleteRow,
+        handleRowModesModelChange,
+        handleEditClick,
+        handleSaveClick,
+        handleDeleteClick,
+        handleCancelClick,
+    } = useDecoratedDataGrid(list, _handleRowUpdate, _handleRowDelete);
 
     const columns = [
         {
@@ -283,7 +262,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                             sx={{
                                 color: 'primary.main',
                             }}
-                            onClick={!isDeleting ? handleSaveClick(params.id) : handleDeleteRow(params.id)}
+                            onClick={!isDeleting ? handleSaveClick(params.id) : handleDeleteRow(params.id, rows)}
                             data-testid={`favourite-search-list-item-${index}-save`}
                         />,
                         <GridActionsCellItem
@@ -338,7 +317,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                 rowModesModel={rowModesModel}
                 loading={loading}
                 onRowModesModelChange={handleRowModesModelChange}
-                processRowUpdate={processRowUpdate}
+                processRowUpdate={handleUpdateRow}
                 localeText={{ noRowsLabel: favouriteSearchList.noRowsLabel }}
                 sx={{
                     border: 0,
@@ -354,6 +333,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                 disableColumnSelector
                 disableSelectionOnClick
                 disableRowSelectionOnClick
+                disableVirtualization
             />
         </Paper>
     );
