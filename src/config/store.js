@@ -6,22 +6,22 @@ import rootReducer from '../reducer';
 
 export const reducers = rootReducer();
 
-export const getStore = (initialState = Immutable.Map()) => {
-    const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+export let storeInstance = null;
+export const getStore = (state = {}) => {
+    const composeEnhancer = window?.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-    const store = createStore(
+    storeInstance = createStore(
         reducers,
-        initialState,
+        Immutable.Map(state),
         composeEnhancer(
             applyMiddleware(thunk, publicationEnhancer, saveReducerOnSessionExpired, journalSearchKeywordsEnhancer),
         ),
     );
 
-    if (window.Cypress) {
-        window.__store__ = store;
+    if (window?.Cypress) {
+        window.__store__ = storeInstance;
     }
-
-    return store;
+    return storeInstance;
 };
 
 export const store = getStore();

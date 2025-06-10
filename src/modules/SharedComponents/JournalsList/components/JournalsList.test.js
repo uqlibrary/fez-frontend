@@ -1,7 +1,5 @@
 import React from 'react';
 import { render, WithReduxStore } from 'test-utils';
-
-import Immutable from 'immutable';
 import { mockData } from 'mock/data/testing/journals/journalSearchResults';
 import { default as JournalsList } from './JournalsList';
 
@@ -13,7 +11,7 @@ const defaultTestData = {
 
 const setup = ({ testData = { ...defaultTestData }, state = {} }) => {
     return render(
-        <WithReduxStore initialState={Immutable.Map({ searchJournalsReducer: state })}>
+        <WithReduxStore initialState={{ searchJournalsReducer: state }}>
             <JournalsList {...testData} />
         </WithReduxStore>,
     );

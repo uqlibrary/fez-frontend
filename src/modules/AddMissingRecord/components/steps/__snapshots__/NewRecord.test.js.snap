@@ -174,3 +174,13 @@ exports[`Add new record should render stepper and a publication form 1`] = `
   </form>
 </div>
 `;
+
+exports[`Add new record should show and navigate to fix record on button click and display file upload error 1`] = `"{"rek_object_type":3,"rek_status":2,"fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:218198","rek_ismemberof_order":1}],"rek_date":"1911-01-01 00:00:00","isNtro":false,"rek_display_type":183,"rek_title":"title","fez_record_search_key_author":[{"rek_author":"author","rek_author_order":1}],"fez_record_search_key_author_id":[{"rek_author_id":44,"rek_author_id_order":1}],"fez_record_search_key_author_affiliation_id":[],"fez_record_search_key_author_affiliation_name":[],"fez_record_search_key_author_affiliation_country":[],"fez_record_search_key_author_affiliation_full_address":[],"fez_record_search_key_author_affiliation_type":[],"fez_record_search_key_language":[{"rek_language":"eng","rek_language_order":1}]}"`;
+
+exports[`Add new record should show and navigate to fix record on button click and display file upload error 2`] = `
+File {
+  "path": "myTestImage.png",
+}
+`;
+
+exports[`Add new record should show confirmation box and navigate to the correct route on button clicks 1`] = `"{"rek_object_type":3,"rek_status":2,"fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:218198","rek_ismemberof_order":1}],"rek_date":"1911-05-01 00:00:00","isNtro":false,"rek_display_type":183,"rek_title":"title","fez_record_search_key_author":[{"rek_author":"author","rek_author_order":1}],"fez_record_search_key_author_id":[{"rek_author_id":44,"rek_author_id_order":1}],"fez_record_search_key_author_affiliation_id":[],"fez_record_search_key_author_affiliation_name":[],"fez_record_search_key_author_affiliation_country":[],"fez_record_search_key_author_affiliation_full_address":[],"fez_record_search_key_author_affiliation_type":[],"fez_record_search_key_language":[{"rek_language":"eng","rek_language_order":1}]}"`;

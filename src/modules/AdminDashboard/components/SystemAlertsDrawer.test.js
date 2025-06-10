@@ -1,6 +1,4 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { render, WithReduxStore, waitFor, within } from 'test-utils';
 import SystemAlertsDrawer from './SystemAlertsDrawer';
 import userEvent from '@testing-library/user-event';
@@ -59,7 +57,7 @@ const setup = (props = {}, state = {}, renderer = render) => {
         ...state,
     };
     return renderer(
-        <WithReduxStore initialState={Immutable.Map(testState)}>
+        <WithReduxStore initialState={testState}>
             <SystemAlertsDrawer {...testProps} />
         </WithReduxStore>,
     );
