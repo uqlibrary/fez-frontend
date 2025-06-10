@@ -267,10 +267,10 @@ export const isValidContributorLink = (link, required = false) => {
 // Google Scholar ID
 export const isValidGoogleScholarId = id => {
     const regex = /^[\w-]{12}$/;
-    if (regex.test(id)) {
-        return undefined;
-    } else {
+    if (id && !regex.test(id)) {
         return locale.validationErrors.googleScholarId;
+    } else {
+        return undefined;
     }
 };
 

@@ -121,20 +121,6 @@ const handlers = {
         ...initialState,
         scopusIngestRequestError: action.payload,
     }),
-
-    [actions.AUTHOR_CLEAR_ALERTS]: /* istanbul ignore next */ state => /* istanbul ignore next */ ({
-        ...state,
-        authorListItemUpdateSuccess: false,
-        authorListItemUpdateError: null,
-        authorListItemDeleteSuccess: false,
-        authorListItemDeleteError: null,
-        authorAddSuccess: false,
-        authorAddError: null,
-        existingAuthorFieldError: null,
-        bulkAuthorDeleteMessages: null,
-        scopusIngestRequestSuccess: false,
-        scopusIngestRequestError: false,
-    }),
 };
 
 export default function manageAuthorsReducer(state = initialState, action) {
