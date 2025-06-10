@@ -9,6 +9,8 @@ import {
     SEARCH_KEY_LOOKUP_API,
 } from 'repositories/routes';
 import { exportPublications } from './exportPublications';
+import Cookies from 'js-cookie';
+import { api, SESSION_COOKIE_NAME, TOKEN_NAME } from 'config';
 
 function getSearch(source, searchQuery) {
     if (source === locale.global.sources.espace.id) {
@@ -191,6 +193,7 @@ export function loadSearchKeyList(searchKey, searchQuery) {
     };
 }
 
+const searchEspacePublicationsRetryLimit = 1;
 /**
  * searchEspacePublications - call eSpace internal search api
  * searchParameters are
@@ -204,7 +207,7 @@ export function loadSearchKeyList(searchKey, searchQuery) {
  * @param searchParams
  * @return {function(*): Promise<any>}
  */
-export function searchEspacePublications(searchParams) {
+export function searchEspacePublications(searchParams, attempt = 0) {
     return dispatch => {
         dispatch({
             type: actions.SET_SEARCH_QUERY,
@@ -213,6 +216,7 @@ export function searchEspacePublications(searchParams) {
 
         dispatch({ type: actions.SEARCH_LOADING, payload: '' });
 
+        const isUserLoggedInPriorToRequest = !!Cookies.get(SESSION_COOKIE_NAME);
         return get(
             SEARCH_INTERNAL_RECORDS_API({
                 ...searchParams,
@@ -226,7 +230,21 @@ export function searchEspacePublications(searchParams) {
                 });
             })
             .catch(error => {
-                dispatch({
+                if (
+                    // in case of 401s for logged-in users
+                    error.status === 401 &&
+                    attempt < searchEspacePublicationsRetryLimit &&
+                    // check if the app has logged out them - see axios resp. interceptor error handler
+                    isUserLoggedInPriorToRequest &&
+                    !Cookies.get(SESSION_COOKIE_NAME) &&
+                    // check if the invalid session token won't be included the next req.
+                    !api?.defaults?.headers?.common?.[TOKEN_NAME]
+                ) {
+                    // retry once
+                    return dispatch(searchEspacePublications(searchParams, attempt + 1));
+                }
+
+                return dispatch({
                     type: actions.SEARCH_FAILED,
                     payload: error.message,
                 });
