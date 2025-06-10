@@ -155,7 +155,7 @@ const FixRecord = () => {
     });
     // load record to fix based pid, extracted from URL
     useEffect(() => {
-        if (actions && pid && !recordToFix?.rek_pid) {
+        if (actions && pid && recordToFix?.rek_pid !== pid) {
             dispatch(actions.loadRecordToFix(pid));
         }
         return () => actions.clearFixRecord();

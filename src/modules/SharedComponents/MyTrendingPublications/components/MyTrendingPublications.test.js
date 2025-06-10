@@ -1,12 +1,8 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { trendingPublications, trendingPublicationsWithNoSources } from 'mock/data/testing/trendingPublications';
 import { MyTrendingPublications } from './MyTrendingPublications';
 import { transformTrendingPublicationsMetricsData } from 'actions/academicDataTransformers';
-
 import { render, WithReduxStore, WithRouter } from 'test-utils';
-
 import * as actions from 'actions';
 
 jest.mock('actions', () => ({
@@ -24,7 +20,7 @@ function setup(testState = {}) {
     };
 
     return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <MyTrendingPublications />
             </WithRouter>

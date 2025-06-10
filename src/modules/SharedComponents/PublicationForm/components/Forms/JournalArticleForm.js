@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
@@ -14,17 +14,7 @@ import { IssnListEditorField, IssnRowItemTemplate } from 'modules/SharedComponen
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelected }) => {
-    const normalizeIssn = value => {
-        const newValue = value.replace('-', '');
-        return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
-    };
-
-    const transformIssn = (searchKey, item, index) => ({
-        [searchKey.value]: item.key,
-        [searchKey.order]: index + 1,
-    });
-
+export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isAuthorSelected }) => {
     // path to the locale data for each of the sections
     const txt = formLocale.journalArticle;
     return (
@@ -34,8 +24,9 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 autoFocus={!isNtro}
                                 name="rek_title"
                                 textFieldId="rek-title"
@@ -50,8 +41,9 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_journal_name.rek_journal_name"
                                 textFieldId="rek-journal-name"
                                 type="text"
@@ -63,8 +55,9 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_doi.rek_doi"
                                 textFieldId="rek-doi"
                                 type="text"
@@ -75,9 +68,10 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={PartialDateField}
                                 partialDateFieldId="rek-date"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="rek_date"
                                 allowPartial
                                 required
@@ -96,6 +90,7 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                         <Grid item xs={12}>
                             <Typography>{txt.authors.description}</Typography>
                             <Field
+                                control={control}
                                 component={ContributorsEditorField}
                                 canEdit
                                 forceSelectable
@@ -105,7 +100,7 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                                 showContributorAssignment
                                 name="authors"
                                 locale={txt.authors.field}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 validate={[validation.authorRequired]}
                                 isNtro={isNtro}
                                 required
@@ -116,8 +111,9 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
             </Grid>
             {isNtro && (
                 <NtroFields
+                    control={control}
                     canEdit
-                    submitting={submitting}
+                    isSubmitting={isSubmitting}
                     showContributionStatement={isAuthorSelected}
                     hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
                     hideIsrc
@@ -134,6 +130,7 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                 <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
                     <Typography>{locale.components.issnForm.text}</Typography>
                     <Field
+                        control={control}
                         component={IssnListEditorField}
                         remindToAdd
                         isValid={validation.isValidIssn}
@@ -142,10 +139,8 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                         locale={locale.components.issnForm.field}
                         searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
                         listEditorId="issn"
-                        disabled={submitting}
-                        inputNormalizer={normalizeIssn}
+                        disabled={isSubmitting}
                         rowItemTemplate={IssnRowItemTemplate}
-                        transformFunction={transformIssn}
                     />
                 </StandardCard>
             </Grid>
@@ -154,24 +149,26 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                     <Grid container spacing={2}>
                         <Grid item xs={6} sm={3}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="fez_record_search_key_volume_number.rek_volume_number"
                                 textFieldId="rek-volume-number"
                                 type="text"
                                 fullWidth
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 label={txt.optional.fieldLabels.volume}
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={6} sm={3}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="fez_record_search_key_issue_number.rek_issue_number"
                                 textFieldId="rek-issue-number"
                                 type="text"
                                 fullWidth
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 label={txt.optional.fieldLabels.issue}
                                 validate={[validation.maxLength255Validator]}
                             />
@@ -179,47 +176,51 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
 
                         <Grid item xs={6} sm={3}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="fez_record_search_key_start_page.rek_start_page"
                                 textFieldId="rek-start-page"
                                 type="text"
                                 fullWidth
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 label={txt.optional.fieldLabels.startPage}
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={6} sm={3}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="fez_record_search_key_end_page.rek_end_page"
                                 textFieldId="rek-end-page"
                                 type="text"
                                 fullWidth
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 label={txt.optional.fieldLabels.endPage}
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="fez_record_search_key_article_number.rek_article_number"
                                 textFieldId="rek-article-number"
                                 type="text"
                                 fullWidth
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 label={txt.optional.fieldLabels.articleNumber}
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 textFieldId="comments"
                                 name="comments"
                                 type="text"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 fullWidth
                                 multiline
                                 rows={1}
@@ -228,11 +229,12 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="rek_link"
                                 textFieldId="rek-link"
                                 type="text"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 fullWidth
                                 label={txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
@@ -245,7 +247,8 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
     );
 };
 JournalArticleForm.propTypes = {
-    submitting: PropTypes.bool,
+    control: PropTypes.any,
+    isSubmitting: PropTypes.bool,
     subtype: PropTypes.string,
     isNtro: PropTypes.bool,
     isAuthorSelected: PropTypes.bool,

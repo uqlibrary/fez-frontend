@@ -1,6 +1,4 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import AddMissingRecord from './AddMissingRecord';
 import { accounts } from 'mock/data/account';
 import { pathConfig } from 'config/pathConfig';
@@ -8,20 +6,14 @@ import { render, WithReduxStore, WithRouter } from 'test-utils';
 
 const mockUseNavigate = jest.fn();
 let mockUseLocation = { pathname: '/' };
-
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,
     useLocation: () => mockUseLocation,
 }));
 
-function setup(testProps = {}, testState = {}) {
-    const props = {
-        ...testProps,
-
-        rawSearchQuery: testProps.rawSearchQuery || '',
-        addRecordStep: testProps.addRecordStep || jest.fn(),
-    };
+function setup(testProps = {}) {
+    const { rawSearchQuery, ...props } = testProps;
     const state = {
         accountReducer: {
             account: {
@@ -31,13 +23,13 @@ function setup(testProps = {}, testState = {}) {
                 aut_id: 111,
             },
         },
-        ...testState,
+        searchRecordsReducer: { rawSearchQuery },
     };
 
     return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
-                <AddMissingRecord {...props} />
+                <AddMissingRecord {...{ addRecordStep: jest.fn(), ...props }} />
             </WithRouter>
         </WithReduxStore>,
     );

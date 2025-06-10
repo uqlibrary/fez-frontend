@@ -93,6 +93,7 @@ export const getDoi = value => {
 };
 
 export const isValidDOIValue = value => {
+    if (!value?.trim?.()) return false;
     for (const regex of doiRegexps) {
         const anchoredRegex = new RegExp(`^${regex.source}`, regex.flags);
         const matches = value?.match(anchoredRegex);
@@ -139,7 +140,7 @@ export const requiredList = value => {
 };
 
 export const email = value =>
-    !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
+    value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
 export const url = value =>
     value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value)
         ? locale.validationErrors.url
@@ -273,23 +274,6 @@ export const isValidGoogleScholarId = id => {
     }
 };
 
-export const dateRange = (value, values) => {
-    const lowerInRange =
-        !!values.toJS().fez_record_search_key_start_date &&
-        !!values.toJS().fez_record_search_key_start_date.rek_start_date &&
-        moment(values.toJS().fez_record_search_key_start_date.rek_start_date);
-    const higherInRange =
-        !!values.toJS().fez_record_search_key_end_date &&
-        !!values.toJS().fez_record_search_key_end_date.rek_end_date &&
-        moment(values.toJS().fez_record_search_key_end_date.rek_end_date);
-
-    if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
-        return locale.validationErrors.collectionDateRange;
-    } else {
-        return '';
-    }
-};
-
 export const isValidDate = date => {
     try {
         return moment(date).isValid();
@@ -305,6 +289,15 @@ export const isDateSameOrBefore = (date, anotherDate) =>
     moment(date).isSameOrBefore(moment(anotherDate).format('YYYY-MM-DD'));
 
 export const isDateInBetween = (date, from, to) => isDateSameOrAfter(date, from) && isDateSameOrBefore(date, to);
+
+/**
+ * @param {?string} start
+ * @param {?string} end
+ * @param {string} message
+ * @return {string}
+ */
+export const dateRange = (start, end, message = locale.validationErrors.dateRange) =>
+    !!start && !!end && !isDateSameOrBefore(start, end) ? message : undefined;
 
 export const grantFormIsPopulated = value => (value === true ? locale.validationErrors.grants : undefined);
 
