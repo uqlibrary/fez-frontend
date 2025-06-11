@@ -5,7 +5,6 @@ import * as mockData from 'mock/data';
 import * as ExportPublicationsActions from './exportPublications';
 import { EXPORT_FORMAT_TO_EXTENSION, SESSION_COOKIE_NAME } from 'config/general';
 import Cookies from 'js-cookie';
-import { waitFor } from '@testing-library/dom';
 
 describe('Search action creators', () => {
     const testTitleSearchParam = 'global';
@@ -590,7 +589,7 @@ describe('Search action creators', () => {
             ];
 
             await mockActionsStore.dispatch(searchActions.searchEspacePublications(searchParams));
-            await waitFor(() => expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions));
+            expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
         });
     });
 

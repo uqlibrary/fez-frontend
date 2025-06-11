@@ -237,11 +237,10 @@ export function searchEspacePublications(searchParams, attempt = 0) {
                     isLoggedInUserPriorToRequest
                 ) {
                     // retry once
-                    dispatch(searchEspacePublications(searchParams, attempt + 1));
-                    return;
+                    return dispatch(searchEspacePublications(searchParams, attempt + 1));
                 }
 
-                dispatch({
+                return dispatch({
                     type: actions.SEARCH_FAILED,
                     payload: error.message,
                 });
