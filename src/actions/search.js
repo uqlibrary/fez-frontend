@@ -10,7 +10,7 @@ import {
 } from 'repositories/routes';
 import { exportPublications } from './exportPublications';
 import Cookies from 'js-cookie';
-import { SESSION_COOKIE_NAME } from 'config';
+import { api, SESSION_COOKIE_NAME, TOKEN_NAME } from 'config';
 
 function getSearch(source, searchQuery) {
     if (source === locale.global.sources.espace.id) {
@@ -216,7 +216,7 @@ export function searchEspacePublications(searchParams, attempt = 0) {
 
         dispatch({ type: actions.SEARCH_LOADING, payload: '' });
 
-        const isLoggedInUserPriorToRequest = !!Cookies.get(SESSION_COOKIE_NAME);
+        const isUserLoggedInPriorToRequest = !!Cookies.get(SESSION_COOKIE_NAME);
         return get(
             SEARCH_INTERNAL_RECORDS_API({
                 ...searchParams,
@@ -234,7 +234,11 @@ export function searchEspacePublications(searchParams, attempt = 0) {
                     // in case of 401s for logged-in users
                     error.status === 401 &&
                     attempt < searchEspacePublicationsRetryLimit &&
-                    isLoggedInUserPriorToRequest
+                    // check if the app has logged out them - see axios resp. interceptor error handler
+                    isUserLoggedInPriorToRequest &&
+                    !Cookies.get(SESSION_COOKIE_NAME) &&
+                    // check if the invalid session token won't be included the next req.
+                    !api?.defaults?.headers?.common?.[TOKEN_NAME]
                 ) {
                     // retry once
                     return dispatch(searchEspacePublications(searchParams, attempt + 1));

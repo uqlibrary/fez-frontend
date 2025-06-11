@@ -120,6 +120,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
      * Effect to handle initial render
      */
     React.useEffect(() => {
+        // actions.searchEspacePublications(queryParams);
         return dispatch(actions.clearSearchQuery());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
