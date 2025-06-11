@@ -3,9 +3,8 @@ import * as repositories from 'repositories';
 import * as searchActions from './search';
 import * as mockData from 'mock/data';
 import * as ExportPublicationsActions from './exportPublications';
-import { EXPORT_FORMAT_TO_EXTENSION, SESSION_COOKIE_NAME, TOKEN_NAME } from 'config/general';
+import { EXPORT_FORMAT_TO_EXTENSION, SESSION_COOKIE_NAME } from 'config/general';
 import Cookies from 'js-cookie';
-import { api } from '../config';
 
 describe('Search action creators', () => {
     const testTitleSearchParam = 'global';
@@ -543,7 +542,7 @@ describe('Search action creators', () => {
             expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
         });
 
-        it('should not retry whe receiving 401s for an anonymous user', async () => {
+        it('should not retry when receiving 401s for an anonymous user', async () => {
             const searchParams = { title: 'abc' };
             const params = { searchParams: searchParams, sortBy: 'score' };
             mockApi
@@ -573,12 +572,7 @@ describe('Search action creators', () => {
                     repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
                     repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options,
                 )
-                .replyOnce(() => {
-                    // see axios resp. interceptor error handler
-                    Cookies.remove(SESSION_COOKIE_NAME);
-                    delete api?.defaults?.headers?.common?.[TOKEN_NAME];
-                    return [401, ''];
-                })
+                .replyOnce(401)
                 .onGet(
                     repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
                     repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options,
