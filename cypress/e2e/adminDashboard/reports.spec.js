@@ -12,6 +12,16 @@ context('Admin Dashboard - Reports tab', () => {
         cy.injectAxe();
     });
 
+    const clearField = field => {
+        // field shoul dbe the data-testid of the input
+        cy.data(field)
+            .parent()
+            .click()
+            .within(() => {
+                cy.get('button[title=Clear]').click();
+            });
+    };
+
     it('renders page as expected', () => {
         cy.data('report-export-button').should('be.disabled');
         cy.checkA11y(
@@ -238,7 +248,7 @@ context('Admin Dashboard - Reports tab', () => {
                 .should('have.class', 'Mui-error');
             cy.data('report-export-button').should('be.disabled');
 
-            cy.data('report-export-only-date-to-input').clear();
+            clearField('report-export-only-date-to-input');
 
             cy.data('report-export-only-date-from-input').type('01/01/2020');
             // to date should be in error state
@@ -250,7 +260,7 @@ context('Admin Dashboard - Reports tab', () => {
 
             cy.data('report-export-button').should('be.disabled');
 
-            cy.data('report-export-only-date-from-input').clear();
+            clearField('report-export-only-date-from-input');
 
             // to before from
             cy.data('report-export-only-date-to-input').type('01/01/2025');
@@ -274,14 +284,12 @@ context('Admin Dashboard - Reports tab', () => {
             );
 
             cy.data('report-export-button').should('be.disabled');
-            cy.data('report-export-only-date-from-input')
-                .clear()
-                .type('01/01/2024');
+            clearField('report-export-only-date-from-input');
+            cy.data('report-export-only-date-from-input').type('01/01/2024');
 
             cy.data('report-export-only-date-to').contains('Must be within 1 week of "from" date');
-            cy.data('report-export-only-date-to-input')
-                .clear()
-                .type('07/01/2024');
+            clearField('report-export-only-date-to-input');
+            cy.data('report-export-only-date-to-input').type('07/01/2024');
             cy.data('report-export-only-date-to')
                 .contains('Must be within 1 week of "from" date')
                 .should('not.exist');
@@ -300,17 +308,14 @@ context('Admin Dashboard - Reports tab', () => {
                 .should('have.class', 'Mui-error');
             cy.data('report-export-only-date-to-input').should('be.disabled');
             cy.data('report-export-button').should('be.disabled');
-            cy.data('report-export-only-date-from-input')
-                .clear()
-                .type('01/01/2015');
+
+            cy.data('report-export-only-date-from-input').type('01/01/2015');
             cy.data('report-export-only-date-to-input').should('have.value', '31/12/2015');
-            cy.data('report-export-only-date-from-input')
-                .clear()
-                .type('30/10/2015');
+            clearField('report-export-only-date-from-input');
+            cy.data('report-export-only-date-from-input').type('30/10/2015');
             cy.data('report-export-only-date-to-input').should('have.value', '28/10/2016');
-            cy.data('report-export-only-date-from-input')
-                .clear()
-                .type('28/02/2017');
+            clearField('report-export-only-date-from-input');
+            cy.data('report-export-only-date-from-input').type('28/02/2017');
             cy.data('report-export-only-date-to-input').should('have.value', '27/02/2018');
 
             // test auto-cutoff, when selected 'from' date is less than maximum date range.
@@ -322,9 +327,8 @@ context('Admin Dashboard - Reports tab', () => {
             // automatically to today's date, making the range 20/06/2024 - 20/11/2024
             const today = moment();
             const dateFrom = moment().subtract(6, 'months');
-            cy.data('report-export-only-date-from-input')
-                .clear()
-                .type(dateFrom.format('DD/MM/YYYY'));
+            clearField('report-export-only-date-from-input');
+            cy.data('report-export-only-date-from-input').type(dateFrom.format('DD/MM/YYYY'));
             cy.data('report-export-only-date-to-input').should('have.value', today.format('DD/MM/YYYY'));
         });
     });
@@ -497,7 +501,7 @@ context('Admin Dashboard - Reports tab', () => {
             .parent()
             .should('have.class', 'Mui-error');
         cy.data('report-display-export-button').should('be.disabled');
-        cy.data('report-display-export-date-to-input').clear();
+        clearField('report-display-export-date-to-input');
         cy.data('report-display-export-button').should('not.be.disabled');
 
         cy.data('report-display-export-date-from-input').type('01/01/2020');
@@ -509,7 +513,7 @@ context('Admin Dashboard - Reports tab', () => {
             .should('have.class', 'Mui-error');
 
         cy.data('report-display-export-button').should('be.disabled');
-        cy.data('report-display-export-date-from-input').clear();
+        clearField('report-display-export-date-from-input');
         cy.data('report-display-export-button').should('not.be.disabled');
 
         // to before from
@@ -532,9 +536,8 @@ context('Admin Dashboard - Reports tab', () => {
         );
 
         cy.data('report-display-export-button').should('be.disabled');
-        cy.data('report-display-export-date-from-input')
-            .clear()
-            .type('01/01/2024');
+        clearField('report-display-export-date-from-input');
+        cy.data('report-display-export-date-from-input').type('01/01/2024');
 
         // system alert id field
         cy.data('report-display-export-system-alert-id-input').type('abc');
@@ -566,9 +569,5 @@ context('Admin Dashboard - Reports tab', () => {
         cy.data('report-display-export-system-alert-id-input').clear();
 
         cy.data('report-display-export-button').should('not.be.disabled');
-
-        cy.data('report-display-export-date-to-input').type('01/01/2025');
-        cy.data('report-display-export-date-from-input').type('01/01/2024');
-        cy.data('report-display-export-system-alert-id-input').type('10');
     });
 });
