@@ -364,7 +364,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                      
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
-                      class=" css-1oqhn84"
+                      class="css-1oqhn84"
                       data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
@@ -1284,7 +1284,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                     Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0) no derivatives
                   </a>
                   <a
-                    class=" css-1oqhn84"
+                    class="css-1oqhn84"
                     data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
@@ -1493,7 +1493,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                 </ul>
                 <p />
                 <a
-                  class=" css-1oqhn84"
+                  class="css-1oqhn84"
                   data-analyticsid="rek-sdg-link"
                   data-testid="rek-sdg-link"
                   href="https://sdgs.un.org/goals"
@@ -1847,7 +1847,7 @@ exports[`Additional Information Component  should render component with Attribut
                      
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
-                      class=" css-1oqhn84"
+                      class="css-1oqhn84"
                       data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
@@ -3031,7 +3031,7 @@ exports[`Additional Information Component  should render component with audio do
                     Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0) no derivatives
                   </a>
                   <a
-                    class=" css-1oqhn84"
+                    class="css-1oqhn84"
                     data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
@@ -3240,7 +3240,7 @@ exports[`Additional Information Component  should render component with audio do
                 </ul>
                 <p />
                 <a
-                  class=" css-1oqhn84"
+                  class="css-1oqhn84"
                   data-analyticsid="rek-sdg-link"
                   data-testid="rek-sdg-link"
                   href="https://sdgs.un.org/goals"
@@ -3911,7 +3911,7 @@ exports[`Additional Information Component  should render component with book 1`]
                 </ul>
                 <p />
                 <a
-                  class=" css-1oqhn84"
+                  class="css-1oqhn84"
                   data-analyticsid="rek-sdg-link"
                   data-testid="rek-sdg-link"
                   href="https://sdgs.un.org/goals"
@@ -4936,7 +4936,7 @@ exports[`Additional Information Component  should render component with book cha
                 </ul>
                 <p />
                 <a
-                  class=" css-1oqhn84"
+                  class="css-1oqhn84"
                   data-analyticsid="rek-sdg-link"
                   data-testid="rek-sdg-link"
                   href="https://sdgs.un.org/goals"
@@ -5377,7 +5377,7 @@ exports[`Additional Information Component  should render component with conferen
                      
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
-                      class=" css-1oqhn84"
+                      class="css-1oqhn84"
                       data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="http://example.com"
@@ -5886,7 +5886,7 @@ exports[`Additional Information Component  should render component with conferen
                 </ul>
                 <p />
                 <a
-                  class=" css-1oqhn84"
+                  class="css-1oqhn84"
                   data-analyticsid="rek-sdg-link"
                   data-testid="rek-sdg-link"
                   href="https://sdgs.un.org/goals"
@@ -8509,7 +8509,7 @@ exports[`Additional Information Component  should render component with data col
                     The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.
                   </p>
                   <a
-                    class=" css-1oqhn84"
+                    class="css-1oqhn84"
                     data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="https://guides.library.uq.edu.au/deposit-your-data/license-reuse-with-acknowledgement"
@@ -9592,7 +9592,7 @@ exports[`Additional Information Component  should render component with data col
                     Creative Commons Attribution 3.0 International (CC BY 3.0)
                   </a>
                   <a
-                    class=" css-1oqhn84"
+                    class="css-1oqhn84"
                     data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="http://creativecommons.org/licenses/by/3.0/deed.en_US"
@@ -10823,7 +10823,7 @@ exports[`Additional Information Component  should render component with data col
                     The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.
                   </p>
                   <a
-                    class=" css-1oqhn84"
+                    class="css-1oqhn84"
                     data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="https://guides.library.uq.edu.au/deposit-your-data/license-reuse-data-agreement"
@@ -13669,7 +13669,7 @@ exports[`Additional Information Component  should render component with design d
                 </ul>
                 <p />
                 <a
-                  class=" css-1oqhn84"
+                  class="css-1oqhn84"
                   data-analyticsid="rek-sdg-link"
                   data-testid="rek-sdg-link"
                   href="https://sdgs.un.org/goals"
@@ -15782,7 +15782,7 @@ exports[`Additional Information Component  should render component with journal 
                 </ul>
                 <p />
                 <a
-                  class=" css-1oqhn84"
+                  class="css-1oqhn84"
                   data-analyticsid="rek-sdg-link"
                   data-testid="rek-sdg-link"
                   href="https://sdgs.un.org/goals"
@@ -16107,7 +16107,7 @@ exports[`Additional Information Component  should render component with journal 
                      
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
-                      class=" css-1oqhn84"
+                      class="css-1oqhn84"
                       data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
@@ -17969,7 +17969,7 @@ exports[`Additional Information Component  should render component with newspape
                 </ul>
                 <p />
                 <a
-                  class=" css-1oqhn84"
+                  class="css-1oqhn84"
                   data-analyticsid="rek-sdg-link"
                   data-testid="rek-sdg-link"
                   href="https://sdgs.un.org/goals"
@@ -18526,7 +18526,7 @@ exports[`Additional Information Component  should render component with patent 1
                 </ul>
                 <p />
                 <a
-                  class=" css-1oqhn84"
+                  class="css-1oqhn84"
                   data-analyticsid="rek-sdg-link"
                   data-testid="rek-sdg-link"
                   href="https://sdgs.un.org/goals"
@@ -19408,7 +19408,7 @@ exports[`Additional Information Component  should render component with proceedi
                      
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
-                      class=" css-1oqhn84"
+                      class="css-1oqhn84"
                       data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="http://example.com"
@@ -20825,7 +20825,7 @@ exports[`Additional Information Component  should render component with rek_herd
                      
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
-                      class=" css-1oqhn84"
+                      class="css-1oqhn84"
                       data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
@@ -22411,7 +22411,7 @@ exports[`Additional Information Component  should render component with research
                 </ul>
                 <p />
                 <a
-                  class=" css-1oqhn84"
+                  class="css-1oqhn84"
                   data-analyticsid="rek-sdg-link"
                   data-testid="rek-sdg-link"
                   href="https://sdgs.un.org/goals"
@@ -23355,7 +23355,7 @@ exports[`Additional Information Component  should render component with video do
                 </ul>
                 <p />
                 <a
-                  class=" css-1oqhn84"
+                  class="css-1oqhn84"
                   data-analyticsid="rek-sdg-link"
                   data-testid="rek-sdg-link"
                   href="https://sdgs.un.org/goals"
@@ -24382,7 +24382,7 @@ exports[`Additional Information Component  should render component without Attri
                      
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
-                      class=" css-1oqhn84"
+                      class="css-1oqhn84"
                       data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
@@ -25270,7 +25270,7 @@ exports[`Additional Information Component  should render component without Attri
                      
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
-                      class=" css-1oqhn84"
+                      class="css-1oqhn84"
                       data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
@@ -26253,7 +26253,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                     Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0) no derivatives
                   </a>
                   <a
-                    class=" css-1oqhn84"
+                    class="css-1oqhn84"
                     data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
@@ -26462,7 +26462,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                 </ul>
                 <p />
                 <a
-                  class=" css-1oqhn84"
+                  class="css-1oqhn84"
                   data-analyticsid="rek-sdg-link"
                   data-testid="rek-sdg-link"
                   href="https://sdgs.un.org/goals"
@@ -27268,7 +27268,7 @@ exports[`Additional Information Component  should render with description only 1
                      
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
-                      class=" css-1oqhn84"
+                      class="css-1oqhn84"
                       data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
@@ -28125,7 +28125,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                      
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
-                      class=" css-1oqhn84"
+                      class="css-1oqhn84"
                       data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"
@@ -29013,7 +29013,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                      
                     <a
                       aria-label="Check publisher's OA archiving policy in a new window"
-                      class=" css-1oqhn84"
+                      class="css-1oqhn84"
                       data-analyticsid="rek-journal-name-sherpa-link"
                       data-testid="rek-journal-name-sherpa-link"
                       href="https://example.com/"

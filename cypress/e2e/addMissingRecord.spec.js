@@ -162,9 +162,11 @@ context('Add missing record', () => {
         cy.get('[data-testid=rek-author-input]').type('New Author');
         cy.get('[data-testid=rek-author-add]').click();
         cy.contains('New Author').click();
-        cy.get('#submit-work').should('be.enabled');
-
         cy.get('[data-testid=rek-doi-input]').type('10.1426/12345');
+
+        cy.get('#submit-work')
+            .should('be.enabled')
+            .click();
         cy.get('[data-testid=rek-doi-helper-text]').contains('DOI is assigned to another work');
         cy.get('@validationErrors').should('have.length', 1);
         cy.get('#submit-work').should('be.disabled');

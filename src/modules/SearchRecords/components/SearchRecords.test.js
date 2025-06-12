@@ -6,8 +6,6 @@ import * as UserIsAdminHook from 'hooks/userIsAdmin';
 import { EXPORT_FORMAT_TO_EXTENSION, COLLECTION_VIEW_TYPE } from 'config/general';
 import { render } from '@testing-library/react';
 import param from 'can-param';
-import Immutable from 'immutable';
-
 import * as actions from 'actions';
 
 jest.mock('actions', () => ({
@@ -136,7 +134,7 @@ const setup = (props = {}, state = {}, renderMethod = render) => {
     };
 
     return renderMethod(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <SearchRecords {...testProps} />
             </WithRouter>

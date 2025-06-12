@@ -3,13 +3,12 @@ import Table from '@mui/material/Table';
 import JournalsListHeaderRow from './JournalsListHeaderRow';
 import JournalFieldsMap from './JournalFieldsMap';
 import { act, WithReduxStore, fireEvent, render } from 'test-utils';
-import Immutable from 'immutable';
 import { sanitiseId } from 'helpers/general';
 
 const setup = (state = {}) => {
     const onChange = state.onChange ?? jest.fn();
     return render(
-        <WithReduxStore initialState={Immutable.Map({ searchJournalsReducer: state })}>
+        <WithReduxStore initialState={{ searchJournalsReducer: state }}>
             <Table>
                 <JournalsListHeaderRow {...state} onChange={onChange} />
             </Table>

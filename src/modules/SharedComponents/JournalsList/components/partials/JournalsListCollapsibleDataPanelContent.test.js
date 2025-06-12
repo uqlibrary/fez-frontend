@@ -4,7 +4,6 @@ import JournalsListCollapsibleDataPanelContent from './JournalsListCollapsibleDa
 import JournalFieldsMap from './JournalFieldsMap';
 import mockData from 'mock/data/testing/journals/journals';
 import { WithReduxStore, render, createMatchMedia } from 'test-utils';
-import Immutable from 'immutable';
 import { sanitiseId } from 'helpers/general';
 
 const defaultTestData = {
@@ -18,7 +17,7 @@ const defaultTestData = {
 const setup = ({ testData = { ...defaultTestData }, ...state } = {}) => {
     const onChange = state.onChange ?? jest.fn();
     return render(
-        <WithReduxStore initialState={Immutable.Map({ searchJournalsReducer: state })}>
+        <WithReduxStore initialState={{ searchJournalsReducer: state }}>
             <Grid container>
                 <JournalsListCollapsibleDataPanelContent {...testData} {...state} onChange={onChange} />
             </Grid>

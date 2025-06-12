@@ -1,6 +1,5 @@
 import React from 'react';
 import ViewRecord from './ViewRecord';
-import Immutable from 'immutable';
 import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import { userIsAdmin, userIsAuthor } from 'hooks';
@@ -55,7 +54,7 @@ const setup = (state = {}, renderer = render) => {
         },
     };
     return renderer(
-        <WithReduxStore initialState={Immutable.Map(initState)}>
+        <WithReduxStore initialState={initState}>
             <WithRouter>
                 <ViewRecord />
             </WithRouter>

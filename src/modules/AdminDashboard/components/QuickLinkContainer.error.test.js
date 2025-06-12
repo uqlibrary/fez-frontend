@@ -1,9 +1,6 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { render, WithReduxStore, waitFor, userEvent } from 'test-utils';
 import QuickLinkContainer from './QuickLinkContainer';
-
 import * as DashboardActions from 'actions/adminDashboard';
 
 const locale = {
@@ -75,7 +72,7 @@ const setup = (props = {}, state = {}, renderer = render) => {
         ...props,
     };
     return renderer(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <QuickLinkContainer {...testProps} />
         </WithReduxStore>,
     );

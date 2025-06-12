@@ -56,7 +56,7 @@ export default {
         supervisorRequired: 'Please provide a list of supervisors',
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
         advancedSearchSelectionRequired: 'Please select a field to search',
-        dateRange: 'Please provide a valid start/end date range',
+        dateRange: 'Date range is not valid',
         collectionDateRange: 'Please provide a valid start/end Collection Date range',
         pageRange: 'Please provide a valid start/end page range',
         remindToAdd: 'Please remember to click ADD to add this item to your list',

@@ -1,8 +1,5 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { render, WithReduxStore, within, waitFor, userEvent } from 'test-utils';
-
 import * as DashboardActions from 'actions/adminDashboard';
 import * as repositories from 'repositories';
 import * as Utils from '../utils';
@@ -27,7 +24,7 @@ const setup = (props = {}, state = {}, renderer = render) => {
         ...state,
     };
     return renderer(
-        <WithReduxStore initialState={Immutable.Map(testState)}>
+        <WithReduxStore initialState={testState}>
             <Reports {...props} />
         </WithReduxStore>,
     );
