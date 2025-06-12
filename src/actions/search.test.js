@@ -584,13 +584,11 @@ describe('Search action creators', () => {
                 actions.SET_SEARCH_QUERY,
                 actions.SEARCH_LOADING,
                 actions.CURRENT_ACCOUNT_ANONYMOUS,
-                actions.SET_SEARCH_QUERY,
-                actions.SEARCH_LOADING,
                 actions.SEARCH_LOADED,
             ];
 
             await mockActionsStore.dispatch(searchActions.searchEspacePublications(searchParams));
-            await waitFor(() => expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions));
+            expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
         });
     });
 

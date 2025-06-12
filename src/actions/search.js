@@ -193,7 +193,6 @@ export function loadSearchKeyList(searchKey, searchQuery) {
     };
 }
 
-const searchEspacePublicationsRetryLimit = 1;
 /**
  * searchEspacePublications - call eSpace internal search api
  * searchParameters are
@@ -207,7 +206,7 @@ const searchEspacePublicationsRetryLimit = 1;
  * @param searchParams
  * @return {function(*): Promise<any>}
  */
-export function searchEspacePublications(searchParams, attempt = 0) {
+export function searchEspacePublications(searchParams) {
     return dispatch => {
         dispatch({
             type: actions.SET_SEARCH_QUERY,
@@ -233,15 +232,15 @@ export function searchEspacePublications(searchParams, attempt = 0) {
                 if (
                     // in case of 401s for logged-in users
                     error.status === 401 &&
-                    attempt < searchEspacePublicationsRetryLimit &&
                     isLoggedInUserPriorToRequest
                 ) {
-                    // retry once
-                    dispatch(searchEspacePublications(searchParams, attempt + 1));
-                    return;
+                    return dispatch({
+                        type: actions.SEARCH_LOADED,
+                        payload: { body: [] },
+                    });
                 }
 
-                dispatch({
+                return dispatch({
                     type: actions.SEARCH_FAILED,
                     payload: error.message,
                 });
