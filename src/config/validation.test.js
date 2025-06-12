@@ -3,7 +3,7 @@ import { locale } from 'locale';
 import { APP_URL, viewRecordsConfig } from 'config';
 import Immutable from 'immutable';
 import { MEDIATED_ACCESS_ID } from 'config/general';
-import { isFileValid } from './validation';
+import { dateRange, isFileValid } from './validation';
 import { STATE_DELETED } from './viewRecord';
 
 describe('Validation method', () => {
@@ -155,6 +155,7 @@ describe('Validation method', () => {
     });
 
     it('should validate doi', () => {
+        expect(validation.isValidDOIValue(null)).toBeFalsy();
         expect(validation.isValidDOIValue('10.1007/978-3-319-60492-3_52')).toBeTruthy();
         expect(validation.isValidDOIValue('10.1007/something')).toBeTruthy();
         expect(validation.isValidDOIValue('10.1021/jp030583+')).toBeTruthy();
@@ -371,47 +372,65 @@ describe('checkDigit ', () => {
     });
 });
 
-describe('isValidDate ', () => {
-    it('should return true for valid date', () => {
-        expect(validation.isValidDate('2000-01-01 00:00:00')).toBeTruthy();
+describe('dates', () => {
+    describe('isValidDate', () => {
+        it('should return true for valid date', () => {
+            expect(validation.isValidDate('2000-01-01 00:00:00')).toBeTruthy();
+        });
+
+        it('should return false for invalid date', () => {
+            expect(validation.isValidDate('2000-13-01 00:00:00')).toBeFalsy();
+        });
     });
 
-    it('should return false for invalid date', () => {
-        expect(validation.isValidDate('2000-13-01 00:00:00')).toBeFalsy();
-    });
-});
+    describe('isDateSameOrAfter', () => {
+        it('should return true when the first given date is same or after the second given date', () => {
+            expect(validation.isDateSameOrAfter('2000-01-01', '2000-01-01')).toBeTruthy();
+            expect(validation.isDateSameOrAfter('2000-01-02', '2000-01-01')).toBeTruthy();
+        });
 
-describe('isDateSameOrAfter ', () => {
-    it('should return true when the first given date is same or after the second given date', () => {
-        expect(validation.isDateSameOrAfter('2000-01-01', '2000-01-01')).toBeTruthy();
-        expect(validation.isDateSameOrAfter('2000-01-02', '2000-01-01')).toBeTruthy();
-    });
-
-    it('should return false when the first given date is before the second given date', () => {
-        expect(validation.isDateSameOrAfter('1999-12-31', '2000-01-01')).toBeFalsy();
-    });
-});
-
-describe('isDateSameOrBefore ', () => {
-    it('should return true when the first given date is same or before the second given date', () => {
-        expect(validation.isDateSameOrBefore('2000-01-01', '2000-01-01')).toBeTruthy();
-        expect(validation.isDateSameOrBefore('1999-12-31', '2000-01-01')).toBeTruthy();
+        it('should return false when the first given date is before the second given date', () => {
+            expect(validation.isDateSameOrAfter('1999-12-31', '2000-01-01')).toBeFalsy();
+        });
     });
 
-    it('should return false when the first given date is after the second given date', () => {
-        expect(validation.isDateSameOrBefore('2000-01-01', '1999-12-31')).toBeFalsy();
-    });
-});
+    describe('isDateSameOrBefore', () => {
+        it('should return true when the first given date is same or before the second given date', () => {
+            expect(validation.isDateSameOrBefore('2000-01-01', '2000-01-01')).toBeTruthy();
+            expect(validation.isDateSameOrBefore('1999-12-31', '2000-01-01')).toBeTruthy();
+        });
 
-describe('isDateInBetween ', () => {
-    it('should return true when the first given date is in between the  other given dates', () => {
-        expect(validation.isDateInBetween('2000-01-01', '2000-01-01', '2000-01-03')).toBeTruthy();
-        expect(validation.isDateInBetween('2000-01-02', '2000-01-01', '2000-01-03')).toBeTruthy();
-        expect(validation.isDateInBetween('2000-01-03', '2000-01-01', '2000-01-03')).toBeTruthy();
+        it('should return false when the first given date is after the second given date', () => {
+            expect(validation.isDateSameOrBefore('2000-01-01', '1999-12-31')).toBeFalsy();
+        });
     });
 
-    it('should return false when the first given date is not in between the other given dates', () => {
-        expect(validation.isDateInBetween('1999-12-31', '2000-01-01', '2000-01-03')).toBeFalsy();
-        expect(validation.isDateInBetween('2000-01-04', '2000-01-01', '2000-01-03')).toBeFalsy();
+    describe('isDateInBetween', () => {
+        it('should return true when the first given date is in between the  other given dates', () => {
+            expect(validation.isDateInBetween('2000-01-01', '2000-01-01', '2000-01-03')).toBeTruthy();
+            expect(validation.isDateInBetween('2000-01-02', '2000-01-01', '2000-01-03')).toBeTruthy();
+            expect(validation.isDateInBetween('2000-01-03', '2000-01-01', '2000-01-03')).toBeTruthy();
+        });
+
+        it('should return false when the first given date is not in between the other given dates', () => {
+            expect(validation.isDateInBetween('1999-12-31', '2000-01-01', '2000-01-03')).toBeFalsy();
+            expect(validation.isDateInBetween('2000-01-04', '2000-01-01', '2000-01-03')).toBeFalsy();
+        });
+    });
+
+    describe('dateRange', () => {
+        it('should not return error when start date is before or equal to end date', () => {
+            expect(validation.dateRange('2000-01-01 00:00:00', '2000-01-01 00:00:00')).toBeUndefined();
+            expect(validation.dateRange('2000-01-01 00:00:00', '2000-01-01 00:00:01')).toBeUndefined();
+        });
+
+        it('should return error when start date is after end date', () => {
+            expect(validation.dateRange('2000-01-01 00:00:01', '2000-01-01 00:00:00')).toEqual(
+                locale.validationErrors.dateRange,
+            );
+            expect(validation.dateRange('2000-01-01 00:00:01', '2000-01-01 00:00:00', 'error message')).toEqual(
+                'error message',
+            );
+        });
     });
 });

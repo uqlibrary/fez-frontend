@@ -5,7 +5,6 @@ import JournalsListDataRow from './JournalsListDataRow';
 import JournalFieldsMap from './JournalFieldsMap';
 import mockData from 'mock/data/testing/journals/journals';
 import { WithReduxStore, fireEvent, render, act } from 'test-utils';
-import Immutable from 'immutable';
 import { sanitiseId } from 'helpers/general';
 const defaultTestData = {
     row: mockData[0],
@@ -15,7 +14,7 @@ const defaultTestData = {
 const setup = ({ testData = { ...defaultTestData }, ...state }) => {
     const onChange = state.onChange ?? jest.fn();
     return render(
-        <WithReduxStore initialState={Immutable.Map({ searchJournalsReducer: state })}>
+        <WithReduxStore initialState={{ searchJournalsReducer: state }}>
             <Table>
                 <TableBody>
                     <JournalsListDataRow {...testData} {...state} onChange={onChange} />

@@ -1,7 +1,6 @@
 import React from 'react';
 import JournalsListHeaderCol2Full from './JournalsListHeaderCol2Full';
 import { render, WithReduxStore } from 'test-utils';
-import Immutable from 'immutable';
 
 const testProps = {
     journal: {
@@ -15,7 +14,7 @@ const testProps = {
 };
 const setup = (props = {}, state = {}) => {
     return render(
-        <WithReduxStore initialState={Immutable.Map({ searchJournalsReducer: state })}>
+        <WithReduxStore initialState={{ searchJournalsReducer: state }}>
             <JournalsListHeaderCol2Full {...props} />
         </WithReduxStore>,
     );

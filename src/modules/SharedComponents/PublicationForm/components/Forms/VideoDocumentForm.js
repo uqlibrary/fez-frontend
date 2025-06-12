@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -13,14 +13,13 @@ import { default as formLocale } from 'locale/publicationForm';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { hasAtLeastOneItemSelected } from 'helpers/general';
 
-export const VideoDocumentForm = ({ submitting, formValues }) => {
+export const VideoDocumentForm = ({ isSubmitting, control, values }) => {
     // path to the locale data for each of the sections
     const txt = formLocale.video;
-    const editors = formValues && formValues.get('editors');
-    const editorSelected = !!editors && editors.filter(editor => editor.selected).length > 0;
-    const authors = formValues && formValues.get('authors');
-    const authorSelected = !!authors && authors.filter(author => author.selected).length > 0;
+    const isAuthorSelected = hasAtLeastOneItemSelected(values.authors);
+    const isEditorSelected = hasAtLeastOneItemSelected(values.editors);
     return (
         <Grid container spacing={3}>
             <Grid item xs={12}>
@@ -28,8 +27,9 @@ export const VideoDocumentForm = ({ submitting, formValues }) => {
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 autoFocus
                                 name="rek_title"
                                 type="text"
@@ -43,8 +43,9 @@ export const VideoDocumentForm = ({ submitting, formValues }) => {
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
@@ -54,8 +55,9 @@ export const VideoDocumentForm = ({ submitting, formValues }) => {
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
@@ -65,8 +67,9 @@ export const VideoDocumentForm = ({ submitting, formValues }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_doi.rek_doi"
                                 textFieldId="rek-doi"
                                 type="text"
@@ -77,9 +80,10 @@ export const VideoDocumentForm = ({ submitting, formValues }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={PartialDateField}
                                 partialDateFieldId="rek-date"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="rek_date"
                                 allowPartial
                                 required
@@ -91,8 +95,9 @@ export const VideoDocumentForm = ({ submitting, formValues }) => {
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="rek_description"
                                 type="text"
                                 fullWidth
@@ -108,17 +113,18 @@ export const VideoDocumentForm = ({ submitting, formValues }) => {
                 <StandardCard title={txt.creator.title} help={txt.creator.help}>
                     <Typography>{txt.creator.descriptionCreatorOrContributor}</Typography>
                     <Field
+                        control={control}
                         component={ContributorsEditorField}
                         canEdit
                         forceSelectable
                         hideUqIDFields
                         maintainSelected
                         contributorEditorId="creators"
-                        showContributorAssignment={!editorSelected}
+                        showContributorAssignment={!isEditorSelected}
                         required
                         name="authors"
                         locale={txt.creator.field}
-                        disabled={submitting}
+                        disabled={isSubmitting}
                     />
                 </StandardCard>
             </Grid>
@@ -126,16 +132,17 @@ export const VideoDocumentForm = ({ submitting, formValues }) => {
                 <StandardCard title={txt.contributor.title} help={txt.contributor.help}>
                     <Typography>{txt.contributor.descriptionCreatorOrContributor}</Typography>
                     <Field
+                        control={control}
                         component={ContributorsEditorField}
                         canEdit
                         forceSelectable
                         hideUqIDFields
                         maintainSelected
                         contributorEditorId="contributors"
-                        showContributorAssignment={!authorSelected}
+                        showContributorAssignment={!isAuthorSelected}
                         name="editors"
                         locale={txt.contributor.field}
-                        disabled={submitting}
+                        disabled={isSubmitting}
                     />
                 </StandardCard>
             </Grid>
@@ -144,8 +151,9 @@ export const VideoDocumentForm = ({ submitting, formValues }) => {
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="comments"
                                 type="text"
                                 fullWidth
@@ -155,10 +163,11 @@ export const VideoDocumentForm = ({ submitting, formValues }) => {
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="rek_link"
                                 type="text"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 fullWidth
                                 {...txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
@@ -171,7 +180,8 @@ export const VideoDocumentForm = ({ submitting, formValues }) => {
     );
 };
 VideoDocumentForm.propTypes = {
-    submitting: PropTypes.bool,
-    formValues: PropTypes.object,
+    control: PropTypes.any,
+    isSubmitting: PropTypes.bool,
+    values: PropTypes.object,
 };
 export default VideoDocumentForm;

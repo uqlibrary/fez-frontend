@@ -78,7 +78,7 @@ function setup(props = {}) {
 describe('ThesisSubmission', () => {
     const fileMock = ['myTestImage.png'];
     const isDebugging = false;
-    const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
+    const waitForOptions = { timeout: isDebugging ? 120000 : 2000 };
 
     const mockRichEditorFieldValues = values => {
         mockUseForm((props, original) => {
@@ -145,7 +145,7 @@ describe('ThesisSubmission', () => {
     beforeEach(() => {
         jest.restoreAllMocks();
         mockSessionApi.resetHandlers();
-        api.request.history.reset();
+        api.reset();
 
         config.THESIS_UPLOAD_RETRIES = 1;
         mockSessionApi.onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl).reply(200);
@@ -157,7 +157,7 @@ describe('ThesisSubmission', () => {
     afterEach(() => {
         jest.restoreAllMocks();
         mockSessionApi.resetHandlers();
-        api.mock.reset();
+        api.reset();
     });
 
     describe('HDR submission', () => {
@@ -414,6 +414,7 @@ describe('ThesisSubmission', () => {
                 await submitForm();
                 await confirmDeposit();
 
+                await waitForTextToBeRemoved(/saving/i);
                 await waitForText('UQ eSpace');
                 expect(getByTestId('alert-message')).not.toHaveTextContent('Graduate School');
                 await retryUpload();
