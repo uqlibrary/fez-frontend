@@ -203,10 +203,11 @@ export function loadSearchKeyList(searchKey, searchQuery) {
  *  activeFacets = {filters: {}, ranges: {}}
  * }
  *
- * @param searchParams
+ * @param {object} searchParams
+ * @param {boolean} isLoggedInUser
  * @return {function(*): Promise<any>}
  */
-export function searchEspacePublications(searchParams) {
+export function searchEspacePublications(searchParams, isLoggedInUser) {
     return dispatch => {
         dispatch({
             type: actions.SET_SEARCH_QUERY,
@@ -215,7 +216,6 @@ export function searchEspacePublications(searchParams) {
 
         dispatch({ type: actions.SEARCH_LOADING, payload: '' });
 
-        const isLoggedInUserPriorToRequest = !!Cookies.get(SESSION_COOKIE_NAME);
         return get(
             SEARCH_INTERNAL_RECORDS_API({
                 ...searchParams,
@@ -231,12 +231,13 @@ export function searchEspacePublications(searchParams) {
             .catch(error => {
                 if (
                     // in case of 401s for logged-in users
+                    // login dialog should be displayed at a higher level on the comp. tree, see App.js
                     error.status === 401 &&
-                    isLoggedInUserPriorToRequest
+                    isLoggedInUser
                 ) {
                     return dispatch({
                         type: actions.SEARCH_LOADED,
-                        payload: { body: [] },
+                        payload: { data: [] },
                     });
                 }
 

@@ -161,15 +161,15 @@ api.interceptors.response.use(
         if (!handlesErrorsInternally) {
             if (errorStatus === 401) {
                 if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+                    // dev
+                    Cookies.remove(SESSION_COOKIE_NAME);
+                    Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME);
+                    // live env
                     const params = {
                         path: '/',
                         domain: '.library.uq.edu.au',
                         secure: true,
                     };
-                    // dev
-                    Cookies.remove(SESSION_COOKIE_NAME);
-                    Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME);
-                    // live env
                     Cookies.remove(SESSION_COOKIE_NAME, params);
                     Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME, params);
                 }

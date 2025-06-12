@@ -565,7 +565,6 @@ describe('Search action creators', () => {
         });
 
         it('should retry when receiving 401s for a logged in user', async () => {
-            Cookies.set(SESSION_COOKIE_NAME, 'abc123');
             const searchParams = { title: 'abc' };
             const params = { searchParams: searchParams, sortBy: 'score' };
             mockApi
@@ -587,7 +586,7 @@ describe('Search action creators', () => {
                 actions.SEARCH_LOADED,
             ];
 
-            await mockActionsStore.dispatch(searchActions.searchEspacePublications(searchParams));
+            await mockActionsStore.dispatch(searchActions.searchEspacePublications(searchParams, true));
             expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
         });
     });
