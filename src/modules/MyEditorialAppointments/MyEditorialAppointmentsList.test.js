@@ -1,6 +1,6 @@
 import React from 'react';
 import MyEditorialAppointmentsList from './MyEditorialAppointmentsList';
-import { render, fireEvent, act, waitFor, WithReduxStore, createMatchMedia, within, preview } from 'test-utils';
+import { render, fireEvent, userEvent, act, waitFor, WithReduxStore, createMatchMedia, within } from 'test-utils';
 
 import { default as locale } from 'locale/components';
 
@@ -341,15 +341,12 @@ describe('MyEditorialAppointmentsList', () => {
         await waitFor(() => getByTestId('eap-end-year-current'));
         fireEvent.click(getByTestId('eap-end-year-current'));
 
-        act(() => {
-            fireEvent.click(getByTestId('my-editorial-appointments-add-save'));
-        });
+        await userEvent.click(getByTestId('my-editorial-appointments-add-save'));
+        const listItem = document.querySelector('#my-editorial-appointments-list-row-0');
 
-        // const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
-
-        // expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
-        // expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
-        // expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('Current');
+        expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
+        expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('Current');
     });
 
     describe('coverage', () => {
