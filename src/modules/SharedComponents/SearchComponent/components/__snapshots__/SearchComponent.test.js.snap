@@ -1717,7 +1717,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r41:"
+                        id=":r49:"
                         type="text"
                         value=" to "
                       />
@@ -2239,7 +2239,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r34:"
+                        id=":r3c:"
                         type="text"
                         value=" to "
                       />
@@ -3263,7 +3263,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r2u:"
+                        id=":r36:"
                         type="text"
                         value=" to "
                       />
@@ -3789,7 +3789,7 @@ exports[`SearchComponent should update advanced search row on search text change
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r3p:"
+                        id=":r41:"
                         type="text"
                         value=" to "
                       />
@@ -4264,7 +4264,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r4l:"
+                        id=":r4t:"
                         type="text"
                         value=" to "
                       />
@@ -4321,18 +4321,20 @@ exports[`SearchComponent should update date range filter 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
+                        autocomplete="off"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         data-testid="created-range-from-date"
                         id="created-range-from-date"
+                        inputmode="text"
                         placeholder="dd/mm/yyyy"
-                        type="tel"
+                        type="text"
                         value="01/01/2000"
                       />
                       <div
@@ -4373,7 +4375,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r4o:"
+                        id=":r51:"
                         type="text"
                         value=" to "
                       />
@@ -4384,18 +4386,20 @@ exports[`SearchComponent should update date range filter 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
+                        autocomplete="off"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         data-testid="created-range-to-date"
                         id="created-range-to-date"
+                        inputmode="text"
                         placeholder="dd/mm/yyyy"
-                        type="tel"
+                        type="text"
                         value="01/01/2001"
                       />
                       <div
@@ -4449,18 +4453,20 @@ exports[`SearchComponent should update date range filter 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
+                        autocomplete="off"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         data-testid="updated-range-from-date"
                         id="updated-range-from-date"
+                        inputmode="text"
                         placeholder="dd/mm/yyyy"
-                        type="tel"
+                        type="text"
                         value=""
                       />
                       <div
@@ -4501,7 +4507,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r4r:"
+                        id=":r56:"
                         type="text"
                         value=" to "
                       />
@@ -4512,18 +4518,20 @@ exports[`SearchComponent should update date range filter 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
+                        autocomplete="off"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         data-testid="updated-range-to-date"
                         id="updated-range-to-date"
+                        inputmode="text"
                         placeholder="dd/mm/yyyy"
-                        type="tel"
+                        type="text"
                         value=""
                       />
                       <div
@@ -4995,7 +5003,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r4l:"
+                        id=":r4t:"
                         type="text"
                         value=" to "
                       />
@@ -5052,18 +5060,20 @@ exports[`SearchComponent should update date range filter 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
+                        autocomplete="off"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         data-testid="created-range-from-date"
                         id="created-range-from-date"
+                        inputmode="text"
                         placeholder="dd/mm/yyyy"
-                        type="tel"
+                        type="text"
                         value="01/01/2000"
                       />
                       <div
@@ -5104,7 +5114,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r4o:"
+                        id=":r51:"
                         type="text"
                         value=" to "
                       />
@@ -5115,18 +5125,20 @@ exports[`SearchComponent should update date range filter 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
+                        autocomplete="off"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         data-testid="created-range-to-date"
                         id="created-range-to-date"
+                        inputmode="text"
                         placeholder="dd/mm/yyyy"
-                        type="tel"
+                        type="text"
                         value="01/01/2005"
                       />
                       <div
@@ -5180,18 +5192,20 @@ exports[`SearchComponent should update date range filter 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
+                        autocomplete="off"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         data-testid="updated-range-from-date"
                         id="updated-range-from-date"
+                        inputmode="text"
                         placeholder="dd/mm/yyyy"
-                        type="tel"
+                        type="text"
                         value=""
                       />
                       <div
@@ -5232,7 +5246,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r4r:"
+                        id=":r56:"
                         type="text"
                         value=" to "
                       />
@@ -5243,18 +5257,20 @@ exports[`SearchComponent should update date range filter 2`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
+                        autocomplete="off"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         data-testid="updated-range-to-date"
                         id="updated-range-to-date"
+                        inputmode="text"
                         placeholder="dd/mm/yyyy"
-                        type="tel"
+                        type="text"
                         value=""
                       />
                       <div
