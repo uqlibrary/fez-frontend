@@ -60,26 +60,19 @@ export const sessionApi = axios.create({
     crossdomain: true,
 });
 
+sessionApi.interceptors.request.use(request => {
+    if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+        request.headers[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
+    }
+    return request;
+});
+
 // need to generate a new token for each request otherwise if you try a new request with the old token,
 // axios will appear to cancel your request automatically
 export const generateCancelToken = () => {
     const CancelToken = axios.CancelToken;
     return CancelToken.source();
 };
-
-export const setupDefaults = () => {
-    // If there is a local cookie available, then set the api headers for x-uql-token
-    if (!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)) {
-        api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
-        sessionApi.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
-    }
-    // allow us to safely force a given SESSION_COOKIE_NAME during development
-    if (process.env.NODE_ENV === 'development' && !!process.env.SESSION_COOKIE_NAME) {
-        api.defaults.headers.common[TOKEN_NAME] = process.env.SESSION_COOKIE_NAME;
-        sessionApi.defaults.headers.common[TOKEN_NAME] = process.env.SESSION_COOKIE_NAME;
-    }
-};
-setupDefaults();
 
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
@@ -92,6 +85,9 @@ export const clearLastRequest = () => {
 
 let isGet = null;
 api.interceptors.request.use(request => {
+    if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+        request.headers[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
+    }
     apiLastRequest = request;
     // keep track of last requests just for tests
     if (isTest()) {
@@ -165,9 +161,27 @@ api.interceptors.response.use(
         if (!handlesErrorsInternally) {
             if (errorStatus === 401) {
                 if (!!Cookies.get(SESSION_COOKIE_NAME)) {
-                    Cookies.remove(SESSION_COOKIE_NAME, { path: '/', domain: '.library.uq.edu.au' });
-                    Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME, { path: '/', domain: '.library.uq.edu.au' });
-                    delete api.defaults.headers.common[TOKEN_NAME];
+                    console.log(
+                        `401 detected, current session cookies: ${SESSION_COOKIE_NAME}:${Cookies.get(
+                            SESSION_COOKIE_NAME,
+                        )}, ${SESSION_USER_GROUP_COOKIE_NAME}:${Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)}`,
+                    );
+                    let params = {};
+                    if (!isDevEnv()) {
+                        // has to match whatever gets set by auth.library.uq.edu.au
+                        params = {
+                            path: '/',
+                            domain: '.library.uq.edu.au',
+                            secure: true,
+                        };
+                    }
+                    Cookies.remove(SESSION_COOKIE_NAME, params);
+                    Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME, params);
+                    console.log(
+                        `401 detected, cleared session cookies: ${SESSION_COOKIE_NAME}:${Cookies.get(
+                            SESSION_COOKIE_NAME,
+                        )}, ${SESSION_USER_GROUP_COOKIE_NAME}:${Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)}`,
+                    );
                 }
 
                 if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc') {
