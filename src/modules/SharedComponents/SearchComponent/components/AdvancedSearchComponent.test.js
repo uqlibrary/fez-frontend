@@ -194,10 +194,11 @@ describe('AdvancedSearchComponent', () => {
         fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('combobox'));
         const list = await waitFor(() => getByRole('presentation'));
         const options = getAllByRole('option', list);
+
         expect(options[4]).toHaveClass('Mui-selected'); // Journal article
-        expect(options[4].checked).toBeTruthy(); // Journal article
+        expect(options[4]).toHaveAttribute('aria-selected', 'true'); // Journal article
         expect(options[12]).toHaveClass('Mui-selected'); // Generic document
-        expect(options[12].checked).toBeTruthy(); // Generic document
+        expect(options[12]).toHaveAttribute('aria-selected', 'true'); // Generic document
     });
 
     it('should render advanced search docTypes with checked values based on fixed invalid props', async () => {
@@ -225,7 +226,7 @@ describe('AdvancedSearchComponent', () => {
         fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('combobox'));
         const list = await waitFor(() => getByRole('presentation'));
         const options = getAllByRole('option', list);
-        expect(options[12].checked).toBeTruthy(); // Generic document
+        expect(options[12]).toHaveAttribute('aria-selected', 'true'); // Generic document
         expect(options[12]).toHaveClass('Mui-selected'); // Generic document
         expect(options.filter(option => option['data-value'] === 'test').length).toEqual(0);
     });
@@ -262,12 +263,19 @@ describe('AdvancedSearchComponent', () => {
             },
         });
 
-        fireEvent.change(getByTestId('created-range-to-date'), { target: { value: '10/10/2013' } });
+        act(() => {
+            fireEvent.change(getByTestId('created-range-to-date'), { target: { value: '10/10/2013' } });
+        });
+
         expect(getByTestId('created-range-to-date').value).toBe('10/10/2013');
         expect(updateDateRangeFn).toHaveBeenCalledWith('rek_created_date', {
-            from: moment('10/10/2010', 'DD/MM/YYYY'),
-            to: moment('10/10/2013', 'DD/MM/YYYY', true),
+            from: expect.any(moment),
+            to: expect.any(moment),
         });
+        // Additional verification for actual date values sent in the mock call
+        const calledArgs = updateDateRangeFn.mock.calls[0][1];
+        expect(calledArgs.from.format('DD/MM/YYYY')).toBe('10/10/2010');
+        expect(calledArgs.to.format('DD/MM/YYYY')).toBe('10/10/2013');
     });
 
     it('should handle search for created date range filter', () => {
