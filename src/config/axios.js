@@ -161,27 +161,17 @@ api.interceptors.response.use(
         if (!handlesErrorsInternally) {
             if (errorStatus === 401) {
                 if (!!Cookies.get(SESSION_COOKIE_NAME)) {
-                    console.log(
-                        `401 detected, current session cookies: ${SESSION_COOKIE_NAME}:${Cookies.get(
-                            SESSION_COOKIE_NAME,
-                        )}, ${SESSION_USER_GROUP_COOKIE_NAME}:${Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)}`,
-                    );
-                    let params = {};
-                    if (!isDevEnv()) {
-                        // has to match whatever gets set by auth.library.uq.edu.au
-                        params = {
-                            path: '/',
-                            domain: '.library.uq.edu.au',
-                            secure: true,
-                        };
-                    }
+                    const params = {
+                        path: '/',
+                        domain: '.library.uq.edu.au',
+                        secure: true,
+                    };
+                    // dev
+                    Cookies.remove(SESSION_COOKIE_NAME);
+                    Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME);
+                    // live env
                     Cookies.remove(SESSION_COOKIE_NAME, params);
                     Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME, params);
-                    console.log(
-                        `401 detected, cleared session cookies: ${SESSION_COOKIE_NAME}:${Cookies.get(
-                            SESSION_COOKIE_NAME,
-                        )}, ${SESSION_USER_GROUP_COOKIE_NAME}:${Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)}`,
-                    );
                 }
 
                 if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc') {
