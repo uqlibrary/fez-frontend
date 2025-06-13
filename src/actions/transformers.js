@@ -1425,6 +1425,12 @@ export const getOpenAccessStatusSearchKey = record => {
     };
 };
 
+export const getCollectionViewType = record => {
+    // return empty object if all parameters are null
+    if (!!!record?.rek_collection_view_type) return {};
+    return { fez_record_search_key_collection_view_type: { ...record } };
+};
+
 export const getAdminSectionSearchKeys = (data = {}) => {
     const {
         collections,
@@ -1433,6 +1439,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         contactName,
         contactNameId,
         contactEmail,
+        fez_record_search_key_collection_view_type: collectionViewType,
         fez_record_search_key_institutional_status: institutionalStatus,
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
@@ -1442,9 +1449,11 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_end_date: endDate,
         ...rest
     } = data;
+
     return {
         ...getRecordIsMemberOfSearchKey(communities),
         ...getRecordIsMemberOfSearchKey(collections),
+        ...getCollectionViewType(collectionViewType),
         ...getContentIndicatorSearchKey(contentIndicators),
         ...(!!contactName && !!contactEmail
             ? getDatasetContactDetailSearchKeys({ contactName, contactNameId, contactEmail })
