@@ -225,7 +225,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                       >
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class=" css-1oqhn84"
+                          class="css-1oqhn84"
                           data-analyticsid="my-trending-pubs-altmetric-link"
                           data-testid="my-trending-pubs-altmetric-link"
                           href="https://queensland.altmetric.com/details/101417"
@@ -685,7 +685,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                       >
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class=" css-1oqhn84"
+                          class="css-1oqhn84"
                           data-analyticsid="my-trending-pubs-altmetric-link"
                           data-testid="my-trending-pubs-altmetric-link"
                           href="https://queensland.altmetric.com/details/101417"

@@ -93,7 +93,7 @@ export const getDoi = value => {
 };
 
 export const isValidDOIValue = value => {
-    if (!value.trim?.()) return false;
+    if (!value?.trim?.()) return false;
     for (const regex of doiRegexps) {
         const anchoredRegex = new RegExp(`^${regex.source}`, regex.flags);
         const matches = value?.match(anchoredRegex);
@@ -140,7 +140,7 @@ export const requiredList = value => {
 };
 
 export const email = value =>
-    !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
+    value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
 export const url = value =>
     value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value)
         ? locale.validationErrors.url
@@ -267,10 +267,10 @@ export const isValidContributorLink = (link, required = false) => {
 // Google Scholar ID
 export const isValidGoogleScholarId = id => {
     const regex = /^[\w-]{12}$/;
-    if (regex.test(id)) {
-        return undefined;
-    } else {
+    if (id && !regex.test(id)) {
         return locale.validationErrors.googleScholarId;
+    } else {
+        return undefined;
     }
 };
 

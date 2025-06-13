@@ -8,6 +8,11 @@ const defaultMenuItems = [
         primaryText: 'Primary text 0',
         secondaryText: 'secondary text 0',
     },
+    {
+        linkTo: 'https://test.com',
+        primaryText: 'External Link',
+        isExternal: true,
+    },
 ];
 
 function setup(testProps = {}) {

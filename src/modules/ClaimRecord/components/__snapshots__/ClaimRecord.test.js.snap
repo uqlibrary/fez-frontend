@@ -516,7 +516,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                         Add any relevant indicator(s).
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-controls=":r9:"
@@ -2038,7 +2038,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                         Add any relevant indicator(s).
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-controls=":rj:"
@@ -3924,7 +3924,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         Add any relevant indicator(s).
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-controls=":re:"
@@ -5236,7 +5236,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         Add any relevant indicator(s).
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-controls=":r4:"

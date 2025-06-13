@@ -359,7 +359,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
@@ -408,7 +408,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
@@ -457,7 +457,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
@@ -1019,7 +1019,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
@@ -1068,7 +1068,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
@@ -1117,7 +1117,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
@@ -1679,7 +1679,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
@@ -1728,7 +1728,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
@@ -1777,7 +1777,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
@@ -2502,7 +2502,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
@@ -2552,7 +2552,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
@@ -2602,7 +2602,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
@@ -2903,7 +2903,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
@@ -2953,7 +2953,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
@@ -3003,7 +3003,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div

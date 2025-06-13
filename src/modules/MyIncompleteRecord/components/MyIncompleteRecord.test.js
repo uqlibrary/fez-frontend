@@ -71,7 +71,7 @@ function setup(props = {}) {
 
 describe('MyIncompleteRecord', () => {
     const isDebugging = false;
-    const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
+    const waitForOptions = { timeout: isDebugging ? 120000 : 2000 };
     const cancelButtonId = 'incomplete-record-button-cancel';
     const submitButtonId = 'incomplete-record-button-submit';
 

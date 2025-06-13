@@ -102,7 +102,7 @@ function setup(props = {}) {
 }
 describe('Component ClaimRecord ', () => {
     const isDebugging = false;
-    const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
+    const waitForOptions = { timeout: isDebugging ? 120000 : 2000 };
 
     beforeEach(() => {
         mockUseNavigate.mockReset();

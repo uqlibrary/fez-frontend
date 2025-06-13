@@ -8,12 +8,12 @@ exports[`Audio Player Component  should render component 1`] = `
       id="audioPlayer"
     >
       <source
-        src="UQ676287_OA.pdf"
-        type="audio/mp3"
+        src="test_t.mp3"
+        type="audio/mpeg"
       />
     </audio>
     <button
-      aria-label="Click to play audio file UQ676287_OA.pdf"
+      aria-label="Click to play audio file test_t.mp3"
       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
       id="playButton"
       style="margin-top: -10px; margin-bottom: -10px;"

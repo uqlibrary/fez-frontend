@@ -46,6 +46,7 @@ export const pathConfig = {
     communityList: '/communities',
     dashboard: '/dashboard',
     about: '/about',
+    copyright: 'https://www.uq.edu.au/legal/copyright-privacy-disclaimer',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/habslodge',
     records: {
@@ -56,6 +57,7 @@ export const pathConfig = {
             new: '/records/add/new',
         },
         claim: '/records/claim',
+        feedback: pid => `/records/${pid}/feedback`,
         fix: pid => `/records/${pid}/fix`,
         incomplete: '/records/incomplete',
         incompleteFix: pid => `/records/${pid}/incomplete`,

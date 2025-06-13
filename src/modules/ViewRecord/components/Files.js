@@ -379,8 +379,9 @@ const Files = props => {
     const handleVideoFailed = event => {
         setPreview({
             ...preview,
-            videoErrorCode: event.code,
-            videoErrorMsg: event.message,
+            videoLoading: false,
+            videoErrorCode: event?.target?.error?.code,
+            videoErrorMsg: event?.target?.error?.message,
         });
     };
 

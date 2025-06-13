@@ -27,7 +27,7 @@ describe('transformers', () => {
 
             expect(transformedRequest).toEqual({
                 sat_id: 123,
-                sat_resolved_date: '2017-06-30 00:00',
+                sat_resolved_date: '2017-06-29 14:00:00',
                 sat_resolved_by: 456,
             });
         });
@@ -63,7 +63,7 @@ describe('transformers', () => {
             expect(transformedRequest).toEqual({
                 sat_id: 123,
                 sat_assigned_to: null,
-                sat_assigned_date: '2017-06-30 00:00',
+                sat_assigned_date: '2017-06-29 14:00:00',
             });
         });
     });

@@ -617,7 +617,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
           style="width: 100%;"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;

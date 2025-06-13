@@ -421,6 +421,7 @@ export const viewRecordsConfig = {
             ],
         },
     ],
+    feedbackButtonCollectionWhiteList: ['UQ:229001'],
 };
 
 export const STATE_ADDED = 'A';

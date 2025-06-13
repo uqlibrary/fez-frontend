@@ -5,7 +5,7 @@ import Pause from '@mui/icons-material/Pause';
 import IconButton from '@mui/material/IconButton';
 import locale from 'locale/global';
 
-const AudioPlayer = ({ fileName, mimeType }) => {
+const AudioPlayer = ({ fileName }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const audioPlayerRef = useRef(null);
 
@@ -41,7 +41,7 @@ const AudioPlayer = ({ fileName, mimeType }) => {
                 ref={player => (audioPlayerRef.current = player)}
                 onEnded={onAudioStreamEnd}
             >
-                <source src={fileName} type={mimeType} />
+                <source src={fileName} type="audio/mpeg" />
             </audio>
             <IconButton
                 id={isPlaying ? 'pauseButton' : 'playButton'}
@@ -57,6 +57,5 @@ const AudioPlayer = ({ fileName, mimeType }) => {
 };
 AudioPlayer.propTypes = {
     fileName: PropTypes.string.isRequired,
-    mimeType: PropTypes.string.isRequired,
 };
 export default React.memo(AudioPlayer);
