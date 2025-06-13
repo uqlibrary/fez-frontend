@@ -421,7 +421,7 @@ context('Advanced Search', () => {
 });
 
 context('Error handling', () => {
-    const expectUserSessionToBe = existent => {
+    const expectUserToBeLoggedIn = existent => {
         cy.data('PersonOutlineIcon').should(existent ? 'not.exist' : 'exist');
         cy.data('PersonIcon').should(existent ? 'exist' : 'not.exist');
         cy.getCookie('UQLID').should(existent ? 'exist' : 'not.exist');
@@ -436,7 +436,7 @@ context('Error handling', () => {
                 'Displaying works 1 to 7 of 7 total works.',
             );
             cy.data('alert').should('not.exist');
-            expectUserSessionToBe(true);
+            expectUserToBeLoggedIn(true);
 
             // make a search that returns a 401
             cy.data('simple-search-input')
@@ -448,7 +448,7 @@ context('Error handling', () => {
             cy.data('alert')
                 .should('be.visible')
                 .should('contain', 'You are not logged in');
-            expectUserSessionToBe(false);
+            expectUserToBeLoggedIn(false);
 
             // subsequent searches should go through
             cy.data('simple-search-input')
@@ -460,7 +460,7 @@ context('Error handling', () => {
                 'contain',
                 'Displaying works 1 to 7 of 7 total works.',
             );
-            expectUserSessionToBe(false);
+            expectUserToBeLoggedIn(false);
         });
     });
 });
