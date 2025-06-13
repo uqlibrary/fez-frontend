@@ -87,7 +87,7 @@ export class ContributorsEditor extends PureComponent {
 
     componentDidUpdate(prevProps, prevState) {
         // Authors, not used by SoS
-        if (diff(prevProps?.value, this.props?.value).length > 0) {
+        if (JSON.stringify(prevProps?.value) !== JSON.stringify(this.props?.value)) {
             const items = this.getContributorsWithAffiliationsFromProps(this.props);
             this.setState({
                 contributors: items,
