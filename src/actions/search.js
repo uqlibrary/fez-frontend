@@ -9,8 +9,6 @@ import {
     SEARCH_KEY_LOOKUP_API,
 } from 'repositories/routes';
 import { exportPublications } from './exportPublications';
-import Cookies from 'js-cookie';
-import { SESSION_COOKIE_NAME } from 'config';
 
 function getSearch(source, searchQuery) {
     if (source === locale.global.sources.espace.id) {
@@ -231,7 +229,7 @@ export function searchEspacePublications(searchParams, isLoggedInUser) {
             .catch(error => {
                 if (
                     // in case of 401s for logged-in users
-                    // login dialog should be displayed at a higher level on the comp. tree, see App.js
+                    // login dialog should be displayed up higher on the comp. tree - see App.js
                     error.status === 401 &&
                     isLoggedInUser
                 ) {

@@ -83,7 +83,7 @@ const AppClass = ({
     const navigate = useNavigate();
     const location = useLocation();
 
-    const wasUserEverLoggedIn = useRef(false);
+    const hadLoggedInUser = useRef(false);
     const [sessionExpiredConfirmationBox, setSessionExpiredConfirmationBox] = useState(null);
     const [menuDrawerOpen, setMenuDrawerOpen] = useState(false);
     const [docked, setDocked] = useState(false);
@@ -95,8 +95,8 @@ const AppClass = ({
     };
 
     useEffect(() => {
-        if (!account?.id) return;
-        wasUserEverLoggedIn.current = true;
+        if (!account?.id || hadLoggedInUser.current) return;
+        hadLoggedInUser.current = true;
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [account?.id]);
 
@@ -223,7 +223,7 @@ const AppClass = ({
         !accountLoading &&
         !account &&
         // not a public route or a logged-in user who performed a search with an expired session token included
-        (!isPublicPage || (wasUserEverLoggedIn.current && location.pathname === pathConfig.records.search))
+        (!isPublicPage || (hadLoggedInUser.current && location?.pathname === pathConfig.records.search))
     ) {
         // user is not logged in
         userStatusAlert = {

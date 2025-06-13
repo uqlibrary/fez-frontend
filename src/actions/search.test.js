@@ -3,9 +3,7 @@ import * as repositories from 'repositories';
 import * as searchActions from './search';
 import * as mockData from 'mock/data';
 import * as ExportPublicationsActions from './exportPublications';
-import { EXPORT_FORMAT_TO_EXTENSION, SESSION_COOKIE_NAME } from 'config/general';
-import Cookies from 'js-cookie';
-import { waitFor } from '@testing-library/dom';
+import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
 describe('Search action creators', () => {
     const testTitleSearchParam = 'global';
