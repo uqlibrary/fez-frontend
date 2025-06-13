@@ -5796,4 +5796,32 @@ describe('transformers', () => {
             ).toEqual([{ dsi_dsid: 'original.jpg' }]);
         });
     });
+
+    describe('getCollectionViewType', () => {
+        it('should return undefined if record is undefined', () => {
+            expect(transformers.getCollectionViewType()).toMatchObject({});
+        });
+
+        it('should return undefined if record is null', () => {
+            expect(transformers.getCollectionViewType(null)).toMatchObject({});
+        });
+
+        it('should return undefined if record is an empty object', () => {
+            expect(transformers.getCollectionViewType({})).toMatchObject({});
+        });
+
+        it('should return empty object if record contains an undefined rek_collection_view_type property', () => {
+            expect(transformers.getCollectionViewType({ rek_collection_view_type: undefined })).toMatchObject({});
+        });
+
+        it('should return empty object if record contains an empty object for the rek_collection_view_type property', () => {
+            expect(transformers.getCollectionViewType({ rek_collection_view_type: {} })).toMatchObject({});
+        });
+
+        it('should return a formatted object if the record contains a valid rek_collection_view_type property', () => {
+            expect(transformers.getCollectionViewType({ rek_collection_view_type: 123 })).toMatchObject({
+                fez_record_search_key_collection_view_type: { rek_collection_view_type: 123 },
+            });
+        });
+    });
 });
