@@ -201,10 +201,11 @@ export function loadSearchKeyList(searchKey, searchQuery) {
  *  activeFacets = {filters: {}, ranges: {}}
  * }
  *
- * @param searchParams
+ * @param {object} searchParams
+ * @param {boolean} isLoggedInUser
  * @return {function(*): Promise<any>}
  */
-export function searchEspacePublications(searchParams) {
+export function searchEspacePublications(searchParams, isLoggedInUser) {
     return dispatch => {
         dispatch({
             type: actions.SET_SEARCH_QUERY,
@@ -226,7 +227,19 @@ export function searchEspacePublications(searchParams) {
                 });
             })
             .catch(error => {
-                dispatch({
+                if (
+                    // in case of 401s for logged-in users
+                    // login dialog should be displayed up higher on the comp. tree - see App.js
+                    error.status === 401 &&
+                    isLoggedInUser
+                ) {
+                    return dispatch({
+                        type: actions.SEARCH_LOADED,
+                        payload: { data: [] },
+                    });
+                }
+
+                return dispatch({
                     type: actions.SEARCH_FAILED,
                     payload: error.message,
                 });

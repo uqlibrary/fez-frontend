@@ -144,7 +144,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                 searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
             );
             setSearchParams({ ...queryParams });
-            dispatch(actions.searchEspacePublications(queryParams));
+            dispatch(actions.searchEspacePublications(queryParams, !!account?.id));
             dispatch(actions.clearSearchQuery());
             dispatch(actions.resetExportPublicationsStatus());
         }

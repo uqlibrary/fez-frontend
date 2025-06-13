@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import Cookies from 'js-cookie';
@@ -81,6 +81,7 @@ const AppClass = ({
     const navigate = useNavigate();
     const location = useLocation();
 
+    const hadLoggedInUser = useRef(false);
     const [sessionExpiredConfirmationBox, setSessionExpiredConfirmationBox] = useState(null);
     const [menuDrawerOpen, setMenuDrawerOpen] = useState(false);
     const [docked, setDocked] = useState(false);
@@ -90,6 +91,12 @@ const AppClass = ({
     const handleResize = mediaQuery => {
         setDocked(mediaQuery.matches);
     };
+
+    useEffect(() => {
+        if (!account?.id || hadLoggedInUser.current) return;
+        hadLoggedInUser.current = true;
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [account?.id]);
 
     useEffect(() => {
         if (!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)) {
@@ -210,7 +217,12 @@ const AppClass = ({
     }
 
     let userStatusAlert = null;
-    if (!accountLoading && !account && !isPublicPage) {
+    if (
+        !accountLoading &&
+        !account &&
+        // not a public route or a logged-in user who performed a search with an expired session token included
+        (!isPublicPage || (hadLoggedInUser.current && location?.pathname === pathConfig.records.search))
+    ) {
         // user is not logged in
         userStatusAlert = {
             ...locale.global.loginAlert,
