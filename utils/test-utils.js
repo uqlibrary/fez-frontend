@@ -220,12 +220,12 @@ const expectMissingRequiredFieldError = async field =>
         expect(screen.queryByTestId(`${field}-helper-text`)).not.toBeInTheDocument();
     }));
 
-const setFileUploaderFilesToClosedAccess = async files => {
+const setFileUploaderFilesToClosedAccess = async (files, waitForOptions = {}) => {
     const { fireEvent } = reactTestingLib;
     // set all files to closed access
     for (const file of files) {
         const index = files.indexOf(file);
-        await waitForText(new RegExp(getFilenameBasename(file)));
+        await waitForText(new RegExp(getFilenameBasename(file)), waitForOptions);
         fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
         fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
     }
