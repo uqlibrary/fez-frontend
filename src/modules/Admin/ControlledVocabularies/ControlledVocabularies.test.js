@@ -132,9 +132,8 @@ describe('ControlledVocabularies', () => {
                 await showAddForm2().then(async ({ getByTestId, queryByTestId }) => {
                     await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
                     await userEvent.click(getByTestId('update_dialog-action-button'));
-                    await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
-                    // expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
-                    expect(queryByTestId('update_dialog-controlledVocabulary') === null);
+                    queryByTestId('update_dialog-controlledVocabulary') &&
+                        (await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary')));
                 });
             });
         });
