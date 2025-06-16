@@ -45,6 +45,43 @@ context('Add missing record', () => {
             .should('be.disabled');
     });
 
+    it('should show and hide an Author selection error', () => {
+        // Journal article requires subtype selection
+        cy.data('rek-display-type-select')
+            .should('exist')
+            .click();
+        cy.get('#submit-work').should('not.exist');
+        cy.data('rek-display-type-options')
+            .find('li[role=option]')
+            .contains('Journal Article')
+            .click();
+        cy.get('#submit-work').should('not.exist');
+
+        cy.data('rek-subtype-select')
+            .should('exist')
+            .click();
+        cy.data('rek-subtype-options')
+            .find('li[role=option]')
+            .contains('Article (original research)')
+            .click();
+        cy.get('#submit-work')
+            .should('exist')
+            .should('be.disabled');
+
+        cy.data('authors-input').type('New Author');
+        cy.data('authors-add').click();
+
+        cy.data('authors-error').contains('Please provide a list as described and select one as you');
+
+        cy.contains('New Author').click();
+
+        cy.data('authors-error').should('not.exist');
+
+        cy.contains('New Author').click();
+
+        cy.data('authors-error').contains('Please provide a list as described and select one as you');
+    });
+
     it('should validate form as expected', () => {
         // Choose Book > Textbook
         cy.get('[data-testid=rek-display-type-select]').click();
