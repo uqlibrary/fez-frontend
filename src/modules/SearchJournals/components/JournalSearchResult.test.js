@@ -1,8 +1,6 @@
 import React from 'react';
 import { render, WithRouter, WithReduxStore, fireEvent, within } from 'test-utils';
-
 import { pathConfig } from 'config';
-import Immutable from 'immutable';
 import locale from 'locale/components';
 import deparam from 'can-deparam';
 
@@ -17,7 +15,7 @@ jest.mock('react-router-dom', () => ({
 
 const setup = ({ state = {}, onSearchFn = jest.fn(), route = '/', initialEntries = ['/'] }) => {
     return render(
-        <WithReduxStore initialState={Immutable.Map({ searchJournalsReducer: state })}>
+        <WithReduxStore initialState={{ searchJournalsReducer: state }}>
             <WithRouter route={route} initialEntries={initialEntries}>
                 <JournalSearchResult onSearch={onSearchFn} />
             </WithRouter>

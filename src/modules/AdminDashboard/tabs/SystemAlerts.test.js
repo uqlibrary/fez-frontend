@@ -1,11 +1,7 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { render, WithReduxStore, within, waitFor, waitForElementToBeRemoved, userEvent } from 'test-utils';
-
 import * as DashboardActions from 'actions/adminDashboard';
 import * as repositories from 'repositories';
-
 import { adminDashboardSystemAlerts } from 'mock/data/testing/adminDashboard';
 import SystemAlerts from './SystemAlerts';
 
@@ -32,7 +28,7 @@ const setup = (props = {}, state = {}, renderer = render) => {
         ...state,
     };
     return renderer(
-        <WithReduxStore initialState={Immutable.Map(testState)}>
+        <WithReduxStore initialState={testState}>
             <SystemAlerts {...props} />
         </WithReduxStore>,
     );

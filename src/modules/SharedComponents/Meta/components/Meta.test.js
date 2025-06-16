@@ -2,10 +2,8 @@ import React from 'react';
 import * as records from 'mock/data/testing/records';
 import Meta, { getMetaTagContent, getMetaTags } from './Meta';
 import { pathConfig } from 'config';
-import Immutable from 'immutable';
 import { render, WithReduxStore, WithRouter } from 'test-utils';
 import { metaExpected } from 'mock/data/testing/meta';
-
 import { useLocation } from 'react-router-dom';
 
 jest.mock('react-router-dom', () => ({
@@ -58,7 +56,7 @@ function setup(testProps = {}, testState = {}, renderer = render) {
 
     return renderer(
         <WithRouter>
-            <WithReduxStore initialState={Immutable.Map(state)}>
+            <WithReduxStore initialState={state}>
                 <Meta {...props} />
             </WithReduxStore>
         </WithRouter>,

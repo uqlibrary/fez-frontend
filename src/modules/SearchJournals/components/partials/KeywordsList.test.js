@@ -1,12 +1,11 @@
 import React from 'react';
 import { render, WithReduxStore } from 'test-utils';
 import { KeywordsList } from './KeywordsList';
-import Immutable from 'immutable';
 import locale from '../../../../locale/components';
 
 const setup = state => {
     return render(
-        <WithReduxStore initialState={Immutable.Map({})}>
+        <WithReduxStore>
             <KeywordsList {...state} />
         </WithReduxStore>,
     );

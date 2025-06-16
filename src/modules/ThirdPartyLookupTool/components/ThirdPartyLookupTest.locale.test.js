@@ -1,6 +1,4 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { rtlRender, fireEvent, WithReduxStore } from 'test-utils';
 import { ThirdPartyLookupTool } from './ThirdPartyLookupTool';
 import * as actions from 'actions';
@@ -65,7 +63,7 @@ function setup(testProps = {}, testState = {}) {
     };
 
     return rtlRender(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <ThirdPartyLookupTool {...props} />
         </WithReduxStore>,
     );

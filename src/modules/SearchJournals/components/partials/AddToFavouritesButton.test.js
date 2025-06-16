@@ -1,13 +1,12 @@
 import React from 'react';
 import { fireEvent, render, WithReduxStore, waitFor, waitForElementToBeRemoved } from 'test-utils';
-import Immutable from 'immutable';
 import { AddToFavouritesButton } from './AddToFavouritesButton';
 import * as redux from 'react-redux';
 import { act } from '@testing-library/react';
 
 const setup = ({ state = {}, props = {} } = {}) => {
     return render(
-        <WithReduxStore initialState={Immutable.Map({ favouriteJournalsReducer: state })}>
+        <WithReduxStore initialState={{ favouriteJournalsReducer: state }}>
             <AddToFavouritesButton {...props} />
         </WithReduxStore>,
     );

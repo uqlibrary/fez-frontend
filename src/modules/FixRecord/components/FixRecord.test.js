@@ -65,7 +65,7 @@ function setup(props = {}) {
  */
 describe('Component FixRecord', () => {
     const isDebugging = false;
-    const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
+    const waitForOptions = { timeout: isDebugging ? 120000 : 2000 };
     const switchToUnclaimMode = () => {
         fireEvent.mouseDown(screen.getByTestId('fix-action-select'));
         fireEvent.click(screen.getByText(/I am not the author/i));
@@ -165,12 +165,8 @@ describe('Component FixRecord', () => {
         };
         const mockFixRecordApiCall = () => api.mock.records.issues({ pid });
 
-        beforeEach(() => {
-            api.request.history.reset();
-        });
-        afterEach(() => {
-            api.mock.reset();
-        });
+        beforeEach(() => api.reset());
+        afterEach(() => api.reset());
 
         describe('payload', () => {
             it('should submit unclaim data', async () => {

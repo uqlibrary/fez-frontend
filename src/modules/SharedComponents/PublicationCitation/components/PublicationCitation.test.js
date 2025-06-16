@@ -1,10 +1,7 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { PublicationCitation } from './PublicationCitation';
 import { mockRecordToFix, journalArticle } from 'mock/data/testing/records';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
-
 const mockUseNavigate = jest.fn();
 import { useLocation } from 'react-router-dom';
 
@@ -26,7 +23,7 @@ function setup(testProps = {}, testState = {}) {
         ...testState,
     };
     return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <PublicationCitation {...props} />
             </WithRouter>

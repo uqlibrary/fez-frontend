@@ -1,47 +1,51 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import Immutable from 'immutable';
-import { formValueSelector, getFormSyncErrors, change, Field, reduxForm, SubmissionError } from 'redux-form/immutable';
-
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { DocumentTypeSingleField, PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { DocumentTypeSingleField, PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { locale } from 'locale';
 import { validation } from 'config';
 import { usePublicationSubtype } from 'hooks';
 import { changeDisplayType } from 'actions';
+import { useValidatedForm } from 'hooks';
+import { Field } from '../../../Toolbox/ReactHookForm';
+import { useWatch } from 'react-hook-form';
 
-const FORM_NAME = 'ChangeDisplayTypeForm';
-const selector = formValueSelector(FORM_NAME);
-
-const onSubmit = (values, dispatch, props) => {
-    return dispatch(changeDisplayType(Object.values(props.recordsSelected), values.toJS(), true)).catch(error => {
-        throw new SubmissionError({ _error: error.message });
-    });
-};
-
-const onChange = (values, dispatch, props, prevValues) => {
-    if (values.get('rek_display_type') !== prevValues.get('rek_display_type')) {
-        dispatch(change(FORM_NAME, 'rek_subtype', null));
-    }
-};
-
-export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitSucceeded, onCancel }) => {
+export const ChangeDisplayTypeForm = ({ onCancel, recordsSelected }) => {
+    const dispatch = useDispatch();
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
-    const displayType = useSelector(state => selector(state, 'rek_display_type'));
-    const subtypes = usePublicationSubtype(displayType || null, true);
-    const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
-    const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
 
-    React.useEffect(() => {
-        if (submitSucceeded) {
-            setTimeout(onCancel, 2000);
-        }
+    const {
+        control,
+        safelyHandleSubmit,
+        setValue,
+        formState: { isSubmitting, isSubmitSuccessful, serverError, hasServerError, hasError },
+    } = useValidatedForm({
+        defaultValues: {
+            rek_display_type: null,
+            rek_subtype: null,
+        },
+    });
+
+    const displayType = useWatch({ control, name: 'rek_display_type' });
+    const subtypes = usePublicationSubtype(displayType || null, true);
+
+    // handles displayType changes
+    useEffect(() => {
+        setValue('rek_subtype', null);
+    }, [displayType, setValue]);
+
+    useEffect(() => {
+        if (!isSubmitSuccessful) return;
+        setTimeout(onCancel, 2000);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [submitSucceeded]);
+    }, [isSubmitSuccessful]);
+
+    const onSubmit = safelyHandleSubmit(
+        async data => await dispatch(changeDisplayType(Object.values(recordsSelected), data, true)),
+    );
 
     return (
         <form data-testid="change-display-type-form" id="change-display-type-form">
@@ -51,8 +55,9 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
                 </Grid>
                 <Grid item xs={12}>
                     <Field
+                        control={control}
                         component={DocumentTypeSingleField}
-                        disabled={submitting || submitSucceeded}
+                        disabled={isSubmitting || isSubmitSuccessful}
                         genericSelectFieldId="rek-display-type"
                         label={txt.changeDisplayTypeForm.formLabels.displayType}
                         name="rek_display_type"
@@ -63,9 +68,10 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
                 {!!displayType && subtypes.length > 0 && (
                     <Grid item xs={12}>
                         <Field
+                            control={control}
                             component={PublicationSubtypeField}
                             displayType={!!displayType && displayType}
-                            disabled={submitting || submitSucceeded}
+                            disabled={isSubmitting || isSubmitSuccessful}
                             label={txt.changeDisplayTypeForm.formLabels.subtype}
                             name="rek_subtype"
                             required
@@ -79,7 +85,7 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
                         children={txt.changeDisplayTypeForm.formLabels.cancelButtonLabel}
                         data-analyticsid="change-display-type-cancel"
                         data-testid="change-display-type-cancel"
-                        disabled={submitting}
+                        disabled={isSubmitting}
                         fullWidth
                         id="change-display-type-cancel"
                         onClick={onCancel}
@@ -93,25 +99,27 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
                         color="primary"
                         data-analyticsid="change-display-type-submit"
                         data-testid="change-display-type-submit"
-                        disabled={submitting || disableSubmit || submitSucceeded}
+                        disabled={hasError || isSubmitting || isSubmitSuccessful}
                         fullWidth
                         id="change-display-type-submit"
-                        onClick={handleSubmit}
+                        onClick={onSubmit}
                         variant="contained"
                     />
                 </Grid>
                 <Grid item xs={12}>
-                    {!!submitting && (
+                    {isSubmitting && (
                         <Alert
                             alertId="alert-info-change-display-type"
                             {...txt.changeDisplayTypeForm.submittingAlert}
                         />
                     )}
-                    {!!submitSucceeded && (
+                    {isSubmitSuccessful && (
                         <Alert alertId="alert-done-change-display-type" {...txt.changeDisplayTypeForm.successAlert} />
                     )}
-                    {!!error && (
-                        <Alert alertId="alert-error-change-display-type" {...txt.changeDisplayTypeForm.errorAlert} />
+                    {hasServerError && (
+                        <Alert alertId="alert-error-change-display-type" {...txt.changeDisplayTypeForm.errorAlert}>
+                            {serverError}
+                        </Alert>
                     )}
                 </Grid>
             </Grid>
@@ -120,17 +128,8 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
 };
 
 ChangeDisplayTypeForm.propTypes = {
-    error: PropTypes.string,
-    handleSubmit: PropTypes.func,
     onCancel: PropTypes.func,
-    submitting: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
+    recordsSelected: PropTypes.object,
 };
 
-const ChangeDisplayTypeReduxForm = reduxForm({
-    form: FORM_NAME,
-    onChange,
-    onSubmit,
-})(ChangeDisplayTypeForm);
-
-export default React.memo(ChangeDisplayTypeReduxForm);
+export default React.memo(ChangeDisplayTypeForm);

@@ -11,7 +11,7 @@ import {
 import { promptForDownload } from './exportPublicationsDataTransformers';
 import { store } from '../config/store';
 import { dismissAppAlert } from './app';
-import { lastRequest, api } from '../config/axios';
+import { apiLastRequest, api } from '../config/axios';
 import * as transformers from './journalTransformers';
 
 /**
@@ -32,7 +32,7 @@ const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined
 // it's hard to predict if that would suit all scenarios
 api.interceptors.response.use(response => {
     try {
-        if (lastRequest.url?.includes?.('journals/search')) {
+        if (apiLastRequest.url?.includes?.('journals/search')) {
             // dismiss error alert raised for previous error responses
             store.dispatch(dismissAppAlert());
         }
