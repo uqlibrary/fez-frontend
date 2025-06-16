@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { PublicationForm } from 'modules/SharedComponents/PublicationForm';
@@ -11,39 +10,29 @@ import { useNavigate } from 'react-router-dom';
 import { pathConfig } from 'config';
 import locale from 'locale/pages';
 import Grid from '@mui/material/Grid';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearNewRecord } from '../../../../actions';
+import { createConfirmDialogBoxRefAssigner } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
 
-export const NewRecord = ({
-    account,
-    actions,
-    rawSearchQuery = '',
-    newRecordFileUploadingOrIssueError,
-    author,
-    newRecord = {},
-}) => {
+export const NewRecord = () => {
+    const dispatch = useDispatch();
     const navigate = useNavigate();
-    const confirmationBoxRef = React.useRef();
+    const confirmDialogBoxRef = React.useRef();
+    const { author } = useSelector(state => state.get('accountReducer'));
+    const { rawSearchQuery } = useSelector(state => state.get('searchRecordsReducer'));
+    const { newRecord, newRecordFileUploadingOrIssueError } = useSelector(state => state.get('createRecordReducer'));
 
-    const setConfirmationRef = React.useCallback(node => {
-        confirmationBoxRef.current = node; // TODO: Add check that this worked
-    }, []);
-
-    const _recordSaved = () => {
-        // show record save successfully confirmation box
-        confirmationBoxRef.current.showConfirmation();
-    };
-
+    const _recordSaved = () => confirmDialogBoxRef.current.showConfirmation();
     const _restartWorkflow = () => {
-        actions.clearNewRecord();
+        dispatch(clearNewRecord());
         navigate(pathConfig.records.add.find);
     };
-
     const _navigateToMyResearch = () => {
-        actions.clearNewRecord();
+        dispatch(clearNewRecord());
         navigate(pathConfig.records.mine);
     };
-
     const _navigateToFixRecord = () => {
-        actions.clearNewRecord();
+        dispatch(clearNewRecord());
         navigate(pathConfig.records.fix(newRecord.rek_pid));
     };
 
@@ -54,27 +43,8 @@ export const NewRecord = ({
     }
 
     const txt = locale.pages.addRecord;
-
-    // set initial value only if it's a title (not pubmed/DOI)
-    const initialValues = {
-        currentAuthor: [
-            {
-                nameAsPublished: author.aut_display_name ? author.aut_display_name : '',
-                // eslint-disable-next-line camelcase
-                authorId: author?.aut_id,
-            },
-        ],
-        rek_title: rawSearchQuery || '',
-        isHdrStudent:
-            !!account &&
-            account.class &&
-            account.class.indexOf('IS_CURRENT') >= 0 &&
-            account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0,
-    };
-
-    const isPID = /UQ:(.*)/;
-    const showAlternateActionButton =
-        newRecord && newRecord.rek_pid && isPID.test(newRecord.rek_pid) && newRecordFileUploadingOrIssueError;
+    const initialValues = { rek_title: rawSearchQuery };
+    const showAlternateActionButton = !!newRecord?.rek_pid?.match?.(/UQ:.+/) && newRecordFileUploadingOrIssueError;
 
     // set confirmation message depending on file upload status
     const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
@@ -89,12 +59,12 @@ export const NewRecord = ({
     return (
         <React.Fragment>
             <ConfirmDialogBox
-                onRef={setConfirmationRef}
+                onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}
                 onAction={_navigateToMyResearch}
                 onCancelAction={_restartWorkflow}
-                showAlternateActionButton={showAlternateActionButton}
                 onAlternateAction={_navigateToFixRecord}
                 locale={saveConfirmationLocale}
+                showAlternateActionButton={showAlternateActionButton}
             />
             <PublicationForm
                 onFormSubmitSuccess={_recordSaved}
@@ -103,14 +73,6 @@ export const NewRecord = ({
             />
         </React.Fragment>
     );
-};
-NewRecord.propTypes = {
-    account: PropTypes.object,
-    actions: PropTypes.object.isRequired,
-    rawSearchQuery: PropTypes.string,
-    newRecordFileUploadingOrIssueError: PropTypes.bool,
-    author: PropTypes.object,
-    newRecord: PropTypes.object,
 };
 
 export default React.memo(NewRecord);

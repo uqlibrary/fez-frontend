@@ -1,23 +1,36 @@
 import React from 'react';
 import NewRecord from './NewRecord';
-import { render, WithReduxStore, WithRouter, fireEvent, waitFor } from 'test-utils';
-import * as RecordActions from 'actions/records';
+import {
+    render,
+    WithReduxStore,
+    WithRouter,
+    fireEvent,
+    waitFor,
+    expectApiRequestToMatchSnapshot,
+    api,
+    addFilesToFileUploader,
+    setFileUploaderFilesToClosedAccess,
+    waitToBeEnabled,
+    assertInstanceOfFile,
+    userEvent,
+} from 'test-utils';
 import { NEW_RECORD_API } from 'repositories/routes';
 
 const mockUseNavigate = jest.fn();
-
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,
 }));
 
 function setup(testProps = {}) {
-    const props = {
-        actions: {},
-        ...testProps,
-    };
+    const { author, account, rawSearchQuery, ...props } = testProps;
     return render(
-        <WithReduxStore>
+        <WithReduxStore
+            initialState={{
+                accountReducer: { account, author },
+                searchRecordsReducer: { rawSearchQuery },
+            }}
+        >
             <WithRouter>
                 <NewRecord {...props} />
             </WithRouter>
@@ -26,13 +39,9 @@ function setup(testProps = {}) {
 }
 
 describe('Add new record', () => {
-    beforeEach(() => {
-        mockActionsStore = setupStoreForActions();
-        mockApi = setupMockAdapter();
-    });
-
+    beforeEach(() => api.reset());
     afterEach(() => {
-        mockApi.reset();
+        api.reset();
         jest.clearAllMocks();
     });
 
@@ -47,14 +56,9 @@ describe('Add new record', () => {
     });
 
     it('should show confirmation box and navigate to the correct route on button clicks', async () => {
-        const requestCreateNewRecord = jest.spyOn(RecordActions, 'createNewRecord');
-        const clearNewRecordFn = jest.fn();
-        mockApi.onPost(NEW_RECORD_API().apiUrl).replyOnce(200, {
-            data: '',
-        });
+        api.mock.records.create({ data: '' });
         const { getByTestId, getByRole, getByText } = setup({
             author: { aut_display_name: 'Fred', aut_id: 44 },
-            actions: { clearNewRecord: clearNewRecordFn },
         });
 
         // interact with the form
@@ -81,50 +85,19 @@ describe('Add new record', () => {
             console.error(error);
         }
 
-        expect(requestCreateNewRecord).toBeCalledWith({
-            authors: [
-                {
-                    affiliation: '',
-                    affiliations: [],
-                    aut_title: '',
-                    authorId: null,
-                    creatorRole: '',
-                    disabled: false,
-                    nameAsPublished: 'author',
-                    orgaff: '',
-                    orgtype: '',
-                    required: false,
-                    selected: true,
-                    uqIdentifier: '',
-                    uqUsername: '',
-                },
-            ],
-            languages: ['eng'],
-            rek_date: '1911-05-01',
-            rek_display_type: 183,
-            rek_title: 'title',
-        });
-
+        expectApiRequestToMatchSnapshot('post', NEW_RECORD_API().apiUrl);
         fireEvent.click(getByRole('button', { name: 'Go to my works' }));
-        expect(clearNewRecordFn).toHaveBeenCalledTimes(1);
         expect(mockUseNavigate).toHaveBeenNthCalledWith(1, '/records/mine');
 
         fireEvent.click(getByRole('button', { name: 'Add another missing work' }));
-        expect(clearNewRecordFn).toHaveBeenCalledTimes(2);
         expect(mockUseNavigate).toHaveBeenNthCalledWith(2, '/records/add/find');
     });
 
     it('should show and navigate to fix record on button click and display file upload error', async () => {
-        const clearNewRecordFn = jest.fn();
-        mockApi.onPost(NEW_RECORD_API().apiUrl).replyOnce(200, {
-            data: '',
-        });
+        api.mock.records.create({ data: { rek_pid: 'UQ:1' } }).files.fail.upload();
         const { getByTestId, getByRole, getByText } = setup({
             author: { aut_id: 44 }, // no display name
             account: { class: ['IS_UQ_STUDENT_PLACEMENT', 'IS_CURRENT'] }, // hdr student
-            actions: { clearNewRecord: clearNewRecordFn },
-            newRecord: { rek_pid: 'UQ:1' },
-            newRecordFileUploadingOrIssueError: true,
         });
 
         // interact with the form
@@ -138,15 +111,18 @@ describe('Add new record', () => {
         fireEvent.change(getByTestId('authors-input'), { target: { value: 'author' } });
         fireEvent.click(getByRole('button', { name: 'Add author' }));
         fireEvent.click(getByRole('listitem', { name: 'Select this author (author) to assign it as you' }));
-
+        const mockFile = ['myTestImage.png'];
+        addFilesToFileUploader(mockFile);
+        await setFileUploaderFilesToClosedAccess(mockFile, { timeout: 2000 });
+        await waitToBeEnabled(getByRole('button', { name: 'Submit for approval' }));
         // submit to trigger confirmation box
-        fireEvent.click(getByRole('button', { name: 'Submit for approval' }));
-
+        await userEvent.click(getByRole('button', { name: 'Submit for approval' }));
         await waitFor(() => getByTestId('confirm-dialog-box'));
         expect(getByText(/File upload and\/or notes post failed/i)).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('post', NEW_RECORD_API().apiUrl);
+        expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
 
         fireEvent.click(getByRole('button', { name: 'Fix work' }));
-        expect(clearNewRecordFn).toHaveBeenCalledTimes(1);
         expect(mockUseNavigate).toHaveBeenCalledWith('/records/UQ:1/fix');
     });
 

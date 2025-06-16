@@ -1,11 +1,8 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { render, WithReduxStore, WithRouter, createMatchMedia, waitFor, act, userEvent } from 'test-utils';
 import Cookies from 'js-cookie';
 import { useParams } from 'react-router-dom';
 import * as JournalActions from 'actions/journals';
-
 import { accounts } from 'mock/data/account';
 import { journalDoaj } from 'mock/data';
 import JournalAdminContainer from './JournalAdminContainer';
@@ -51,7 +48,7 @@ function setup(testState = {}, renderer = render) {
     };
     return renderer(
         <WithRouter>
-            <WithReduxStore initialState={Immutable.Map(state)}>
+            <WithReduxStore initialState={state}>
                 <JournalAdminContainer />
             </WithReduxStore>
         </WithRouter>,

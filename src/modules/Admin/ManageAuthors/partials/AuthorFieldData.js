@@ -6,8 +6,13 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import ColumnTitle from '../partials/ColumnTitle';
 import CircularProgress from '@mui/material/CircularProgress';
 import InputAdornment from '@mui/material/InputAdornment';
+import { useFormContext } from 'react-hook-form';
 
 export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props }) => {
+    const {
+        formState: { isValidating },
+    } = useFormContext();
+
     return (
         <React.Fragment>
             <Grid item xs={2}>
@@ -29,7 +34,7 @@ export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props
                             fontWeight: 400,
                         },
                         ...props.InputProps,
-                        ...((!!props.meta.asyncValidating && {
+                        ...((isValidating && {
                             endAdornment: (
                                 <InputAdornment position="end">
                                     <CircularProgress
@@ -46,7 +51,7 @@ export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props
                     }}
                     InputLabelProps={{
                         style: {
-                            ...(!props.meta.error ? { color: '#4085C6' } : {}),
+                            ...(props.error || { color: '#4085C6' }),
                             fontWeight: 400,
                         },
                     }}
@@ -65,6 +70,7 @@ AuthorFieldData.propTypes = {
     meta: PropTypes.object,
     label: PropTypes.string,
     helperText: PropTypes.string,
+    error: PropTypes.bool,
     InputProps: PropTypes.object,
     onChange: PropTypes.func,
 };

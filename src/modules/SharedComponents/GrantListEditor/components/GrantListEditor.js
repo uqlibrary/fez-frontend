@@ -63,7 +63,7 @@ const GrantListEditor = ({
             }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [grantFormPopulated, form?.setValue, onChange]);
+    }, [grantFormPopulated]);
 
     // propagate `grants` changes to input
     useEffect(() => {
@@ -78,7 +78,7 @@ const GrantListEditor = ({
             onChange(grants);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(grants), form?.setValue, onChange]);
+    }, [JSON.stringify(grants)]);
 
     const addGrant = useCallback(
         grant => {

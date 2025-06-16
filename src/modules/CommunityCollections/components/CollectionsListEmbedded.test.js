@@ -1,10 +1,6 @@
 import React from 'react';
 import { act, render, fireEvent, WithReduxStore, WithRouter, waitFor, createMatchMedia, within } from 'test-utils';
-
 import * as mockData from 'mock/data';
-
-import Immutable from 'immutable';
-
 import CollectionsListEmbedded from './CollectionsListEmbedded';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
@@ -25,7 +21,7 @@ const testProps = {
 
 const setup = (testProps = {}, state = {}) => {
     return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <CollectionsListEmbedded {...testProps} />
             </WithRouter>

@@ -301,7 +301,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
@@ -350,7 +350,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
@@ -399,7 +399,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
@@ -670,7 +670,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
@@ -719,7 +719,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
@@ -768,7 +768,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div

@@ -33,22 +33,31 @@ interface ApiUrls {
     };
 }
 
-interface RecordApi {
-    create: (params: Params) => RecordApi;
-    get: (params: Params) => RecordApi;
-    update: (params: Params) => RecordApi;
-    delete: (params: Params) => RecordApi;
-    issues: (params: Params) => RecordApi;
-    files: DatastreamApi;
+interface DatastreamApi {
+    presignedUrl: (params?: Params) => DatastreamApi;
+    put: (params?: Params) => DatastreamApi;
+    upload: (attributes?: Params, defaults?: Params) => DatastreamApi;
+    fail: {
+        upload: () => DatastreamApi;
+    };
+    records: RecordApi;
     cvo: ControlledVocabApi;
     instance: MockAdapter;
 }
 
-interface DatastreamApi {
-    presignedUrl: (params: Params) => DatastreamApi;
-    put: (params: Params) => DatastreamApi;
-    upload: (attributes?: Params, defaults?: Params) => DatastreamApi;
-    records: RecordApi;
+interface RecordApi {
+    create: (params?: Params) => RecordApi;
+    get: (params?: Params) => RecordApi;
+    update: (params?: Params) => RecordApi;
+    bulkUpdate: (params?: Params) => RecordApi;
+    delete: (params?: Params) => RecordApi;
+    issues: (params?: Params) => RecordApi;
+    fail: {
+        create: () => RecordApi;
+        update: (params?: Params) => RecordApi;
+        bulkUpdate: (params?: Params) => RecordApi;
+    };
+    files: DatastreamApi;
     cvo: ControlledVocabApi;
     instance: MockAdapter;
 }
@@ -74,6 +83,7 @@ interface Api {
             reset: () => void;
         };
     };
+    reset: () => void;
 }
 
 const replyMethod = (once: boolean): 'reply' | 'replyOnce' => (once ? 'replyOnce' : 'reply');
@@ -100,49 +110,63 @@ const wrapper: Api = {
     mock: {
         instance: mockApi,
         records: {
-            create: function({ status = 200, pid = '', data = {}, once = true }: Params) {
+            create: function({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
                 this.instance.onPost(wrapper.url.records.create)[replyMethod(once)](status, {
                     data: { rek_pid: pid, ...data },
                 });
                 return this;
             },
-            get: function({ status = 200, pid = '', data = {}, once = true }: Params) {
+            get: function({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
                 this.instance.onGet(wrapper.url.records.get(pid))[replyMethod(once)](status, {
                     data: { rek_pid: pid, ...data },
                 });
                 return this;
             },
-            update: function({ status = 200, pid = '', data = {}, once = true }: Params) {
+            update: function({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
                 this.instance.onPatch(wrapper.url.records.get(pid))[replyMethod(once)](status, {
                     data: { rek_pid: pid, ...data },
                 });
                 return this;
             },
-            delete: function({ status = 200, pid = '', once = true }: Params) {
+            bulkUpdate: function({ status = 200, data = {}, once = true }: Params = {}) {
+                this.instance.onPatch(wrapper.url.records.create)[replyMethod(once)](status, { data });
+                return this;
+            },
+            delete: function({ status = 200, pid = '', once = true }: Params = {}) {
                 this.instance.onDelete(wrapper.url.records.get(pid))[replyMethod(once)](status, {
                     data: 'Record deleted',
                 });
                 return this;
             },
-            issues: function({ status = 200, pid = '', data = {}, once = true }: Params) {
+            issues: function({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
                 this.instance.onPost(wrapper.url.records.issues(pid))[replyMethod(once)](status, { data });
                 return this;
+            },
+            fail: {
+                create: () => wrapper.mock.records.create({ status: 500 }),
+                update: ({ pid = '', data = {}, once = true }: Params = {}) =>
+                    wrapper.mock.records.update({ status: 500, pid, data, once }),
+                bulkUpdate: ({ data = {}, once = true }: Params = {}) =>
+                    wrapper.mock.records.bulkUpdate({ status: 500, data, once }),
             },
             files: {} as DatastreamApi,
             cvo: {} as ControlledVocabApi,
             instance: {} as MockAdapter,
         },
         files: {
-            presignedUrl: function({ status = 200, once = true }: Params) {
+            presignedUrl: function({ status = 200, once = true }: Params = {}) {
                 this.instance.onPost(wrapper.url.files.presignedUrl)[replyMethod(once)](status, wrapper.url.files.put);
                 return this;
             },
-            put: function({ status = 200, once = true }: Params) {
+            put: function({ status = 200, once = true }: Params = {}) {
                 this.instance.onPut(wrapper.url.files.put)[replyMethod(once)](status);
                 return this;
             },
-            upload: function(params: Params = {}, defaults: Params = { status: 200, once: true }) {
-                return this.presignedUrl({ ...defaults, ...params }).put({ ...defaults, ...params });
+            upload: function({ status = 200, once = true }: Params = {}) {
+                return this.presignedUrl({ status, once }).put({ status, once });
+            },
+            fail: {
+                upload: () => wrapper.mock.files.presignedUrl({ once: false }).put({ status: 500, once: false }),
             },
             records: {} as RecordApi,
             cvo: {} as ControlledVocabApi,
@@ -165,6 +189,10 @@ const wrapper: Api = {
         history: {
             reset: () => clearLastRequest(),
         },
+    },
+    reset: function() {
+        this.mock.reset();
+        this.request.history.reset();
     },
 };
 

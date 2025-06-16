@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react';
-import PropTypes from 'prop-types';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
@@ -19,15 +18,15 @@ import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
 
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setClaimPublication, setRedirectPath } from '../../../../actions';
 
-export const RecordsSearchResults = ({
-    actions,
-    publicationsList = [],
-    searchLoading,
-    loadingPublicationSources = [],
-    rawSearchQuery,
-}) => {
+export const RecordsSearchResults = () => {
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+    const { loadingPublicationSources, publicationsList, searchLoading, rawSearchQuery } = useSelector(state =>
+        state.get('searchRecordsReducer'),
+    );
 
     const autoFocus = element => {
         publicationsList.length === 0 && element?.focus();
@@ -42,8 +41,8 @@ export const RecordsSearchResults = ({
     };
 
     const _claimPublication = item => {
-        actions.setClaimPublication(item);
-        actions.setRedirectPath(pathConfig.records.add.find);
+        dispatch(setClaimPublication(item));
+        dispatch(setRedirectPath(pathConfig.records.add.find));
         navigate(pathConfig.records.claim);
     };
 
@@ -180,14 +179,6 @@ export const RecordsSearchResults = ({
             </Grid>
         </React.Fragment>
     );
-};
-
-RecordsSearchResults.propTypes = {
-    publicationsList: PropTypes.array,
-    searchLoading: PropTypes.bool,
-    loadingPublicationSources: PropTypes.object,
-    actions: PropTypes.object.isRequired,
-    rawSearchQuery: PropTypes.string,
 };
 
 export default React.memo(RecordsSearchResults);

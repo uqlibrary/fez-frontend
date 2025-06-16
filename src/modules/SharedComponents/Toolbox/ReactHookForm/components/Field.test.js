@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import Field, { validateHandler } from './Field';
 import Controller from './Controller';
+import { userEvent } from 'test-utils';
 
 jest.mock('./Controller', () => ({
     __esModule: true,
@@ -47,6 +48,19 @@ describe('Field component', () => {
         const input = getByTestId('field-input');
         expect(input).toHaveAttribute('placeholder', 'Enter text here');
         expect(input).toHaveAttribute('maxLength', '10');
+    });
+
+    describe('normalize', () => {
+        it('should call given normalize function on onChange', async () => {
+            const normalize = jest.fn();
+            const { getByTestId } = setup({ placeholder: 'Enter text here', maxLength: 10, normalize });
+
+            await userEvent.type(getByTestId('field-input'), 'test');
+            expect(normalize).toHaveBeenCalledWith('t');
+            expect(normalize).toHaveBeenCalledWith('e');
+            expect(normalize).toHaveBeenCalledWith('s');
+            expect(normalize).toHaveBeenCalledWith('t');
+        });
     });
 
     describe('validateHandler', () => {
