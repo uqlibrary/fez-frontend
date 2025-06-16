@@ -2,7 +2,7 @@ import React from 'react';
 
 import { within, render, userEvent } from 'test-utils';
 
-import { LocalizationProvider } from '@mui/x-date-pickers';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { emptyReportActionState as actionState } from '../reducers';
 

@@ -37,7 +37,7 @@ jest.mock('@mui/x-charts', () => ({
 }));
 
 // jest.mock('@date-io/moment');
-import MomentUtils from '@date-io/moment';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 // setup global fetch for navigate in jest
 import 'whatwg-fetch';
 
@@ -94,7 +94,7 @@ global.renderComponent = (component, props, args = {}) => {
             <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
                 <StyledEngineProvider injectFirst>
                     <ThemeProvider theme={mui1theme}>
-                        <LocalizationProvider dateAdapter={MomentUtils}>
+                        <LocalizationProvider dateAdapter={AdapterMoment}>
                             {React.createElement(component, props)}
                         </LocalizationProvider>
                     </ThemeProvider>
@@ -131,7 +131,7 @@ MockDate.set('6/30/2017');
 
 global.mockDate = MockDate;
 
-//ResizeObserver is either not available or not correctly recognized in the test environment
+// ResizeObserver is either not available or not correctly recognized in the test environment
 class ResizeObserver {
     observe() {}
     unobserve() {}
