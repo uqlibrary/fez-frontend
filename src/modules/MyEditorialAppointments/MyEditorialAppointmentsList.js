@@ -1,13 +1,14 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import MaterialTable, { MTableAction, MTableBodyRow, MTableEditRow } from '@material-table/core';
 import moment from 'moment';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Box from '@mui/material/Box';
+import { GridRowModes, DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
 
 import { tableIcons } from './MyEditorialAppointmentsListIcons';
 import Typography from '@mui/material/Typography';
@@ -28,6 +29,23 @@ import {
     EDITORIAL_ROLE_OPTIONS,
     EDITORIAL_ROLE_OTHER,
 } from 'config/general';
+
+import { useDataGrid } from 'hooks';
+
+const classes = {
+    text: {
+        fontSize: 13,
+    },
+    h6text: {
+        display: 'block',
+        marginBlockStart: 0,
+        marginBlockEnd: 0,
+        marginInlineStart: 0,
+        marginInlineEnd: 0,
+        fontWeight: 400,
+        fontSize: 20,
+    },
+};
 
 const StyledToolbar = styled(Typography)(() => ({
     margin: '8px',
@@ -60,6 +78,9 @@ const StyledDatePicker = styled(DatePicker)(({ theme }) => ({
 }));
 
 const StyledResponsiveWrapper = styled('div')(({ theme }) => ({
+    padding: 2,
+    display: 'flex',
+    flexDirection: 'column',
     [theme.breakpoints.down('md')]: {
         '& [class*="MuiToolbar-root"]': {
             padding: 0,
@@ -99,9 +120,10 @@ const StyledResponsiveWrapper = styled('div')(({ theme }) => ({
     },
 }));
 
-export const GetColumns = () => {
+export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
     const theme = useTheme();
     const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
+    const rowIdentifier = 'eap_id';
 
     const {
         header: {
@@ -119,48 +141,118 @@ export const GetColumns = () => {
                 endYearLabel,
                 endYearHint,
                 endYearErrorMessage,
+                addButtonTooltip,
+                editButtonTooltip,
+                deleteButtonTooltip,
             },
         },
+        row: {
+            locale: { deleteConfirmLabel },
+            noRowsLabel,
+        },
     } = locale.components.myEditorialAppointmentsList;
-    return [
-        {
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {journalName.title}
-                </Typography>
-            ),
-            field: 'eap_journal_name',
-            render: rowData => (
-                <Typography
-                    variant="body2"
-                    data-testid={`eap-journal-name-${rowData.tableData.id}`}
-                    id={`eap-journal-name-${rowData.tableData.id}`}
-                >
-                    {rowData.eap_journal_name}
-                </Typography>
-            ),
-            editComponent: props => {
-                const { rowData } = props;
-                const handleChange = selectedItem => {
-                    props.onRowDataChange({
-                        ...rowData,
-                        eap_jnl_id: selectedItem.jnl_jid,
-                        eap_journal_name: selectedItem.jnl_title || selectedItem.value,
-                    });
-                };
 
+    const handleEditingApproved = props => (action, newData, oldData) => {
+        const invalid = props.columns.some(column => !column.validate(newData));
+        /* istanbul ignore if  */
+        if (invalid) {
+            return;
+        }
+        props.onEditingApproved(action, newData, oldData);
+    };
+
+    const _handleRowUpdate = React.useCallback(
+        (newData, oldData) =>
+            handleRowUpdate(newData, oldData)
+                .then(() => {
+                    return new Promise(resolve => {
+                        resolve(newData);
+                    });
+                })
+                .catch(() => {
+                    return oldData;
+                }),
+        [handleRowUpdate],
+    );
+
+    const _handleRowDelete = React.useCallback(
+        (rows, rowToDelete) =>
+            handleRowDelete(rowToDelete)
+                .then(() => {
+                    return new Promise(resolve => {
+                        resolve(rows.filter(row => row[rowIdentifier] !== rowToDelete[rowIdentifier]));
+                    });
+                })
+                .catch(() => {
+                    return rows;
+                }),
+        [handleRowDelete],
+    );
+
+    const {
+        loading,
+        deleteRowId,
+        rows,
+        rowModesModel,
+        handleUpdateRow,
+        handleDeleteRow,
+        handleRowModesModelChange,
+        handleEditClick,
+        handleSaveClick,
+        handleDeleteClick,
+        handleCancelClick,
+    } = useDataGrid(list, _handleRowUpdate, _handleRowDelete);
+
+    const columns = [
+        {
+            field: 'eap_journal_name',
+            headerName: journalName.title,
+            headerClassName: 'header-styled',
+            editable: true,
+            renderCell: params => {
+                const index = rows.findIndex(row => row.eap_id === params.id);
+                if (!!deleteRowId && params.row.fvs_id === deleteRowId) {
+                    return (
+                        <Typography
+                            data-testid={`delete-row-${index}`}
+                            id={`delete-row-${index}`}
+                            sx={{ ...classes.h6text }}
+                            component={'h6'}
+                        >
+                            {deleteConfirmLabel}
+                        </Typography>
+                    );
+                }
+
+                return (
+                    <Typography
+                        variant="body2"
+                        data-testid={`eap-journal-name-${params.id}`}
+                        id={`eap-journal-name-${params.id}`}
+                    >
+                        {params.value}
+                    </Typography>
+                );
+            },
+            renderEditCell: params => {
                 return (
                     <React.Fragment>
                         <JournalIdField
                             autoFocus
                             journalIdFieldId="eap-journal-name"
                             value={
-                                !!rowData.eap_jnl_id
-                                    ? { id: rowData.eap_jnl_id, value: props.value }
-                                    : { value: props.value }
+                                !!params.row.eap_jnl_id
+                                    ? { id: params.row.eap_jnl_id, value: params.value }
+                                    : { value: params.value }
                             }
-                            onChange={handleChange}
-                            error={(rowData.eap_journal_name || '').length === 0}
+                            onChange={e => {
+                                params.api.setEditCellValue({
+                                    id: params.id,
+                                    field: params.field,
+                                    value: e.target.value,
+                                });
+                            }}
+                            error={(params.row.eap_journal_name || '').length === 0}
                             label={journalNameLabel}
                             placeholder={journalNameHint}
                             required
@@ -172,90 +264,79 @@ export const GetColumns = () => {
                     </React.Fragment>
                 );
             },
-            validate: rowData => !!rowData.eap_journal_name && rowData.eap_journal_name !== '',
-            cellStyle: matchesMd
-                ? {
-                      width: '45%',
-                      maxWidth: '45%',
-                  }
-                : {
-                      display: 'block',
-                      width: '100%',
-                      boxSizing: 'border-box',
-                  },
-            headerStyle: {
-                width: '45%',
-                maxWidth: '45%',
-            },
+            preProcessEditCellProps: params => ({
+                ...params.props,
+                error: !!params.props.eap_journal_name && params.props.eap_journal_name !== '',
+            }),
+            flex: 1,
         },
         {
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {role.title}
-                </Typography>
-            ),
             field: 'eap_role_name',
-            render: rowData => (
+            headerName: role.title,
+            headerClassName: 'header-styled',
+            editable: true,
+            renderCell: params => (
                 <Typography
                     variant="body2"
-                    id={`eap-role-name-${rowData.tableData.id}`}
-                    data-testid={`eap-role-name-${rowData.tableData.id}`}
+                    id={`eap-role-name-${params.id}`}
+                    data-testid={`eap-role-name-${params.id}`}
                 >
-                    {`${EDITORIAL_ROLE_MAP[rowData.eap_role_cvo_id]}${
-                        !!rowData.eap_role_name ? ' (' + rowData.eap_role_name + ')' : ''
+                    {`${EDITORIAL_ROLE_MAP[params.row.eap_role_cvo_id]}${
+                        !!params.value ? ' (' + params.value + ')' : ''
                     }`}
                 </Typography>
             ),
-            editComponent: props => {
-                const { rowData } = props;
-
-                const handleChange = selectedItem => {
-                    props.onRowDataChange({
-                        ...rowData,
-                        eap_role_cvo_id: selectedItem,
-                        eap_role_name: null,
-                    });
-                };
-
-                const handleClear = () =>
-                    props.onRowDataChange({ ...rowData, eap_role_name: null, eap_role_cvo_id: null });
-
-                const handleRoleNameChangeForOther = e => {
-                    props.onRowDataChange({ ...rowData, eap_role_name: e.target.value });
-                };
-
+            renderEditCell: params => {
                 return (
                     <React.Fragment>
                         <RoleField
-                            {...props}
+                            {...params.props}
                             autoCompleteSelectFieldId="eap-role-cvo-id"
                             fullWidth
                             clearable
-                            key={`eap-role-${rowData.eap_role_cvo_id}`}
+                            key={`eap-role-${params.props.eap_role_cvo_id}`}
                             id="eap-role-cvo-id"
                             floatingLabelText={editorialRoleLabel}
                             hintText={editorialRoleHint}
-                            onChange={handleChange}
-                            onClear={handleClear}
+                            onChange={selectedItem =>
+                                params.api.setEditCellValue({
+                                    id: params.id,
+                                    eap_role_cvo_id: selectedItem,
+                                    eap_role_name: null,
+                                })
+                            }
+                            onClear={() =>
+                                params.api.setEditCellValue({
+                                    id: params.id,
+                                    eap_role_cvo_id: null,
+                                    eap_role_name: null,
+                                })
+                            }
                             itemsList={EDITORIAL_ROLE_OPTIONS}
                             required
                             autoComplete="off"
-                            error={!rowData.eap_role_cvo_id}
+                            error={!params.props.eap_role_cvo_id}
                             value={
-                                !!rowData.eap_role_cvo_id
+                                !!params.props.eap_role_cvo_id
                                     ? {
-                                          value: String(rowData.eap_role_cvo_id),
-                                          text: EDITORIAL_ROLE_MAP[String(rowData.eap_role_cvo_id)],
+                                          value: String(params.props.eap_role_cvo_id),
+                                          text: EDITORIAL_ROLE_MAP[String(params.props.eap_role_cvo_id)],
                                       }
                                     : null
                             }
                         />
-                        {String(rowData.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER && (
+                        {String(params.props.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER && (
                             <SharedTextField
-                                value={rowData.eap_role_name || ''}
-                                onChange={handleRoleNameChangeForOther}
+                                value={params.value || ''}
+                                onChange={e =>
+                                    params.api.setEditCellValue({
+                                        id: params.id,
+                                        field: params.field,
+                                        value: e.target.value,
+                                    })
+                                }
                                 textFieldId="eap-role-name"
-                                error={!rowData.eap_role_name}
+                                error={!params.value}
                                 label={otherRoleLabel}
                                 placeholder={otherRoleHint}
                                 required
@@ -265,46 +346,40 @@ export const GetColumns = () => {
                     </React.Fragment>
                 );
             },
-            validate: rowData =>
-                !!rowData.eap_role_cvo_id &&
-                (String(rowData.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER ? !!rowData.eap_role_name : true),
-            cellStyle: matchesMd
-                ? {
-                      width: '25%',
-                      maxWidth: '25%',
-                  }
-                : {
-                      display: 'block',
-                      width: '100%',
-                      boxSizing: 'border-box',
-                  },
-            headerStyle: {
-                width: '25%',
-                maxWidth: '25%',
-            },
+            preProcessEditCellProps: params => ({
+                ...params.props,
+                error:
+                    params.props.value === !!params.row.eap_role_cvo_id &&
+                    (String(params.row.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER ? !!params.value : true),
+            }),
+            flex: 1,
         },
         {
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {startYear.title}
-                </Typography>
-            ),
             field: 'eap_start_year',
-            render: rowData => (
+            headerName: startYear.title,
+            headerClassName: 'header-styled',
+            editable: true,
+            renderCell: params => (
                 <Typography
                     variant="body2"
-                    id={`eap-start-year-${rowData.tableData.id}`}
-                    data-testid={`eap-start-year-${rowData.tableData.id}`}
+                    id={`eap-start-year-${params.id}`}
+                    data-testid={`eap-start-year-${params.id}`}
                 >
-                    {rowData.eap_start_year}
+                    {params.value}
                 </Typography>
             ),
-            editComponent: props => {
+            renderEditCell: params => {
                 return (
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <StyledDatePicker
-                            value={(!!props.value && moment(String(props.value), 'YYYY')) || null}
-                            onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
+                            value={(!!params.value && moment(String(params.value), 'YYYY')) || null}
+                            onChange={value => {
+                                params.api.setEditCellValue({
+                                    id: params.id,
+                                    field: params.field,
+                                    value: (!!value && value.format('YYYY')) || null,
+                                });
+                            }}
                             views={['year']}
                             openTo="year"
                             disableFuture
@@ -339,51 +414,33 @@ export const GetColumns = () => {
                     </LocalizationProvider>
                 );
             },
-            validate: rowData => {
-                const startYearMoment = moment(String(rowData.eap_start_year), 'YYYY');
-                return (
-                    startYearMoment.isValid() &&
-                    startYearMoment.isSameOrBefore(moment(), 'year') &&
-                    startYearMoment.isSameOrAfter(moment(EDITORIAL_APPOINTMENT_MIN_YEAR, 'YYYY'))
-                );
+            preProcessEditCellProps: params => {
+                const startYearMoment = moment(String(params.props.value), 'YYYY');
+                return {
+                    ...params.props,
+                    error:
+                        startYearMoment.isValid() &&
+                        startYearMoment.isSameOrBefore(moment(), 'year') &&
+                        startYearMoment.isSameOrAfter(moment(EDITORIAL_APPOINTMENT_MIN_YEAR, 'YYYY')),
+                };
             },
-            cellStyle: matchesMd
-                ? {
-                      width: '15%',
-                      maxWidth: '15%',
-                      float: 'none',
-                  }
-                : {
-                      width: '100%',
-                      display: 'block',
-                      boxSizing: 'border-box',
-                  },
-            headerStyle: {
-                width: '15%',
-                maxWidth: '15%',
-            },
+            flex: 1,
         },
         {
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {endYear.title}
-                </Typography>
-            ),
             field: 'eap_end_year',
-            render: rowData => (
-                <Typography
-                    variant="body2"
-                    id={`eap-end-year-${rowData.tableData.id}`}
-                    data-testid={`eap-end-year-${rowData.tableData.id}`}
-                >
-                    {moment(String(rowData.eap_end_year), 'YYYY').format('YYYY') === moment(new Date()).format('YYYY')
+            headerName: endYear.title,
+            headerClassName: 'header-styled',
+            editable: true,
+            renderCell: params => (
+                <Typography variant="body2" id={`eap-end-year-${params.id}`} data-testid={`eap-end-year-${params.id}`}>
+                    {moment(String(params.value), 'YYYY').format('YYYY') === moment(new Date()).format('YYYY')
                         ? locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel
-                        : rowData.eap_end_year}
+                        : params.value}
                 </Typography>
             ),
-            editComponent: ({ value, rowData, onChange }) => {
+            renderEditCell: ({ value, row, ...params }) => {
                 const minDate = new Date();
-                minDate.setFullYear(parseInt(rowData.eap_start_year, 10));
+                minDate.setFullYear(parseInt(row.eap_start_year, 10));
                 minDate.setDate(1);
                 minDate.setMonth(0);
                 return (
@@ -391,7 +448,11 @@ export const GetColumns = () => {
                         <StyledDatePicker
                             value={(!!value && moment(String(value), 'YYYY')) || null}
                             onChange={value => {
-                                onChange((!!value && value.format('YYYY')) || null);
+                                params.api.setEditCellValue({
+                                    id: params.id,
+                                    field: params.field,
+                                    value: (!!value && value.format('YYYY')) || null,
+                                });
                             }}
                             {...((!!value &&
                                 moment(String(value), 'YYYY').format('YYYY') === moment().format('YYYY') && {
@@ -432,7 +493,7 @@ export const GetColumns = () => {
                                             !!value &&
                                             (!moment(String(value), 'YYYY').isValid() ||
                                                 moment(String(value), 'YYYY').isBefore(
-                                                    moment(String(rowData.eap_start_year), 'YYYY'),
+                                                    moment(String(row.eap_start_year), 'YYYY'),
                                                 ))
                                                 ? endYearErrorMessage
                                                 : '',
@@ -445,7 +506,7 @@ export const GetColumns = () => {
                                         error:
                                             !moment(String(value), 'YYYY').isValid() ||
                                             moment(String(value), 'YYYY').isBefore(
-                                                moment(String(rowData.eap_start_year), 'YYYY'),
+                                                moment(String(row.eap_start_year), 'YYYY'),
                                             ),
                                     };
                                 },
@@ -454,220 +515,277 @@ export const GetColumns = () => {
                     </LocalizationProvider>
                 );
             },
-            validate: rowData => {
-                const endYearMoment = moment(String(rowData.eap_end_year), 'YYYY');
-                return (
-                    endYearMoment.isValid() &&
-                    endYearMoment.isSameOrBefore(moment(EDITORIAL_APPOINTMENT_MAX_YEAR, 'YYYY')) &&
-                    endYearMoment.isSameOrAfter(moment(String(rowData.eap_start_year), 'YYYY'))
-                );
+            preProcessEditCellProps: params => {
+                const endYearMoment = moment(String(params.props.value), 'YYYY');
+                return {
+                    ...params.props,
+                    error:
+                        endYearMoment.isValid() &&
+                        endYearMoment.isSameOrBefore(moment(EDITORIAL_APPOINTMENT_MAX_YEAR, 'YYYY')) &&
+                        endYearMoment.isSameOrAfter(moment(String(params.row.eap_start_year), 'YYYY')),
+                };
             },
-            cellStyle: matchesMd
-                ? {
-                      width: '15%',
-                      maxWidth: '15%',
-                      float: 'none',
-                  }
-                : {
-                      width: '100%',
-                      display: 'block',
-                      boxSizing: 'border-box',
-                  },
-            headerStyle: {
-                width: '15%',
-                maxWidth: '15%',
+            flex: 1,
+        },
+        {
+            field: 'actions',
+            type: 'actions',
+            headerName: 'Actions',
+            width: 96,
+            cellClassName: 'cell-styled',
+            getActions: params => {
+                const isAnyInEditMdode = Object.values(rowModesModel).some(
+                    rowMode => rowMode.mode === GridRowModes.Edit,
+                );
+                const isAnyDeleting = !!deleteRowId;
+                const isInEditMode = rowModesModel[params.id]?.mode === GridRowModes.Edit;
+                const isDeleting = params.id === deleteRowId;
+                const index = rows.findIndex(row => row[rowIdentifier] === params.id);
+                if (isInEditMode || isDeleting) {
+                    return [
+                        <GridActionsCellItem
+                            icon={<tableIcons.Check />}
+                            label="Save"
+                            sx={{
+                                color: 'primary.main',
+                            }}
+                            onClick={!isDeleting ? handleSaveClick(params.id) : handleDeleteRow(params.id, rows)}
+                            data-testid={`my-editorial-appointments-list-row-${index}-save`}
+                        />,
+                        <GridActionsCellItem
+                            icon={<tableIcons.Clear />}
+                            label="Cancel"
+                            className="textPrimary"
+                            onClick={handleCancelClick(params.id)}
+                            color="inherit"
+                            data-testid={`my-editorial-appointments-list-row-${index}-cancel`}
+                        />,
+                    ];
+                }
+
+                return [
+                    <GridActionsCellItem
+                        icon={<tableIcons.Edit />}
+                        label="Edit"
+                        className="textPrimary"
+                        onClick={handleEditClick(params.id)}
+                        color="inherit"
+                        data-testid={`my-editorial-appointments-list-row-${index}-edit`}
+                        disabled={isAnyInEditMdode || isAnyDeleting}
+                    />,
+                    <GridActionsCellItem
+                        icon={<tableIcons.Delete />}
+                        label="Delete"
+                        onClick={handleDeleteClick(params.id)}
+                        color="inherit"
+                        data-testid={`my-editorial-appointments-list-row-${index}-delete`}
+                        disabled={isAnyInEditMdode || isAnyDeleting}
+                    />,
+                ];
             },
         },
     ];
-};
-
-export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
-    const materialTableRef = React.createRef();
-    const columns = React.createRef();
-    columns.current = GetColumns();
-
-    const {
-        form: {
-            locale: { addButtonTooltip, editButtonTooltip, deleteButtonTooltip },
-        },
-    } = locale.components.myEditorialAppointmentsList;
-
-    const [data, setData] = React.useState(list);
-    const handleEditingApproved = props => (action, newData, oldData) => {
-        const invalid = props.columns.some(column => !column.validate(newData));
-        /* istanbul ignore if  */
-        if (invalid) {
-            return;
-        }
-        props.onEditingApproved(action, newData, oldData);
-    };
 
     return (
-        <MaterialTable
-            tableRef={materialTableRef}
-            columns={columns.current}
-            components={{
-                Container: props => (
-                    <StyledResponsiveWrapper
-                        {...props}
-                        id="my-editorial-appointments-list"
-                        data-testid="my-editorial-appointments-list"
-                    />
-                ),
-                Row: props => (
-                    <MTableBodyRow
-                        {...props}
-                        id={`my-editorial-appointments-list-row-${props.index}`}
-                        data-testid={`my-editorial-appointments-list-row-${props.index}`}
-                    />
-                ),
-                EditRow: props => (
-                    <MTableEditRow
-                        {...props}
-                        id={`my-editorial-appointments-list-${props.mode}-row`}
-                        data-testid={`my-editorial-appointments-list-${props.mode}-row`}
-                        onEditingApproved={handleEditingApproved(props)}
-                        sx={{
-                            '& td:not(:last-of-type)': {
-                                verticalAlign: 'top',
-                            },
-                        }}
-                    />
-                ),
-                Action: props => {
-                    /* istanbul ignore else */
-                    if (typeof props.action === 'function') {
-                        const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
-                        return (
-                            <MTableAction
-                                {...props}
-                                action={{
-                                    ...restAction,
-                                    tooltip,
-                                    icon: () => (
-                                        <Icon
-                                            disabled={props.disabled}
-                                            id={`my-editorial-appointments-list-row-${
-                                                props.data.tableData.id
-                                            }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            data-testid={`my-editorial-appointments-list-row-${
-                                                props.data.tableData.id
-                                            }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            {...restAction.iconProps}
-                                        />
-                                    ),
-                                }}
-                                size="small"
-                            />
-                        );
-                    }
-                    /* istanbul ignore else */
-                    if (!!props.action.icon) {
-                        //  Save or Cancel actions for Add/Edit/Delete actions
-                        const { icon: Icon, tooltip, ...restAction } = props.action;
-                        return (
-                            <MTableAction
-                                {...props}
-                                action={{
-                                    ...restAction,
-                                    icon: () => (
-                                        <Icon
-                                            id={`my-editorial-appointments-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            data-testid={`my-editorial-appointments-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                        />
-                                    ),
-                                }}
-                            />
-                        );
-                    }
+        <StyledResponsiveWrapper id="my-editorial-appointments-list" data-testid="my-editorial-appointments-list">
+            <DataGrid
+                id="favourite-search-list"
+                data-testid="favourite-search-list"
+                rows={rows}
+                getRowId={row => row[rowIdentifier]}
+                columns={columns}
+                editMode="row"
+                rowModesModel={rowModesModel}
+                loading={loading}
+                onRowModesModelChange={handleRowModesModelChange}
+                processRowUpdate={handleUpdateRow}
+                localeText={noRowsLabel}
+                sx={theme => ({
+                    border: 0,
+                    '& .cell-styled': {
+                        lineHeight: 1.43,
+                        alignContent: 'center',
+                        ...classes.text,
+                    },
+                    '& .header-styled': {
+                        ...theme.typography.caption,
+                        ...theme.palette.secondary.main,
+                    },
+                })}
+                disableDensitySelector
+                disableColumnMenu
+                disableColumnFilter
+                disableColumnSelector
+                disableSelectionOnClick
+                disableRowSelectionOnClick
+                disableVirtualization
+            />
+        </StyledResponsiveWrapper>
+        // <MaterialTable
+        //     tableRef={materialTableRef}
+        //     columns={columns.current}
+        //     components={{
+        //         Container: props => (
+        //             <StyledResponsiveWrapper
+        //                 {...props}
+        //                 id="my-editorial-appointments-list"
+        //                 data-testid="my-editorial-appointments-list"
+        //             />
+        //         ),
+        //         Row: props => (
+        //             <MTableBodyRow
+        //                 {...props}
+        //                 id={`my-editorial-appointments-list-row-${props.index}`}
+        //                 data-testid={`my-editorial-appointments-list-row-${props.index}`}
+        //             />
+        //         ),
+        //         EditRow: props => (
+        //             <MTableEditRow
+        //                 {...props}
+        //                 id={`my-editorial-appointments-list-${props.mode}-row`}
+        //                 data-testid={`my-editorial-appointments-list-${props.mode}-row`}
+        //                 onEditingApproved={handleEditingApproved(props)}
+        //                 sx={{
+        //                     '& td:not(:last-of-type)': {
+        //                         verticalAlign: 'top',
+        //                     },
+        //                 }}
+        //             />
+        //         ),
+        //         Action: props => {
+        //             /* istanbul ignore else */
+        //             if (typeof props.action === 'function') {
+        //                 const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
+        //                 return (
+        //                     <MTableAction
+        //                         {...props}
+        //                         action={{
+        //                             ...restAction,
+        //                             tooltip,
+        //                             icon: () => (
+        //                                 <Icon
+        //                                     disabled={props.disabled}
+        //                                     id={`my-editorial-appointments-list-row-${
+        //                                         props.data.tableData.id
+        //                                     }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+        //                                     data-testid={`my-editorial-appointments-list-row-${
+        //                                         props.data.tableData.id
+        //                                     }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+        //                                     {...restAction.iconProps}
+        //                                 />
+        //                             ),
+        //                         }}
+        //                         size="small"
+        //                     />
+        //                 );
+        //             }
+        //             /* istanbul ignore else */
+        //             if (!!props.action.icon) {
+        //                 //  Save or Cancel actions for Add/Edit/Delete actions
+        //                 const { icon: Icon, tooltip, ...restAction } = props.action;
+        //                 return (
+        //                     <MTableAction
+        //                         {...props}
+        //                         action={{
+        //                             ...restAction,
+        //                             icon: () => (
+        //                                 <Icon
+        //                                     id={`my-editorial-appointments-${(!!props.data.tableData &&
+        //                                         props.data.tableData.editing) ||
+        //                                         'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+        //                                     data-testid={`my-editorial-appointments-${(!!props.data.tableData &&
+        //                                         props.data.tableData.editing) ||
+        //                                         'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+        //                                 />
+        //                             ),
+        //                         }}
+        //                     />
+        //                 );
+        //             }
 
-                    /* istanbul ignore else */
-                    if (!!props.action.tooltip) {
-                        //  Add action
-                        const { tooltip } = props.action;
-                        return (
-                            <Button
-                                id={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                data-testid={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                disabled={props.disabled || disabled}
-                                variant="contained"
-                                color="primary"
-                                children={tooltip}
-                                onClick={event => props.action.onClick(event, props.data)}
-                            />
-                        );
-                    }
+        //             /* istanbul ignore else */
+        //             if (!!props.action.tooltip) {
+        //                 //  Add action
+        //                 const { tooltip } = props.action;
+        //                 return (
+        //                     <Button
+        //                         id={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+        //                         data-testid={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+        //                         disabled={props.disabled || disabled}
+        //                         variant="contained"
+        //                         color="primary"
+        //                         children={tooltip}
+        //                         onClick={event => props.action.onClick(event, props.data)}
+        //                     />
+        //                 );
+        //             }
 
-                    // Catch for erronious "Buttons" on rows after editing
-                    /* istanbul ignore next */
-                    return <React.Fragment />;
-                },
-            }}
-            data={data}
-            icons={tableIcons}
-            title=""
-            localization={{
-                body: {
-                    addTooltip: addButtonTooltip,
-                    editTooltip: editButtonTooltip,
-                    deleteTooltip: deleteButtonTooltip,
-                },
-            }}
-            editable={{
-                onRowUpdateCancelled: () => {},
-                onRowAdd: newData => {
-                    return handleRowAdd(newData)
-                        .then(data => {
-                            setData(prevState => {
-                                return [...prevState, data];
-                            });
-                        })
-                        .catch(() => setData(prevState => prevState));
-                },
-                onRowUpdate: (newData, oldData) => {
-                    return handleRowUpdate(newData, oldData)
-                        .then(data => {
-                            setData(prevState => {
-                                const list = [...prevState];
-                                const target = list.find(el => el.eap_id === oldData.eap_id);
-                                const index = list.indexOf(target);
-                                list[index] = data;
-                                return list;
-                            });
-                        })
-                        .catch(() => setData(prevState => prevState));
-                },
-                onRowDelete: oldData => {
-                    return handleRowDelete(oldData).then(() => {
-                        return new Promise(resolve => {
-                            setTimeout(() => {
-                                const dataDelete = [...data];
-                                const target = dataDelete.find(el => el.eap_id === oldData.eap_id);
-                                const index = dataDelete.indexOf(target);
-                                dataDelete.splice(index, 1);
-                                setData([...dataDelete]);
-                                resolve();
-                            }, 1000);
-                        });
-                    });
-                },
-            }}
-            options={{
-                actionsColumnIndex: -1,
-                addRowPosition: 'first',
-                paging: false,
-                search: data.length > 10,
-                rowStyle: rowData => ({
-                    borderLeft: moment(String(rowData.eap_end_year), 'YYYY').isBefore(moment(), 'year')
-                        ? '8px solid red'
-                        : '',
-                }),
-            }}
-        />
+        //             // Catch for erronious "Buttons" on rows after editing
+        //             /* istanbul ignore next */
+        //             return <React.Fragment />;
+        //         },
+        //     }}
+        //     data={data}
+        //     icons={tableIcons}
+        //     title=""
+        //     localization={{
+        //         body: {
+        //             addTooltip: addButtonTooltip,
+        //             editTooltip: editButtonTooltip,
+        //             deleteTooltip: deleteButtonTooltip,
+        //         },
+        //     }}
+        //     editable={{
+        //         onRowUpdateCancelled: () => {},
+        //         onRowAdd: newData => {
+        //             return handleRowAdd(newData)
+        //                 .then(data => {
+        //                     setData(prevState => {
+        //                         return [...prevState, data];
+        //                     });
+        //                 })
+        //                 .catch(() => setData(prevState => prevState));
+        //         },
+        //         onRowUpdate: (newData, oldData) => {
+        //             return handleRowUpdate(newData, oldData)
+        //                 .then(data => {
+        //                     setData(prevState => {
+        //                         const list = [...prevState];
+        //                         const target = list.find(el => el.eap_id === oldData.eap_id);
+        //                         const index = list.indexOf(target);
+        //                         list[index] = data;
+        //                         return list;
+        //                     });
+        //                 })
+        //                 .catch(() => setData(prevState => prevState));
+        //         },
+        //         onRowDelete: oldData => {
+        //             return handleRowDelete(oldData).then(() => {
+        //                 return new Promise(resolve => {
+        //                     setTimeout(() => {
+        //                         const dataDelete = [...data];
+        //                         const target = dataDelete.find(el => el.eap_id === oldData.eap_id);
+        //                         const index = dataDelete.indexOf(target);
+        //                         dataDelete.splice(index, 1);
+        //                         setData([...dataDelete]);
+        //                         resolve();
+        //                     }, 1000);
+        //                 });
+        //             });
+        //         },
+        //     }}
+        //     options={{
+        //         actionsColumnIndex: -1,
+        //         addRowPosition: 'first',
+        //         paging: false,
+        //         search: data.length > 10,
+        //         rowStyle: rowData => ({
+        //             borderLeft: moment(String(rowData.eap_end_year), 'YYYY').isBefore(moment(), 'year')
+        //                 ? '8px solid red'
+        //                 : '',
+        //         }),
+        //     }}
+        // />
     );
 };
 

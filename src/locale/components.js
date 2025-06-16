@@ -3711,7 +3711,9 @@ export default {
             row: {
                 locale: {
                     editHint: 'Edit this item',
+                    deleteConfirmLabel: 'Are you sure you want to delete this row?',
                 },
+                noRowsLabel: 'No editorial appointments found',
             },
             successAlert: {
                 alertId: 'alert-done-editorial-appointment-add',
