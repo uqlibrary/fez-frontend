@@ -419,3 +419,48 @@ context('Advanced Search', () => {
         assertSearchKeyUpdates(additionalNotesOptionId, 'rek-notes');
     });
 });
+
+context('Error handling', () => {
+    const expectUserToBeLoggedIn = existent => {
+        cy.data('PersonOutlineIcon').should(existent ? 'not.exist' : 'exist');
+        cy.data('PersonIcon').should(existent ? 'exist' : 'not.exist');
+        cy.getCookie('UQLID').should(existent ? 'exist' : 'not.exist');
+        cy.getCookie('UQLID_USER_GROUP').should(existent ? 'exist' : 'not.exist');
+    };
+
+    describe('401', () => {
+        it('should display the login dialog upon receiving a 401', () => {
+            cy.visit('/records/search?searchQueryParams%5Ball%5D=test');
+            cy.get('[data-testid="search-records-results"]').should(
+                'contain',
+                'Displaying works 1 to 7 of 7 total works.',
+            );
+            cy.data('alert').should('not.exist');
+            expectUserToBeLoggedIn(true);
+
+            // make a search that returns a 401
+            cy.data('simple-search-input')
+                .focus()
+                .clear()
+                .type('should return 401');
+            cy.data('simple-search-button').click();
+            // assert login dialog is displayed by - see App component
+            cy.data('alert')
+                .should('be.visible')
+                .should('contain', 'You are not logged in');
+            expectUserToBeLoggedIn(false);
+
+            // subsequent searches should go through
+            cy.data('simple-search-input')
+                .focus()
+                .clear()
+                .type('test');
+            cy.data('simple-search-button').click();
+            cy.get('[data-testid="search-records-results"]').should(
+                'contain',
+                'Displaying works 1 to 7 of 7 total works.',
+            );
+            expectUserToBeLoggedIn(false);
+        });
+    });
+});

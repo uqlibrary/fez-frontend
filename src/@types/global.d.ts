@@ -4,4 +4,5 @@ export {};
 
 declare global {
     let mockApi: MockAdapter;
+    let mockSessionApi: MockAdapter;
 }

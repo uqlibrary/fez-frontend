@@ -120,7 +120,6 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
      * Effect to handle initial render
      */
     React.useEffect(() => {
-        // actions.searchEspacePublications(queryParams);
         return dispatch(actions.clearSearchQuery());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -144,7 +143,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                 searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
             );
             setSearchParams({ ...queryParams });
-            dispatch(actions.searchEspacePublications(queryParams));
+            dispatch(actions.searchEspacePublications(queryParams, !!account?.id));
             dispatch(actions.clearSearchQuery());
             dispatch(actions.resetExportPublicationsStatus());
         }
