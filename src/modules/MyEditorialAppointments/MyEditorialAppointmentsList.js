@@ -33,9 +33,6 @@ import {
 import { useDataGrid } from 'hooks';
 
 const classes = {
-    text: {
-        fontSize: 13,
-    },
     h6text: {
         display: 'block',
         marginBlockStart: 0,
@@ -176,7 +173,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
     );
 
     const _handleRowDelete = React.useCallback(
-        (rows, rowToDelete) =>
+        ({ rows, rowToDelete, rowIdentifier }) =>
             handleRowDelete(rowToDelete)
                 .then(() => {
                     return new Promise(resolve => {
@@ -202,7 +199,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         handleDeleteClick,
         handleCancelClick,
     } = useDataGrid(list, _handleRowUpdate, _handleRowDelete);
-
+    console.log(loading);
     const columns = [
         {
             field: 'eap_journal_name',
@@ -210,8 +207,8 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             headerClassName: 'header-styled',
             editable: true,
             renderCell: params => {
-                const index = rows.findIndex(row => row.eap_id === params.id);
-                if (!!deleteRowId && params.row.fvs_id === deleteRowId) {
+                const index = rows.findIndex(row => row[rowIdentifier] === params.id);
+                if (!!deleteRowId && params.row[rowIdentifier] === deleteRowId) {
                     return (
                         <Typography
                             data-testid={`delete-row-${index}`}
@@ -268,7 +265,13 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 ...params.props,
                 error: !!params.props.eap_journal_name && params.props.eap_journal_name !== '',
             }),
-            flex: 1,
+            cellClassName: () => 'cell-styled',
+            minWidth: '45%',
+            flex: 3,
+            colSpan: (value, row) => {
+                if (row[rowIdentifier] === deleteRowId) return 4;
+                return undefined;
+            },
         },
         {
             field: 'eap_role_name',
@@ -287,6 +290,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 </Typography>
             ),
             renderEditCell: params => {
+                console.log(params);
                 return (
                     <React.Fragment>
                         <RoleField
@@ -294,7 +298,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                             autoCompleteSelectFieldId="eap-role-cvo-id"
                             fullWidth
                             clearable
-                            key={`eap-role-${params.props.eap_role_cvo_id}`}
+                            key={`eap-role-${params.row.eap_role_cvo_id}`}
                             id="eap-role-cvo-id"
                             floatingLabelText={editorialRoleLabel}
                             hintText={editorialRoleHint}
@@ -315,17 +319,17 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                             itemsList={EDITORIAL_ROLE_OPTIONS}
                             required
                             autoComplete="off"
-                            error={!params.props.eap_role_cvo_id}
+                            error={!params.row.eap_role_cvo_id}
                             value={
-                                !!params.props.eap_role_cvo_id
+                                !!params.row.eap_role_cvo_id
                                     ? {
-                                          value: String(params.props.eap_role_cvo_id),
-                                          text: EDITORIAL_ROLE_MAP[String(params.props.eap_role_cvo_id)],
+                                          value: String(params.row.eap_role_cvo_id),
+                                          text: EDITORIAL_ROLE_MAP[String(params.row.eap_role_cvo_id)],
                                       }
                                     : null
                             }
                         />
-                        {String(params.props.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER && (
+                        {String(params.row.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER && (
                             <SharedTextField
                                 value={params.value || ''}
                                 onChange={e =>
@@ -352,7 +356,8 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     params.props.value === !!params.row.eap_role_cvo_id &&
                     (String(params.row.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER ? !!params.value : true),
             }),
-            flex: 1,
+            cellClassName: () => 'cell-styled',
+            flex: 2,
         },
         {
             field: 'eap_start_year',
@@ -424,6 +429,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         startYearMoment.isSameOrAfter(moment(EDITORIAL_APPOINTMENT_MIN_YEAR, 'YYYY')),
                 };
             },
+            cellClassName: 'cell-styled',
             flex: 1,
         },
         {
@@ -525,6 +531,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         endYearMoment.isSameOrAfter(moment(String(params.row.eap_start_year), 'YYYY')),
                 };
             },
+            cellClassName: 'cell-styled',
             flex: 1,
         },
         {
@@ -549,7 +556,11 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                             sx={{
                                 color: 'primary.main',
                             }}
-                            onClick={!isDeleting ? handleSaveClick(params.id) : handleDeleteRow(params.id, rows)}
+                            onClick={
+                                !isDeleting
+                                    ? handleSaveClick(params.id)
+                                    : handleDeleteRow(params.id, rows, rowIdentifier)
+                            }
                             data-testid={`my-editorial-appointments-list-row-${index}-save`}
                         />,
                         <GridActionsCellItem
@@ -593,13 +604,14 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 data-testid="favourite-search-list"
                 rows={rows}
                 getRowId={row => row[rowIdentifier]}
+                getRowHeight={() => 'auto'}
                 columns={columns}
                 editMode="row"
                 rowModesModel={rowModesModel}
                 loading={loading}
                 onRowModesModelChange={handleRowModesModelChange}
                 processRowUpdate={handleUpdateRow}
-                localeText={noRowsLabel}
+                localeText={{ noRowsLabel }}
                 sx={theme => ({
                     border: 0,
                     '& .cell-styled': {
@@ -611,7 +623,31 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         ...theme.typography.caption,
                         ...theme.palette.secondary.main,
                     },
+                    '& .row-error-styled': {
+                        borderLeft: '4px solid red',
+                    },
+                    '& .cell-journal-name': {
+                        width: '45%',
+                        maxWidth: '45%',
+                    },
+                    '& .cell-role-name': {
+                        width: '25%',
+                        maxWidth: '25%',
+                    },
+                    '& .cell-md-date': {
+                        width: '15%',
+                        maxWidth: '15%',
+                        float: 'none',
+                    },
+                    '& .cell-mobile': {
+                        width: '100%',
+                        display: 'block',
+                        boxSizing: 'border-box',
+                    },
                 })}
+                getRowClassName={params =>
+                    moment(String(params.row.eap_end_year), 'YYYY').isBefore(moment(), 'year') && 'row-error-styled'
+                }
                 disableDensitySelector
                 disableColumnMenu
                 disableColumnFilter

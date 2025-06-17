@@ -7,7 +7,9 @@ import { GridRowModes } from '@mui/x-data-grid';
  * @param {function} handleRowUpdate Function to call when updating a row in the DataGrid.
  * This function will be called with the arguments newData nad oldData, and should return the next state's list array.
  * @param {function} handleRowDelete Function to call when deleting a row in the DataGrid.
- * This function will be called with the arguments rows and rowToDelete, and should return the next state's list array.
+ * This function will be called with an object argument including rows, rowToDelete & rowIdentifier,
+ * and should return the next state's list array.
+ * Should supply the parameters id, rows & rowIdentifier.
  * @returns {Object} {
         loading,
         deleteRowId,
@@ -39,10 +41,10 @@ export const useDataGrid = (list, handleRowUpdate, handleRowDelete) => {
     );
 
     const handleDeleteRow = useCallback(
-        (id, rows) => async () => {
+        (id, rows, rowIdentifier) => async () => {
             setBusy(true);
-            const rowToDelete = rows.find(row => row.fvs_id === id);
-            const newRows = await handleRowDelete(rows, rowToDelete);
+            const rowToDelete = rows.find(row => row[rowIdentifier] === id);
+            const newRows = await handleRowDelete({ rows, rowToDelete, rowIdentifier });
             setRows(newRows);
             setDeleteRowId(null);
             setBusy(false);
@@ -90,7 +92,7 @@ export const useDataGrid = (list, handleRowUpdate, handleRowDelete) => {
     );
 
     return {
-        busy,
+        loading: busy,
         deleteRowId,
         rows,
         setRows,
