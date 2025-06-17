@@ -149,20 +149,12 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         },
     } = locale.components.myEditorialAppointmentsList;
 
-    const handleEditingApproved = props => (action, newData, oldData) => {
-        const invalid = props.columns.some(column => !column.validate(newData));
-        /* istanbul ignore if  */
-        if (invalid) {
-            return;
-        }
-        props.onEditingApproved(action, newData, oldData);
-    };
-
     const _handleRowUpdate = React.useCallback(
         (newData, oldData) =>
             handleRowUpdate(newData, oldData)
                 .then(() => {
                     return new Promise(resolve => {
+                        console.log(newData, oldData);
                         resolve(newData);
                     });
                 })
@@ -199,7 +191,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         handleDeleteClick,
         handleCancelClick,
     } = useDataGrid(list, _handleRowUpdate, _handleRowDelete);
-    console.log(loading);
+
     const columns = [
         {
             field: 'eap_journal_name',
@@ -243,10 +235,11 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                     : { value: params.value }
                             }
                             onChange={e => {
+                                console.log(e);
                                 params.api.setEditCellValue({
                                     id: params.id,
                                     field: params.field,
-                                    value: e.target.value,
+                                    value: e?.value,
                                 });
                             }}
                             error={(params.row.eap_journal_name || '').length === 0}
@@ -266,7 +259,6 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 error: !!params.props.eap_journal_name && params.props.eap_journal_name !== '',
             }),
             cellClassName: () => 'cell-styled',
-            minWidth: '45%',
             flex: 3,
             colSpan: (value, row) => {
                 if (row[rowIdentifier] === deleteRowId) return 4;
@@ -290,7 +282,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 </Typography>
             ),
             renderEditCell: params => {
-                console.log(params);
+                console.log(params.row.eap_role_cvo_id);
                 return (
                     <React.Fragment>
                         <RoleField
@@ -302,20 +294,22 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                             id="eap-role-cvo-id"
                             floatingLabelText={editorialRoleLabel}
                             hintText={editorialRoleHint}
-                            onChange={selectedItem =>
+                            onChange={selectedItem => {
+                                console.log('onChange', selectedItem);
                                 params.api.setEditCellValue({
                                     id: params.id,
                                     eap_role_cvo_id: selectedItem,
                                     eap_role_name: null,
-                                })
-                            }
-                            onClear={() =>
+                                });
+                            }}
+                            onClear={() => {
+                                console.log('onClear');
                                 params.api.setEditCellValue({
                                     id: params.id,
                                     eap_role_cvo_id: null,
                                     eap_role_name: null,
-                                })
-                            }
+                                });
+                            }}
                             itemsList={EDITORIAL_ROLE_OPTIONS}
                             required
                             autoComplete="off"
@@ -615,34 +609,23 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 sx={theme => ({
                     border: 0,
                     '& .cell-styled': {
-                        lineHeight: 1.43,
                         alignContent: 'center',
+                        padding: 2,
+                        flexDirection: 'column',
                         ...classes.text,
+                        '&.MuiDataGrid-cell--editing': {
+                            paddingY: 1,
+                            paddingX: 2,
+                        },
                     },
                     '& .header-styled': {
                         ...theme.typography.caption,
                         ...theme.palette.secondary.main,
+                        paddingY: 1,
+                        paddingX: 2,
                     },
                     '& .row-error-styled': {
                         borderLeft: '4px solid red',
-                    },
-                    '& .cell-journal-name': {
-                        width: '45%',
-                        maxWidth: '45%',
-                    },
-                    '& .cell-role-name': {
-                        width: '25%',
-                        maxWidth: '25%',
-                    },
-                    '& .cell-md-date': {
-                        width: '15%',
-                        maxWidth: '15%',
-                        float: 'none',
-                    },
-                    '& .cell-mobile': {
-                        width: '100%',
-                        display: 'block',
-                        boxSizing: 'border-box',
                     },
                 })}
                 getRowClassName={params =>

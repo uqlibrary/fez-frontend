@@ -33,6 +33,7 @@ export const useDataGrid = (list, handleRowUpdate, handleRowDelete) => {
     const handleUpdateRow = useCallback(
         async (newData, oldData) => {
             setBusy(true);
+            console.log(newData, oldData);
             const res = await handleRowUpdate(newData, oldData);
             setBusy(false);
             return res;
