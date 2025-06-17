@@ -1,113 +1,36 @@
 import CommunityForm from './CommunityForm';
 import Immutable from 'immutable';
 import React from 'react';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, userEvent, waitFor } from 'test-utils';
+import * as actions from 'actions';
 
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: props => {
-        return (
-            <field
-                is="mock"
-                name={props.name}
-                title={props.title}
-                required={props.required}
-                disabled={props.disabled}
-                label={props.label || props.floatingLabelText}
-                hasError={props.hasError}
-            />
-        );
-    },
+jest.mock('actions', () => ({
+    ...jest.requireActual('actions'), // Retain the actual implementations of other functions
+    createCommunity: jest.fn(),
 }));
 
-function setup(testProps) {
-    const props = {
-        autofill: jest.fn(),
-        blur: jest.fn(),
-        change: jest.fn(),
-        clearAsyncError: jest.fn(),
-        anyTouched: true,
-        asyncValidating: false,
-        asyncValidate: jest.fn(),
-        clearFields: jest.fn(),
-        clearSubmitErrors: jest.fn(),
-        destroy: jest.fn(),
-        dispatch: jest.fn(),
-        handleSubmit: jest.fn(),
-        initialize: jest.fn(),
-        reset: jest.fn(),
-        resetSection: jest.fn(),
-        touch: jest.fn(),
-        submit: jest.fn(),
-        untouch: jest.fn(),
-        clearSubmit: jest.fn(),
-        dirty: true,
-        form: 'form',
-        initialized: false,
-        submitFailed: false,
-        valid: true,
-        pure: true,
-        submitAsSideEffect: false,
-        // common immutable props above
-        formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
-        submitting: testProps.submitting || false, // : PropTypes.bool
-        submitSucceeded: testProps.submitSucceeded || false, // : PropTypes.bool
-        invalid: testProps.invalid || false, // : PropTypes.bool
-        pristine: testProps.pristine || false, // : PropTypes.bool
-        fileAccessId: testProps.fileAccessId || 3, // PropTypes.number
-        actions: {
-            logout: jest.fn(),
-            checkSession: jest.fn(),
-            clearSessionExpiredFlag: jest.fn(),
-        },
-        ...testProps,
-    };
-
-    return render(
-        <WithReduxStore>
-            <WithRouter>
-                <CommunityForm {...props} />
-            </WithRouter>
-        </WithReduxStore>,
+function setup(testProps = {}, state = {}, rerender = render) {
+    return rerender(
+        <React.StrictMode>
+            <WithReduxStore initialState={Immutable.Map(state)}>
+                <WithRouter>
+                    <CommunityForm {...testProps} />
+                </WithRouter>
+            </WithReduxStore>
+        </React.StrictMode>,
     );
+}
+async function inputText(getByTestId, settings) {
+    for (const [testId, value] of settings) {
+        const input = getByTestId(testId);
+        await userEvent.click(input);
+        await userEvent.type(input, value);
+        await userEvent.tab();
+        expect(input).toHaveValue(value);
+    }
 }
 
 describe('Community form', () => {
-    it('should render form', () => {
-        const { container } = setup({});
-        expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(4);
-        expect(container.getElementsByTagName('button').length).toEqual(2);
-    });
-
-    it('should not disable submit button if form submit has failed', () => {
-        const { container, getByRole } = setup({ submitFailed: true });
-        expect(container.getElementsByTagName('button').length).toEqual(2);
-        expect(getByRole('button', { name: 'Add community' })).toBeEnabled();
-    });
-
-    it('should ask when redirecting from form with data (even if submit failed)', () => {
-        const render = renderComponent(CommunityForm, { dirty: true, submitSucceeded: false });
-        expect(render.getRenderOutput()).toMatchSnapshot();
-    });
-
-    it('should not ask when redirecting from form with data after successful submit', () => {
-        const render = renderComponent(CommunityForm, { dirty: true, submitSucceeded: true });
-        expect(render.getRenderOutput()).toMatchSnapshot();
-    });
-
-    it('should display successfull submission screen', () => {
-        const { container } = setup({ submitSucceeded: true });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render success panel', () => {
-        const { container } = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
-        expect(container).toMatchSnapshot();
-    });
-});
-
-describe('Collection form redirections', () => {
     const { location } = window;
 
     beforeAll(() => {
@@ -119,21 +42,48 @@ describe('Collection form redirections', () => {
         window.location = location;
     });
 
+    it('should render form', async () => {
+        actions.createCommunity
+            .mockImplementationOnce(() => {
+                return () => Promise.reject(new Error('test'));
+            })
+            .mockImplementationOnce(() => {
+                return () => Promise.resolve();
+            });
+
+        const { getByTestId, rerender } = setup();
+        await inputText(getByTestId, [
+            ['rek-title-input', 'test'],
+            ['rek-description-input', 'test'],
+        ]);
+        const submitButton = getByTestId('submit-community');
+        await waitFor(() => expect(submitButton).toBeEnabled());
+
+        await userEvent.click(submitButton);
+        await waitFor(() => expect(getByTestId('alert-error-community')).toBeInTheDocument());
+
+        setup(
+            {},
+            {
+                createCommunityReducer: {
+                    newRecord: true,
+                },
+            },
+            rerender,
+        );
+
+        await userEvent.click(submitButton);
+        await waitFor(() => expect(getByTestId('after-submit-community')).toBeInTheDocument());
+        await userEvent.click(getByTestId('after-submit-community'));
+        expect(window.location.assign).toHaveBeenCalledWith('/');
+
+        await userEvent.click(getByTestId('reload-community'));
+        expect(window.location.reload).toHaveBeenCalled();
+    });
+
     it('should redirect to cancel page', () => {
         const { getByTestId } = setup({});
         fireEvent.click(getByTestId('cancel-community'));
-        expect(window.location.assign).toBeCalledWith('/');
-    });
-
-    it('should redirect to after submit page', () => {
-        const { getByRole } = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
-        fireEvent.click(getByRole('button', { name: 'Return to the homepage' }));
-        expect(window.location.assign).toBeCalledWith('/');
-    });
-
-    it('should reload the page', () => {
-        const { getByRole } = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
-        fireEvent.click(getByRole('button', { name: 'Add another community' }));
-        expect(window.location.reload).toBeCalled();
+        expect(window.location.assign).toHaveBeenCalledWith('/');
     });
 });
