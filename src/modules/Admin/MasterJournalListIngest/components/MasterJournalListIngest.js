@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Immutable from 'immutable';
-import { useSelector } from 'react-redux';
-import { Field, reduxForm, SubmissionError, getFormSyncErrors } from 'redux-form/immutable';
-import PropTypes from 'prop-types';
+import React from 'react';
+import { useValidatedForm } from 'hooks';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+import { useDispatch } from 'react-redux';
+
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 
@@ -17,40 +17,41 @@ import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 import { useNavigate } from 'react-router-dom';
 
-export const FORM_NAME = 'MasterJournalListIngest';
-
-const onSubmit = (values, dispatch) => {
-    const data = { ...values.toJS() };
-    return dispatch(requestMJLIngest(data)).catch(error => {
-        throw new SubmissionError({ _error: error.message });
-    });
-};
-
-const MasterJournalListIngest = ({ error, handleSubmit, submitSucceeded, submitting }) => {
-    const navigate = useNavigate();
-    const [validationErrors, setValidationErrors] = useState(null);
-    const txt = componentsLocale.components.MasterJournalListIngest;
-    const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
-    const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
-
-    useEffect(() => {
-        const alertProps = validation.getErrorAlertProps({
-            alertLocale: {
-                validationAlert: { ...publicationLocale.validationAlert },
-                progressAlert: { ...txt.submitProgressAlert },
-                successAlert: { ...txt.submitSuccessAlert },
-                errorAlert: { ...txt.submitFailureAlert },
-            },
-            error,
-            formErrors,
-            submitSucceeded,
-            submitting,
+const MasterJournalListIngest = () => {
+    const [apiError, setApiError] = React.useState('');
+    const dispatch = useDispatch();
+    const onSubmit = async data => {
+        return dispatch(requestMJLIngest(data)).catch(error => {
+            setApiError(error.message);
         });
+    };
 
-        setValidationErrors(alertProps);
+    const {
+        handleSubmit,
+        control,
+        formState: { isSubmitting: submitting, isSubmitSuccessful: submitSucceeded, errors: formErrors },
+    } = useValidatedForm({
+        // use values instead of defaultValues, as the first triggers a re-render upon updates
+        values: {},
+    });
 
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [error, formErrors, submitSucceeded, submitting]);
+    const navigate = useNavigate();
+    // const [validationErrors, setValidationErrors] = useState(null);
+    const txt = componentsLocale.components.MasterJournalListIngest;
+    const disableSubmit = !!formErrors && Object.keys(formErrors).length > 0;
+
+    const alertProps = validation.getErrorAlertProps({
+        alertLocale: {
+            validationAlert: { ...publicationLocale.validationAlert },
+            progressAlert: { ...txt.submitProgressAlert },
+            successAlert: { ...txt.submitSuccessAlert },
+            errorAlert: { ...txt.submitFailureAlert },
+        },
+        error: apiError,
+        formErrors,
+        submitSucceeded: submitSucceeded && !!!apiError,
+        submitting,
+    });
 
     const cancelIngest = () => {
         navigate(pathConfig.index);
@@ -65,6 +66,7 @@ const MasterJournalListIngest = ({ error, handleSubmit, submitSucceeded, submitt
                             <Grid container spacing={2}>
                                 <Grid item xs={12}>
                                     <Field
+                                        control={control}
                                         component={DirectorySelectField}
                                         genericSelectFieldId="directory"
                                         disabled={submitting}
@@ -78,9 +80,9 @@ const MasterJournalListIngest = ({ error, handleSubmit, submitSucceeded, submitt
                             </Grid>
                         </StandardCard>
                     </Grid>
-                    {validationErrors && (
+                    {alertProps && (
                         <Grid item xs={12}>
-                            <Alert alertId="batch-import-validation" {...validationErrors} />
+                            <Alert alertId="batch-import-validation" {...alertProps} />
                         </Grid>
                     )}
                     <Grid item xs={12} sm="auto">
@@ -107,7 +109,7 @@ const MasterJournalListIngest = ({ error, handleSubmit, submitSucceeded, submitt
                             disabled={submitting || submitSucceeded || disableSubmit}
                             fullWidth
                             id="submitIngest"
-                            onClick={handleSubmit}
+                            onClick={handleSubmit(onSubmit)}
                             variant="contained"
                         />
                     </Grid>
@@ -117,16 +119,6 @@ const MasterJournalListIngest = ({ error, handleSubmit, submitSucceeded, submitt
     );
 };
 
-MasterJournalListIngest.propTypes = {
-    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-    handleSubmit: PropTypes.func,
-    submitSucceeded: PropTypes.bool,
-    submitting: PropTypes.bool,
-};
+MasterJournalListIngest.propTypes = {};
 
-const MasterJournalListIngestForm = reduxForm({
-    form: FORM_NAME,
-    onSubmit,
-})(MasterJournalListIngest);
-
-export default MasterJournalListIngestForm;
+export default MasterJournalListIngest;
