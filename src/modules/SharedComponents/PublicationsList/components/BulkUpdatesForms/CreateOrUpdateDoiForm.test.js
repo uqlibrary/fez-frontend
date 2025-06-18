@@ -8,8 +8,8 @@ import {
     fireEvent,
     waitFor,
     expectApiRequestToMatchSnapshot,
+    api,
 } from 'test-utils';
-import { api } from '../../../../../../utils/api-mock';
 
 function setup(testProps = {}) {
     const props = {

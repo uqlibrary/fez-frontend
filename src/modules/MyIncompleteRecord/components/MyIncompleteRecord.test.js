@@ -164,14 +164,14 @@ describe('MyIncompleteRecord', () => {
             await waitForText(/Work not found/i, waitForOptions);
         });
 
-        it('should render loader when author is loading', () => {
+        it('should render loader when author is loading', async () => {
             setup({ author: null });
-            waitForText(pageLocale.loading, waitForOptions);
+            await waitForText(pageLocale.loadingMessage, waitForOptions);
         });
 
-        it('should render loader when record is loading', () => {
+        it('should render loader when record is loading', async () => {
             setup();
-            waitForText(pageLocale.loading, waitForOptions);
+            await waitForText(pageLocale.loadingMessage, waitForOptions);
         });
 
         it('should redirect if author not linked', () => {
