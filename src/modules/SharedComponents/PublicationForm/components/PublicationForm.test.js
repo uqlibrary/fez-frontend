@@ -18,10 +18,10 @@ import {
     WithReduxStore,
     WithRouter,
     expectApiRequestCountToBe,
+    api,
 } from 'test-utils';
 import { screen } from '@testing-library/react';
 import publicationForm from '../../../../locale/publicationForm';
-import { api } from '../../../../../utils/api-mock';
 import { SEARCH_KEY_LOOKUP_API } from '../../../../repositories/routes';
 import validationErrors from '../../../../locale/validationErrors';
 

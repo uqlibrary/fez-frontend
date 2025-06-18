@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { render } from '@testing-library/react';
+import { render, within } from '@testing-library/react';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
@@ -24,8 +24,9 @@ import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useForm from 'hooks/useForm';
 import { apiRequestHistory } from '../src/config/axios';
-import { api } from './api-mock';
+import { default as api } from './MockApiWrapper';
 import { isEmptyObject } from '../src/helpers/general';
+import { locale } from '../src/locale';
 
 export const AllTheProviders = props => {
     return (
@@ -198,21 +199,72 @@ const waitToBeDisabled = async element =>
     await waitFor(() =>
         expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled'),
     );
-const waitForText = async (text, options) =>
-    ((typeof text === 'string' && !!text.trim().length) || text) &&
-    !screen.queryByText(text) &&
-    (await waitFor(() => screen.getByText(text), options));
-const waitForTextToBeRemoved = async (text, options) =>
-    ((typeof text === 'string' && !!text.trim().length) || text) &&
-    screen.queryByText(text) &&
-    (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
 
-const setFileUploaderFilesToClosedAccess = async files => {
+/**
+ * @param {string|function} dataTestId
+ * @param {object?} options
+ * @return {Promise<HTMLElement>}
+ */
+const waitElementToBeInDocument = async (dataTestId, options) =>
+    await waitFor(() => {
+        const element = typeof dataTestId === 'string' ? screen.getByTestId(dataTestId) : dataTestId();
+        expect(element).toBeInTheDocument();
+        return element;
+    }, options);
+
+/**
+ * note: it will match visible texts in DOM or input's values
+ * @param {string|RegExp} text
+ * @param {object?} options
+ * @return {Promise<HTMLElement>}
+ */
+const waitForText = async (text, options) => {
+    if (text === undefined || text === null || (typeof text === 'string' && !text.trim?.().length)) {
+        throw new Error('empty text');
+    }
+
+    return await waitFor(
+        async () =>
+            await waitElementToBeInDocument(
+                () =>
+                    (!options?.within && (screen.queryByText(text) || screen.queryByDisplayValue(text))) ||
+                    (options?.within &&
+                        (within(options.within()).queryByText(text) ||
+                            within(options.within).queryByDisplayValue(text))),
+                options,
+            ),
+        options,
+    );
+};
+
+/**
+ * @param {string|RegExp} text
+ * @param {object?} options
+ * @return {Promise<void>}
+ */
+const waitForTextToBeRemoved = async (text, options) => {
+    if (typeof text === 'string' && !text.trim().length) throw new Error('empty text');
+    screen.queryByText(text) && (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
+};
+
+const expectRequiredFieldError = async field =>
+    await waitFor(() => {
+        expect(screen.getByTestId(`${field}-helper-text`)).toBeInTheDocument();
+        expect(screen.getByTestId(`${field}-helper-text`)).toHaveTextContent(locale.validationErrors.required);
+    });
+
+const expectMissingRequiredFieldError = async field =>
+    screen.queryByTestId(`${field}-helper-text`) &&
+    (await waitFor(() => {
+        expect(screen.queryByTestId(`${field}-helper-text`)).not.toBeInTheDocument();
+    }));
+
+const setFileUploaderFilesToClosedAccess = async (files, waitForOptions = {}) => {
     const { fireEvent } = reactTestingLib;
     // set all files to closed access
     for (const file of files) {
         const index = files.indexOf(file);
-        await waitForText(new RegExp(getFilenameBasename(file)));
+        await waitForText(new RegExp(getFilenameBasename(file)), waitForOptions);
         fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
         fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
     }
@@ -362,18 +414,6 @@ const previewAndHalt = () => {
 };
 
 /**
- * @param {string} containerTestId
- * @param {string} value
- */
-const setRichTextEditorValue = async (containerTestId, value) => {
-    const editor = screen.getByTestId(containerTestId).querySelector('.ck-editor__editable').ckeditorInstance;
-    editor.model.change(writer => {
-        writer.insertText(value, editor.model.document.selection.getFirstPosition());
-    });
-    await userEvent.tab();
-};
-
-/**
  * @param {string} id
  * @param {string} option
  * @param {number}  index
@@ -404,9 +444,47 @@ const addAndSelectContributorsEditorItem = async (fieldName, name = 'author') =>
     await userEvent.click(screen.getByTestId(`${fieldName}-list-row-0-name-as-published`));
 };
 
+/**
+ * @param input
+ * @param value
+ * @return {Promise<void>}
+ */
 const clearAndType = async (input, value) => {
     await userEvent.clear(screen.getByTestId(input));
     await userEvent.type(screen.getByTestId(input), value);
+};
+
+/**
+ * @param {string} testId
+ * @return {Promise<Element>}
+ */
+const getRichTextEditor = async testId =>
+    await waitFor(() => {
+        const el = screen.getByTestId(testId).querySelector('.ck-editor__editable');
+        if (!el.ckeditorInstance) throw new Error('Waiting for CKEditor editable element');
+        return el;
+    });
+
+/**
+ * Note: value is set programmatically, not via DOM
+ * @param {string} testId
+ * @param {string} value
+ */
+const setRichTextEditorValue = async (testId, value) => {
+    const editor = await getRichTextEditor(testId);
+    await editor.ckeditorInstance.setData(value);
+    await userEvent.tab();
+};
+
+/**
+ * Note: assertion is done programmatically, not via DOM
+ * @param {string} testId
+ * @param {string|number|boolean|null|undefined} value
+ * @return void
+ */
+const assertRichTextEditorValue = async (testId, value) => {
+    const editor = await getRichTextEditor(testId);
+    expect(editor).toHaveTextContent(value, { exact: true });
 };
 
 module.exports = {
@@ -429,8 +507,11 @@ module.exports = {
     assertDisabled,
     waitToBeEnabled,
     waitToBeDisabled,
+    waitElementToBeInDocument,
     waitForText,
     waitForTextToBeRemoved,
+    expectRequiredFieldError,
+    expectMissingRequiredFieldError,
     mockUseForm,
     getFilenameExtension,
     getFilenameBasename,
@@ -449,6 +530,7 @@ module.exports = {
     assertInstanceOfFile,
     previewAndHalt,
     setRichTextEditorValue,
+    assertRichTextEditorValue,
     selectDropDownOption,
     addContributorsEditorItem,
     addAndSelectContributorsEditorItem,

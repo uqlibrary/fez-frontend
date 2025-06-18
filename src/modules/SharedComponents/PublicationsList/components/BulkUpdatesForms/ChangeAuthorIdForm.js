@@ -1,60 +1,72 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useRef, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import Immutable from 'immutable';
-import { getFormSyncErrors, Field, reduxForm, SubmissionError, formValueSelector, change } from 'redux-form/immutable';
-
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { UqIdField } from 'modules/SharedComponents/LookupFields';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-
 import { locale } from 'locale';
 import { validation } from 'config';
 import { changeAuthorId } from 'actions';
 import { SEARCH_AUTHOR_BY, SEARCH_BY_AUTHOR_NAME, SEARCH_BY_AUTHOR_ID } from 'config/bulkUpdates';
+import { useValidatedForm } from 'hooks';
+import { Field } from '../../../Toolbox/ReactHookForm';
+import { useWatch } from 'react-hook-form';
 
-const FORM_NAME = 'ChangeAuthorIdForm';
-const selector = formValueSelector(FORM_NAME);
-
-const onSubmit = (values, dispatch, props) => {
-    return dispatch(changeAuthorId(Object.values(props.recordsSelected), values.toJS())).catch(error => {
-        throw new SubmissionError({ _error: error.message });
-    });
-};
-
-export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submitting, submitSucceeded, onCancel }) => {
-    const dispatch = useDispatch();
+export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
-    const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
-    const searchAuthorBy = useSelector(state => selector(state, 'search_author_by'));
-    const searchAuthorByName = useSelector(state => selector(state, 'search_author.author'));
-
-    const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
-    const handleClear = field => () => dispatch(change(FORM_NAME, field, null));
-
-    const authorNames = React.createRef(null);
-    const [authorNameNoMatchCount, setAuthorNameNoMatchCount] = React.useState(null);
-    authorNames.current = Object.values(recordsSelected).map(record =>
-        record.fez_record_search_key_author.map(author => author.rek_author),
+    const dispatch = useDispatch();
+    const authorNames = useRef(
+        Object.values(recordsSelected)?.map?.(record =>
+            record.fez_record_search_key_author.map(author => author.rek_author),
+        ),
     );
+    const [authorNameNoMatchCount, setAuthorNameNoMatchCount] = React.useState(null);
+    const {
+        control,
+        trigger,
+        unregister,
+        resetField,
+        safelyHandleSubmit,
+        formState: { isSubmitting, isSubmitSuccessful, serverError, hasServerError, hasError },
+    } = useValidatedForm();
+    const [searchAuthorBy, searchAuthorByName] = useWatch({
+        control,
+        name: ['search_author_by', 'search_author.author'],
+    });
 
-    React.useEffect(() => {
-        if (!!searchAuthorByName) {
-            const count = authorNames.current.filter(author => !author.includes(searchAuthorByName)).length;
-            setAuthorNameNoMatchCount(count);
-        }
+    // handles "search author by" option changes
+    useEffect(() => {
+        // remove hidden field
+        unregister(searchAuthorBy !== SEARCH_BY_AUTHOR_NAME ? 'search_author.author' : 'search_author.author_id');
+        // trigger validation for added field
+        trigger(`search_author.${searchAuthorBy}`);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [searchAuthorBy]);
+
+    // handles raising alert about unmatched authors when searching by authors name
+    useEffect(() => {
+        if (!searchAuthorByName) return;
+        const count = authorNames.current.filter(author => !author.includes(searchAuthorByName)).length;
+        setAuthorNameNoMatchCount(count);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchAuthorByName]);
 
-    React.useEffect(() => {
-        if (submitSucceeded) {
-            setTimeout(onCancel, 2000);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [submitSucceeded]);
+    useEffect(() => {
+        if (!isSubmitSuccessful) return;
+        setTimeout(onCancel, 2000);
+    }, [isSubmitSuccessful, onCancel]);
+
+    const handleClear = field => () => {
+        resetField(field);
+        (async () => await trigger(field))();
+    };
+
+    const onSubmit = safelyHandleSubmit(
+        async data => await dispatch(changeAuthorId(Object.values(recordsSelected), data)),
+    );
 
     return (
         <form data-testid="change-author-id-form" id="change-author-id-form">
@@ -62,7 +74,7 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                 <Grid item xs={12}>
                     <Alert alertId="alert-info-change-author-id" {...txt.changeAuthorIdForm.alert} />
                 </Grid>
-                {searchAuthorBy === SEARCH_BY_AUTHOR_NAME && !!searchAuthorByName && (
+                {searchAuthorBy === SEARCH_BY_AUTHOR_NAME && !!searchAuthorByName && !!authorNameNoMatchCount && (
                     <Grid item xs={12}>
                         <Alert
                             alertId="alert-warning-change-author-id"
@@ -75,8 +87,9 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                 )}
                 <Grid item xs={12}>
                     <Field
+                        control={control}
                         component={NewGenericSelectField}
-                        disabled={submitting || submitSucceeded}
+                        disabled={isSubmitting || isSubmitSuccessful}
                         genericSelectFieldId="search-author-by"
                         label={txt.changeAuthorIdForm.formLabels.searchBy}
                         itemsList={Object.values(SEARCH_AUTHOR_BY)}
@@ -89,12 +102,13 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                 {searchAuthorBy === SEARCH_BY_AUTHOR_NAME && (
                     <Grid item xs={12}>
                         <Field
+                            control={control}
                             component={GenericTextField}
-                            disabled={submitting || submitSucceeded}
+                            disabled={isSubmitting || isSubmitSuccessful}
                             textFieldId="search-by-rek-author"
                             fullWidth
                             label={txt.changeAuthorIdForm.formLabels.searchByAuthorName}
-                            name={`search_author.${searchAuthorBy}`}
+                            name={'search_author.author'}
                             required
                             validate={[validation.required]}
                         />
@@ -103,30 +117,32 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                 {searchAuthorBy === SEARCH_BY_AUTHOR_ID && (
                     <Grid item xs={12}>
                         <Field
+                            control={control}
                             component={UqIdField}
-                            disabled={submitting || submitSucceeded}
+                            disabled={isSubmitting || isSubmitSuccessful}
                             floatingLabelText={txt.changeAuthorIdForm.formLabels.searchByAuthorId}
-                            name={`search_author.${searchAuthorBy}`}
+                            name={'search_author.author_id'}
                             required
                             validate={[validation.required]}
                             uqIdFieldId="search-by-rek-author-id"
                             getOptionLabel={option => !!option && `${option.id} (${option.value})`}
-                            normalize={value => value.aut_id}
-                            onClear={handleClear(`search_author.${searchAuthorBy}`)}
+                            normalize={value => value?.aut_id || value}
+                            onClear={handleClear('search_author.author_id')}
                         />
                     </Grid>
                 )}
                 <Grid item xs={12}>
                     <Field
+                        control={control}
                         component={UqIdField}
-                        disabled={submitting || submitSucceeded}
+                        disabled={isSubmitting || isSubmitSuccessful}
                         floatingLabelText={txt.changeAuthorIdForm.formLabels.authorId}
                         name="rek_author_id"
                         required
                         validate={[validation.required]}
                         uqIdFieldId="rek-author-id"
                         getOptionLabel={option => !!option && `${option.id} (${option.value})`}
-                        normalize={value => value.aut_id}
+                        normalize={value => value?.aut_id || value}
                         onClear={handleClear('rek_author_id')}
                     />
                 </Grid>
@@ -136,7 +152,7 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                         children={txt.changeAuthorIdForm.formLabels.cancelButtonLabel}
                         data-analyticsid="change-author-id-cancel"
                         data-testid="change-author-id-cancel"
-                        disabled={submitting}
+                        disabled={isSubmitting}
                         fullWidth
                         id="change-author-id-cancel"
                         onClick={onCancel}
@@ -150,21 +166,25 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                         color="primary"
                         data-analyticsid="change-author-id-submit"
                         data-testid="change-author-id-submit"
-                        disabled={submitting || disableSubmit || submitSucceeded}
+                        disabled={hasError || isSubmitting || isSubmitSuccessful}
                         fullWidth
                         id="change-author-id-submit"
-                        onClick={handleSubmit}
+                        onClick={onSubmit}
                         variant="contained"
                     />
                 </Grid>
                 <Grid item xs={12}>
-                    {!!submitting && (
+                    {isSubmitting && (
                         <Alert alertId="alert-info-change-author-id" {...txt.changeAuthorIdForm.submittingAlert} />
                     )}
-                    {!!submitSucceeded && (
+                    {isSubmitSuccessful && (
                         <Alert alertId="alert-done-change-author-id" {...txt.changeAuthorIdForm.successAlert} />
                     )}
-                    {!!error && <Alert alertId="alert-error-change-author-id" {...txt.changeAuthorIdForm.errorAlert} />}
+                    {hasServerError && (
+                        <Alert alertId="alert-error-change-author-id" {...txt.changeAuthorIdForm.errorAlert}>
+                            {serverError}
+                        </Alert>
+                    )}
                 </Grid>
             </Grid>
         </form>
@@ -172,17 +192,8 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
 };
 
 ChangeAuthorIdForm.propTypes = {
-    error: PropTypes.string,
-    handleSubmit: PropTypes.func,
     onCancel: PropTypes.func,
     recordsSelected: PropTypes.object,
-    submitting: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
 };
 
-const ChangeAuthorIdReduxForm = reduxForm({
-    form: FORM_NAME,
-    onSubmit,
-})(ChangeAuthorIdForm);
-
-export default React.memo(ChangeAuthorIdReduxForm);
+export default React.memo(ChangeAuthorIdForm);
