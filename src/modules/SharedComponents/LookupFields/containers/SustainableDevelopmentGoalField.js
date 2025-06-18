@@ -1,18 +1,17 @@
 /* eslint-disable react/prop-types */
-import React, { useCallback, useMemo, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
-import * as actions from 'actions';
 import { matchSorter } from 'match-sorter';
 import { FoROptionTemplate } from 'modules/SharedComponents/LookupFields';
-import { SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID as sdgCVOTreeRootId } from '../../../../config/general';
+import { SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID as cvoId } from '../../../../config/general';
+import { useControlledVocabs } from 'hooks/useControlledVocabs';
 
 const flattenSDGCVOTree = data =>
     data?.reduce?.((acc, item) => {
         const children = item.controlled_vocab.controlled_vocab_children;
         // SDGs themselves should not be allowed to be selected
-        // in case, if there are no SDG sources, ignore it
+        // in case there are no SDG sources, ignore it
         if (!children.length) {
             return acc;
         }
@@ -32,21 +31,7 @@ const flattenSDGCVOTree = data =>
     }, []) || [];
 
 const SustainableDevelopmentGoalField = props => {
-    const dispatch = useDispatch();
-    const { rawData, itemsLoading, itemsLoaded } = useSelector(
-        state => state.get('controlledVocabulariesReducer')?.[sdgCVOTreeRootId],
-    ) || { rawData: [], itemsLoading: false, itemsLoaded: false };
-    const itemsLoadedLocalRef = useRef(itemsLoaded);
-
-    const loadSuggestions = useCallback(() => {
-        if (itemsLoadedLocalRef.current) return;
-        itemsLoadedLocalRef.current = true;
-        dispatch(actions.loadVocabulariesList(sdgCVOTreeRootId));
-    }, [dispatch]);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const itemsList = useMemo(() => flattenSDGCVOTree(rawData), [rawData.length]);
-
+    const { items, itemsLoading, fetch } = useControlledVocabs(cvoId, flattenSDGCVOTree);
     return (
         <AutoCompleteAsynchronousField
             id="sustainable-development-goal-input"
@@ -54,7 +39,7 @@ const SustainableDevelopmentGoalField = props => {
             errorText={props.meta ? props.meta.error : props.errorText}
             error={props.meta ? !!props.meta.error : !!props.error || null}
             filterOptions={(options, { inputValue }) => matchSorter(options, inputValue, { keys: ['group', 'value'] })}
-            itemsList={itemsList}
+            itemsList={items}
             itemsLoading={itemsLoading}
             defaultValue={!!props.input && !!props.input.value ? { value: props.input.value } : null}
             getOptionLabel={() => ''}
@@ -63,7 +48,7 @@ const SustainableDevelopmentGoalField = props => {
             onChange={value => props.input?.onChange({ ...value, value: `${value.group} - ${value.value}` })}
             onClear={() => {}}
             clearSuggestionsOnClose={false}
-            loadSuggestions={loadSuggestions}
+            loadSuggestions={fetch}
             {...props}
         />
     );
