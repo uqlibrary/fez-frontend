@@ -1,6 +1,6 @@
 import React from 'react';
 import MyEditorialAppointmentsList from './MyEditorialAppointmentsList';
-import { render, fireEvent, act, waitFor, WithReduxStore, createMatchMedia, within } from 'test-utils';
+import { render, fireEvent, userEvent, act, waitFor, WithReduxStore, createMatchMedia, within } from 'test-utils';
 
 import { default as locale } from 'locale/components';
 
@@ -100,7 +100,7 @@ describe('MyEditorialAppointmentsList', () => {
     });
 
     it('should render previous list on unsuccessful add operation', async () => {
-        const { queryAllByTestId, getByTestId, getByText, queryByTestId } = setup({
+        const { queryAllByTestId, getByTestId, getByText } = setup({
             list: [],
             handleRowAdd: jest.fn(() => Promise.reject()),
         });
@@ -123,7 +123,7 @@ describe('MyEditorialAppointmentsList', () => {
     });
 
     it('should validate inputs and render updated info after editing', async () => {
-        const { getByTestId, getByLabelText, getByText } = setup({
+        const { getByTestId, getByText } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -148,7 +148,11 @@ describe('MyEditorialAppointmentsList', () => {
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: '' } });
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
 
-        fireEvent.click(getByLabelText('Clear'));
+        fireEvent.click(
+            getByTestId('eap-role-cvo-id-input')
+                .closest('div')
+                .querySelector('[aria-label=Clear]'),
+        );
 
         expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
 
@@ -337,15 +341,12 @@ describe('MyEditorialAppointmentsList', () => {
         await waitFor(() => getByTestId('eap-end-year-current'));
         fireEvent.click(getByTestId('eap-end-year-current'));
 
-        act(() => {
-            fireEvent.click(getByTestId('my-editorial-appointments-add-save'));
-        });
+        await userEvent.click(getByTestId('my-editorial-appointments-add-save'));
+        const listItem = document.querySelector('#my-editorial-appointments-list-row-0');
 
-        // const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
-
-        // expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
-        // expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
-        // expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('Current');
+        expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
+        expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('Current');
     });
 
     describe('coverage', () => {

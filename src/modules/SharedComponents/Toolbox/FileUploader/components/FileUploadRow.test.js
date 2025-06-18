@@ -129,7 +129,10 @@ describe('FileUploadRow', () => {
             target: { value: '01/01/2016' },
         });
 
-        expect(testFunction).toHaveBeenCalledWith(file, 0, moment('01/01/2016', 'DD/MM/YYYY', true));
+        expect(testFunction).toHaveBeenCalledWith(file, 0, expect.any(moment));
+        // Additional verification for actual date value sent in the mock call
+        const calledArg = testFunction.mock.calls[0][2];
+        expect(calledArg.format('DD/MM/YYYY')).toBe('01/01/2016');
     });
 
     it('call prop to move file down', () => {
