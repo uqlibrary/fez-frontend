@@ -1,31 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { reduxForm, SubmissionError } from 'redux-form/immutable';
-
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-
 import { locale } from 'locale';
 import { createOrUpdateDoi } from 'actions';
 import { RECORD_TYPE_COLLECTION } from '../../../../../config/general';
+import { useDispatch } from 'react-redux';
+import { useForm } from 'hooks';
 
-const FORM_NAME = 'CreateOrUpdateDoiForm';
-
-const onSubmit = (values, dispatch, props) => {
-    return dispatch(createOrUpdateDoi(Object.values(props.recordsSelected))).catch(error => {
-        throw new SubmissionError({ _error: error.message });
-    });
-};
-
-export const CreateOrUpdateDoiForm = ({
-    error,
-    handleSubmit,
-    onCancel,
-    recordsSelected,
-    submitting,
-    submitSucceeded,
-}) => {
+export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
+    const dispatch = useDispatch();
+    const {
+        safelyHandleSubmit,
+        formState: { hasError, isSubmitting, isSubmitSuccessful },
+    } = useForm();
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
     const hasCollectionsAmongSelectedRecords =
         Object.values(recordsSelected).filter(
@@ -35,12 +24,13 @@ export const CreateOrUpdateDoiForm = ({
                 record.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_COLLECTION,
         ).length > 0;
 
-    React.useEffect(() => {
-        if (submitSucceeded) {
-            setTimeout(onCancel, 2000);
-        }
+    useEffect(() => {
+        if (!isSubmitSuccessful) return;
+        setTimeout(onCancel, 2000);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [submitSucceeded]);
+    }, [isSubmitSuccessful]);
+
+    const handleSubmit = safelyHandleSubmit(() => dispatch(createOrUpdateDoi(Object.values(recordsSelected))));
 
     return (
         <form data-testid="create-or-update-doi-form" id="create-or-update-doi-form">
@@ -62,7 +52,7 @@ export const CreateOrUpdateDoiForm = ({
                         children={txt.createOrUpdateDoiForm.formLabels.cancelButtonLabel}
                         data-analyticsid="create-or-update-doi-cancel"
                         data-testid="create-or-update-doi-cancel"
-                        disabled={submitting}
+                        disabled={isSubmitting}
                         fullWidth
                         id="create-or-update-doi-cancel"
                         onClick={onCancel}
@@ -76,7 +66,7 @@ export const CreateOrUpdateDoiForm = ({
                         color="primary"
                         data-analyticsid="create-or-update-doi-submit"
                         data-testid="create-or-update-doi-submit"
-                        disabled={submitting || submitSucceeded}
+                        disabled={isSubmitting || isSubmitSuccessful}
                         fullWidth
                         id="create-or-update-doi-submit"
                         onClick={handleSubmit}
@@ -84,16 +74,16 @@ export const CreateOrUpdateDoiForm = ({
                     />
                 </Grid>
                 <Grid item xs={12}>
-                    {!!submitting && (
+                    {!!isSubmitting && (
                         <Alert
                             alertId="alert-info-create-or-update-doi"
                             {...txt.createOrUpdateDoiForm.submittingAlert}
                         />
                     )}
-                    {!!submitSucceeded && (
+                    {!!isSubmitSuccessful && (
                         <Alert alertId="alert-done-create-or-update-doi" {...txt.createOrUpdateDoiForm.successAlert} />
                     )}
-                    {!!error && (
+                    {!!hasError && (
                         <Alert alertId="alert-error-create-or-update-doi" {...txt.createOrUpdateDoiForm.errorAlert} />
                     )}
                 </Grid>
@@ -103,17 +93,8 @@ export const CreateOrUpdateDoiForm = ({
 };
 
 CreateOrUpdateDoiForm.propTypes = {
-    error: PropTypes.string,
-    handleSubmit: PropTypes.func,
     onCancel: PropTypes.func,
     recordsSelected: PropTypes.object,
-    submitting: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
 };
 
-const CreateOrUpdateDoiReduxForm = reduxForm({
-    form: FORM_NAME,
-    onSubmit,
-})(CreateOrUpdateDoiForm);
-
-export default React.memo(CreateOrUpdateDoiReduxForm);
+export default React.memo(CreateOrUpdateDoiForm);
