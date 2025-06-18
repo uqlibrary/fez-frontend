@@ -96,7 +96,8 @@ export default {
     },
     advisoryStatement: {
         getValue: journal => ({
-            type: journal?.jnl_advisory_statement_type,
+            // TODO revert upon enabling Advisory Statement Type
+            // type: journal?.jnl_advisory_statement_type,
             text: getValueSearchKeyCKEditor(journal, 'jnl_advisory_statement', 'jnl_advisory_statement'),
         }),
     },
