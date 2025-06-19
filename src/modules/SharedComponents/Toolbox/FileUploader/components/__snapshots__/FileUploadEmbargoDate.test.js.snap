@@ -3,7 +3,7 @@
 exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
   >
     <div
       class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -12,10 +12,12 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
     >
       <input
         aria-invalid="false"
+        autocomplete="off"
         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-        id=":r5:"
+        id=":ra:"
+        inputmode="text"
         placeholder="dd/mm/yyyy"
-        type="tel"
+        type="text"
         value="01/01/2016"
       />
       <div
@@ -48,7 +50,7 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
 exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
   >
     <div
       class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -57,11 +59,13 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
     >
       <input
         aria-invalid="false"
+        autocomplete="off"
         class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
         disabled=""
-        id=":r2:"
+        id=":r4:"
+        inputmode="text"
         placeholder="dd/mm/yyyy"
-        type="tel"
+        type="text"
         value="01/01/2016"
       />
       <div
@@ -95,7 +99,7 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
 exports[`Component FileUploadEmbargoDate should render with default setup 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
   >
     <div
       class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -104,10 +108,12 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
     >
       <input
         aria-invalid="false"
+        autocomplete="off"
         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
         id=":r0:"
+        inputmode="text"
         placeholder="dd/mm/yyyy"
-        type="tel"
+        type="text"
         value="01/01/2016"
       />
       <div
@@ -140,7 +146,7 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
 exports[`Component FileUploadEmbargoDate should render with no supplied date 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-138cwby-MuiFormControl-root-MuiTextField-root"
   >
     <div
       class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -149,10 +155,12 @@ exports[`Component FileUploadEmbargoDate should render with no supplied date 1`]
     >
       <input
         aria-invalid="false"
+        autocomplete="off"
         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-        id=":r1:"
+        id=":r2:"
+        inputmode="text"
         placeholder="dd/mm/yyyy"
-        type="tel"
+        type="text"
         value=""
       />
       <div
@@ -185,7 +193,7 @@ exports[`Component FileUploadEmbargoDate should render with no supplied date 1`]
 exports[`Component FileUploadEmbargoDate should set correct date on date changed 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
   >
     <div
       class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -194,10 +202,12 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
     >
       <input
         aria-invalid="false"
+        autocomplete="off"
         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-        id=":r3:"
+        id=":r6:"
+        inputmode="text"
         placeholder="dd/mm/yyyy"
-        type="tel"
+        type="text"
         value="01/01/2016"
       />
       <div
@@ -230,7 +240,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
 exports[`Component FileUploadEmbargoDate should set correct date on date changed 2`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
   >
     <div
       class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -239,17 +249,19 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
     >
       <input
         aria-invalid="false"
+        autocomplete="off"
         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-        id=":r3:"
+        id=":r6:"
+        inputmode="text"
         placeholder="dd/mm/yyyy"
-        type="tel"
+        type="text"
         value="01/01/2018"
       />
       <div
         class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
       >
         <button
-          aria-label="Choose date, selected date is Jan 1, 2016"
+          aria-label="Choose date, selected date is Jan 1, 2018"
           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1d2b2o6-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
