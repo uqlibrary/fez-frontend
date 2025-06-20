@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
@@ -8,7 +8,14 @@ import moment from 'moment';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
-import { GridRowModes, DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
+import {
+    GridRowModes,
+    DataGrid,
+    GridActionsCellItem,
+    GridCellEditStopReasons,
+    useGridApiRef,
+    useGridApiContext,
+} from '@mui/x-data-grid';
 
 import { tableIcons } from './MyEditorialAppointmentsListIcons';
 import Typography from '@mui/material/Typography';
@@ -120,6 +127,7 @@ const StyledResponsiveWrapper = styled('div')(({ theme }) => ({
 export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
     const theme = useTheme();
     const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
+    const apiRef = useGridApiRef();
     const rowIdentifier = 'eap_id';
 
     const {
@@ -149,12 +157,11 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         },
     } = locale.components.myEditorialAppointmentsList;
 
-    const _handleRowUpdate = React.useCallback(
+    const _handleRowUpdate = useCallback(
         (newData, oldData) =>
             handleRowUpdate(newData, oldData)
                 .then(() => {
                     return new Promise(resolve => {
-                        console.log(newData, oldData);
                         resolve(newData);
                     });
                 })
@@ -164,7 +171,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         [handleRowUpdate],
     );
 
-    const _handleRowDelete = React.useCallback(
+    const _handleRowDelete = useCallback(
         ({ rows, rowToDelete, rowIdentifier }) =>
             handleRowDelete(rowToDelete)
                 .then(() => {
@@ -190,7 +197,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         handleSaveClick,
         handleDeleteClick,
         handleCancelClick,
-    } = useDataGrid(list, _handleRowUpdate, _handleRowDelete);
+    } = useDataGrid({ list, handleRowUpdate: _handleRowUpdate, handleRowDelete: _handleRowDelete });
 
     const columns = [
         {
@@ -234,14 +241,13 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                     ? { id: params.row.eap_jnl_id, value: params.value }
                                     : { value: params.value }
                             }
-                            onChange={e => {
-                                console.log(e);
-                                params.api.setEditCellValue({
+                            onChange={async e =>
+                                await params.api.setEditCellValue({
                                     id: params.id,
                                     field: params.field,
                                     value: e?.value,
-                                });
-                            }}
+                                })
+                            }
                             error={(params.row.eap_journal_name || '').length === 0}
                             label={journalNameLabel}
                             placeholder={journalNameHint}
@@ -266,7 +272,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             },
         },
         {
-            field: 'eap_role_name',
+            field: 'eap_role_cvo_id',
             headerName: role.title,
             headerClassName: 'header-styled',
             editable: true,
@@ -282,59 +288,75 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 </Typography>
             ),
             renderEditCell: params => {
-                console.log(params.row.eap_role_cvo_id);
                 return (
                     <React.Fragment>
                         <RoleField
-                            {...params.props}
                             autoCompleteSelectFieldId="eap-role-cvo-id"
                             fullWidth
                             clearable
-                            key={`eap-role-${params.row.eap_role_cvo_id}`}
+                            key={`eap-role-${params.value}`}
                             id="eap-role-cvo-id"
                             floatingLabelText={editorialRoleLabel}
                             hintText={editorialRoleHint}
-                            onChange={selectedItem => {
-                                console.log('onChange', selectedItem);
+                            onChange={async selectedItem => {
+                                await params.api.updateRows([
+                                    {
+                                        ...params.row,
+                                        eap_role_name: null,
+                                    },
+                                ]);
+
                                 params.api.setEditCellValue({
                                     id: params.id,
-                                    eap_role_cvo_id: selectedItem,
-                                    eap_role_name: null,
+                                    field: params.field,
+                                    value: selectedItem,
                                 });
                             }}
-                            onClear={() => {
-                                console.log('onClear');
+                            onClear={async () => {
+                                await params.api.updateRows([
+                                    {
+                                        ...params.row,
+                                        eap_role_name: null,
+                                    },
+                                ]);
+
                                 params.api.setEditCellValue({
                                     id: params.id,
-                                    eap_role_cvo_id: null,
-                                    eap_role_name: null,
+                                    field: params.field,
+                                    value: null,
                                 });
                             }}
                             itemsList={EDITORIAL_ROLE_OPTIONS}
                             required
                             autoComplete="off"
-                            error={!params.row.eap_role_cvo_id}
+                            error={!params.value}
                             value={
-                                !!params.row.eap_role_cvo_id
+                                !!params.value
                                     ? {
-                                          value: String(params.row.eap_role_cvo_id),
-                                          text: EDITORIAL_ROLE_MAP[String(params.row.eap_role_cvo_id)],
+                                          value: String(params.value),
+                                          text: EDITORIAL_ROLE_MAP[String(params.value)],
                                       }
                                     : null
                             }
                         />
-                        {String(params.row.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER && (
+                        {String(params.value) === EDITORIAL_ROLE_OTHER && (
                             <SharedTextField
-                                value={params.value || ''}
-                                onChange={e =>
-                                    params.api.setEditCellValue({
+                                value={apiRef.current.getCellValue(params.id, 'eap_role_name') || ''}
+                                onChange={async e => {
+                                    await params.api.updateRows([
+                                        {
+                                            ...params.row,
+                                            eap_role_name: e.target.value,
+                                        },
+                                    ]);
+                                    await params.api.setEditCellValue({
                                         id: params.id,
                                         field: params.field,
-                                        value: e.target.value,
-                                    })
-                                }
+                                        value: EDITORIAL_ROLE_OTHER,
+                                    });
+                                }}
                                 textFieldId="eap-role-name"
-                                error={!params.value}
+                                error={!apiRef.current.getCellValue(params.id, 'eap_role_name')}
                                 label={otherRoleLabel}
                                 placeholder={otherRoleHint}
                                 required
@@ -344,12 +366,16 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     </React.Fragment>
                 );
             },
-            preProcessEditCellProps: params => ({
-                ...params.props,
-                error:
-                    params.props.value === !!params.row.eap_role_cvo_id &&
-                    (String(params.row.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER ? !!params.value : true),
-            }),
+            preProcessEditCellProps: params => {
+                const eapRoleName = apiRef.current.getRowWithUpdatedValues(params.id, '').eap_role_name;
+                return {
+                    ...params.props,
+                    error: !(
+                        !!params.props.value &&
+                        (String(params.props.value) === EDITORIAL_ROLE_OTHER ? !!eapRoleName : true)
+                    ),
+                };
+            },
             cellClassName: () => 'cell-styled',
             flex: 2,
         },
@@ -372,8 +398,8 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <StyledDatePicker
                             value={(!!params.value && moment(String(params.value), 'YYYY')) || null}
-                            onChange={value => {
-                                params.api.setEditCellValue({
+                            onChange={async value => {
+                                await params.api.setEditCellValue({
                                     id: params.id,
                                     field: params.field,
                                     value: (!!value && value.format('YYYY')) || null,
@@ -417,10 +443,11 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 const startYearMoment = moment(String(params.props.value), 'YYYY');
                 return {
                     ...params.props,
-                    error:
+                    error: !(
                         startYearMoment.isValid() &&
                         startYearMoment.isSameOrBefore(moment(), 'year') &&
-                        startYearMoment.isSameOrAfter(moment(EDITORIAL_APPOINTMENT_MIN_YEAR, 'YYYY')),
+                        startYearMoment.isSameOrAfter(moment(EDITORIAL_APPOINTMENT_MIN_YEAR, 'YYYY'))
+                    ),
                 };
             },
             cellClassName: 'cell-styled',
@@ -447,8 +474,8 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <StyledDatePicker
                             value={(!!value && moment(String(value), 'YYYY')) || null}
-                            onChange={value => {
-                                params.api.setEditCellValue({
+                            onChange={async value => {
+                                await params.api.setEditCellValue({
                                     id: params.id,
                                     field: params.field,
                                     value: (!!value && value.format('YYYY')) || null,
@@ -519,10 +546,11 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 const endYearMoment = moment(String(params.props.value), 'YYYY');
                 return {
                     ...params.props,
-                    error:
+                    error: !(
                         endYearMoment.isValid() &&
                         endYearMoment.isSameOrBefore(moment(EDITORIAL_APPOINTMENT_MAX_YEAR, 'YYYY')) &&
-                        endYearMoment.isSameOrAfter(moment(String(params.row.eap_start_year), 'YYYY')),
+                        endYearMoment.isSameOrAfter(moment(String(params.row.eap_start_year), 'YYYY'))
+                    ),
                 };
             },
             cellClassName: 'cell-styled',
@@ -590,19 +618,19 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             },
         },
     ];
-
     return (
         <StyledResponsiveWrapper id="my-editorial-appointments-list" data-testid="my-editorial-appointments-list">
             <DataGrid
+                apiRef={apiRef}
                 id="favourite-search-list"
                 data-testid="favourite-search-list"
                 rows={rows}
                 getRowId={row => row[rowIdentifier]}
                 getRowHeight={() => 'auto'}
                 columns={columns}
+                loading={loading}
                 editMode="row"
                 rowModesModel={rowModesModel}
-                loading={loading}
                 onRowModesModelChange={handleRowModesModelChange}
                 processRowUpdate={handleUpdateRow}
                 localeText={{ noRowsLabel }}
@@ -631,10 +659,19 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 getRowClassName={params =>
                     moment(String(params.row.eap_end_year), 'YYYY').isBefore(moment(), 'year') && 'row-error-styled'
                 }
-                disableDensitySelector
+                onCellEditStop={(params, event) => {
+                    event.defaultMuiPrevented = true;
+                }}
+                onRowEditStop={(params, event) => {
+                    // if (event.reason === GridCellEditStopReasons.cellFocusOut) {
+                    event.defaultMuiPrevented = true;
+                    //  }
+                }}
+                disableColumnResize
                 disableColumnMenu
                 disableColumnFilter
                 disableColumnSelector
+                disableDensitySelector
                 disableSelectionOnClick
                 disableRowSelectionOnClick
                 disableVirtualization

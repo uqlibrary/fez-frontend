@@ -24,7 +24,7 @@ import { GridRowModes } from '@mui/x-data-grid';
         handleCancelClick,
     };
  */
-export const useDataGrid = (list, handleRowUpdate, handleRowDelete) => {
+export const useDataGrid = ({ list, handleRowUpdate, handleRowDelete }) => {
     const [rows, setRows] = useState(list);
     const [busy, setBusy] = useState(false);
     const [rowModesModel, setRowModesModel] = useState({});
@@ -33,7 +33,6 @@ export const useDataGrid = (list, handleRowUpdate, handleRowDelete) => {
     const handleUpdateRow = useCallback(
         async (newData, oldData) => {
             setBusy(true);
-            console.log(newData, oldData);
             const res = await handleRowUpdate(newData, oldData);
             setBusy(false);
             return res;
