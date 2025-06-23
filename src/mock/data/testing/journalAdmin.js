@@ -7,8 +7,7 @@ export const helpersTypicalExpected = {
                     htmlText: 'This is an advisory statement',
                     plainText: 'This is an advisory statement',
                 },
-                // TODO revert upon enabling Advisory Statement Type
-                // type: 1234
+                type: 1234
             },
             description:
                 'Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.',
@@ -480,8 +479,7 @@ export const helpersNonTypicalExpected = {
                     htmlText: 'This is an advisory statement',
                     plainText: 'This is an advisory statement',
                 },
-                // TODO revert upon enabling Advisory Statement Type
-                // type: 1234
+                type: 1234,
             },
             description:
                 'Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.',
