@@ -11,7 +11,6 @@ import { JOURNAL_ADVISORY_STATEMENT_TYPE as cvoId } from '../../../config/genera
 import { usePrevious } from '../../../hooks/usePrevious';
 import get from 'lodash/get';
 
-// TODO revert all ignore next upon enabling Advisory Statement Type
 // istanbul ignore next
 const flattenCVOTree = data =>
     data
@@ -33,9 +32,9 @@ export const AdvisoryStatementFields = props => {
 
     // preload options in case the field pre-populated
     // e.g. editing a journal with advisory statement type
-    // istanbul ignore next
     useEffect(() => {
         if (!isPrePopulated) return;
+        // istanbul ignore next
         cvoList.fetch();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isPrePopulated]);
