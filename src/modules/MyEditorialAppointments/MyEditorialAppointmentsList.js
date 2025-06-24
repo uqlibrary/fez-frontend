@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import MaterialTable, { MTableAction, MTableBodyRow, MTableEditRow } from '@material-table/core';
+import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 import moment from 'moment';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -99,7 +99,7 @@ const StyledResponsiveWrapper = styled('div')(({ theme }) => ({
     },
 }));
 
-export const GetColumns = () => {
+export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
     const theme = useTheme();
     const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
 
@@ -122,24 +122,37 @@ export const GetColumns = () => {
             },
         },
     } = locale.components.myEditorialAppointmentsList;
-    return [
+
+    const {
+        form: {
+            locale: { addButtonTooltip, editButtonTooltip, deleteButtonTooltip },
+        },
+    } = locale.components.myEditorialAppointmentsList;
+
+    const [data, setData] = React.useState(list);
+    const handleEditingApproved = props => (action, newData, oldData) => {
+        const invalid = props.columns.some(column => !column.validate(newData));
+        /* istanbul ignore if  */
+        if (invalid) {
+            return;
+        }
+        props.onEditingApproved(action, newData, oldData);
+    };
+
+    const columns = [
         {
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {journalName.title}
-                </Typography>
-            ),
-            field: 'eap_journal_name',
-            render: rowData => (
+            accessorKey: 'eap_journal_name',
+            header: journalName.title,
+            Cell: ({ row }) => (
                 <Typography
                     variant="body2"
-                    data-testid={`eap-journal-name-${rowData.tableData.id}`}
-                    id={`eap-journal-name-${rowData.tableData.id}`}
+                    data-testid={`eap-journal-name-${row.id}`}
+                    id={`eap-journal-name-${row.id}`}
                 >
-                    {rowData.eap_journal_name}
+                    {row.eap_journal_name}
                 </Typography>
             ),
-            editComponent: props => {
+            Edit: props => {
                 const { rowData } = props;
                 const handleChange = selectedItem => {
                     props.onRowDataChange({
@@ -172,41 +185,33 @@ export const GetColumns = () => {
                     </React.Fragment>
                 );
             },
-            validate: rowData => !!rowData.eap_journal_name && rowData.eap_journal_name !== '',
-            cellStyle: matchesMd
-                ? {
-                      width: '45%',
-                      maxWidth: '45%',
-                  }
-                : {
-                      display: 'block',
-                      width: '100%',
-                      boxSizing: 'border-box',
-                  },
-            headerStyle: {
-                width: '45%',
-                maxWidth: '45%',
-            },
+            // validate: rowData => !!rowData.eap_journal_name && rowData.eap_journal_name !== '',
+            // cellStyle: matchesMd
+            //     ? {
+            //           width: '45%',
+            //           maxWidth: '45%',
+            //       }
+            //     : {
+            //           display: 'block',
+            //           width: '100%',
+            //           boxSizing: 'border-box',
+            //       },
+            // headerStyle: {
+            //     width: '45%',
+            //     maxWidth: '45%',
+            // },
         },
         {
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {role.title}
-                </Typography>
-            ),
-            field: 'eap_role_name',
-            render: rowData => (
-                <Typography
-                    variant="body2"
-                    id={`eap-role-name-${rowData.tableData.id}`}
-                    data-testid={`eap-role-name-${rowData.tableData.id}`}
-                >
-                    {`${EDITORIAL_ROLE_MAP[rowData.eap_role_cvo_id]}${
-                        !!rowData.eap_role_name ? ' (' + rowData.eap_role_name + ')' : ''
+            accessorKey: 'eap_role_name',
+            header: role.title,
+            Cell: ({ row }) => (
+                <Typography variant="body2" id={`eap-role-name-${row.id}`} data-testid={`eap-role-name-${row.id}`}>
+                    {`${EDITORIAL_ROLE_MAP[row.eap_role_cvo_id]}${
+                        !!row.eap_role_name ? ' (' + row.eap_role_name + ')' : ''
                     }`}
                 </Typography>
             ),
-            editComponent: props => {
+            Edit: props => {
                 const { rowData } = props;
 
                 const handleChange = selectedItem => {
@@ -265,41 +270,33 @@ export const GetColumns = () => {
                     </React.Fragment>
                 );
             },
-            validate: rowData =>
-                !!rowData.eap_role_cvo_id &&
-                (String(rowData.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER ? !!rowData.eap_role_name : true),
-            cellStyle: matchesMd
-                ? {
-                      width: '25%',
-                      maxWidth: '25%',
-                  }
-                : {
-                      display: 'block',
-                      width: '100%',
-                      boxSizing: 'border-box',
-                  },
-            headerStyle: {
-                width: '25%',
-                maxWidth: '25%',
-            },
+            // validate: rowData =>
+            //     !!rowData.eap_role_cvo_id &&
+            //     (String(rowData.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER ? !!rowData.eap_role_name : true),
+            // cellStyle: matchesMd
+            //     ? {
+            //           width: '25%',
+            //           maxWidth: '25%',
+            //       }
+            //     : {
+            //           display: 'block',
+            //           width: '100%',
+            //           boxSizing: 'border-box',
+            //       },
+            // headerStyle: {
+            //     width: '25%',
+            //     maxWidth: '25%',
+            // },
         },
         {
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {startYear.title}
+            accessorKey: 'eap_start_year',
+            header: startYear.title,
+            Cell: ({ row }) => (
+                <Typography variant="body2" id={`eap-start-year-${row.id}`} data-testid={`eap-start-year-${row.id}`}>
+                    {row.eap_start_year}
                 </Typography>
             ),
-            field: 'eap_start_year',
-            render: rowData => (
-                <Typography
-                    variant="body2"
-                    id={`eap-start-year-${rowData.tableData.id}`}
-                    data-testid={`eap-start-year-${rowData.tableData.id}`}
-                >
-                    {rowData.eap_start_year}
-                </Typography>
-            ),
-            editComponent: props => {
+            Edit: props => {
                 return (
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <StyledDatePicker
@@ -339,49 +336,41 @@ export const GetColumns = () => {
                     </LocalizationProvider>
                 );
             },
-            validate: rowData => {
-                const startYearMoment = moment(String(rowData.eap_start_year), 'YYYY');
-                return (
-                    startYearMoment.isValid() &&
-                    startYearMoment.isSameOrBefore(moment(), 'year') &&
-                    startYearMoment.isSameOrAfter(moment(EDITORIAL_APPOINTMENT_MIN_YEAR, 'YYYY'))
-                );
-            },
-            cellStyle: matchesMd
-                ? {
-                      width: '15%',
-                      maxWidth: '15%',
-                      float: 'none',
-                  }
-                : {
-                      width: '100%',
-                      display: 'block',
-                      boxSizing: 'border-box',
-                  },
-            headerStyle: {
-                width: '15%',
-                maxWidth: '15%',
-            },
+            // validate: rowData => {
+            //     const startYearMoment = moment(String(rowData.eap_start_year), 'YYYY');
+            //     return (
+            //         startYearMoment.isValid() &&
+            //         startYearMoment.isSameOrBefore(moment(), 'year') &&
+            //         startYearMoment.isSameOrAfter(moment(EDITORIAL_APPOINTMENT_MIN_YEAR, 'YYYY'))
+            //     );
+            // },
+            // cellStyle: matchesMd
+            //     ? {
+            //           width: '15%',
+            //           maxWidth: '15%',
+            //           float: 'none',
+            //       }
+            //     : {
+            //           width: '100%',
+            //           display: 'block',
+            //           boxSizing: 'border-box',
+            //       },
+            // headerStyle: {
+            //     width: '15%',
+            //     maxWidth: '15%',
+            // },
         },
         {
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {endYear.title}
-                </Typography>
-            ),
-            field: 'eap_end_year',
-            render: rowData => (
-                <Typography
-                    variant="body2"
-                    id={`eap-end-year-${rowData.tableData.id}`}
-                    data-testid={`eap-end-year-${rowData.tableData.id}`}
-                >
-                    {moment(String(rowData.eap_end_year), 'YYYY').format('YYYY') === moment(new Date()).format('YYYY')
+            accessorKey: 'eap_end_year',
+            header: endYear.title,
+            Cell: ({ row }) => (
+                <Typography variant="body2" id={`eap-end-year-${row.id}`} data-testid={`eap-end-year-${row.id}`}>
+                    {moment(String(row.eap_end_year), 'YYYY').format('YYYY') === moment(new Date()).format('YYYY')
                         ? locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel
-                        : rowData.eap_end_year}
+                        : row.eap_end_year}
                 </Typography>
             ),
-            editComponent: ({ value, rowData, onChange }) => {
+            Edit: ({ value, rowData, onChange }) => {
                 const minDate = new Date();
                 minDate.setFullYear(parseInt(rowData.eap_start_year, 10));
                 minDate.setDate(1);
@@ -454,221 +443,47 @@ export const GetColumns = () => {
                     </LocalizationProvider>
                 );
             },
-            validate: rowData => {
-                const endYearMoment = moment(String(rowData.eap_end_year), 'YYYY');
-                return (
-                    endYearMoment.isValid() &&
-                    endYearMoment.isSameOrBefore(moment(EDITORIAL_APPOINTMENT_MAX_YEAR, 'YYYY')) &&
-                    endYearMoment.isSameOrAfter(moment(String(rowData.eap_start_year), 'YYYY'))
-                );
-            },
-            cellStyle: matchesMd
-                ? {
-                      width: '15%',
-                      maxWidth: '15%',
-                      float: 'none',
-                  }
-                : {
-                      width: '100%',
-                      display: 'block',
-                      boxSizing: 'border-box',
-                  },
-            headerStyle: {
-                width: '15%',
-                maxWidth: '15%',
-            },
+            // validate: rowData => {
+            //     const endYearMoment = moment(String(rowData.eap_end_year), 'YYYY');
+            //     return (
+            //         endYearMoment.isValid() &&
+            //         endYearMoment.isSameOrBefore(moment(EDITORIAL_APPOINTMENT_MAX_YEAR, 'YYYY')) &&
+            //         endYearMoment.isSameOrAfter(moment(String(rowData.eap_start_year), 'YYYY'))
+            //     );
+            // },
+            // cellStyle: matchesMd
+            //     ? {
+            //           width: '15%',
+            //           maxWidth: '15%',
+            //           float: 'none',
+            //       }
+            //     : {
+            //           width: '100%',
+            //           display: 'block',
+            //           boxSizing: 'border-box',
+            //       },
+            // headerStyle: {
+            //     width: '15%',
+            //     maxWidth: '15%',
+            // },
         },
     ];
-};
-
-export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
-    const materialTableRef = React.createRef();
-    const columns = React.createRef();
-    columns.current = GetColumns();
-
-    const {
-        form: {
-            locale: { addButtonTooltip, editButtonTooltip, deleteButtonTooltip },
+    const table = useMaterialReactTable({
+        columns,
+        data,
+        getRowId: row => row.eap_id,
+        createDisplayMode: 'row', // ('modal', and 'custom' are also available)
+        editDisplayMode: 'row', // ('modal', 'cell', 'table', and 'custom' are also available)
+        enableEditing: true,
+        state: {
+            isLoading: false,
+            isSaving: false,
+            showAlertBanner: false,
+            showProgressBars: false,
         },
-    } = locale.components.myEditorialAppointmentsList;
+    });
 
-    const [data, setData] = React.useState(list);
-    const handleEditingApproved = props => (action, newData, oldData) => {
-        const invalid = props.columns.some(column => !column.validate(newData));
-        /* istanbul ignore if  */
-        if (invalid) {
-            return;
-        }
-        props.onEditingApproved(action, newData, oldData);
-    };
-
-    return (
-        <MaterialTable
-            tableRef={materialTableRef}
-            columns={columns.current}
-            components={{
-                Container: props => (
-                    <StyledResponsiveWrapper
-                        {...props}
-                        id="my-editorial-appointments-list"
-                        data-testid="my-editorial-appointments-list"
-                    />
-                ),
-                Row: props => (
-                    <MTableBodyRow
-                        {...props}
-                        id={`my-editorial-appointments-list-row-${props.index}`}
-                        data-testid={`my-editorial-appointments-list-row-${props.index}`}
-                    />
-                ),
-                EditRow: props => (
-                    <MTableEditRow
-                        {...props}
-                        id={`my-editorial-appointments-list-${props.mode}-row`}
-                        data-testid={`my-editorial-appointments-list-${props.mode}-row`}
-                        onEditingApproved={handleEditingApproved(props)}
-                        sx={{
-                            '& td:not(:last-of-type)': {
-                                verticalAlign: 'top',
-                            },
-                        }}
-                    />
-                ),
-                Action: props => {
-                    /* istanbul ignore else */
-                    if (typeof props.action === 'function') {
-                        const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
-                        return (
-                            <MTableAction
-                                {...props}
-                                action={{
-                                    ...restAction,
-                                    tooltip,
-                                    icon: () => (
-                                        <Icon
-                                            disabled={props.disabled}
-                                            id={`my-editorial-appointments-list-row-${
-                                                props.data.tableData.id
-                                            }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            data-testid={`my-editorial-appointments-list-row-${
-                                                props.data.tableData.id
-                                            }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            {...restAction.iconProps}
-                                        />
-                                    ),
-                                }}
-                                size="small"
-                            />
-                        );
-                    }
-                    /* istanbul ignore else */
-                    if (!!props.action.icon) {
-                        //  Save or Cancel actions for Add/Edit/Delete actions
-                        const { icon: Icon, tooltip, ...restAction } = props.action;
-                        return (
-                            <MTableAction
-                                {...props}
-                                action={{
-                                    ...restAction,
-                                    icon: () => (
-                                        <Icon
-                                            id={`my-editorial-appointments-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            data-testid={`my-editorial-appointments-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                        />
-                                    ),
-                                }}
-                            />
-                        );
-                    }
-
-                    /* istanbul ignore else */
-                    if (!!props.action.tooltip) {
-                        //  Add action
-                        const { tooltip } = props.action;
-                        return (
-                            <Button
-                                id={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                data-testid={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                disabled={props.disabled || disabled}
-                                variant="contained"
-                                color="primary"
-                                children={tooltip}
-                                onClick={event => props.action.onClick(event, props.data)}
-                            />
-                        );
-                    }
-
-                    // Catch for erronious "Buttons" on rows after editing
-                    /* istanbul ignore next */
-                    return <React.Fragment />;
-                },
-            }}
-            data={data}
-            icons={tableIcons}
-            title=""
-            localization={{
-                body: {
-                    addTooltip: addButtonTooltip,
-                    editTooltip: editButtonTooltip,
-                    deleteTooltip: deleteButtonTooltip,
-                },
-            }}
-            editable={{
-                onRowUpdateCancelled: () => {},
-                onRowAdd: newData => {
-                    return handleRowAdd(newData)
-                        .then(data => {
-                            setData(prevState => {
-                                return [...prevState, data];
-                            });
-                        })
-                        .catch(() => setData(prevState => prevState));
-                },
-                onRowUpdate: (newData, oldData) => {
-                    return handleRowUpdate(newData, oldData)
-                        .then(data => {
-                            setData(prevState => {
-                                const list = [...prevState];
-                                const target = list.find(el => el.eap_id === oldData.eap_id);
-                                const index = list.indexOf(target);
-                                list[index] = data;
-                                return list;
-                            });
-                        })
-                        .catch(() => setData(prevState => prevState));
-                },
-                onRowDelete: oldData => {
-                    return handleRowDelete(oldData).then(() => {
-                        return new Promise(resolve => {
-                            setTimeout(() => {
-                                const dataDelete = [...data];
-                                const target = dataDelete.find(el => el.eap_id === oldData.eap_id);
-                                const index = dataDelete.indexOf(target);
-                                dataDelete.splice(index, 1);
-                                setData([...dataDelete]);
-                                resolve();
-                            }, 1000);
-                        });
-                    });
-                },
-            }}
-            options={{
-                actionsColumnIndex: -1,
-                addRowPosition: 'first',
-                paging: false,
-                search: data.length > 10,
-                rowStyle: rowData => ({
-                    borderLeft: moment(String(rowData.eap_end_year), 'YYYY').isBefore(moment(), 'year')
-                        ? '8px solid red'
-                        : '',
-                }),
-            }}
-        />
-    );
+    return <MaterialReactTable table={table} />;
 };
 
 MyEditorialAppointmentsList.propTypes = {
