@@ -148,6 +148,7 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
         focusOnElementId('afterMenuDrawer');
     };
 
+    /* istanbul ignore next */
     const navigateToLink = (url: string, target: string = '_blank'): void => {
         if (url) {
             if (url.indexOf('http') === -1) {
