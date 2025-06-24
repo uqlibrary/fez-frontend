@@ -399,7 +399,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Category code
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-controls="<dynamic>"
@@ -458,7 +458,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Category code status
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-controls="<dynamic>"
@@ -517,7 +517,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Institutional status
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-controls="<dynamic>"
@@ -572,7 +572,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Refereed source
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-controls="<dynamic>"
@@ -627,7 +627,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Content Indicators
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-controls="<dynamic>"
@@ -686,7 +686,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 OA status
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-controls="<dynamic>"
@@ -741,7 +741,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 OA status type
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-controls="<dynamic>"
@@ -800,7 +800,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 License
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-controls="<dynamic>"
@@ -1007,7 +1007,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Language of work
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-controls="<dynamic>"
@@ -1565,7 +1565,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-1x5zecq-MuiGrid2-root"
                                   >
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth  css-yyhjw1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth css-yyhjw1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
                                         aria-controls="<dynamic>"
@@ -3579,7 +3579,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                        
                                     </span>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
                                         aria-controls="<dynamic>"
@@ -4074,7 +4074,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       >
                                         <p
                                           aria-label=""
-                                          class=" css-9r39es"
+                                          class="css-9r39es"
                                           data-mui-internal-clone-element="true"
                                           data-testid="file-name-11-tooltip"
                                         >
@@ -4238,7 +4238,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                                   >
                                     <a
-                                      class=" css-1571yvh"
+                                      class="css-1571yvh"
                                       data-analyticsid="file-name-13-download-link"
                                       data-testid="file-name-13-download-link"
                                       href="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2012.pdf"
@@ -4418,7 +4418,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                                   >
                                     <a
-                                      class=" css-1571yvh"
+                                      class="css-1571yvh"
                                       data-analyticsid="file-name-14-download-link"
                                       data-testid="file-name-14-download-link"
                                       href="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2014.pdf"
@@ -4598,7 +4598,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                                   >
                                     <a
-                                      class=" css-1571yvh"
+                                      class="css-1571yvh"
                                       data-analyticsid="file-name-15-download-link"
                                       data-testid="file-name-15-download-link"
                                       href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines.pdf"
@@ -4778,7 +4778,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                                   >
                                     <a
-                                      class=" css-1571yvh"
+                                      class="css-1571yvh"
                                       data-analyticsid="file-name-16-download-link"
                                       data-testid="file-name-16-download-link"
                                       href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2013.pdf"
@@ -4958,7 +4958,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                                   >
                                     <a
-                                      class=" css-1571yvh"
+                                      class="css-1571yvh"
                                       data-analyticsid="file-name-17-download-link"
                                       data-testid="file-name-17-download-link"
                                       href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2016.pdf"
@@ -5138,7 +5138,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                                   >
                                     <a
-                                      class=" css-1571yvh"
+                                      class="css-1571yvh"
                                       data-analyticsid="file-name-31-download-link"
                                       data-testid="file-name-31-download-link"
                                       href="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119.pdf"
@@ -5318,7 +5318,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                                   >
                                     <a
-                                      class=" css-1571yvh"
+                                      class="css-1571yvh"
                                       data-analyticsid="file-name-32-download-link"
                                       data-testid="file-name-32-download-link"
                                       href="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119_old.pdf"
@@ -5724,7 +5724,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Sensitive Handling Note
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-controls="<dynamic>"
@@ -6208,7 +6208,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -6292,7 +6292,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -6376,7 +6376,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -6460,7 +6460,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -6544,7 +6544,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -6628,7 +6628,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -6712,7 +6712,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -6796,7 +6796,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;

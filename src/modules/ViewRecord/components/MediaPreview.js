@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import JWPlayer from '@jwplayer/jwplayer-react';
+import ReactPlayer from 'react-player';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -142,29 +142,25 @@ export const MediaPreview = ({ ...props }) => {
                 </div>
             )}
             {isVideo && !videoErrorMsg && (
-                <JWPlayer
-                    id="previewVideo"
-                    library="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
-                    onPlaylistItem={onVideoLoad}
-                    onSetupError={onVideoFailed}
-                    onError={onVideoFailed}
-                    autostart="viewable"
-                    file={previewMediaUrl}
-                    // TODO : Was put in for cloudfront not liking 'range' in request headers
-                    // playlist={
-                    //     [{
-                    //         sources: [
-                    //             {
-                    //                 file: previewMediaUrl,
-                    //                 onXhrOpen: (xhr, url) => {
-                    //                     console.log(url);
-                    //                     xhr.setRequestHeader('Range', '');
-                    //                 },
-                    //             },
-                    //         ],
-                    //     }]
-                    // }
-                />
+                <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
+                    <ReactPlayer
+                        id="previewVideo"
+                        style={{ backgroundColor: 'black', position: 'absolute', top: 0, left: 0 }}
+                        onReady={onVideoLoad}
+                        width={'100%'}
+                        height={'100%'}
+                        controls
+                        onError={onVideoFailed}
+                        url={previewMediaUrl}
+                        config={{
+                            file: {
+                                attributes: {
+                                    controlsList: 'nodownload',
+                                },
+                            },
+                        }}
+                    />
+                </div>
             )}
             {isPreviewable && !imageError && (
                 <Grid container spacing={4}>
@@ -198,7 +194,6 @@ MediaPreview.propTypes = {
     mediaUrl: PropTypes.string.isRequired,
     previewMediaUrl: PropTypes.string.isRequired,
     mimeType: PropTypes.string.isRequired,
-
     videoErrorMsg: PropTypes.string,
     videoErrorCode: PropTypes.number,
     videoLoading: PropTypes.bool,

@@ -109,7 +109,7 @@ export const CommunityForm = () => {
             </StandardPage>
         );
     }
-    // customise error for thesis submission
+    // customise error for submission
     const alertProps = validation.getErrorAlertProps({
         error: apiError,
         formErrors,

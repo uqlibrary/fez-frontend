@@ -19,6 +19,7 @@ context('Design admin edit', () => {
 
     it('should render the different sections as expected', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
+        cy.data('rek-license-select').should('exist');
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
         cy.get('[data-testid=bibliographic-section-header]').should('contain', 'Bibliographic');
@@ -53,6 +54,7 @@ context('Design admin edit', () => {
 
     it('should render different sections as expected for non-NTRO subtype', () => {
         cy.loadRecordForAdminEdit(nonNtroRecord.rek_pid);
+        cy.data('rek-license-select').should('exist');
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
         cy.get('[data-testid=bibliographic-section-header]').should('contain', 'Bibliographic');

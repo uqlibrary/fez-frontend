@@ -4,7 +4,8 @@ import { customRedirectors } from '../containers/App';
 import { accounts, authorDetails, currentAuthor } from 'mock/data';
 import { pathConfig } from 'config';
 import Cookies from 'js-cookie';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, waitForText } from 'test-utils';
+import locale from '../../../locale/global';
 
 const mockUseNavigate = jest.fn();
 let mockUseLocation = {};
@@ -489,5 +490,23 @@ describe('Application component', () => {
         mockUseLocation.pathname = '/not-public-page';
         const { container } = setup({ isMobile: true });
         expect(container).toMatchSnapshot();
+    });
+
+    it('Should display login dialog logged-in user performs a search with an expired session token', async () => {
+        const { rerender } = setup({ account: account });
+
+        // since there are no visual cues to tell if the related side effect has been completed,
+        // make sure the text that will be displayed after a rerender without an account is not present
+        let isTextPresent = false;
+        try {
+            await waitForText(locale.global.loginAlert.message, { timeout: 1 });
+            isTextPresent = true;
+        } catch (e) {
+            expect(isTextPresent).toBeFalsy();
+        }
+
+        mockUseLocation.pathname = '/records/search';
+        setup({ account: null }, rerender);
+        await waitForText(locale.global.loginAlert.message);
     });
 });

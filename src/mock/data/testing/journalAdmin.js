@@ -3,8 +3,11 @@ export const helpersTypicalExpected = {
         adminSection: {
             abbreviatedTitle: 'ADV NONLINEAR STUD',
             advisoryStatement: {
-                htmlText: 'This is an advisory statement',
-                plainText: 'This is an advisory statement',
+                text: {
+                    htmlText: 'This is an advisory statement',
+                    plainText: 'This is an advisory statement',
+                },
+                type: 1234
             },
             description:
                 'Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.',
@@ -441,6 +444,7 @@ export const helpersTypicalExpected = {
             ],
             is_favourite: false,
             jnl_advisory_statement: 'This is an advisory statement',
+            jnl_advisory_statement_type: 1234,
             jnl_created_date: '2021-02-22 00:56:49',
             jnl_editing_start_date: '2023-12-07 23:57:35',
             jnl_editing_user: 'uqlsibba',
@@ -471,8 +475,11 @@ export const helpersNonTypicalExpected = {
         adminSection: {
             abbreviatedTitle: 'ADV NONLINEAR STUD',
             advisoryStatement: {
-                htmlText: 'This is an advisory statement',
-                plainText: 'This is an advisory statement',
+                text: {
+                    htmlText: 'This is an advisory statement',
+                    plainText: 'This is an advisory statement',
+                },
+                type: 1234,
             },
             description:
                 'Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.',
@@ -865,6 +872,7 @@ export const helpersNonTypicalExpected = {
             ],
             is_favourite: false,
             jnl_advisory_statement: 'This is an advisory statement',
+            jnl_advisory_statement_type: 1234,
             jnl_created_date: '2021-02-22 00:56:49',
             jnl_editing_start_date: '2023-12-07 23:57:35',
             jnl_editing_user: 'uqlsibba',

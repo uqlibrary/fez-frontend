@@ -11,7 +11,7 @@ import { useLocation, useNavigationType, createRoutesFromChildren, matchRoutes }
 import { setup } from 'mock';
 
 // pick utils
-import MomentUtils from '@date-io/moment';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 
 // Internal
 import Root from './Root';
@@ -73,7 +73,7 @@ const render = () => {
         <React.StrictMode>
             <AppErrorBoundary>
                 <Provider store={store}>
-                    <LocalizationProvider dateAdapter={MomentUtils}>
+                    <LocalizationProvider dateAdapter={AdapterMoment}>
                         <Root />
                     </LocalizationProvider>
                 </Provider>

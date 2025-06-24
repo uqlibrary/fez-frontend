@@ -24,6 +24,7 @@ help: {
 /* eslint-disable max-len */
 export default {
     title: 'Complete my work',
+    loadingMessage: 'Loading work',
     help: {
         title: 'Add more information to an existing NTRO',
         text: (

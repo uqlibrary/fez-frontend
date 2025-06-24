@@ -132,7 +132,7 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
       >
         CRICOS Provider No: 
         <a
-          class=" css-1oqhn84"
+          class="css-1oqhn84"
           data-analyticsid="cricos-link"
           data-testid="cricos-link"
           href="http://www.uq.edu.au/about/cricos-link"

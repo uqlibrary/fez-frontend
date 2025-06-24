@@ -92,7 +92,7 @@ export const getDoi = value => {
 };
 
 export const isValidDOIValue = value => {
-    if (!value.trim?.()) return false;
+    if (!value?.trim?.()) return false;
     for (const regex of doiRegexps) {
         const anchoredRegex = new RegExp(`^${regex.source}`, regex.flags);
         const matches = value?.match(anchoredRegex);
