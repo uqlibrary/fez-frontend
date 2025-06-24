@@ -268,13 +268,6 @@ export function adminJournalUpdate(data) {
             type: actions.ADMIN_UPDATE_JOURNAL_PROCESSING,
         });
         const [patchJournalRequest] = getAdminJournalRequest(data);
-        // TODO revert upon enabling Advisory Statement Type
-        try {
-            delete patchJournalRequest.jnl_advisory_statement_type;
-        } catch (e) {
-            /* empty */
-        }
-
         return Promise.resolve([])
             .then(() => put(JOURNAL_API({ id: data.jnl_jid }), patchJournalRequest))
             .then(response => {
