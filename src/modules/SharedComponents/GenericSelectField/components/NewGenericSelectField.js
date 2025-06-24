@@ -21,6 +21,7 @@ export const NewGenericSelectField = ({
     formHelperTextProps,
     genericSelectFieldId,
     hideLabel,
+    inputProps,
     itemsList = [],
     itemsLoading,
     label,
@@ -139,6 +140,7 @@ export const NewGenericSelectField = ({
                 disabled={disabled}
                 displayEmpty={displayEmpty}
                 inputProps={{
+                    ...inputProps,
                     'aria-labelledby': `${genericSelectFieldId}-label`,
                     'data-analyticsid': `${genericSelectFieldId}-input`,
                     'data-testid': `${genericSelectFieldId}-input`,
@@ -186,6 +188,7 @@ NewGenericSelectField.propTypes = {
     genericSelectFieldId: PropTypes.string.isRequired,
     hideLabel: PropTypes.bool,
     state: PropTypes.object,
+    inputProps: PropTypes.object,
     itemsList: PropTypes.arrayOf(
         PropTypes.shape({
             text: PropTypes.string.isRequired,

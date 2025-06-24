@@ -136,6 +136,11 @@ describe('Validation method', () => {
         expect(testValue).toEqual('');
     });
 
+    it('should validate RAiD', () => {
+        expect(validation.raid('sdjflsjdlfjsl')).toEqual(locale.validationErrors.raid);
+        expect(validation.raid('10.1234/suffix')).toEqual(undefined);
+    });
+
     it('should validate max length', () => {
         expect(
             validation.spacelessMaxLength10Validator('sdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjsl'),

@@ -12,7 +12,7 @@ context('Data Collection admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(9);
         cy.adminEditVerifyAlerts(1, ['Publication date is required']);
 
         cy.adminEditTabbedView();

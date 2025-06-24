@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlternateIdentifierListEditorField function should return AlternateIdentifierListEditorField 1`] = `
+<AlternateIdentifierListEditor
+  errorText={null}
+  input={
+    {
+      "onChange": [MockFunction],
+    }
+  }
+  onChange={[MockFunction]}
+/>
+`;
+
+exports[`AlternateIdentifierListEditorField function should return AlternateIdentifierListEditorField with error attributes 1`] = `
+<AlternateIdentifierListEditor
+  error="test"
+  errorText="test"
+  input={
+    {
+      "onChange": [MockFunction],
+    }
+  }
+  meta={
+    {
+      "error": "test",
+    }
+  }
+  onChange={[MockFunction]}
+/>
+`;
