@@ -137,26 +137,29 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                 <Grid item xs={12} sm={4}>
                     <Box data-testid={`${id}-date-from`}>
                         <DatePicker
-                            inputProps={{
-                                id: `${id}-date-from-input`,
-                                'data-testid': `${id}-date-from-input`,
-                                label: txt.label.dateFrom,
-                                'aria-label': txt.label.dateFrom,
-                                'aria-labelledby': `${id}-input`,
-                                'data-analyticsid': `${id}-date-from-input`,
-                            }}
                             label={txt.label.dateFrom}
-                            value={actionState.filters.date_from}
-                            renderInput={params => (
-                                <TextField
-                                    {...params}
-                                    variant="standard"
-                                    fullWidth
-                                    error={!!fromDateError}
-                                    required={!!fromDateError || actionState.report?.value === 'workshistory'}
-                                    helperText={fromDateError}
-                                />
-                            )}
+                            value={actionState.filters.date_from && moment(actionState.filters.date_from)}
+                            slotProps={{
+                                textField: {
+                                    inputProps: {
+                                        id: `${id}-date-from-input`,
+                                        'data-testid': `${id}-date-from-input`,
+                                        label: txt.label.dateFrom,
+                                        'aria-label': txt.label.dateFrom,
+                                        'aria-labelledby': `${id}-input`,
+                                        'data-analyticsid': `${id}-date-from-input`,
+                                    },
+                                    variant: 'standard',
+                                    fullWidth: true,
+                                    error: !!fromDateError,
+                                    required: !!fromDateError || actionState.report?.value === 'workshistory',
+                                    helperText: fromDateError,
+                                },
+                                field: {
+                                    clearable: true, // Allow clearing the date
+                                    readOnly: false,
+                                },
+                            }}
                             // eslint-disable-next-line react/prop-types
                             onChange={props =>
                                 handleDisplayReportChange({
@@ -164,42 +167,43 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                     value: !!props ? moment(props).format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME) : null,
                                 })
                             }
-                            defaultValue=""
                             disableFuture
-                            maxDate={actionState.filters.date_to}
+                            maxDate={actionState.filters.date_to && moment(actionState.filters.date_to)}
                             disabled={
                                 !!!actionState.report ||
                                 (actionState.report?.value === 'systemalertlog' && actionState.filters.record_id !== '')
                             }
-                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
+                            format={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={4}>
                     <Box data-testid={`${id}-date-to`}>
                         <DatePicker
-                            inputProps={{
-                                id: `${id}-date-to-input`,
-                                'data-testid': `${id}-date-to-input`,
-                                label: txt.label.dateTo,
-                                'aria-label': txt.label.dateTo,
-                                'aria-labelledby': `${id}-date-to-label`,
-                                'data-analyticsid': `${id}-date-to-input`,
-                            }}
                             label={txt.label.dateTo}
-                            value={actionState.filters.date_to}
-                            renderInput={params => (
-                                <TextField
-                                    {...params}
-                                    variant="standard"
-                                    fullWidth
-                                    error={!!toDateError}
-                                    required={
-                                        !!actionState.filters.date_from || actionState.report?.value === 'workshistory'
-                                    }
-                                    helperText={toDateError}
-                                />
-                            )}
+                            value={actionState.filters.date_to && moment(actionState.filters.date_to)}
+                            slotProps={{
+                                textField: {
+                                    inputProps: {
+                                        id: `${id}-date-to-input`,
+                                        'data-testid': `${id}-date-to-input`,
+                                        label: txt.label.dateTo,
+                                        'aria-label': txt.label.dateTo,
+                                        'aria-labelledby': `${id}-date-to-label`,
+                                        'data-analyticsid': `${id}-date-to-input`,
+                                    },
+                                    variant: 'standard',
+                                    fullWidth: true,
+                                    error: !!toDateError,
+                                    required:
+                                        !!actionState.filters.date_from || actionState.report?.value === 'workshistory',
+                                    helperText: toDateError,
+                                },
+                                field: {
+                                    clearable: true, // Allow clearing the date
+                                    readOnly: false,
+                                },
+                            }}
                             // eslint-disable-next-line react/prop-types
                             onChange={props =>
                                 handleDisplayReportChange({
@@ -207,14 +211,13 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                     value: !!props ? moment(props).format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME) : null,
                                 })
                             }
-                            defaultValue=""
                             disableFuture
-                            minDate={actionState.filters.date_from}
+                            minDate={actionState.filters.date_from && moment(actionState.filters.date_from)}
                             disabled={
                                 !!!actionState.report ||
                                 (actionState.report?.value === 'systemalertlog' && actionState.filters.record_id !== '')
                             }
-                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
+                            format={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
                     </Box>
                 </Grid>

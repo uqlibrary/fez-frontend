@@ -1,7 +1,7 @@
 import React from 'react';
 import DateRangeField from './DateRangeField';
 import { GENERIC_DATE_FORMAT } from 'config/general';
-import { rtlRender, fireEvent, act } from 'test-utils';
+import { rtlRender, fireEvent, act, userEvent } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -36,15 +36,15 @@ describe('DateRangeField component', () => {
         expect(getByTestId('test-date-range-to-date')).toBeTruthy();
     });
 
-    it('should display error for "from" date for invalid date input', () => {
+    it('should display error for "from" date for invalid date input', async () => {
         const { getByTestId, getByText } = setup({ id: 'test-date-range' });
-        fireEvent.change(getByTestId('test-date-range-from-date'), { target: { value: '10/13/2010' } });
+        await userEvent.type(getByTestId('test-date-range-from-date'), '31022010');
         expect(getByText('Please provide valid date')).toBeInTheDocument();
     });
 
-    it('should display error for "to" date for invalid date input', () => {
+    it('should display error for "to" date for invalid date input', async () => {
         const { getByTestId, getByText } = setup({ id: 'test-date-range' });
-        fireEvent.change(getByTestId('test-date-range-to-date'), { target: { value: '10/13/2010' } });
+        await userEvent.type(getByTestId('test-date-range-to-date'), '31022010');
         expect(getByText('Please provide valid date')).toBeInTheDocument();
     });
 
