@@ -12182,7 +12182,7 @@ exports[`Additional Information Component  should render component with data col
                     The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.
                   </p>
                   <a
-                    class=" css-1oqhn84"
+                    class="css-1oqhn84"
                     data-analyticsid="rek-license-link"
                     data-testid="rek-license-link"
                     href="https://guides.library.uq.edu.au/deposit-your-data/license-reuse-with-acknowledgement"

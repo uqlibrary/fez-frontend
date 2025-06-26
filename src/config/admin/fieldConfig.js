@@ -2061,7 +2061,7 @@ export default {
             ownerIdentifier: () => ({
                 validate: [
                     (value, allValues) => {
-                        const type = allValues.get('adminSection')?.get('ownerIdentifierType');
+                        const type = allValues.adminSection?.ownerIdentifierType;
                         const validateMethod = AUTHOR_EXTERNAL_IDENTIFIER_TYPE.find(item => item.value === type);
                         return validateMethod ? validation[validateMethod.text.toLowerCase()](value) : undefined;
                     },

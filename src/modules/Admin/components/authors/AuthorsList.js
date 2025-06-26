@@ -256,6 +256,9 @@ export const getColumns = ({
         ...(showExternalIdentifierInput
             ? [
                   {
+                      cellStyle: () => ({
+                          verticalAlign: 'top',
+                      }),
                       title: (
                           <Typography variant="caption" color="secondary">
                               {externalIdentifierColumn}
@@ -277,8 +280,7 @@ export const getColumns = ({
                               <Grid container spacing={2}>
                                   <Grid item style={{ flexGrow: '1' }}>
                                       <TextField
-                                          autoFocus
-                                          value={props.value}
+                                          value={props.value || ''}
                                           onChange={e => props.onChange(e.target.value)}
                                           textFieldId={`${contributorEditorId}-external-identifier`}
                                           error={isIdValid(
@@ -300,6 +302,9 @@ export const getColumns = ({
                       validate: rowData => isIdValid(rowData.externalIdentifier, rowData.externalIdentifierType),
                   },
                   {
+                      cellStyle: () => ({
+                          verticalAlign: 'top',
+                      }),
                       title: (
                           <Typography variant="caption" color="secondary">
                               {externalIdentifierTypeColumn}
@@ -322,18 +327,15 @@ export const getColumns = ({
                       ),
                       editComponent: props => {
                           const { rowData: contributor } = props;
-                          const handleChange = selectedItem => {
-                              props.onRowDataChange({ ...contributor, externalIdentifierType: selectedItem });
-                          };
                           return (
                               <Grid container spacing={2}>
                                   <Grid item style={{ flexGrow: '1' }}>
                                       <NewGenericSelectField
                                           {...props}
-                                          autoFocus
                                           itemsList={AUTHOR_EXTERNAL_IDENTIFIER_TYPE}
-                                          onChange={handleChange}
+                                          onChange={item => props.onChange(item)}
                                           value={props.value}
+                                          key={`${contributor.externalIdentifierType}-${contributor.externalIdentifier}`}
                                           genericSelectFieldId={`${contributorEditorId}-external-identifier-type`}
                                           label={externalIdentifierTypeLabel}
                                       />
@@ -557,7 +559,7 @@ export const AuthorsList = ({
                 contributorEditorId,
                 showExternalIdentifierInput,
             }),
-        [contributorEditorId, disabled, isNtro, locale, showRoleInput, suffix],
+        [contributorEditorId, showExternalIdentifierInput, disabled, isNtro, locale, showRoleInput, suffix],
     );
 
     const prevList = React.useRef('');

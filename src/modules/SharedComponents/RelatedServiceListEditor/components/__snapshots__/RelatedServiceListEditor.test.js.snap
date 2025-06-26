@@ -400,7 +400,6 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -958,7 +957,6 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -1079,7 +1077,6 @@ exports[`RelatedServiceListEditor should delete all services 2`] = `
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -1637,7 +1634,6 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -2043,7 +2039,6 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -2601,7 +2596,6 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -3159,7 +3153,6 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -3717,7 +3710,6 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -4275,7 +4267,6 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -4679,7 +4670,6 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -5083,7 +5073,6 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -5643,7 +5632,6 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -6203,7 +6191,6 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -6324,7 +6311,6 @@ exports[`RelatedServiceListEditor should render default view 1`] = `
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -6450,7 +6436,6 @@ exports[`RelatedServiceListEditor should render error from props 1`] = `
       Some error
     </span>
   </div>
-  \\
 </div>
 `;
 
@@ -6581,7 +6566,6 @@ exports[`RelatedServiceListEditor should render error from props as children 1`]
       </span>
     </span>
   </div>
-  \\
 </div>
 `;
 
@@ -7447,7 +7431,6 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
       </div>
     </div>
   </div>
-  \\
 </div>
 `;
 
@@ -7573,7 +7556,6 @@ exports[`RelatedServiceListEditor should render string error from props 1`] = `
       Test error
     </span>
   </div>
-  \\
 </div>
 `;
 
@@ -7977,411 +7959,6 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
       </div>
     </div>
   </div>
-  \\
-</div>
-`;
-
-exports[`RelatedServiceListEditor should render with default given value is Immutable List 1`] = `
-<div>
-  <div>
-    Add the Related Service's ID and description - then click the ADD RELATED SERVICE button to add to the list
-    <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-      style="margin-top: 8px;"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
-      >
-        <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
-        >
-          <div
-            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-          >
-            <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-              data-shrink="false"
-              for="rek-related-service-id"
-              id="rek-related-service-id-label"
-            >
-              Related Service ID
-              <span
-                aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
-              >
-                 
-                *
-              </span>
-            </label>
-            <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1vg8b0p-MuiInputBase-root-MuiInput-root"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-describedby="rek-related-service-id-helper-text"
-                aria-expanded="false"
-                aria-invalid="true"
-                autocapitalize="none"
-                autocomplete="off"
-                class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                data-analyticsid="rek-related-service-id-input"
-                data-testid="rek-related-service-id-input"
-                id="rek-related-service-id"
-                name="relatedServiceId"
-                placeholder="Enter related service's ROR or DOI"
-                required=""
-                role="combobox"
-                spellcheck="false"
-                type="text"
-                value=""
-              />
-            </div>
-            <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
-              data-testid="rek-related-service-id-helper-text"
-              id="rek-related-service-id-helper-text"
-            >
-              This field is required
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-related-service-desc"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-related-service-desc-label"
-            for="rek-related-service-desc-input"
-            id="rek-related-service-desc-label"
-          >
-            Related Service Description
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-invalid="false"
-              aria-label="Related Service Description"
-              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-related-service-desc-input"
-              data-testid="rek-related-service-desc-input"
-              id="rek-related-service-desc-input"
-              label="Related Service Description"
-              name="relatedServiceDesc"
-              placeholder="Description for this related service"
-              type="text"
-              value=""
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-      >
-        <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-          data-analyticsid="rek-related-service-add"
-          data-testid="rek-related-service-add"
-          disabled=""
-          id="rek-related-service-add"
-          tabindex="-1"
-          type="button"
-        >
-          Add related service
-        </button>
-      </div>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-      >
-        <ul
-          class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
-        >
-          <span
-            class="MuiBox-root css-0"
-            data-testid="confirmDialogBox"
-          />
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
-                      >
-                        Related Service ID
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
-                      >
-                        Related Service Description
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
-              >
-                <div
-                  class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
-                  style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiListItemText-root css-18quae3-MuiListItemText-root"
-                        style="padding: 0px;"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
-                        >
-                          Reorder entries
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      style="text-align: right;"
-                    >
-                      <div
-                        aria-label="Remove all entries"
-                        class=""
-                        data-mui-internal-clone-element="true"
-                        style="display: inline;"
-                      >
-                        <button
-                          aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                          tabindex="0"
-                          type="button"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                            data-testid="DeleteForeverIcon"
-                            focusable="false"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        style="margin-top: -8px;"
-      >
-        <ul
-          class="MuiList-root MuiList-padding css-9kfl2b-MuiList-root"
-          data-testid="rek-related-service-list"
-        >
-          <span
-            class="MuiBox-root css-0"
-            data-testid="confirmDialogBox"
-          />
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
-            style="padding: 8px 0px 8px 0px;"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-              data-testid="related-service-list-row-0"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container css-1ti6yax-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
-                      >
-                        1234
-                      </p>
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-toder3-MuiTypography-root"
-                      >
-                        desc
-                      </p>
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-12ow2id-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
-              >
-                <div
-                  class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
-                  style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-ye9v0w-MuiGrid-root"
-                    >
-                      <div
-                        aria-label="Move entry up the order"
-                        class=""
-                        data-mui-internal-clone-element="true"
-                        style="display: inline;"
-                      >
-                        <button
-                          aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                          data-testid="related-service-list-move-up=0"
-                          disabled=""
-                          tabindex="-1"
-                          type="button"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                            data-testid="KeyboardArrowUpIcon"
-                            focusable="false"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                      <div
-                        aria-label="Move entry down the order"
-                        class=""
-                        data-mui-internal-clone-element="true"
-                        style="display: inline;"
-                      >
-                        <button
-                          aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                          data-testid="related-service-list-move-down=0"
-                          disabled=""
-                          tabindex="-1"
-                          type="button"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                            data-testid="KeyboardArrowDownIcon"
-                            focusable="false"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13ezsq2-MuiGrid-root"
-                    >
-                      <div
-                        aria-label="Remove this entry"
-                        class=""
-                        data-mui-internal-clone-element="true"
-                        style="display: inline;"
-                      >
-                        <button
-                          aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                          tabindex="0"
-                          type="button"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                            data-testid="DeleteIcon"
-                            focusable="false"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  \\
 </div>
 `;
 
@@ -8785,6 +8362,5 @@ exports[`RelatedServiceListEditor should update on receiving new props 1`] = `
       </div>
     </div>
   </div>
-  \\
 </div>
 `;

@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import Immutable from 'immutable';
 import RelatedServiceListEditorHeader from './RelatedServiceListEditorHeader';
 import RelatedServiceListEditorRow from './RelatedServiceListEditorRow';
 import RelatedServiceListEditorForm from './RelatedServiceListEditorForm';
@@ -10,20 +9,15 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { useFormContext } from 'react-hook-form';
 
-const getRelatedServicesFromProps = input => {
-    if (input?.name && input?.value) {
-        return input.value instanceof Immutable.List ? input.value.toJS() : input.value;
-    }
-    return [];
-};
+const getRelatedServicesFromProps = (name, value) => (name && value) || [];
 
 const RelatedServiceListEditor = ({
     canEdit = false,
     disabled,
-    meta,
-    onChange,
+    state,
     locale,
-    input,
+    name,
+    value,
     required,
     disableDeleteAllRelatedServices = false,
 }) => {
@@ -37,37 +31,28 @@ const RelatedServiceListEditor = ({
 
     // propagate input changes to `related services`
     useEffect(() => {
-        const updated = getRelatedServicesFromProps(input);
-        // only update `related services` once, when input.value has been updated
+        const updated = getRelatedServicesFromProps(name, value);
+        // only update `related services` once, when value has been updated
         if (!!relatedServices.length || !updated.length || hasPropagatedInputValueChanges.current) {
             return;
         }
         hasPropagatedInputValueChanges.current = true;
         setRelatedServices(updated);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(relatedServices), input?.value, hasPropagatedInputValueChanges.current]);
+    }, [JSON.stringify(relatedServices), value, hasPropagatedInputValueChanges.current]);
 
     // propagate `relatedServiceFormPopulated` changes to input
     useEffect(() => {
-        if (relatedServiceFormPopulated) {
-            // TODO remove upon removing redux-form
-            /* istanbul ignore else */
-            if (onChange) {
-                onChange(relatedServiceFormPopulated);
-            }
-        }
+        if (!relatedServiceFormPopulated) return;
+        form?.setValue?.(name, relatedServiceFormPopulated, { shouldValidate: true });
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [relatedServiceFormPopulated, form?.setValue, onChange]);
+    }, [relatedServiceFormPopulated]);
 
     // propagate `related service` changes to input
     useEffect(() => {
-        // TODO remove upon removing redux-form
-        /* istanbul ignore else */
-        if (onChange) {
-            onChange(relatedServices);
-        }
+        form?.setValue?.(name, relatedServices, { shouldValidate: true });
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(relatedServices), form?.setValue, onChange]);
+    }, [JSON.stringify(relatedServices)]);
 
     const addRelatedService = useCallback(
         relatedService => {
@@ -156,10 +141,10 @@ const RelatedServiceListEditor = ({
     ));
 
     let error = null;
-    if (meta?.error) {
+    if (state?.error) {
         error =
-            !!meta.error.props &&
-            React.Children.map(meta.error.props.children, (child, index) => {
+            !!state.error.props &&
+            React.Children.map(state.error.props.children, (child, index) => {
                 if (child.type) {
                     return React.cloneElement(child, { key: index });
                 }
@@ -177,8 +162,6 @@ const RelatedServiceListEditor = ({
                 />
             )}
             <RelatedServiceListEditorForm
-                meta={meta}
-                input={input}
                 onAdd={addRelatedService}
                 isPopulated={isFormPopulated}
                 required={required}
@@ -214,9 +197,9 @@ const RelatedServiceListEditor = ({
                     </Grid>
                 </Grid>
             )}
-            {meta?.error && (
+            {state?.error && (
                 <Typography color="error" variant="caption">
-                    {error || meta.error}
+                    {error || state.error}
                 </Typography>
             )}
         </div>
@@ -226,10 +209,10 @@ const RelatedServiceListEditor = ({
 RelatedServiceListEditor.propTypes = {
     canEdit: PropTypes.bool,
     disabled: PropTypes.bool,
-    meta: PropTypes.object,
-    onChange: PropTypes.func,
+    state: PropTypes.object,
     locale: PropTypes.object,
-    input: PropTypes.object,
+    name: PropTypes.string,
+    value: PropTypes.any,
     required: PropTypes.bool,
     disableDeleteAllRelatedServices: PropTypes.bool,
 };

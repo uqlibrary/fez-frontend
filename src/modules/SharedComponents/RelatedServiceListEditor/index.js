@@ -1,1 +1,1 @@
-export { default as RelatedServiceListEditorField } from './RelatedServiceListEditorField';
+export { default as RelatedServiceListEditorField } from './components/RelatedServiceListEditor';

@@ -87,7 +87,6 @@ export const RelatedServiceListEditorRow = ({
     };
 
     const handleEdit = () => {
-        console.log(relatedService);
         onEdit(relatedService, index);
     };
 

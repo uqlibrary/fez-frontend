@@ -176,8 +176,6 @@ RelatedServiceListEditorForm.propTypes = {
     relatedServiceSelectedToEdit: PropTypes.object,
     isPopulated: PropTypes.func.isRequired,
     locale: PropTypes.object,
-    meta: PropTypes.object,
-    input: PropTypes.object,
     onAdd: PropTypes.func.isRequired,
     required: PropTypes.bool,
 };

@@ -414,6 +414,8 @@ exports[`form submission payload create a journal article 1`] = `
       "rek_author_id_order": 7,
     },
   ],
+  "fez_record_search_key_author_identifier": [],
+  "fez_record_search_key_author_identifier_type": [],
   "fez_record_search_key_biosis_id": null,
   "fez_record_search_key_book_title": null,
   "fez_record_search_key_building_materials": [],
