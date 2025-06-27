@@ -13,10 +13,7 @@ import { tableIcons } from './MyEditorialAppointmentsListIcons';
 import Button from '@mui/material/Button';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import TextField from '@mui/material/TextField';
 import { Box, Typography, Tooltip, IconButton } from '@mui/material';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -105,8 +102,9 @@ const StyledDatePicker = styled(DatePicker)(({ theme }) => ({
 
 const useTable = list => {
     const [data, setData] = useState(list);
-    const [state, setState] = useState({ busy: false, deleteRowId: null });
+    const [state, setState] = useState({ busy: false, deleteRowId: null, editingRow: null });
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
+    const [validationErrors, setValidationErrors] = useState({});
 
     const setBusy = (isBusy = true) => setState(prev => ({ ...prev, busy: isBusy }));
     const setDeleteRow = id => {
@@ -117,6 +115,8 @@ const useTable = list => {
         setState(prev => ({ ...prev, deleteRowId: null }));
         hideConfirmation();
     };
+    const setEditRow = row => setState(prev => ({ ...prev, editingRow: row }));
+    const resetEditRow = () => setState(prev => ({ ...prev, editingRow: null }));
 
     return {
         data,
@@ -126,9 +126,14 @@ const useTable = list => {
         pendingDeleteRowId: state.deleteRowId,
         setDeleteRow,
         resetDeleteRow,
+        editingRow: state.editingRow,
+        setEditRow,
+        resetEditRow,
         isOpen,
         showConfirmation,
         hideConfirmation,
+        validationErrors,
+        setValidationErrors,
     };
 };
 
@@ -168,23 +173,33 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         pendingDeleteRowId,
         setDeleteRow,
         resetDeleteRow,
+        editingRow,
+        setEditRow,
+        resetEditRow,
         isOpen,
-        showConfirmation,
-        hideConfirmation,
+        validationErrors,
+        setValidationErrors,
     } = useTable(list);
 
-    const handleEditingApproved = props => (action, newData, oldData) => {
-        const invalid = props.columns.some(column => !column.validate(newData));
-        /* istanbul ignore if  */
-        if (invalid) {
-            return;
-        }
+    const handleCreate = ({ values, table, row }) => {
+        console.log(values, table, row);
+        table.setCreatingRow(false);
+    };
+
+    const handleEdit = ({ values, table, row }) => {
+        // const invalid = props.columns.some(column => !column.validate(newData));
+        // /* istanbul ignore if  */
+        // if (invalid) {
+        //     return;
+        // }
+        console.log({ values, table, row });
         setBusy();
-        handleRowUpdate(newData, oldData)
+        handleRowUpdate(values, row.original)
             .then(data => {
+                table.setEditingRow(null);
                 setData(prevState => {
                     const list = [...prevState];
-                    const target = list.find(el => el.eap_id === oldData.eap_id);
+                    const target = list.find(el => el.eap_id === row.original.eap_id);
                     const index = list.indexOf(target);
                     list[index] = data;
                     return list;
@@ -663,21 +678,39 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         enableRowSelection: false,
         enableColumnActions: false,
         enableColumnFilterModes: false,
-        enableTopToolbar: false,
         enablePagination: false,
+        enableToolbarInternalActions: false,
         positionActionsColumn: !matchesMd ? 'first' : 'last',
         state: {
             showAlertBanner: false,
             showLoadingOverlay: isBusy,
         },
         displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
+        renderTopToolbarCustomActions: ({ table }) => (
+            <Button
+                id={`my-editorial-appointments-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                data-testid={`my-editorial-appointments-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                disabled={disabled}
+                variant="contained"
+                color="primary"
+                children={addButtonTooltip}
+                onClick={() => {
+                    setEditRow({});
+                    table.setCreatingRow(true);
+                }}
+                sx={{ marginLeft: 'auto' }}
+            />
+        ),
         renderRowActions: ({ row }) => {
             return (
                 <>
                     <Tooltip title={editButtonTooltip}>
                         <IconButton
-                            onClick={() => table.setEditingRow(row)}
-                            disabled={!!pendingDeleteRowId || !!isBusy}
+                            onClick={() => {
+                                setEditRow(row);
+                                table.setEditingRow(row);
+                            }}
+                            disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
                             id={`my-editorial-appointments-list-row-${row.id}-${editButtonTooltip
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
@@ -685,13 +718,13 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                 row.id
                             }-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                         >
-                            <EditIcon />
+                            <tableIcons.Edit />
                         </IconButton>
                     </Tooltip>
                     <Tooltip title={deleteButtonTooltip}>
                         <IconButton
                             onClick={openDeleteConfirmModal(row.id)}
-                            disabled={!!pendingDeleteRowId || !!isBusy}
+                            disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
                             id={`my-editorial-appointments-list-row-${
                                 row.id
                             }-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
@@ -699,39 +732,34 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                 row.id
                             }-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                         >
-                            <DeleteIcon />
+                            <tableIcons.Delete />
                         </IconButton>
                     </Tooltip>
                 </>
             );
         },
-        onEditingRowSave: ({ values, table, row }) => {
-            console.log('onEditingRowSave', values, table);
-            // setData(prev => prev.map(r => (r.eap_id === row.original.eap_id ? { ...row.original, ...values } : r)));
-            // table.setEditingRow(null);
+        onCreatingRowCancel: () => {
+            setEditRow(null);
+            setValidationErrors({});
         },
+        onCreatingRowSave: handleCreate,
+        onEditingRowSave: handleEdit,
+        onEditingRowCancel: () => setEditRow(null),
         initialState: {
             expanded: true,
             columnVisibility: { eap_role_name: false },
             columnPinning: { [!matchesMd ? 'left' : 'right']: ['mrt-row-actions'] },
         },
-        // renderTopToolbarCustomActions: ({ table }) => (
-        //   <Button
-        //     variant="contained"
-        //     onClick={() => {
-        //       table.setCreatingRow(true); //simplest way to open the create row modal with no default values
-        //       //or you can pass in a row object to set default values with the `createRow` helper function
-        //       // table.setCreatingRow(
-        //       //   createRow(table, {
-        //       //     //optionally pass in default values for the new row,
-        // useful for nested data or other complex scenarios
-        //       //   }),
-        //       // );
-        //     }}
-        //   >
-        //     Create New User
-        //   </Button>
-        // ),
+        icons: {
+            SaveIcon: props => (
+                <tableIcons.Check
+                    id={`my-editorial-appointments-${!!editingRow ? 'edit' : 'add'}-save`}
+                    data-testid={`my-editorial-appointments-${!!editingRow ? 'edit' : 'add'}-save`}
+                    color="secondary"
+                    {...props}
+                />
+            ),
+        },
     });
 
     return (
