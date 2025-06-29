@@ -87,10 +87,12 @@ export const NewGenericSelectField = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [error]);
 
-    const handleChange = React.useCallback(event => {
-        onChange?.(event.target.value) || /* istanbul ignore next */ onChange?.(event.target.value);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    const handleChange = React.useCallback(
+        event => {
+            onChange?.(event.target.value);
+        },
+        [onChange],
+    );
 
     const renderMenuItems = itemsList => {
         return [

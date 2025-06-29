@@ -327,13 +327,17 @@ export const getColumns = ({
                       ),
                       editComponent: props => {
                           const { rowData: contributor } = props;
+                          const handleChange = value => {
+                              props.onRowDataChange({ ...contributor, ...{ externalIdentifierType: value } });
+                          };
+
                           return (
                               <Grid container spacing={2}>
                                   <Grid item style={{ flexGrow: '1' }}>
                                       <NewGenericSelectField
                                           {...props}
                                           itemsList={AUTHOR_EXTERNAL_IDENTIFIER_TYPE}
-                                          onChange={item => props.onChange(item)}
+                                          onChange={handleChange}
                                           value={props.value}
                                           key={`${contributor.externalIdentifierType}-${contributor.externalIdentifier}`}
                                           genericSelectFieldId={`${contributorEditorId}-external-identifier-type`}
