@@ -10,6 +10,8 @@ import { FormProvider } from 'react-hook-form';
 import locale from 'locale/pages';
 import {
     NTRO_SUBTYPES,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_THESIS,
     RECORD_TYPE_COLLECTION,
@@ -38,6 +40,7 @@ import IdentifiersSection from './identifiers/IdentifiersSection';
 import NotesSection from './notes/NotesSection';
 import ReasonSection from './reason/ReasonSection';
 import SecuritySection from './security/SecurityCard';
+import RelatedServicesSection from './relatedServices/RelatedServicesSection';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 import AuthorsSection from './authors/AuthorsSection';
@@ -205,10 +208,20 @@ export const AdminContainer = ({ createMode = false }) => {
                                             isActivated() &&
                                             // Blacklist types without grant info
                                             !(
-                                                [PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
-                                                    recordToView && recordToView.rek_display_type,
-                                                ) ||
+                                                [
+                                                    PUBLICATION_TYPE_MANUSCRIPT,
+                                                    PUBLICATION_TYPE_THESIS,
+                                                    PUBLICATION_TYPE_INSTRUMENT,
+                                                ].includes(recordToView && recordToView.rek_display_type) ||
                                                 [SUBTYPE_NON_NTRO].includes(form.getValues('adminSection.rek_subtype'))
+                                            ),
+                                    },
+                                    relatedServices: {
+                                        component: RelatedServicesSection,
+                                        activated:
+                                            isActivated() &&
+                                            [PUBLICATION_TYPE_DATA_COLLECTION].includes(
+                                                recordToView && recordToView.rek_display_type,
                                             ),
                                     },
                                     notes: {

@@ -2551,7 +2551,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                             <td
                                               class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
                                               data-testid="mtablecell"
-                                              style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                                              style="box-sizing: border-box; font-family: inherit; font-weight: inherit; vertical-align: top;"
                                               value="Heath, Andrew"
                                             >
                                               <div
@@ -2732,7 +2732,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                             <td
                                               class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
                                               data-testid="mtablecell"
-                                              style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                                              style="box-sizing: border-box; font-family: inherit; font-weight: inherit; vertical-align: top;"
                                               value="Marrington, Mary-Anne"
                                             >
                                               <div

@@ -16,6 +16,7 @@ import {
     SCOPUS_DOC_TYPES,
     WOS_DOC_TYPES,
     COLLECTION_VIEW_TYPE,
+    AUTHOR_EXTERNAL_IDENTIFIER_TYPE,
     SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID,
 } from 'config/general';
 import { selectFields } from 'locale/selectFields';
@@ -34,6 +35,7 @@ import {
     PUBLICATION_TYPE_DIGILIB_IMAGE,
     PUBLICATION_TYPE_GENERIC_DOCUMENT,
     PUBLICATION_TYPE_IMAGE,
+    PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_PATENT,
@@ -73,7 +75,9 @@ import {
     ListEditorField,
     NewListEditorField,
     KeywordsForm,
+    AlternateIdentifierListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { RelatedServiceListEditorField } from 'modules/SharedComponents/RelatedServiceListEditor';
 import { ScaleOfSignificanceListEditorField } from 'modules/SharedComponents/ScaleOfSignificanceListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
@@ -202,6 +206,17 @@ export default {
                 placeholder: '',
                 locale: locale.components.linkListForm.field,
                 listEditorId: 'rek-link',
+                canEdit: true,
+            },
+        },
+        alternateIdentifiers: {
+            component: AlternateIdentifierListEditorField,
+            componentProps: {
+                name: 'identifiersSection.alternateIdentifiers',
+                label: 'Alternate Identifier',
+                placeholder: '',
+                locale: locale.components.alternateIdentifierForm.field,
+                listEditorId: 'rek-alternate-identifier',
                 canEdit: true,
             },
         },
@@ -693,6 +708,21 @@ export default {
                 placeholder: '',
             },
         },
+        fez_record_search_key_raid: {
+            component: ListEditorField,
+            componentProps: {
+                remindToAdd: true,
+                name: 'bibliographicSection.fez_record_search_key_raid',
+                isValid: validation.raid,
+                searchKey: {
+                    value: 'rek_raid',
+                    order: 'rek_raid_order',
+                },
+                listEditorId: 'rek-raid',
+                locale: locale.components.raidForm.field,
+                canEdit: true,
+            },
+        },
         fez_record_search_key_total_pages: {
             component: GenericTextField,
             componentProps: {
@@ -1044,6 +1074,13 @@ export default {
                 ...selectFields.qualityIndicators,
             },
         },
+        relatedServices: {
+            component: RelatedServiceListEditorField,
+            componentProps: {
+                name: 'relatedServicesSection.relatedServices',
+                canEdit: true,
+            },
+        },
         grants: {
             component: GrantListEditorField,
             componentProps: {
@@ -1382,6 +1419,25 @@ export default {
                 ...selectFields.andsCollectionType,
             },
         },
+        ownerIdentifier: {
+            component: GenericTextField,
+            componentProps: {
+                textFieldId: 'rek-contributor-identifier',
+                name: 'adminSection.ownerIdentifier',
+                fullWidth: true,
+                label: 'Owner Identifier',
+                placeholder: "Type owner's identifier",
+            },
+        },
+        ownerIdentifierType: {
+            component: NewGenericSelectField,
+            componentProps: {
+                name: 'adminSection.ownerIdentifierType',
+                itemsList: AUTHOR_EXTERNAL_IDENTIFIER_TYPE,
+                genericSelectFieldId: 'rek-contributor-identifier-type',
+                label: 'Select an identifier type',
+            },
+        },
         fez_record_search_key_project_name: {
             component: GenericTextField,
             componentProps: {
@@ -1518,6 +1574,16 @@ export default {
                 fullWidth: true,
                 label: 'Newspaper',
                 name: 'bibliographicSection.fez_record_search_key_newspaper.rek_newspaper',
+                placeholder: '',
+            },
+        },
+        fez_record_search_key_resource_type: {
+            component: GenericTextField,
+            componentProps: {
+                textFieldId: 'rek-resource-type',
+                fullWidth: true,
+                label: 'Resource type',
+                name: 'adminSection.fez_record_search_key_resource_type.rek_resource_type',
                 placeholder: '',
             },
         },
@@ -1736,6 +1802,48 @@ export default {
                 locale: locale.components.architecturalFeaturesForm.field,
             },
         },
+        fez_record_search_key_instrument_type: {
+            component: ListEditorField,
+            componentProps: {
+                name: 'bibliographicSection.fez_record_search_key_instrument_type',
+                title: 'Instrument Type',
+                searchKey: {
+                    value: 'rek_instrument_type',
+                    order: 'rek_instrument_type_order',
+                },
+                listEditorId: 'rek-instrument-type',
+                locale: locale.components.instrumentTypeForm.field,
+                canEdit: true,
+            },
+        },
+        fez_record_search_key_model: {
+            component: ListEditorField,
+            componentProps: {
+                name: 'bibliographicSection.fez_record_search_key_model',
+                title: 'Model',
+                searchKey: {
+                    value: 'rek_model',
+                    order: 'rek_model_order',
+                },
+                listEditorId: 'rek-model',
+                locale: locale.components.modelForm.field,
+                canEdit: true,
+            },
+        },
+        fez_record_search_key_measured_variable: {
+            component: ListEditorField,
+            componentProps: {
+                name: 'bibliographicSection.fez_record_search_key_measured_variable',
+                title: 'Measured Variable',
+                searchKey: {
+                    value: 'rek_measured_variable',
+                    order: 'rek_measured_variable_order',
+                },
+                listEditorId: 'rek-measured-variable',
+                locale: locale.components.measuredVariableForm.field,
+                canEdit: true,
+            },
+        },
         architects: {
             component: ContributorsEditorField,
             componentProps: {
@@ -1930,6 +2038,48 @@ export default {
             rek_date: () => ({
                 label: 'Date',
                 placeholder: 'Date',
+            }),
+        },
+        [PUBLICATION_TYPE_INSTRUMENT]: {
+            authors: () => ({
+                showRoleInput: false,
+                showExternalIdentifierInput: true,
+                locale: locale.components.authorsList('manufacturer').field,
+            }),
+            contactName: () => ({
+                label: 'Owner Name',
+                placeholder: 'Type the name of owner for this instrument',
+            }),
+            contactNameId: () => ({
+                floatingLabelText: 'Owner UQ Id',
+                placeholder: 'Type to search UQ ID of owner for this instrument',
+            }),
+            contactEmail: () => ({
+                label: 'Owner Email',
+                placeholder: 'Type the email address of owner for this instrument',
+            }),
+            ownerIdentifier: () => ({
+                validate: [
+                    (value, allValues) => {
+                        const type = allValues.adminSection?.ownerIdentifierType;
+                        const validateMethod = AUTHOR_EXTERNAL_IDENTIFIER_TYPE.find(item => item.value === type);
+                        return validateMethod ? validation[validateMethod.text.toLowerCase()](value) : undefined;
+                    },
+                ],
+            }),
+            fez_record_search_key_end_date: () => ({
+                name: 'adminSection.fez_record_search_key_end_date.rek_end_date',
+            }),
+            fez_record_search_key_model: () => ({
+                validate: [validation.requiredList],
+                required: true,
+            }),
+            fez_record_search_key_instrument_type: () => ({
+                validate: [validation.requiredList],
+                required: true,
+            }),
+            rek_description: () => ({
+                required: true,
             }),
         },
         [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {

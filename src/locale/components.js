@@ -245,6 +245,48 @@ export default {
                 noconfig: 'No config available',
             },
         },
+        alternateIdentifierForm: {
+            title: 'Manage alternate identifiers',
+            field: {
+                form: {
+                    locale: {
+                        alternateIdentifierInputFieldLabel: 'Alternate Identifier',
+                        alternateIdentifierInputFieldHint: 'Enter alternate identifier',
+                        alternateIdentifierTypeInputFieldLabel: 'Identifier Type',
+                        alternateIdentifierTypeInputFieldHint: 'Enter Identifier Type',
+                        addButtonLabel: <span>Add&nbsp;identifier</span>,
+                        editButtonLabel: <span>Update&nbsp;identifier</span>,
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Alternate Identifier',
+                        reorderColumn: 'Reorder Alternate identifiers',
+                        deleteAll: 'Remove all Alternate identifiers',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Alternate identifiers?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
         publicationsList: {
             selectAllText: 'Select all',
         },
@@ -1122,6 +1164,171 @@ export default {
                 },
             },
         },
+        instrumentTypeForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Instrument type',
+                        inputFieldHint: 'Type Instrument type',
+                        addButtonLabel: 'Add',
+                        id: 'instrument-type-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Instrument type',
+                        reorderColumn: 'Reorder Instrument type',
+                        deleteAll: 'Remove all Instrument types',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Instrument types?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Instrument type up the order',
+                        moveDownHint: 'Move Instrument type down the order',
+                        deleteHint: 'Remove this Instrument type',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Instrument type',
+                            confirmationMessage: 'Are you sure you want to delete this Instrument type?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        measuredVariableForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Measured variable',
+                        inputFieldHint: 'Type Measured variable',
+                        addButtonLabel: 'Add',
+                        id: 'measured-variable-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Measured variable',
+                        reorderColumn: 'Reorder Measured variables',
+                        deleteAll: 'Remove all Measured variables',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Measured variables?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Measured variable up the order',
+                        moveDownHint: 'Move Measured variable down the order',
+                        deleteHint: 'Remove this Measured variable',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Measured variable',
+                            confirmationMessage: 'Are you sure you want to delete this Measured variable?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        modelForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Model',
+                        inputFieldHint: 'Type Model',
+                        addButtonLabel: 'Add',
+                        id: 'Model-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Model',
+                        reorderColumn: 'Reorder Models',
+                        deleteAll: 'Remove all Models',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Models?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Model up the order',
+                        moveDownHint: 'Move Model down the order',
+                        deleteHint: 'Remove this Model',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Model',
+                            confirmationMessage: 'Are you sure you want to delete this Model?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        raidForm: {
+            title: 'RAiD',
+            text: 'You can add RAiD values',
+            // help: {
+            //     title: 'RAiD value',
+            //     text: 'Acceptable RAiD formats are....',
+            //     buttonLabel: 'CLOSE'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'RAiD value',
+                        inputFieldHint: 'Enter RAiD, e.g. {prefix}/{suffix}',
+                        addButtonLabel: <span>Add&nbsp;RAiD</span>,
+                        editButtonLabel: <span>Update&nbsp;RAiD</span>,
+                        remindToAddText: (
+                            <span>
+                                Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
+                            </span>
+                        ),
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'RAiD',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        editHint: 'Edit this item',
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
         scaleOfSignificanceListForm: {
             title: 'Manage scale/significance of work and creator contribution statement',
             field: {
@@ -1333,6 +1540,9 @@ export default {
                         nameAsPublishedLabel: `${capitalizeFirstLetter(suffix)}'s name as published`,
                         nameAsPublishedHint: 'Type the name exactly as published (eg. Smith, John)',
                         identifierLabel: 'UQ identifier (if available)',
+                        externalIdentifierLabel: 'External identifier',
+                        externalIdentifierHint: 'Enter an external identifier',
+                        externalIdentifierTypeLabel: 'Identifier type',
                         addButton: `Add ${suffix}`,
                         creatorRoleLabel: "Enter creator's role",
                         creatorRoleHint:
@@ -1371,6 +1581,8 @@ export default {
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: `${capitalizeFirstLetter(suffix)}'s name as published`,
                         identifierColumn: 'UQ identifiers',
+                        externalIdentifierColumn: 'External identifier',
+                        externalIdentifierTypeColumn: 'External identifier type',
                         organisationColumn: 'Organisation/Organisation type',
                         roleColumn: 'Creator role',
                     },
@@ -2424,6 +2636,17 @@ export default {
                         validation: ['required'],
                         id: 'rek-org-unit-name',
                         ariaLabel: 'Begin typing an school, centre or institute name to select an author from the list',
+                    },
+                    rek_raid: {
+                        order: 8.5,
+                        map: '',
+                        title: 'RAiD',
+                        combiner: 'is',
+                        id: 'rek-raid',
+                        type: 'TextField',
+                        hint: 'Add a RAiD',
+                        validation: ['required', 'raid'],
+                        ariaLabel: 'Type a RAiD to search for',
                     },
                     rek_display_type: {
                         order: 20,
