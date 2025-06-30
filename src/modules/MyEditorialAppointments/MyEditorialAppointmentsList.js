@@ -182,8 +182,19 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
     } = useTable(list);
 
     const handleCreate = ({ values, table, row }) => {
-        console.log(values, table, row);
-        table.setCreatingRow(false);
+        const newValues = { ...row.original, ...row._valuesCache, ...values };
+        setBusy();
+        return handleRowAdd(newValues)
+            .then(data => {
+                setData(prevState => {
+                    return [...prevState, data];
+                });
+            })
+            .catch(() => setData(prevState => prevState))
+            .finally(() => {
+                table.setCreatingRow(false);
+                setBusy(false);
+            });
     };
 
     const handleEdit = ({ values, table, row }) => {
@@ -192,9 +203,9 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         // if (invalid) {
         //     return;
         // }
-        console.log({ values, table, row });
+        const newValues = { ...row.original, ...row._valuesCache, ...values };
         setBusy();
-        handleRowUpdate(values, row.original)
+        handleRowUpdate(newValues, row.original)
             .then(data => {
                 table.setEditingRow(null);
                 setData(prevState => {
