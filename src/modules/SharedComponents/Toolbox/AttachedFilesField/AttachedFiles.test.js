@@ -7,7 +7,6 @@ import {
     FormProviderWrapper,
     userEvent,
     fireEvent,
-    userEvent,
     waitFor,
     act,
     createMatchMedia,

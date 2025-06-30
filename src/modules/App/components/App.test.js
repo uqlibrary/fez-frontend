@@ -5,6 +5,7 @@ import { accounts, authorDetails, currentAuthor } from 'mock/data';
 import { pathConfig } from 'config';
 import Cookies from 'js-cookie';
 import { render, WithReduxStore, WithRouter, fireEvent, waitForText } from 'test-utils';
+import locale from '../../../locale/global';
 
 const mockUseNavigate = jest.fn();
 let mockUseLocation = {};

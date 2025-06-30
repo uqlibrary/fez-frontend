@@ -169,31 +169,6 @@ export const createMatchMedia = width => {
     });
 };
 
-const getFilenameExtension = filename => filename.split('.').pop();
-const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
-const addFilesToFileUploader = async (files, timeout = 500) => {
-    const { screen, fireEvent } = reactTestingLib;
-    // create a list of Files
-    const fileList = files.map(file => {
-        // if file it's a string, treat it as a filename
-        if (typeof file === 'string') {
-            return new File([getFilenameBasename(file)], file, { type: `image/${getFilenameExtension(file)}` });
-        }
-        // otherwise expect it to be a object with filename and mimeType keys
-        return new File([getFilenameBasename(file.filename)], file.filename, { type: file.mimeType });
-    });
-    // drag and drop files
-    fireEvent.drop(screen.getByTestId('fez-datastream-info-input'), {
-        dataTransfer: {
-            files: fileList,
-            types: ['Files'],
-        },
-    });
-    for (const file of files) {
-        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
-    }
-};
-
 const assertEnabled = element =>
     expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
 const assertDisabled = element =>
@@ -253,6 +228,12 @@ const waitForTextToBeRemoved = async (text, options) => {
     if (typeof text === 'string' && !text.trim().length) throw new Error('empty text');
     screen.queryByText(text) && (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
 };
+
+const expectRequiredFieldError = async field =>
+    await waitFor(() => {
+        expect(screen.getByTestId(`${field}-helper-text`)).toBeInTheDocument();
+        expect(screen.getByTestId(`${field}-helper-text`)).toHaveTextContent(locale.validationErrors.required);
+    });
 
 const getFilenameExtension = filename => filename.split('.').pop();
 const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
