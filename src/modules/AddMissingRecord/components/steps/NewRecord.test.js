@@ -113,7 +113,7 @@ describe('Add new record', () => {
         fireEvent.click(getByRole('listitem', { name: 'Select this author (author) to assign it as you' }));
         const mockFile = ['myTestImage.png'];
         await addFilesToFileUploader(mockFile, 2000);
-        await setFileUploaderFilesToClosedAccess(mockFile);
+        await setFileUploaderFilesToClosedAccess(mockFile, { timeout: 2000 });
         await waitToBeEnabled(getByRole('button', { name: 'Submit for approval' }));
         // submit to trigger confirmation box
         await userEvent.click(getByRole('button', { name: 'Submit for approval' }));

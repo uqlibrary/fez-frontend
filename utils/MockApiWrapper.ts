@@ -93,11 +93,11 @@ const replyMethod = (once: boolean): 'reply' | 'replyOnce' => (once ? 'replyOnce
 /**
  * This is an `mockApi` (Axios Mock Adapter instance) wrapper, for improved DX when mocking API requests.
  */
-const wrapper: Api = {
+export const api: Api = {
     url: {
         records: {
             create: repositories.routes.NEW_RECORD_API().apiUrl,
-            update: (pid: string, isEdit: boolean = false) => wrapper.url.records.get(pid, isEdit),
+            update: (pid: string, isEdit: boolean = false) => api.url.records.get(pid, isEdit),
             get: (pid: string, isEdit: boolean = false) =>
                 repositories.routes.EXISTING_RECORD_API({ pid, isEdit }).apiUrl,
             issues: (pid: string) => repositories.routes.RECORDS_ISSUES_API({ pid }).apiUrl,
@@ -114,44 +114,44 @@ const wrapper: Api = {
         instance: mockApi,
         records: {
             create: function({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
-                this.instance.onPost(wrapper.url.records.create)[replyMethod(once)](status, {
+                this.instance.onPost(api.url.records.create)[replyMethod(once)](status, {
                     data: { rek_pid: pid, ...data },
                 });
                 return this;
             },
             get: function({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
-                this.instance.onGet(wrapper.url.records.get(pid))[replyMethod(once)](status, {
+                this.instance.onGet(api.url.records.get(pid))[replyMethod(once)](status, {
                     data: { rek_pid: pid, ...data },
                 });
                 return this;
             },
             update: function({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
-                this.instance.onPatch(wrapper.url.records.get(pid))[replyMethod(once)](status, {
+                this.instance.onPatch(api.url.records.get(pid))[replyMethod(once)](status, {
                     data: { rek_pid: pid, ...data },
                 });
                 return this;
             },
             bulkUpdate: function({ status = 200, data = {}, once = true }: Params = {}) {
-                this.instance.onPatch(wrapper.url.records.create)[replyMethod(once)](status, { data });
+                this.instance.onPatch(api.url.records.create)[replyMethod(once)](status, { data });
                 return this;
             },
             delete: function({ status = 200, pid = '', once = true }: Params = {}) {
-                this.instance.onDelete(wrapper.url.records.get(pid))[replyMethod(once)](status, {
+                this.instance.onDelete(api.url.records.get(pid))[replyMethod(once)](status, {
                     data: 'Record deleted',
                 });
                 return this;
             },
             issues: function({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
-                this.instance.onPost(wrapper.url.records.issues(pid))[replyMethod(once)](status, { data });
+                this.instance.onPost(api.url.records.issues(pid))[replyMethod(once)](status, { data });
                 return this;
             },
             fail: {
-                create: () => wrapper.mock.records.create({ status: 500 }),
-                get: ({ pid = '', once = true }: Params = {}) => wrapper.mock.records.get({ pid, status: 500, once }),
+                create: () => api.mock.records.create({ status: 500 }),
+                get: ({ pid = '', once = true }: Params = {}) => api.mock.records.get({ pid, status: 500, once }),
                 update: ({ pid = '', data = {}, once = true }: Params = {}) =>
-                    wrapper.mock.records.update({ status: 500, pid, data, once }),
+                    api.mock.records.update({ status: 500, pid, data, once }),
                 bulkUpdate: ({ data = {}, once = true }: Params = {}) =>
-                    wrapper.mock.records.bulkUpdate({ status: 500, data, once }),
+                    api.mock.records.bulkUpdate({ status: 500, data, once }),
             },
             files: {} as DatastreamApi,
             cvo: {} as ControlledVocabApi,
@@ -159,18 +159,18 @@ const wrapper: Api = {
         },
         files: {
             presignedUrl: function({ status = 200, once = true }: Params = {}) {
-                this.instance.onPost(wrapper.url.files.presignedUrl)[replyMethod(once)](status, wrapper.url.files.put);
+                this.instance.onPost(api.url.files.presignedUrl)[replyMethod(once)](status, api.url.files.put);
                 return this;
             },
             put: function({ status = 200, once = true }: Params = {}) {
-                this.instance.onPut(wrapper.url.files.put)[replyMethod(once)](status);
+                this.instance.onPut(api.url.files.put)[replyMethod(once)](status);
                 return this;
             },
             upload: function({ status = 200, once = true }: Params = {}) {
                 return this.presignedUrl({ status, once }).put({ status, once });
             },
             fail: {
-                upload: () => wrapper.mock.files.presignedUrl({ once: false }).put({ status: 500, once: false }),
+                upload: () => api.mock.files.presignedUrl({ once: false }).put({ status: 500, once: false }),
             },
             records: {} as RecordApi,
             cvo: {} as ControlledVocabApi,
@@ -178,7 +178,7 @@ const wrapper: Api = {
         },
         cvo: {
             get: function({ status = 200, cvoId = 0, data = {}, once = false }: CvoParams) {
-                this.instance.onGet(wrapper.url.cvo.get(cvoId))[replyMethod(once)](status, { data });
+                this.instance.onGet(api.url.cvo.get(cvoId))[replyMethod(once)](status, { data });
                 return this;
             },
             records: {} as RecordApi,
@@ -200,15 +200,13 @@ const wrapper: Api = {
     },
 };
 
-// cross-references to allow chaining
-wrapper.mock.records.files = wrapper.mock.files as DatastreamApi;
-wrapper.mock.records.cvo = wrapper.mock.cvo as ControlledVocabApi;
-wrapper.mock.records.instance = wrapper.mock.instance as MockAdapter;
-wrapper.mock.files.records = wrapper.mock.records as RecordApi;
-wrapper.mock.files.cvo = wrapper.mock.cvo as ControlledVocabApi;
-wrapper.mock.files.instance = wrapper.mock.instance as MockAdapter;
-wrapper.mock.cvo.records = wrapper.mock.records as RecordApi;
-wrapper.mock.cvo.files = wrapper.mock.files as DatastreamApi;
-wrapper.mock.cvo.instance = wrapper.mock.instance as MockAdapter;
-
-export default wrapper;
+// cross-references for chaining
+api.mock.records.files = api.mock.files as DatastreamApi;
+api.mock.records.cvo = api.mock.cvo as ControlledVocabApi;
+api.mock.records.instance = api.mock.instance as MockAdapter;
+api.mock.files.records = api.mock.records as RecordApi;
+api.mock.files.cvo = api.mock.cvo as ControlledVocabApi;
+api.mock.cvo.records = api.mock.records as RecordApi;
+api.mock.cvo.files = api.mock.files as DatastreamApi;
+api.mock.cvo.instance = api.mock.instance as MockAdapter;
+api.mock.files.instance = api.mock.instance as MockAdapter;

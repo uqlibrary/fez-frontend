@@ -26,7 +26,7 @@ import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useValidatedForm from 'hooks/useValidatedForm';
 import * as useForm from 'hooks/useForm';
 import { apiRequestHistory } from '../src/config/axios';
-import { default as api } from './MockApiWrapper';
+import { api } from './MockApiWrapper';
 import { isEmptyObject } from '../src/helpers/general';
 import { locale } from 'locale';
 import { isPlainObject } from 'lodash';
@@ -169,6 +169,31 @@ export const createMatchMedia = width => {
     });
 };
 
+const getFilenameExtension = filename => filename.split('.').pop();
+const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
+const addFilesToFileUploader = async (files, timeout = 500) => {
+    const { screen, fireEvent } = reactTestingLib;
+    // create a list of Files
+    const fileList = files.map(file => {
+        // if file it's a string, treat it as a filename
+        if (typeof file === 'string') {
+            return new File([getFilenameBasename(file)], file, { type: `image/${getFilenameExtension(file)}` });
+        }
+        // otherwise expect it to be a object with filename and mimeType keys
+        return new File([getFilenameBasename(file.filename)], file.filename, { type: file.mimeType });
+    });
+    // drag and drop files
+    fireEvent.drop(screen.getByTestId('fez-datastream-info-input'), {
+        dataTransfer: {
+            files: fileList,
+            types: ['Files'],
+        },
+    });
+    for (const file of files) {
+        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
+    }
+};
+
 const assertEnabled = element =>
     expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
 const assertDisabled = element =>
@@ -253,12 +278,19 @@ const addFilesToFileUploader = async (files, timeout = 500) => {
         await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
     }
 };
-const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
+
+const expectMissingRequiredFieldError = async field =>
+    screen.queryByTestId(`${field}-helper-text`) &&
+    (await waitFor(() => {
+        expect(screen.queryByTestId(`${field}-helper-text`)).not.toBeInTheDocument();
+    }));
+
+const setFileUploaderFilesToClosedAccess = async (files, waitForOptions = {}) => {
     const { fireEvent } = reactTestingLib;
     // set all files to closed access
     for (const file of files) {
         const index = files.indexOf(file);
-        await waitForText(new RegExp(getFilenameBasename(file)), { timeout });
+        await waitForText(new RegExp(getFilenameBasename(file)), waitForOptions);
         fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
         fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
     }
@@ -275,18 +307,6 @@ const setFileUploaderFilesSecurityPolicy = async (files, optionName, timeout = 5
         fireEvent.click(screen.getByRole('option', { name: optionName }));
     }
 };
-
-const expectRequiredFieldError = async field =>
-    await waitFor(() => {
-        expect(screen.getByTestId(`${field}-helper-text`)).toBeInTheDocument();
-        expect(screen.getByTestId(`${field}-helper-text`)).toHaveTextContent(locale.validationErrors.required);
-    });
-
-const expectMissingRequiredFieldError = async field =>
-    screen.queryByTestId(`${field}-helper-text`) &&
-    (await waitFor(() => {
-        expect(screen.queryByTestId(`${field}-helper-text`)).not.toBeInTheDocument();
-    }));
 
 const originalUseForm = useForm.useForm;
 const mockUseForm = implementation => {
