@@ -24,6 +24,8 @@ import { validationRules } from './validationRules';
 
 import { EDITORIAL_ROLE_MAP, EDITORIAL_ROLE_OPTIONS, EDITORIAL_ROLE_OTHER } from 'config/general';
 
+const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
+
 const StyledToolbar = styled(Typography)(() => ({
     margin: '8px',
     cursor: 'pointer',
@@ -535,7 +537,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         enableColumnFilterModes: false,
         enablePagination: false,
         enableToolbarInternalActions: false,
-        positionActionsColumn: matchesMd ? 'last' : 'first',
+        positionActionsColumn: 'first',
         state: {
             showAlertBanner: false,
             showLoadingOverlay: isBusy,
@@ -553,6 +555,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     resetEditRow();
                     table.setEditingRow(null);
                     table.setCreatingRow(true);
+                    // immediately force validation of new row
                     handleValidation({ id: 'mrt-row-create' }, columns[0].accessorKey, '');
                 }}
                 sx={{ marginLeft: 'auto' }}
@@ -560,7 +563,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         ),
         renderRowActions: ({ row }) => {
             return (
-                <>
+                <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
                     <Tooltip title={editButtonTooltip}>
                         <IconButton
                             onClick={() => {
@@ -593,7 +596,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                             <tableIcons.Delete />
                         </IconButton>
                     </Tooltip>
-                </>
+                </Box>
             );
         },
         onCreatingRowCancel: () => {
@@ -620,9 +623,17 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         },
         muiTableBodyCellProps: {
             sx: {
+                '&:last-of-type > div': {
+                    gap: 0,
+                    [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: { flexDirection: 'row-reverse' },
+                },
                 '&:not(:last-child)': { alignContent: 'flex-start' },
             },
         },
+        muiTableBodyRowProps: ({ row }) => ({
+            id: `my-editorial-appointments-list-row-${row.index === -1 ? 'add' : row.index}`,
+            'data-testid': `my-editorial-appointments-list-row-${row.index === -1 ? 'add' : row.index}}`,
+        }),
     });
 
     return (
@@ -638,7 +649,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 isOpen={isOpen}
                 locale={deleteConfirmationLocale}
             />
-            <MaterialReactTable table={table} />
+            <MaterialReactTable table={table} data-testid="tester" />
         </Box>
     );
 };
