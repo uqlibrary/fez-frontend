@@ -47,7 +47,7 @@ exports[`AlternateIdentifierListEditor component should render default view 1`] 
             id="rek-alternate-identifier-type-label"
           />
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-controls=":r1:"
