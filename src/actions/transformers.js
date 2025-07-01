@@ -945,25 +945,27 @@ export const getExternalSourceIdSearchKeys = data => {
     return result;
 };
 
-export const getAlternateIdentifierSearchKey = (alternateIdentifiers = []) => {
+export const getAlternateIdentifierSearchKeys = (alternateIdentifiers = []) => {
     if (!alternateIdentifiers || alternateIdentifiers.length === 0) return {};
 
-    return {
-        fez_record_search_key_alternate_identifier: alternateIdentifiers.map(alternateIdentifier => ({
+    const ids = [];
+    const types = [];
+    alternateIdentifiers.forEach(alternateIdentifier => {
+        ids.push({
             rek_alternate_identifier: alternateIdentifier.rek_value.key,
             rek_alternate_identifier_order: alternateIdentifier.rek_order,
-        })),
-    };
-};
-
-export const getAlternateIdentifierTypeSearchKey = (alternateIdentifiers = []) => {
-    if (!alternateIdentifiers || alternateIdentifiers.length === 0) return {};
+        });
+        if (alternateIdentifier.rek_value.value) {
+            types.push({
+                rek_alternate_identifier_type: alternateIdentifier.rek_value.value,
+                rek_alternate_identifier_type_order: alternateIdentifier.rek_order,
+            });
+        }
+    });
 
     return {
-        fez_record_search_key_alternate_identifier_type: alternateIdentifiers.map(alternateIdentifier => ({
-            rek_alternate_identifier_type: alternateIdentifier.rek_value.value,
-            rek_alternate_identifier_type_order: alternateIdentifier.rek_order,
-        })),
+        fez_record_search_key_alternate_identifier: ids,
+        fez_record_search_key_alternate_identifier_type: types,
     };
 };
 
@@ -1112,8 +1114,7 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         ...(!!pubmedCentralId && pubmedCentralId.hasOwnProperty('rek_pubmed_central_id')
             ? { fez_record_search_key_pubmed_central_id: pubmedCentralId }
             : {}),
-        ...getAlternateIdentifierSearchKey(alternateIdentifiers),
-        ...getAlternateIdentifierTypeSearchKey(alternateIdentifiers),
+        ...getAlternateIdentifierSearchKeys(alternateIdentifiers),
         ...getLinkSearchKey(links),
         ...getLinkDescriptionSearchKey(links),
         ...(!!locations ? getRecordLocationSearchKey(locations) : {}),

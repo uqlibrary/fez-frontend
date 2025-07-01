@@ -105,16 +105,22 @@ describe('transformers', () => {
                     rek_value: { key: 'id', value: '111' },
                     rek_order: 1,
                 },
+                {
+                    rek_value: { key: 'id2', value: null },
+                    rek_order: 2,
+                },
             ];
-            const expectedId = {
+            const expected = {
                 fez_record_search_key_alternate_identifier: [
                     {
                         rek_alternate_identifier: 'id',
                         rek_alternate_identifier_order: 1,
                     },
+                    {
+                        rek_alternate_identifier: 'id2',
+                        rek_alternate_identifier_order: 2,
+                    },
                 ],
-            };
-            const expectedIdType = {
                 fez_record_search_key_alternate_identifier_type: [
                     {
                         rek_alternate_identifier_type: '111',
@@ -123,15 +129,11 @@ describe('transformers', () => {
                 ],
             };
 
-            expect(transformers.getAlternateIdentifierSearchKey(data)).toEqual(expectedId);
-            expect(transformers.getAlternateIdentifierTypeSearchKey(data)).toEqual(expectedIdType);
+            expect(transformers.getAlternateIdentifierSearchKeys(data)).toEqual(expected);
         });
 
         it('should return empty object structure with missing alternate identifier', () => {
-            const data = [];
-            const expected = {};
-            expect(transformers.getAlternateIdentifierSearchKey(data)).toEqual(expected);
-            expect(transformers.getAlternateIdentifierTypeSearchKey(data)).toEqual(expected);
+            expect(transformers.getAlternateIdentifierSearchKeys([])).toEqual({});
         });
 
         it('should return empty request object structure if no link is provided', () => {
