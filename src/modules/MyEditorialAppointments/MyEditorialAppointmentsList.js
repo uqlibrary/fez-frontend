@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
@@ -19,22 +18,24 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { TextField as SharedTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { RoleField, JournalIdField } from 'modules/SharedComponents/LookupFields';
-import { useConfirmationState } from 'hooks';
 import { default as locale } from 'locale/components';
+import { useMrtTable } from 'hooks';
+import { validationRules } from './validationRules';
 
-import {
-    EDITORIAL_APPOINTMENT_MAX_YEAR,
-    EDITORIAL_APPOINTMENT_MIN_YEAR,
-    EDITORIAL_ROLE_MAP,
-    EDITORIAL_ROLE_OPTIONS,
-    EDITORIAL_ROLE_OTHER,
-} from 'config/general';
+import { EDITORIAL_ROLE_MAP, EDITORIAL_ROLE_OPTIONS, EDITORIAL_ROLE_OTHER } from 'config/general';
 
 const StyledToolbar = styled(Typography)(() => ({
     margin: '8px',
     cursor: 'pointer',
     flexDirection: 'column',
     gridColumn: 2,
+}));
+
+const StyledDatePicker = styled(DatePicker)(({ theme }) => ({
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+        minWidth: '120px',
+    },
 }));
 
 export const CustomToolbar = props => {
@@ -53,169 +54,9 @@ export const CustomToolbar = props => {
     );
 };
 
-const StyledDatePicker = styled(DatePicker)(({ theme }) => ({
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-        minWidth: '120px',
-    },
-}));
-
-// const StyledResponsiveWrapper = styled('div')(({ theme }) => ({
-//     [theme.breakpoints.down('md')]: {
-//         '& [class*="MuiToolbar-root"]': {
-//             padding: 0,
-//             display: 'block',
-//             marginBlockEnd: '12px',
-
-//             '& > div:first-of-type': {
-//                 display: 'none',
-//             },
-//         },
-
-//         '& [class*="MuiTable-root"]': {
-//             '& thead': {
-//                 display: 'none',
-//             },
-
-//             '& tr[class*="MuiTableRow-root"]': {
-//                 display: 'block',
-//                 width: '100%',
-//                 boxSizing: 'border-box',
-
-//                 '& td[class*="MuiTableCell-root"]:last-of-type': {
-//                     display: 'block',
-//                     clear: 'both',
-//                     width: '100% !important',
-//                     boxSizing: 'border-box',
-//                 },
-//             },
-//             '& tr[class*="MuiTableRow-root"]:not(:last-of-type)': {
-//                 marginBottom: '12px',
-//             },
-//         },
-
-//         '& button#my-editorial-appointments-add-new-editorial-appointment': {
-//             width: '100%',
-//         },
-//     },
-// }));
-
-const useTable = list => {
-    const [data, setData] = useState(list);
-    const [state, setState] = useState({ busy: false, deleteRowId: null, editingRow: null });
-    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
-
-    const setBusy = (isBusy = true) => setState(prev => ({ ...prev, busy: isBusy }));
-    const setDeleteRow = id => {
-        setState(prev => ({ ...prev, deleteRowId: id }));
-        showConfirmation();
-    };
-    const resetDeleteRow = () => {
-        setState(prev => ({ ...prev, deleteRowId: null }));
-        hideConfirmation();
-    };
-    const setEditRow = row => setState(prev => ({ ...prev, editingRow: row }));
-    const resetEditRow = () => setState(prev => ({ ...prev, editingRow: null }));
-
-    const validate = rules => row => {
-        const errors = rules.reduce((acc, curr) => {
-            const fieldError = curr.validate?.(row);
-            return fieldError ? [...acc, fieldError] : acc;
-        }, []);
-        return errors.length > 0 ? errors : null;
-    };
-
-    const getValidationError = (errors = [], field) => {
-        return errors.find(error => error.field === field)?.message;
-    };
-
-    return {
-        data,
-        setData,
-        isBusy: state.busy,
-        setBusy,
-        pendingDeleteRowId: state.deleteRowId,
-        setDeleteRow,
-        resetDeleteRow,
-        editingRow: state.editingRow,
-        setEditRow,
-        resetEditRow,
-        isOpen,
-        showConfirmation,
-        hideConfirmation,
-        validate,
-        getValidationError,
-    };
-};
-
-export const validationRules = [
-    {
-        id: 'eap_journal_name',
-        validate: rowData => {
-            const isValid = !!rowData.eap_journal_name && rowData.eap_journal_name !== '';
-            return (
-                !isValid && {
-                    field: 'eap_journal_name',
-                    message: locale.components.myEditorialAppointmentsList.form.locale.journalNameHint,
-                }
-            );
-        },
-    },
-    {
-        id: 'eap_role_cvo_id',
-        validate: rowData => {
-            const isValid = !!rowData.eap_role_cvo_id;
-            return !isValid && { field: 'eap_role_cvo_id', message: 'Required' };
-        },
-    },
-    {
-        id: 'eap_role_name',
-        validate: rowData => {
-            const isValid =
-                !!rowData.eap_role_cvo_id &&
-                (String(rowData.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER ? !!rowData.eap_role_name : true);
-            return !isValid && { field: 'eap_role_name', message: 'Required' };
-        },
-    },
-    {
-        id: 'eap_start_year',
-        validate: rowData => {
-            const startYearMoment = moment(String(rowData.eap_start_year), 'YYYY');
-            const isValid =
-                startYearMoment.isValid() &&
-                startYearMoment.isSameOrBefore(moment(), 'year') &&
-                startYearMoment.isSameOrAfter(moment(EDITORIAL_APPOINTMENT_MIN_YEAR, 'YYYY'));
-            return (
-                !isValid && {
-                    field: 'eap_start_year',
-                    message: locale.components.myEditorialAppointmentsList.form.locale.startYearErrorMessage,
-                }
-            );
-        },
-    },
-    {
-        id: 'eap_end_year',
-        validate: rowData => {
-            const endYearMoment = moment(String(rowData.eap_end_year), 'YYYY');
-            const isValid =
-                endYearMoment.isValid() &&
-                endYearMoment.isSameOrBefore(moment(EDITORIAL_APPOINTMENT_MAX_YEAR, 'YYYY')) &&
-                endYearMoment.isSameOrAfter(moment(String(rowData.eap_start_year), 'YYYY'));
-            return (
-                !isValid && {
-                    field: 'eap_end_year',
-                    message: locale.components.myEditorialAppointmentsList.form.locale.endYearErrorMessage,
-                }
-            );
-        },
-    },
-];
-
 export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
     const theme = useTheme();
     const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
-
-    const [validationErrors, setValidationErrors] = useState({});
 
     const {
         deleteConfirmationLocale,
@@ -231,10 +72,8 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 otherRoleLabel,
                 otherRoleHint,
                 startYearLabel,
-                startYearErrorMessage,
                 endYearLabel,
                 endYearHint,
-                endYearErrorMessage,
                 addButtonTooltip,
                 editButtonTooltip,
                 deleteButtonTooltip,
@@ -244,34 +83,22 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
 
     const {
         data,
-        setData,
         isBusy,
-        setBusy,
         pendingDeleteRowId,
+        isOpen,
+        editingRow,
+        validationErrors,
+        setData,
+        setBusy,
         setDeleteRow,
         resetDeleteRow,
-        editingRow,
         setEditRow,
         resetEditRow,
-        isOpen,
         validate,
         getValidationError,
-    } = useTable(list);
-
-    // curry the validate function from hook
-    const validateValues = validate(validationRules);
-
-    const handleValidation = (row, field, value) => {
-        const currentValues = { ...row.original, ...row._valuesCache };
-        const updatedValues = { ...currentValues, [field]: value };
-
-        const errors = validateValues(updatedValues);
-
-        setValidationErrors(prev => ({
-            ...prev,
-            [row.id]: errors,
-        }));
-    };
+        handleValidation,
+        clearValidationErrors,
+    } = useMrtTable(list, validationRules);
 
     const columns = [
         {
@@ -313,7 +140,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     row.original.eap_jnl_id = selectedItem.jnl_jid;
                     row._valuesCache[column.id] = selectedItem.jnl_title || selectedItem.value;
 
-                    handleValidation(row, 'eap_journal_name', state);
+                    handleValidation(row, 'eap_journal_name', row._valuesCache[column.id]);
                 };
 
                 return (
@@ -327,7 +154,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                     : { value: state.eap_journal_name }
                             }
                             onChange={handleChange}
-                            error={(row._valuesCache[column.id] || '').length === 0}
+                            error={!!error}
                             label={journalNameLabel}
                             placeholder={journalNameHint}
                             required
@@ -339,29 +166,8 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     </React.Fragment>
                 );
             },
-
             size: 300,
             grow: true,
-            // muiTableHeadCellProps: () => ({
-            //     sx: {
-            //         width: '45%',
-            //         maxWidth: '45%',
-            //     },
-            // }),
-            // cellStyle: matchesMd
-            //     ? {
-            //           width: '45%',
-            //           maxWidth: '45%',
-            //       }
-            //     : {
-            //           display: 'block',
-            //           width: '100%',
-            //           boxSizing: 'border-box',
-            //       },
-            // headerStyle: {
-            //     width: '45%',
-            //     maxWidth: '45%',
-            // },
         },
         { accessorKey: 'eap_role_name', header: '', enableEditing: true, Edit: () => null },
         {
@@ -384,7 +190,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     </Typography>
                 );
             },
-            Edit: ({ row, column, cell }) => {
+            Edit: ({ row, column }) => {
                 const [state, setState] = React.useState({
                     eap_role_cvo_id: row._valuesCache.eap_role_cvo_id || row.original.eap_role_cvo_id,
                     eap_role_name: row._valuesCache.eap_role_name || row.original.eap_role_name || '',
@@ -400,17 +206,17 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         eap_role_cvo_id: selectedItem,
                         eap_role_name: null,
                     }));
-                    handleValidation(row, 'eap_role_cvo_id', state);
                     row._valuesCache[column.id] = selectedItem;
                     row._valuesCache.eap_role_name = null;
-                    handleValidation(row, 'eap_role_name', state.eap_role_name);
+                    handleValidation(row, 'eap_role_cvo_id', row._valuesCache[column.id]);
+                    handleValidation(row, 'eap_role_name', null);
                 };
 
                 const handleClear = () => {
                     setState(prev => ({ ...prev, eap_role_cvo_id: null, eap_role_name: null }));
                     row._valuesCache[column.id] = null;
                     row._valuesCache.eap_role_name = null;
-                    handleValidation(row, 'eap_role_cvo_id', state);
+                    handleValidation(row, 'eap_role_cvo_id', row._valuesCache[column.id]);
                 };
 
                 const handleRoleNameChangeForOther = e => {
@@ -420,7 +226,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     }));
                     row._valuesCache.eap_role_name = e.target.value;
 
-                    handleValidation(row, 'eap_role_name', state.eap_role_name);
+                    handleValidation(row, 'eap_role_name', row._valuesCache.eap_role_name);
                 };
 
                 return (
@@ -463,29 +269,8 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     </React.Fragment>
                 );
             },
-
             size: 200,
             grow: true,
-            // muiTableHeadCellProps: () => ({
-            //     sx: {
-            //         width: '25%',
-            //         maxWidth: '25%',
-            //     },
-            // }),
-            // cellStyle: matchesMd
-            //     ? {
-            //           width: '25%',
-            //           maxWidth: '25%',
-            //       }
-            //     : {
-            //           display: 'block',
-            //           width: '100%',
-            //           boxSizing: 'border-box',
-            //       },
-            // headerStyle: {
-            //     width: '25%',
-            //     maxWidth: '25%',
-            // },
         },
         {
             accessorKey: 'eap_start_year',
@@ -522,7 +307,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                     ...row._valuesCache,
                                     [column.id]: (!!value && value.format('YYYY')) || null,
                                 };
-                                handleValidation(row, 'eap_start_year', value.format('YYYY'));
+                                handleValidation(row, 'eap_start_year', value?.format('YYYY') || null);
                                 // Re-validate end date when start date changes
                                 const currentEndDate = row._valuesCache.eap_end_year || row.original.eap_end_year;
                                 if (currentEndDate) {
@@ -533,8 +318,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                             openTo="year"
                             disableFuture
                             slotProps={{
-                                textField: ownerState => {
-                                    const value = ownerState.value ?? /* istanbul ignore next */ null;
+                                textField: () => {
                                     return {
                                         inputProps: {
                                             id: 'eap-start-year-input',
@@ -560,31 +344,8 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     </LocalizationProvider>
                 );
             },
-
             size: 100,
             grow: false,
-            // muiTableHeadCellProps: () => ({
-            //     sx: {
-            //         width: '15%',
-            //         maxWidth: '15%',
-            //     },
-            // }),
-
-            // cellStyle: matchesMd
-            //     ? {
-            //           width: '15%',
-            //           maxWidth: '15%',
-            //           float: 'none',
-            //       }
-            //     : {
-            //           width: '100%',
-            //           display: 'block',
-            //           boxSizing: 'border-box',
-            //       },
-            // headerStyle: {
-            //     width: '15%',
-            //     maxWidth: '15%',
-            // },
         },
         {
             accessorKey: 'eap_end_year',
@@ -606,7 +367,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     </Typography>
                 );
             },
-            Edit: ({ cell, row, column }) => {
+            Edit: ({ row, column }) => {
                 const startYearValue = row._valuesCache.eap_start_year || row.original.eap_start_year;
 
                 const errors = validationErrors[row.id] || [];
@@ -626,7 +387,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                     ...row._valuesCache,
                                     [column.id]: (!!value && value.format('YYYY')) || null,
                                 };
-                                handleValidation(row, 'eap_end_year', value.format('YYYY'));
+                                handleValidation(row, 'eap_end_year', value?.format('YYYY') || null);
                             }}
                             {...((!!currentValue &&
                                 moment(String(currentValue), 'YYYY').format('YYYY') === moment().format('YYYY') && {
@@ -681,34 +442,12 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             },
             size: 100,
             grow: false,
-            // muiTableHeadCellProps: () => ({
-            //     sx: {
-            //         width: '15%',
-            //         maxWidth: '15%',
-            //     },
-            // }),
-
-            // cellStyle: matchesMd
-            //     ? {
-            //           width: '15%',
-            //           maxWidth: '15%',
-            //           float: 'none',
-            //       }
-            //     : {
-            //           width: '100%',
-            //           display: 'block',
-            //           boxSizing: 'border-box',
-            //       },
-            // headerStyle: {
-            //     width: '15%',
-            //     maxWidth: '15%',
-            // },
         },
     ];
 
     const handleCreate = ({ values, table, row }) => {
         const newValues = { ...row.original, ...row._valuesCache, ...values };
-        const errors = validateValues(values);
+        const errors = validate(values);
         /* istanbul ignore if  */
         if (!!errors) {
             return;
@@ -718,6 +457,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         handleRowAdd(newValues)
             .then(data => {
                 table.setCreatingRow(false);
+                resetEditRow();
                 setData(prevState => {
                     return [...prevState, data];
                 });
@@ -730,7 +470,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
 
     const handleEdit = ({ values, table, row }) => {
         const newValues = { ...row.original, ...row._valuesCache, ...values };
-        const errors = validateValues(values);
+        const errors = validate(values);
         /* istanbul ignore if  */
         if (!!errors) {
             return;
@@ -739,6 +479,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         handleRowUpdate(newValues, row.original)
             .then(data => {
                 table.setEditingRow(null);
+                resetEditRow();
                 setData(prevState => {
                     const list = [...prevState];
                     const target = list.find(el => el.eap_id === row.original.eap_id);
@@ -809,7 +550,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 color="primary"
                 children={addButtonTooltip}
                 onClick={() => {
-                    setEditRow({});
+                    resetEditRow();
                     table.setEditingRow(null);
                     table.setCreatingRow(true);
                     handleValidation({ id: 'mrt-row-create' }, columns[0].accessorKey, '');
@@ -856,8 +597,8 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             );
         },
         onCreatingRowCancel: () => {
-            setEditRow(null);
-            setValidationErrors({});
+            resetEditRow();
+            clearValidationErrors();
         },
         onCreatingRowSave: handleCreate,
         onEditingRowSave: handleEdit,
@@ -876,6 +617,11 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     {...props}
                 />
             ),
+        },
+        muiTableBodyCellProps: {
+            sx: {
+                '&:not(:last-child)': { alignContent: 'flex-start' },
+            },
         },
     });
 
