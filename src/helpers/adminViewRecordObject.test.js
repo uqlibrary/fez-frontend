@@ -172,6 +172,17 @@ describe('Author Affiliations', () => {
     });
 
     describe('internal notes', () => {
+        it('should handle null', () => {
+            const content = createDefaultDrawerDescriptorObject(
+                locale.pages.viewRecord.adminRecordData.drawer.sectionTitles,
+                {
+                    ...recordWithAuthorAffiliates,
+                    fez_internal_notes: null,
+                },
+                fields.viewRecord.adminViewRecordDrawerFields,
+            );
+            expect(content.sections[0][1].value).toBe('-');
+        });
         it('should handle empty', () => {
             const content = createDefaultDrawerDescriptorObject(
                 locale.pages.viewRecord.adminRecordData.drawer.sectionTitles,
