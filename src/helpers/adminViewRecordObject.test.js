@@ -1,5 +1,7 @@
-import { navigateToEdit, authorAffiliates } from './adminViewRecordObject';
-import viewRecord from 'locale/viewRecord';
+import { navigateToEdit, authorAffiliates, createDefaultDrawerDescriptorObject } from './adminViewRecordObject';
+import fields from 'locale/viewRecord';
+import locale from '../locale/pages';
+import recordWithAuthorAffiliates from '../mock/data/records/recordWithAuthorAffiliates';
 
 describe('Author Affiliations', () => {
     const mockNavigate = jest.fn();
@@ -52,7 +54,7 @@ describe('Author Affiliations', () => {
         };
 
         const result = authorAffiliates(KEY, CONTENT, mockNavigate, 'UQ:1', []);
-        expect(result).toEqual(viewRecord.viewRecord.adminViewRecordDrawerFields.hasAffiliates);
+        expect(result).toEqual(fields.viewRecord.adminViewRecordDrawerFields.hasAffiliates);
     });
 
     it('should calculate affiliations correctly for no affiliate information', () => {
@@ -62,7 +64,7 @@ describe('Author Affiliations', () => {
         };
 
         const result = authorAffiliates(KEY, CONTENT, mockNavigate, 'UQ:1', []);
-        expect(result).toEqual(viewRecord.viewRecord.adminViewRecordDrawerFields.hasNoAffiliates);
+        expect(result).toEqual(fields.viewRecord.adminViewRecordDrawerFields.hasNoAffiliates);
     });
 
     it('should calculate affiliations correctly for invalid affiliation percentile', () => {
@@ -167,5 +169,37 @@ describe('Author Affiliations', () => {
 
         const result = JSON.stringify(authorAffiliates(KEY, CONTENT, mockNavigate, 'UQ:1', PROBLEMS));
         expect(result).toMatchSnapshot();
+    });
+
+    describe('internal notes', () => {
+        it('should handle empty', () => {
+            const content = createDefaultDrawerDescriptorObject(
+                locale.pages.viewRecord.adminRecordData.drawer.sectionTitles,
+                {
+                    ...recordWithAuthorAffiliates,
+                    fez_internal_notes: {
+                        ...recordWithAuthorAffiliates.fez_internal_notes,
+                        ain_detail: ' ',
+                    },
+                },
+                fields.viewRecord.adminViewRecordDrawerFields,
+            );
+            expect(content.sections[0][1].value).toBe('-');
+        });
+        it('should remove invalid html', () => {
+            const content = createDefaultDrawerDescriptorObject(
+                locale.pages.viewRecord.adminRecordData.drawer.sectionTitles,
+                {
+                    ...recordWithAuthorAffiliates,
+                    fez_internal_notes: {
+                        ...recordWithAuthorAffiliates.fez_internal_notes,
+                        ain_detail: 'To: UQ eSpace Manager <espace@library.uq.edu.au>\n<b>test</b>',
+                    },
+                },
+                fields.viewRecord.adminViewRecordDrawerFields,
+            );
+            expect(content.sections[0][1].value[0]).toBe('To: UQ eSpace Manager \n');
+            expect(content.sections[0][1].value).toMatchSnapshot();
+        });
     });
 });
