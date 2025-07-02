@@ -570,27 +570,43 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         },
         displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
         renderCreateRowDialogContent: ({ table, row, internalEditComponents }) => (
-            <>
-                <DialogTitle variant="h5">Create New Appointment</DialogTitle>
+            <Box
+                id={`my-editorial-appointments-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                data-testid={`my-editorial-appointments-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+            >
+                <DialogTitle variant="h5">{addButtonTooltip}</DialogTitle>
                 <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                     {internalEditComponents} {/* or render custom edit components here */}
                 </DialogContent>
                 <DialogActions>
-                    <MRT_EditActionButtons variant="text" table={table} row={row} />
+                    <MRT_EditActionButtons
+                        variant="text"
+                        table={table}
+                        row={row}
+                        sx={{ flexDirection: 'column', flexGrow: 1 }}
+                    />
                 </DialogActions>
-            </>
+            </Box>
         ),
         // optionally customize modal content
         renderEditRowDialogContent: ({ table, row, internalEditComponents }) => (
-            <>
-                <DialogTitle variant="h5">Edit Appointment</DialogTitle>
-                <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <Box
+                id={`my-editorial-appointments-dialog-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                data-testid={`my-editorial-appointments-dialog-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+            >
+                <DialogTitle variant="h5">{editButtonTooltip}</DialogTitle>
+                <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                     {internalEditComponents} {/* or render custom edit components here */}
                 </DialogContent>
                 <DialogActions>
-                    <MRT_EditActionButtons variant="text" table={table} row={row} />
+                    <MRT_EditActionButtons
+                        variant="text"
+                        table={table}
+                        row={row}
+                        sx={{ flexDirection: 'column', flexGrow: 1 }}
+                    />
                 </DialogActions>
-            </>
+            </Box>
         ),
         renderTopToolbarCustomActions: ({ table }) => (
             <Button
@@ -687,7 +703,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             sx: {
                 '&:last-of-type > div': {
                     gap: 0,
-                    [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: { flexDirection: 'row-reverse' },
+                    [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: { flexDirection: 'row-reverse', justifyContent: 'flex-end' },
                 },
                 '&:not(:last-child)': { alignContent: 'flex-start' },
             },

@@ -10,7 +10,6 @@ import {
     createMatchMedia,
     within,
     selectDropDownOption,
-    preview,
 } from 'test-utils';
 
 import { default as locale } from 'locale/components';
@@ -33,7 +32,7 @@ function setup(testProps = {}) {
 
 describe('MyEditorialAppointmentsList', () => {
     beforeEach(() => {
-        window.matchMedia = createMatchMedia(1400);
+        window.matchMedia = createMatchMedia(window.innerWidth);
     });
 
     it('should render empty list', () => {
@@ -91,7 +90,6 @@ describe('MyEditorialAppointmentsList', () => {
         await selectDropDownOption('eap-role-cvo-id-input', 'Guest Editor');
         await userEvent.type(getByTestId('eap-start-year-input'), '2010');
         await userEvent.type(getByTestId('eap-end-year-input'), '2009');
-
         expect(getByTestId('my-editorial-appointments-list-row-add').textContent).toContain(
             locale.components.myEditorialAppointmentsList.form.locale.endYearErrorMessage,
         );
@@ -370,13 +368,20 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
         expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('Current');
     });
-    // HERE - FIX THIS BELOW TO TEST THE MOBILE DIALOG
+
     describe('coverage', () => {
         beforeEach(() => {
-            window.matchMedia = createMatchMedia(800);
+            window.matchMedia = createMatchMedia(320);
         });
-        it('should show mobile add dialog', () => {
-            const { getByTestId } = setup({
+        it('should show mobile add dialog', async () => {
+            const { getByTestId, findByTestId } = setup({
+                list: [],
+            });
+            await userEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
+            await findByTestId('my-editorial-appointments-dialog-add-new-editorial-appointment');
+        });
+        it('should show mobile edit dialog', async () => {
+            const { getByTestId, findByTestId } = setup({
                 list: [
                     {
                         eap_id: 1,
@@ -389,22 +394,8 @@ describe('MyEditorialAppointmentsList', () => {
                     },
                 ],
             });
-            const row = getByTestId('mtablebodyrow');
-            expect(
-                within(row)
-                    .getByText('test')
-                    .closest('td'),
-            ).toHaveStyle('width: 100%');
-            expect(
-                within(row)
-                    .getByText('test')
-                    .closest('td'),
-            ).toHaveStyle('display: block');
-            expect(
-                within(row)
-                    .getByText('test')
-                    .closest('td'),
-            ).toHaveStyle('box-sizing: border-box');
+            await userEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+            await findByTestId('my-editorial-appointments-dialog-edit-this-editorial-appointment');
         });
     });
 });
