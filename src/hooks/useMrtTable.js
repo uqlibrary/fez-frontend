@@ -16,32 +16,37 @@ export const useMrtTable = (list, rules) => {
         setState(prev => ({ ...prev, deleteRowId: null }));
         hideConfirmation();
     };
-    const setEditRow = row => setState(prev => ({ ...prev, editingRow: row }));
-    const resetEditRow = () => setState(prev => ({ ...prev, editingRow: null }));
+    const setEditRow = useCallback(row => setState(prev => ({ ...prev, editingRow: row })), []);
+    const resetEditRow = useCallback(() => setState(prev => ({ ...prev, editingRow: null })), []);
 
-    const validate = rules => row => {
-        const errors = rules.reduce((acc, curr) => {
-            const fieldError = curr.validate?.(row);
-            return fieldError ? [...acc, fieldError] : acc;
-        }, []);
-        return errors.length > 0 ? errors : null;
-    };
+    const validate = useCallback(
+        rules => row => {
+            const errors = rules.reduce((acc, curr) => {
+                const fieldError = curr.validate?.(row);
+                return fieldError ? [...acc, fieldError] : acc;
+            }, []);
+            return errors.length > 0 ? errors : null;
+        },
+        [],
+    );
 
-    const getValidationError = (errors = [], field) => {
+    const getValidationError = useCallback((errors = [], field) => {
         return errors.find(error => error.field === field)?.message;
-    };
+    }, []);
 
-    const handleValidation = (row, field, value) => {
-        const currentValues = { ...row.original, ...row._valuesCache };
-        const updatedValues = { ...currentValues, [field]: value };
+    const handleValidation = useCallback(
+        (row, field, value) => {
+            const currentValues = { ...row.original, ...row._valuesCache };
+            const updatedValues = { ...currentValues, [field]: value };
+            const errors = validate(rules)(updatedValues);
 
-        const errors = validate(rules)(updatedValues);
-
-        setValidationErrors(prev => ({
-            ...prev,
-            [row.id]: errors,
-        }));
-    };
+            setValidationErrors(prev => ({
+                ...prev,
+                [row.id]: errors,
+            }));
+        },
+        [rules, validate],
+    );
 
     const hasValidationErrors = id => Object.keys(validationErrors[id]).length > 0;
     const clearValidationErrors = () => setValidationErrors({});
