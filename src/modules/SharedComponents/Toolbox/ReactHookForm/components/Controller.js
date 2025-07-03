@@ -4,9 +4,10 @@ import { Controller as Base } from 'react-hook-form';
 /**
  * Decorate the original `field` object with additional attributes required to make
  * RHF's HOC <Controller/> compatible with our custom field components.
- * @param field object
- * @param fieldState object
- * @return {*}
+ * @param {object} field
+ * @param {object} fieldState
+ * @param {object} formState
+ * @return {object}
  */
 const getDecoratedField = (field, fieldState, formState) => {
     const decoratedField = field;

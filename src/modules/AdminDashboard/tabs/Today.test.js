@@ -1,14 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import Immutable from 'immutable';
-
 import { render, WithReduxStore, waitForElementToBeRemoved, userEvent } from 'test-utils';
-
 import Today from './Today';
 
 const setup = (props = {}, state = {}, renderer = render) => {
     return renderer(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <Today {...props} />
         </WithReduxStore>,
     );

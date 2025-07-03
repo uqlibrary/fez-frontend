@@ -1420,7 +1420,6 @@ export default {
                         label: 'Collection start date',
                         placeholder: 'Date that data started being collected',
                         name: 'fez_record_search_key_start_date.rek_start_date',
-                        rangeError: 'Date range is not valid',
                     },
                     collectionEnd: {
                         label: 'Collection end date',
@@ -1536,7 +1535,7 @@ export default {
             },
             keywords: {
                 description:
-                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)',
+                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the collection. (eg. one|two|three)',
                 field: {
                     form: {
                         locale: {
@@ -1606,7 +1605,7 @@ export default {
             },
             keywords: {
                 description:
-                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)',
+                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the community. (eg. one|two|three)',
                 field: {
                     form: {
                         locale: {

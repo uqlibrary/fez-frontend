@@ -60,6 +60,13 @@ export const sessionApi = axios.create({
     crossdomain: true,
 });
 
+sessionApi.interceptors.request.use(request => {
+    if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+        request.headers[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
+    }
+    return request;
+});
+
 // need to generate a new token for each request otherwise if you try a new request with the old token,
 // axios will appear to cancel your request automatically
 export const generateCancelToken = () => {
@@ -67,37 +74,26 @@ export const generateCancelToken = () => {
     return CancelToken.source();
 };
 
-export const setupDefaults = () => {
-    // If there is a local cookie available, then set the api headers for x-uql-token
-    if (!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)) {
-        api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
-        sessionApi.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
-    }
-    // allow us to safely force a given SESSION_COOKIE_NAME during development
-    if (process.env.NODE_ENV === 'development' && !!process.env.SESSION_COOKIE_NAME) {
-        api.defaults.headers.common[TOKEN_NAME] = process.env.SESSION_COOKIE_NAME;
-        sessionApi.defaults.headers.common[TOKEN_NAME] = process.env.SESSION_COOKIE_NAME;
-    }
-};
-setupDefaults();
-
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
-export let lastRequests = [];
-export let lastRequest = null;
+export let apiRequestHistory = [];
+export let apiLastRequest = null;
 export const clearLastRequest = () => {
-    lastRequest = null;
-    lastRequests = [];
+    apiLastRequest = null;
+    apiRequestHistory = [];
 };
 
 let isGet = null;
 api.interceptors.request.use(request => {
-    lastRequest = request;
+    if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+        request.headers[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
+    }
+    apiLastRequest = request;
     // keep track of last requests just for tests
     if (isTest()) {
         // keep only the last 10 requests in the queue
-        lastRequests.length > 10 && lastRequests.shift();
-        lastRequests.push(request);
+        apiRequestHistory.length > 10 && apiRequestHistory.shift();
+        apiRequestHistory.push(request);
     }
     isGet = request.method === 'get';
     if (
@@ -165,9 +161,17 @@ api.interceptors.response.use(
         if (!handlesErrorsInternally) {
             if (errorStatus === 401) {
                 if (!!Cookies.get(SESSION_COOKIE_NAME)) {
-                    Cookies.remove(SESSION_COOKIE_NAME, { path: '/', domain: '.library.uq.edu.au' });
-                    Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME, { path: '/', domain: '.library.uq.edu.au' });
-                    delete api.defaults.headers.common[TOKEN_NAME];
+                    // dev
+                    Cookies.remove(SESSION_COOKIE_NAME);
+                    Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME);
+                    // live env
+                    const params = {
+                        path: '/',
+                        domain: '.library.uq.edu.au',
+                        secure: true,
+                    };
+                    Cookies.remove(SESSION_COOKIE_NAME, params);
+                    Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME, params);
                 }
 
                 if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc') {

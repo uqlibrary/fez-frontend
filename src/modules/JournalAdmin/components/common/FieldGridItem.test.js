@@ -1,12 +1,13 @@
 import React from 'react';
 import { rtlRender } from 'test-utils';
 import FieldGridItem from './FieldGridItem';
-import { FormProvider } from 'react-hook-form';
+import { FormProvider, useFormContext } from 'react-hook-form';
 
 jest.mock('../../../../context');
 import { useJournalContext } from 'context';
 import { useValidatedForm } from 'hooks';
 import { ADMIN_JOURNAL } from 'config/general';
+import { fieldConfig } from 'config/journalAdmin';
 
 global.console = {
     ...global.console,
@@ -92,6 +93,64 @@ describe('FieldGridItem', () => {
             },
         });
         expect(global.console.warn).toHaveBeenCalledWith('No field config found for', 'fake_field');
+    });
+
+    describe('composed field', () => {
+        it('should handle composed field', () => {
+            fieldConfig.default.composed_field = {
+                composed: true,
+                component: props => {
+                    // eslint-disable-next-line react-hooks/rules-of-hooks
+                    const { register } = useFormContext();
+                    return (
+                        <>
+                            <div>
+                                <input
+                                    {...register(props.field1.name)}
+                                    {...props.field1}
+                                    className={props.field1.error ? 'error' : ''}
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    {...register(props.field2.name)}
+                                    {...props.field2}
+                                    className={props.field2.error ? 'error' : ''}
+                                />
+                            </div>
+                        </>
+                    );
+                },
+                componentProps: {
+                    field1: {
+                        'data-testid': 'field1',
+                        name: 'sectionA.field1',
+                    },
+                    field2: {
+                        'data-testid': 'field2',
+                        name: 'sectionA.field2',
+                    },
+                },
+            };
+            const { getByTestId } = setup({
+                field: 'composed_field',
+                methods: {
+                    getFieldState: jest.fn(field => field === 'sectionA.field1' && { error: 'error message' }),
+                },
+                values: {
+                    sectionA: {
+                        field1: 'value 1',
+                    },
+                },
+            });
+
+            expect(getByTestId('field1')).toHaveValue('value 1');
+            expect(getByTestId('field1')).toHaveAttribute('class', 'error');
+            expect(getByTestId('field1')).toHaveAttribute('errortext', 'error message');
+            expect(getByTestId('field2')).toHaveValue('');
+            expect(getByTestId('field2')).not.toHaveAttribute('class', 'error');
+            expect(getByTestId('field2')).not.toHaveAttribute('errortext', 'error message');
+        });
     });
 });
 

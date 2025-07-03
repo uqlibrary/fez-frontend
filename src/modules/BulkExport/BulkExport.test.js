@@ -1,8 +1,5 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { render, WithReduxStore, fireEvent, act, waitForElementToBeRemoved } from 'test-utils';
-
 import BulkExport from './BulkExport';
 import * as actions from 'actions';
 
@@ -30,7 +27,7 @@ const setup = (testProps = {}, initialState = {}) => {
         ...initialState,
     };
     return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <BulkExport {...props} />
         </WithReduxStore>,
     );
