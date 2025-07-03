@@ -103,7 +103,7 @@ exports[`ThesisForm component 1`] = `
                               . Please see the
                                
                               <a
-                                href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
+                                href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/hdr-support-thesis#s-lg-box-22941538"
                               >
                                 UQRDM thesis submission guide
                               </a>
@@ -1228,7 +1228,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                               . Please see the
                                
                               <a
-                                href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
+                                href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/hdr-support-thesis#s-lg-box-22941538"
                               >
                                 UQRDM thesis submission guide
                               </a>
