@@ -390,7 +390,7 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('Current');
     });
 
-    describe('coverage', () => {
+    describe('mobile coverage', () => {
         beforeEach(() => {
             window.matchMedia = createMatchMedia(320);
         });

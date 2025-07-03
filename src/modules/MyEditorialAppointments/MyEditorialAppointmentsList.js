@@ -693,7 +693,6 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     {...props}
                 />
             ),
-            SortIcon: props => <tableIcons.SortArrow color="secondary" {...props} />,
         },
         muiTableProps: {
             sx: {
