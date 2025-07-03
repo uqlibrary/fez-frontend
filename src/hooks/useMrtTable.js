@@ -48,7 +48,7 @@ export const useMrtTable = (list, rules) => {
         [rules, validate],
     );
 
-    const hasValidationErrors = id => Object.keys(validationErrors[id]).length > 0;
+    const hasValidationErrors = id => Array.isArray(validationErrors[id]) && validationErrors[id].length > 0;
     const clearValidationErrors = () => setValidationErrors({});
 
     return {
