@@ -37,7 +37,7 @@ export default {
                         <a
                             style={{ fontWeight: 700 }}
                             target="_blank"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/submission-data-requirements#s-lg-box-20836548"
                         >
                             here
                         </a>

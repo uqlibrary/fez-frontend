@@ -31,7 +31,7 @@ export default {
             <p>
                 For help, click{' '}
                 <a
-                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                    href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/add-information-to-existing-ntro"
                     target="_blank"
                 >
                     here

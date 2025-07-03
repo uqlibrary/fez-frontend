@@ -26,7 +26,7 @@ const thesisSubmission = {
                 this process
             </a>
             . Please see the{' '}
-            <a href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376">
+            <a href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/hdr-support-thesis#s-lg-box-22941538">
                 UQRDM thesis submission guide
             </a>{' '}
             for more information.
@@ -136,7 +136,7 @@ export default {
                             style={{ fontWeight: 700 }}
                             target="_blank"
                             rel="noreferrer"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records#s-lg-box-18496096"
+                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/add-missing-work#s-lg-box-18496096"
                         >
                             here
                         </a>
@@ -149,7 +149,7 @@ export default {
                             style={{ fontWeight: 700 }}
                             target="_blank"
                             rel="noreferrer"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/add-information-to-existing-ntro"
                         >
                             here
                         </a>
@@ -175,7 +175,7 @@ export default {
                         style={{ fontWeight: 700 }}
                         target="_blank"
                         rel="noreferrer"
-                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                        href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/content-indicators"
                     >
                         here
                     </a>
@@ -598,7 +598,7 @@ export default {
                                 this process
                             </a>
                             . Please see the{' '}
-                            <a href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376">
+                            <a href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/hdr-support-thesis#s-lg-box-22941538">
                                 UQRDM thesis submission guide
                             </a>{' '}
                             for more information.
