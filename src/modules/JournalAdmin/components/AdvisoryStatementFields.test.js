@@ -16,9 +16,9 @@ import { useValidatedForm } from 'hooks';
 import { AdvisoryStatementFields } from './AdvisoryStatementFields';
 import { JOURNAL_ADVISORY_STATEMENT_TYPE } from '../../../config/general';
 import { vocabulariesList } from '../../../mock/data';
+import * as repositories from '../../../repositories';
 import { screen, within } from '@testing-library/react';
-// TODO revert upon enabling Advisory Statement Type
-// import { waitFor } from '@testing-library/dom';
+import { waitFor } from '@testing-library/dom';
 
 let defaultComponentProps;
 
@@ -130,47 +130,46 @@ describe('Component JournalAdvisoryStatementTypeField', () => {
             await assertStatementText(expectedStatement);
         });
 
-        // TODO revert upon enabling Advisory Statement Type
-        // it('should allow selecting a statement type option with a default statement text', async () => {
-        //     const { getByTestId } = setup();
-        //
-        //     // select statement type
-        //     await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'err');
-        //     await userEvent.click(await waitForText('Error'));
-        //     const expectedStatement = getTypeDefaultStatementText('Error');
-        //     await assertStatementText(expectedStatement);
-        //
-        //     // make sure clearing statement type field resets statement text field to its initial state
-        //     await clearStatementTypeField();
-        //     await assertStatementText('');
-        // });
-        //
-        // it('should allow selecting a statement type without a default statement text', async () => {
-        //     const { getByTestId } = setup();
-        //
-        //     // select statement type
-        //     await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'warn');
-        //     await userEvent.click(within(await screen.findByRole('listbox')).getAllByRole('option')[1]);
-        //     await waitFor(() => expect(getByTestId(`${defaultComponentProps.type.id}-input`).value).toBe('Warning'));
-        //     await assertStatementText('');
-        // });
-        //
-        // it('should not update custom statement text', async () => {
-        //     const { getByTestId } = setup();
-        //
-        //     const updatedStatement = 'custom advisory statement text';
-        //     await setStatementText(updatedStatement);
-        //     await assertStatementText(updatedStatement);
-        //
-        //     // select statement type
-        //     await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'err');
-        //     await userEvent.click(await waitForText('Error'));
-        //
-        //     // make sure clearing statement type field won't reset statement text field to its initial state
-        //     await assertStatementText(updatedStatement);
-        //     await clearStatementTypeField();
-        //     await assertStatementText(updatedStatement);
-        // });
+        it('should allow selecting a statement type option with a default statement text', async () => {
+            const { getByTestId } = setup();
+
+            // select statement type
+            await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'err');
+            await userEvent.click(await waitForText('Error'));
+            const expectedStatement = getTypeDefaultStatementText('Error');
+            await assertStatementText(expectedStatement);
+
+            // make sure clearing statement type field resets statement text field to its initial state
+            await clearStatementTypeField();
+            await assertStatementText('');
+        });
+
+        it('should allow selecting a statement type without a default statement text', async () => {
+            const { getByTestId } = setup();
+
+            // select statement type
+            await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'warn');
+            await userEvent.click(within(await screen.findByRole('listbox')).getAllByRole('option')[1]);
+            await waitFor(() => expect(getByTestId(`${defaultComponentProps.type.id}-input`).value).toBe('Warning'));
+            await assertStatementText('');
+        });
+
+        it('should not update custom statement text', async () => {
+            const { getByTestId } = setup();
+
+            const updatedStatement = 'custom advisory statement text';
+            await setStatementText(updatedStatement);
+            await assertStatementText(updatedStatement);
+
+            // select statement type
+            await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'err');
+            await userEvent.click(await waitForText('Error'));
+
+            // make sure clearing statement type field won't reset statement text field to its initial state
+            await assertStatementText(updatedStatement);
+            await clearStatementTypeField();
+            await assertStatementText(updatedStatement);
+        });
     });
 
     describe('with form values', () => {
@@ -184,104 +183,103 @@ describe('Component JournalAdvisoryStatementTypeField', () => {
             await waitForText(updatedStatement);
         });
 
-        // TODO revert upon enabling Advisory Statement Type
-        // it('should allow updating statement text by selecting a new statement type', async () => {
-        //     const initialStatement = getTypeDefaultStatementText('Warning');
-        //     const { getByTestId } = setup({
-        //         form: {
-        //             defaultValues: {
-        //                 [defaultComponentProps.type.name]: getTypeCvoId('Warning'),
-        //                 [defaultComponentProps.text.name]: initialStatement,
-        //             },
-        //         },
-        //     });
-        //     await waitForText('Warning');
-        //     await assertStatementText(initialStatement);
-        //
-        //     // select statement type
-        //     await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'err');
-        //     await userEvent.click(await waitForText('Error'));
-        //     const expectedStatement = getTypeDefaultStatementText('Error');
-        //     await assertStatementText(expectedStatement);
-        //
-        //     // make sure clearing statement type field resets statement text field to its initial state
-        //     await clearStatementTypeField();
-        //     await assertStatementText(initialStatement);
-        // });
-        //
-        // it('should allow clearing statement text by selecting a statement type without a default statement text', async () => {
-        //     const initialStatement = getTypeDefaultStatementText('Error');
-        //     const { getByTestId } = setup({
-        //         form: {
-        //             defaultValues: {
-        //                 [defaultComponentProps.type.name]: getTypeCvoId('Error'),
-        //                 [defaultComponentProps.text.name]: initialStatement,
-        //             },
-        //         },
-        //     });
-        //     await waitForText('Error');
-        //     await assertStatementText(initialStatement);
-        //
-        //     // select statement type
-        //     await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'warn');
-        //     await userEvent.click(within(await screen.findByRole('listbox')).getAllByRole('option')[1]);
-        //     await waitFor(() => expect(getByTestId(`${defaultComponentProps.type.id}-input`).value).toBe('Warning'));
-        //     await assertStatementText('');
-        //
-        //     // make sure clearing statement type field resets statement text field to its initial state
-        //     await clearStatementTypeField();
-        //     await assertStatementText(initialStatement);
-        // });
-        //
-        // it('should not update custom statement', async () => {
-        //     const customStatement = 'custom advisory statement text';
-        //     const { getByTestId } = setup({
-        //         form: {
-        //             defaultValues: {
-        //                 [defaultComponentProps.type.name]: getTypeCvoId('Warning'),
-        //                 [defaultComponentProps.text.name]: customStatement,
-        //             },
-        //         },
-        //     });
-        //     await waitForText('Warning');
-        //     await assertStatementText(customStatement);
-        //
-        //     // select statement type
-        //     await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'err');
-        //     await userEvent.click(await waitForText('Error'));
-        //
-        //     // make sure clearing statement type field won't reset statement text field to its initial state
-        //     await assertStatementText(customStatement);
-        //     await clearStatementTypeField();
-        //     await assertStatementText(customStatement);
-        // });
-        //
-        // it('should not update statement text that has been replaced by a custom statement', async () => {
-        //     const initialStatement = getTypeDefaultStatementText('Warning');
-        //     const { getByTestId } = setup({
-        //         form: {
-        //             defaultValues: {
-        //                 [defaultComponentProps.type.name]: getTypeCvoId('Warning'),
-        //                 [defaultComponentProps.text.name]: initialStatement,
-        //             },
-        //         },
-        //     });
-        //     await waitForText('Warning');
-        //     await assertStatementText(initialStatement);
-        //
-        //     // update statement type
-        //     const updatedStatement = 'custom advisory statement text';
-        //     await setStatementText(updatedStatement);
-        //     await assertStatementText(updatedStatement);
-        //
-        //     // select statement type
-        //     await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'err');
-        //     await userEvent.click(await waitForText('Error'));
-        //
-        //     // make sure clearing statement type field won't reset statement text field to its initial state
-        //     await assertStatementText(updatedStatement);
-        //     await clearStatementTypeField();
-        //     await assertStatementText(updatedStatement);
-        // });
+        it('should allow updating statement text by selecting a new statement type', async () => {
+            const initialStatement = getTypeDefaultStatementText('Warning');
+            const { getByTestId } = setup({
+                form: {
+                    defaultValues: {
+                        [defaultComponentProps.type.name]: getTypeCvoId('Warning'),
+                        [defaultComponentProps.text.name]: initialStatement,
+                    },
+                },
+            });
+            await waitForText('Warning');
+            await assertStatementText(initialStatement);
+
+            // select statement type
+            await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'err');
+            await userEvent.click(await waitForText('Error'));
+            const expectedStatement = getTypeDefaultStatementText('Error');
+            await assertStatementText(expectedStatement);
+
+            // make sure clearing statement type field resets statement text field to its initial state
+            await clearStatementTypeField();
+            await assertStatementText(initialStatement);
+        });
+
+        it('should allow clearing statement text by selecting a statement type without a default statement text', async () => {
+            const initialStatement = getTypeDefaultStatementText('Error');
+            const { getByTestId } = setup({
+                form: {
+                    defaultValues: {
+                        [defaultComponentProps.type.name]: getTypeCvoId('Error'),
+                        [defaultComponentProps.text.name]: initialStatement,
+                    },
+                },
+            });
+            await waitForText('Error');
+            await assertStatementText(initialStatement);
+
+            // select statement type
+            await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'warn');
+            await userEvent.click(within(await screen.findByRole('listbox')).getAllByRole('option')[1]);
+            await waitFor(() => expect(getByTestId(`${defaultComponentProps.type.id}-input`).value).toBe('Warning'));
+            await assertStatementText('');
+
+            // make sure clearing statement type field resets statement text field to its initial state
+            await clearStatementTypeField();
+            await assertStatementText(initialStatement);
+        });
+
+        it('should not update custom statement', async () => {
+            const customStatement = 'custom advisory statement text';
+            const { getByTestId } = setup({
+                form: {
+                    defaultValues: {
+                        [defaultComponentProps.type.name]: getTypeCvoId('Warning'),
+                        [defaultComponentProps.text.name]: customStatement,
+                    },
+                },
+            });
+            await waitForText('Warning');
+            await assertStatementText(customStatement);
+
+            // select statement type
+            await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'err');
+            await userEvent.click(await waitForText('Error'));
+
+            // make sure clearing statement type field won't reset statement text field to its initial state
+            await assertStatementText(customStatement);
+            await clearStatementTypeField();
+            await assertStatementText(customStatement);
+        });
+
+        it('should not update statement text that has been replaced by a custom statement', async () => {
+            const initialStatement = getTypeDefaultStatementText('Warning');
+            const { getByTestId } = setup({
+                form: {
+                    defaultValues: {
+                        [defaultComponentProps.type.name]: getTypeCvoId('Warning'),
+                        [defaultComponentProps.text.name]: initialStatement,
+                    },
+                },
+            });
+            await waitForText('Warning');
+            await assertStatementText(initialStatement);
+
+            // update statement type
+            const updatedStatement = 'custom advisory statement text';
+            await setStatementText(updatedStatement);
+            await assertStatementText(updatedStatement);
+
+            // select statement type
+            await userEvent.type(getByTestId(`${defaultComponentProps.type.id}-input`), 'err');
+            await userEvent.click(await waitForText('Error'));
+
+            // make sure clearing statement type field won't reset statement text field to its initial state
+            await assertStatementText(updatedStatement);
+            await clearStatementTypeField();
+            await assertStatementText(updatedStatement);
+        });
     });
 });

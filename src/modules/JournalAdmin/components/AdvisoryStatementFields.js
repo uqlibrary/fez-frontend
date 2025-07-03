@@ -11,8 +11,6 @@ import { JOURNAL_ADVISORY_STATEMENT_TYPE as cvoId } from '../../../config/genera
 import { usePrevious } from '../../../hooks/usePrevious';
 import get from 'lodash/get';
 
-// TODO revert all ignore next upon enabling Advisory Statement Type
-// istanbul ignore next
 const flattenCVOTree = data =>
     data
         .map(item => ({
@@ -33,7 +31,6 @@ export const AdvisoryStatementFields = props => {
 
     // preload options in case the field pre-populated
     // e.g. editing a journal with advisory statement type
-    // istanbul ignore next
     useEffect(() => {
         if (!isPrePopulated) return;
         cvoList.fetch();
@@ -42,9 +39,7 @@ export const AdvisoryStatementFields = props => {
 
     // handle type changes
     useEffect(() => {
-        // istanbul ignore next
         const prevTypeItem = cvoList.items.find(item => item.key === prevType);
-        // istanbul ignore next
         const currentTypeItem = cvoList.items.find(item => item.key === type);
         // if current advisory statement text is empty, or it has type's default statement value,
         // then update it to the corresponding selected type's statement text (item.id - see flattenCVOTree)
@@ -61,20 +56,14 @@ export const AdvisoryStatementFields = props => {
                     control={control}
                     component={JournalAdvisoryStatementTypeField}
                     list={cvoList}
-                    disabled={props.disabled}
+                    disable={props.disable}
                     {...props.type}
                     // trigger a re-render upon options are loaded when field is pre-populated
-                    // TODO revert upon enabling Advisory Statement Type
-                    {...((isPrePopulated && /* istanbul ignore next*/ {
-                        key: `${props.name}-${cvoList.itemsLoaded}`,
-                    }) ||
-                        {})}
-                    // TODO revert upon enabling Advisory Statement Type
-                    disabled
+                    {...((isPrePopulated && { key: `${props.name}-${cvoList.itemsLoaded}` }) || {})}
                 />
             </Grid>
             <Grid item xs={12} md={12}>
-                <Field control={control} component={RichEditorField} disabled={props.disabled} {...props.text} />
+                <Field control={control} component={RichEditorField} disable={props.disable} {...props.text} />
             </Grid>
         </>
     );
