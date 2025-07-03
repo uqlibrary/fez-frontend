@@ -152,7 +152,28 @@ describe('MyEditorialAppointmentsList', () => {
         await userEvent.type(getByTestId('eap-start-year-input'), '2010');
         await userEvent.type(getByTestId('eap-end-year-input'), '2020');
 
-        await userEvent.click(getByTestId('my-editorial-appointments-add-save'));
+        await userEvent.click(getByTestId('my-editorial-appointments-add-save').closest('button'));
+
+        await waitFor(() => getByText('No records to display'));
+
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(0);
+    });
+
+    it('should render previous list when add operation cancelled', async () => {
+        const { container, getByTestId, getByText } = setup({
+            list: [],
+        });
+
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(0);
+
+        await userEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
+
+        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        await selectDropDownOption('eap-role-cvo-id-input', 'Guest Editor');
+        await userEvent.type(getByTestId('eap-start-year-input'), '2010');
+        await userEvent.type(getByTestId('eap-end-year-input'), '2020');
+
+        await userEvent.click(getByTestId('my-editorial-appointments-add-cancel').closest('button'));
 
         await waitFor(() => getByText('No records to display'));
 

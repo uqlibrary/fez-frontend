@@ -576,7 +576,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             >
                 <DialogTitle variant="h5">{addButtonTooltip}</DialogTitle>
                 <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                    {internalEditComponents} {/* or render custom edit components here */}
+                    {internalEditComponents}
                 </DialogContent>
                 <DialogActions>
                     <MRT_EditActionButtons
@@ -588,7 +588,6 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 </DialogActions>
             </Box>
         ),
-        // optionally customize modal content
         renderEditRowDialogContent: ({ table, row, internalEditComponents }) => (
             <Box
                 id={`my-editorial-appointments-dialog-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
@@ -596,7 +595,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             >
                 <DialogTitle variant="h5">{editButtonTooltip}</DialogTitle>
                 <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                    {internalEditComponents} {/* or render custom edit components here */}
+                    {internalEditComponents}
                 </DialogContent>
                 <DialogActions>
                     <MRT_EditActionButtons
@@ -675,6 +674,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             expanded: true,
             columnVisibility: { eap_role_name: false },
             columnPinning: { ['right']: ['mrt-row-actions'] },
+            sorting: [{ id: 'eap_role_cvo_id', desc: true }],
         },
         icons: {
             SaveIcon: props => (
@@ -693,6 +693,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     {...props}
                 />
             ),
+            SortIcon: props => <tableIcons.SortArrow color="secondary" {...props} />,
         },
         muiTableProps: {
             sx: {
