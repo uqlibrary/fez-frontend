@@ -136,7 +136,7 @@ export default {
                             style={{ fontWeight: 700 }}
                             target="_blank"
                             rel="noreferrer"
-                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/add-missing-work#s-lg-box-18496096"
+                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/add-missing-work"
                         >
                             here
                         </a>
@@ -149,7 +149,7 @@ export default {
                             style={{ fontWeight: 700 }}
                             target="_blank"
                             rel="noreferrer"
-                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/add-information-to-existing-ntro"
+                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/non-traditional-research-outputs#s-lg-box-20857679"
                         >
                             here
                         </a>
