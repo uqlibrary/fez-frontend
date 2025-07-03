@@ -29,3 +29,10 @@ cypress/downloads/*
 
 # Code Coverage checker temp dir
 .nyc_output
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/monocart-report/
