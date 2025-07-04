@@ -1436,6 +1436,7 @@ export default {
                 itemsList: AUTHOR_EXTERNAL_IDENTIFIER_TYPE,
                 genericSelectFieldId: 'rek-contributor-identifier-type',
                 label: 'Select an identifier type',
+                rules: { deps: ['adminSection.ownerIdentifier'] },
             },
         },
         fez_record_search_key_project_name: {
