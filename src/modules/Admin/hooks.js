@@ -76,7 +76,7 @@ export const useRecordToView = (recordToView, createMode, form) => {
     };
 };
 
-export const useFormOnChangeHook = form => {
+export const useFormOnChangeHook = (form, createMode) => {
     const prevBibliographicSectionFezMatchedJournals = useRef('');
     const [
         rekDisplayType,
@@ -99,7 +99,7 @@ export const useFormOnChangeHook = form => {
     // AD-290 Remove the subtype key if the selected display type does not have subtypes
     const selectedPublicationType = !!rekDisplayType && publicationTypes({ ...recordForms }, true)[rekDisplayType];
     const hasSubtypes = !!(selectedPublicationType || {}).subtypes;
-    if (!hasSubtypes && Object.hasOwn(form.getValues()?.adminSection ?? {}, 'rek_subtype')) {
+    if (createMode && !hasSubtypes && Object.hasOwn(form.getValues()?.adminSection ?? {}, 'rek_subtype')) {
         form.unregister('adminSection.rek_subtype');
     }
 

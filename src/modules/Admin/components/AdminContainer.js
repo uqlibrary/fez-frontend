@@ -72,7 +72,7 @@ export const AdminContainer = ({ createMode = false }) => {
     });
 
     const recordToView = useRecordToView(record, createMode, form);
-    useFormOnChangeHook(form);
+    useFormOnChangeHook(form, createMode);
     const { errors: formErrors } = useFormValidator(form);
 
     const handleSubmit = async data => {
