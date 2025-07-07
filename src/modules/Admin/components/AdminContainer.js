@@ -116,7 +116,6 @@ export const AdminContainer = ({ createMode = false }) => {
     React.useEffect(() => {
         !!pid && dispatch(actions.loadRecordToView(pid, true));
         return () => {
-            console.log('unmount');
             form.reset();
             dispatch(actions.clearRecordToView());
         };
