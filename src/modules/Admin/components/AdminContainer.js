@@ -72,7 +72,7 @@ export const AdminContainer = ({ createMode = false }) => {
     });
 
     const recordToView = useRecordToView(record, createMode, form);
-    useFormOnChangeHook(form);
+    useFormOnChangeHook(form, createMode);
     const { errors: formErrors } = useFormValidator(form);
 
     const handleSubmit = async data => {
@@ -116,7 +116,6 @@ export const AdminContainer = ({ createMode = false }) => {
     React.useEffect(() => {
         !!pid && dispatch(actions.loadRecordToView(pid, true));
         return () => {
-            console.log('unmount');
             form.reset();
             dispatch(actions.clearRecordToView());
         };
