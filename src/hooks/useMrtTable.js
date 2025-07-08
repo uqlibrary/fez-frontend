@@ -1,8 +1,14 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useConfirmationState } from './index';
 
 export const useMrtTable = (list, rules) => {
     const [data, setData] = useState(list);
+    useEffect(() => {
+        if (JSON.stringify(list) !== JSON.stringify(data)) {
+            setData(list);
+        }
+    }, [data, list]);
+
     const [state, setState] = useState({ busy: false, deleteRowId: null, editingRow: null });
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const [validationErrors, setValidationErrors] = useState({});
