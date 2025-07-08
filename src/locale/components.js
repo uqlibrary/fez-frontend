@@ -3992,10 +3992,20 @@ export default {
                         title: 'Status',
                     },
                     isAdmin: {
-                        title: 'Is admin?',
+                        title: (
+                            <>
+                                Is <br />
+                                admin?
+                            </>
+                        ),
                     },
                     isSuperAdmin: {
-                        title: 'Is superadmin?',
+                        title: (
+                            <>
+                                Is <br />
+                                superadmin?
+                            </>
+                        ),
                     },
                 },
             },
