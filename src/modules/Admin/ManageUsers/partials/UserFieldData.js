@@ -15,7 +15,7 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type = 'text
     } = useFormContext();
     return (
         <React.Fragment>
-            <Grid item fullWidth xs={12}>
+            <Grid item xs={12}>
                 <Grid container justifyContent="flex-end" flexDirection={'column'}>
                     <Grid item>
                         <ColumnTitle title={label} />

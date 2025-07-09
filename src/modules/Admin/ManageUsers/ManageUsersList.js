@@ -385,6 +385,36 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
     //         });
     // };
 
+    const handleCreate = (mode, formValues, rowData) => {
+        console.log(mode, formValues, rowData);
+        // { values, table, row }
+        // const newValues = { ...row.original, ...row._valuesCache, ...values };
+        // const errors = validate(newValues);
+        // /* istanbul ignore if  */
+        // if (!!errors) {
+        //     return;
+        // }
+
+        // setBusy();
+        // handleRowAdd(newValues)
+        //     .then(data => {
+        //         setData(prevState => {
+        //             return [...prevState, data];
+        //         });
+        //     })
+        //     .catch(() => setData(prevState => [...prevState]))
+        //     .finally(() => {
+        //         table.setCreatingRow(null);
+        //         resetEditRow();
+        //         setBusy(false);
+        //     });
+    };
+    const handleCancel = table => () => {
+        console.log('cancel', editingRow);
+        resetEditRow();
+        table.setCreatingRow(null);
+    };
+
     // DELETE action
     const openDeleteConfirmModal = id => () => {
         setDeleteRow(id);
@@ -420,7 +450,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             pagination: { pageSize, pageIndex },
         },
         displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
-        renderCreateRowDialogContent: ({ table, row, internalEditComponents }) => (
+        renderCreateRowDialogContent: ({ table, row }) => (
             <Box
                 id={`users-list-row-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                 data-testid={`users-list-row-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
@@ -431,7 +461,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     mode="add"
                     id="users-list-edit-row"
                     data-testid="users-list-edit-row"
-                    onEditingApproved={() => {}}
+                    onEditingApproved={handleCreate}
+                    onEditingCanceled={handleCancel(table)}
                 />
             </Box>
         ),
@@ -510,13 +541,6 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 </Box>
             );
         },
-        onCreatingRowCancel: () => {
-            resetEditRow();
-            clearValidationErrors();
-        },
-        onCreatingRowSave: () => {},
-        onEditingRowSave: () => {},
-        onEditingRowCancel: () => setEditRow(null),
         initialState: {
             expanded: true,
             columnPinning: { left: ['mrt-row-select'], right: ['mrt-row-actions'] },
