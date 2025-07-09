@@ -17,13 +17,13 @@ test.describe('Record with invalid affiliation', () => {
         await expect(drawerIndicator).toBeVisible();
 
         // Check specific affiliation error messages
-        const incompleteAffil = page.locator('#adminViewRecordDrawerDesktop [data-testid="affil_error_88844"]');
-        await expect(incompleteAffil).toContainText('Robertson, Avril A. B. not 100%');
-        await expect(incompleteAffil).toContainText('has incomplete author affiliation information');
+        const incompleteAffiliation = page.locator('#adminViewRecordDrawerDesktop [data-testid="affil_error_88844"]');
+        await expect(incompleteAffiliation).toContainText('Robertson, Avril A. B. not 100%');
+        await expect(incompleteAffiliation).toContainText('has incomplete author affiliation information');
 
-        const orphanedAffil = page.locator('#adminViewRecordDrawerDesktop [data-testid="affil_error_7624840"]');
-        await expect(orphanedAffil).toContainText('Affiliate, Orphaned');
-        await expect(orphanedAffil).toContainText('has orphaned author information');
+        const orphanedAffiliation = page.locator('#adminViewRecordDrawerDesktop [data-testid="affil_error_7624840"]');
+        await expect(orphanedAffiliation).toContainText('Affiliate, Orphaned');
+        await expect(orphanedAffiliation).toContainText('has orphaned author information');
 
         // Click the 'Fix Affiliations' button
         await page.locator('#adminViewRecordDrawerDesktop [data-testid="btnFixAffiliations"]').click();

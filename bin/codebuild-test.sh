@@ -97,8 +97,8 @@ case "$PIPE_NUM" in
 #    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
         # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the second group
         installPlaywrightDependencies
-        source bin/codebuild-parallel.sh
         printf "\n--- \e[1mRUNNING E2E PLAYWRIGHT TESTS GROUP [STARTING AT $(date)] 2\e[0m ---\n"
+#        source bin/codebuild-parallel.sh
         npm run test:e2e:pw
         printf "\n--- [ENDED AT $(date)] \n"
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/playwright/coverage-final.json
