@@ -20,6 +20,7 @@ export async function collectCoverageAsync(
 
     await context.addInitScript(() => {
         window.addEventListener('beforeunload', () => {
+            if ((window as any)?.__coverage__) return;
             (window as any).collectIstanbulCoverageAsync(JSON.stringify((window as any).__coverage__));
         });
     });
@@ -28,6 +29,7 @@ export async function collectCoverageAsync(
 
     for (const page of context.pages()) {
         await page.evaluate(() => {
+            if ((window as any)?.__coverage__) return;
             (window as any).collectIstanbulCoverageAsync(JSON.stringify((window as any).__coverage__));
         });
     }
