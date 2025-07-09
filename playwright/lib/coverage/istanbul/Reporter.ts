@@ -32,13 +32,13 @@ export default class Reporter implements Base {
         this.config = config.reporter.find((reporter: ReporterDescription) => typeof reporter[0] === 'string' && reporter[0].includes(__filename))?.[1];
     }
 
-    async onEnd(result: FullResult) {
+    async onEnd(testResult: FullResult) {
         if (this.config === undefined || !this.config.outputDir) {
             console.log(`\nSkipping Istanbul Coverage Merger ... misconfigured, please check it's configuration\n`);
             return;
         }
         // skip for failed test, unless explicitly specified
-        if (result.status === 'failed' && this.config.bailOnTestFailure !== false) return;
+        if (testResult.status === 'failed' && this.config.bailOnTestFailure !== false) return;
 
         const jsonPartialsDir = this.config.jsonPartialsDir || `${this.config.outputDir}/temp`;
         const jsonReportDir = this.config.jsonReportDir || this.config.outputDir;
