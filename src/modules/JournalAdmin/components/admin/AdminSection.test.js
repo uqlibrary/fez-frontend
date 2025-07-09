@@ -1,16 +1,13 @@
 import React from 'react';
-import { WithReduxStore } from 'test-utils';
+import { render, WithReduxStore, FormProviderWrapper } from 'test-utils';
 import AdminSection from './AdminSection';
 import { journalDoaj } from 'mock/data';
 import { fieldConfig } from 'config/journalAdmin';
 
-import { FormProvider } from 'react-hook-form';
-import { useValidatedForm } from 'hooks';
 import { ADMIN_JOURNAL } from 'config/general';
 
 jest.mock('../../../../context');
 import { useJournalContext } from 'context';
-import { render } from '@testing-library/react';
 
 class ResizeObserver {
     observe() {}
@@ -20,19 +17,13 @@ class ResizeObserver {
 
 window.ResizeObserver = ResizeObserver;
 
-// eslint-disable-next-line react/prop-types
-const FormProviderWrapper = ({ children, ...props }) => {
-    const methods = useValidatedForm(props);
-    return <FormProvider {...methods}>{children}</FormProvider>;
-};
-
-function setup(testProps = {}) {
+function setup(testProps = {}, renderer = render) {
     const { values = {}, ...rest } = testProps;
     const props = {
         ...rest,
     };
 
-    return render(
+    return renderer(
         <FormProviderWrapper
             values={{
                 ...values,

@@ -1,17 +1,19 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { AttachedFiles } from './AttachedFiles';
-import { useFormValuesContext } from 'context';
+import { useFormContext } from 'react-hook-form';
 
-export const deleteCallbackFactory = (dataStreams, setDataStreams, onDeleteAttachedFile) => {
+import { AttachedFiles } from './AttachedFiles';
+
+export const deleteCallbackFactory = (dataStreams, onDeleteAttachedFile, onChange) => {
     const callback = key => {
         const indexToDelete = dataStreams.findIndex(item => item.dsi_dsid === key);
         const fileToDelete = dataStreams[indexToDelete];
         const newDataStreams = [...dataStreams.slice(0, indexToDelete), ...dataStreams.slice(indexToDelete + 1)];
         onDeleteAttachedFile(fileToDelete);
-        setDataStreams(newDataStreams);
+        onChange?.(newDataStreams);
     };
-    return [callback, [dataStreams, setDataStreams, onDeleteAttachedFile]];
+
+    return [callback, [dataStreams, onDeleteAttachedFile, onChange]];
 };
 
 export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams) => {
@@ -58,33 +60,35 @@ export const handleDatastreamMultiChange = (dataStreams, setDataStreams, onRenam
     setDataStreams(newDataStreams);
 };
 
-export const handleOnChange = (dataStreams, onChange) => {
-    onChange(dataStreams);
-};
+export const AttachedFilesField = ({ onRenameAttachedFile, onDeleteAttachedFile, ...props }) => {
+    const { getValues } = useFormContext();
+    const formValues = getValues('filesSection');
+    const prevPropsDatastream = React.useRef('[]');
 
-export const AttachedFilesField = ({ input, ...props }) => {
-    const { formValues, onDeleteAttachedFile, onRenameAttachedFile } = useFormValuesContext();
-
-    const [dataStreams, setDataStreams] = useState(() => {
-        return !!formValues.fez_datastream_info
+    const getState = () =>
+        !!formValues.fez_datastream_info
             ? formValues.fez_datastream_info
-            : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [];
-    });
+            : props?.state?.defaultValue || /* istanbul ignore next */ [];
 
-    const { onChange } = input;
+    const [dataStreams, setDataStreams] = useState(getState);
+    const newPropsDataStreams = getState();
+    const newPropsDataStreamsString = JSON.stringify(newPropsDataStreams);
+
+    React.useEffect(() => {
+        /* istanbul ignore else */
+        if (newPropsDataStreamsString !== prevPropsDatastream.current) {
+            prevPropsDatastream.current = newPropsDataStreamsString;
+            setDataStreams(newPropsDataStreams);
+        }
+    }, [newPropsDataStreams, newPropsDataStreamsString]);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDataStreamOrderChange = useCallback(
         ...datastreamOrderChangeCallbackFactory(dataStreams, setDataStreams),
     );
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, setDataStreams, onDeleteAttachedFile));
-
-    useEffect(() => {
-        // Called when attachment is deleted in the UI
-        return handleOnChange(dataStreams, onChange);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [dataStreams]);
+    const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, onDeleteAttachedFile, props.onChange));
 
     return (
         <AttachedFiles
@@ -102,6 +106,8 @@ export const AttachedFilesField = ({ input, ...props }) => {
 };
 
 AttachedFilesField.propTypes = {
-    input: PropTypes.object,
-    meta: PropTypes.object,
+    state: PropTypes.object,
+    onChange: PropTypes.func,
+    onRenameAttachedFile: PropTypes.func.isRequired,
+    onDeleteAttachedFile: PropTypes.func.isRequired,
 };

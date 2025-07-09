@@ -351,7 +351,7 @@ exports[`DepartmentTechnicalReportForm component 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":rb:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -1134,7 +1134,7 @@ exports[`DepartmentTechnicalReportForm component with all fields disabled 1`] = 
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":rt:"
+                          aria-controls="<dynamic>"
                           aria-disabled="true"
                           aria-expanded="false"
                           aria-haspopup="listbox"

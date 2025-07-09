@@ -11,6 +11,7 @@ const classes = {
     identifierName: 'identifierName',
     identifierSubtitle: 'identifierSubtitle',
 };
+const selectedClass = { selected: true };
 
 describe('ContributorRowText', () => {
     it('should render only one column for researcher while adding new non-NTRO work', () => {
@@ -24,7 +25,7 @@ describe('ContributorRowText', () => {
                     nameAsPublished: 'Test, Testing',
                 }}
                 index={0}
-                selectedClass="test"
+                selectedClass={selectedClass}
                 showRoleInput={false}
                 suffix={null}
                 width="md"
@@ -46,7 +47,6 @@ describe('ContributorRowText', () => {
                     nameAsPublished: 'Test, Testing',
                 }}
                 index={0}
-                selectedClass="test"
                 showRoleInput={false}
                 suffix={null}
                 width="xs"
@@ -74,7 +74,6 @@ describe('ContributorRowText', () => {
                     aut_student_username: 's123456',
                 }}
                 index={0}
-                selectedClass="test"
                 showRoleInput={false}
                 suffix={null}
                 width="md"
@@ -103,7 +102,6 @@ describe('ContributorRowText', () => {
                     uqUsername: 'uqtest',
                 }}
                 index={0}
-                selectedClass="test"
                 showRoleInput={false}
                 suffix={null}
                 width="xs"
@@ -129,7 +127,6 @@ describe('ContributorRowText', () => {
                     orgtype: '453989',
                 }}
                 index={0}
-                selectedClass="test"
                 showRoleInput={false}
                 suffix={null}
                 width="md"
@@ -154,7 +151,6 @@ describe('ContributorRowText', () => {
                     orgaff: 'Some institution',
                 }}
                 index={0}
-                selectedClass="test"
                 showRoleInput={false}
                 suffix={null}
                 width="xs"
@@ -178,7 +174,6 @@ describe('ContributorRowText', () => {
                     creatorRole: 'Librarian',
                 }}
                 index={0}
-                selectedClass="test"
                 showRoleInput
                 suffix={null}
                 width="md"
@@ -205,7 +200,6 @@ describe('ContributorRowText', () => {
                     aut_id: 123,
                 }}
                 index={0}
-                selectedClass="test"
                 showRoleInput
                 suffix={null}
                 width="md"
@@ -230,7 +224,6 @@ describe('ContributorRowText', () => {
                     creatorRole: 'Librarian',
                 }}
                 index={0}
-                selectedClass="test"
                 showRoleInput
                 suffix={null}
                 width="xs"
@@ -256,7 +249,6 @@ describe('ContributorRowText', () => {
                     orgtype: '453989',
                 }}
                 index={0}
-                selectedClass="test"
                 showRoleInput={false}
                 suffix={null}
                 width="md"
@@ -283,7 +275,6 @@ describe('ContributorRowText', () => {
                     creatorRole: 'Some creator role',
                 }}
                 index={0}
-                selectedClass="test"
                 showRoleInput
                 suffix={null}
                 width="md"
@@ -313,7 +304,6 @@ describe('ContributorRowText', () => {
                     uqUsername: 'uqtest',
                 }}
                 index={0}
-                selectedClass="test"
                 showRoleInput={false}
                 suffix={null}
                 contributorRowId="test-list-row"

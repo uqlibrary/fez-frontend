@@ -308,7 +308,7 @@ exports[`BookForm component 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r6:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -1332,7 +1332,7 @@ exports[`BookForm component should render contributor assignment 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r2l:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -1996,7 +1996,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":rk:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -2174,7 +2174,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                         required=""
                       >
                         <div
-                          aria-controls=":rn:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="org-affiliation-label org-affiliation-select"
@@ -2655,7 +2655,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls=":ru:"
+                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-language-select"
@@ -2721,7 +2721,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls=":rv:"
+                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-quality-indicator-select"
@@ -2891,7 +2891,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                     class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   >
                     <div
-                      aria-controls=":r12:"
+                      aria-controls="<dynamic>"
                       aria-disabled="true"
                       aria-expanded="false"
                       aria-haspopup="listbox"
@@ -3540,7 +3540,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r1c:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -3718,7 +3718,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                         required=""
                       >
                         <div
-                          aria-controls=":r1f:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="org-affiliation-label org-affiliation-select"
@@ -4268,7 +4268,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls=":r1n:"
+                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-language-select"
@@ -4334,7 +4334,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls=":r1o:"
+                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-quality-indicator-select"
@@ -4504,7 +4504,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                     class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   >
                     <div
-                      aria-controls=":r1r:"
+                      aria-controls="<dynamic>"
                       aria-disabled="true"
                       aria-expanded="false"
                       aria-haspopup="listbox"
@@ -5194,7 +5194,7 @@ exports[`BookForm component with all fields disabled 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r26:"
+                          aria-controls="<dynamic>"
                           aria-disabled="true"
                           aria-expanded="false"
                           aria-haspopup="listbox"
@@ -6226,7 +6226,7 @@ exports[`BookForm should hide author when is edited book 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r31:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"

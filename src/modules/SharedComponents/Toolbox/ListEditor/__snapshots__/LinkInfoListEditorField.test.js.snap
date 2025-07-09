@@ -2,30 +2,20 @@
 
 exports[`LinkInfoListEditorField function should return <LinkInfoListEditor> 1`] = `
 <LinkInfoListEditor
-  errorText={null}
-  input={
-    {
-      "onChange": [MockFunction],
-    }
-  }
+  error={false}
   onChange={[MockFunction]}
 />
 `;
 
 exports[`LinkInfoListEditorField function should return <LinkInfoListEditor> with error attributes 1`] = `
 <LinkInfoListEditor
-  error="test"
+  error={true}
   errorText="test"
-  input={
-    {
-      "onChange": [MockFunction],
-    }
-  }
-  meta={
+  onChange={[MockFunction]}
+  state={
     {
       "error": "test",
     }
   }
-  onChange={[MockFunction]}
 />
 `;
