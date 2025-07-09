@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '../lib/fixture';
 
 // Base URL from environment or test config
 const baseUrl = process.env.BASE_URL || '';

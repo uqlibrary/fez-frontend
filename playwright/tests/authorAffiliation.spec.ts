@@ -1,4 +1,4 @@
-import { expect, test } from '../fixture';
+import { expect, test } from '../lib/fixture';
 
 test.describe('Record with invalid affiliation', () => {
     test('should show correct indicators for orphaned affiliations, and provide navigation', async ({ page }) => {

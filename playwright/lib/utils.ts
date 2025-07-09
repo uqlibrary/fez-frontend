@@ -1,4 +1,4 @@
-import { expect, Locator, Page } from '@playwright/test';
+import { expect, Locator } from '@playwright/test';
 
 export async function assertIsVisible(element: Locator): Promise<void> {
     await expect(element).toBeVisible();

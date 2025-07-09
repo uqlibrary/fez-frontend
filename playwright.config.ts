@@ -1,4 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
+import { Config as IstanbulMergerConfig } from './playwright/lib/coverage/IstanbulReporter';
+
+export const istanbulReportPartialsDir = 'coverage/playwright/partials';
 
 export default defineConfig({
     testDir: 'playwright/tests',
@@ -12,21 +15,16 @@ export default defineConfig({
     reporter: [
         ['list'],
         [
-            'monocart-reporter',
+            './playwright/lib/coverage/istanbul/Reporter.ts',
             {
-                coverage: {
-                    logging: 'debug',
-                    name: 'Playwright Istanbul Coverage Report',
-                    outputDir: 'coverage/playwright',
-                    reports: ['cobertura', 'html', 'json'],
-                    outputFile: null,
-                },
-            },
+                outputDir: 'coverage/playwright',
+                jsonPartialsDir: istanbulReportPartialsDir,
+            } as IstanbulMergerConfig,
         ],
     ],
     use: {
         baseURL: 'http://localhost:3000',
-        // Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer
+        // collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer
         // trace: 'on-first-retry',
         headless: true,
         viewport: { width: 1280, height: 720 },

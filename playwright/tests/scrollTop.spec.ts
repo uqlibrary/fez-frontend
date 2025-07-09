@@ -1,5 +1,5 @@
-import { test, expect } from '@playwright/test';
-import { assertIsVisible } from '../utils';
+import { expect, test } from '../lib/fixture';
+import { assertIsVisible } from '../lib/utils';
 
 test.describe('Scroll to top module', () => {
     test.beforeEach(async ({ page }) => {

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '../lib/fixture';
 import recordVersion from 'mock/data/records/recordVersion';
 import recordVersionLegacy from 'mock/data/records/recordVersionLegacy';
 

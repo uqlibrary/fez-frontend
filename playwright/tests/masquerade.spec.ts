@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '../lib/fixture';
 
 test.describe('Masquerade', () => {
     test("unprivileged users can't masquerade", async ({ page }) => {

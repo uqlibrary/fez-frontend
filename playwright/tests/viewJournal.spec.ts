@@ -1,5 +1,5 @@
 import { test, expect, Page } from '@playwright/test';
-import { assertIsNotVisible, assertIsVisible } from '../utils';
+import { assertIsNotVisible, assertIsVisible } from '../lib/utils';
 
 test.describe('view Journal', () => {
     async function tabVisibleInWindow(page: Page, tabId: string, shouldBeVisible: boolean, buttonType = 'ssci') {

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '../lib/fixture';
 
 test.describe('viewRecord', () => {
     test('Renders the Work not found message for a 404', async ({ page }) => {
