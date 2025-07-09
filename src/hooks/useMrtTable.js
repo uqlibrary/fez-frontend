@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useConfirmationState } from './index';
 
-export const useMrtTable = (list, rules) => {
+export const useMrtTable = (list, rules = []) => {
     const [data, setData] = useState(list);
     useEffect(() => {
         if (JSON.stringify(list) !== JSON.stringify(data)) {

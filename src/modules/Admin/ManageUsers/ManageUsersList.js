@@ -38,7 +38,6 @@ import { useMrtTable } from 'hooks';
 const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
 
 const useServerData = ({ actions, pageSize = 20, pageIndex = 0 }) => {
-    console.log(actions);
     const [state, setState] = useState({
         data: [],
         pageIndex,
@@ -167,7 +166,6 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         onPaginationChange,
     } = useServerData({ actions });
 
-    const validationRules = [];
     const {
         data,
         isBusy,
@@ -185,7 +183,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         getValidationError,
         handleValidation,
         clearValidationErrors,
-    } = useMrtTable(list, validationRules);
+    } = useMrtTable(list);
 
     const columns = [
         {
@@ -424,27 +422,23 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
         renderCreateRowDialogContent: ({ table, row, internalEditComponents }) => (
             <Box
-                id={`my-editorial-appointments-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                data-testid={`my-editorial-appointments-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                id={`users-list-row-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                data-testid={`users-list-row-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                sx={{ width: '50vw' }}
             >
-                <DialogTitle variant="h5">{addButtonTooltip}</DialogTitle>
-                <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                    {internalEditComponents}
-                </DialogContent>
-                <DialogActions>
-                    <MRT_EditActionButtons
-                        variant="text"
-                        table={table}
-                        row={row}
-                        sx={{ flexDirection: 'column', flexGrow: 1 }}
-                    />
-                </DialogActions>
+                <FullUserDetails
+                    data={row.original}
+                    mode="add"
+                    id="users-list-edit-row"
+                    data-testid="users-list-edit-row"
+                    onEditingApproved={() => {}}
+                />
             </Box>
         ),
         renderEditRowDialogContent: ({ table, row, internalEditComponents }) => (
             <Box
-                id={`my-editorial-appointments-dialog-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                data-testid={`my-editorial-appointments-dialog-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                id={`users-list-row-dialog-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                data-testid={`users-list-row-dialog-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
             >
                 <DialogTitle variant="h5">{editButtonTooltip}</DialogTitle>
                 <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -462,8 +456,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         ),
         renderTopToolbarCustomActions: ({ table }) => (
             <Button
-                id={`my-editorial-appointments-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                data-testid={`my-editorial-appointments-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                id={`users-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                data-testid={`users-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                 disabled={disabled}
                 variant="contained"
                 color="primary"
@@ -489,10 +483,10 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                                 table.setEditingRow(row);
                             }}
                             disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
-                            id={`my-editorial-appointments-list-row-${
-                                row.index
-                            }-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                            data-testid={`my-editorial-appointments-list-row-${
+                            id={`users-list-row-list-row-${row.index}-${editButtonTooltip
+                                .toLowerCase()
+                                .replace(/ /g, '-')}`}
+                            data-testid={`users-list-row-list-row-${
                                 row.index
                             }-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                         >
@@ -503,10 +497,10 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                         <IconButton
                             onClick={openDeleteConfirmModal(row.id)}
                             disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
-                            id={`my-editorial-appointments-list-row-${
-                                row.index
-                            }-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                            data-testid={`my-editorial-appointments-list-row-${
+                            id={`users-list-row-list-row-${row.index}-${deleteButtonTooltip
+                                .toLowerCase()
+                                .replace(/ /g, '-')}`}
+                            data-testid={`users-list-row-list-row-${
                                 row.index
                             }-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                         >
@@ -530,20 +524,23 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         icons: {
             SaveIcon: props => (
                 <tableIcons.Check
-                    id={`my-editorial-appointments-${!!editingRow ? 'edit' : 'add'}-save`}
-                    data-testid={`my-editorial-appointments-${!!editingRow ? 'edit' : 'add'}-save`}
+                    id={`users-list-row-${!!editingRow ? 'edit' : 'add'}-save`}
+                    data-testid={`users-list-row-${!!editingRow ? 'edit' : 'add'}-save`}
                     color="secondary"
                     {...props}
                 />
             ),
             CancelIcon: props => (
                 <tableIcons.Clear
-                    id={`my-editorial-appointments-${!!editingRow ? 'edit' : 'add'}-cancel`}
-                    data-testid={`my-editorial-appointments-${!!editingRow ? 'edit' : 'add'}-cancel`}
+                    id={`users-list-row-${!!editingRow ? 'edit' : 'add'}-cancel`}
+                    data-testid={`users-list-row-${!!editingRow ? 'edit' : 'add'}-cancel`}
                     color="secondary"
                     {...props}
                 />
             ),
+        },
+        muiEditRowDialogProps: {
+            sx: { '& .MuiDialog-paper': { maxWidth: '50vw' } },
         },
         muiTableProps: {
             sx: {
@@ -566,8 +563,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             },
         },
         muiTableBodyRowProps: ({ row }) => ({
-            id: `my-editorial-appointments-list-row-${row.index === -1 ? 'add' : row.index}`,
-            'data-testid': `my-editorial-appointments-list-row-${row.index === -1 ? 'add' : row.index}`,
+            id: `users-list-row-list-row-${row.index === -1 ? 'add' : row.index}`,
+            'data-testid': `users-list-row-list-row-${row.index === -1 ? 'add' : row.index}`,
             ...(moment(String(row._valuesCache.eap_end_year || row.original.eap_end_year), 'YYYY').isBefore(
                 moment(),
                 'year',

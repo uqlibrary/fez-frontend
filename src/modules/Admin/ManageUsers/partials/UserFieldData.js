@@ -15,65 +15,68 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type = 'text
     } = useFormContext();
     return (
         <React.Fragment>
-            <Grid item xs={2}>
-                <Grid container justifyContent="flex-end">
+            <Grid item fullWidth xs={12}>
+                <Grid container justifyContent="flex-end" flexDirection={'column'}>
                     <Grid item>
                         <ColumnTitle title={label} />
                     </Grid>
+
+                    <Grid item>
+                        {type === 'checkbox' && (
+                            <Checkbox
+                                {...props}
+                                color={!!props.input.value ? 'primary' : 'secondary'}
+                                checked={!!props.input.value}
+                                inputProps={{
+                                    'data-analyticsid': `${userFieldDataId}-input`,
+                                    'data-testid': `${userFieldDataId}-input`,
+                                    id: `${userFieldDataId}-input`,
+                                }}
+                                onChange={event => props.input.onChange(event.target.checked ? 1 : 0)}
+                            />
+                        )}
+                        {type === 'text' && (
+                            <TextField
+                                {...props}
+                                label={label}
+                                textFieldId={userFieldDataId}
+                                fullWidth
+                                InputProps={{
+                                    style: {
+                                        fontSize: 14,
+                                        fontWeight: 400,
+                                    },
+                                    ...props.InputProps,
+                                    ...((!!isValidating && {
+                                        endAdornment: (
+                                            <InputAdornment position="end">
+                                                <CircularProgress
+                                                    size={18}
+                                                    thickness={2}
+                                                    color="primary"
+                                                    id="checking-existing-user-progress"
+                                                    data-testid="checking-existing-user-progress"
+                                                />
+                                            </InputAdornment>
+                                        ),
+                                    }) ||
+                                        {}),
+                                }}
+                                InputLabelProps={{
+                                    style: {
+                                        ...(props.error || { color: '#4085C6' }),
+                                        fontWeight: 400,
+                                    },
+                                }}
+                            />
+                        )}
+                    </Grid>
+                    <Grid item>
+                        <FormHelperText variant="outlined" sx={{ ml: 0, mr: 0 }}>
+                            {helperText}
+                        </FormHelperText>
+                    </Grid>
                 </Grid>
-            </Grid>
-            <Grid item xs={7}>
-                {type === 'checkbox' && (
-                    <Checkbox
-                        {...props}
-                        color={!!props.input.value ? 'primary' : 'secondary'}
-                        checked={!!props.input.value}
-                        inputProps={{
-                            'data-analyticsid': `${userFieldDataId}-input`,
-                            'data-testid': `${userFieldDataId}-input`,
-                            id: `${userFieldDataId}-input`,
-                        }}
-                        onChange={event => props.input.onChange(event.target.checked ? 1 : 0)}
-                    />
-                )}
-                {type === 'text' && (
-                    <TextField
-                        {...props}
-                        label={label}
-                        textFieldId={userFieldDataId}
-                        fullWidth
-                        InputProps={{
-                            style: {
-                                fontSize: 14,
-                                fontWeight: 400,
-                            },
-                            ...props.InputProps,
-                            ...((!!isValidating && {
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <CircularProgress
-                                            size={18}
-                                            thickness={2}
-                                            color="primary"
-                                            id="checking-existing-user-progress"
-                                            data-testid="checking-existing-user-progress"
-                                        />
-                                    </InputAdornment>
-                                ),
-                            }) ||
-                                {}),
-                        }}
-                        InputLabelProps={{
-                            style: {
-                                ...(props.error || { color: '#4085C6' }),
-                                fontWeight: 400,
-                            },
-                        }}
-                    />
-                )}
-            </Grid>
-            <Grid item xs={3}>
-                <FormHelperText variant="outlined">{helperText}</FormHelperText>
             </Grid>
         </React.Fragment>
     );
