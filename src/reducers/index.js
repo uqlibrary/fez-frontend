@@ -22,6 +22,7 @@ export { default as fileUploadReducer } from './fileUpload';
 export { default as fixRecordReducer } from './fixRecord';
 export { default as issnLinksReducer } from './issnLinks';
 export { default as journalReducer } from './journals';
+export { default as relatedServicesReducer } from './relatedServices';
 export { default as exportJournalsReducer } from './exportJournals';
 export { default as exportFavouriteJournalsReducer } from './exportFavouriteJournals';
 export { default as exportCommunitiesReducer } from './exportCommunities';

@@ -1,1 +1,1 @@
-export { default as ChangeDisplayType } from './containers/ChangeDisplayType';
+export { default as ChangeDisplayType } from './components/ChangeDisplayType';

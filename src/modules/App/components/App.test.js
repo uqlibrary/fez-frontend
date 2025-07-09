@@ -1,5 +1,5 @@
 import React from 'react';
-import App, { StrictModeConditional } from './App';
+import App from './App';
 import { customRedirectors } from '../containers/App';
 import { accounts, authorDetails, currentAuthor } from 'mock/data';
 import { pathConfig } from 'config';
@@ -490,28 +490,6 @@ describe('Application component', () => {
         mockUseLocation.pathname = '/not-public-page';
         const { container } = setup({ isMobile: true });
         expect(container).toMatchSnapshot();
-    });
-
-    it('StrictModeConditional should wrap the App JSX', () => {
-        const { getByTestId, getByText } = render(
-            <StrictModeConditional condition wrapper={children => <div data-testid="wrapper">{children}</div>}>
-                <div>content here</div>
-            </StrictModeConditional>,
-        );
-
-        expect(getByTestId('wrapper')).toBeInTheDocument();
-        expect(getByText('content here')).toBeInTheDocument();
-    });
-
-    it('StrictModeConditional should not wrap the App JSX', () => {
-        const { queryByTestId, getByText } = render(
-            <StrictModeConditional condition={false} wrapper={children => <div data-testid="wrapper">{children}</div>}>
-                <div>content here</div>
-            </StrictModeConditional>,
-        );
-
-        expect(queryByTestId('wrapper')).not.toBeInTheDocument();
-        expect(getByText('content here')).toBeInTheDocument();
     });
 
     it('Should display login dialog logged-in user performs a search with an expired session token', async () => {

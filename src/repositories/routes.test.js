@@ -1,5 +1,6 @@
 import * as routes from './routes';
 import { IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL } from 'config/general';
+import { ROR_LOOKUP_API } from './routes';
 
 describe('Backend routes method', () => {
     it('should get zer-padded year', () => {
@@ -775,6 +776,7 @@ describe('Backend routes method', () => {
         });
     });
 
+
     it('should construct url for THIRD_PARTY_LOOKUP_API_1FIELD', () => {
         expect(
             routes.THIRD_PARTY_LOOKUP_API_1FIELD({
@@ -806,6 +808,10 @@ describe('Backend routes method', () => {
         ).toEqual({
             apiUrl: 'communities/UQ:123456/collections',
         });
+    });
+
+    it('should construct url for ROR_LOOKUP_API', () => {
+        expect(routes.ROR_LOOKUP_API({ id: 'id' })).toEqual({ apiUrl: 'external/ror/id' });
     });
 
     it('should construct url for BATCH_IMPORT_DIRECTORIES_API', () => {

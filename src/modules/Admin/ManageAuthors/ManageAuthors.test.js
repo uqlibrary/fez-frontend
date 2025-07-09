@@ -11,11 +11,9 @@ import userEvent from '@testing-library/user-event';
 
 const setup = (testProps = {}) => {
     return render(
-        <React.StrictMode>
-            <WithReduxStore>
-                <ManageAuthors {...testProps} />
-            </WithReduxStore>
-        </React.StrictMode>,
+        <WithReduxStore>
+            <ManageAuthors {...testProps} />
+        </WithReduxStore>,
     );
 };
 

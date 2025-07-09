@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import Immutable from 'immutable';
 
 import locale from 'locale/validationErrors';
 import { MEDIATED_ACCESS_ID, ORG_TYPE_NOT_SET } from 'config/general';
@@ -127,6 +126,21 @@ export const isValidPublicationTitle = value => {
     return isValid.test(value.trim());
 };
 
+export const isValidOrcid = value => {
+    const isValid = /^(\d{4}-){3}\d{3}(\d|X)$/;
+    return isValid.test(value.toString().trim());
+};
+
+export const isValidRaid = value => {
+    const isValid = /[^\/]+\/[^\/]+/;
+    return isValid.test(value.toString().trim());
+};
+
+export const isValidROR = value => {
+    const isValid = /^0[a-z|0-9]{6}[0-9]{2}$/;
+    return isValid.test(value.toString().trim());
+};
+
 // Generic
 export const required = value => (value ? undefined : locale.validationErrors.required);
 
@@ -134,9 +148,7 @@ export const required = value => (value ? undefined : locale.validationErrors.re
 export const requireChecked = value => (value === 'on' ? undefined : locale.validationErrors.requireChecked);
 
 export const requiredList = value => {
-    return ((value instanceof Immutable.List && value.toJS()) || value || []).length > 0
-        ? undefined
-        : locale.validationErrors.required;
+    return !value?.length && locale.validationErrors.required;
 };
 
 export const email = value =>
@@ -147,6 +159,9 @@ export const url = value =>
         : spacelessMaxLength2000Validator(value);
 export const doi = value => (!!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined);
 export const pid = value => (!!value && !isValidPid(value) ? locale.validationErrors.pid : undefined);
+export const orcid = value => (!!value && !isValidOrcid(value) ? locale.validationErrors.orcid : undefined);
+export const raid = value => (!!value && !isValidRaid(value) ? locale.validationErrors.raid : undefined);
+export const ror = value => (!!value && !isValidROR(value) ? locale.validationErrors.ror : undefined);
 export const forRequired = itemList =>
     !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;
 
@@ -196,7 +211,7 @@ export const fileUploadRequired = value => {
 };
 
 export const fileUploadNotRequiredForMediated = (value, values) => {
-    const accessCondition = values.toJS().fez_record_search_key_access_conditions;
+    const accessCondition = values.fez_record_search_key_access_conditions;
     if (!!accessCondition && accessCondition.rek_access_conditions === MEDIATED_ACCESS_ID) {
         return undefined;
     } else {
@@ -269,9 +284,8 @@ export const isValidGoogleScholarId = id => {
     const regex = /^[\w-]{12}$/;
     if (id && !regex.test(id)) {
         return locale.validationErrors.googleScholarId;
-    } else {
-        return undefined;
     }
+    return undefined;
 };
 
 export const isValidDate = date => {

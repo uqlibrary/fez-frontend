@@ -286,7 +286,7 @@ describe('PublicationForm', () => {
             await selectDropDownOption('rek-significance-select', 'Minor');
             await setRichTextEditorValue('rek-creator-contribution-statement', 'statement');
             await setRichTextEditorValue('rek-description', 'abstract');
-            addFilesToFileUploader(fileMock);
+            await addFilesToFileUploader(fileMock);
             await setFileUploaderFilesToClosedAccess(fileMock);
 
             await submitForm();

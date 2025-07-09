@@ -5,9 +5,7 @@ import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { journalDoaj } from 'mock/data';
 import * as redux from 'react-redux';
 
-import { render, WithReduxStore, WithRouter, fireEvent, act, userEvent } from 'test-utils';
-import { FormProvider } from 'react-hook-form';
-import { useValidatedForm } from 'hooks';
+import { render, WithReduxStore, WithRouter, FormProviderWrapper, fireEvent, act, userEvent } from 'test-utils';
 import { ADMIN_JOURNAL } from 'config/general';
 
 jest.mock('../submitHandler', () => ({
@@ -32,12 +30,6 @@ jest.mock('react-router-dom', () => ({
     useNavigate: () => mockUseNavigate,
     useLocation: () => mockUseLocation,
 }));
-
-// eslint-disable-next-line react/prop-types
-const FormProviderWrapper = ({ children, ...props }) => {
-    const methods = useValidatedForm(props);
-    return <FormProvider {...methods}>{children}</FormProvider>;
-};
 
 function setup(testProps = {}, renderMethod = render) {
     const { values = {}, ...rest } = testProps;

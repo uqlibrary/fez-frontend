@@ -45,22 +45,22 @@ export const ListRow = ({
     const deleteRecord = useCallback(() => {
         !disabled && !!onDelete && onDelete(item, index);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [index]);
+    }, [index, onDelete]);
 
     const _handleEdit = useCallback(() => {
         !!onEdit && onEdit(index);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [index]);
+    }, [index, onEdit]);
 
     const _handleMoveUp = useCallback(() => {
         !disabled && !!onMoveUp && onMoveUp(item, index);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [index]);
+    }, [index, onMoveUp]);
 
     const _handleMoveDown = useCallback(() => {
         !disabled && !!onMoveDown && onMoveDown(item, index);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [index]);
+    }, [index, onMoveDown]);
     return (
         <div style={{ flexGrow: 1, padding: 8 }} id={`${listRowId}`} data-testid={`${listRowId}`}>
             <ConfirmationBox

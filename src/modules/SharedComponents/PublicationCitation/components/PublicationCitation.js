@@ -35,6 +35,7 @@ import DesignCitation from './citations/DesignCitation';
 import DigilibImageCitation from './citations/DigilibImageCitation';
 import GenericDocumentCitation from './citations/GenericDocumentCitation';
 import ImageDocumentCitation from './citations/ImageDocumentCitation';
+import InstrumentCitation from './citations/InstrumentCitation';
 import JournalArticleCitation from './citations/JournalArticleCitation';
 import JournalCitation from './citations/JournalCitation';
 import ManuscriptCitation from './citations/ManuscriptCitation';
@@ -197,6 +198,7 @@ export const PublicationCitation = ({
         DigilibImageCitation,
         GenericDocumentCitation,
         ImageDocumentCitation,
+        InstrumentCitation,
         JournalArticleCitation,
         JournalCitation,
         ManuscriptCitation,

@@ -11,7 +11,7 @@ const MockInput = ({ field, fieldState, formState }) => (
         {/* eslint-disable-next-line react/prop-types */}
         {fieldState.error?.message && <span data-testid="error">{fieldState.error.message}</span>}
         {/* eslint-disable-next-line react/prop-types */}
-        {field.meta?.error && <span data-testid="meta-error">meta: {field.meta.error}</span>}
+        {field.state?.error && <span data-testid="meta-error">state: {field.state.error}</span>}
         {/* eslint-disable-next-line react/prop-types */}
         {formState.errors?.mockInput?.message && formState.isSubmitted && (
             <span data-testid="form-state">Form has errors</span>
@@ -43,13 +43,13 @@ describe('Controller component', () => {
     });
 
     test('should render the input field with given default value', () => {
-        const { getByTestId } = setup({ defaultValue: 'default-value' });
+        const { getByTestId } = setup({ state: { defaultValue: 'default-value' } });
 
         expect(getByTestId('field-input')).toBeInTheDocument();
         expect(getByTestId('field-input')).toHaveValue('default-value');
     });
 
-    test('should pass error as in field.meta prop and formState', async () => {
+    test('should pass error as in field.state prop and formState', async () => {
         const { getByTestId, getByText } = setup({
             rules: { validate: value => (!value.trim() ? 'This field is required' : null) },
         });
@@ -59,7 +59,7 @@ describe('Controller component', () => {
         await waitFor(() => expect(getByTestId('error')).toBeInTheDocument());
 
         expect(getByTestId('error')).toHaveTextContent('This field is required');
-        expect(getByTestId('meta-error')).toHaveTextContent('meta: This field is required');
+        expect(getByTestId('meta-error')).toHaveTextContent('state: This field is required');
         expect(getByTestId('form-state')).toHaveTextContent('Form has errors');
     });
 });

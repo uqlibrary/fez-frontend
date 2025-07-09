@@ -98,7 +98,7 @@ export function clearDeleteRecord() {
 }
 
 /**
- * @returns {Promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise}
  */
 export function deleteRecord(data) {
     return dispatch => {
@@ -122,7 +122,7 @@ export function deleteRecord(data) {
 }
 
 /**
- * @returns {Promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise}
  */
 export function deleteUpdatePartial(data) {
     return dispatch => {

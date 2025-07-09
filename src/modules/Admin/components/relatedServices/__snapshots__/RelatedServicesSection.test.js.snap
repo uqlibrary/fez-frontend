@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RelatedServicesSection should render default view 1`] = `
+<Section
+  cards={
+    [
+      {
+        "groups": [
+          [
+            "relatedServices",
+          ],
+        ],
+        "title": "Related Services",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`RelatedServicesSection should render disabled view 1`] = `
+<Section
+  cards={
+    [
+      {
+        "groups": [
+          [
+            "relatedServices",
+          ],
+        ],
+        "title": "Related Services",
+      },
+    ]
+  }
+  disabled={true}
+/>
+`;

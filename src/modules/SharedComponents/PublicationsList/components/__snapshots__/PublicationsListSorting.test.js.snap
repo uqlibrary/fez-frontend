@@ -23,7 +23,7 @@ exports[`PublicationsListSorting component has the correct display type options 
           data-testid="publication-list-sorting-sort-by"
         >
           <div
-            aria-controls=":r1s:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
@@ -72,7 +72,7 @@ exports[`PublicationsListSorting component has the correct display type options 
           data-testid="publication-list-sorting-sort-order"
         >
           <div
-            aria-controls=":r1t:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
@@ -121,7 +121,7 @@ exports[`PublicationsListSorting component has the correct display type options 
           data-testid="publication-list-sorting-page-size"
         >
           <div
-            aria-controls=":r1u:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
@@ -170,7 +170,7 @@ exports[`PublicationsListSorting component has the correct display type options 
           data-testid="publication-list-display-records-as"
         >
           <div
-            aria-controls=":r1v:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="display-records-as-label"
@@ -236,7 +236,7 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
           data-testid="publication-list-sorting-sort-by"
         >
           <div
-            aria-controls=":r1n:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
@@ -285,7 +285,7 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
           data-testid="publication-list-sorting-sort-order"
         >
           <div
-            aria-controls=":r1o:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
@@ -334,7 +334,7 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
           data-testid="publication-list-sorting-page-size"
         >
           <div
-            aria-controls=":r1p:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
@@ -383,7 +383,7 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
           data-testid="publication-list-display-records-as"
         >
           <div
-            aria-controls=":r1q:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="display-records-as-label"
@@ -432,7 +432,7 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
           data-testid="export-publications-format"
         >
           <div
-            aria-controls=":r1r:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="export-publications-format-label"
@@ -500,7 +500,7 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
           data-testid="publication-list-sorting-sort-by"
         >
           <div
-            aria-controls=":r3:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
@@ -549,7 +549,7 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
           data-testid="publication-list-sorting-sort-order"
         >
           <div
-            aria-controls=":r4:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
@@ -598,7 +598,7 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
           data-testid="publication-list-sorting-page-size"
         >
           <div
-            aria-controls=":r5:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
@@ -647,7 +647,7 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
           data-testid="export-publications-format"
         >
           <div
-            aria-controls=":r6:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="export-publications-format-label"
@@ -707,7 +707,7 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
           data-testid="publication-list-sorting-sort-by"
         >
           <div
-            aria-controls=":r7:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
@@ -756,7 +756,7 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
           data-testid="publication-list-sorting-sort-order"
         >
           <div
-            aria-controls=":r8:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
@@ -805,7 +805,7 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
           data-testid="publication-list-sorting-page-size"
         >
           <div
-            aria-controls=":r9:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
@@ -863,7 +863,7 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
           data-testid="publication-list-sorting-sort-by"
         >
           <div
-            aria-controls=":r0:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
@@ -912,7 +912,7 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
           data-testid="publication-list-sorting-sort-order"
         >
           <div
-            aria-controls=":r1:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
@@ -961,7 +961,7 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
           data-testid="publication-list-sorting-page-size"
         >
           <div
-            aria-controls=":r2:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
@@ -1019,7 +1019,7 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
           data-testid="publication-list-sorting-sort-by"
         >
           <div
-            aria-controls=":r1h:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
@@ -1068,7 +1068,7 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
           data-testid="publication-list-sorting-sort-order"
         >
           <div
-            aria-controls=":r1i:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
@@ -1117,7 +1117,7 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
           data-testid="publication-list-sorting-page-size"
         >
           <div
-            aria-controls=":r1j:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
@@ -1175,7 +1175,7 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
           data-testid="publication-list-sorting-sort-by"
         >
           <div
-            aria-controls=":r1h:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
@@ -1224,7 +1224,7 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
           data-testid="publication-list-sorting-sort-order"
         >
           <div
-            aria-controls=":r1i:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
@@ -1273,7 +1273,7 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
           data-testid="publication-list-sorting-page-size"
         >
           <div
-            aria-controls=":r1j:"
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"

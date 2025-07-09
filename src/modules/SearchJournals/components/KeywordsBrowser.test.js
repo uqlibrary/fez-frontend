@@ -2,20 +2,19 @@ import React from 'react';
 import { render, WithReduxStore } from 'test-utils';
 import { KeywordsBrowser } from './KeywordsBrowser';
 import locale from '../../../locale/components';
-import Immutable from 'immutable';
 import { initialJournalSearchKeywords, initialState } from '../../../reducers/journals';
 
 const setup = ({ storeState = {}, state } = {}) => {
     return render(
         <WithReduxStore
-            initialState={Immutable.Map({
+            initialState={{
                 journalReducer: {
                     ...initialState,
                     isInitialValues: false,
                     ...storeState,
                     journalSearchKeywords: { ...initialJournalSearchKeywords, ...storeState.journalSearchKeywords },
                 },
-            })}
+            }}
         >
             <KeywordsBrowser {...{ onKeywordAdd: jest.fn(), ...state }} />
         </WithReduxStore>,

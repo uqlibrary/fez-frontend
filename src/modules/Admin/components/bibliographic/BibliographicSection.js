@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
+import { useFormContext } from 'react-hook-form';
 
 import { Section } from '../common/Section';
 
-import { useRecordContext, useFormValuesContext } from 'context';
+import { useRecordContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
 import { bibliographicParams } from 'modules/Admin/helpers';
 
 export const BibliographicSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
-    const { formValues } = useFormValuesContext();
+    const methods = useFormContext();
+    const formValues = methods.getValues('bibliographicSection');
+    const cards = useRef(
+        adminInterfaceConfig[record.rek_display_type].bibliographic(bibliographicParams(record, formValues)),
+    );
 
-    const cards = adminInterfaceConfig[record.rek_display_type].bibliographic(bibliographicParams(record, formValues));
-
-    return <Section cards={cards} disabled={disabled} />;
+    return <Section cards={cards.current} disabled={disabled} />;
 };
 
 BibliographicSection.propTypes = {

@@ -7,9 +7,7 @@ function setup(testProps = {}) {
         disabled: false,
         isDepositAgreementAccepted: false,
         depositAgreementFieldId: 'rek-copyright',
-        input: {
-            onChange: jest.fn(),
-        },
+        onChange: jest.fn(),
         depositAgreement: 'test deposit agreement',
         ...testProps,
     };

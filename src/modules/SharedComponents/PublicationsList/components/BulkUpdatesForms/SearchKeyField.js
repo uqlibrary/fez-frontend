@@ -112,11 +112,8 @@ export const getSearchKeyValueField = searchKey => {
 export const SearchKeyField = fieldProps => {
     return (
         <NewGenericSelectField
-            error={!!fieldProps.meta.error}
-            errorText={fieldProps.meta.error}
             itemsList={Object.values(BULK_UPDATE_SEARCH_KEYS)}
-            onChange={fieldProps.input?.onChange}
-            value={fieldProps.input.value || ''}
+            value={fieldProps.value || ''}
             selectPrompt="Please select a search key"
             {...fieldProps}
         />

@@ -3,12 +3,14 @@ import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
 import {
     COLLECTIONS_BY_COMMUNITY_LOOKUP_API,
+    ROR_LOOKUP_API,
     SEARCH_AUTHOR_LOOKUP_API,
     SEARCH_EXTERNAL_RECORDS_API,
     SEARCH_INTERNAL_RECORDS_API,
     SEARCH_KEY_LOOKUP_API,
 } from 'repositories/routes';
 import { exportPublications } from './exportPublications';
+import { isValidROR } from 'config/validation';
 
 function getSearch(source, searchQuery) {
     if (source === locale.global.sources.espace.id) {
@@ -312,6 +314,44 @@ export function loadPublicationList(searchKey, searchQuery) {
             error => {
                 dispatch({
                     type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`,
+                    payload: error.message,
+                });
+            },
+        );
+    };
+}
+
+export function loadRelatedServiceList(id) {
+    const api = isValidROR(id)
+        ? ROR_LOOKUP_API({ id: id })
+        : SEARCH_INTERNAL_RECORDS_API({
+              searchQueryParams: {
+                  all: id,
+              },
+              page: 1,
+              pageSize: 20,
+              sortBy: 'score',
+              sortDirection: 'Desc',
+              facets: {},
+          });
+
+    return dispatch => {
+        dispatch({
+            type: actions.RELATED_SERVICE_LOOKUP_LOADING,
+            payload: id,
+        });
+
+        return get(api).then(
+            response => {
+                const data = response.data;
+                dispatch({
+                    type: actions.RELATED_SERVICE_LOOKUP_LOADED,
+                    payload: Array.isArray(data) ? data : [data],
+                });
+            },
+            error => {
+                dispatch({
+                    type: actions.RELATED_SERVICE_LOOKUP_FAILED,
                     payload: error.message,
                 });
             },

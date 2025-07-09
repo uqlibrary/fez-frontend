@@ -1,6 +1,9 @@
+import React from 'react';
 import { SecuritySelector } from './SecuritySelector';
+import { rtlRender, FormProviderWrapper } from 'test-utils';
+jest.mock('../../../../context');
 
-function setup(testProps) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         disabled: false,
@@ -13,15 +16,19 @@ function setup(testProps) {
                 overridePrompt: 'test3',
             },
         },
+        fieldName: 'test',
         recordType: 'community',
         ...testProps,
     };
-
-    return renderComponent(SecuritySelector, props);
+    return rtlRender(
+        <FormProviderWrapper>
+            <SecuritySelector {...props} />
+        </FormProviderWrapper>,
+    );
 }
 
 describe('SecuritySelector component', () => {
-    it('should render properly for community', () => {
+    it('should render properly for community', async () => {
         const testProps = {
             disabled: false,
             text: {
@@ -31,8 +38,25 @@ describe('SecuritySelector component', () => {
             },
             securityPolicy: 2,
         };
-        const render = setup(testProps);
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { getByText, getByTestId } = setup(testProps);
+        expect(getByText(testProps.text.description)).toBeInTheDocument();
+        expect(getByTestId('rek-security-input')).toBeInTheDocument();
+        expect(getByText('Theses Assessors (2)')).toBeInTheDocument();
+    });
+
+    it('should render properly for community without policy', async () => {
+        const testProps = {
+            disabled: false,
+            text: {
+                description: 'test description for community',
+                prompt: 'test2',
+                selectedTitle: 'test3',
+            },
+        };
+        const { getByText, queryByText, getByTestId } = setup(testProps);
+        expect(getByText(testProps.text.description)).toBeInTheDocument();
+        expect(getByTestId('rek-security-input')).toBeInTheDocument();
+        expect(queryByText('Theses Assessors (2)')).not.toBeInTheDocument();
     });
 
     it('should render properly for collection', () => {
@@ -46,8 +70,10 @@ describe('SecuritySelector component', () => {
             securityPolicy: 2,
             recordType: 'collection',
         };
-        const render = setup(testProps);
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { getByText, getByTestId } = setup(testProps);
+        expect(getByText(testProps.text.description)).toBeInTheDocument();
+        expect(getByTestId('rek-security-input')).toBeInTheDocument();
+        expect(getByText('Theses Assessors (2)')).toBeInTheDocument();
     });
 
     it('should render properly for record', () => {
@@ -61,7 +87,9 @@ describe('SecuritySelector component', () => {
             securityPolicy: 2,
             recordType: 'record',
         };
-        const render = setup(testProps);
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { getByText, getByTestId } = setup(testProps);
+        expect(getByText(testProps.text.description)).toBeInTheDocument();
+        expect(getByTestId('rek-security-input')).toBeInTheDocument();
+        expect(getByText('Theses Assessors (2)')).toBeInTheDocument();
     });
 });

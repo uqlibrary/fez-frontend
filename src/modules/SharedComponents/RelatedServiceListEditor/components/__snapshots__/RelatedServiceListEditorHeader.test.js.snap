@@ -1,0 +1,663 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RelatedServiceListEditorHeader should hide grant agency type input 1`] = `
+<div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Related Service ID
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Related Service Description
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
+      >
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
+            >
+              <div
+                class="MuiListItemText-root css-18quae3-MuiListItemText-root"
+                style="padding: 0px;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+                >
+                  Reorder entries
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-gj1fbr-MuiGrid-root"
+              style="text-align: right;"
+            >
+              <div
+                aria-label="Remove all entries"
+                class=""
+                data-mui-internal-clone-element="true"
+                style="display: inline;"
+              >
+                <button
+                  aria-label="Remove all entries"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`RelatedServiceListEditorHeader should render default mobile view 1`] = `
+<div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Related Service ID
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Related Service Description
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
+      >
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
+            >
+              <div
+                class="MuiListItemText-root css-18quae3-MuiListItemText-root"
+                style="padding: 0px;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+                >
+                  Reorder entries
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              style="text-align: right;"
+            >
+              <div
+                aria-label="Remove all entries"
+                class=""
+                data-mui-internal-clone-element="true"
+                style="display: inline;"
+              >
+                <button
+                  aria-label="Remove all entries"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`RelatedServiceListEditorHeader should render default mobile view 2`] = `
+<div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Related Service ID
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Related Service Description
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
+      >
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
+            >
+              <div
+                class="MuiListItemText-root css-18quae3-MuiListItemText-root"
+                style="padding: 0px;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+                >
+                  Reorder entries
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              style="text-align: right;"
+            >
+              <div
+                aria-label="Remove all entries"
+                class=""
+                data-mui-internal-clone-element="true"
+                style="display: inline;"
+              >
+                <button
+                  aria-label="Remove all entries"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`RelatedServiceListEditorHeader should render default view 1`] = `
+<div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Related Service ID
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Related Service Description
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
+      >
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
+            >
+              <div
+                class="MuiListItemText-root css-18quae3-MuiListItemText-root"
+                style="padding: 0px;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+                >
+                  Reorder entries
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-gj1fbr-MuiGrid-root"
+              style="text-align: right;"
+            >
+              <div
+                aria-label="Remove all entries"
+                class=""
+                data-mui-internal-clone-element="true"
+                style="display: inline;"
+              >
+                <button
+                  aria-label="Remove all entries"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`RelatedServiceListEditorHeader should render with default props 1`] = `
+<div>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Related Service ID
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Related Service Description
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
+      >
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
+            >
+              <div
+                class="MuiListItemText-root css-18quae3-MuiListItemText-root"
+                style="padding: 0px;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+                >
+                  Reorder entries
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-gj1fbr-MuiGrid-root"
+              style="text-align: right;"
+            >
+              <div
+                aria-label="Remove all entries"
+                class=""
+                data-mui-internal-clone-element="true"
+                style="display: inline;"
+              >
+                <button
+                  aria-label="Remove all entries"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`RelatedServiceListEditorHeader should show confirmation box 1`] = `
+<div
+  aria-hidden="true"
+>
+  <span
+    class="MuiBox-root css-0"
+    data-testid="confirmDialogBox"
+  />
+  <li
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-15ouf0u-MuiListItem-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-g2ltd9-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-11lxi55-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Related Service ID
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 css-fhiukf-MuiGrid-root"
+          >
+            <div
+              class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+              style="padding: 0px;"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+              >
+                Related Service Description
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-yqu2kz-MuiGrid-root"
+      >
+        <div
+          class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+          style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 css-r7wkox-MuiGrid-root"
+            >
+              <div
+                class="MuiListItemText-root css-18quae3-MuiListItemText-root"
+                style="padding: 0px;"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+                >
+                  Reorder entries
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-gj1fbr-MuiGrid-root"
+              style="text-align: right;"
+            >
+              <div
+                aria-label="Remove all entries"
+                class=""
+                data-mui-internal-clone-element="true"
+                style="display: inline;"
+              >
+                <button
+                  aria-label="Remove all entries"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;

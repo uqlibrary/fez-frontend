@@ -71,7 +71,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r10:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="rek-significance-select"
@@ -314,7 +314,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r14:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="rek-significance-select"
@@ -642,7 +642,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r6:"
+              aria-controls="<dynamic>"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -974,7 +974,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r0:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="rek-significance-select"
@@ -1302,7 +1302,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":rc:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="rek-significance-select"
@@ -1784,7 +1784,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":rm:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="rek-significance-select"
@@ -2266,7 +2266,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r1a:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="rek-significance-select"

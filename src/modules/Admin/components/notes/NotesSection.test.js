@@ -1,6 +1,6 @@
 import React from 'react';
+import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
 import NotesSection from './NotesSection';
-import { rtlRender } from 'test-utils';
 
 jest.mock('../../../../context');
 import { useRecordContext } from 'context';
@@ -10,7 +10,13 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return renderComponent(NotesSection, props);
+    return rtlRender(
+        <WithReduxStore>
+            <FormProviderWrapper>
+                <NotesSection {...props} />
+            </FormProviderWrapper>
+        </WithReduxStore>,
+    );
 }
 
 describe('NotesSection component', () => {
@@ -29,8 +35,8 @@ describe('NotesSection component', () => {
             },
         }));
 
-        const render = setup();
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
@@ -48,7 +54,7 @@ describe('NotesSection component', () => {
             },
         }));
 
-        const render = setup({ disabled: true });
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup({ disabled: true });
+        expect(container).toMatchSnapshot();
     });
 });

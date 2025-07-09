@@ -27,6 +27,8 @@ export const LookupForm = ({
                 <InputField
                     key={defaultValue}
                     input={{ onChange: onAdd, value: defaultValue }}
+                    onChange={onAdd}
+                    value={defaultValue}
                     floatingLabelText={locale.inputFieldLabel}
                     hintText={locale.inputFieldHint}
                     disabled={disabled}

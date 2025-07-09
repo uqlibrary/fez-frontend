@@ -14,6 +14,7 @@ import {
     PUBLICATION_TYPE_DIGILIB_IMAGE,
     PUBLICATION_TYPE_GENERIC_DOCUMENT,
     PUBLICATION_TYPE_IMAGE,
+    PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_JOURNAL,
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_MANUSCRIPT,
@@ -42,6 +43,7 @@ import {
     validateDigilibImage,
     validateGenericDocument,
     validateImage,
+    validateInstrument,
     validateJournal,
     validateJournalArticle,
     validateManuscript,
@@ -61,7 +63,7 @@ import {
 import deepmerge from 'deepmerge';
 
 export default values => {
-    const data = values.toJS();
+    const data = values;
     const summary = locale.validationErrorsSummary;
     let errors = {
         bibliographicSection: {},
@@ -93,7 +95,7 @@ export default values => {
 
     (data.securitySection || {}).hasOwnProperty('rek_security_inherited') &&
         (data.securitySection || {}).hasOwnProperty('rek_security_policy') &&
-        data.securitySection.rek_security_inherited === 0 &&
+        (data.securitySection.rek_security_inherited === true || data.securitySection.rek_security_inherited === 0) &&
         (typeof data.securitySection.rek_security_policy === 'undefined' ||
             data.securitySection.rek_security_policy === null) &&
         (errors.securitySection.rek_security_policy = summary.rek_security_policy);
@@ -146,6 +148,10 @@ export default values => {
         case PUBLICATION_TYPE_IMAGE:
             const imageErrors = validateImage(data, locale);
             errors = deepmerge(errors, imageErrors);
+            break;
+        case PUBLICATION_TYPE_INSTRUMENT:
+            const instrumentErrors = validateInstrument(data, locale);
+            errors = deepmerge(errors, instrumentErrors);
             break;
         case PUBLICATION_TYPE_JOURNAL_ARTICLE:
             const journalArticleErrors = validateJournalArticle(data, locale);

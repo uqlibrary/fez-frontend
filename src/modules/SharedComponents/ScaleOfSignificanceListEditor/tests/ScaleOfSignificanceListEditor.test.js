@@ -1,6 +1,5 @@
 import React from 'react';
 import ScaleOfSignificanceListEditor from '../ScaleOfSignificanceListEditor';
-import { List } from 'immutable';
 import { render, WithReduxStore, fireEvent, within } from 'test-utils';
 
 /* eslint react/prop-types: 0 */
@@ -34,25 +33,23 @@ const defaultProps = {
     scrollList: false,
     scrollListHeight: 250,
     listEditorId: 'test-list-editor',
-    input: {
-        name: 'scaleofsignificancestatement',
-        value: [
-            {
-                rek_order: 1,
-                rek_value: {
-                    author: {
-                        rek_author_id: 111,
-                        rek_author_pid: 'UQ:11',
-                        rek_author: 'Test, Tom',
-                        rek_author_order: 1,
-                    },
-                    id: 922694,
-                    key: 0,
-                    value: { plainText: 'Missing', htmlText: 'Missing' },
+    name: 'scaleofsignificancestatement',
+    value: [
+        {
+            rek_order: 1,
+            rek_value: {
+                author: {
+                    rek_author_id: 111,
+                    rek_author_pid: 'UQ:11',
+                    rek_author: 'Test, Tom',
+                    rek_author_order: 1,
                 },
+                id: 922694,
+                key: 0,
+                value: { plainText: 'Missing', htmlText: 'Missing' },
             },
-        ],
-    },
+        },
+    ],
     locale: {
         form: {
             locale: {
@@ -89,17 +86,15 @@ describe('ScaleOfSignificanceListEditor tests', () => {
 
     it('should render input value as itemList', () => {
         const { container } = setup({
-            input: {
-                name: 'test',
-                value: [
-                    {
-                        rek_value: 'test 1',
-                    },
-                    {
-                        rek_value: 'test 2',
-                    },
-                ],
-            },
+            name: 'test',
+            value: [
+                {
+                    rek_value: 'test 1',
+                },
+                {
+                    rek_value: 'test 2',
+                },
+            ],
             searchKey: {
                 order: 'rek_order',
                 value: 'rek_value',
@@ -110,17 +105,15 @@ describe('ScaleOfSignificanceListEditor tests', () => {
 
     it('should render input value as itemList for List', () => {
         const { container } = setup({
-            input: {
-                name: 'test',
-                value: new List([
-                    {
-                        rek_value: 'test 1',
-                    },
-                    {
-                        rek_value: 'test 2',
-                    },
-                ]),
-            },
+            name: 'test',
+            value: [
+                {
+                    rek_value: 'test 1',
+                },
+                {
+                    rek_value: 'test 2',
+                },
+            ],
             searchKey: {
                 order: 'rek_order',
                 value: 'rek_value',
@@ -131,28 +124,11 @@ describe('ScaleOfSignificanceListEditor tests', () => {
 
     it('should process incomplete props without error', () => {
         const { container } = setup({
-            input: {
-                name: 'test',
-            },
+            name: 'test',
+            value: undefined,
         });
         expect(container).toMatchSnapshot();
     });
-
-    // it('should render add form', () => {
-    //     const { container, getByTestId } = setup();
-    //     fireEvent.click(getByTestId('rek-significance-showhidebutton'));
-    //     expect(container).toMatchSnapshot();
-    // });
-
-    // it('should add an entry', () => {
-    //     const { container, getByTestId, getByRole } = setup();
-    //     fireEvent.click(getByTestId('rek-significance-showhidebutton'));
-    //     fireEvent.mouseDown(getByTestId('rek-significance-select'));
-    //     fireEvent.click(getByRole('option', { name: 'Minor' }));
-    //     fireEvent.change(getByTestId('rek-creator-contribution-statement'), { target: { value: 'test' } });
-    //     fireEvent.click(getByTestId('rek-significance-add'));
-    //     expect(container).toMatchSnapshot();
-    // });
 
     it('should render edit form', () => {
         const { container, getByTestId } = setup();
@@ -174,13 +150,6 @@ describe('ScaleOfSignificanceListEditor tests', () => {
         expect(container).toMatchSnapshot();
     });
 
-    // it('should delete an item from the list', () => {
-    //     const { getByText, getByTestId } = setup();
-    //     fireEvent.click(getByTestId('test-list-editor-list-row-0-delete'));
-    //     fireEvent.click(getByTestId('confirm-test-list-editor-list-row-0-delete'));
-    //     expect(getByText('No records to display')).toBeInTheDocument();
-    // });
-
     it('should delete all items from a list', () => {
         const { getByTestId } = setup();
         fireEvent.click(getByTestId('delete-all-test-list-editor'));
@@ -190,31 +159,29 @@ describe('ScaleOfSignificanceListEditor tests', () => {
 
     it('should move up an item', () => {
         const { getByTestId } = setup({
-            input: {
-                name: 'test',
-                value: new List([
-                    {
-                        rek_value: {
-                            author: {
-                                rek_author_id: 111,
-                                rek_author: 'Test, Author 1',
-                                rek_author_order: 1,
-                            },
-                            value: { plainText: 'Minor', htmlText: 'Minor' },
+            name: 'test',
+            value: [
+                {
+                    rek_value: {
+                        author: {
+                            rek_author_id: 111,
+                            rek_author: 'Test, Author 1',
+                            rek_author_order: 1,
                         },
+                        value: { plainText: 'Minor', htmlText: 'Minor' },
                     },
-                    {
-                        rek_value: {
-                            author: {
-                                rek_author_id: 222,
-                                rek_author: 'Test, Author 2',
-                                rek_author_order: 2,
-                            },
-                            value: { plainText: 'Major', htmlText: 'Major' },
+                },
+                {
+                    rek_value: {
+                        author: {
+                            rek_author_id: 222,
+                            rek_author: 'Test, Author 2',
+                            rek_author_order: 2,
                         },
+                        value: { plainText: 'Major', htmlText: 'Major' },
                     },
-                ]),
-            },
+                },
+            ],
             searchKey: {
                 order: 'rek_order',
                 value: 'rek_value',
@@ -229,31 +196,29 @@ describe('ScaleOfSignificanceListEditor tests', () => {
 
     it('should move down an item', () => {
         const { getByTestId } = setup({
-            input: {
-                name: 'test',
-                value: new List([
-                    {
-                        rek_value: {
-                            author: {
-                                rek_author_id: 111,
-                                rek_author: 'Test, Author 1',
-                                rek_author_order: 1,
-                            },
-                            value: { plainText: 'Minor', htmlText: 'Minor' },
+            name: 'test',
+            value: [
+                {
+                    rek_value: {
+                        author: {
+                            rek_author_id: 111,
+                            rek_author: 'Test, Author 1',
+                            rek_author_order: 1,
                         },
+                        value: { plainText: 'Minor', htmlText: 'Minor' },
                     },
-                    {
-                        rek_value: {
-                            author: {
-                                rek_author_id: 222,
-                                rek_author: 'Test, Author 2',
-                                rek_author_order: 2,
-                            },
-                            value: { plainText: 'Major', htmlText: 'Major' },
+                },
+                {
+                    rek_value: {
+                        author: {
+                            rek_author_id: 222,
+                            rek_author: 'Test, Author 2',
+                            rek_author_order: 2,
                         },
+                        value: { plainText: 'Major', htmlText: 'Major' },
                     },
-                ]),
-            },
+                },
+            ],
             searchKey: {
                 order: 'rek_order',
                 value: 'rek_value',

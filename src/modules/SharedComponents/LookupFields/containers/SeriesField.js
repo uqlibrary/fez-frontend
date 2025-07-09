@@ -23,16 +23,16 @@ export const SeriesField = props => {
             loadSuggestions={loadSuggestions}
             autoCompleteAsynchronousFieldId={props.seriesFieldId || 'rek-series'}
             allowFreeText
-            defaultValue={(!!props.input && !!props.input.value && { value: props.input.value }) || null}
-            errorText={props.meta ? props.meta.error : null}
-            error={!!props.meta && !!props.meta.error}
+            defaultValue={(!!props?.value && { value: props.value, id: 1 }) || null}
+            errorText={props.state?.error}
+            error={!!props.state?.error}
             filterOptions={options => options}
             getOptionLabel={item => (!!item && String(item.value)) || ''}
             itemsList={itemsList}
             itemsLoading={itemsLoading}
             id={'series-field-input'}
-            onChange={item => props.input.onChange(item.value)}
-            onClear={() => props.input.onChange(null)}
+            onChange={item => props.onChange(item.value)}
+            onClear={() => props.onChange(null)}
         />
     );
 };

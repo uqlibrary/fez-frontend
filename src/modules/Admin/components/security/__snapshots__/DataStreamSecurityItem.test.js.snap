@@ -46,7 +46,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
 }"
       >
         <div
-          aria-controls=":r0:"
+          aria-controls="<dynamic>"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="dsi-security-policy-0-select"
@@ -134,7 +134,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
 }"
       >
         <div
-          aria-controls=":r1:"
+          aria-controls="<dynamic>"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="dsi-security-policy-0-select"
@@ -222,7 +222,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
 }"
       >
         <div
-          aria-controls=":r4:"
+          aria-controls="<dynamic>"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="dsi-security-policy-2-select"

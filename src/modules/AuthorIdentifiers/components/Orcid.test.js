@@ -102,7 +102,7 @@ describe('Component Orcid ', () => {
         fireEvent.click(getByRole('button', { name: /Link your existing ORCID iD/i }));
         fireEvent.click(getByTestId('confirm-dialog-box'));
         expect(assignFn).toBeCalledWith(
-            'http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=b650667a7eb582897f036e66099b78c7&show_login=true',
+            'https://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=b650667a7eb582897f036e66099b78c7&show_login=true',
         );
     });
 
@@ -125,7 +125,7 @@ describe('Component Orcid ', () => {
         fireEvent.click(getByRole('button', { name: /Create a new ORCID iD/i }));
         fireEvent.click(getByTestId('confirm-dialog-box'));
         expect(assignFn).toBeCalledWith(
-            'http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=b650667a7eb582897f036e66099b78c7&show_login=false&family_names=Researcher&given_names=J',
+            'https://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=b650667a7eb582897f036e66099b78c7&show_login=false&family_names=Researcher&given_names=J',
         );
     });
 
