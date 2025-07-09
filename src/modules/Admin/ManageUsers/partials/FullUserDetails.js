@@ -188,15 +188,26 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
         <React.Fragment>
             {(mode === 'update' || mode === 'add') && (
                 <TableRow onKeyDown={handleKeyPress} id="user-edit-row" data-testid="user-edit-row">
-                    <TableCell colSpan={9}>
+                    <TableCell sx={{ p: 0 }}>
                         <ScrollToSection scrollToSection>
                             <FormProvider {...validatedForm}>
                                 <form onSubmit={handleSubmit(onSubmit)}>
                                     <Box sx={{ ...classes.background }}>
-                                        <Grid container spacing={2}>
-                                            <Grid item xs={12}>
+                                        <Grid container spacing={2} sx={{ position: 'relative' }}>
+                                            <Grid item xs={12} sx={{ paddingBottom: 2 }}>
                                                 <NameData />
                                             </Grid>
+                                        </Grid>
+                                        <Grid
+                                            container
+                                            spacing={2}
+                                            sx={{
+                                                ...classes.background,
+                                                padding: 0,
+                                                position: 'sticky',
+                                                bottom: 0,
+                                            }}
+                                        >
                                             <Grid item xs={12}>
                                                 <Grid
                                                     container
@@ -234,7 +245,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                                                 </Grid>
                                             </Grid>
                                             {(!!apiError || !!Object.keys(errors).length) && (
-                                                <Grid xs={12}>
+                                                <Grid item xs={12}>
                                                     <Alert alertId="api_error_alert" {...alertProps} />
                                                 </Grid>
                                             )}
