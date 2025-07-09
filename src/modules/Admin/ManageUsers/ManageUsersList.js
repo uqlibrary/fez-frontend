@@ -234,6 +234,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
             Cell: ({ cell, row }) => <ColumnData data={cell.getValue()} columnDataId={`usr-email-${row.id}`} />,
             grow: true,
+            size: 300,
         },
         {
             accessorKey: 'usr_status',
