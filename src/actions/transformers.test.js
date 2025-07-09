@@ -3149,8 +3149,17 @@ describe('transformers', () => {
                 fez_record_search_key_license: {
                     rek_license: '453607',
                 },
+                fez_record_search_key_start_date: {
+                    rek_start_date: '2019-03-14',
+                },
                 fez_record_search_key_end_date: {
                     rek_end_date: '2019-03-14',
+                },
+                fez_record_search_key_time_period_start_date: {
+                    rek_time_period_start_date: '2019-03-14',
+                },
+                fez_record_search_key_time_period_end_date: {
+                    rek_time_period_end_date: '2019-03-14',
                 },
             };
 
@@ -3211,8 +3220,17 @@ describe('transformers', () => {
                 fez_record_search_key_license: {
                     rek_license: '453607',
                 },
+                fez_record_search_key_start_date: {
+                    rek_start_date: '2019-03-14',
+                },
                 fez_record_search_key_end_date: {
                     rek_end_date: '2019-03-14',
+                },
+                fez_record_search_key_time_period_start_date: {
+                    rek_time_period_start_date: '2019-03-14',
+                },
+                fez_record_search_key_time_period_end_date: {
+                    rek_time_period_end_date: '2019-03-14',
                 },
             });
         });
@@ -3258,6 +3276,18 @@ describe('transformers', () => {
                         text: 'Please choose an option',
                         value: null,
                     },
+                },
+                fez_record_search_key_start_date: {
+                    rek_start_date: undefined,
+                },
+                fez_record_search_key_end_date: {
+                    rek_end_date: undefined,
+                },
+                fez_record_search_key_time_period_start_date: {
+                    rek_time_period_start_date: undefined,
+                },
+                fez_record_search_key_time_period_end_date: {
+                    rek_time_period_end_date: undefined,
                 },
             };
 

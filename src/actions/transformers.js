@@ -1530,7 +1530,10 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_oa_status: openAccessStatus,
         fez_record_search_key_oa_status_type: openAccessStatusType,
         fez_record_search_key_license: license,
+        fez_record_search_key_start_date: startDate,
         fez_record_search_key_end_date: endDate,
+        fez_record_search_key_time_period_start_date: timePeriodStartDate,
+        fez_record_search_key_time_period_end_date: timePeriodEndDate,
         ...rest
     } = data;
 
@@ -1553,7 +1556,14 @@ export const getAdminSectionSearchKeys = (data = {}) => {
                 ...(!!license && license?.rek_license > 0 ? license : {}),
             },
         },
+        ...(!!startDate && !!startDate.rek_start_date ? { fez_record_search_key_start_date: { ...startDate } } : {}),
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
+        ...(!!timePeriodStartDate && !!timePeriodStartDate.rek_time_period_start_date
+            ? { fez_record_search_key_time_period_start_date: { ...timePeriodStartDate } }
+            : {}),
+        ...(!!timePeriodEndDate && !!timePeriodEndDate.rek_time_period_end_date
+            ? { fez_record_search_key_time_period_end_date: { ...timePeriodEndDate } }
+            : {}),
         ...rest,
     };
 };
