@@ -82,7 +82,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
     item={true}
     xs={12}
   >
-    <RichEditor
+    <RichEditorField
       disabled={false}
       error={false}
       id=""
@@ -217,7 +217,7 @@ exports[`ScaleOfSignificanceForm component should render with id 1`] = `
     item={true}
     xs={12}
   >
-    <RichEditor
+    <RichEditorField
       disabled={false}
       error={false}
       id="100"

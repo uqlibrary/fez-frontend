@@ -4,8 +4,10 @@ import { rtlRender } from 'test-utils';
 
 function setup(testProps) {
     const props = {
-        onChange: jest.fn(),
-        value: true,
+        input: {
+            onChange: jest.fn(),
+            value: true,
+        },
         ...testProps,
     };
 

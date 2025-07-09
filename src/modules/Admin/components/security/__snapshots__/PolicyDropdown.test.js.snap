@@ -28,7 +28,7 @@ exports[`PolicyDropdown component should hide policies that the user cant select
 }"
     >
       <div
-        aria-controls="<dynamic>"
+        aria-controls=":r1:"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="test-policy-select"
@@ -101,7 +101,7 @@ exports[`PolicyDropdown component should render properly 1`] = `
 }"
     >
       <div
-        aria-controls="<dynamic>"
+        aria-controls=":r0:"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="test-policy-select"

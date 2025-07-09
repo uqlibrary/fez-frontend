@@ -1,4 +1,5 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListBook';
+import { default as editedBookList } from '../../../src/mock/data/records/publicationTypeListBookEdited';
 import { sherpaRomeo as sherpaMocks } from '../../../src/mock/data/sherpaRomeo';
 
 context('Book admin edit', () => {
@@ -135,12 +136,10 @@ context('Book admin edit', () => {
                 .should('not.contain', 'SHERPA/RoMEO')
                 .should('not.contain', 'Ulrichs');
             cy.viewport(1000, 1000);
-            cy.wait(1000);
             cy.log('Add 4th entry with match in API');
             cy.get('@issnBlock')
                 .find('input')
                 .type('33333333{enter}');
-            cy.wait(1000);
             cy.get('#rek-issn-list-row-3').within(row => {
                 checkIssnLinks(row, '3333-3333');
                 cy.get('span > a')
@@ -168,7 +167,6 @@ context('Book admin edit', () => {
             cy.get('@issnBlock')
                 .find('input')
                 .type('55555555{enter}');
-            cy.wait(1000);
             cy.log('Verify and move up the 5th entry');
             cy.get('#rek-issn-list-row-4').within(row => {
                 checkIssnLinks(row, '5555-5555');
@@ -185,7 +183,6 @@ context('Book admin edit', () => {
             cy.get('@issnBlock')
                 .find('input')
                 .type('00000000{enter}');
-            cy.wait(1000);
             cy.get('#rek-issn-list-row-5')
                 .should('contain', '0000-0000')
                 .find('a')
@@ -195,7 +192,6 @@ context('Book admin edit', () => {
             cy.get('@issnBlock')
                 .find('input')
                 .type('66666666{enter}');
-            cy.wait(1000);
             cy.get('#rek-issn-list-row-6').within(row => {
                 checkIssnLinks(row, '6666-6666');
             });

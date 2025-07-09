@@ -1,29 +1,14 @@
-import React from 'react';
-import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
 import AdminSection from './AdminSection';
 
 jest.mock('../../../../context');
-import { useRecordContext } from 'context';
+import { useRecordContext, useFormValuesContext } from 'context';
 
-function setup({ values, ...testProps } = {}) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         ...testProps,
     };
 
-    return rtlRender(
-        <WithReduxStore>
-            <FormProviderWrapper
-                values={{
-                    adminSection: {
-                        rek_subtype: 'Creative Work - Design/Architectural',
-                        ...values,
-                    },
-                }}
-            >
-                <AdminSection {...props} />
-            </FormProviderWrapper>
-        </WithReduxStore>,
-    );
+    return renderComponent(AdminSection, props, args);
 }
 
 describe('AdminSection component', () => {
@@ -45,16 +30,22 @@ describe('AdminSection component', () => {
                 fez_record_search_key_language: [{ rek_language: 'eng' }],
             },
         }));
+
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
+                rek_subtype: 'Creative Work - Design/Architectural',
+            },
+        }));
     });
 
     it('should render default view', () => {
-        const { container } = setup();
-        expect(container).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
-        const { container } = setup({ disabled: true });
-        expect(container).toMatchSnapshot();
+        const render = setup({ disabled: true });
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render design form fields', () => {
@@ -76,7 +67,7 @@ describe('AdminSection component', () => {
             },
         }));
 
-        const { container } = setup();
-        expect(container).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

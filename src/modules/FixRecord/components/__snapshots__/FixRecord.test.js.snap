@@ -322,7 +322,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                     required=""
                   >
                     <div
-                      aria-controls="<dynamic>"
+                      aria-controls=":r1:"
                       aria-expanded="false"
                       aria-haspopup="listbox"
                       aria-labelledby="fix-action-select"
@@ -808,7 +808,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                     required=""
                   >
                     <div
-                      aria-controls="<dynamic>"
+                      aria-controls=":r0:"
                       aria-expanded="false"
                       aria-haspopup="listbox"
                       aria-labelledby="fix-action-select"
@@ -1184,7 +1184,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                     required=""
                   >
                     <div
-                      aria-controls="<dynamic>"
+                      aria-controls=":r2:"
                       aria-expanded="false"
                       aria-haspopup="listbox"
                       aria-labelledby="fix-action-select"

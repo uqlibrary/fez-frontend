@@ -1,4 +1,5 @@
 import ClaimRecord from './ClaimRecord';
+import Immutable from 'immutable';
 import { dataCollection, journalArticle } from 'mock/data/testing/records';
 import validationErrors from 'locale/validationErrors';
 import { CLAIM_PRE_CHECK, NEW_RECORD_API } from 'repositories/routes';
@@ -75,7 +76,7 @@ function setup(props = {}) {
         ],
     };
     const pid = (props.publication || defaultRecord).rek_pid;
-    const state = {
+    const state = Immutable.Map({
         appReducer: {
             redirectPath: props.redirectPath,
         },
@@ -89,7 +90,7 @@ function setup(props = {}) {
             publicationsClaimedInProgress: props.publicationsClaimedInProgress || [],
             publicationToClaimFileUploadingError: props.publicationToClaimFileUploadingError || false,
         },
-    };
+    });
 
     return render(
         <WithReduxStore initialState={state}>
@@ -419,7 +420,7 @@ describe('Component ClaimRecord ', () => {
                 const { getByText, getByTestId } = setup();
 
                 selectAuthor();
-                await addFilesToFileUploader(fileMock);
+                addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesToClosedAccess(fileMock);
                 await userEvent.type(getByTestId('claim-comments-input'), 'my comments');
                 await userEvent.type(getByTestId('claim-link-input'), 'https://www.test.com');
@@ -468,7 +469,7 @@ describe('Component ClaimRecord ', () => {
                 const { getByText, getByTestId } = setup();
 
                 selectAuthor();
-                await addFilesToFileUploader(fileMock);
+                addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesToClosedAccess(fileMock);
                 await submitForm();
                 // assert a file upload error

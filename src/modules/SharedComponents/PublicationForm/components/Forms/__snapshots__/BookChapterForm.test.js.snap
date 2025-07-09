@@ -322,7 +322,7 @@ exports[`BookChapterForm component 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r6:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -1476,7 +1476,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r1a:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -1654,7 +1654,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                         required=""
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r1d:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="org-affiliation-label org-affiliation-select"
@@ -2126,7 +2126,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r1l:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-language-select"
@@ -2192,7 +2192,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r1m:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-quality-indicator-select"
@@ -2362,7 +2362,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                     class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   >
                     <div
-                      aria-controls="<dynamic>"
+                      aria-controls=":r1p:"
                       aria-disabled="true"
                       aria-expanded="false"
                       aria-haspopup="listbox"
@@ -3182,7 +3182,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r27:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -3360,7 +3360,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                         required=""
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r2a:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="org-affiliation-label org-affiliation-select"
@@ -3901,7 +3901,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r2j:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-language-select"
@@ -3967,7 +3967,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r2k:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-quality-indicator-select"
@@ -4137,7 +4137,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                     class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   >
                     <div
-                      aria-controls="<dynamic>"
+                      aria-controls=":r2n:"
                       aria-disabled="true"
                       aria-expanded="false"
                       aria-haspopup="listbox"
@@ -4963,7 +4963,7 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":ro:"
                           aria-disabled="true"
                           aria-expanded="false"
                           aria-haspopup="listbox"
@@ -6128,7 +6128,7 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r35:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"

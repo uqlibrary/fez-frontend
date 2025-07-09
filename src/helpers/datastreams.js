@@ -1,16 +1,10 @@
 import { viewRecordsConfig } from '../config';
 import { STATE_DELETED } from '../config/viewRecord';
 import { stripHtml } from './general';
-import {
-    AV_CHECK_STATE_DEFAULT,
-    AV_CHECK_STATES,
-    SENSITIVE_HANDLING_NOTE_TYPE,
-    SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
-} from '../config/general';
+import { isSensitiveHandlingNoteTypeOther } from '../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
+import { AV_CHECK_STATE_DEFAULT, AV_CHECK_STATES, SENSITIVE_HANDLING_NOTE_TYPE } from '../config/general';
 import { locale } from '../locale';
 import { UTCDateToCurrentTZDate } from '../modules/SharedComponents/Toolbox/FileAvStateIcon/FileAvStateIcon';
-
-export const isSensitiveHandlingNoteTypeOther = value => parseInt(value, 10) === SENSITIVE_HANDLING_NOTE_OTHER_TYPE;
 
 export const isDerivative = dataStream => {
     const {

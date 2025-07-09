@@ -1,5 +1,3 @@
-import React from 'react';
-import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
 import {
     AttachedFilesField,
     deleteCallbackFactory,
@@ -8,95 +6,42 @@ import {
     handleDatastreamChange,
     handleDatastreamMultiChange,
 } from './AttachedFilesField';
+import Immutable from 'immutable';
 
-jest.mock('context');
-import { useRecordContext } from 'context';
+import { recordWithDatastreams } from 'mock/data';
 
-function setup({ values, ...testProps }) {
+function setup(testProps = {}) {
     const props = {
-        onRenameAttachedFile: jest.fn(),
-        onDeleteAttachedFile: jest.fn(),
+        input: {},
         ...testProps,
     };
 
-    return rtlRender(
-        <WithReduxStore>
-            <FormProviderWrapper
-                values={{
-                    filesSection: {
-                        fez_datastream_info: [],
-                        ...values,
-                    },
-                }}
-            >
-                <AttachedFilesField {...props} />
-            </FormProviderWrapper>
-        </WithReduxStore>,
-    );
+    return renderComponent(AttachedFilesField, props);
 }
 
-const newDs = [
-    {
-        dsi_av_check_date: null,
-        dsi_av_check_state: null,
-        dsi_checksum: '90e3f7efe37a4892241260f5c5fff938',
-        dsi_copyright: null,
-        dsi_dsid: 'new_file.jpeg',
-        dsi_embargo_date: '2025-01-31',
-        dsi_id: 3835508,
-        dsi_label: 'new file test description',
-        dsi_mimetype: 'image/jpeg',
-        dsi_open_access: null,
-        dsi_order: 1,
-        dsi_pid: 'UQ:342708',
-        dsi_security_inherited: 0,
-        dsi_security_policy: 5,
-        dsi_size: 223390,
-        dsi_state: 'A',
-    },
-];
-
 describe('AttachedFilesField component', () => {
-    beforeAll(() => {
-        useRecordContext.mockImplementation(() => ({
-            record: {},
-        }));
-    });
-
-    it('should render nothing when no files provided', () => {
-        const { container } = setup({});
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render default view when files provided', () => {
-        const { container } = setup({
-            values: {
-                fez_datastream_info: newDs,
-            },
-        });
-        expect(container).toMatchSnapshot();
+    it('should render default view', () => {
+        const render = setup({});
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render with initial data', () => {
-        const { container } = setup({
-            values: {
-                fez_datastream_info: undefined,
-            },
-            state: {
-                defaultValue: newDs,
+        const render = setup({
+            meta: {
+                initial: Immutable.List(recordWithDatastreams.fez_datastream_info.slice(0, 1)),
             },
         });
-        expect(container).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     describe('AttachedFilesField callback factories', () => {
         it('should create delete callback', () => {
             const dataStreams = [1, 2, 3];
-            const onChangeFn = jest.fn();
+            const setDataStreams = jest.fn();
             const onDeleteAttachedFile = jest.fn();
-            const callback = deleteCallbackFactory(dataStreams, onDeleteAttachedFile, onChangeFn)[0];
+            const callback = deleteCallbackFactory(dataStreams, setDataStreams, onDeleteAttachedFile)[0];
             callback(1);
-            expect(onChangeFn).toHaveBeenCalledWith([1, 2, 1, 2, 3]);
+            expect(setDataStreams).toHaveBeenCalledWith([1, 2, 1, 2, 3]);
         });
 
         it('should create datastream order change callback', () => {

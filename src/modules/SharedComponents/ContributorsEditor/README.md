@@ -10,7 +10,7 @@ ContributorEditor has been adjusted to also take scale of significance (NTRO) in
 
 ReduxForm Field - adds ability for users to add a list of authors/editors to a record.
 
-Data is passed in the following format:
+Data is passed to redux form values in the following format:
 
 ```javascript
 [

@@ -4,7 +4,8 @@ import DepositAgreement from './DepositAgreement';
 export default function DepositAgreementField(fieldProps) {
     return (
         <DepositAgreement
-            isDepositAgreementAccepted={fieldProps.value !== '' && fieldProps.value === 'on'}
+            onChange={fieldProps.input?.onChange}
+            isDepositAgreementAccepted={fieldProps.input.value !== '' && fieldProps.input.value === 'on'}
             {...fieldProps}
         />
     );

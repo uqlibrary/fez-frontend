@@ -12,7 +12,6 @@ export {
 export { default as designFields, validateDesign } from './designFields';
 export { default as digilibImageFields, validateDigilibImage } from './digilibImageFields';
 export { default as genericDocumentFields, validateGenericDocument } from './genericDocumentFields';
-export { default as instrumentFields, validateInstrument } from './instrumentFields';
 export { default as imageFields, validateImage } from './imageFields';
 export { default as journalArticleFields, validateJournalArticle } from './journalArticleFields';
 export { default as journalFields, validateJournal } from './journalFields';

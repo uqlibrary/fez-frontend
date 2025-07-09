@@ -109,9 +109,6 @@ module.exports = {
         ],
     },
     plugins: [
-        new webpack.ProvidePlugin({
-            process: 'process/browser.js',
-        }),
         new HtmlWebpackPlugin({
             favicon: join(__dirname, 'public', 'favicon.ico'),
             filename: 'index.html',

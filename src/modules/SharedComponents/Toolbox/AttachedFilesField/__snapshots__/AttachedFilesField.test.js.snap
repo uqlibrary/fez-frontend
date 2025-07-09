@@ -1,447 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AttachedFilesField component should render default view when files provided 1`] = `
-<div>
-  <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-  >
-    <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-      data-testid="standard-card"
-      id="standard-card"
-    >
-      <div
-        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-      >
-        <div
-          class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-        />
-      </div>
-      <div
-        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-        data-analyticsid="standard-card-content"
-        data-testid="standard-card-content"
-        id="standard-card-content"
-      >
-        <div
-          class="MuiBox-root css-hpgf8j"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1rd0tpv-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1gjvs5g-MuiGrid2-root"
-            >
-               
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-3 MuiGrid2-grid-xs-6 css-120a3y3-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-5 MuiGrid2-grid-sm-7 css-17yboxz-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-ukxn5j-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiBox-root css-1vn0y5f"
-          data-testid="fez-datastream-info-attached-list-row-3835508"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1111w80-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1u781dq-MuiGrid2-root"
-            >
-              <button
-                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-o72p4c-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="order-up-file-0"
-                data-testid="order-up-file-0"
-                disabled=""
-                id="order-up-file-0"
-                tabindex="-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="ExpandLessIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1111w80-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1ry1lx3-MuiGrid2-root"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
-                data-testid="ImageIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2M8.5 13.5l2.5 3.01L14.5 12l4.5 6H5z"
-                />
-              </svg>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-3 MuiGrid2-grid-xs-6 css-yul8qx-MuiGrid2-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-ygucae-MuiGrid-root"
-                data-testid="file-name-3835508"
-                id="file-name-3835508"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
-                >
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
-                  >
-                    <a
-                      class="css-gkvags"
-                      data-testid="file-name-3835508-preview"
-                      id="file-name-3835508-preview"
-                    >
-                      new_file.jpeg
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-5 MuiGrid2-grid-sm-7 css-1gmcysx-MuiGrid2-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
-              >
-                new file test description
-              </p>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-t4jovg-MuiGrid2-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
-              >
-                218.15 KB
-              </p>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-3 MuiGrid2-grid-sm-4 css-4e875f-MuiGrid2-root"
-            >
-              <div
-                class="MuiBox-root css-epvm6"
-              >
-                <span
-                  class="MuiBox-root css-111wug5"
-                >
-                  <svg
-                    aria-hidden="true"
-                    aria-label="Not yet scanned for threats"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                    data-mui-internal-clone-element="true"
-                    data-testid="3835508-file-av-state-icon-default"
-                    focusable="false"
-                    id="3835508-file-av-state-icon-default"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 2 4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5zm6 9.09c0 4-2.55 7.7-6 8.83-3.45-1.13-6-4.82-6-8.83v-4.7l6-2.25 6 2.25z"
-                    />
-                  </svg>
-                </span>
-                <span
-                  class="MuiBox-root css-111wug5"
-                >
-                  <span
-                    class="noOaIcon"
-                    data-testid="oa-n/a-icon"
-                  />
-                </span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1111w80-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1u781dq-MuiGrid2-root"
-            >
-              <button
-                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-o72p4c-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="order-down-file-0"
-                data-testid="order-down-file-0"
-                disabled=""
-                id="order-down-file-0"
-                tabindex="-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="ExpandMoreIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+exports[`AttachedFilesField component should render default view 1`] = `
+<AttachedFiles
+  dataStreams={[]}
+  onDateChange={[Function]}
+  onDelete={[Function]}
+  onDescriptionChange={[Function]}
+  onFilenameChange={[Function]}
+  onFilenameSave={[Function]}
+  onHandleFileIsValid={[Function]}
+  onOrderChange={[Function]}
+/>
 `;
 
-exports[`AttachedFilesField component should render nothing when no files provided 1`] = `<div />`;
-
 exports[`AttachedFilesField component should render with initial data 1`] = `
-<div>
-  <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-  >
-    <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-      data-testid="standard-card"
-      id="standard-card"
-    >
-      <div
-        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-      >
-        <div
-          class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-        />
-      </div>
-      <div
-        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-        data-analyticsid="standard-card-content"
-        data-testid="standard-card-content"
-        id="standard-card-content"
-      >
-        <div
-          class="MuiBox-root css-hpgf8j"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1rd0tpv-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1gjvs5g-MuiGrid2-root"
-            >
-               
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-3 MuiGrid2-grid-xs-6 css-120a3y3-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-5 MuiGrid2-grid-sm-7 css-17yboxz-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-ukxn5j-MuiGrid2-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiBox-root css-1vn0y5f"
-          data-testid="fez-datastream-info-attached-list-row-3835508"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1111w80-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1u781dq-MuiGrid2-root"
-            >
-              <button
-                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-o72p4c-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="order-up-file-0"
-                data-testid="order-up-file-0"
-                disabled=""
-                id="order-up-file-0"
-                tabindex="-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="ExpandLessIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1111w80-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1ry1lx3-MuiGrid2-root"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
-                data-testid="ImageIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2M8.5 13.5l2.5 3.01L14.5 12l4.5 6H5z"
-                />
-              </svg>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-3 MuiGrid2-grid-xs-6 css-yul8qx-MuiGrid2-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-ygucae-MuiGrid-root"
-                data-testid="file-name-3835508"
-                id="file-name-3835508"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
-                >
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
-                  >
-                    <a
-                      class="css-gkvags"
-                      data-testid="file-name-3835508-preview"
-                      id="file-name-3835508-preview"
-                    >
-                      new_file.jpeg
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-5 MuiGrid2-grid-sm-7 css-1gmcysx-MuiGrid2-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
-              >
-                new file test description
-              </p>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-t4jovg-MuiGrid2-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
-              >
-                218.15 KB
-              </p>
-            </div>
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-3 MuiGrid2-grid-sm-4 css-4e875f-MuiGrid2-root"
-            >
-              <div
-                class="MuiBox-root css-epvm6"
-              >
-                <span
-                  class="MuiBox-root css-111wug5"
-                >
-                  <svg
-                    aria-hidden="true"
-                    aria-label="Not yet scanned for threats"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                    data-mui-internal-clone-element="true"
-                    data-testid="3835508-file-av-state-icon-default"
-                    focusable="false"
-                    id="3835508-file-av-state-icon-default"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M12 2 4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5zm6 9.09c0 4-2.55 7.7-6 8.83-3.45-1.13-6-4.82-6-8.83v-4.7l6-2.25 6 2.25z"
-                    />
-                  </svg>
-                </span>
-                <span
-                  class="MuiBox-root css-111wug5"
-                >
-                  <span
-                    class="noOaIcon"
-                    data-testid="oa-n/a-icon"
-                  />
-                </span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1111w80-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1u781dq-MuiGrid2-root"
-            >
-              <button
-                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-o72p4c-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="order-down-file-0"
-                data-testid="order-down-file-0"
-                disabled=""
-                id="order-down-file-0"
-                tabindex="-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="ExpandMoreIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<AttachedFiles
+  dataStreams={
+    [
+      {
+        "dsi_copyright": null,
+        "dsi_dsid": "FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml",
+        "dsi_embargo_date": null,
+        "dsi_id": 1,
+        "dsi_label": "FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf",
+        "dsi_mimetype": "text/xml",
+        "dsi_open_access": null,
+        "dsi_order": 1,
+        "dsi_pid": "UQ:252236",
+        "dsi_security_inherited": 1,
+        "dsi_security_policy": 1,
+        "dsi_size": 3097,
+        "dsi_state": "A",
+      },
+    ]
+  }
+  meta={
+    {
+      "initial": Immutable.List [
+        {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml",
+          "dsi_embargo_date": null,
+          "dsi_id": 1,
+          "dsi_label": "FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_order": 1,
+          "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
+          "dsi_size": 3097,
+          "dsi_state": "A",
+        },
+      ],
+    }
+  }
+  onDateChange={[Function]}
+  onDelete={[Function]}
+  onDescriptionChange={[Function]}
+  onFilenameChange={[Function]}
+  onFilenameSave={[Function]}
+  onHandleFileIsValid={[Function]}
+  onOrderChange={[Function]}
+/>
 `;

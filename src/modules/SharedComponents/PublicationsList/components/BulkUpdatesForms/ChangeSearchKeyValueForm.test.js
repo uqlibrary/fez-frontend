@@ -42,7 +42,7 @@ describe('ChangeSearchKeyValueForm', () => {
 
     it('should correctly submit form and display success info', async () => {
         api.mock.records.bulkUpdate();
-        const { getByTestId, getByText } = setup();
+        const { getByTestId, getByText, queryByTestId } = setup();
         await assertFormInitialState();
 
         // interact with the form
@@ -75,7 +75,7 @@ describe('ChangeSearchKeyValueForm', () => {
 
     it('should submit form and display error', async () => {
         api.mock.records.fail.bulkUpdate();
-        const { getByTestId, getByText } = setup();
+        const { getByTestId, getByText, queryByTestId } = setup();
         await assertFormInitialState();
 
         // interact with the form

@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { parseHtmlToJSX } from 'helpers/general';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useConfirmationState, useForm, usePublicationSubtype } from 'hooks';
+import { useParams } from 'react-router-dom';
+import { Field } from 'redux-form/immutable';
+import { useConfirmationState } from 'hooks';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
@@ -21,11 +23,6 @@ import { PublicationCitation } from 'modules/SharedComponents/PublicationCitatio
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import { Field } from '../../../SharedComponents/Toolbox/ReactHookForm';
-import { useDispatch, useSelector } from 'react-redux';
-import { useWatch } from 'react-hook-form';
-import { changeDisplayType, loadRecordToView } from '../../../../actions';
-import { WorkNotFound } from '../../../NotFound/components/WorkNotFound';
 
 const txt = {
     ...componentsLocale.components.changeDisplayType,
@@ -40,7 +37,7 @@ const txt = {
 
 const renderTitle = record => {
     const prefixTxt = componentsLocale.components.changeDisplayType.title;
-    const subtypeSuffix = !!record.rek_subtype && ` - ${record.rek_subtype}`;
+    const subtypeSuffix = !!record.rek_subtype ? ` - ${record.rek_subtype}` : '';
     const pageTitle = parseHtmlToJSX(`${prefixTxt}${record.rek_display_type_lookup}${subtypeSuffix}`);
     return (
         <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="change-display-type-page-title">
@@ -49,89 +46,105 @@ const renderTitle = record => {
     );
 };
 
-export const ChangeDisplayType = () => {
-    const { pid } = useParams();
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const { recordToView: record, loadingRecordToView } = useSelector(state => state.get('viewRecordReducer'));
-    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
+const _handleDefaultSubmit = event => {
+    !!event && event.preventDefault();
+};
 
-    const {
-        control,
-        setValue,
-        getPropsForAlert,
-        safelyHandleSubmit,
-        formState: { isSubmitting, isSubmitSuccessful },
-    } = useForm({
-        defaultValues: {
-            rek_display_type: null,
-            rek_subtype: null,
-        },
+export const ChangeDisplayType = ({
+    disableSubmit,
+    handleSubmit,
+    loadingRecordToView,
+    loadRecordToView,
+    publicationSubtypeItems,
+    record,
+    resetSubType,
+    saveRequesting,
+    saveUpdated,
+    saveFailed,
+    submitting = false,
+}) => {
+    const { pid: pidParam } = useParams();
+    /* istanbul ignore next */
+    React.useEffect(() => {
+        // Load record if it hasn't
+        if (saveRequesting === null) {
+            !!pidParam && (!record || record.rek_pid !== pidParam) && !!loadRecordToView && loadRecordToView(pidParam);
+        }
+    }, [loadRecordToView, pidParam, record, saveRequesting]);
+
+    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
+    /* istanbul ignore next */
+    React.useEffect(() => {
+        if (saveUpdated) {
+            showConfirmation();
+        }
+    }, [showConfirmation, saveUpdated]);
+
+    const alertProps = validation.getErrorAlertProps({
+        alertLocale: txt.alertProps,
+        error: saveFailed,
+        submitSucceeded: saveUpdated,
+        submitting: saveRequesting,
     });
 
-    const [displayType, subtype] = useWatch({ control, name: ['rek_display_type', 'rek_subtype'] });
-    const subtypes = usePublicationSubtype(displayType || null, true);
-
-    // handles loading record on mount
-    useEffect(() => {
-        /* istanbul ignore next */
-        if (!pid || record?.rek_pid) return;
-        dispatch(loadRecordToView(pid));
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    // handles displayType changes
-    useEffect(() => {
-        setValue('rek_subtype', null);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [displayType, setValue]);
-
-    // handles displaying confirmation dialog
-    useEffect(() => {
-        if (!isSubmitSuccessful) return;
-        showConfirmation();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isSubmitSuccessful]);
-
-    if (pid && loadingRecordToView) {
+    if (!!pidParam && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
     }
-    if (!pid || !record?.rek_pid) {
-        return <WorkNotFound />;
+
+    // Record not found
+    const pid = !!record && record.rek_pid;
+    if (!!pidParam && !pid) {
+        return <div className="ChangeDisplayType empty" />;
     }
 
-    const typeItems = [
-        ...Object.values(publicationTypes())
-            .filter(pubType => !DOCUMENT_TYPES_EDIT_ONLY.includes(pubType.id))
-            .map((item, index) => {
-                return (
-                    <MenuItem value={item.id} key={index}>
-                        {item.name}
-                    </MenuItem>
-                );
-            }),
+    const allPublicationTypes = Object.values(publicationTypes());
+    const availablePublicationTypes = allPublicationTypes.filter(
+        pubType => !DOCUMENT_TYPES_EDIT_ONLY.includes(pubType.id),
+    );
+    const publicationTypeItems = [
+        ...availablePublicationTypes.map((item, index) => {
+            return (
+                <MenuItem value={item.id} key={index}>
+                    {item.name}
+                </MenuItem>
+            );
+        }),
     ];
+
+    // tested in cypress changeDisplayType
+    /* istanbul ignore next */
     const subitems =
-        !!subtypes && subtypes.length > 0
+        !!publicationSubtypeItems && publicationSubtypeItems.length > 0
             ? [
-                  ...subtypes.map((item, index) => (
+                  ...publicationSubtypeItems.map((item, index) => (
                       <MenuItem value={item} key={index}>
                           {item}
                       </MenuItem>
                   )),
               ]
             : [];
-    const alertProps = validation.getErrorAlertProps({
-        alertLocale: txt.alertProps,
-        ...getPropsForAlert(),
-    });
 
-    const navigateToViewPage = () => navigate(pathConfig.records.view(pid));
-    const navigateToEditRecord = () => navigate(pathConfig.admin.edit(pid));
-    const onSubmit = safelyHandleSubmit(data => dispatch(changeDisplayType([record], data)));
+    const navigateToViewPage = () => {
+        /* istanbul ignore else */
+        if (!!pid && validation.isValidPid(pid)) {
+            window.location.assign(pathConfig.records.view(pid, true));
+        }
+    };
+
+    // tested in cypress changeDisplayType
+    /* istanbul ignore next */
+    const navigateToEditRecord = () => {
+        if (!!pid && validation.isValidPid(pid)) {
+            window.location.assign(pathConfig.admin.edit(pid));
+        }
+    };
+
+    const clearSubitems = () => {
+        resetSubType();
+    };
 
     return (
-        <form>
+        <form onSubmit={_handleDefaultSubmit}>
             <StandardPage>
                 {!!pid && (
                     <Grid container spacing={2}>
@@ -157,17 +170,17 @@ export const ChangeDisplayType = () => {
                                 <Grid container spacing={1}>
                                     <Grid item xs={12}>
                                         <Field
-                                            control={control}
                                             component={SelectField}
-                                            disabled={isSubmitting}
+                                            disabled={submitting}
                                             name="rek_display_type"
                                             id="rek-display-type"
                                             label={txt.publicationType.inputLabelText}
                                             required
                                             placeholder={txt.publicationType.hintText}
                                             selectFieldId="rek-display-type"
+                                            onChange={clearSubitems}
                                         >
-                                            {typeItems}
+                                            {publicationTypeItems}
                                         </Field>
                                     </Grid>
                                     {!!subitems && subitems.length > 0 && (
@@ -175,9 +188,8 @@ export const ChangeDisplayType = () => {
                                         /* istanbul ignore next */
                                         <Grid item xs={12}>
                                             <Field
-                                                control={control}
                                                 component={SelectField}
-                                                disabled={isSubmitting}
+                                                disabled={submitting}
                                                 id="rek-subtype"
                                                 name="rek_subtype"
                                                 label={txt.publicationSubtype.inputLabelText}
@@ -211,7 +223,7 @@ export const ChangeDisplayType = () => {
                                         id="rek-change-display-type-cancel"
                                         data-analyticsid="rek-change-display-type-cancel"
                                         data-testid="rek-change-display-type-cancel"
-                                        disabled={isSubmitting}
+                                        disabled={saveRequesting}
                                         variant="contained"
                                         fullWidth
                                         onClick={navigateToViewPage}
@@ -228,13 +240,8 @@ export const ChangeDisplayType = () => {
                                         variant="contained"
                                         color="primary"
                                         fullWidth
-                                        onClick={onSubmit}
-                                        disabled={
-                                            isSubmitting ||
-                                            isSubmitSuccessful ||
-                                            !displayType ||
-                                            (!!subtypes?.length && !subtype)
-                                        }
+                                        onClick={handleSubmit}
+                                        disabled={disableSubmit || saveRequesting}
                                     >
                                         {txt.submit}
                                     </Button>
@@ -246,6 +253,21 @@ export const ChangeDisplayType = () => {
             </StandardPage>
         </form>
     );
+};
+
+ChangeDisplayType.propTypes = {
+    disableSubmit: PropTypes.bool,
+    handleSubmit: PropTypes.func,
+    loadingRecordToView: PropTypes.bool,
+    loadRecordToView: PropTypes.func,
+    publicationSubtypeItems: PropTypes.array,
+    publicationTypeItems: PropTypes.array,
+    record: PropTypes.object,
+    resetSubType: PropTypes.func,
+    saveFailed: PropTypes.bool,
+    saveRequesting: PropTypes.bool,
+    saveUpdated: PropTypes.bool,
+    submitting: PropTypes.bool,
 };
 
 export default ChangeDisplayType;

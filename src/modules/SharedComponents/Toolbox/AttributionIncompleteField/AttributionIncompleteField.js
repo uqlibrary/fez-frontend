@@ -4,9 +4,10 @@ import AttributionIncomplete from './AttributionIncomplete';
 export default function AttributionIncompleteField(fieldProps) {
     return (
         <AttributionIncomplete
+            onChange={fieldProps.input?.onChange}
             isAttributionIncomplete={
-                fieldProps.value !== '' &&
-                (fieldProps.value === 'on' || fieldProps.value === 1 || fieldProps.value === true)
+                fieldProps.input.value !== '' &&
+                (fieldProps.input.value === 'on' || fieldProps.input.value === 1 || fieldProps.input.value === true)
             }
             {...fieldProps}
         />

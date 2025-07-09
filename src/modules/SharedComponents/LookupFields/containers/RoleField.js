@@ -10,6 +10,7 @@ export const RoleField = props => {
     return (
         <AutoCompleteSelectField
             {...props}
+            loadSuggestions={() => {}}
             autoCompleteSelectFieldId={
                 !!props.autoCompleteSelectFieldId ? props.autoCompleteSelectFieldId : 'rek-author-role'
             }

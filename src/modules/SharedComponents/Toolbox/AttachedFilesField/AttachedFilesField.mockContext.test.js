@@ -1,18 +1,16 @@
 import React from 'react';
 import { AttachedFilesField } from './AttachedFilesField';
-import { rtlRender, WithReduxStore, FormProviderWrapper, cleanup, userEvent } from 'test-utils';
-
-import * as UserIsAdmin from 'hooks/userIsAdmin';
+import { rtlRender, cleanup } from 'test-utils';
 
 jest.mock('../../../../context');
-import { useRecordContext } from 'context';
+import { useRecordContext, useFormValuesContext } from 'context';
 
 import { recordWithDatastreams } from 'mock/data';
 
-function setup({ values, ...testProps }, renderMethod = rtlRender) {
+function setup(testProps = {}, renderMethod = rtlRender) {
     const { locale, ...restProps } = testProps;
     const props = {
-        onChange: jest.fn(),
+        input: { onChange: jest.fn() },
         dataStreams: recordWithDatastreams.fez_datastream_info,
         locale: {
             title: 'Files',
@@ -22,42 +20,24 @@ function setup({ values, ...testProps }, renderMethod = rtlRender) {
             },
             ...locale,
         },
-        onRenameAttachedFile: jest.fn(),
-        onDeleteAttachedFile: jest.fn(),
         ...restProps,
     };
 
-    return renderMethod(
-        <WithReduxStore>
-            <FormProviderWrapper
-                values={{
-                    filesSection: {
-                        fez_datastream_info: [],
-                        ...values,
-                    },
-                }}
-            >
-                <AttachedFilesField {...props} />
-            </FormProviderWrapper>
-        </WithReduxStore>,
-    );
+    return renderMethod(<AttachedFilesField {...props} />);
 }
 
 describe('DataStreamSecuritySelector component with mockContext', () => {
-    const userIsAdmin = jest.spyOn(UserIsAdmin, 'userIsAdmin');
     beforeEach(() => {
         useRecordContext.mockImplementation(() => ({
             record: recordWithDatastreams,
         }));
-
-        userIsAdmin.mockImplementation(() => false);
     });
 
     afterEach(() => cleanup);
 
     it('should render with form data', () => {
-        const { container } = setup({
-            values: {
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
                 fez_datastream_info: [
                     {
                         dsi_dsid: 'test1.txt',
@@ -66,24 +46,31 @@ describe('DataStreamSecuritySelector component with mockContext', () => {
                     },
                 ],
             },
-        });
+        }));
+
+        const { container } = setup();
 
         expect(container).toMatchSnapshot();
     });
 
-    it('fires when attachment deleted', async () => {
-        userIsAdmin.mockImplementation(() => true);
+    it('fires when attachment deleted', () => {
         const dataStreamsInitial = recordWithDatastreams.fez_datastream_info;
+        const dataStreamsChanged = dataStreamsInitial.slice(1); // remove first item
         const onChange = jest.fn();
 
-        const { getByTestId } = setup({
-            values: {
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
                 fez_datastream_info: dataStreamsInitial,
             },
-            onChange,
-            canEdit: true,
-        });
-        await userEvent.click(getByTestId('delete-file-0'));
+        }));
+
+        const { rerender } = setup({ input: { onChange } });
+
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: { fez_datastream_info: dataStreamsChanged },
+        }));
+
+        setup({ input: { onChange } }, rerender);
 
         expect(onChange).toHaveBeenCalledTimes(1);
     });

@@ -53,3 +53,23 @@ ReactDOM.render(
   document.getElementById('app')
 );
 ```
+
+### ./reducer.js
+
+```jsx
+import { reducer as formReducer } from 'redux-form/immutable';
+import { combineReducers } from 'redux-immutable';
+
+// Reducers
+import { helpDrawerReducer } from 'modules/SharedComponents/Toolbox/HelpDrawer';
+
+const rootReducer = combineReducers({
+    form: formReducer,
+    // New
+    ...
+    helpDrawer: helpDrawerReducer
+});
+
+export default rootReducer;
+
+```

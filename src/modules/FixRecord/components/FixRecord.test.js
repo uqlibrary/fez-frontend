@@ -1,6 +1,7 @@
 import React from 'react';
 import FixRecord from './FixRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
+import Immutable from 'immutable';
 import {
     render,
     WithReduxStore,
@@ -33,7 +34,7 @@ jest.mock('react-router-dom', () => ({
 function setup(props = {}) {
     props.publication = props.publication || null;
     props.author = props.hasOwnProperty('author') ? props.author : { aut_id: 410 };
-    const state = {
+    const state = Immutable.Map({
         fixRecordReducer: {
             recordToFix: props.publication,
             loadingRecordToFix: props.hasOwnProperty('loadingRecordToFix')
@@ -46,7 +47,7 @@ function setup(props = {}) {
                 ? props.accountAuthorLoading
                 : !props.author,
         },
-    };
+    });
 
     return render(
         <WithReduxStore initialState={state}>
@@ -213,7 +214,7 @@ describe('Component FixRecord', () => {
                 fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
                 fireEvent.mouseDown(getByTestId('rek-content-indicator-select'));
                 fireEvent.click(getByText(newContentIndicator));
-                await addFilesToFileUploader(fileMock);
+                addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesToClosedAccess(fileMock);
                 await assertNoValidationErrorSummary();
                 await submitForm();
@@ -258,7 +259,7 @@ describe('Component FixRecord', () => {
 
             it('should display confirmation box after fix work successful submission and go to dashboard', async () => {
                 mockFixRecordApiCall();
-                const { getByTestId } = setup({
+                const { getByTestId, getByText } = setup({
                     publication: { ...mockRecordToFix, fez_record_search_key_content_indicator: null },
                 });
 

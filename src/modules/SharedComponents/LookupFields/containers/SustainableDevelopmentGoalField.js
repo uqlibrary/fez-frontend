@@ -36,16 +36,16 @@ const SustainableDevelopmentGoalField = props => {
         <AutoCompleteAsynchronousField
             id="sustainable-development-goal-input"
             autoCompleteAsynchronousFieldId={'rek-sustainable-development-goal'}
-            errorText={props.state?.error || props.errorText}
-            error={!!props.state?.error}
+            errorText={props.meta ? props.meta.error : props.errorText}
+            error={props.meta ? !!props.meta.error : !!props.error || null}
             filterOptions={(options, { inputValue }) => matchSorter(options, inputValue, { keys: ['group', 'value'] })}
             itemsList={items}
             itemsLoading={itemsLoading}
-            defaultValue={!!props?.value ? { value: props.value } : null}
+            defaultValue={!!props.input && !!props.input.value ? { value: props.input.value } : null}
             getOptionLabel={() => ''}
             OptionTemplate={FoROptionTemplate}
             groupBy={option => option.group}
-            onChange={value => props?.onChange?.({ ...value, value: `${value.group} - ${value.value}` })}
+            onChange={value => props.input?.onChange({ ...value, value: `${value.group} - ${value.value}` })}
             onClear={() => {}}
             clearSuggestionsOnClose={false}
             loadSuggestions={fetch}

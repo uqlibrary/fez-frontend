@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SensitiveHandlingNoteField should render default view 1`] = `
+<React.Fragment>
+  <Field
+    ariaLabel="Please select sensitive handling note"
+    component={
+      {
+        "$$typeof": Symbol(react.memo),
+        "compare": null,
+        "type": [Function],
+      }
+    }
+    genericSelectFieldId="rek-sensitive-handling-note-id"
+    itemsList={
+      [
+        {
+          "text": "None",
+          "value": "0",
+        },
+        {
+          "text": "Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.",
+          "value": 456855,
+        },
+        {
+          "text": "Indigenous/First Nations people should be aware that this output is about women’s business.",
+          "value": 456856,
+        },
+        {
+          "text": "Indigenous/First Nations people should be aware that this output is about men’s business.",
+          "value": 456857,
+        },
+        {
+          "text": "Assessors should be aware that this output contains content related to any of the following: violence, family or domestic violence, self-harm, sexual assault, suicide, family child removal, refugee experiences, war survivor experiences or other traumatic experiences that may be distressing or harmful to some people.",
+          "value": 456858,
+        },
+        {
+          "text": "Assessors should be aware that this output contains content with explicit language, hate speech, nudity or sexuality, or drug use which may be confronting and potentially distressing to some people.",
+          "value": 456859,
+        },
+        {
+          "text": "Other",
+          "value": 456860,
+        },
+      ]
+    }
+    label="Sensitive Handling Note"
+    name="filesSection.sensitiveHandlingNote.id"
+    onChange={[Function]}
+    selectPrompt="Select a sensitive handling note"
+    textFieldId="rek-sensitive-handling-note-id"
+  />
+</React.Fragment>
+`;
+
+exports[`SensitiveHandlingNoteField should render disabled view 1`] = `
+<React.Fragment>
+  <Field
+    ariaLabel="Please select sensitive handling note"
+    component={
+      {
+        "$$typeof": Symbol(react.memo),
+        "compare": null,
+        "type": [Function],
+      }
+    }
+    disabled={true}
+    genericSelectFieldId="rek-sensitive-handling-note-id"
+    itemsList={
+      [
+        {
+          "text": "None",
+          "value": "0",
+        },
+        {
+          "text": "Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.",
+          "value": 456855,
+        },
+        {
+          "text": "Indigenous/First Nations people should be aware that this output is about women’s business.",
+          "value": 456856,
+        },
+        {
+          "text": "Indigenous/First Nations people should be aware that this output is about men’s business.",
+          "value": 456857,
+        },
+        {
+          "text": "Assessors should be aware that this output contains content related to any of the following: violence, family or domestic violence, self-harm, sexual assault, suicide, family child removal, refugee experiences, war survivor experiences or other traumatic experiences that may be distressing or harmful to some people.",
+          "value": 456858,
+        },
+        {
+          "text": "Assessors should be aware that this output contains content with explicit language, hate speech, nudity or sexuality, or drug use which may be confronting and potentially distressing to some people.",
+          "value": 456859,
+        },
+        {
+          "text": "Other",
+          "value": 456860,
+        },
+      ]
+    }
+    label="Sensitive Handling Note"
+    name="filesSection.sensitiveHandlingNote.id"
+    onChange={[Function]}
+    selectPrompt="Select a sensitive handling note"
+    textFieldId="rek-sensitive-handling-note-id"
+  />
+</React.Fragment>
+`;

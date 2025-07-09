@@ -46,16 +46,13 @@ export const getDefaultCenter = geoCoords => {
 };
 
 export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
-    const initialGeoCoords = React.useMemo(
-        () =>
-            (!!coordinates &&
-                coordinates.split(' ').map(item => ({
-                    lng: Number(item.split(',')[0]),
-                    lat: Number(item.split(',')[1]),
-                }))) ||
-            [],
-        [coordinates],
-    );
+    const initialGeoCoords =
+        (!!coordinates &&
+            coordinates.split(' ').map(item => ({
+                lng: Number(item.split(',')[0]),
+                lat: Number(item.split(',')[1]),
+            }))) ||
+        [];
 
     const pointZoom = 7;
     const polygonZoom = 13;
@@ -77,10 +74,6 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
     const [map, setMap] = React.useState(null);
     const searchBox = React.useRef(null);
     const drawingManagerRef = React.useRef();
-
-    React.useEffect(() => {
-        setGeoCoords(initialGeoCoords);
-    }, [initialGeoCoords]);
 
     React.useEffect(() => {
         if (!!bounds.current && !!geoCoords && geoCoords.length > 0) {

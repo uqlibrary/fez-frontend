@@ -130,14 +130,12 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
         const navigateTo = () => navigate(pathConfig.journal.view(journal.jnl_jid));
 
         const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
-        /* istanbul ignore next */
         if (
             authorDetails &&
             (authorDetails.is_administrator === 1 ||
                 /* istanbul ignore next */ authorDetails.is_super_administrator === 1) &&
             !!navigatedFrom
         ) {
-            /* istanbul ignore next */
             navigate(decodeURIComponent(navigatedFrom));
         } else {
             navigateTo();

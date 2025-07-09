@@ -23,15 +23,8 @@ import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { validation } from 'config';
 
-import {
-    AFFILIATION_TYPE_NOT_UQ,
-    ORG_TYPE_ID_UNIVERSITY,
-    ORG_TYPES_LOOKUP,
-    AFFILIATION_TYPE_UQ,
-    AUTHOR_EXTERNAL_IDENTIFIER_TYPE,
-} from 'config/general';
+import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_UQ } from 'config/general';
 import { default as globalLocale } from 'locale/global';
-import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField/components/NewGenericSelectField';
 
 const classes = {
     linked: {
@@ -70,50 +63,18 @@ NameAsPublished.propTypes = {
 
 const isValid = value => !validation.isEmpty(value) && !validation.maxLength255Validator(value);
 
-const isIdValid = (id, type) => {
-    const validateMethod = AUTHOR_EXTERNAL_IDENTIFIER_TYPE.find(item => item.value === type);
-    return validateMethod ? validation[validateMethod.text.toLowerCase()](id) : undefined;
-};
-
-export const getColumns = ({
-    contributorEditorId,
-    disabled,
-    suffix,
-    showRoleInput,
-    locale,
-    isNtro,
-    showExternalIdentifierInput,
-}) => {
+export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInput, locale, isNtro }) => {
     const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : {});
     const {
         header: {
-            locale: {
-                nameColumn,
-                roleColumn,
-                identifierColumn,
-                organisationColumn,
-                externalIdentifierColumn,
-                externalIdentifierTypeColumn,
-            },
+            locale: { nameColumn, roleColumn, identifierColumn, organisationColumn },
         },
         form: {
-            locale: {
-                creatorRoleLabel,
-                creatorRoleHint,
-                nameAsPublishedLabel,
-                nameAsPublishedHint,
-                identifierLabel,
-                externalIdentifierLabel,
-                externalIdentifierHint,
-                externalIdentifierTypeLabel,
-            },
+            locale: { creatorRoleLabel, creatorRoleHint, nameAsPublishedLabel, nameAsPublishedHint, identifierLabel },
         },
     } = locale;
     return [
         {
-            cellStyle: () => ({
-                verticalAlign: 'top',
-            }),
             title: (
                 <NameAsPublished
                     icon={<People color="secondary" />}
@@ -212,19 +173,18 @@ export const getColumns = ({
                         uqIdentifier: `${selectedItem.aut_id}`,
                         orgaff:
                             (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && globalLocale.global.orgTitle) ||
-                            /* istanbul ignore next */ contributor.orgaff,
+                            contributor.orgaff,
                         orgtype:
                             (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) ||
-                            /* istanbul ignore next */ contributor.orgtype,
+                            contributor.orgtype,
                         uqUsername: `${selectedItem.aut_org_username ||
-                            /* istanbul ignore next */ selectedItem.aut_student_username ||
-                            /* istanbul ignore next */ selectedItem.aut_ref_num}`,
+                            selectedItem.aut_student_username ||
+                            selectedItem.aut_ref_num}`,
                     };
                     props.onRowDataChange({ ...contributor, ...newValue });
                 };
 
-                const handleClear = /* istanbul ignore next */ () => {
-                    /* istanbul ignore next */
+                const handleClear = () => {
                     props.onRowDataChange({
                         nameAsPublished: contributor.nameAsPublished,
                         creatorRole: contributor.creatorRole,
@@ -253,103 +213,6 @@ export const getColumns = ({
             },
             searchable: true,
         },
-        ...(showExternalIdentifierInput
-            ? [
-                  {
-                      cellStyle: () => ({
-                          verticalAlign: 'top',
-                      }),
-                      title: (
-                          <Typography variant="caption" color="secondary">
-                              {externalIdentifierColumn}
-                          </Typography>
-                      ),
-                      field: 'externalIdentifier',
-                      width: '20%',
-                      render: rowData => (
-                          <Typography
-                              variant="body2"
-                              id={`${contributorEditorId}-list-row-${rowData.tableData.id}-external-identifier`}
-                              data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-external-identifier`}
-                          >
-                              {rowData.externalIdentifier}
-                          </Typography>
-                      ),
-                      editComponent: props => {
-                          return (
-                              <Grid container spacing={2}>
-                                  <Grid item style={{ flexGrow: '1' }}>
-                                      <TextField
-                                          value={props.value || ''}
-                                          onChange={e => props.onChange(e.target.value)}
-                                          textFieldId={`${contributorEditorId}-external-identifier`}
-                                          error={isIdValid(
-                                              props.rowData?.externalIdentifier,
-                                              props.rowData?.externalIdentifierType,
-                                          )}
-                                          errorText={isIdValid(
-                                              props.rowData?.externalIdentifier,
-                                              props.rowData?.externalIdentifierType,
-                                          )}
-                                          label={externalIdentifierLabel}
-                                          placeholder={externalIdentifierHint}
-                                          fullWidth
-                                      />
-                                  </Grid>
-                              </Grid>
-                          );
-                      },
-                      validate: rowData => isIdValid(rowData.externalIdentifier, rowData.externalIdentifierType),
-                  },
-                  {
-                      cellStyle: () => ({
-                          verticalAlign: 'top',
-                      }),
-                      title: (
-                          <Typography variant="caption" color="secondary">
-                              {externalIdentifierTypeColumn}
-                          </Typography>
-                      ),
-                      field: 'externalIdentifierType',
-                      width: '20%',
-                      render: rowData => (
-                          <Typography
-                              variant="body2"
-                              id={`${contributorEditorId}-list-row-${rowData.tableData.id}-external-identifier-type`}
-                              data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-external-identifier-type`}
-                          >
-                              {
-                                  AUTHOR_EXTERNAL_IDENTIFIER_TYPE.find(
-                                      type => type.value === rowData.externalIdentifierType,
-                                  )?.text
-                              }
-                          </Typography>
-                      ),
-                      editComponent: props => {
-                          const { rowData: contributor } = props;
-                          const handleChange = value => {
-                              props.onRowDataChange({ ...contributor, ...{ externalIdentifierType: value } });
-                          };
-
-                          return (
-                              <Grid container spacing={2}>
-                                  <Grid item style={{ flexGrow: '1' }}>
-                                      <NewGenericSelectField
-                                          {...props}
-                                          itemsList={AUTHOR_EXTERNAL_IDENTIFIER_TYPE}
-                                          onChange={handleChange}
-                                          value={props.value}
-                                          key={`${contributor.externalIdentifierType}-${contributor.externalIdentifier}`}
-                                          genericSelectFieldId={`${contributorEditorId}-external-identifier-type`}
-                                          label={externalIdentifierTypeLabel}
-                                      />
-                                  </Grid>
-                              </Grid>
-                          );
-                      },
-                  },
-              ]
-            : []),
         ...(showRoleInput
             ? [
                   {
@@ -371,7 +234,7 @@ export const getColumns = ({
                       ),
                       editComponent: props => {
                           const { rowData: contributor } = props;
-                          const handleChange = /* istanbul ignore next */ selectedItem => /* istanbul ignore next */ {
+                          const handleChange = selectedItem => {
                               const newValue = {
                                   ...contributor,
                                   creatorRole: selectedItem,
@@ -398,10 +261,7 @@ export const getColumns = ({
                                   }
                                   value={
                                       !!contributor.creatorRole
-                                          ? /* istanbul ignore next */ {
-                                                value: contributor.creatorRole,
-                                                text: contributor.creatorRole,
-                                            }
+                                          ? { value: contributor.creatorRole, text: contributor.creatorRole }
                                           : null
                                   }
                               />
@@ -446,18 +306,15 @@ export const getColumns = ({
                               </Grid>
                           </Grid>
                       ),
-                      editComponent: /* istanbul ignore next */ props => {
+                      editComponent: props => {
                           const { rowData: contributor } = props;
 
-                          /* istanbul ignore next */
                           const handleOrgAffliationChange = event => {
                               props.onRowDataChange({ ...contributor, orgaff: event.target.value });
                           };
-                          /* istanbul ignore next */
                           const handleOrgTypeChange = event => {
                               props.onRowDataChange({ ...contributor, orgtype: event.target.value });
                           };
-                          /* istanbul ignore next */
                           const handleAffiliationChange = event => {
                               const affiliation = event.target.value;
                               props.onRowDataChange({
@@ -471,7 +328,6 @@ export const getColumns = ({
                                       contributor.orgtype,
                               });
                           };
-                          /* istanbul ignore next */
                           return (
                               <React.Fragment>
                                   {isNtro && (
@@ -522,16 +378,7 @@ export const AuthorDetail = rowData => {
     );
 };
 
-export const AuthorsList = ({
-    contributorEditorId,
-    disabled,
-    isNtro,
-    list,
-    locale,
-    onChange,
-    showRoleInput,
-    showExternalIdentifierInput,
-}) => {
+export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, locale, onChange, showRoleInput }) => {
     const {
         row: {
             locale: {
@@ -552,20 +399,7 @@ export const AuthorsList = ({
     const theme = useTheme();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
-    columns.current = React.useMemo(
-        () =>
-            getColumns({
-                disabled,
-                suffix,
-                showRoleInput,
-                locale,
-                isNtro,
-                contributorEditorId,
-                showExternalIdentifierInput,
-            }),
-        [contributorEditorId, showExternalIdentifierInput, disabled, isNtro, locale, showRoleInput, suffix],
-    );
-
+    columns.current = getColumns({ disabled, suffix, showRoleInput, locale, isNtro, contributorEditorId });
     const prevList = React.useRef('');
 
     const [data, setData] = React.useState([]);
@@ -597,32 +431,24 @@ export const AuthorsList = ({
         if (action === 'delete') {
             const index = oldData.tableData.id;
             newList = [...data.slice(0, index), ...data.slice(index + 1)];
+        } else if (
+            action === 'update' &&
+            data.filter(
+                (contributor, index) =>
+                    index !== oldData.tableData.id && !!contributor.aut_id && contributor.aut_id === newData.aut_id,
+            ).length > 0
+        ) {
+            newList = [...data];
+        } else if (
+            action === 'add' &&
+            data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
+        ) {
+            newList = [...data];
         } else {
-            /* istanbul ignore next */ if (
-                action === 'update' &&
-                data.filter(
-                    (contributor, index) =>
-                        index !== oldData.tableData.id &&
-                        !!contributor.aut_id &&
-                        /* istanbul ignore next */ contributor.aut_id === newData.aut_id,
-                ).length > 0
-            ) {
-                /* istanbul ignore next */
-                newList = [...data];
-            } else {
-                /* istanbul ignore next */ if (
-                    action === 'add' &&
-                    data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
-                ) {
-                    /* istanbul ignore next */
-                    newList = [...data];
-                } else {
-                    newList =
-                        action === 'update'
-                            ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
-                            : [...data, newData];
-                }
-            }
+            newList =
+                action === 'update'
+                    ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
+                    : [...data, newData];
         }
 
         onChange(newList);
@@ -697,7 +523,7 @@ export const AuthorsList = ({
                         disabled ||
                         (rowData.itemIndex && /* istanbul ignore next */ rowData.itemIndex === 0) ||
                         rowData.tableData.id === 0,
-                    onClick: /* istanbul ignore next */ () => /* istanbul ignore next */ {
+                    onClick: () => {
                         const index = rowData.tableData.id;
                         const nextContributor = {
                             ...data[index - 1],
@@ -802,7 +628,7 @@ export const AuthorsList = ({
             title=""
             {...(!isNtro ? { detailPanel: AuthorDetail } : {})}
             editable={{
-                onRowUpdateCancelled: /* istanbul ignore next */ () => {},
+                onRowUpdateCancelled: () => {},
             }}
             options={{
                 actionsColumnIndex: -1,
@@ -840,7 +666,6 @@ AuthorsList.propTypes = {
     locale: PropTypes.object,
     onChange: PropTypes.func,
     showRoleInput: PropTypes.bool,
-    showExternalIdentifierInput: PropTypes.bool,
     useFormReducer: PropTypes.bool,
 };
 

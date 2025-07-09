@@ -1,11 +1,19 @@
 import React from 'react';
-import { rtlRender, FormProviderWrapper } from 'test-utils';
+import { rtlRender } from 'test-utils';
 
 jest.mock('../../../../context');
 import { journalDoaj } from 'mock/data';
 import { useJournalContext } from 'context';
+import { FormProvider } from 'react-hook-form';
 import IndexedSection from './IndexedSection';
+import { useValidatedForm } from 'hooks';
 import { ADMIN_JOURNAL } from 'config/general';
+
+// eslint-disable-next-line react/prop-types
+const FormProviderWrapper = ({ children, ...props }) => {
+    const methods = useValidatedForm(props);
+    return <FormProvider {...methods}>{children}</FormProvider>;
+};
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {

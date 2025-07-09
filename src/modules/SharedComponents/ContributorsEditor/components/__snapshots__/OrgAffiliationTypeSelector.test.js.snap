@@ -18,7 +18,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
       required=""
     >
       <div
-        aria-controls="<dynamic>"
+        aria-controls=":r2:"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="org-affiliation-label org-affiliation-select"
@@ -73,7 +73,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
       required=""
     >
       <div
-        aria-controls="<dynamic>"
+        aria-controls=":r1:"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="org-affiliation-label org-affiliation-select"
@@ -128,7 +128,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
       required=""
     >
       <div
-        aria-controls="<dynamic>"
+        aria-controls=":r0:"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="org-affiliation-label org-affiliation-select"

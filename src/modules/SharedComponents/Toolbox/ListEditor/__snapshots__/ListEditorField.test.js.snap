@@ -4,20 +4,30 @@ exports[`ListEditorField function should return <FreeTextListEditor> with specif
 <FreeTextListEditor
   error={true}
   errorText="test1"
+  input={
+    {
+      "onChange": [MockFunction],
+    }
+  }
   maxInputLength={100}
-  onChange={[MockFunction]}
-  remindToAdd="test2"
-  state={
+  meta={
     {
       "error": "test1",
     }
   }
+  onChange={[MockFunction]}
+  remindToAdd="test2"
 />
 `;
 
 exports[`ListEditorField function should return <FreeTextListEditor> with specified props 2`] = `
 <FreeTextListEditor
-  error={false}
+  errorText={null}
+  input={
+    {
+      "onChange": [MockFunction],
+    }
+  }
   maxInputLength={100}
   onChange={[MockFunction]}
   remindToAdd="test2"

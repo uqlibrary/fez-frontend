@@ -3,16 +3,18 @@ import ListEditorField from './ListEditorField';
 describe('ListEditorField function', () => {
     it('should return <FreeTextListEditor> with specified props', () => {
         const props = {
-            state: {
+            meta: {
                 error: 'test1',
             },
-            onChange: jest.fn(),
+            input: {
+                onChange: jest.fn(),
+            },
             remindToAdd: 'test2',
             maxInputLength: 100,
         };
         expect(ListEditorField(props)).toMatchSnapshot();
 
-        delete props.state;
+        delete props.meta;
         expect(ListEditorField(props)).toMatchSnapshot();
     });
 });

@@ -10,17 +10,18 @@ import Controller from './Controller';
  * @param validate
  * @return {string|null}
  */
-export const validateHandler = async (value, formValues, validators) => {
+export const validateHandler = (value, formValues, validators) => {
     if (!(validators instanceof Array)) {
         return null;
     }
 
-    for (const validator of validators) {
-        if (typeof validator !== 'function') continue;
+    for (let i = 0; i < validators.length; i++) {
+        if (!(validators[i] instanceof Function)) {
+            continue;
+        }
 
-        let result = await Promise.resolve(validator(value, formValues));
-
-        if (typeof result !== 'string') {
+        let result = validators[i](value, formValues);
+        if (!result?.trim) {
             continue;
         }
 
@@ -29,16 +30,13 @@ export const validateHandler = async (value, formValues, validators) => {
             return result;
         }
     }
-
     return null;
 };
 
 /**
- * A simple Higher-Order Component (HoC) inspired by the Redux Form <Field> component. It utilizes a custom HoC based
- * on the React Hook Form <Controller> component.
- *
- * Customizations relevant to specific components and cases should be added to a new component that extends
- * this one.
+ * A Higher-Order Component (HoC) inspired by the Redux Form <Field> component.
+ * It utilizes a custom HoC based on the React Hook Form <Controller> component, allowing for a smoother migration
+ * from Redux Form to React Hook Form.
  *
  * Props notes:
  * - validate: an array of validators that are checks the field's value sequentially, in left-to-right order.
@@ -65,11 +63,12 @@ const Field = ({ name, control, rules, component: Component, validate, normalize
                     validateHandler(value, formValues, validate),
             }}
             render={({ field }) => {
-                if (typeof field.onChange === 'function' && typeof normalize === 'function') {
+                // eslint-disable-next-line react/prop-types
+                if (!!childProps.noRef) delete field.ref;
+                if (typeof normalize === 'function') {
                     const originalOnChange = field.onChange;
-                    field.onChange = event => {
+                    field.onChange = event =>
                         originalOnChange(normalize(event && event?.target ? event.target.value : event));
-                    };
                 }
                 return <Component {...childProps} {...field} />;
             }}

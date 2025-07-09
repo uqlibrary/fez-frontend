@@ -1,65 +1,55 @@
-import React from 'react';
 import FieldGridItem from './FieldGridItem';
-import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
 
 jest.mock('../../../../context');
-import { useRecordContext } from 'context';
+import { useFormValuesContext, useRecordContext } from 'context';
 
 global.console = {
-    ...global.console,
     warn: jest.fn(),
 };
 
-const setup = ({ values, ...testProps } = {}) => {
+const setup = (testProps = {}, args = { isShallow: true }) => {
     const props = {
         ...testProps,
         group: [1],
     };
 
-    const inputValues = {
-        rek_title: 'Test title',
-        ...values,
-    };
-
-    return rtlRender(
-        <WithReduxStore>
-            <FormProviderWrapper
-                values={{
-                    ...inputValues,
-                }}
-            >
-                <FieldGridItem {...props} />
-            </FormProviderWrapper>
-        </WithReduxStore>,
-    );
+    return renderComponent(FieldGridItem, props, args);
 };
 
 describe('FieldGridItem', () => {
     beforeEach(() => {
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
+                rek_title: 'Test title',
+            },
+        }));
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
+                // rek_object_type_lookup: 'Record',
+                // rek_display_type_lookup: 'Journal Article',
             },
         }));
     });
 
     afterEach(() => {
+        useFormValuesContext.mockReset();
         useRecordContext.mockReset();
     });
 
     it('should render default view', () => {
-        const { container } = setup({
+        const render = setup({
             field: 'rek_title',
         });
-        expect(container).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render default view for a composed field', () => {
-        const { container } = setup({
+        const render = setup({
             field: 'sensitiveHandlingNote',
         });
-        expect(container).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render with correct props', () => {
@@ -71,10 +61,10 @@ describe('FieldGridItem', () => {
             },
         }));
 
-        const { container } = setup({
+        const render = setup({
             field: 'editors',
         });
-        expect(container).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should handle missing field config', () => {
@@ -87,15 +77,20 @@ describe('FieldGridItem', () => {
 
 describe('FieldGridItem without record', () => {
     beforeEach(() => {
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
+                rek_title: 'Test title',
+            },
+        }));
         useRecordContext.mockImplementation(() => ({
             record: {},
         }));
     });
 
     it('should render default view', () => {
-        const { container } = setup({
+        const render = setup({
             field: 'rek_title',
         });
-        expect(container).toMatchSnapshot();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

@@ -18,7 +18,6 @@ import {
     DOI_DATACITE_NAME,
     DOI_CROSSREF_NAME,
     PUBLICATION_TYPE_BOOK_CHAPTER,
-    PUBLICATION_TYPE_INSTRUMENT,
     SUBTYPE_EDITED_BOOK,
     UQ_FULL_NAME,
 } from 'config/general';
@@ -362,10 +361,7 @@ export const Doi: React.FC<Doi> = ({
     // deep clone
     const alertTxt = JSON.parse(JSON.stringify(txt.alertProps));
     const confirmationTxt = JSON.parse(JSON.stringify(txt.successConfirmation));
-    if (
-        record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION ||
-        record.rek_display_type === PUBLICATION_TYPE_INSTRUMENT
-    ) {
+    if (record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION) {
         alertTxt.progressAlert.message = alertTxt.progressAlert.message
             .replace(DOI_CROSSREF_NAME, DOI_DATACITE_NAME)
             .replace('queued', 'submitted');

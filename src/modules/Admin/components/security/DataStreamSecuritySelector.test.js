@@ -9,7 +9,9 @@ function setup(testProps = {}) {
             dataStreamFileBlock: 'dataStreamFileBlock',
             dataStreamFileName: 'dataStreamFileName',
         },
-        onChange: jest.fn(),
+        input: {
+            onChange: jest.fn(),
+        },
         attachedDataStreams: [],
         text: {
             overridePolicyPrompt: 'Override datastream security policy',

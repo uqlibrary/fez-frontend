@@ -21,6 +21,7 @@ index.html
 stats.json
 cypress/videos
 cypress/screenshots
+cypress/downloads/*
 # Ignore everything in cypress/downloads
 cypress/downloads/*
 # But do not ignore .gitkeep

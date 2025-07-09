@@ -1,27 +1,14 @@
-import React from 'react';
-import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
 import BibliographicSection from './BibliographicSection';
 
 jest.mock('../../../../context');
-import { useRecordContext } from 'context';
+import { useRecordContext, useFormValuesContext } from 'context';
 
-function setup({ values, ...testProps } = {}) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         ...testProps,
     };
 
-    return rtlRender(
-        <WithReduxStore>
-            <FormProviderWrapper
-                values={{
-                    languages: ['eng'],
-                    ...values,
-                }}
-            >
-                <BibliographicSection {...props} />
-            </FormProviderWrapper>
-        </WithReduxStore>,
-    );
+    return renderComponent(BibliographicSection, props, args);
 }
 
 describe('BibliographicSection component', () => {
@@ -43,9 +30,14 @@ describe('BibliographicSection component', () => {
                 fez_record_search_key_language: [{ rek_language: 'eng' }],
             },
         }));
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
+                languages: ['eng'],
+            },
+        }));
 
-        const { container } = setup();
-        expect(container).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
@@ -67,8 +59,14 @@ describe('BibliographicSection component', () => {
             },
         }));
 
-        const { container } = setup({ disabled: true });
-        expect(container).toMatchSnapshot();
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
+                languages: ['eng'],
+            },
+        }));
+
+        const render = setup({ disabled: true });
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 
     it('should render design form fields', () => {
@@ -90,7 +88,7 @@ describe('BibliographicSection component', () => {
             },
         }));
 
-        const { container } = setup();
-        expect(container).toMatchSnapshot();
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
     });
 });

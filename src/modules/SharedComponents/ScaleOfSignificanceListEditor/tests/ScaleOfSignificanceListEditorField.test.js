@@ -2,12 +2,12 @@ import ScaleOfSignificanceListEditorField from '../ScaleOfSignificanceListEditor
 
 describe('ScaleOfSignificanceListEditorField function', () => {
     it('should return <ScaleOfSignificanceListEditor>', () => {
-        const props = { onChange: jest.fn() };
+        const props = { input: { onChange: jest.fn() } };
         expect(ScaleOfSignificanceListEditorField(props)).toMatchSnapshot();
     });
 
     it('should return <ScaleOfSignificanceListEditor> with error attributes', () => {
-        const props = { onChange: jest.fn(), state: { errorText: 'test' } };
+        const props = { input: { onChange: jest.fn() }, meta: { errorText: 'test' } };
         expect(ScaleOfSignificanceListEditorField(props)).toMatchSnapshot();
     });
 });

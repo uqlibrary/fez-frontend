@@ -22,11 +22,13 @@ jest.mock('react-router-dom', () => ({
 
 function setup(testProps = {}) {
     return render(
-        <WithReduxStore>
-            <WithRouter>
-                <MasterJournalListIngest {...testProps} />
-            </WithRouter>
-        </WithReduxStore>,
+        <React.StrictMode>
+            <WithReduxStore>
+                <WithRouter>
+                    <MasterJournalListIngest {...testProps} />
+                </WithRouter>
+            </WithReduxStore>
+        </React.StrictMode>,
     );
 }
 

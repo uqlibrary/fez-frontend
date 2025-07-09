@@ -191,7 +191,7 @@ NewListEditor.propTypes = {
     inputNormalizer: PropTypes.func,
     list: PropTypes.array,
     listEditorId: PropTypes.string.isRequired,
-    ListEditorForm: PropTypes.elementType,
+    ListEditorForm: PropTypes.elementType.isRequired,
     ListEditorItemTemplate: PropTypes.elementType,
     locale: PropTypes.object,
     maxCount: PropTypes.number,

@@ -73,24 +73,6 @@ describe('DoiField', () => {
                     expect(formatPublicationDate).toHaveBeenCalledWith(record.rek_date, undefined);
                 },
             },
-            {
-                field: 'fez_record_search_key_start_date',
-                data: {
-                    rek_start_date: '1900-01-02T00:00:00Z',
-                },
-                test: () => {
-                    expect(formatPublicationDate).toHaveBeenCalledWith('1900-01-02T00:00:00Z', undefined);
-                },
-            },
-            {
-                field: 'fez_record_search_key_end_date',
-                data: {
-                    rek_start_date: '1900-01-02T00:00:00Z',
-                },
-                test: () => {
-                    expect(formatPublicationDate).toHaveBeenCalledWith('1900-01-02T00:00:00Z', undefined);
-                },
-            },
             // Edition
             {
                 field: 'fez_record_search_key_edition',

@@ -6,7 +6,9 @@ function setup(testProps) {
     const props = {
         disabled: false,
         isCopyrightAgreementAccepted: false,
-        onChange: jest.fn(),
+        input: {
+            onChange: jest.fn(),
+        },
         copyrightAgreementFieldId: 'test',
         copyrightAgreement: 'test deposit agreement',
         classes: {

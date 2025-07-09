@@ -33,7 +33,6 @@ export { default as publicationTypeListDesign } from './publicationTypeListDesig
 export { default as publicationTypeListDigilibImage } from './publicationTypeListDigilibImage';
 export { default as publicationTypeListGenericDocument } from './publicationTypeListGenericDocument';
 export { default as publicationTypeListImage } from './publicationTypeListImage';
-export { default as publicationTypeListInstrument } from './publicationTypeListInstrument';
 export { default as publicationTypeListJournal } from './publicationTypeListJournal';
 export { default as publicationTypeListJournalArticle } from './publicationTypeListJournalArticle';
 export { default as publicationTypeListManuscript } from './publicationTypeListManuscript';

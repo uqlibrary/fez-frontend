@@ -21,6 +21,7 @@ import {
     expectApiRequestToMatchSnapshot,
     assertInstanceOfFile,
 } from 'test-utils';
+import Immutable from 'immutable';
 import { waitFor } from '@testing-library/dom';
 
 jest.mock('../../../context');
@@ -41,7 +42,7 @@ jest.mock('react-router-dom', () => ({
 
 function setup(props = {}) {
     props.author = props.hasOwnProperty('author') ? props.author : { aut_id: 79324 };
-    const state = {
+    const state = Immutable.Map({
         fixRecordReducer: {
             recordToFix: props.publication,
             loadingRecordToFix: props.hasOwnProperty('loadingRecordToFix')
@@ -54,7 +55,7 @@ function setup(props = {}) {
                 ? props.accountAuthorLoading
                 : !props.author,
         },
-    };
+    });
 
     return render(
         <WithReduxStore initialState={state}>
@@ -114,7 +115,7 @@ describe('MyIncompleteRecord', () => {
             (await waitForTextToBeRemoved('Author affiliation rows marked with red are required'));
 
         const mockFile = ['myTestImage.png'];
-        await addFilesToFileUploader(mockFile);
+        addFilesToFileUploader(mockFile);
         await setFileUploaderFilesToClosedAccess(mockFile);
         waitForFieldErrorToBeCleared && (await waitForTextToBeRemoved('File submission to be completed'));
 
@@ -321,7 +322,7 @@ describe('MyIncompleteRecord', () => {
                 assertDisabled(submitButtonId);
                 await waitForText(pageLocale.successWorkflowConfirmation.confirmationTitle, waitForOptions);
 
-                expectApiRequestToMatchSnapshot('patch', api.url.records.update(pid));
+                expectApiRequestToMatchSnapshot('patch', api.url.records.update);
                 expectApiRequestToMatchSnapshot('post', api.url.records.issues(pid));
                 expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
             });

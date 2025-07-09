@@ -1,1 +1,1 @@
-export { default as AddDataCollection } from './components/AddDataCollection';
+export { default as AddDataCollection } from './containers/AddDataCollection';

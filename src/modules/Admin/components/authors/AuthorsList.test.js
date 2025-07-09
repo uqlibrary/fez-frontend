@@ -259,7 +259,6 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
-            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -322,7 +321,6 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
-            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -435,7 +433,6 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
-            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: '' } });
         });
 
@@ -600,7 +597,6 @@ describe('AuthorsList', () => {
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
 
         act(() => {
-            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -669,7 +665,6 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
-            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -737,34 +732,6 @@ describe('AuthorsList', () => {
         fireEvent.click(getByTestId('rek-author-update-save'));
 
         expect(getByTestId('rek-author-list-row-0-role')).toHaveTextContent('Technician');
-    });
-
-    it('should be able to add and update external identifier', () => {
-        const externalId = '0000-0000-0000-0001';
-        const updatedExternalId = '02mhbdp94';
-        const { getByTestId, getAllByTestId, getByText } = setup({
-            showExternalIdentifierInput: true,
-        });
-
-        // add a new author
-        fireEvent.click(getByTestId('rek-author-add'));
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
-        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
-        fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
-        fireEvent.click(getByText('Orcid'));
-        fireEvent.click(getByTestId('rek-author-add-save'));
-
-        expect(getAllByTestId('mtablebodyrow').length).toBe(1);
-        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(externalId);
-
-        // update author
-        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
-        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: updatedExternalId } });
-        fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
-        fireEvent.click(getByText('ROR'));
-        fireEvent.click(getByTestId('rek-author-update-save'));
-
-        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(updatedExternalId);
     });
 
     it('should delete row correctly', () => {

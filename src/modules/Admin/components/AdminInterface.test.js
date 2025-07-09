@@ -1,17 +1,35 @@
 import React from 'react';
-import AdminInterface, { navigateToSearchResult } from './AdminInterface';
+import { AdminInterface, navigateToSearchResult } from './AdminInterface';
 import { useAccountContext, useRecordContext, useTabbedContext } from 'context';
 import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { RECORD_TYPE_RECORD } from 'config/general';
 
+import { onSubmit } from '../submitHandler';
 import * as redux from 'react-redux';
-import { render, WithReduxStore, WithRouter, FormProviderWrapper, fireEvent, within, act } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, within, act } from 'test-utils';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
 }));
 jest.mock('../../../context');
 
+/* eslint-disable react/prop-types */
+jest.mock('redux-form/immutable', () => ({
+    destroy: jest.fn(),
+    Field: props => {
+        return (
+            <field
+                is="mock"
+                name={props.name}
+                title={props.title}
+                required={props.required}
+                disabled={props.disabled}
+                label={props.label || props.floatingLabelText}
+                hasError={props.hasError}
+            />
+        );
+    },
+}));
 jest.mock('js-cookie', () => ({
     get: jest.fn(),
     set: jest.fn(),
@@ -31,7 +49,7 @@ jest.mock('react-router-dom', () => ({
     useLocation: () => mockUseLocation,
 }));
 
-function setup({ values, ...testProps } = {}, renderMethod = render) {
+function setup(testProps = {}, renderMethod = render) {
     const props = {
         createMode: false,
         authorDetails: {
@@ -39,6 +57,7 @@ function setup({ values, ...testProps } = {}, renderMethod = render) {
             is_super_administrator: 1,
             username: 'test',
         },
+        submitting: false,
         handleSubmit: jest.fn(),
         tabs: {
             security: {
@@ -54,13 +73,7 @@ function setup({ values, ...testProps } = {}, renderMethod = render) {
     return renderMethod(
         <WithReduxStore>
             <WithRouter>
-                <FormProviderWrapper
-                    values={{
-                        ...values,
-                    }}
-                >
-                    <AdminInterface {...props} />
-                </FormProviderWrapper>
+                <AdminInterface {...props} />
             </WithRouter>
         </WithReduxStore>,
     );
@@ -68,7 +81,6 @@ function setup({ values, ...testProps } = {}, renderMethod = render) {
 
 describe('AdminInterface component', () => {
     let mockUseEffect;
-    let mockFormState;
     const cleanupFns = [];
     const useDispatchMock = redux.useDispatch;
 
@@ -98,25 +110,6 @@ describe('AdminInterface component', () => {
         }));
         useDispatchMock.mockImplementation(() => () => {});
         mockUseLocation = { pathname: '/', search: '' };
-
-        mockFormState = {
-            formState: {
-                errors: {},
-                isSubmitted: false,
-                isSubmitSuccessful: false,
-            },
-            values: {},
-            setError: jest.fn(),
-            setValue: jest.fn(),
-            clearErrors: jest.fn(),
-            trigger: jest.fn(),
-            reset: jest.fn(),
-        };
-        mockFormState.getValues = jest.fn().mockImplementation(() => mockFormState.values);
-        mockFormState.handleSubmit = jest
-            .fn()
-            .mockImplementation(callback => () => callback(mockFormState.getValues()));
-        jest.spyOn(require('react-hook-form'), 'useForm').mockReturnValue(mockFormState);
     });
 
     afterEach(() => {
@@ -127,7 +120,6 @@ describe('AdminInterface component', () => {
         }
         useDispatchMock.mockRestore();
         mockUseNavigate.mockClear();
-        jest.clearAllMocks();
     });
 
     afterAll(() => {
@@ -449,7 +441,6 @@ describe('AdminInterface component', () => {
             });
 
         createWrapper();
-
         expect(toggleTabbed).toHaveBeenCalledTimes(0);
         map.keydown({ key: 'ArrowUp', ctrlKey: true });
         expect(toggleTabbed).toHaveBeenCalledTimes(1);
@@ -498,6 +489,7 @@ describe('AdminInterface component', () => {
                 },
             },
         });
+
         expect(getByTestId('alert')).toHaveTextContent('This work has been retracted');
     });
 
@@ -575,9 +567,8 @@ describe('AdminInterface component', () => {
 
     it('should disabled button and render alert for form submitting', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
-        mockFormState.formState.isSubmitting = true;
-        mockFormState.formState.isSubmitSuccessful = false;
         const { container } = setup({
+            submitting: true,
             tabs: {
                 bibliographic: {
                     activated: true,
@@ -586,22 +577,6 @@ describe('AdminInterface component', () => {
             },
         });
         expect(container).toMatchSnapshot();
-    });
-
-    it('should show server error alert', async () => {
-        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
-        mockFormState.formState.errors = { root: { serverError: { type: 'custom', message: 'An API error' } } };
-
-        const { getByTestId } = setup({
-            tabs: {
-                bibliographic: {
-                    activated: true,
-                    component: () => 'BibliographySectionComponent',
-                },
-            },
-            formErrors: { 'bibliographicSection.rek_title': 'Title is required' },
-        });
-        expect(within(getByTestId('alert')).getByTestId('action-button')).toBeInTheDocument();
     });
 
     it('should display successful alert', () => {
@@ -617,12 +592,10 @@ describe('AdminInterface component', () => {
 
         expect(container).toMatchSnapshot();
 
-        mockFormState.formState.isSubmitting = false;
-        mockFormState.formState.isSubmitSuccessful = true;
-
         // should show the confirmation dialog
         setup(
             {
+                submitSucceeded: true,
                 tabs: {
                     bibliographic: {
                         activated: true,
@@ -648,13 +621,11 @@ describe('AdminInterface component', () => {
         });
         expect(container).toMatchSnapshot();
 
-        mockFormState.formState.isSubmitting = false;
-        mockFormState.formState.isSubmitSuccessful = true;
-
         // should show the confirmation dialog
         setup(
             {
                 isJobCreated: true,
+                submitSucceeded: true,
                 tabs: {
                     bibliographic: {
                         activated: true,
@@ -666,65 +637,7 @@ describe('AdminInterface component', () => {
         );
 
         fireEvent.click(getByTestId('confirm-dialog-box'));
-
         expect(container).toMatchSnapshot();
-    });
-
-    it('should handle cancel action of submit confirmation for new record', () => {
-        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_display_type: 187,
-                rek_object_type_lookup: RECORD_TYPE_RECORD,
-            },
-        }));
-
-        const { getByTestId, rerender } = setup();
-
-        mockFormState.formState.isSubmitting = false;
-        mockFormState.formState.isSubmitSuccessful = true;
-
-        setup({}, rerender);
-        fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(mockUseNavigate).toHaveBeenCalledTimes(0);
-    });
-
-    it('should handle cancel action of submit confirmation for existing record', () => {
-        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_display_type: 187,
-                rek_object_type_lookup: RECORD_TYPE_RECORD,
-                rek_pid: 'UQ:111111',
-            },
-        }));
-
-        const { getByTestId, rerender } = setup();
-
-        mockFormState.formState.isSubmitting = false;
-        mockFormState.formState.isSubmitSuccessful = true;
-        setup({}, rerender);
-        fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(mockUseNavigate).toHaveBeenCalledWith('/view/UQ:111111');
-    });
-
-    it('should call method to show submit confirmation', () => {
-        const mockUseRef = jest.spyOn(React, 'useRef');
-        const testFn = jest.fn();
-        mockUseRef.mockImplementation(() => ({
-            current: {
-                showConfirmation: testFn,
-            },
-        }));
-        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
-        useRecordContext.mockImplementation(() => ({}));
-
-        mockFormState.formState.isSubmitting = false;
-        mockFormState.formState.isSubmitSuccessful = true;
-        setup({});
-        expect(testFn).toHaveBeenCalledTimes(1);
-
-        mockUseRef.mockRestore();
     });
 
     it('should render a title with html correctly', () => {
@@ -796,6 +709,25 @@ describe('AdminInterface component', () => {
         expect(mockUseNavigate).toHaveBeenCalledWith('/admin/add');
     });
 
+    it('should call method to show submit confirmation', () => {
+        const mockUseRef = jest.spyOn(React, 'useRef');
+        const testFn = jest.fn();
+        mockUseRef.mockImplementation(() => ({
+            current: {
+                showConfirmation: testFn,
+            },
+        }));
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({}));
+
+        setup({
+            submitSucceeded: true,
+        });
+        expect(testFn).toHaveBeenCalledTimes(1);
+
+        mockUseRef.mockRestore();
+    });
+
     it('should call method to handle cancel of the form for new record', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         useRecordContext.mockImplementation(() => ({
@@ -828,7 +760,52 @@ describe('AdminInterface component', () => {
         expect(mockUseNavigate).toHaveBeenCalledWith('/view/UQ:111111');
     });
 
-    it('should render unpublish button for published record', async () => {
+    it('should handle cancel action of submit confirmation for new record', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: RECORD_TYPE_RECORD,
+            },
+        }));
+
+        const { getByTestId, rerender } = setup();
+
+        setup(
+            {
+                submitSucceeded: true,
+            },
+            rerender,
+        );
+
+        fireEvent.click(getByTestId('cancel-dialog-box'));
+        expect(mockUseNavigate).toHaveBeenCalledTimes(0);
+    });
+
+    it('should handle cancel action of submit confirmation for existing record', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: RECORD_TYPE_RECORD,
+                rek_pid: 'UQ:111111',
+            },
+        }));
+
+        const { getByTestId, rerender } = setup();
+
+        setup(
+            {
+                submitSucceeded: true,
+            },
+            rerender,
+        );
+        fireEvent.click(getByTestId('cancel-dialog-box'));
+        expect(mockUseNavigate).toHaveBeenCalledWith('/view/UQ:111111');
+    });
+
+    it('should render unpublish button for published record', () => {
+        onSubmit.mockImplementation(() => {});
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         useRecordContext.mockImplementation(() => ({
             record: {
@@ -840,7 +817,7 @@ describe('AdminInterface component', () => {
                 rek_display_type: 179,
             },
         }));
-        const handleSubmit = jest.fn();
+        const handleSubmit = jest.fn(f => f({ setIn: jest.fn() }));
         const { getByTestId } = setup({
             handleSubmit,
             tabs: {
@@ -852,12 +829,12 @@ describe('AdminInterface component', () => {
         });
 
         fireEvent.click(getByTestId('unpublish-admin-top'));
-        expect(handleSubmit).toHaveBeenCalledTimes(1);
-        expect(mockFormState.handleSubmit).toHaveBeenCalledTimes(3);
+        expect(handleSubmit).toHaveBeenCalledTimes(2);
+        expect(onSubmit).toHaveBeenCalledTimes(2);
 
         fireEvent.click(getByTestId('unpublish-admin'));
         expect(handleSubmit).toHaveBeenCalledTimes(2);
-        expect(mockFormState.handleSubmit).toHaveBeenCalledTimes(4);
+        expect(onSubmit).toHaveBeenCalledTimes(2);
     });
 
     it('should render publish button for unpublished record (status = 1)', () => {
@@ -909,6 +886,7 @@ describe('AdminInterface component', () => {
         const useIsUserSuperAdmin = jest.spyOn(UseIsUserSuperAdmin, 'useIsUserSuperAdmin');
         useIsUserSuperAdmin.mockImplementation(() => true);
 
+        onSubmit.mockImplementation(() => {});
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         useRecordContext.mockImplementation(() => ({
             record: {
@@ -920,7 +898,7 @@ describe('AdminInterface component', () => {
                 rek_display_type: 179,
             },
         }));
-        const handleSubmit = jest.fn();
+        const handleSubmit = jest.fn(f => f({ setIn: jest.fn() }));
         const { getByTestId } = setup({
             handleSubmit,
             tabs: {
@@ -933,7 +911,7 @@ describe('AdminInterface component', () => {
 
         fireEvent.click(getByTestId('retract-admin-top'));
         expect(handleSubmit).toHaveBeenCalled();
-        expect(mockFormState.handleSubmit).toHaveBeenCalled();
+        expect(onSubmit).toHaveBeenCalled();
     });
 
     it('should render error', () => {
@@ -942,7 +920,7 @@ describe('AdminInterface component', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 
         const { getByTestId } = setup({
-            handleSubmit: jest.fn(),
+            handleSubmit: jest.fn(f => f({ setIn: jest.fn() })),
             error: { message: 'error' },
             tabs: {
                 bibliographic: {
@@ -951,8 +929,9 @@ describe('AdminInterface component', () => {
                 },
             },
         });
+
         expect(getByTestId('alert')).toHaveTextContent(
-            'Error - Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later',
+            'Error - Error has occurred during request and request cannot be processed. error Please contact eSpace administrators or try again later',
         );
     });
 
@@ -961,9 +940,11 @@ describe('AdminInterface component', () => {
         useIsUserSuperAdmin.mockImplementationOnce(() => true);
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 
+        const error = 'Title is required';
         const { getByTestId } = setup({
-            handleSubmit: jest.fn(),
-            formErrors: { bibliographicSection: { rek_title: 'Title is required' } },
+            handleSubmit: jest.fn(f => f({ setIn: jest.fn() })),
+            formErrors: { bibliographicSection: { rek_title: error } },
+            error: { message: 'error' },
             tabs: {
                 bibliographic: {
                     activated: true,
@@ -971,6 +952,7 @@ describe('AdminInterface component', () => {
                 },
             },
         });
+
         expect(getByTestId('alert')).toHaveTextContent(/Title is required/);
     });
 });

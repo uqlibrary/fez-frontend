@@ -461,7 +461,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r9:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
@@ -577,7 +577,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                   data-testid="document-type-selector"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rb:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
@@ -911,7 +911,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r1:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
@@ -1027,7 +1027,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                   data-testid="document-type-selector"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r3:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
@@ -1508,7 +1508,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r4b:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
@@ -1624,7 +1624,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                   data-testid="document-type-selector"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r47:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
@@ -2030,7 +2030,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r38:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
@@ -2146,7 +2146,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                   data-testid="document-type-selector"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r3a:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
@@ -2580,7 +2580,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":ri:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
@@ -2695,7 +2695,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   data-testid="document-type-selector"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rk:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
@@ -3054,7 +3054,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r32:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
@@ -3170,7 +3170,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                   data-testid="document-type-selector"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r34:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
@@ -3581,7 +3581,7 @@ exports[`SearchComponent should update advanced search row on search text change
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r3t:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
@@ -3696,7 +3696,7 @@ exports[`SearchComponent should update advanced search row on search text change
                   data-testid="document-type-selector"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r3v:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
@@ -4055,7 +4055,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r4p:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
@@ -4171,7 +4171,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   data-testid="document-type-selector"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r4r:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
@@ -4794,7 +4794,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r4p:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
@@ -4910,7 +4910,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   data-testid="document-type-selector"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r4r:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"

@@ -23,7 +23,9 @@ jest.mock('@react-google-maps/api', () => ({
 function setup(testProps = {}) {
     const props = {
         country: testProps.country || 'AU',
-        onChange: jest.fn(),
+        input: {
+            onChange: jest.fn(),
+        },
         ...testProps,
     };
 

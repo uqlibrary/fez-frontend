@@ -13,39 +13,6 @@ exports[`RichEditor should handle null value 1`] = `
 </div>
 `;
 
-exports[`RichEditor should render alternative error from react-hook-form 1`] = `
-<div>
-  <div
-    data-analyticsid="rek-test"
-    data-testid="rek-test"
-    id="rek-test"
-  >
-    <span>
-      <p
-        class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
-      >
-        This is title with error
-        <span>
-           *
-        </span>
-      </p>
-      <span
-        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-      >
-        This is description with error
-      </span>
-    </span>
-    <div />
-    <span
-      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-      style="display: inline-block;"
-    >
-      This field is required
-    </span>
-  </div>
-</div>
-`;
-
 exports[`RichEditor should render component 1`] = `
 <div>
   <div
@@ -123,39 +90,6 @@ exports[`RichEditor should render error as react children 1`] = `
 </div>
 `;
 
-exports[`RichEditor should render error from react-hook-form 1`] = `
-<div>
-  <div
-    data-analyticsid="rek-test"
-    data-testid="rek-test"
-    id="rek-test"
-  >
-    <span>
-      <p
-        class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
-      >
-        This is title with error
-        <span>
-           *
-        </span>
-      </p>
-      <span
-        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-      >
-        This is description with error
-      </span>
-    </span>
-    <div />
-    <span
-      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-      style="display: inline-block;"
-    >
-      This field is required
-    </span>
-  </div>
-</div>
-`;
-
 exports[`RichEditor should render error showing input length 1`] = `
 <div>
   <div
@@ -175,7 +109,7 @@ exports[`RichEditor should render error showing input length 1`] = `
       </span>
     </span>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
       style="display: inline-block;"
     >
       18
@@ -206,7 +140,7 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
       </span>
     </span>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
       style="display: inline-block;"
     >
       0
@@ -251,7 +185,7 @@ exports[`RichEditor should render given title and description with error 1`] = `
   >
     <span>
       <p
-        class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
       >
         This is title with error
         <span>
@@ -259,7 +193,7 @@ exports[`RichEditor should render given title and description with error 1`] = `
         </span>
       </p>
       <span
-        class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
       >
         This is description with error
       </span>
@@ -271,19 +205,6 @@ exports[`RichEditor should render given title and description with error 1`] = `
     >
       This field is required
     </span>
-  </div>
-</div>
-`;
-
-exports[`RichEditor should render input text value 1`] = `
-<div>
-  <div
-    data-analyticsid="rek-test"
-    data-testid="rek-test"
-    id="rek-test"
-  >
-    <span />
-    <div />
   </div>
 </div>
 `;
@@ -310,32 +231,6 @@ exports[`RichEditor should render maxValue with missing instructions 1`] = `
 `;
 
 exports[`RichEditor should render plain text value 1`] = `
-<div>
-  <div
-    data-analyticsid="rek-test"
-    data-testid="rek-test"
-    id="rek-test"
-  >
-    <span />
-    <div />
-  </div>
-</div>
-`;
-
-exports[`RichEditor should render redux value using htmlText 1`] = `
-<div>
-  <div
-    data-analyticsid="rek-test"
-    data-testid="rek-test"
-    id="rek-test"
-  >
-    <span />
-    <div />
-  </div>
-</div>
-`;
-
-exports[`RichEditor should render redux value using plainText 1`] = `
 <div>
   <div
     data-analyticsid="rek-test"

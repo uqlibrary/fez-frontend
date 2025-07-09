@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useValidatedForm } from 'hooks';
-import { useWatch } from 'react-hook-form';
-import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+import { propTypes } from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 import { parseHtmlToJSX } from 'helpers/general';
 import moment from 'moment';
-import { CURRENT_LICENCES, NEW_DATASET_DEFAULT_VALUES } from 'config/general';
-import * as actions from 'actions';
-import { useDispatch } from 'react-redux';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -15,21 +11,20 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import {
-    AuthorIdField,
-    FieldOfResearchListField,
-    RelatedDatasetAndPublicationListField,
-} from 'modules/SharedComponents/LookupFields';
+import { FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
-import { KeywordsForm, NewListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { NewListEditorField, KeywordsForm } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
+import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
+import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { default as Divider } from 'modules/SharedComponents/Toolbox/Divider';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import DepositAgreementField from './DepositAgreementField';
 
-import { DATASET_ACCESS_CONDITIONS_OPTIONS, pathConfig, validation } from 'config';
+import { pathConfig, validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
+import { CURRENT_LICENCES } from 'config/general';
 import componentLocale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { locale } from 'locale';
@@ -40,19 +35,29 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { useNavigate } from 'react-router-dom';
-import { createNewRecord, doesDOIExist } from 'actions';
-import validationErrors from '../../../locale/validationErrors';
+import { dateRange as validateDateRange } from 'config/validation';
 
 /**
  * @param {object} value
  * @param {object} values
  * @return {string}
  */
-const dateRange = data =>
-    validation.dateRange(
-        data?.fez_record_search_key_start_date?.rek_start_date,
-        data?.fez_record_search_key_end_date?.rek_end_date,
-    );
+const dateRange = (value, values) => {
+    const lowerInRange =
+        !!values.toJS().fez_record_search_key_start_date &&
+        !!values.toJS().fez_record_search_key_start_date.rek_start_date &&
+        moment(values.toJS().fez_record_search_key_start_date.rek_start_date);
+    const higherInRange =
+        !!values.toJS().fez_record_search_key_end_date &&
+        !!values.toJS().fez_record_search_key_end_date.rek_end_date &&
+        moment(values.toJS().fez_record_search_key_end_date.rek_end_date);
+
+    if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
+        return locale.validationErrors.dateRange;
+    } else {
+        return '';
+    }
+};
 
 /*
  * given an array of licenses containing a heading and an array of description lines,
@@ -73,72 +78,54 @@ export const licenseText = licenses => {
         .join('');
 };
 
-export const AddDataCollection = ({ disableSubmit, ...props }) => {
-    const {
-        handleSubmit,
-        reset: resetForm,
-        control,
-        formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
-    } = useValidatedForm({
-        // use values instead of defaultValues, as the first triggers a re-render upon updates
-        values: {
-            ...NEW_DATASET_DEFAULT_VALUES,
-        },
-        shouldValidate: true,
-    });
-    const [apiError, setApiError] = React.useState('');
+const usePrevious = value => {
+    const ref = React.useRef();
+    React.useEffect(() => {
+        ref.current = value;
+    }, [value]);
+    return ref.current;
+};
 
+export const AddDataCollection = ({ author, disableSubmit, actions, isSessionValid, resetForm, ...props }) => {
     const navigate = useNavigate();
+    const previous = usePrevious(props.submitSucceeded);
     const confirmationBoxRef = React.useRef();
 
-    const setConfirmationRef = React.useCallback(node => {
-        node && (confirmationBoxRef.current = node);
-    }, []);
     React.useEffect(() => {
-        if (isSubmitSuccessful && !!!apiError) {
-            confirmationBoxRef.current?.showConfirmation();
-        } else {
-            confirmationBoxRef.current?._hideConfirmation();
+        if (previous !== undefined && previous !== props.submitSucceeded) {
+            confirmationBoxRef.current.showConfirmation();
         }
-    }, [isSubmitSuccessful, apiError]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [props.submitSucceeded]);
+
+    const setConfirmationRef = React.useCallback(node => {
+        confirmationBoxRef.current = node; // TODO: Add check that this worked
+    }, []);
 
     const _navigateToMyDatasets = () => {
-        resetForm?.();
+        resetForm();
         actions.clearNewRecord();
         navigate(pathConfig.dataset.mine);
     };
 
     const _restartWorkflow = () => {
-        resetForm?.();
+        resetForm();
         window.location.reload();
     };
 
     const txt = formLocale.addDataset;
     const txtFoR = componentLocale.components.fieldOfResearchForm;
-
-    const [startDate, endDate] = useWatch({
-        control,
-        name: ['fez_record_search_key_start_date.rek_start_date', 'fez_record_search_key_end_date.rek_end_date'],
-    });
-    const dateError =
-        !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
-            ? validationErrors.validationErrors.collectionDateRange
-            : '';
-
-    const validateDOI = async doi => {
-        if (!!!doi) return null;
-        try {
-            const response = await doesDOIExist(doi);
-            return response?.total ? validationErrors.validationErrors.doiExists : null;
-        } catch (error) {
-            return locale.validationErrors.doi;
-        }
-    };
+    const formValues = props.formValues && props.formValues.toJS();
+    const hasDateError = validateDateRange(
+        formValues.fez_record_search_key_start_date?.rek_start_date,
+        formValues.fez_record_search_key_end_date?.rek_end_date,
+    );
 
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
         ...props,
-        formErrors: errors,
+        author,
+        isSessionValid,
         dirty: true,
         alertLocale: {
             validationAlert: { ...formLocale.validationAlert },
@@ -188,88 +175,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         return template;
     };
 
-    const dispatch = useDispatch();
-    const onSubmit = async data => {
-        const errorDoi = await validateDOI(data.fez_record_search_key_doi.rek_doi);
-        if (errorDoi) {
-            setApiError(errorDoi);
-            return;
-        }
-
-        // '' to []
-        const specialKeys = [
-            'fez_record_search_key_grant_agency',
-            'fez_record_search_key_grant_id',
-            'fez_record_search_key_keywords',
-            'fez_record_search_key_software_required',
-            'fez_record_search_key_type_of_data',
-        ];
-        const convertedData = Object.keys(data).reduce((acc, key) => {
-            acc[key] = specialKeys.includes(key) && data[key] === '' ? [] : data[key];
-            return acc;
-        }, {});
-        // unset empty value
-        const fieldsToUnset = [
-            // "fez_record_search_key_isdatasetof",
-            'fez_record_search_key_doi.rek_doi',
-            'fez_record_search_key_end_date.rek_end_date',
-            'fez_record_search_key_notes.rek_notes',
-            'fez_record_search_key_publisher.rek_publisher',
-            'fez_record_search_key_start_date.rek_start_date',
-        ];
-        fieldsToUnset.forEach(field => {
-            const parts = field.split('.');
-            let current = convertedData;
-            let parent = null;
-            let keyToDelete = null;
-
-            parts.forEach((part, index) => {
-                if (index === parts.length - 1) {
-                    // If the final key's value is an empty string, mark it for deletion
-                    if (current && current[part] === '') {
-                        keyToDelete = part;
-                        parent = current;
-                    }
-                } else {
-                    parent = current;
-                    current = current[part];
-                }
-            });
-
-            // Delete the key from its parent if needed
-            if (parent && keyToDelete) {
-                delete parent[keyToDelete];
-            }
-        });
-
-        // Remove empty parent objects
-        Object.keys(convertedData).forEach(key => {
-            if (
-                typeof convertedData[key] === 'object' &&
-                convertedData[key] !== null &&
-                Object.keys(convertedData[key]).length === 0
-            ) {
-                delete convertedData[key];
-            }
-        });
-        const cleanValues = { ...convertedData };
-
-        // set default values for a new unapproved record and handle submission
-        try {
-            await dispatch(createNewRecord(cleanValues));
-            setApiError('');
-            // Form submission successful
-        } catch (error) {
-            let err = error.message;
-            const originalMessage = error?.original?.error?.message;
-            err += originalMessage && ' ' + originalMessage;
-            setApiError(err);
-        }
-    };
-
     return (
         <StandardPage title={txt.pageTitle}>
-            <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
+            <ConfirmDiscardFormChanges dirty={props.dirty} submitSucceeded={props.submitSucceeded}>
                 <form>
                     <ConfirmDialogBox
                         onRef={setConfirmationRef}
@@ -277,20 +185,22 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                         onCancelAction={_restartWorkflow}
                         locale={saveConfirmationLocale}
                     />
-                    <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
+                    <NavigationDialogBox
+                        when={props.dirty && !props.submitSucceeded}
+                        txt={txt.cancelWorkflowConfirmation}
+                    />
                     <Grid container spacing={3} className={'DataCollection'}>
                         <Grid xs={12}>
                             <StandardCard title={txt.information.agreement.title}>
                                 <Grid container spacing={3} padding={0}>
                                     <Grid xs={12}>
                                         <Field
-                                            control={control}
                                             component={DepositAgreementField}
                                             depositAgreement={txt.information.agreement.text}
                                             name="rek_copyright"
                                             required
                                             validate={[validation.requireChecked]}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             depositAgreementFieldId="rek-copyright"
                                         />
                                     </Grid>
@@ -302,9 +212,8 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 <Grid container spacing={3} padding={0}>
                                     <Grid xs={12} sm={12}>
                                         <Field
-                                            control={control}
                                             component={TextField}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             textFieldId="rek-title"
                                             name="rek_title"
                                             required
@@ -317,9 +226,8 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12} sm={12}>
                                         <Field
-                                            control={control}
                                             component={TextField}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             name="rek_description"
                                             textFieldId="rek-description"
                                             required
@@ -332,9 +240,8 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12} sm={6}>
                                         <Field
-                                            control={control}
                                             component={TextField}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             name="contact.contactName"
                                             textFieldId="rek-contributor"
                                             required
@@ -345,10 +252,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12} sm={6}>
                                         <Field
-                                            control={control}
                                             id="contact-name-id-auto-complete"
                                             component={AuthorIdField}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             name="contact.contactNameId"
                                             fullWidth
                                             required
@@ -359,9 +265,8 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12} sm={12}>
                                         <Field
-                                            control={control}
                                             component={TextField}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             name="contact.contactEmail"
                                             textFieldId="rek-contact-details-email"
                                             required
@@ -372,9 +277,8 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12} sm={12}>
                                         <Field
-                                            control={control}
                                             component={TextField}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             name="fez_record_search_key_doi.rek_doi"
                                             textFieldId="rek-doi"
                                             type="text"
@@ -385,9 +289,8 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12} sm={6}>
                                         <Field
-                                            control={control}
                                             component={TextField}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             name="fez_record_search_key_publisher.rek_publisher"
                                             textFieldId="rek-publisher"
                                             type="text"
@@ -397,9 +300,8 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12} sm={6}>
                                         <Field
-                                            control={control}
                                             component={PartialDateField}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             partialDateFieldId="rek-date"
                                             name="rek_date"
                                             allowPartial
@@ -419,7 +321,6 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                             >
                                 <Typography>{txt.information.fieldOfResearchCodes.text}</Typography>
                                 <Field
-                                    control={control}
                                     component={FieldOfResearchListField}
                                     name="fieldOfResearch"
                                     listEditorId="field-of-research"
@@ -427,7 +328,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     validate={[validation.forRequired]}
                                     hideReorder
                                     distinctOnly
-                                    disabled={isSubmitting}
+                                    disabled={props.submitting}
                                     locale={txt.information.fieldOfResearchCodes.field}
                                 />
                             </StandardCard>
@@ -435,7 +336,6 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                         <Grid xs={12} className={'Creators'}>
                             <StandardCard title={txt.information.creator.title}>
                                 <Field
-                                    control={control}
                                     component={ContributorsEditorField}
                                     name="authors"
                                     contributorEditorId="rek-author"
@@ -443,7 +343,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     showIdentifierLookup
                                     locale={txt.information.creator.field}
                                     required
-                                    disabled={isSubmitting}
+                                    disabled={props.submitting}
                                     validate={[validation.requiredList]}
                                 />
                             </StandardCard>
@@ -456,13 +356,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 <Grid container spacing={3} padding={0}>
                                     <Grid xs={12} sm={12} md={4}>
                                         <Field
-                                            control={control}
                                             component={NewGenericSelectField}
                                             id="data-collection-access-selector"
                                             name="fez_record_search_key_access_conditions.rek_access_conditions"
                                             required
                                             validate={[validation.required]}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             itemsList={DATASET_ACCESS_CONDITIONS_OPTIONS}
                                             genericSelectFieldId="rek-access-conditions"
                                             {...txt.information.accessAndLicensing.fieldLabels.accessConditions}
@@ -470,23 +369,21 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12} sm={12} md={4}>
                                         <Field
-                                            control={control}
                                             component={NewGenericSelectField}
                                             genericSelectFieldId="rek-license"
                                             id="data-collection-licence-selector"
                                             name="fez_record_search_key_license.rek_license"
                                             required
                                             validate={[validation.required]}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             itemsList={CURRENT_LICENCES}
                                             {...selectFields.license}
                                         />
                                     </Grid>
                                     <Grid xs={12} sm={12} md={4}>
                                         <Field
-                                            control={control}
                                             component={TextField}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             name="fez_record_search_key_rights.rek_rights"
                                             textFieldId="rek-rights"
                                             type="text"
@@ -502,9 +399,8 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 <Grid container spacing={3} padding={0}>
                                     <Grid xs={12}>
                                         <Field
-                                            control={control}
                                             component={TextField}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             name="fez_record_search_key_project_name.rek_project_name"
                                             textFieldId="rek-project-name"
                                             required
@@ -518,9 +414,8 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12}>
                                         <Field
-                                            control={control}
                                             component={TextField}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             name="fez_record_search_key_project_description.rek_project_description"
                                             textFieldId="rek-project-description"
                                             required
@@ -535,7 +430,6 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
 
                                     <Grid xs={12}>
                                         <Field
-                                            control={control}
                                             component={NewListEditorField}
                                             listEditorId="rek-grant-agency"
                                             name="fez_record_search_key_grant_agency"
@@ -545,19 +439,18 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                                 order: 'rek_grant_agency_order',
                                             }}
                                             locale={locale.components.fundingBodyForm.field}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                         />
                                     </Grid>
                                     <Grid xs={12}>
                                         <Field
-                                            control={control}
                                             component={NewListEditorField}
                                             listEditorId="rek-grant-id"
                                             name="fez_record_search_key_grant_id"
                                             maxCount={10}
                                             searchKey={{ value: 'rek_grant_id', order: 'rek_grant_id_order' }}
                                             locale={locale.components.grantIdForm.field}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                         />
                                     </Grid>
                                 </Grid>
@@ -568,7 +461,6 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 <Grid container spacing={3} padding={0}>
                                     <Grid xs={12}>
                                         <Field
-                                            control={control}
                                             component={NewListEditorField}
                                             listEditorId="rek-type-of-data"
                                             name="fez_record_search_key_type_of_data"
@@ -578,7 +470,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                                 order: 'rek_type_of_data_order',
                                             }}
                                             locale={locale.components.typeOfDataForm.fieldDataset}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                         />
                                     </Grid>
                                     <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
@@ -586,7 +478,6 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12}>
                                         <Field
-                                            control={control}
                                             component={NewListEditorField}
                                             listEditorId="rek-software-required"
                                             name="fez_record_search_key_software_required"
@@ -596,7 +487,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                                 order: 'rek_software_required_order',
                                             }}
                                             locale={locale.components.softwareRequiredForm.field}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                         />
                                     </Grid>
                                     <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
@@ -604,14 +495,13 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12}>
                                         <Field
-                                            control={control}
                                             component={NewListEditorField}
                                             listEditorId="rek-keywords"
                                             name="fez_record_search_key_keywords"
                                             maxCount={10}
                                             searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                             locale={locale.components.keywordsForm.field}
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             ListEditorForm={KeywordsForm}
                                         />
                                     </Grid>
@@ -620,7 +510,6 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12} sm={6}>
                                         <Field
-                                            control={control}
                                             component={PartialDateField}
                                             partialDateFieldId="rek-start-date"
                                             disableFuture
@@ -630,27 +519,25 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             floatingTitle={
                                                 txt.information.optionalDatasetDetails.fieldLabels.collectionStart.label
                                             }
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             validate={[dateRange]}
-                                            hasError={dateError}
+                                            hasError={hasDateError}
                                         />
                                     </Grid>
                                     <Grid xs={12} sm={6}>
                                         <Field
-                                            control={control}
                                             component={PartialDateField}
                                             partialDateFieldId="rek-end-date"
                                             disableFuture
-                                            allowPartial
                                             autoOk
                                             floatingTitle={
                                                 txt.information.optionalDatasetDetails.fieldLabels.collectionEnd.label
                                             }
                                             name="fez_record_search_key_end_date.rek_end_date"
                                             id="rek_end_date"
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             validate={[dateRange]}
-                                            hasError={dateError}
+                                            hasError={hasDateError}
                                         />
                                     </Grid>
                                 </Grid>
@@ -667,9 +554,8 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     }
                                 </Typography>
                                 <Field
-                                    control={control}
                                     component={GeoCoordinatesField}
-                                    disabled={isSubmitting}
+                                    disabled={props.submitting}
                                     name="geographicArea"
                                 />
                             </StandardCard>
@@ -679,13 +565,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 title={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets.title}
                             >
                                 <Field
-                                    control={control}
                                     component={RelatedDatasetAndPublicationListField}
                                     listEditorId="related-datasets"
                                     name="fez_record_search_key_isdatasetof"
                                     locale={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets}
                                     searchKey={{ value: 'rek_isdatasetof', order: 'rek_isdatasetof_order' }}
-                                    disabled={isSubmitting}
+                                    disabled={props.submitting}
                                     height={50}
                                 />
                             </StandardCard>
@@ -695,12 +580,11 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 <Grid container spacing={2} padding={0}>
                                     <Grid xs={12}>
                                         <Field
-                                            control={control}
                                             component={TextField}
                                             name="fez_record_search_key_notes.rek_notes"
                                             textFieldId="rek-additional-notes"
                                             type="text"
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             fullWidth
                                             multiline
                                             {...txt.information.additionalNotes.fieldLabels.notes}
@@ -708,12 +592,11 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     </Grid>
                                     <Grid xs={12}>
                                         <Field
-                                            control={control}
                                             component={TextField}
                                             name="rek_link"
                                             textFieldId="rek-link"
                                             type="text"
-                                            disabled={isSubmitting}
+                                            disabled={props.submitting}
                                             fullWidth
                                             {...txt.information.additionalNotes.fieldLabels.links}
                                             validate={[validation.url]}
@@ -725,10 +608,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                         <Grid xs={12}>
                             <StandardCard title={txt.fileUpload.title}>
                                 <Field
-                                    control={control}
                                     name="files"
                                     component={FileUploadField}
-                                    disabled={isSubmitting}
+                                    disabled={props.submitting}
                                     requireOpenAccessStatus
                                     locale={txt.fileUpload.fileUploader}
                                     validate={[validation.validFileUpload]}
@@ -736,15 +618,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                             </StandardCard>
                         </Grid>
 
-                        {alertProps && !isSubmitSuccessful && (
+                        {alertProps && !props.submitSucceeded && (
                             <Grid xs={12}>
                                 <Alert {...alertProps} />
-                            </Grid>
-                        )}
-
-                        {!!apiError && (
-                            <Grid xs={12}>
-                                <Alert alertId="api-error-alert" type="error_outline" message={apiError} />
                             </Grid>
                         )}
                     </Grid>
@@ -756,7 +632,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 fullWidth
                                 children={formLocale.addDataset.cancel}
                                 aria-label={formLocale.addDataset.cancel}
-                                disabled={isSubmitting}
+                                disabled={props.submitting}
                                 onClick={_restartWorkflow}
                                 color={'default'}
                             />
@@ -770,8 +646,8 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 fullWidth
                                 children={formLocale.addDataset.submit}
                                 aria-label={formLocale.addDataset.submit}
-                                onClick={handleSubmit(onSubmit)}
-                                disabled={isSubmitting || disableSubmit || JSON.stringify(errors) !== '{}'}
+                                onClick={props.handleSubmit}
+                                disabled={props.submitting || disableSubmit}
                             />
                         </Grid>
                     </Grid>
@@ -781,8 +657,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
     );
 };
 AddDataCollection.propTypes = {
+    ...propTypes, // all redux-form props
+    author: PropTypes.object,
     disableSubmit: PropTypes.bool,
-    newRecordFileUploadingOrIssueError: PropTypes.bool,
+    actions: PropTypes.object,
+    isSessionValid: PropTypes.bool,
+    resetForm: PropTypes.any,
 };
 
 export default AddDataCollection;

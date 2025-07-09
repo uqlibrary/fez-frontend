@@ -35,10 +35,10 @@ export const UqIdField = props => {
         ],
     };
 
-    const { authorsListLoading, authorsList } = useSelector(state => state.get('authorsReducer'));
+    const _itemsList = useSelector(state => state.get('authorsReducer').authorsList || []);
     const itemsList = React.useMemo(
         () =>
-            (authorsList || [])
+            _itemsList
                 .filter(
                     item =>
                         !!item.aut_org_username || !!item.aut_student_username || !!item.aut_ref_num || !item.aut_id,
@@ -48,14 +48,17 @@ export const UqIdField = props => {
                     id: item.aut_id,
                     ...item,
                 })),
-        [authorsList],
+        [_itemsList],
     );
+    const itemsLoading =
+        useSelector(state => state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading) || false;
+
     return (
         <AutoCompleteAsynchronousField
             {...props}
             autoCompleteAsynchronousFieldId={props.uqIdFieldId || 'aut-id'}
             itemsList={itemsList}
-            itemsLoading={authorsListLoading}
+            itemsLoading={itemsLoading}
             defaultValue={(!!props.value && { value: props.value }) || null}
             getOptionLabel={
                 (!!props.getOptionLabel && props.getOptionLabel) || (option => (option && option.value) || '')
@@ -64,14 +67,15 @@ export const UqIdField = props => {
                 const fuseAutocompleteOptions = new Fuse(options, fuseOptions);
                 return fuseAutocompleteOptions.search(inputValue).map(item => item.item);
             }}
-            error={!!props.state?.error}
-            errorText={props.state?.error || props.hintText || 'Enter a value to search'}
+            error={!!props.meta && !!props.meta.error}
+            errorText={(!!props.meta && props.meta.error) || props.hintText || 'Enter a value to search'}
             floatingLabelText={props.floatingLabelText || 'UQ Identifier'}
             OptionTemplate={GenericOptionTemplate}
             disabled={props.disabled}
             loadSuggestions={loadSuggestions}
             clearSuggestions={() => dispatch(actions.clearAuthorsSuggestions())}
-            onClear={!!props?.value ? props.onClear : () => {}}
+            onChange={(!!props.input && props.input.onChange) || props.onChange}
+            onClear={!!props.value || (!!props.input && !!props.input.value) ? props.onClear : () => {}}
         />
     );
 };

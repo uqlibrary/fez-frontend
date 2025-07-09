@@ -1,1 +1,1 @@
-export { default as GrantListEditorField } from './components/GrantListEditor';
+export { default as GrantListEditorField } from './GrantListEditorField';

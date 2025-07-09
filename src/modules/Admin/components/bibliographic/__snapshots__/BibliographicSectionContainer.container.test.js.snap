@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BibliographicSectionContainer component should render default view 1`] = `
+<Context.Provider
+  value={
+    {
+      "formValues": {},
+    }
+  }
+>
+  <Memo(BibliographicSection) />
+</Context.Provider>
+`;
+
+exports[`BibliographicSectionContainer component should render disabled view 1`] = `
+<Context.Provider
+  value={
+    {
+      "formValues": {},
+    }
+  }
+>
+  <Memo(BibliographicSection)
+    disabled={true}
+  />
+</Context.Provider>
+`;

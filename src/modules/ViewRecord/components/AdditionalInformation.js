@@ -15,15 +15,7 @@ import { parseHtmlToJSX } from 'helpers/general';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
-import {
-    CURRENT_LICENCES,
-    NTRO_SUBTYPE_CW_TEXTUAL_WORK,
-    PLACEHOLDER_ISO8601_ZULU_DATE,
-    PUBLICATION_TYPE_INSTRUMENT,
-    ORCID_BASE_URL,
-    ROR_BASE_URL,
-} from 'config/general';
-import { isValidOrcid, isValidROR } from 'config/validation';
+import { CURRENT_LICENCES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
@@ -223,61 +215,11 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     };
 
     // TODO: display original contact email for admin users
-    const renderContactEmail = (objects, subKey) => {
-        const isInstrument = publication.rek_display_type === PUBLICATION_TYPE_INSTRUMENT;
-        const email = isInstrument ? objects[0][subKey] : viewRecordsConfig.genericDataEmail;
+    const renderContactEmail = () => {
         return (
-            <a href={`mailto:${email}`} data-testid="rek-contact-details-email">
-                {email}
+            <a href={`mailto:${viewRecordsConfig.genericDataEmail}`} data-testid="rek-contact-details-email">
+                {viewRecordsConfig.genericDataEmail}
             </a>
-        );
-    };
-
-    const renderContributorIdentifier = (objects, subKey) => {
-        const id = objects[0][subKey];
-        let link = null;
-
-        if (isValidOrcid(id)) {
-            link = `${ORCID_BASE_URL}/${id}`;
-        } else {
-            /* istanbul ignore else */
-            if (isValidROR(id)) {
-                link = `${ROR_BASE_URL}/${id}`;
-            }
-        }
-
-        return link ? (
-            <ExternalLink id={'rek-contributor-identifier'} data-testid={'rek-contributor-identifier'} href={link}>
-                {id}
-            </ExternalLink>
-        ) : (
-            id
-        );
-    };
-
-    const renderAlternateIdentifier = publication => {
-        const ids = publication.fez_record_search_key_alternate_identifier;
-        return (
-            <Box component={'ul'} key={'alternate-identifier'} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                {ids.map((item, index) => (
-                    <li key={`alternate-identifier-${index}`} data-testid={`alternate-identifier-${index}`}>
-                        {(() => {
-                            const identifier = item.rek_alternate_identifier;
-                            const order = item.rek_alternate_identifier_order;
-                            const typeObject = publication.fez_record_search_key_alternate_identifier_type?.find(
-                                identifierType => identifierType.rek_alternate_identifier_type_order === order,
-                            );
-
-                            if (typeObject) {
-                                const identifierType = getData(typeObject, 'rek_alternate_identifier_type');
-                                return `${identifier} (${identifierType})`;
-                            } else {
-                                return identifier;
-                            }
-                        })()}
-                    </li>
-                ))}
-            </Box>
         );
     };
 
@@ -377,8 +319,6 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
 
     const renderObjectList = (objects, subkey, publication) => {
         switch (subkey) {
-            case 'rek_alternate_identifier':
-                return renderAlternateIdentifier(publication);
             case 'rek_author':
                 return renderAuthors(publication);
             case 'rek_contributor':
@@ -390,13 +330,9 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             case 'rek_alternate_genre':
                 return renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_contact_details_email':
-                return renderContactEmail(objects, subkey);
-            case 'rek_contributor_identifier':
-                return renderContributorIdentifier(objects, subkey);
+                return renderContactEmail();
             case 'rek_geographic_area':
                 return renderMap(objects);
-            case 'rek_raid':
-                return renderList(objects, subkey, pathConfig.list.raid);
             case 'rek_subject':
                 return renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_sdg_source':

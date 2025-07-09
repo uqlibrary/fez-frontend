@@ -53,7 +53,6 @@ context('As an admin,', () => {
             .find('h2')
             .should('contain', 'Work has been added');
     });
-
     describe('Author Affiliations', () => {
         beforeEach(() => {
             cy.visit('/admin/add?user=uqstaff');
@@ -346,38 +345,6 @@ context('As an admin,', () => {
             cy.get('[data-testid=expandPanelIcon-78152]')
                 .should('exist')
                 .click();
-        });
-    });
-
-    describe('Changing the display type', () => {
-        it('does not force a subtype error', () => {
-            cy.visit('/admin/add?user=uqstaff');
-
-            // Choose a collection
-            cy.get('[data-testid=rek-ismemberof-input]').type('a');
-            cy.clickAutoSuggestion('rek-ismemberof', 0);
-
-            // Choose display type
-            cy.get('[data-testid=rek-display-type-select]').click();
-            cy.get('[data-testid=rek-display-type-options]')
-                .contains('li', 'Journal Article')
-                .click();
-
-            // Change display type
-            cy.get('[data-testid=rek-display-type-select]').click();
-            cy.get('[data-testid=rek-display-type-options]')
-                .contains('li', 'Working Paper')
-                .click();
-
-            // Apply selections
-            cy.get('button')
-                .contains('Create work')
-                .should('exist')
-                .click();
-
-            cy.data('alert-message').within(() => {
-                cy.get('li').should('not.contain', 'Work subtype is required');
-            });
         });
     });
 });

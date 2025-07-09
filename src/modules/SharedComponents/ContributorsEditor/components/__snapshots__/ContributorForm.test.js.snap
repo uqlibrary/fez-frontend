@@ -19,14 +19,13 @@ exports[`Component ContributorForm should render with default props 1`] = `
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-        data-testid="name-as-published"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
-          data-testid="name-as-published-label"
-          for="name-as-published-input"
-          id="name-as-published-label"
+          data-testid="undefined-label"
+          for="undefined-input"
+          id="undefined-label"
         >
           Name as published
         </label>
@@ -38,9 +37,9 @@ exports[`Component ContributorForm should render with default props 1`] = `
             aria-label="Name as published"
             autocomplete="off"
             class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-            data-analyticsid="name-as-published-input"
-            data-testid="name-as-published-input"
-            id="name-as-published-input"
+            data-analyticsid="undefined-input"
+            data-testid="undefined-input"
+            id="undefined-input"
             label="Name as published"
             placeholder="Please type the name exactly as published"
             type="text"

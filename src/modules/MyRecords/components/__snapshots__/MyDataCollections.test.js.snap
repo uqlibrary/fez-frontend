@@ -305,7 +305,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
-                            aria-controls="<dynamic>"
+                            aria-controls=":r0:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="sort-by-label"
@@ -354,7 +354,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
-                            aria-controls="<dynamic>"
+                            aria-controls=":r1:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="sort-order-label"
@@ -403,7 +403,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
-                            aria-controls="<dynamic>"
+                            aria-controls=":r2:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="page-size-label"
@@ -674,7 +674,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
-                            aria-controls="<dynamic>"
+                            aria-controls=":r4:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="sort-by-label"
@@ -723,7 +723,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
-                            aria-controls="<dynamic>"
+                            aria-controls=":r5:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="sort-order-label"
@@ -772,7 +772,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
-                            aria-controls="<dynamic>"
+                            aria-controls=":r6:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="page-size-label"

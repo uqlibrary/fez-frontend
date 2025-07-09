@@ -1,24 +1,20 @@
 import React from 'react';
 import GrantListEditor from './GrantListEditor';
+import Immutable from 'immutable';
 import { rtlRender, fireEvent, within } from 'test-utils';
-import { FormProvider } from 'react-hook-form';
 
-const mockSetValue = jest.fn();
 function setup(testProps = {}) {
     const props = {
         disabled: false,
-        state: {},
+        meta: {},
         onChange: jest.fn(),
         locale: {},
+        input: {},
         required: true,
         hideType: false,
         ...testProps,
     };
-    return rtlRender(
-        <FormProvider setValue={mockSetValue}>
-            <GrantListEditor {...props} />
-        </FormProvider>,
-    );
+    return rtlRender(<GrantListEditor {...props} />);
 }
 
 describe('GrantListEditor', () => {
@@ -33,14 +29,16 @@ describe('GrantListEditor', () => {
 
     it('should render with default given value', () => {
         const { container } = setup({
-            name: 'TestField',
-            value: [
-                {
-                    grantAgencyName: 'Testing',
-                    grantId: '1234',
-                    grantAgencyType: 'Test',
-                },
-            ],
+            input: {
+                name: 'TestField',
+                value: [
+                    {
+                        grantAgencyName: 'Testing',
+                        grantId: '1234',
+                        grantAgencyType: 'Test',
+                    },
+                ],
+            },
             locale: {
                 form: {},
             },
@@ -50,7 +48,7 @@ describe('GrantListEditor', () => {
 
     it('should render error from props', () => {
         const { container } = setup({
-            state: {
+            meta: {
                 error: <span>Some error</span>,
             },
         });
@@ -59,7 +57,7 @@ describe('GrantListEditor', () => {
 
     it('should render error from props as children', () => {
         const { container } = setup({
-            state: {
+            meta: {
                 error: (
                     <p>
                         <span>Test error 1</span>
@@ -73,49 +71,65 @@ describe('GrantListEditor', () => {
 
     it('should render string error from props', () => {
         const { container } = setup({
-            state: {
+            meta: {
                 error: 'Test error',
             },
         });
         expect(container).toMatchSnapshot();
     });
 
-    it('should render with default given value is List', () => {
+    it('should render with default given value is Immutable List', () => {
         const { container } = setup({
-            name: 'TestField',
-            value: [
-                {
-                    grantAgencyName: 'Testing',
-                    grantId: '1234',
-                    grantAgencyType: 'Test',
-                },
-            ],
+            input: {
+                name: 'TestField',
+                value: Immutable.List([
+                    {
+                        grantAgencyName: 'Testing',
+                        grantId: '1234',
+                        grantAgencyType: 'Test',
+                    },
+                ]),
+            },
         });
         expect(container).toMatchSnapshot();
     });
 
     it('should update on receiving new props', () => {
-        const value = {
-            grantAgencyName: 'Testing',
-            grantId: '1234',
-            grantAgencyType: 'Test',
-        };
+        const onChangeFn = jest.fn();
         let props = {
-            name: 'TestField',
-            value: [value],
+            input: {
+                name: 'TestField',
+                value: [
+                    {
+                        grantAgencyName: 'Testing',
+                        grantId: '1234',
+                        grantAgencyType: 'Test',
+                    },
+                ],
+            },
+            onChange: onChangeFn,
         };
         const { container, rerender } = setup(props);
         expect(container).toMatchSnapshot();
 
         props = {
             classes: {},
-            name: 'TestField',
-            value: [value],
+            input: {
+                name: 'TestField',
+                value: [
+                    {
+                        grantAgencyName: 'Test',
+                        grantId: '123',
+                        grantAgencyType: 'Testing',
+                    },
+                ],
+            },
+            onChange: onChangeFn,
         };
 
         rerender(<GrantListEditor {...props} />);
-        expect(mockSetValue).toHaveBeenCalledWith('TestField', [], { shouldValidate: true });
-        expect(mockSetValue).toHaveBeenCalledWith('TestField', [value], { shouldValidate: true });
+
+        expect(onChangeFn).toHaveBeenCalled();
     });
 
     it('should add grant to the list', () => {
@@ -156,8 +170,10 @@ describe('GrantListEditor', () => {
         };
 
         const { container } = setup({
-            name: 'test',
-            value: [grant1, grant2, grant3, grant4],
+            input: {
+                name: 'test',
+                value: [grant1, grant2, grant3, grant4],
+            },
             classes: {
                 scroll: 'scroll-class',
             },
@@ -179,8 +195,10 @@ describe('GrantListEditor', () => {
         };
 
         const { getByTestId, container } = setup({
-            name: 'test',
-            value: [grant1, grant2],
+            input: {
+                name: 'test',
+                value: [grant1, grant2],
+            },
         });
         expect(container).toMatchSnapshot();
 
@@ -201,8 +219,10 @@ describe('GrantListEditor', () => {
         };
 
         const { getByTestId, container } = setup({
-            name: 'test',
-            value: [grant1],
+            input: {
+                name: 'test',
+                value: [grant1],
+            },
         });
         expect(container).toMatchSnapshot();
 
@@ -227,8 +247,10 @@ describe('GrantListEditor', () => {
         };
 
         const { getByTestId, container } = setup({
-            name: 'test',
-            value: [grant1, grant2],
+            input: {
+                name: 'test',
+                value: [grant1, grant2],
+            },
         });
         expect(container).toMatchSnapshot();
 
@@ -252,8 +274,10 @@ describe('GrantListEditor', () => {
         };
 
         const { getByTestId, container } = setup({
-            name: 'test',
-            value: [grant1, grant2],
+            input: {
+                name: 'test',
+                value: [grant1, grant2],
+            },
         });
         expect(container).toMatchSnapshot();
 
@@ -278,8 +302,10 @@ describe('GrantListEditor', () => {
         };
 
         const { getByTestId, container } = setup({
-            name: 'test',
-            value: [grant1, grant2],
+            input: {
+                name: 'test',
+                value: [grant1, grant2],
+            },
         });
         expect(container).toMatchSnapshot();
 
@@ -304,8 +330,10 @@ describe('GrantListEditor', () => {
         };
 
         const { getByRole, getByTestId, container } = setup({
-            name: 'test',
-            value: [grant1, grant2],
+            input: {
+                name: 'test',
+                value: [grant1, grant2],
+            },
         });
         expect(container).toMatchSnapshot();
         fireEvent.click(getByRole('button', { name: 'Remove all entries' }));
@@ -328,8 +356,10 @@ describe('GrantListEditor', () => {
 
         const { getByTestId, getByRole } = setup({
             canEdit: true,
-            name: 'test',
-            value: [grant1, grant2],
+            input: {
+                name: 'test',
+                value: [grant1, grant2],
+            },
         });
 
         let grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
@@ -349,7 +379,7 @@ describe('GrantListEditor', () => {
         const inputName = 'my-input';
         const { getByRole } = setup({
             onChange: mockOnChange,
-            name: inputName,
+            input: { name: inputName },
         });
 
         fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
@@ -357,5 +387,19 @@ describe('GrantListEditor', () => {
         expect(mockOnChange).not.toHaveBeenCalledWith([]);
         expect(mockSetValue).toHaveBeenCalledWith(inputName, true, { shouldValidate: true });
         expect(mockSetValue).toHaveBeenCalledWith(inputName, [], { shouldValidate: true });
+    });
+
+    describe('Legacy redux-form', () => {
+        it('should call onChange on state change', () => {
+            const mockOnChange = jest.fn();
+
+            const { getByRole } = setup({
+                onChange: mockOnChange,
+            });
+
+            fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
+            expect(mockOnChange).toHaveBeenCalledWith(true);
+            expect(mockOnChange).toHaveBeenCalledWith([]);
+        });
     });
 });

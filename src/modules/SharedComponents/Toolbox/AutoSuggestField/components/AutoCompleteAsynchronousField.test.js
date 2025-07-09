@@ -159,7 +159,6 @@ describe('AutoCompleteAsynchronousField component', () => {
     });
 
     it('should not remove provided suggestions on close when clearSuggestionsOnClose is set to false', async () => {
-        // eslint-disable-next-line react/prop-types
         const OptionTemplate = ({ option }) => <div data-testid="option-template">{option}</div>;
 
         const { getByTestId } = setup({
@@ -183,28 +182,5 @@ describe('AutoCompleteAsynchronousField component', () => {
         await waitForTextToBeRemoved('cherry');
         await waitForTextToBeRemoved('chevy');
         await triggerOpen();
-    });
-
-    describe('Handling default values', () => {
-        it('should render default value if in object format', async () => {
-            const { getByTestId } = setup({
-                getOptionLabel: option => option.value,
-                defaultValue: { value: 'apple' },
-            });
-            expect(getByTestId('autocomplete-asynchronous-field-input')).toHaveValue('apple');
-        });
-        it('should render default value if in nested object format', async () => {
-            const { getByTestId } = setup({
-                getOptionLabel: option => option.value,
-                defaultValue: { value: { value: 'banana' } },
-            });
-            expect(getByTestId('autocomplete-asynchronous-field-input')).toHaveValue('banana');
-        });
-        it('should render default value if in non-object format', async () => {
-            const { getByTestId } = setup({
-                defaultValue: 'lemon',
-            });
-            expect(getByTestId('autocomplete-asynchronous-field-input')).toHaveValue('lemon');
-        });
     });
 });

@@ -6,8 +6,8 @@ export const RelatedDatasetAndPublicationListField = fieldProps => {
     return (
         <LookupListEditor
             inputField={TitleOrPidField}
-            error={!!fieldProps.state?.error}
-            errorText={fieldProps.state?.error}
+            errorText={fieldProps.meta ? fieldProps.meta.error : null}
+            onChange={fieldProps.input?.onChange}
             transformFunction={(searchKey, item, index) => ({
                 [searchKey.value]: item.id,
                 [searchKey.order]: index + 1,
