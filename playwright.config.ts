@@ -4,6 +4,7 @@ import { Config as IstanbulMergerConfig } from './playwright/lib/coverage/Istanb
 export const istanbulReportPartialsDir = 'coverage/playwright/partials';
 
 export default defineConfig({
+    outputDir: 'playwright/.results',
     testDir: 'playwright/tests',
     timeout: 30 * 1000, // cy alike
     expect: {

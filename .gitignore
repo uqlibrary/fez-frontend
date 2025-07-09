@@ -31,8 +31,5 @@ cypress/downloads/*
 .nyc_output
 
 # Playwright
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/monocart-report/
+/playwright/.results
+/playwright/.cache
