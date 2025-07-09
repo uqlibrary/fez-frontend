@@ -44,7 +44,7 @@ const useServerData = ({ actions, pageSize = 20, pageIndex = 0 }) => {
         pageIndex,
         pageSize,
         search: '',
-        pageCount: 0,
+        resultCount: 0,
     });
     const dispatch = useDispatch();
     const {
@@ -73,7 +73,7 @@ const useServerData = ({ actions, pageSize = 20, pageIndex = 0 }) => {
                         data: response.data,
                         pageIndex: response.page,
                         pageSize: response.size,
-                        pageCount: response.totalCount ?? (response.data?.length + 1 || 0),
+                        resultCount: response.totalCount ?? (response.data?.length + 1 || 0),
                     }));
                 })
                 .catch(e => {
@@ -162,10 +162,11 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         userAdding,
         pageIndex,
         pageSize,
+        resultCount,
         data: list,
         onPaginationChange,
     } = useServerData({ actions });
-    console.log(pageIndex, pageSize);
+
     const validationRules = [];
     const {
         data,
@@ -412,6 +413,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         enableSelectAll: true,
         positionActionsColumn: 'last',
         manualPagination: true,
+        rowCount: resultCount,
         onPaginationChange: onPaginationChange,
         state: {
             showAlertBanner: false,
