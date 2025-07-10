@@ -41,7 +41,6 @@ cypress/e2e/changeDisplayType.spec.js
 cypress/e2e/strategic-publishing/comparison.spec.js
 cypress/e2e/strategic-publishing/favourites.spec.js
 cypress/e2e/strategic-publishing/search.spec.js
-cypress/e2e/addMissingRecord.spec.js
 cypress/e2e/thesis.spec.js
 cypress/e2e/search.spec.js
 cypress/e2e/dataCollection.spec.js
