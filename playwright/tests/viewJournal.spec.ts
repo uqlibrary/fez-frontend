@@ -42,20 +42,20 @@ test.describe('view Journal', () => {
 
     test('should have an advisory statement', async ({ page }) => {
         await page.goto('/journal/view/12');
-        await expect(page.locator('[data-testid=alert]')).toContainText('Advisory statement');
+        await expect(page.getByTestId('alert')).toContainText('Advisory statement');
     });
 
     test.describe('admin', () => {
         test('should show a larger admin menu button in desktop view', async ({ page }) => {
             await page.setViewportSize({ width: 1200, height: 1000 });
             await page.goto('/journal/view/12?user=uqstaff');
-            await expect(page.locator('[data-testid=admin-actions-button]')).toHaveClass(/MuiIconButton-sizeLarge/);
+            await expect(page.getByTestId('admin-actions-button')).toHaveClass(/MuiIconButton-sizeLarge/);
         });
 
         test('should show a small admin menu button in mobile view', async ({ page }) => {
             await page.setViewportSize({ width: 480, height: 1000 });
             await page.goto('/journal/view/12?user=uqstaff');
-            await expect(page.locator('[data-testid=admin-actions-button]')).toHaveClass(/MuiIconButton-sizeSmall/);
+            await expect(page.getByTestId('admin-actions-button')).toHaveClass(/MuiIconButton-sizeSmall/);
         });
 
         test('should navigate to the edit admin journal page and use current page url as navigatedFrom value', async ({
@@ -63,7 +63,7 @@ test.describe('view Journal', () => {
             baseURL,
         }) => {
             await page.goto('/journal/view/12?user=uqstaff');
-            await page.locator('[data-testid=admin-actions-button]').click();
+            await page.getByTestId('admin-actions-button').click();
             await page
                 .locator('[role="menuitem"]')
                 .first()
@@ -78,7 +78,7 @@ test.describe('view Journal', () => {
             baseURL,
         }) => {
             await page.goto('/journal/view/12?user=uqstaff#test');
-            await page.locator('[data-testid=admin-actions-button]').click();
+            await page.getByTestId('admin-actions-button').click();
             await page
                 .locator('[role="menuitem"]')
                 .first()
@@ -90,7 +90,7 @@ test.describe('view Journal', () => {
             test('should handle disabling lock without losing record details', async ({ page }) => {
                 await page.goto('/admin/journal/edit/12?user=uqstaff');
 
-                const alert = page.locator('[data-testid=alert]');
+                const alert = page.getByTestId('alert');
                 await expect(alert).toContainText('THIS WORK IS LOCKED');
 
                 const fields = [
@@ -109,21 +109,18 @@ test.describe('view Journal', () => {
 
                 const ckContent = await page.locator('.ck-content').innerText();
 
-                await expect(page.locator('[data-testid=jnl_issn_jid-list-row-0]')).toContainText('0388-0001');
-                await expect(page.locator('[data-testid=jnl_issn_jid-list-row-1]')).toContainText('2169-0375');
-
-                await page.locator('[data-testid=action-button]').click();
-
+                await expect(page.getByTestId('jnl_issn_jid-list-row-0')).toContainText('0388-0001');
+                await expect(page.getByTestId('jnl_issn_jid-list-row-1')).toContainText('2169-0375');
+                await page.getByTestId('action-button').click();
                 await expect(alert).toHaveCount(0);
 
                 for (const field of fields) {
-                    await expect(page.locator(`[data-testid=${field}]`)).toHaveValue(fieldValues[field]);
+                    await expect(page.getByTestId(field)).toHaveValue(fieldValues[field]);
                 }
 
                 await expect(page.locator('.ck-content')).toHaveText(ckContent);
-
-                await expect(page.locator('[data-testid=jnl_issn_jid-list-row-0]')).toContainText('0388-0001');
-                await expect(page.locator('[data-testid=jnl_issn_jid-list-row-1]')).toContainText('2169-0375');
+                await expect(page.getByTestId('jnl_issn_jid-list-row-0')).toContainText('0388-0001');
+                await expect(page.getByTestId('jnl_issn_jid-list-row-1')).toContainText('2169-0375');
             });
         });
     });

@@ -15,15 +15,15 @@ test.describe('Favourite searches', () => {
         await page.goto('/admin/favourite-search?user=uqstaff');
 
         // Rename first item
-        await page.locator('[data-testid="favourite-search-list-item-1-edit"]').click();
-        const descInput = page.locator('[data-testid="fvs-description-input"]');
+        await page.getByTestId('favourite-search-list-item-1-edit').click();
+        const descInput = page.getByTestId('fvs-description-input');
         await descInput.fill('New value test');
-        await page.locator('[data-testid="favourite-search-list-item-1-save"]').click();
-        await expect(page.locator('[data-testid="fvs-description-1"]')).toContainText('New value test');
+        await page.getByTestId('favourite-search-list-item-1-save').click();
+        await expect(page.getByTestId('fvs-description-1')).toContainText('New value test');
 
         // Delete that item
-        await page.locator('[data-testid="favourite-search-list-item-1-delete"]').click();
-        await page.locator('[data-testid="favourite-search-list-item-1-save"]').click();
-        await expect(page.locator('[data-testid="fvs-description-1"]')).toHaveCount(0);
+        await page.getByTestId('favourite-search-list-item-1-delete').click();
+        await page.getByTestId('favourite-search-list-item-1-save').click();
+        await expect(page.getByTestId('fvs-description-1')).toHaveCount(0);
     });
 });

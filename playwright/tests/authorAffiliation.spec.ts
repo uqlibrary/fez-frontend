@@ -6,7 +6,7 @@ test.describe('Record with invalid affiliation', () => {
         await page.goto('/view/UQ:871c1f8?user=uqstaff');
 
         // Open the affiliation error drawer
-        const toggleIcon = page.locator('[data-testid="error-affiliation-toggle-icon"]');
+        const toggleIcon = page.getByTestId('error-affiliation-toggle-icon');
         await expect(toggleIcon).toHaveCount(1);
         await toggleIcon.click();
 
@@ -34,7 +34,7 @@ test.describe('Record with invalid affiliation', () => {
         await cancelTop.click();
 
         // Verify page-title reads 'Chick'
-        const pageTitle = page.locator('[data-testid="page-title"]');
+        const pageTitle = page.getByTestId('page-title');
         await expect(pageTitle).toContainText('Chick');
     });
 });

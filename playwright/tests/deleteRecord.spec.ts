@@ -31,7 +31,7 @@ const assertNavigatedToViewPage = async (page: Page, record: any) => {
 
 const triggerReasonFieldValidationError = async (page: Page) => {
     await fillInput(page, selectors.reasonInput, 'a', 256);
-    await expect(page.locator('[data-testid=reason-helper-text]')).toContainText('Must be 255 characters or less');
+    await expect(page.getByTestId('reason-helper-text')).toContainText('Must be 255 characters or less');
 };
 
 test.describe('Delete work form', () => {
@@ -47,9 +47,7 @@ test.describe('Delete work form', () => {
         await expect(cards.nth(0).locator('h3')).toHaveText('Work to be deleted');
 
         await expect(cards.locator('.publicationCitation h6 a')).toContainText(record.rek_title);
-        await expect(page.locator('[data-testid=rek-content-indicator]')).toContainText(
-            'Scholarship of Teaching and Learning',
-        );
+        await expect(page.getByTestId('rek-content-indicator')).toContainText('Scholarship of Teaching and Learning');
         await expect(page.locator('text=Describe the reason to delete this work')).toBeVisible();
 
         await expect(page.getByRole('button', { name: 'Cancel' })).toBeEnabled();
@@ -72,7 +70,7 @@ test.describe('Delete work form', () => {
                 await assertTriggersDisabled(page, selectors.submitButton, async () => {
                     await triggerReasonFieldValidationError(page);
                     await fillInput(page, '[data-testid=rek-doi-resolution-url-input]', 'bad.url');
-                    await expect(page.locator('[data-testid=rek-doi-resolution-url-helper-text]')).toContainText(
+                    await expect(page.getByTestId('rek-doi-resolution-url-helper-text')).toContainText(
                         'URL is not valid',
                     );
                 });
@@ -83,9 +81,7 @@ test.describe('Delete work form', () => {
                 await assertTriggersDisabled(page, selectors.submitButton, async () => {
                     await triggerReasonFieldValidationError(page);
                     await fillInput(page, '[data-testid=rek-new-doi-input]', '10.123.bad-doi');
-                    await expect(page.locator('[data-testid=rek-new-doi-helper-text]')).toContainText(
-                        'DOI is not valid',
-                    );
+                    await expect(page.getByTestId('rek-new-doi-helper-text')).toContainText('DOI is not valid');
                     await typeCKEditor(page, 'rek-deletion-notes', 'a'.repeat(2001));
                     const count = await page.locator('[data-testid=rek-deletion-notes] span').count();
                     await expect(page.locator('[data-testid=rek-deletion-notes] span').nth(count - 3)).toContainText(
@@ -98,14 +94,14 @@ test.describe('Delete work form', () => {
         test.describe('server', () => {
             test('should display "not found" message on 404', async ({ page }) => {
                 await loadPage(page, { rek_pid: 'UQ:abc123' });
-                await expect(page.locator('[data-testid=page-title]')).toContainText('Work not found');
+                await expect(page.getByTestId('page-title')).toContainText('Work not found');
             });
 
             test('should display error message on server error', async ({ page }) => {
                 await loadPage(page, recordThatFailsDeletion);
                 await expect(page.locator(selectors.submitButton)).toBeEnabled();
                 await page.click(selectors.submitButton);
-                await expect(page.locator('[data-testid=ErrorOutlineIcon]')).toBeVisible();
+                await expect(page.getByTestId('ErrorOutlineIcon')).toBeVisible();
                 await expect(page.locator(selectors.submitButton)).toBeEnabled();
                 await expect(page.locator(selectors.cancelButton)).toBeEnabled();
             });
@@ -114,7 +110,7 @@ test.describe('Delete work form', () => {
                 await loadPage(page, collectionRecord);
                 await expect(page.locator(selectors.submitButton)).toBeEnabled();
                 await page.click(selectors.submitButton);
-                await expect(page.locator('[data-testid=ErrorOutlineIcon]')).toBeVisible();
+                await expect(page.getByTestId('ErrorOutlineIcon')).toBeVisible();
                 await expect(page.locator(selectors.submitButton)).toBeEnabled();
                 await expect(page.locator(selectors.cancelButton)).toBeEnabled();
             });
