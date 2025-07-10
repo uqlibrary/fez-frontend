@@ -22,19 +22,6 @@ const loadPage = record => {
     cy.visit(`/admin/delete/${record.rek_pid}?user=uqstaff`);
 };
 
-const submit = () => {
-    const deleteFormLocale = formsLocale.forms.deleteRecordForm;
-    cy.assertEnabled(selectors.submitButton).click();
-    cy.get('[data-testid=alert] .alert-text')
-        .should('contain', deleteFormLocale.progressAlert.title)
-        .should('contain', deleteFormLocale.progressAlert.message);
-    cy.get('[data-testid=alert] .alert-text')
-        .should('contain', deleteFormLocale.successAlert.title)
-        .should('contain', deleteFormLocale.successAlert.message);
-    cy.contains('h2', deleteFormLocale.successWorkflowConfirmation.confirmationTitle).should('have.length', 1);
-    cy.contains('button', deleteFormLocale.successWorkflowConfirmation.confirmButtonLabel).click();
-};
-
 const assertNavigatedToViewPage = record => {
     cy.url().should('equal', `${baseUrl}/view/${record.rek_pid}`);
 };

@@ -37,6 +37,7 @@ export default class Reporter implements Base {
             console.log(`\nSkipping Istanbul Coverage Merger ... misconfigured, please check it's configuration\n`);
             return;
         }
+        if (testResult.status === 'interrupted') return;
         // skip for failed test, unless explicitly specified
         if (testResult.status === 'failed' && this.config.bailOnTestFailure !== false) return;
 

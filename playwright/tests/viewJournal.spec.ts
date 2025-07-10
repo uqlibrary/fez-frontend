@@ -4,9 +4,11 @@ import { assertIsNotVisible, assertIsVisible } from '../lib/utils';
 test.describe('view Journal', () => {
     async function tabVisibleInWindow(page: Page, tabId: string, shouldBeVisible: boolean, buttonType = 'ssci') {
         const selector = `button[data-testid="journal-details-tab-fez-journal-jcr-${buttonType}-category-${tabId}-heading"]`;
-        shouldBeVisible
-            ? await assertIsVisible(page.locator(selector))
-            : await assertIsNotVisible(page.locator(selector));
+        if (shouldBeVisible) {
+            await assertIsVisible(page.locator(selector));
+            return;
+        }
+        await assertIsNotVisible(page.locator(selector));
     }
 
     test('should have appropriate scroll buttons', async ({ page }) => {
@@ -101,7 +103,6 @@ test.describe('view Journal', () => {
                 ];
 
                 const fieldValues = {};
-
                 for (const field of fields) {
                     fieldValues[field] = await page.locator(`[data-testid=${field}]`).inputValue();
                 }

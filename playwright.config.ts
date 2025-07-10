@@ -1,7 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 import { Config as IstanbulMergerConfig } from './playwright/lib/coverage/istanbul/Reporter';
-
-export const istanbulReportPartialsDir = 'coverage/playwright/partials';
+import { baseURL, istanbulReportPartialsDir } from './playwright/support/constants';
 
 export default defineConfig({
     outputDir: 'playwright/.results',
@@ -10,7 +9,7 @@ export default defineConfig({
     expect: {
         timeout: 10000, // cy alike
     },
-    fullyParallel: true,
+    fullyParallel: process.env.PW_SERIAL === 'true' ? false : true,
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 0,
     workers: process.env.CI ? '100%' : '75%',
@@ -25,10 +24,10 @@ export default defineConfig({
         ],
     ],
     use: {
-        baseURL: 'http://localhost:3000',
+        baseURL,
         // collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer
         // trace: 'on-first-retry',
-        headless: true,
+        headless: process.env.PW_HEADED === 'true' ? false : true,
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
@@ -48,7 +47,7 @@ export default defineConfig({
     ],
     webServer: {
         command: 'npm run start:mock',
-        url: 'http://localhost:3000',
+        url: baseURL,
         timeout: 5 * 60 * 1000,
         reuseExistingServer: !process.env.CI,
     },

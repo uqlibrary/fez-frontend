@@ -1,6 +1,6 @@
 import { test as base } from '@playwright/test';
 import { collectCoverageAsync } from './coverage/istanbul/collectCoverageAsync';
-import { istanbulReportPartialsDir } from '../../playwright.config';
+import { istanbulReportPartialsDir } from '../support/constants';
 
 export * from '@playwright/test';
 
