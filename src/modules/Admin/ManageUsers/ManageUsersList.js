@@ -7,18 +7,20 @@ import moment from 'moment';
 import { upperFirst } from 'lodash';
 
 // eslint-disable-next-line camelcase
-import { MaterialReactTable, useMaterialReactTable, MRT_EditActionButtons } from 'material-react-table';
+import { MaterialReactTable, useMaterialReactTable, MRT_GlobalFilterTextField } from 'material-react-table';
 
-import Backdrop from '@mui/material/Backdrop';
+import { throttle } from 'throttle-debounce';
+
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import InputAdornment from '@mui/material/InputAdornment';
+import TextField from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
+import ClearIcon from '@mui/icons-material/Clear';
 
-import { DialogActions, DialogContent, DialogTitle } from '@mui/material';
-
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 import { tableIcons } from './ManageUsersListIcons';
@@ -29,8 +31,6 @@ import ColumnData from './partials/ColumnData';
 import { default as locale } from 'locale/components';
 import { loadUserList } from 'actions';
 import { BULK_DELETE_USER_SUCCESS } from 'config/general';
-import UserDetailsRow from './partials/UserDetailsRow';
-import UserDetailsHeader from './partials/UserDetailsHeader';
 import { clearAlerts } from './helpers';
 
 import { useMrtTable } from 'hooks';
@@ -44,7 +44,7 @@ const useServerData = ({ actions, pageSize = TABLE_PAGE_SIZE_DEFAULT, pageIndex 
         data: [],
         pageIndex,
         pageSize,
-        search: '',
+        searchTerm: '',
         resultCount: 0,
     });
     const dispatch = useDispatch();
@@ -66,7 +66,7 @@ const useServerData = ({ actions, pageSize = TABLE_PAGE_SIZE_DEFAULT, pageIndex 
     const read = useCallback(
         payload => {
             console.log('request', payload);
-            dispatch(actions.read({ page: payload.pageIndex, pageSize: payload.pageSize, search: payload.search }))
+            dispatch(actions.read({ page: payload.pageIndex, pageSize: payload.pageSize, search: payload.searchTerm }))
                 .then(response => {
                     console.log(response);
                     setState(prev => ({
@@ -83,6 +83,12 @@ const useServerData = ({ actions, pageSize = TABLE_PAGE_SIZE_DEFAULT, pageIndex 
         },
         [actions, dispatch],
     );
+
+    const onSearchTermChange = term => {
+        const newState = { ...state, searchTerm: term };
+        setState(newState);
+        read(newState);
+    };
 
     const onPaginationChange = updater => {
         // Updater can be a function or a value
@@ -101,8 +107,6 @@ const useServerData = ({ actions, pageSize = TABLE_PAGE_SIZE_DEFAULT, pageIndex 
     }, [read]);
 
     return {
-        onPaginationChange,
-        onSetPageSize,
         userListLoading,
         userListLoadingError,
         userListItemUpdating,
@@ -116,6 +120,9 @@ const useServerData = ({ actions, pageSize = TABLE_PAGE_SIZE_DEFAULT, pageIndex 
         userAddError,
         bulkUserDeleteMessages,
         ...state,
+        onPaginationChange,
+        onSearchTermChange,
+        onSetPageSize,
     };
 };
 useServerData.propTypes = {
@@ -145,6 +152,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         },
         form: {
             locale: { addButtonTooltip, bulkDeleteButtonTooltip, editButtonTooltip, deleteButtonTooltip },
+            deleteConfirmationLocale,
             bulkDeleteConfirmationLocale,
         },
     } = locale.components.manageUsers;
@@ -161,30 +169,27 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         userListItemUpdating,
         userListItemDeleting,
         userAdding,
+        searchTerm,
         pageIndex,
         pageSize,
         resultCount,
         data: list,
         onPaginationChange,
+        onSearchTermChange,
     } = useServerData({ actions });
 
     const {
         data,
         isBusy,
-        pendingDeleteRowId,
+        pendingDeleteRowId: pendingDeleteRowIndex,
         isOpen,
         editingRow,
-        validationErrors,
         setData,
         setBusy,
         setDeleteRow,
         resetDeleteRow,
         setEditRow,
         resetEditRow,
-        validate,
-        getValidationError,
-        handleValidation,
-        clearValidationErrors,
     } = useMrtTable(list);
 
     const columns = React.useMemo(
@@ -273,7 +278,6 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
     );
 
     const handleSave = table => (mode, newData, oldData) => {
-        // materialTable.setState(prevState => {
         setBusy();
         if (mode === 'add') {
             onRowAdd(newData)
@@ -301,67 +305,65 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     resetEditRow();
                 });
         }
-        // else {
-        //     const index = oldData.tableData.id;
-        //     materialTable.props.editable
-        //         .onRowDelete(oldData)
-        //         .then(() => {
-        //             materialTable.setState(prevState => {
-        //                 materialTable.dataManager.setData([
-        //                     ...prevState.data.slice(0, index),
-        //                     ...prevState.data.slice(index + 1),
-        //                 ]);
-        //                 return {
-        //                     ...materialTable.dataManager.getRenderState(),
-        //                     showAddRow: false,
-        //                 };
-        //             });
-        //         })
-        //         .catch(() => {
-        //             materialTable.setState(prevState => {
-        //                 materialTable.dataManager.setData([...prevState.data]);
-        //                 return {
-        //                     ...materialTable.dataManager.getRenderState(),
-        //                     showAddRow: false,
-        //                 };
-        //             });
-        //         });
-        // }
+    };
+    const handleDelete = () => {
+        const row = data[pendingDeleteRowIndex];
+        setBusy();
+        onRowDelete(row)
+            .then(() => {
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                        const dataDelete = [...data];
+                        dataDelete.splice(pendingDeleteRowIndex, 1);
+                        setData([...dataDelete]);
+                        resolve();
+                    }, 1000);
+                });
+            })
+            .catch(() => setData(prev => [...prev]))
+            .finally(() => {
+                setBusy(false);
+                resetDeleteRow();
+            });
     };
 
-    // const handleBulkDelete = () => {
-    //     const rowsSelected = materialTable.dataManager.data.filter(row => !!row.tableData.checked);
-    //     onBulkRowDelete(rowsSelected)
-    //         .then(response => {
-    //             materialTable.setState(
-    //                 prevState => {
-    //                     const newList = [...prevState.data];
-    //                     for (const [userId, message] of Object.entries(response)) {
-    //                         message === BULK_DELETE_USER_SUCCESS &&
-    //                             newList.splice(
-    //                                 newList.findIndex(user => String(user.usr_id) === String(userId)),
-    //                                 1,
-    //                             );
-    //                     }
-    //                     materialTable.dataManager.changeAllSelected(false);
-    //                     materialTable.dataManager.setData(newList);
-    //                     return {
-    //                         ...materialTable.dataManager.getRenderState(),
-    //                     };
-    //                 },
-    //                 () => materialTable.onSelectionChange(),
-    //             );
-    //         })
-    //         .catch(() => {
-    //             materialTable.setState(prevState => {
-    //                 materialTable.dataManager.changeAllSelected(false);
-    //                 materialTable.dataManager.setData([...prevState.data]);
-    //                 return {
-    //                     ...materialTable.dataManager.getRenderState(),
-    //                 };
-    //             });
-    //         });
-    // };
+    const handleBulkDelete = () => {
+        // const rowsSelected = materialTable.dataManager.data.filter(row => !!row.tableData.checked);
+        // onBulkRowDelete(rowsSelected)
+        //     .then(response => {
+        //         materialTable.setState(
+        //             prevState => {
+        //                 const newList = [...prevState.data];
+        //                 for (const [userId, message] of Object.entries(response)) {
+        //                     message === BULK_DELETE_USER_SUCCESS &&
+        //                         newList.splice(
+        //                             newList.findIndex(user => String(user.usr_id) === String(userId)),
+        //                             1,
+        //                         );
+        //                 }
+        //                 materialTable.dataManager.changeAllSelected(false);
+        //                 materialTable.dataManager.setData(newList);
+        //                 return {
+        //                     ...materialTable.dataManager.getRenderState(),
+        //                 };
+        //             },
+        //             () => materialTable.onSelectionChange(),
+        //         );
+        //     })
+        //     .catch(() => {
+        //         materialTable.setState(prevState => {
+        //             materialTable.dataManager.changeAllSelected(false);
+        //             materialTable.dataManager.setData([...prevState.data]);
+        //             return {
+        //                 ...materialTable.dataManager.getRenderState(),
+        //             };
+        //         });
+        //     });
+    };
+
+    const handleSearch = e => {
+        throttle(1000, onSearchTermChange(e?.target?.value || ''), { noTrailing: true });
+    };
 
     const handleCancel = table => () => {
         console.log('cancel', editingRow);
@@ -478,22 +480,57 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             />
         ),
         renderTopToolbarCustomActions: ({ table }) => (
-            <Button
-                id={`users-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                data-testid={`users-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                disabled={disabled}
-                variant="contained"
-                color="primary"
-                children={addButtonTooltip}
-                onClick={() => {
-                    resetEditRow();
-                    table.setEditingRow(null);
-                    table.setCreatingRow(true);
-                    // immediately force validation of new row
-                    handleValidation({ id: 'mrt-row-create' }, columns[0].accessorKey, '');
-                }}
-                sx={{ marginLeft: 'auto' }}
-            />
+            <Box
+                sx={theme => ({
+                    display: 'flex',
+                    backgroundColor: 'inherit',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    flexGrow: 1,
+                    gap: 1,
+                    padding: '24px 16px',
+                    '@media max-width: 768px': {
+                        flexDirection: 'column',
+                    },
+                })}
+            >
+                <TextField
+                    title=""
+                    placeholder="Search users"
+                    variant="standard"
+                    inputProps={{ inputMode: 'search' }}
+                    InputProps={{
+                        startAdornment: (
+                            <InputAdornment position="start">
+                                <SearchIcon />
+                            </InputAdornment>
+                        ),
+                        endAdornment: (
+                            <InputAdornment position="end">
+                                <IconButton disabled={!!!searchTerm} onClick={() => handleSearch()}>
+                                    <ClearIcon />
+                                </IconButton>
+                            </InputAdornment>
+                        ),
+                    }}
+                    sx={{ width: '300px' }}
+                    value={searchTerm}
+                    onChange={handleSearch}
+                />
+                <Button
+                    id={`users-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                    data-testid={`users-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                    disabled={disabled}
+                    variant="contained"
+                    color="primary"
+                    children={addButtonTooltip}
+                    onClick={() => {
+                        resetEditRow();
+                        table.setEditingRow(null);
+                        table.setCreatingRow(true);
+                    }}
+                />
+            </Box>
         ),
         renderRowActions: ({ row }) => {
             return (
@@ -505,7 +542,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                                 table.setCreatingRow(null);
                                 table.setEditingRow(row);
                             }}
-                            disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
+                            disabled={!!pendingDeleteRowIndex || !!isBusy || !!editingRow}
                             id={`users-list-row-list-row-${row.index}-${editButtonTooltip
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
@@ -518,8 +555,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     </Tooltip>
                     <Tooltip title={deleteButtonTooltip}>
                         <IconButton
-                            onClick={openDeleteConfirmModal(row.id)}
-                            disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
+                            onClick={openDeleteConfirmModal(row.index)}
+                            disabled={!!pendingDeleteRowIndex || !!isBusy || !!editingRow}
                             id={`users-list-row-list-row-${row.index}-${deleteButtonTooltip
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
@@ -548,167 +585,15 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             }}
         >
             <ConfirmationBox
-                confirmationBoxId="bulk-delete-users-confirmation"
-                onAction={() => {}}
+                confirmationBoxId={
+                    pendingDeleteRowIndex ? 'users-delete-this-user-confirmation' : 'bulk-delete-users-confirmation'
+                }
+                onAction={pendingDeleteRowIndex ? handleDelete : handleBulkDelete}
                 onClose={cancelDeleteConfirmModal}
                 isOpen={isOpen}
-                locale={bulkDeleteConfirmationLocale}
+                locale={pendingDeleteRowIndex ? deleteConfirmationLocale : bulkDeleteConfirmationLocale}
             />
-
             <MaterialReactTable table={table} />
-            {/*
-            <MaterialTable
-                tableRef={materialTableRef}
-                columns={columns.current}
-                components={{
-                    Container: props => <div {...props} id="users-list" data-testid="users-list" />,
-                    OverlayLoading: props => (
-                        <Backdrop
-                            {...props}
-                            open
-                            sx={{ position: 'absolute', zIndex: 9999, color: 'rgba(0, 0, 0, 0.2)' }}
-                        >
-                            <StandardCard noHeader standardCardId="loading-users">
-                                <InlineLoader message={loadingText} />
-                            </StandardCard>
-                        </Backdrop>
-                    ),
-                    Row: props => (
-                        <MTableBodyRow
-                            {...props}
-                            {...(props.hasAnyEditingRow
-                                ? {
-                                      onRowClick: null,
-                                      hover: false,
-                                  }
-                                : { hover: true })}
-                            hover
-                            id={`users-list-row-${props.index}`}
-                            data-testid={`users-list-row-${props.index}`}
-                        />
-                    ),
-                    EditRow: props => {
-                        return (
-                            <FullUserDetails
-                                {...props}
-                                initialValues={props.data}
-                                id="users-list-edit-row"
-                                data-testid="users-list-edit-row"
-                                onEditingApproved={handleSave}
-                            />
-                        );
-                    },
-                    Action: props => {
-                        if (typeof props.action === 'function') {
-                            const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
-                            return (
-                                <MTableAction
-                                    {...props}
-                                    action={{
-                                        ...restAction,
-                                        tooltip,
-                                        icon: () => (
-                                            <Icon
-                                                disabled={props.disabled}
-                                                id={`users-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                data-testid={`users-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                {...restAction.iconProps}
-                                            />
-                                        ),
-                                    }}
-                                    size="small"
-                                />
-                            );
-                        } else {
-                            //  Add action
-                            const { tooltip } = props.action;
-                            return (
-                                <Button
-                                    id={`users-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                    data-analyticsid={`users-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                    data-testid={`users-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                    disabled={props.disabled}
-                                    variant="contained"
-                                    color="primary"
-                                    children={tooltip}
-                                    onClick={event => props.action.onClick(event, props.data)}
-                                />
-                            );
-                        }
-                    },
-                }}
-                data={query => {
-                    materialTableRef.current.dataManager.changeRowEditing();
-                    materialTableRef.current.setState({
-                        ...materialTableRef.current.dataManager.getRenderState(),
-                        showAddRow: false,
-                    });
-                    return dispatch(loadUserList(query));
-                }}
-                onRowClick={(event, rowData) => {
-                    materialTableRef.current.dataManager.changeRowEditing(rowData, 'update');
-                    materialTableRef.current.setState({
-                        ...materialTableRef.current.dataManager.getRenderState(),
-                        showAddRow: false,
-                    });
-                }}
-                onRowsPerPageChange={pageSize => {
-                    return setPageSize(pageSize);
-                }}
-                icons={tableIcons}
-                title=""
-                localization={{
-                    body: {
-                        addTooltip: addButtonTooltip,
-                        editTooltip: editButtonTooltip,
-                        deleteTooltip: deleteButtonTooltip,
-                    },
-                    toolbar: {
-                        searchAriaLabel: 'Search users',
-                        searchPlaceholder: 'Search users',
-                    },
-                }}
-                editable={{
-                    onRowUpdateCancelled: () => {},
-                    onRowAdd: newData => onRowAdd(newData),
-                    onRowUpdate: (newData, oldData) => onRowUpdate(newData, oldData),
-                    onRowDelete: oldData => onRowDelete(oldData),
-                }}
-                options={{
-                    actionsColumnIndex: -1,
-                    addRowPosition: 'first',
-                    debounceInterval: 400,
-                    grouping: false,
-                    draggable: false,
-                    emptyRowsWhenPaging: true,
-                    pageSize: pageSize,
-                    pageSizeOptions: [20, 50, 100],
-                    padding: 'dense',
-                    overflowY: 'auto',
-                    searchFieldAlignment: 'left',
-                    selection: true,
-                    sorting: false,
-                    showSelectAllCheckbox: false,
-                    selectionProps: rowData => ({
-                        inputProps: {
-                            id: `select-user-${rowData.tableData.id}`,
-                            'data-testid': `select-user-${rowData.tableData.id}`,
-                        },
-                    }),
-                }}
-                actions={[
-                    {
-                        icon: 'delete',
-                        tooltip: bulkDeleteButtonTooltip,
-                        onClick: showConfirmation,
-                    },
-                ]}
-            />
-            */}
         </Box>
     );
 };
