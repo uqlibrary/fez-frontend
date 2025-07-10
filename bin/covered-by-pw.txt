@@ -1,3 +1,4 @@
+cypress/e2e/batchImport.spec.js
 cypress/e2e/addMissingRecord.spec.js
 cypress/e2e/authorAffiliation.spec.js
 cypress/e2e/authorIdentifier.spec.js

@@ -33,11 +33,11 @@ export default class Reporter implements Base {
     }
 
     async onEnd(testResult: FullResult) {
+        if (process?.env?.NODE_ENV !== 'cc' || testResult.status === 'interrupted') return;
         if (this.config === undefined || !this.config.outputDir) {
             console.log(`\nSkipping Istanbul Coverage Merger ... misconfigured, please check it's configuration\n`);
             return;
         }
-        if (testResult.status === 'interrupted') return;
         // skip for failed test, unless explicitly specified
         if (testResult.status === 'failed' && this.config.bailOnTestFailure !== false) return;
 

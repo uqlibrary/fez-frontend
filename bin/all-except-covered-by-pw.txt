@@ -6,7 +6,6 @@ cypress/e2e/admin-add/journalArticle.spec.js
 cypress/e2e/admin-add/video.spec.js
 cypress/e2e/admin-add/collection.spec.js
 cypress/e2e/admin-add/community.spec.js
-cypress/e2e/batchImport.spec.js
 cypress/e2e/admin-edit/fileRename.spec.js
 cypress/e2e/admin-edit/image.spec.js
 cypress/e2e/admin-edit/design.spec.js

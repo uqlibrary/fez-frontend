@@ -4,8 +4,13 @@ import { istanbulReportPartialsDir } from '../support/constants';
 
 export * from '@playwright/test';
 
-export const test = base.extend({
-    context: async ({ context }, use) => {
-        await collectCoverageAsync(context, use, istanbulReportPartialsDir);
-    },
-});
+let test = base;
+// enable istanbul coverage collecting
+if (process?.env?.NODE_ENV === 'cc') {
+    test = base.extend({
+        context: async ({ context }, use) => {
+            await collectCoverageAsync(context, use, istanbulReportPartialsDir);
+        },
+    });
+}
+export { test };

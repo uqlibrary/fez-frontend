@@ -246,6 +246,7 @@
         "tsc": "./node_modules/typescript/bin/tsc",
         "tsc:watch": "./node_modules/typescript/bin/tsc --watch",
         "test:e2e:pw": "playwright test",
+        "test:e2e:pw:cc": "cross-env NODE_ENV=cc npm run test:e2e:pw",
         "test:e2e:ci:pw": "npm run test:e2e:ci 'playwright test'"
     },
     "engines": {
