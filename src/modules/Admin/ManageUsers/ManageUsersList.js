@@ -36,8 +36,10 @@ import { clearAlerts } from './helpers';
 import { useMrtTable } from 'hooks';
 
 const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
+const TABLE_PAGE_SIZE_OPTIONS = [10, 20, 40];
+const TABLE_PAGE_SIZE_DEFAULT = 20;
 
-const useServerData = ({ actions, pageSize = 20, pageIndex = 0 }) => {
+const useServerData = ({ actions, pageSize = TABLE_PAGE_SIZE_DEFAULT, pageIndex = 0 }) => {
     const [state, setState] = useState({
         data: [],
         pageIndex,
@@ -61,7 +63,7 @@ const useServerData = ({ actions, pageSize = 20, pageIndex = 0 }) => {
         bulkUserDeleteMessages,
     } = useSelector(state => state?.get('manageUsersReducer'));
 
-    const _request = useCallback(
+    const read = useCallback(
         payload => {
             console.log('request', payload);
             dispatch(actions.read({ page: payload.pageIndex, pageSize: payload.pageSize, search: payload.search }))
@@ -86,17 +88,17 @@ const useServerData = ({ actions, pageSize = 20, pageIndex = 0 }) => {
         // Updater can be a function or a value
         const newPagination =
             typeof updater === 'function' ? updater({ pageIndex: state.pageIndex, pageSize: state.pageSize }) : updater;
-        _request(newPagination);
+        read(newPagination);
     };
 
     const onSetPageSize = size => {
-        _request({ ...state, pageSize: size });
+        read({ ...state, pageSize: size });
     };
 
     useEffect(() => {
-        _request(state);
+        read(state);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [_request]);
+    }, [read]);
 
     return {
         onPaginationChange,
@@ -185,171 +187,147 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         clearValidationErrors,
     } = useMrtTable(list);
 
-    const columns = [
-        {
-            accessorKey: 'usr_id',
-            header: id.title,
-            Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
-            Cell: ({ cell, row }) => <ColumnData data={cell.getValue()} columnDataId={`usr-id-${row.id}`} />,
-            size: 100,
-        },
-        {
-            accessorKey: 'usr_full_name',
-            header: fullName.title,
-            Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
-            Cell: ({ cell, row }) => (
-                <ColumnData data={cell.getValue()} columnDataId={`usr-full-name-${row.id}`} copiable />
-            ),
-            grow: true,
-        },
-        {
-            accessorKey: 'usr_username',
-            header: username.title,
-            Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
-            Cell: ({ cell, row }) => (
-                <React.Fragment>
-                    <ColumnData data={cell.getValue()} columnDataId={`usr-username-${row.id}`} copiable />
-                    <Tooltip title="Last login date">
-                        <Typography
-                            variant="caption"
-                            id={`usr-last-login-date-${row.id}`}
-                            data-testid={`usr-last-login-date-${row.id}`}
-                        >
-                            {!!row.original.usr_last_login_date &&
-                            moment(row.original.usr_created_date).format('YYYY-MM-DD HH:mm') !==
-                                moment(row.original.usr_last_login_date).format('YYYY-MM-DD HH:mm')
-                                ? moment(row.original.usr_last_login_date).format('YYYY-MM-DD HH:mm:ss')
-                                : 'Never'}
-                        </Typography>
-                    </Tooltip>
-                </React.Fragment>
-            ),
-            size: 200,
-        },
-        {
-            accessorKey: 'usr_email',
-            header: email.title,
-            Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
-            Cell: ({ cell, row }) => <ColumnData data={cell.getValue()} columnDataId={`usr-email-${row.id}`} />,
-            grow: true,
-            size: 300,
-        },
-        {
-            accessorKey: 'usr_status',
-            header: status.title,
-            Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
-            Cell: ({ cell, row }) => (
-                <ColumnData data={upperFirst(cell.getValue())} columnDataId={`usr-status-${row.id}`} />
-            ),
-            size: 50,
-        },
-        {
-            accessorKey: 'usr_administrator',
-            header: isAdmin.title,
-            Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
-            Cell: ({ cell, row }) => (
-                <ColumnData data={!!cell.getValue() ? 'Yes' : 'No'} columnDataId={`usr-administrator-${row.id}`} />
-            ),
-            size: 50,
-        },
-        {
-            accessorKey: 'usr_super_administrator',
-            header: isSuperAdmin.title,
-            Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
-            Cell: ({ cell, row }) => (
-                <ColumnData
-                    data={!!cell.getValue() ? 'Yes' : 'No'}
-                    columnDataId={`usr-super-administrator-${row.id}`}
-                />
-            ),
-            size: 50,
-        },
-    ];
+    const columns = React.useMemo(
+        () => [
+            {
+                accessorKey: 'usr_id',
+                header: id.title,
+                Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
+                Cell: ({ cell, row }) => <ColumnData data={cell.getValue()} columnDataId={`usr-id-${row.id}`} />,
+                size: 100,
+            },
+            {
+                accessorKey: 'usr_full_name',
+                header: fullName.title,
+                Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
+                Cell: ({ cell, row }) => (
+                    <ColumnData data={cell.getValue()} columnDataId={`usr-full-name-${row.id}`} copiable />
+                ),
+                size: 300,
+                grow: true,
+            },
+            {
+                accessorKey: 'usr_username',
+                header: username.title,
+                Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
+                Cell: ({ cell, row }) => (
+                    <React.Fragment>
+                        <ColumnData data={cell.getValue()} columnDataId={`usr-username-${row.id}`} copiable />
+                        <Tooltip title="Last login date">
+                            <Typography
+                                variant="caption"
+                                id={`usr-last-login-date-${row.id}`}
+                                data-testid={`usr-last-login-date-${row.id}`}
+                            >
+                                {!!row.original.usr_last_login_date &&
+                                moment(row.original.usr_created_date).format('YYYY-MM-DD HH:mm') !==
+                                    moment(row.original.usr_last_login_date).format('YYYY-MM-DD HH:mm')
+                                    ? moment(row.original.usr_last_login_date).format('YYYY-MM-DD HH:mm:ss')
+                                    : 'Never'}
+                            </Typography>
+                        </Tooltip>
+                    </React.Fragment>
+                ),
+                size: 200,
+            },
+            {
+                accessorKey: 'usr_email',
+                header: email.title,
+                Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
+                Cell: ({ cell, row }) => <ColumnData data={cell.getValue()} columnDataId={`usr-email-${row.id}`} />,
+                grow: true,
+                size: 300,
+            },
+            {
+                accessorKey: 'usr_status',
+                header: status.title,
+                Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
+                Cell: ({ cell, row }) => (
+                    <ColumnData data={upperFirst(cell.getValue())} columnDataId={`usr-status-${row.id}`} />
+                ),
+                size: 50,
+            },
+            {
+                accessorKey: 'usr_administrator',
+                header: isAdmin.title,
+                Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
+                Cell: ({ cell, row }) => (
+                    <ColumnData data={!!cell.getValue() ? 'Yes' : 'No'} columnDataId={`usr-administrator-${row.id}`} />
+                ),
+                size: 50,
+            },
+            {
+                accessorKey: 'usr_super_administrator',
+                header: isSuperAdmin.title,
+                Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
+                Cell: ({ cell, row }) => (
+                    <ColumnData
+                        data={!!cell.getValue() ? 'Yes' : 'No'}
+                        columnDataId={`usr-super-administrator-${row.id}`}
+                    />
+                ),
+                size: 50,
+            },
+        ],
+        [email.title, fullName.title, id.title, isAdmin.title, isSuperAdmin.title, status.title, username.title],
+    );
 
-    // const handleSave = (mode, newData, oldData) => {
-    //     // materialTable.setState(prevState => {
-    //     if (mode === 'add') {
-    //         materialTable.props.editable
-    //             .onRowAdd(newData)
-    //             .then(data => {
-    //                 materialTable.setState(prevState => {
-    //                     const prev = [...prevState.data];
-    //                     prev.forEach(item => delete item.tableData);
-    //                     materialTable.dataManager.setData([data, ...prev]);
-    //                     return {
-    //                         ...materialTable.dataManager.getRenderState(),
-    //                         showAddRow: false,
-    //                     };
-    //                 });
-    //             })
-    //             .catch(() => {
-    //                 materialTable.setState(prevState => {
-    //                     materialTable.dataManager.setData([...prevState.data]);
-    //                     return {
-    //                         ...materialTable.dataManager.getRenderState(),
-    //                         showAddRow: false,
-    //                     };
-    //                 });
-    //             });
-    //     } else if (mode === 'update') {
-    //         const index = oldData.tableData.id;
-    //         materialTable.props.editable
-    //             .onRowUpdate(newData, oldData)
-    //             .then(data => {
-    //                 materialTable.setState(prevState => {
-    //                     materialTable.dataManager.changeRowEditing(oldData);
-    //                     materialTable.dataManager.setData([
-    //                         ...prevState.data.slice(0, index),
-    //                         data,
-    //                         ...prevState.data.slice(index + 1),
-    //                     ]);
-    //                     return {
-    //                         ...materialTable.dataManager.getRenderState(),
-    //                         showAddRow: false,
-    //                     };
-    //                 });
-    //             })
-    //             .catch(() => {
-    //                 materialTable.setState(prevState => {
-    //                     materialTable.dataManager.changeRowEditing(oldData);
-    //                     materialTable.dataManager.setData([
-    //                         ...prevState.data.slice(0, index),
-    //                         oldData,
-    //                         ...prevState.data.slice(index + 1),
-    //                     ]);
-    //                     return {
-    //                         ...materialTable.dataManager.getRenderState(),
-    //                         showAddRow: false,
-    //                     };
-    //                 });
-    //             });
-    //     } else {
-    //         const index = oldData.tableData.id;
-    //         materialTable.props.editable
-    //             .onRowDelete(oldData)
-    //             .then(() => {
-    //                 materialTable.setState(prevState => {
-    //                     materialTable.dataManager.setData([
-    //                         ...prevState.data.slice(0, index),
-    //                         ...prevState.data.slice(index + 1),
-    //                     ]);
-    //                     return {
-    //                         ...materialTable.dataManager.getRenderState(),
-    //                         showAddRow: false,
-    //                     };
-    //                 });
-    //             })
-    //             .catch(() => {
-    //                 materialTable.setState(prevState => {
-    //                     materialTable.dataManager.setData([...prevState.data]);
-    //                     return {
-    //                         ...materialTable.dataManager.getRenderState(),
-    //                         showAddRow: false,
-    //                     };
-    //                 });
-    //             });
-    //     }
-    // };
+    const handleSave = table => (mode, newData, oldData) => {
+        // materialTable.setState(prevState => {
+        setBusy();
+        if (mode === 'add') {
+            onRowAdd(newData)
+                .then(data => {
+                    setData(prev => [...prev, data]);
+                })
+                .catch(() => setData(prev => [...prev]))
+                .finally(() => {
+                    setBusy(false);
+                    table.setCreatingRow(null);
+                    resetEditRow();
+                });
+        } else if (mode === 'update') {
+            onRowUpdate(newData, oldData)
+                .then(data => {
+                    setData(prev => {
+                        const index = prev.findIndex(row => row.usr_id === oldData.usr_id);
+                        return [...prev.slice(0, index), data, ...prev.slice(index + 1)];
+                    });
+                })
+                .catch(() => setData(prev => [...prev]))
+                .finally(() => {
+                    setBusy(false);
+                    table.setCreatingRow(null);
+                    resetEditRow();
+                });
+        }
+        // else {
+        //     const index = oldData.tableData.id;
+        //     materialTable.props.editable
+        //         .onRowDelete(oldData)
+        //         .then(() => {
+        //             materialTable.setState(prevState => {
+        //                 materialTable.dataManager.setData([
+        //                     ...prevState.data.slice(0, index),
+        //                     ...prevState.data.slice(index + 1),
+        //                 ]);
+        //                 return {
+        //                     ...materialTable.dataManager.getRenderState(),
+        //                     showAddRow: false,
+        //                 };
+        //             });
+        //         })
+        //         .catch(() => {
+        //             materialTable.setState(prevState => {
+        //                 materialTable.dataManager.setData([...prevState.data]);
+        //                 return {
+        //                     ...materialTable.dataManager.getRenderState(),
+        //                     showAddRow: false,
+        //                 };
+        //             });
+        //         });
+        // }
+    };
 
     // const handleBulkDelete = () => {
     //     const rowsSelected = materialTable.dataManager.data.filter(row => !!row.tableData.checked);
@@ -385,34 +363,11 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
     //         });
     // };
 
-    const handleCreate = (mode, formValues, rowData) => {
-        console.log(mode, formValues, rowData);
-        // { values, table, row }
-        // const newValues = { ...row.original, ...row._valuesCache, ...values };
-        // const errors = validate(newValues);
-        // /* istanbul ignore if  */
-        // if (!!errors) {
-        //     return;
-        // }
-
-        // setBusy();
-        // handleRowAdd(newValues)
-        //     .then(data => {
-        //         setData(prevState => {
-        //             return [...prevState, data];
-        //         });
-        //     })
-        //     .catch(() => setData(prevState => [...prevState]))
-        //     .finally(() => {
-        //         table.setCreatingRow(null);
-        //         resetEditRow();
-        //         setBusy(false);
-        //     });
-    };
     const handleCancel = table => () => {
         console.log('cancel', editingRow);
         resetEditRow();
         table.setCreatingRow(null);
+        table.setEditingRow(null);
     };
 
     // DELETE action
@@ -425,9 +380,9 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
     };
 
     const table = useMaterialReactTable({
+        getRowId: row => row.eap_id,
         columns,
         data,
-        getRowId: row => row.eap_id,
         createDisplayMode: 'modal',
         editDisplayMode: 'modal',
         enableEditing: true,
@@ -443,47 +398,84 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         positionActionsColumn: 'last',
         manualPagination: true,
         rowCount: resultCount,
-        onPaginationChange: onPaginationChange,
+        autoResetPageIndex: false,
+        displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
+        initialState: {
+            expanded: true,
+            columnPinning: { left: ['mrt-row-select'], right: ['mrt-row-actions'] },
+        },
         state: {
             showAlertBanner: false,
+            isLoading: userListLoading || userListItemUpdating || userListItemDeleting || userAdding || isBusy,
             showLoadingOverlay: userListLoading || userListItemUpdating || userListItemDeleting || userAdding || isBusy,
             pagination: { pageSize, pageIndex },
         },
-        displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
-        renderCreateRowDialogContent: ({ table, row }) => (
-            <Box
-                id={`users-list-row-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                data-testid={`users-list-row-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                sx={{ width: '50vw' }}
-            >
-                <FullUserDetails
-                    data={row.original}
-                    mode="add"
-                    id="users-list-edit-row"
-                    data-testid="users-list-edit-row"
-                    onEditingApproved={handleCreate}
-                    onEditingCanceled={handleCancel(table)}
+        icons: {
+            SaveIcon: props => (
+                <tableIcons.Check
+                    id={`users-list-row-${!!editingRow ? 'edit' : 'add'}-save`}
+                    data-testid={`users-list-row-${!!editingRow ? 'edit' : 'add'}-save`}
+                    color="secondary"
+                    {...props}
                 />
-            </Box>
+            ),
+            CancelIcon: props => (
+                <tableIcons.Clear
+                    id={`users-list-row-${!!editingRow ? 'edit' : 'add'}-cancel`}
+                    data-testid={`users-list-row-${!!editingRow ? 'edit' : 'add'}-cancel`}
+                    color="secondary"
+                    {...props}
+                />
+            ),
+        },
+        muiPaginationProps: {
+            rowsPerPageOptions: TABLE_PAGE_SIZE_OPTIONS,
+        },
+        muiEditRowDialogProps: {
+            sx: {
+                '& .MuiDialog-paper': {
+                    maxWidth: { xs: '100%', lg: '60vw' },
+                    margin: { xs: 0, lg: 4 },
+                    width: '100%',
+                    display: 'table',
+                },
+            },
+        },
+        muiTableProps: {
+            sx: {
+                borderCollapse: 'collapse',
+            },
+        },
+        muiTableHeadCellProps: {
+            sx: {
+                padding: 1,
+            },
+        },
+        muiTableBodyCellProps: {
+            sx: {
+                padding: 1,
+            },
+        },
+        onPaginationChange: onPaginationChange,
+        renderCreateRowDialogContent: ({ table, row }) => (
+            <FullUserDetails
+                data={row.original}
+                mode="add"
+                id="users-list-edit-row"
+                data-testid="users-list-edit-row"
+                onEditingApproved={handleSave(table)}
+                onEditingCanceled={handleCancel(table)}
+            />
         ),
-        renderEditRowDialogContent: ({ table, row, internalEditComponents }) => (
-            <Box
-                id={`users-list-row-dialog-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                data-testid={`users-list-row-dialog-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-            >
-                <DialogTitle variant="h5">{editButtonTooltip}</DialogTitle>
-                <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                    {internalEditComponents}
-                </DialogContent>
-                <DialogActions>
-                    <MRT_EditActionButtons
-                        variant="text"
-                        table={table}
-                        row={row}
-                        sx={{ flexDirection: 'column', flexGrow: 1 }}
-                    />
-                </DialogActions>
-            </Box>
+        renderEditRowDialogContent: ({ table, row }) => (
+            <FullUserDetails
+                data={row.original}
+                mode="update"
+                id="users-list-edit-row"
+                data-testid="users-list-edit-row"
+                onEditingApproved={handleSave(table)}
+                onEditingCanceled={handleCancel(table)}
+            />
         ),
         renderTopToolbarCustomActions: ({ table }) => (
             <Button
@@ -541,65 +533,20 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 </Box>
             );
         },
-        initialState: {
-            expanded: true,
-            columnPinning: { left: ['mrt-row-select'], right: ['mrt-row-actions'] },
-        },
-        icons: {
-            SaveIcon: props => (
-                <tableIcons.Check
-                    id={`users-list-row-${!!editingRow ? 'edit' : 'add'}-save`}
-                    data-testid={`users-list-row-${!!editingRow ? 'edit' : 'add'}-save`}
-                    color="secondary"
-                    {...props}
-                />
-            ),
-            CancelIcon: props => (
-                <tableIcons.Clear
-                    id={`users-list-row-${!!editingRow ? 'edit' : 'add'}-cancel`}
-                    data-testid={`users-list-row-${!!editingRow ? 'edit' : 'add'}-cancel`}
-                    color="secondary"
-                    {...props}
-                />
-            ),
-        },
-        muiEditRowDialogProps: {
-            sx: { '& .MuiDialog-paper': { maxWidth: '50vw' } },
-        },
-        muiTableProps: {
-            sx: {
-                borderCollapse: 'collapse',
-            },
-        },
-        muiTableHeadCellProps: {
-            sx: {
-                padding: 1,
-            },
-        },
-        muiTableBodyCellProps: {
-            sx: {
-                padding: 1,
-                '&:last-of-type > div': {
-                    gap: 0,
-                    [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: { flexDirection: 'row-reverse', justifyContent: 'flex-end' },
-                },
-                '&:not(:last-child)': { alignContent: 'flex-start' },
-            },
-        },
         muiTableBodyRowProps: ({ row }) => ({
             id: `users-list-row-list-row-${row.index === -1 ? 'add' : row.index}`,
             'data-testid': `users-list-row-list-row-${row.index === -1 ? 'add' : row.index}`,
-            ...(moment(String(row._valuesCache.eap_end_year || row.original.eap_end_year), 'YYYY').isBefore(
-                moment(),
-                'year',
-            )
-                ? { style: { borderLeft: '8px solid red' } }
-                : {}),
         }),
     });
 
     return (
-        <Box id="users-list" data-testid="users-list">
+        <Box
+            id="users-list"
+            data-testid="users-list"
+            sx={{
+                '& >.MuiPaper-root': { boxShadow: 'none' },
+            }}
+        >
             <ConfirmationBox
                 confirmationBoxId="bulk-delete-users-confirmation"
                 onAction={() => {}}
@@ -607,6 +554,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 isOpen={isOpen}
                 locale={bulkDeleteConfirmationLocale}
             />
+
             <MaterialReactTable table={table} />
             {/*
             <MaterialTable
