@@ -8,7 +8,7 @@ test.describe('ORCiD Upload button', () => {
     test('should appear and open panel on click; panel can close', async ({ page }) => {
         // Click the ORCID help icon
         const helpIcon = page.getByTestId('help-icon-orcid');
-        await expect(helpIcon).toHaveCount(1);
+        await helpIcon.waitFor({ state: 'visible' });
         await helpIcon.click();
 
         // Drawer message appears and title contains 'ORCID'

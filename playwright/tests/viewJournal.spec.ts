@@ -15,7 +15,7 @@ test.describe('view Journal', () => {
         await page.goto('/journal/view/8508?user=uqresearcher');
 
         // Scroll to SCIE section
-        const scieSection = page.locator('div[data-testid="journal-details-jscie"]');
+        const scieSection = page.getByTestId('journal-details-jscie');
         await scieSection.scrollIntoViewIfNeeded();
         await tabVisibleInWindow(page, '0', true, 'scie');
         await tabVisibleInWindow(page, '1', true, 'scie');
@@ -24,7 +24,7 @@ test.describe('view Journal', () => {
         await expect(scieSection.locator('div.MuiTabs-scrollButtons')).toHaveCount(0);
 
         // Scroll to SSCI section
-        const ssciSection = page.locator('div[data-testid="journal-details-jssci"]');
+        const ssciSection = page.getByTestId('journal-details-jssci');
         await ssciSection.scrollIntoViewIfNeeded();
         await tabVisibleInWindow(page, '0', true);
         await tabVisibleInWindow(page, '3', false);
@@ -104,7 +104,7 @@ test.describe('view Journal', () => {
 
                 const fieldValues = {};
                 for (const field of fields) {
-                    fieldValues[field] = await page.locator(`[data-testid=${field}]`).inputValue();
+                    fieldValues[field] = await page.getByTestId(field).inputValue();
                 }
 
                 const ckContent = await page.locator('.ck-content').innerText();

@@ -83,10 +83,9 @@ test.describe('Delete work form', () => {
                     await fillInput(page, '[data-testid=rek-new-doi-input]', '10.123.bad-doi');
                     await expect(page.getByTestId('rek-new-doi-helper-text')).toContainText('DOI is not valid');
                     await typeCKEditor(page, 'rek-deletion-notes', 'a'.repeat(2001));
-                    const count = await page.locator('[data-testid=rek-deletion-notes] span').count();
-                    await expect(page.locator('[data-testid=rek-deletion-notes] span').nth(count - 3)).toContainText(
-                        'Must be 2000 characters or less',
-                    );
+                    const helperTextContainer = page.getByTestId('rek-deletion-notes').locator(' span');
+                    const count = await helperTextContainer.count();
+                    await expect(helperTextContainer.nth(count - 3)).toContainText('Must be 2000 characters or less');
                 });
             });
         });

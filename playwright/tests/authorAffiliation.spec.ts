@@ -7,7 +7,7 @@ test.describe('Record with invalid affiliation', () => {
 
         // Open the affiliation error drawer
         const toggleIcon = page.getByTestId('error-affiliation-toggle-icon');
-        await expect(toggleIcon).toHaveCount(1);
+        await toggleIcon.waitFor({ state: 'visible' });
         await toggleIcon.click();
 
         // Verify the affiliation error indicator exists
@@ -30,7 +30,7 @@ test.describe('Record with invalid affiliation', () => {
 
         // Cancel the fix workflow and verify return to page title
         const cancelTop = page.locator('#admin-work-cancel-top');
-        await expect(cancelTop).toHaveCount(1);
+        await cancelTop.waitFor({ state: 'visible' });
         await cancelTop.click();
 
         // Verify page-title reads 'Chick'
