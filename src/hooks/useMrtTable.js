@@ -20,6 +20,7 @@ export const useMrtTable = (list, rules = []) => {
         setState(prev => ({ ...prev, deleteRowId: null }));
         hideConfirmation();
     };
+    const isPendingDelete = state.deleteRowId !== null;
     const setEditRow = useCallback(row => setState(prev => ({ ...prev, editingRow: row })), []);
     const resetEditRow = useCallback(() => setState(prev => ({ ...prev, editingRow: null })), []);
 
@@ -66,6 +67,7 @@ export const useMrtTable = (list, rules = []) => {
         setBusy,
         setDeleteRow,
         resetDeleteRow,
+        isPendingDelete,
         setEditRow,
         resetEditRow,
         showConfirmation,

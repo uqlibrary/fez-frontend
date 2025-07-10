@@ -9,7 +9,7 @@ import { upperFirst } from 'lodash';
 // eslint-disable-next-line camelcase
 import { MaterialReactTable, useMaterialReactTable, MRT_GlobalFilterTextField } from 'material-react-table';
 
-import { throttle } from 'throttle-debounce';
+import { debounce } from 'throttle-debounce';
 
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
@@ -84,10 +84,14 @@ const useServerData = ({ actions, pageSize = TABLE_PAGE_SIZE_DEFAULT, pageIndex 
         [actions, dispatch],
     );
 
+    const debouncedReadRequest = useMemo(() => {
+        return debounce(400, read, { atBegin: false });
+    }, [read]);
+
     const onSearchTermChange = term => {
         const newState = { ...state, searchTerm: term };
         setState(newState);
-        read(newState);
+        debouncedReadRequest(newState);
     };
 
     const onPaginationChange = updater => {
@@ -188,6 +192,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         setBusy,
         setDeleteRow,
         resetDeleteRow,
+        isPendingDelete,
         setEditRow,
         resetEditRow,
     } = useMrtTable(list);
@@ -301,7 +306,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 .catch(() => setData(prev => [...prev]))
                 .finally(() => {
                     setBusy(false);
-                    table.setCreatingRow(null);
+                    table.setEditingRow(null);
                     resetEditRow();
                 });
         }
@@ -328,6 +333,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
     };
 
     const handleBulkDelete = () => {
+        console.log('bulk');
         // const rowsSelected = materialTable.dataManager.data.filter(row => !!row.tableData.checked);
         // onBulkRowDelete(rowsSelected)
         //     .then(response => {
@@ -361,12 +367,12 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         //     });
     };
 
+    // memoize the debounce call with useMemo
     const handleSearch = e => {
-        throttle(1000, onSearchTermChange(e?.target?.value || ''), { noTrailing: true });
+        onSearchTermChange(e?.target?.value || '');
     };
 
     const handleCancel = table => () => {
-        console.log('cancel', editingRow);
         resetEditRow();
         table.setCreatingRow(null);
         table.setEditingRow(null);
@@ -408,7 +414,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         },
         state: {
             showAlertBanner: false,
-            isLoading: userListLoading || userListItemUpdating || userListItemDeleting || userAdding || isBusy,
+            isLoading: userListLoading,
             showLoadingOverlay: userListLoading || userListItemUpdating || userListItemDeleting || userAdding || isBusy,
             pagination: { pageSize, pageIndex },
         },
@@ -542,7 +548,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                                 table.setCreatingRow(null);
                                 table.setEditingRow(row);
                             }}
-                            disabled={!!pendingDeleteRowIndex || !!isBusy || !!editingRow}
+                            disabled={isPendingDelete || !!isBusy || !!editingRow}
                             id={`users-list-row-list-row-${row.index}-${editButtonTooltip
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
@@ -556,7 +562,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     <Tooltip title={deleteButtonTooltip}>
                         <IconButton
                             onClick={openDeleteConfirmModal(row.index)}
-                            disabled={!!pendingDeleteRowIndex || !!isBusy || !!editingRow}
+                            disabled={isPendingDelete || !!isBusy || !!editingRow}
                             id={`users-list-row-list-row-${row.index}-${deleteButtonTooltip
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
@@ -586,12 +592,12 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         >
             <ConfirmationBox
                 confirmationBoxId={
-                    pendingDeleteRowIndex ? 'users-delete-this-user-confirmation' : 'bulk-delete-users-confirmation'
+                    isPendingDelete ? 'users-delete-this-user-confirmation' : 'bulk-delete-users-confirmation'
                 }
-                onAction={pendingDeleteRowIndex ? handleDelete : handleBulkDelete}
+                onAction={isPendingDelete ? handleDelete : handleBulkDelete}
                 onClose={cancelDeleteConfirmModal}
                 isOpen={isOpen}
-                locale={pendingDeleteRowIndex ? deleteConfirmationLocale : bulkDeleteConfirmationLocale}
+                locale={isPendingDelete ? deleteConfirmationLocale : bulkDeleteConfirmationLocale}
             />
             <MaterialReactTable table={table} />
         </Box>
