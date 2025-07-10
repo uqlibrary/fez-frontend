@@ -4,10 +4,8 @@ import { useConfirmationState } from './index';
 export const useMrtTable = (list, rules = []) => {
     const [data, setData] = useState(list);
     useEffect(() => {
-        if (JSON.stringify(list) !== JSON.stringify(data)) {
-            setData(list);
-        }
-    }, [data, list]);
+        setData(list);
+    }, [list]);
 
     const [state, setState] = useState({ busy: false, deleteRowId: null, editingRow: null });
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
