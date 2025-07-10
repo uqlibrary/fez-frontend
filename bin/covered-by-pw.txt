@@ -9,3 +9,4 @@ cypress/e2e/scrollTop.spec.js
 cypress/e2e/version.spec.js
 cypress/e2e/viewJournal.spec.js
 cypress/e2e/viewRecord.spec.js
+cypress/e2e/deleteRecord.spec.js

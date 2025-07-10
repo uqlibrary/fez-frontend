@@ -45,5 +45,4 @@ cypress/e2e/addMissingRecord.spec.js
 cypress/e2e/thesis.spec.js
 cypress/e2e/search.spec.js
 cypress/e2e/dataCollection.spec.js
-cypress/e2e/deleteRecord.spec.js
 cypress/e2e/claimFromPossible.spec.js
