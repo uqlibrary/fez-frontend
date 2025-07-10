@@ -1295,7 +1295,7 @@ exports[`AdminContainer component should render record not found view 1`] = `
               If you believe this is in error, please
                
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/contact-us"
+                href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
               >
                 contact the eSpace team.
               </a>
@@ -1354,7 +1354,7 @@ exports[`AdminContainer component should render work not found if record is not 
               If you believe this is in error, please
                
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/contact-us"
+                href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
               >
                 contact the eSpace team.
               </a>
