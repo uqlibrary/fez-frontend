@@ -4104,6 +4104,8 @@ export default {
                 type: 'error',
                 message: 'A user could not be deleted.',
             },
+            tablePageSizeOptions: [10, 20, 50],
+            tablePageSizeDefault: 20,
         },
         communitiesCollections: {
             title: {
