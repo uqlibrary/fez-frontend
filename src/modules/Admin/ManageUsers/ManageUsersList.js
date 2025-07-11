@@ -1,13 +1,12 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React, { useEffect, useMemo, useState, useCallback } from 'react';
+import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import moment from 'moment';
 import { upperFirst } from 'lodash';
 
 // eslint-disable-next-line camelcase
-import { MaterialReactTable, useMaterialReactTable, MRT_GlobalFilterTextField } from 'material-react-table';
+import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 
 import { debounce } from 'throttle-debounce';
 
@@ -33,115 +32,12 @@ import { loadUserList } from 'actions';
 import { BULK_DELETE_USER_SUCCESS } from 'config/general';
 import { clearAlerts } from './helpers';
 
-import { useMrtTable } from 'hooks';
-
-const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
-const TABLE_PAGE_SIZE_OPTIONS = [10, 20, 40];
-const TABLE_PAGE_SIZE_DEFAULT = 20;
-
-const useServerData = ({ actions, pageSize = TABLE_PAGE_SIZE_DEFAULT, pageIndex = 0 }) => {
-    const [state, setState] = useState({
-        data: [],
-        pageIndex,
-        pageSize,
-        searchTerm: '',
-        resultCount: 0,
-    });
-    const dispatch = useDispatch();
-    const {
-        userListLoading,
-        userListLoadingError,
-        userListItemUpdating,
-        userListItemUpdateSuccess,
-        userListItemUpdateError,
-        userListItemDeleting,
-        userListItemDeleteSuccess,
-        userListItemDeleteError,
-        userAdding,
-        userAddSuccess,
-        userAddError,
-        bulkUserDeleteMessages,
-    } = useSelector(state => state?.get('manageUsersReducer'));
-
-    const read = useCallback(
-        payload => {
-            console.log('request', payload);
-            dispatch(actions.read({ page: payload.pageIndex, pageSize: payload.pageSize, search: payload.searchTerm }))
-                .then(response => {
-                    console.log(response);
-                    setState(prev => ({
-                        ...prev,
-                        data: response.data,
-                        pageIndex: response.page,
-                        pageSize: response.size,
-                        resultCount: response.totalCount ?? (response.data?.length + 1 || 0),
-                    }));
-                })
-                .catch(e => {
-                    console.error(e);
-                });
-        },
-        [actions, dispatch],
-    );
-
-    const debouncedReadRequest = useMemo(() => {
-        return debounce(400, read, { atBegin: false });
-    }, [read]);
-
-    const onSearchTermChange = term => {
-        const newState = { ...state, searchTerm: term };
-        setState(newState);
-        debouncedReadRequest(newState);
-    };
-
-    const onPaginationChange = updater => {
-        // Updater can be a function or a value
-        const newPagination =
-            typeof updater === 'function' ? updater({ pageIndex: state.pageIndex, pageSize: state.pageSize }) : updater;
-        read(newPagination);
-    };
-
-    const onSetPageSize = size => {
-        read({ ...state, pageSize: size });
-    };
-
-    useEffect(() => {
-        read(state);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [read]);
-
-    return {
-        userListLoading,
-        userListLoadingError,
-        userListItemUpdating,
-        userListItemUpdateSuccess,
-        userListItemUpdateError,
-        userListItemDeleting,
-        userListItemDeleteSuccess,
-        userListItemDeleteError,
-        userAdding,
-        userAddSuccess,
-        userAddError,
-        bulkUserDeleteMessages,
-        ...state,
-        onPaginationChange,
-        onSearchTermChange,
-        onSetPageSize,
-    };
-};
-useServerData.propTypes = {
-    actions: PropTypes.shape({
-        read: PropTypes.func.isRequired,
-        update: PropTypes.func,
-        delete: PropTypes.func,
-    }).isRequired,
-    pageSize: PropTypes.number,
-    pageIndex: PropTypes.number,
-};
+import { useMrtTable, useServerData } from 'hooks';
 
 export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowDelete }) => {
     const disabled = false;
     const dispatch = useDispatch();
+    const [searchTerm, setSearchTerm] = useState('');
 
     React.useEffect(() => {
         return () => {
@@ -150,7 +46,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
     }, [dispatch]);
 
     const {
-        loadingText,
+        tablePageSizeOptions,
+        tablePageSizeDefault,
         header: {
             columns: { id, fullName, username, email, status, isAdmin, isSuperAdmin },
         },
@@ -173,14 +70,11 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         userListItemUpdating,
         userListItemDeleting,
         userAdding,
-        searchTerm,
-        pageIndex,
-        pageSize,
-        resultCount,
         data: list,
+        pagination,
+        request,
         onPaginationChange,
-        onSearchTermChange,
-    } = useServerData({ actions });
+    } = useServerData({ actions, pageSize: tablePageSizeDefault });
 
     const {
         data,
@@ -188,13 +82,19 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         pendingDeleteRowId: pendingDeleteRowIndex,
         isOpen,
         editingRow,
+        isPendingDelete,
+        selectedRows,
+        hasSelectedRows,
         setData,
         setBusy,
         setDeleteRow,
         resetDeleteRow,
-        isPendingDelete,
         setEditRow,
         resetEditRow,
+        setSelectedRows,
+        resetSelectedRows,
+        showConfirmation,
+        hideConfirmation,
     } = useMrtTable(list);
 
     const columns = React.useMemo(
@@ -320,7 +220,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     setTimeout(() => {
                         const dataDelete = [...data];
                         dataDelete.splice(pendingDeleteRowIndex, 1);
-                        setData([...dataDelete]);
+                        setData(dataDelete);
                         resolve();
                     }, 1000);
                 });
@@ -333,41 +233,39 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
     };
 
     const handleBulkDelete = () => {
-        console.log('bulk');
-        // const rowsSelected = materialTable.dataManager.data.filter(row => !!row.tableData.checked);
-        // onBulkRowDelete(rowsSelected)
-        //     .then(response => {
-        //         materialTable.setState(
-        //             prevState => {
-        //                 const newList = [...prevState.data];
-        //                 for (const [userId, message] of Object.entries(response)) {
-        //                     message === BULK_DELETE_USER_SUCCESS &&
-        //                         newList.splice(
-        //                             newList.findIndex(user => String(user.usr_id) === String(userId)),
-        //                             1,
-        //                         );
-        //                 }
-        //                 materialTable.dataManager.changeAllSelected(false);
-        //                 materialTable.dataManager.setData(newList);
-        //                 return {
-        //                     ...materialTable.dataManager.getRenderState(),
-        //                 };
-        //             },
-        //             () => materialTable.onSelectionChange(),
-        //         );
-        //     })
-        //     .catch(() => {
-        //         materialTable.setState(prevState => {
-        //             materialTable.dataManager.changeAllSelected(false);
-        //             materialTable.dataManager.setData([...prevState.data]);
-        //             return {
-        //                 ...materialTable.dataManager.getRenderState(),
-        //             };
-        //         });
-        //     });
+        setBusy();
+        const selectedRowIndexes = Object.keys(selectedRows);
+        const rowsSelected = data.filter((_, index) => selectedRowIndexes.includes(String(index)));
+
+        onBulkRowDelete(rowsSelected)
+            .then(response => {
+                const newList = [...data];
+                for (const [userId, message] of Object.entries(response)) {
+                    message === BULK_DELETE_USER_SUCCESS &&
+                        newList.splice(
+                            newList.findIndex(user => String(user.usr_id) === String(userId)),
+                            1,
+                        );
+                }
+                setData(newList);
+                resetSelectedRows();
+            })
+            .catch(() => setData(prev => [...prev]))
+            .finally(() => {
+                setBusy(false);
+                hideConfirmation();
+            });
     };
 
-    // memoize the debounce call with useMemo
+    const debouncedReadRequest = useMemo(() => {
+        return debounce(400, request, { atBegin: false });
+    }, [request]);
+
+    const onSearchTermChange = term => {
+        setSearchTerm(term);
+        debouncedReadRequest({ ...pagination, searchTerm: term });
+    };
+
     const handleSearch = e => {
         onSearchTermChange(e?.target?.value || '');
     };
@@ -387,6 +285,12 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         resetDeleteRow();
     };
 
+    const onCreateRecord = table => () => {
+        resetEditRow();
+        table.setEditingRow(null);
+        table.setCreatingRow(true);
+    };
+
     const table = useMaterialReactTable({
         getRowId: row => row.eap_id,
         columns,
@@ -394,18 +298,18 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         createDisplayMode: 'modal',
         editDisplayMode: 'modal',
         enableEditing: true,
+        enableRowSelection: true,
+        enableSelectAll: true,
         enableColumnDragging: false,
         enableColumnResizing: false,
         enableRowDragging: false,
-        enableRowSelection: true,
         enableColumnActions: false,
         enableColumnFilterModes: false,
         enableSorting: false,
         enableToolbarInternalActions: false,
-        enableSelectAll: true,
         positionActionsColumn: 'last',
         manualPagination: true,
-        rowCount: resultCount,
+        rowCount: pagination.resultCount,
         autoResetPageIndex: false,
         displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
         initialState: {
@@ -416,7 +320,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             showAlertBanner: false,
             isLoading: userListLoading,
             showLoadingOverlay: userListLoading || userListItemUpdating || userListItemDeleting || userAdding || isBusy,
-            pagination: { pageSize, pageIndex },
+            pagination,
+            rowSelection: selectedRows,
         },
         icons: {
             SaveIcon: props => (
@@ -437,7 +342,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             ),
         },
         muiPaginationProps: {
-            rowsPerPageOptions: TABLE_PAGE_SIZE_OPTIONS,
+            rowsPerPageOptions: tablePageSizeOptions,
         },
         muiEditRowDialogProps: {
             sx: {
@@ -464,6 +369,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 padding: 1,
             },
         },
+        onRowSelectionChange: setSelectedRows,
         onPaginationChange: onPaginationChange,
         renderCreateRowDialogContent: ({ table, row }) => (
             <FullUserDetails
@@ -487,7 +393,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         ),
         renderTopToolbarCustomActions: ({ table }) => (
             <Box
-                sx={theme => ({
+                sx={{
                     display: 'flex',
                     backgroundColor: 'inherit',
                     flexDirection: 'row',
@@ -498,7 +404,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     '@media max-width: 768px': {
                         flexDirection: 'column',
                     },
-                })}
+                }}
             >
                 <TextField
                     title=""
@@ -524,17 +430,17 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     onChange={handleSearch}
                 />
                 <Button
-                    id={`users-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                    data-testid={`users-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                    id={`users-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
+                        .toLowerCase()
+                        .replace(/ /g, '-')}`}
+                    data-testid={`users-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
+                        .toLowerCase()
+                        .replace(/ /g, '-')}`}
                     disabled={disabled}
                     variant="contained"
                     color="primary"
-                    children={addButtonTooltip}
-                    onClick={() => {
-                        resetEditRow();
-                        table.setEditingRow(null);
-                        table.setCreatingRow(true);
-                    }}
+                    children={hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip}
+                    onClick={hasSelectedRows ? showConfirmation : onCreateRecord(table)}
                 />
             </Box>
         ),
