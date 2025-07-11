@@ -187,7 +187,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         if (mode === 'add') {
             onRowAdd(newData)
                 .then(data => {
-                    setData(prev => [...prev, data]);
+                    setData(prev => [data, ...prev]);
                 })
                 .catch(() => setData(prev => [...prev]))
                 .finally(() => {
@@ -428,6 +428,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     sx={{ width: '300px' }}
                     value={searchTerm}
                     onChange={handleSearch}
+                    disabled={table.getState().creatingRow !== null}
                 />
                 <Button
                     id={`users-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
@@ -436,7 +437,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     data-testid={`users-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
                         .toLowerCase()
                         .replace(/ /g, '-')}`}
-                    disabled={disabled}
+                    disabled={disabled || table.getState().creatingRow !== null}
                     variant="contained"
                     color="primary"
                     children={hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip}

@@ -1,4 +1,5 @@
-import { useState, useCallback, useEffect } from 'react';
+/* eslint-disable no-unused-vars */
+import { useState, useCallback, useEffect, useMemo } from 'react';
 
 import PropTypes from 'prop-types';
 
@@ -96,9 +97,10 @@ export const useMrtTable = (list, rules = []) => {
         setData(list);
     }, [list]);
 
-    const _setData = data => {
-        hasSelectedRows && resetSelectedRows();
-        setData(data);
+    const _setData = updater => {
+        resetSelectedRows();
+        const newData = typeof updater === 'function' ? updater(data) : updater;
+        setData(newData);
     };
 
     return {
