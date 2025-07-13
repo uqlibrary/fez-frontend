@@ -205,7 +205,7 @@ export const pathConfig = {
     authorStatistics: {
         url: id => `https://app.library.uq.edu.au/#/authors/${id}`,
     },
-    help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide',
+    help: 'https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets',
     digiteam: {
         batchImport: '/batch-import',
     },
