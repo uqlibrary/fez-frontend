@@ -1683,14 +1683,14 @@ export const OA_STATUS_TYPE = [
 ];
 
 export const ALTERNATE_IDENTIFIER_TYPE = [
-    { value: 459133, text: 'Serial Number' },
-    { value: 459134, text: 'Inventory Number' },
-    { value: 459135, text: 'Other' },
+    { value: 457082, text: 'Serial Number' },
+    { value: 457083, text: 'Inventory Number' },
+    { value: 457084, text: 'Other' },
 ];
 
 export const AUTHOR_EXTERNAL_IDENTIFIER_TYPE = [
-    { value: 459136, text: 'Orcid' },
-    { value: 459137, text: 'ROR' },
+    { value: 457086, text: 'Orcid' },
+    { value: 457087, text: 'ROR' },
 ];
 
 export const SENSITIVE_HANDLING_NOTE_OTHER_TYPE = 456860;
