@@ -37,7 +37,7 @@ jest.mock('@mui/x-charts', () => ({
 }));
 
 // jest.mock('@date-io/moment');
-import MomentUtils from '@date-io/moment';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 // setup global fetch for navigate in jest
 import 'whatwg-fetch';
 
@@ -94,7 +94,7 @@ global.renderComponent = (component, props, args = {}) => {
             <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
                 <StyledEngineProvider injectFirst>
                     <ThemeProvider theme={mui1theme}>
-                        <LocalizationProvider dateAdapter={MomentUtils}>
+                        <LocalizationProvider dateAdapter={AdapterMoment}>
                             {React.createElement(component, props)}
                         </LocalizationProvider>
                     </ThemeProvider>

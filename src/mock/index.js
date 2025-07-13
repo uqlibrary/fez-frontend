@@ -121,8 +121,11 @@ export const setup = () => {
         })
         .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl)
         .reply(config => {
+            if (config.params?.all === 'should return 401') {
+                return [401, { data: [] }];
+            }
             // AUTHOR_PUBLICATIONS_STATS_ONLY_API
-            if (config.params.rule === 'incomplete') {
+            else if (config.params.rule === 'incomplete') {
                 return [200, mockData.incompleteNTROlist];
             } else if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
                 return [200, mockData.currentAuthorStats];
@@ -902,7 +905,6 @@ export const setup = () => {
     mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
         .reply(200, { data: { ...mockData.record } })
         // .reply(500, { message: ['error - failed PATCH EXISTING_RECORD_API'] })
-
         .onPatch(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
         .reply(200)
 

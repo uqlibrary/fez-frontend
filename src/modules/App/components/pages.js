@@ -36,7 +36,7 @@ export const CollectionForm = lazy(() =>
     lazyRetry(() => import('modules/Admin/CollectionForm/components/CollectionForm')),
 );
 export const CommunityForm = lazy(() =>
-    lazyRetry(() => import('modules/Admin/CommunityForm/containers/CommunityForm')),
+    lazyRetry(() => import('modules/Admin/CommunityForm/components/CommunityForm')),
 );
 export const CommunityList = lazy(() => lazyRetry(() => import('modules/CommunityCollections/CommunityList')));
 export const ControlledVocabularies = lazy(() =>
@@ -50,6 +50,7 @@ export const FavouriteSearch = lazy(() =>
     lazyRetry(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch')),
 );
 export const FixRecord = lazy(() => lazyRetry(() => import('modules/FixRecord/components/FixRecord')));
+export const FeedbackRecord = lazy(() => lazyRetry(() => import('modules/FeedbackRecord/components/FeedbackRecord')));
 export const ViewJournal = lazy(() => lazyRetry(() => import('modules/ViewJournal/components/ViewJournal')));
 export const ManageAuthors = lazy(() => lazyRetry(() => import('modules/Admin/ManageAuthors')));
 export const ManageUsers = lazy(() => lazyRetry(() => import('modules/Admin/ManageUsers')));

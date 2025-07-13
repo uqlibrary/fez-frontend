@@ -1280,6 +1280,21 @@ export const viewJournalConfig = {
                     },
                 },
             ],
+            [
+                {
+                    heading: 'Last updated',
+                    fieldId: 'jnl-read-and-publish-source-date',
+                    data: [
+                        {
+                            path: ['fez_journal_read_and_publish', 'jnl_read_and_publish_source_date'],
+                        },
+                    ],
+                    template: 'DateTimeTemplate',
+                    templateProps: {
+                        format: 'Do MMMM YYYY',
+                    },
+                },
+            ],
         ],
     },
 };

@@ -1535,7 +1535,7 @@ export default {
             },
             keywords: {
                 description:
-                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)',
+                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the collection. (eg. one|two|three)',
                 field: {
                     form: {
                         locale: {
@@ -1605,7 +1605,7 @@ export default {
             },
             keywords: {
                 description:
-                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)',
+                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the community. (eg. one|two|three)',
                 field: {
                     form: {
                         locale: {

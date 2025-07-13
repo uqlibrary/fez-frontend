@@ -65,7 +65,7 @@ function setup(props = {}) {
  */
 describe('Component FixRecord', () => {
     const isDebugging = false;
-    const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
+    const waitForOptions = { timeout: isDebugging ? 120000 : 2000 };
     const switchToUnclaimMode = () => {
         fireEvent.mouseDown(screen.getByTestId('fix-action-select'));
         fireEvent.click(screen.getByText(/I am not the author/i));

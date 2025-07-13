@@ -1612,7 +1612,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
-                  aria-controls=":r1s:"
+                  aria-controls=":r1u:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
@@ -1814,7 +1814,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
-                  aria-controls=":r1o:"
+                  aria-controls=":r1q:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
@@ -2322,7 +2322,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
-                  aria-controls=":r1o:"
+                  aria-controls=":r1q:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
@@ -2524,7 +2524,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
-                  aria-controls=":r1s:"
+                  aria-controls=":r1u:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
@@ -3966,7 +3966,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
-                  aria-controls=":r2n:"
+                  aria-controls=":r2p:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
@@ -4008,7 +4008,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
             <div
-              class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+              class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
             >
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -4017,10 +4017,12 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               >
                 <input
                   aria-invalid="false"
+                  autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r2t:"
+                  id=":r2v:"
+                  inputmode="text"
                   placeholder="dd/mm/yyyy"
-                  type="tel"
+                  type="text"
                   value="01/01/2020"
                 />
                 <div
@@ -4194,7 +4196,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
-                  aria-controls=":r2r:"
+                  aria-controls=":r2t:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
@@ -6861,7 +6863,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
             <div
-              class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+              class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
             >
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -6870,10 +6872,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               >
                 <input
                   aria-invalid="false"
+                  autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
                   id=":r12:"
+                  inputmode="text"
                   placeholder="dd/mm/yyyy"
-                  type="tel"
+                  type="text"
                   value="02/02/2022"
                 />
                 <div
@@ -8187,14 +8191,14 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
               >
                 <div
-                  aria-controls=":r1d:"
+                  aria-controls=":r1e:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-0-select"
@@ -8392,14 +8396,14 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
               >
                 <div
-                  aria-controls=":r1h:"
+                  aria-controls=":r1i:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-1-select"
@@ -8904,14 +8908,14 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
               >
                 <div
-                  aria-controls=":r1d:"
+                  aria-controls=":r1e:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-0-select"
@@ -9104,14 +9108,14 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
               >
                 <div
-                  aria-controls=":r1h:"
+                  aria-controls=":r1i:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-1-select"
@@ -9616,14 +9620,14 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
               >
                 <div
-                  aria-controls=":r1d:"
+                  aria-controls=":r1e:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-0-select"
@@ -9816,14 +9820,14 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
               >
                 <div
-                  aria-controls=":r1h:"
+                  aria-controls=":r1i:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-1-select"
@@ -9866,7 +9870,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
             <div
-              class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+              class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
             >
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -9875,10 +9879,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               >
                 <input
                   aria-invalid="false"
+                  autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r1j:"
+                  id=":r1k:"
+                  inputmode="text"
                   placeholder="dd/mm/yyyy"
-                  type="tel"
+                  type="text"
                   value="01/01/2020"
                 />
                 <div
@@ -10988,7 +10994,7 @@ exports[`Component FileUploader should update file description 1`] = `
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
-                  aria-controls=":r17:"
+                  aria-controls=":r18:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"

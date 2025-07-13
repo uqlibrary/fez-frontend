@@ -50,6 +50,9 @@ describe('UqDataSection component', () => {
 
         expect(getByTestId('jnl-uq-author-count-header')).toHaveTextContent('Recently published UQ authors');
         expect(getByTestId('jnl-uq-author-count-value')).toHaveTextContent('0');
+
+        expect(getByTestId('jnl-read-and-publish-source-date-header')).toHaveTextContent('Last updated');
+        expect(getByTestId('jnl-read-and-publish-source-date-value')).toHaveTextContent('19th July 2023');
     });
 
     it('should render default view (not discounted)', () => {
@@ -82,5 +85,8 @@ describe('UqDataSection component', () => {
 
         expect(getByTestId('jnl-uq-author-count-header')).toHaveTextContent('Recently published UQ authors');
         expect(getByTestId('jnl-uq-author-count-value')).toHaveTextContent('0');
+
+        expect(getByTestId('jnl-read-and-publish-source-date-header')).toHaveTextContent('Last updated');
+        expect(getByTestId('jnl-read-and-publish-source-date-value')).toHaveTextContent('19th July 2023');
     });
 });

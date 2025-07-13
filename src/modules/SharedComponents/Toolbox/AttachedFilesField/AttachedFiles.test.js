@@ -1,7 +1,7 @@
 import React from 'react';
 import AttachedFiles, { getFileOpenAccessStatus, checkFileNamesForDupes, getFilenameId } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
-import { rtlRender, fireEvent, waitFor, act, createMatchMedia, within } from 'test-utils';
+import { rtlRender, fireEvent, userEvent, waitFor, act, createMatchMedia, within } from 'test-utils';
 import { openAccessConfig } from 'config';
 import * as fileUploadLocale from '../FileUploader/locale';
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
@@ -23,6 +23,8 @@ import { getTestId as getAvStateIconTestId } from '../FileAvStateIcon/FileAvStat
 import { createFezDatastreamInfoArray, withDatastreams } from 'test-utils';
 import { getDownloadLinkTestId, getPreviewLinkTestId } from '../../../ViewRecord/components/partials/FileName';
 import moment from 'moment';
+
+jest.mock('react-player', () => () => <div>Mock React Player</div>);
 
 function setup(testProps = {}, renderer = rtlRender) {
     const { locale, ...restProps } = testProps;
@@ -307,7 +309,7 @@ describe('AttachedFiles component', () => {
         expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', '2018-01-26', 0);
     });
 
-    it('should yield an warning for when entering an invalid embargo date', async () => {
+    it('should yield a warning when entering an invalid embargo date', async () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
 
@@ -334,22 +336,18 @@ describe('AttachedFiles component', () => {
         });
 
         // set embargo date to an invalid date
-        act(() => {
-            fireEvent.change(getByTestId('dsi-embargo-date-0-input').firstChild, { target: { value: '12122222' } });
-        });
+        // act(() => {
+        await userEvent.type(getByTestId('dsi-embargo-date-0-input').firstChild, '12122222');
+        // });
         // make sure the invalid date warning has been raised
         const alert = await waitFor(() => getByTestId('alert-files'));
         expect(alert).toHaveTextContent(
             fileUploadLocale.default.fileUploadRow.invalidEmbargoDateWarning(datastream[0].dsi_dsid),
         );
         // change to a valid date
-        act(() => {
-            fireEvent.change(getByTestId('dsi-embargo-date-0-input').firstChild, {
-                target: {
-                    value: moment().format(GENERIC_DATE_FORMAT),
-                },
-            });
-        });
+        // act(() => {
+        await userEvent.type(getByTestId('dsi-embargo-date-0-input').firstChild, moment().format(GENERIC_DATE_FORMAT));
+        // });
         // make sure the warning has been cleared
         expect(alert).not.toBeInTheDocument();
     });
@@ -381,24 +379,22 @@ describe('AttachedFiles component', () => {
         });
 
         // set embargo date to an invalid date
-        act(() => {
-            fireEvent.change(getByTestId('dsi-embargo-date-0-input').firstChild, { target: { value: '12122222' } });
-        });
+        await userEvent.type(getByTestId('dsi-embargo-date-0-input').firstChild, '12122222');
+
         // make sure the invalid date warning has been raised
         const alert = await waitFor(() => getByTestId('alert-files'));
         expect(alert).toHaveTextContent(
             fileUploadLocale.default.fileUploadRow.invalidEmbargoDateWarning(datastream[0].dsi_dsid),
         );
-        act(() => {
-            fireEvent.keyUp(getByTestId('dsi-embargo-date-0-input').firstChild, { key: '1' });
-        });
+
+        await userEvent.type(getByTestId('dsi-embargo-date-0-input').firstChild, '1');
+
         expect(alert).toHaveTextContent(
             fileUploadLocale.default.fileUploadRow.invalidEmbargoDateWarning(datastream[0].dsi_dsid),
         );
         // clear date with backspace
-        act(() => {
-            fireEvent.keyUp(getByTestId('dsi-embargo-date-0-input').firstChild, { key: 'Backspace' });
-        });
+        await userEvent.type(getByTestId('dsi-embargo-date-0-input').firstChild, '{backspace}');
+
         // make sure the warning has been cleared
         expect(alert).not.toBeInTheDocument();
     });
