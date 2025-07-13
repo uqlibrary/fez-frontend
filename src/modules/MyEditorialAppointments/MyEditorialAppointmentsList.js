@@ -611,7 +611,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             <Button
                 id={`my-editorial-appointments-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                 data-testid={`my-editorial-appointments-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                disabled={disabled}
+                disabled={disabled || table.getState().creatingRow !== null}
                 variant="contained"
                 color="primary"
                 children={addButtonTooltip}
