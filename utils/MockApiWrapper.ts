@@ -20,8 +20,9 @@ interface CvoParams {
 
 interface ApiUrls {
     records: {
-        create: string;
         get: (pid: string, isEdit?: boolean) => string;
+        create: string;
+        update: (pid: string, isEdit?: boolean) => string;
         issues: (pid: string) => string;
     };
     files: {
@@ -53,6 +54,7 @@ interface RecordApi {
     delete: (params?: Params) => RecordApi;
     issues: (params?: Params) => RecordApi;
     fail: {
+        get: (params?: Params) => RecordApi;
         create: () => RecordApi;
         update: (params?: Params) => RecordApi;
         bulkUpdate: (params?: Params) => RecordApi;
@@ -94,9 +96,10 @@ const replyMethod = (once: boolean): 'reply' | 'replyOnce' => (once ? 'replyOnce
 const wrapper: Api = {
     url: {
         records: {
-            create: repositories.routes.NEW_RECORD_API().apiUrl,
             get: (pid: string, isEdit: boolean = false) =>
                 repositories.routes.EXISTING_RECORD_API({ pid, isEdit }).apiUrl,
+            create: repositories.routes.NEW_RECORD_API().apiUrl,
+            update: (pid: string, isEdit: boolean = false) => wrapper.url.records.get(pid, isEdit),
             issues: (pid: string) => repositories.routes.RECORDS_ISSUES_API({ pid }).apiUrl,
         },
         files: {
@@ -143,6 +146,7 @@ const wrapper: Api = {
                 return this;
             },
             fail: {
+                get: ({ pid = '', once = true }: Params = {}) => wrapper.mock.records.get({ pid, status: 500, once }),
                 create: () => wrapper.mock.records.create({ status: 500 }),
                 update: ({ pid = '', data = {}, once = true }: Params = {}) =>
                     wrapper.mock.records.update({ status: 500, pid, data, once }),
