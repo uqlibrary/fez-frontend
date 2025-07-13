@@ -1,10 +1,7 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { latestPubsPayload } from 'mock/data/testing/latestPublications';
 import MyLatestPublications from './MyLatestPublications';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
-
 import * as actions from 'actions';
 
 jest.mock('actions', () => ({
@@ -31,7 +28,7 @@ function setup(testProps = {}, testState = {}) {
         ...testState,
     };
     return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <MyLatestPublications {...props} />
             </WithRouter>

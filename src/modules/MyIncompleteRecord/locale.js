@@ -24,13 +24,14 @@ help: {
 /* eslint-disable max-len */
 export default {
     title: 'Complete my work',
+    loadingMessage: 'Loading work',
     help: {
         title: 'Add more information to an existing NTRO',
         text: (
             <p>
                 For help, click{' '}
                 <a
-                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                    href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/add-information-to-existing-ntro"
                     target="_blank"
                 >
                     here

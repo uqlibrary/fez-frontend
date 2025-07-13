@@ -27,17 +27,6 @@ function setup(testProps = {}) {
 }
 
 describe('AuthorsListWithAffiliates', () => {
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
-
     afterEach(() => {
         jest.resetAllMocks();
     });

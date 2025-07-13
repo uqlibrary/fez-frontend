@@ -1229,7 +1229,7 @@ export default {
                                 Detailed instructions are available{' '}
                                 <a
                                     target="_blank"
-                                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records#s-lg-box-18496096"
+                                    href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/add-missing-work#s-lg-box-18496096"
                                 >
                                     here
                                 </a>
@@ -1243,7 +1243,7 @@ export default {
                                 click{' '}
                                 <a
                                     target="_blank"
-                                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+                                    href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/submission-data-requirements#s-lg-box-20836546"
                                 >
                                     here
                                 </a>
@@ -1556,7 +1556,7 @@ export default {
                         For more information about identification of author/creator/designer, click{' '}
                         <a
                             target="_blank"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/submission-data-requirements#s-lg-box-20836546"
                         >
                             here
                         </a>
@@ -2185,7 +2185,7 @@ export default {
                                     <a
                                         style={{ fontWeight: 700 }}
                                         target="_blank"
-                                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
+                                        href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/submission-data-requirements#s-lg-box-20836546"
                                     >
                                         here
                                     </a>
@@ -3281,7 +3281,7 @@ export default {
                         For more information about identification of photographer, click{' '}
                         <a
                             target="_blank"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/submission-data-requirements#s-lg-box-20836546"
                         >
                             here
                         </a>
@@ -3760,6 +3760,8 @@ export default {
             },
         },
         manageAuthors: {
+            validationAlertTitle:
+                'Form cannot be submitted until all fields are valid. Please review all input fields.',
             loadingText: 'Loading authors',
             header: {
                 columns: {
@@ -3964,6 +3966,8 @@ export default {
             },
         },
         manageUsers: {
+            validationAlertTitle:
+                'Form cannot be submitted until all fields are valid. Please review all input fields.',
             loadingText: 'Loading users',
             title: 'User information',
             header: {

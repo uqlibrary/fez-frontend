@@ -1,53 +1,15 @@
-import React from 'react';
-
-jest.dontMock('./GenericDocumentForm');
-
 import GenericDocumentForm from './GenericDocumentForm';
-import { render, WithReduxStore } from 'test-utils';
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(GenericDocumentForm, props);
 
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: props => {
-        return (
-            <field
-                is="mock"
-                name={props.name}
-                title={props.title}
-                required={props.required}
-                disabled={props.disabled}
-                label={props.label || props.floatingLabelText}
-                hasError={props.hasError}
-            />
-        );
-    },
-}));
-
-function setup(testProps = {}) {
-    const props = {
-        ...testProps,
-        submitting: testProps.submitting || false, // : PropTypes.bool,
-        subtypeVocabId: testProps.subtypeVocabId || 0, // : PropTypes.number
-    };
-    return render(
-        <WithReduxStore>
-            <GenericDocumentForm {...props} />
-        </WithReduxStore>,
-    );
-}
-
-describe('GenericDocumentForm renders ', () => {
+describe('GenericDocumentForm', () => {
     it('component', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 
-    it('component with 8 input fields', () => {
-        const { container } = setup();
-        expect(container.getElementsByTagName('field').length).toEqual(8);
-    });
-
     it('component with all fields disabled', () => {
-        const { container } = setup({ submitting: true });
-        expect(container.querySelectorAll('field[disabled=true]').length).toEqual(8);
+        const { container } = setup({ isSubmitting: true });
+        expect(container).toMatchSnapshot();
     });
 });

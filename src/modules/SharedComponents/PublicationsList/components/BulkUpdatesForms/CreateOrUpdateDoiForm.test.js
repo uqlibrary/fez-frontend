@@ -1,7 +1,15 @@
 import React from 'react';
 import CreateOrUpdateDoiForm from './CreateOrUpdateDoiForm';
-import { act, render, WithRouter, WithReduxStore, fireEvent, waitFor } from 'test-utils';
-import * as repositories from 'repositories';
+import {
+    act,
+    render,
+    WithRouter,
+    WithReduxStore,
+    fireEvent,
+    waitFor,
+    expectApiRequestToMatchSnapshot,
+    api,
+} from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -22,16 +30,7 @@ function setup(testProps = {}) {
 }
 
 describe('CreateOrUpdateDoiForm', () => {
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
+    beforeEach(() => api.reset());
 
     it('should not show collection warning when no collections are selected', async () => {
         const { getByTestId } = setup();
@@ -51,7 +50,7 @@ describe('CreateOrUpdateDoiForm', () => {
     });
 
     it('should correctly submit form and display success info', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
+        api.mock.records.bulkUpdate();
         const { getByTestId } = setup();
         // assert initial state of the form
         expect(getByTestId('create-or-update-doi-submit')).not.toHaveAttribute('disabled');
@@ -63,10 +62,11 @@ describe('CreateOrUpdateDoiForm', () => {
 
         await waitFor(() => getByTestId('alert-done-create-or-update-doi'));
         expect(getByTestId('alert-done-create-or-update-doi')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should submit form and display error ', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500, {});
+        api.mock.records.fail.bulkUpdate();
         const { getByTestId } = setup();
         // assert initial state of the form
         expect(getByTestId('create-or-update-doi-submit')).not.toHaveAttribute('disabled');
