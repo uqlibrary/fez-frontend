@@ -1,5 +1,684 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ChangeDisplayType form submission should correctly submit form and display success info for type with subtype 1`] = `"{"rek_pid":"UQ:284280","rek_display_type":174,"rek_subtype":"Research book (original research)","fez_record_search_key_herdc_code":{"rek_herdc_code":null}}"`;
+exports[`ChangeDisplayType form should display confirmation box after successful submission 1`] = `
+<div
+  aria-hidden="true"
+>
+  <form>
+    <div
+      class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      />
+      <div
+        class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              data-testid="change-display-type-page-title"
+              style="font-size: 24px;"
+            >
+              Change display type from Research Report - Research Report for an External Body - Public Sector
+            </h2>
+            <div
+              class="publicationCitation"
+            >
+              <div
+                class="css-0"
+                data-testid="publication-citation-parent-UQ:284280"
+                id="publication-citation-parent-UQ:284280"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                      />
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                      >
+                        <div
+                          class="citationContent citationResearchReport"
+                        >
+                          <span
+                            class="citationAuthors"
+                          >
+                            <span
+                              class="citationAuthor"
+                              data-testid="rek-author-0"
+                            >
+                              Memmott, Paul
+                            </span>
+                            , 
+                            <span
+                              class="citationAuthor"
+                              data-testid="rek-author-1"
+                            >
+                              Birdsall-Jones, Christina
+                            </span>
+                            , 
+                             and 
+                            <span
+                              class="citationAuthor"
+                              data-testid="rek-author-2"
+                            >
+                              Greenop, Kelly
+                            </span>
+                             
+                          </span>
+                          <span
+                            class="citationDate"
+                          >
+                            (
+                            2012
+                            ).
+                          </span>
+                          <span
+                            class="citationTitle"
+                          >
+                             
+                            Australian Indigenous house crowding
+                            .
+                          </span>
+                          <span
+                            class="citationSeries empty"
+                          />
+                          <span
+                            class="citationPlaceOfPublication"
+                          >
+                             
+                            Melbourne, VIC, Australia
+                            :
+                          </span>
+                          <span
+                            class="citationPublisher"
+                          >
+                             
+                            The University of Queensland
+                            .
+                          </span>
+                          <span
+                            class="citationDOI empty"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr
+                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+              />
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card"
+              id="standard-card"
+            >
+              <div
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                />
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-content"
+                data-testid="standard-card-content"
+                id="standard-card-content"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      disabled="false"
+                      is="mock"
+                      label="New Work type"
+                      name="rek_display_type"
+                      required="true"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              data-testid="alert"
+              style="margin-top: 5px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
+                data-analyticsid="change-display-type-submit-status"
+                data-testid="change-display-type-submit-status"
+                id="change-display-type-submit-status"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                        data-testid="DoneIcon"
+                        focusable="false"
+                        id="done-icon"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                    >
+                      <b>
+                        Success - 
+                      </b>
+                      <span
+                        data-testid="alert-message"
+                      >
+                        Display type has been changed successfully.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-true css-1vknvy4-MuiGrid-root"
+              />
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="rek-change-display-type-cancel"
+                  data-testid="rek-change-display-type-cancel"
+                  id="rek-change-display-type-cancel"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="change-display-type-submit"
+                  data-testid="change-display-type-submit"
+                  id="change-display-type-submit"
+                  tabindex="0"
+                  type="button"
+                >
+                  Change display type
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+`;
 
-exports[`ChangeDisplayType form submission should correctly submit form and display success info for type without subtype 1`] = `"{"rek_pid":"UQ:284280","rek_display_type":238,"rek_subtype":null,"fez_record_search_key_herdc_code":{"rek_herdc_code":null}}"`;
+exports[`ChangeDisplayType form should render empty form when no record supplied 1`] = `
+<div>
+  <div
+    class="ChangeDisplayType empty"
+  />
+</div>
+`;
+
+exports[`ChangeDisplayType form should render form loaded with submit button disabled 1`] = `
+<div>
+  <form>
+    <div
+      class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      />
+      <div
+        class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              data-testid="change-display-type-page-title"
+              style="font-size: 24px;"
+            >
+              Change display type from Research Report - Research Report for an External Body - Public Sector
+            </h2>
+            <div
+              class="publicationCitation"
+            >
+              <div
+                class="css-0"
+                data-testid="publication-citation-parent-UQ:284280"
+                id="publication-citation-parent-UQ:284280"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                      />
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                      >
+                        <div
+                          class="citationContent citationResearchReport"
+                        >
+                          <span
+                            class="citationAuthors"
+                          >
+                            <span
+                              class="citationAuthor"
+                              data-testid="rek-author-0"
+                            >
+                              Memmott, Paul
+                            </span>
+                            , 
+                            <span
+                              class="citationAuthor"
+                              data-testid="rek-author-1"
+                            >
+                              Birdsall-Jones, Christina
+                            </span>
+                            , 
+                             and 
+                            <span
+                              class="citationAuthor"
+                              data-testid="rek-author-2"
+                            >
+                              Greenop, Kelly
+                            </span>
+                             
+                          </span>
+                          <span
+                            class="citationDate"
+                          >
+                            (
+                            2012
+                            ).
+                          </span>
+                          <span
+                            class="citationTitle"
+                          >
+                             
+                            Australian Indigenous house crowding
+                            .
+                          </span>
+                          <span
+                            class="citationSeries empty"
+                          />
+                          <span
+                            class="citationPlaceOfPublication"
+                          >
+                             
+                            Melbourne, VIC, Australia
+                            :
+                          </span>
+                          <span
+                            class="citationPublisher"
+                          >
+                             
+                            The University of Queensland
+                            .
+                          </span>
+                          <span
+                            class="citationDOI empty"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr
+                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+              />
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card"
+              id="standard-card"
+            >
+              <div
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                />
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-content"
+                data-testid="standard-card-content"
+                id="standard-card-content"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      disabled="false"
+                      is="mock"
+                      label="New Work type"
+                      name="rek_display_type"
+                      required="true"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-true css-1vknvy4-MuiGrid-root"
+              />
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="rek-change-display-type-cancel"
+                  data-testid="rek-change-display-type-cancel"
+                  id="rek-change-display-type-cancel"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="change-display-type-submit"
+                  data-testid="change-display-type-submit"
+                  id="change-display-type-submit"
+                  tabindex="0"
+                  type="button"
+                >
+                  Change display type
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
+<div>
+  <form>
+    <div
+      class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      />
+      <div
+        class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              data-testid="change-display-type-page-title"
+              style="font-size: 24px;"
+            >
+              Change display type from Research Report - Research Report for an External Body - Public Sector
+            </h2>
+            <div
+              class="publicationCitation"
+            >
+              <div
+                class="css-0"
+                data-testid="publication-citation-parent-UQ:284280"
+                id="publication-citation-parent-UQ:284280"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                      />
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                      >
+                        <div
+                          class="citationContent citationResearchReport"
+                        >
+                          <span
+                            class="citationAuthors"
+                          >
+                            <span
+                              class="citationAuthor"
+                              data-testid="rek-author-0"
+                            >
+                              Memmott, Paul
+                            </span>
+                            , 
+                            <span
+                              class="citationAuthor"
+                              data-testid="rek-author-1"
+                            >
+                              Birdsall-Jones, Christina
+                            </span>
+                            , 
+                             and 
+                            <span
+                              class="citationAuthor"
+                              data-testid="rek-author-2"
+                            >
+                              Greenop, Kelly
+                            </span>
+                             
+                          </span>
+                          <span
+                            class="citationDate"
+                          >
+                            (
+                            2012
+                            ).
+                          </span>
+                          <span
+                            class="citationTitle"
+                          >
+                             
+                            Australian Indigenous house crowding
+                            .
+                          </span>
+                          <span
+                            class="citationSeries empty"
+                          />
+                          <span
+                            class="citationPlaceOfPublication"
+                          >
+                             
+                            Melbourne, VIC, Australia
+                            :
+                          </span>
+                          <span
+                            class="citationPublisher"
+                          >
+                             
+                            The University of Queensland
+                            .
+                          </span>
+                          <span
+                            class="citationDOI empty"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr
+                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+              />
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card"
+              id="standard-card"
+            >
+              <div
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                />
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-content"
+                data-testid="standard-card-content"
+                id="standard-card-content"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <field
+                      disabled="false"
+                      is="mock"
+                      label="New Work type"
+                      name="rek_display_type"
+                      required="true"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-true css-1vknvy4-MuiGrid-root"
+              />
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="rek-change-display-type-cancel"
+                  data-testid="rek-change-display-type-cancel"
+                  id="rek-change-display-type-cancel"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="change-display-type-submit"
+                  data-testid="change-display-type-submit"
+                  id="change-display-type-submit"
+                  tabindex="0"
+                  type="button"
+                >
+                  Change display type
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+`;
