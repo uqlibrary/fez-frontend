@@ -745,12 +745,98 @@ describe('ManageUsers', () => {
         await findByTestId('standard-card-user-information');
         expect(queryByText('User information')).toBeInTheDocument();
 
+        fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
+        fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test, Name' } });
+        fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
+        fireEvent.click(getByTestId('users-update-this-user-save'));
+
         fireEvent.keyDown(getByTestId('user-edit-row'), { key: 'Escape' });
 
         await waitFor(() => {
             expect(queryByTestId('standard-card-user-information')).not.toBeInTheDocument();
         });
         expect(queryByText('User information')).not.toBeInTheDocument();
+
+        expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
+        expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
+    });
+
+    it('should cancel editing user mode', async () => {
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl)).replyOnce(200, {
+            data: [
+                {
+                    usr_id: 1000000293,
+                    usr_created_date: '2017-02-16T23:11:37Z',
+                    usr_status: 'active',
+                    usr_given_names: null,
+                    usr_family_name: null,
+                    usr_full_name: 'Test User',
+                    usr_email: 't.user@library.uq.edu.au',
+                    usr_preferences: null,
+                    usr_sms_email: null,
+                    usr_username: 'uqvasai',
+                    usr_shib_username: null,
+                    usr_administrator: true,
+                    usr_ldap_authentication: false,
+                    usr_login_count: 157,
+                    usr_shib_login_count: 0,
+                    usr_last_login_date: '2021-02-23T04:44:06Z',
+                    usr_external_usr_id: null,
+                    usr_super_administrator: true,
+                    usr_auth_rule_groups:
+                        '53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11',
+                    usr_real_last_login_date: '2021-02-22T11:49:49Z',
+                },
+                {
+                    usr_id: 1000000293,
+                    usr_created_date: '2017-02-16T23:11:37Z',
+                    usr_status: 'active',
+                    usr_given_names: null,
+                    usr_family_name: null,
+                    usr_full_name: 'Testing User',
+                    usr_email: 't.user@library.uq.edu.au',
+                    usr_preferences: null,
+                    usr_sms_email: null,
+                    usr_username: 'uqvdesai',
+                    usr_shib_username: null,
+                    usr_administrator: true,
+                    usr_ldap_authentication: false,
+                    usr_login_count: 157,
+                    usr_shib_login_count: 0,
+                    usr_last_login_date: '2021-02-23T04:44:06Z',
+                    usr_external_usr_id: null,
+                    usr_super_administrator: true,
+                    usr_auth_rule_groups:
+                        '53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11',
+                    usr_real_last_login_date: '2021-02-22T11:49:49Z',
+                },
+            ],
+            total: 2,
+        });
+        const { container, getByTestId, queryByTestId, queryByText, findByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
+
+        fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
+        await findByTestId('standard-card-user-information');
+        expect(queryByText('User information')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
+        fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test, Name' } });
+        fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
+        fireEvent.click(getByTestId('users-update-this-user-save'));
+
+        fireEvent.click(getByTestId('users-update-this-user-cancel'));
+
+        await waitFor(() => {
+            expect(queryByTestId('standard-card-user-information')).not.toBeInTheDocument();
+        });
+        expect(queryByText('User information')).not.toBeInTheDocument();
+
+        expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
+        expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
     });
 
     it('should copy user id to clipboard', async () => {
