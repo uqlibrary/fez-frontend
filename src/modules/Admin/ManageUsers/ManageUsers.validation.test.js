@@ -1,6 +1,6 @@
 import React from 'react';
 import ManageUsers from './index';
-import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent, userEvent, preview } from 'test-utils';
+import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent, userEvent } from 'test-utils';
 import * as repository from 'repositories';
 
 const setup = (testProps = {}) => {
