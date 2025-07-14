@@ -35,7 +35,6 @@ import { clearAlerts } from './helpers';
 import { useMrtTable, useServerData } from 'hooks';
 
 export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowDelete }) => {
-    const disabled = false;
     const dispatch = useDispatch();
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -375,8 +374,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             <FullUserDetails
                 data={row.original}
                 mode="add"
-                id="users-list-edit-row"
-                data-testid="users-list-edit-row"
+                id="users-list-create-row"
+                data-testid="users-list-create-row"
                 onEditingApproved={handleSave(table)}
                 onEditingCanceled={handleCancel(table)}
             />
@@ -437,7 +436,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     data-testid={`users-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
                         .toLowerCase()
                         .replace(/ /g, '-')}`}
-                    disabled={disabled || table.getState().creatingRow !== null}
+                    disabled={table.getState().creatingRow !== null}
                     variant="contained"
                     color="primary"
                     children={hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip}
@@ -456,12 +455,10 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                                 table.setEditingRow(row);
                             }}
                             disabled={isPendingDelete || !!isBusy || !!editingRow}
-                            id={`users-list-row-list-row-${row.index}-${editButtonTooltip
+                            id={`users-list-row-${row.index}-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                            data-testid={`users-list-row-${row.index}-${editButtonTooltip
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
-                            data-testid={`users-list-row-list-row-${
-                                row.index
-                            }-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                         >
                             <tableIcons.Edit />
                         </IconButton>
@@ -470,12 +467,10 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                         <IconButton
                             onClick={openDeleteConfirmModal(row.index)}
                             disabled={isPendingDelete || !!isBusy || !!editingRow}
-                            id={`users-list-row-list-row-${row.index}-${deleteButtonTooltip
+                            id={`users-list-row-${row.index}-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                            data-testid={`users-list-row-${row.index}-${deleteButtonTooltip
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
-                            data-testid={`users-list-row-list-row-${
-                                row.index
-                            }-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                         >
                             <tableIcons.Delete />
                         </IconButton>
@@ -484,8 +479,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             );
         },
         muiTableBodyRowProps: ({ row }) => ({
-            id: `users-list-row-list-row-${row.index === -1 ? 'add' : row.index}`,
-            'data-testid': `users-list-row-list-row-${row.index === -1 ? 'add' : row.index}`,
+            id: `users-list-row-${row.index === -1 ? 'add' : row.index}`,
+            'data-testid': `users-list-row-${row.index === -1 ? 'add' : row.index}`,
         }),
     });
 

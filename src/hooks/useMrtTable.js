@@ -191,19 +191,22 @@ export const useServerData = ({ actions, pageSize = 10, pageIndex = 0 }) => {
 
     const _get = useCallback(
         payload => {
-            dispatch(actions.read({ page: payload.pageIndex, pageSize: payload.pageSize, search: payload.searchTerm }))
-                .then(response => {
-                    _setState(prev => ({
-                        ...prev,
-                        data: response.data,
-                        pageIndex: response.page,
-                        pageSize: response.size,
-                        resultCount: response.totalCount ?? (response.data?.length + 1 || 0),
-                    }));
-                })
-                .catch(e => {
-                    console.error(e);
-                });
+            actions?.read &&
+                dispatch(
+                    actions.read({ page: payload.pageIndex, pageSize: payload.pageSize, search: payload.searchTerm }),
+                )
+                    .then(response => {
+                        _setState(prev => ({
+                            ...prev,
+                            data: response.data,
+                            pageIndex: response.page,
+                            pageSize: response.size,
+                            resultCount: response.totalCount ?? (response.data?.length + 1 || 0),
+                        }));
+                    })
+                    .catch(e => {
+                        console.error(e);
+                    });
         },
         [actions, dispatch],
     );
@@ -218,11 +221,6 @@ export const useServerData = ({ actions, pageSize = 10, pageIndex = 0 }) => {
     const onSetPageSize = size => {
         _get({ ...state, pageSize: size });
     };
-
-    useEffect(() => {
-        _get(state);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
 
     return {
         userListLoading,
