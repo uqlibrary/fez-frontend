@@ -1,8 +1,10 @@
-cypress/e2e/batchImport.spec.js
 cypress/e2e/addMissingRecord.spec.js
 cypress/e2e/authorAffiliation.spec.js
 cypress/e2e/authorIdentifier.spec.js
+cypress/e2e/changeDisplayType.spec.js
+cypress/e2e/batchImport.spec.js
 cypress/e2e/dashboard.spec.js
+cypress/e2e/deleteRecord.spec.js
 cypress/e2e/favouriteSearch.spec.js
 cypress/e2e/masquerade.spec.js
 cypress/e2e/missingRecord.spec.js
@@ -11,4 +13,3 @@ cypress/e2e/scrollTop.spec.js
 cypress/e2e/version.spec.js
 cypress/e2e/viewJournal.spec.js
 cypress/e2e/viewRecord.spec.js
-cypress/e2e/deleteRecord.spec.js

@@ -12,7 +12,6 @@ test.describe('Add missing record', () => {
 
         test('should enable the submit button on form render only', async ({ page }) => {
             // Journal article requires subtype selection
-            await expect(page.getByTestId('rek-display-type-select')).toBeVisible();
             await page.getByTestId('rek-display-type-select').click();
             await expect(page.locator('#submit-work')).not.toBeVisible();
             await page
@@ -22,7 +21,6 @@ test.describe('Add missing record', () => {
                 .first()
                 .click();
             await expect(page.locator('#submit-work')).not.toBeVisible();
-            await expect(page.getByTestId('rek-subtype-select')).toBeVisible();
             await page.getByTestId('rek-subtype-select').click();
             await page
                 .getByTestId('rek-subtype-options')

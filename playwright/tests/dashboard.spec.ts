@@ -12,7 +12,6 @@ test.describe('Dashboard', () => {
 
         test('should display graphs', async ({ page }) => {
             await expect(page.locator('text=Professor J Researcher')).toBeVisible();
-
             await expect(page.getByTestId('standard-card-espace-works-per-year')).toBeVisible();
             await expect(page.getByTestId('standard-card-work-types-overview-content')).toBeVisible();
         });
@@ -31,7 +30,6 @@ test.describe('Dashboard', () => {
 
         test("shouldn't display graphs", async ({ page }) => {
             await expect(page.locator('text=Professor J Researcher')).toBeVisible();
-
             await expect(page.getByTestId('standard-card-espace-works-per-year')).toHaveCount(0);
             await expect(page.getByTestId('standard-card-work-types-overview-content')).toHaveCount(0);
         });

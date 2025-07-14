@@ -28,7 +28,6 @@ test.describe('Batch import', () => {
 
         const selectItem = async (field: string, option: number, validationMessage: string | null = null) => {
             await page.getByTestId(`${field}-select`).click();
-            await expect(page.getByTestId(`${field}-options`)).toBeVisible();
             await page.getByTestId(`${field}-option-${option}`).click();
 
             if (validationMessage) {

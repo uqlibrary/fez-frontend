@@ -31,9 +31,10 @@ test.describe('view Journal', () => {
         await tabVisibleInWindow(page, '4', false);
 
         // Click the right scroll button
-        const rightScrollButton = ssciSection.locator('div.MuiTabs-scrollButtons').nth(1);
-        await expect(rightScrollButton).toBeVisible();
-        await rightScrollButton.click();
+        await ssciSection
+            .locator('div.MuiTabs-scrollButtons')
+            .nth(1)
+            .click();
 
         await tabVisibleInWindow(page, '0', false);
         await tabVisibleInWindow(page, '3', true);

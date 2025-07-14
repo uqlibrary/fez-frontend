@@ -36,7 +36,6 @@ cypress/e2e/adminDashboard/systemalerts.spec.js
 cypress/e2e/adminDashboard/today.spec.js
 cypress/e2e/adminDashboard/reports.spec.js
 cypress/e2e/adminDashboard/adminDashboard.spec.js
-cypress/e2e/changeDisplayType.spec.js
 cypress/e2e/strategic-publishing/comparison.spec.js
 cypress/e2e/strategic-publishing/favourites.spec.js
 cypress/e2e/strategic-publishing/search.spec.js
