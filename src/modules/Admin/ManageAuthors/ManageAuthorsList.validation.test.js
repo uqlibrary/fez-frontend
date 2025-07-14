@@ -1,6 +1,6 @@
 import React from 'react';
 import ManageAuthorsList from './ManageAuthorsList';
-import { render, userEvent, fireEvent, waitFor, WithReduxStore, waitForElementToBeRemoved, preview } from 'test-utils';
+import { render, userEvent, fireEvent, waitFor, WithReduxStore, waitForElementToBeRemoved } from 'test-utils';
 import * as repository from 'repositories';
 // import userEvent from '@testing-library/user-event';
 
@@ -393,7 +393,6 @@ describe('ManageAuthorsList', () => {
             const messages = queryAllByText(
                 'The supplied Organisation Username is already on file for another author.',
             );
-            preview.debug();
             expect(messages.length).toBeGreaterThan(0); // Ensure at least one match
             messages.forEach(message => expect(message).toBeInTheDocument());
         });

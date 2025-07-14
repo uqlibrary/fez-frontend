@@ -1,6 +1,6 @@
 import React from 'react';
 import ManageAuthors from './index';
-import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent, preview } from 'test-utils';
+import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
 import * as ManageAuthorsActions from 'actions/manageAuthors';
 import * as AppActions from 'actions/app';
 import * as repository from 'repositories';
@@ -229,7 +229,6 @@ describe('ManageAuthors', () => {
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
         const tableRows = getAllByTestId('mtablebodyrow');
-        preview.debug();
         expect(tableRows.length).toBe(20);
 
         mockApi.reset();

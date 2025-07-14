@@ -3715,6 +3715,12 @@ export default {
                     editHint: 'Edit this item',
                 },
             },
+            deleteConfirmationLocale: {
+                confirmationTitle: 'Delete appointment',
+                confirmationMessage: 'Are you sure you want to delete this editorial appointment?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes',
+            },
             successAlert: {
                 alertId: 'alert-done-editorial-appointment-add',
                 allowDismiss: true,
