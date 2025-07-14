@@ -83,9 +83,6 @@ test.describe('Change display type', () => {
             .locator('button')
             .getByText(/view work/i)
             .click();
-        await expect(async () => {
-            const loc = new URL(page.url());
-            expect(loc.pathname).toBe(`/view/${pid}`);
-        }).toPass();
+        await expect(page).toHaveURL(`/view/${pid}`);
     });
 });

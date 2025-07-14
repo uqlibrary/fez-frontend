@@ -14,10 +14,7 @@ test.describe('Batch import', () => {
 
     test('should work as expected', async ({ page }) => {
         const confirmInitialValidations = async () => {
-            const scope = page
-                .getByTestId('batch-import-validation')
-                .locator('.alert-text', { hasText: /Validation/ })
-                .first();
+            const scope = page.getByTestId('batch-import-validation').locator('.alert-text', { hasText: /Validation/ });
             await expect(scope.getByTestId('validation-warning-0')).toHaveText(validationErrors.communityID);
             await expect(scope.getByTestId('validation-warning-1')).toHaveText(validationErrors.doc_type_id);
             await expect(scope.getByTestId('validation-warning-2')).toHaveText(validationErrors.directory);
@@ -82,7 +79,6 @@ test.describe('Batch import', () => {
         await page
             .getByTestId('alert-done-batch-import')
             .locator('button', { hasText: /Start another ingest/ })
-            .first()
             .click();
 
         // form is ready to go again and the validation errors re-appear

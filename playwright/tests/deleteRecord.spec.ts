@@ -26,7 +26,7 @@ const loadPage = async (page: Page, record: any) => {
 };
 
 const assertNavigatedToViewPage = async (page: Page, record: any) => {
-    await expect(page).toHaveURL(`${baseURL}/view/${record.rek_pid}`);
+    await expect(page).toHaveURL(`/view/${record.rek_pid}`);
 };
 
 const triggerReasonFieldValidationError = async (page: Page) => {
@@ -131,7 +131,7 @@ test.describe('Delete work form', () => {
             await page
                 .getByRole('button', { name: deleteFormLocale.successWorkflowConfirmation.cancelButtonLabel })
                 .click();
-            await expect(page).toHaveURL(`${baseURL}/records/search`);
+            await expect(page).toHaveURL('/records/search');
         });
 
         test('should show nav dialog when exit the form with reason entered', async ({ page }) => {

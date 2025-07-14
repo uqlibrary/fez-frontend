@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { baseURL } from '../support/constants';
 
 test.describe('Add missing record', () => {
     // disable fullyParallel
@@ -26,7 +25,6 @@ test.describe('Add missing record', () => {
                 .getByTestId('rek-subtype-options')
                 .locator('li[role=option]')
                 .getByText(/Editorial/)
-                .first()
                 .click();
             await expect(page.locator('#submit-work')).toBeVisible();
             await expect(page.locator('#submit-work')).toBeDisabled();
@@ -40,7 +38,6 @@ test.describe('Add missing record', () => {
                 .getByTestId('rek-display-type-options')
                 .locator('li[role=option]')
                 .getByText(/Department Technical Report/)
-                .first()
                 .click();
             await expect(page.locator('#submit-work')).toBeVisible();
             await expect(page.locator('#submit-work')).toBeDisabled();
@@ -53,7 +50,6 @@ test.describe('Add missing record', () => {
                 .getByTestId('rek-display-type-options')
                 .locator('li[role=option]')
                 .getByText(/Book/)
-                .first()
                 .nth(0)
                 .click();
             await page.getByTestId('rek-subtype-select').click();
@@ -61,7 +57,6 @@ test.describe('Add missing record', () => {
                 .getByTestId('rek-subtype-options')
                 .locator('li[role=option]')
                 .getByText(/Textbook/)
-                .first()
                 .click();
 
             // Verify cards
@@ -82,8 +77,7 @@ test.describe('Add missing record', () => {
                     page
                         .locator('h3')
                         .nth(index)
-                        .getByText(cardHeading)
-                        .first(),
+                        .getByText(cardHeading),
                 ).toBeVisible();
             }
 
@@ -102,7 +96,7 @@ test.describe('Add missing record', () => {
             const validationErrors = page.locator('[data-testid=alert] li');
             await expect(page.locator('[data-testid=alert] li')).toHaveCount(invalidFieldNames.length);
             for (const invalidFieldName of invalidFieldNames) {
-                await expect(validationErrors.getByText(invalidFieldName).first()).toBeVisible();
+                await expect(validationErrors.getByText(invalidFieldName)).toBeVisible();
             }
             await page.getByTestId('rek-title-input').fill('book title');
             await page.getByTestId('rek-place-of-publication-input').fill('test place of publication');
@@ -111,25 +105,18 @@ test.describe('Add missing record', () => {
             await expect(validationErrors).toHaveCount(2);
             await page.getByTestId('rek-author-input').fill('New Author');
             await page.getByTestId('rek-author-add').click();
-            await page
-                .getByText(/New Author/)
-                .first()
-                .click();
+            await page.getByText(/New Author/).click();
             await expect(page.locator('#submit-work')).toBeEnabled();
             await page.locator('#rek-author-list-row-delete-0').click();
             await page
                 .locator('button')
                 .getByText(/Yes/)
-                .first()
                 .click();
             await expect(page.locator('#submit-work')).toBeDisabled();
             await expect(validationErrors).toHaveCount(2);
             await page.locator('#rek-contributor-input').fill('New Editor');
             await page.getByTestId('rek-contributor-add').click();
-            await page
-                .getByText(/New Editor/)
-                .first()
-                .click();
+            await page.getByText(/New Editor/).click();
             await expect(page.locator('#submit-work')).toBeEnabled();
         });
 
@@ -140,7 +127,6 @@ test.describe('Add missing record', () => {
                 .getByTestId('rek-display-type-options')
                 .locator('li[role=option]')
                 .getByText(/Book/)
-                .first()
                 .nth(0)
                 .click();
             await page.getByTestId('rek-subtype-select').click();
@@ -148,7 +134,6 @@ test.describe('Add missing record', () => {
                 .getByTestId('rek-subtype-options')
                 .locator('li[role=option]')
                 .getByText(/Textbook/)
-                .first()
                 .click();
 
             // Submit button
@@ -166,7 +151,7 @@ test.describe('Add missing record', () => {
             const validationErrors = page.locator('[data-testid=alert] li');
             await expect(page.locator('[data-testid=alert] li')).toHaveCount(invalidFieldNames.length);
             for (const invalidFieldName of invalidFieldNames) {
-                await expect(validationErrors.getByText(invalidFieldName).first()).toBeVisible();
+                await expect(validationErrors.getByText(invalidFieldName)).toBeVisible();
             }
             await page.getByTestId('rek-title-input').fill('book title');
             await page.getByTestId('rek-place-of-publication-input').fill('test place of publication');
@@ -175,18 +160,12 @@ test.describe('Add missing record', () => {
             await expect(validationErrors).toHaveCount(2);
             await page.getByTestId('rek-author-input').fill('New Author');
             await page.getByTestId('rek-author-add').click();
-            await page
-                .getByText(/New Author/)
-                .first()
-                .click();
+            await page.getByText(/New Author/).click();
             await page.getByTestId('rek-doi-input').fill('10.1426/12345');
             await expect(page.locator('#submit-work')).toBeEnabled();
             await page.locator('#submit-work').click();
             await expect(
-                page
-                    .getByTestId('rek-doi-helper-text')
-                    .getByText(/DOI is assigned to another work/)
-                    .first(),
+                page.getByTestId('rek-doi-helper-text').getByText(/DOI is assigned to another work/),
             ).toBeVisible();
             await expect(validationErrors).toHaveCount(1);
             await expect(page.locator('#submit-work')).toBeDisabled();
@@ -195,8 +174,8 @@ test.describe('Add missing record', () => {
 
     // a NON RHD student is prompted in case they have a student account
     test.describe('Non RHD adding a Thesis', () => {
-        test('is prompted that theses could be added elsewhere', async ({ page }) => {
-            await page.goto(`${baseURL}/records/add/new?user=uqstaff`);
+        test('is prompted that theses could be added elsewhere', async ({ page }, baseURL) => {
+            await page.goto('/records/add/new?user=uqstaff');
             await page.getByTestId('rek-display-type-select').click();
             await page
                 .getByTestId('rek-display-type-options')
@@ -225,7 +204,6 @@ test.describe('Add missing record', () => {
                 .getByTestId('rek-display-type-options')
                 .locator('li[role=option]')
                 .getByText(/Book/)
-                .first()
                 .nth(0)
                 .click();
             await page.getByTestId('rek-subtype-select').click();
@@ -233,7 +211,6 @@ test.describe('Add missing record', () => {
                 .getByTestId('rek-subtype-options')
                 .locator('li[role=option]')
                 .getByText(/Textbook/)
-                .first()
                 .click();
 
             // Validation error checks
@@ -248,7 +225,7 @@ test.describe('Add missing record', () => {
             const validationErrors = page.locator('[data-testid=alert] li');
             await expect(page.locator('[data-testid=alert] li')).toHaveCount(invalidFieldNames.length);
             for (const invalidFieldName of invalidFieldNames) {
-                await expect(validationErrors.getByText(invalidFieldName).first()).toBeVisible();
+                await expect(validationErrors.getByText(invalidFieldName)).toBeVisible();
             }
             await page.getByTestId('rek-title-input').fill('book title');
             await page.getByTestId('rek-place-of-publication-input').fill('test place of publication');
@@ -305,7 +282,6 @@ test.describe('Add missing record', () => {
                 .getByTestId('rek-display-type-options')
                 .locator('li[role=option]')
                 .getByText(/Book/)
-                .first()
                 .nth(0)
                 .click();
             await page.getByTestId('rek-subtype-select').click();
@@ -313,7 +289,6 @@ test.describe('Add missing record', () => {
                 .getByTestId('rek-subtype-options')
                 .locator('li[role=option]')
                 .getByText(/Creative Work - Textual/)
-                .first()
                 .click();
             await page.getByTestId('rek-title-input').fill('book title');
             await page.getByTestId('rek-place-of-publication-input').fill('test place of publication');
@@ -328,7 +303,6 @@ test.describe('Add missing record', () => {
                 .getByTestId('rek-grant-type-options')
                 .locator('li[role=option]')
                 .getByText(/NGO/)
-                .first()
                 .click();
             await page.getByTestId('rek-grant-add').click();
             await expect(page.getByTestId('rek-grant-add')).toBeVisible();
@@ -339,7 +313,6 @@ test.describe('Add missing record', () => {
                 .getByTestId('rek-grant-type-options')
                 .locator('li[role=option]')
                 .getByText(/NGO/)
-                .first()
                 .click();
             await expect(page.getByTestId('rek-grant-add')).toBeVisible();
             await page.getByTestId('rek-grant-add').click();

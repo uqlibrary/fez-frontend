@@ -1,12 +1,9 @@
 import { expect, test } from '../lib/fixture';
 
-// Base URL from environment or test config
-const baseUrl = process.env.BASE_URL || '';
-
 test.describe('Favourite search bookmark', () => {
     test('should direct to advanced search page', async ({ page }) => {
         await page.goto('/published?user=uqstaff');
-        await expect(page).toHaveURL(new RegExp(`${baseUrl}/records/search`));
+        await expect(page).toHaveURL(new RegExp('/records/search'));
     });
 });
 

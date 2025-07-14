@@ -61,30 +61,22 @@ test.describe('view Journal', () => {
 
         test('should navigate to the edit admin journal page and use current page url as navigatedFrom value', async ({
             page,
-            baseURL,
         }) => {
             await page.goto('/journal/view/12?user=uqstaff');
             await page.getByTestId('admin-actions-button').click();
-            await page
-                .locator('[role="menuitem"]')
-                .first()
-                .click();
+            await page.locator('[role="menuitem"]').click();
             await expect(page).toHaveURL(
-                `${baseURL}/admin/journal/edit/12?navigatedFrom=%2Fjournal%2Fview%2F12%3Fuser%3Duqstaff`,
+                '/admin/journal/edit/12?navigatedFrom=%2Fjournal%2Fview%2F12%3Fuser%3Duqstaff',
             );
         });
 
         test('should navigate to the edit admin journal page and set navigatedFrom to the hash value (coverage)', async ({
             page,
-            baseURL,
         }) => {
             await page.goto('/journal/view/12?user=uqstaff#test');
             await page.getByTestId('admin-actions-button').click();
-            await page
-                .locator('[role="menuitem"]')
-                .first()
-                .click();
-            await expect(page).toHaveURL(`${baseURL}/admin/journal/edit/12?navigatedFrom=test`);
+            await page.locator('[role="menuitem"]').click();
+            await expect(page).toHaveURL('/admin/journal/edit/12?navigatedFrom=test');
         });
 
         test.describe('editing', () => {
