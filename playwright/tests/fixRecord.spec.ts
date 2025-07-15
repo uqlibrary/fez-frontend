@@ -15,7 +15,6 @@ test.describe('Request correction form', () => {
     });
 
     test.afterEach(async ({ page }) => {
-        await page.setViewportSize({ width: 1000, height: 600 });
         await navToHomeFromMenu(page, fixFormLocale.cancelWorkflowConfirmation);
     });
 

@@ -8,7 +8,6 @@ test.describe('Batch import', () => {
     const initialFieldIDs = ['community-pid', 'doc-type-id', 'directory'];
 
     test.afterEach(async ({ page }) => {
-        await page.setViewportSize({ width: 1000, height: 600 });
         await navToHomeFromMenu(page);
     });
 

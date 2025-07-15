@@ -21,7 +21,6 @@ test.describe.skip('Claim possible work', () => {
 
     test.describe('Claim Possible Form', () => {
         test.afterEach(async ({ page }) => {
-            await page.setViewportSize({ width: 1000, height: 600 });
             await navToHomeFromMenu(page, claimFormLocale.cancelWorkflowConfirmation);
         });
 
@@ -261,7 +260,6 @@ test.describe.skip('Claim possible work', () => {
 
         test('should not show prompt when navigate away white the form is untouched', async ({ page }) => {
             await navToFirstClaim(page);
-            await page.setViewportSize({ width: 1000, height: 600 });
             await page.locator('button[aria-label="Click to open the main navigation"]').click();
             await page
                 .locator('.menu-item-container')

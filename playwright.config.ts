@@ -28,7 +28,6 @@ export default defineConfig({
         // collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer
         // trace: 'on-first-retry',
         headless: process.env.PW_HEADED === 'true' ? false : true,
-        viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
         launchOptions: {
@@ -42,6 +41,10 @@ export default defineConfig({
             name: 'chromium-headless-shell',
             use: {
                 ...devices['Desktop Chrome'],
+                viewport: {
+                    width: 1000,
+                    height: 660,
+                },
             },
         },
     ],

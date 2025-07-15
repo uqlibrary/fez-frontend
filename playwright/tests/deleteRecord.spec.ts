@@ -135,7 +135,6 @@ test.describe('Delete work form', () => {
         });
 
         test('should show nav dialog when exit the form with reason entered', async ({ page }) => {
-            await page.setViewportSize({ width: 1000, height: 660 });
             await loadPage(page, record);
             await fillInput(page, selectors.reasonInput, 'reason');
             await navToHomeFromMenu(page, deleteFormLocale);

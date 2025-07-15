@@ -2,7 +2,6 @@ import { test, expect, Page } from '../lib/fixture';
 
 test.describe.serial('Homepage', () => {
     const checkMenuItemCount = async (page: Page, expectedCount: number) => {
-        await page.setViewportSize({ width: 1000, height: 600 });
         await page.locator('button[aria-label="Click to open the main navigation"]').click();
         await expect(page.locator('nav#mainMenu div[role="button"]')).toHaveCount(expectedCount, { timeout: 30_000 });
     };
@@ -87,18 +86,18 @@ test.describe.serial('Homepage', () => {
     test('Shows help panel as expected', async ({ page }) => {
         await page.goto('/?user=uqresearcher');
         await page.locator('button#help-icon').click();
-        await expect(page.locator('[data-testid=help-drawer-title]')).toBeVisible();
+        await expect(page.getByTestId('help-drawer-title')).toBeVisible();
         await expect(
             page
-                .locator('[data-testid=help-drawer-title]')
+                .getByTestId('help-drawer-title')
                 .getByText(/About these metrics/)
                 .first(),
         ).toBeVisible();
         await page
-            .locator('[data-testid=help-drawer-close]')
+            .getByTestId('help-drawer-close')
             .getByText(/CLOSE/)
             .first()
             .click();
-        await expect(page.locator('[data-testid=help-drawer-title]')).not.toBeVisible();
+        await expect(page.getByTestId('help-drawer-title')).not.toBeVisible();
     });
 });
