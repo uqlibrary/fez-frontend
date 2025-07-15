@@ -20,8 +20,6 @@ test.describe('Data Collection form', () => {
     }
 
     test('correctly validates', async ({ page }) => {
-        test.setTimeout(60_000);
-
         // 'validates deposit agreement'
         await submitButtonCorrect(page);
 

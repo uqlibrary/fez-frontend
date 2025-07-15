@@ -155,7 +155,6 @@ test.describe('Incomplete record form', () => {
     });
 
     test('should allow completion of work with total pages field, a disabled author', async ({ page }) => {
-        test.setTimeout(60_000);
         const pid = 'UQ:716942';
         const authorUsername = 'uqagrinb';
         await page.goto(`/records/${pid}/incomplete?user=${authorUsername}`);

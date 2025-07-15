@@ -31,9 +31,7 @@ export default defineConfig({
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
         launchOptions: {
-            args: [
-                '--disable-web-security', // cy alike chromeWebSecurity: false
-            ],
+            args: ['--disable-web-security'],
         },
     },
     projects: [
