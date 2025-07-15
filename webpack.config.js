@@ -26,8 +26,6 @@ module.exports = {
     context: resolve(__dirname),
     devtool: 'source-map',
     entry: {
-        webpackDevClient: `webpack-dev-server/client?http://${url}:${port}`,
-        webPackDevServer: 'webpack/hot/only-dev-server',
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         index: join(__dirname, 'src', 'index.js'),
     },
@@ -157,7 +155,8 @@ module.exports = {
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
         }),
-        new ESLintPlugin({ exclude: ['node_modules', 'custom_modules', 'mock', 'mocks'] }),
+        process.env.NODE_ENV === 'cc' &&
+            new ESLintPlugin({ exclude: ['node_modules', 'custom_modules', 'mock', 'mocks'] }),
         new Dotenv(),
     ].filter(Boolean),
     resolve: {

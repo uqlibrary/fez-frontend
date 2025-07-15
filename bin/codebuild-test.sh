@@ -99,7 +99,7 @@ case "$PIPE_NUM" in
         installPlaywrightDependencies
         printf "\n--- \e[1mRUNNING E2E PLAYWRIGHT TESTS GROUP [STARTING AT $(date)] 2\e[0m ---\n"
 #        source bin/codebuild-parallel.sh
-        npm run test:e2e:pw
+        npm run test:e2e:pw:cc
         printf "\n--- [ENDED AT $(date)] \n"
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/playwright/coverage-final.json
 #    else
