@@ -78,7 +78,7 @@ test.describe('Controlled vocabularies', () => {
                 await expect(page.getByTestId('portal-root')).toHaveText(/Add vocabulary/);
                 await expect(page.getByTestId('admin-add-vocabulary-button')).toBeDisabled();
                 await expect(page.getByTestId('update_dialog-action-button')).toBeDisabled();
-                await page.getByTestId('cvo-title-input').type('Test title', { delay: 10 });
+                await page.getByTestId('cvo-title-input').fill('Test title');
                 await expect(page.getByTestId('update_dialog-action-button')).not.toBeDisabled();
                 await expect(page.getByTestId('update_dialog-action-button')).not.toBeDisabled();
                 await page.getByTestId('update_dialog-action-button').click();
@@ -93,7 +93,7 @@ test.describe('Controlled vocabularies', () => {
                 await expect(page.getByTestId('portal-add-453669')).toHaveText(/Add vocabulary/);
                 await expect(page.getByTestId('admin-add-vocabulary-button-453669')).toBeDisabled();
                 await expect(page.getByTestId('update_dialog-action-button')).toBeDisabled();
-                await page.getByTestId('cvo-title-input').type('Test title', { delay: 10 });
+                await page.getByTestId('cvo-title-input').fill('Test title');
                 await expect(page.getByTestId('update_dialog-action-button')).not.toBeDisabled();
                 await expect(page.getByTestId('update_dialog-action-button')).not.toBeDisabled();
                 await page.getByTestId('update_dialog-action-button').click();
@@ -106,85 +106,83 @@ test.describe('Controlled vocabularies', () => {
             }) => {
                 // expand
                 await page.getByTestId('expand-row-453669').click();
-                await expect(page.locator('[data-testid=total-vocab-453669]')).toHaveText(/165/);
-                await page.locator('[data-testid=admin-add-vocabulary-button-453669]').click();
-                await expect(page.locator('[data-testid=update_dialog-controlledVocabulary]')).toBeVisible();
-                await expect(page.locator('[data-testid=admin-add-vocabulary-button-453669]')).toBeDisabled();
-                await expect(page.locator('[data-testid=admin-add-vocabulary-button]')).toBeDisabled();
-                await expect(page.locator('[data-testid=admin-edit-button-453669]')).toBeDisabled();
+                await expect(page.getByTestId('total-vocab-453669')).toHaveText(/165/);
+                await page.getByTestId('admin-add-vocabulary-button-453669').click();
+                await expect(page.getByTestId('update_dialog-controlledVocabulary')).toBeVisible();
+                await expect(page.getByTestId('admin-add-vocabulary-button-453669')).toBeDisabled();
+                await expect(page.getByTestId('admin-add-vocabulary-button')).toBeDisabled();
+                await expect(page.getByTestId('admin-edit-button-453669')).toBeDisabled();
                 // collapse
-                await page.locator('[data-testid=expand-row-453669]').click();
-                await expect(page.locator('[data-testid=admin-add-vocabulary-button]')).not.toBeDisabled();
-                await expect(page.locator('[data-testid=admin-edit-button-453669]')).not.toBeDisabled();
+                await page.getByTestId('expand-row-453669').click();
+                await expect(page.getByTestId('admin-add-vocabulary-button')).not.toBeDisabled();
+                await expect(page.getByTestId('admin-edit-button-453669')).not.toBeDisabled();
                 // expand again
-                await page.locator('[data-testid=expand-row-453669]').click();
-                await expect(page.locator('[data-testid=admin-add-vocabulary-button-453669]')).not.toBeDisabled();
-                await expect(page.locator('[data-testid=update_dialog-controlledVocabulary]')).not.toBeVisible();
+                await page.getByTestId('expand-row-453669').click();
+                await expect(page.getByTestId('admin-add-vocabulary-button-453669')).not.toBeDisabled();
+                await expect(page.getByTestId('update_dialog-controlledVocabulary')).not.toBeVisible();
             });
 
             test('should close the admin panel and re-enable admin functionality when clicking breadcrumbs with the admin panel visible', async ({
                 page,
             }) => {
                 // expand
-                await page.locator('[data-testid=expand-row-453669]').click();
-                await expect(page.locator('[data-testid=total-vocab-453669]')).toHaveText(/165/);
-                await page.locator('[data-testid=child-row-title-link-453670]').click();
-                await expect(page.locator('[data-testid=childControlledVocab-page-loading]')).not.toBeVisible();
-                await page.locator('[data-testid=admin-add-vocabulary-button-453669]').click();
-                await expect(page.locator('[data-testid=update_dialog-controlledVocabulary]')).toBeVisible();
-                await expect(page.locator('[data-testid=admin-add-vocabulary-button-453669]')).toBeDisabled();
-                await expect(page.locator('[data-testid=admin-add-vocabulary-button]')).toBeDisabled();
-                await expect(page.locator('[data-testid=admin-edit-button-453669]')).toBeDisabled();
-                await page.locator('[data-testid=nav-453669]').click(); // navigate via breadcrumbs
-                await expect(page.locator('[data-testid=update_dialog-controlledVocabulary]')).not.toBeVisible();
-                await expect(page.locator('[data-testid=admin-add-vocabulary-button]')).not.toBeDisabled();
-                await expect(page.locator('[data-testid=admin-add-vocabulary-button-453669]')).not.toBeDisabled();
+                await page.getByTestId('expand-row-453669').click();
+                await expect(page.getByTestId('total-vocab-453669')).toHaveText(/165/);
+                await page.getByTestId('child-row-title-link-453670').click();
+                await expect(page.getByTestId('childControlledVocab-page-loading')).not.toBeVisible();
+                await page.getByTestId('admin-add-vocabulary-button-453669').click();
+                await expect(page.getByTestId('update_dialog-controlledVocabulary')).toBeVisible();
+                await expect(page.getByTestId('admin-add-vocabulary-button-453669')).toBeDisabled();
+                await expect(page.getByTestId('admin-add-vocabulary-button')).toBeDisabled();
+                await expect(page.getByTestId('admin-edit-button-453669')).toBeDisabled();
+                await page.getByTestId('nav-453669').click(); // navigate via breadcrumbs
+                await expect(page.getByTestId('update_dialog-controlledVocabulary')).not.toBeVisible();
+                await expect(page.getByTestId('admin-add-vocabulary-button')).not.toBeDisabled();
+                await expect(page.getByTestId('admin-add-vocabulary-button-453669')).not.toBeDisabled();
             });
         });
         test.describe('editing vocabs', () => {
             test('should show a populated Edit panel when a top-level Edit button is clicked', async ({ page }) => {
-                await page.locator('[data-testid=expand-row-453669]').click();
-                await expect(page.locator('[data-testid=vocab-table-453669]')).toBeVisible();
-                await page.locator('[data-testid=admin-edit-button-453669]').click();
-                await expect(page.locator('[data-testid=vocab-table-453669]')).not.toBeVisible();
-                await expect(page.locator('[data-testid=portal-edit-453669]')).toHaveText(/Update vocabulary/);
-                await expect(page.locator('[data-testid=admin-edit-button-453669]')).not.toBeVisible();
-                await expect(page.locator('[data-testid=update_dialog-action-button]')).toBeDisabled();
-                await expect(page.locator('[data-testid=cvo-title-input]')).toHaveValue('AIATSIS codes');
-                await expect(page.locator('[data-testid=cvo-desc-input]')).toHaveValue('This is my edited version');
-                await expect(page.locator('[data-testid=portal-edit-453669]')).not.toHaveText(/Required/);
-                await page.locator('[data-testid=cvo-title-input]').clear();
-                await expect(page.locator('[data-testid=portal-edit-453669]')).toHaveText(/Required/);
-                await page.locator('[data-testid=cvo-title-input]').type('New title', { delay: 10 });
-                await expect(page.locator('[data-testid=update_dialog-action-button]')).not.toBeDisabled();
-                await expect(page.locator('[data-testid=update_dialog-action-button]')).not.toBeDisabled();
-                await page.locator('[data-testid=update_dialog-action-button]').click();
-                await expect(page.locator('[data-testid=portal-root]')).not.toHaveText(/Update vocabulary/);
-                await expect(page.locator('[data-testid=admin-edit-button-453669]')).toBeVisible();
+                await page.getByTestId('expand-row-453669').click();
+                await expect(page.getByTestId('vocab-table-453669')).toBeVisible();
+                await page.getByTestId('admin-edit-button-453669').click();
+                await expect(page.getByTestId('vocab-table-453669')).not.toBeVisible();
+                await expect(page.getByTestId('portal-edit-453669')).toHaveText(/Update vocabulary/);
+                await expect(page.getByTestId('admin-edit-button-453669')).not.toBeVisible();
+                await expect(page.getByTestId('update_dialog-action-button')).toBeDisabled();
+                await expect(page.getByTestId('cvo-title-input')).toHaveValue('AIATSIS codes');
+                await expect(page.getByTestId('cvo-desc-input')).toHaveValue('This is my edited version');
+                await expect(page.getByTestId('portal-edit-453669')).not.toHaveText(/Required/);
+                await page.getByTestId('cvo-title-input').clear();
+                await expect(page.getByTestId('portal-edit-453669')).toHaveText(/Required/);
+                await page.getByTestId('cvo-title-input').fill('New title');
+                await expect(page.getByTestId('update_dialog-action-button')).not.toBeDisabled();
+                await expect(page.getByTestId('update_dialog-action-button')).not.toBeDisabled();
+                await page.getByTestId('update_dialog-action-button').click();
+                await expect(page.getByTestId('portal-root')).not.toHaveText(/Update vocabulary/);
+                await expect(page.getByTestId('admin-edit-button-453669')).toBeVisible();
             });
 
             test('should show a populated Edit panel when a child-level Edit button is clicked', async ({ page }) => {
-                await page.locator('[data-testid=expand-row-453669]').click();
-                await expect(page.locator('[data-testid=vocab-table-453669]')).toBeVisible();
-                await page.locator('[data-testid=admin-edit-button-453670]').click();
-                await expect(page.locator('[data-testid=vocab-table-453669]')).toBeVisible();
-                await expect(page.locator('[data-testid=portal-edit-453670]')).toHaveText(/Update vocabulary/);
-                await expect(page.locator('[data-testid=admin-edit-button-453670]')).not.toBeVisible();
-                await expect(page.locator('[data-testid=update_dialog-action-button]')).toBeDisabled();
-                await expect(page.locator('[data-testid=cvo-title-input]')).toHaveValue(
-                    'Yukulta / Ganggalidda language G34',
-                );
-                await expect(page.locator('[data-testid=cvo-external-id-input]')).toHaveValue('G34');
-                await expect(page.locator('[data-testid=portal-edit-453670]')).not.toHaveText(/Required/);
-                await page.locator('[data-testid=cvo-title-input]').clear();
-                await expect(page.locator('[data-testid=portal-edit-453670]')).toHaveText(/Required/);
-                await page.locator('[data-testid=cvo-title-input]').type('New title', { delay: 10 });
-                await expect(page.locator('[data-testid=update_dialog-action-button]')).not.toBeDisabled();
-                await expect(page.locator('[data-testid=portal-edit-453670]')).not.toHaveText(/Must be a number/);
-                await expect(page.locator('[data-testid=update_dialog-action-button]')).not.toBeDisabled();
-                await page.locator('[data-testid=update_dialog-action-button]').click();
-                await expect(page.locator('[data-testid=portal-root]')).not.toHaveText(/Update vocabulary/);
-                await expect(page.locator('[data-testid=admin-edit-button-453670]')).toBeVisible();
+                await page.getByTestId('expand-row-453669').click();
+                await expect(page.getByTestId('vocab-table-453669')).toBeVisible();
+                await page.getByTestId('admin-edit-button-453670').click();
+                await expect(page.getByTestId('vocab-table-453669')).toBeVisible();
+                await expect(page.getByTestId('portal-edit-453670')).toHaveText(/Update vocabulary/);
+                await expect(page.getByTestId('admin-edit-button-453670')).not.toBeVisible();
+                await expect(page.getByTestId('update_dialog-action-button')).toBeDisabled();
+                await expect(page.getByTestId('cvo-title-input')).toHaveValue('Yukulta / Ganggalidda language G34');
+                await expect(page.getByTestId('cvo-external-id-input')).toHaveValue('G34');
+                await expect(page.getByTestId('portal-edit-453670')).not.toHaveText(/Required/);
+                await page.getByTestId('cvo-title-input').clear();
+                await expect(page.getByTestId('portal-edit-453670')).toHaveText(/Required/);
+                await page.getByTestId('cvo-title-input').fill('New title');
+                await expect(page.getByTestId('update_dialog-action-button')).not.toBeDisabled();
+                await expect(page.getByTestId('portal-edit-453670')).not.toHaveText(/Must be a number/);
+                await expect(page.getByTestId('update_dialog-action-button')).not.toBeDisabled();
+                await page.getByTestId('update_dialog-action-button').click();
+                await expect(page.getByTestId('portal-root')).not.toHaveText(/Update vocabulary/);
+                await expect(page.getByTestId('admin-edit-button-453670')).toBeVisible();
             });
         });
     });

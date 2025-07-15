@@ -23,7 +23,6 @@ cypress/e2e/admin-edit/thesis.spec.js
 cypress/e2e/admin-edit/bookChapter.spec.js
 cypress/e2e/admin-edit/video.spec.js
 cypress/e2e/admin-edit/workingPaper.spec.js
-cypress/e2e/admin-edit/dataCollection.spec.js
 cypress/e2e/admin-edit/collection.spec.js
 cypress/e2e/admin-edit/fileUploadOrder.spec.js
 cypress/e2e/admin-edit/book.spec.js
