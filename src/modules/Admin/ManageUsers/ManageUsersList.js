@@ -192,7 +192,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     table.setCreatingRow(null);
                     resetEditRow();
                 });
-        } else if (mode === 'update') {
+        } else {
+            // update
             onRowUpdate(newData, oldData)
                 .then(data => {
                     setData(prev => {
