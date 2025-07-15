@@ -54,4 +54,4 @@ export { withIsMobileView, useIsMobileView } from './useIsMobileView';
 export { useForm } from './useForm';
 export { useValidatedForm } from './useValidatedForm';
 export { useOnSelectiveMountEffect } from './useOnSelectiveMountEffect';
-export { useMrtTable } from './useMrtTable';
+export { useMrtTable, useServerData } from './useMrtTable';

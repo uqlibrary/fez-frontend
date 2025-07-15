@@ -54,6 +54,10 @@ describe('ManageUsers', () => {
                     },
                 ],
                 total: 1,
+                per_page: 20,
+                current_page: 1,
+                from: 1,
+                to: 20,
             })
             .onPut(new RegExp(repository.routes.USER_API().apiUrl))
             .replyOnce(200, {
@@ -80,23 +84,16 @@ describe('ManageUsers', () => {
             })
             .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtname', rule: 'lookup' } })
             .replyOnce(200, {
-                data: [
-                    {
-                        usr_id: 1234,
-                        usr_full_name: 'Test',
-                        usr_email: 'test@uq.edu.au',
-                        usr_username: 'uqtest',
-                        usr_auth_rule_groups:
-                            '53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11',
-                    },
-                ],
-                total: 1,
+                data: [],
+                total: 0,
             });
-        const { getAllByTestId, getByTestId, getByText, queryAllByText } = setup();
 
-        await waitForElementToBeRemoved(() => getByText('No records to display'));
+        const { getByTestId, findByTestId, queryByTestId, queryAllByText } = setup();
+
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
+        await findByTestId('standard-card-user-information');
 
         expect(getByTestId('usr-full-name-input')).toHaveAttribute('value', 'Test User');
         expect(getByTestId('usr-email-input')).toHaveAttribute('value', 't.user@library.uq.edu.au');
@@ -116,9 +113,12 @@ describe('ManageUsers', () => {
         });
 
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
+
         await userEvent.click(getByTestId('users-update-this-user-save'));
 
-        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
+        await waitFor(() => {
+            expect(queryByTestId('standard-card-user-information')).not.toBeInTheDocument();
+        });
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test');
         expect(getByTestId('usr-email-0')).toHaveAttribute('value', 'test@uq.edu.au');

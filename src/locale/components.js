@@ -4217,10 +4217,20 @@ export default {
                         title: 'Status',
                     },
                     isAdmin: {
-                        title: 'Is admin?',
+                        title: (
+                            <>
+                                Is <br />
+                                admin?
+                            </>
+                        ),
                     },
                     isSuperAdmin: {
-                        title: 'Is superadmin?',
+                        title: (
+                            <>
+                                Is <br />
+                                superadmin?
+                            </>
+                        ),
                     },
                 },
             },
@@ -4319,6 +4329,8 @@ export default {
                 type: 'error',
                 message: 'A user could not be deleted.',
             },
+            tablePageSizeOptions: [10, 20, 50],
+            tablePageSizeDefault: 20,
         },
         communitiesCollections: {
             title: {
