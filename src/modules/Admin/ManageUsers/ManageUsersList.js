@@ -17,8 +17,6 @@ import TextField from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
-import ClearIcon from '@mui/icons-material/Clear';
 
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
@@ -291,7 +289,6 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
     };
 
     const table = useMaterialReactTable({
-        getRowId: row => row.eap_id,
         columns,
         data,
         createDisplayMode: 'modal',
@@ -322,24 +319,6 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             pagination,
             rowSelection: selectedRows,
         },
-        icons: {
-            SaveIcon: props => (
-                <tableIcons.Check
-                    id={`users-list-row-${!!editingRow ? 'edit' : 'add'}-save`}
-                    data-testid={`users-list-row-${!!editingRow ? 'edit' : 'add'}-save`}
-                    color="secondary"
-                    {...props}
-                />
-            ),
-            CancelIcon: props => (
-                <tableIcons.Clear
-                    id={`users-list-row-${!!editingRow ? 'edit' : 'add'}-cancel`}
-                    data-testid={`users-list-row-${!!editingRow ? 'edit' : 'add'}-cancel`}
-                    color="secondary"
-                    {...props}
-                />
-            ),
-        },
         muiPaginationProps: {
             rowsPerPageOptions: tablePageSizeOptions,
         },
@@ -368,6 +347,10 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 padding: 1,
             },
         },
+        muiSelectCheckboxProps: ({ row }) => ({
+            id: `select-user-${row.id}`,
+            'data-testid': `select-user-${row.id}`,
+        }),
         onRowSelectionChange: setSelectedRows,
         onPaginationChange: onPaginationChange,
         renderCreateRowDialogContent: ({ table, row }) => (
@@ -406,20 +389,21 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 }}
             >
                 <TextField
+                    id={'users-search-input'}
                     title=""
                     placeholder="Search users"
                     variant="standard"
-                    inputProps={{ inputMode: 'search' }}
+                    inputProps={{ inputMode: 'search', 'data-testid': 'users-search-input' }}
                     InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">
-                                <SearchIcon />
+                                <tableIcons.Search />
                             </InputAdornment>
                         ),
                         endAdornment: (
                             <InputAdornment position="end">
                                 <IconButton disabled={!!!searchTerm} onClick={() => handleSearch()}>
-                                    <ClearIcon />
+                                    <tableIcons.Clear />
                                 </IconButton>
                             </InputAdornment>
                         ),
@@ -479,8 +463,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             );
         },
         muiTableBodyRowProps: ({ row }) => ({
-            id: `users-list-row-${row.index === -1 ? 'add' : row.index}`,
-            'data-testid': `users-list-row-${row.index === -1 ? 'add' : row.index}`,
+            id: `users-list-row-${row.index}`,
+            'data-testid': `users-list-row-${row.index}`,
         }),
     });
 
