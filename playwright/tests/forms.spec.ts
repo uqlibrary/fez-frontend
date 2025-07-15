@@ -1,7 +1,10 @@
+import { test, expect } from '../lib/fixture';
+
 import { myRecordsList } from '../../src/mock/data/records';
+import path from 'path';
 
 const record = myRecordsList.data[0];
-context('forms', () => {
+test.describe('forms', () => {
     /**
      * This test asserts that the data submitted by forms will not include corrupted files.
      * How does it work? We intercept PUT requests made to S3 pre-signed URLs using api mock
@@ -17,23 +20,20 @@ context('forms', () => {
      * refactor this test to use another form that has a field based on FileUploader component and uses
      * repositories/files::putUploadFile() for uploading files.
      */
-    it('should not upload corrupted files', () => {
+    test('should not upload corrupted files', async ({ page }) => {
         // fill up form
-        cy.visit(`/records/${record.rek_pid}/fix`);
-        cy.data('fix-action-select').click();
-        cy.data('fix-action-options')
-            .contains('I am the author')
-            .click();
-        cy.data('fez-datastream-info-input').attachFile('test.jpg', {
-            subjectType: 'drag-n-drop',
-        });
-        cy.data('dsi-open-access-0-select').click();
-        cy.data('dsi-open-access-0-option-2')
-            .contains('Closed Access')
-            .click();
+        await page.goto(`/records/${record.rek_pid}/fix`);
+        await page.getByTestId('fix-action-select').click();
+        await page.getByText(/I am the author/).click();
+        await page.getByTestId('fez-datastream-info-input').setInputFiles(path.join(__dirname, 'fixtures/test.jpg'));
+        await page.getByTestId('dsi-open-access-0-select').click();
+        await page.getByText(/Closed Access/).click();
 
         // submit form and make sure dialog message is shown
-        cy.contains('button', 'Submit').click();
-        cy.contains(/Your request has been submitted/i).should('be.visible');
+        await page
+            .locator('button', { hasText: /Submit/ })
+            .first()
+            .click();
+        await expect(page.getByText(/Your request has been submitted/i).first()).toBeVisible();
     });
 });

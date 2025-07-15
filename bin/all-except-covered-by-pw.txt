@@ -1,6 +1,5 @@
 cypress/e2e/homepage.spec.js
 cypress/e2e/incompleteRecord.spec.js
-cypress/e2e/forms.spec.js
 cypress/e2e/admin-add/creativeWork.spec.js
 cypress/e2e/admin-add/journalArticle.spec.js
 cypress/e2e/admin-add/video.spec.js
