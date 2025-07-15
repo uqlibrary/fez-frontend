@@ -30,7 +30,6 @@ cypress/e2e/admin-edit/book.spec.js
 cypress/e2e/admin-edit/community.spec.js
 cypress/e2e/admin-edit/audio.spec.js
 cypress/e2e/controlledVocabulalries.spec.js
-cypress/e2e/communityCollections.spec.js
 cypress/e2e/fixRecord.spec.js
 cypress/e2e/adminDashboard/systemalerts.spec.js
 cypress/e2e/adminDashboard/today.spec.js
