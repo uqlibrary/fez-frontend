@@ -8,6 +8,7 @@ import {
     within,
     selectDropDownOptionByElement,
     fireEvent,
+    userEvent,
 } from 'test-utils';
 import * as ManageUsersActions from 'actions/manageUsers';
 import * as repository from 'repositories';
@@ -322,6 +323,8 @@ describe('ManageUsers', () => {
     });
 
     it('should render updated info after editing', async () => {
+        const updateUserListItemFn = jest.spyOn(ManageUsersActions, 'updateUserListItem');
+
         mockApi
             .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtname', rule: 'lookup' } })
             .replyOnce(200, {})
@@ -385,6 +388,8 @@ describe('ManageUsers', () => {
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test');
         expect(getByTestId('usr-email-0')).toHaveAttribute('value', 'test@uq.edu.au');
         expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqtname');
+
+        await waitFor(() => expect(updateUserListItemFn).toHaveBeenCalled());
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
@@ -886,5 +891,24 @@ describe('ManageUsers', () => {
         expect(navigator.clipboard.writeText).toHaveBeenCalledWith('uqvasai');
 
         await waitFor(() => getByTestId('copied-text-snackbar'));
+    });
+
+    it('should handle text searching and clearing', async () => {
+        const loadUserListFn = jest.spyOn(ManageUsersActions, 'loadUserList');
+        const { getByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+
+        await userEvent.type(getByTestId('users-search-input'), 'test search');
+
+        await waitFor(() =>
+            expect(loadUserListFn).toHaveBeenLastCalledWith({ page: 0, pageSize: 20, search: 'test search' }),
+        );
+
+        await userEvent.click(
+            within(getByTestId('users-search-input').closest('.MuiInput-root')).getByTestId('ClearIcon'),
+        );
+
+        await waitFor(() => expect(loadUserListFn).toHaveBeenLastCalledWith({ page: 0, pageSize: 20, search: '' }));
     });
 });
