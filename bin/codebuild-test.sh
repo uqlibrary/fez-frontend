@@ -80,7 +80,7 @@ case "$PIPE_NUM" in
         printf "\n--- \e[1mRUNNING E2E CYPRESS TESTS GROUP [STARTING AT $(date)] 1\e[0m ---\n"
         # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the first group
 #        source bin/codebuild-parallel.sh
-        npm run test:e2e:ci4
+        npm run test:e2e:ci3
         printf "\n--- [ENDED AT $(date)] \n"
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
 #    else
