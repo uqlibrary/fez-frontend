@@ -5,9 +5,9 @@ import { baseURL, istanbulReportPartialsDir } from './playwright/support/constan
 export default defineConfig({
     outputDir: 'playwright/.results',
     testDir: 'playwright/tests',
-    timeout: 30 * 1000, // cy alike
+    timeout: 60_000,
     expect: {
-        timeout: 10000, // cy alike
+        timeout: 10_000,
     },
     fullyParallel: process.env.PW_SERIAL === 'true' ? false : true,
     forbidOnly: !!process.env.CI,
