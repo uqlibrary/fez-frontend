@@ -376,18 +376,18 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         ),
         renderTopToolbarCustomActions: ({ table }) => (
             <Box
-                sx={{
+                sx={theme => ({
                     display: 'flex',
                     backgroundColor: 'inherit',
-                    flexDirection: 'row',
                     justifyContent: 'space-between',
                     flexGrow: 1,
                     gap: 1,
                     padding: '24px 16px',
-                    '@media max-width: 768px': {
+                    flexDirection: 'row',
+                    [theme.breakpoints.down('md')]: {
                         flexDirection: 'column',
                     },
-                }}
+                })}
             >
                 <TextField
                     id={'users-search-input'}
@@ -409,7 +409,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                             </InputAdornment>
                         ),
                     }}
-                    sx={{ width: '300px' }}
+                    sx={{ width: { md: '300px' } }}
                     value={searchTerm}
                     onChange={handleSearch}
                     disabled={table.getState().creatingRow !== null}
