@@ -4193,6 +4193,8 @@ export default {
                 allowDismiss: true,
                 type: 'info',
             },
+            tablePageSizeOptions: [10, 20, 50],
+            tablePageSizeDefault: 20,
         },
         manageUsers: {
             validationAlertTitle:
