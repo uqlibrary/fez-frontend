@@ -1,10 +1,9 @@
-/* eslint-disable no-unused-vars */
-import { useState, useCallback, useEffect, useMemo } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 import PropTypes from 'prop-types';
 
 import { useConfirmationState } from './index';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 /**
  * Hook providing convenience methods and properties for interacting with an MRT table.
@@ -147,24 +146,11 @@ useMrtTable.propTypes = {
  * @param {number} pageIndex Current zero-indexed page number
  * @returns
  *
-        userListLoading,
-        userListLoadingError,
-        userListItemUpdating,
-        userListItemUpdateSuccess,
-        userListItemUpdateError,
-        userListItemDeleting,
-        userListItemDeleteSuccess,
-        userListItemDeleteError,
-        userAdding,
-        userAddSuccess,
-        userAddError,
-        bulkUserDeleteMessages,
         pagination,
         data,
         request,
         onPaginationChange,
         onSetPageSize,
-
  */
 export const useServerData = ({ actions, pageSize = 10, pageIndex = 0 }) => {
     const [state, _setState] = useState({
@@ -174,20 +160,6 @@ export const useServerData = ({ actions, pageSize = 10, pageIndex = 0 }) => {
         resultCount: 0,
     });
     const dispatch = useDispatch();
-    const {
-        userListLoading,
-        userListLoadingError,
-        userListItemUpdating,
-        userListItemUpdateSuccess,
-        userListItemUpdateError,
-        userListItemDeleting,
-        userListItemDeleteSuccess,
-        userListItemDeleteError,
-        userAdding,
-        userAddSuccess,
-        userAddError,
-        bulkUserDeleteMessages,
-    } = useSelector(state => state?.get('manageUsersReducer'));
 
     const _get = useCallback(
         payload => {
@@ -223,18 +195,6 @@ export const useServerData = ({ actions, pageSize = 10, pageIndex = 0 }) => {
     };
 
     return {
-        userListLoading,
-        userListLoadingError,
-        userListItemUpdating,
-        userListItemUpdateSuccess,
-        userListItemUpdateError,
-        userListItemDeleting,
-        userListItemDeleteSuccess,
-        userListItemDeleteError,
-        userAdding,
-        userAddSuccess,
-        userAddError,
-        bulkUserDeleteMessages,
         pagination: { pageIndex: state.pageIndex, pageSize: state.pageSize, resultCount: state.resultCount },
         data: state.data,
         request: _get,
