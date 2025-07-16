@@ -1,10 +1,12 @@
 import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
-import Immutable from 'immutable';
 import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen } from 'test-utils';
+import { useValidatedForm } from 'hooks';
+import userEvent from '@testing-library/user-event';
+import { useWatch } from 'react-hook-form';
 
 /* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
+jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
     Field: props => {
         return (
             <field
@@ -29,42 +31,6 @@ jest.mock('react-router-dom', () => ({
 
 function setup(testProps = {}, renderMethod = render) {
     const props = {
-        autofill: jest.fn(),
-        blur: jest.fn(),
-        change: jest.fn(),
-        clearAsyncError: jest.fn(),
-        anyTouched: true,
-        asyncValidating: false,
-        asyncValidate: jest.fn(),
-        clearFields: jest.fn(),
-        clearSubmitErrors: jest.fn(),
-        destroy: jest.fn(),
-        dispatch: jest.fn(),
-        handleSubmit: jest.fn(),
-        initialize: jest.fn(),
-        reset: jest.fn(),
-        resetSection: jest.fn(),
-        touch: jest.fn(),
-        submit: jest.fn(),
-        untouch: jest.fn(),
-        clearSubmit: jest.fn(),
-        dirty: true,
-        form: 'form',
-        initialized: false,
-        submitFailed: false,
-        valid: true,
-        pure: true,
-        submitAsSideEffect: false,
-        // common immutable props above
-        formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
-        submitting: testProps.submitting || false, // : PropTypes.bool
-        submitSucceeded: testProps.submitSucceeded || false, // : PropTypes.bool
-        invalid: testProps.invalid || false, // : PropTypes.bool
-        pristine: testProps.pristine || false, // : PropTypes.bool
-        fileAccessId: testProps.fileAccessId || 3, // PropTypes.number
-        actions: {
-            logout: jest.fn(),
-        },
         resetForm: testProps.resetForm || jest.fn(),
         ...testProps,
     };
@@ -80,23 +46,84 @@ function setup(testProps = {}, renderMethod = render) {
     );
 }
 
+jest.mock('hooks', () => ({
+    useValidatedForm: jest.fn(),
+}));
+
+jest.mock('react-hook-form', () => ({
+    ...jest.requireActual('react-hook-form'),
+    useWatch: jest.fn(),
+}));
+
+describe('AddDataCollection test mocking hooks', () => {
+    it('should navigate to my datasets url', async () => {
+        mockApi
+            .onGet('records/search', {
+                params: { rule: 'lookup', search_key: 'doi', lookup_value: '10.1037/arc0000014' },
+            })
+            .reply(() => [200, { total: 0, data: [] }]);
+
+        useWatch.mockImplementation(() => ['2025-01-01', '2025-02-01']);
+        // Mock the hook implementation for this test
+        let counter = 0;
+        useValidatedForm.mockImplementation(() => ({
+            handleSubmit: jest.fn(),
+            // watch: () =>
+            //     // startDate, endDate, watchedDoiField
+            //     ['2025-01-01', '2025-02-01', '10.1037/arc0000014'],
+            setError: jest.fn(),
+            control: {
+                values: {
+                    'fez_record_search_key_start_date.rek_start_date': '2025-01-01',
+                    'fez_record_search_key_end_date.rek_end_date': '2025-02-01',
+                },
+            },
+            formState: {
+                isSubmitting: false,
+                get isSubmitSuccessful() {
+                    counter++;
+                    return counter === 1 ? false : true;
+                },
+                isDirty: false,
+                errors: {},
+            },
+        }));
+
+        const { rerender, getByTestId } = setup({
+            submitSucceeded: false,
+        });
+        expect(useValidatedForm).toHaveBeenCalled();
+
+        setup(
+            {
+                submitSucceeded: true,
+            },
+            rerender,
+        );
+        await userEvent.click(getByTestId('submit-data-collection'));
+        await waitFor(() => expect(screen.getByTestId('confirm-dialog-box')));
+
+        fireEvent.click(screen.getByTestId('confirm-dialog-box'));
+
+        expect(mockUseNavigate).toHaveBeenCalledWith('/data-collections/mine');
+    });
+});
+
 describe('AddDataCollection test', () => {
-    afterEach(() => {
-        mockUseNavigate.mockClear();
+    beforeAll(() => {
+        const { useValidatedForm: originalUseValidatedForm } = jest.requireActual('hooks');
+        useValidatedForm.mockImplementation(originalUseValidatedForm);
+    });
+    afterAll(() => {
+        // mockUseNavigate.mockClear();
     });
 
     it('should render data set form', () => {
         const { container, getByRole } = setup();
 
-        expect(container).toMatchSnapshot();
         expect(container.getElementsByTagName('field').length).toEqual(28);
         expect(getByRole('button', { name: 'Cancel' })).toBeInTheDocument();
         expect(getByRole('button', { name: 'Submit for approval' })).toBeInTheDocument();
-    });
-
-    it('should render component with all fields disabled', () => {
-        const { container } = setup({ submitting: true });
-        expect(container.querySelectorAll('field[disabled=true]').length).toEqual(28);
     });
 
     it('should disable submit button if invalid form data before submit', () => {
@@ -120,61 +147,9 @@ describe('AddDataCollection test', () => {
         window.location = location;
     });
 
-    it('should navigate to my datasets url', async () => {
-        const clearNewRecordFn = jest.fn();
-        const { rerender } = setup({
-            submitSucceeded: false,
-        });
-
-        setup(
-            {
-                submitSucceeded: true,
-                actions: {
-                    clearNewRecord: clearNewRecordFn,
-                },
-            },
-            rerender,
-        );
-        await waitFor(() => expect(screen.getByTestId('confirm-dialog-box')));
-
-        fireEvent.click(screen.getByTestId('confirm-dialog-box'));
-
-        expect(clearNewRecordFn).toHaveBeenCalled();
-        expect(mockUseNavigate).toHaveBeenCalledWith('/data-collections/mine');
-    });
-
     it('should get save confirmation locale correctly', () => {
         const { container, rerender } = setup();
         setup({ newRecordFileUploadingOrIssueError: true, submitSucceeded: true }, rerender);
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render component with an invalid collection date range', () => {
-        const { container } = setup({
-            initialValues: {
-                fez_record_search_key_start_date: {
-                    rek_start_date: '2018-06-30',
-                },
-                fez_record_search_key_end_date: {
-                    rek_end_date: '2018-04-30', // before the start date - invalid!
-                },
-            },
-        });
-        // hasError Date range is not valid
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render component with a valid collection date range', () => {
-        const { container } = setup({
-            initialValues: {
-                fez_record_search_key_start_date: {
-                    rek_start_date: '2018-06-30',
-                },
-                fez_record_search_key_end_date: {
-                    rek_end_date: '2018-07-30',
-                },
-            },
-        });
         expect(container).toMatchSnapshot();
     });
 

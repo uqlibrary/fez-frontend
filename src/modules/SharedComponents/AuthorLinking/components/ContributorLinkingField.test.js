@@ -4,9 +4,7 @@ import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
-        input: {
-            onChange: () => {},
-        },
+        onChange: () => {},
         ...testProps,
     };
     return rtlRender(<ContributorLinkingField {...props} />);

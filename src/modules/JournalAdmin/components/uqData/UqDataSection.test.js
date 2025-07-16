@@ -1,20 +1,11 @@
 import React from 'react';
-import { rtlRender } from 'test-utils';
+import { rtlRender, FormProviderWrapper } from 'test-utils';
 import UqDataSection from './UqDataSection';
 
 jest.mock('../../../../context');
 import { useJournalContext } from 'context';
-
-import { FormProvider } from 'react-hook-form';
 import { journalDoaj } from 'mock/data';
-import { useValidatedForm } from 'hooks';
 import { ADMIN_JOURNAL } from 'config/general';
-
-// eslint-disable-next-line react/prop-types
-const FormProviderWrapper = ({ children, ...props }) => {
-    const methods = useValidatedForm(props);
-    return <FormProvider {...methods}>{children}</FormProvider>;
-};
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {

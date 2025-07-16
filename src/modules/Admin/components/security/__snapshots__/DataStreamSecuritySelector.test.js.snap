@@ -55,7 +55,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
 }"
           >
             <div
-              aria-controls=":r3:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-security-policy-0-select"
@@ -163,7 +163,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
 }"
           >
             <div
-              aria-controls=":r0:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-security-policy-0-select"
@@ -262,7 +262,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
 }"
           >
             <div
-              aria-controls=":r4:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-security-policy-0-select"

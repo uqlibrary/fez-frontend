@@ -17,7 +17,7 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       data-testid="document-type-selector"
     >
       <div
-        aria-controls=":r0:"
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="document-type-selector"
@@ -73,7 +73,7 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       data-testid="document-type-selector"
     >
       <div
-        aria-controls=":r1:"
+        aria-controls="<dynamic>"
         aria-disabled="true"
         aria-expanded="false"
         aria-haspopup="listbox"
@@ -130,7 +130,7 @@ exports[`DocumentTypeMultipleField component should render with given document t
       data-testid="document-type-selector"
     >
       <div
-        aria-controls=":r2:"
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="document-type-selector"

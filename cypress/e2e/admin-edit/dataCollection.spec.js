@@ -12,7 +12,7 @@ context('Data Collection admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.adminEditCountCards(8);
+        cy.adminEditCountCards(9);
         cy.adminEditVerifyAlerts(1, ['Publication date is required']);
 
         cy.adminEditTabbedView();
@@ -62,5 +62,31 @@ context('Author affiliations', () => {
             orgName: 'The University of Queensland',
             rowId: 0,
         });
+    });
+});
+
+context('Related Services', () => {
+    const record = recordList.data[0];
+
+    beforeEach(() => {
+        cy.loadRecordForAdminEdit(record.rek_pid);
+    });
+
+    afterEach(() => {
+        cy.adminEditCleanup();
+    });
+
+    it('should auto fill description field with selected title', () => {
+        cy.get('[data-testid=rek-related-service-id-input]').type('00tjv0s44');
+        cy.get('[data-testid=rek-related-service-id-options]')
+            .contains('li', 'Test Org')
+            .click();
+
+        cy.get('[data-testid=rek-related-service-desc-input]').should('have.value', 'Test Org');
+
+        cy.get('[data-testid=rek-related-service-add]').click();
+        // should add to the second row
+        cy.get('[data-testid=related-service-list-row-1]').contains('00tjv0s44');
+        cy.get('[data-testid=related-service-list-row-1]').contains('Test Org');
     });
 });
