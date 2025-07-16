@@ -10,9 +10,9 @@ export default defineConfig({
         timeout: 10_000,
     },
     fullyParallel: process.env.PW_SERIAL === 'true' ? false : true,
-    forbidOnly: !!process.env.CI,
-    retries: process.env.CI ? 2 : 0,
-    workers: process.env.CI ? '100%' : '75%',
+    forbidOnly: !!process.env.CI_BRANCH,
+    retries: process.env.CI_BRANCH ? 2 : 0,
+    workers: process.env.CI_BRANCH ? '100%' : '75%',
     reporter: [
         ['list'],
         [
@@ -50,6 +50,6 @@ export default defineConfig({
         command: 'npm run start:mock',
         url: baseURL,
         timeout: 5 * 60 * 1000,
-        reuseExistingServer: !process.env.CI,
+        reuseExistingServer: !process.env.CI_BRANCH,
     },
 });
