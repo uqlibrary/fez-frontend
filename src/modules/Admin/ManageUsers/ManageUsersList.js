@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import { upperFirst } from 'lodash';
 
@@ -62,16 +62,14 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         [],
     );
 
-    const {
-        userListLoading,
-        userListItemUpdating,
-        userListItemDeleting,
-        userAdding,
-        data: list,
-        pagination,
-        request,
-        onPaginationChange,
-    } = useServerData({ actions, pageSize: tablePageSizeDefault });
+    const { userListLoading, userListItemUpdating, userListItemDeleting, userAdding } = useSelector(state =>
+        state?.get('manageUsersReducer'),
+    );
+
+    const { data: list, pagination, request, onPaginationChange } = useServerData({
+        actions,
+        pageSize: tablePageSizeDefault,
+    });
 
     const {
         data,
