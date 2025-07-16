@@ -49,7 +49,13 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             columns: { id, fullName, username, email, status, isAdmin, isSuperAdmin },
         },
         form: {
-            locale: { addButtonTooltip, bulkDeleteButtonTooltip, editButtonTooltip, deleteButtonTooltip },
+            locale: {
+                addButtonTooltip,
+                bulkDeleteButtonTooltip,
+                editButtonTooltip,
+                deleteButtonTooltip,
+                searchAriaLabel,
+            },
             deleteConfirmationLocale,
             bulkDeleteConfirmationLocale,
         },
@@ -392,7 +398,11 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     title=""
                     placeholder="Search users"
                     variant="standard"
-                    inputProps={{ inputMode: 'search', 'data-testid': 'users-search-input' }}
+                    inputProps={{
+                        inputMode: 'search',
+                        'data-testid': 'users-search-input',
+                        'aria-label': searchAriaLabel,
+                    }}
                     InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">
