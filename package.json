@@ -116,6 +116,7 @@
         "whatwg-fetch": "^3.6.20"
     },
     "dependencies": {
+        "@axe-core/playwright": "^4.10.2",
         "@babel/runtime": "^7.23.6",
         "@babel/runtime-corejs3": "^7.23.8",
         "@ckeditor/ckeditor5-react": "^9.3.1",
