@@ -1,5 +1,5 @@
 import { expect, test } from '../lib/fixture';
-import { assertIsVisible } from '../lib/utils';
+import { assertIsVisible } from '../support/commands';
 
 test.describe('Scroll to top module', () => {
     test.beforeEach(async ({ page }) => {

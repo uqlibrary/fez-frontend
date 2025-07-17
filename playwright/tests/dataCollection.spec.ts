@@ -1,5 +1,5 @@
 import { test, expect, Page } from '../lib/fixture';
-import { clickAutoSuggestion } from '../lib/utils';
+import { clickAutoSuggestion } from '../support/commands';
 
 test.describe('Data Collection form', () => {
     let errorCount = 13;

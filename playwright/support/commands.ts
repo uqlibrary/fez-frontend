@@ -1,4 +1,4 @@
-import { Page, expect } from '../lib/fixture';
+import { Page, expect, Locator } from '../lib/fixture';
 import { baseURL } from './constants';
 
 export const assertEnabled = async (page: Page, selector: string) => expect(page.locator(selector)).toBeEnabled();
@@ -33,3 +33,17 @@ export const navToHomeFromMenu = async (
 export const fillInput = async (page: Page, selector: string, value: any, times: number = 1) => {
     await page.fill(selector, String(value).repeat(times));
 };
+
+export async function assertIsVisible(element: Locator): Promise<void> {
+    await expect(element).toBeVisible();
+}
+export async function assertIsNotVisible(element: Locator): Promise<void> {
+    await expect(element).not.toBeInViewport({ timeout: 0 });
+}
+
+export async function clickAutoSuggestion(page: Page, fieldName: string, ordinal: string | number): Promise<void> {
+    await expect(page.locator(`[data-testid=${fieldName}-options]`)).toBeVisible();
+    const menuItem = page.locator(`#${fieldName}-option-${ordinal}`);
+    await expect(page.locator(`#${fieldName}-option-${ordinal}`)).toBeVisible();
+    await menuItem.click();
+}

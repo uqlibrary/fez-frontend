@@ -1,5 +1,5 @@
 import { test, expect } from '../../lib/fixture';
-import { clickAutoSuggestion } from '../../lib/utils';
+import { clickAutoSuggestion } from '../../support/commands';
 import { typeCKEditor } from '../../support/ckeditor';
 import { adminEditCheckTabErrorBadge, adminEditTabbedView, assertAffiliationsAllowed } from '../../support/adminEdit';
 

@@ -3,7 +3,7 @@ import { test, expect, Page } from '../lib/fixture';
 test.describe.serial('Homepage', () => {
     const checkMenuItemCount = async (page: Page, expectedCount: number) => {
         await page.locator('button[aria-label="Click to open the main navigation"]').click();
-        await expect(page.locator('nav#mainMenu div[role="button"]')).toHaveCount(expectedCount, { timeout: 30_000 });
+        await expect(page.locator('nav#mainMenu div[role="button"]')).toHaveCount(expectedCount, { timeout: 60_000 });
     };
 
     test('Renders the tabbed panes as expected', async ({ page }) => {

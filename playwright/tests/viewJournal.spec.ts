@@ -1,5 +1,5 @@
 import { expect, test, Page } from '../lib/fixture';
-import { assertIsNotVisible, assertIsVisible } from '../lib/utils';
+import { assertIsNotVisible, assertIsVisible } from '../support/commands';
 
 test.describe('view Journal', () => {
     async function tabVisibleInWindow(page: Page, tabId: string, shouldBeVisible: boolean, buttonType = 'ssci') {

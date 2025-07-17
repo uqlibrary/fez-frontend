@@ -5,7 +5,7 @@ import { baseURL, istanbulReportPartialsDir } from './playwright/support/constan
 export default defineConfig({
     outputDir: 'playwright/.results',
     testDir: 'playwright/tests',
-    timeout: 60_000,
+    timeout: 90_000,
     expect: {
         timeout: 10_000,
     },

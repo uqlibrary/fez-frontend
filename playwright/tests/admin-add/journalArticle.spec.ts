@@ -6,7 +6,7 @@ import {
     adminEditTabbedView,
     editAffiliationAndAssert,
 } from '../../support/adminEdit';
-import { clickAutoSuggestion } from '../../lib/utils';
+import { clickAutoSuggestion } from '../../support/commands';
 import { typeCKEditor } from '../../support/ckeditor';
 
 test.describe('As an admin,', () => {
