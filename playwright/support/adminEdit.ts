@@ -16,12 +16,12 @@ export async function adminEditCountCards(page: Page, count: number) {
 
 export async function adminEditNoAlerts(page: Page) {
     const form = page.locator('.StandardPage form > div:first-child');
-    await expect(form.locator('[data-testid=alert]')).not.toBeVisible();
+    await expect(form.getByTestId('alert')).not.toBeVisible();
     await expect(page.locator('#admin-work-submit')).toBeEnabled();
 }
 
 export async function adminEditVerifyAlerts(page: Page, count: number, messages: string[]) {
-    const alert = page.locator('[data-testid=alert-warning]');
+    const alert = page.getByTestId('alert-warning');
     await expect(alert.locator('.alert-text')).toContainText('Validation -');
     const alertMessages = alert.locator('li');
     await expect(alertMessages).toHaveCount(count);
@@ -97,13 +97,13 @@ export async function addAuthorAndAssert(
     expand = true,
     edit = true,
 ) {
-    await page.locator('[data-testid=rek-author-add]').click();
-    await page.locator('[data-testid=rek-author-id-input]').fill('uq');
+    await page.getByTestId('rek-author-add').click();
+    await page.getByTestId('rek-author-id-input').fill('uq');
     await page
-        .locator('[data-testid=rek-author-id-options]')
+        .getByTestId('rek-author-id-options')
         .locator(`li:has-text("${authorUqname}")`)
         .click();
-    await page.locator('[data-testid=rek-author-add-save]').click();
+    await page.getByTestId('rek-author-add-save').click();
     await expect(page.locator('[data-testid^=contributor-errorIcon-]')).toBeVisible();
 
     if (expand) {
@@ -111,17 +111,17 @@ export async function addAuthorAndAssert(
         await expandIcon.click();
 
         const detailPanel = page.locator(`[data-testid=detailPanel-${authorId}]`);
-        await expect(detailPanel.locator('[data-testid=orgChip-error]')).toContainText('0%');
+        await expect(detailPanel.getByTestId('orgChip-error')).toContainText('0%');
         await expect(detailPanel).toContainText('No affiliations have been added');
-        await expect(page.locator('[data-testid=alert]')).toContainText(
+        await expect(page.getByTestId('alert').first()).toContainText(
             'Author affiliation information is incomplete - Author requires at least one affiliation to be added',
         );
 
         if (edit) {
             const editBtn = page.locator('[data-testid^=affiliationEditBtn-]').first();
             await editBtn.click();
-            await expect(page.locator('[data-testid=affiliationCancelBtn]')).toBeEnabled();
-            await expect(page.locator('[data-testid=affiliationSaveBtn]')).toBeDisabled();
+            await expect(page.getByTestId('affiliationCancelBtn')).toBeEnabled();
+            await expect(page.getByTestId('affiliationSaveBtn')).toBeDisabled();
         }
     }
 }
@@ -141,11 +141,11 @@ export async function addAffiliationAndAssert(
     expectedPercent: string,
     suggested = false,
 ) {
-    const addInput = page.locator('[data-testid=orgSelect-add-input]');
+    const addInput = page.getByTestId('orgSelect-add-input');
     await addInput.click();
     await page
-        .locator('[data-testid=orgSelect-add-options]')
-        .locator(`li:has-text("${orgName}")`)
+        .getByTestId('orgSelect-add-options')
+        .getByText(orgName, { exact: true })
         .click();
 
     const actualOrgName = suggested ? orgName.replace('Suggested: ', '') : orgName;
@@ -163,7 +163,7 @@ export async function editAffiliationAndAssert(
     await currentInput.click();
     await page
         .locator(`[data-testid=orgSelect-${currentOrgId}-options]`)
-        .locator(`li:has-text("${nextOrgName}")`)
+        .getByText(nextOrgName, { exact: true })
         .click();
     await assertAffiliation(page, nextOrgName, nextOrgId, expectedPercent);
 }
@@ -184,13 +184,13 @@ export async function assertAffiliationsAllowed(page: Page, options: AssertAffil
         await adminEditTabbedView(page);
     }
 
-    await page.locator('[data-testid="authors-tab"]').click();
-    await page.locator('[data-testid=rek-author-add]').click();
-    await page.locator('[data-testid=rek-author-id-input]').fill('uq');
+    await page.getByTestId('authors-tab').click();
+    await page.getByTestId('rek-author-add').click();
+    await page.getByTestId('rek-author-id-input').fill('uq');
 
-    const authorOption = page.locator('[data-testid=rek-author-id-options]').locator(`li:has-text("${authorName}")`);
+    const authorOption = page.getByTestId('rek-author-id-options').locator(`li:has-text("${authorName}")`);
     await authorOption.click();
-    await page.locator('[data-testid=rek-author-add-save]').click();
+    await page.getByTestId('rek-author-add-save').click();
 
     if (allowed) {
         await expect(page.locator('[data-testid^=contributor-errorIcon]')).toBeVisible();
@@ -205,7 +205,7 @@ export async function assertAffiliationsAllowed(page: Page, options: AssertAffil
         await row.locator(iconSelector).click();
     }
 
-    const authorList = page.locator('[data-testid=rek-author-list]');
+    const authorList = page.getByTestId('rek-author-list');
     if (allowed) {
         await expect(authorList).toContainText('No affiliations have been added');
     } else {
@@ -213,8 +213,8 @@ export async function assertAffiliationsAllowed(page: Page, options: AssertAffil
     }
 
     if (allowed) {
-        await expect(authorList.locator('[data-testid=alert]')).toBeVisible();
+        await expect(authorList.getByTestId('alert')).toBeVisible();
     } else {
-        await expect(authorList.locator('[data-testid=alert]')).not.toBeVisible();
+        await expect(authorList.getByTestId('alert')).not.toBeVisible();
     }
 }
