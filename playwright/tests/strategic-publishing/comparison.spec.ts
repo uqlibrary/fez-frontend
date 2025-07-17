@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../../lib/fixture';
 import { assertAccessibility } from '../../support/axe';
 
 test.describe('Strategic Publishing - Comparison', () => {
@@ -11,7 +11,7 @@ test.describe('Strategic Publishing - Comparison', () => {
     test('Should navigate to search', async ({ page }) => {
         await page.goto('/journals/compare/');
         await expect(page.getByText(/No journals were selected for comparison/).first()).toBeVisible();
-        await page.locator('[data-testid="return-to-search-results-button"]').click();
+        await page.getByTestId('return-to-search-results-button').click();
         await expect(page).toHaveURL('/journals/search/');
     });
 
@@ -26,24 +26,24 @@ test.describe('Strategic Publishing - Comparison', () => {
 
         // wait until the progress spinner is no longer in the document
         await expect(page.locator('[role="progressbar"]')).toHaveCount(0);
-        await expect(page.locator('[data-testid="journal-list-data-col-1-checkbox-0"]')).toBeVisible();
+        await expect(page.getByTestId('journal-list-data-col-1-checkbox-0')).toBeVisible();
         // make sure 3rd journal is present
-        await expect(page.locator('[data-testid="journal-list-data-col-1-title-2"]')).toBeVisible();
+        await expect(page.getByTestId('journal-list-data-col-1-title-2')).toBeVisible();
         // select journals for comparison
-        await expect(page.locator('[data-testid="journal-comparison-button"]')).toBeDisabled();
-        await page.locator('[data-testid="journal-list-data-col-1-checkbox-0"]').click();
-        await expect(page.locator('[data-testid="journal-comparison-button"]')).toBeDisabled();
-        await page.locator('[data-testid="journal-list-data-col-1-checkbox-1"]').click();
-        await expect(page.locator('[data-testid="journal-comparison-button"]')).not.toBeDisabled();
-        await page.locator('[data-testid="journal-comparison-button"]').click();
+        await expect(page.getByTestId('journal-comparison-button')).toBeDisabled();
+        await page.getByTestId('journal-list-data-col-1-checkbox-0').click();
+        await expect(page.getByTestId('journal-comparison-button')).toBeDisabled();
+        await page.getByTestId('journal-list-data-col-1-checkbox-1').click();
+        await expect(page.getByTestId('journal-comparison-button')).not.toBeDisabled();
+        await page.getByTestId('journal-comparison-button').click();
         await expect(page).toHaveURL('/journals/compare/');
         // make sure the selected journal are present
-        await expect(page.locator('[data-testid="journal-list-data-col-1-title-0"]').first()).toBeVisible();
-        await expect(page.locator('[data-testid="journal-list-data-col-1-title-1"]').first()).toBeVisible();
+        await expect(page.getByTestId('journal-list-data-col-1-title-0').first()).toBeVisible();
+        await expect(page.getByTestId('journal-list-data-col-1-title-1').first()).toBeVisible();
         // make sure 3rd journal is not present
-        await expect(page.locator('[data-testid="journal-list-data-col-1-title-2"]')).not.toBeVisible();
+        await expect(page.getByTestId('journal-list-data-col-1-title-2')).not.toBeVisible();
         await assertAccessibility(page, 'div.StandardPage');
-        await page.locator('[data-testid="return-to-search-results-button"]').click();
+        await page.getByTestId('return-to-search-results-button').click();
         // go back to search results
         await expect(async () => {
             const loc = new URL(page.url());
