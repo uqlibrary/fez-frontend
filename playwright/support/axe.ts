@@ -29,7 +29,7 @@ export const assertAccessibility = async (
         console.error('Accessibility Violations Found (filtered by impact):');
         console.table(
             filtered.map(violation => ({
-                id: violation.id,
+                ruleId: violation.id,
                 description: violation.description,
                 impact: violation.impact,
                 nodes: violation.nodes.length,
