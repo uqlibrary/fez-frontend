@@ -2,22 +2,6 @@ import { test, expect, Page } from '../../lib/fixture';
 import { assertAccessibility } from '../../support/axe';
 import { assertNotSearchParams } from '../../support/url';
 
-const scrollToBottom = async (page: Page) => {
-    const container = page.locator('#content-container');
-    await container.evaluate(el => (el.scrollTop = el.scrollHeight));
-    const scrollTop = await container.evaluate(el => el.scrollTop);
-    expect(scrollTop).toBeGreaterThan(0);
-};
-
-const assertScrollIsNotOnTop = async (page: Page) => {
-    const container = page.locator('#content-container');
-    const scrollTop = await container.evaluate(el => el.scrollTop);
-    expect(scrollTop).toBeGreaterThan(0);
-};
-
-const assertScrollIsOnTop = async (page: Page) =>
-    expect(await page.locator('#content-container').evaluate(el => el.scrollTop)).toBe(0);
-
 const captureBeforeContent = async (page: Page, selector: string) =>
     await page.evaluate(selector => {
         const el = document.querySelector(selector);
