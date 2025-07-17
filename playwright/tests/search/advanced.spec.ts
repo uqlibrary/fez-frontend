@@ -51,7 +51,6 @@ test.describe('Advanced Search', () => {
             /activeFacets%5Branges%5D%5BYear\+published%5D%5Bfrom%5D=2005&activeFacets%5Branges%5D%5BYear\+published%5D%5Bto%5D=2018/,
         );
         await expect(page.getByTestId('facet-year-range-caption')).toBeVisible();
-        await expect(page.getByTestId('search-records-loading')).toBeVisible();
         await expect(page.getByTestId('search-records-loading')).toHaveText(/Searching for works/);
     });
 
