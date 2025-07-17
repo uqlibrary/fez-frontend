@@ -1,5 +1,6 @@
 import { Page, expect, Locator } from '../lib/fixture';
 import { baseURL } from './constants';
+import { BrowserContext } from '@playwright/test';
 
 export const assertEnabled = async (page: Page, selector: string) => expect(page.locator(selector)).toBeEnabled();
 
@@ -47,3 +48,19 @@ export async function clickAutoSuggestion(page: Page, fieldName: string, ordinal
     await expect(page.locator(`#${fieldName}-option-${ordinal}`)).toBeVisible();
     await menuItem.click();
 }
+
+export async function loadAdminDashboard(page: Page, user: string = 'uqstaff') {
+    await page.setViewportSize({ width: 1200, height: 1000 });
+    await page.goto(`/admin/dashboard?user=${user}`);
+    // Wait until the <h2> element is visible and contains "Admin dashboard"
+    const heading = page.locator('h2');
+    await expect(heading).toBeVisible({ timeout: 10000 });
+    await expect(heading).toContainText('Admin dashboard');
+}
+
+export const testIdStartsWith = (page: Page | Locator, id: string) => page.locator(`[data-testid^=${id}]`);
+
+export const getOpenedLink = async (context: BrowserContext, locator: Locator) => {
+    const [newPage] = await Promise.all([context.waitForEvent('page'), locator.click()]);
+    return newPage;
+};
