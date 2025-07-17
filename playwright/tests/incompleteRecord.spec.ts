@@ -1,4 +1,4 @@
-import { test, expect, Page } from '@playwright/test';
+import { test, expect, Page } from '../lib/fixture';
 import { typeCKEditor } from '../support/ckeditor'; // Assuming this is a custom helper
 
 test.describe('Incomplete record form', () => {
