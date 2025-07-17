@@ -3,10 +3,10 @@ import { assertAccessibility } from '../../support/axe';
 import { assertNotSearchParams } from '../../support/url';
 
 const captureBeforeContent = async (page: Page, selector: string) =>
-    await page.evaluate(selector => {
-        const el = document.querySelector(selector);
-        return window.getComputedStyle(el, '::before').content;
-    }, selector);
+    await page.evaluate(
+        selector => window.getComputedStyle(document.querySelector(selector), '::before').content,
+        selector,
+    );
 
 async function assertCollapsiblePanel(page: Page, index: number) {
     await expect(page.locator(`[data-testid="journal-list-collapse-panel-${index}"]`)).not.toBeVisible();
@@ -140,22 +140,18 @@ test.describe('Strategic Publishing - Search', () => {
 
     test('Selecting keyword should not change scroll position', async ({ page }) => {
         await page.getByTestId('journal-search-keywords-input').fill('bio');
-        // await scrollToBottom(page);
         await page.getByTestId('journal-search-item-addable-keyword-bioe-27').click();
         await expect(page.getByTestId('journal-search-chip-keyword-bioe')).toBeVisible();
-        // await assertScrollIsNotOnTop(page);
     });
 
     test('Removing keyword should not change scroll position', async ({ page }) => {
         await page.getByTestId('journal-search-keywords-input').fill('bio');
-        // await scrollToBottom(page);
         await page.getByTestId('journal-search-item-addable-keyword-bioe-27').click();
         await page
             .getByTestId('journal-search-chip-keyword-bioe')
             .getByTestId('CancelIcon')
             .click();
         await expect(page.getByTestId('journal-search-chip-keyword-bioe')).not.toBeVisible();
-        // await assertScrollIsNotOnTop(page);
     });
 
     test('Selecting keyword should indicate change on keyword icon when added', async ({ page }) => {

@@ -24,7 +24,7 @@ export const assertAccessibility = async (
     const results = await builder.analyze();
 
     const impacts = options?.includedImpacts || defaultIncludedImpacts;
-    const filtered = results.violations.filter(violation => impacts.includes(violation.impact));
+    const filtered = results.violations.filter(violation => violation.impact && impacts.includes(violation.impact));
     if (filtered.length > 0) {
         console.error('Accessibility Violations Found (filtered by impact):');
         console.table(
