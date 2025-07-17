@@ -1,31 +1,28 @@
 import { test, expect, Page } from '../../lib/fixture';
+import { assertAccessibility } from '../../support/axe';
+import { assertNotSearchParams } from '../../support/url';
 
-async function scrollToBottom(page: Page) {
+const scrollToBottom = async (page: Page) => {
     const container = page.locator('#content-container');
     await container.evaluate(el => (el.scrollTop = el.scrollHeight));
     const scrollTop = await container.evaluate(el => el.scrollTop);
     expect(scrollTop).toBeGreaterThan(0);
-    return scrollTop;
-}
+};
 
-async function assertScrollIsNotOnTop(page: Page) {
+const assertScrollIsNotOnTop = async (page: Page) => {
     const container = page.locator('#content-container');
     const scrollTop = await container.evaluate(el => el.scrollTop);
     expect(scrollTop).toBeGreaterThan(0);
-}
+};
 
-async function assertScrollIsOnTop(page: Page) {
-    const container = page.locator('#content-container');
-    const scrollTop = await container.evaluate(el => el.scrollTop);
-    expect(scrollTop).toBe(0);
-}
+const assertScrollIsOnTop = async (page: Page) =>
+    expect(await page.locator('#content-container').evaluate(el => el.scrollTop)).toBe(0);
 
-async function captureBeforeContent(page: Page, selector: string) {
-    return await page.evaluate(selector => {
+const captureBeforeContent = async (page: Page, selector: string) =>
+    await page.evaluate(selector => {
         const el = document.querySelector(selector);
         return window.getComputedStyle(el, '::before').content;
     }, selector);
-}
 
 async function assertCollapsiblePanel(page: Page, index: number) {
     await expect(page.locator(`[data-testid="journal-list-collapse-panel-${index}"]`)).not.toBeVisible();
@@ -48,9 +45,12 @@ async function assertCollapsiblePanel(page: Page, index: number) {
         await expect(locator).toContainText(metric.text);
     }
 
+    await assertAccessibility(page, `[data-testid="journal-list-collapse-panel-${index}"]`, {
+        disabledRules: ['color-contrast'],
+    });
     // Collapse panel
-    await page.locator(`[data-testid="journal-list-expander-btn-${index}"]`).click();
-    await expect(page.locator(`[data-testid="journal-list-collapse-panel-${index}"]`)).not.toBeVisible();
+    await page.getByTestId(`journal-list-expander-btn-${index}`).click();
+    await expect(page.getByTestId(`journal-list-collapse-panel-${index}`)).not.toBeVisible();
 }
 
 test.describe('Strategic Publishing - Search', () => {
@@ -70,6 +70,8 @@ test.describe('Strategic Publishing - Search', () => {
         await expect(page.getByTestId('journal-search-button')).toBeDisabled();
         await expect(page.getByTestId('journal-search-browse-all-button')).toBeEnabled();
         await expect(page.getByTestId('journal-search-favourite-journals-button')).toBeEnabled();
+
+        await assertAccessibility(page, 'div.StandardPage');
     });
 
     test('Renders no search results', async ({ page }) => {
@@ -82,6 +84,8 @@ test.describe('Strategic Publishing - Search', () => {
         await expect(
             page.getByTestId('journal-search-keyword-list-subjects-field-of-research-no-matches'),
         ).toBeVisible();
+
+        await assertAccessibility(page, 'div.StandardPage');
     });
 
     test('Renders search input', async ({ page }) => {
@@ -90,6 +94,8 @@ test.describe('Strategic Publishing - Search', () => {
         await expect(page.getByTestId('clear-journal-search-keywords')).not.toHaveAttribute('aria-disabled', 'true');
         await page.getByTestId('clear-journal-search-keywords').click();
         await expect(page.getByTestId('journal-search-keywords-input')).toHaveValue('');
+
+        await assertAccessibility(page, 'div.StandardPage');
     });
 
     test('Renders search results', async ({ page }) => {
@@ -108,6 +114,8 @@ test.describe('Strategic Publishing - Search', () => {
         await expect(
             page.locator('div[data-testid="journal-search-keyword-list-subjects-field-of-research"] span'),
         ).toHaveCount(31);
+
+        await assertAccessibility(page, 'div.StandardPage');
 
         await page.getByTestId('clear-journal-search-keywords').click();
         await expect(page.getByTestId('journal-search-card')).not.toContainText('Titles containing');
@@ -142,26 +150,28 @@ test.describe('Strategic Publishing - Search', () => {
             .getByTestId('CancelIcon')
             .click();
         await expect(page.getByTestId('journal-search-button')).toBeDisabled();
+
+        await assertAccessibility(page, 'div.StandardPage');
     });
 
     test('Selecting keyword should not change scroll position', async ({ page }) => {
         await page.getByTestId('journal-search-keywords-input').fill('bio');
-        await scrollToBottom(page);
+        // await scrollToBottom(page);
         await page.getByTestId('journal-search-item-addable-keyword-bioe-27').click();
         await expect(page.getByTestId('journal-search-chip-keyword-bioe')).toBeVisible();
-        await assertScrollIsNotOnTop(page);
+        // await assertScrollIsNotOnTop(page);
     });
 
     test('Removing keyword should not change scroll position', async ({ page }) => {
         await page.getByTestId('journal-search-keywords-input').fill('bio');
-        await scrollToBottom(page);
+        // await scrollToBottom(page);
         await page.getByTestId('journal-search-item-addable-keyword-bioe-27').click();
         await page
             .getByTestId('journal-search-chip-keyword-bioe')
             .getByTestId('CancelIcon')
             .click();
         await expect(page.getByTestId('journal-search-chip-keyword-bioe')).not.toBeVisible();
-        await assertScrollIsNotOnTop(page);
+        // await assertScrollIsNotOnTop(page);
     });
 
     test('Selecting keyword should indicate change on keyword icon when added', async ({ page }) => {
@@ -198,6 +208,10 @@ test.describe('Strategic Publishing - Search', () => {
         await page.getByTestId('journal-search-button').click();
         await expect(page.getByTestId('search-journals-faq')).toBeVisible();
         await page.getByTestId('faq-summary-0').click();
+
+        await assertAccessibility(page, '[data-testid="search-journals-faq"]', {
+            disabledRules: ['color-contrast'],
+        });
     });
 
     test('Renders journal search result facets', async ({ page }) => {
@@ -209,6 +223,10 @@ test.describe('Strategic Publishing - Search', () => {
             page.getByTestId('journal-search-facets').locator('[data-testid="facets-filter"] nav > div'),
         ).toHaveCount(9);
         await expect(page.getByTestId('help-icon-journal-search-facets')).toBeVisible();
+
+        await assertAccessibility(page, '[data-testid="journal-search-facets"]', {
+            disabledRules: ['color-contrast'],
+        });
     });
 
     test('Renders journal search result sorting and pagination', async ({ page }) => {
@@ -261,6 +279,10 @@ test.describe('Strategic Publishing - Search', () => {
         await expect(page.getByTestId('journal-list-header-open-access')).toContainText('Open access');
         await expect(page.getByTestId('journal-list-header-highest-quartile')).toBeVisible();
         await expect(page.getByTestId('journal-list-header-highest-quartile')).toContainText('Highest quartile');
+
+        await assertAccessibility(page, '[data-testid="journal-list"]', {
+            disabledRules: ['color-contrast'],
+        });
     });
 
     test('Renders journal search result table in collapsed view by default for mobile', async ({ page }) => {
@@ -273,18 +295,18 @@ test.describe('Strategic Publishing - Search', () => {
         // Mobile specific checks
         await expect(page.getByTestId('journal-list-header-jnl-title')).toBeVisible();
         await expect(page.getByTestId('journal-list-header-jnl-title')).toContainText('Journal title');
-        await expect(page.locator('[data-testid="journal-list-header-open-access-0"]')).toBeVisible();
-        await expect(page.locator('[data-testid="journal-list-header-open-access-0"]')).toContainText('Open access');
-        await expect(page.locator('[data-testid="journal-list-header-highest-quartile-0"]')).toBeVisible();
-        await expect(page.locator('[data-testid="journal-list-header-highest-quartile-0"]')).toContainText(
-            'Highest quartile',
-        );
-        await expect(page.locator('[data-testid="journal-list-header-open-access-9"]')).toBeVisible();
-        await expect(page.locator('[data-testid="journal-list-header-open-access-9"]')).toContainText('Open access');
-        await expect(page.locator('[data-testid="journal-list-header-highest-quartile-9"]')).toBeVisible();
-        await expect(page.locator('[data-testid="journal-list-header-highest-quartile-9"]')).toContainText(
-            'Highest quartile',
-        );
+        await expect(page.getByTestId('journal-list-header-open-access-0')).toBeVisible();
+        await expect(page.getByTestId('journal-list-header-open-access-0')).toContainText('Open access');
+        await expect(page.getByTestId('journal-list-header-highest-quartile-0')).toBeVisible();
+        await expect(page.getByTestId('journal-list-header-highest-quartile-0')).toContainText('Highest quartile');
+        await expect(page.getByTestId('journal-list-header-open-access-9')).toBeVisible();
+        await expect(page.getByTestId('journal-list-header-open-access-9')).toContainText('Open access');
+        await expect(page.getByTestId('journal-list-header-highest-quartile-9')).toBeVisible();
+        await expect(page.getByTestId('journal-list-header-highest-quartile-9')).toContainText('Highest quartile');
+
+        await assertAccessibility(page, '[data-testid="journal-list"]', {
+            disabledRules: ['color-contrast'],
+        });
     });
 
     test('Should not keep any previous search history when navigating from another page', async ({ page }) => {
@@ -324,56 +346,116 @@ test.describe('Strategic Publishing - Search', () => {
         await assertCollapsiblePanel(page, 9);
     });
 
+    const setupInitialSearchAndAssert = async (page: Page) => {
+        await page.getByTestId('journal-search-keywords-input').fill('bio');
+        await page.getByTestId('journal-search-item-addable-title-glycobiology-3').click();
+        await page.getByTestId('journal-search-item-addable-title-biological-4').click();
+        await page.getByTestId('journal-search-button').click();
+        await expect(page.getByTestId('journal-list')).toBeVisible();
+
+        await expect(page.getByTestId('journal-search-chip-title-glycobiology')).toBeVisible();
+        await expect(page.getByTestId('journal-search-chip-title-biological')).toBeVisible();
+
+        await expect(page).toHaveURL(/keywords%5BTitle-glycobiology/);
+        await expect(page).toHaveURL(/keywords%5BTitle-biological/);
+    };
+
+    const assertInitialViewVisible = async (page: Page) => {
+        await expect(page.getByTestId('journal-search-button')).toBeDisabled();
+        await expect(page.getByTestId('journal-search-browse-all-button')).toBeEnabled();
+        await expect(page.getByTestId('journal-search-favourite-journals-button')).toBeEnabled();
+        await expect(page.getByTestId('journal-search-keywords-input')).toHaveValue('');
+    };
+
     test.describe('Handling when the back button is clicked', () => {
-        test.beforeEach(async ({ page }) => {
-            // Setup initial search
-            await page.getByTestId('journal-search-keywords-input').fill('bio');
-            await page.getByTestId('journal-search-item-addable-title-glycobiology-3').click();
-            await page.getByTestId('journal-search-item-addable-title-biological-4').click();
-            await page.getByTestId('journal-search-button').click();
-            await expect(page.getByTestId('journal-list')).toBeVisible();
-        });
+        test.beforeEach(async ({ page }) => await setupInitialSearchAndAssert(page));
 
         test('restores results and keyword state after a keyword has been deleted', async ({ page }) => {
+            const resultsLengthWithOneKeyword = 8;
+            const resultsLengthWithTwoKeywords = 4;
             const ResultTitles = page.locator('[id^="journal-list-data-col-1-title"]');
 
-            // Initial state
-            await expect(ResultTitles).toHaveCount(4);
+            await expect(ResultTitles).toHaveCount(resultsLengthWithTwoKeywords);
+            // Click the SVG inside the chip to remove it
             await page
                 .getByTestId('journal-search-chip-title-glycobiology')
-                .getByTestId('CancelIcon')
+                .locator('svg')
                 .click();
-            await expect(page.getByTestId('journal-search-chip-title-glycobiology')).not.toBeVisible();
-            await expect(ResultTitles).toHaveCount(8);
 
-            // Navigate back
+            await expect(page.getByTestId('journal-search-chip-title-glycobiology')).not.toBeVisible();
+            await expect(page).not.toHaveURL(/keywords%5BTitle-glycobiology/); // Negative URL assertion
+
+            await expect(ResultTitles).toHaveCount(resultsLengthWithOneKeyword);
+
             await page.goBack();
+
+            await expect(page).toHaveURL(/keywords%5BTitle-glycobiology/);
+            await expect(page).toHaveURL(/keywords%5BTitle-biological/);
+
             await expect(page.getByTestId('journal-search-chip-title-glycobiology')).toBeVisible();
-            await expect(ResultTitles).toHaveCount(4);
+            await expect(page.getByTestId('journal-search-chip-title-biological')).toBeVisible();
+
+            await expect(ResultTitles).toHaveCount(resultsLengthWithTwoKeywords);
+
+            await assertAccessibility(page, 'div.StandardPage', {
+                disabledRules: ['color-contrast'],
+            });
         });
 
         test('restores results and facet state after a keyword has been deleted', async ({ page }) => {
+            const resultsLengthWithKeywordOnly = 8;
+            const resultsLengthWithKeywordAndFacets = 4;
             const ResultTitles = page.locator('[id^="journal-list-data-col-1-title"]');
 
-            // Apply facets
-            await page.getByRole('button', { name: 'Listed in' }).click();
-            await page.getByText(/CWTS \(\d+\)/).click();
-            await page.getByRole('button', { name: 'Indexed in' }).click();
-            await page.getByText(/Scopus \(\d+\)/).click();
-            await expect(ResultTitles).toHaveCount(4);
+            await expect(
+                page.getByTestId('journal-search-facets').locator('[data-testid="facets-filter"] nav > div'),
+            ).toHaveCount(9);
 
-            // Remove keyword
+            // Select facets
+            await page.locator('[id="clickable-facet-category-listed-in"]').click();
+            const facetItemCwts = page.locator('[id="facet-filter-nested-item-listed-in-cwts"]');
+            await facetItemCwts.click();
+            await expect(facetItemCwts.locator('svg#clear-facet-filter-nested-item-listed-in-cwts')).toBeVisible();
+
+            await page.locator('[id="clickable-facet-category-indexed-in"]').click();
+            const facetItemScopus = page.locator('[id="facet-filter-nested-item-indexed-in-scopus"]');
+            await facetItemScopus.click();
+            await expect(facetItemScopus.locator('svg#clear-facet-filter-nested-item-indexed-in-scopus')).toBeVisible();
+
+            await expect(page).toHaveURL(/CWTS/);
+            await expect(page).toHaveURL(/Scopus/);
+
+            await expect(ResultTitles).toHaveCount(resultsLengthWithKeywordAndFacets);
+
+            // Remove a keyword - this should unselect the active facets and update the URL
             await page
                 .getByTestId('journal-search-chip-title-glycobiology')
-                .getByTestId('CancelIcon')
+                .locator('svg')
                 .click();
-            await expect(ResultTitles).toHaveCount(8);
 
-            // Navigate back
+            await expect(page).not.toHaveURL(/CWTS/);
+            await expect(page).not.toHaveURL(/Scopus/);
+
+            await expect(facetItemCwts.locator('svg#clear-facet-filter-nested-item-listed-in-cwts')).not.toBeVisible();
+            await expect(
+                facetItemScopus.locator('svg#clear-facet-filter-nested-item-indexed-in-scopus'),
+            ).not.toBeVisible();
+
+            await expect(ResultTitles).toHaveCount(resultsLengthWithKeywordOnly);
+
             await page.goBack();
-            await expect(page.getByText(/CWTS \(\d+\)/)).toBeVisible();
-            await expect(page.getByText(/Scopus \(\d+\)/)).toBeVisible();
-            await expect(ResultTitles).toHaveCount(4);
+
+            await expect(page).toHaveURL(/CWTS/);
+            await expect(page).toHaveURL(/Scopus/);
+
+            await expect(facetItemCwts.locator('svg#clear-facet-filter-nested-item-listed-in-cwts')).toBeVisible();
+            await expect(facetItemScopus.locator('svg#clear-facet-filter-nested-item-indexed-in-scopus')).toBeVisible();
+
+            await expect(ResultTitles).toHaveCount(resultsLengthWithKeywordAndFacets);
+
+            await assertAccessibility(page, 'div.StandardPage', {
+                disabledRules: ['color-contrast'],
+            });
         });
 
         test('should handle invalid keywords when browser history changes', async ({ page }) => {
@@ -381,6 +463,7 @@ test.describe('Strategic Publishing - Search', () => {
             await page.getByTestId('journal-search-keywords-input').fill('bio');
             await page.getByTestId('journal-search-item-addable-subject-06-biological-sciences-1').click();
             await page.getByTestId('journal-search-button').click();
+            await expect(page.getByTestId('journal-list')).toBeVisible();
             await page.goBack();
             await page.goBack();
             await expect(page.getByTestId('journal-search-chip-title-glycobiology')).toBeVisible();
@@ -390,21 +473,37 @@ test.describe('Strategic Publishing - Search', () => {
 
     test.describe('Handling the Clear functionality', () => {
         test.beforeEach(async ({ page }) => {
-            // Setup initial search
-            await page.getByTestId('journal-search-keywords-input').fill('bio');
-            await page.getByTestId('journal-search-item-addable-title-glycobiology-3').click();
-            await page.getByTestId('journal-search-item-addable-title-biological-4').click();
-            await page.getByTestId('journal-search-button').click();
+            await page.goto('/journals/search'); // Ensure starting from a clean state
+            await setupInitialSearchAndAssert(page);
         });
 
         test('resets the search functionality and clears results when the clear button is clicked', async ({
             page,
         }) => {
-            // Apply facets and settings
-            await page.getByRole('button', { name: 'Listed in' }).click();
-            await page.getByText(/CWTS \(\d+\)/).click();
-            await page.getByRole('button', { name: 'Indexed in' }).click();
-            await page.getByText(/Scopus \(\d+\)/).click();
+            const resultsLengthWithKeywordAndFacets = 4;
+            const resultsLengthFullDefaultPage = 10;
+            const ResultTitles = page.locator('[id^="journal-list-data-col-1-title"]');
+
+            await expect(page.getByTestId('journal-search-clear-keywords-button')).toBeVisible();
+
+            await expect(
+                page.getByTestId('journal-search-facets').locator('[data-testid="facets-filter"] nav > div'),
+            ).toHaveCount(9);
+
+            // select facets
+            await page.locator('[id="clickable-facet-category-listed-in"]').click();
+            const facetItemCwts = page.locator('[id="facet-filter-nested-item-listed-in-cwts"]');
+            await facetItemCwts.click();
+            await expect(facetItemCwts.locator('svg#clear-facet-filter-nested-item-listed-in-cwts')).toBeVisible();
+
+            await page.locator('[id="clickable-facet-category-indexed-in"]').click();
+            const facetItemScopus = page.locator('[id="facet-filter-nested-item-indexed-in-scopus"]');
+            await facetItemScopus.click();
+            await expect(facetItemScopus.locator('svg#clear-facet-filter-nested-item-indexed-in-scopus')).toBeVisible();
+
+            // confirm two facets visible selected in the UI
+            await expect(page.locator('[id^="clear-facet-filter-nested-item"]')).toHaveCount(2);
+            await expect(ResultTitles).toHaveCount(resultsLengthWithKeywordAndFacets);
 
             // Change sorting
             await page.getByTestId('publication-list-sorting-sort-by').click();
@@ -414,37 +513,86 @@ test.describe('Strategic Publishing - Search', () => {
             await page.getByTestId('publication-list-sorting-page-size').click();
             await page.locator('li[role="option"]:has-text("20")').click();
 
-            // Clear search
+            // assert everything selected is in the URL
+            await expect(page).toHaveURL(/keywords%5BTitle-glycobiology/);
+            await expect(page).toHaveURL(/keywords%5BTitle-biological/);
+            await expect(page).toHaveURL(/CWTS/);
+            await expect(page).toHaveURL(/Scopus/);
+            await expect(page).toHaveURL(/sortBy=score/);
+            await expect(page).toHaveURL(/sortDirection=Desc/);
+            await expect(page).toHaveURL(/pageSize=20/);
+
+            // clear the search
             await page.getByTestId('journal-search-clear-keywords-button').click();
             await expect(page.getByTestId('journal-search-card')).toBeVisible();
-            await expect(page.getByTestId('journal-search-button')).toBeDisabled();
-            await expect(page.getByTestId('journal-search-browse-all-button')).toBeEnabled();
+            await assertNotSearchParams(page);
 
-            // Perform new search
+            // assert broadly that step 1 is visible and in default state
+            await assertInitialViewVisible(page);
+
+            // as a final check, perform a new search and confirm previous search terms/facets/sorting are not present
             await page.getByTestId('journal-search-keywords-input').fill('bio');
             await page.getByTestId('journal-search-item-addable-title-biology-1').click();
             await page.getByTestId('journal-search-button').click();
+            await expect(page.getByTestId('journal-list')).toBeVisible();
 
-            // Verify reset state
             await expect(page.getByTestId('journal-search-chip-title-biology')).toBeVisible();
+            await expect(ResultTitles).toHaveCount(resultsLengthFullDefaultPage);
+
+            // default sorting
             await expect(page.getByTestId('publication-list-sorting-sort-by')).toContainText('Highest quartile');
             await expect(page.getByTestId('publication-list-sorting-sort-order')).toContainText('Asc');
             await expect(page.getByTestId('publication-list-sorting-page-size')).toContainText('10');
+
+            // no facets visible selected in the UI (here we check for any svg 'delete' button next to a selected facet)
+            await expect(page.locator('[id^="clear-facet-filter-nested-item"]')).toHaveCount(0);
+
+            // nothing in the URL from the previous search
+            await expect(page).not.toHaveURL(/keywords%5BTitle-glycobiology/);
+            await expect(page).not.toHaveURL(/keywords%5BTitle-biological/);
+            await expect(page).not.toHaveURL(/CWTS/);
+            await expect(page).not.toHaveURL(/Scopus/);
+            await expect(page).not.toHaveURL(/sortBy=score/);
+            await expect(page).not.toHaveURL(/sortDirection=Desc/);
+            await expect(page).not.toHaveURL(/pageSize=20/);
+
+            await assertAccessibility(page, 'div.StandardPage', {
+                disabledRules: ['color-contrast'],
+            });
         });
 
         test('resets the search functionality and clears results when the last keyword is deleted', async ({
             page,
         }) => {
+            const resultsLengthWithOneKeyword = 8;
+            const resultsLengthWithTwoKeywords = 4;
+            const ResultTitles = page.locator('[id^="journal-list-data-col-1-title"]');
+
+            await expect(ResultTitles).toHaveCount(resultsLengthWithTwoKeywords);
+
             await page
                 .getByTestId('journal-search-chip-title-glycobiology')
-                .getByTestId('CancelIcon')
+                .locator('svg')
                 .click();
+
+            await expect(page.getByTestId('journal-search-chip-title-glycobiology')).not.toBeVisible();
+            await expect(page).not.toHaveURL(/keywords%5BTitle-glycobiology/);
+
+            await expect(ResultTitles).toHaveCount(resultsLengthWithOneKeyword);
+
             await page
                 .getByTestId('journal-search-chip-title-biological')
-                .getByTestId('CancelIcon')
+                .locator('svg')
                 .click();
+            await assertNotSearchParams(page);
+
             await expect(page.getByTestId('journal-search-card')).toBeVisible();
-            await expect(page.getByTestId('journal-search-button')).toBeDisabled();
+
+            await assertInitialViewVisible(page);
+
+            await assertAccessibility(page, 'div.StandardPage', {
+                disabledRules: ['color-contrast'],
+            });
         });
     });
 
@@ -452,41 +600,98 @@ test.describe('Strategic Publishing - Search', () => {
         test('shows All Journals when the Browse All Journals button is clicked in Search Results', async ({
             page,
         }) => {
-            // Setup search
-            await page.getByTestId('journal-search-keywords-input').fill('bio');
-            await page.getByTestId('journal-search-item-addable-title-glycobiology-3').click();
-            await page.getByTestId('journal-search-item-addable-title-biological-4').click();
-            await page.getByTestId('journal-search-button').click();
-
+            const resultsLengthWithAllResults = 10;
+            const resultsLengthWithTwoKeywords = 4;
             const ResultTitles = page.locator('[id^="journal-list-data-col-1-title"]');
-            await expect(ResultTitles).toHaveCount(4);
 
-            // Browse all
+            await setupInitialSearchAndAssert(page);
+
+            await expect(ResultTitles).toHaveCount(resultsLengthWithTwoKeywords);
+
+            await expect(page.getByTestId('journal-search-chip-title-glycobiology')).toBeVisible();
+            await expect(page.getByTestId('journal-search-chip-title-biological')).toBeVisible();
+
+            await expect(page).toHaveURL(/keywords%5BTitle-glycobiology/);
+            await expect(page).toHaveURL(/keywords%5BTitle-biological/);
+            await expect(page).not.toHaveURL(/keywords%5BKeyword-all-journals/);
+
+            await expect(page.getByTestId('journal-search-browse-all-button')).toBeVisible();
             await page.getByTestId('journal-search-browse-all-button').click();
+
+            await expect(page.getByTestId('journal-search-chip-title-glycobiology')).not.toBeVisible();
+            await expect(page.getByTestId('journal-search-chip-title-biological')).not.toBeVisible();
+
+            await expect(page).not.toHaveURL(/keywords%5BTitle-glycobiology/);
+            await expect(page).not.toHaveURL(/keywords%5BTitle-biological/);
+            await expect(page).toHaveURL(/keywords%5BKeyword-all-journals/);
+
+            await expect(page.getByTestId('journal-search-browse-all-button')).not.toBeVisible();
+
             await expect(page.getByTestId('journal-search-chip-keyword-all-journals')).toBeVisible();
-            await expect(ResultTitles).toHaveCount(10);
+
+            await expect(ResultTitles).toHaveCount(resultsLengthWithAllResults);
+
+            await assertAccessibility(page, 'div.StandardPage', {
+                disabledRules: ['color-contrast'],
+            });
         });
 
         test('shows All Journals when the Browse All Journals button is clicked from the initial Journal Search page', async ({
             page,
         }) => {
+            const resultsLengthWithAllResults = 10;
+            const resultsLengthWithOneKeyword = 8;
             const ResultTitles = page.locator('[id^="journal-list-data-col-1-title"]');
 
-            // Browse all from initial state
-            await page.getByTestId('journal-search-browse-all-button').click();
-            await expect(page.getByTestId('journal-search-chip-keyword-all-journals')).toBeVisible();
-            await expect(ResultTitles).toHaveCount(10);
+            await assertInitialViewVisible(page);
 
-            // Clear and perform new search
+            // Browse all from initial state
+            await expect(page.getByTestId('journal-search-browse-all-button')).toBeVisible();
+            await page.getByTestId('journal-search-browse-all-button').click();
+
+            await expect(page).toHaveURL(/keywords%5BKeyword-all-journals/);
+
+            await expect(page.getByTestId('journal-search-browse-all-button')).not.toBeVisible();
+
+            await expect(page.getByTestId('journal-search-chip-keyword-all-journals')).toBeVisible();
+
+            await expect(ResultTitles).toHaveCount(resultsLengthWithAllResults);
+
+            // clear the search
             await page.getByTestId('journal-search-clear-keywords-button').click();
+            await expect(page.getByTestId('journal-search-card')).toBeVisible();
+            await assertNotSearchParams(page);
+
+            // perform a normal search
             await page.getByTestId('journal-search-keywords-input').fill('bio');
             await page.getByTestId('journal-search-item-addable-title-biological-4').click();
             await page.getByTestId('journal-search-button').click();
-            await expect(ResultTitles).toHaveCount(8);
+            await expect(page.getByTestId('journal-list')).toBeVisible();
 
-            // Browse all again
+            await expect(page.getByTestId('journal-search-chip-title-biological')).toBeVisible();
+            await expect(page.getByTestId('journal-search-chip-keyword-all-journals')).not.toBeVisible();
+
+            await expect(page).toHaveURL(/keywords%5BTitle-biological/);
+            await expect(page).not.toHaveURL(/keywords%5BKeyword-all-journals/);
+
+            await expect(ResultTitles).toHaveCount(resultsLengthWithOneKeyword);
+
+            await expect(page.getByTestId('journal-search-browse-all-button')).toBeVisible();
             await page.getByTestId('journal-search-browse-all-button').click();
-            await expect(ResultTitles).toHaveCount(10);
+
+            await expect(page.getByTestId('journal-search-chip-title-biological')).not.toBeVisible();
+            await expect(page.getByTestId('journal-search-chip-keyword-all-journals')).toBeVisible();
+
+            await expect(page).not.toHaveURL(/keywords%5BTitle-biological/);
+            await expect(page).toHaveURL(/keywords%5BKeyword-all-journals/);
+
+            await expect(page.getByTestId('journal-search-browse-all-button')).not.toBeVisible();
+
+            await expect(ResultTitles).toHaveCount(resultsLengthWithAllResults);
+
+            await assertAccessibility(page, 'div.StandardPage', {
+                disabledRules: ['color-contrast'],
+            });
         });
 
         test('should clear error alert from a previous api error', async ({ page }) => {

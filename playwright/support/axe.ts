@@ -1,15 +1,32 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, Page } from '../lib/fixture';
 
+export const defaultIncludedImpacts = ['minor', 'moderate', 'serious', 'critical'];
 export const assertAccessibility = async (
     page: Page,
-    context: string,
-    severity: string[] = ['minor', 'moderate', 'serious', 'critical'],
+    selector?: string,
+    options?: {
+        rules?: string[];
+        disabledRules?: string[];
+        includedImpacts?: string[];
+    },
 ) => {
-    const results = await new AxeBuilder({ page }).include(context).analyze();
-    const filtered = results.violations.filter(violation => severity.includes(violation.impact));
+    const builder = new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice']);
+    if (selector) {
+        builder.include(selector);
+    }
+    if (options?.rules?.length) {
+        builder.withRules(options.rules);
+    }
+    if (options?.disabledRules?.length) {
+        builder.disableRules(options.disabledRules);
+    }
+    const results = await builder.analyze();
+
+    const impacts = options?.includedImpacts || defaultIncludedImpacts;
+    const filtered = results.violations.filter(violation => impacts.includes(violation.impact));
     if (filtered.length > 0) {
-        console.warn('Accessibility Violations Found (filtered by impact):');
+        console.error('Accessibility Violations Found (filtered by impact):');
         console.table(
             filtered.map(violation => ({
                 id: violation.id,
