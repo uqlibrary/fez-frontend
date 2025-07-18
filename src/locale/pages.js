@@ -57,14 +57,14 @@ export default {
                         <p>
                             You can also view our{' '}
                             <a
-                                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+                                href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="externalLink"
                                 title={
                                     globalLocale.global.linkWillOpenInNewWindow.replace(
                                         '[destination]',
-                                        'https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets',
+                                        'https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets',
                                     ) || undefined
                                 }
                                 tabIndex={0}
@@ -188,7 +188,7 @@ export default {
                     <p>The work you are attempting to access does not appear in our system.</p>
                     <p>
                         If you believe this is in error, please{' '}
-                        <a href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/contact-us">
+                        <a href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us">
                             contact the eSpace team.
                         </a>
                     </p>
@@ -273,9 +273,9 @@ export default {
                         },
                         notLinkedUrl: {
                             scopus:
-                                'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid',
+                                'https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/google-scholar-scopus-and-other-profiles',
                             researcher:
-                                'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid',
+                                ' https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/web-science-researcher-profile',
                             // google scholar is linked via ORCID
                             google_scholar: pathConfig.authorIdentifiers.orcid.link,
                             orcid: pathConfig.authorIdentifiers.orcid.link,
