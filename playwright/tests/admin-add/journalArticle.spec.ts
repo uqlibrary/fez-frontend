@@ -34,12 +34,6 @@ test.describe('As an admin,', () => {
             .click();
 
         // Apply selections
-        await expect(
-            page
-                .locator('button')
-                .getByText(/Create work/)
-                .first(),
-        ).toBeVisible();
         await page
             .locator('button')
             .getByText(/Create work/)
@@ -69,7 +63,6 @@ test.describe('As an admin,', () => {
         await page.locator('#admin-work-submit').click();
 
         // Confirmation message
-        await expect(page.locator('[role=dialog]')).toBeVisible();
         await expect(page.locator('[role=dialog]').locator('h2')).toHaveText(/Work has been added/);
     });
     test.describe('Author Affiliations', () => {
@@ -97,12 +90,6 @@ test.describe('As an admin,', () => {
                 .click();
 
             // Apply selections
-            await expect(
-                page
-                    .locator('button')
-                    .getByText(/Create work/)
-                    .first(),
-            ).toBeVisible();
             await page
                 .locator('button')
                 .getByText(/Create work/)

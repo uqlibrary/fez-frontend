@@ -43,19 +43,13 @@ export async function assertIsNotVisible(element: Locator): Promise<void> {
 }
 
 export async function clickAutoSuggestion(page: Page, fieldName: string, ordinal: string | number): Promise<void> {
-    await expect(page.locator(`[data-testid=${fieldName}-options]`)).toBeVisible();
-    const menuItem = page.locator(`#${fieldName}-option-${ordinal}`);
-    await expect(page.locator(`#${fieldName}-option-${ordinal}`)).toBeVisible();
-    await menuItem.click();
+    await page.locator(`#${fieldName}-option-${ordinal}`).click();
 }
 
 export async function loadAdminDashboard(page: Page, user: string = 'uqstaff') {
     await page.setViewportSize({ width: 1200, height: 1000 });
     await page.goto(`/admin/dashboard?user=${user}`);
-    // Wait until the <h2> element is visible and contains "Admin dashboard"
-    const heading = page.locator('h2');
-    await expect(heading).toBeVisible({ timeout: 10000 });
-    await expect(heading).toContainText('Admin dashboard');
+    await expect(page.locator('h2').getByText('Admin dashboard')).toBeVisible({ timeout: 10000 });
 }
 
 export const testIdStartsWith = (page: Page | Locator, id: string) => page.locator(`[data-testid^=${id}]`);

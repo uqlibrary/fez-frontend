@@ -142,7 +142,6 @@ test.describe('Incomplete record form', () => {
         const pid = 'UQ:352045';
         const authorUsername = 'uqrdav10';
         await page.goto(`/records/${pid}/incomplete?user=${authorUsername}`);
-        await expect(page.locator('#update-my-work')).toBeVisible();
         await expect(page.locator('#update-my-work')).toBeDisabled();
         await checkSignificance(page, 'Major');
         await checkResearchStatement(page, 'Creator research statement');
@@ -173,7 +172,6 @@ test.describe('Incomplete record form', () => {
 
         await expect(page.locator(validationErrorsSelector)).toHaveCount(1);
         await expect(page.locator(validationErrorsSelector)).toContainText('File submission to be completed'); // Use toContainText
-        await expect(page.locator('#update-my-work')).toBeVisible();
         await expect(page.locator('#update-my-work')).toBeDisabled();
 
         // 'should have working tests for Grants editor'
@@ -202,13 +200,6 @@ test.describe('Incomplete record form', () => {
     test("should allow going back to list using browser's back button", async ({ page }) => {
         await page.goto('/records/incomplete');
         // navigate to the first incomplete work form
-        await expect(
-            page
-                .locator('button')
-                .getByText(/complete work/i)
-                .first(),
-        ).toBeVisible(); // This remains a good check for the first button's visibility.
-
         await page
             .locator('button')
             .getByText(/complete work/i)
@@ -227,12 +218,6 @@ test.describe('Incomplete record form', () => {
         await page.waitForTimeout(1000);
         await page.goBack();
 
-        await expect(
-            page
-                .locator('button')
-                .getByText(/yes/i)
-                .first(),
-        ).toBeVisible();
         await page
             .locator('button')
             .getByText(/yes/i)

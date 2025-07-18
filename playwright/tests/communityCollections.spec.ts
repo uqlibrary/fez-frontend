@@ -20,7 +20,6 @@ test.describe('Communities and Collections', () => {
         await expect(page.getByTestId('community-collections-paging-top-select-page-3')).not.toBeVisible();
 
         // export format
-        await expect(page.getByTestId('export-publications-format')).toBeVisible();
         await page.getByTestId('export-publications-format').click();
         await expect(page.locator('[role="listbox"]')).toHaveText(/Excel File/);
         await dismissPopover(page);
@@ -28,7 +27,6 @@ test.describe('Communities and Collections', () => {
     test('correctly expands and contracts collections within community', async ({ page }) => {
         await page.setViewportSize({ width: 1200, height: 1000 });
         await page.getByTestId('expand-row-UQ:12096').click();
-        await expect(page.getByTestId('total-collections-UQ:12096')).toBeVisible();
         await expect(page.getByTestId('total-collections-UQ:12096')).toHaveText(
             /Displaying 1 to 3 of 3 collections for 'Aboriginal and Torres Strait Islander Studies Unit'/,
         );
@@ -76,7 +74,6 @@ test.describe('Communities and Collections', () => {
         await page.getByTestId('collection-title-UQ:3585').click();
         await expect(page).toHaveURL(/\/view\/UQ:3585/);
         await expect(page.getByTestId('page-title')).toHaveText(/Gooreng Gooreng Cultural Heritage Project/);
-        UQ: 3585;
     });
     test('correctly opens collections in advanced search view', async ({ page }) => {
         await page.getByTestId('expand-row-UQ:12096').click();
@@ -113,7 +110,7 @@ test.describe('Communities and Collections - Admin', () => {
     });
 
     test('Renders the default community and collections screen', async ({ page }) => {
-        await expect(page.getByTestId('page-title')).toHaveText(/Communities/);
+        await expect(page.getByTestId('page-title').getByText(/Communities/)).toBeVisible();
         await expect(page.getByTestId('total-communities')).toHaveText(
             /Displaying communities 1 to 10 of 20 total communities/,
         );

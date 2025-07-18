@@ -199,10 +199,11 @@ export async function assertAffiliationsAllowed(page: Page, options: AssertAffil
     }
 
     if (!ntro) {
-        const row = page.locator(`[id=rek-author-list-row-${rowId}]`);
         const iconSelector = allowed ? '[data-testid^=expandPanelIcon-]' : '[data-testid=ChevronRightIcon]';
-        await expect(row.locator(iconSelector)).toBeVisible();
-        await row.locator(iconSelector).click();
+        await page
+            .locator(`[id=rek-author-list-row-${rowId}]`)
+            .locator(iconSelector)
+            .click();
     }
 
     const authorList = page.getByTestId('rek-author-list');

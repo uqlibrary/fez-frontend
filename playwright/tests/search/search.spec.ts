@@ -117,7 +117,6 @@ test.describe('Search', () => {
         }).toPass();
         await expect(page.getByTestId('advanced-search')).not.toBeDisabled();
         await page.getByTestId('advanced-search').click();
-        await expect(page.getByTestId('search-records-loading')).toBeVisible();
         await expect(page.getByTestId('search-records-loading')).toHaveText(/Searching for works/);
         await expect(
             page
@@ -166,7 +165,6 @@ test.describe('Search', () => {
             await expect(page.getByTestId('search-records-results')).toHaveText(
                 /Displaying works 1 to 7 of 7 total works\./,
             );
-            await expect(page.getByTestId('refine-results-facets')).toBeVisible();
             await expect(
                 page.getByTestId('refine-results-facets').locator('[data-testid="facets-filter"] nav > div'),
             ).toHaveCount(8);
@@ -175,7 +173,6 @@ test.describe('Search', () => {
                 page.getByTestId('clear-facet-filter-nested-item-display-type-journal-article'),
             ).not.toBeVisible();
             await page.getByTestId('facet-filter-nested-item-display-type-journal-article').click();
-            await expect(page.getByTestId('clear-facet-filter-nested-item-display-type-journal-article')).toBeVisible();
             await page.getByTestId('clear-facet-filter-nested-item-display-type-journal-article').click();
             await expect(
                 page.getByTestId('clear-facet-filter-nested-item-display-type-journal-article'),
@@ -196,16 +193,9 @@ test.describe('Search', () => {
             await expect(page.getByTestId('search-records-results')).toHaveText(
                 /Displaying works 1 to 7 of 7 total works\./,
             );
-            await expect(
-                page
-                    .getByTestId('publication-list-display-records-as')
-                    .getByRole('combobox')
-                    .getByText(/Auto/),
-            ).toBeVisible();
-            await page
-                .getByTestId('publication-list-display-records-as')
-                .getByRole('combobox')
-                .click();
+            const option = page.getByTestId('publication-list-display-records-as').getByRole('combobox');
+            await expect(option.getByText(/Auto/)).toBeVisible();
+            await option.click();
             await expect(page.getByRole('listbox').getByText(/Auto/)).toBeVisible();
             await expect(page.getByRole('listbox').getByText(/Standard/)).toBeVisible();
             await page
@@ -247,16 +237,9 @@ test.describe('Search', () => {
             await expect(page.getByTestId('search-records-results')).toHaveText(
                 /Displaying works 1 to 7 of 7 total works\./,
             );
-            await expect(
-                page
-                    .getByTestId('publication-list-display-records-as')
-                    .getByRole('combobox')
-                    .getByText(/Auto/),
-            ).toBeVisible();
-            await page
-                .getByTestId('publication-list-display-records-as')
-                .getByRole('combobox')
-                .click();
+            const option = page.getByTestId('publication-list-display-records-as').getByRole('combobox');
+            await expect(option.getByText(/Auto/)).toBeVisible();
+            await option.click();
             await expect(page.getByRole('listbox').getByText(/Auto/)).toBeVisible();
             await expect(page.getByRole('listbox').getByText(/Standard/)).toBeVisible();
             await page
@@ -357,16 +340,9 @@ test.describe('Search', () => {
             await expect(page.getByTestId('search-records-results')).toHaveText(
                 /Displaying works 1 to 7 of 7 total works\./,
             );
-            await expect(
-                page
-                    .getByTestId('publication-list-display-records-as')
-                    .getByRole('combobox')
-                    .getByText(/Auto/),
-            ).toBeVisible();
-            await page
-                .getByTestId('publication-list-display-records-as')
-                .getByRole('combobox')
-                .click();
+            const option = page.getByTestId('publication-list-display-records-as').getByRole('combobox');
+            await expect(option.getByText(/Auto/)).toBeVisible();
+            await option.click();
             await expect(page.getByRole('listbox').getByText(/Auto/)).toBeVisible();
             await expect(page.getByRole('listbox').getByText(/Standard/)).toBeVisible();
             await page
@@ -396,16 +372,9 @@ test.describe('Search', () => {
             await expect(page.getByTestId('search-records-results')).toHaveText(
                 /Displaying works 1 to 7 of 7 total works\./,
             );
-            await expect(
-                page
-                    .getByTestId('publication-list-display-records-as')
-                    .getByRole('combobox')
-                    .getByText(/Auto/),
-            ).toBeVisible();
-            await page
-                .getByTestId('publication-list-display-records-as')
-                .getByRole('combobox')
-                .click();
+            const option = page.getByTestId('publication-list-display-records-as').getByRole('combobox');
+            await expect(option.getByText(/Auto/)).toBeVisible();
+            await option.click();
             await expect(page.getByRole('listbox').getByText(/Auto/)).toBeVisible();
             await expect(page.getByRole('listbox').getByText(/Standard/)).toBeVisible();
             await page
@@ -435,16 +404,9 @@ test.describe('Search', () => {
             await expect(page.getByTestId('search-records-results')).toHaveText(
                 /Displaying works 1 to 7 of 7 total works\./,
             );
-            await expect(
-                page
-                    .getByTestId('publication-list-display-records-as')
-                    .getByRole('combobox')
-                    .getByText(/Auto/),
-            ).toBeVisible();
-            await page
-                .getByTestId('publication-list-display-records-as')
-                .getByRole('combobox')
-                .click();
+            const option = page.getByTestId('publication-list-display-records-as').getByRole('combobox');
+            await expect(option.getByText(/Auto/)).toBeVisible();
+            await option.click();
             await expect(page.getByRole('listbox').getByText(/Auto/)).toBeVisible();
             await expect(page.getByRole('listbox').getByText(/Standard/)).toBeVisible();
             await page

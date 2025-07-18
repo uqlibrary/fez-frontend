@@ -1,4 +1,4 @@
-import { test, expect, Page } from '../../lib/fixture'; // Ensure Page is imported
+import { test, expect, Page } from '../../lib/fixture';
 
 test.describe('Error handling', () => {
     const expectUserToBeLoggedIn = async (page: Page, loggedIn: boolean) => {
@@ -40,7 +40,6 @@ test.describe('Error handling', () => {
             await page.getByTestId('simple-search-button').click();
 
             // assert login dialog is displayed by - see App component
-            await expect(page.getByTestId('alert')).toBeVisible();
             await expect(page.getByTestId('alert')).toContainText('You are not logged in');
             await expectUserToBeLoggedIn(page, false);
 

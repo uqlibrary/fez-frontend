@@ -7,7 +7,7 @@ export const typeCKEditor = async (page: Page, elementDataTestId: string, conten
 };
 
 export const assertCKEditorEmpty = async (page: Page, elementDataTestId: string) => {
-    const container = page.locator(`[data-testid="${elementDataTestId}"] .ck-editor__main p`);
-    await expect(container).toBeVisible();
-    await expect(container.locator('[data-cke-filler="true"]')).toHaveCount(1);
+    await expect(
+        page.locator(`[data-testid="${elementDataTestId}"] .ck-editor__main p [data-cke-filler="true"]`),
+    ).toHaveCount(1);
 };

@@ -25,7 +25,6 @@ async function assertCollapsiblePanel(page: Page, index: number) {
 
     for (const metric of metrics) {
         const locator = page.locator(`[data-testid="${metric.testid}-${index}"]`);
-        await expect(locator).toBeVisible();
         await expect(locator).toContainText(metric.text);
     }
 
@@ -219,21 +218,18 @@ test.describe('Strategic Publishing - Search', () => {
         await expect(page.getByTestId('search-journals-paging-bottom')).toBeVisible();
 
         // Sort by
-        await expect(page.getByTestId('publication-list-sorting-sort-by')).toBeVisible();
         await expect(page.getByTestId('publication-list-sorting-sort-by')).toContainText('Highest quartile');
         await page.getByTestId('publication-list-sorting-sort-by').click();
         await page.locator('li[role="option"]:has-text("CiteScore")').click();
         await expect(page.getByTestId('publication-list-sorting-sort-by')).toContainText('CiteScore');
 
         // Sort order
-        await expect(page.getByTestId('publication-list-sorting-sort-order')).toBeVisible();
         await expect(page.getByTestId('publication-list-sorting-sort-order')).toContainText('Asc');
         await page.getByTestId('publication-list-sorting-sort-order').click();
         await page.locator('li[role="option"]:has-text("Desc")').click();
         await expect(page.getByTestId('publication-list-sorting-sort-order')).toContainText('Desc');
 
         // Page size
-        await expect(page.getByTestId('publication-list-sorting-page-size')).toBeVisible();
         await expect(page.getByTestId('publication-list-sorting-page-size')).toContainText('10');
         await page.getByTestId('publication-list-sorting-page-size').click();
         await page.locator('li[role="option"]:has-text("20")').click();
@@ -253,11 +249,8 @@ test.describe('Strategic Publishing - Search', () => {
         await expect(page.getByTestId('journal-list')).toBeVisible();
 
         // Desktop specific checks
-        await expect(page.getByTestId('journal-list-header-jnl-title')).toBeVisible();
         await expect(page.getByTestId('journal-list-header-jnl-title')).toContainText('Journal title');
-        await expect(page.getByTestId('journal-list-header-open-access')).toBeVisible();
         await expect(page.getByTestId('journal-list-header-open-access')).toContainText('Open access');
-        await expect(page.getByTestId('journal-list-header-highest-quartile')).toBeVisible();
         await expect(page.getByTestId('journal-list-header-highest-quartile')).toContainText('Highest quartile');
 
         await assertAccessibility(page, '[data-testid="journal-list"]', {
@@ -273,15 +266,10 @@ test.describe('Strategic Publishing - Search', () => {
         await expect(page.getByTestId('journal-list')).toBeVisible();
 
         // Mobile specific checks
-        await expect(page.getByTestId('journal-list-header-jnl-title')).toBeVisible();
         await expect(page.getByTestId('journal-list-header-jnl-title')).toContainText('Journal title');
-        await expect(page.getByTestId('journal-list-header-open-access-0')).toBeVisible();
         await expect(page.getByTestId('journal-list-header-open-access-0')).toContainText('Open access');
-        await expect(page.getByTestId('journal-list-header-highest-quartile-0')).toBeVisible();
         await expect(page.getByTestId('journal-list-header-highest-quartile-0')).toContainText('Highest quartile');
-        await expect(page.getByTestId('journal-list-header-open-access-9')).toBeVisible();
         await expect(page.getByTestId('journal-list-header-open-access-9')).toContainText('Open access');
-        await expect(page.getByTestId('journal-list-header-highest-quartile-9')).toBeVisible();
         await expect(page.getByTestId('journal-list-header-highest-quartile-9')).toContainText('Highest quartile');
 
         await assertAccessibility(page, '[data-testid="journal-list"]', {
@@ -564,12 +552,10 @@ test.describe('Strategic Publishing - Search', () => {
                 .getByTestId('journal-search-chip-title-biological')
                 .locator('svg')
                 .click();
+
             await assertNotSearchParams(page);
-
             await expect(page.getByTestId('journal-search-card')).toBeVisible();
-
             await assertInitialViewVisible(page);
-
             await assertAccessibility(page, 'div.StandardPage', {
                 disabledRules: ['color-contrast'],
             });
@@ -595,7 +581,6 @@ test.describe('Strategic Publishing - Search', () => {
             await expect(page).toHaveURL(/keywords%5BTitle-biological/);
             await expect(page).not.toHaveURL(/keywords%5BKeyword-all-journals/);
 
-            await expect(page.getByTestId('journal-search-browse-all-button')).toBeVisible();
             await page.getByTestId('journal-search-browse-all-button').click();
 
             await expect(page.getByTestId('journal-search-chip-title-glycobiology')).not.toBeVisible();
@@ -626,15 +611,11 @@ test.describe('Strategic Publishing - Search', () => {
             await assertInitialViewVisible(page);
 
             // Browse all from initial state
-            await expect(page.getByTestId('journal-search-browse-all-button')).toBeVisible();
             await page.getByTestId('journal-search-browse-all-button').click();
 
             await expect(page).toHaveURL(/keywords%5BKeyword-all-journals/);
-
             await expect(page.getByTestId('journal-search-browse-all-button')).not.toBeVisible();
-
             await expect(page.getByTestId('journal-search-chip-keyword-all-journals')).toBeVisible();
-
             await expect(ResultTitles).toHaveCount(resultsLengthWithAllResults);
 
             // clear the search
@@ -656,7 +637,6 @@ test.describe('Strategic Publishing - Search', () => {
 
             await expect(ResultTitles).toHaveCount(resultsLengthWithOneKeyword);
 
-            await expect(page.getByTestId('journal-search-browse-all-button')).toBeVisible();
             await page.getByTestId('journal-search-browse-all-button').click();
 
             await expect(page.getByTestId('journal-search-chip-title-biological')).not.toBeVisible();

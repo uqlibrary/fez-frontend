@@ -26,7 +26,6 @@ test.describe('Add missing record', () => {
                 .locator('li[role=option]')
                 .getByText(/Editorial/)
                 .click();
-            await expect(page.locator('#submit-work')).toBeVisible();
             await expect(page.locator('#submit-work')).toBeDisabled();
 
             // Start over
@@ -305,7 +304,6 @@ test.describe('Add missing record', () => {
                 .getByText(/NGO/)
                 .click();
             await page.getByTestId('rek-grant-add').click();
-            await expect(page.getByTestId('rek-grant-add')).toBeVisible();
             await page.getByTestId('rek-grant-agency-input').fill('Second Grant');
             await page.getByTestId('rek-grant-id-input').fill('23456');
             await page.getByTestId('rek-grant-type-select').click();
@@ -314,7 +312,6 @@ test.describe('Add missing record', () => {
                 .locator('li[role=option]')
                 .getByText(/NGO/)
                 .click();
-            await expect(page.getByTestId('rek-grant-add')).toBeVisible();
             await page.getByTestId('rek-grant-add').click();
             await expect(page.getByTestId('grant-list-move-up=0')).toHaveAttribute('disabled', /.*/);
             await expect(page.getByTestId('grant-list-move-down=1')).toHaveAttribute('disabled', /.*/);

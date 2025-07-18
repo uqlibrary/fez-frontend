@@ -15,7 +15,6 @@ test.describe('Thesis', () => {
         test('shows rdm redirect message to non-whitelisted users', async ({ page }) => {
             await page.goto('rhdsubmission?user=s3333333');
             await expect(page.getByTestId('alert-info-rdm-redirect')).toBeVisible();
-            await expect(page.getByTestId('alert-info-rdm-redirect')).toBeVisible();
         });
 
         test('is denied access if they have logged in with a non-student account', async ({ page }) => {

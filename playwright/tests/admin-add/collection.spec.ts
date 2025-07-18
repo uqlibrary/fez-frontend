@@ -3,40 +3,14 @@ import { test, expect } from '../../lib/fixture';
 test.describe('As an admin,', () => {
     test('I can create a collection', async ({ page }) => {
         await page.goto('/admin/collection?user=uqstaff');
-        await expect(
-            page
+        const title = page.locator('.StandardCard').filter({
+            has: page
                 .locator('h3')
                 .getByText(/Add a missing collection/)
                 .first(),
-        ).toBeVisible();
-        await expect(
-            page.locator('.StandardCard').filter({
-                has: page
-                    .locator('h3')
-                    .getByText(/Add a missing collection/)
-                    .first(),
-            }),
-        ).toHaveText(/Select a community/);
-        const communitySelector = page
-            .locator('.StandardCard')
-            .filter({
-                has: page
-                    .locator('h3')
-                    .getByText(/Add a missing collection/)
-                    .first(),
-            })
-            .getByTestId('rek-ismemberof-select');
-        await expect(
-            page
-                .locator('.StandardCard')
-                .filter({
-                    has: page
-                        .locator('h3')
-                        .getByText(/Add a missing collection/)
-                        .first(),
-                })
-                .getByTestId('rek-ismemberof-select'),
-        ).toBeVisible();
+        });
+        await expect(title).toHaveText(/Select a community/);
+        const communitySelector = title.getByTestId('rek-ismemberof-select');
         await page.waitForTimeout(1000); // Wait for event handlers to attach
         await communitySelector.click();
         await page

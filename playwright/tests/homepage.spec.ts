@@ -86,7 +86,6 @@ test.describe.serial('Homepage', () => {
     test('Shows help panel as expected', async ({ page }) => {
         await page.goto('/?user=uqresearcher');
         await page.locator('button#help-icon').click();
-        await expect(page.getByTestId('help-drawer-title')).toBeVisible();
         await expect(
             page
                 .getByTestId('help-drawer-title')
