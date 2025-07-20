@@ -1,13 +1,13 @@
-import { test, expect } from '../../lib/fixture';
+import { test, expect } from '../../../lib/fixture';
 import {
     addAffiliationAndAssert,
     addAuthorAndAssert,
     adminEditCheckTabErrorBadge,
     adminEditTabbedView,
     editAffiliationAndAssert,
-} from '../../support/adminEdit';
-import { clickAutoSuggestion } from '../../support/commands';
-import { typeCKEditor } from '../../support/ckeditor';
+} from '../admin';
+import { clickAutoSuggestion } from '../../../support/commands';
+import { typeCKEditor } from '../../../support/ckeditor';
 
 test.describe('As an admin,', () => {
     test('I can add a journal article', async ({ page }) => {
@@ -203,7 +203,7 @@ test.describe('As an admin,', () => {
             await expect(
                 page
                     .getByTestId('detailPanel-75121')
-                    .getByTestId('orgChip-877]', { hasText: /33\.334%/ })
+                    .locator('[data-testid=orgChip-1248]', { hasText: /33\.334%/ })
                     .first(),
             ).toBeVisible();
             await expect(
@@ -215,7 +215,7 @@ test.describe('As an admin,', () => {
             await expect(
                 page
                     .getByTestId('detailPanel-75121')
-                    .getByTestId('orgChip-1248]', { hasText: /33\.333%/ })
+                    .locator('[data-testid=orgChip-1248]', { hasText: /33\.333%/ })
                     .first(),
             ).toBeVisible();
             await expect(
@@ -282,7 +282,6 @@ test.describe('As an admin,', () => {
                     .getByText(/0%/)
                     .first(),
             ).toBeVisible();
-            await expect(page.getByTestId('orgSelect-1248-input')).toBeVisible();
             await expect(page.getByTestId('orgSelect-1248-input')).toHaveValue(
                 'Information Systems and Resource Services (University of Queensland Library)',
             );
@@ -319,9 +318,7 @@ test.describe('As an admin,', () => {
             await expect(page.getByTestId('orgChip-error')).not.toBeVisible();
 
             // Now edit non-herdc to remove that option
-            await expect(page.getByTestId('affiliationEditBtn-78152')).toBeVisible();
             await page.getByTestId('affiliationEditBtn-78152').click();
-            await expect(page.getByTestId('orgSelect-1062-input')).toBeVisible();
             await expect(page.getByTestId('orgSelect-1062-input')).toHaveValue('!NON-HERDC');
             await expect(page.getByTestId('orgChip-1062')).toBeVisible();
             await expect(

@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
-import { assertAccessibility } from '../../support/axe';
-import { testIdStartsWith, getOpenedLink, loadAdminDashboard } from '../../support/commands';
+import { test, expect } from '../../../lib/fixture';
+import { assertAccessibility } from '../../../support/axe';
+import { testIdStartsWith, getOpenedLink, loadAdminDashboard } from '../../../support/commands';
 
 test.describe('Admin Dashboard - Today tab', () => {
     test.beforeEach(async ({ page }) => await loadAdminDashboard(page));

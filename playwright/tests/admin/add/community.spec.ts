@@ -1,4 +1,4 @@
-import { test, expect } from '../../lib/fixture';
+import { test, expect } from '../../../lib/fixture';
 
 test.describe('As an admin,', () => {
     test('I can create a community', async ({ page }) => {

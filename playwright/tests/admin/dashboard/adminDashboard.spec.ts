@@ -1,5 +1,5 @@
-import { test, expect } from '../../lib/fixture';
-import { assertAccessibility } from '../../support/axe';
+import { test, expect } from '../../../lib/fixture';
+import { assertAccessibility } from '../../../support/axe';
 
 test.describe('Navigating to Admin Dashboard - System Alerts tab', () => {
     test('should be reachable via the menu link for users with masquerade=full', async ({ page }) => {

@@ -1,6 +1,6 @@
-import { test, expect, Page, Locator } from '../../lib/fixture';
-import { assertAccessibility } from '../../support/axe';
-import { loadAdminDashboard } from '../../support/commands';
+import { test, expect, Page, Locator } from '../../../lib/fixture';
+import { assertAccessibility } from '../../../support/axe';
+import { loadAdminDashboard } from '../../../support/commands';
 
 test.describe('Admin Dashboard - System Alerts tab', () => {
     const getByTestId = (context: Page | Locator, testId: string) => {

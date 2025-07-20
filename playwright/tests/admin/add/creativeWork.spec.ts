@@ -1,7 +1,7 @@
-import { test, expect, Page } from '../../lib/fixture';
-import { adminEditTabbedView, assertAffiliationsAllowed } from '../../support/adminEdit';
-import { clickAutoSuggestion } from '../../support/commands';
-import { typeCKEditor } from '../../support/ckeditor';
+import { test, expect, Page } from '../../../lib/fixture';
+import { adminEditTabbedView, assertAffiliationsAllowed } from '../admin';
+import { clickAutoSuggestion } from '../../../support/commands';
+import { typeCKEditor } from '../../../support/ckeditor';
 
 test.describe('As an admin, I can', () => {
     // load the admin add page for a Creative Work with the indicated collection and subType and open the NTRO tab

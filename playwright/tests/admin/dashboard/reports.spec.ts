@@ -1,7 +1,7 @@
-import { test, expect, Page } from '../../lib/fixture';
+import { test, expect, Page } from '../../../lib/fixture';
 import moment from 'moment';
-import { assertAccessibility } from '../../support/axe';
-import { loadAdminDashboard } from '../../support/commands';
+import { assertAccessibility } from '../../../support/axe';
+import { loadAdminDashboard } from '../../../support/commands';
 
 const assertFileDownload = async (page: Page, callbacks: Promise<void>[]) => {
     const [download] = await Promise.all([page.waitForEvent('download'), ...callbacks]);

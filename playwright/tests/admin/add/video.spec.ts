@@ -1,7 +1,7 @@
-import { test, expect } from '../../lib/fixture';
-import { clickAutoSuggestion } from '../../support/commands';
-import { typeCKEditor } from '../../support/ckeditor';
-import { adminEditCheckTabErrorBadge, adminEditTabbedView, assertAffiliationsAllowed } from '../../support/adminEdit';
+import { test, expect } from '../../../lib/fixture';
+import { clickAutoSuggestion } from '../../../support/commands';
+import { typeCKEditor } from '../../../support/ckeditor';
+import { adminEditCheckTabErrorBadge, adminEditTabbedView, assertAffiliationsAllowed } from '../admin';
 
 test.describe('As an admin,', () => {
     test('I can add a video', async ({ page }) => {
