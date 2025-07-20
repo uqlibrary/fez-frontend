@@ -138,12 +138,9 @@ test.describe('Admin Dashboard - Reports tab', () => {
             await page.locator('[role=option]', { hasText: 'Queued report two bindings' }).click();
             await expect(page.getByTestId('report-export-only-input')).toHaveValue('Queued report two bindings');
 
-            await page.getByTestId('report-export-only-date-from-input').pressSequentially('01');
-            await page.getByTestId('report-export-only-date-from-input').pressSequentially('01');
-            await page.getByTestId('report-export-only-date-from-input').pressSequentially('2024');
-            await page.getByTestId('report-export-only-date-to-input').pressSequentially('02');
-            await page.getByTestId('report-export-only-date-to-input').pressSequentially('01');
-            await page.getByTestId('report-export-only-date-to-input').pressSequentially('2024');
+            // note: fill() doesn't work and pressSequentially() requires an extra leading 0
+            await page.getByTestId('report-export-only-date-from-input').pressSequentially('001012024');
+            await page.getByTestId('report-export-only-date-to-input').pressSequentially('002012024');
             await page.getByTestId('report-export-button').click();
             await expect(page.getByTestId('alert')).toBeVisible();
             await expect(page.getByTestId('alert')).toContainText('Report queued');
