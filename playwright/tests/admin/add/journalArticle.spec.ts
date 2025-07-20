@@ -203,7 +203,7 @@ test.describe('As an admin,', () => {
             await expect(
                 page
                     .getByTestId('detailPanel-75121')
-                    .locator('[data-testid=orgChip-877]', { hasText: /33\.334%/ })
+                    .getByTestId('orgChip-877]', { hasText: /33\.334%/ })
                     .first(),
             ).toBeVisible();
             await expect(
@@ -215,7 +215,7 @@ test.describe('As an admin,', () => {
             await expect(
                 page
                     .getByTestId('detailPanel-75121')
-                    .locator('[data-testid=orgChip-1248]', { hasText: /33\.333%/ })
+                    .getByTestId('orgChip-1248]', { hasText: /33\.333%/ })
                     .first(),
             ).toBeVisible();
             await expect(
@@ -370,8 +370,8 @@ test.describe('As an admin,', () => {
             ).toBeVisible();
 
             // currentOrgId, nextOrgId, nextOrgName, expectedPercent) =
-            await expect(page.locator('[data-testid^=affiliationEditBtn-]')).toBeVisible();
-            await page.locator('[data-testid^=affiliationEditBtn-]').click();
+            await expect(page.locator('[data-testid^=affiliationEditBtn-')).toBeVisible();
+            await page.locator('[data-testid^=affiliationEditBtn-').click();
             await editAffiliationAndAssert(page, 1248, 1062, '!NON-HERDC', '100%');
             // double check the suggested org has been re-added
             await expect(page.getByTestId('orgSelect-1248-input')).toBeVisible();
