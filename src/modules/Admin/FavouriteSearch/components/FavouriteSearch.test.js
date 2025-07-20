@@ -1,6 +1,6 @@
 import React from 'react';
 import FavouriteSearch from './FavouriteSearch';
-import { render, WithReduxStore, fireEvent, waitFor } from 'test-utils';
+import { render, WithReduxStore, fireEvent, userEvent, waitFor } from 'test-utils';
 import * as FavouriteSearchActions from 'actions/favouriteSearch';
 import * as repository from 'repositories';
 
@@ -13,6 +13,8 @@ const setup = (testProps = {}) => {
 };
 
 describe('FavouriteSearch', () => {
+    const getRows = () => document.querySelectorAll('.MuiDataGrid-row');
+
     beforeEach(() => {
         mockApi.onGet(repository.routes.FAVOURITE_SEARCH_LIST_API().apiUrl).replyOnce(200, {
             data: [
@@ -74,29 +76,28 @@ describe('FavouriteSearch', () => {
     });
 
     it('should not update row if alias has found', async () => {
-        const { getAllByTestId, getByRole, getByText, getByTestId } = setup({});
+        const { getByText, getByTestId, findByTestId } = setup({});
 
         await waitFor(() => getByText('Favourite searches'));
 
         fireEvent.click(getByTestId('favourite-search-list-item-0-edit'));
 
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing' } });
-        fireEvent.click(getByRole('button', { name: 'Save' }));
+        await userEvent.click(getByTestId('favourite-search-list-item-0-save'));
 
-        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(2));
-
+        await findByTestId('fvs-description-0');
+        expect(getRows().length).toBe(2);
         expect(getByTestId('fvs-alias-0')).toHaveTextContent('test');
         expect(getByText('Alias "testing" has been taken')).toBeInTheDocument();
     });
 
     it('should handle row delete', async () => {
-        const { getByRole, getByText, getByTestId } = setup({});
+        const { getByText, getByTestId } = setup({});
         const deleteFavouriteSearchListItemFn = jest.spyOn(FavouriteSearchActions, 'deleteFavouriteSearchListItem');
 
         await waitFor(() => getByText('Favourite searches'));
-
         fireEvent.click(getByTestId('favourite-search-list-item-1-delete'));
-        fireEvent.click(getByRole('button', { name: 'Save' }));
+        fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
 
         expect(deleteFavouriteSearchListItemFn).toBeCalled();
     });

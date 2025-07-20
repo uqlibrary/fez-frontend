@@ -3619,6 +3619,8 @@ export default {
         },
         favouriteSearchList: {
             tableTitle: '',
+            noRowsLabel: 'No records to display',
+            deleteConfirmLabel: 'Are you sure you want to delete this row?',
             columns: {
                 realLink: {
                     title: 'Real link',
