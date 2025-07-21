@@ -1,4 +1,4 @@
-import { expect, Page } from '../lib/fixture';
+import { expect, Page } from '../../test';
 
 // Common selectors
 const tabHeadingSelector = '.StandardPage form > div > div div.StandardCard > div > div > h3';

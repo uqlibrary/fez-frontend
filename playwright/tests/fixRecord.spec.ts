@@ -1,8 +1,8 @@
-import { test, expect } from '../lib/fixture';
+import { test, expect } from '../test';
 
-import formsLocale from '../../src/locale/forms';
-import { myRecordsList } from '../../src/mock/data/records';
-import { navToHomeFromMenu } from '../support/commands';
+import formsLocale from 'locale/forms';
+import { myRecordsList } from 'mock/data/records';
+import { navToHomeFromMenu } from '../lib/helpers';
 
 const record = myRecordsList.data[0];
 

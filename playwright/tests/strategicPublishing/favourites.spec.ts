@@ -1,5 +1,5 @@
-import { test, expect } from '../../lib/fixture';
-import { assertAccessibility } from '../../support/axe';
+import { test, expect } from '../../test';
+import { assertAccessibility } from '../../lib/axe';
 
 test.describe('Strategic Publishing - Favourite Journals', () => {
     test('Should render', async ({ page }) => {

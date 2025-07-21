@@ -1,4 +1,4 @@
-import { test, expect } from '../../../lib/fixture';
+import { test, expect } from '../../../test';
 
 test.describe('As an admin,', () => {
     test('I can create a collection', async ({ page }) => {

@@ -1,8 +1,8 @@
-import { test, expect, Page } from '../lib/fixture';
+import { test, expect, Page } from '../test';
 
-import formsLocale from '../../src/locale/forms';
-import fileUploaderLocale from '../../src/modules/SharedComponents/Toolbox/FileUploader/locale';
-import { navToHomeFromMenu } from '../support/commands';
+import formsLocale from 'locale/forms';
+import fileUploaderLocale from 'modules/SharedComponents/Toolbox/FileUploader/locale';
+import { navToHomeFromMenu } from '../lib/helpers';
 import path from 'path';
 
 // TODO pw fix

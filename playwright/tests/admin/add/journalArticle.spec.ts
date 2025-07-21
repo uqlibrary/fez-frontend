@@ -1,13 +1,13 @@
-import { test, expect } from '../../../lib/fixture';
+import { test, expect } from '../../../test';
 import {
     addAffiliationAndAssert,
     addAuthorAndAssert,
     adminEditCheckTabErrorBadge,
     adminEditTabbedView,
     editAffiliationAndAssert,
-} from '../admin';
-import { clickAutoSuggestion } from '../../../support/commands';
-import { typeCKEditor } from '../../../support/ckeditor';
+} from '../helpers';
+import { clickAutoSuggestion } from '../../../lib/helpers';
+import { typeCKEditor } from '../../../lib/ckeditor';
 
 test.describe('As an admin,', () => {
     test('I can add a journal article', async ({ page }) => {

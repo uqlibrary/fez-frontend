@@ -1,4 +1,4 @@
-import { test, expect, Page } from '../lib/fixture';
+import { test, expect, Page } from '../test';
 
 test.describe.serial('Homepage', () => {
     const checkMenuItemCount = async (page: Page, expectedCount: number) => {

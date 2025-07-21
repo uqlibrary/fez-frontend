@@ -1,5 +1,5 @@
-import { test, expect, Page } from '../../lib/fixture';
-import { assertCKEditorEmpty, typeCKEditor } from '../../support/ckeditor';
+import { test, expect, Page } from '../../test';
+import { assertCKEditorEmpty, typeCKEditor } from '../../lib/ckeditor';
 
 test.describe('Advanced Search', () => {
     // a particular search key can be updated for bulk records

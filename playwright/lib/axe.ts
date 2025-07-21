@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright';
-import { expect, Page } from '../lib/fixture';
+import { expect, Page } from '../test';
 
 export const defaultIncludedImpacts = ['minor', 'moderate', 'serious', 'critical'];
 export const assertAccessibility = async (

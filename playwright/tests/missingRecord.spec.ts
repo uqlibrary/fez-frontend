@@ -1,4 +1,4 @@
-import { expect, test } from '../lib/fixture';
+import { expect, test } from '../test';
 
 test.describe('viewRecord', () => {
     test('Renders the Work not found message for a 404', async ({ page }) => {

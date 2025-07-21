@@ -1,4 +1,4 @@
-import { expect, test } from '../lib/fixture';
+import { expect, test } from '../test';
 
 test.describe('Record with invalid affiliation', () => {
     // disable fullyParallel

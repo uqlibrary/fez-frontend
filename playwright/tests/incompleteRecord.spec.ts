@@ -1,5 +1,5 @@
-import { test, expect, Page } from '../lib/fixture';
-import { typeCKEditor } from '../support/ckeditor'; // Assuming this is a custom helper
+import { test, expect, Page } from '../test';
+import { typeCKEditor } from '../lib/ckeditor'; // Assuming this is a custom helper
 
 test.describe('Incomplete record form', () => {
     const checkSignificance = async (page: Page, significance: string) => {

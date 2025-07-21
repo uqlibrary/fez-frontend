@@ -1,6 +1,6 @@
-import { test, expect, Page } from '../lib/fixture';
-import { typeCKEditor } from '../support/ckeditor';
-import { clickAutoSuggestion } from '../support/commands';
+import { test, expect, Page } from '../test';
+import { typeCKEditor } from '../lib/ckeditor';
+import { clickAutoSuggestion } from '../lib/helpers';
 import path from 'path';
 
 test.describe('Thesis', () => {

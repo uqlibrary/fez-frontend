@@ -1,7 +1,7 @@
-import { test, expect, Page } from '../lib/fixture';
+import { test, expect, Page } from '../test';
 
-import { default as recordListBook } from '../../src/mock/data/records/publicationTypeListBookEdited';
-import { default as recordListImage } from '../../src/mock/data/records/publicationTypeListImage';
+import { default as recordListBook } from 'mock/data/records/publicationTypeListBookEdited';
+import { default as recordListImage } from 'mock/data/records/publicationTypeListImage';
 
 const recordBook = recordListBook.data[0];
 const recordImage = recordListImage.data[0];

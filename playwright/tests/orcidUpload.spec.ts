@@ -1,4 +1,4 @@
-import { expect, test } from '../lib/fixture';
+import { expect, test } from '../test';
 
 test.describe('ORCiD Upload button', () => {
     test.beforeEach(async ({ page }) => {

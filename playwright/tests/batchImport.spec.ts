@@ -1,7 +1,7 @@
-import { test, expect } from '../lib/fixture';
+import { test, expect } from '../test';
 
-import validationErrorsLocale from '../../src/locale/validationErrors';
-import { navToHomeFromMenu } from '../support/commands';
+import validationErrorsLocale from 'locale/validationErrors';
+import { navToHomeFromMenu } from '../lib/helpers';
 
 test.describe('Batch import', () => {
     const validationErrors = validationErrorsLocale.validationErrorsSummary;

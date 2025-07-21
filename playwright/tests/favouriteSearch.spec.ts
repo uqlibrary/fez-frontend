@@ -1,4 +1,4 @@
-import { expect, test } from '../lib/fixture';
+import { expect, test } from '../test';
 
 test.describe('Favourite search bookmark', () => {
     test('should direct to advanced search page', async ({ page }) => {

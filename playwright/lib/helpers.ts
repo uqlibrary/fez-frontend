@@ -1,6 +1,7 @@
-import { Page, expect, Locator } from '../lib/fixture';
+import { Page, expect, Locator } from '../test';
 import { baseURL } from './constants';
 import { BrowserContext } from '@playwright/test';
+import moment from 'moment/moment';
 
 export const assertEnabled = async (page: Page, selector: string) => expect(page.locator(selector)).toBeEnabled();
 
@@ -58,3 +59,57 @@ export const getOpenedLink = async (context: BrowserContext, locator: Locator) =
     const [newPage] = await Promise.all([context.waitForEvent('page'), locator.click()]);
     return newPage;
 };
+
+export async function setPartialDate(
+    page: Page,
+    id: string,
+    { day, month, year }: { day?: string | number; month?: number; year?: string | number },
+) {
+    if (day !== undefined) {
+        const dayInput = page.locator(`[data-testid=${id}-day-input]`);
+        await dayInput.fill(String(day));
+    }
+
+    if (month !== undefined) {
+        // Click to open the month dropdown
+        await page.locator(`[data-testid=${id}-month-select]`).click();
+
+        // Click on the desired month option
+        await page.locator(`[data-testid=${id}-month-options] li[role=option][data-value="${month - 1}"]`).click();
+    }
+
+    if (year !== undefined) {
+        const yearInput = page.locator(`[data-testid=${id}-year-input]`);
+        await yearInput.fill(String(year));
+    }
+}
+
+export async function checkPartialDate(
+    page: Page,
+    id: string,
+    { day, monthName, year }: { day?: string; monthName?: string; year?: string },
+) {
+    if (day !== undefined) {
+        const dayInput = page.locator(`[data-testid=${id}-day-input]`);
+        await expect(dayInput).toHaveValue(day);
+    }
+
+    if (monthName !== undefined) {
+        const monthSelect = page.locator(`[data-testid=${id}-month-select]`);
+        await expect(monthSelect).toHaveText(monthName);
+    }
+
+    if (year !== undefined) {
+        const yearInput = page.locator(`[data-testid=${id}-year-input]`);
+        await expect(yearInput).toHaveValue(year);
+    }
+}
+
+export async function checkPartialDateFromRecordValue(page: Page, id: string, dateString: string) {
+    const date = moment(dateString);
+    await checkPartialDate(page, id, {
+        day: date.format('D'),
+        monthName: date.format('MMMM'),
+        year: date.format('YYYY'),
+    });
+}

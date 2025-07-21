@@ -1,6 +1,6 @@
-import { test, expect, Page } from '../../lib/fixture';
-import { assertAccessibility } from '../../support/axe';
-import { assertNotSearchParams } from '../../support/url';
+import { test, expect, Page } from '../../test';
+import { assertAccessibility } from '../../lib/axe';
+import { assertNotSearchParams } from '../../lib/url';
 
 const captureBeforeContent = async (page: Page, selector: string) =>
     await page.evaluate(

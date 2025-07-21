@@ -1,4 +1,4 @@
-import { test, expect, Page } from '../lib/fixture';
+import { test, expect, Page } from '../test';
 
 test.describe('Communities and Collections', () => {
     const dismissPopover = async (page: Page) => await page.locator('body').click({ position: { x: 0, y: 0 } });

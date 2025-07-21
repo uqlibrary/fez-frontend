@@ -1,6 +1,6 @@
-import { test, expect } from '../../../lib/fixture';
-import { assertAccessibility } from '../../../support/axe';
-import { testIdStartsWith, getOpenedLink, loadAdminDashboard } from '../../../support/commands';
+import { test, expect } from '../../../test';
+import { assertAccessibility } from '../../../lib/axe';
+import { testIdStartsWith, getOpenedLink, loadAdminDashboard } from '../../../lib/helpers';
 
 test.describe('Admin Dashboard - Today tab', () => {
     test.beforeEach(async ({ page }) => await loadAdminDashboard(page));

@@ -1,15 +1,14 @@
-import { test, expect, Page } from '../lib/fixture';
-import formsLocale from '../../src/locale/forms';
+import { test, expect, Page } from '../test';
+import formsLocale from 'locale/forms';
 import {
     myRecordsList,
     publicationTypeListThesis,
     recordWithRDM,
     collectionRecord,
     recordThatFailsDeletion,
-} from '../../src/mock/data/records';
-import { baseURL } from '../support/constants';
-import { assertTriggersDisabled, fillInput, navToHomeFromMenu } from '../support/commands';
-import { typeCKEditor } from '../support/ckeditor';
+} from 'mock/data/records';
+import { assertTriggersDisabled, fillInput, navToHomeFromMenu } from '../lib/helpers';
+import { typeCKEditor } from '../lib/ckeditor';
 
 const record = myRecordsList.data[0];
 const recordWithCrossrefDoi = publicationTypeListThesis.data[0];

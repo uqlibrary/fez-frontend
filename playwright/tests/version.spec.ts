@@ -1,4 +1,4 @@
-import { expect, test } from '../lib/fixture';
+import { expect, test } from '../test';
 import recordVersion from 'mock/data/records/recordVersion';
 import recordVersionLegacy from 'mock/data/records/recordVersionLegacy';
 

@@ -1,6 +1,6 @@
-import { test, expect } from '../lib/fixture';
+import { test, expect } from '../test';
 
-import { myRecordsList } from '../../src/mock/data/records';
+import { myRecordsList } from 'mock/data/records';
 import path from 'path';
 
 const record = myRecordsList.data[0];

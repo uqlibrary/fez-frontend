@@ -1,4 +1,4 @@
-import { test, expect, Page } from '../../lib/fixture';
+import { test, expect, Page } from '../../test';
 
 test.describe('Error handling', () => {
     const expectUserToBeLoggedIn = async (page: Page, loggedIn: boolean) => {

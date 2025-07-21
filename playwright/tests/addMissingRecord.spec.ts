@@ -1,4 +1,4 @@
-import { test, expect } from '../lib/fixture';
+import { test, expect } from '../test';
 
 test.describe('Add missing record', () => {
     // disable fullyParallel

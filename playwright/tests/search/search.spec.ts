@@ -1,6 +1,6 @@
-import { test, expect, Page, Locator } from '../../lib/fixture';
+import { test, expect, Page, Locator } from '../../test';
 
-import records from '../../../src/mock/data/records/internalTitleSearchList';
+import records from 'mock/data/records/internalTitleSearchList';
 
 test.describe('Search', () => {
     const cleanExtraSpaces = (value: string) => value.replace(/\s+/g, ' ').trim();

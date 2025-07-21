@@ -1,4 +1,4 @@
-import { expect, test } from '../lib/fixture';
+import { expect, test } from '../test';
 
 test.describe('Author Identifier Orcid Link', () => {
     test('should show linking buttons for authors with no linked orcid id', async ({ page }) => {

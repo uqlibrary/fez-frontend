@@ -1,4 +1,4 @@
-import { expect, Page } from '../lib/fixture';
+import { expect, Page } from '../test';
 
 export const assertSearchParamsCount = async (page: Page, count: number) =>
     await expect(() => expect(new URL(page.url()).searchParams.keys.length).toEqual(count)).toPass();
