@@ -1,13 +1,8 @@
 import { test, expect } from '../test';
 
-test.describe('Add missing record', () => {
-    // disable fullyParallel
-    test.describe.configure({ mode: 'default' });
-
+test.describe.serial('Add missing record', () => {
     test.describe('add new', () => {
-        test.beforeEach(async ({ page }) => {
-            await page.goto('/records/add/new');
-        });
+        test.beforeEach(async ({ page }) => await page.goto('/records/add/new'));
 
         test('should enable the submit button on form render only', async ({ page }) => {
             // Journal article requires subtype selection
