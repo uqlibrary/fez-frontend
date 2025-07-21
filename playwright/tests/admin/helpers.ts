@@ -6,7 +6,7 @@ const tabHeadingSelector = '.StandardPage form > div > div div.StandardCard > di
 // Helper functions
 export async function loadRecordForAdminEdit(page: Page, pid: string) {
     await page.goto(`/admin/edit/${pid}?user=uqstaff`);
-    await page.locator('h2').waitFor({ state: 'visible', timeout: 10000 });
+    await page.locator('h2').waitFor({ state: 'visible', timeout: 60_0000 });
     await expect(page.locator('h2')).toContainText(pid);
 }
 

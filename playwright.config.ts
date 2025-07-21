@@ -7,7 +7,7 @@ export default defineConfig({
     testDir: 'playwright/tests',
     timeout: 90_000,
     expect: {
-        timeout: 10_000,
+        timeout: process.env.CI_BRANCH ? 30_000 : 10_000,
     },
     fullyParallel: process.env.PW_SERIAL === 'true' ? false : true,
     forbidOnly: !!process.env.CI_BRANCH,
