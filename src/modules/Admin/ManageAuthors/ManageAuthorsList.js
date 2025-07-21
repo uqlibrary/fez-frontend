@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
@@ -34,7 +33,6 @@ import { useConfirmationState } from 'hooks';
 import { BULK_DELETE_AUTHOR_SUCCESS, SCOPUS_INGESTED_AUTHORS } from 'config/general';
 
 import { useMrtTable, useServerData } from 'hooks';
-import { is } from 'immutable';
 
 export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate, onScopusIngest }) => {
     const theme = useTheme();
@@ -42,7 +40,6 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     const [searchTerm, setSearchTerm] = useState('');
     const [isScopusIngestOpen, showScopusIngestConfirmation, hideScopusIngestConfirmation] = useConfirmationState();
 
-    const materialTableRef = React.createRef();
     const scopusIngestAuthor = React.useRef();
 
     const {
@@ -228,21 +225,15 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     const handleHideScopusIngestConfirmation = () => hideScopusIngestConfirmation();
 
     const handleScopusIngest = () => {
-        const materialTable = materialTableRef.current;
         const autId = scopusIngestAuthor.current;
         onScopusIngest(autId)
             .then(() => {
                 Cookies.set(`${SCOPUS_INGESTED_AUTHORS}_${autId}`, autId, { expires: 7 });
-                materialTable.setState(() => ({
-                    ...materialTable.dataManager.getRenderState(),
-                }));
             })
-            .catch(() => {
-                materialTable.setState(() => ({
-                    ...materialTable.dataManager.getRenderState(),
-                }));
+            .catch(() => {})
+            .finally(() => {
+                scopusIngestAuthor.current = null;
             });
-        scopusIngestAuthor.current = null;
     };
 
     const debouncedReadRequest = useMemo(() => {
@@ -278,189 +269,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         table.setEditingRow(null);
         table.setCreatingRow(true);
     };
-    /*
-            <MaterialTable
-                tableRef={materialTableRef}
-                columns={columns.current}
-                components={{
-                    Container: props => <div {...props} id="authors-list" data-testid="authors-list" />,
-                    OverlayLoading: props => (
-                        <Backdrop
-                            {...props}
-                            open
-                            sx={{ position: 'absolute', zIndex: 9999, color: 'rgba(0, 0, 0, 0.2)' }}
-                        >
-                            <StandardCard noHeader standardCardId="loading-authors">
-                                <InlineLoader message={loadingText} />
-                            </StandardCard>
-                        </Backdrop>
-                    ),
-                    Row: props => (
-                        <MTableBodyRow
-                            {...props}
-                            {...(props.hasAnyEditingRow ? { onRowClick: null, hover: false } : { hover: true })}
-                            id={`authors-list-row-${props.index}`}
-                            data-testid={`authors-list-row-${props.index}`}
-                        />
-                    ),
-                    EditRow: props => {
-                        return (
-                            <FullAuthorDetails
-                                {...props}
-                                initialValues={props.data}
-                                id="authors-list-edit-row"
-                                data-testid="authors-list-edit-row"
-                                onEditingApproved={handleSave}
-                            />
-                        );
-                    },
-                    Action: props => {
-                        if (typeof props.action === 'function') {
-                            const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
-                            return (
-                                <MTableAction
-                                    {...props}
-                                    action={{
-                                        ...restAction,
-                                        tooltip,
-                                        icon: () => (
-                                            <Icon
-                                                disabled={props.disabled}
-                                                id={`authors-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                data-testid={`authors-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                {...restAction.iconProps}
-                                            />
-                                        ),
-                                    }}
-                                    size="small"
-                                />
-                            );
-                        } else if (props.action.isScopusIngest) {
-                            const { icon: Icon, tooltip, ...restAction } = props.action;
-                            const isCookieSet = !!Cookies.get(`${SCOPUS_INGESTED_AUTHORS}_${props.data.aut_id}`);
 
-                            return (
-                                <MTableAction
-                                    {...props}
-                                    action={{
-                                        ...restAction,
-                                        tooltip,
-                                        disabled:
-                                            isCookieSet ||
-                                            !(
-                                                !!props.data.aut_orcid_id ||
-                                                (!!props.data.aut_scopus_id &&
-                                                    props.data.aut_is_scopus_id_authenticated === 1)
-                                            ),
-                                        icon: () => (
-                                            <Icon
-                                                id={`authors-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                data-testid={`authors-list-row-${
-                                                    props.data.tableData.id
-                                                }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                                {...restAction.iconProps}
-                                            />
-                                        ),
-                                        onClick: () => props.action.onClick(props.data),
-                                    }}
-                                    size="small"
-                                />
-                            );
-                        } else {
-                            //  Add action
-                            const { tooltip } = props.action;
-                            return (
-                                <Button
-                                    id={`authors-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                    data-analyticsid={`authors-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                    data-testid={`authors-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                    disabled={props.disabled}
-                                    variant="contained"
-                                    color="primary"
-                                    children={tooltip}
-                                    onClick={event => props.action.onClick(event, props.data)}
-                                />
-                            );
-                        }
-                    },
-                }}
-                data={query => {
-                    materialTableRef.current.dataManager.changeRowEditing();
-                    materialTableRef.current.setState({
-                        ...materialTableRef.current.dataManager.getRenderState(),
-                        showAddRow: false,
-                    });
-                    return dispatch(loadAuthorList(query));
-                }}
-                onRowClick={(event, rowData) => {
-                    materialTableRef.current.dataManager.changeRowEditing(rowData, 'update');
-                    materialTableRef.current.setState({
-                        ...materialTableRef.current.dataManager.getRenderState(),
-                        showAddRow: false,
-                    });
-                }}
-                onRowsPerPageChange={pageSize => setPageSize(pageSize)}
-                icons={tableIcons}
-                title=""
-                localization={{
-                    body: {
-                        addTooltip: addButtonTooltip,
-                        editTooltip: editButtonTooltip,
-                        deleteTooltip: deleteButtonTooltip,
-                    },
-                    toolbar: {
-                        searchAriaLabel: searchAriaLabel,
-                        searchPlaceholder: searchPlaceholder,
-                    },
-                }}
-                editable={{
-                    onRowAdd: newData => onRowAdd(newData),
-                    onRowUpdate: newData => onRowUpdate(newData),
-                    onRowDelete: oldData => onRowDelete(oldData),
-                }}
-                options={{
-                    actionsColumnIndex: -1,
-                    addRowPosition: 'first',
-                    debounceInterval: 400,
-                    grouping: false,
-                    draggable: false,
-                    emptyRowsWhenPaging: true,
-                    pageSize: pageSize,
-                    pageSizeOptions: [20, 50, 100],
-                    padding: 'dense',
-                    overflowY: 'auto',
-                    searchFieldAlignment: 'left',
-                    selection: true,
-                    showSelectAllCheckbox: false,
-                    selectionProps: rowData => ({
-                        inputProps: {
-                            id: `select-author-${rowData.tableData.id}`,
-                            'data-testid': `select-author-${rowData.tableData.id}`,
-                        },
-                    }),
-                }}
-                actions={[
-                    {
-                        icon: 'delete',
-                        tooltip: bulkDeleteButtonTooltip,
-                        onClick: showConfirmation,
-                        isFreeAction: false,
-                    },
-                    {
-                        icon: tableIcons.Download,
-                        isScopusIngest: true,
-                        position: 'row',
-                        onClick: handleShowScopusIngestConfirmation,
-                        tooltip: scopusIngestButtonTooltip,
-                    },
-                ]}
-            />*/
     const table = useMaterialReactTable({
         columns,
         data,
@@ -522,6 +331,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 padding: 1,
             },
         },
+        muiTableBodyRowProps: ({ row }) => ({
+            id: `authors-list-row-${row.index}`,
+            'data-testid': `authors-list-row-${row.index}`,
+        }),
         muiSelectCheckboxProps: ({ row }) => ({
             id: `select-author-${row.id}`,
             'data-testid': `select-author-${row.id}`,
@@ -608,8 +421,27 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             </Box>
         ),
         renderRowActions: ({ row }) => {
+            const isCookieSet = !!Cookies.get(`${SCOPUS_INGESTED_AUTHORS}_${row.original.aut_id}`);
             return (
                 <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
+                    <Tooltip title={scopusIngestButtonTooltip}>
+                        <IconButton
+                            onClick={handleShowScopusIngestConfirmation}
+                            disabled={
+                                isCookieSet ||
+                                !(
+                                    !!row.original.aut_orcid_id ||
+                                    (!!row.original.aut_scopus_id && row.original.aut_is_scopus_id_authenticated === 1)
+                                )
+                            }
+                            id={`authors-list-row-${row.index}-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                            data-testid={`authors-list-row-${row.index}-${deleteButtonTooltip
+                                .toLowerCase()
+                                .replace(/ /g, '-')}`}
+                        >
+                            <tableIcons.Download />
+                        </IconButton>
+                    </Tooltip>
                     <Tooltip title={editButtonTooltip}>
                         <IconButton
                             onClick={() => {
@@ -641,10 +473,6 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 </Box>
             );
         },
-        muiTableBodyRowProps: ({ row }) => ({
-            id: `authors-list-row-${row.index}`,
-            'data-testid': `authors-list-row-${row.index}`,
-        }),
     });
 
     return (
