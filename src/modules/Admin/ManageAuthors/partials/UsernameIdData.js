@@ -1,6 +1,6 @@
 import { useFormContext } from 'react-hook-form';
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useWatch } from 'react-hook-form';
 
@@ -119,10 +119,6 @@ export const UsernameIdColumnData = () => {
             </Grid>
         </StandardCard>
     );
-};
-UsernameIdColumnData.propTypes = {
-    control: PropTypes.object.isRequired,
-    validatedForm: PropTypes.object.isRequired,
 };
 
 export default React.memo(UsernameIdColumnData);

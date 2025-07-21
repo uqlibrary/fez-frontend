@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 // eslint-disable-next-line camelcase
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
@@ -16,8 +17,10 @@ import Box from '@mui/material/Box';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
-import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
+
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 import ColumnTitle from './partials/ColumnTitle';
 import ColumnData from './partials/ColumnData';
@@ -31,19 +34,18 @@ import { useConfirmationState } from 'hooks';
 import { BULK_DELETE_AUTHOR_SUCCESS, SCOPUS_INGESTED_AUTHORS } from 'config/general';
 
 import { useMrtTable, useServerData } from 'hooks';
+import { is } from 'immutable';
 
 export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate, onScopusIngest }) => {
-    const dispatch = useDispatch();
+    const theme = useTheme();
+    const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
     const [searchTerm, setSearchTerm] = useState('');
     const [isScopusIngestOpen, showScopusIngestConfirmation, hideScopusIngestConfirmation] = useConfirmationState();
 
     const materialTableRef = React.createRef();
     const scopusIngestAuthor = React.useRef();
 
-    const [pageSize, setPageSize] = React.useState(20);
-
     const {
-        loadingText,
         tablePageSizeOptions,
         tablePageSizeDefault,
         header: {
@@ -59,6 +61,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 searchAriaLabel,
                 searchPlaceholder,
             },
+            deleteConfirmationLocale,
             bulkDeleteConfirmationLocale,
             scopusIngestConfirmationLocale,
         },
@@ -71,16 +74,14 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         [],
     );
 
-    const {
-        userListLoading,
-        userListItemUpdating,
-        userListItemDeleting,
-        userAdding,
-        data: list,
-        pagination,
-        request,
-        onPaginationChange,
-    } = useServerData({ actions, pageSize: tablePageSizeDefault });
+    const { authorListLoading, authorListItemUpdating, authorListItemDeleting, authorAdding } = useSelector(state =>
+        state?.get('manageAuthorsReducer'),
+    );
+
+    const { data: list, pagination, request, onPaginationChange } = useServerData({
+        actions,
+        pageSize: tablePageSizeDefault,
+    });
 
     const {
         data,
@@ -161,7 +162,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             onRowUpdate(newData, oldData)
                 .then(data => {
                     setData(prev => {
-                        const index = prev.findIndex(row => row.usr_id === oldData.usr_id);
+                        const index = prev.findIndex(row => row.aut_id === oldData.aut_id);
                         return [...prev.slice(0, index), data, ...prev.slice(index + 1)];
                     });
                 })
@@ -202,10 +203,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         onBulkRowDelete(rowsSelected)
             .then(response => {
                 const newList = [...data];
-                for (const [userId, message] of Object.entries(response)) {
+                for (const [authorId, message] of Object.entries(response)) {
                     message === BULK_DELETE_AUTHOR_SUCCESS &&
                         newList.splice(
-                            newList.findIndex(user => String(user.usr_id) === String(userId)),
+                            newList.findIndex(author => String(author.aut_id) === String(authorId)),
                             1,
                         );
                 }
@@ -218,128 +219,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 hideConfirmation();
             });
     };
-    /*
-    const handleSave = (mode, newData, oldData) => {
-        const materialTable = materialTableRef.current;
 
-        if (mode === 'add') {
-            materialTable.props.editable
-                .onRowAdd(newData)
-                .then(data => {
-                    materialTable.setState(prevState => {
-                        materialTable.dataManager.setData([data, ...prevState.data]);
-                        return {
-                            ...materialTable.dataManager.getRenderState(),
-                            showAddRow: false,
-                        };
-                    });
-                })
-                .catch(() => {
-                    materialTable.setState(prevState => {
-                        materialTable.dataManager.setData([...prevState.data]);
-                        return {
-                            ...materialTable.dataManager.getRenderState(),
-                            showAddRow: false,
-                        };
-                    });
-                });
-        } else if (mode === 'update') {
-            const index = oldData.tableData.id;
-            materialTable.props.editable
-                .onRowUpdate(newData, oldData)
-                .then(data => {
-                    materialTable.setState(prevState => {
-                        materialTable.dataManager.changeRowEditing(oldData);
-                        materialTable.dataManager.setData([
-                            ...prevState.data.slice(0, index),
-                            data,
-                            ...prevState.data.slice(index + 1),
-                        ]);
-                        return {
-                            ...materialTable.dataManager.getRenderState(),
-                            showAddRow: false,
-                        };
-                    });
-                })
-                .catch(
-                     istanbul ignore next  () => {
-                        materialTable.setState(prevState => {
-                            materialTable.dataManager.changeRowEditing(oldData);
-                            materialTable.dataManager.setData([
-                                ...prevState.data.slice(0, index),
-                                oldData,
-                                ...prevState.data.slice(index + 1),
-                            ]);
-                            return {
-                                ...materialTable.dataManager.getRenderState(),
-                                showAddRow: false,
-                            };
-                        });
-                    },
-                );
-        } else {
-            const index = oldData.tableData.id;
-            materialTable.props.editable
-                .onRowDelete(oldData)
-                .then(() => {
-                    materialTable.setState(prevState => {
-                        materialTable.dataManager.setData([
-                            ...prevState.data.slice(0, index),
-                            ...prevState.data.slice(index + 1),
-                        ]);
-                        return {
-                            ...materialTable.dataManager.getRenderState(),
-                            showAddRow: false,
-                        };
-                    });
-                })
-                .catch(() => {
-                    materialTable.setState(prevState => {
-                        materialTable.dataManager.setData([...prevState.data]);
-                        return {
-                            ...materialTable.dataManager.getRenderState(),
-                            showAddRow: false,
-                        };
-                    });
-                });
-        }
-    };
-
-    const handleBulkDelete = () => {
-        const materialTable = materialTableRef.current;
-        const rowsSelected = materialTable.dataManager.data.filter(row => !!row.tableData.checked);
-        onBulkRowDelete(rowsSelected)
-            .then(response => {
-                materialTable.setState(
-                    prevState => {
-                        const newList = [...prevState.data];
-                        for (const [authorId, message] of Object.entries(response)) {
-                            message === BULK_DELETE_AUTHOR_SUCCESS &&
-                                newList.splice(
-                                    newList.findIndex(author => String(author.aut_id) === String(authorId)),
-                                    1,
-                                );
-                        }
-                        materialTable.dataManager.changeAllSelected(false);
-                        materialTable.dataManager.setData(newList);
-                        return {
-                            ...materialTable.dataManager.getRenderState(),
-                        };
-                    },
-                    () => materialTable.onSelectionChange(),
-                );
-            })
-            .catch(() => {
-                materialTable.setState(prevState => {
-                    materialTable.dataManager.changeAllSelected(false);
-                    materialTable.dataManager.setData([...prevState.data]);
-                    return {
-                        ...materialTable.dataManager.getRenderState(),
-                    };
-                });
-            });
-    };
-*/
     const handleShowScopusIngestConfirmation = data => {
         scopusIngestAuthor.current = data.aut_id;
         showScopusIngestConfirmation();
@@ -607,8 +487,9 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         },
         state: {
             showAlertBanner: false,
-            isLoading: userListLoading,
-            showLoadingOverlay: userListLoading || userListItemUpdating || userListItemDeleting || userAdding || isBusy,
+            isLoading: authorListLoading,
+            showLoadingOverlay:
+                authorListLoading || authorListItemUpdating || authorListItemDeleting || authorAdding || isBusy,
             pagination,
             rowSelection: selectedRows,
         },
@@ -616,13 +497,14 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             rowsPerPageOptions: tablePageSizeOptions,
         },
         muiEditRowDialogProps: {
-            sx: {
-                '& .MuiDialog-paper': {
-                    maxWidth: { xs: '100%', lg: '60vw' },
-                    margin: { xs: 0, lg: 4 },
-                    width: '100%',
-                    display: 'table',
-                },
+            scroll: 'paper',
+            maxWidth: 'lg',
+            fullWidth: true,
+            fullScreen: isMobileView,
+            onClose: (e, reason) => {
+                if (reason !== 'backdropClick') {
+                    handleCancel(table)();
+                }
             },
         },
         muiTableProps: {
@@ -641,8 +523,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             },
         },
         muiSelectCheckboxProps: ({ row }) => ({
-            id: `select-user-${row.id}`,
-            'data-testid': `select-user-${row.id}`,
+            id: `select-author-${row.id}`,
+            'data-testid': `select-author-${row.id}`,
         }),
         onRowSelectionChange: setSelectedRows,
         onPaginationChange: onPaginationChange,
@@ -682,11 +564,15 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 })}
             >
                 <TextField
-                    id={'users-search-input'}
+                    id={'authors-search-input'}
                     title=""
-                    placeholder="Search users"
+                    placeholder={searchPlaceholder}
                     variant="standard"
-                    inputProps={{ inputMode: 'search', 'data-testid': 'users-search-input' }}
+                    inputProps={{
+                        inputMode: 'search',
+                        'data-testid': 'authors-search-input',
+                        'aria-label': searchAriaLabel,
+                    }}
                     InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">
@@ -707,10 +593,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     disabled={table.getState().creatingRow !== null}
                 />
                 <Button
-                    id={`users-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
+                    id={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
                         .toLowerCase()
                         .replace(/ /g, '-')}`}
-                    data-testid={`users-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
+                    data-testid={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
                         .toLowerCase()
                         .replace(/ /g, '-')}`}
                     disabled={table.getState().creatingRow !== null}
@@ -732,8 +618,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                                 table.setEditingRow(row);
                             }}
                             disabled={isPendingDelete || !!isBusy || !!editingRow}
-                            id={`users-list-row-${row.index}-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                            data-testid={`users-list-row-${row.index}-${editButtonTooltip
+                            id={`authors-list-row-${row.index}-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                            data-testid={`authors-list-row-${row.index}-${editButtonTooltip
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
                         >
@@ -744,8 +630,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         <IconButton
                             onClick={openDeleteConfirmModal(row.index)}
                             disabled={isPendingDelete || !!isBusy || !!editingRow}
-                            id={`users-list-row-${row.index}-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                            data-testid={`users-list-row-${row.index}-${deleteButtonTooltip
+                            id={`authors-list-row-${row.index}-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                            data-testid={`authors-list-row-${row.index}-${deleteButtonTooltip
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
                         >
@@ -756,22 +642,22 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             );
         },
         muiTableBodyRowProps: ({ row }) => ({
-            id: `users-list-row-${row.index}`,
-            'data-testid': `users-list-row-${row.index}`,
+            id: `authors-list-row-${row.index}`,
+            'data-testid': `authors-list-row-${row.index}`,
         }),
     });
 
     return (
         <Box
-            id="users-list"
-            data-testid="users-list"
+            id="authors-list"
+            data-testid="authors-list"
             sx={{
                 '& >.MuiPaper-root': { boxShadow: 'none' },
             }}
         >
             <ConfirmationBox
                 confirmationBoxId={
-                    isPendingDelete ? 'users-delete-this-user-confirmation' : 'bulk-delete-users-confirmation'
+                    isPendingDelete ? 'authors-delete-this-author-confirmation' : 'bulk-delete-authors-confirmation'
                 }
                 onAction={isPendingDelete ? handleDelete : handleBulkDelete}
                 onClose={cancelDeleteConfirmModal}

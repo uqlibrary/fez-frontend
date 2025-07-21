@@ -1,6 +1,6 @@
 import { useFormContext } from 'react-hook-form';
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
@@ -84,9 +84,6 @@ export const NameData = () => {
             </Grid>
         </StandardCard>
     );
-};
-NameData.propTypes = {
-    control: PropTypes.object.isRequired,
 };
 
 export default React.memo(NameData);

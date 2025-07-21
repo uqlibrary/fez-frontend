@@ -190,7 +190,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     };
 
     return (
-        <React.Fragment>
+        <Box display={'table'}>
             {(mode === 'update' || mode === 'add') && (
                 <TableRow onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row">
                     <TableCell colSpan={4}>
@@ -286,7 +286,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                     </TableCell>
                 </TableRow>
             )}
-        </React.Fragment>
+        </Box>
     );
 };
 
