@@ -23,11 +23,11 @@ export async function adminEditNoAlerts(page: Page) {
 export async function adminEditVerifyAlerts(page: Page, count: number, messages: string[]) {
     const alert = page.getByTestId('alert-warning');
     await expect(alert.locator('.alert-text')).toContainText('Validation -');
-    const alertMessages = alert.locator('li');
+    const alertMessages = alert.getByTestId('alert-message').locator('li');
     await expect(alertMessages).toHaveCount(count);
 
     for (const message of messages) {
-        await expect(alertMessages).toContainText(message);
+        await expect(alertMessages.filter({ hasText: message })).toBeVisible();
     }
 
     await expect(page.locator('#admin-work-submit')).toBeDisabled();
