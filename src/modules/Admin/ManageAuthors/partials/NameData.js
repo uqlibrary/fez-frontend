@@ -13,6 +13,7 @@ import { default as locale } from 'locale/components';
 
 export const NameData = () => {
     const {
+        title: cardTitle,
         editRow: {
             fields: { title, displayName, firstName, middleName, lastName, position, email },
         },
@@ -20,7 +21,7 @@ export const NameData = () => {
     const { control } = useFormContext();
 
     return (
-        <StandardCard subCard title="Name information" smallTitle customTitleBgColor="#F7F7F7">
+        <StandardCard subCard title={cardTitle} smallTitle customTitleBgColor="#F7F7F7">
             <Grid container spacing={2} alignItems="center">
                 <Field
                     {...displayName}

@@ -3992,6 +3992,7 @@ export default {
             validationAlertTitle:
                 'Form cannot be submitted until all fields are valid. Please review all input fields.',
             loadingText: 'Loading authors',
+            title: 'Author information',
             header: {
                 columns: {
                     id: {
