@@ -128,9 +128,9 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 Header: ({ column }) => <ColumnTitle title={column.columnDef.header} />,
                 Cell: ({ cell, row }) => (
                     <ColumnData
-                        data={cell.getValue()}
+                        data={cell.getValue() || row.original.aut_student_username}
                         columnDataId={`${(row._valuesCache.aut_org_username && 'aut-org-username') ||
-                            (row._valuesCache.aut_student_username && 'aut-student-username') ||
+                            (row.original.aut_student_username && 'aut-student-username') ||
                             'aut-org-username'}-${row.id}`}
                     />
                 ),
@@ -311,6 +311,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             fullWidth: true,
             fullScreen: isMobileView,
             onClose: (e, reason) => {
+                /* istanbul ignore else */
                 if (reason !== 'backdropClick') {
                     handleCancel(table)();
                 }
