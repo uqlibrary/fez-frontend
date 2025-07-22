@@ -1,7 +1,6 @@
 import { test, expect, Page } from '../test';
 import { typeCKEditor } from '../lib/ckeditor';
-import { clickAutoSuggestion } from '../lib/helpers';
-import path from 'path';
+import { clickAutoSuggestion, setFileInput } from '../lib/helpers';
 
 test.describe('Thesis', () => {
     const ensureErrorCount = async (page: Page, count: number) => {
@@ -9,7 +8,7 @@ test.describe('Thesis', () => {
     };
 
     const uploadFile = async (page: Page, fileName: string) =>
-        await page.getByTestId('fez-datastream-info-input').setInputFiles(path.join(__dirname, `fixtures/${fileName}`));
+        await setFileInput(page.getByTestId('fez-datastream-info-input'), fileName);
 
     test.describe('HDR submission', () => {
         test('shows rdm redirect message to non-whitelisted users', async ({ page }) => {

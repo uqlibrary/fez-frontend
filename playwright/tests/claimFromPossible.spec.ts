@@ -2,8 +2,7 @@ import { test, expect, Page } from '../test';
 
 import formsLocale from 'locale/forms';
 import fileUploaderLocale from 'modules/SharedComponents/Toolbox/FileUploader/locale';
-import { navToHomeFromMenu } from '../lib/helpers';
-import path from 'path';
+import { navToHomeFromMenu, setFileInput } from '../lib/helpers';
 
 // TODO pw fix
 test.describe.skip('Claim possible work', () => {
@@ -151,10 +150,7 @@ test.describe.skip('Claim possible work', () => {
 
         test('will allow upload of files', async ({ page }) => {
             await navToFirstClaim(page);
-            const fileName = 'test.jpg';
-            await page
-                .getByTestId('fez-datastream-info-input')
-                .setInputFiles(path.join(__dirname, `fixtures/${fileName}`));
+            await setFileInput(page.getByTestId('fez-datastream-info-input'), 'test.jpg');
             await expect(page.locator('.StandardCard', { hasText: claimFormLocale.fileUpload.title })).toBeVisible();
             await expect(
                 page.getByText(fileUploaderLocale.successMessage.replace('[numberOfFiles]', '1')),

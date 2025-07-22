@@ -2,6 +2,7 @@ import { Page, expect, Locator } from '../test';
 import { baseURL } from './constants';
 import { BrowserContext } from '@playwright/test';
 import moment from 'moment/moment';
+import path from 'path';
 
 export const assertEnabled = async (page: Page, selector: string) => expect(page.locator(selector)).toBeEnabled();
 
@@ -113,3 +114,6 @@ export async function checkPartialDateFromRecordValue(page: Page, id: string, da
         year: date.format('YYYY'),
     });
 }
+
+export const setFileInput = async (container: Page | Locator, fileName: string) =>
+    await container.setInputFiles(path.join(__dirname, `../tests/fixtures/${fileName}`));

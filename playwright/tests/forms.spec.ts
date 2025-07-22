@@ -1,7 +1,7 @@
 import { test, expect } from '../test';
 
 import { myRecordsList } from 'mock/data/records';
-import path from 'path';
+import { setFileInput } from '../lib/helpers';
 
 const record = myRecordsList.data[0];
 test.describe('forms', () => {
@@ -25,7 +25,7 @@ test.describe('forms', () => {
         await page.goto(`/records/${record.rek_pid}/fix`);
         await page.getByTestId('fix-action-select').click();
         await page.getByText(/I am the author/).click();
-        await page.getByTestId('fez-datastream-info-input').setInputFiles(path.join(__dirname, 'fixtures/test.jpg'));
+        await setFileInput(page.getByTestId('fez-datastream-info-input'), 'test.jpg');
         await page.getByTestId('dsi-open-access-0-select').click();
         await page.getByText(/Closed Access/).click();
 
