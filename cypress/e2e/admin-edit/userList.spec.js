@@ -5,8 +5,8 @@ context('Manage User List', () => {
     });
 
     it('Allows number of records per page to be changed', () => {
-        cy.get('.MuiTablePagination-select').click();
-        cy.get('[data-value="100"]').click();
+        cy.get('.MuiSelect-select').click();
+        cy.get('[data-value="50"]').click();
         cy.wait(1000);
         cy.get('#usr-id-0').should('exist');
         cy.get('#usr-id-1').should('exist');
@@ -16,8 +16,8 @@ context('Manage User List', () => {
         cy.get('[data-testid="users-delete-selected-users"]').click();
         cy.get('[data-testid="confirm-bulk-delete-users-confirmation"]').click();
         cy.wait(1000);
-        cy.get('#usr-id-1').should('exist');
-        cy.get('#usr-id-0').should('not.exist');
+        cy.get('#usr-id-0').should('exist');
+        cy.get('#usr-id-1').should('not.exist'); // mock data always deletes 1000000293
     });
     it('Handles new user', () => {
         cy.get('[data-testid="users-add-new-user"]').click();
