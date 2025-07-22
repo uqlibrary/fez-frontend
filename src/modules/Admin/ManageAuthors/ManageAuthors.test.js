@@ -1347,4 +1347,23 @@ describe('ManageAuthors', () => {
             expect(set).not.toHaveBeenCalled();
         });
     });
+
+    it('should handle text searching and clearing', async () => {
+        const loadAuthorListFn = jest.spyOn(ManageAuthorsActions, 'loadAuthorList');
+        const { getByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+
+        await userEvent.type(getByTestId('authors-search-input'), 'test search');
+
+        await waitFor(() =>
+            expect(loadAuthorListFn).toHaveBeenLastCalledWith({ page: 0, pageSize: 20, search: 'test search' }),
+        );
+
+        await userEvent.click(
+            within(getByTestId('authors-search-input').closest('.MuiInput-root')).getByTestId('ClearIcon'),
+        );
+
+        await waitFor(() => expect(loadAuthorListFn).toHaveBeenLastCalledWith({ page: 0, pageSize: 20, search: '' }));
+    });
 });
