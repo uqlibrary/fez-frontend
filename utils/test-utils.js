@@ -452,6 +452,10 @@ const selectDropDownOption = async (id, option, index = 0) => {
     await userEvent.click(screen.getByTestId(id));
     await userEvent.click(screen.queryAllByRole('option', { name: option })[index]);
 };
+const selectDropDownOptionByElement = async (el, option, index = 0) => {
+    await userEvent.click(el);
+    await userEvent.click(screen.queryAllByRole('option', { name: option })[index]);
+};
 
 /**
  * @param {string} fieldName
@@ -586,6 +590,7 @@ module.exports = {
     setRichTextEditorValue,
     assertRichTextEditorValue,
     selectDropDownOption,
+    selectDropDownOptionByElement,
     addContributorsEditorItem,
     addAndSelectContributorsEditorItem,
     clearAndType,

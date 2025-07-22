@@ -56,6 +56,7 @@ export const NameData = () => {
                     {...username}
                 />
                 <Field
+                    control={control}
                     component={UserFieldData}
                     userFieldDataId="usr-administrator"
                     name="usr_administrator"
@@ -63,6 +64,7 @@ export const NameData = () => {
                     {...isAdmin}
                 />
                 <Field
+                    control={control}
                     component={UserFieldData}
                     userFieldDataId="usr-super-administrator"
                     name="usr_super_administrator"
