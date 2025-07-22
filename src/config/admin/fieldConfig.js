@@ -2072,15 +2072,20 @@ export default {
                 name: 'adminSection.fez_record_search_key_end_date.rek_end_date',
             }),
             fez_record_search_key_model: () => ({
-                validate: [validation.requiredList],
                 required: true,
+                validate: [validation.requiredList],
             }),
             fez_record_search_key_instrument_type: () => ({
-                validate: [validation.requiredList],
                 required: true,
+                validate: [validation.requiredList],
+            }),
+            fez_record_search_key_publisher: () => ({
+                required: true,
+                validate: [validation.required],
             }),
             rek_description: () => ({
                 required: true,
+                validate: [validation.required],
             }),
         },
         [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {
