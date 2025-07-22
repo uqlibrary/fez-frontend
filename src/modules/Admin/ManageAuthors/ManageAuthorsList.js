@@ -217,8 +217,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             });
     };
 
-    const handleShowScopusIngestConfirmation = data => {
-        scopusIngestAuthor.current = data.aut_id;
+    const handleShowScopusIngestConfirmation = id => () => {
+        scopusIngestAuthor.current = id;
         showScopusIngestConfirmation();
     };
 
@@ -426,7 +426,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
                     <Tooltip title={scopusIngestButtonTooltip}>
                         <IconButton
-                            onClick={handleShowScopusIngestConfirmation}
+                            onClick={handleShowScopusIngestConfirmation(row.original.aut_id)}
                             disabled={
                                 isCookieSet ||
                                 !(
@@ -434,10 +434,12 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                                     (!!row.original.aut_scopus_id && row.original.aut_is_scopus_id_authenticated === 1)
                                 )
                             }
-                            id={`authors-list-row-${row.index}-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                            data-testid={`authors-list-row-${row.index}-${deleteButtonTooltip
+                            id={`authors-list-row-${row.index}-${scopusIngestButtonTooltip
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
+                            data-testid={`authors-list-row-${
+                                row.index
+                            }-${scopusIngestButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                         >
                             <tableIcons.Download />
                         </IconButton>
