@@ -95,7 +95,7 @@ const publicationTypeListInstrument = {
                 "rek_author_identifier_type_id": 1,
                 "rek_author_identifier_type_pid": "UQ:23aac26",
                 "rek_author_identifier_type_order": 1,
-                "rek_author_identifier_type": 459136
+                "rek_author_identifier_type": 457086
             }
         ],
         "fez_record_search_key_contact_details_email": [
@@ -137,7 +137,7 @@ const publicationTypeListInstrument = {
             {
                 "rek_contributor_identifier_type_id": 2475658,
                 "rek_contributor_identifier_type_pid": "UQ:23aac26",
-                "rek_contributor_identifier_type": 459136,
+                "rek_contributor_identifier_type": 457086,
                 "rek_contributor_id_type_order": 1
             }
         ],
@@ -198,14 +198,14 @@ const publicationTypeListInstrument = {
                 "rek_alternate_identifier_type_id": 1,
                 "rek_alternate_identifier_type_pid": "UQ:23aac26",
                 "rek_alternate_identifier_type_order": 1,
-                "rek_alternate_identifier_type": 459133,
+                "rek_alternate_identifier_type": 457082,
                 "rek_alternate_identifier_type_lookup": 'Serial Number'
             },
             {
                 "rek_alternate_identifier_type_id": 1,
                 "rek_alternate_identifier_type_pid": "UQ:23aac26",
                 "rek_alternate_identifier_type_order": 2,
-                "rek_alternate_identifier_type": 459134,
+                "rek_alternate_identifier_type": 457083,
                 "rek_alternate_identifier_type_lookup": 'Inventory Number'
             }
         ],

@@ -38,7 +38,7 @@ describe('AlternateIdentifierForm', () => {
         fireEvent.click(getByText('Serial Number'));
 
         fireEvent.click(getByTestId('rek-alternate-identifier-add'));
-        expect(onAddFn).toHaveBeenCalledWith({ key: '12345', value: 459133 });
+        expect(onAddFn).toHaveBeenCalledWith({ key: '12345', value: 457082 });
         // reset form
         expect(getByTestId('rek-alternate-identifier-input')).toHaveAttribute('value', '');
         expect(getByTestId('rek-alternate-identifier-type-input')).toHaveAttribute('value', '');
