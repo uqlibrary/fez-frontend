@@ -316,6 +316,9 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     handleCancel(table)();
                 }
             },
+            '& .MuiDialog-paper': {
+                margin: { xs: 0, lg: 4 },
+            },
         },
         muiTableProps: {
             sx: {

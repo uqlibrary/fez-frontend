@@ -23,6 +23,12 @@ import NotesData from './NotesData';
 
 import { default as locale } from 'locale/components';
 
+const classes = {
+    background: {
+        backgroundColor: 'secondary.light',
+    },
+};
+
 export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled }) => {
     const validatedForm = useForm({
         defaultValues: rowData,
@@ -172,12 +178,12 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     return (
         <Box display={'table'}>
             <TableRow onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row">
-                <TableCell colSpan={4}>
+                <TableCell colSpan={4} sx={{ p: 0 }}>
                     <ScrollToSection scrollToSection>
                         <FormProvider {...validatedForm}>
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                <Box sx={{ backgroundColor: 'secondary.light', padding: 2 }}>
-                                    <Grid container spacing={2}>
+                                <Box sx={{ ...classes.background, paddingTop: 2, paddingRight: 2, paddingLeft: 2 }}>
+                                    <Grid container spacing={2} sx={{ position: 'relative' }}>
                                         <Grid item xs={12}>
                                             <NameData />
                                         </Grid>
@@ -187,9 +193,20 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                         <Grid item xs={12}>
                                             <ResearcherIdentifierData />
                                         </Grid>
-                                        <Grid item xs={12}>
+                                        <Grid item xs={12} sx={{ paddingBottom: 2 }}>
                                             <NotesData />
                                         </Grid>
+                                    </Grid>
+                                    <Grid
+                                        container
+                                        spacing={2}
+                                        sx={{
+                                            ...classes.background,
+                                            position: 'sticky',
+                                            padding: 0,
+                                            bottom: 0,
+                                        }}
+                                    >
                                         <Grid item xs={12}>
                                             <Grid
                                                 container
@@ -197,6 +214,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                                 justifyContent="flex-start"
                                                 alignItems="center"
                                                 spacing={2}
+                                                paddingBottom={2}
                                             >
                                                 <Grid item>
                                                     <Button
