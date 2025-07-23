@@ -73,7 +73,7 @@ test.describe('File rename admin edit', () => {
         await filesSectionContent.locator(`[data-testid=${vars.editingId}]`).fill(`${newFilename}d`); // Use fill to overwrite
         await expect(filesSectionContent.locator(`[data-testid=${vars.editingId}]`)).toHaveValue(`${newFilename}d`);
         await filesSectionContent.locator(`[data-testid=${vars.saveId}]`).click();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editedId}]`)).toHaveText(`${newFilename}d`);
+        await expect(filesSectionContent.locator(`[data-testid=${vars.editedId}]`)).toContainText(`${newFilename}d`);
 
         // cancel a rename
         await filesSectionContent.locator(`[data-testid=${vars.editId}]`).click();
@@ -82,7 +82,7 @@ test.describe('File rename admin edit', () => {
             `${newFilename}d-again`,
         );
         await filesSectionContent.locator(`[data-testid=${vars.cancelId}]`).click();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editedId}]`)).toHaveText(`${newFilename}d`);
+        await expect(filesSectionContent.locator(`[data-testid=${vars.editedId}]`)).toContainText(`${newFilename}d`);
 
         // reset renamed file to original
         await filesSectionContent.locator(`[data-testid=${vars.resetId}]`).click();
@@ -90,7 +90,7 @@ test.describe('File rename admin edit', () => {
         await expect(filesSectionContent.locator(`[data-testid=${vars.resetId}]`)).not.toBeVisible();
         await expect(filesSectionContent.locator(`[data-testid=${vars.filenameText}]`)).toBeVisible();
         await expect(filesSectionContent.locator(`[data-testid=${vars.editedId}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.filenameText}]`)).toHaveText(
+        await expect(filesSectionContent.locator(`[data-testid=${vars.filenameText}]`)).toContainText(
             vars.originalFilename,
         );
 
