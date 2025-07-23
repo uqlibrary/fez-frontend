@@ -152,7 +152,7 @@ test.describe('Thesis admin edit', () => {
         );
         const licenseInput = additionalInfoCard.getByTestId('rek-license-input');
         const licenseInputParent = licenseInput.locator('xpath=..'); // Get parent
-        const licenseCombobox = licenseInputParent.locator('[role=combobox]'); // Find combobox within parent
+        const licenseCombobox = licenseInputParent.getByRole('combobox'); // Find combobox within parent
         await expect(licenseCombobox).toHaveText(record.fez_record_search_key_license.rek_license_lookup);
 
         // ----------------------------------------------- NOTES TAB -------------------------------------------------

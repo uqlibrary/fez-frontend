@@ -43,7 +43,7 @@ test.describe('Change display type', () => {
         await expect(page.getByTestId('change-display-type-submit-status')).toHaveText(
             /Display type has been changed successfully\./,
         );
-        await expect(page.locator('[role=dialog]').locator('h2')).toHaveText(/Change Display type/);
+        await expect(page.getByRole('dialog').locator('h2')).toHaveText(/Change Display type/);
         await expect(page.locator('button', { hasText: /View work/ })).toBeVisible();
         await page.locator('button', { hasText: /Edit full work/ }).click();
         await expect(async () => {
@@ -75,7 +75,7 @@ test.describe('Change display type', () => {
         await expect(page.getByTestId('change-display-type-submit-status')).toHaveText(
             /Display type has been changed successfully\./,
         );
-        await expect(page.locator('[role=dialog]').locator('h2')).toHaveText(/Change Display type/);
+        await expect(page.getByRole('dialog').locator('h2')).toHaveText(/Change Display type/);
         await expect(page.locator('button', { hasText: /edit full work/i })).toBeVisible();
         await page
             .locator('button')

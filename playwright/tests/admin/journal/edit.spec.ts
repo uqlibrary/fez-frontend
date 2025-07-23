@@ -7,7 +7,7 @@ import { ULRICHS_URL_PREFIX } from 'config/general';
 const removeJournalLock = async (page: Page) => {
     await page
         .getByTestId('alert-error')
-        .locator('[data-testid=action-button]')
+        .getByTestId('action-button')
         .click();
 };
 
@@ -224,7 +224,7 @@ test.describe('JournalAdmin', () => {
             await tabbedCheckbox.click();
             await expect(tabbedCheckboxParent).toHaveAttribute('aria-label', 'Switch to full form mode');
 
-            const tabs = page.locator('[role=tab]');
+            const tabs = page.getByRole('tab');
             await expect(tabs).toHaveCount(5);
             await expect(tabs.nth(0)).toHaveAttribute('aria-selected', 'true');
 

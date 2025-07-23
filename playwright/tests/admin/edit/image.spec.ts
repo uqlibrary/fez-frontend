@@ -51,7 +51,7 @@ test.describe('Image admin edit', () => {
         await expect(adminTab.getByTestId('rek-oa-status-input')).toHaveValue(
             record.fez_record_search_key_oa_status.rek_oa_status.toString(),
         );
-        await expect(adminTab.locator('[data-testid=rek-oa-status-select]')).toHaveText(
+        await expect(adminTab.getByTestId('rek-oa-status-select')).toHaveText(
             record.fez_record_search_key_oa_status.rek_oa_status_lookup,
         );
     });

@@ -6,7 +6,7 @@ test.describe('Admin Dashboard - Today tab', () => {
     test.beforeEach(async ({ page }) => await loadAdminDashboard(page));
 
     test('renders tabs as expected', async ({ page }) => {
-        const tabs = page.locator('[role=tab]');
+        const tabs = page.getByRole('tab');
         await expect(tabs).toHaveCount(3);
 
         await expect(tabs.first()).toContainText('TODAY');
@@ -64,7 +64,7 @@ test.describe('Admin Dashboard - Today tab', () => {
             .getByTestId('processed-works-subtitle')
             .getByTestId('HelpIcon')
             .hover();
-        await expect(page.locator('[role=tooltip]')).toContainText(
+        await expect(page.getByRole('tooltip')).toContainText(
             '23rd September 2024 00:00:00 to 25th September 2024 23:59:59',
         );
 

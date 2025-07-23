@@ -25,7 +25,7 @@ test.describe('Strategic Publishing - Comparison', () => {
         await page.goto(`${uri}${query}`);
 
         // wait until the progress spinner is no longer in the document
-        await expect(page.locator('[role="progressbar"]')).toHaveCount(0);
+        await expect(page.getByRole('progressbar')).toHaveCount(0);
         await expect(page.getByTestId('journal-list-data-col-1-checkbox-0')).toBeVisible();
         // make sure 3rd journal is present
         await expect(page.getByTestId('journal-list-data-col-1-title-2')).toBeVisible();

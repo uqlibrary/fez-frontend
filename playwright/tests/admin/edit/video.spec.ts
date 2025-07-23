@@ -43,7 +43,7 @@ test.describe('Video admin edit', () => {
         await typeCKEditor(page, 'rek-description', 'some description'); // description
         await page.locator('#admin-work-submit').click();
         // Confirmation message
-        const dialog = page.locator('[role=dialog]');
+        const dialog = page.getByRole('dialog');
         await expect(dialog.locator('h2')).toContainText('Work has been updated');
         // Locate the 'View updated work' button within the dialog and click it
         await dialog.locator('button', { hasText: 'View updated work' }).click();

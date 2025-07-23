@@ -36,8 +36,8 @@ test.describe('File rename admin edit', () => {
         const vars = getIds(record, 1);
         await loadRecordForAdminEdit(page, record.rek_pid);
         console.log('Files Tab');
-        await expect(page.locator('[data-testid=files-section-header]')).toHaveText('Files');
-        const filesSectionContent = page.locator('[data-testid=files-section-content]');
+        await expect(page.getByTestId('files-section-header')).toHaveText('Files');
+        const filesSectionContent = page.getByTestId('files-section-content');
         await expect(filesSectionContent.locator('h4').first()).toHaveText('Attached files');
         await expect(filesSectionContent.locator('p').first()).toHaveText(
             'There may be a delay before newly uploaded or renamed files appear on the record.',
@@ -114,14 +114,14 @@ test.describe('File rename admin edit', () => {
         await expect(filesSectionContent.locator('h4', { hasText: 'Advisory statement' })).toBeVisible();
         await expect(filesSectionContent.locator('h4', { hasText: 'Copyright agreement' })).toBeVisible();
 
-        const checkbox = filesSectionContent.locator('[data-testid=rek-copyright-input]');
+        const checkbox = filesSectionContent.getByTestId('rek-copyright-input');
         if (record.rek_copyright === 'on') {
             await expect(checkbox).toBeChecked();
         } else {
             await expect(checkbox).not.toBeChecked();
         }
 
-        await page.locator('[data-testid=rek-copyright-input]').click(); // This click is likely on the main page, not scoped to filesSectionContent.
+        await page.getByTestId('rek-copyright-input').click(); // This click is likely on the main page, not scoped to filesSectionContent.
         await adminEditVerifyAlerts(page, 1, ['You are required to accept deposit agreement']);
     });
 
@@ -130,7 +130,7 @@ test.describe('File rename admin edit', () => {
         const vars = getIds(record, 12);
         await loadRecordForAdminEdit(page, record.rek_pid);
         // rename
-        const filesSectionContent = page.locator('[data-testid=files-section-content]');
+        const filesSectionContent = page.getByTestId('files-section-content');
         await expect(filesSectionContent.locator(`[data-testid=${vars.editId}]`)).toBeVisible();
         await expect(filesSectionContent.locator(`[data-testid=${vars.resetId}]`)).not.toBeVisible();
         await expect(filesSectionContent.locator(`[data-testid=${vars.filenameText}]`)).toHaveText(
@@ -186,7 +186,7 @@ test.describe('File rename admin edit', () => {
         const resetId = `file-name-${record.fez_datastream_info[1].dsi_id}-reset`;
         const filenameText = `file-name-${record.fez_datastream_info[1].dsi_id}`;
         const originalFilename = record.fez_datastream_info[1].dsi_dsid;
-        const filesSectionContent = page.locator('[data-testid=files-section-content]');
+        const filesSectionContent = page.getByTestId('files-section-content');
         await expect(filesSectionContent.locator(`[data-testid=${editId}]`)).not.toBeVisible();
         await expect(filesSectionContent.locator(`[data-testid=${resetId}]`)).not.toBeVisible();
         await expect(filesSectionContent.locator(`[data-testid=${filenameText}]`)).toHaveText(originalFilename);

@@ -8,11 +8,11 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
     };
 
     const getRow = (page: Page, row: number) => {
-        return page.locator('[role=row]').nth(row);
+        return page.getByRole('row').nth(row);
     };
 
     const getCell = (parentLocator: Page | Locator, cell: number) => {
-        return parentLocator.locator('[role=gridcell]').nth(cell);
+        return parentLocator.getByRole('gridcell').nth(cell);
     };
 
     const assertDetailDrawer = async (page: Page, data: any) => {
@@ -66,7 +66,7 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
     test('renders table as expected', async ({ page }) => {
         // no need to check every row, just check
         // a couple that have a different status
-        await expect(page.locator('[role=row]')).toHaveCount(9);
+        await expect(page.getByRole('row')).toHaveCount(9);
 
         const firstRow = getRow(page, 1);
         await expect(getCell(firstRow, 1)).toContainText('Issues on record - UQ:34555c6');
@@ -119,8 +119,8 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
         await assigneeDropdown.click();
 
         const optionsContainer = getByTestId(page, 'system-alert-detail-options');
-        await expect(optionsContainer.locator('[role=option]')).toHaveCount(5);
-        await expect(optionsContainer.locator('[role=option]').nth(3)).toHaveAttribute('aria-selected', 'true');
+        await expect(optionsContainer.getByRole('option')).toHaveCount(5);
+        await expect(optionsContainer.getByRole('option').nth(3)).toHaveAttribute('aria-selected', 'true');
 
         const actionButton = getByTestId(page, 'system-alert-detail-action-button');
         await expect(actionButton).toContainText('Mark as resolved');
@@ -131,6 +131,6 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
 
         const assigneeInputContainer = getByTestId(page, 'system-alert-detail-assignee');
         await expect(getByTestId(assigneeInputContainer, 'system-alert-detail-assignee-input')).toBeDisabled();
-        await expect(assigneeInputContainer.locator('[role=progressbar]')).toBeVisible();
+        await expect(assigneeInputContainer.getByRole('progressbar')).toBeVisible();
     });
 });

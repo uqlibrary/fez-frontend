@@ -34,15 +34,15 @@ test.describe('Digilib Image admin edit', () => {
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         console.log('Bibliographic tab');
-        const bibliographicTab = page.locator('[data-testid=bibliographic-section-content]');
-        await expect(page.locator('[data-testid=bibliographic-section-header]')).toHaveText('Bibliographic');
+        const bibliographicTab = page.getByTestId('bibliographic-section-content');
+        await expect(page.getByTestId('bibliographic-section-header')).toHaveText('Bibliographic');
         await expect(bibliographicTab.locator('h4').getByText(/Bibliographic/)).toBeVisible();
 
-        await expect(bibliographicTab.locator('[data-testid=rek-rights-input]')).toHaveValue(
+        await expect(bibliographicTab.getByTestId('rek-rights-input')).toHaveValue(
             record.fez_record_search_key_rights.rek_rights,
         );
 
-        await expect(bibliographicTab.locator('[data-testid=rek-construction-date-input]')).toHaveValue(
+        await expect(bibliographicTab.getByTestId('rek-construction-date-input')).toHaveValue(
             record.fez_record_search_key_construction_date.rek_construction_date,
         );
 
@@ -68,7 +68,7 @@ test.describe('Digilib Image admin edit', () => {
             bibliographicTab
                 .locator('.AdminCard')
                 .nth(2)
-                .locator('[data-testid="rek-geographic-area"]'),
+                .getByTestId('rek-geographic-area'),
         ).toBeVisible();
 
         await expect(
@@ -285,8 +285,8 @@ test.describe('Digilib Image admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         console.log('Author Details tab');
-        await expect(page.locator('[data-testid=authors-section-header]')).toHaveText('Authors');
-        const authorDetailsTab = page.locator('[data-testid=authors-section-content]');
+        await expect(page.getByTestId('authors-section-header')).toHaveText('Authors');
+        const authorDetailsTab = page.getByTestId('authors-section-content');
 
         await expect(
             authorDetailsTab
@@ -338,7 +338,7 @@ test.describe('Digilib Image admin edit', () => {
 
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
         console.log('Identifiers tab');
-        const identifiersTab = page.locator('[data-testid=identifiers-section-content]');
+        const identifiersTab = page.getByTestId('identifiers-section-content');
         await expect(identifiersTab.locator('h4').getByText(/Location/)).toBeVisible();
         const locations = record.fez_record_search_key_location.map(item => item.rek_location);
         for (const [index, location] of locations.entries()) {

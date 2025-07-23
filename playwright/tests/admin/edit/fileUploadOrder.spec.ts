@@ -20,10 +20,10 @@ test.describe('File Upload Order', () => {
         await setFileInput(page.getByTestId('fez-datastream-info-input'), file2);
         await expect(page.getByTestId('dsi-dsid-0')).toContainText(file1);
         await expect(page.getByTestId('dsi-dsid-1')).toContainText(file2);
-        await page.locator('[data-testid="new-file-upload-down-0"]').click();
+        await page.getByTestId('new-file-upload-down-0').click();
         await expect(page.getByTestId('dsi-dsid-0')).toContainText(file2);
         await expect(page.getByTestId('dsi-dsid-1')).toContainText(file1);
-        await page.locator('[data-testid="new-file-upload-down-0"]').click();
+        await page.getByTestId('new-file-upload-down-0').click();
         await expect(page.getByTestId('dsi-dsid-0')).toContainText(file1);
         await expect(page.getByTestId('dsi-dsid-1')).toContainText(file2);
     });
@@ -34,10 +34,10 @@ test.describe('File Upload Order', () => {
         const scope = page.getByTestId('standard-card-attached-files-content');
         await expect(testIdStartsWith(scope, 'fez-datastream-info-attached-list-row-').nth(0)).toContainText(file1);
         await expect(testIdStartsWith(scope, 'fez-datastream-info-attached-list-row-').nth(1)).toContainText(file2);
-        await scope.locator('[data-testid="order-down-file-0"]').click();
+        await scope.getByTestId('order-down-file-0').click();
         await expect(testIdStartsWith(scope, 'fez-datastream-info-attached-list-row-').nth(0)).toContainText(file2);
         await expect(testIdStartsWith(scope, 'fez-datastream-info-attached-list-row-').nth(1)).toContainText(file1);
-        await scope.locator('[data-testid="order-down-file-0"]').click();
+        await scope.getByTestId('order-down-file-0').click();
         await expect(testIdStartsWith(scope, 'fez-datastream-info-attached-list-row-').nth(0)).toContainText(file1);
         await expect(testIdStartsWith(scope, 'fez-datastream-info-attached-list-row-').nth(1)).toContainText(file2);
     });
@@ -47,29 +47,29 @@ test.describe('File Upload Order', () => {
         const file2 = 'BA_MM_147_2.tif';
         const file1name = getFilenamePart(file1);
         const file2name = getFilenamePart(file2);
-        const scope = page.locator('[data-testid=standard-card-attached-files-content]');
+        const scope = page.getByTestId('standard-card-attached-files-content');
         // show the edit inputs
-        await scope.locator('[data-testid=file-name-1-edit]').click();
-        await scope.locator('[data-testid=file-name-2-edit]').click();
-        await expect(scope.locator('[data-testid=file-name-1-editing-input]')).toHaveValue(file1name);
-        await expect(scope.locator('[data-testid=file-name-2-editing-input]')).toHaveValue(file2name);
+        await scope.getByTestId('file-name-1-edit').click();
+        await scope.getByTestId('file-name-2-edit').click();
+        await expect(scope.getByTestId('file-name-1-editing-input')).toHaveValue(file1name);
+        await expect(scope.getByTestId('file-name-2-editing-input')).toHaveValue(file2name);
 
         // reorder the rows down
-        await scope.locator('[data-testid="order-down-file-0"]').click();
-        await expect(scope.locator('[data-testid=file-name-2-editing-input]')).toHaveValue(file2name);
-        await expect(scope.locator('[data-testid=file-name-1-editing-input]')).toHaveValue(file1name);
+        await scope.getByTestId('order-down-file-0').click();
+        await expect(scope.getByTestId('file-name-2-editing-input')).toHaveValue(file2name);
+        await expect(scope.getByTestId('file-name-1-editing-input')).toHaveValue(file1name);
 
         // reorder the rows up
-        await scope.locator('[data-testid="order-up-file-1"]').click();
-        await expect(scope.locator('[data-testid=file-name-1-editing-input]')).toHaveValue(file1name);
-        await expect(scope.locator('[data-testid=file-name-2-editing-input]')).toHaveValue(file2name);
+        await scope.getByTestId('order-up-file-1').click();
+        await expect(scope.getByTestId('file-name-1-editing-input')).toHaveValue(file1name);
+        await expect(scope.getByTestId('file-name-2-editing-input')).toHaveValue(file2name);
 
         // reorder down again
-        await scope.locator('[data-testid="order-down-file-0"]').click();
+        await scope.getByTestId('order-down-file-0').click();
 
         // save the filenames to set the filenames back to text in page rather than input
-        await scope.locator('[data-testid=file-name-1-save]').click();
-        await scope.locator('[data-testid=file-name-2-save]').click();
+        await scope.getByTestId('file-name-1-save').click();
+        await scope.getByTestId('file-name-2-save').click();
 
         // confirm the filenames are as expected in the new order
         await expect(testIdStartsWith(scope, 'fez-datastream-info-attached-list-row-').first()).toContainText(file2);

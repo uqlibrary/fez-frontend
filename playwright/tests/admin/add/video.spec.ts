@@ -53,8 +53,8 @@ test.describe('As an admin,', () => {
         await page.locator('#admin-work-submit').click();
 
         // Confirmation message
-        await expect(page.locator('[role=dialog]')).toBeVisible();
-        await expect(page.locator('[role=dialog]').locator('h2')).toHaveText(/Work has been added/);
+        await expect(page.getByRole('dialog')).toBeVisible();
+        await expect(page.getByRole('dialog').locator('h2')).toHaveText(/Work has been added/);
     });
 });
 

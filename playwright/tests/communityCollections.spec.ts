@@ -21,7 +21,7 @@ test.describe('Communities and Collections', () => {
 
         // export format
         await page.getByTestId('export-publications-format').click();
-        await expect(page.locator('[role="listbox"]')).toHaveText(/Excel File/);
+        await expect(page.getByRole('listbox')).toHaveText(/Excel File/);
         await dismissPopover(page);
     });
     test('correctly expands and contracts collections within community', async ({ page }) => {
@@ -35,7 +35,7 @@ test.describe('Communities and Collections', () => {
         const exportCollection1 = page.getByTestId('export-publications-format');
         await expect(page.getByTestId('export-publications-format')).toHaveCount(2);
         await exportCollection1.nth(1).click();
-        await expect(page.locator('[role="listbox"]')).toHaveText(/Excel File/);
+        await expect(page.getByRole('listbox')).toHaveText(/Excel File/);
         await dismissPopover(page);
         await page.getByTestId('expand-row-UQ:7556').click();
         await expect(page.getByTestId('total-collections-UQ:7556')).toBeVisible();
@@ -47,7 +47,7 @@ test.describe('Communities and Collections', () => {
         const exportCollection2 = page.getByTestId('export-publications-format');
         await expect(page.getByTestId('export-publications-format')).toHaveCount(3);
         await exportCollection2.nth(2).click();
-        await expect(page.locator('[role="listbox"]')).toHaveText(/Excel File/);
+        await expect(page.getByRole('listbox')).toHaveText(/Excel File/);
         await dismissPopover(page);
         await page.getByTestId('expand-row-UQ:12096').click();
         await expect(page.getByTestId('total-collections-UQ:12096')).not.toBeVisible();

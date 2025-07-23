@@ -180,7 +180,7 @@ test.describe('Creative Work admin edit, general', () => {
             await rowAuthorDisplaysAs(page, 1, 'Belanger');
 
             await page.getByTestId('submit-admin-top').click();
-            const dialog = page.locator('[role=dialog]');
+            const dialog = page.getByRole('dialog');
             await expect(dialog).toBeVisible();
             await expect(dialog.locator('h2')).toContainText('Work has been updated');
         });
@@ -201,7 +201,7 @@ test.describe('Creative Work admin edit, general', () => {
             await rowAuthorDisplaysAs(page, 1, 'Belanger');
 
             await page.getByTestId('submit-admin-top').click();
-            const dialog = page.locator('[role=dialog]');
+            const dialog = page.getByRole('dialog');
             await expect(dialog).toBeVisible();
             await expect(dialog.locator('h2')).toContainText('Work has been updated');
         });
@@ -278,7 +278,7 @@ test.describe('Creative Work admin edit, general', () => {
             await rowStatementDisplaysAs(page, 2, statementList[0].newText);
 
             await page.getByTestId('submit-admin-top').click();
-            const dialog = page.locator('[role=dialog]');
+            const dialog = page.getByRole('dialog');
             await expect(dialog).toBeVisible();
             await expect(dialog.locator('h2')).toContainText('Work has been updated');
         });

@@ -68,13 +68,13 @@ test.describe('Research Report admin edit', () => {
         const licenseInput = adminInfoAdminCard.getByTestId('rek-license-input');
         // Assuming the combobox is a sibling within the same parent as the input
         const parentOfLicenseInput = licenseInput.locator('xpath=..');
-        const licenseCombobox = parentOfLicenseInput.locator('[role=combobox]');
+        const licenseCombobox = parentOfLicenseInput.getByRole('combobox');
         await expect(licenseCombobox).toHaveText(record.fez_record_search_key_license.rek_license_lookup);
 
         // ---------------------------------------- GRANT INFORMATION TAB --------------------------------------------
         console.log('Grant Information tab');
-        await expect(page.locator('[data-testid=grants-section-header]')).toHaveText('Grants');
-        const grantsSectionContent = page.locator('[data-testid=grants-section-content]');
+        await expect(page.getByTestId('grants-section-header')).toHaveText('Grants');
+        const grantsSectionContent = page.getByTestId('grants-section-content');
         const grantInfoAdminCard = grantsSectionContent.locator('.AdminCard').first();
 
         await expect(grantInfoAdminCard.locator('h4')).toHaveText(/Grant information/);

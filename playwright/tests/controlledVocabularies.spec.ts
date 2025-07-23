@@ -19,9 +19,9 @@ test.describe('Controlled vocabularies', () => {
 
         // test tooltips
         await page.getByTestId('row-hidden-icon-453226').hover();
-        await expect(page.locator('[role=tooltip]')).toHaveText(/This vocabulary is hidden/);
+        await expect(page.getByRole('tooltip')).toHaveText(/This vocabulary is hidden/);
         await page.getByTestId('row-locked-icon-456849').hover();
-        await expect(page.locator('[role=tooltip]').last()).toHaveText(/This vocabulary and children are read-only/);
+        await expect(page.getByRole('tooltip').last()).toHaveText(/This vocabulary and children are read-only/);
     });
 
     test('Renders the editable child level controlled vocabulary screen', async ({ page }) => {

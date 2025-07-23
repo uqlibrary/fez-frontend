@@ -28,10 +28,8 @@ test.describe('Patent admin edit', () => {
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         console.log('Bibliographic tab');
-        const bibliographicSectionContent = page.locator('[data-testid=bibliographic-section-content]'); // Renamed for clarity, original had 'bibliographicTab' and 'scope'
-        await expect(bibliographicSectionContent.locator('[data-testid=rek-genre-input]')).toHaveValue(
-            record.rek_genre,
-        );
+        const bibliographicSectionContent = page.getByTestId('bibliographic-section-content'); // Renamed for clarity, original had 'bibliographicTab' and 'scope'
+        await expect(bibliographicSectionContent.getByTestId('rek-genre-input')).toHaveValue(record.rek_genre);
     });
 });
 

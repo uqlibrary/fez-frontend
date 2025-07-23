@@ -225,7 +225,7 @@ test.describe('Data Collection form', () => {
             .getByText(/Yes/)
             .first()
             .click();
-        await expect(page.locator('[role="dialog"]')).not.toBeVisible();
+        await expect(page.getByRole('dialog')).not.toBeVisible();
         await page.locator('#delete-all-rek-grant-agency').click();
         await page
             .locator('[role="dialog"] button')

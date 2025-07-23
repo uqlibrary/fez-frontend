@@ -42,7 +42,7 @@ test.describe('Data Collection admin edit', () => {
         await expect(adminTab.getByTestId('rek-license-input')).toHaveValue(
             record.fez_record_search_key_license.rek_license.toString(),
         );
-        await expect(adminTab.locator('[data-testid=rek-license-select]')).toHaveText(
+        await expect(adminTab.getByTestId('rek-license-select')).toHaveText(
             record.fez_record_search_key_license.rek_license_lookup,
         );
         await checkPartialDateFromRecordValue(page, 'rek-end-date', record.fez_record_search_key_end_date.rek_end_date);

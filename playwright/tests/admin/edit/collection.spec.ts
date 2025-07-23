@@ -19,11 +19,11 @@ test.describe('As an admin,', () => {
 
         // cycle through the known default view types and ensure
         // each option is displayed after being selected
-        const defaultViewSelector = page.locator('[data-testid=collection-view-type-select]');
-        await page.locator('[data-testid=collection-view-type-select]').click();
-        const defaultViewOptions = page.locator('[data-testid=collection-view-type-options]');
+        const defaultViewSelector = page.getByTestId('collection-view-type-select');
+        await page.getByTestId('collection-view-type-select').click();
+        const defaultViewOptions = page.getByTestId('collection-view-type-options');
         await page
-            .locator('[data-testid=collection-view-type-options]')
+            .getByTestId('collection-view-type-options')
             .locator('li', { hasText: /Auto/ })
             .first()
             .click();
@@ -46,7 +46,7 @@ test.describe('As an admin,', () => {
             'Aboriginal and Torres Strait Islander Studies Unit Publications With Extra Data UPDATED',
         );
         await typeCKEditor(page, 'rek-description', 'Test collection description UPDATED');
-        await page.locator('[data-testid=rek-keywords-list-row-2-delete]').click();
+        await page.getByTestId('rek-keywords-list-row-2-delete').click();
         await expect(page.locator('h2').getByText(/Delete keyword/)).toBeVisible();
         await page
             .locator('button')
@@ -54,7 +54,7 @@ test.describe('As an admin,', () => {
             .first()
             .click();
         await typeCKEditor(page, 'ain-notes', 'Test internal notes UPDATED');
-        await page.locator('[data-testid=reason-input]').fill('Automated Update test for Collection');
+        await page.getByTestId('reason-input').fill('Automated Update test for Collection');
         await page
             .locator('button')
             .getByText(/Save/)

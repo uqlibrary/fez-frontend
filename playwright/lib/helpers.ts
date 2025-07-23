@@ -27,7 +27,7 @@ export const navToHomeFromMenu = async (
     await menuItem0.click();
 
     if (locale && page.url() !== `${baseURL}/`) {
-        const dialog = page.locator('[role="dialog"]').filter({ hasText: locale.confirmationTitle });
+        const dialog = page.getByRole('dialog').filter({ hasText: locale.confirmationTitle });
         await dialog.waitFor({ state: 'visible' });
         await dialog.getByRole('button', { name: locale.confirmButtonLabel }).click();
     }
@@ -40,8 +40,9 @@ export const fillInput = async (page: Page, selector: string, value: any, times:
 export async function assertIsVisible(element: Locator): Promise<void> {
     await expect(element).toBeVisible();
 }
+
 export async function assertIsNotVisible(element: Locator): Promise<void> {
-    await expect(element).not.toBeInViewport({ timeout: 0 });
+    await expect(element).not.toBeInViewport();
 }
 
 export async function clickAutoSuggestion(page: Page, fieldName: string, ordinal: string | number): Promise<void> {
@@ -51,7 +52,7 @@ export async function clickAutoSuggestion(page: Page, fieldName: string, ordinal
 export async function loadAdminDashboard(page: Page, user: string = 'uqstaff') {
     await page.setViewportSize({ width: 1200, height: 1000 });
     await page.goto(`/admin/dashboard?user=${user}`);
-    await expect(page.locator('h2').getByText('Admin dashboard')).toBeVisible({ timeout: 10000 });
+    await expect(page.locator('h2').getByText('Admin dashboard')).toBeVisible();
 }
 
 export const testIdStartsWith = (page: Page | Locator, id: string) => page.locator(`[data-testid^=${id}]`);

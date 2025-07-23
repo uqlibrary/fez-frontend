@@ -43,7 +43,7 @@ test.describe('Strategic Publishing - Favourite Journals', () => {
         await page.getByTestId('publication-list-sorting-sort-order').click();
         await page.getByTestId('publication-list-sorting-sort-order-option-1').click();
         // make sure selection was cleared
-        await expect(page.locator('#journal-list-header-col-1-select-all')).not.toBeChecked({ timeout: 1000 });
+        await expect(page.locator('#journal-list-header-col-1-select-all')).not.toBeChecked();
 
         await expect(page.locator('#journal-list-data-col-1-checkbox-0')).not.toBeChecked();
         await expect(page.locator('#journal-list-data-col-1-checkbox-1')).not.toBeChecked();

@@ -61,40 +61,38 @@ test.describe('Conference Paper admin edit', () => {
                 .locator('..')
                 .locator('[role=button] span'),
         ).toHaveCount(0);
-        await expect(bibliographicTab.locator('[data-testid=rek-native-script-proceedings-title-input]')).toHaveValue(
+        await expect(bibliographicTab.getByTestId('rek-native-script-proceedings-title-input')).toHaveValue(
             record.fez_record_search_key_native_script_proceedings_title.rek_native_script_proceedings_title,
         );
-        await expect(bibliographicTab.locator('[data-testid=rek-roman-script-proceedings-title-input]')).toHaveValue(
+        await expect(bibliographicTab.getByTestId('rek-roman-script-proceedings-title-input')).toHaveValue(
             record.fez_record_search_key_roman_script_proceedings_title.rek_roman_script_proceedings_title,
         );
-        await expect(bibliographicTab.locator('[data-testid=rek-translated-proceedings-title-input]')).toHaveValue(
+        await expect(bibliographicTab.getByTestId('rek-translated-proceedings-title-input')).toHaveValue(
             record.fez_record_search_key_translated_proceedings_title.rek_translated_proceedings_title,
         );
-        await expect(bibliographicTab.locator('[data-testid=rek-journal-name-input]')).toHaveValue(
+        await expect(bibliographicTab.getByTestId('rek-journal-name-input')).toHaveValue(
             record.fez_record_search_key_journal_name.rek_journal_name,
         );
-        await expect(bibliographicTab.locator('[data-testid=rek-language-of-journal-name-select]')).toHaveText(
-            'German',
-        );
+        await expect(bibliographicTab.getByTestId('rek-language-of-journal-name-select')).toHaveText('German');
         await expect(
             bibliographicTab
-                .locator('[data-testid=rek-language-of-journal-name-select]')
+                .getByTestId('rek-language-of-journal-name-select')
                 .locator('..')
                 .locator('[role=button] span'),
         ).toHaveCount(0);
-        await expect(bibliographicTab.locator('[data-testid=rek-native-script-journal-name-input]')).toHaveValue(
+        await expect(bibliographicTab.getByTestId('rek-native-script-journal-name-input')).toHaveValue(
             record.fez_record_search_key_native_script_journal_name.rek_native_script_journal_name,
         );
-        await expect(bibliographicTab.locator('[data-testid=rek-roman-script-journal-name-input]')).toHaveValue(
+        await expect(bibliographicTab.getByTestId('rek-roman-script-journal-name-input')).toHaveValue(
             record.fez_record_search_key_roman_script_journal_name.rek_roman_script_journal_name,
         );
-        await expect(bibliographicTab.locator('[data-testid=rek-translated-journal-name-input]')).toHaveValue(
+        await expect(bibliographicTab.getByTestId('rek-translated-journal-name-input')).toHaveValue(
             record.fez_record_search_key_translated_journal_name.rek_translated_journal_name,
         );
-        await expect(bibliographicTab.locator('[data-testid=rek-series-input]')).toHaveValue(
+        await expect(bibliographicTab.getByTestId('rek-series-input')).toHaveValue(
             record.fez_record_search_key_series.rek_series,
         );
-        await expect(bibliographicTab.locator('[data-testid=rek-article-number-input]')).toHaveValue(
+        await expect(bibliographicTab.getByTestId('rek-article-number-input')).toHaveValue(
             record.fez_record_search_key_article_number.rek_article_number,
         );
 
@@ -112,7 +110,7 @@ test.describe('Conference Paper admin edit', () => {
 
         for (const [index, selector] of selectors.entries()) {
             await bibliographicTab.locator(selector).clear();
-            await expect(page.locator('[data-testid=alert-warning]')).toContainText(errorMessages[index]);
+            await expect(page.getByTestId('alert-warning')).toContainText(errorMessages[index]);
         }
     });
 });

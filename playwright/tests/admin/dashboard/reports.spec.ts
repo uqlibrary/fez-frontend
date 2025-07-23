@@ -33,7 +33,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
 
         await expect(page.getByTestId('report-export-only-input')).toHaveValue('');
         await page.getByTestId('report-export-only-input').click();
-        await expect(page.locator('[role=option]')).toHaveCount(6);
+        await expect(page.getByRole('option')).toHaveCount(6);
         await page.locator('[role=option]', { hasText: 'Wok ID dups' }).click();
         await expect(page.getByTestId('report-export-only-input')).toHaveValue('Wok ID dups');
 
@@ -48,7 +48,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
 
         await expect(page.getByTestId('report-display-export-system-alert-id-input')).not.toBeAttached();
         await page.getByTestId('report-display-export-input').click();
-        await expect(page.locator('[role=option]')).toHaveCount(2);
+        await expect(page.getByRole('option')).toHaveCount(2);
         await page.locator('[role=option]', { hasText: 'Works history' }).click();
         await expect(page.getByTestId('report-display-export-input')).toHaveValue('Works history');
         await expect(page.getByTestId('report-display-export-date-from-input')).toHaveValue('');
@@ -59,7 +59,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
         await expect(page.getByTestId('report-display-export-button')).toBeDisabled(); // dates are required
 
         await page.getByTestId('report-display-export-input').click();
-        await expect(page.locator('[role=option]')).toHaveCount(2);
+        await expect(page.getByRole('option')).toHaveCount(2);
         await page.locator('[role=option]', { hasText: 'System alert log' }).click();
         await expect(page.getByTestId('report-display-export-input')).toHaveValue('System alert log');
 
@@ -94,7 +94,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
         });
 
         await page
-            .locator('[role=option]')
+            .getByRole('option')
             .getByText(/DOI Dups/)
             .click();
         await expect(page.getByTestId('report-export-only-input')).toHaveValue('DOI Dups');
@@ -254,7 +254,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
     test('displays and downloads a display report', async ({ page }) => {
         // works history
         await page.getByTestId('report-display-export-input').click();
-        await expect(page.locator('[role=option]')).toHaveCount(2);
+        await expect(page.getByRole('option')).toHaveCount(2);
         await assertAccessibility(page, 'div.StandardPage', {
             disabledRules: ['color-contrast'],
         });
@@ -263,8 +263,8 @@ test.describe('Admin Dashboard - Reports tab', () => {
         await page.getByTestId('report-display-export-date-to-input').fill('02/01/2020');
         await page.getByTestId('report-display-export-button').click();
         await expect(page.getByTestId('report-display-data-grid')).toBeAttached();
-        await expect(page.getByTestId('report-display-data-grid').locator('[role=columnheader]')).toHaveCount(6);
-        await expect(page.getByTestId('report-display-data-grid').locator('[role=row]')).toHaveCount(7); // +1 for header
+        await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(6);
+        await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(7); // +1 for header
         await assertAccessibility(page, 'div.StandardPage', {
             disabledRules: ['color-contrast'],
         });
@@ -273,12 +273,12 @@ test.describe('Admin Dashboard - Reports tab', () => {
 
         // system alerts
         await page.getByTestId('report-display-export-input').click();
-        await expect(page.locator('[role=option]')).toHaveCount(2);
+        await expect(page.getByRole('option')).toHaveCount(2);
         await page.locator('[role=option]', { hasText: 'System alert log' }).click();
         await page.getByTestId('report-display-export-button').click();
         await expect(page.getByTestId('report-display-data-grid')).toBeAttached();
-        await expect(page.getByTestId('report-display-data-grid').locator('[role=columnheader]')).toHaveCount(8);
-        await expect(page.getByTestId('report-display-data-grid').locator('[role=row]')).toHaveCount(8); // +1 for header
+        await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(8);
+        await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(8); // +1 for header
         await assertAccessibility(page, 'div.StandardPage', {
             disabledRules: ['color-contrast', 'aria-required-children'],
         });
@@ -289,8 +289,8 @@ test.describe('Admin Dashboard - Reports tab', () => {
         await page.getByTestId('report-display-export-system-alert-id-input').fill('1');
         await page.getByTestId('report-display-export-button').click();
         await expect(page.getByTestId('report-display-data-grid')).toBeAttached();
-        await expect(page.getByTestId('report-display-data-grid').locator('[role=columnheader]')).toHaveCount(9); // extra column for content field
-        await expect(page.getByTestId('report-display-data-grid').locator('[role=row]')).toHaveCount(2); // +1 for header
+        await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(9); // extra column for content field
+        await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(2); // +1 for header
 
         await assertFileDownload(page, [page.getByTestId('report-display-export-export-button').click()]);
     });
@@ -298,15 +298,15 @@ test.describe('Admin Dashboard - Reports tab', () => {
     test('displays a report even if user navs away and back', async ({ page }) => {
         // works history
         await page.getByTestId('report-display-export-input').click();
-        await expect(page.locator('[role=option]')).toHaveCount(2);
+        await expect(page.getByRole('option')).toHaveCount(2);
 
         await page.locator('[role=option]', { hasText: 'Works history' }).click();
         await page.getByTestId('report-display-export-date-from-input').fill('01/01/2020');
         await page.getByTestId('report-display-export-date-to-input').fill('02/01/2020');
         await page.getByTestId('report-display-export-button').click();
         await expect(page.getByTestId('report-display-data-grid')).toBeAttached();
-        await expect(page.getByTestId('report-display-data-grid').locator('[role=columnheader]')).toHaveCount(6);
-        await expect(page.getByTestId('report-display-data-grid').locator('[role=row]')).toHaveCount(7); // +1 for header
+        await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(6);
+        await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(7); // +1 for header
 
         // nav away
         const todayTab = page.locator('[role=tab]', { hasText: 'TODAY' });
@@ -324,8 +324,8 @@ test.describe('Admin Dashboard - Reports tab', () => {
 
         // results should still be visible
         await expect(page.getByTestId('report-display-data-grid')).toBeAttached();
-        await expect(page.getByTestId('report-display-data-grid').locator('[role=columnheader]')).toHaveCount(6);
-        await expect(page.getByTestId('report-display-data-grid').locator('[role=row]')).toHaveCount(7); // +1 for header
+        await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(6);
+        await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(7); // +1 for header
     });
 
     test('validates the filters', async ({ page }) => {
@@ -333,7 +333,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
         // an additional field, but otherwise the
         // validation is the same
         await page.getByTestId('report-display-export-input').click();
-        await expect(page.locator('[role=option]')).toHaveCount(2);
+        await expect(page.getByRole('option')).toHaveCount(2);
         await page.locator('[role=option]', { hasText: 'System alert log' }).click();
 
         await expect(page.getByTestId('report-display-export-button')).not.toBeDisabled();

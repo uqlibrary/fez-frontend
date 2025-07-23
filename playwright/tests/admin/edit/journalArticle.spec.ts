@@ -37,7 +37,7 @@ test.describe('Journal Article admin edit', () => {
 
         // ---------------------------------------------- NOTES TAB --------------------------------------------------
         console.log('Notes tab');
-        await expect(page.locator('[data-testid=notes-section-header]')).toHaveText('Notes');
+        await expect(page.getByTestId('notes-section-header')).toHaveText('Notes');
         let ckeditorText = await readCKEditor(page, 'rek-notes');
         expect(ckeditorText).toContain(record.fez_record_search_key_notes.rek_notes);
         // 'Published online before print: 28 December 2012.'
@@ -46,44 +46,34 @@ test.describe('Journal Article admin edit', () => {
 
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
         console.log('Identifiers tab');
-        await expect(page.locator('[data-testid=identifiers-section-header]')).toHaveText('Identifiers');
-        const identifiersSectionContent = page.locator('[data-testid=identifiers-section-content]');
+        await expect(page.getByTestId('identifiers-section-header')).toHaveText('Identifiers');
+        const identifiersSectionContent = page.getByTestId('identifiers-section-content');
         {
             const adminCard0 = identifiersSectionContent.locator('.AdminCard').first();
             await expect(adminCard0.locator('h4')).toHaveText(/Manage identifiers/);
-            await expect(adminCard0.locator('[data-testid=rek-doi-input]')).toHaveValue(
-                record.fez_record_search_key_doi.rek_doi,
-            );
-            await expect(adminCard0.locator('[data-testid=rek-isi-loc-input]')).toHaveValue(
+            await expect(adminCard0.getByTestId('rek-doi-input')).toHaveValue(record.fez_record_search_key_doi.rek_doi);
+            await expect(adminCard0.getByTestId('rek-isi-loc-input')).toHaveValue(
                 record.fez_record_search_key_isi_loc.rek_isi_loc,
             );
-            await expect(adminCard0.locator('[data-testid=rek-scopus-id-input]')).toHaveValue(
+            await expect(adminCard0.getByTestId('rek-scopus-id-input')).toHaveValue(
                 record.fez_record_search_key_scopus_id.rek_scopus_id,
             );
-            await expect(adminCard0.locator('[data-testid=rek-pubmed-id-input]')).toHaveValue(
+            await expect(adminCard0.getByTestId('rek-pubmed-id-input')).toHaveValue(
                 record.fez_record_search_key_pubmed_id.rek_pubmed_id,
             );
-            await expect(adminCard0.locator('[data-testid=rek-pubmed-central-id-input]')).toHaveValue(
+            await expect(adminCard0.getByTestId('rek-pubmed-central-id-input')).toHaveValue(
                 record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id,
             );
-            await expect(adminCard0.locator('[data-testid=rek-wok-doc-type-input]')).toHaveValue(
-                record.rek_wok_doc_type,
-            );
-            await expect(adminCard0.locator('[data-testid=rek-wok-doc-type-select]')).toHaveText(
+            await expect(adminCard0.getByTestId('rek-wok-doc-type-input')).toHaveValue(record.rek_wok_doc_type);
+            await expect(adminCard0.getByTestId('rek-wok-doc-type-select')).toHaveText(
                 new RegExp(`^${record.rek_wok_doc_type}`),
             );
-            await expect(adminCard0.locator('[data-testid=rek-scopus-doc-type-input]')).toHaveValue(
-                record.rek_scopus_doc_type,
-            );
-            await expect(adminCard0.locator('[data-testid=rek-scopus-doc-type-select]')).toHaveText(
+            await expect(adminCard0.getByTestId('rek-scopus-doc-type-input')).toHaveValue(record.rek_scopus_doc_type);
+            await expect(adminCard0.getByTestId('rek-scopus-doc-type-select')).toHaveText(
                 new RegExp(`^${record.rek_scopus_doc_type}`),
             );
-            await expect(adminCard0.locator('[data-testid=rek-pubmed-doc-type-input]')).toHaveValue(
-                record.rek_pubmed_doc_type,
-            );
-            await expect(adminCard0.locator('[data-testid=rek-pubmed-doc-type-select]')).toHaveText(
-                record.rek_pubmed_doc_type,
-            );
+            await expect(adminCard0.getByTestId('rek-pubmed-doc-type-input')).toHaveValue(record.rek_pubmed_doc_type);
+            await expect(adminCard0.getByTestId('rek-pubmed-doc-type-select')).toHaveText(record.rek_pubmed_doc_type);
         }
         {
             const adminCard1 = identifiersSectionContent.locator('.AdminCard').nth(1);
@@ -93,8 +83,8 @@ test.describe('Journal Article admin edit', () => {
 
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         console.log('Bibliographic tab');
-        await expect(page.locator('[data-testid=bibliographic-section-header]')).toHaveText('Bibliographic');
-        const bibliographicSectionContent = page.locator('[data-testid=bibliographic-section-content]');
+        await expect(page.getByTestId('bibliographic-section-header')).toHaveText('Bibliographic');
+        const bibliographicSectionContent = page.getByTestId('bibliographic-section-content');
         const bibliographicCards = bibliographicSectionContent.locator('.AdminCard');
 
         {
@@ -108,8 +98,8 @@ test.describe('Journal Article admin edit', () => {
             const card = bibliographicCards.nth(1);
             await expect(card.locator('h4')).toHaveText(/Language of work & Journal name/);
             const langCodes = record.fez_record_search_key_language.map(lang => lang.rek_language);
-            await expect(card.locator('[data-testid=rek-language-input]')).toHaveValue(langCodes.join(','));
-            await expect(card.locator('[data-testid=rek-journal-name-input]')).toHaveValue(
+            await expect(card.getByTestId('rek-language-input')).toHaveValue(langCodes.join(','));
+            await expect(card.getByTestId('rek-journal-name-input')).toHaveValue(
                 record.fez_record_search_key_journal_name.rek_journal_name,
             );
         }
@@ -222,8 +212,8 @@ test.describe('Journal Article admin edit', () => {
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         console.log('Author Details tab');
-        await expect(page.locator('[data-testid=authors-section-header]')).toHaveText('Authors');
-        const authorsSectionContent = page.locator('[data-testid=authors-section-content]');
+        await expect(page.getByTestId('authors-section-header')).toHaveText('Authors');
+        const authorsSectionContent = page.getByTestId('authors-section-content');
         {
             const authorsCard = authorsSectionContent.locator('.AdminCard').first();
             await expect(authorsCard.locator('h4')).toHaveText(/Authors/);
@@ -245,8 +235,8 @@ test.describe('Journal Article admin edit', () => {
         console.log('Admin tab');
         const collections = record.fez_record_search_key_ismemberof.map(item => item.rek_ismemberof_lookup);
 
-        await expect(page.locator('[data-testid=admin-section-header]')).toHaveText('Admin');
-        const adminSectionContent = page.locator('[data-testid=admin-section-content]');
+        await expect(page.getByTestId('admin-section-header')).toHaveText('Admin');
+        const adminSectionContent = page.getByTestId('admin-section-content');
         const adminCards = adminSectionContent.locator('.AdminCard');
         const collectionsCard = adminCards.first();
 
@@ -263,9 +253,9 @@ test.describe('Journal Article admin edit', () => {
         {
             const card = adminCards.nth(1);
             await expect(card.locator('h4')).toHaveText(/Additional information/);
-            await expect(card.locator('[data-testid=rek-subtype-input]')).toHaveValue(record.rek_subtype);
-            await expect(card.locator('[data-testid=rek-subtype-select]')).toHaveText(record.rek_subtype);
-            await expect(card.locator('[data-testid=rek-herdc-code-input]')).toHaveValue(
+            await expect(card.getByTestId('rek-subtype-input')).toHaveValue(record.rek_subtype);
+            await expect(card.getByTestId('rek-subtype-select')).toHaveText(record.rek_subtype);
+            await expect(card.getByTestId('rek-herdc-code-input')).toHaveValue(
                 record.fez_record_search_key_herdc_code.rek_herdc_code.toString(),
             );
             await expect(card.locator('[data-testid=rek-herdc-code-select]')).toHaveText(
