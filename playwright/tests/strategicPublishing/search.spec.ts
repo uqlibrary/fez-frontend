@@ -9,9 +9,9 @@ const captureBeforeContent = async (page: Page, selector: string) =>
     );
 
 async function assertCollapsiblePanel(page: Page, index: number) {
-    await expect(page.getByTestId(`journal-list-collapse-panel-${index}"`)).not.toBeVisible();
-    await page.getByTestId(`journal-list-expander-btn-${index}"`).click();
-    await expect(page.getByTestId(`journal-list-collapse-panel-${index}"`)).toBeVisible();
+    await expect(page.getByTestId(`journal-list-collapse-panel-${index}`)).not.toBeVisible();
+    await page.getByTestId(`journal-list-expander-btn-${index}`).click();
+    await expect(page.getByTestId(`journal-list-collapse-panel-${index}`)).toBeVisible();
 
     // Verify all metrics are visible
     const metrics = [
@@ -24,7 +24,7 @@ async function assertCollapsiblePanel(page: Page, index: number) {
     ];
 
     for (const metric of metrics) {
-        const locator = page.getByTestId(`${metric.testid}-${index}"`);
+        const locator = page.getByTestId(`${metric.testid}-${index}`);
         await expect(locator).toContainText(metric.text);
     }
 

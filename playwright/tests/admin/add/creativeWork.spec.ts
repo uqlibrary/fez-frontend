@@ -63,7 +63,7 @@ test.describe('As an admin, I can', () => {
     };
 
     const assertHasAuthor = async (page: Page, index: number, value: string) => {
-        await expect(page.getByTestId(`'rek-author-list-row-${index}-name-as-published'`)).toHaveText(value);
+        await expect(page.getByTestId(`rek-author-list-row-${index}-name-as-published`)).toHaveText(value);
     };
 
     test('add a creative work', async ({ page }) => {
