@@ -9,6 +9,8 @@ import {
 } from 'config/general';
 import { useWatch } from 'react-hook-form';
 import { unionBy } from 'lodash';
+import { publicationTypes } from 'config';
+import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
 export const getInitialValuesForForm = (recordToView, createMode) => {
     const initialFormValues = {
@@ -39,10 +41,10 @@ export const useRecord = createMode => {
         error,
     } = useSelector(state => state.get('viewRecordReducer'));
 
-    const initialFormValues = useMemo(() => getInitialValuesForForm(recordToView, createMode), [
-        createMode,
-        recordToView,
-    ]);
+    const initialFormValues = useMemo(() => {
+        return getInitialValuesForForm(recordToView, createMode);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [createMode, JSON.stringify(recordToView)]);
 
     return {
         loadingRecordToView,
@@ -74,7 +76,7 @@ export const useRecordToView = (recordToView, createMode, form) => {
     };
 };
 
-export const useFormOnChangeHook = form => {
+export const useFormOnChangeHook = (form, createMode) => {
     const prevBibliographicSectionFezMatchedJournals = useRef('');
     const [
         rekDisplayType,
@@ -92,6 +94,13 @@ export const useFormOnChangeHook = form => {
     });
     if (rekDisplayType === PUBLICATION_TYPE_THESIS && !!adminSectionRekSubtype && !!!bibliographicSectionRekGenreType) {
         form.setValue('bibliographicSection.rek_genre_type', adminSectionRekSubtype);
+    }
+
+    // AD-290 Remove the subtype key if the selected display type does not have subtypes
+    const selectedPublicationType = !!rekDisplayType && publicationTypes({ ...recordForms }, true)[rekDisplayType];
+    const hasSubtypes = !!(selectedPublicationType || {}).subtypes;
+    if (createMode && !hasSubtypes && Object.hasOwn(form.getValues()?.adminSection ?? {}, 'rek_subtype')) {
+        form.unregister('adminSection.rek_subtype');
     }
 
     const { isTouched } = form.getFieldState('bibliographicSection.fez_matched_journals');

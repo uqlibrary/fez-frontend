@@ -11,7 +11,7 @@ import { useLocation, useNavigationType, createRoutesFromChildren, matchRoutes }
 import { setup } from 'mock';
 
 // pick utils
-import MomentUtils from '@date-io/moment';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 
 // Internal
 import Root from './Root';
@@ -70,13 +70,15 @@ if (process.env.ENABLE_LOG) {
 const render = () => {
     const root = createRoot(document.getElementById('react-root'));
     root.render(
-        <AppErrorBoundary>
-            <Provider store={store}>
-                <LocalizationProvider dateAdapter={MomentUtils}>
-                    <Root />
-                </LocalizationProvider>
-            </Provider>
-        </AppErrorBoundary>,
+        <React.StrictMode>
+            <AppErrorBoundary>
+                <Provider store={store}>
+                    <LocalizationProvider dateAdapter={AdapterMoment}>
+                        <Root />
+                    </LocalizationProvider>
+                </Provider>
+            </AppErrorBoundary>
+        </React.StrictMode>,
     );
 };
 

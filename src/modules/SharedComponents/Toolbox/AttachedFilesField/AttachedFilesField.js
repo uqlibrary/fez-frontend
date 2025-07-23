@@ -74,11 +74,13 @@ export const AttachedFilesField = ({ onRenameAttachedFile, onDeleteAttachedFile,
     const newPropsDataStreams = getState();
     const newPropsDataStreamsString = JSON.stringify(newPropsDataStreams);
 
-    /* istanbul ignore else */
-    if (newPropsDataStreamsString !== prevPropsDatastream.current) {
-        prevPropsDatastream.current = newPropsDataStreamsString;
-        setDataStreams(newPropsDataStreams);
-    }
+    React.useEffect(() => {
+        /* istanbul ignore else */
+        if (newPropsDataStreamsString !== prevPropsDatastream.current) {
+            prevPropsDatastream.current = newPropsDataStreamsString;
+            setDataStreams(newPropsDataStreams);
+        }
+    }, [newPropsDataStreams, newPropsDataStreamsString]);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDataStreamOrderChange = useCallback(

@@ -1,17 +1,24 @@
 import React from 'react';
 import ManageUsers from './index';
-import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
+import {
+    render,
+    WithReduxStore,
+    waitFor,
+    waitForElementToBeRemoved,
+    within,
+    selectDropDownOptionByElement,
+    fireEvent,
+    userEvent,
+} from 'test-utils';
 import * as ManageUsersActions from 'actions/manageUsers';
 import * as repository from 'repositories';
 import * as AppActions from 'actions/app';
 
 const setup = (testProps = {}) => {
     return render(
-        <React.StrictMode>
-            <WithReduxStore>
-                <ManageUsers {...testProps} />
-            </WithReduxStore>
-        </React.StrictMode>,
+        <WithReduxStore>
+            <ManageUsers {...testProps} />
+        </WithReduxStore>,
     );
 };
 
@@ -31,7 +38,7 @@ describe('ManageUsers', () => {
     it('should render default view', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({ page: 1, pageSize: 1, search: '' }).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         usr_id: 1000000293,
@@ -58,14 +65,18 @@ describe('ManageUsers', () => {
                     },
                 ],
                 total: 1,
+                per_page: 20,
+                current_page: 1,
+                from: 1,
+                to: 20,
             });
-        const loadAuthorListFn = jest.spyOn(ManageUsersActions, 'loadUserList');
+        const loadUserListFn = jest.spyOn(ManageUsersActions, 'loadUserList');
 
         const { getByText, getByTestId } = setup({});
 
-        await waitForElementToBeRemoved(() => getByText('No records to display'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
-        expect(loadAuthorListFn).toBeCalled();
+        expect(loadUserListFn).toHaveBeenCalled();
 
         await waitFor(() => getByText('Manage users'));
         expect(getByTestId('users-list')).toBeInTheDocument();
@@ -86,7 +97,7 @@ describe('ManageUsers', () => {
 
         const { getByText } = setup({});
 
-        await waitForElementToBeRemoved(() => getByText('Loading users'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
@@ -94,6 +105,8 @@ describe('ManageUsers', () => {
     });
 
     it('should change call an api with updated page size', async () => {
+        const loadUserListFn = jest.spyOn(ManageUsersActions, 'loadUserList');
+
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
             .reply(200, {
@@ -225,20 +238,18 @@ describe('ManageUsers', () => {
                 current_page: 1,
             });
 
-        const { getAllByTestId, getByText } = setup({});
+        const { container } = setup({});
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
-        await waitForElementToBeRemoved(() => getByText('No records to display'));
+        expect(loadUserListFn).toHaveBeenCalledTimes(1);
+        await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(20));
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(20);
+        const el = within(container.querySelector('#mrt-rows-per-page').closest('.MuiInput-root')).getByRole(
+            'combobox',
+        );
+        await selectDropDownOptionByElement(el, '50');
 
-        fireEvent.mouseDown(getByText('20 rows'));
-        fireEvent.click(getByText('50'));
-
-        // await waitFor(() => getByTestId('users-list-row-22'));
-
-        // expect(getByTestId('users-list-row-0')).toBeInTheDocument();
-        // expect(getByTestId('users-list-row-22')).toBeInTheDocument();
+        expect(loadUserListFn).toHaveBeenCalledTimes(2);
     });
 
     it('should render added info after adding and display "Never" for last login date', async () => {
@@ -265,7 +276,8 @@ describe('ManageUsers', () => {
                     usr_last_login_date: '2017-02-16T23:11:38Z',
                 },
             });
-        const { getAllByTestId, getByTestId } = setup();
+        const { container, getByTestId } = setup();
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         fireEvent.click(getByTestId('users-add-new-user'));
 
@@ -276,7 +288,7 @@ describe('ManageUsers', () => {
         fireEvent.click(getByTestId('usr-administrator-input'));
         fireEvent.click(getByTestId('users-add-this-user-save'));
 
-        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
+        await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(1));
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test Name');
         expect(getByTestId('usr-last-login-date-0')).toHaveTextContent('Never');
@@ -297,6 +309,7 @@ describe('ManageUsers', () => {
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
         const { getByTestId, queryByTestId } = setup({});
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         fireEvent.click(getByTestId('users-add-new-user'));
 
@@ -310,6 +323,8 @@ describe('ManageUsers', () => {
     });
 
     it('should render updated info after editing', async () => {
+        const updateUserListItemFn = jest.spyOn(ManageUsersActions, 'updateUserListItem');
+
         mockApi
             .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtname', rule: 'lookup' } })
             .replyOnce(200, {})
@@ -351,9 +366,9 @@ describe('ManageUsers', () => {
                     usr_username: 'uqtname',
                 },
             });
-        const { getAllByTestId, getByTestId, getByText } = setup();
+        const { queryByTestId, getByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => getByText('No records to display'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
 
@@ -366,15 +381,18 @@ describe('ManageUsers', () => {
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
         fireEvent.click(getByTestId('users-update-this-user-save'));
 
-        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
+        await waitFor(() => {
+            expect(queryByTestId('standard-card-user-information')).not.toBeInTheDocument();
+        });
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test');
         expect(getByTestId('usr-email-0')).toHaveAttribute('value', 'test@uq.edu.au');
         expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqtname');
+
+        await waitFor(() => expect(updateUserListItemFn).toHaveBeenCalled());
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
-        console.log('search url=', new RegExp(repository.routes.USERS_SEARCH_API({}).apiUrl));
         mockApi
             .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtname', rule: 'lookup' } })
             .replyOnce(200, {})
@@ -409,16 +427,18 @@ describe('ManageUsers', () => {
             })
             .onPut(new RegExp(repository.routes.USER_API().apiUrl))
             .replyOnce(500);
-        const { getAllByTestId, getByTestId, getByText } = setup({});
+        const { queryByTestId, getByTestId } = setup({});
 
-        await waitForElementToBeRemoved(() => getByText('No records to display'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
         fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test, Name' } });
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
         fireEvent.click(getByTestId('users-update-this-user-save'));
 
-        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
+        await waitFor(() => {
+            expect(queryByTestId('standard-card-user-information')).not.toBeInTheDocument();
+        });
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
         expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
@@ -483,22 +503,21 @@ describe('ManageUsers', () => {
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
-        const { getAllByTestId, getByTestId, getByText } = setup({});
+        const { container, getByTestId } = setup({});
 
-        await waitForElementToBeRemoved(() => getByText('No records to display'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2));
 
         fireEvent.click(getByTestId('users-list-row-0-delete-this-user'));
         fireEvent.click(getByTestId('confirm-users-delete-this-user-confirmation'));
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
-        // await waitFor(() => expect(getByTestId('usr-full-name-0')).toBeInTheDocument());
-        // await new Promise(r => setTimeout(r, 2000));
-        // expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Testing User');
-        // expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
+        await waitFor(() => expect(getByTestId('usr-full-name-0')).toBeInTheDocument());
+        await new Promise(r => setTimeout(r, 2000));
+        expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Testing User');
+        expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
     });
 
     it('should render same list after unsuccessful delete operation', async () => {
@@ -560,12 +579,11 @@ describe('ManageUsers', () => {
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
-        const { getAllByTestId, getByTestId, getByText } = setup({});
+        const { container, getByTestId } = setup({});
 
-        await waitForElementToBeRemoved(() => getByText('No records to display'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2));
 
         fireEvent.click(getByTestId('users-list-row-0-delete-this-user'));
         fireEvent.click(getByTestId('confirm-users-delete-this-user-confirmation'));
@@ -611,22 +629,18 @@ describe('ManageUsers', () => {
                 },
             });
 
-        const { queryAllByTestId, getAllByTestId, getByText, getByTestId, queryByTestId } = setup({});
+        const { container, getAllByLabelText, getByTestId, findByText } = setup({});
 
-        await waitForElementToBeRemoved(() => getByText('No records to display'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(3);
+        await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(3));
 
-        fireEvent.click(getByTestId('select-user-0'));
-        fireEvent.click(getByTestId('select-user-1'));
-        fireEvent.click(getByTestId('select-user-2'));
+        fireEvent.click(getAllByLabelText('Toggle select all')[1]);
+        await findByText('3 of 3 row(s) selected');
         fireEvent.click(getByTestId('users-delete-selected-users'));
         fireEvent.click(getByTestId('confirm-bulk-delete-users-confirmation'));
 
-        await waitFor(() => {
-            expect(queryAllByTestId('mtablebodyrow').length).toBe(0);
-        });
+        await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(0));
     });
 
     it('should fail to bulk delete all users', async () => {
@@ -657,26 +671,24 @@ describe('ManageUsers', () => {
             .onPost('fez-users/delete-list')
             .replyOnce(500);
 
-        const { getAllByTestId, getByText, getByTestId } = setup({});
+        const { container, getAllByLabelText, getByTestId, findByText, getByText } = setup({});
 
-        await waitForElementToBeRemoved(() => getByText('No records to display'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(3);
+        await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(3));
 
-        fireEvent.click(getByTestId('select-user-0'));
-        fireEvent.click(getByTestId('select-user-1'));
-        fireEvent.click(getByTestId('select-user-2'));
+        fireEvent.click(getAllByLabelText('Toggle select all')[1]);
+        await findByText('3 of 3 row(s) selected');
         fireEvent.click(getByTestId('users-delete-selected-users'));
         fireEvent.click(getByTestId('confirm-bulk-delete-users-confirmation'));
 
         await waitFor(() => {
-            expect(getAllByTestId('mtablebodyrow').length).toBe(3);
+            expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(3);
             expect(getByText('Add new user')).toBeInTheDocument();
         });
     });
 
-    it('should exit from editing author mode', async () => {
+    it('should exit from editing user mode', async () => {
         mockApi.onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl)).replyOnce(200, {
             data: [
                 {
@@ -728,21 +740,111 @@ describe('ManageUsers', () => {
             ],
             total: 2,
         });
-        const { getAllByTestId, getByTestId, getByText, queryByTestId, queryByText } = setup();
+        const { container, getByTestId, queryByTestId, queryByText, findByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => getByText('No records to display'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
 
-        fireEvent.click(tableRows[0]);
+        fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
+        await findByTestId('standard-card-user-information');
+        expect(queryByText('User information')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
+        fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test, Name' } });
+        fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
+        fireEvent.click(getByTestId('users-update-this-user-save'));
+
         fireEvent.keyDown(getByTestId('user-edit-row'), { key: 'Escape' });
 
-        expect(queryByTestId('user-edit-row')).not.toBeInTheDocument();
-        expect(queryByText('Name information')).not.toBeInTheDocument();
+        await waitFor(() => {
+            expect(queryByTestId('standard-card-user-information')).not.toBeInTheDocument();
+        });
+        expect(queryByText('User information')).not.toBeInTheDocument();
+
+        expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
+        expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
     });
 
-    it('should copy author id to clipboard', async () => {
+    it('should cancel editing user mode', async () => {
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl)).replyOnce(200, {
+            data: [
+                {
+                    usr_id: 1000000293,
+                    usr_created_date: '2017-02-16T23:11:37Z',
+                    usr_status: 'active',
+                    usr_given_names: null,
+                    usr_family_name: null,
+                    usr_full_name: 'Test User',
+                    usr_email: 't.user@library.uq.edu.au',
+                    usr_preferences: null,
+                    usr_sms_email: null,
+                    usr_username: 'uqvasai',
+                    usr_shib_username: null,
+                    usr_administrator: true,
+                    usr_ldap_authentication: false,
+                    usr_login_count: 157,
+                    usr_shib_login_count: 0,
+                    usr_last_login_date: '2021-02-23T04:44:06Z',
+                    usr_external_usr_id: null,
+                    usr_super_administrator: true,
+                    usr_auth_rule_groups:
+                        '53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11',
+                    usr_real_last_login_date: '2021-02-22T11:49:49Z',
+                },
+                {
+                    usr_id: 1000000293,
+                    usr_created_date: '2017-02-16T23:11:37Z',
+                    usr_status: 'active',
+                    usr_given_names: null,
+                    usr_family_name: null,
+                    usr_full_name: 'Testing User',
+                    usr_email: 't.user@library.uq.edu.au',
+                    usr_preferences: null,
+                    usr_sms_email: null,
+                    usr_username: 'uqvdesai',
+                    usr_shib_username: null,
+                    usr_administrator: true,
+                    usr_ldap_authentication: false,
+                    usr_login_count: 157,
+                    usr_shib_login_count: 0,
+                    usr_last_login_date: '2021-02-23T04:44:06Z',
+                    usr_external_usr_id: null,
+                    usr_super_administrator: true,
+                    usr_auth_rule_groups:
+                        '53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11',
+                    usr_real_last_login_date: '2021-02-22T11:49:49Z',
+                },
+            ],
+            total: 2,
+        });
+        const { container, getByTestId, queryByTestId, queryByText, findByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
+
+        fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
+        await findByTestId('standard-card-user-information');
+        expect(queryByText('User information')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
+        fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test, Name' } });
+        fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
+        fireEvent.click(getByTestId('users-update-this-user-save'));
+
+        fireEvent.click(getByTestId('users-update-this-user-cancel'));
+
+        await waitFor(() => {
+            expect(queryByTestId('standard-card-user-information')).not.toBeInTheDocument();
+        });
+        expect(queryByText('User information')).not.toBeInTheDocument();
+
+        expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
+        expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
+    });
+
+    it('should copy user id to clipboard', async () => {
         mockApi.onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl)).replyOnce(200, {
             data: [
                 {
@@ -780,14 +882,33 @@ describe('ManageUsers', () => {
         });
         jest.spyOn(navigator.clipboard, 'writeText');
 
-        const { getByTestId, getByText } = setup();
+        const { getByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => getByText('Loading users'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         fireEvent.click(getByTestId('usr-username-0-copy-text'));
 
         expect(navigator.clipboard.writeText).toHaveBeenCalledWith('uqvasai');
 
         await waitFor(() => getByTestId('copied-text-snackbar'));
+    });
+
+    it('should handle text searching and clearing', async () => {
+        const loadUserListFn = jest.spyOn(ManageUsersActions, 'loadUserList');
+        const { getByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+
+        await userEvent.type(getByTestId('users-search-input'), 'test search');
+
+        await waitFor(() =>
+            expect(loadUserListFn).toHaveBeenLastCalledWith({ page: 0, pageSize: 20, search: 'test search' }),
+        );
+
+        await userEvent.click(
+            within(getByTestId('users-search-input').closest('.MuiInput-root')).getByTestId('ClearIcon'),
+        );
+
+        await waitFor(() => expect(loadUserListFn).toHaveBeenLastCalledWith({ page: 0, pageSize: 20, search: '' }));
     });
 });

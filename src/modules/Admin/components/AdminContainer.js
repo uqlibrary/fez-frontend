@@ -10,6 +10,8 @@ import { FormProvider } from 'react-hook-form';
 import locale from 'locale/pages';
 import {
     NTRO_SUBTYPES,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_THESIS,
     RECORD_TYPE_COLLECTION,
@@ -38,6 +40,7 @@ import IdentifiersSection from './identifiers/IdentifiersSection';
 import NotesSection from './notes/NotesSection';
 import ReasonSection from './reason/ReasonSection';
 import SecuritySection from './security/SecurityCard';
+import RelatedServicesSection from './relatedServices/RelatedServicesSection';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 import AuthorsSection from './authors/AuthorsSection';
@@ -69,7 +72,7 @@ export const AdminContainer = ({ createMode = false }) => {
     });
 
     const recordToView = useRecordToView(record, createMode, form);
-    useFormOnChangeHook(form);
+    useFormOnChangeHook(form, createMode);
     const { errors: formErrors } = useFormValidator(form);
 
     const handleSubmit = async data => {
@@ -109,11 +112,11 @@ export const AdminContainer = ({ createMode = false }) => {
     ]);
 
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
-    const destroy = React.useCallback(() => form.reset(), [form]);
 
     React.useEffect(() => {
         !!pid && dispatch(actions.loadRecordToView(pid, true));
         return () => {
+            form.reset();
             dispatch(actions.clearRecordToView());
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -142,112 +145,117 @@ export const AdminContainer = ({ createMode = false }) => {
     };
 
     return (
-        <React.Fragment>
-            <FormProvider {...form}>
-                {createMode && showAddForm && <AddSection onCreate={handleAddFormDisplay} createMode={createMode} />}
-                {!showAddForm && (
-                    <TabbedContext.Provider value={{ ...toggleObject }}>
-                        <RecordContext.Provider
-                            value={{
-                                record: recordToView,
-                            }}
-                        >
-                            <ThemeProvider theme={adminTheme}>
-                                <AdminInterface
-                                    authorDetails={authorDetails}
-                                    handleSubmit={handleSubmit}
-                                    createMode={createMode}
-                                    isDeleted={isDeleted}
-                                    isJobCreated={isJobCreated}
-                                    destroy={destroy}
-                                    locked={locked}
-                                    disabled
-                                    error={apiUpdateError}
-                                    formErrors={formErrors}
-                                    tabs={{
-                                        admin: {
-                                            component: AdminSection,
-                                            activated:
-                                                isActivated() ||
-                                                [RECORD_TYPE_COLLECTION].includes(
-                                                    recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
-                                                ),
-                                            numberOfErrors: tabErrors.current.adminSection || null,
+        <FormProvider {...form}>
+            {createMode && showAddForm && <AddSection onCreate={handleAddFormDisplay} createMode={createMode} />}
+            {!showAddForm && (
+                <TabbedContext.Provider value={{ ...toggleObject }}>
+                    <RecordContext.Provider
+                        value={{
+                            record: recordToView,
+                        }}
+                    >
+                        <ThemeProvider theme={adminTheme}>
+                            <AdminInterface
+                                authorDetails={authorDetails}
+                                handleSubmit={handleSubmit}
+                                createMode={createMode}
+                                isDeleted={isDeleted}
+                                isJobCreated={isJobCreated}
+                                locked={locked}
+                                disabled
+                                error={apiUpdateError}
+                                formErrors={formErrors}
+                                tabs={{
+                                    admin: {
+                                        component: AdminSection,
+                                        activated:
+                                            isActivated() ||
+                                            [RECORD_TYPE_COLLECTION].includes(
+                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                            ),
+                                        numberOfErrors: tabErrors.current.adminSection || null,
+                                    },
+                                    bibliographic: {
+                                        component: BibliographicSection,
+                                        activated:
+                                            isActivated() ||
+                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
+                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                            ),
+                                        numberOfErrors: tabErrors.current.bibliographicSection || null,
+                                    },
+                                    authors: {
+                                        component: AuthorsSection,
+                                        activated: isActivated(),
+                                        numberOfErrors: tabErrors.current.authorsSection || null,
+                                        subComponent: {
+                                            title: 'NTRO',
+                                            component: NTRO_SUBTYPES.includes(
+                                                form.getValues('adminSection.rek_subtype'),
+                                            )
+                                                ? NtroSection
+                                                : null,
                                         },
-                                        bibliographic: {
-                                            component: BibliographicSection,
-                                            activated:
-                                                isActivated() ||
-                                                [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
-                                                    recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
-                                                ),
-                                            numberOfErrors: tabErrors.current.bibliographicSection || null,
-                                        },
-                                        authors: {
-                                            component: AuthorsSection,
-                                            activated: isActivated(),
-                                            numberOfErrors: tabErrors.current.authorsSection || null,
-                                            subComponent: {
-                                                title: 'NTRO',
-                                                component: NTRO_SUBTYPES.includes(
-                                                    form.getValues('adminSection.rek_subtype'),
-                                                )
-                                                    ? NtroSection
-                                                    : null,
-                                            },
-                                        },
-                                        identifiers: {
-                                            component: IdentifiersSection,
-                                            activated: isActivated(),
-                                        },
-                                        grants: {
-                                            component: GrantInformationSection,
-                                            activated:
-                                                isActivated() &&
-                                                // Blacklist types without grant info
-                                                !(
-                                                    [PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
-                                                        recordToView && recordToView.rek_display_type,
-                                                    ) ||
-                                                    [SUBTYPE_NON_NTRO].includes(
-                                                        form.getValues('adminSection.rek_subtype'),
-                                                    )
-                                                ),
-                                        },
-                                        notes: {
-                                            component: NotesSection,
-                                            activated:
-                                                isActivated() ||
-                                                [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
-                                                    recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
-                                                ),
-                                        },
-                                        files: {
-                                            component: FilesSection,
-                                            activated: isActivated(),
-                                            numberOfErrors: tabErrors.current.filesSection || null,
-                                        },
-                                        security: {
-                                            component: SecuritySection,
-                                            activated: !createMode, // true,
-                                        },
+                                    },
+                                    identifiers: {
+                                        component: IdentifiersSection,
+                                        activated: isActivated(),
+                                    },
+                                    grants: {
+                                        component: GrantInformationSection,
+                                        activated:
+                                            isActivated() &&
+                                            // Blacklist types without grant info
+                                            !(
+                                                [
+                                                    PUBLICATION_TYPE_MANUSCRIPT,
+                                                    PUBLICATION_TYPE_THESIS,
+                                                    PUBLICATION_TYPE_INSTRUMENT,
+                                                ].includes(recordToView && recordToView.rek_display_type) ||
+                                                [SUBTYPE_NON_NTRO].includes(form.getValues('adminSection.rek_subtype'))
+                                            ),
+                                    },
+                                    relatedServices: {
+                                        component: RelatedServicesSection,
+                                        activated:
+                                            isActivated() &&
+                                            [PUBLICATION_TYPE_DATA_COLLECTION].includes(
+                                                recordToView && recordToView.rek_display_type,
+                                            ),
+                                    },
+                                    notes: {
+                                        component: NotesSection,
+                                        activated:
+                                            isActivated() ||
+                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
+                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                            ),
+                                    },
+                                    files: {
+                                        component: FilesSection,
+                                        activated: isActivated(),
+                                        numberOfErrors: tabErrors.current.filesSection || null,
+                                    },
+                                    security: {
+                                        component: SecuritySection,
+                                        activated: !createMode, // true,
+                                    },
 
-                                        reason: {
-                                            component: ReasonSection,
-                                            activated:
-                                                !createMode &&
-                                                [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
-                                                    recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
-                                                ),
-                                        },
-                                    }}
-                                />
-                            </ThemeProvider>
-                        </RecordContext.Provider>
-                    </TabbedContext.Provider>
-                )}
-            </FormProvider>
-        </React.Fragment>
+                                    reason: {
+                                        component: ReasonSection,
+                                        activated:
+                                            !createMode &&
+                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
+                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                            ),
+                                    },
+                                }}
+                            />
+                        </ThemeProvider>
+                    </RecordContext.Provider>
+                </TabbedContext.Provider>
+            )}
+        </FormProvider>
     );
 };
 

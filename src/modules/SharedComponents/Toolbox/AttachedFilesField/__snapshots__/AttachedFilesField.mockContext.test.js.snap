@@ -128,7 +128,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-11-download-link"
                     data-testid="file-name-11-download-link"
                     href="http://localhost/view/UQ:252236/MyUQeSpace_Researcher_Guidelines_current.pdf"
@@ -299,7 +299,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-13-download-link"
                     data-testid="file-name-13-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2012.pdf"
@@ -470,7 +470,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-14-download-link"
                     data-testid="file-name-14-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2014.pdf"
@@ -641,7 +641,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-15-download-link"
                     data-testid="file-name-15-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines.pdf"
@@ -812,7 +812,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-16-download-link"
                     data-testid="file-name-16-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2013.pdf"
@@ -983,7 +983,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-17-download-link"
                     data-testid="file-name-17-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2016.pdf"
@@ -1154,7 +1154,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-31-download-link"
                     data-testid="file-name-31-download-link"
                     href="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119.pdf"
@@ -1325,7 +1325,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
                 >
                   <a
-                    class=" css-za9t3z"
+                    class="css-za9t3z"
                     data-analyticsid="file-name-32-download-link"
                     data-testid="file-name-32-download-link"
                     href="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119_old.pdf"

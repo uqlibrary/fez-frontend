@@ -103,7 +103,7 @@ exports[`ThesisForm component 1`] = `
                               . Please see the
                                
                               <a
-                                href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
+                                href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/hdr-support-thesis#s-lg-box-22941538"
                               >
                                 UQRDM thesis submission guide
                               </a>
@@ -293,7 +293,7 @@ exports[`ThesisForm component 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-controls="<dynamic>"
@@ -403,7 +403,7 @@ exports[`ThesisForm component 1`] = `
                       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-controls="<dynamic>"
@@ -1228,7 +1228,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                               . Please see the
                                
                               <a
-                                href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
+                                href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/hdr-support-thesis#s-lg-box-22941538"
                               >
                                 UQRDM thesis submission guide
                               </a>
@@ -1421,7 +1421,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-controls="<dynamic>"
@@ -1533,7 +1533,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-controls="<dynamic>"

@@ -1,6 +1,12 @@
 import moment from 'moment-timezone';
 
-import { exportReportAllowedFilters, DEFAULT_SERVER_DATE_FORMAT, SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
+import {
+    exportReportAllowedFilters,
+    dateToUtc,
+    DEFAULT_SERVER_DATE_FORMAT,
+    SYSTEM_ALERT_ACTION,
+    REPORT_TYPE,
+} from './config';
 import { filterObjectProps, filterObjectPropsByKey, getPlatformUrl, trimTrailingSlash } from './utils';
 
 import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
@@ -15,11 +21,11 @@ export const transformSystemAlertRequest = ({ user, action, row }) => {
     if (action === SYSTEM_ALERT_ACTION.ASSIGN) {
         /* istanbul ignore else */
         if (request.sat_assigned_to === 0) request.sat_assigned_to = null;
-        request.sat_assigned_date = moment().format('YYYY-MM-DD HH:mm');
+        request.sat_assigned_date = dateToUtc({ date: moment() });
     }
     if (action === SYSTEM_ALERT_ACTION.RESOLVE) {
         request.sat_resolved_by = user.id;
-        request.sat_resolved_date = moment().format('YYYY-MM-DD HH:mm');
+        request.sat_resolved_date = dateToUtc({ date: moment() });
     }
 
     return request;

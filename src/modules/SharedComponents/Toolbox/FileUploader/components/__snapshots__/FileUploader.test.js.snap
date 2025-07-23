@@ -2663,7 +2663,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
         <span>
           You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.
           <a
-            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/submission-data-requirements#s-lg-box-20836613"
             target="_blank"
           >
             More information
@@ -4008,7 +4008,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
             <div
-              class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+              class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
             >
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -4017,10 +4017,12 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               >
                 <input
                   aria-invalid="false"
+                  autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r2t:"
+                  id=":r2v:"
+                  inputmode="text"
                   placeholder="dd/mm/yyyy"
-                  type="tel"
+                  type="text"
                   value="01/01/2020"
                 />
                 <div
@@ -6861,7 +6863,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
             <div
-              class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+              class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
             >
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -6870,10 +6872,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               >
                 <input
                   aria-invalid="false"
+                  autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
                   id=":r12:"
+                  inputmode="text"
                   placeholder="dd/mm/yyyy"
-                  type="tel"
+                  type="text"
                   value="02/02/2022"
                 />
                 <div
@@ -8187,7 +8191,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -8392,7 +8396,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -8904,7 +8908,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -9104,7 +9108,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -9616,7 +9620,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -9816,7 +9820,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -9866,7 +9870,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
             <div
-              class="MuiFormControl-root MuiTextField-root css-cgb30r-MuiFormControl-root-MuiTextField-root"
+              class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
             >
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -9875,10 +9879,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               >
                 <input
                   aria-invalid="false"
+                  autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r1j:"
+                  id=":r1k:"
+                  inputmode="text"
                   placeholder="dd/mm/yyyy"
-                  type="tel"
+                  type="text"
                   value="01/01/2020"
                 />
                 <div

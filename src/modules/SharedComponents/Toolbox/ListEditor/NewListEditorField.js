@@ -1,15 +1,6 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import NewListEditor from './components/NewListEditor';
-
-const getValue = (props, normalize, searchKey) => normalize(props.value || [], searchKey);
-
-export const useItemsList = (props, normalize, searchKey) => {
-    const [value, setValue] = React.useState(getValue(props, normalize, searchKey));
-    return [value, setValue];
-};
 
 export const NewListEditorField = props => {
     const {
@@ -20,23 +11,17 @@ export const NewListEditorField = props => {
         },
     } = props;
 
-    const [value, setValue] = useItemsList(props, normalize, searchKey);
-    const prevValue = React.useRef();
-    const propValueNormalised = getValue(props, normalize, searchKey);
-    const propValueStringified = JSON.stringify(propValueNormalised);
-
-    if (propValueStringified !== prevValue.current) {
-        prevValue.current = propValueStringified;
-        setValue(propValueNormalised);
-    }
+    const value = React.useMemo(() => props.value || [], [props]);
+    const propNormalize = React.useCallback(() => normalize(value, searchKey), [normalize, searchKey, value]);
+    const propValueNormalised = propNormalize();
 
     return (
         <NewListEditor
-            key={value.length}
+            key={propValueNormalised.length}
             error={!!props.state?.error}
             errorText={props.state?.error}
             remindToAdd={props.remindToAdd}
-            list={value}
+            list={propValueNormalised}
             searchKey={searchKey}
             normalize={normalize}
             {...props}
@@ -49,6 +34,7 @@ NewListEditorField.propTypes = {
     normalize: PropTypes.func,
     onChange: PropTypes.func,
     remindToAdd: PropTypes.bool,
+    value: PropTypes.array,
     state: PropTypes.object,
 };
 
