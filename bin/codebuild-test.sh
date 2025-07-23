@@ -66,48 +66,43 @@ function installPlaywrightDependencies {
     npx playwright install-deps chromium-headless-shell
 }
 
-#if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-#  installCypressDependencies
-#fi
-
 npm run pretest:unit:ci
 
 case "$PIPE_NUM" in
 "1")
-#    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
         set -e
         installCypressDependencies
-        printf "\n--- \e[1mRUNNING E2E CYPRESS TESTS GROUP [STARTING AT $(date)] 1\e[0m ---\n"
-        # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the first group
-#        source bin/codebuild-parallel.sh
-        npm run test:e2e:ci3
+        installPlaywrightDependencies
+        printf "\n--- \e[1mRUNNING E2E TESTS GROUP #1 [STARTING AT $(date)] 1\e[0m ---\n"
+        npm run test:e2e:cy
+        npm run test:e2e:pw:cc --shard=1/2
         printf "\n--- [ENDED AT $(date)] \n"
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
-#    else
-#        printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
-#        checkCodeStyle
-#        set -e
-#        printf "\n--- \e[1mRUNNING UNIT TESTS 1\e[0m ---\n"
-#        npm run test:unit:ci1:nocoverage
-#    fi
+    else
+        printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
+        checkCodeStyle
+        set -e
+        printf "\n--- \e[1mRUNNING UNIT TESTS 1\e[0m ---\n"
+        npm run test:unit:ci1:nocoverage
+    fi
 ;;
 "2")
     set -e
 
-#    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the second group
+    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+         Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the second group
         installPlaywrightDependencies
-        printf "\n--- \e[1mRUNNING E2E PLAYWRIGHT TESTS GROUP [STARTING AT $(date)] 2\e[0m ---\n"
-#        source bin/codebuild-parallel.sh
-        npm run test:e2e:pw:cc
+        printf "\n--- \e[1mRUNNING E2E TESTS GROUP #2 [STARTING AT $(date)] 2\e[0m ---\n"
+        npm run test:e2e:pw:cc --shard=2/2
         printf "\n--- [ENDED AT $(date)] \n"
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/playwright/coverage-final.json
-#    else
-#        printf "\n--- \e[1mRUNNING SERIAL UNIT TESTS\e[0m ---\n"
-#        npm run test:unit:ci:serial:nocoverage
-#        printf "\n--- \e[1mRUNNING UNIT TESTS 2\e[0m ---\n"
-#        npm run test:unit:ci2:nocoverage
-#    fi
+    else
+        printf "\n--- \e[1mRUNNING SERIAL UNIT TESTS\e[0m ---\n"
+        npm run test:unit:ci:serial:nocoverage
+        printf "\n--- \e[1mRUNNING UNIT TESTS 2\e[0m ---\n"
+        npm run test:unit:ci2:nocoverage
+    fi
 ;;
 "3")
     export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
