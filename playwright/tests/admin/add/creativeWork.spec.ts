@@ -43,27 +43,27 @@ test.describe('As an admin, I can', () => {
         await page.getByTestId('rek-author-add-save').click();
     };
     const assertUpdateAuthor = async (page: Page, index: number, nameAsPublished: string) => {
-        await page.locator(`[data-testid="rek-author-list-row-${index}-edit"]`).click();
+        await page.getByTestId(`rek-author-list-row-${index}-edit`).click();
         await page.getByTestId('rek-author-input').clear();
         await page.getByTestId('rek-author-input').fill(nameAsPublished);
         await page.getByTestId('rek-author-update-save').click();
     };
 
     const assertCanSetScaleStatement = async (page: Page, index: number, typeIndex: number, statement: string) => {
-        await page.locator(`[data-testid="rek-significance-list-row-${index}-edit"]`).click();
+        await page.getByTestId(`rek-significance-list-row-${index}-edit`).click();
         await page.getByTestId('rek-significance-select').click();
-        await page.locator(`[data-testid="rek-significance-option-${typeIndex}"]`).click();
+        await page.getByTestId(`rek-significance-option-${typeIndex}`).click();
         await typeCKEditor(page, 'rek-creator-contribution-statement', statement);
         await page.getByTestId('rek-significance-add').click();
     };
 
     const assertCanClearScaleStatement = async (page: Page, index: number) => {
-        await page.locator(`[data-testid="rek-significance-list-row-${index}-delete"]`).click();
-        await page.locator(`[data-testid="confirm-rek-significance-list-row-${index}-delete"]`).click();
+        await page.getByTestId(`rek-significance-list-row-${index}-delete`).click();
+        await page.getByTestId(`confirm-rek-significance-list-row-${index}-delete`).click();
     };
 
     const assertHasAuthor = async (page: Page, index: number, value: string) => {
-        await expect(page.locator(`[data-testid='rek-author-list-row-${index}-name-as-published']`)).toHaveText(value);
+        await expect(page.getByTestId(`'rek-author-list-row-${index}-name-as-published'`)).toHaveText(value);
     };
 
     test('add a creative work', async ({ page }) => {

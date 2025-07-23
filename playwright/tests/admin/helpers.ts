@@ -68,13 +68,11 @@ export async function adminEditCheckDefaultTab(page: Page, tabTitle: string) {
 }
 
 export async function adminEditCheckTabErrorBadge(page: Page, tab: string, value: string | number = '1') {
-    await expect(page.locator(`[data-testid=${tab}-tab]`).locator('[class*="MuiBadge-colorError"]')).toHaveText(
-        String(value),
-    );
+    await expect(page.getByTestId(`${tab}-tab`).locator('[class*="MuiBadge-colorError"]')).toHaveText(String(value));
 }
 
 export async function assertChangeSelectFromTo(page: Page, item: string, changeFrom: string, changeTo: string) {
-    const select = page.locator(`[data-testid="${item}-select"]`);
+    const select = page.getByTestId(`${item}-select`);
     await select.waitFor({ state: 'visible' });
 
     if (changeFrom === '') {
@@ -84,7 +82,7 @@ export async function assertChangeSelectFromTo(page: Page, item: string, changeF
         await select.click();
     }
 
-    const options = page.locator(`[data-testid="${item}-options"]`);
+    const options = page.getByTestId(`${item}-options`);
     await options.waitFor({ state: 'visible' });
     await options.locator(`:text("${changeTo}")`).click();
     await expect(select).toContainText(changeTo);
@@ -107,10 +105,10 @@ export async function addAuthorAndAssert(
     await expect(page.locator('[data-testid^=contributor-errorIcon-]')).toBeVisible();
 
     if (expand) {
-        const expandIcon = page.locator(`[data-testid=expandPanelIcon-${authorId}]`);
+        const expandIcon = page.getByTestId(`expandPanelIcon-${authorId}`);
         await expandIcon.click();
 
-        const detailPanel = page.locator(`[data-testid=detailPanel-${authorId}]`);
+        const detailPanel = page.getByTestId(`detailPanel-${authorId}`);
         await expect(detailPanel.getByTestId('orgChip-error')).toContainText('0%');
         await expect(detailPanel).toContainText('No affiliations have been added');
         await expect(page.getByTestId('alert').first()).toContainText(
@@ -127,10 +125,10 @@ export async function addAuthorAndAssert(
 }
 
 export async function assertAffiliation(page: Page, orgName: string, orgId: string, expectedPercent: string) {
-    const orgInput = page.locator(`[data-testid=orgSelect-${orgId}-input]`);
+    const orgInput = page.getByTestId(`orgSelect-${orgId}-input`);
     await expect(orgInput).toHaveValue(orgName);
 
-    const orgChip = page.locator(`[data-testid=orgChip-${orgId}]`);
+    const orgChip = page.getByTestId(`orgChip-${orgId}`);
     await expect(orgChip).toContainText(expectedPercent);
 }
 
@@ -159,10 +157,10 @@ export async function editAffiliationAndAssert(
     nextOrgName: string,
     expectedPercent: string,
 ) {
-    const currentInput = page.locator(`[data-testid=orgSelect-${currentOrgId}-input]`);
+    const currentInput = page.getByTestId(`orgSelect-${currentOrgId}-input`);
     await currentInput.click();
     await page
-        .locator(`[data-testid=orgSelect-${currentOrgId}-options]`)
+        .getByTestId(`orgSelect-${currentOrgId}-options`)
         .getByText(nextOrgName, { exact: true })
         .click();
     await assertAffiliation(page, nextOrgName, nextOrgId, expectedPercent);

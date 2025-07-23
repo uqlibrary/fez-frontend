@@ -68,20 +68,20 @@ export async function setPartialDate(
     { day, month, year }: { day?: string | number; month?: number; year?: string | number },
 ) {
     if (day !== undefined) {
-        const dayInput = page.locator(`[data-testid=${id}-day-input]`);
+        const dayInput = page.getByTestId(`${id}-day-input`);
         await dayInput.fill(String(day));
     }
 
     if (month !== undefined) {
         // Click to open the month dropdown
-        await page.locator(`[data-testid=${id}-month-select]`).click();
+        await page.getByTestId(`${id}-month-select`).click();
 
         // Click on the desired month option
         await page.locator(`[data-testid=${id}-month-options] li[role=option][data-value="${month - 1}"]`).click();
     }
 
     if (year !== undefined) {
-        const yearInput = page.locator(`[data-testid=${id}-year-input]`);
+        const yearInput = page.getByTestId(`${id}-year-input`);
         await yearInput.fill(String(year));
     }
 }
@@ -92,17 +92,17 @@ export async function checkPartialDate(
     { day, monthName, year }: { day?: string; monthName?: string; year?: string },
 ) {
     if (day !== undefined) {
-        const dayInput = page.locator(`[data-testid=${id}-day-input]`);
+        const dayInput = page.getByTestId(`${id}-day-input`);
         await expect(dayInput).toHaveValue(day);
     }
 
     if (monthName !== undefined) {
-        const monthSelect = page.locator(`[data-testid=${id}-month-select]`);
+        const monthSelect = page.getByTestId(`${id}-month-select`);
         await expect(monthSelect).toHaveText(monthName);
     }
 
     if (year !== undefined) {
-        const yearInput = page.locator(`[data-testid=${id}-year-input]`);
+        const yearInput = page.getByTestId(`${id}-year-input`);
         await expect(yearInput).toHaveValue(year);
     }
 }

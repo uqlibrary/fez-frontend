@@ -300,7 +300,7 @@ test.describe('Digilib Image admin edit', () => {
                 authorDetailsTab
                     .locator('.AdminCard')
                     .nth(0)
-                    .locator(`[data-testid=rek-architect-name-list-row-${index}-name-as-published]`),
+                    .getByTestId(`rek-architect-name-list-row-${index}-name-as-published`),
             ).toHaveText(author);
         }
 
@@ -316,7 +316,7 @@ test.describe('Digilib Image admin edit', () => {
                 authorDetailsTab
                     .locator('.AdminCard')
                     .nth(1)
-                    .locator(`[data-testid=rek-author-list-row-${index}-name-as-published]`),
+                    .getByTestId(`rek-author-list-row-${index}-name-as-published`),
             ).toHaveText(author);
         }
 
@@ -332,7 +332,7 @@ test.describe('Digilib Image admin edit', () => {
                 authorDetailsTab
                     .locator('.AdminCard')
                     .nth(2)
-                    .locator(`[data-testid=rek-contributor-list-row-${index}-name-as-published]`),
+                    .getByTestId(`rek-contributor-list-row-${index}-name-as-published`),
             ).toHaveText(contributor);
         }
 
@@ -342,7 +342,7 @@ test.describe('Digilib Image admin edit', () => {
         await expect(identifiersTab.locator('h4').getByText(/Location/)).toBeVisible();
         const locations = record.fez_record_search_key_location.map(item => item.rek_location);
         for (const [index, location] of locations.entries()) {
-            await expect(identifiersTab.locator(`[data-testid=rek-location-list-row-${index}]`)).toHaveText(location);
+            await expect(identifiersTab.getByTestId(`rek-location-list-row-${index}`)).toHaveText(location);
         }
     });
 });

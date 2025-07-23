@@ -45,70 +45,64 @@ test.describe('File rename admin edit', () => {
         await expect(filesSectionContent.locator('p').nth(2)).toHaveText(record.fez_datastream_info[1].dsi_dsid);
 
         // rename
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.resetId}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.filenameText}]`)).toHaveText(
-            vars.originalFilename,
-        );
+        await expect(filesSectionContent.getByTestId(`${vars.editId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.resetId}`)).not.toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.filenameText}`)).toHaveText(vars.originalFilename);
 
         // rename pass 1
-        await filesSectionContent.locator(`[data-testid=${vars.editId}]`).click();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editId}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editingId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.saveId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.cancelId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editingId}]`)).toHaveValue(vars.originalFilepart);
-        await filesSectionContent.locator(`[data-testid=${vars.editingId}]`).clear();
-        await filesSectionContent.locator(`[data-testid=${vars.editingId}]`).fill(newFilename);
-        await filesSectionContent.locator(`[data-testid=${vars.saveId}]`).click();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editingId}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.saveId}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.cancelId}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.resetId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editedId}]`)).toHaveText(vars.newFilenamefull);
+        await filesSectionContent.getByTestId(`${vars.editId}`).click();
+        await expect(filesSectionContent.getByTestId(`${vars.editId}`)).not.toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.editingId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.saveId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.cancelId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.editingId}`)).toHaveValue(vars.originalFilepart);
+        await filesSectionContent.getByTestId(`${vars.editingId}`).clear();
+        await filesSectionContent.getByTestId(`${vars.editingId}`).fill(newFilename);
+        await filesSectionContent.getByTestId(`${vars.saveId}`).click();
+        await expect(filesSectionContent.getByTestId(`${vars.editingId}`)).not.toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.saveId}`)).not.toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.cancelId}`)).not.toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.editId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.resetId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.editedId}`)).toHaveText(vars.newFilenamefull);
 
         // rename pass 2
-        await filesSectionContent.locator(`[data-testid=${vars.editId}]`).click();
-        await filesSectionContent.locator(`[data-testid=${vars.editingId}]`).fill(`${newFilename}d`); // Use fill to overwrite
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editingId}]`)).toHaveValue(`${newFilename}d`);
-        await filesSectionContent.locator(`[data-testid=${vars.saveId}]`).click();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editedId}]`)).toContainText(`${newFilename}d`);
+        await filesSectionContent.getByTestId(`${vars.editId}`).click();
+        await filesSectionContent.getByTestId(`${vars.editingId}`).fill(`${newFilename}d`); // Use fill to overwrite
+        await expect(filesSectionContent.getByTestId(`${vars.editingId}`)).toHaveValue(`${newFilename}d`);
+        await filesSectionContent.getByTestId(`${vars.saveId}`).click();
+        await expect(filesSectionContent.getByTestId(`${vars.editedId}`)).toContainText(`${newFilename}d`);
 
         // cancel a rename
-        await filesSectionContent.locator(`[data-testid=${vars.editId}]`).click();
-        await filesSectionContent.locator(`[data-testid=${vars.editingId}]`).fill(`${newFilename}d-again`); // Use fill
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editingId}]`)).toHaveValue(
-            `${newFilename}d-again`,
-        );
-        await filesSectionContent.locator(`[data-testid=${vars.cancelId}]`).click();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editedId}]`)).toContainText(`${newFilename}d`);
+        await filesSectionContent.getByTestId(`${vars.editId}`).click();
+        await filesSectionContent.getByTestId(`${vars.editingId}`).fill(`${newFilename}d-again`); // Use fill
+        await expect(filesSectionContent.getByTestId(`${vars.editingId}`)).toHaveValue(`${newFilename}d-again`);
+        await filesSectionContent.getByTestId(`${vars.cancelId}`).click();
+        await expect(filesSectionContent.getByTestId(`${vars.editedId}`)).toContainText(`${newFilename}d`);
 
         // reset renamed file to original
-        await filesSectionContent.locator(`[data-testid=${vars.resetId}]`).click();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.resetId}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.filenameText}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editedId}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.filenameText}]`)).toContainText(
-            vars.originalFilename,
-        );
+        await filesSectionContent.getByTestId(`${vars.resetId}`).click();
+        await expect(filesSectionContent.getByTestId(`${vars.editId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.resetId}`)).not.toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.filenameText}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.editedId}`)).not.toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.filenameText}`)).toContainText(vars.originalFilename);
 
         // invalid filename
-        await expect(page.locator(`[data-testid=${alertId}]`)).not.toBeVisible(); // Alert is outside filesSectionContent scope
-        await filesSectionContent.locator(`[data-testid=${vars.editId}]`).click();
-        await filesSectionContent.locator(`[data-testid=${vars.editingId}]`).fill(invalidFilename);
-        await filesSectionContent.locator(`[data-testid=${vars.saveId}]`).click();
+        await expect(page.getByTestId(`${alertId}`)).not.toBeVisible(); // Alert is outside filesSectionContent scope
+        await filesSectionContent.getByTestId(`${vars.editId}`).click();
+        await filesSectionContent.getByTestId(`${vars.editingId}`).fill(invalidFilename);
+        await filesSectionContent.getByTestId(`${vars.saveId}`).click();
         // state of input should remain visible and not return to text-only
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editingId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.saveId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.cancelId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.filenameText}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editedId}]`)).not.toBeVisible();
-        await expect(page.locator(`[data-testid=${alertId}]`)).toBeVisible(); // Alert is outside filesSectionContent scope
-        await expect(page.locator(`[data-testid=${alertId}]`)).toContainText('invalid file name'); // Use toContainText for partial match
-        await filesSectionContent.locator(`[data-testid=${vars.cancelId}]`).click();
-        await expect(page.locator(`[data-testid=${alertId}]`)).not.toBeVisible(); // Alert is outside filesSectionContent scope
+        await expect(filesSectionContent.getByTestId(`${vars.editingId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.saveId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.cancelId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.filenameText}`)).not.toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.editedId}`)).not.toBeVisible();
+        await expect(page.getByTestId(`${alertId}`)).toBeVisible(); // Alert is outside filesSectionContent scope
+        await expect(page.getByTestId(`${alertId}`)).toContainText('invalid file name'); // Use toContainText for partial match
+        await filesSectionContent.getByTestId(`${vars.cancelId}`).click();
+        await expect(page.getByTestId(`${alertId}`)).not.toBeVisible(); // Alert is outside filesSectionContent scope
 
         // Other elements within filesSectionContent
         await expect(filesSectionContent.locator('h4', { hasText: 'Advisory statement' })).toBeVisible();
@@ -131,50 +125,48 @@ test.describe('File rename admin edit', () => {
         await loadRecordForAdminEdit(page, record.rek_pid);
         // rename
         const filesSectionContent = page.getByTestId('files-section-content');
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.resetId}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.filenameText}]`)).toHaveText(
-            vars.originalFilename,
-        );
+        await expect(filesSectionContent.getByTestId(`${vars.editId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.resetId}`)).not.toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.filenameText}`)).toHaveText(vars.originalFilename);
 
         // rename pass 1 - cant rename a file to a filename that already exists in the DS
         const anotherExistingFilename = record.fez_datastream_info[13].dsi_dsid;
         const anotherExistingFilenamePart = getFilenamePart(anotherExistingFilename);
-        await filesSectionContent.locator(`[data-testid=${vars.editId}]`).click();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editId}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editingId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.saveId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.cancelId}]`)).toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${vars.editingId}]`)).toHaveValue(vars.originalFilepart);
-        await filesSectionContent.locator(`[data-testid=${vars.editingId}]`).clear();
-        await filesSectionContent.locator(`[data-testid=${vars.editingId}]`).fill(anotherExistingFilenamePart);
-        await filesSectionContent.locator(`[data-testid=${vars.saveId}]`).click();
-        await expect(page.locator(`[data-testid=${alertId}]`)).toBeVisible(); // Alert is outside filesSectionContent scope
-        await expect(page.locator(`[data-testid=${alertId}]`)).toContainText('name matches with an existing file.'); // Use toContainText
-        await filesSectionContent.locator(`[data-testid=${vars.editingId}]`).clear();
-        await filesSectionContent.locator(`[data-testid=${vars.editingId}]`).fill(newFilename);
-        await filesSectionContent.locator(`[data-testid=${vars.saveId}]`).click();
-        await expect(page.locator(`[data-testid=${alertId}]`)).not.toBeVisible(); // Alert is outside filesSectionContent scope
+        await filesSectionContent.getByTestId(`${vars.editId}`).click();
+        await expect(filesSectionContent.getByTestId(`${vars.editId}`)).not.toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.editingId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.saveId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.cancelId}`)).toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${vars.editingId}`)).toHaveValue(vars.originalFilepart);
+        await filesSectionContent.getByTestId(`${vars.editingId}`).clear();
+        await filesSectionContent.getByTestId(`${vars.editingId}`).fill(anotherExistingFilenamePart);
+        await filesSectionContent.getByTestId(`${vars.saveId}`).click();
+        await expect(page.getByTestId(`${alertId}`)).toBeVisible(); // Alert is outside filesSectionContent scope
+        await expect(page.getByTestId(`${alertId}`)).toContainText('name matches with an existing file.'); // Use toContainText
+        await filesSectionContent.getByTestId(`${vars.editingId}`).clear();
+        await filesSectionContent.getByTestId(`${vars.editingId}`).fill(newFilename);
+        await filesSectionContent.getByTestId(`${vars.saveId}`).click();
+        await expect(page.getByTestId(`${alertId}`)).not.toBeVisible(); // Alert is outside filesSectionContent scope
 
         // pass 2 - can't rename another file using the original filename of a file we've renamed
         const vars2 = getIds(record, 13);
-        await filesSectionContent.locator(`[data-testid=${vars2.editId}]`).click();
-        await filesSectionContent.locator(`[data-testid=${vars2.editingId}]`).clear();
-        await filesSectionContent.locator(`[data-testid=${vars2.editingId}]`).fill(vars.originalFilepart);
-        await filesSectionContent.locator(`[data-testid=${vars2.saveId}]`).click();
-        await expect(page.locator(`[data-testid=${alertId}]`)).toBeVisible(); // Alert is outside filesSectionContent scope
-        await expect(page.locator(`[data-testid=${alertId}]`)).toContainText('name matches with an existing file.'); // Use toContainText
-        await filesSectionContent.locator(`[data-testid=${vars2.cancelId}]`).click();
-        await expect(page.locator(`[data-testid=${alertId}]`)).not.toBeVisible(); // Alert is outside filesSectionContent scope
+        await filesSectionContent.getByTestId(`${vars2.editId}`).click();
+        await filesSectionContent.getByTestId(`${vars2.editingId}`).clear();
+        await filesSectionContent.getByTestId(`${vars2.editingId}`).fill(vars.originalFilepart);
+        await filesSectionContent.getByTestId(`${vars2.saveId}`).click();
+        await expect(page.getByTestId(`${alertId}`)).toBeVisible(); // Alert is outside filesSectionContent scope
+        await expect(page.getByTestId(`${alertId}`)).toContainText('name matches with an existing file.'); // Use toContainText
+        await filesSectionContent.getByTestId(`${vars2.cancelId}`).click();
+        await expect(page.getByTestId(`${alertId}`)).not.toBeVisible(); // Alert is outside filesSectionContent scope
 
         // pass 3 - can't rename another file using the new filename of a file we've renamed
         const vars3 = getIds(record, 14);
-        await filesSectionContent.locator(`[data-testid=${vars3.editId}]`).click();
-        await filesSectionContent.locator(`[data-testid=${vars3.editingId}]`).clear();
-        await filesSectionContent.locator(`[data-testid=${vars3.editingId}]`).fill(newFilename);
-        await filesSectionContent.locator(`[data-testid=${vars3.saveId}]`).click();
-        await expect(page.locator(`[data-testid=${alertId}]`)).toBeVisible(); // Alert is outside filesSectionContent scope
-        await expect(page.locator(`[data-testid=${alertId}]`)).toContainText('name matches with an existing file.'); // Use toContainText
+        await filesSectionContent.getByTestId(`${vars3.editId}`).click();
+        await filesSectionContent.getByTestId(`${vars3.editingId}`).clear();
+        await filesSectionContent.getByTestId(`${vars3.editingId}`).fill(newFilename);
+        await filesSectionContent.getByTestId(`${vars3.saveId}`).click();
+        await expect(page.getByTestId(`${alertId}`)).toBeVisible(); // Alert is outside filesSectionContent scope
+        await expect(page.getByTestId(`${alertId}`)).toContainText('name matches with an existing file.'); // Use toContainText
     });
 
     test('should not present rename buttons on mobile', async ({ page }) => {
@@ -187,8 +179,8 @@ test.describe('File rename admin edit', () => {
         const filenameText = `file-name-${record.fez_datastream_info[1].dsi_id}`;
         const originalFilename = record.fez_datastream_info[1].dsi_dsid;
         const filesSectionContent = page.getByTestId('files-section-content');
-        await expect(filesSectionContent.locator(`[data-testid=${editId}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${resetId}]`)).not.toBeVisible();
-        await expect(filesSectionContent.locator(`[data-testid=${filenameText}]`)).toHaveText(originalFilename);
+        await expect(filesSectionContent.getByTestId(`${editId}`)).not.toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${resetId}`)).not.toBeVisible();
+        await expect(filesSectionContent.getByTestId(`${filenameText}`)).toHaveText(originalFilename);
     });
 });

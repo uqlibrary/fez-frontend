@@ -222,12 +222,12 @@ test.describe('Journal Article admin edit', () => {
             const authorIDs = record.fez_record_search_key_author_id.map(item => item.rek_author_id);
 
             for (const [index, author] of authors.entries()) {
-                await expect(
-                    authorsCard.locator(`[data-testid=rek-author-list-row-${index}-name-as-published]`),
-                ).toContainText(author);
-                await expect(
-                    authorsCard.locator(`[data-testid=rek-author-list-row-${index}-uq-identifiers]`),
-                ).toContainText(`${authorUsernames[index]} - ${authorIDs[index]}`);
+                await expect(authorsCard.getByTestId(`rek-author-list-row-${index}-name-as-published`)).toContainText(
+                    author,
+                );
+                await expect(authorsCard.getByTestId(`rek-author-list-row-${index}-uq-identifiers`)).toContainText(
+                    `${authorUsernames[index]} - ${authorIDs[index]}`,
+                );
             }
         }
 
@@ -258,31 +258,31 @@ test.describe('Journal Article admin edit', () => {
             await expect(card.getByTestId('rek-herdc-code-input')).toHaveValue(
                 record.fez_record_search_key_herdc_code.rek_herdc_code.toString(),
             );
-            await expect(card.locator('[data-testid=rek-herdc-code-select]')).toHaveText(
+            await expect(card.getByTestId('rek-herdc-code-select')).toHaveText(
                 new RegExp(`^${record.fez_record_search_key_herdc_code.rek_herdc_code_lookup}`),
             );
-            await expect(card.locator('[data-testid=rek-herdc-status-input]')).toHaveValue(
+            await expect(card.getByTestId('rek-herdc-status-input')).toHaveValue(
                 record.fez_record_search_key_herdc_status.rek_herdc_status.toString(),
             );
-            await expect(card.locator('[data-testid=rek-herdc-status-select]')).toHaveText(
+            await expect(card.getByTestId('rek-herdc-status-select')).toHaveText(
                 record.fez_record_search_key_herdc_status.rek_herdc_status_lookup,
             );
-            await expect(card.locator('[data-testid=rek-institutional-status-input]')).toHaveValue(
+            await expect(card.getByTestId('rek-institutional-status-input')).toHaveValue(
                 record.fez_record_search_key_institutional_status.rek_institutional_status.toString(),
             );
-            await expect(card.locator('[data-testid=rek-institutional-status-select]')).toHaveText(
+            await expect(card.getByTestId('rek-institutional-status-select')).toHaveText(
                 record.fez_record_search_key_institutional_status.rek_institutional_status_lookup,
             );
-            await expect(card.locator('[data-testid=rek-oa-status-input]')).toHaveValue(
+            await expect(card.getByTestId('rek-oa-status-input')).toHaveValue(
                 record.fez_record_search_key_oa_status.rek_oa_status.toString(),
             );
-            await expect(card.locator('[data-testid=rek-oa-status-select]')).toHaveText(
+            await expect(card.getByTestId('rek-oa-status-select')).toHaveText(
                 record.fez_record_search_key_oa_status.rek_oa_status_lookup,
             );
-            await expect(card.locator('[data-testid=rek-oa-status-type-input]')).toHaveValue(
+            await expect(card.getByTestId('rek-oa-status-type-input')).toHaveValue(
                 record.fez_record_search_key_oa_status_type.rek_oa_status_type.toString(),
             );
-            await expect(card.locator('[data-testid=rek-oa-status-type-select]')).toHaveText(
+            await expect(card.getByTestId('rek-oa-status-type-select')).toHaveText(
                 record.fez_record_search_key_oa_status_type.rek_oa_status_type_lookup,
             );
             // No content indicators selected in mock
@@ -302,8 +302,8 @@ test.describe('Journal Article admin edit', () => {
 
         // ----------------------------------------- GRANT INFORMATION TAB -------------------------------------------
         console.log('Grant Information tab');
-        await expect(page.locator('[data-testid=grants-section-header]')).toHaveText('Grants');
-        const grantsSectionContent = page.locator('[data-testid=grants-section-content]');
+        await expect(page.getByTestId('grants-section-header')).toHaveText('Grants');
+        const grantsSectionContent = page.getByTestId('grants-section-content');
         {
             const card = grantsSectionContent.locator('.AdminCard').first();
             await expect(card.locator('h4')).toHaveText(/Grant information/);
@@ -312,11 +312,11 @@ test.describe('Journal Article admin edit', () => {
 
         // ---------------------------------------------- SECURITY TAB -----------------------------------------------
         console.log('Security tab');
-        await expect(page.locator('[data-testid=security-section-header]')).toHaveText('Security');
-        await expect(page.locator('[data-testid=record-security-card-header]')).toHaveText(
+        await expect(page.getByTestId('security-section-header')).toHaveText('Security');
+        await expect(page.getByTestId('record-security-card-header')).toHaveText(
             `Work level security - ${record.rek_pid}`,
         );
-        const securityCardContent = page.locator('[data-testid=record-security-card-content]');
+        const securityCardContent = page.getByTestId('record-security-card-content');
         await expect(securityCardContent.locator('h6').first()).toHaveText('Inherited security policy details');
         for (const [index, collection] of record.fez_record_search_key_ismemberof.entries()) {
             await expect(securityCardContent.locator('h6').nth(2 * index + 1)).toHaveText(collection.rek_ismemberof);
@@ -345,8 +345,8 @@ test.describe('Files tab functionality', () => {
         // ---------------------------------------------- FILES TAB --------------------------------------------------
         const filesTabRecord = recordList.data[1]; // Redundant, already set in beforeEach
         console.log('Files Tab');
-        await expect(page.locator('[data-testid=files-section-header]')).toHaveText('Files');
-        const filesSectionContent = page.locator('[data-testid=files-section-content]');
+        await expect(page.getByTestId('files-section-header')).toHaveText('Files');
+        const filesSectionContent = page.getByTestId('files-section-content');
         const fileSizeInMB = Math.round((filesTabRecord.fez_datastream_info[1].dsi_size / 1024 / 1024) * 100) / 100;
         await expect(filesSectionContent.locator('h4').first()).toHaveText('Attached files');
         await expect(filesSectionContent.locator('p').first()).toHaveText(
@@ -365,7 +365,7 @@ test.describe('Files tab functionality', () => {
 
         await expect(filesSectionContent.locator('h4', { hasText: /Advisory statement/ }).first()).toBeVisible();
         await expect(filesSectionContent.locator('h4', { hasText: /Copyright agreement/ }).first()).toBeVisible();
-        const copyrightCheckbox = filesSectionContent.locator('[data-testid=rek-copyright-input]');
+        const copyrightCheckbox = filesSectionContent.getByTestId('rek-copyright-input');
         if (filesTabRecord.rek_copyright === 'on') {
             await expect(copyrightCheckbox).toBeChecked();
         } else {
