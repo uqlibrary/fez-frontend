@@ -4,8 +4,7 @@ import formsLocale from 'locale/forms';
 import fileUploaderLocale from 'modules/SharedComponents/Toolbox/FileUploader/locale';
 import { navToHomeFromMenu, setFileInput } from '../lib/helpers';
 
-// TODO pw fix
-test.describe.skip('Claim possible work', () => {
+test.describe.serial('Claim possible work', () => {
     const claimFormLocale = formsLocale.forms.claimPublicationForm;
 
     const navToFirstClaim = async (page: Page) => {
@@ -23,7 +22,7 @@ test.describe.skip('Claim possible work', () => {
             await navToHomeFromMenu(page, claimFormLocale.cancelWorkflowConfirmation);
         });
 
-        test.skip('renders a list of possible works with filters', async ({ page }) => {
+        test('renders a list of possible works with filters', async ({ page }) => {
             await page.goto('/records/possible', { timeout: 60_000 });
             await expect(page.locator('h2')).toHaveText(/Claim possible works/, { timeout: 60_000 });
             await expect(page.locator('.StandardCard h6[class*="PublicationCitation-citationTitle"] > a')).toHaveCount(

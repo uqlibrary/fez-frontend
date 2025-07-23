@@ -11,7 +11,7 @@ export default defineConfig({
     },
     fullyParallel: process.env.PW_SERIAL === 'true' ? false : true,
     forbidOnly: !!process.env.CI_BRANCH,
-    retries: process.env.CI_BRANCH ? 2 : 1,
+    retries: process.env.CI_BRANCH ? 2 : 0,
     workers: process.env.CI_BRANCH ? '100%' : '75%',
     reporter: [
         ['list'],

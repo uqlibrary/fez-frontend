@@ -70,37 +70,38 @@ npm run pretest:unit:ci
 
 case "$PIPE_NUM" in
 "1")
+    set -e
+    installCypressDependencies
+    installPlaywrightDependencies
+    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #1 [STARTING AT $(date)] 1\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        set -e
-        installCypressDependencies
-        installPlaywrightDependencies
-        printf "\n--- \e[1mRUNNING E2E TESTS GROUP #1 [STARTING AT $(date)] 1\e[0m ---\n"
-        npm run test:e2e:cy
-        npm run test:e2e:pw:cc --shard=1/2
-        printf "\n--- [ENDED AT $(date)] \n"
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
+#        npm run test:e2e:cy
+        npm run test:e2e:pw:cc -- --shard=1/2
     else
-        printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
         checkCodeStyle
-        set -e
-        printf "\n--- \e[1mRUNNING UNIT TESTS 1\e[0m ---\n"
-        npm run test:unit:ci1:nocoverage
+        npm run test:e2e:cy
+        npm run test:e2e:pw -- --shard=1/2
+    fi
+    printf "\n--- [ENDED AT $(date)] \n"
+
+    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+#        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
+        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/playwright/coverage-final.json
     fi
 ;;
 "2")
     set -e
+    installPlaywrightDependencies
+    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #2 [STARTING AT $(date)] 2\e[0m ---\n"
+    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+        npm run test:e2e:pw:cc -- --shard=2/2
+    else
+        npm run test:e2e:pw -- --shard=2/2
+    fi
+    printf "\n--- [ENDED AT $(date)] \n"
 
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        installPlaywrightDependencies
-        printf "\n--- \e[1mRUNNING E2E TESTS GROUP #2 [STARTING AT $(date)] 2\e[0m ---\n"
-        npm run test:e2e:pw:cc --shard=2/2
-        printf "\n--- [ENDED AT $(date)] \n"
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/playwright/coverage-final.json
-    else
-        printf "\n--- \e[1mRUNNING SERIAL UNIT TESTS\e[0m ---\n"
-        npm run test:unit:ci:serial:nocoverage
-        printf "\n--- \e[1mRUNNING UNIT TESTS 2\e[0m ---\n"
-        npm run test:unit:ci2:nocoverage
     fi
 ;;
 "3")

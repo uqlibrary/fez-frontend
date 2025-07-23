@@ -27,8 +27,10 @@ export const UQ_FULL_NAME = 'The University of Queensland';
 // URLS - values are set in webpack build
 export const PRODUCTION_URL = 'https://espace.library.uq.edu.au/';
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
+export const PRODUCTION_API_URL = 'https://api.library.uq.edu.au/v1/';
+export const STAGING_API_URL = 'https://api.library.uq.edu.au/staging/';
 export const DEVELOPMENT_DOMAIN = 'development.library.uq.edu.au';
-export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
+export const API_URL = process.env.API_URL || STAGING_API_URL;
 export const APP_URL = process.env.APP_URL || STAGING_URL;
 export const IS_PRODUCTION = API_URL.indexOf('staging') === -1;
 export const IS_DEVELOPMENT_SERVER =
