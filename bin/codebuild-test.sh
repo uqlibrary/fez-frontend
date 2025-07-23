@@ -91,7 +91,6 @@ case "$PIPE_NUM" in
     set -e
 
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-         Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the second group
         installPlaywrightDependencies
         printf "\n--- \e[1mRUNNING E2E TESTS GROUP #2 [STARTING AT $(date)] 2\e[0m ---\n"
         npm run test:e2e:pw:cc --shard=2/2
