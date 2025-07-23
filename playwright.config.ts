@@ -25,8 +25,7 @@ export default defineConfig({
     ],
     use: {
         baseURL,
-        // collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer
-        // trace: 'on-first-retry',
+        trace: 'on-first-retry',
         headless: process.env.PW_HEADED === 'true' ? false : true,
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
