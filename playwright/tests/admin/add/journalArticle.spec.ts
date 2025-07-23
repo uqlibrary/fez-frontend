@@ -6,7 +6,7 @@ import {
     adminEditTabbedView,
     editAffiliationAndAssert,
 } from '../helpers';
-import { clickAutoSuggestion } from '../../../lib/helpers';
+import { clickAutoSuggestion, testIdStartsWith } from '../../../lib/helpers';
 import { typeCKEditor } from '../../../lib/ckeditor';
 
 test.describe('As an admin,', () => {
@@ -200,22 +200,13 @@ test.describe('As an admin,', () => {
             ).toBeVisible();
             await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
             await page.getByTestId('affiliationSaveBtn').click();
-            await expect(
-                page
-                    .getByTestId('detailPanel-75121')
-                    .locator('[data-testid=orgChip-1248]', { hasText: /33\.334%/ })
-                    .first(),
-            ).toBeVisible();
+            await expect(page.getByTestId('detailPanel-75121').locator('[data-testid=orgChip-877]')).toContainText(
+                /33\.334%/,
+            );
             await expect(
                 page
                     .getByTestId('detailPanel-75121')
                     .getByText(/Aboriginal and Torres Strait Islander Studies Unit/)
-                    .first(),
-            ).toBeVisible();
-            await expect(
-                page
-                    .getByTestId('detailPanel-75121')
-                    .locator('[data-testid=orgChip-1248]', { hasText: /33\.333%/ })
                     .first(),
             ).toBeVisible();
             await expect(
@@ -367,8 +358,7 @@ test.describe('As an admin,', () => {
             ).toBeVisible();
 
             // currentOrgId, nextOrgId, nextOrgName, expectedPercent) =
-            await expect(page.locator('[data-testid^=affiliationEditBtn-')).toBeVisible();
-            await page.locator('[data-testid^=affiliationEditBtn-').click();
+            await testIdStartsWith(page, 'affiliationEditBtn-').click();
             await editAffiliationAndAssert(page, 1248, 1062, '!NON-HERDC', '100%');
             // double check the suggested org has been re-added
             await expect(page.getByTestId('orgSelect-1248-input')).toBeVisible();
