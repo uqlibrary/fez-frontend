@@ -6,7 +6,7 @@ CYPRESS_REPORT=cypress/coverage-final.json
 JEST_REPORT=jest/coverage-final.json
 
 if [ ! -f "$CYPRESS_REPORT" ]; then
-    echo "Cypress test report not found! Merge aborted."
+    echo "Playwright test report not found! Merge aborted."
     exit 1
 fi
 

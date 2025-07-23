@@ -12,7 +12,6 @@
     "afterAll": true,
     "beforeAll": true,
     "cy": true,
-    "Cypress": true,
     "expect": true,
     "getElement": true,
     "renderComponent": true,

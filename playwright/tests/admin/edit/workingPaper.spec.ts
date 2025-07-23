@@ -49,7 +49,7 @@ test.describe('Working paper admin edit', () => {
 
         expect(await readCKEditor(page, 'rek-title')).toContain(record.rek_title);
 
-        // Fourth AdminCard (Bibliographic section) - Cypress uses eq(4) which is the 5th element (0-indexed)
+        // Fourth AdminCard (Bibliographic section)
         const bibliographicCard = bibliographicContent.locator('.AdminCard').nth(4);
         await expect(bibliographicCard.locator('h4')).toHaveText(/Bibliographic/);
 

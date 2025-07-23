@@ -54,7 +54,7 @@ exclude_patterns:
 - "__mocks__/"
 - "coverage/"
 - "custom_modules/"
-- "cypress/"
+- "playwright/"
 - "dist/"
 - "**/node_modules/"
 - "public/"

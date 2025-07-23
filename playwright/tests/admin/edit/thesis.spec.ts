@@ -84,7 +84,7 @@ test.describe('Thesis admin edit', () => {
             }),
         );
 
-        // Card 6: Related publications (Card 5 is skipped in original Cypress based on index)
+        // Card 6: Related publications
         const relatedPublicationsCard = bibliographicAdminCards.nth(6);
         await expect(relatedPublicationsCard.locator('h4')).toHaveText(/Related publications/);
         const relatedPubs = record.fez_record_search_key_isderivationof.map(item => item.rek_isderivationof_lookup);

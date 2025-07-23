@@ -40,7 +40,6 @@ test.describe('Conference Proceedings admin edit', () => {
         await expect(bibliographicTab.locator('h4').getByText(/Title of proceedings/)).toBeVisible();
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
-        // These clicks are outside the within() scope in Cypress, so they remain outside here.
         await expect(page.getByTestId('rek-contributor-add')).toBeVisible();
         await page.getByTestId('rek-contributor-add').click();
 
@@ -108,7 +107,7 @@ test.describe('Author affiliations', () => {
             authorName: 'Steve Su (uqysu4)',
             orgName: 'The University of Queensland',
             rowId: 0,
-            allowed: false, // In the original Cypress spec, this test implied 'not available', so `allowed: false` should be passed.
+            allowed: false,
         });
     });
 });

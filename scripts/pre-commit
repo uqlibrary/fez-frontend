@@ -82,28 +82,4 @@ fi
 # if [[ "$?" != 0 ]]; then
 #   printf "\e[31mEither Jest tests failed, or code coverage is not complete. Please fix and try again.\e[0m\n"
 #   exit 2
-# else
-
-STAGED_CYPRESS_TESTS="${GIT_DIFF} -- '*.spec.*'"
-CYPRESS_ONLY_COUNT=$(eval "${STAGED_CYPRESS_TESTS}" | xargs cat | grep -c '\.only(')
-STAGED_UNIT_TESTS="${GIT_DIFF} -- '*.test.*'"
-UNIT_ONLY_COUNT=$(eval "${STAGED_UNIT_TESTS}" | xargs cat | grep -c '\.only(')
-if [[ -z ${GIT_COMMIT_SKIP_CYPRESS_ONLY_KEYWORD_CHECK} && $(($CYPRESS_ONLY_COUNT+$UNIT_ONLY_COUNT)) -ne 0 ]]; then
-    cat << EOF
-
-$(printf "${C_YELLOW}Warning${C_RESET}"): It appears that you're attempting to commit a Cypress test using the "only" keyword,
-such as "it.only(...)". This practice can potentially lead to issues with code coverage checks.
-If you have a valid reason for using the "only" keyword in your Cypress test and wish to proceed
-with the commit, follow these steps:
-
-Set the environment variable for skipping the "only" keyword check:
- $(printf "${C_GREY}GIT_COMMIT_SKIP_CYPRESS_ONLY_KEYWORD_CHECK=true git commit ...${C_RESET}")
-
-EOF
-		exit 1
-fi
-
-printf "\n\e[92mNo issues found. Good job!\e[0m\n\n"
-echo "Proceeding with commit..."
-
 # fi

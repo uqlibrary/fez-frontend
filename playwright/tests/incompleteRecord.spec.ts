@@ -48,7 +48,6 @@ test.describe('Incomplete record form', () => {
 
     const editNonUQAuthor = async (page: Page, authorNumber: number, orgName: string, orgType: string) => {
         await page.locator(`#rek-author-list-row-edit-${authorNumber}`).click();
-        // Playwright's locator strategy for siblings is different from Cypress.
         // We can find the parent of the clicked element and then find its sibling 'div' that contains the text.
         await expect(
             page

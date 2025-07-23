@@ -56,10 +56,6 @@ function checkCodeStyle {
     fi
 }
 
-# required for Ubuntu 22.04 https://docs.cypress.io/guides/continuous-integration/introduction#Dependencies
-function installCypressDependencies {
-    apt-get update && apt-get -y install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb
-}
 
 function installPlaywrightDependencies {
     npx playwright install chromium-headless-shell
@@ -71,11 +67,9 @@ npm run pretest:unit:ci
 case "$PIPE_NUM" in
 "1")
     set -e
-    installCypressDependencies
     installPlaywrightDependencies
     printf "\n--- \e[1mRUNNING E2E TESTS GROUP #1 [STARTING AT $(date)] 1\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-#        npm run test:e2e:cy
         npm run test:e2e:pw:cc -- --shard=1/2
     else
         checkCodeStyle
@@ -85,7 +79,6 @@ case "$PIPE_NUM" in
     printf "\n--- [ENDED AT $(date)] \n"
 
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-#        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/playwright/coverage-final.json
     fi
 ;;
