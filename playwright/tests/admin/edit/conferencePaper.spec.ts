@@ -123,7 +123,7 @@ test.describe('Author affiliations', () => {
 
     test('should be available for this work type', async ({ page }) => {
         await assertAffiliationsAllowed(page, {
-            authorName: 'Steve Su (page, uqysu4)',
+            authorName: 'Steve Su (uqysu4)',
             orgName: 'The University of Queensland',
             rowId: 4,
             allowed: true,
