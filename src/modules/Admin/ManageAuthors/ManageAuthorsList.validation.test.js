@@ -62,12 +62,12 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
 
-        expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-org-username-input'), 'uqtest');
 
@@ -82,14 +82,15 @@ describe('ManageAuthorsList', () => {
         });
 
         expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         userEvent.clear(getByTestId('aut-org-username-input'));
         userEvent.type(getByTestId('aut-org-username-input'), 'uqtesta');
 
         await waitFor(() => {
             expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'false');
-            expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+            expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
         });
     });
 
@@ -113,12 +114,12 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
 
-        expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-student-username-input'), { target: { value: 's1234567' } });
         await userEvent.click(getByTestId('authors-add-this-author-save'));
@@ -130,13 +131,13 @@ describe('ManageAuthorsList', () => {
         });
 
         expect(getByTestId('aut-student-username-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-student-username-input'), { target: { value: 's1234569' } });
 
         await waitFor(() => {
             expect(getByTestId('aut-student-username-input')).toHaveAttribute('aria-invalid', 'false');
-            expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+            expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
         });
     });
 
@@ -168,12 +169,12 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
 
-        expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-staff-id-input'), { target: { value: '1234567' } });
 
@@ -188,13 +189,13 @@ describe('ManageAuthorsList', () => {
         });
 
         expect(getByTestId('aut-org-staff-id-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-staff-id-input'), { target: { value: '1234569' } });
 
         await waitFor(() => {
             expect(getByTestId('aut-org-staff-id-input')).toHaveAttribute('aria-invalid', 'false');
-            expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+            expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
         });
     });
 
@@ -225,12 +226,12 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
 
-        expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-org-student-id-input'), '12345678');
 
@@ -245,13 +246,13 @@ describe('ManageAuthorsList', () => {
         });
 
         expect(getByTestId('aut-org-student-id-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '12345679' } });
 
         await waitFor(() => {
             expect(getByTestId('aut-org-student-id-input')).toHaveAttribute('aria-invalid', 'false');
-            expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+            expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
         });
     });
 
@@ -382,7 +383,7 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
         await fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
@@ -399,7 +400,7 @@ describe('ManageAuthorsList', () => {
         });
 
         expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         const usernameInput = await findByTestId('aut-org-username-input');
 
