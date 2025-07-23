@@ -71,9 +71,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         [],
     );
 
-    const { authorListLoading, authorListItemUpdating, authorListItemDeleting, authorAdding } = useSelector(state =>
-        state?.get('manageAuthorsReducer'),
-    );
+    const { authorListLoading, authorListItemDeleting } = useSelector(state => state?.get('manageAuthorsReducer'));
 
     const { data: list, pagination, request, onPaginationChange } = useServerData({
         actions,
@@ -297,8 +295,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         state: {
             showAlertBanner: false,
             isLoading: authorListLoading,
-            showLoadingOverlay:
-                authorListLoading || authorListItemUpdating || authorListItemDeleting || authorAdding || isBusy,
+            showLoadingOverlay: authorListLoading || authorListItemDeleting || isBusy,
             pagination,
             rowSelection: selectedRows,
         },

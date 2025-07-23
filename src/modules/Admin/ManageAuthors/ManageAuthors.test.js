@@ -660,7 +660,10 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
         fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtname' } });
+
+        expect(getByTestId('authors-update-this-author-save')).not.toHaveAttribute('disabled');
         fireEvent.click(getByTestId('authors-update-this-author-save'));
+        await waitFor(() => expect(getByTestId('authors-update-this-author-save')).toHaveAttribute('disabled'));
 
         fireEvent.click(getByTestId('authors-update-this-author-cancel'));
 
@@ -692,7 +695,7 @@ describe('ManageAuthors', () => {
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
 
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
@@ -701,13 +704,15 @@ describe('ManageAuthors', () => {
         fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-342' } });
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
 
-        expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
         await waitFor(() => getByTestId('aut-name-overridden'));
 
         fireEvent.click(getByTestId('aut-name-overridden'));
         fireEvent.click(getByTestId('aut-is-scopus-id-authenticated'));
         fireEvent.click(getByTestId('authors-add-this-author-save'));
+
+        await waitFor(() => expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled'));
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
@@ -731,7 +736,7 @@ describe('ManageAuthors', () => {
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
 
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
@@ -813,7 +818,6 @@ describe('ManageAuthors', () => {
         await userEvent.clear(getByTestId('aut-lname-input'));
 
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-update-this-author-save').closest('button')).toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
@@ -824,7 +828,12 @@ describe('ManageAuthors', () => {
         await userEvent.type(getByTestId('aut-org-username-input'), 'uqtname');
 
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
+
+        expect(getByTestId('authors-update-this-author-save')).not.toHaveAttribute('disabled');
+
         fireEvent.click(getByTestId('authors-update-this-author-save'));
+
+        await waitFor(() => expect(getByTestId('authors-update-this-author-save')).toHaveAttribute('disabled'));
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
@@ -896,10 +905,10 @@ describe('ManageAuthors', () => {
         await userEvent.clear(getByTestId('aut-lname-input'));
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
 
-        expect(getByTestId('authors-update-this-author-save').closest('button')).toHaveAttribute('disabled');
-
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
+
+        expect(getByTestId('authors-update-this-author-save')).not.toHaveAttribute('disabled');
 
         await userEvent.click(getByTestId('authors-update-this-author-save'));
 

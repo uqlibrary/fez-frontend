@@ -1,5 +1,5 @@
 import { checkForExistingAuthor } from 'actions';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
@@ -46,11 +46,12 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     };
     const [apiError, setApiError] = React.useState('');
     const [submitting, setSubmitting] = React.useState(false);
-
+    const { authorListItemUpdating, authorAdding } = useSelector(state => state?.get('manageAuthorsReducer'));
     const dispatch = useDispatch();
     const { setError, clearErrors } = validatedForm;
 
-    const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}';
+    const disableSubmit =
+        !isDirty || isSubmitting || authorListItemUpdating || authorAdding || JSON.stringify(errors) !== '{}';
 
     const {
         form: { editButton, cancelButton, addButton },
@@ -243,13 +244,13 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                                     </Button>
                                                 </Grid>
                                             </Grid>
-                                        </Grid>
 
-                                        {(!!apiError || !!Object.keys(errors).length) && (
-                                            <Grid xs={12}>
-                                                <Alert alertId="api_error_alert" {...alertProps} />
-                                            </Grid>
-                                        )}
+                                            {(!!apiError || !!Object.keys(errors).length) && (
+                                                <Grid xs={12} paddingBottom={2}>
+                                                    <Alert alertId="api_error_alert" {...alertProps} />
+                                                </Grid>
+                                            )}
+                                        </Grid>
                                     </Grid>
                                 </Box>
                             </form>
