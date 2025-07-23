@@ -70,7 +70,7 @@ case "$PIPE_NUM" in
     installPlaywrightDependencies
     printf "\n--- \e[1mRUNNING E2E TESTS GROUP #1 [STARTING AT $(date)] 1\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        npm run test:e2e:pw:cc -- --shard=1/2
+        npm run test:e2e:pw:cc -- -- --shard=1/2
     else
         checkCodeStyle
         npm run test:e2e:cy
@@ -87,7 +87,7 @@ case "$PIPE_NUM" in
     installPlaywrightDependencies
     printf "\n--- \e[1mRUNNING E2E TESTS GROUP #2 [STARTING AT $(date)] 2\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        npm run test:e2e:pw:cc -- --shard=2/2
+        npm run test:e2e:pw:cc -- -- --shard=2/2
     else
         npm run test:e2e:pw -- --shard=2/2
     fi
