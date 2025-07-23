@@ -73,9 +73,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         [],
     );
 
-    const { userListLoading, userListItemUpdating, userListItemDeleting, userAdding } = useSelector(state =>
-        state?.get('manageUsersReducer'),
-    );
+    const { userListLoading, userListItemDeleting } = useSelector(state => state?.get('manageUsersReducer'));
 
     const { data: list, pagination, request, onPaginationChange } = useServerData({
         actions,
@@ -325,7 +323,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         state: {
             showAlertBanner: false,
             isLoading: userListLoading,
-            showLoadingOverlay: userListLoading || userListItemUpdating || userListItemDeleting || userAdding || isBusy,
+            showLoadingOverlay: userListLoading || userListItemDeleting || isBusy,
             pagination,
             rowSelection: selectedRows,
         },
@@ -355,6 +353,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         },
         muiTableBodyCellProps: {
             sx: {
+                alignContent: 'flex-start',
                 padding: 1,
             },
         },
