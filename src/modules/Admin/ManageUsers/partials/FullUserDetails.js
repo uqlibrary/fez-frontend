@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FormProvider } from 'react-hook-form';
 import { useForm } from 'hooks';
 import { useWatch } from 'react-hook-form';
@@ -43,10 +43,13 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
     const [apiError, setApiError] = React.useState('');
     const [submitting, setSubmitting] = React.useState(false);
 
+    const { userListItemUpdating, userAdding } = useSelector(state => state?.get('manageUsersReducer'));
+
     const dispatch = useDispatch();
     const { setError, clearErrors } = validatedForm;
 
-    const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}';
+    const disableSubmit =
+        !isDirty || isSubmitting || userListItemUpdating || userAdding || JSON.stringify(errors) !== '{}';
 
     const {
         form: { editButton, cancelButton, addButton },
@@ -225,12 +228,13 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                                                     </Button>
                                                 </Grid>
                                             </Grid>
+
+                                            {(!!apiError || !!Object.keys(errors).length) && (
+                                                <Grid item xs={12}>
+                                                    <Alert alertId="api_error_alert" {...alertProps} />
+                                                </Grid>
+                                            )}
                                         </Grid>
-                                        {(!!apiError || !!Object.keys(errors).length) && (
-                                            <Grid item xs={12}>
-                                                <Alert alertId="api_error_alert" {...alertProps} />
-                                            </Grid>
-                                        )}
                                     </Grid>
                                 </Box>
                             </form>

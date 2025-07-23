@@ -281,12 +281,16 @@ describe('ManageUsers', () => {
 
         fireEvent.click(getByTestId('users-add-new-user'));
 
+        expect(getByTestId('users-add-this-user-save')).toHaveAttribute('disabled');
+
         fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test Name' } });
         fireEvent.change(getByTestId('usr-email-input'), { target: { value: 'test@uq.edu.au' } });
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtest' } });
         fireEvent.click(getByTestId('usr-administrator-input'));
         fireEvent.click(getByTestId('usr-administrator-input'));
         fireEvent.click(getByTestId('users-add-this-user-save'));
+
+        await waitFor(() => expect(getByTestId('users-add-this-user-save')).toHaveAttribute('disabled'));
 
         await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(1));
 
@@ -372,6 +376,8 @@ describe('ManageUsers', () => {
 
         fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
 
+        expect(getByTestId('users-update-this-user-save')).toHaveAttribute('disabled');
+
         expect(getByTestId('usr-full-name-input')).toHaveAttribute('value', 'Test User');
         expect(getByTestId('usr-email-input')).toHaveAttribute('value', 't.user@library.uq.edu.au');
         expect(getByTestId('usr-username-input')).toHaveAttribute('value', 'uqvasai');
@@ -379,7 +385,12 @@ describe('ManageUsers', () => {
         fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test' } });
         fireEvent.change(getByTestId('usr-email-input'), { target: { value: 'test@uq.edu.au' } });
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
+
+        expect(getByTestId('users-update-this-user-save')).not.toHaveAttribute('disabled');
+
         fireEvent.click(getByTestId('users-update-this-user-save'));
+
+        await waitFor(() => expect(getByTestId('users-update-this-user-save')).toHaveAttribute('disabled'));
 
         await waitFor(() => {
             expect(queryByTestId('standard-card-user-information')).not.toBeInTheDocument();
