@@ -6,6 +6,9 @@ const getKeyValue = value => (process.env.NODE_ENV === 'production' ? `?key=${va
 
 export const RESOLVER_URL_PREFIX = 'https://resolver.library.uq.edu.au/openathens/redir?qurl=';
 
+export const ULRICHS_URL_PREFIX =
+    RESOLVER_URL_PREFIX + encodeURIComponent('https://ulrichsweb.serialssolutions.com/title/');
+
 export const prefixByUrlResolver = url => RESOLVER_URL_PREFIX + encodeURIComponent(url);
 
 export const numberToWords = value => {

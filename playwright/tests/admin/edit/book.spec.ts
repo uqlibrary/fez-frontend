@@ -2,6 +2,7 @@ import { test, expect, Locator } from '../../../test';
 
 import { default as recordList } from 'mock/data/records/publicationTypeListBook';
 import { sherpaRomeo as sherpaMocks } from 'mock/data/sherpaRomeo';
+import { ULRICHS_URL_PREFIX } from 'config/general';
 
 import {
     adminEditCheckDefaultTab,
@@ -72,10 +73,6 @@ test.describe('Book admin edit', () => {
 
     test('should render ISSN as expected', async ({ page }) => {
         const recordWithIssn = recordList.data[1]; // Using a different record from the list for this test
-        const ulrichsLinkPrefix =
-            'https://resolver.library.uq.edu.au/openathens/redir?qurl=' +
-            encodeURIComponent('https://ulrichsweb.serialssolutions.com/title/');
-
         await loadRecordForAdminEdit(page, recordWithIssn.rek_pid);
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
 
@@ -85,8 +82,8 @@ test.describe('Book admin edit', () => {
                 (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_journal_link ||
                 sherpaMocks[0].srm_journal_link;
             await expect(container).toContainText(issn);
-            await expect(container).toContainText('SHERPA/RoMEO'); // Check if text is present
-            await expect(container).toContainText('Ulrichs'); // Check if text is present
+            await expect(container).toContainText('SHERPA/RoMEO');
+            await expect(container).toContainText('Ulrichs');
             await expect(container.locator('#sherparomeo-link')).toHaveAttribute('href', sherpaLink);
 
             let ulrichsID = issn.replace('-', '');
@@ -102,7 +99,7 @@ test.describe('Book admin edit', () => {
             }
             await expect(container.locator('#ulrichs-link')).toHaveAttribute(
                 'href',
-                `${ulrichsLinkPrefix}${ulrichsID}`,
+                `${ULRICHS_URL_PREFIX}${ulrichsID}`,
             );
         };
 
@@ -120,7 +117,7 @@ test.describe('Book admin edit', () => {
             'aria-label',
             'Source publisher name/place and alternate ISSNs in a new window',
         );
-        await expect(row1.locator('a')).toHaveAttribute('href', `${ulrichsLinkPrefix}339301`);
+        await expect(row1.locator('a')).toHaveAttribute('href', `${ULRICHS_URL_PREFIX}339301`);
         await row1.locator('button[aria-label="Edit this item"]').click();
 
         console.log('Edit issn to a different one with valid data');
