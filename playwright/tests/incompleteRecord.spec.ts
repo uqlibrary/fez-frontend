@@ -1,5 +1,5 @@
 import { test, expect, Page } from '../test';
-import { typeCKEditor } from '../lib/ckeditor'; // Assuming this is a custom helper
+import { readCKEditor, typeCKEditor } from '../lib/ckeditor'; // Assuming this is a custom helper
 
 test.describe('Incomplete record form', () => {
     const checkSignificance = async (page: Page, significance: string) => {
@@ -13,7 +13,7 @@ test.describe('Incomplete record form', () => {
 
     const checkResearchStatement = async (page: Page, statement: string) => {
         await typeCKEditor(page, 'rek-creator-contribution-statement', statement);
-        // expect(await readCKEditor('rek-creator-contribution-statement')).toContain(statement);
+        expect(await readCKEditor(page, 'rek-creator-contribution-statement')).toContain(statement);
     };
 
     const checkAudienceSize = async (page: Page, sizeText: string) => {
