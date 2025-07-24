@@ -70,7 +70,7 @@ case "$PIPE_NUM" in
     installPlaywrightDependencies
     printf "\n--- \e[1mRUNNING E2E TESTS GROUP #1 [STARTING AT $(date)] 1\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        PW_CC_REPORT_FILENAME=coverage-final-2.json npm run test:e2e:pw:cc -- -- --shard=1/2
+        PW_CC_REPORT_FILENAME=coverage-final-1.json npm run test:e2e:pw:cc -- -- --shard=1/2
     else
         checkCodeStyle
         npm run test:e2e:cy
