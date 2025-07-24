@@ -56,20 +56,20 @@ export const NameData = () => {
                     {...username}
                 />
                 <Field
+                    control={control}
                     component={UserFieldData}
                     userFieldDataId="usr-administrator"
                     name="usr_administrator"
                     type="checkbox"
-                    // onChange={handleUserAdministrator}
                     {...isAdmin}
                 />
                 <Field
+                    control={control}
                     component={UserFieldData}
                     userFieldDataId="usr-super-administrator"
                     name="usr_super_administrator"
                     type="checkbox"
                     disabled={!isUserSuperAdmin}
-                    // onChange={handleUserSuperAdministrator}
                     {...isSuperAdmin}
                 />
             </Grid>

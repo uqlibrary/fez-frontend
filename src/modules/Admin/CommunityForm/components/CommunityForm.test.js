@@ -1,5 +1,4 @@
 import CommunityForm from './CommunityForm';
-import Immutable from 'immutable';
 import React from 'react';
 import { render, WithReduxStore, WithRouter, fireEvent, userEvent, waitFor } from 'test-utils';
 import * as actions from 'actions';
@@ -11,13 +10,11 @@ jest.mock('actions', () => ({
 
 function setup(testProps = {}, state = {}, rerender = render) {
     return rerender(
-        <React.StrictMode>
-            <WithReduxStore initialState={Immutable.Map(state)}>
-                <WithRouter>
-                    <CommunityForm {...testProps} />
-                </WithRouter>
-            </WithReduxStore>
-        </React.StrictMode>,
+        <WithReduxStore initialState={state}>
+            <WithRouter>
+                <CommunityForm {...testProps} />
+            </WithRouter>
+        </WithReduxStore>,
     );
 }
 async function inputText(getByTestId, settings) {

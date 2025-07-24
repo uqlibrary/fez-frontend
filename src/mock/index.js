@@ -452,6 +452,7 @@ export const setup = () => {
                 ...mockData.publicationTypeListDigilibImage.data,
                 ...mockData.publicationTypeListGenericDocument.data,
                 ...mockData.publicationTypeListImage.data,
+                ...mockData.publicationTypeListInstrument.data,
                 ...mockData.publicationTypeListJournal.data,
                 ...mockData.publicationTypeListJournalArticle.data,
                 ...mockData.publicationTypeListManuscript.data,
@@ -557,6 +558,8 @@ export const setup = () => {
         // Journal main search
         .onGet(new RegExp(escapeRegExp(routes.JOURNAL_LOOKUP_API({ query: '.*' }).apiUrl)))
         .reply(200, { ...mockData.journalLookup })
+        .onGet(new RegExp(routes.ROR_LOOKUP_API({ id: '.*' }).apiUrl))
+        .reply(200, { ...mockData.rorLookup })
         .onGet(new RegExp(escapeRegExp(routes.JOURNAL_KEYWORDS_LOOKUP_API({ query: '.*' }).apiUrl)))
         .reply(config => {
             console.log(

@@ -71,13 +71,15 @@ if (!isTest() && process.env.ENABLE_LOG) {
 const render = () => {
     const root = createRoot(document.getElementById('react-root'));
     root.render(
-        <AppErrorBoundary>
-            <Provider store={store}>
-                <LocalizationProvider dateAdapter={AdapterMoment}>
-                    <Root />
-                </LocalizationProvider>
-            </Provider>
-        </AppErrorBoundary>,
+        <React.StrictMode>
+            <AppErrorBoundary>
+                <Provider store={store}>
+                    <LocalizationProvider dateAdapter={AdapterMoment}>
+                        <Root />
+                    </LocalizationProvider>
+                </Provider>
+            </AppErrorBoundary>
+        </React.StrictMode>,
     );
 };
 

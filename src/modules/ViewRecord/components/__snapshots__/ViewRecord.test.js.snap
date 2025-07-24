@@ -39,7 +39,7 @@ exports[`ViewRecord should render not found 1`] = `
               If you believe this is in error, please
                
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/contact-us"
+                href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
               >
                 contact the eSpace team.
               </a>

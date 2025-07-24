@@ -96,14 +96,14 @@ describe('MyEditorialAppointments', () => {
             'loadMyEditorialAppointmentsList',
         );
 
-        const { getAllByTestId, getByText, getByTestId, getByRole } = setup({});
+        const { container, getByText, getByTestId, getByRole } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
         expect(loadMyEditorialAppointmentsListFn).toBeCalled();
 
         await waitFor(() => getByText('My editorial appointments'));
         expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
 
-        expect(getAllByTestId('mtablebodyrow').length).toBe(1);
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(1); // account for header row
 
         fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
 
@@ -138,18 +138,14 @@ describe('MyEditorialAppointments', () => {
             'loadMyEditorialAppointmentsList',
         );
 
-        const { getAllByTestId, getByText, getByTestId } = setup({});
+        const { container, getByText, getByTestId } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
         expect(loadMyEditorialAppointmentsListFn).toBeCalled();
 
         await waitFor(() => getByText('My editorial appointments'));
         expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
 
-        expect(getAllByTestId('mtablebodyrow').length).toBe(2);
-        expect(document.querySelector('#my-editorial-appointments-list-row-0 td:first-of-type')).not.toHaveAttribute(
-            'style',
-            expect.stringContaining('display: block'),
-        );
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
     });
 
     it('should render table in phone width', async () => {
@@ -182,18 +178,13 @@ describe('MyEditorialAppointments', () => {
             'loadMyEditorialAppointmentsList',
         );
 
-        const { getAllByTestId, getByText, getByTestId } = setup({});
+        const { container, getByText, getByTestId } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
         expect(loadMyEditorialAppointmentsListFn).toBeCalled();
 
         await waitFor(() => getByText('My editorial appointments'));
         expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
-        expect(getAllByTestId('mtablebodyrow').length).toBe(2);
-
-        expect(document.querySelector('#my-editorial-appointments-list-row-0 td:first-of-type')).toHaveAttribute(
-            'style',
-            expect.stringContaining('display: block'),
-        );
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
     });
 
     it('should render error message', async () => {

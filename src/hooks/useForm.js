@@ -182,7 +182,7 @@ export const useForm = (props = {}) => {
     );
     attributes.formState.serverError = getServerError(attributes.formState.errors);
     attributes.setServerError = e => setServerError(attributes.setError, e);
-    attributes.resetServerError = () => attributes.clearErrors(`${SERVER_ERROR_NAMESPACE}.${SERVER_ERROR_KEY}`);
+    attributes.resetServerErrors = () => attributes.clearErrors(`${SERVER_ERROR_NAMESPACE}.${SERVER_ERROR_KEY}`);
 
     // form submission helpers
     attributes.safelyHandleSubmit = safelyHandleSubmit(attributes);

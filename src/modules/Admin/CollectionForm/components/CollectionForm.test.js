@@ -130,8 +130,7 @@ describe('Collection form', () => {
                 { rek_pid: 'UQ:123', rek_title: '<b>Tested community</b>' },
             ],
         });
-        mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(config => {
-            console.log('Mock API called: ', config.url);
+        mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(() => {
             return [401, { error: { message: 'Server Error' } }];
         });
 

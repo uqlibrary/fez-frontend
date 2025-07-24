@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction, MTableToolbar } from '@material-table/core';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { GridRowModes, DataGrid, GridActionsCellItem } from '@mui/x-data-grid';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -13,118 +13,21 @@ import { tableIcons } from './FavouriteSearchListIcons';
 import locale from 'locale/global';
 import { APP_URL, PATH_PREFIX } from 'config';
 import componentsLocale from 'locale/components';
+import { useDecoratedDataGrid } from './hooks';
 
 const classes = {
     text: {
         fontSize: 13,
     },
-};
-
-export const getColumns = classes => {
-    const {
-        components: { favouriteSearchList },
-    } = componentsLocale;
-    return [
-        {
-            title: favouriteSearchList.columns.realLink.title,
-            field: 'fvs_search_parameters',
-            editable: 'never',
-            render: rowData => (
-                <ExternalLink
-                    id={`fvs-search-parameters-${rowData.tableData.id}`}
-                    key={rowData.fvs_search_parameters}
-                    href={`${APP_URL}${PATH_PREFIX}${rowData.fvs_search_parameters.replace('/', '')}`}
-                    aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', rowData.fvs_description)}
-                >
-                    {favouriteSearchList.columns.realLink.cellText}
-                </ExternalLink>
-            ),
-        },
-        {
-            title: favouriteSearchList.columns.description.title,
-            field: 'fvs_description',
-            render: rowData => (
-                <Typography
-                    data-testid={`fvs-description-${rowData.tableData.id}`}
-                    id={`fvs-description-${rowData.tableData.id}`}
-                    sx={{ ...classes.text }}
-                >
-                    {rowData.fvs_description}
-                </Typography>
-            ),
-            editComponent: props => (
-                <TextField
-                    {...props}
-                    InputProps={{
-                        style: {
-                            fontSize: 13,
-                        },
-                    }}
-                    value={props.value}
-                    onChange={e => props.onChange(e.target.value)}
-                    textFieldId="fvs-description"
-                    errorText={props.helperText}
-                />
-            ),
-            validate: rowData =>
-                rowData.fvs_description === ''
-                    ? { isValid: false, helperText: favouriteSearchList.columns.description.validationMessage.empty }
-                    : true,
-        },
-        {
-            title: favouriteSearchList.columns.aliasedLink.title,
-            field: 'fvs_alias',
-            editable: 'never',
-            render: rowData => (
-                <ExternalLink
-                    key={rowData.fvs_alias}
-                    id={`fvs-alias-${rowData.tableData.id}`}
-                    href={`${APP_URL}${PATH_PREFIX}${rowData.fvs_alias}`}
-                    aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', rowData.fvs_description)}
-                >
-                    <Box component={'span'} sx={{ ...classes.text }}>
-                        {rowData.fvs_alias}
-                    </Box>
-                </ExternalLink>
-            ),
-        },
-        {
-            title: favouriteSearchList.columns.alias.title,
-            field: 'fvs_alias',
-            render: rowData => (
-                <Typography>
-                    <Box
-                        component={'span'}
-                        sx={{ ...classes.text }}
-                        data-testid={`fvs-alias-${rowData.tableData.id}`}
-                        id={`fvs-alias-${rowData.tableData.id}`}
-                    >
-                        {rowData.fvs_alias}
-                    </Box>
-                </Typography>
-            ),
-            editComponent: props => (
-                <TextField
-                    {...props}
-                    InputProps={{
-                        style: {
-                            fontSize: 13,
-                        },
-                    }}
-                    value={props.value || ''}
-                    onChange={e => props.onChange(e.target.value)}
-                    textFieldId="fvs-alias"
-                    errorText={props.helperText}
-                />
-            ),
-            validate: rowData => {
-                return rowData.fvs_alias !== '' &&
-                    !new RegExp(favouriteSearchList.columns.alias.regex).test(rowData.fvs_alias)
-                    ? { isValid: false, helperText: favouriteSearchList.columns.alias.validationMessage.invalid }
-                    : true;
-            },
-        },
-    ];
+    h6text: {
+        display: 'block',
+        marginBlockStart: 0,
+        marginBlockEnd: 0,
+        marginInlineStart: 0,
+        marginInlineEnd: 0,
+        fontWeight: 400,
+        fontSize: 20,
+    },
 };
 
 export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) => {
@@ -132,105 +35,307 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
         components: { favouriteSearchList },
     } = componentsLocale;
 
-    const materialTableRef = React.createRef();
-    const columns = React.createRef();
-    columns.current = getColumns(classes);
+    const _handleRowUpdate = React.useCallback(
+        (newData, oldData) =>
+            handleRowUpdate(newData, oldData)
+                .then(() => {
+                    return new Promise(resolve => {
+                        resolve(newData);
+                    });
+                })
+                .catch(() => {
+                    return oldData;
+                }),
+        [handleRowUpdate],
+    );
 
-    const [data, setData] = React.useState(list);
+    const _handleRowDelete = React.useCallback(
+        (rows, rowToDelete) =>
+            handleRowDelete(rowToDelete)
+                .then(() => {
+                    return new Promise(resolve => {
+                        resolve(rows.filter(row => row.fvs_id !== rowToDelete.fvs_id));
+                    });
+                })
+                .catch(() => {
+                    return rows;
+                }),
+        [handleRowDelete],
+    );
+
+    const {
+        loading,
+        deleteRowId,
+        rows,
+        rowModesModel,
+        handleUpdateRow,
+        handleDeleteRow,
+        handleRowModesModelChange,
+        handleEditClick,
+        handleSaveClick,
+        handleDeleteClick,
+        handleCancelClick,
+    } = useDecoratedDataGrid(list, _handleRowUpdate, _handleRowDelete);
+
+    const columns = [
+        {
+            field: 'fvs_search_parameters',
+            headerName: favouriteSearchList.columns.realLink.title,
+            editable: !!deleteRowId,
+            renderCell: props => {
+                const index = rows.findIndex(row => row.fvs_id === props.id);
+                if (!!deleteRowId && props.row.fvs_id === deleteRowId) {
+                    return (
+                        <Typography
+                            data-testid={`delete-row-${index}`}
+                            id={`delete-row-${index}`}
+                            sx={{ ...classes.h6text }}
+                            component={'h6'}
+                        >
+                            {favouriteSearchList.deleteConfirmLabel}
+                        </Typography>
+                    );
+                }
+
+                return (
+                    <ExternalLink
+                        id={`fvs-search-parameters-${index}`}
+                        key={props.value}
+                        href={`${APP_URL}${PATH_PREFIX}${props.value.replace('/', '')}`}
+                        aria-label={locale.global.linkWillOpenInNewWindow.replace(
+                            '[destination]',
+                            props.row.fvs_description,
+                        )}
+                    >
+                        {favouriteSearchList.columns.realLink.cellText}
+                    </ExternalLink>
+                );
+            },
+            flex: 1,
+            cellClassName: 'cell-styled',
+            colSpan: (value, row) => {
+                if (row.fvs_id === deleteRowId) return 4;
+                return undefined;
+            },
+        },
+        {
+            field: 'fvs_description',
+            headerName: favouriteSearchList.columns.description.title,
+            editable: true,
+            renderCell: props => {
+                const index = rows.findIndex(row => row.fvs_id === props.id);
+                return (
+                    <Typography
+                        data-testid={`fvs-description-${index}`}
+                        id={`fvs-description-${index}`}
+                        sx={{ ...classes.text }}
+                    >
+                        {props.value}
+                    </Typography>
+                );
+            },
+            renderEditCell: props => {
+                return (
+                    <TextField
+                        InputProps={{
+                            style: {
+                                fontSize: 13,
+                            },
+                        }}
+                        value={props.value}
+                        textFieldId="fvs-description"
+                        error={props.error}
+                        errorText={props.error ? favouriteSearchList.columns.description.validationMessage.empty : ''}
+                        onChange={e => {
+                            props.api.setEditCellValue({
+                                id: props.id,
+                                field: props.field,
+                                value: e.target.value,
+                            });
+                        }}
+                        sx={{ alignSelf: 'center' }}
+                    />
+                );
+            },
+            preProcessEditCellProps: params => ({
+                ...params.props,
+                error: params.props.value === '',
+            }),
+            flex: 1,
+            cellClassName: 'cell-styled',
+        },
+        {
+            headerName: favouriteSearchList.columns.aliasedLink.title,
+            field: 'fvs_alias_link',
+            editable: false,
+            renderCell: props => {
+                const index = rows.findIndex(row => row.fvs_id === props.id);
+                return (
+                    <ExternalLink
+                        key={props.value}
+                        id={`fvs-alias-${index}`}
+                        href={`${APP_URL}${PATH_PREFIX}${props.row.fvs_alias}`}
+                        aria-label={locale.global.linkWillOpenInNewWindow.replace(
+                            '[destination]',
+                            props.row.fvs_description,
+                        )}
+                    >
+                        <Box component={'span'} sx={{ ...classes.text }}>
+                            {props.row.fvs_alias}
+                        </Box>
+                    </ExternalLink>
+                );
+            },
+            flex: 1,
+            cellClassName: 'cell-styled',
+        },
+        {
+            headerName: favouriteSearchList.columns.alias.title,
+            field: 'fvs_alias',
+            editable: true,
+            renderCell: props => {
+                const index = rows.findIndex(row => row.fvs_id === props.id);
+                return (
+                    <Typography>
+                        <Box
+                            component={'span'}
+                            sx={{ ...classes.text }}
+                            data-testid={`fvs-alias-${index}`}
+                            id={`fvs-alias-${index}`}
+                        >
+                            {props.value}
+                        </Box>
+                    </Typography>
+                );
+            },
+            renderEditCell: props => (
+                <TextField
+                    InputProps={{
+                        style: {
+                            fontSize: 13,
+                        },
+                    }}
+                    value={props.value || ''}
+                    textFieldId="fvs-alias"
+                    onChange={e => {
+                        props.api.setEditCellValue({
+                            id: props.id,
+                            field: props.field,
+                            value: e.target.value,
+                        });
+                    }}
+                    error={props.error}
+                    errorText={props.error ? favouriteSearchList.columns.alias.validationMessage.invalid : ''}
+                    sx={{ alignSelf: 'center' }}
+                />
+            ),
+            preProcessEditCellProps: params => {
+                return {
+                    ...params.props,
+                    error:
+                        params.props.value !== '' &&
+                        !new RegExp(favouriteSearchList.columns.alias.regex).test(params.props.value),
+                };
+            },
+            flex: 1,
+            cellClassName: 'cell-styled',
+        },
+        {
+            field: 'actions',
+            type: 'actions',
+            headerName: 'Actions',
+            width: 96,
+            cellClassName: 'cell-styled',
+            getActions: params => {
+                const isAnyInEditMdode = Object.values(rowModesModel).some(
+                    rowMode => rowMode.mode === GridRowModes.Edit,
+                );
+                const isAnyDeleting = !!deleteRowId;
+                const isInEditMode = rowModesModel[params.id]?.mode === GridRowModes.Edit;
+                const isDeleting = params.id === deleteRowId;
+                const index = rows.findIndex(row => row.fvs_id === params.id);
+                if (isInEditMode || isDeleting) {
+                    return [
+                        <GridActionsCellItem
+                            icon={<tableIcons.Check />}
+                            label="Save"
+                            sx={{
+                                color: 'primary.main',
+                            }}
+                            onClick={!isDeleting ? handleSaveClick(params.id) : handleDeleteRow(params.id, rows)}
+                            data-testid={`favourite-search-list-item-${index}-save`}
+                        />,
+                        <GridActionsCellItem
+                            icon={<tableIcons.Clear />}
+                            label="Cancel"
+                            className="textPrimary"
+                            onClick={handleCancelClick(params.id)}
+                            color="inherit"
+                            data-testid={`favourite-search-list-item-${index}-cancel`}
+                        />,
+                    ];
+                }
+
+                return [
+                    <GridActionsCellItem
+                        icon={<tableIcons.Edit />}
+                        label="Edit"
+                        className="textPrimary"
+                        onClick={handleEditClick(params.id)}
+                        color="inherit"
+                        data-testid={`favourite-search-list-item-${index}-edit`}
+                        disabled={isAnyInEditMdode || isAnyDeleting}
+                    />,
+                    <GridActionsCellItem
+                        icon={<tableIcons.Delete />}
+                        label="Delete"
+                        onClick={handleDeleteClick(params.id)}
+                        color="inherit"
+                        data-testid={`favourite-search-list-item-${index}-delete`}
+                        disabled={isAnyInEditMdode || isAnyDeleting}
+                    />,
+                ];
+            },
+        },
+    ];
 
     return (
-        <MaterialTable
-            tableRef={materialTableRef}
-            columns={columns.current}
-            components={{
-                Container: props => <Paper {...props} style={{ padding: 16 }} />,
-                Toolbar: props => <MTableToolbar {...props} style={{ minHeight: 64 }} />,
-                Row: props => (
-                    <MTableBodyRow
-                        {...props}
-                        sx={{ ...classes.text }}
-                        id={`favourite-search-list-item-${props.index}`}
-                        data-testid={`favourite-search-list-item-${props.index}`}
-                    />
-                ),
-                EditRow: props => (
-                    <MTableEditRow
-                        {...props}
-                        id={`favourite-search-list-edit-item-${props.data.tableData.id}`}
-                        data-testid={`favourite-search-list-edit-item-${props.data.tableData.id}`}
-                    />
-                ),
-                Action: props => {
-                    const { icon: Icon, tooltip, ...restAction } =
-                        (typeof props.action === 'function' && props.action(props.data)) || props.action;
-                    return (
-                        <MTableAction
-                            {...props}
-                            action={{
-                                ...restAction,
-                                tooltip,
-                                icon: () => (
-                                    <Icon
-                                        data-testid={`favourite-search-list-item-${
-                                            props.data.tableData.id
-                                        }-${tooltip.toLowerCase()}`}
-                                    />
-                                ),
-                            }}
-                        />
-                    );
-                },
+        <Paper
+            sx={{
+                padding: 2,
+                display: 'flex',
+                flexDirection: 'column',
             }}
-            data={data}
-            icons={tableIcons}
-            title={favouriteSearchList.tableTitle}
-            editable={{
-                onRowUpdate: (newData, oldData) => {
-                    return handleRowUpdate(newData, oldData)
-                        .then(() => {
-                            return new Promise(resolve => {
-                                setTimeout(() => {
-                                    const dataUpdate = [...data];
-                                    const target = dataUpdate.find(el => el.fvs_id === oldData.fvs_id);
-                                    const index = dataUpdate.indexOf(target);
-                                    const newValue = { ...newData };
-                                    delete newValue.tableData;
-                                    dataUpdate[index] = newValue;
-                                    setData([...dataUpdate]);
-                                    resolve();
-                                }, 1000);
-                            });
-                        })
-                        .catch(() => {
-                            setData(prevState => prevState);
-                        });
-                },
-                onRowDelete: oldData => {
-                    return handleRowDelete(oldData).then(() => {
-                        return new Promise(resolve => {
-                            setTimeout(() => {
-                                const dataDelete = [...data];
-                                const target = dataDelete.find(el => el.fvs_id === oldData.fvs_id);
-                                const index = dataDelete.indexOf(target);
-                                dataDelete.splice(index, 1);
-                                setData([...dataDelete]);
-                                resolve();
-                            }, 1000);
-                        });
-                    });
-                },
-            }}
-            options={{
-                actionsColumnIndex: -1,
-                grouping: false,
-                draggable: false,
-                paging: false,
-                search: false,
-                headerStyle: {
-                    padding: 16,
-                },
-            }}
-        />
+        >
+            <DataGrid
+                id="favourite-search-list"
+                data-testid="favourite-search-list"
+                rows={rows}
+                getRowId={row => row.fvs_id}
+                columns={columns}
+                editMode="row"
+                rowModesModel={rowModesModel}
+                loading={loading}
+                onRowModesModelChange={handleRowModesModelChange}
+                processRowUpdate={handleUpdateRow}
+                localeText={{ noRowsLabel: favouriteSearchList.noRowsLabel }}
+                sx={{
+                    border: 0,
+                    '& .cell-styled': {
+                        lineHeight: 1.43,
+                        alignContent: 'center',
+                        ...classes.text,
+                    },
+                }}
+                disableDensitySelector
+                disableColumnMenu
+                disableColumnFilter
+                disableColumnSelector
+                disableSelectionOnClick
+                disableRowSelectionOnClick
+                disableVirtualization
+            />
+        </Paper>
     );
 };
 
