@@ -215,7 +215,7 @@
         "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
         "test:unit:serial": "npm run test:unit -- --runInBand",
         "pretest:unit:ci": "rm -rf coverage",
-        "test:unit:ci": "npm run test:unit -- --ci --silent --no-warnings --testPathIgnorePatterns=$(paste -sd'|' jest-serial.txt | sed 's/[.[\\]*^$/\\\\&/g')",
+        "test:unit:ci": "npm run test:unit -- --testPathIgnorePatterns=\"$(jq -r '.jest.testPathIgnorePatterns | join(\"|\")' package.json)|$(paste -sd'|' jest-serial.txt | sed 's/[.[\\\\]*^$/\\\\\\\\&/g')\"",
         "test:unit:ci:nocoverage": "npm run test:unit:ci -- --no-coverage",
         "test:unit:ci1:nocoverage": "npm run test:unit:ci:nocoverage -- --testPathIgnorePatterns=SharedComponents",
         "test:unit:ci2:nocoverage": "npm run test:unit:ci:nocoverage -- SharedComponents",
