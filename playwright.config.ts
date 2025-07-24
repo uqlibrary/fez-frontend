@@ -51,6 +51,6 @@ export default defineConfig({
         command: 'npm run start:mock',
         url: baseURL,
         timeout: 5 * 60 * 1000,
-        reuseExistingServer: !process.env.CI_BRANCH,
+        reuseExistingServer: true,
     },
 });
