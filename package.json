@@ -330,6 +330,9 @@
             "**/?(*.)+(test).[jt]s?(x)",
             "**/?(*.)+(integration).[jt]s?(x)"
         ],
+        "testPathIgnorePatterns": [
+            "<rootDir>/playwright/"
+        ],
         "moduleFileExtensions": [
             "js",
             "jsx",
@@ -342,6 +345,9 @@
             "react"
         ],
         "collectCoverage": true,
+        "coveragePathIgnorePatterns": [
+            "<rootDir>/playwright/"
+        ],
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx,ts,tsx}",
             "!src/**/*.test.{js,jsx,ts,tsx}",
