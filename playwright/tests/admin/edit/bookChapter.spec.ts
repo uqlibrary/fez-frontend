@@ -26,7 +26,7 @@ test.describe('Book Chapter admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        console.log('Bibliographic tab');
+        // Bibliographic tab
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
         await expect(bibliographicTab).toBeVisible(); // Ensure the tab content is visible
 
@@ -65,7 +65,7 @@ test.describe('Book Chapter admin edit', () => {
         }
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
-        console.log('Author Details tab');
+        // Author Details tab
         const authorDetailsTab = page.getByTestId('authors-section-content');
         await expect(authorDetailsTab).toBeVisible(); // Ensure the tab content is visible
 

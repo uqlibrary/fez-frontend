@@ -32,7 +32,7 @@ test.describe('Book admin edit', () => {
     test('should render the different sections as expected', async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        console.log('Bibliographic tab');
+        // Bibliographic tab
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
         await expect(bibliographicTab.locator('h4').getByText(/Title/)).toBeVisible();
         const langCodes = record.fez_record_search_key_language_of_title.map(lang => lang.rek_language_of_title);
@@ -104,11 +104,11 @@ test.describe('Book admin edit', () => {
         };
 
         const issnBlock = bibliographicTab.locator('#rek-issn-list-editor');
-        console.log('Find existing entry');
+        // Find existing entry
         const row0 = issnBlock.getByTestId('rek-issn-list-row-0');
         await checkIssnLinks(row0, '0302-9743');
 
-        console.log('Find existing entry with placeholder data');
+        // Find existing entry with placeholder data
         const row1 = issnBlock.locator('#rek-issn-list-row-1');
         await expect(row1).toContainText('1611-3349');
         await expect(row1.locator('a')).toHaveCount(1);
@@ -120,7 +120,7 @@ test.describe('Book admin edit', () => {
         await expect(row1.locator('a')).toHaveAttribute('href', `${ULRICHS_URL_PREFIX}339301`);
         await row1.locator('button[aria-label="Edit this item"]').click();
 
-        console.log('Edit issn to a different one with valid data');
+        // Edit issn to a different one with valid data
         const issnInput = issnBlock.locator('input');
         await issnInput.press('End');
         await issnInput.press('Backspace');
@@ -128,7 +128,7 @@ test.describe('Book admin edit', () => {
         await issnInput.press('Enter');
         await checkIssnLinks(row1, '1611-3340');
 
-        console.log('Add a 3rd entry without match in API');
+        // Add a 3rd entry without match in API
         const row2 = issnBlock.locator('#rek-issn-list-row-2');
         await issnInput.fill('11111111');
         await issnInput.press('Enter');
@@ -138,7 +138,7 @@ test.describe('Book admin edit', () => {
 
         await page.setViewportSize({ width: 1000, height: 1000 });
 
-        console.log('Add 4th entry with match in API');
+        // Add 4th entry with match in API
         const row3 = issnBlock.locator('#rek-issn-list-row-3');
         await issnInput.fill('33333333');
         await issnInput.press('Enter');
@@ -152,7 +152,7 @@ test.describe('Book admin edit', () => {
 
         await row3.locator('button[aria-label="Edit this item"]').click();
 
-        console.log('Edit the 4th entry');
+        // Edit the 4th entry
         await issnInput.press('Control+A'); // Use Control+A for cross-platform select all
         await issnInput.press('Delete');
         await issnInput.fill('44444444');
@@ -160,22 +160,22 @@ test.describe('Book admin edit', () => {
         await expect(row3).not.toContainText('3333-3333');
         await checkIssnLinks(row3, '4444-4444');
 
-        console.log('Add a 5th entry');
+        // Add a 5th entry
         const row4 = issnBlock.locator('#rek-issn-list-row-4');
         await issnInput.fill('55555555');
         await issnInput.press('Enter');
 
-        console.log('Verify and move up the 5th entry');
+        // Verify and move up the 5th entry
         await checkIssnLinks(row4, '5555-5555');
         await page.locator('#rek-issn-list-row-4-move-up').click();
 
-        console.log('Ensure 4th and 5th entries have swapped properly');
+        // Ensure 4th and 5th entries have swapped properly
         const newRow3 = issnBlock.locator('#rek-issn-list-row-3'); // Re-get locator as elements might re-render
         const newRow4 = issnBlock.locator('#rek-issn-list-row-4');
         await checkIssnLinks(newRow3, '5555-5555');
         await checkIssnLinks(newRow4, '4444-4444');
 
-        console.log('New entry with sherpa placeholder data');
+        // New entry with sherpa placeholder data
         const row5 = issnBlock.locator('#rek-issn-list-row-5');
         await issnInput.fill('00000000');
         await issnInput.press('Enter');
@@ -183,7 +183,7 @@ test.describe('Book admin edit', () => {
         await expect(row5.locator('a')).not.toContainText('SHERPA/RoMEO'); // Check specific link element if needed
         await expect(row5).toContainText('Ulrichs'); // Check parent container for Ulrichs text
 
-        console.log('New entry with unknown sherpa status');
+        // New entry with unknown sherpa status
         const row6 = issnBlock.locator('#rek-issn-list-row-6');
         await issnInput.fill('66666666');
         await issnInput.press('Enter');

@@ -27,7 +27,7 @@ test.describe('Image admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        console.log('Bibliographic tab');
+        // Bibliographic tab
         await expect(page.getByTestId('bibliographic-section-header')).toHaveText('Bibliographic');
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
 
@@ -44,7 +44,7 @@ test.describe('Image admin edit', () => {
         );
 
         // ---------------------------------------------- ADMIN TAB --------------------------------------------------
-        console.log('Admin tab');
+        // Admin tab
         await expect(page.getByTestId('admin-section-header')).toHaveText('Admin');
         const adminTab = page.getByTestId('admin-section-content');
 

@@ -26,17 +26,17 @@ test.describe('Data Collection admin edit', () => {
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');
         await adminEditCheckTabErrorBadge(page, 'bibliographic');
-        console.log('Finished testing tabs');
+        // Finished testing tabs
     });
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        console.log('Bibliographic tab');
+        // Bibliographic tab
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
         await expect(bibliographicTab.locator('h4').getByText(/Dataset name/)).toBeVisible();
 
         // -------------------------------------- ADMIN TAB -----------------------------------------
-        console.log('Admin tab');
+        // Admin tab
         const adminTab = page.getByTestId('admin-section-content');
         await expect(adminTab.locator('h4').getByText(/Additional information/)).toBeVisible();
         await expect(adminTab.getByTestId('rek-license-input')).toHaveValue(

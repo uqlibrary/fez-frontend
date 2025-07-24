@@ -36,7 +36,7 @@ test.describe('Journal Article admin edit', () => {
         await page.setViewportSize({ width: 1000, height: 1000 });
 
         // ---------------------------------------------- NOTES TAB --------------------------------------------------
-        console.log('Notes tab');
+        // Notes tab
         await expect(page.getByTestId('notes-section-header')).toHaveText('Notes');
         let ckeditorText = await readCKEditor(page, 'rek-notes');
         expect(ckeditorText).toContain(record.fez_record_search_key_notes.rek_notes);
@@ -45,7 +45,7 @@ test.describe('Journal Article admin edit', () => {
         expect(ckeditorText).toContain(record.fez_internal_notes.ain_detail); // 'Not yet indexed in Scopus/ISI 3/5/13'
 
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
-        console.log('Identifiers tab');
+        // Identifiers tab
         await expect(page.getByTestId('identifiers-section-header')).toHaveText('Identifiers');
         const identifiersSectionContent = page.getByTestId('identifiers-section-content');
         {
@@ -82,7 +82,7 @@ test.describe('Journal Article admin edit', () => {
         }
 
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        console.log('Bibliographic tab');
+        // Bibliographic tab
         await expect(page.getByTestId('bibliographic-section-header')).toHaveText('Bibliographic');
         const bibliographicSectionContent = page.getByTestId('bibliographic-section-content');
         const bibliographicCards = bibliographicSectionContent.locator('.AdminCard');
@@ -211,7 +211,7 @@ test.describe('Journal Article admin edit', () => {
         await adminEditNoAlerts(page);
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
-        console.log('Author Details tab');
+        // Author Details tab
         await expect(page.getByTestId('authors-section-header')).toHaveText('Authors');
         const authorsSectionContent = page.getByTestId('authors-section-content');
         {
@@ -232,7 +232,7 @@ test.describe('Journal Article admin edit', () => {
         }
 
         // -------------------------------------- ADMIN TAB -----------------------------------------
-        console.log('Admin tab');
+        // Admin tab
         const collections = record.fez_record_search_key_ismemberof.map(item => item.rek_ismemberof_lookup);
 
         await expect(page.getByTestId('admin-section-header')).toHaveText('Admin');
@@ -301,7 +301,7 @@ test.describe('Journal Article admin edit', () => {
         await adminEditVerifyAlerts(page, 1, ['You must select at least one collection']);
 
         // ----------------------------------------- GRANT INFORMATION TAB -------------------------------------------
-        console.log('Grant Information tab');
+        // Grant Information tab
         await expect(page.getByTestId('grants-section-header')).toHaveText('Grants');
         const grantsSectionContent = page.getByTestId('grants-section-content');
         {
@@ -311,7 +311,7 @@ test.describe('Journal Article admin edit', () => {
         }
 
         // ---------------------------------------------- SECURITY TAB -----------------------------------------------
-        console.log('Security tab');
+        // Security tab
         await expect(page.getByTestId('security-section-header')).toHaveText('Security');
         await expect(page.getByTestId('record-security-card-header')).toHaveText(
             `Work level security - ${record.rek_pid}`,
@@ -344,7 +344,7 @@ test.describe('Files tab functionality', () => {
     test('should render the files tab as expected', async ({ page }) => {
         // ---------------------------------------------- FILES TAB --------------------------------------------------
         const filesTabRecord = recordList.data[1]; // Redundant, already set in beforeEach
-        console.log('Files Tab');
+        // Files Tab
         await expect(page.getByTestId('files-section-header')).toHaveText('Files');
         const filesSectionContent = page.getByTestId('files-section-content');
         const fileSizeInMB = Math.round((filesTabRecord.fez_datastream_info[1].dsi_size / 1024 / 1024) * 100) / 100;

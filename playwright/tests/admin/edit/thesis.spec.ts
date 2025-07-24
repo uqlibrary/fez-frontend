@@ -28,7 +28,7 @@ test.describe('Thesis admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        console.log('----------------Bibliographic tab----------------');
+        // ----------------Bibliographic tab----------------
         await expect(page.getByTestId('bibliographic-section-header')).toHaveText('Bibliographic');
         const bibliographicSectionContent = page.getByTestId('bibliographic-section-content');
         const bibliographicAdminCards = bibliographicSectionContent.locator('.AdminCard');
@@ -95,7 +95,7 @@ test.describe('Thesis admin edit', () => {
         );
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
-        console.log('----------------Author Details tab----------------');
+        // ----------------Author Details tab----------------
         await expect(page.getByTestId('authors-section-header')).toHaveText('Authors');
         const authorsSectionContent = page.getByTestId('authors-section-content');
 
@@ -122,7 +122,7 @@ test.describe('Thesis admin edit', () => {
         );
 
         // ----------------------------------------------- ADMIN TAB -------------------------------------------------
-        console.log('----------------Admin tab----------------');
+        // ----------------Admin tab----------------
         await expect(page.getByTestId('admin-section-header')).toHaveText('Admin');
         const adminSectionContent = page.getByTestId('admin-section-content');
         const adminAdminCards = adminSectionContent.locator('.AdminCard');
@@ -156,7 +156,7 @@ test.describe('Thesis admin edit', () => {
         await expect(licenseCombobox).toHaveText(record.fez_record_search_key_license.rek_license_lookup);
 
         // ----------------------------------------------- NOTES TAB -------------------------------------------------
-        console.log('----------------Notes tab----------------');
+        // ----------------Notes tab----------------
         await expect(page.getByTestId('notes-section-header')).toHaveText('Notes');
         const notesSectionContent = page.getByTestId('notes-section-content');
         const notesAdminCards = notesSectionContent.locator('.AdminCard');
@@ -169,7 +169,7 @@ test.describe('Thesis admin edit', () => {
         await expect(rekNotesText).toContain(record.fez_record_search_key_notes.rek_notes);
 
         // ---------------------------------------------- FILES TAB --------------------------------------------------
-        console.log('----------------Files tab----------------');
+        // ----------------Files tab----------------
         await expect(page.getByTestId('files-section-header')).toHaveText('Files');
         const filesSectionContent = page.getByTestId('files-section-content');
         const filesAdminCards = filesSectionContent.locator('.AdminCard');
@@ -193,7 +193,7 @@ test.describe('Thesis admin edit', () => {
         }
 
         // --------------------------------------------- SECURITY TAB ------------------------------------------------
-        console.log('----------------Security tab----------------');
+        // ----------------Security tab----------------
         await expect(page.getByTestId('security-section-header')).toHaveText('Security');
         const securitySectionContent = page.getByTestId('security-section-content');
 

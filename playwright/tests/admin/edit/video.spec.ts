@@ -27,7 +27,7 @@ test.describe('Video admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        console.log('Bibliographic tab');
+        // Bibliographic tab
         await expect(page.getByTestId('bibliographic-section-header')).toHaveText('Bibliographic');
         // Corrected locator chaining: get bibliographic content, then find the 5th AdminCard
         const bibliographicContent = page.getByTestId('bibliographic-section-content');

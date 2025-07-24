@@ -22,12 +22,12 @@ test.describe('Patent admin edit', () => {
         await adminEditNoAlerts(page);
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');
-        console.log('Finished testing tabs');
+        // Finished testing tabs
     });
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        console.log('Bibliographic tab');
+        // Bibliographic tab
         const bibliographicSectionContent = page.getByTestId('bibliographic-section-content'); // Renamed for clarity, original had 'bibliographicTab' and 'scope'
         await expect(bibliographicSectionContent.getByTestId('rek-genre-input')).toHaveValue(record.rek_genre);
     });

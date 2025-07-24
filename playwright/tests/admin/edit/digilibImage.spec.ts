@@ -33,7 +33,7 @@ test.describe('Digilib Image admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        console.log('Bibliographic tab');
+        // Bibliographic tab
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
         await expect(page.getByTestId('bibliographic-section-header')).toHaveText('Bibliographic');
         await expect(bibliographicTab.locator('h4').getByText(/Bibliographic/)).toBeVisible();
@@ -284,7 +284,7 @@ test.describe('Digilib Image admin edit', () => {
         }
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
-        console.log('Author Details tab');
+        // Author Details tab
         await expect(page.getByTestId('authors-section-header')).toHaveText('Authors');
         const authorDetailsTab = page.getByTestId('authors-section-content');
 
@@ -337,7 +337,7 @@ test.describe('Digilib Image admin edit', () => {
         }
 
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
-        console.log('Identifiers tab');
+        // Identifiers tab
         const identifiersTab = page.getByTestId('identifiers-section-content');
         await expect(identifiersTab.locator('h4').getByText(/Location/)).toBeVisible();
         const locations = record.fez_record_search_key_location.map(item => item.rek_location);

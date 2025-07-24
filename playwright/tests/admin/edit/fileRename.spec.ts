@@ -35,7 +35,7 @@ test.describe('File rename admin edit', () => {
         const record = recordList.data[1];
         const vars = getIds(record, 1);
         await loadRecordForAdminEdit(page, record.rek_pid);
-        console.log('Files Tab');
+        // Files Tab
         await expect(page.getByTestId('files-section-header')).toHaveText('Files');
         const filesSectionContent = page.getByTestId('files-section-content');
         await expect(filesSectionContent.locator('h4').first()).toHaveText('Attached files');

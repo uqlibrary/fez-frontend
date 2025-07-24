@@ -65,11 +65,11 @@ test.describe('JournalAdmin', () => {
             const bibliographicTab = page.getByTestId('bibliographic-section-content');
             const issnBlock = bibliographicTab.locator('.AdminCard', { has: page.locator('h4', { hasText: 'ISSN' }) });
 
-            console.log('Find existing entry');
+            // Find existing entry
             let row0 = page.getByTestId('jnl_issn_jid-list-row-0');
             await checkIssnLinks(row0, '0388-0001');
 
-            console.log('Find existing entry with placeholder data');
+            // Find existing entry with placeholder data
             let row1 = page.getByTestId('jnl_issn_jid-list-row-1');
             await expect(row1).toContainText('2169-0375');
             {
@@ -83,14 +83,14 @@ test.describe('JournalAdmin', () => {
                 await row1.locator('button[aria-label="Edit this item"]').click();
             }
 
-            console.log('Edit issn to a different one with valid data');
+            // Edit issn to a different one with valid data
             await issnBlock.locator('input').fill('2169-0370');
             await issnBlock.locator('input').press('Enter');
 
             row1 = page.locator('#jnl_issn_jid-list-row-1');
             await checkIssnLinks(row1, '2169-0370');
 
-            console.log('Add a 3rd entry without match in API');
+            // Add a 3rd entry without match in API
             await issnBlock.locator('input').fill('11111111');
             await issnBlock.locator('input').press('Enter');
 
@@ -101,7 +101,7 @@ test.describe('JournalAdmin', () => {
 
             await page.setViewportSize({ width: 1000, height: 1000 });
 
-            console.log('Add 4th entry with match in API');
+            // Add 4th entry with match in API
             await issnBlock.locator('input').fill('33333333');
             await issnBlock.locator('input').press('Enter');
 
@@ -118,7 +118,7 @@ test.describe('JournalAdmin', () => {
 
             await row3.locator('button[aria-label="Edit this item"]').click();
 
-            console.log('Edit the 4th entry');
+            // Edit the 4th entry
             await issnBlock.locator('input').fill('44444444');
             await issnBlock.locator('input').press('Enter');
 
@@ -126,24 +126,24 @@ test.describe('JournalAdmin', () => {
             await expect(row3).not.toContainText('3333-3333');
             await checkIssnLinks(row3, '4444-4444');
 
-            console.log('Add a 5th entry');
+            // Add a 5th entry
             await issnBlock.locator('input').fill('55555555');
             await issnBlock.locator('input').press('Enter');
 
-            console.log('Verify and move up the 5th entry');
+            // Verify and move up the 5th entry
             let row4 = page.locator('#jnl_issn_jid-list-row-4');
             await checkIssnLinks(row4, '5555-5555');
 
             await page.locator('#jnl_issn_jid-list-row-4-move-up').click();
 
-            console.log('Ensure 4th and 5th entries have swapped properly');
+            // Ensure 4th and 5th entries have swapped properly
             // Re-get locators after move operation as their positions change
             row3 = page.locator('#jnl_issn_jid-list-row-3');
             await checkIssnLinks(row3, '5555-5555');
             row4 = page.locator('#jnl_issn_jid-list-row-4');
             await checkIssnLinks(row4, '4444-4444');
 
-            console.log('New entry with sherpa placeholder data');
+            // New entry with sherpa placeholder data
             await issnBlock.locator('input').fill('00000000');
             await issnBlock.locator('input').press('Enter');
 
@@ -152,7 +152,7 @@ test.describe('JournalAdmin', () => {
             await expect(row5.locator('a', { hasText: 'SHERPA/RoMEO' })).not.toBeVisible();
             await expect(row5.locator('a', { hasText: 'Ulrichs' })).toBeVisible();
 
-            console.log('New entry with unknown sherpa status');
+            // New entry with unknown sherpa status
             await issnBlock.locator('input').fill('66666666');
             await issnBlock.locator('input').press('Enter');
             let row6 = page.locator('#jnl_issn_jid-list-row-6');

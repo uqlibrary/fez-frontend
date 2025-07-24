@@ -31,7 +31,7 @@ test.describe('Audio admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
-        console.log('Identifiers tab');
+        // Identifiers tab
         const identifiersScope = page.getByTestId('identifiers-section-content');
         await expect(identifiersScope.locator('h4').getByText('Manage links')).toBeVisible();
         const links = [
@@ -48,7 +48,7 @@ test.describe('Audio admin edit', () => {
         }
 
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        console.log('Bibliographic tab');
+        // Bibliographic tab
         const bibliographicCard = page.getByTestId('bibliographic-section-content');
         await expect(bibliographicCard.locator('h4').getByText('Bibliographic')).toBeVisible();
         await checkPartialDateFromRecordValue(
@@ -96,7 +96,7 @@ test.describe('Audio admin edit', () => {
         await adminEditNoAlerts(page);
 
         // ---------------------------------------------- FILES TAB --------------------------------------------------
-        console.log('Files tab');
+        // Files tab
         const filesTab = page.getByTestId('files-section-content');
 
         // start: check embargo date can be cleared

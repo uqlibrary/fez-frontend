@@ -34,7 +34,7 @@ test.describe('Conference Proceedings admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        console.log('Bibliographic tab');
+        // Bibliographic tab
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
         await expect(bibliographicTab).toBeVisible(); // Ensure the tab content is visible
         await expect(bibliographicTab.locator('h4').getByText(/Title of proceedings/)).toBeVisible();
@@ -43,7 +43,7 @@ test.describe('Conference Proceedings admin edit', () => {
         await expect(page.getByTestId('rek-contributor-add')).toBeVisible();
         await page.getByTestId('rek-contributor-add').click();
 
-        console.log('Author Details tab');
+        // Author Details tab
         const editorDetailsTab = page.getByTestId('authors-section-content');
         await expect(editorDetailsTab).toBeVisible(); // Ensure the tab content is visible
 
@@ -55,7 +55,7 @@ test.describe('Conference Proceedings admin edit', () => {
         await adminEditNoAlerts(page);
 
         // ---------------------------------------------- FILES TAB --------------------------------------------------
-        console.log('Files tab');
+        // Files tab
         const filesTab = page.getByTestId('files-section-content');
         await expect(filesTab).toBeVisible(); // Ensure the tab content is visible
 
@@ -67,7 +67,7 @@ test.describe('Conference Proceedings admin edit', () => {
         await expect(fileDetailsDiv.locator('input[name=fileDescription]')).toHaveValue(visibleFileDescription);
 
         // --------------------------------------------- SECURITY TAB ------------------------------------------------
-        console.log('Security tab');
+        // Security tab
         const securityTab = page.getByTestId('security-section-content');
         await expect(securityTab).toBeVisible(); // Ensure the tab content is visible
 
