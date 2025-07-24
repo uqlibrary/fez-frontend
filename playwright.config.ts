@@ -10,6 +10,7 @@ export default defineConfig({
         timeout: process.env.CI_BRANCH ? 60_000 : 10_000,
     },
     fullyParallel: process.env.PW_SERIAL === 'true' ? false : true,
+    failOnFlakyTests: !!process.env.CI_BRANCH,
     forbidOnly: !!process.env.CI_BRANCH,
     retries: process.env.CI_BRANCH ? 4 : 0,
     workers: process.env.CI_BRANCH ? '100%' : '75%',
