@@ -6,6 +6,7 @@ export COMMIT_INFO_EMAIL=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"
 export COMMIT_INFO_MESSAGE=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"%B")
 export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend/executions/${CI_BUILD_NUMBER}"
 export TZ='Australia/Brisbane'
+export PW_CC_REPORT_FILENAME="coverage-final-${PIPE_NUM}.json"
 
 # Run CC only on these branches
 # NB: These branches will require 3 pipelines to run all tests, branches not in this list require only 2.
@@ -70,32 +71,26 @@ case "$PIPE_NUM" in
     installPlaywrightDependencies
     printf "\n--- \e[1mRUNNING E2E TESTS GROUP #1 [STARTING AT $(date)] 1\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        PW_CC_REPORT_FILENAME=coverage-final-1.json npm run test:e2e:pw:cc -- -- --shard=1/2
+        npm run test:e2e:pw:cc -- -- --shard=1/2
+        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' "coverage/playwright/${PW_CC_REPORT_FILENAME}"
     else
         checkCodeStyle
         npm run test:e2e:cy
         npm run test:e2e:pw -- --shard=1/2
     fi
     printf "\n--- [ENDED AT $(date)] \n"
-
-    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/playwright/coverage-final.json
-    fi
 ;;
 "2")
     set -e
     installPlaywrightDependencies
     printf "\n--- \e[1mRUNNING E2E TESTS GROUP #2 [STARTING AT $(date)] 2\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        PW_CC_REPORT_FILENAME=coverage-final-2.json npm run test:e2e:pw:cc -- -- --shard=2/2
+        npm run test:e2e:pw:cc -- -- --shard=2/2
+        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' "coverage/playwright/${PW_CC_REPORT_FILENAME}"
     else
         npm run test:e2e:pw -- --shard=2/2
     fi
     printf "\n--- [ENDED AT $(date)] \n"
-
-    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/playwright/coverage-final.json
-    fi
 ;;
 "3")
     export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
