@@ -11,7 +11,6 @@
     "__DEV__": true,
     "afterAll": true,
     "beforeAll": true,
-    "cy": true,
     "expect": true,
     "getElement": true,
     "renderComponent": true,
