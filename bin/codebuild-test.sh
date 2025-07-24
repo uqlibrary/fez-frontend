@@ -72,10 +72,10 @@ function run_pw_test_shard() {
     local SHARD_INDEX="$1"
     printf "\n--- \e[1mRUNNING E2E TESTS GROUP #$SHARD_INDEX [STARTING AT $(date)] 2\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        npm run test:e2e:pw:cc -- -- --shard="$SHARD_INDEX/2"
+        npm run test:e2e:cc -- -- --shard="$SHARD_INDEX/2"
         sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' "coverage/playwright/${PW_CC_REPORT_FILENAME}"
     else
-        npm run test:e2e:pw -- --shard="$SHARD_INDEX/2"
+        npm run test:e2e -- --shard="$SHARD_INDEX/2"
     fi
     printf "\n--- [ENDED RUNNING E2E TESTS GROUP #$SHARD_INDEX AT $(date)] \n"
 }

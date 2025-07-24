@@ -209,6 +209,7 @@
         "test:cs": "echo \"Running code style checks...\" && FILES=$(npm run codestyles:files -s) && echo \"No code style issues found.\" || echo \"File(s) failed code style checks!:\" && echo $FILES",
         "pretest:e2e": "rm -rf .nyc_output",
         "pretest:e2e:cc": "rm -rf .nyc_output coverage/playwright",
+        "test:e2e": "cross-env PW_IS_RUNNING=true playwright test",
         "test:e2e:cc": "cross-env NODE_ENV=cc npm run test:e2e",
         "test:e2e:ci": "cross-env NODE_ENV=cc start-server-and-test 'npm run start:mock' http-get://localhost:3000",
         "posttest:e2e:cc": "rm -rf .nyc_output",
@@ -217,16 +218,14 @@
         "pretest:unit:ci": "rm -rf coverage",
         "test:unit:ci": "npm run test:unit -- --testPathIgnorePatterns=\"$(jq -r '.jest.testPathIgnorePatterns | join(\"|\")' package.json)|$(paste -sd'|' jest-serial.txt | sed 's/[.[\\\\]*^$/\\\\\\\\&/g')\"",
         "test:unit:ci:nocoverage": "npm run test:unit:ci -- --no-coverage",
-        "test:unit:ci1:nocoverage": "npm run test:unit:ci:nocoverage -- --testPathIgnorePatterns=SharedComponents",
+        "test:unit:ci1:nocoverage": "npm run test:unit:ci:nocoverage -- --testPathIgnorePatterns=\"$(jq -r '.jest.testPathIgnorePatterns | join(\"|\")' package.json)|SharedComponents",
         "test:unit:ci2:nocoverage": "npm run test:unit:ci:nocoverage -- SharedComponents",
         "test:unit:ci:serial": "npm run test:unit:serial -- --ci --silent --no-warnings $(paste -sd' ', jest-serial.txt)",
         "test:unit:ci:serial:nocoverage": "npm run test:unit:ci:serial -- --no-coverage",
         "test:unit:update": "npm run test:unit -- --updateSnapshot",
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged",
         "tsc": "./node_modules/typescript/bin/tsc",
-        "tsc:watch": "./node_modules/typescript/bin/tsc --watch",
-        "test:e2e:pw": "cross-env PW_IS_RUNNING=true playwright test",
-        "test:e2e:pw:cc": "cross-env NODE_ENV=cc npm run test:e2e:pw"
+        "tsc:watch": "./node_modules/typescript/bin/tsc --watch"
     },
     "engines": {
         "npm": ">=10.2.3",

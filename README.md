@@ -493,8 +493,8 @@ To run tests, first start the build, using mock data, ie `npm run start:mock`
 
 Then:
 
-- use `npm run test:e2e:pw`
-- 
+- use `npm run test:e2e`
+
 Before pushing to a branch make sure to run `npm run test:all`. This runs the unit and playwright tests.
 
 #### Standardised selectors to target elements
@@ -561,7 +561,7 @@ Ask for review from team-mates if you'd like other eyes on your changes.
 
 ## Deployment
 
-Application deployment is 100% automated (except for prodtest) using AWS Codebuild (and Codepipeline), and is hosted in S3. All testing and deployment commands and configuration are stored in the buildspec yaml files in the repo. All secrets (access keys and tokens for PT, Playwright, Sentry and Google) are stored in AWS Parameter Store, and then populated into ENV variables in those buildspec yaml files. 
+Application deployment is 100% automated (except for prodtest) using AWS Codebuild (and Codepipeline), and is hosted in S3. All testing and deployment commands and configuration are stored in the buildspec yaml files in the repo. All secrets (access keys and tokens for PT, Sentry and Google) are stored in AWS Parameter Store, and then populated into ENV variables in those buildspec yaml files. 
 Deployment pipelines are setup for branches: "master", "staging", "prodtest", "production" and several key branches starting with "feature-".
 
 - Master branch is always deployed to staging/production
