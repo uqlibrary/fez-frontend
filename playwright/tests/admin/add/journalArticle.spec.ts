@@ -408,4 +408,34 @@ test.describe('As an admin,', () => {
             await page.getByTestId('expandPanelIcon-78152').click();
         });
     });
+
+    test.describe('Changing the display type', () => {
+        test('does not force a subtype error', async ({ page }) => {
+            await page.goto('/admin/add?user=uqstaff');
+
+            // Choose a collection
+            await page.getByTestId('rek-ismemberof-input').fill('a');
+            await clickAutoSuggestion(page, 'rek-ismemberof', 0);
+
+            // Choose display type
+            await page.getByTestId('rek-display-type-select').click();
+            await page
+                .getByTestId('rek-display-type-options')
+                .getByText('Journal Article')
+                .click();
+
+            await page.getByTestId('rek-display-type-select').click();
+            await page
+                .getByTestId('rek-display-type-options')
+                .getByText('Working Paper')
+                .click();
+
+            await page.getByRole('button', { name: 'Create work' }).click();
+
+            // Assert that the subtype error message is NOT present
+            await expect(
+                page.getByTestId('alert-message').locator('li', { hasText: 'Work subtype is required' }),
+            ).not.toBeVisible();
+        });
+    });
 });

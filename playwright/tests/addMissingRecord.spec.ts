@@ -37,6 +37,42 @@ test.describe.serial('Add missing record', () => {
             await expect(page.locator('#submit-work')).toBeDisabled();
         });
 
+        test('should show and hide an Author selection error', async ({ page }) => {
+            // Journal article requires subtype selection
+            await expect(page.getByTestId('rek-display-type-select')).toBeVisible();
+            await page.getByTestId('rek-display-type-select').click();
+
+            await expect(page.locator('#submit-work')).not.toBeVisible();
+
+            await page
+                .getByTestId('rek-display-type-options')
+                .locator('li[role=option]')
+                .getByText(/Journal Article/)
+                .first()
+                .click();
+
+            await expect(page.locator('#submit-work')).not.toBeVisible();
+            await expect(page.getByTestId('rek-subtype-select')).toBeVisible();
+            await page.getByTestId('rek-subtype-select').click();
+            await page
+                .getByTestId('rek-subtype-options')
+                .locator('li[role=option]', { hasText: 'Article (original research)' })
+                .click();
+
+            await expect(page.locator('#submit-work')).toBeDisabled();
+            await page.getByTestId('authors-input').fill('New Author');
+            await page.getByTestId('authors-add').click();
+            await expect(page.getByTestId('authors-error')).toContainText(
+                'Please provide a list as described and select one as you',
+            );
+            await page.getByText('New Author').click();
+            await expect(page.getByTestId('authors-error')).not.toBeVisible();
+            await page.getByText('New Author').click();
+            await expect(page.getByTestId('authors-error')).toContainText(
+                'Please provide a list as described and select one as you',
+            );
+        });
+
         test('should validate form as expected', async ({ page }) => {
             // Choose Book > Textbook
             await page.getByTestId('rek-display-type-select').click();

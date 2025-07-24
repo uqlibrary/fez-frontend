@@ -14,7 +14,7 @@ import {
 import { checkPartialDateFromRecordValue } from '../../../lib/helpers';
 
 test.describe('Data Collection admin edit', () => {
-    const record = recordList.data[0];
+    const record = { ...recordList.data[0] };
 
     test.beforeEach(async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);
@@ -63,5 +63,25 @@ test.describe('Author affiliations', () => {
             rowId: 0,
             allowed: false,
         });
+    });
+});
+
+test.describe('Related Services', () => {
+    const record = { ...recordList.data[0] };
+
+    test.beforeEach(async ({ page }) => await loadRecordForAdminEdit(page, record.rek_pid));
+
+    test('should auto fill description field with selected title', async ({ page }) => {
+        await page.getByTestId('rek-related-service-id-input').pressSequentially('00tjv0s44');
+        await page
+            .getByTestId('rek-related-service-id-options')
+            .locator('li', { hasText: /Test Org/ })
+            .first()
+            .click();
+        await expect(page.getByTestId('rek-related-service-desc-input')).toHaveValue('Test Org');
+        await page.getByTestId('rek-related-service-add').click();
+        // should add to the second row
+        await expect(page.getByTestId('related-service-list-row-1').getByText(/00tjv0s44/)).toBeVisible();
+        await expect(page.getByTestId('related-service-list-row-1').getByTestId(/Test Org/)).toBeVisible();
     });
 });

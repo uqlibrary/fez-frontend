@@ -7,8 +7,8 @@ test.describe('Manage User List', () => {
     });
 
     test('Allows number of records per page to be changed', async ({ page }) => {
-        await page.locator('.MuiTablePagination-select').click();
-        await page.locator('[data-value="100"]').click();
+        await page.locator('.MuiSelect-select').click();
+        await page.locator('[data-value="50"]').click();
         await expect(page.locator('#usr-id-0')).toBeVisible();
         await expect(page.locator('#usr-id-1')).toBeVisible();
     });
@@ -17,8 +17,8 @@ test.describe('Manage User List', () => {
         await page.getByTestId('select-user-1').click();
         await page.getByTestId('users-delete-selected-users').click();
         await page.getByTestId('confirm-bulk-delete-users-confirmation').click();
-        await expect(page.locator('#usr-id-0')).not.toBeVisible();
-        await expect(page.locator('#usr-id-1')).toBeVisible();
+        await expect(page.locator('#usr-id-0')).toBeVisible();
+        await expect(page.locator('#usr-id-1')).not.toBeVisible();
     });
 
     test('Handles new user', async ({ page }) => {
