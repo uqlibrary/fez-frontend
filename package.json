@@ -225,7 +225,7 @@
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged",
         "tsc": "./node_modules/typescript/bin/tsc",
         "tsc:watch": "./node_modules/typescript/bin/tsc --watch",
-        "test:e2e:pw": "cross-env IS_PW_RUNNING=true playwright test",
+        "test:e2e:pw": "cross-env PW_IS_RUNNING=true playwright test",
         "test:e2e:pw:cc": "cross-env NODE_ENV=cc npm run test:e2e:pw"
     },
     "engines": {
