@@ -7,7 +7,7 @@ import { loadRecordForAdminEdit } from '../helpers';
 const getFilenamePart = filename => filename.split('.').shift();
 
 test.describe('File Upload Order', () => {
-    const record = recordList.data[0];
+    const record = { ...recordList.data[0] };
 
     test.beforeEach(async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);

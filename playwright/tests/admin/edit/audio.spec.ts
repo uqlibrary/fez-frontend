@@ -15,7 +15,7 @@ import { checkPartialDateFromRecordValue, setPartialDate } from '../../../lib/he
 import { readCKEditor } from '../../../lib/ckeditor';
 
 test.describe('Audio admin edit', () => {
-    const record = recordList.data[0];
+    const record = { ...recordList.data[0] };
 
     test.beforeEach(async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);
@@ -133,7 +133,7 @@ test.describe('Audio admin edit', () => {
 });
 
 test.describe('Author affiliations', () => {
-    const record = recordList.data[0];
+    const record = { ...recordList.data[0] };
 
     test.beforeEach(async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);

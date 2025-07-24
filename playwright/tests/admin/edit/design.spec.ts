@@ -10,7 +10,7 @@ import {
 } from '../helpers';
 
 test.describe('Design admin edit', () => {
-    const record = recordList.data[0];
+    const record = { ...recordList.data[0] };
     const nonNtroRecord = recordList.data[2];
 
     test('should load expected tabs', async ({ page }) => {

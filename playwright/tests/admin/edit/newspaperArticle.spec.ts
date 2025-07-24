@@ -54,7 +54,7 @@ test.describe('Newspaper Article admin edit', () => {
 });
 
 test.describe('Author affiliations', () => {
-    const record = recordList.data[0];
+    const record = { ...recordList.data[0] };
 
     test.beforeEach(async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);

@@ -42,9 +42,12 @@ test.describe('Manage User List', () => {
     });
 
     test('Handles delete user', async ({ page }) => {
+        await expect(page.getByTestId('usr-id-0')).toBeVisible();
+        await expect(page.getByTestId('usr-id-1')).toBeVisible();
         await page.getByTestId('users-list-row-0-delete-this-user').click();
         await page.getByTestId('confirm-users-delete-this-user-confirmation').click();
         await expect(page.getByTestId('alert-done-user-delete')).toBeVisible();
-        await expect(page.locator('#usr-id-0')).not.toBeVisible();
+        await expect(page.getByTestId('usr-id-0')).toBeVisible();
+        await expect(page.getByTestId('usr-id-1')).not.toBeVisible();
     });
 });

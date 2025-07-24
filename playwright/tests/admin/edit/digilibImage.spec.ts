@@ -13,7 +13,7 @@ import {
 import { checkPartialDateFromRecordValue } from '../../../lib/helpers';
 
 test.describe('Digilib Image admin edit', () => {
-    const record = recordList.data[0];
+    const record = { ...recordList.data[0] };
 
     test.beforeEach(async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);
@@ -348,7 +348,7 @@ test.describe('Digilib Image admin edit', () => {
 });
 
 test.describe('Author affiliations', () => {
-    const record = recordList.data[0];
+    const record = { ...recordList.data[0] };
 
     test.beforeEach(async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);

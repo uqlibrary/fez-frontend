@@ -21,12 +21,11 @@ test.describe('Data Collection admin edit', () => {
     });
 
     test('should load expected tabs', async ({ page }) => {
-        await adminEditCountCards(page, 8);
+        await adminEditCountCards(page, 9);
         await adminEditVerifyAlerts(page, 1, ['Publication date is required']);
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');
         await adminEditCheckTabErrorBadge(page, 'bibliographic');
-        // Finished testing tabs
     });
 
     test('should render the different sections as expected', async ({ page }) => {
@@ -50,7 +49,7 @@ test.describe('Data Collection admin edit', () => {
 });
 
 test.describe('Author affiliations', () => {
-    const record = recordList.data[0];
+    const record = { ...recordList.data[0] };
 
     test.beforeEach(async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);
@@ -82,6 +81,6 @@ test.describe('Related Services', () => {
         await page.getByTestId('rek-related-service-add').click();
         // should add to the second row
         await expect(page.getByTestId('related-service-list-row-1').getByText(/00tjv0s44/)).toBeVisible();
-        await expect(page.getByTestId('related-service-list-row-1').getByTestId(/Test Org/)).toBeVisible();
+        await expect(page.getByTestId('related-service-list-row-1').getByText(/Test Org/)).toBeVisible();
     });
 });

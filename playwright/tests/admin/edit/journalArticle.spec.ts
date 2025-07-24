@@ -14,7 +14,7 @@ import { readCKEditor } from '../../../lib/ckeditor';
 import { checkPartialDateFromRecordValue } from '../../../lib/helpers';
 
 test.describe('Journal Article admin edit', () => {
-    const record = recordList.data[0];
+    const record = { ...recordList.data[0] };
 
     test.beforeEach(async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);

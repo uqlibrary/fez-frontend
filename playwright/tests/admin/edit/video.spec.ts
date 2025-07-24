@@ -12,7 +12,7 @@ import {
 import { typeCKEditor } from '../../../lib/ckeditor';
 
 test.describe('Video admin edit', () => {
-    const record = recordList.data[0];
+    const record = { ...recordList.data[0] };
 
     test.beforeEach(async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);
@@ -53,7 +53,7 @@ test.describe('Video admin edit', () => {
 });
 
 test.describe('Author affiliations', () => {
-    const record = recordList.data[0];
+    const record = { ...recordList.data[0] };
 
     test.beforeEach(async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);

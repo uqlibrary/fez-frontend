@@ -39,7 +39,6 @@ test.describe('Advanced Search', () => {
         await page.getByTestId('from').fill('2005');
         await page.getByTestId('to').fill('2018');
         await page.getByTestId('advanced-search').click();
-        // Using expect(page).toHaveURL with a regex for robustness
         await expect(page).toHaveURL(
             /activeFacets%5Branges%5D%5BYear\+published%5D%5Bfrom%5D=2005&activeFacets%5Branges%5D%5BYear\+published%5D%5Bto%5D=2018/,
         );
