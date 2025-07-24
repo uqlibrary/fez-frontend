@@ -495,11 +495,11 @@ Then:
 
 - use `npm run test:e2e:pw`
 - 
-Before pushing to a branch make sure to run `npm run test:all`. This runs the unit and cypress tests.
+Before pushing to a branch make sure to run `npm run test:all`. This runs the unit and playwright tests.
 
 #### Standardised selectors to target elements
 
-- We are following the best practice recommended by cypress to target elements using `data-testid` attribute
+- We are following the best practice recommended by playwright to target elements using `data-testid` attribute
 
 - Please have a look at below table for some current examples in eSpace frontend:
 

@@ -126,7 +126,6 @@ export const displayErrors = ({
                 locale.validationMessage.date;
             break;
         case STATUS_VALID:
-            // cypress does not like more concise format (?!?) (integration tests didnt either?!?!?)
             if (!!year && validMonthIndices.includes(month) && !!day) {
                 // date complete for non-partial-entry
                 date = '';

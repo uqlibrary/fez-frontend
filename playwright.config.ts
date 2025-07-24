@@ -20,6 +20,7 @@ export default defineConfig({
             {
                 outputDir: 'coverage/playwright',
                 jsonPartialsDir: istanbulReportPartialsDir,
+                jsonReportFilename: process.env.PW_CC_REPORT_FILENAME,
             } as IstanbulMergerConfig,
         ],
     ],

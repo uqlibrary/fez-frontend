@@ -111,7 +111,6 @@ export const ChangeDisplayType = ({
         }),
     ];
 
-    // tested in cypress changeDisplayType
     /* istanbul ignore next */
     const subitems =
         !!publicationSubtypeItems && publicationSubtypeItems.length > 0
@@ -131,7 +130,6 @@ export const ChangeDisplayType = ({
         }
     };
 
-    // tested in cypress changeDisplayType
     /* istanbul ignore next */
     const navigateToEditRecord = () => {
         if (!!pid && validation.isValidPid(pid)) {
@@ -184,7 +182,6 @@ export const ChangeDisplayType = ({
                                         </Field>
                                     </Grid>
                                     {!!subitems && subitems.length > 0 && (
-                                        // tested in cypress changeDisplayType
                                         /* istanbul ignore next */
                                         <Grid item xs={12}>
                                             <Field
@@ -205,7 +202,6 @@ export const ChangeDisplayType = ({
                             </StandardCard>
                         </Grid>
                         {alertProps && (
-                            // tested in cypress changeDisplayType
                             /* istanbul ignore next */
                             <Grid item xs={12}>
                                 <Alert
