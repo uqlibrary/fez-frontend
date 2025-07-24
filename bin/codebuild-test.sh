@@ -41,7 +41,7 @@ fi
 
 printf "(Build of branch \"$CI_BRANCH\")\n"
 
-function checkCodeStyle {
+function check_code_style() {
     FILES=$(npm run codestyles:files -s)
     if [[ "$?" == 0 ]]; then
         printf "\n\e[92mLooks good! Well done.\e[0m\n\n"
@@ -57,46 +57,43 @@ function checkCodeStyle {
     fi
 }
 
-
-function installPlaywrightDependencies {
+function install_pw_deps() {
+    printf "\n--- \e[INSTALLING PW DEPS [STARTING AT $(date)] 1\e[0m ---\n"
     npx playwright install chromium-headless-shell
     npx playwright install-deps chromium-headless-shell
+    printf "\n--- \e[ENDED INSTALLING PW DEPS AT $(date)] 1\e[0m ---\n"
+}
+
+function run_pw_test_shard() {
+    set -e
+
+    install_pw_deps
+
+    local SHARD_INDEX="$1"
+    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #$SHARD_INDEX [STARTING AT $(date)] 2\e[0m ---\n"
+    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+        npm run test:e2e:pw:cc -- -- --shard="$SHARD_INDEX/2"
+        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' "coverage/playwright/${PW_CC_REPORT_FILENAME}"
+    else
+        npm run test:e2e:pw -- --shard="$SHARD_INDEX/2"
+    fi
+    printf "\n--- [ENDED RUNNING E2E TESTS GROUP #$SHARD_INDEX AT $(date)] \n"
 }
 
 npm run pretest:unit:ci
 
 case "$PIPE_NUM" in
 "1")
-    set -e
-    installPlaywrightDependencies
-    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #1 [STARTING AT $(date)] 1\e[0m ---\n"
-    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        npm run test:e2e:pw:cc -- -- --shard=1/2
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' "coverage/playwright/${PW_CC_REPORT_FILENAME}"
-    else
-        checkCodeStyle
-        npm run test:e2e:cy
-        npm run test:e2e:pw -- --shard=1/2
-    fi
-    printf "\n--- [ENDED AT $(date)] \n"
+    run_pw_test_shard "$PIPE_NUM"
 ;;
 "2")
-    set -e
-    installPlaywrightDependencies
-    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #2 [STARTING AT $(date)] 2\e[0m ---\n"
-    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        npm run test:e2e:pw:cc -- -- --shard=2/2
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' "coverage/playwright/${PW_CC_REPORT_FILENAME}"
-    else
-        npm run test:e2e:pw -- --shard=2/2
-    fi
-    printf "\n--- [ENDED AT $(date)] \n"
+    run_pw_test_shard "$PIPE_NUM"
 ;;
 "3")
     export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
         printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
-        checkCodeStyle
+        check_code_style
         set -e
         printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
         # Unit tests which require --runInBand
