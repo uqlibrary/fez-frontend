@@ -8,7 +8,6 @@ env:
     GITHUB_URL: "/CodeBuild/fez-frontend/GITHUB_URL"
     PT_PROJECT: "/CodeBuild/fez-frontend/PT_PROJECT"
     PT_TOKEN: "/CodeBuild/fez-frontend/PT_TOKEN"
-    CYPRESS_RECORD_KEY: "/CodeBuild/fez-frontend/CYPRESS_RECORD_KEY"
     GOOGLE_MAPS_API_KEY: "/CodeBuild/fez-frontend/GOOGLE_MAPS_API_KEY"
     SENTRY_AUTH_TOKEN: "/CodeBuild/fez-frontend/SENTRY_AUTH_TOKEN"
     SENTRY_ORG: "/CodeBuild/fez-frontend/SENTRY_ORG"

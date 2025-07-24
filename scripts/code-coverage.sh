@@ -2,10 +2,10 @@
 
 cd coverage
 
-CYPRESS_REPORT=cypress/coverage-final.json
+PLAYWRIGHT_REPORT=playwright/${PW_CC_REPORT_FILENAME-coverage-final.json}
 JEST_REPORT=jest/coverage-final.json
 
-if [ ! -f "$CYPRESS_REPORT" ]; then
+if [ ! -f "$PLAYWRIGHT_REPORT" ]; then
     echo "Playwright test report not found! Merge aborted."
     exit 1
 fi
@@ -20,7 +20,7 @@ rm -rf all temp
 mkdir all temp
 
 # Copy test reports into common location
-cp $CYPRESS_REPORT all/cypress.json
+cp $PLAYWRIGHT_REPORT all/playwright.json
 cp $JEST_REPORT all/jest.json
 
 # Combine reports into single json file
