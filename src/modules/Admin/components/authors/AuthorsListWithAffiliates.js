@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from '@material-table/core';
+
+// eslint-disable-next-line camelcase
+import { MaterialReactTable, useMaterialReactTable, MRT_EditActionButtons } from 'material-react-table';
+
 import { useTheme } from '@mui/material/styles';
 import { numberToWords, validation } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
@@ -35,6 +38,9 @@ import EditAuthorAffiliations from './EditAuthorAffiliations';
 
 import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
 import { ChevronRight } from '@mui/icons-material';
+
+import { useMrtTable } from 'hooks';
+// import { validationRules } from './validationRules';
 
 const classes = {
     linked: {
@@ -485,7 +491,26 @@ export const AuthorsListWithAffiliates = ({
         },
     } = locale;
     const theme = useTheme();
-    const materialTableRef = React.createRef();
+    const validationRules = [];
+
+    const {
+        data,
+        isBusy,
+        pendingDeleteRowId,
+        isOpen,
+        editingRow,
+        validationErrors,
+        setData,
+        setBusy,
+        setDeleteRow,
+        resetDeleteRow,
+        setEditRow,
+        resetEditRow,
+        validate,
+        getValidationError,
+        handleValidation,
+        clearValidationErrors,
+    } = useMrtTable(list, validationRules);
 
     const columns = React.createRef();
     columns.current = getColumns({
@@ -496,8 +521,7 @@ export const AuthorsListWithAffiliates = ({
         isNtro,
         contributorEditorId,
     });
-
-    const [data, setData] = React.useState([]);
+    // all this stuff, but also merge authors migration latest to master once marcelo has pushed his stuff to prod
     React.useEffect(() => {
         const listStr = JSON.stringify(list);
         /* istanbul ignore else */
@@ -511,7 +535,7 @@ export const AuthorsListWithAffiliates = ({
             });
             setData(result);
         }
-    }, [list]);
+    }, [list, setData]);
 
     const transformNewAuthorObject = newAuthor => [...data, { ...newAuthor, affiliations: [] }];
 
