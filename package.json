@@ -71,6 +71,7 @@
         "eslint-plugin-uqlibrary": "file:eslint-plugin-uqlibrary",
         "eslint-webpack-plugin": "^4.0.1",
         "file-loader": "^6.2.0",
+        "fork-ts-checker-webpack-plugin": "^9.1.0",
         "html-react-parser": "^4.0.0",
         "html-webpack-plugin": "^5.5.0",
         "jest": "^29.7.0",
@@ -100,7 +101,6 @@
         "string-to-arraybuffer": "^1.0.0",
         "style-loader": "^2.0.0",
         "terser-webpack-plugin": "^5.3.6",
-        "ts-loader": "^9.5.1",
         "typescript": "5.5",
         "webpack": "^5.75.0",
         "webpack-bundle-analyzer": "^4.8.0",
@@ -368,7 +368,6 @@
         ],
         "coverageDirectory": "coverage/jest",
         "coverageReporters": [
-            "cobertura",
             "html",
             "json"
         ],
@@ -411,7 +410,9 @@
             "url": "http://fez-staging.library.uq.edu.au"
         },
         "testTimeout": 30000,
-        "snapshotSerializers": ["<rootDir>/utils/jest-serializer.ts"]
+        "snapshotSerializers": [
+            "<rootDir>/utils/jest-serializer.ts"
+        ]
     },
     "nyc": {
         "reporter": [
@@ -432,23 +433,7 @@
         "exclude": [
             "src/**/{index,locale,config,pages}.js",
             "src/**/containers/*.{js,jsx,ts,tsx}",
-            "src/**/*.test.{js,jsx,ts,tsx}",
-            "!src/modules/Admin/Doi/components/**",
-            "!src/modules/Admin/FavouriteSearch/components/**",
-            "!src/modules/Admin/ManageAuthors/**",
-            "!src/modules/Admin/ManageAuthors/partials/**",
-            "!src/modules/Admin/ManageUsers/**",
-            "!src/modules/Admin/ManageUsers/partials/**",
-            "!src/modules/Admin/MasterJournalListIngest/components/**",
-            "!src/modules/AuthorIdentifiers/components/**",
-            "!src/modules/BulkUpdates/**",
-            "!src/modules/MyEditorialAppointments/**",
-            "!src/modules/SharedComponents/Toolbox/ScrollToSection/components/**",
-            "!src/modules/SharedComponents/Toolbox/TabbedCard/components/**",
-            "!src/modules/ThirdPartyLookupTool/components/**",
-            "!src/modules/ViewJournal/components/**",
-            "!src/modules/ViewJournal/components/partials/",
-            "src/reducers/account.ts"
+            "src/**/*.test.{js,jsx,ts,tsx}"
         ],
         "all": true
     }

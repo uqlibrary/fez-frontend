@@ -10,6 +10,7 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const port = 3000;
 const url = process.env.URL || 'localhost';
@@ -63,19 +64,17 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
                         plugins: [
                             '@babel/plugin-proposal-export-default-from',
                             ['@babel/plugin-transform-spread', { loose: true }],
                             enableFastRefresh && 'react-refresh/babel',
-                            'istanbul',
+                            'babel-plugin-istanbul',
                         ].filter(Boolean),
+                        sourceMaps: true,
+                        inputSourceMap: true,
                     },
                 },
-            },
-            {
-                test: /\.tsx?$/,
-                use: 'ts-loader?configFile=tsconfig.webpack.json',
-                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
             },
             {
                 test: /\.json$/,
@@ -107,6 +106,13 @@ module.exports = {
         ],
     },
     plugins: [
+        new ForkTsCheckerWebpackPlugin({
+            typescript: {
+                configFile: 'tsconfig.webpack.json',
+            },
+            async: true,
+            devServer: true, // required for webpack-dev-server to display TS errors
+        }),
         new webpack.ProvidePlugin({
             process: 'process/browser.js',
         }),
@@ -195,7 +201,6 @@ module.exports = {
     },
     optimization: {
         emitOnErrors: false,
-        // moduleIds: 'named',
         runtimeChunk: 'single',
         splitChunks: {
             chunks: 'all',

@@ -194,9 +194,8 @@ To use local reusable in your local dev, swap the value of reusablejs in webpack
 TypeScript support has been added to enable a progressive migration from JavaScript, allowing both JavaScript and TypeScript code 
 to coexist and work seamlessly together from a DX perspective.
 
-To achieve this, the `ts-loader` Webpack plugin has been added and configured to validate TypeScript files exclusively, raising errors for 
-any issues before handing them over to the `babel-loader` Webpack plugin for transpilation. This approach is necessary because, 
-as of this date, `babel-loader` alone can only convert TypeScript to JavaScript without performing any checks.
+To achieve this, the `fork-ts-checker-webpack-plugin` Webpack plugin has been added and configured to validate TypeScript files exclusively, raising errors for 
+any syntax issues.
 
 #### Tooling
 
@@ -245,7 +244,7 @@ eSpace models have been added to the `@types` folder, providing type inference f
 Code coverage for TypeScript files is generated in the same way as for JavaScript files from `jest` and `playwright` tests. However, 
 a known `nyc` [bug](https://github.com/istanbuljs/nyc/issues/1302#issuecomment-961455318) may cause issues during the  
 coverage report merging step of the deployment process. As a workaround, ensure full coverage is achieved by either `jest` or `playwright`
-tests and add the file to the ignore list for the other tool in `package.json`. See the example for the `reducers/actions.ts` file.
+tests and add the file to the ignore list for the other tool in `package.json`.
 
 ### Webpack
 
