@@ -1408,9 +1408,7 @@ export const getHerdcCodeSearchKey = record => {
         (!!record.rek_herdc_code && record.rek_herdc_code.value === null)
     ) {
         return {
-            fez_record_search_key_herdc_code: {
-                rek_herdc_code: null,
-            },
+            fez_record_search_key_herdc_code: {},
         };
     }
 
@@ -1423,17 +1421,38 @@ export const getHerdcCodeSearchKey = record => {
 
 export const getHerdcStatusSearchKey = record => {
     // return empty object if all parameters are null
-    if (!!!record.rek_herdc_status || (!!record.rek_herdc_status && record.rek_herdc_status.value === null)) {
+    if (
+        !!!record.rek_herdc_status ||
+        record.rek_herdc_status === '0' ||
+        (!!record.rek_herdc_status && record.rek_herdc_status.value === null)
+    ) {
         return {
-            fez_record_search_key_herdc_status: {
-                rek_herdc_status: null,
-            },
+            fez_record_search_key_herdc_status: {},
         };
     }
 
     return {
         fez_record_search_key_herdc_status: {
             rek_herdc_status: record.rek_herdc_status,
+        },
+    };
+};
+
+export const getRefereedStatusSearchKey = record => {
+    // return empty object if all parameters are null
+    if (
+        !!!record.rek_refereed_source ||
+        record.rek_refereed_source === '0' ||
+        (!!record.rek_refereed_source && record.rek_refereed_source.value === null)
+    ) {
+        return {
+            fez_record_search_key_refereed_source: {},
+        };
+    }
+
+    return {
+        fez_record_search_key_refereed_source: {
+            rek_refereed_source: record.rek_refereed_source,
         },
     };
 };
@@ -1446,7 +1465,7 @@ export const getOpenAccessStatusTypeSearchKey = record => {
         (!!record.rek_oa_status_type && record.rek_oa_status_type?.value === null)
     ) {
         return {
-            fez_record_search_key_oa_status_type: null,
+            fez_record_search_key_oa_status_type: {},
         };
     }
 
@@ -1527,6 +1546,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_institutional_status: institutionalStatus,
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
+        fez_record_search_key_refereed_source: refereeStatus,
         fez_record_search_key_oa_status: openAccessStatus,
         fez_record_search_key_oa_status_type: openAccessStatusType,
         fez_record_search_key_license: license,
@@ -1548,6 +1568,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!institutionalStatus ? getInstitutionalStatusSearchKey(institutionalStatus) : {}),
         ...(!!herdcCode ? getHerdcCodeSearchKey(herdcCode) : {}),
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
+        ...(!!refereeStatus ? getRefereedStatusSearchKey(refereeStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
         ...(!!openAccessStatusType ? getOpenAccessStatusTypeSearchKey(openAccessStatusType) : {}),
         ...(!!ownerIdentifier ? getOwnerIdentifierSearchKey(ownerIdentifier, ownerIdentifierType) : {}),
