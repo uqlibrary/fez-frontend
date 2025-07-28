@@ -95,6 +95,8 @@ describe('ManageUsers', () => {
         fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
         await findByTestId('standard-card-user-information');
 
+        expect(getByTestId('users-update-this-user-save')).toHaveAttribute('disabled');
+
         expect(getByTestId('usr-full-name-input')).toHaveAttribute('value', 'Test User');
         expect(getByTestId('usr-email-input')).toHaveAttribute('value', 't.user@library.uq.edu.au');
         expect(getByTestId('usr-username-input')).toHaveAttribute('value', 'uqvasai');
@@ -102,7 +104,8 @@ describe('ManageUsers', () => {
         fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test' } });
         fireEvent.change(getByTestId('usr-email-input'), { target: { value: 'test@uq.edu.au' } });
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtest' } });
-        expect(getByTestId('users-update-this-user-save').closest('button')).not.toHaveAttribute('disabled');
+
+        expect(getByTestId('users-update-this-user-save')).not.toHaveAttribute('disabled');
 
         await userEvent.click(getByTestId('users-update-this-user-save'));
 
