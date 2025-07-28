@@ -1,6 +1,6 @@
 import { test, expect } from '../test';
 
-test.describe.serial('Add missing record', () => {
+test.describe('Add missing record', () => {
     test.describe('add new', () => {
         test.beforeEach(async ({ page }) => await page.goto('/records/add/new'));
 

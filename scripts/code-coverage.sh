@@ -23,10 +23,7 @@ mkdir all temp
 # Copy test reports into common location
 cp "$PLAYWRIGHT_REPORT" all/playwright.json
 cp "$JEST_REPORT" all/jest.json
-if [[ -f "$JEST_SERIAL_REPORT" ]]; then
-  cp "$JEST_SERIAL_REPORT" all/jest-serial.json
-fi
-
+cp "$JEST_SERIAL_REPORT" all/jest-serial.json
 
 # Combine reports into single json file
 npx nyc merge all temp/combined.json

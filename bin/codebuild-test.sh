@@ -100,13 +100,11 @@ case "$PIPE_NUM" in
         check_code_style
         set -e
         printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
-        # Unit tests which require --runInBand
+        # Jest tests which are required to run in serial
         npm run test:unit:ci:serial
-        # Replace codebuild source path as we'll compile multiple of these together to get the final code coverage
-        fix_coverage_report_paths coverage/jest/coverage-final.json
-        mkdir -p coverage/jest-serial && mv coverage/jest/coverage-final.json coverage/jest-serial/coverage-final.json
+        fix_coverage_report_paths coverage/jest-serial/coverage-final.json
 
-        # All other unit tests
+        # All other jest tests
         export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest/jest-html-report.html
         npm run test:unit:ci
         fix_coverage_report_paths coverage/jest/coverage-final.json
