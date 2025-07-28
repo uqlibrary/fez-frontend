@@ -1,5 +1,5 @@
 import { checkForExistingAuthor } from 'actions';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
@@ -13,20 +13,21 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
-import Checkbox from '@mui/material/Checkbox';
 import Box from '@mui/material/Box';
 
 import { ScrollToSection } from 'modules/SharedComponents/Toolbox/ScrollToSection';
-import ColumnData from './ColumnData';
 import NameData from './NameData';
-import LeastAuthorData from './LeastAuthorData';
 import UsernameIdData from './UsernameIdData';
 import ResearcherIdentifierData from './ResearcherIdentifierData';
 import NotesData from './NotesData';
 
-import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import { useConfirmationState } from 'hooks';
 import { default as locale } from 'locale/components';
+
+const classes = {
+    background: {
+        backgroundColor: 'secondary.light',
+    },
+};
 
 export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled }) => {
     const validatedForm = useForm({
@@ -45,34 +46,20 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     };
     const [apiError, setApiError] = React.useState('');
     const [submitting, setSubmitting] = React.useState(false);
-
+    const { authorListItemUpdating, authorAdding } = useSelector(state => state?.get('manageAuthorsReducer'));
     const dispatch = useDispatch();
     const { setError, clearErrors } = validatedForm;
 
-    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
-
-    const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}';
+    const disableSubmit =
+        !isDirty || isSubmitting || authorListItemUpdating || authorAdding || JSON.stringify(errors) !== '{}';
 
     const {
-        form: { deleteConfirmationLocale, editButton, cancelButton, addButton },
+        form: { editButton, cancelButton, addButton },
     } = locale.components.manageAuthors;
 
     const handleSave = formValues => onEditingApproved(mode, formValues, rowData);
-    const handleDelete = () => onEditingApproved(mode, rowData, rowData);
     const handleCancel = () => onEditingCanceled(mode, rowData);
     const handleKeyPress = e => e.key === 'Escape' && onEditingCanceled(mode, rowData);
-
-    const handleCancelDelete = () => {
-        handleCancel();
-        hideConfirmation();
-    };
-
-    React.useEffect(() => {
-        if (mode === 'delete') {
-            showConfirmation();
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [mode]);
 
     React.useEffect(() => {
         trigger();
@@ -190,103 +177,88 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     };
 
     return (
-        <React.Fragment>
-            {(mode === 'update' || mode === 'add') && (
-                <TableRow onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row">
-                    <TableCell colSpan={4}>
-                        <ScrollToSection scrollToSection>
-                            <FormProvider {...validatedForm}>
-                                <form onSubmit={handleSubmit(onSubmit)}>
-                                    <Box sx={{ backgroundColor: 'secondary.light', padding: 2 }}>
-                                        <Grid container spacing={2}>
-                                            <Grid item xs={12}>
-                                                <NameData />
-                                            </Grid>
-                                            <Grid item xs={12}>
-                                                <UsernameIdData />
-                                            </Grid>
-                                            <Grid item xs={12}>
-                                                <ResearcherIdentifierData />
-                                            </Grid>
-                                            <Grid item xs={12}>
-                                                <NotesData />
-                                            </Grid>
-                                            <Grid item xs={12}>
-                                                <Grid
-                                                    container
-                                                    direction="row-reverse"
-                                                    justifyContent="flex-start"
-                                                    alignItems="center"
-                                                    spacing={2}
-                                                >
-                                                    <Grid item>
-                                                        <Button
-                                                            id={`authors-${mode}-this-author-save`}
-                                                            data-analyticsid={`authors-${mode}-this-author-save`}
-                                                            data-testid={`authors-${mode}-this-author-save`}
-                                                            disabled={disableSubmit || submitting || disabled}
-                                                            variant="contained"
-                                                            color="primary"
-                                                            type="submit"
-                                                        >
-                                                            {mode === 'update' ? editButton : addButton}
-                                                        </Button>
-                                                    </Grid>
-                                                    <Grid item>
-                                                        <Button
-                                                            id={`authors-${mode}-this-author-cancel`}
-                                                            data-analyticsid={`authors-${mode}-this-author-cancel`}
-                                                            data-testid={`authors-${mode}-this-author-cancel`}
-                                                            disabled={disabled}
-                                                            variant="outlined"
-                                                            color="secondary"
-                                                            onClick={handleCancel}
-                                                        >
-                                                            {cancelButton}
-                                                        </Button>
-                                                    </Grid>
+        <Box display={'table'}>
+            <TableRow onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row">
+                <TableCell colSpan={4} sx={{ p: 0 }}>
+                    <ScrollToSection scrollToSection>
+                        <FormProvider {...validatedForm}>
+                            <form onSubmit={handleSubmit(onSubmit)}>
+                                <Box sx={{ ...classes.background, paddingTop: 2, paddingRight: 2, paddingLeft: 2 }}>
+                                    <Grid container spacing={2} sx={{ position: 'relative' }}>
+                                        <Grid item xs={12}>
+                                            <NameData />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <UsernameIdData />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <ResearcherIdentifierData />
+                                        </Grid>
+                                        <Grid item xs={12} sx={{ paddingBottom: 2 }}>
+                                            <NotesData />
+                                        </Grid>
+                                    </Grid>
+                                    <Grid
+                                        container
+                                        spacing={2}
+                                        sx={{
+                                            ...classes.background,
+                                            position: 'sticky',
+                                            padding: 0,
+                                            bottom: 0,
+                                        }}
+                                    >
+                                        <Grid item xs={12}>
+                                            <Grid
+                                                container
+                                                direction="row-reverse"
+                                                justifyContent="flex-start"
+                                                alignItems="center"
+                                                spacing={2}
+                                                paddingBottom={2}
+                                            >
+                                                <Grid item>
+                                                    <Button
+                                                        id={`authors-${mode}-this-author-save`}
+                                                        data-analyticsid={`authors-${mode}-this-author-save`}
+                                                        data-testid={`authors-${mode}-this-author-save`}
+                                                        disabled={disableSubmit || submitting || disabled}
+                                                        variant="contained"
+                                                        color="primary"
+                                                        type="submit"
+                                                    >
+                                                        {mode === 'update' ? editButton : addButton}
+                                                    </Button>
+                                                </Grid>
+                                                <Grid item>
+                                                    <Button
+                                                        id={`authors-${mode}-this-author-cancel`}
+                                                        data-analyticsid={`authors-${mode}-this-author-cancel`}
+                                                        data-testid={`authors-${mode}-this-author-cancel`}
+                                                        disabled={disabled}
+                                                        variant="outlined"
+                                                        color="secondary"
+                                                        onClick={handleCancel}
+                                                    >
+                                                        {cancelButton}
+                                                    </Button>
                                                 </Grid>
                                             </Grid>
 
                                             {(!!apiError || !!Object.keys(errors).length) && (
-                                                <Grid xs={12}>
+                                                <Grid xs={12} paddingBottom={2}>
                                                     <Alert alertId="api_error_alert" {...alertProps} />
                                                 </Grid>
                                             )}
                                         </Grid>
-                                    </Box>
-                                </form>
-                            </FormProvider>
-                        </ScrollToSection>
-                    </TableCell>
-                </TableRow>
-            )}
-            {mode === 'delete' && (
-                <TableRow
-                    onKeyDown={handleKeyPress}
-                    id="author-delete-row"
-                    data-testid="author-delete-row"
-                    sx={{ backgroundColor: 'secondary.light', padding: 2 }}
-                >
-                    <ConfirmationBox
-                        confirmationBoxId="authors-delete-this-author-confirmation"
-                        onAction={handleDelete}
-                        onClose={handleCancelDelete}
-                        isOpen={isOpen}
-                        locale={deleteConfirmationLocale}
-                    />
-                    <TableCell>
-                        <Checkbox disabled size="small" />
-                    </TableCell>
-                    <TableCell>
-                        <ColumnData data={rowData.aut_id} columnDataId={`aut-id-${rowData.tableData.id}`} />
-                    </TableCell>
-                    <TableCell colSpan={3}>
-                        <LeastAuthorData rowData={rowData} />
-                    </TableCell>
-                </TableRow>
-            )}
-        </React.Fragment>
+                                    </Grid>
+                                </Box>
+                            </form>
+                        </FormProvider>
+                    </ScrollToSection>
+                </TableCell>
+            </TableRow>
+        </Box>
     );
 };
 
