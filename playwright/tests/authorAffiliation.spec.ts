@@ -1,6 +1,6 @@
 import { expect, test } from '../test';
 
-test.describe.serial('Record with invalid affiliation', () => {
+test.describe('Record with invalid affiliation', () => {
     test('should show correct indicators for orphaned affiliations, and provide navigation', async ({ page }) => {
         // Navigate to the record view as staff
         await page.goto('/view/UQ:871c1f8?user=uqstaff');
