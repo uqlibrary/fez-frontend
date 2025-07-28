@@ -24,7 +24,6 @@ import { PublicationCitation } from 'modules/SharedComponents/PublicationCitatio
 import { pathConfig, validation } from 'config';
 import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
-import { withNavigate } from 'helpers/withNavigate';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -381,4 +380,4 @@ const FixRecord = () => {
     );
 };
 
-export default withNavigate()(FixRecord);
+export default FixRecord;

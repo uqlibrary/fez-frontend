@@ -23,7 +23,6 @@ import {
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { doesListContainItem } from 'helpers/general';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
-import { withNavigate } from 'helpers/withNavigate';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 import * as actions from 'actions';
 import { useDispatch, useSelector } from 'react-redux';
@@ -302,4 +301,4 @@ const DeleteRecord = () => {
     );
 };
 
-export default withNavigate()(DeleteRecord);
+export default DeleteRecord;
