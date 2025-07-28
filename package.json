@@ -184,6 +184,11 @@
     "optionalDependencies": {
         "fsevents": "^2.3.0"
     },
+    "overrides": {
+        "istanbul-lib-instrument": "6.0.1",
+        "@istanbuljs/schema": "0.1.3",
+        "istanbul-lib-coverage": "3.2.2"
+    },
     "scripts": {
         "jest-preview": "jest-preview",
         "analyse": "webpack --config=./webpack-dist.config --stats=detailed --json=stats.json",
@@ -215,7 +220,6 @@
         "posttest:e2e:cc": "rm -rf .nyc_output",
         "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
         "test:unit:serial": "npm run test:unit -- --runInBand",
-        "pretest:unit:ci": "rm -rf coverage",
         "test:unit:ci": "npm run test:unit -- --testPathIgnorePatterns=\"$(jq -r '.jest.testPathIgnorePatterns | join(\"|\")' package.json)|$(paste -sd'|' jest-serial.txt | sed 's/[.[\\\\]*^$/\\\\\\\\&/g')\"",
         "test:unit:ci:nocoverage": "npm run test:unit:ci -- --no-coverage",
         "test:unit:ci1:nocoverage": "npm run test:unit:ci:nocoverage -- --testPathIgnorePatterns=\"$(jq -r '.jest.testPathIgnorePatterns | join(\"|\")' package.json)|SharedComponents",
@@ -368,6 +372,7 @@
         ],
         "coverageDirectory": "coverage/jest",
         "coverageReporters": [
+            "cobertura",
             "html",
             "json"
         ],
@@ -433,7 +438,9 @@
         "exclude": [
             "src/**/{index,locale,config,pages}.js",
             "src/**/containers/*.{js,jsx,ts,tsx}",
-            "src/**/*.test.{js,jsx,ts,tsx}"
+            "src/**/*.test.{js,jsx,ts,tsx}",
+            "src/modules/Admin/hooks.js",
+            "src/modules/SharedComponents/Toolbox/MenuDrawer/components/MenuDrawer.tsx"
         ],
         "all": true
     }

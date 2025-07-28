@@ -57,6 +57,10 @@ function check_code_style() {
     fi
 }
 
+function fix_coverage_report_paths() {
+    sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' "$1"
+}
+
 function install_pw_deps() {
     printf "\n--- \e[INSTALLING PW DEPS [STARTING AT $(date)] 1\e[0m ---\n"
     npx playwright install chromium-headless-shell
@@ -73,7 +77,7 @@ function run_pw_test_shard() {
     printf "\n--- \e[1mRUNNING E2E TESTS GROUP #$SHARD_INDEX [STARTING AT $(date)] 2\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
         npm run test:e2e:cc -- -- --shard="$SHARD_INDEX/2"
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' "coverage/playwright/${PW_CC_REPORT_FILENAME}"
+        fix_coverage_report_paths "coverage/playwright/${PW_CC_REPORT_FILENAME}"
     else
         npm run test:e2e -- --shard="$SHARD_INDEX/2"
     fi
@@ -99,15 +103,13 @@ case "$PIPE_NUM" in
         # Unit tests which require --runInBand
         npm run test:unit:ci:serial
         # Replace codebuild source path as we'll compile multiple of these together to get the final code coverage
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/jest/coverage-final.json
-        mv coverage/jest/coverage-final.json coverage-final.json
+        fix_coverage_report_paths coverage/jest/coverage-final.json
+        mkdir -p coverage/jest-serial && mv coverage/jest/coverage-final.json coverage/jest-serial/coverage-final.json
 
         # All other unit tests
         export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest/jest-html-report.html
         npm run test:unit:ci
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/jest/coverage-final.json
-
-        mkdir -p coverage/jest-serial && mv coverage-final.json coverage/jest-serial/coverage-final.json
+        fix_coverage_report_paths coverage/jest/coverage-final.json
     fi
 ;;
 *)

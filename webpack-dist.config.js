@@ -143,6 +143,7 @@ const webpackConfig = {
         ],
     },
     plugins: [
+        // this plugin is required for highlighting TS errors, please do not remove it
         new ForkTsCheckerWebpackPlugin({
             typescript: {
                 configFile: 'tsconfig.webpack-dist.json',
