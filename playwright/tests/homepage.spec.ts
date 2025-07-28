@@ -1,9 +1,11 @@
 import { test, expect, Page } from '../test';
 
-test.describe.serial('Homepage', () => {
+test.describe('Homepage', () => {
     const checkMenuItemCount = async (page: Page, expectedCount: number) => {
         await page.locator('button[aria-label="Click to open the main navigation"]').click();
-        await expect(page.locator('nav#mainMenu div[role="button"]')).toHaveCount(expectedCount, { timeout: 60_000 });
+        await expect
+            .poll(async () => (await page.locator('nav#mainMenu div[role="button"]').all()).length)
+            .toBe(expectedCount);
     };
 
     test('Renders the tabbed panes as expected', async ({ page }) => {
@@ -43,7 +45,7 @@ test.describe.serial('Homepage', () => {
 
     test('Has expected menu items for a researcher', async ({ page }) => {
         await page.goto('/?user=uqresearcher');
-        await checkMenuItemCount(page, 15);
+        await checkMenuItemCount(page, 16);
     });
 
     test('Has expected menu items for an admin with full masquerade', async ({ page }) => {
@@ -58,7 +60,7 @@ test.describe.serial('Homepage', () => {
 
     test('Should not redirect for readonly masquerade user even if URL switch present', async ({ page }) => {
         await page.goto('/?user=uqmasquerade&adrd=1');
-        await checkMenuItemCount(page, 16);
+        await checkMenuItemCount(page, 17);
         await expect(page).not.toHaveURL('/admin/dashboard');
     });
 
@@ -69,12 +71,12 @@ test.describe.serial('Homepage', () => {
 
     test('Has expected menu items for a RHD student', async ({ page }) => {
         await page.goto('/?user=s2222222');
-        await checkMenuItemCount(page, 15);
+        await checkMenuItemCount(page, 16);
     });
 
     test('Has expected menu items for a Masqueradable staff member', async ({ page }) => {
         await page.goto('/?user=uqmasquerade');
-        await checkMenuItemCount(page, 16);
+        await checkMenuItemCount(page, 17);
         await expect(
             page
                 .locator('#mainMenu .menu-item-container p')
