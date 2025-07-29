@@ -29,6 +29,7 @@ export const ReportNumberField = props => {
             errorText={props.state?.error}
             getOptionLabel={item => (!!item && String(item.value)) || ''}
             filterOptions={(options, { inputValue }) => matchSorter(options, inputValue, { keys: ['value'] })}
+            onChange={item => props.onChange(item.value)}
             onClear={() => props.onChange(null)}
         />
     );
