@@ -3,30 +3,63 @@ import PossiblyMyRecords from './PossiblyMyRecords';
 import { pathConfig } from 'config';
 import { render, WithReduxStore, WithRouter, fireEvent, within } from 'test-utils';
 
+const mockSearchPossiblyYourPublications = jest.fn();
+const mockSetClaimPublication = jest.fn();
+const mockHideRecord = jest.fn();
+const mockHideRecordErrorReset = jest.fn();
+
+jest.mock('actions', () => ({
+    ...jest.requireActual('actions'),
+    searchPossiblyYourPublications: () => mockSearchPossiblyYourPublications,
+    setClaimPublication: () => mockSetClaimPublication,
+    hideRecord: () => mockHideRecord,
+    hideRecordErrorReset: () => mockHideRecordErrorReset,
+}));
+
+let mockUseLocation = {};
+const mockUseNavigate = jest.fn();
+let mockUseNavigationType = 'PUSH';
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useLocation: () => mockUseLocation,
+    useNavigate: () => mockUseNavigate,
+    useNavigationType: () => mockUseNavigationType,
+}));
+
 function setup(testProps = {}, renderMethod = render) {
-    const props = {
-        possiblePublicationsList: testProps.possiblePublicationsList || [],
-        possiblePublicationsFacets: testProps.possiblePublicationsFacets || {},
-        possibleCounts: testProps.possibleCounts || 0,
-        loadingPossiblePublicationsList: testProps.loadingPossiblePublicationsList || false,
-        loadingPossibleCounts: testProps.loadingPossibleCounts || false,
-        hidePublicationLoading: testProps.hidePublicationLoading || false,
-        accountLoading: testProps.accountLoading || false,
-        actions: {
-            searchPossiblyYourPublications: jest.fn(),
-            setClaimPublication: jest.fn(),
-            hideRecordErrorReset: jest.fn(),
+    const {
+        accountLoading = false,
+        possiblePublicationsList = [],
+        possiblePublicationsFacets = {},
+        possiblePublicationsPagingData = {},
+        possibleCounts = 0,
+        loadingPossiblePublicationsList = false,
+        loadingPossibleCounts = false,
+        hidePublicationLoading = false,
+        hidePublicationFailed = false,
+        hidePublicationFailedErrorMessage = '',
+        ...props
+    } = testProps;
+
+    const state = {
+        accountReducer: {
+            accountLoading,
         },
-        location: {
-            pathname: pathConfig.records.possible,
-            state: null,
+        claimPublicationReducer: {
+            possiblePublicationsList,
+            possiblePublicationsFacets,
+            possiblePublicationsPagingData,
+            possibleCounts,
+            loadingPossiblePublicationsList,
+            loadingPossibleCounts,
+            hidePublicationLoading,
+            hidePublicationFailed,
+            hidePublicationFailedErrorMessage,
         },
-        navigate: testProps.navigate || jest.fn(),
-        navigationType: testProps.navigationType || 'PUSH',
-        ...testProps,
     };
+
     return renderMethod(
-        <WithReduxStore>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <PossiblyMyRecords {...props} />
             </WithRouter>
@@ -35,6 +68,8 @@ function setup(testProps = {}, renderMethod = render) {
 }
 
 describe('Component PossiblyMyRecords', () => {
+    beforeEach(() => jest.clearAllMocks());
+
     it('renders nothing while account is loading', () => {
         const { container } = setup({ accountLoading: true });
         expect(container).toMatchSnapshot();
@@ -56,13 +91,7 @@ describe('Component PossiblyMyRecords', () => {
     });
 
     it('renders list of publications and counts and facets', () => {
-        const searchFn = jest.fn();
         const { container, getByTestId } = setup({
-            actions: {
-                searchPossiblyYourPublications: searchFn,
-                setClaimPublication: jest.fn(),
-                hideRecordErrorReset: jest.fn(),
-            },
             possibleCounts: 5,
             possiblePublicationsList: [
                 { rek_pid: 'UQ:1', rek_title: '1' },
@@ -108,10 +137,10 @@ describe('Component PossiblyMyRecords', () => {
         // change facet should redo search
         fireEvent.click(getByTestId('clickable-facet-category-display-type'));
         fireEvent.click(getByTestId('facet-filter-nested-item-display-type-book'));
-        expect(searchFn).toBeCalledTimes(2);
+        expect(mockSearchPossiblyYourPublications).toBeCalledTimes(2);
     });
 
-    it('renders alert when the hide pub api fails', () => {
+    it('renders alert when the hide pub api fails', async () => {
         const { container } = setup({
             hidePublicationFailed: true,
             hidePublicationFailedErrorMessage: 'Test error message',
@@ -120,105 +149,78 @@ describe('Component PossiblyMyRecords', () => {
     });
 
     it('should select publication for claiming', () => {
-        const claimFunction = jest.fn();
-        const searchFunction = jest.fn();
-
         const { getByRole } = setup({
             possibleCounts: 1,
             possiblePublicationsList: [{ rek_pid: 'UQ:11111' }],
-            actions: {
-                setClaimPublication: claimFunction,
-                searchPossiblyYourPublications: searchFunction,
-                hideRecordErrorReset: jest.fn(),
-            },
         });
-        expect(searchFunction).toHaveBeenCalled();
+        expect(mockSearchPossiblyYourPublications).toHaveBeenCalled();
         fireEvent.click(getByRole('button', { name: 'Claim this work' }));
-        expect(claimFunction).toHaveBeenCalled();
+        expect(mockSetClaimPublication).toHaveBeenCalled();
     });
 
     it('calls hide publication', () => {
-        const actionFunction = jest.fn();
         const { getByRole } = setup({
             possibleCounts: 1,
             possiblePublicationsList: [{ rek_pid: 'UQ:11111' }],
-            actions: {
-                hideRecord: actionFunction,
-                hideRecordErrorReset: jest.fn(),
-                searchPossiblyYourPublications: jest.fn(),
-            },
         });
 
         fireEvent.click(getByRole('button', { name: 'Not mine' }));
-        expect(actionFunction).not.toBeCalled();
+        expect(mockHideRecord).not.toBeCalled();
         fireEvent.click(getByRole('button', { name: 'Yes' }));
-        expect(actionFunction).toBeCalled();
+        expect(mockHideRecord).toBeCalled();
     });
 
     it('renders active filters', () => {
-        const { container } = setup({
-            location: {
-                state: {
-                    hasPublications: true,
-                    activeFacets: {
-                        filters: {},
-                        ranges: {
-                            Year: {
-                                from: 2000,
-                                to: 2010,
-                            },
+        mockUseLocation = {
+            state: {
+                hasPublications: true,
+                activeFacets: {
+                    filters: {},
+                    ranges: {
+                        Year: {
+                            from: 2000,
+                            to: 2010,
                         },
                     },
                 },
             },
-        });
+        };
+        const { container } = setup();
 
         expect(container).toMatchSnapshot();
     });
 
     it('gets publications when user clicks back and state is set', () => {
-        const testAction = jest.fn();
-        setup({
-            actions: {
-                hideRecordErrorReset: jest.fn(),
-                searchPossiblyYourPublications: testAction,
-            },
-            navigationType: 'POP',
-            location: {
-                pathname: pathConfig.records.possible,
-                state: {
-                    hasPublications: true,
-                    activeFacets: {
-                        filters: {},
-                        ranges: {
-                            Year: {
-                                from: 2000,
-                                to: 2010,
-                            },
+        mockUseNavigationType = 'POP';
+        mockUseLocation = {
+            pathname: pathConfig.records.possible,
+            state: {
+                hasPublications: true,
+                activeFacets: {
+                    filters: {},
+                    ranges: {
+                        Year: {
+                            from: 2000,
+                            to: 2010,
                         },
                     },
                 },
             },
-        });
+        };
+        setup();
 
-        expect(testAction).toBeCalled();
+        expect(mockSearchPossiblyYourPublications).toBeCalled();
     });
 
     it('gets publications when user clicks back with no location state', () => {
-        const testAction = jest.fn();
-        setup({
-            actions: {
-                hideRecordErrorReset: jest.fn(),
-                searchPossiblyYourPublications: testAction,
-            },
-            navigationType: 'POP',
-            location: {
-                pathname: pathConfig.records.possible,
-                state: null,
-            },
-        });
+        mockUseNavigationType = 'POP';
+        mockUseLocation = {
+            pathname: pathConfig.records.possible,
+            state: null,
+        };
+        setup();
 
-        expect(testAction).toBeCalled();
+        expect(mockSearchPossiblyYourPublications).toBeCalled();
     });
 
     it('should handle larger number of pubs than page size', () => {
