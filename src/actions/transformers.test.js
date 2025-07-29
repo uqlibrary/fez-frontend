@@ -3292,15 +3292,11 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-                fez_record_search_key_herdc_code: {
-                    rek_herdc_code: null,
-                },
-                fez_record_search_key_herdc_status: {
-                    rek_herdc_status: null,
-                },
+                fez_record_search_key_herdc_code: {},
+                fez_record_search_key_herdc_status: {},
                 fez_record_search_key_institutional_status: {},
                 fez_record_search_key_oa_status: {},
-                fez_record_search_key_oa_status_type: null,
+                fez_record_search_key_oa_status_type: {},
                 fez_record_search_key_license: {},
             });
         });
@@ -3352,15 +3348,11 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-                fez_record_search_key_herdc_code: {
-                    rek_herdc_code: null,
-                },
-                fez_record_search_key_herdc_status: {
-                    rek_herdc_status: null,
-                },
+                fez_record_search_key_herdc_code: {},
+                fez_record_search_key_herdc_status: {},
                 fez_record_search_key_institutional_status: {},
                 fez_record_search_key_oa_status: {},
-                fez_record_search_key_oa_status_type: null,
+                fez_record_search_key_oa_status_type: {},
                 fez_record_search_key_license: {},
             });
         });
@@ -5932,9 +5924,28 @@ describe('transformers', () => {
     describe('getHerdcCodeSearchKey', () => {
         it('should correctly transform data for category code', () => {
             expect(transformers.getHerdcCodeSearchKey({ rek_herdc_code: '0' })).toEqual({
-                fez_record_search_key_herdc_code: {
-                    rek_herdc_code: null,
-                },
+                fez_record_search_key_herdc_code: {},
+                //     rek_herdc_code: null,
+                // },
+            });
+        });
+    });
+    describe('getHerdcStatusSearchKey', () => {
+        it('should correctly transform data for status code', () => {
+            expect(transformers.getHerdcStatusSearchKey({ rek_herdc_status: '0' })).toEqual({
+                fez_record_search_key_herdc_status: {},
+                //     rek_herdc_status: null,
+                // },
+            });
+        });
+    });
+
+    describe('getRefereedStatusSearchKey', () => {
+        it('should correctly transform data for source code', () => {
+            expect(transformers.getRefereedStatusSearchKey({ rek_refereed_source: '0' })).toEqual({
+                fez_record_search_key_refereed_source: {},
+                //     rek_refereed_source: null,
+                // },
             });
         });
     });
@@ -5942,7 +5953,7 @@ describe('transformers', () => {
     describe('getOpenAccessStatusTypeSearchKey', () => {
         it('should correctly transform data for OA status type', () => {
             expect(transformers.getOpenAccessStatusTypeSearchKey({ rek_oa_status_type: '0' })).toEqual({
-                fez_record_search_key_oa_status_type: null,
+                fez_record_search_key_oa_status_type: {},
             });
         });
     });
