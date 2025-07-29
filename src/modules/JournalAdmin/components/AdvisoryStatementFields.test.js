@@ -5,7 +5,6 @@ import {
     assertRichTextEditorValue,
     render,
     setRichTextEditorValue,
-    turnOnJestPreviewOnTestFailure,
     userEvent,
     waitForText,
     waitElementToBeInDocument,
@@ -58,7 +57,6 @@ function setup(props = {}) {
 }
 
 describe('Component JournalAdvisoryStatementTypeField', () => {
-    turnOnJestPreviewOnTestFailure();
     beforeEach(() => {
         defaultComponentProps = {
             type: {
