@@ -1,7 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    authorListLoading: true,
+    authorListLoading: false,
     authorListLoadingError: null,
     authorListItemUpdating: false,
     authorListItemUpdateSuccess: false,
