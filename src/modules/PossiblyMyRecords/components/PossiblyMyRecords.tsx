@@ -22,15 +22,30 @@ import { locale } from 'locale';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
+import { FezRecord } from '../../../@types/models/FezRecord';
+import { AppState } from '../../../reducer';
 
-const PossiblyMyRecords = () => {
+interface ComponentState {
+    page: number;
+    pageSize: number;
+    sortBy: string;
+    sortDirection: string;
+    activeFacets: {
+        filters: Record<string, string>;
+        ranges: Record<string, string>;
+    };
+    hasPublications: boolean;
+    publicationToHide: FezRecord | null;
+}
+
+const PossiblyMyRecords: React.FC = () => {
     const navigate = useNavigate();
     const navigationType = useNavigationType();
     const location = useLocation();
     const dispatch = useDispatch();
-    const confirmDialogBoxRef = useRef();
+    const confirmDialogBoxRef = useRef<{ showConfirmation: () => void } | null>(null);
 
-    const accountLoading = useSelector(state => state?.get('accountReducer').accountLoading || false);
+    const accountLoading = useSelector((state: AppState) => state?.get('accountReducer').accountLoading || false);
     const {
         possibleCounts = 0,
         hidePublicationFailed = false,
@@ -41,10 +56,10 @@ const PossiblyMyRecords = () => {
         possiblePublicationsFacets = {},
         possiblePublicationsPagingData = {},
         publicationsClaimedInProgress = [],
-    } = useSelector(state => state?.get('claimPublicationReducer') || {});
+    } = useSelector((state: AppState) => state?.get('claimPublicationReducer') || {});
 
     // initial state
-    const initialState = {
+    const initialState: ComponentState = {
         page: 1,
         pageSize: 20,
         sortBy: locale.components.sorting.sortBy[1].value,
@@ -53,14 +68,14 @@ const PossiblyMyRecords = () => {
             filters: {},
             ranges: {},
         },
-    };
-    // component state
-    const [state, setState] = useState(() => ({
-        ...initialState,
         // check if user has publications, once true always true
         // facets filtering might return no results, but facets should still be visible
         hasPublications: !loadingPossiblePublicationsList && possiblePublicationsList.length > 0,
         publicationToHide: null,
+    };
+    // component state
+    const [state, setState] = useState<ComponentState>(() => ({
+        ...initialState,
         ...(location?.state || {}),
     }));
 
@@ -70,8 +85,7 @@ const PossiblyMyRecords = () => {
     // handle navigation after state updates
     useEffect(() => {
         if (shouldNavigate) {
-            navigate(`${pathConfig.records.possible}`, {
-                search: `?ts=${Date.now()}`,
+            navigate(`${pathConfig.records.possible}?ts=${Date.now()}`, {
                 state: { ...state, prevProps: {} },
             });
             dispatch(actions.searchPossiblyYourPublications(state));
@@ -94,7 +108,7 @@ const PossiblyMyRecords = () => {
             dispatch(actions.searchPossiblyYourPublications(newState));
         }
         setPrevLocation(location);
-    }, [location, dispatch]);
+    }, [location, dispatch, navigationType]);
 
     // set forever-true flag if user has publications
     useEffect(() => {
@@ -113,7 +127,7 @@ const PossiblyMyRecords = () => {
         if (!accountLoading) {
             dispatch(actions.searchPossiblyYourPublications(state));
         }
-    }, [accountLoading]);
+    }, [accountLoading, dispatch]);
 
     // cleanup on unmount
     useEffect(() => {
@@ -124,7 +138,7 @@ const PossiblyMyRecords = () => {
 
     if (accountLoading) return null;
 
-    const hidePublication = () => {
+    const hidePublication = (): void => {
         if (state.publicationToHide) {
             dispatch(
                 actions.hideRecord({
@@ -136,17 +150,17 @@ const PossiblyMyRecords = () => {
         }
     };
 
-    const confirmHidePublication = item => {
+    const confirmHidePublication = (item: FezRecord): void => {
         setState(prevState => ({ ...prevState, publicationToHide: item }));
         confirmDialogBoxRef.current?.showConfirmation();
     };
 
-    const claimPublication = item => {
+    const claimPublication = (item: FezRecord): void => {
         dispatch(actions.setClaimPublication(item));
         navigate(pathConfig.records.claim);
     };
 
-    const facetsChanged = activeFacets => {
+    const facetsChanged = (activeFacets: ComponentState['activeFacets']): void => {
         setState(prevState => ({
             ...prevState,
             activeFacets,
@@ -155,7 +169,7 @@ const PossiblyMyRecords = () => {
         setShouldNavigate(true);
     };
 
-    const sortByChanged = (sortBy, sortDirection) => {
+    const sortByChanged = (sortBy: string, sortDirection: string): void => {
         setState(prevState => ({
             ...prevState,
             sortBy,
@@ -164,7 +178,7 @@ const PossiblyMyRecords = () => {
         setShouldNavigate(true);
     };
 
-    const pageSizeChanged = pageSize => {
+    const pageSizeChanged = (pageSize: number): void => {
         setState(prevState => ({
             ...prevState,
             pageSize,
@@ -173,7 +187,7 @@ const PossiblyMyRecords = () => {
         setShouldNavigate(true);
     };
 
-    const pageChanged = page => {
+    const pageChanged = (page: number): void => {
         setState(prevState => ({
             ...prevState,
             page,
@@ -181,7 +195,11 @@ const PossiblyMyRecords = () => {
         setShouldNavigate(true);
     };
 
-    const getAlert = (alertLocale, hasFailed = false, error = '') => {
+    const getAlert = (
+        alertLocale: { alertId: string; title: string; message: (s: string) => string; type: string },
+        hasFailed: boolean = false,
+        error: string = '',
+    ): React.ReactNode => {
         return hasFailed ? (
             <Alert
                 {...{
@@ -324,7 +342,7 @@ const PossiblyMyRecords = () => {
                     (state.activeFacets?.filters && Object.keys(state.activeFacets.filters).length > 0) ||
                     (state.activeFacets?.ranges && Object.keys(state.activeFacets.ranges).length > 0)) && (
                     <Grid item sm={3} sx={{ display: { xs: 'none', md: 'block' } }}>
-                        <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                        <StandardRighthandCard title={txt.facetsFilter.title}>
                             <FacetsFilter
                                 facetsData={possiblePublicationsFacets}
                                 onFacetsChanged={facetsChanged}
