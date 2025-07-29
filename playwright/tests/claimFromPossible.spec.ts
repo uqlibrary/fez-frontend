@@ -4,7 +4,7 @@ import formsLocale from 'locale/forms';
 import fileUploaderLocale from 'modules/SharedComponents/Toolbox/FileUploader/locale';
 import { navToHomeFromMenu, setFileInput } from '../lib/helpers';
 
-test.describe.serial('Claim possible work', () => {
+test.describe('Claim possible work', () => {
     const claimFormLocale = formsLocale.forms.claimPublicationForm;
 
     const navToFirstClaim = async (page: Page) => {
