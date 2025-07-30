@@ -1576,6 +1576,12 @@ export default {
                         },
                     },
                 },
+                deleteConfirmationLocale: {
+                    confirmationTitle: 'Delete author',
+                    confirmationMessage: 'Are you sure you want to delete this author?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 header: {
                     locale: {
                         contributorAssignmentColumn: 'Select your name',

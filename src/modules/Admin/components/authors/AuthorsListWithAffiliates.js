@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 // eslint-disable-next-line camelcase
@@ -45,6 +45,8 @@ import { useMrtTable } from 'hooks';
 import { head } from 'lodash';
 // import { validationRules } from './validationRules';
 
+const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
+
 const classes = {
     linked: {
         fontWeight: 500,
@@ -55,7 +57,7 @@ const classes = {
     },
 };
 
-const getIcon = ({ rowData, inProblemState }) => {
+const getIcon = ({ rowData, disabled, inProblemState }) => {
     if (!!inProblemState) {
         return (
             <ErrorOutlineOutlinedIcon
@@ -65,18 +67,18 @@ const getIcon = ({ rowData, inProblemState }) => {
             />
         );
     } else if (parseInt(rowData.uqIdentifier, 10)) {
-        return <HowToRegIcon color="primary" id={`contributor-linked-${rowData.tableData.id}`} />;
+        return <HowToRegIcon color="primary" id={`contributor-linked-${rowData.aut_id}`} />; // rowdata.index
     }
     /* istanbul ignore next */
-    if (rowData.disabled) {
+    if (disabled) {
         /* istanbul ignore next */
-        return <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />;
+        return <Lock color="secondary" id={`contributor-locked-${rowData.aut_id}`} />; // rowdata.index
     }
     return (
         <PersonOutlined
             color="secondary"
-            id={`contributor-unlinked-${rowData.tableData.id}`}
-            data-testid={`contributor-unlinked-${rowData.tableData.id}`}
+            id={`contributor-unlinked-${rowData.aut_id}`} // rowdata.index
+            data-testid={`contributor-unlinked-${rowData.aut_id}`} // rowdata.index
         />
     );
 };
@@ -97,344 +99,44 @@ NameAsPublished.propTypes = {
 
 const isValid = value => !validation.isEmpty(value) && !validation.maxLength255Validator(value);
 
-// export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInput, locale, isNtro }) => {
-//     return [
-//         {
-//             title: (
-//                 <NameAsPublished
-//                     icon={<People color="secondary" />}
-//                     text={
-//                         <Typography variant="caption" color="secondary">
-//                             {nameColumn}
-//                         </Typography>
-//                     }
+// export const authorDetailPanel = ({ rowData, locale, isEditing, setEditing, onChange }) => {
+//     const {
+//         form: {
+//             locale: { affiliations: affiliationsLocale },
+//         },
+//     } = locale;
+
+//     return (
+//         <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }} data-testid={`detailPanel-${rowData.aut_id}`}>
+//             <Typography variant="body2">
+//                 {affiliationsLocale.title}
+//                 {!isEditing && (
+//                     <Tooltip title={affiliationsLocale.editButton.tooltip}>
+//                         <IconButton
+//                             aria-label="delete"
+//                             onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
+//                             size={'small'}
+//                             id={`affiliationEditBtn-${rowData.aut_id}`}
+//                             data-testid={`affiliationEditBtn-${rowData.aut_id}`}
+//                         >
+//                             <PlaylistAddCheckIcon />
+//                         </IconButton>
+//                     </Tooltip>
+//                 )}
+//             </Typography>
+// {!isEditing && <ViewAuthorAffiliations rowData={rowData} onChange={onChange} locale={affiliationsLocale} />}
+//             {isEditing && (
+//                 <EditAuthorAffiliations
+//                     rowData={rowData}
+//                     locale={affiliationsLocale}
+//                     isEditing={isEditing}
+//                     setEditing={setEditing}
+//                     onChange={onChange}
 //                 />
-//             ),
-//             field: 'nameAsPublished',
-//             render: rowData => {
-//                 const inProblemState =
-//                     hasAffiliationProblemsByAuthor(rowData) &&
-//                     !!rowData.uqUsername &&
-//                     rowData.uqUsername !== '' &&
-//                     !isNtro;
-//                 return (
-//                     <NameAsPublished
-//                         icon={getIcon({ rowData, disabled, inProblemState })}
-//                         text={
-//                             <React.Fragment>
-//                                 <Typography
-//                                     variant="body2"
-//                                     sx={{ ...linkedClass(rowData, inProblemState) }}
-//                                     id={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
-//                         data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
-//                                 >
-//                                     {rowData.nameAsPublished}
-//                                 </Typography>
-//                                 <Typography
-//                                     variant="caption"
-//                                     sx={{ ...linkedClass(rowData, inProblemState) }}
-//                                 >{`${numberToWords(rowData.tableData.id + 1)} ${suffix}`}</Typography>
-//                             </React.Fragment>
-//                         }
-//                         linked={!!rowData.aut_id}
-//                     />
-//                 );
-//             },
-//             editComponent: props => {
-//                 return (
-//                     <Grid container spacing={2}>
-//                         <Grid style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
-//                             <PersonOutlined color="secondary" />
-//                         </Grid>
-//                         <Grid style={{ flexGrow: '1' }}>
-//                             <CustomTextField
-//                                 autoFocus
-//                                 value={props.value || ''}
-//                                 onChange={e => props.onChange(e.target.value)}
-//                                 textFieldId={contributorEditorId}
-//                                 error={!isValid(props.rowData?.nameAsPublished)}
-//                                 errorText={validation.maxLength255Validator(props.rowData?.nameAsPublished)}
-//                                 label={nameAsPublishedLabel}
-//                                 placeholder={nameAsPublishedHint}
-//                                 required
-//                                 fullWidth
-//                             />
-//                         </Grid>
-//                     </Grid>
-//                 );
-//             },
-//             validate: rowData => isValid(rowData.nameAsPublished),
-//         },
-//         {
-//             cellStyle: () => ({
-//                 verticalAlign: 'top',
-//             }),
-//             title: (
-//                 <Typography variant="caption" color="secondary">
-//                     {identifierColumn}
-//                 </Typography>
-//             ),
-//             field: 'uqIdentifier',
-//             render: rowData => {
-//                 const identifierText =
-//                     (!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
-//                     (rowData.uqIdentifier && rowData.uqIdentifier !== '0' ? rowData.uqIdentifier : '');
-//                 return (
-//                     <Typography
-//                         variant="body2"
-//                         id={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
-//                         data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
-//                     >
-//                         {identifierText}
-//                     </Typography>
-//                 );
-//             },
-//             editComponent: props => {
-//                 const { rowData: contributor } = props;
-//                 const prefilledSearch = !contributor.uqIdentifier || contributor.uqIdentifier === '0';
-//                 const value =
-//                     (prefilledSearch && contributor.nameAsPublished) ||
-//                     (!!contributor.uqUsername && `${contributor.uqUsername} - ${contributor.uqIdentifier}`) ||
-//                     contributor.uqIdentifier;
-
-//                 const handleChange = selectedItem => {
-//                     const newValue = {
-//                         ...selectedItem,
-//                         nameAsPublished:
-//                             contributor.nameAsPublished ||
-//                             (selectedItem &&
-//                                 selectedItem.aut_lname &&
-//                                 `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`),
-//                         uqIdentifier: `${selectedItem.aut_id}`,
-//                         orgaff:
-//                             (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && globalLocale.global.orgTitle) ||
-//                             contributor.orgaff,
-//                         orgtype:
-//                             (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) ||
-//                             contributor.orgtype,
-//                         uqUsername: `${selectedItem.aut_org_username ||
-//                             selectedItem.aut_student_username ||
-//                             selectedItem.aut_ref_num}`,
-//                         affiliations:
-//                             contributor.aut_id !== selectedItem.aut_id
-//                                 ? []
-//                        : /* istanbul ignore next */ contributor.affiliations || /* istanbul ignore next */ [],
-//                     };
-//                     props.onRowDataChange({ ...contributor, ...newValue });
-//                 };
-
-//                 const handleClear = () => {
-//                     props.onRowDataChange({
-//                         nameAsPublished: contributor.nameAsPublished,
-//                         creatorRole: contributor.creatorRole,
-//                         orgaff: 'Missing',
-//                         orgtype: '',
-//                         uqIdentifier: '0',
-//                         uqUsername: '',
-//                         affiliation: '',
-//                     });
-//                 };
-
-//                 return (
-//                     <UqIdField
-//                         {...props}
-//                         clearOnInputClear
-//                         floatingLabelText={identifierLabel}
-//                         hintText="Type UQ author name to search"
-//                         uqIdFieldId={`${contributorEditorId}-id`}
-//                   key={!!contributor.uqIdentifier ? contributor.uqIdentifier : contributor.uqUsername || 'aut-id'}
-//                         onChange={handleChange}
-//                         onClear={handleClear}
-//                         value={value}
-//                         prefilledSearch={prefilledSearch}
-//                     />
-//                 );
-//             },
-//             searchable: true,
-//         },
-//         ...(showRoleInput
-//             ? [
-//                   {
-//                       title: (
-//                           <Typography variant="caption" color="secondary">
-//                               {roleColumn}
-//                           </Typography>
-//                       ),
-//                       field: 'creatorRole',
-//                       render: rowData => (
-//                           <Typography
-//                               variant="body2"
-//                               className={linkedClass(rowData)}
-//                               id={`${contributorEditorId}-list-row-${rowData.tableData.id}-role`}
-//                               data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-role`}
-//                           >
-//                               {rowData.creatorRole}
-//                           </Typography>
-//                       ),
-//                       editComponent: props => {
-//                           const { rowData: contributor } = props;
-//                           const handleChange = selectedItem => {
-//                               const newValue = {
-//                                   ...contributor,
-//                                   creatorRole: selectedItem,
-//                               };
-//                               props.onRowDataChange({ ...contributor, ...newValue });
-//                           };
-//                           return (
-//                               <RoleField
-//                                   {...props}
-//                                   fullWidth
-//                                   key={`role-input-${(contributor.nameAsPublished || '').trim().length === 0}`}
-//                                   id="creator-role-field"
-//                                   floatingLabelText={creatorRoleLabel}
-//                                   hintText={creatorRoleHint}
-//                                   onChange={handleChange}
-//                                   disabled={disabled || (contributor.nameAsPublished || '').trim().length === 0}
-//                                   required
-//                                   autoComplete="off"
-//                                   allowFreeText
-//                                   error={
-//                                       (contributor.nameAsPublished || '').trim().length === 0
-//                                           ? false
-//                                           : (contributor.creatorRole || '').trim().length === 0
-//                                   }
-//                                   value={
-//                                       !!contributor.creatorRole
-//                                           ? { value: contributor.creatorRole, text: contributor.creatorRole }
-//                                           : null
-//                                   }
-//                               />
-//                           );
-//                       },
-//                   },
-//               ]
-//             : []),
-//         ...(isNtro
-//             ? [
-//                   {
-//                       title: (
-//                           <Typography variant="caption" color="secondary">
-//                               {organisationColumn}
-//                           </Typography>
-//                       ),
-//                       field: 'orgaff',
-//                       render: rowData => (
-//                           <Grid container>
-//                               <Grid xs={12}>
-//                                   <Typography
-//                                       variant="body2"
-//                                       className={linkedClass(rowData)}
-//                                       id={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation`}
-//                                 data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation`}
-//                                   >
-//                                       {rowData.orgaff}
-//                                   </Typography>
-//                               </Grid>
-//                               <Grid xs={12}>
-//                                   <Typography
-//                                       variant="caption"
-//                                       className={linkedClass(rowData)}
-//                                       id={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation-type`}
-//                             data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation-type`}
-//                                   >
-//                                       {`${(!!rowData.orgtype &&
-//                                           !!ORG_TYPES_LOOKUP[rowData.orgtype] &&
-//                                           `Organisation type: ${ORG_TYPES_LOOKUP[rowData.orgtype]}`) ||
-//                                           ''}`}
-//                                   </Typography>
-//                               </Grid>
-//                           </Grid>
-//                       ),
-//                       editComponent: props => {
-//                           const { rowData: contributor } = props;
-
-//                           const handleOrgAffliationChange = event => {
-//                               props.onRowDataChange({ ...contributor, orgaff: event.target.value });
-//                           };
-//                           const handleOrgTypeChange = event => {
-//                               props.onRowDataChange({ ...contributor, orgtype: event.target.value });
-//                           };
-//                           const handleAffiliationChange = event => {
-//                               const affiliation = event.target.value;
-//                               props.onRowDataChange({
-//                                   ...contributor,
-//                                   affiliation: affiliation,
-//                                   orgaff:
-//                                       (affiliation === AFFILIATION_TYPE_UQ && globalLocale.global.orgTitle) ||
-//                                       contributor.orgaff,
-//                                   orgtype:
-//                                       (affiliation === AFFILIATION_TYPE_UQ && ORG_TYPE_ID_UNIVERSITY) ||
-//                                       contributor.orgtype,
-//                               });
-//                           };
-//                           return (
-//                               <React.Fragment>
-//                                   {isNtro && (
-//                                       <OrgAffiliationTypeSelector
-//                                           affiliation={contributor.affiliation}
-//                                           onAffiliationChange={handleAffiliationChange}
-//                                           disabled={disabled}
-//                                       />
-//                                   )}
-//                                   {contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
-//                                       <NonUqOrgAffiliationFormSection
-//                                           {...props}
-//                                           orgAffiliation={contributor.orgaff}
-//                                           orgType={contributor.orgtype}
-//                                           onOrgAffiliationChange={handleOrgAffliationChange}
-//                                           onOrgTypeChange={handleOrgTypeChange}
-//                                           disableAffiliationEdit={disabled}
-//                                           disableOrgTypeEdit={disabled}
-//                                           fullWidthFields
-//                                       />
-//                                   )}
-//                               </React.Fragment>
-//                           );
-//                       },
-//                   },
-//               ]
-//             : []),
-//     ];
+//             )}
+//         </Grid>
+//     );
 // };
-
-export const authorDetailPanel = ({ rowData, locale, isEditing, setEditing, onChange }) => {
-    const {
-        form: {
-            locale: { affiliations: affiliationsLocale },
-        },
-    } = locale;
-
-    return (
-        <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }} data-testid={`detailPanel-${rowData.aut_id}`}>
-            <Typography variant="body2">
-                {affiliationsLocale.title}
-                {!isEditing && (
-                    <Tooltip title={affiliationsLocale.editButton.tooltip}>
-                        <IconButton
-                            aria-label="delete"
-                            onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
-                            size={'small'}
-                            id={`affiliationEditBtn-${rowData.aut_id}`}
-                            data-testid={`affiliationEditBtn-${rowData.aut_id}`}
-                        >
-                            <PlaylistAddCheckIcon />
-                        </IconButton>
-                    </Tooltip>
-                )}
-            </Typography>
-            {!isEditing && <ViewAuthorAffiliations rowData={rowData} onChange={onChange} locale={affiliationsLocale} />}
-            {isEditing && (
-                <EditAuthorAffiliations
-                    rowData={rowData}
-                    locale={affiliationsLocale}
-                    isEditing={isEditing}
-                    setEditing={setEditing}
-                    onChange={onChange}
-                />
-            )}
-        </Grid>
-    );
-};
 
 export const AuthorsListWithAffiliates = ({
     contributorEditorId,
@@ -490,6 +192,7 @@ export const AuthorsListWithAffiliates = ({
                 identifierLabel,
             },
         },
+        deleteConfirmationLocale,
     } = locale;
 
     const validationRules = [
@@ -500,7 +203,7 @@ export const AuthorsListWithAffiliates = ({
                 return (
                     !valid && {
                         field: 'nameAsPublished',
-                        message: validation.maxLength255Validator(rowData.nameAsPublished),
+                        message: 'required',
                     }
                 );
             },
@@ -530,7 +233,7 @@ export const AuthorsListWithAffiliates = ({
         // eslint-disable-next-line no-nested-ternary
         !!isProblem ? classes.problem : !!rowData.aut_id ? classes.linked : '';
 
-    const columns = React.useRef(
+    const columns = useMemo(
         () => [
             {
                 accessorKey: 'nameAsPublished',
@@ -553,6 +256,7 @@ export const AuthorsListWithAffiliates = ({
                         !!rowData.uqUsername &&
                         rowData.uqUsername !== '' &&
                         !isNtro;
+
                     return (
                         <NameAsPublished
                             icon={getIcon({ rowData, disabled, inProblemState })}
@@ -561,15 +265,15 @@ export const AuthorsListWithAffiliates = ({
                                     <Typography
                                         variant="body2"
                                         sx={{ ...linkedClass(rowData, inProblemState) }}
-                                        id={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
-                                        data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
+                                        id={`${contributorEditorId}-list-row-${row.index}-name-as-published`}
+                                        data-testid={`${contributorEditorId}-list-row-${row.index}-name-as-published`}
                                     >
                                         {value}
                                     </Typography>
                                     <Typography
                                         variant="caption"
                                         sx={{ ...linkedClass(rowData, inProblemState) }}
-                                    >{`${numberToWords(rowData.tableData.id + 1)} ${suffix}`}</Typography>
+                                    >{`${numberToWords(row.index + 1)} ${suffix}`}</Typography>
                                 </React.Fragment>
                             }
                             linked={!!rowData.aut_id}
@@ -604,7 +308,7 @@ export const AuthorsListWithAffiliates = ({
                                     onChange={handleChange}
                                     textFieldId={contributorEditorId}
                                     error={!!error}
-                                    errorText={error}
+                                    //  errorText={error}
                                     label={nameAsPublishedLabel}
                                     placeholder={nameAsPublishedHint}
                                     required
@@ -620,7 +324,7 @@ export const AuthorsListWithAffiliates = ({
             {
                 accessorKey: 'uqIdentifier',
                 header: identifierColumn,
-                Header: column => (
+                Header: ({ column }) => (
                     <Typography variant="caption" color="secondary">
                         {column.columnDef.header}
                     </Typography>
@@ -726,7 +430,7 @@ export const AuthorsListWithAffiliates = ({
             {
                 accessorKey: 'creatorRole',
                 header: roleColumn,
-                Header: column => (
+                Header: ({ column }) => (
                     <Typography variant="caption" color="secondary">
                         {column.columnDef.header}
                     </Typography>
@@ -781,7 +485,7 @@ export const AuthorsListWithAffiliates = ({
             {
                 accessorKey: 'orgaff',
                 header: organisationColumn,
-                Header: column => (
+                Header: ({ column }) => (
                     <Typography variant="caption" color="secondary">
                         {column.columnDef.header}
                     </Typography>
@@ -871,7 +575,8 @@ export const AuthorsListWithAffiliates = ({
                 },
             },
         ],
-        [],
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [disabled, getValidationError, handleValidation, validationErrors],
     );
 
     React.useEffect(() => {
@@ -891,40 +596,92 @@ export const AuthorsListWithAffiliates = ({
 
     const transformNewAuthorObject = newAuthor => [...data, { ...newAuthor, affiliations: [] }];
 
-    const handleAuthorUpdate = (action, newData, oldData) => {
-        let newList = [...data];
-        if (action === 'delete') {
-            const index = oldData.tableData.id;
-            newList = [...data.slice(0, index), ...data.slice(index + 1)];
-        } else if (
-            action === 'update' &&
-            data.filter(
-                (contributor, index) =>
-                    index !== oldData.tableData.id && !!contributor.aut_id && contributor.aut_id === newData.aut_id,
-            ).length > 0
-        ) {
-            newList = [...data];
-        } else if (
-            action === 'add' &&
-            data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
-        ) {
-            newList = [...data];
-        } else {
-            newList =
-                action === 'update'
-                    ? [
-                          ...data.slice(0, oldData.tableData.id),
-                          {
-                              ...newData,
-                              affiliations: newData.affiliation === '' ? [] : newData.affiliations,
-                              id: oldData.tableData.id,
-                          },
-                          ...data.slice(oldData.tableData.id + 1),
-                      ]
-                    : transformNewAuthorObject(newData);
+    // const handleAuthorUpdate = action => ({ values, table, row }) => {
+    //     const newValues = [ ...row.original, ...row._valuesCache, ...values ];
+    //     let newList = [...data];
+    //     if (
+    //         action === 'update'){
+    //         if(data.filter(
+    //             (contributor, index) =>
+    //                 index !== row.index && !!contributor.aut_id && contributor.aut_id === newData.aut_id,
+    //         ).length > 0
+    //     ) {
+    //         newList = [...data];
+    //     }
+    //     else{
+    //         newList = [
+    //                       ...data.slice(0, oldData.tableData.id),
+    //                       {
+    //                           ...newData,
+    //                           affiliations: newData.affiliation === '' ? [] : newData.affiliations,
+    //                           id: oldData.tableData.id,
+    //                       },
+    //                       ...data.slice(oldData.tableData.id + 1),
+    //                   ]
+    //     }
+    //  } else if (
+    //         action === 'add' &&
+    //         data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
+    //     ) {
+    //         newList = [...data];
+    //     } else {
+    //         newList = transformNewAuthorObject(newData);
+    //     }
+    //     onChange(newList);
+    //     setData(newList);
+    // };
+
+    const handleCreate = ({ values, table, row }) => {
+        const newAuthor = { ...row.original, ...row._valuesCache, ...values };
+        const errors = validate(newAuthor);
+        /* istanbul ignore if  */
+        if (!!errors) {
+            return;
         }
-        onChange(newList);
-        setData(newList);
+        const transformedAuthor = transformNewAuthorObject(newAuthor);
+        const updatedAuthorList = [transformedAuthor, ...data];
+
+        table.setCreatingRow(null);
+        resetEditRow();
+
+        onChange(updatedAuthorList);
+        setData(updatedAuthorList);
+    };
+
+    const handleEdit = ({ values, table, row }) => {
+        const updatedAuthor = { ...row.original, ...row._valuesCache, ...values };
+        const errors = validate(updatedAuthor);
+        /* istanbul ignore if  */
+        if (!!errors) {
+            return;
+        }
+
+        const updatedAuthorList = [...data];
+        const target = updatedAuthorList.find(el => el.aut_id === row.original.aut_id);
+        const index = updatedAuthorList.indexOf(target);
+        updatedAuthorList[index] = updatedAuthor;
+
+        table.setEditingRow(null);
+        resetEditRow();
+
+        onChange(updatedAuthorList);
+        setData(updatedAuthorList);
+    };
+
+    const handleDeleteApproved = () => {
+        const row = data.find(row => row.aut_id === pendingDeleteRowId);
+        setBusy();
+        try {
+            const dataDelete = [...data];
+            const target = dataDelete.find(el => el.aut_id === row.aut_id);
+            const index = dataDelete.indexOf(target);
+            dataDelete.splice(index, 1);
+            setData([...dataDelete]);
+        } catch (error) {
+            console.error('Error deleting row:', error);
+        } finally {
+            setBusy(false);
+        }
     };
 
     const handleAffiliationUpdate = rowData => {
@@ -967,8 +724,8 @@ export const AuthorsListWithAffiliates = ({
         renderTopToolbarCustomActions: ({ table }) => (
             <Tooltip title={addButton}>
                 <IconButton
-                    id={`contributorEditorId-${addButton.toLowerCase().replace(/ /g, '-')}`}
-                    data-testid={`contributorEditorId-${addButton.toLowerCase().replace(/ /g, '-')}`}
+                    id={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
+                    data-testid={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
                     disabled={disabled || table.getState().creatingRow !== null}
                     onClick={() => {
                         resetEditRow();
@@ -999,10 +756,10 @@ export const AuthorsListWithAffiliates = ({
                                 table.setEditingRow(row);
                             }}
                             disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
-                            id={`contributorEditorId-list-row-${row.index}-${editHint
+                            id={`${contributorEditorId}-list-row-${row.index}-${editHint
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
-                            data-testid={`contributorEditorId-list-row-${row.index}-${editHint
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-${editHint
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
                         >
@@ -1013,12 +770,12 @@ export const AuthorsListWithAffiliates = ({
                         <IconButton
                             onClick={openDeleteConfirmModal(row.id)}
                             disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
-                            id={`contributorEditorId-list-row-${row.index}-${deleteHint
+                            id={`${contributorEditorId}-list-row-${row.index}-${deleteHint
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
-                            data-testid={`contributorEditorId-list-row-${row.index}-${deleteHint
-                                .toLowerCase()
-                                .replace(/ /g, '-')}`}
+                            data-testid={`${contributorEditorId}-list-row-${
+                                row.index
+                            }-${deleteHint.toLowerCase().replace(/ /g, '-')}`}
                         >
                             <tableIcons.Delete />
                         </IconButton>
@@ -1040,18 +797,26 @@ export const AuthorsListWithAffiliates = ({
             // sorting: [{ id: 'eap_role_cvo_id', desc: true }],
         },
         icons: {
+            SortIcon: props => (
+                <tableIcons.SortArrow
+                    id={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-sort`}
+                    data-testid={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-sort`}
+                    color="secondary"
+                    {...props}
+                />
+            ),
             SaveIcon: props => (
                 <tableIcons.Check
-                    id={`contributorEditorId-${!!editingRow ? 'edit' : 'add'}-save`}
-                    data-testid={`contributorEditorId-${!!editingRow ? 'edit' : 'add'}-save`}
+                    id={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-save`}
+                    data-testid={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-save`}
                     color="secondary"
                     {...props}
                 />
             ),
             CancelIcon: props => (
                 <tableIcons.Clear
-                    id={`contributorEditorId-${!!editingRow ? 'edit' : 'add'}-cancel`}
-                    data-testid={`contributorEditorId-${!!editingRow ? 'edit' : 'add'}-cancel`}
+                    id={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-cancel`}
+                    data-testid={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-cancel`}
                     color="secondary"
                     {...props}
                 />
@@ -1072,25 +837,19 @@ export const AuthorsListWithAffiliates = ({
             },
         },
         muiTableBodyRowProps: ({ row }) => ({
-            id: `contributorEditorId-list-row-${row.index === -1 ? 'add' : row.index}`,
-            'data-testid': `contributorEditorId-list-row-${row.index === -1 ? 'add' : row.index}`,
-            ...(moment(String(row._valuesCache.eap_end_year || row.original.eap_end_year), 'YYYY').isBefore(
-                moment(),
-                'year',
-            )
-                ? { style: { borderLeft: '8px solid red' } }
-                : {}),
+            id: `${contributorEditorId}-list-row-${row.index === -1 ? 'add' : row.index}`,
+            'data-testid': `${contributorEditorId}-list-row-${row.index === -1 ? 'add' : row.index}`,
         }),
     });
 
     return (
         <Box
-            id="contributorEditorId-list"
-            data-testid="contributorEditorId-list"
+            id={`${contributorEditorId}-list`}
+            data-testid={`${contributorEditorId}-list`}
             sx={{ '& .MuiPaper-root': { border: 0, boxShadow: 0 } }}
         >
             <ConfirmationBox
-                confirmationBoxId="contributorEditorId-delete-appointment-confirmation"
+                confirmationBoxId={`${contributorEditorId}-delete-appointment-confirmation`}
                 onAction={handleDeleteApproved}
                 onClose={cancelDeleteConfirmModal}
                 isOpen={isOpen}
@@ -1151,17 +910,17 @@ export const AuthorsListWithAffiliates = ({
     //                 rowData => ({
     //                     icon: props => <KeyboardArrowUp {...props} />,
     //                     iconProps: {
-    //                         id: `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
-    //                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
+    //                         id: `${contributorEditorId}-list-row-${row.index}-move-up`,
+    //                         'data-testid': `${contributorEditorId}-list-row-${row.index}-move-up`,
     //                     },
     //                     tooltip: moveUpHint,
     //                     disabled:
     //                         disabled ||
     //                         editState.editing ||
     //                         (rowData.itemIndex && /* istanbul ignore next */ rowData.itemIndex === 0) ||
-    //                         rowData.tableData.id === 0,
+    //                         row.index === 0,
     //                     onClick: () => {
-    //                         const index = rowData.tableData.id;
+    //                         const index = row.index;
     //                         const nextContributor = {
     //                             ...data[index - 1],
     //                         };
@@ -1185,13 +944,13 @@ export const AuthorsListWithAffiliates = ({
     //                 rowData => ({
     //                     icon: props => <KeyboardArrowDown {...props} />,
     //                     iconProps: {
-    //                         id: `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
-    //                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
+    //                         id: `${contributorEditorId}-list-row-${row.index}-move-down`,
+    //                         'data-testid': `${contributorEditorId}-list-row-${row.index}-move-down`,
     //                     },
-    //                     tooltip: `${moveDownHint}-${rowData.tableData.id}`,
-    //                     disabled: disabled || editState.editing || rowData.tableData.id === data.length - 1,
+    //                     tooltip: `${moveDownHint}-${row.index}`,
+    //                     disabled: disabled || editState.editing || row.index === data.length - 1,
     //                     onClick: () => {
-    //                         const index = rowData.tableData.id;
+    //                         const index = row.index;
     //                         const nextContributor = data[index + 1];
     //                         const newRowData = { ...rowData };
     //                         delete newRowData.tableData;
@@ -1212,8 +971,8 @@ export const AuthorsListWithAffiliates = ({
     //                 rowData => ({
     //                     icon: props => <Edit {...props} />,
     //                     iconProps: {
-    //                         id: `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
-    //                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
+    //                         id: `${contributorEditorId}-list-row-${row.index}-edit`,
+    //                         'data-testid': `${contributorEditorId}-list-row-${row.index}-edit`,
     //                     },
     //                     disabled: editState.editing || disabled,
     //                     tooltip: editHint,
@@ -1228,8 +987,8 @@ export const AuthorsListWithAffiliates = ({
     //                 rowData => ({
     //                     icon: props => <Delete {...props} />,
     //                     iconProps: {
-    //                         id: `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
-    //                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
+    //                         id: `${contributorEditorId}-list-row-${row.index}-delete`,
+    //                         'data-testid': `${contributorEditorId}-list-row-${row.index}-delete`,
     //                     },
     //                     disabled: editState.editing || disabled,
     //                     tooltip: deleteHint,
