@@ -12,8 +12,8 @@ export const escapeRegExp = input => input.replace('.\\*', '.*').replace(/[\-\[\
 
 export const setup = () => {
     const queryString = require('query-string');
-    const mock = new MockAdapter(api, { delayResponse: 100 });
-    const mockSessionApi = new MockAdapter(sessionApi, { delayResponse: 100 });
+    const mock = new MockAdapter(api, { delayResponse: 200 });
+    const mockSessionApi = new MockAdapter(sessionApi, { delayResponse: 200 });
 
     // set session cookie in mock mode
     Cookies.set(SESSION_COOKIE_NAME, 'abc123');
