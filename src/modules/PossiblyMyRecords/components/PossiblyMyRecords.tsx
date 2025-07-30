@@ -102,7 +102,8 @@ const PossiblyMyRecords: React.FC = () => {
             navigationType === 'POP' &&
             location.pathname === pathConfig.records.possible
         ) {
-            const newState = location.state ? { ...location.state } /* istanbul ignore next */ : { ...initialState };
+            // istanbul ignore next
+            const newState = location.state ? { ...location.state } : { ...initialState };
             setState(prevState => ({
                 ...prevState,
                 ...newState,
