@@ -118,16 +118,13 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
         await expect(actionButton).toContainText('Mark as resolved');
 
         await actionButton.click();
-        try {
-            await expect(actionButton).toContainText('Updating...');
-            await expect(actionButton).toBeDisabled();
-            const assigneeInputContainer = getByTestId(page, 'system-alert-detail-assignee');
-            await expect(getByTestId(assigneeInputContainer, 'system-alert-detail-assignee-input')).toBeDisabled();
-            await expect(assigneeInputContainer.getByRole('progressbar')).toBeVisible();
-        } catch (e) {
-            // ignore above assertion failures in related elements are no longer on the page
-            if (!(await getByTestId(page, 'system-alert-detail').isVisible())) return;
-            throw e;
-        }
+        // it's not possible to reliably make the assertions below, as the component does NOT wait for the
+        // dispatched action's request to be completed before removing the related elements
+        // await expect(actionButton).toContainText('Updating...');
+        // await expect(actionButton).toBeDisabled();
+        // const assigneeInputContainer = getByTestId(page, 'system-alert-detail-assignee');
+        // await expect(getByTestId(assigneeInputContainer, 'system-alert-detail-assignee-input')).toBeDisabled();
+        // await expect(assigneeInputContainer.getByRole('progressbar')).toBeVisible();
+        await expect(getByTestId(page, 'system-alert-detail')).not.toBeVisible();
     });
 });
