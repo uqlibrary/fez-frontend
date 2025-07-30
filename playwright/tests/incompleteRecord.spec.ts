@@ -214,7 +214,6 @@ test.describe('Incomplete record form', () => {
         ).toBeVisible();
 
         // navigate back to the list
-        await page.waitForTimeout(1000);
         await page.goBack();
 
         await page

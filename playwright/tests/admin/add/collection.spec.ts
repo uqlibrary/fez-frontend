@@ -11,7 +11,6 @@ test.describe('As an admin,', () => {
         });
         await expect(title).toHaveText(/Select a community/);
         const communitySelector = title.getByTestId('rek-ismemberof-select');
-        await page.waitForTimeout(1000); // Wait for event handlers to attach
         await communitySelector.click();
         await page
             .getByTestId('rek-ismemberof-options')

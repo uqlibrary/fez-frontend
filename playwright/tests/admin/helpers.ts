@@ -34,7 +34,6 @@ export async function adminEditVerifyAlerts(page: Page, count: number, messages:
 }
 
 export async function adminEditTabbedView(page: Page, showTabs = true) {
-    await page.waitForTimeout(1000);
     const tabViewButton = page.locator('input[value=tabbed]');
 
     if (showTabs) {
@@ -44,8 +43,6 @@ export async function adminEditTabbedView(page: Page, showTabs = true) {
     }
 
     await tabViewButton.click();
-    await page.waitForTimeout(200);
-
     await page.waitForFunction(
         ({ selector, showTabs }) => {
             const elements = document.querySelectorAll(selector);

@@ -68,7 +68,6 @@ test.describe('Author affiliations', () => {
             .click();
 
         // Apply selections
-        await page.waitForTimeout(200);
         await page
             .locator('button')
             .getByText(/Create work/)

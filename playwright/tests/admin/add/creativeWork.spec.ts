@@ -95,7 +95,6 @@ test.describe('As an admin, I can', () => {
         await assertHasAuthor(page, 0, 'Updated Author');
         // Delete the first author.
         await page.getByTestId('rek-author-list-row-0-delete').click();
-        await page.waitForTimeout(500);
         await page.getByTestId('rek-author-delete-save').click();
         await assertHasAuthor(page, 0, 'Test Author');
         // Clear the statement via edit
