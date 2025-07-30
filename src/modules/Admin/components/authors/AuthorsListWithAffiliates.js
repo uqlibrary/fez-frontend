@@ -281,14 +281,25 @@ export const AuthorsListWithAffiliates = ({
                     );
                 },
                 Edit: ({ row, column }) => {
-                    const [state, setState] = React.useState(
-                        row._valuesCache.nameAsPublished || row.original.nameAsPublished || '',
-                    );
+                    const value = row._valuesCache.nameAsPublished || row.original.nameAsPublished || '';
+                    // const currentName = React.useRef(
+                    //     row._valuesCache.nameAsPublished || row.original.nameAsPublished || '',
+                    // );
+                    // const [state, setState] = React.useState(
+                    //     row._valuesCache.nameAsPublished || row.original.nameAsPublished || '',
+                    // );
                     const errors = validationErrors[row.id] || [];
                     const error = getValidationError(errors, 'nameAsPublished');
 
+                    // React.useEffect(() => {
+                    //     if (row._valuesCache.nameAsPublished !== currentName.current) {
+                    //         currentName.current = row._valuesCache.nameAsPublished;
+                    //         setState(row._valuesCache.nameAsPublished);
+                    //     }
+                    // }, [row._valuesCache.nameAsPublished, state]);
+
                     const handleChange = e => {
-                        setState(e.target.value || '');
+                        // setState(e.target.value || '');
                         row._valuesCache = {
                             ...row._valuesCache,
                             [column.id]: e.target.value || null,
@@ -304,7 +315,7 @@ export const AuthorsListWithAffiliates = ({
                             <Grid style={{ flexGrow: '1' }}>
                                 <CustomTextField
                                     autoFocus
-                                    value={state}
+                                    value={value}
                                     onChange={handleChange}
                                     textFieldId={contributorEditorId}
                                     error={!!error}
@@ -344,7 +355,7 @@ export const AuthorsListWithAffiliates = ({
                         </Typography>
                     );
                 },
-                Edit: ({ row }) => {
+                Edit: ({ table, row }) => {
                     const contributor = { ...row.original, ...row._valuesCache };
                     const prefilledSearch = !contributor.uqIdentifier || contributor.uqIdentifier === '0';
                     const value =
@@ -364,8 +375,6 @@ export const AuthorsListWithAffiliates = ({
                             orgaff:
                                 (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && globalLocale.global.orgTitle) ||
                                 contributor.orgaff,
-                        };
-                        const newValueOriginals = {
                             orgtype:
                                 (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) ||
                                 contributor.orgtype,
@@ -378,14 +387,12 @@ export const AuthorsListWithAffiliates = ({
                                     : /* istanbul ignore next */ contributor.affiliations ||
                                       /* istanbul ignore next */ [],
                         };
-                        row._valuesCache = {
+                        const updatedValues = {
                             ...row._valuesCache,
                             ...newValueCache,
                         };
-                        row.original = {
-                            ...row.original,
-                            ...newValueOriginals,
-                        };
+                        row._valuesCache = updatedValues;
+                        // table.setEditingRow({ ...row });
                         handleValidation(row, 'nameAsPublished', newValueCache.nameAsPublished);
                     };
 
@@ -594,58 +601,26 @@ export const AuthorsListWithAffiliates = ({
         }
     }, [list, setData]);
 
-    const transformNewAuthorObject = newAuthor => [...data, { ...newAuthor, affiliations: [] }];
-
-    // const handleAuthorUpdate = action => ({ values, table, row }) => {
-    //     const newValues = [ ...row.original, ...row._valuesCache, ...values ];
-    //     let newList = [...data];
-    //     if (
-    //         action === 'update'){
-    //         if(data.filter(
-    //             (contributor, index) =>
-    //                 index !== row.index && !!contributor.aut_id && contributor.aut_id === newData.aut_id,
-    //         ).length > 0
-    //     ) {
-    //         newList = [...data];
-    //     }
-    //     else{
-    //         newList = [
-    //                       ...data.slice(0, oldData.tableData.id),
-    //                       {
-    //                           ...newData,
-    //                           affiliations: newData.affiliation === '' ? [] : newData.affiliations,
-    //                           id: oldData.tableData.id,
-    //                       },
-    //                       ...data.slice(oldData.tableData.id + 1),
-    //                   ]
-    //     }
-    //  } else if (
-    //         action === 'add' &&
-    //         data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
-    //     ) {
-    //         newList = [...data];
-    //     } else {
-    //         newList = transformNewAuthorObject(newData);
-    //     }
-    //     onChange(newList);
-    //     setData(newList);
-    // };
+    const transformNewAuthorObject = newAuthor => {
+        delete newAuthor['mrt-row-actions'];
+        return [...data, { ...newAuthor, affiliations: [] }];
+    };
 
     const handleCreate = ({ values, table, row }) => {
         const newAuthor = { ...row.original, ...row._valuesCache, ...values };
+
         const errors = validate(newAuthor);
         /* istanbul ignore if  */
         if (!!errors) {
             return;
         }
-        const transformedAuthor = transformNewAuthorObject(newAuthor);
-        const updatedAuthorList = [transformedAuthor, ...data];
+        const transformedAuthorList = transformNewAuthorObject(newAuthor);
 
         table.setCreatingRow(null);
         resetEditRow();
 
-        onChange(updatedAuthorList);
-        setData(updatedAuthorList);
+        onChange(transformedAuthorList);
+        setData(transformedAuthorList);
     };
 
     const handleEdit = ({ values, table, row }) => {
@@ -748,6 +723,47 @@ export const AuthorsListWithAffiliates = ({
         renderRowActions: ({ row }) => {
             return (
                 <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
+                    <Tooltip title={moveUpHint}>
+                        <IconButton
+                            onClick={() => {
+                                const index = row.index;
+                                if (index > 0) {
+                                    const newData = [...data];
+                                    const temp = newData[index - 1];
+                                    newData[index - 1] = newData[index];
+                                    newData[index] = temp;
+                                    setData(newData);
+                                    onChange(newData);
+                                }
+                            }}
+                            disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow || row.index === 0}
+                            id={`${contributorEditorId}-list-row-${row.index}-move-up`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-move-up`}
+                        >
+                            <KeyboardArrowUp />
+                        </IconButton>{' '}
+                    </Tooltip>
+                    <Tooltip title={moveDownHint}>
+                        <IconButton
+                            onClick={() => {
+                                const index = row.index;
+                                if (index < data.length - 1) {
+                                    const newData = [...data];
+                                    const temp = newData[index + 1];
+                                    newData[index + 1] = newData[index];
+                                    newData[index] = temp;
+                                    setData(newData);
+                                    onChange(newData);
+                                }
+                            }}
+                            disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow || row.index === data.length - 1}
+                            id={`${contributorEditorId}-list-row-${row.index}-move-down`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-move-down`}
+                        >
+                            <KeyboardArrowDown />
+                        </IconButton>
+                    </Tooltip>
+
                     <Tooltip title={editHint}>
                         <IconButton
                             onClick={() => {
@@ -849,7 +865,7 @@ export const AuthorsListWithAffiliates = ({
             sx={{ '& .MuiPaper-root': { border: 0, boxShadow: 0 } }}
         >
             <ConfirmationBox
-                confirmationBoxId={`${contributorEditorId}-delete-appointment-confirmation`}
+                confirmationBoxId={`${contributorEditorId}-delete-author-confirmation`}
                 onAction={handleDeleteApproved}
                 onClose={cancelDeleteConfirmModal}
                 isOpen={isOpen}
