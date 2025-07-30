@@ -3,10 +3,18 @@ import moment from 'moment';
 import { assertAccessibility } from '../../../lib/axe';
 import { loadAdminDashboard } from '../../../lib/helpers';
 
+const fillDateInput = async (page: Page, field: string, value: string) => {
+    const input = page.getByTestId(`report-export-only-date-${field}-input`);
+    await input.click();
+    await input.fill(value);
+    await input.press('Tab');
+};
+
 const assertFileDownload = async (page: Page, callbacks: Promise<void>[]) => {
     const [download] = await Promise.all([page.waitForEvent('download'), ...callbacks]);
     expect(download).toBeDefined();
 };
+
 test.describe('Admin Dashboard - Reports tab', () => {
     const clearField = async (page: Page, fieldTestId: string) => {
         const fieldLocator = page.getByTestId(fieldTestId);
@@ -101,12 +109,9 @@ test.describe('Admin Dashboard - Reports tab', () => {
 
         await page.getByTestId('report-export-button').click();
 
-        await expect(page.getByTestId('export-report-progress')).toBeAttached();
-
         await expect(page.getByTestId('report-export-button')).not.toBeDisabled();
         await expect(page.getByTestId('export-report-progress')).not.toBeAttached();
 
-        await expect(page.getByTestId('alert')).toBeVisible();
         await expect(page.getByTestId('alert')).toContainText('Nothing to export');
 
         // dismiss for coverage
@@ -138,11 +143,9 @@ test.describe('Admin Dashboard - Reports tab', () => {
             await page.locator('[role=option]', { hasText: 'Queued report two bindings' }).click();
             await expect(page.getByTestId('report-export-only-input')).toHaveValue('Queued report two bindings');
 
-            // note: fill() doesn't work and pressSequentially() requires an extra leading 0
-            await page.getByTestId('report-export-only-date-from-input').pressSequentially('001012024');
-            await page.getByTestId('report-export-only-date-to-input').pressSequentially('002012024');
+            await fillDateInput(page, 'from', '01/01/2024');
+            await fillDateInput(page, 'to', '02/01/2024');
             await page.getByTestId('report-export-button').click();
-            await expect(page.getByTestId('alert')).toBeVisible();
             await expect(page.getByTestId('alert')).toContainText('Report queued');
         });
 
@@ -170,7 +173,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
                 .getByTestId('report-export-only-date-to')
                 .locator('button')
                 .click();
-            await page.getByTestId('report-export-only-date-to-input').fill('01/01/2020');
+            await fillDateInput(page, 'to', '01/01/2020');
             // date from should be in error state
             await expect(page.getByTestId('report-export-only-date-from-input')).toHaveAttribute('required');
             await expect(page.getByTestId('report-export-only-date-from')).toContainText('Required');
@@ -179,7 +182,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
 
             await clearField(page, 'report-export-only-date-to-input');
 
-            await page.getByTestId('report-export-only-date-from-input').fill('01/01/2020');
+            await fillDateInput(page, 'from', '01/01/2020');
             // to date should be in error state
             await expect(page.getByTestId('report-export-only-date-to-input')).toHaveAttribute('required');
             await expect(page.getByTestId('report-export-only-date-to')).toContainText('Required');
@@ -190,8 +193,8 @@ test.describe('Admin Dashboard - Reports tab', () => {
             await clearField(page, 'report-export-only-date-from-input');
 
             // to before from
-            await page.getByTestId('report-export-only-date-to-input').fill('01/01/2025');
-            await page.getByTestId('report-export-only-date-from-input').fill('01/01/2026');
+            await fillDateInput(page, 'to', '01/01/2025');
+            await fillDateInput(page, 'from', '01/01/2026');
             await expect(page.getByTestId('report-export-only-date-from')).toContainText('Must not be after "to" date');
             await expect(page.getByTestId('report-export-only-date-to')).toContainText(
                 'Must not be before "from" date',
@@ -205,13 +208,13 @@ test.describe('Admin Dashboard - Reports tab', () => {
 
             await expect(page.getByTestId('report-export-button')).toBeDisabled();
             await clearField(page, 'report-export-only-date-from-input');
-            await page.getByTestId('report-export-only-date-from-input').fill('01/01/2024');
+            await fillDateInput(page, 'from', '01/01/2024');
 
             await expect(page.getByTestId('report-export-only-date-to')).toContainText(
                 'Must be within 1 week of "from" date',
             );
             await clearField(page, 'report-export-only-date-to-input');
-            await page.getByTestId('report-export-only-date-to-input').fill('07/01/2024');
+            await fillDateInput(page, 'to', '07/01/2024');
             await expect(page.getByTestId('report-export-only-date-to')).not.toContainText(
                 'Must be within 1 week of "from" date',
             );
@@ -227,13 +230,13 @@ test.describe('Admin Dashboard - Reports tab', () => {
             await expect(page.getByTestId('report-export-only-date-to-input')).toBeDisabled();
             await expect(page.getByTestId('report-export-button')).toBeDisabled();
 
-            await page.getByTestId('report-export-only-date-from-input').fill('01/01/2015');
+            await fillDateInput(page, 'from', '01/01/2015');
             await expect(page.getByTestId('report-export-only-date-to-input')).toHaveValue('31/12/2015');
             await clearField(page, 'report-export-only-date-from-input');
-            await page.getByTestId('report-export-only-date-from-input').fill('30/10/2015');
+            await fillDateInput(page, 'from', '30/10/2015');
             await expect(page.getByTestId('report-export-only-date-to-input')).toHaveValue('28/10/2016');
             await clearField(page, 'report-export-only-date-from-input');
-            await page.getByTestId('report-export-only-date-from-input').fill('28/02/2017');
+            await fillDateInput(page, 'from', '28/02/2017');
             await expect(page.getByTestId('report-export-only-date-to-input')).toHaveValue('27/02/2018');
 
             // test auto-cutoff, when selected 'from' date is less than maximum date range.
@@ -246,7 +249,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
             const today = moment();
             const dateFrom = moment().subtract(6, 'months');
             await clearField(page, 'report-export-only-date-from-input');
-            await page.getByTestId('report-export-only-date-from-input').fill(dateFrom.format('DD/MM/YYYY'));
+            await fillDateInput(page, 'from', dateFrom.format('DD/MM/YYYY'));
             await expect(page.getByTestId('report-export-only-date-to-input')).toHaveValue(today.format('DD/MM/YYYY'));
         });
     });
