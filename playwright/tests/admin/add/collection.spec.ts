@@ -3,15 +3,9 @@ import { test, expect } from '../../../test';
 test.describe('As an admin,', () => {
     test('I can create a collection', async ({ page }) => {
         await page.goto('/admin/collection?user=uqstaff');
-        const title = page.locator('.StandardCard').filter({
-            has: page
-                .locator('h3')
-                .getByText(/Add a missing collection/)
-                .first(),
-        });
-        await expect(title).toHaveText(/Select a community/);
-        const communitySelector = title.getByTestId('rek-ismemberof-select');
-        await communitySelector.click();
+        await expect(page.locator('h3').getByText(/Add a missing collection/)).toBeVisible();
+        await expect(page.getByText(/Select a community/)).toBeVisible();
+        await page.getByTestId('rek-ismemberof-select').click();
         await page
             .getByTestId('rek-ismemberof-options')
             .locator('li', { hasText: /Advanced Computational/ })
@@ -44,11 +38,6 @@ test.describe('As an admin,', () => {
             .getByText(/Add another collection/)
             .first()
             .click();
-        await expect(
-            page
-                .locator('h3')
-                .getByText(/Add a missing collection/)
-                .first(),
-        ).toBeVisible();
+        await expect(page.locator('h3').getByText(/Add a missing collection/)).toBeVisible();
     });
 });

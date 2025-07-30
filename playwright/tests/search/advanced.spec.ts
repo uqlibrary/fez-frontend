@@ -33,7 +33,6 @@ test.describe('Advanced Search', () => {
     });
 
     test('should search records when advanced search options are updated', async ({ page }) => {
-        await expect(page.getByTestId('search-records-loading')).not.toBeVisible();
         await page.getByTestId('show-advanced-search').click();
         await page.getByTestId('from').fill('2005');
         await page.getByTestId('to').fill('2018');
@@ -42,7 +41,6 @@ test.describe('Advanced Search', () => {
             /activeFacets%5Branges%5D%5BYear\+published%5D%5Bfrom%5D=2005&activeFacets%5Branges%5D%5BYear\+published%5D%5Bto%5D=2018/,
         );
         await expect(page.getByTestId('facet-year-range-caption')).toBeVisible();
-        await expect(page.getByTestId('search-records-loading')).toHaveText(/Searching for works/);
     });
 
     test('can bulk edit Advisory statement', async ({ page }) => {

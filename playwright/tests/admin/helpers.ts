@@ -43,17 +43,11 @@ export async function adminEditTabbedView(page: Page, showTabs = true) {
     }
 
     await tabViewButton.click();
-    await page.waitForFunction(
-        ({ selector, showTabs }) => {
-            const elements = document.querySelectorAll(selector);
-            return showTabs ? elements.length === 1 : elements.length > 1;
-        },
-        { selector: tabHeadingSelector, showTabs },
-    );
-
     if (showTabs) {
+        expect(await page.locator(tabHeadingSelector).count()).toBe(1);
         await expect(tabViewButton).toBeChecked();
     } else {
+        expect(await page.locator(tabHeadingSelector).count()).toBeGreaterThan(1);
         await expect(tabViewButton).not.toBeChecked();
     }
 }

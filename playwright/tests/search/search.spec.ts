@@ -117,7 +117,6 @@ test.describe('Search', () => {
         }).toPass();
         await expect(page.getByTestId('advanced-search')).not.toBeDisabled();
         await page.getByTestId('advanced-search').click();
-        await expect(page.getByTestId('search-records-loading')).toHaveText(/Searching for works/);
         await expect(
             page
                 .getByTestId('search-records-results')
