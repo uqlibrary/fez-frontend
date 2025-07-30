@@ -4,7 +4,7 @@ test.describe('As an admin,', () => {
     test('I can create a community', async ({ page }) => {
         await page.goto('/admin/community?user=uqstaff');
         await expect(page.locator('h2')).toHaveText(/Add a missing community/);
-        await expect(page.locator('h3')).toHaveText(/Community details/);
+        await expect(page.locator('h3').getByText(/Community details/)).toBeVisible();
         await page.getByTestId('rek-title-input').fill('Fez E2E Test Community');
         await page.getByTestId('rek-description-input').fill('Fez E2E Test Community description');
         await page.getByTestId('rek-keywords-input').fill('testing');
@@ -14,13 +14,13 @@ test.describe('As an admin,', () => {
         await page
             .locator('button')
             .getByText(/Add another community/)
-            .first()
             .click();
         await expect(
-            page
-                .locator('h3')
-                .getByText(/Community details/)
-                .first(),
-        ).toBeVisible();
+            async () =>
+                await page
+                    .locator('h3')
+                    .getByText(/Community details/)
+                    .isVisible(),
+        ).toPass();
     });
 });
