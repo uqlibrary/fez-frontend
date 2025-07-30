@@ -15,41 +15,33 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
         return parentLocator.getByRole('gridcell').nth(cell);
     };
 
-    const assertDetailDrawer = async (page: Page, data: any) => {
+    const assertDetailDrawer = async (page: Page, data: Record<string, string>) => {
         const detailDrawer = getByTestId(page, 'system-alert-detail');
-        await expect(detailDrawer).toBeVisible();
-
-        if (data) {
-            if (data.title) {
-                await expect(getByTestId(detailDrawer, 'system-alert-detail-title')).toContainText(data.title);
-            }
-            if (data.link) {
-                const linkElement = getByTestId(detailDrawer, 'system-alert-detail-link');
-                await expect(linkElement).toHaveAttribute('href', data.link);
-                await expect(linkElement).toContainText(data.link);
-                await expect(getByTestId(linkElement, 'OpenInNewIcon')).toBeVisible();
-            }
-            if (data.alertId) {
-                await expect(getByTestId(detailDrawer, 'system-alert-detail-id')).toContainText(data.alertId);
-            }
-            if (data.createdDate) {
-                await expect(getByTestId(detailDrawer, 'system-alert-detail-date-created')).toContainText(
-                    data.createdDate,
-                );
-            }
-            if (data.description) {
-                await expect(getByTestId(detailDrawer, 'system-alert-detail-description')).toContainText(
-                    data.description,
-                );
-            }
-            if (data.status) {
-                await expect(getByTestId(detailDrawer, 'system-alert-detail-assignee-input')).toHaveValue(data.status);
-            }
-            if (data.status === 'Unassigned') {
-                await expect(getByTestId(detailDrawer, 'system-alert-detail-action-button')).not.toBeAttached();
-            } else {
-                await expect(getByTestId(detailDrawer, 'system-alert-detail-action-button')).toBeAttached();
-            }
+        if (data.title) {
+            await expect(getByTestId(detailDrawer, 'system-alert-detail-title')).toContainText(data.title);
+        }
+        if (data.link) {
+            const linkElement = getByTestId(detailDrawer, 'system-alert-detail-link');
+            await expect(linkElement).toHaveAttribute('href', data.link);
+            await expect(linkElement).toContainText(data.link);
+            await expect(getByTestId(linkElement, 'OpenInNewIcon')).toBeVisible();
+        }
+        if (data.alertId) {
+            await expect(getByTestId(detailDrawer, 'system-alert-detail-id')).toContainText(data.alertId);
+        }
+        if (data.createdDate) {
+            await expect(getByTestId(detailDrawer, 'system-alert-detail-date-created')).toContainText(data.createdDate);
+        }
+        if (data.description) {
+            await expect(getByTestId(detailDrawer, 'system-alert-detail-description')).toContainText(data.description);
+        }
+        if (data.status) {
+            await expect(getByTestId(detailDrawer, 'system-alert-detail-assignee-input')).toHaveValue(data.status);
+        }
+        if (data.status === 'Unassigned') {
+            await expect(getByTestId(detailDrawer, 'system-alert-detail-action-button')).not.toBeAttached();
+        } else {
+            await expect(getByTestId(detailDrawer, 'system-alert-detail-action-button')).toBeAttached();
         }
     };
 
@@ -124,10 +116,10 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
 
         const actionButton = getByTestId(page, 'system-alert-detail-action-button');
         await expect(actionButton).toContainText('Mark as resolved');
-        await actionButton.click();
 
-        await expect(actionButton).toBeDisabled();
-        await expect(actionButton).toContainText('Updating...');
+        await actionButton.click();
+        await expect(actionButton).toContainText('Updating...', { timeout: 1000 });
+        await expect(actionButton).toBeDisabled({ timeout: 1000 });
 
         const assigneeInputContainer = getByTestId(page, 'system-alert-detail-assignee');
         await expect(getByTestId(assigneeInputContainer, 'system-alert-detail-assignee-input')).toBeDisabled();

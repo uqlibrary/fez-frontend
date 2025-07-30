@@ -84,7 +84,7 @@ test.describe('view Journal', () => {
                 await page.goto('/admin/journal/edit/12?user=uqstaff');
 
                 const alert = page.getByTestId('alert');
-                await expect(alert).toContainText('THIS WORK IS LOCKED');
+                await expect(async () => expect(alert.getByText('THIS WORK IS LOCKED')).toBeVisible()).toPass();
 
                 const fields = [
                     'jnl_title-input',
