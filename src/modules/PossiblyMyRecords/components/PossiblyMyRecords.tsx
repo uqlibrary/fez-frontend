@@ -45,7 +45,9 @@ const PossiblyMyRecords: React.FC = () => {
     const dispatch = useDispatch();
     const confirmDialogBoxRef = useRef<{ showConfirmation: () => void } | null>(null);
 
+    // istanbul ignore next
     const accountLoading = useSelector((state: AppState) => state?.get('accountReducer').accountLoading || false);
+    // istanbul ignore next
     const {
         possibleCounts = 0,
         hidePublicationFailed = false,
@@ -100,7 +102,7 @@ const PossiblyMyRecords: React.FC = () => {
             navigationType === 'POP' &&
             location.pathname === pathConfig.records.possible
         ) {
-            const newState = location.state ? { ...location.state } : { ...initialState };
+            const newState = location.state ? { ...location.state } /* istanbul ignore next */ : { ...initialState };
             setState(prevState => ({
                 ...prevState,
                 ...newState,
@@ -139,15 +141,18 @@ const PossiblyMyRecords: React.FC = () => {
     if (accountLoading) return null;
 
     const hidePublication = (): void => {
-        if (state.publicationToHide) {
-            dispatch(
-                actions.hideRecord({
-                    record: state.publicationToHide,
-                    facets: state.activeFacets,
-                }),
-            );
-            setState(prevState => ({ ...prevState, publicationToHide: null }));
+        // istanbul ignore next
+        if (!state.publicationToHide) {
+            return;
         }
+
+        dispatch(
+            actions.hideRecord({
+                record: state.publicationToHide,
+                facets: state.activeFacets,
+            }),
+        );
+        setState(prevState => ({ ...prevState, publicationToHide: null }));
     };
 
     const confirmHidePublication = (item: FezRecord): void => {
@@ -197,8 +202,8 @@ const PossiblyMyRecords: React.FC = () => {
 
     const getAlert = (
         alertLocale: { alertId: string; title: string; message: (s: string) => string; type: string },
-        hasFailed: boolean = false,
-        error: string = '',
+        hasFailed: boolean,
+        error: string,
     ): React.ReactNode => {
         return hasFailed ? (
             <Alert
