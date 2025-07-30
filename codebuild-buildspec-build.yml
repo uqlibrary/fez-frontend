@@ -1,9 +1,6 @@
 version: 0.2
 
 env:
-  #variables:
-     # key: "value"
-     # key: "value"
   parameter-store:
     GITHUB_URL: "/CodeBuild/fez-frontend/GITHUB_URL"
     PT_PROJECT: "/CodeBuild/fez-frontend/PT_PROJECT"
@@ -12,18 +9,6 @@ env:
     SENTRY_AUTH_TOKEN: "/CodeBuild/fez-frontend/SENTRY_AUTH_TOKEN"
     SENTRY_ORG: "/CodeBuild/fez-frontend/SENTRY_ORG"
     SENTRY_PROJECT: "/CodeBuild/fez-frontend/SENTRY_PROJECT"
-  #secrets-manager:
-     # key: secret-id:json-key:version-stage:version-id
-     # key: secret-id:json-key:version-stage:version-id
-  #exported-variables:
-     # - variable
-     # - variable
-  #git-credential-helper: yes
-#batch:
-  #fast-fail: true
-  #build-list:
-  #build-matrix:
-  #build-graph:
 phases:
   install:
     runtime-versions:
