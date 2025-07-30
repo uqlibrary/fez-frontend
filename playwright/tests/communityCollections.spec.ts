@@ -38,7 +38,6 @@ test.describe('Communities and Collections', () => {
         await expect(page.getByRole('listbox')).toHaveText(/Excel File/);
         await dismissPopover(page);
         await page.getByTestId('expand-row-UQ:7556').click();
-        await expect(page.getByTestId('total-collections-UQ:7556')).toBeVisible();
         await expect(page.getByTestId('total-collections-UQ:7556')).toHaveText(
             /Displaying 1 to 3 of 3 collections for 'Advanced Computational Modelling Centre'/,
         );
@@ -120,7 +119,6 @@ test.describe('Communities and Collections - Admin', () => {
         await expect(page.getByTestId('community-collections-paging-top-select-page-1')).toBeVisible();
         await expect(page.getByTestId('community-collections-paging-top-select-page-2')).toBeVisible();
         await expect(page.getByTestId('community-collections-paging-top-select-page-3')).not.toBeVisible();
-        await expect(page.getByTestId('admin-actions-button-UQ:12096')).toBeVisible();
         await page.getByTestId('admin-actions-button-UQ:12096').click();
         await expect(page.getByTestId('admin-actions-menu-UQ:12096')).toBeVisible();
         await expect(page.locator('[data-testid="admin-actions-menu-UQ:12096"] ul li[tabindex="0"]')).toBeVisible();

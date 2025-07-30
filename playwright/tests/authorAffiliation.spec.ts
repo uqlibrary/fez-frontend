@@ -11,10 +11,9 @@ test.describe('Record with invalid affiliation', () => {
         await toggleIcon.click();
 
         // Verify the affiliation error indicator exists
-        const drawerIndicator = page.locator(
-            '#adminViewRecordDrawerDesktop [data-testid="affiliation_error_drawer_indicator"]',
-        );
-        await expect(drawerIndicator).toBeVisible();
+        await expect(
+            page.locator('#adminViewRecordDrawerDesktop [data-testid="affiliation_error_drawer_indicator"]'),
+        ).toBeVisible();
 
         // Check specific affiliation error messages
         const incompleteAffiliation = page.locator('#adminViewRecordDrawerDesktop [data-testid="affil_error_88844"]');

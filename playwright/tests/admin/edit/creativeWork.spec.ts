@@ -39,7 +39,6 @@ test.describe('Creative Work admin edit, general', () => {
     test.describe('in the Additional section', () => {
         test('should render as expected', async ({ page }) => {
             const adminTab = page.getByTestId('admin-section-content');
-            await expect(adminTab).toBeVisible();
             await expect(adminTab.locator('h4').getByText(/Additional information/)).toBeVisible();
 
             await expect(adminTab.getByTestId('rek-license-input')).toHaveValue(
@@ -74,17 +73,14 @@ test.describe('Creative Work admin edit, general', () => {
 
         async function clickFormSaveButton(page: Page, label: string) {
             const button = page.locator('button[data-testid="rek-significance-add"]');
-            await expect(button).toBeVisible();
             await expect(button).toContainText(label);
             await button.click();
         }
 
         async function clickRowEditButton(page: Page, rowId: number) {
             const editButton = page.getByTestId(`rek-significance-list-row-${rowId}-edit`);
-            await expect(editButton).toBeVisible();
             await editButton.click();
             const formLocator = page.getByTestId('rek-significance-form');
-            await expect(formLocator).toBeVisible();
             await formLocator.scrollIntoViewIfNeeded();
         }
 
@@ -107,7 +103,6 @@ test.describe('Creative Work admin edit, general', () => {
 
         test('should render the NTRO quality indicators section as expected', async ({ page }) => {
             const NTROSectionContent = page.getByTestId('ntro-section-content');
-            await expect(NTROSectionContent).toBeVisible();
 
             const qualityIndicatorsCard = NTROSectionContent.locator('.AdminCard').nth(1);
             await expect(qualityIndicatorsCard.locator('h4')).toHaveText(/Quality indicators/);
@@ -181,7 +176,6 @@ test.describe('Creative Work admin edit, general', () => {
 
             await page.getByTestId('submit-admin-top').click();
             const dialog = page.getByRole('dialog');
-            await expect(dialog).toBeVisible();
             await expect(dialog.locator('h2')).toContainText('Work has been updated');
         });
 
@@ -189,8 +183,7 @@ test.describe('Creative Work admin edit, general', () => {
             await adminEditTabbedView(page);
             await page.getByTestId('authors-tab').click();
 
-            const NTROSectionContent = page.getByTestId('ntro-section-content');
-            await expect(NTROSectionContent).toBeVisible();
+            await expect(page.getByTestId('ntro-section-content')).toBeVisible();
 
             await clickRowEditButton(page, 1);
             await typeCKEditor(page, 'rek-creator-contribution-statement', statementList[0].newText);
@@ -202,7 +195,6 @@ test.describe('Creative Work admin edit, general', () => {
 
             await page.getByTestId('submit-admin-top').click();
             const dialog = page.getByRole('dialog');
-            await expect(dialog).toBeVisible();
             await expect(dialog.locator('h2')).toContainText('Work has been updated');
         });
 
@@ -211,8 +203,6 @@ test.describe('Creative Work admin edit, general', () => {
             await page.getByTestId('authors-tab').click();
 
             const NTROSectionContent = page.getByTestId('ntro-section-content');
-            await expect(NTROSectionContent).toBeVisible();
-
             const significanceStatementCard = NTROSectionContent.locator('.AdminCard').first(); // <--- KEPT: This one is used for `moveDownButton` and `moveUpButton` below
             await expect(significanceStatementCard.locator('h4')).toHaveText(
                 /Scale\/Significance of work & Creator research statement/,

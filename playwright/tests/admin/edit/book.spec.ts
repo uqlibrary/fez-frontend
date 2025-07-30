@@ -59,12 +59,6 @@ test.describe('Book admin edit', () => {
             placeOfPublicationInput
                 .locator('..')
                 .locator('..')
-                .locator('p'), // Traverse up two parents and find 'p'
-        ).toBeVisible();
-        await expect(
-            placeOfPublicationInput
-                .locator('..')
-                .locator('..')
                 .locator('p'),
         ).toHaveText('This field is required');
 

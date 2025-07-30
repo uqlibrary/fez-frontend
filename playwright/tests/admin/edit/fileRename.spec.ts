@@ -154,7 +154,6 @@ test.describe('File rename admin edit', () => {
         await filesSectionContent.getByTestId(`${vars2.editingId}`).clear();
         await filesSectionContent.getByTestId(`${vars2.editingId}`).fill(vars.originalFilepart);
         await filesSectionContent.getByTestId(`${vars2.saveId}`).click();
-        await expect(page.getByTestId(`${alertId}`)).toBeVisible(); // Alert is outside filesSectionContent scope
         await expect(page.getByTestId(`${alertId}`)).toContainText('name matches with an existing file.'); // Use toContainText
         await filesSectionContent.getByTestId(`${vars2.cancelId}`).click();
         await expect(page.getByTestId(`${alertId}`)).not.toBeVisible(); // Alert is outside filesSectionContent scope
@@ -165,7 +164,6 @@ test.describe('File rename admin edit', () => {
         await filesSectionContent.getByTestId(`${vars3.editingId}`).clear();
         await filesSectionContent.getByTestId(`${vars3.editingId}`).fill(newFilename);
         await filesSectionContent.getByTestId(`${vars3.saveId}`).click();
-        await expect(page.getByTestId(`${alertId}`)).toBeVisible(); // Alert is outside filesSectionContent scope
         await expect(page.getByTestId(`${alertId}`)).toContainText('name matches with an existing file.'); // Use toContainText
     });
 

@@ -224,6 +224,7 @@
         "test:unit:ci:serial:nocoverage": "npm run test:unit:ci:serial -- --no-coverage",
         "test:unit:update": "npm run test:unit -- --updateSnapshot",
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged",
+        "pw:trace:show": "playwright show-trace",
         "tsc": "./node_modules/typescript/bin/tsc",
         "tsc:watch": "./node_modules/typescript/bin/tsc --watch"
     },

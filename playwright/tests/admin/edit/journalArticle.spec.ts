@@ -202,7 +202,6 @@ test.describe('Journal Article admin edit', () => {
         const journalNameInput = page.getByTestId('rek-journal-name-input');
         await journalNameInput.clear();
         const journalNameHelperText = page.locator('#rek-journal-name-helper-text');
-        await expect(journalNameHelperText).toBeVisible();
         await expect(journalNameHelperText).toHaveText('This field is required');
 
         await adminEditVerifyAlerts(page, 1, ['Journal name is required']);
@@ -296,7 +295,6 @@ test.describe('Journal Article admin edit', () => {
                 .first()
                 .click();
         }
-        await expect(collectionsCard.locator('#rek-ismemberof-helper-text')).toBeVisible();
         await expect(collectionsCard.locator('#rek-ismemberof-helper-text')).toHaveText('This field is required');
         await adminEditVerifyAlerts(page, 1, ['You must select at least one collection']);
 

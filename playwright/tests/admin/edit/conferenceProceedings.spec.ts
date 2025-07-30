@@ -36,7 +36,6 @@ test.describe('Conference Proceedings admin edit', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         // Bibliographic tab
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
-        await expect(bibliographicTab).toBeVisible(); // Ensure the tab content is visible
         await expect(bibliographicTab.locator('h4').getByText(/Title of proceedings/)).toBeVisible();
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
@@ -45,8 +44,6 @@ test.describe('Conference Proceedings admin edit', () => {
 
         // Author Details tab
         const editorDetailsTab = page.getByTestId('authors-section-content');
-        await expect(editorDetailsTab).toBeVisible(); // Ensure the tab content is visible
-
         await expect(editorDetailsTab.locator('h4').getByText(/Editors/)).toBeVisible();
         await editorDetailsTab.getByTestId('rek-contributor-add').click();
         await editorDetailsTab.getByTestId('rek-contributor-input').fill('Editor');
@@ -57,8 +54,6 @@ test.describe('Conference Proceedings admin edit', () => {
         // ---------------------------------------------- FILES TAB --------------------------------------------------
         // Files tab
         const filesTab = page.getByTestId('files-section-content');
-        await expect(filesTab).toBeVisible(); // Ensure the tab content is visible
-
         await expect(filesTab.locator('h4').getByText('Attached files')).toBeVisible();
 
         // Locating the specific div for file details
@@ -69,8 +64,6 @@ test.describe('Conference Proceedings admin edit', () => {
         // --------------------------------------------- SECURITY TAB ------------------------------------------------
         // Security tab
         const securityTab = page.getByTestId('security-section-content');
-        await expect(securityTab).toBeVisible(); // Ensure the tab content is visible
-
         await expect(securityTab.locator('h4').nth(1)).toHaveText(`Datastream level security - ${record.rek_pid}`);
 
         const standardCardNth1 = securityTab.locator('.StandardCard').nth(1);

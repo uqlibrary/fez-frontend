@@ -28,7 +28,6 @@ test.describe('As an admin,', () => {
         await page.getByTestId('rek-description-input').fill('This collection is created through automated testing.');
         await page.getByTestId('rek-keywords-input').fill('testing');
         await page.getByTestId('rek-keywords-add').click();
-        await expect(page.getByTestId('rek-keywords-list')).toBeVisible();
         await expect(
             page
                 .getByTestId('rek-keywords-list')

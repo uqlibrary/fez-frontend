@@ -28,7 +28,6 @@ test.describe('Book Chapter admin edit', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         // Bibliographic tab
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
-        await expect(bibliographicTab).toBeVisible(); // Ensure the tab content is visible
 
         // All assertions within the bibliographicTab scope
         await expect(bibliographicTab.getByTestId('rek-chapter-number-input')).toHaveValue(
@@ -67,8 +66,6 @@ test.describe('Book Chapter admin edit', () => {
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         // Author Details tab
         const authorDetailsTab = page.getByTestId('authors-section-content');
-        await expect(authorDetailsTab).toBeVisible(); // Ensure the tab content is visible
-
         await expect(authorDetailsTab.locator('h4').getByText(/Editors/)).toBeVisible();
         const editors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
         for (const [index, editor] of editors.entries()) {

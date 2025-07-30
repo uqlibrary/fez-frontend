@@ -34,7 +34,6 @@ test.describe('Working paper admin edit', () => {
 
         // Locate the bibliographic content section
         const bibliographicContent = page.getByTestId('bibliographic-section-content');
-        await expect(bibliographicContent).toBeVisible(); // Ensure it's visible before interacting
 
         // First AdminCard (Title section)
         const titleCard = bibliographicContent.locator('.AdminCard').nth(0);

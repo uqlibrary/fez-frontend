@@ -88,7 +88,6 @@ test.describe('Audio admin edit', () => {
             record.fez_record_search_key_location.map(item => item.rek_location).join(''),
         );
         const pubDateBlock = bibliographicCard.locator('[id=rek-date]');
-        await expect(pubDateBlock.locator('p')).toBeVisible();
         await expect(pubDateBlock.locator('p')).toHaveText('Year required');
         await setPartialDate(page, 'rek-date', { day: 1, month: 1, year: 2020 });
         await expect(pubDateBlock.locator('p')).not.toBeVisible();

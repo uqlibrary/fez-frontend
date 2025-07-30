@@ -7,7 +7,6 @@ test.describe('Advanced Search', () => {
         await page.getByTestId('select-all-publications-input').click();
         // bulk updates drop down appears - open it
         await page.getByTestId('bulk-updates-actions-select').click();
-        await expect(page.getByTestId('bulk-updates-actions-option-5')).toBeVisible();
         // choose "change search key value"
         await page.getByTestId('bulk-updates-actions-option-5').click();
         // open selector and choose provided type
