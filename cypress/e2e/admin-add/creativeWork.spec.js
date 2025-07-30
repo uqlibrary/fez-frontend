@@ -185,4 +185,41 @@ context('As an admin, I can', () => {
             ntro: true,
         });
     });
+
+    it('should show end date field for Curated or Produced Exhibition or Event - Festival', () => {
+        cy.visit('/admin/add?user=uqstaff');
+
+        // Choose a collection
+        cy.get('[data-testid=rek-ismemberof-input]').type('a');
+        cy.clickAutoSuggestion('rek-ismemberof', 0);
+
+        // Choose display type
+        cy.get('[data-testid=rek-display-type-select]').click();
+        cy.get('[data-testid=rek-display-type-options]')
+            .contains('li', 'Creative Work')
+            .click();
+
+        // Choose sub type
+        cy.get('[data-testid=rek-subtype-select]').click();
+        cy.get('[data-testid=rek-subtype-options]')
+            .contains('li', 'Creative Work - Textual')
+            .click();
+
+        // Apply selections
+        cy.get('button')
+            .contains('Create work')
+            .should('exist')
+            .click();
+
+        // End date is hidden for Creative Work - Textual
+        cy.get('#rek-end-date').should('not.exist');
+
+        // Change subtype to Curated or Produced Exhibition or Event - Exhibition or Event
+        cy.get('[data-testid=rek-subtype-select]').click();
+        cy.get('[data-testid=rek-subtype-options]')
+            .contains('li', 'Curated or Produced Exhibition or Event - Exhibition or Event')
+            .click();
+
+        cy.get('#rek-end-date').should('exist');
+    });
 });
