@@ -5,15 +5,10 @@ import { locale } from 'locale';
 export const ConfirmDiscardFormChanges = props => {
     const { dirty = false, submitSucceeded = false, children } = props;
 
-    const getDiscardFormChangesConfirmationLocale = () => {
-        return locale.global.discardFormChangesConfirmation.confirmationMessage;
-    };
     useEffect(() => {
-        const promptDiscardFormChanges = () => {
-            window.onbeforeunload = getDiscardFormChangesConfirmationLocale;
-        };
-        dirty && !submitSucceeded && promptDiscardFormChanges();
+        if (!dirty || submitSucceeded) return () => {};
 
+        window.onbeforeunload = () => locale.global.discardFormChangesConfirmation.confirmationMessage;
         return () => {
             window.onbeforeunload = null;
         };

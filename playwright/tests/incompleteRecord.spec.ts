@@ -206,12 +206,8 @@ test.describe('Incomplete record form', () => {
             .click();
 
         // verify that the work form is loaded
-        await expect(
-            page
-                .locator('h2')
-                .getByText(/complete my work/i)
-                .first(),
-        ).toBeVisible();
+        await expect(page.locator('h2').getByText(/complete my work/i)).toBeVisible();
+        await page.waitForTimeout(500);
 
         // navigate back to the list
         await page.goBack();
@@ -219,7 +215,6 @@ test.describe('Incomplete record form', () => {
         await page
             .locator('button')
             .getByText(/yes/i)
-            .first()
             .click();
 
         // ensure the list page is loaded
