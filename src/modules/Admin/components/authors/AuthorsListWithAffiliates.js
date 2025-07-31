@@ -99,44 +99,44 @@ NameAsPublished.propTypes = {
 
 const isValid = value => !validation.isEmpty(value) && !validation.maxLength255Validator(value);
 
-// export const authorDetailPanel = ({ rowData, locale, isEditing, setEditing, onChange }) => {
-//     const {
-//         form: {
-//             locale: { affiliations: affiliationsLocale },
-//         },
-//     } = locale;
+export const AuthorDetailPanel = ({ rowData, locale, isEditing, setEditing, onChange }) => {
+    const {
+        form: {
+            locale: { affiliations: affiliationsLocale },
+        },
+    } = locale;
 
-//     return (
-//         <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }} data-testid={`detailPanel-${rowData.aut_id}`}>
-//             <Typography variant="body2">
-//                 {affiliationsLocale.title}
-//                 {!isEditing && (
-//                     <Tooltip title={affiliationsLocale.editButton.tooltip}>
-//                         <IconButton
-//                             aria-label="delete"
-//                             onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
-//                             size={'small'}
-//                             id={`affiliationEditBtn-${rowData.aut_id}`}
-//                             data-testid={`affiliationEditBtn-${rowData.aut_id}`}
-//                         >
-//                             <PlaylistAddCheckIcon />
-//                         </IconButton>
-//                     </Tooltip>
-//                 )}
-//             </Typography>
-// {!isEditing && <ViewAuthorAffiliations rowData={rowData} onChange={onChange} locale={affiliationsLocale} />}
-//             {isEditing && (
-//                 <EditAuthorAffiliations
-//                     rowData={rowData}
-//                     locale={affiliationsLocale}
-//                     isEditing={isEditing}
-//                     setEditing={setEditing}
-//                     onChange={onChange}
-//                 />
-//             )}
-//         </Grid>
-//     );
-// };
+    return (
+        <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }} data-testid={`detailPanel-${rowData.aut_id}`}>
+            <Typography variant="body2">
+                {affiliationsLocale.title}
+                {!isEditing && (
+                    <Tooltip title={affiliationsLocale.editButton.tooltip}>
+                        <IconButton
+                            aria-label="delete"
+                            onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
+                            size={'small'}
+                            id={`affiliationEditBtn-${rowData.aut_id}`}
+                            data-testid={`affiliationEditBtn-${rowData.aut_id}`}
+                        >
+                            <PlaylistAddCheckIcon />
+                        </IconButton>
+                    </Tooltip>
+                )}
+            </Typography>
+            {!isEditing && <ViewAuthorAffiliations rowData={rowData} onChange={onChange} locale={affiliationsLocale} />}
+            {isEditing && (
+                <EditAuthorAffiliations
+                    rowData={rowData}
+                    locale={affiliationsLocale}
+                    isEditing={isEditing}
+                    setEditing={setEditing}
+                    onChange={onChange}
+                />
+            )}
+        </Grid>
+    );
+};
 
 export const AuthorsListWithAffiliates = ({
     contributorEditorId,
@@ -281,25 +281,11 @@ export const AuthorsListWithAffiliates = ({
                     );
                 },
                 Edit: ({ row, column }) => {
-                    const value = row._valuesCache.nameAsPublished || row.original.nameAsPublished || '';
-                    // const currentName = React.useRef(
-                    //     row._valuesCache.nameAsPublished || row.original.nameAsPublished || '',
-                    // );
-                    // const [state, setState] = React.useState(
-                    //     row._valuesCache.nameAsPublished || row.original.nameAsPublished || '',
-                    // );
+                    const value = row._valuesCache.nameAsPublished;
                     const errors = validationErrors[row.id] || [];
                     const error = getValidationError(errors, 'nameAsPublished');
 
-                    // React.useEffect(() => {
-                    //     if (row._valuesCache.nameAsPublished !== currentName.current) {
-                    //         currentName.current = row._valuesCache.nameAsPublished;
-                    //         setState(row._valuesCache.nameAsPublished);
-                    //     }
-                    // }, [row._valuesCache.nameAsPublished, state]);
-
                     const handleChange = e => {
-                        // setState(e.target.value || '');
                         row._valuesCache = {
                             ...row._valuesCache,
                             [column.id]: e.target.value || null,
@@ -319,7 +305,7 @@ export const AuthorsListWithAffiliates = ({
                                     onChange={handleChange}
                                     textFieldId={contributorEditorId}
                                     error={!!error}
-                                    //  errorText={error}
+                                    errorText={validation.maxLength255Validator(value)}
                                     label={nameAsPublishedLabel}
                                     placeholder={nameAsPublishedHint}
                                     required
@@ -329,7 +315,7 @@ export const AuthorsListWithAffiliates = ({
                         </Grid>
                     );
                 },
-                size: 300,
+                size: 400,
                 grow: true,
             },
             {
@@ -660,10 +646,10 @@ export const AuthorsListWithAffiliates = ({
     };
 
     const handleAffiliationUpdate = rowData => {
-        // const index = list.findIndex(item => item.aut_id === rowData.aut_id);
-        // const newList = [...list.slice(0, index), rowData, ...list.slice(index + 1)];
-        // onChange(newList);
-        // setData(newList);
+        const index = list.findIndex(item => item.aut_id === rowData.aut_id);
+        const newList = [...list.slice(0, index), rowData, ...list.slice(index + 1)];
+        onChange(newList);
+        setData(newList);
     };
 
     // DELETE action
@@ -682,6 +668,7 @@ export const AuthorsListWithAffiliates = ({
         createDisplayMode: 'row',
         editDisplayMode: 'row',
         enableEditing: true,
+        enableExpandAll: false,
         enableColumnDragging: false,
         enableColumnResizing: false,
         enableRowDragging: false,
@@ -691,11 +678,49 @@ export const AuthorsListWithAffiliates = ({
         enablePagination: false,
         enableToolbarInternalActions: false,
         positionActionsColumn: 'last',
+        manualExpanding: true,
         state: {
             showAlertBanner: false,
             showLoadingOverlay: isBusy,
         },
-        displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
+        displayColumnDefOptions: {
+            'mrt-row-actions': { minSize: 100, size: 100 },
+            'mrt-row-expand': { header: '', maxSize: 20, grow: 0, size: '20px' },
+        },
+        renderDetailPanel: ({ row }) => {
+            const conditionalIcon =
+                !!!row.original.uqUsername || row.original.uqUsername === '' || isNtro || editState.editing
+                    ? {
+                          icon: () => {
+                              return null;
+                          },
+                      }
+                    : {
+                          icon: () => (
+                              <ChevronRight
+                                  fontSize="medium"
+                                  data-testid={`expandPanelIcon-${row.original.aut_id}`}
+                                  id={`expandPanelIcon-${row.original.aut_id}`}
+                              />
+                          ),
+                      };
+
+            return !!!row.original.uqUsername || row.original.uqUsername === '' || isNtro ? (
+                /* istanbul ignore next */ <></>
+            ) : (
+                <AuthorDetailPanel
+                    rowData={row.original}
+                    locale={locale}
+                    isEditing={isEditing(row.original.aut_id)}
+                    setEditing={setEditing}
+                    onChange={handleAffiliationUpdate}
+                    loadOrganisationalUnitsList={loadOrganisationalUnitsList}
+                    loadSuggestedOrganisationalUnitsList={loadSuggestedOrganisationalUnitsList}
+                    clearSuggestedOrganisationalUnits
+                />
+            );
+        },
+
         renderTopToolbarCustomActions: ({ table }) => (
             <Tooltip title={addButton}>
                 <IconButton
@@ -739,6 +764,8 @@ export const AuthorsListWithAffiliates = ({
                             disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow || row.index === 0}
                             id={`${contributorEditorId}-list-row-${row.index}-move-up`}
                             data-testid={`${contributorEditorId}-list-row-${row.index}-move-up`}
+                            size="small"
+                            color="primary"
                         >
                             <KeyboardArrowUp />
                         </IconButton>{' '}
@@ -759,6 +786,8 @@ export const AuthorsListWithAffiliates = ({
                             disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow || row.index === data.length - 1}
                             id={`${contributorEditorId}-list-row-${row.index}-move-down`}
                             data-testid={`${contributorEditorId}-list-row-${row.index}-move-down`}
+                            size="small"
+                            color="primary"
                         >
                             <KeyboardArrowDown />
                         </IconButton>
@@ -778,6 +807,8 @@ export const AuthorsListWithAffiliates = ({
                             data-testid={`${contributorEditorId}-list-row-${row.index}-${editHint
                                 .toLowerCase()
                                 .replace(/ /g, '-')}`}
+                            size="small"
+                            color="primary"
                         >
                             <tableIcons.Edit />
                         </IconButton>
@@ -792,6 +823,8 @@ export const AuthorsListWithAffiliates = ({
                             data-testid={`${contributorEditorId}-list-row-${
                                 row.index
                             }-${deleteHint.toLowerCase().replace(/ /g, '-')}`}
+                            size="small"
+                            color="primary"
                         >
                             <tableIcons.Delete />
                         </IconButton>
@@ -807,10 +840,9 @@ export const AuthorsListWithAffiliates = ({
         onEditingRowSave: handleEdit,
         onEditingRowCancel: () => setEditRow(null),
         initialState: {
-            expanded: true,
             columnVisibility: { creatorRole: showRoleInput, orgaff: isNtro },
-            // columnPinning: { ['right']: ['mrt-row-actions'] },
-            // sorting: [{ id: 'eap_role_cvo_id', desc: true }],
+            density: 'compact',
+            expanded: false,
         },
         icons: {
             SortIcon: props => (
@@ -838,24 +870,50 @@ export const AuthorsListWithAffiliates = ({
                 />
             ),
         },
+        muiTableContainerProps: {
+            sx: {
+                ...(data.length > 10 ? { maxHeight: '500px' } : {}),
+            },
+        },
         muiTableProps: {
             sx: {
                 borderCollapse: 'collapse',
             },
         },
-        muiTableBodyCellProps: {
+        muiTableHeadCellProps: ({ column }) => ({
+            sx: {
+                '& .Mui-TableHeadCell-Content': {
+                    ...(column.id === 'mrt-row-actions' ? { justifyContent: 'center' } : {}),
+                },
+            },
+        }),
+        muiTableBodyCellProps: ({ column }) => ({
             sx: {
                 '&:last-of-type > div': {
                     gap: 0,
                     [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: { flexDirection: 'row-reverse', justifyContent: 'flex-end' },
                 },
-                '&:not(:last-child)': { alignContent: 'flex-start' },
+                '&:not(:last-child)': { alignContent: column.id === 'mrt-row-expand' ? 'center' : 'flex-start' },
+                ...(column.id === 'mrt-row-actions' ? { justifyContent: 'flex-end' } : {}),
             },
-        },
+        }),
         muiTableBodyRowProps: ({ row }) => ({
             id: `${contributorEditorId}-list-row-${row.index === -1 ? 'add' : row.index}`,
             'data-testid': `${contributorEditorId}-list-row-${row.index === -1 ? 'add' : row.index}`,
+            sx: {
+                ...(!!row.original.aut_id
+                    ? { backgroundColor: theme.palette.secondary.light, color: theme.palette.primary.main }
+                    : {}),
+            },
         }),
+        muiDetailPanelProps: ({ row }) => ({
+            sx: {
+                backgroundColor: theme.palette.background.paper,
+            },
+        }),
+        muiExpandButtonProps: {
+            sx: { alignSelf: 'center' },
+        },
     });
 
     return (
@@ -874,238 +932,6 @@ export const AuthorsListWithAffiliates = ({
             <MaterialReactTable table={table} />
         </Box>
     );
-
-    // return (
-    //     <Box id={`${contributorEditorId}-list`} data-testid={`${contributorEditorId}-list`}>
-    //         <MaterialTable
-    //             tableRef={materialTableRef}
-    //             columns={columns.current}
-    //             components={{
-    //                 Action: props => {
-    //            if (typeof props.action !== 'function' && !props.action.action && !props.action.isFreeAction) {
-    //                         const { icon: Icon, tooltip, ...restAction } = props.action;
-    //                         return (
-    //                             <MTableAction
-    //                                 {...props}
-    //                                 action={{
-    //                                     ...restAction,
-    //                                     icon: () => (
-    //                                         <Icon
-    //                                             id={`${contributorEditorId}-${(!!props.data.tableData &&
-    //                                                 props.data.tableData.editing) ||
-    //                                                 'add'}-${tooltip.toLowerCase()}`}
-    //                                             data-testid={`${contributorEditorId}-${(!!props.data.tableData &&
-    //                                                 props.data.tableData.editing) ||
-    //                                                 'add'}-${tooltip.toLowerCase()}`}
-    //                                         />
-    //                                     ),
-    //                                 }}
-    //                             />
-    //                         );
-    //                     } else {
-    //                         return <MTableAction {...props} />;
-    //                     }
-    //                 },
-    //                 Row: props => (
-    //                     <MTableBodyRow
-    //                         {...props}
-    //                         id={`${contributorEditorId}-list-row-${props.index}`}
-    //                         data-testid={`${contributorEditorId}-list-row-${props.index}`}
-    //                     />
-    //                 ),
-    //                 EditRow: props => (
-    //                     <MTableEditRow
-    //                         {...props}
-    //                         id={`${contributorEditorId}-list-edit-row-${props.index}`}
-    //                         data-testid={`${contributorEditorId}-list-edit-row-${props.index}`}
-    //                         onEditingApproved={handleAuthorUpdate}
-    //                     />
-    //                 ),
-    //             }}
-    //             actions={[
-    //                 rowData => ({
-    //                     icon: props => <KeyboardArrowUp {...props} />,
-    //                     iconProps: {
-    //                         id: `${contributorEditorId}-list-row-${row.index}-move-up`,
-    //                         'data-testid': `${contributorEditorId}-list-row-${row.index}-move-up`,
-    //                     },
-    //                     tooltip: moveUpHint,
-    //                     disabled:
-    //                         disabled ||
-    //                         editState.editing ||
-    //                         (rowData.itemIndex && /* istanbul ignore next */ rowData.itemIndex === 0) ||
-    //                         row.index === 0,
-    //                     onClick: () => {
-    //                         const index = row.index;
-    //                         const nextContributor = {
-    //                             ...data[index - 1],
-    //                         };
-    //                         const newRowData = { ...rowData };
-    //                         delete newRowData.tableData;
-    //                         const newList = [
-    //                             ...data.slice(0, index - 1),
-    //                             { ...newRowData },
-    //                             nextContributor,
-    //                             ...data.slice(index + 1),
-    //                         ];
-    //                         const newIndexedList = [];
-    //                         newList.map((item, index) => {
-    //                             newIndexedList.push({ ...item, id: index });
-    //                         });
-
-    //                         setData(newIndexedList);
-    //                         onChange(newIndexedList);
-    //                     },
-    //                 }),
-    //                 rowData => ({
-    //                     icon: props => <KeyboardArrowDown {...props} />,
-    //                     iconProps: {
-    //                         id: `${contributorEditorId}-list-row-${row.index}-move-down`,
-    //                         'data-testid': `${contributorEditorId}-list-row-${row.index}-move-down`,
-    //                     },
-    //                     tooltip: `${moveDownHint}-${row.index}`,
-    //                     disabled: disabled || editState.editing || row.index === data.length - 1,
-    //                     onClick: () => {
-    //                         const index = row.index;
-    //                         const nextContributor = data[index + 1];
-    //                         const newRowData = { ...rowData };
-    //                         delete newRowData.tableData;
-    //                         const newList = [
-    //                             ...data.slice(0, index),
-    //                             nextContributor,
-    //                             newRowData,
-    //                             ...data.slice(index + 2),
-    //                         ];
-    //                         const newIndexedList = [];
-    //                         newList.map((item, index) => {
-    //                             newIndexedList.push({ ...item, id: index });
-    //                         });
-
-    //                         setData(newIndexedList);
-    //                     },
-    //                 }),
-    //                 rowData => ({
-    //                     icon: props => <Edit {...props} />,
-    //                     iconProps: {
-    //                         id: `${contributorEditorId}-list-row-${row.index}-edit`,
-    //                         'data-testid': `${contributorEditorId}-list-row-${row.index}-edit`,
-    //                     },
-    //                     disabled: editState.editing || disabled,
-    //                     tooltip: editHint,
-    //                     onClick: () => {
-    //                         const materialTable = materialTableRef.current;
-    //                         materialTable.dataManager.changeRowEditing(rowData, 'update');
-    //                         materialTable.setState({
-    //                             ...materialTable.dataManager.getRenderState(),
-    //                         });
-    //                     },
-    //                 }),
-    //                 rowData => ({
-    //                     icon: props => <Delete {...props} />,
-    //                     iconProps: {
-    //                         id: `${contributorEditorId}-list-row-${row.index}-delete`,
-    //                         'data-testid': `${contributorEditorId}-list-row-${row.index}-delete`,
-    //                     },
-    //                     disabled: editState.editing || disabled,
-    //                     tooltip: deleteHint,
-    //                     onClick: () => {
-    //                         const materialTable = materialTableRef.current;
-    //                         materialTable.dataManager.changeRowEditing(rowData, 'delete');
-    //                         materialTable.setState({
-    //                             ...materialTable.dataManager.getRenderState(),
-    //                         });
-    //                     },
-    //                 }),
-    //                 {
-    //                     icon: props => <AddCircle {...props} color="primary" fontSize="large" />,
-    //                     iconProps: {
-    //                         id: `${contributorEditorId}-add`,
-    //                         'data-testid': `${contributorEditorId}-add`,
-    //                     },
-    //                     isFreeAction: true,
-    //                     tooltip: addButton,
-    //                     disabled: editState.editing || disabled,
-    //                     onClick: () => {
-    //                         const materialTable = materialTableRef.current;
-    //                         materialTable.dataManager.changeRowEditing();
-    //                         materialTable.setState({
-    //                             ...materialTable.dataManager.getRenderState(),
-    //                             showAddRow: true,
-    //                         });
-    //                     },
-    //                 },
-    //             ]}
-    //             data={data}
-    //             icons={tableIcons}
-    //             title=""
-    //             detailPanel={[
-    //                 rowData => {
-    //                     const conditionalIcon =
-    //                         !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro || editState.editing
-    //                             ? {
-    //                                   icon: () => {
-    //                                       return null;
-    //                                   },
-    //                               }
-    //                             : {
-    //                                   icon: () => (
-    //                                       <ChevronRight
-    //                                           fontSize="medium"
-    //                                           data-testid={`expandPanelIcon-${rowData.aut_id}`}
-    //                                           id={`expandPanelIcon-${rowData.aut_id}`}
-    //                                       />
-    //                                   ),
-    //                               };
-
-    //                     return {
-    //                         ...conditionalIcon,
-    //                         render: () => {
-    //                             return !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro
-    //                                 ? /* istanbul ignore next */ null
-    //                                 : authorDetailPanel({
-    //                                       rowData,
-    //                                       locale,
-    //                                       isEditing: isEditing(rowData.aut_id),
-    //                                       setEditing,
-    //                                       onChange: handleAffiliationUpdate,
-    //                                       loadOrganisationalUnitsList,
-    //                                       loadSuggestedOrganisationalUnitsList,
-    //                                       clearSuggestedOrganisationalUnits,
-    //                                   });
-    //                         },
-    //                     };
-    //                 },
-    //             ]}
-    //             editable={{
-    //                 onRowUpdateCancelled: () => {},
-    //             }}
-    //             options={{
-    //                 actionsColumnIndex: -1,
-    //                 grouping: false,
-    //                 draggable: false,
-    //                 addRowPosition: 'first',
-    //                 search: data.length > 10,
-    //                 emptyRowsWhenPaging: false,
-    //                 ...(data.length > 10 ? { maxBodyHeight: 600 } : {}),
-    //                 ...(data.length > 10 ? { paging: true } : { paging: false }),
-    //                 ...{ pageSize: /* istanbul ignore next */ data.length > 100 ? 50 : 10 },
-    //                 pageSizeOptions: [10, 50, 100, 200, 500],
-    //                 padding: 'dense',
-    //                 rowStyle: rowData => {
-    //                     if (!!rowData.aut_id) {
-    //                         return {
-    //                             backgroundColor: theme.palette.secondary.light,
-    //                             color: theme.palette.primary.main,
-    //                         };
-    //                     } else {
-    //                         return {};
-    //                     }
-    //                 },
-    //                 overflowY: list.length > 10 ? 'auto' : 'hidden',
-    //             }}
-    //         />
-    //     </Box>
-    // );
 };
 
 AuthorsListWithAffiliates.propTypes = {
