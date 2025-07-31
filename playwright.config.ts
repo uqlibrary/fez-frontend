@@ -27,10 +27,9 @@ export default defineConfig({
     ],
     use: {
         baseURL,
-        trace: !process.env.CI_BRANCH ? 'retain-on-failure' : 'on-first-retry',
+        trace: 'retain-on-failure',
         headless: process.env.PW_HEADED === 'true' ? false : true,
         ignoreHTTPSErrors: true,
-        video: 'retain-on-failure',
         launchOptions: {
             args: ['--disable-web-security'],
         },
