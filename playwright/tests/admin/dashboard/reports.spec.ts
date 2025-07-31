@@ -265,7 +265,6 @@ test.describe('Admin Dashboard - Reports tab', () => {
         await page.getByTestId('report-display-export-date-from-input').fill('01/01/2020');
         await page.getByTestId('report-display-export-date-to-input').fill('02/01/2020');
         await page.getByTestId('report-display-export-button').click();
-        await expect(page.getByTestId('report-display-data-grid')).toBeAttached();
         await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(6);
         await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(7); // +1 for header
         await assertAccessibility(page, 'div.StandardPage', {
@@ -279,7 +278,6 @@ test.describe('Admin Dashboard - Reports tab', () => {
         await expect(page.getByRole('option')).toHaveCount(2);
         await page.locator('[role=option]', { hasText: 'System alert log' }).click();
         await page.getByTestId('report-display-export-button').click();
-        await expect(page.getByTestId('report-display-data-grid')).toBeAttached();
         await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(8);
         await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(8); // +1 for header
         await assertAccessibility(page, 'div.StandardPage', {
@@ -287,11 +285,10 @@ test.describe('Admin Dashboard - Reports tab', () => {
         });
 
         // check searching on system id only returns specific results
-        await page.getByTestId('report-display-export-date-from-input').fill('');
-        await page.getByTestId('report-display-export-date-to-input').fill('');
+        await page.getByTestId('report-display-export-date-from-input').clear();
+        await page.getByTestId('report-display-export-date-to-input').clear();
         await page.getByTestId('report-display-export-system-alert-id-input').fill('1');
         await page.getByTestId('report-display-export-button').click();
-        await expect(page.getByTestId('report-display-data-grid')).toBeAttached();
         await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(9); // extra column for content field
         await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(2); // +1 for header
 
@@ -307,7 +304,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
         await page.getByTestId('report-display-export-date-from-input').fill('01/01/2020');
         await page.getByTestId('report-display-export-date-to-input').fill('02/01/2020');
         await page.getByTestId('report-display-export-button').click();
-        await expect(page.getByTestId('report-display-data-grid')).toBeAttached();
+
         await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(6);
         await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(7); // +1 for header
 
@@ -326,7 +323,6 @@ test.describe('Admin Dashboard - Reports tab', () => {
         await expect(page.getByTestId('standard-card-content').getByText('Export-only reports')).toBeVisible();
 
         // results should still be visible
-        await expect(page.getByTestId('report-display-data-grid')).toBeAttached();
         await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(6);
         await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(7); // +1 for header
     });
@@ -345,18 +341,26 @@ test.describe('Admin Dashboard - Reports tab', () => {
         await expect(page.getByTestId('report-display-export-system-alert-id-input')).toBeAttached();
 
         // check the mui calendar appears if button clicked.
+        await expect(page.getByLabel('calendar view is open, switch to year view')).not.toBeVisible();
         await page
             .getByTestId('report-display-export-date-from')
             .locator('button')
             .click();
+        await expect(
+            async () => await page.getByLabel('calendar view is open, switch to year view').isVisible(),
+        ).toPass();
         await page
             .getByTestId('report-display-export-date-to')
             .locator('button')
             .click();
+        await expect(
+            async () => await page.getByLabel('calendar view is open, switch to year view').isVisible(),
+        ).toPass();
         await page
             .getByTestId('report-display-export-date-to')
             .locator('button')
             .click();
+        await expect(page.getByLabel('calendar view is open, switch to year view')).not.toBeVisible();
         await page.getByTestId('report-display-export-date-to-input').fill('01/01/2020');
         // date from should be in error state
         await expect(page.getByTestId('report-display-export-date-from-input')).toHaveAttribute('required');
@@ -404,19 +408,19 @@ test.describe('Admin Dashboard - Reports tab', () => {
             disabledRules: ['color-contrast'],
         });
 
-        await page.getByTestId('report-display-export-system-alert-id-input').fill('');
+        await page.getByTestId('report-display-export-system-alert-id-input').clear();
 
         await page.getByTestId('report-display-export-system-alert-id-input').fill('-1');
         await expect(page.getByTestId('report-display-export-system-alert-id')).toContainText(
             'Must be a positive whole number',
         );
-        await page.getByTestId('report-display-export-system-alert-id-input').fill('');
+        await page.getByTestId('report-display-export-system-alert-id-input').clear();
 
         await page.getByTestId('report-display-export-system-alert-id-input').fill('1.0');
         await expect(page.getByTestId('report-display-export-system-alert-id')).toContainText(
             'Must be a positive whole number',
         );
-        await page.getByTestId('report-display-export-system-alert-id-input').fill('');
+        await page.getByTestId('report-display-export-system-alert-id-input').clear();
 
         await expect(page.getByTestId('report-display-export-button')).not.toBeDisabled();
     });

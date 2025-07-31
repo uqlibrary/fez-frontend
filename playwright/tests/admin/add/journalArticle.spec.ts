@@ -131,6 +131,7 @@ test.describe('As an admin,', () => {
         });
 
         test('can be added and edited', async ({ page }) => {
+            // Add author with UQ ID and single affiliation
             await addAuthorAndAssert(page, 'Steve Su (uqysu4)', 85004);
             await addAffiliationAndAssert(page, 'Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
             await editAffiliationAndAssert(page, 877, 973, 'Academic Administration', '100%');
@@ -160,11 +161,10 @@ test.describe('As an admin,', () => {
             await expect(page.getByTestId('affiliationSaveBtn')).not.toBeVisible();
             await expect(page.getByTestId('orgChip-error')).not.toBeVisible();
             await page.getByTestId('expandPanelIcon-85004').click();
-
+            // Add author with UQ ID and multiple affiliations
             await addAuthorAndAssert(page, "O'Donoghue, Steven (uqsodono)", 75121);
             await addAffiliationAndAssert(page, 'Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
             await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
-
             // add suggested org (coverage)
             await addAffiliationAndAssert(
                 page,
@@ -225,7 +225,7 @@ test.describe('As an admin,', () => {
             await expect(page.getByTestId('affiliationSaveBtn')).not.toBeVisible();
             await expect(page.getByTestId('orgChip-error')).not.toBeVisible();
             await page.getByTestId('expandPanelIcon-75121').click();
-
+            // Add author with non-HERDC affiliatio
             await addAuthorAndAssert(page, 'Kisely, Steve (uqskisely)', 78152);
             await addAffiliationAndAssert(page, 'Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
             await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
@@ -268,6 +268,7 @@ test.describe('As an admin,', () => {
             );
             // hides the add autocomplete element
             await expect(page.getByTestId('orgSelect-add-input')).not.toBeVisible();
+
             await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
             await page.getByTestId('affiliationSaveBtn').click();
             await expect(
@@ -416,7 +417,6 @@ test.describe('As an admin,', () => {
 
             await page.getByRole('button', { name: 'Create work' }).click();
 
-            // Assert that the subtype error message is NOT present
             await expect(
                 page.getByTestId('alert-message').locator('li', { hasText: 'Work subtype is required' }),
             ).not.toBeVisible();

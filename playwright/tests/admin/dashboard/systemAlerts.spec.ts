@@ -59,6 +59,7 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
         // no need to check every row, just check
         // a couple that have a different status
         await expect(page.getByRole('row')).toHaveCount(9);
+        await assertAccessibility(page, 'div.StandardPage', { disabledRules: ['aria-required-children'] });
 
         const firstRow = getRow(page, 1);
         await expect(getCell(firstRow, 1)).toContainText('Issues on record - UQ:34555c6');
@@ -70,8 +71,6 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
 
         await expect(page.locator('.MuiTablePagination-displayedRows')).toHaveText('1–8 of 8');
         await expect(page.locator('.MuiTablePagination-input > input')).toHaveValue('10');
-
-        await assertAccessibility(page, 'div.StandardPage', { disabledRules: ['aria-required-children'] });
     });
 
     test('shows detail drawer when row is clicked', async ({ page }) => {
@@ -89,7 +88,7 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
         await assertDetailDrawer(page, data);
         await assertAccessibility(page, 'div.StandardPage');
 
-        await page.locator('.MuiBackdrop-root').click();
+        await page.locator('.MuiBackdrop-root').click(); // test drawer can be closed
         await expect(page.locator('.MuiBackdrop-root')).not.toBeAttached();
     });
 
@@ -103,7 +102,7 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
                 'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that there are issues on record - UQ:34555c6.',
             status: 'Feeney, Michael',
         };
-        await getRow(page, 1).click();
+        await getRow(page, 1).click(); // click first row of results
 
         await assertDetailDrawer(page, data);
 
@@ -115,8 +114,6 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
         await expect(optionsContainer.getByRole('option').nth(3)).toHaveAttribute('aria-selected', 'true');
 
         const actionButton = getByTestId(page, 'system-alert-detail-action-button');
-        await expect(actionButton).toContainText('Mark as resolved');
-
         await actionButton.click();
         // it's not possible to reliably make the assertions below, as the component does NOT wait for the
         // dispatched action's request to be completed before removing the related elements

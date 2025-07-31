@@ -9,7 +9,7 @@ test.describe('Navigating to Admin Dashboard - System Alerts tab', () => {
         await page.locator('[role=button]', { hasText: 'Admin dashboard' }).click();
         await expect(page).toHaveURL(/admin\/dashboard/);
         await expect(page.getByTestId('page-title')).toContainText('Admin dashboard');
-        await assertAccessibility(page, 'div.StandardPage', { disabledRules: ['color-contrast'] });
+        await assertAccessibility(page, 'div.StandardPage', { disabledRules: ['aria-progressbar-name'] });
     });
 
     test('should not reachable via the menu link for users with masquerade=readonly or below', async ({ page }) => {

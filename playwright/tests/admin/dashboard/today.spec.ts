@@ -47,7 +47,6 @@ test.describe('Admin Dashboard - Today tab', () => {
         await expect(systemAlertsTable.locator('td').nth(4)).toContainText('135 (90%)');
 
         await expect(page.getByTestId('unprocessed-works-title')).toContainText('Unprocessed Works');
-
         const unprocessedWorksSubtitle = page.getByTestId('unprocessed-works-subtitle');
         await expect(unprocessedWorksSubtitle.getByTestId('unprocessed-link')).toBeVisible();
 
@@ -57,7 +56,6 @@ test.describe('Admin Dashboard - Today tab', () => {
 
         await expect(page.getByTestId('processed-works-title')).toContainText('Processed Works');
         await expect(page.getByTestId('processed-works-subtitle')).toContainText('this iteration');
-
         await expect(page.getByRole('tooltip')).not.toBeVisible();
         await page
             .getByTestId('processed-works-subtitle')
