@@ -9,10 +9,13 @@ fi
 
 # Copy output artifact test reports into common location
 mkdir -p coverage/all
+ls -la "$CODEBUILD_SRC_DIR_TestArtifact1"
+ls -la "$CODEBUILD_SRC_DIR_TestArtifact2"
+ls -la "$CODEBUILD_SRC_DIR_TestArtifact3"
 [[ -e $CODEBUILD_SRC_DIR_TestArtifact1/coverage/playwright/coverage-final-1.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact1/coverage/playwright/coverage-final-1.json coverage/all/playwright-1.json
 [[ -e $CODEBUILD_SRC_DIR_TestArtifact2/coverage/playwright/coverage-final-2.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact2/coverage/playwright/coverage-final-2.json coverage/all/playwright-2.json
-[[ -e $CODEBUILD_SRC_DIR_TestArtifact3/coverage/jest/coverage-final.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact3/jest/coverage/coverage-final.json coverage/all/jest.json
-[[ -e $CODEBUILD_SRC_DIR_TestArtifact3/coverage/jest-serial/coverage-final.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact3/coverage/jest-serial/coverage-final.json coverage/all/jest-serial.json
+[[ -e $CODEBUILD_SRC_DIR_TestArtifact3/jest/coverage-final.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact3/jest/coverage-final.json coverage/all/jest.json
+[[ -e $CODEBUILD_SRC_DIR_TestArtifact3/jest-serial/coverage-final.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact3/jest-serial/coverage-final.json coverage/all/jest-serial.json
 
 
 # Combine reports into single json file
