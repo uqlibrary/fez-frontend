@@ -3987,6 +3987,7 @@ export default {
             validationAlertTitle:
                 'Form cannot be submitted until all fields are valid. Please review all input fields.',
             loadingText: 'Loading authors',
+            title: 'Author information',
             header: {
                 columns: {
                     id: {
@@ -4188,6 +4189,8 @@ export default {
                 allowDismiss: true,
                 type: 'info',
             },
+            tablePageSizeOptions: [10, 20, 50],
+            tablePageSizeDefault: 20,
         },
         manageUsers: {
             validationAlertTitle:

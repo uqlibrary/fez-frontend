@@ -47,23 +47,27 @@ describe('ManageAuthorsList', () => {
                 },
             ],
             total: 1,
+            per_page: 20,
+            current_page: 1,
+            from: 1,
+            to: 20,
         });
-        const { getByTestId, getByText, queryAllByText } = setup();
+        const { getByTestId, queryAllByText } = setup();
 
-        await waitForElementToBeRemoved(() => getByText('Loading authors'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
-        userEvent.click(getByTestId('authors-add-new-author'));
+        await userEvent.click(getByTestId('authors-add-new-author'));
 
         await waitFor(() => expect(getByTestId('aut-fname-input')).toBeInTheDocument());
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
 
-        expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-org-username-input'), 'uqtest');
 
@@ -78,14 +82,15 @@ describe('ManageAuthorsList', () => {
         });
 
         expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         userEvent.clear(getByTestId('aut-org-username-input'));
         userEvent.type(getByTestId('aut-org-username-input'), 'uqtesta');
 
         await waitFor(() => {
             expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'false');
-            expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+            expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
         });
     });
 
@@ -101,20 +106,20 @@ describe('ManageAuthorsList', () => {
             ],
             total: 1,
         });
-        const { getByTestId, getByText, queryAllByText } = setup();
+        const { getByTestId, queryAllByText } = setup();
 
-        await waitForElementToBeRemoved(() => getByText('Loading authors'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
 
-        expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-student-username-input'), { target: { value: 's1234567' } });
         await userEvent.click(getByTestId('authors-add-this-author-save'));
@@ -126,13 +131,13 @@ describe('ManageAuthorsList', () => {
         });
 
         expect(getByTestId('aut-student-username-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-student-username-input'), { target: { value: 's1234569' } });
 
         await waitFor(() => {
             expect(getByTestId('aut-student-username-input')).toHaveAttribute('aria-invalid', 'false');
-            expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+            expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
         });
     });
 
@@ -156,20 +161,20 @@ describe('ManageAuthorsList', () => {
                 total: 0,
             });
 
-        const { getByTestId, getByText, queryAllByText } = setup();
+        const { getByTestId, queryAllByText } = setup();
 
-        await waitForElementToBeRemoved(() => getByText('Loading authors'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
 
-        expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-staff-id-input'), { target: { value: '1234567' } });
 
@@ -184,13 +189,13 @@ describe('ManageAuthorsList', () => {
         });
 
         expect(getByTestId('aut-org-staff-id-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-staff-id-input'), { target: { value: '1234569' } });
 
         await waitFor(() => {
             expect(getByTestId('aut-org-staff-id-input')).toHaveAttribute('aria-invalid', 'false');
-            expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+            expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
         });
     });
 
@@ -213,20 +218,20 @@ describe('ManageAuthorsList', () => {
                 total: 0,
             });
 
-        const { getByTestId, getByText, queryAllByText } = setup();
+        const { getByTestId, queryAllByText } = setup();
 
-        await waitForElementToBeRemoved(() => getByText('Loading authors'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
 
-        expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('aut-org-student-id-input'), '12345678');
 
@@ -241,13 +246,13 @@ describe('ManageAuthorsList', () => {
         });
 
         expect(getByTestId('aut-org-student-id-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '12345679' } });
 
         await waitFor(() => {
             expect(getByTestId('aut-org-student-id-input')).toHaveAttribute('aria-invalid', 'false');
-            expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+            expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
         });
     });
 
@@ -330,21 +335,20 @@ describe('ManageAuthorsList', () => {
             total: 2,
         });
 
-        const { getAllByTestId, getByTestId, getByText } = setup({
+        const { container, getByTestId } = setup({
             onBulkRowDelete: jest.fn(() => Promise.reject({ code: 500 })),
         });
 
-        await waitForElementToBeRemoved(() => getByText('Loading authors'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
 
-        fireEvent.click(getByTestId('select-author-0'));
-        fireEvent.click(getByTestId('select-author-1'));
+        await userEvent.click(document.querySelector('#select-author-0'));
+        await userEvent.click(document.querySelector('#select-author-1'));
 
-        fireEvent.click(getByTestId('authors-delete-selected-authors'));
+        await userEvent.click(getByTestId('authors-delete-selected-authors'));
 
-        fireEvent.click(getByTestId('confirm-bulk-delete-authors-confirmation'));
+        await userEvent.click(getByTestId('confirm-bulk-delete-authors-confirmation'));
 
         await waitFor(() => {
             expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
@@ -371,15 +375,15 @@ describe('ManageAuthorsList', () => {
             total: 0,
         });
 
-        const { getByTestId, getByText, queryAllByText, findByTestId } = setup();
+        const { getByTestId, queryAllByText, findByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => getByText('Loading authors'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         await fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
         await fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
@@ -396,7 +400,7 @@ describe('ManageAuthorsList', () => {
         });
 
         expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
+        expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
         const usernameInput = await findByTestId('aut-org-username-input');
 
@@ -454,15 +458,15 @@ describe('ManageAuthorsList', () => {
         mockApi.onGet(repository.routes.AUTHORS_SEARCH_API({}).apiUrl).reply(() => {
             return [200, { data: [], total: 0 }];
         });
-        const { getAllByTestId, getByTestId, getByText } = setup({
+        const { container, getByTestId } = setup({
             onRowUpdate: jest.fn(() => Promise.reject({ code: 500 })),
         });
 
-        await waitForElementToBeRemoved(() => getByText('Loading authors'));
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(1);
-        fireEvent.click(tableRows[0]);
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(1);
+        await userEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
+
         await userEvent.type(getByTestId('aut-display-name-input'), 'Test, Name');
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
         await userEvent.click(getByTestId('authors-update-this-author-save'));
