@@ -7,9 +7,6 @@ if [[ $CODE_COVERAGE_REQUIRED == false ]]; then
     exit 0
 fi
 
-# Clean processing directories
-npm run pretest:unit:ci
-
 # Copy output artifact test reports into common location
 mkdir -p coverage/all
 [[ -e $CODEBUILD_SRC_DIR_TestArtifact1/playwright/coverage-final-1.json ]] && cp $CODEBUILD_SRC_DIR_TestArtifact1/playwright/coverage-final-1.json coverage/all/playwright-1.json

@@ -84,8 +84,6 @@ function run_pw_test_shard() {
     printf "\n--- [ENDED RUNNING E2E TESTS GROUP #$SHARD_INDEX AT $(date)] \n"
 }
 
-npm run pretest:unit:ci
-
 case "$PIPE_NUM" in
 "1")
     run_pw_test_shard "$PIPE_NUM"
