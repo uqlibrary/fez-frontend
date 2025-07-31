@@ -1,6 +1,6 @@
 import React from 'react';
 import AuthorsListWithAffiliates from './AuthorsListWithAffiliates';
-import { act, render, fireEvent, WithReduxStore, within, waitFor } from 'test-utils';
+import { act, render, fireEvent, WithReduxStore, within, waitFor, getTableBodyRows, preview } from 'test-utils';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
 
@@ -12,10 +12,6 @@ const props = {
     showRoleInput: false,
     disabled: false,
     onChange: jest.fn(),
-    organisationalUnitList: {},
-    suggestedOrganisationalUnitList: {},
-    loadOrganisationalUnitsList: jest.fn(),
-    loadSuggestedOrganisationalUnitsList: jest.fn(),
 };
 
 function setup(testProps = {}) {
@@ -38,7 +34,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should render a list of upto 10 contributors and should not show paging or filtering options', () => {
-        const { getAllByTestId } = setup({
+        const { container } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -73,13 +69,11 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(10);
+        expect(container).toHaveTableRowsLength(10);
     });
 
-    it('should render a list of upto 10 contributors and should not show paging and searching options', () => {
-        const { getAllByTestId } = setup({
+    it('should render a list of upto 10 contributors and should not show paging and searching options', async () => {
+        const { container } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -117,9 +111,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(10);
+        expect(container).toHaveTableRowsLength(10);
     });
 
     it('should render disabled row', () => {
@@ -165,7 +157,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should add contributor correctly', () => {
-        const { getAllByTestId, getByTestId, getByText, queryByText } = setup();
+        const { container, getByTestId, getByText, queryByText } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('rek-author-add'));
@@ -173,14 +165,14 @@ describe('AuthorsListWithAffiliates', () => {
         fireEvent.click(getByTestId('rek-author-add-save'));
 
         expect(queryByText('No records to display')).not.toBeInTheDocument();
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(1);
+        expect(container).toHaveTableRowsLength(1);
     });
 
     it('should validate new contributor maxlength correctly', () => {
         const { getByTestId, getByText } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();
-
+        // doesnt look like we can disable edit buttons so we'll need another way to pass the test,
+        // maybe by clicking the button and then asserting it's still in view
         fireEvent.click(getByTestId('rek-author-add'));
         expect(getByTestId('rek-author-add-save').closest('button')).toHaveAttribute('disabled');
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1' } });
@@ -193,7 +185,7 @@ describe('AuthorsListWithAffiliates', () => {
 
     it('should validate existing contributor maxlength correctly', () => {
         const initialValue = 'test 1';
-        const { getAllByTestId, getByTestId } = setup({
+        const { container, getByTestId } = setup({
             list: [
                 {
                     nameAsPublished: initialValue,
@@ -203,8 +195,7 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(1);
+        expect(container).toHaveTableRowsLength(1);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
@@ -240,7 +231,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getAllByTestId, getByTestId, getByText } = setup({
+        const { container, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -255,8 +246,7 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container).toHaveTableRowsLength(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -305,7 +295,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getAllByTestId, getByTestId, getByText } = setup({
+        const { container, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -320,8 +310,7 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container).toHaveTableRowsLength(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -370,7 +359,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getAllByTestId, getByTestId, getByText } = setup({
+        const { container, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -387,8 +376,7 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container).toHaveTableRowsLength(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -418,7 +406,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should clear uq identifier', async () => {
-        const { getAllByTestId, getByTestId } = setup({
+        const { container, getByTestId } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -435,8 +423,7 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container).toHaveTableRowsLength(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -475,7 +462,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getAllByTestId, getByTestId, getByText } = setup({
+        const { container, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -498,8 +485,7 @@ describe('AuthorsListWithAffiliates', () => {
 
         fireEvent.click(getByTestId('rek-author-add-save'));
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(1);
+        expect(container).toHaveTableRowsLength(1);
     });
 
     it('should render the same list if an existing user with the same uq id in the list has been added', async () => {
@@ -575,7 +561,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getAllByTestId, getByTestId, getByText } = setup({
+        const { container, getByTestId, getByText } = setup({
             isNtro: true,
             list: [
                 {
@@ -593,8 +579,7 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container).toHaveTableRowsLength(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -652,7 +637,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getAllByTestId, getByTestId, getByText } = setup({
+        const { container, getByTestId, getByText } = setup({
             isNtro: true,
             list: [
                 {
@@ -672,8 +657,7 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container).toHaveTableRowsLength(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -820,7 +804,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should render new affiliation view', async () => {
-        const { getAllByTestId, getByTestId, getByText, getByRole, queryByTestId, queryByText } = setup({
+        const { container, getByTestId, getByText, getByRole, queryByTestId, queryByText } = setup({
             list: [
                 {
                     creatorRole: '',
@@ -888,12 +872,11 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container).toHaveTableRowsLength(2);
         // Check the first row is for a linked author, which should
         // have the new UI interface for affiliations.
+        const tableRows = getTableBodyRows(container);
         const row = tableRows[0];
-        expect(row).toBeInTheDocument();
 
         expect(within(row).getByText('Robertson, Avril A. B. not 100%')).toBeInTheDocument();
         expect(within(row).getByTestId('contributor-errorIcon-88844')).toBeInTheDocument();
@@ -915,7 +898,6 @@ describe('AuthorsListWithAffiliates', () => {
 
         // Check there's a second row for an unlinked author
         const row2 = tableRows[1];
-        expect(row2).toBeInTheDocument();
 
         expect(within(row2).getByText('Smith, John Coverage')).toBeInTheDocument();
         expect(within(row2).queryByTestId('expandPanelIcon')).not.toBeInTheDocument(); // unlinked dont have expand icons in this component

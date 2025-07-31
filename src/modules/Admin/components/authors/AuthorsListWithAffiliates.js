@@ -157,6 +157,7 @@ export const AuthorsListWithAffiliates = ({
     };
 
     const {
+        tablePageSizeOptions,
         header: {
             locale: { nameColumn, roleColumn, identifierColumn, organisationColumn },
         },
@@ -650,10 +651,16 @@ export const AuthorsListWithAffiliates = ({
         enableRowSelection: false,
         enableColumnActions: false,
         enableColumnFilterModes: false,
-        enablePagination: false,
+        enablePagination: data.length > 10,
         enableToolbarInternalActions: false,
         positionActionsColumn: 'last',
         manualExpanding: true,
+        initialState: {
+            columnVisibility: { creatorRole: showRoleInput, orgaff: isNtro },
+            density: 'compact',
+            expanded: false,
+            pagination: { pageSize: data.length > 100 ? 50 : 10, pageIndex: 0 },
+        },
         state: {
             showAlertBanner: false,
             showLoadingOverlay: isBusy,
@@ -662,6 +669,57 @@ export const AuthorsListWithAffiliates = ({
             'mrt-row-actions': { minSize: 100, size: 100 },
             'mrt-row-expand': { header: '', maxSize: 20, grow: 0, size: '20px' },
         },
+        muiTableContainerProps: {
+            sx: {
+                ...(data.length > 10 ? { maxHeight: '500px' } : {}),
+            },
+        },
+        muiTableProps: {
+            sx: {
+                borderCollapse: 'collapse',
+            },
+        },
+        muiDetailPanelProps: {
+            sx: {
+                backgroundColor: theme.palette.background.paper,
+            },
+        },
+        muiPaginationProps: {
+            rowsPerPageOptions: tablePageSizeOptions,
+            showFirstButton: false,
+            showLastButton: false,
+        },
+        icons: {
+            SortIcon: props => (
+                <tableIcons.SortArrow
+                    id={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-sort`}
+                    data-testid={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-sort`}
+                    color="secondary"
+                    {...props}
+                />
+            ),
+            SaveIcon: props => (
+                <tableIcons.Check
+                    id={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-save`}
+                    data-testid={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-save`}
+                    color="secondary"
+                    {...props}
+                />
+            ),
+            CancelIcon: props => (
+                <tableIcons.Clear
+                    id={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-cancel`}
+                    data-testid={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-cancel`}
+                    color="secondary"
+                    {...props}
+                />
+            ),
+        },
+        muiExpandButtonProps: ({ row }) => ({
+            id: `expandPanelIcon-${row.original.aut_id}`,
+            ['data-testid']: `expandPanelIcon-${row.original.aut_id}`,
+            sx: { alignSelf: 'center' },
+        }),
         renderDetailPanel: ({ row }) => {
             return !!!row.original.uqUsername || row.original.uqUsername === '' || isNtro ? (
                 /* istanbul ignore next */ <></>
@@ -675,7 +733,6 @@ export const AuthorsListWithAffiliates = ({
                 />
             );
         },
-
         renderTopToolbarCustomActions: ({ table }) => (
             <Tooltip title={addButton}>
                 <IconButton
@@ -755,13 +812,9 @@ export const AuthorsListWithAffiliates = ({
                                 table.setCreatingRow(null);
                                 table.setEditingRow(row);
                             }}
-                            disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
-                            id={`${contributorEditorId}-list-row-${row.index}-${editHint
-                                .toLowerCase()
-                                .replace(/ /g, '-')}`}
-                            data-testid={`${contributorEditorId}-list-row-${row.index}-${editHint
-                                .toLowerCase()
-                                .replace(/ /g, '-')}`}
+                            disabled={disabled || !!pendingDeleteRowId || !!isBusy || !!editingRow}
+                            id={`${contributorEditorId}-list-row-${row.index}-edit`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-edit`}
                             size="small"
                             color="primary"
                         >
@@ -771,13 +824,9 @@ export const AuthorsListWithAffiliates = ({
                     <Tooltip title={deleteHint}>
                         <IconButton
                             onClick={openDeleteConfirmModal(row.id)}
-                            disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
-                            id={`${contributorEditorId}-list-row-${row.index}-${deleteHint
-                                .toLowerCase()
-                                .replace(/ /g, '-')}`}
-                            data-testid={`${contributorEditorId}-list-row-${
-                                row.index
-                            }-${deleteHint.toLowerCase().replace(/ /g, '-')}`}
+                            disabled={disabled || !!pendingDeleteRowId || !!isBusy || !!editingRow}
+                            id={`${contributorEditorId}-list-row-${row.index}-delete`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-delete`}
                             size="small"
                             color="primary"
                         >
@@ -794,47 +843,6 @@ export const AuthorsListWithAffiliates = ({
         onCreatingRowSave: handleCreate,
         onEditingRowSave: handleEdit,
         onEditingRowCancel: () => setEditRow(null),
-        initialState: {
-            columnVisibility: { creatorRole: showRoleInput, orgaff: isNtro },
-            density: 'compact',
-            expanded: false,
-        },
-        icons: {
-            SortIcon: props => (
-                <tableIcons.SortArrow
-                    id={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-sort`}
-                    data-testid={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-sort`}
-                    color="secondary"
-                    {...props}
-                />
-            ),
-            SaveIcon: props => (
-                <tableIcons.Check
-                    id={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-save`}
-                    data-testid={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-save`}
-                    color="secondary"
-                    {...props}
-                />
-            ),
-            CancelIcon: props => (
-                <tableIcons.Clear
-                    id={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-cancel`}
-                    data-testid={`${contributorEditorId}-${!!editingRow ? 'edit' : 'add'}-cancel`}
-                    color="secondary"
-                    {...props}
-                />
-            ),
-        },
-        muiTableContainerProps: {
-            sx: {
-                ...(data.length > 10 ? { maxHeight: '500px' } : {}),
-            },
-        },
-        muiTableProps: {
-            sx: {
-                borderCollapse: 'collapse',
-            },
-        },
         muiTableHeadCellProps: ({ column }) => ({
             sx: {
                 '& .Mui-TableHeadCell-Content': {
@@ -861,14 +869,6 @@ export const AuthorsListWithAffiliates = ({
                     : {}),
             },
         }),
-        muiDetailPanelProps: {
-            sx: {
-                backgroundColor: theme.palette.background.paper,
-            },
-        },
-        muiExpandButtonProps: {
-            sx: { alignSelf: 'center' },
-        },
     });
 
     return (

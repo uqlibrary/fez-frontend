@@ -1602,6 +1602,7 @@ export default {
                         editHint: 'Edit this item',
                     },
                 },
+                tablePageSizeOptions: [10, 20, 50],
             },
         }),
         editors: {
