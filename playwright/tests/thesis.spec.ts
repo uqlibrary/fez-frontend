@@ -24,7 +24,6 @@ test.describe('Thesis', () => {
         test('should allow form to be completed', async ({ page }) => {
             await page.goto('rhdsubmission?user=s2222222');
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
-
             await ensureErrorCount(page, 8);
 
             // Title
@@ -47,7 +46,7 @@ test.describe('Thesis', () => {
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
 
             // Supervisors
-            await page.getByTestId('rek-supervisor-input').type('Ky Lane', { delay: 30 });
+            await page.getByTestId('rek-supervisor-input').fill('Ky Lane');
             await ensureErrorCount(page, 4);
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
             await page.getByTestId('rek-supervisor-input').press('Enter');
@@ -59,14 +58,13 @@ test.describe('Thesis', () => {
                 .getByText(/Yes/)
                 .first()
                 .click();
-
             await ensureErrorCount(page, 4);
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
-            await page.getByTestId('rek-supervisor-input').type('Vishal Asai', { delay: 30 });
+            await page.getByTestId('rek-supervisor-input').fill('Vishal Asai');
             await page.getByTestId('rek-supervisor-input').press('Enter');
             await ensureErrorCount(page, 3);
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
-            await page.getByTestId('rek-supervisor-input').type('Ky Lane', { delay: 30 });
+            await page.getByTestId('rek-supervisor-input').fill('Ky Lane');
             await page.getByTestId('rek-supervisor-input').press('Enter');
             await expect(page.locator('ul.ContributorList').locator(':scope > *')).toHaveCount(2);
             await expect(
@@ -102,7 +100,7 @@ test.describe('Thesis', () => {
                 .click();
 
             await ensureErrorCount(page, 4);
-            await page.getByTestId('rek-supervisor-input').type('Ky Lane', { delay: 30 });
+            await page.getByTestId('rek-supervisor-input').fill('Ky Lane');
             await page.getByTestId('rek-supervisor-input').press('Enter');
             await ensureErrorCount(page, 3);
 
@@ -138,11 +136,8 @@ test.describe('Thesis', () => {
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
 
             // Keywords
-            await page.getByTestId('rek-keywords-input').type('First Keyword', {
-                delay: 30,
-            });
+            await page.getByTestId('rek-keywords-input').fill('First Keyword');
             await page.getByTestId('rek-keywords-input').press('Enter');
-
             await ensureErrorCount(page, 1);
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
             await page.locator('#rek-keywords-list-row-0-delete').click();
@@ -151,13 +146,9 @@ test.describe('Thesis', () => {
                 .getByText(/Yes/)
                 .first()
                 .click();
-
             await ensureErrorCount(page, 2);
-            await page.getByTestId('rek-keywords-input').type('Second Keyword', {
-                delay: 30,
-            });
+            await page.getByTestId('rek-keywords-input').fill('Second Keyword');
             await page.getByTestId('rek-keywords-input').press('Enter');
-
             await ensureErrorCount(page, 1);
             await page.locator('#delete-all-rek-keywords').click();
             await page
@@ -165,11 +156,8 @@ test.describe('Thesis', () => {
                 .getByText(/Yes/)
                 .first()
                 .click();
-
             await ensureErrorCount(page, 2);
-            await page.getByTestId('rek-keywords-input').type('Third Keyword', {
-                delay: 30,
-            });
+            await page.getByTestId('rek-keywords-input').fill('Third Keyword');
             await page.getByTestId('rek-keywords-input').press('Enter');
             await expect(page.locator('#rek-keywords-list')).toHaveCount(1);
             await ensureErrorCount(page, 1);
@@ -185,7 +173,6 @@ test.describe('Thesis', () => {
                 .getByText(/Yes/)
                 .first()
                 .click();
-
             await ensureErrorCount(page, 1);
 
             await uploadFile(page, 'test_two.jpg');
@@ -195,7 +182,6 @@ test.describe('Thesis', () => {
                 .getByText(/Yes/)
                 .first()
                 .click();
-
             await ensureErrorCount(page, 1);
 
             await uploadFile(page, 'test three.jpg');
@@ -205,7 +191,7 @@ test.describe('Thesis', () => {
             await uploadFile(page, 'test_two.jpg');
 
             // Ready to submit
-            await expect(page.locator('button#submit-thesis')).not.toHaveAttribute('disabled', /.*/);
+            await expect(page.locator('button#submit-thesis')).not.toBeDisabled();
         });
 
         // this can't be simply tested via a jest test, as the session expired dialog is
@@ -226,15 +212,13 @@ test.describe('Thesis', () => {
             // filling this field once doesn't always clear validation errors in this context
             await typeCKEditor(page, 'rek-title', 'ab');
             // supervisors
-            await page.getByTestId('rek-supervisor-input').type('a', { delay: 30 });
+            await page.getByTestId('rek-supervisor-input').fill('a');
             await page.getByTestId('rek-supervisor-input').press('Enter');
             // FoR
             await page.getByTestId('rek-subject-input').fill('a');
             await clickAutoSuggestion(page, 'rek-subject', 0);
             // keywords
-            await page.getByTestId('rek-keywords-input').type('a', {
-                delay: 30,
-            });
+            await page.getByTestId('rek-keywords-input').fill('a');
             await page.getByTestId('rek-keywords-input').press('Enter');
             await typeCKEditor(page, 'rek-description', 'ab');
             // files
@@ -255,8 +239,6 @@ test.describe('Thesis', () => {
         test('should allow form to be completed', async ({ page }) => {
             await page.goto('habslodge?user=s2222222');
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
-            const validationAlerts = page.locator('[data-testid="thesis-submission-validation"] li');
-
             await ensureErrorCount(page, 6);
 
             // Title
@@ -270,7 +252,7 @@ test.describe('Thesis', () => {
             await clickAutoSuggestion(page, 'rek-org-unit-name', 0);
             await ensureErrorCount(page, 3);
             // Supervisors
-            await page.getByTestId('rek-supervisor-input').type('Ky Lane', { delay: 30 });
+            await page.getByTestId('rek-supervisor-input').fill('Ky Lane');
             await page.getByTestId('rek-supervisor-input').press('Enter');
             await ensureErrorCount(page, 2);
             // Field of Research
@@ -278,16 +260,10 @@ test.describe('Thesis', () => {
             await clickAutoSuggestion(page, 'rek-subject', 0);
             await ensureErrorCount(page, 1);
             // Keywords
-            await page.getByTestId('rek-keywords-input').type('First Keyword', {
-                delay: 30,
-            });
+            await page.getByTestId('rek-keywords-input').fill('First Keyword');
             await page.getByTestId('rek-keywords-input').press('Enter');
-
             // Keywords
-            await page.getByTestId('comments-input').type('comments', {
-                delay: 30,
-            });
-
+            await page.getByTestId('comments-input').fill('comments');
             // Files
             await uploadFile(page, 'test.jpg');
             await ensureErrorCount(page, 0);
@@ -308,7 +284,7 @@ test.describe('Thesis', () => {
             // filling this field once doesn't always clear validation errors in this context
             await typeCKEditor(page, 'rek-title', 'ab');
             // Supervisors
-            await page.getByTestId('rek-supervisor-input').type('Ky Lane', { delay: 30 });
+            await page.getByTestId('rek-supervisor-input').fill('Ky Lane');
             await page.getByTestId('rek-supervisor-input').press('Enter');
             // Field of Research
             await page.getByTestId('rek-subject-input').fill('a');

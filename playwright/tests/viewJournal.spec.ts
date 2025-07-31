@@ -13,29 +13,24 @@ test.describe('view Journal', () => {
 
     test('should have appropriate scroll buttons', async ({ page }) => {
         await page.goto('/journal/view/8508?user=uqresearcher');
-
         // Scroll to SCIE section
         const scieSection = page.getByTestId('journal-details-jscie');
         await scieSection.scrollIntoViewIfNeeded();
         await tabVisibleInWindow(page, '0', true, 'scie');
         await tabVisibleInWindow(page, '1', true, 'scie');
-
         // Check that scroll buttons are not visible
         await expect(scieSection.locator('div.MuiTabs-scrollButtons')).toHaveCount(0);
-
         // Scroll to SSCI section
         const ssciSection = page.getByTestId('journal-details-jssci');
         await ssciSection.scrollIntoViewIfNeeded();
         await tabVisibleInWindow(page, '0', true);
         await tabVisibleInWindow(page, '3', false);
         await tabVisibleInWindow(page, '4', false);
-
         // Click the right scroll button
         await ssciSection
             .locator('div.MuiTabs-scrollButtons')
             .nth(1)
             .click();
-
         await tabVisibleInWindow(page, '0', false);
         await tabVisibleInWindow(page, '3', true);
         await tabVisibleInWindow(page, '4', true);
@@ -95,13 +90,12 @@ test.describe('view Journal', () => {
                     'jnl_publication_frequency-input',
                 ];
 
-                const fieldValues = {};
+                const fieldValues: Record<string, string> = {};
                 for (const field of fields) {
                     fieldValues[field] = await page.getByTestId(field).inputValue();
                 }
 
                 const ckContent = await page.locator('.ck-content').innerText();
-
                 await expect(page.getByTestId('jnl_issn_jid-list-row-0')).toContainText('0388-0001');
                 await expect(page.getByTestId('jnl_issn_jid-list-row-1')).toContainText('2169-0375');
                 await page.getByTestId('action-button').click();
@@ -110,7 +104,6 @@ test.describe('view Journal', () => {
                 for (const field of fields) {
                     await expect(page.getByTestId(field)).toHaveValue(fieldValues[field]);
                 }
-
                 await expect(page.locator('.ck-content')).toHaveText(ckContent);
                 await expect(page.getByTestId('jnl_issn_jid-list-row-0')).toContainText('0388-0001');
                 await expect(page.getByTestId('jnl_issn_jid-list-row-1')).toContainText('2169-0375');

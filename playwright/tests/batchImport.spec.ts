@@ -25,7 +25,6 @@ test.describe('Batch import', () => {
         const selectItem = async (field: string, option: number, validationMessage: string | null = null) => {
             await page.getByTestId(`${field}-select`).click();
             await page.getByTestId(`${field}-option-${option}`).click();
-
             if (validationMessage) {
                 await expect(page.getByTestId('batch-import-validation')).not.toHaveText(validationMessage);
             }
@@ -44,7 +43,7 @@ test.describe('Batch import', () => {
             /Select folder where CSV and datastream files are located/,
         );
 
-        confirmInitialValidations();
+        await confirmInitialValidations();
         await expect(page.getByTestId('batch-import-cancel')).toHaveText(/Cancel and return to the homepage/);
         await expect(page.getByTestId('batch-import-submit')).toHaveText(/Ingest now/);
         await expect(page.getByTestId('batch-import-submit')).toBeDisabled();
@@ -81,7 +80,7 @@ test.describe('Batch import', () => {
             .click();
 
         // form is ready to go again and the validation errors re-appear
-        confirmInitialValidations();
+        await confirmInitialValidations();
         await expect(page.getByTestId('batch-import-submit')).toBeDisabled();
     });
 });

@@ -13,7 +13,6 @@ test.describe('Record version view', () => {
     test('should load record with legacy version', async ({ page }) => {
         await page.goto(`/view/${recordVersionLegacy.rek_pid}/${recordVersionLegacy.rek_version}?user=uqstaff`);
         const alertInfo = page.locator('#alert-info');
-        await alertInfo.waitFor({ state: 'visible' });
         await expect(alertInfo).toContainText(recordVersionLegacy.rek_pid);
         await expect(alertInfo).toContainText(recordVersionLegacy.rek_version);
     });

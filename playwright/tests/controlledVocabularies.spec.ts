@@ -157,7 +157,6 @@ test.describe('Controlled vocabularies', () => {
                 await expect(page.getByTestId('portal-edit-453669')).toHaveText(/Required/);
                 await page.getByTestId('cvo-title-input').fill('New title');
                 await expect(page.getByTestId('update_dialog-action-button')).not.toBeDisabled();
-                await expect(page.getByTestId('update_dialog-action-button')).not.toBeDisabled();
                 await page.getByTestId('update_dialog-action-button').click();
                 await expect(page.getByTestId('portal-root')).not.toHaveText(/Update vocabulary/);
                 await expect(page.getByTestId('admin-edit-button-453669')).toBeVisible();

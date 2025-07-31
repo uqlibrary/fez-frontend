@@ -39,7 +39,6 @@ test.describe('Dashboard', () => {
 test.describe('Dashboard with no OrcID', () => {
     test('should show the Link ORCID ID form in place of dashboard', async ({ page }) => {
         await page.goto('/dashboard?user=s4444444');
-
         await expect(page.getByTestId('orcid-required')).toBeVisible();
         await expect(page.getByTestId('standard-card-i-already-have-an-orcid-id')).toBeVisible();
         await expect(page.getByTestId('standard-card-i-need-an-orcid-id-content')).toBeVisible();

@@ -64,8 +64,6 @@ export async function adminEditCheckTabErrorBadge(page: Page, tab: string, value
 
 export async function assertChangeSelectFromTo(page: Page, item: string, changeFrom: string, changeTo: string) {
     const select = page.getByTestId(`${item}-select`);
-    await select.waitFor({ state: 'visible' });
-
     if (changeFrom === '') {
         await select.click();
     } else {
@@ -73,9 +71,10 @@ export async function assertChangeSelectFromTo(page: Page, item: string, changeF
         await select.click();
     }
 
-    const options = page.getByTestId(`${item}-options`);
-    await options.waitFor({ state: 'visible' });
-    await options.locator(`:text("${changeTo}")`).click();
+    await page
+        .getByTestId(`${item}-options`)
+        .locator(`:text("${changeTo}")`)
+        .click();
     await expect(select).toContainText(changeTo);
 }
 

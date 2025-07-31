@@ -1,5 +1,4 @@
 import { test, expect } from '../test';
-
 import formsLocale from 'locale/forms';
 import { myRecordsList } from 'mock/data/records';
 import { navToHomeFromMenu } from '../lib/helpers';
@@ -123,7 +122,6 @@ test.describe('Request correction form', () => {
             .getByText(/I am the author/)
             .first()
             .click();
-
         // Enter invalid data triggers validation errors
         await page
             .locator('.StandardCard', { hasText: fixFormLocale.comments.title })
@@ -132,35 +130,18 @@ test.describe('Request correction form', () => {
             .fill('invalid');
         await expect(page.locator('.StandardCard', { hasText: fixFormLocale.comments.title }).first()).toBeVisible();
         await expect(page.getByText(/URL is not valid/)).toBeVisible();
-
         // Confirm form submission is disabled until URL is fixed
         await expect(page.locator('button', { hasText: /Submit/ }).first()).toBeDisabled();
-        await page
+        const input = page
             .locator('.StandardCard', { hasText: fixFormLocale.comments.title })
             .first()
-            .locator('input')
-            .fill('.com');
+            .locator('input');
+        await input.fill('.com');
         await expect(page.locator('button', { hasText: /Submit/ }).first()).toBeDisabled();
-        await page
-            .locator('.StandardCard', { hasText: fixFormLocale.comments.title })
-            .first()
-            .locator('input')
-            .press('Home');
-        await page
-            .locator('.StandardCard', { hasText: fixFormLocale.comments.title })
-            .first()
-            .locator('input')
-            .press('Delete');
-        await page
-            .locator('.StandardCard', { hasText: fixFormLocale.comments.title })
-            .first()
-            .locator('input')
-            .press('Delete');
-        await page
-            .locator('.StandardCard', { hasText: fixFormLocale.comments.title })
-            .first()
-            .locator('input')
-            .fill('https://');
+        await input.press('Home');
+        await input.press('Delete');
+        await input.press('Delete');
+        await input.pressSequentially('https://');
         await expect(page.locator('button', { hasText: /Submit/ }).first()).not.toBeDisabled();
     });
 

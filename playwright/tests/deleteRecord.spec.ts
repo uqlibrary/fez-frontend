@@ -20,13 +20,10 @@ const selectors = {
     cancelButton: '[data-testid=cancel-delete-record]',
 };
 
-const loadPage = async (page: Page, record: any) => {
-    await page.goto(`/admin/delete/${record.rek_pid}?user=uqstaff`);
-};
+const loadPage = async (page: Page, record: any) => await page.goto(`/admin/delete/${record.rek_pid}?user=uqstaff`);
 
-const assertNavigatedToViewPage = async (page: Page, record: any) => {
+const assertNavigatedToViewPage = async (page: Page, record: any) =>
     await expect(page).toHaveURL(`/view/${record.rek_pid}`);
-};
 
 const triggerReasonFieldValidationError = async (page: Page) => {
     await fillInput(page, selectors.reasonInput, 'a', 256);
@@ -83,8 +80,9 @@ test.describe('Delete work form', () => {
                     await expect(page.getByTestId('rek-new-doi-helper-text')).toContainText('DOI is not valid');
                     await typeCKEditor(page, 'rek-deletion-notes', 'a'.repeat(2001));
                     const helperTextContainer = page.getByTestId('rek-deletion-notes').locator(' span');
-                    const count = await helperTextContainer.count();
-                    await expect(helperTextContainer.nth(count - 3)).toContainText('Must be 2000 characters or less');
+                    await expect(helperTextContainer.nth((await helperTextContainer.count()) - 3)).toContainText(
+                        'Must be 2000 characters or less',
+                    );
                 });
             });
         });

@@ -32,9 +32,11 @@ test.describe('Communities and Collections', () => {
         );
 
         // export format
-        const exportCollection1 = page.getByTestId('export-publications-format');
-        await expect(page.getByTestId('export-publications-format')).toHaveCount(2);
-        await exportCollection1.nth(1).click();
+        {
+            const exportCollection = page.getByTestId('export-publications-format');
+            await expect(exportCollection).toHaveCount(2);
+            await exportCollection.nth(1).click();
+        }
         await expect(page.getByRole('listbox')).toHaveText(/Excel File/);
         await dismissPopover(page);
         await page.getByTestId('expand-row-UQ:7556').click();
@@ -43,9 +45,11 @@ test.describe('Communities and Collections', () => {
         );
 
         // export format
-        const exportCollection2 = page.getByTestId('export-publications-format');
-        await expect(page.getByTestId('export-publications-format')).toHaveCount(3);
-        await exportCollection2.nth(2).click();
+        {
+            const exportCollection = page.getByTestId('export-publications-format');
+            await expect(exportCollection).toHaveCount(3);
+            await exportCollection.nth(2).click();
+        }
         await expect(page.getByRole('listbox')).toHaveText(/Excel File/);
         await dismissPopover(page);
         await page.getByTestId('expand-row-UQ:12096').click();

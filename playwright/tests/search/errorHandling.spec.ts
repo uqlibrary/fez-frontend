@@ -3,16 +3,14 @@ import { test, expect, Page } from '../../test';
 test.describe('Error handling', () => {
     const expectUserToBeLoggedIn = async (page: Page, loggedIn: boolean) => {
         if (loggedIn) {
-            await expect(page.getByTestId('PersonIcon')).toBeVisible(); // Should be visible when logged in
-            await expect(page.getByTestId('PersonOutlineIcon')).not.toBeVisible(); // Should not be visible when logged in
+            await expect(page.getByTestId('PersonIcon')).toBeVisible();
+            await expect(page.getByTestId('PersonOutlineIcon')).not.toBeVisible();
         } else {
-            await expect(page.getByTestId('PersonIcon')).not.toBeVisible(); // Should not be visible when logged out
-            await expect(page.getByTestId('PersonOutlineIcon')).toBeVisible(); // Should be visible when logged out
+            await expect(page.getByTestId('PersonIcon')).not.toBeVisible();
+            await expect(page.getByTestId('PersonOutlineIcon')).toBeVisible();
         }
 
-        // Checking cookies
         const allCookies = await page.context().cookies();
-        // Find the specific cookies by their name
         const uqlidCookie = allCookies.find(cookie => cookie.name === 'UQLID');
         const uqlidUserGroupCookie = allCookies.find(cookie => cookie.name === 'UQLID_USER_GROUP');
         if (loggedIn) {
@@ -38,7 +36,6 @@ test.describe('Error handling', () => {
             await page.getByTestId('simple-search-input').clear();
             await page.getByTestId('simple-search-input').fill('should return 401');
             await page.getByTestId('simple-search-button').click();
-
             // assert login dialog is displayed by - see App component
             await expect(page.getByTestId('alert')).toContainText('You are not logged in');
             await expectUserToBeLoggedIn(page, false);
@@ -51,7 +48,6 @@ test.describe('Error handling', () => {
             await expect(page.getByTestId('search-records-results')).toHaveText(
                 /Displaying works 1 to 7 of 7 total works\./,
             );
-
             await expectUserToBeLoggedIn(page, false);
         });
     });
