@@ -12,7 +12,7 @@ export default defineConfig({
     fullyParallel: true,
     failOnFlakyTests: !process.env.CI_BRANCH,
     forbidOnly: !!process.env.CI_BRANCH,
-    retries: process.env.CI_BRANCH ? 4 : 0,
+    retries: process.env.CI_BRANCH ? 2 : 0,
     workers: process.env.CI_BRANCH ? '100%' : '75%',
     reporter: [
         ['list'],
