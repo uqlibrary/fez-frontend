@@ -7,7 +7,7 @@ export default defineConfig({
     testDir: 'playwright/tests',
     timeout: process.env.CI_BRANCH ? 120_000 : 90_000,
     expect: {
-        timeout: process.env.CI_BRANCH ? 60_000 : 10_000,
+        timeout: process.env.CI_BRANCH ? 10_000 : 5_000,
     },
     fullyParallel: true,
     failOnFlakyTests: !process.env.CI_BRANCH,
