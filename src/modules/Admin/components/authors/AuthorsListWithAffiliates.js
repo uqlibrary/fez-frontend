@@ -1,24 +1,21 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 // eslint-disable-next-line camelcase
-import { MaterialReactTable, useMaterialReactTable, MRT_EditActionButtons } from 'material-react-table';
+import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 
 import { useTheme } from '@mui/material/styles';
 import { numberToWords, validation } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
-import Edit from '@mui/icons-material/Edit';
 import People from '@mui/icons-material/People';
 import PersonOutlined from '@mui/icons-material/PersonOutlined';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import Lock from '@mui/icons-material/Lock';
 import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
-import Delete from '@mui/icons-material/Delete';
 import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
@@ -39,11 +36,9 @@ import ViewAuthorAffiliations from './ViewAuthorAffiliations';
 import EditAuthorAffiliations from './EditAuthorAffiliations';
 
 import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
-import { ChevronRight } from '@mui/icons-material';
 
 import { useMrtTable } from 'hooks';
-import { head } from 'lodash';
-// import { validationRules } from './validationRules';
+import { validationRules } from './validationRules';
 
 const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
 
@@ -97,8 +92,6 @@ NameAsPublished.propTypes = {
     text: PropTypes.element,
 };
 
-const isValid = value => !validation.isEmpty(value) && !validation.maxLength255Validator(value);
-
 export const AuthorDetailPanel = ({ rowData, locale, isEditing, setEditing, onChange }) => {
     const {
         form: {
@@ -146,9 +139,6 @@ export const AuthorsListWithAffiliates = ({
     locale,
     onChange,
     showRoleInput,
-    loadOrganisationalUnitsList,
-    loadSuggestedOrganisationalUnitsList,
-    clearSuggestedOrganisationalUnits,
 }) => {
     const theme = useTheme();
     const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
@@ -194,21 +184,6 @@ export const AuthorsListWithAffiliates = ({
         },
         deleteConfirmationLocale,
     } = locale;
-
-    const validationRules = [
-        {
-            id: 'nameAsPublished',
-            validate: rowData => {
-                const valid = isValid(rowData.nameAsPublished);
-                return (
-                    !valid && {
-                        field: 'nameAsPublished',
-                        message: 'required',
-                    }
-                );
-            },
-        },
-    ];
 
     const {
         data,
@@ -341,7 +316,7 @@ export const AuthorsListWithAffiliates = ({
                         </Typography>
                     );
                 },
-                Edit: ({ table, row }) => {
+                Edit: ({ row }) => {
                     const contributor = { ...row.original, ...row._valuesCache };
                     const prefilledSearch = !contributor.uqIdentifier || contributor.uqIdentifier === '0';
                     const value =
@@ -688,23 +663,6 @@ export const AuthorsListWithAffiliates = ({
             'mrt-row-expand': { header: '', maxSize: 20, grow: 0, size: '20px' },
         },
         renderDetailPanel: ({ row }) => {
-            const conditionalIcon =
-                !!!row.original.uqUsername || row.original.uqUsername === '' || isNtro || editState.editing
-                    ? {
-                          icon: () => {
-                              return null;
-                          },
-                      }
-                    : {
-                          icon: () => (
-                              <ChevronRight
-                                  fontSize="medium"
-                                  data-testid={`expandPanelIcon-${row.original.aut_id}`}
-                                  id={`expandPanelIcon-${row.original.aut_id}`}
-                              />
-                          ),
-                      };
-
             return !!!row.original.uqUsername || row.original.uqUsername === '' || isNtro ? (
                 /* istanbul ignore next */ <></>
             ) : (
@@ -714,9 +672,6 @@ export const AuthorsListWithAffiliates = ({
                     isEditing={isEditing(row.original.aut_id)}
                     setEditing={setEditing}
                     onChange={handleAffiliationUpdate}
-                    loadOrganisationalUnitsList={loadOrganisationalUnitsList}
-                    loadSuggestedOrganisationalUnitsList={loadSuggestedOrganisationalUnitsList}
-                    clearSuggestedOrganisationalUnits
                 />
             );
         },
@@ -906,11 +861,11 @@ export const AuthorsListWithAffiliates = ({
                     : {}),
             },
         }),
-        muiDetailPanelProps: ({ row }) => ({
+        muiDetailPanelProps: {
             sx: {
                 backgroundColor: theme.palette.background.paper,
             },
-        }),
+        },
         muiExpandButtonProps: {
             sx: { alignSelf: 'center' },
         },
