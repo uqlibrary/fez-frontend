@@ -74,7 +74,7 @@ test.describe('Book admin edit', () => {
             const sherpaLink =
                 (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_journal_link ||
                 sherpaMocks[0].srm_journal_link;
-            await expect(container).toContainText(issn);
+            await expect(container.getByText(issn)).toBeVisible();
             await expect(container).toContainText('SHERPA/RoMEO');
             await expect(container).toContainText('Ulrichs');
             await expect(container.locator('#sherparomeo-link')).toHaveAttribute('href', sherpaLink);
@@ -125,7 +125,7 @@ test.describe('Book admin edit', () => {
         const row2 = issnBlock.locator('#rek-issn-list-row-2');
         await issnInput.fill('11111111');
         await issnInput.press('Enter');
-        await expect(row2).toContainText('1111-1111');
+        await expect(row2.getByText('1111-1111')).toBeVisible();
         await expect(row2).not.toContainText('SHERPA/RoMEO');
         await expect(row2).not.toContainText('Ulrichs');
 
@@ -172,7 +172,7 @@ test.describe('Book admin edit', () => {
         const row5 = issnBlock.locator('#rek-issn-list-row-5');
         await issnInput.fill('00000000');
         await issnInput.press('Enter');
-        await expect(row5).toContainText('0000-0000');
+        await expect(row5.getByText('0000-0000')).toBeVisible();
         await expect(row5.locator('a')).not.toContainText('SHERPA/RoMEO'); // Check specific link element if needed
         await expect(row5).toContainText('Ulrichs'); // Check parent container for Ulrichs text
 
