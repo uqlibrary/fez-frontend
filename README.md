@@ -485,16 +485,44 @@ Before committing changes, locally run tests and update snapshots (if required).
 
 ### E2E testing
 
-We are using [playwright](https://playwright.dev/docs/writing-tests) for
-our e2e UI testing.
+We use [Playwright](https://playwright.dev/docs/writing-tests) for our E2E testing.
 
-To run tests, first start the build, using mock data, ie `npm run start:mock`
+To run tests, simply use `npm run test:e2e`.
 
-Then:
+To run all tests, including unit tests, use `npm run test:all`.\
+Then, to generate a combined code coverage report, use `npm run cc:reportAll`.\
+This workflow is useful for confidently pushing changes upstream.
 
-- use `npm run test:e2e`
+#### Parallelism
 
-Before pushing to a branch make sure to run `npm run test:all`. This runs the unit and playwright tests.
+E2E tests run in [parallel](https://playwright.dev/docs/test-parallel) by default. In CI, this also includes **horizontal parallelism**  
+via test sharding, where they are split across independent CI steps to speed up execution.
+
+Unfortunately, Playwright doesn't support splitting tests based on their estimated or historical runtime. For this reason,
+to avoid test sharding imbalances, where one shard takes significantly longer than the others, please consider splitting 
+lengthy tests into multiple smaller ones.
+
+#### Debugging
+
+By default, Playwright runs tests using a headless browser.
+To visualize tests in the browser, use `npm run test:e2e:show [?spec file]`.\
+This disables test parallelism for convenience.
+
+Breakpoints are handy for pausing either the test execution (via IDE integration) or the code execution (via the `debugger` keyword or manual breakpoints).
+PhpStorm provides seamless integration.
+
+##### Failed tests
+
+To debug a failed test, use:\
+`npm run test:e2e:debug playwright/.results/.../trace.zip`\
+This displays a storyline of the failed test using the [Playwright Trace Viewer](https://playwright.dev/docs/trace-viewer-intro),\
+where all sorts of detailed inspections are possible - network, DOM elements, etc.
+
+###### CI
+
+The above also applies to tests that fail on CI. In this case, the trace files need to be downloaded locally first. They
+are part of the artifacts uploaded to S3 as output of each test stage - please refer to the "Artifacts" section on
+the "Build Details" tab.
 
 #### Standardised selectors to target elements
 
@@ -502,19 +530,29 @@ Before pushing to a branch make sure to run `npm run test:all`. This runs the un
 
 - Please have a look at below table for some current examples in eSpace frontend:
 
-| Element   | prop for ID               | ID attached to native elements for targetting                   |
-| --------- | ------------------------- | --------------------------------------------------------------- |
-| TextField | `textFieldId="rek-title"` | `<input id="rek-title-input"/>` `<label id="rek-title-label"/>` |
+| Element   | prop for ID               | ID attached to native elements for targeting                   |
+| --------- | ------------------------- | ---------------------------------------------------------------|
+| TextField | `textFieldId="rek-title"` | `<input id="rek-title-input"/>` `<label id="rek-title-label"/>`|
 
 #### Gotchas
 
+##### Unit tests
 When running ```npm test``` and related scripts natively in linux (without using a VM), jest can be quite demanding making the OS unresponsive.
-
 One way to avoid this is to restrict the number of CPU cores through jest's [--maxWorkers](https://jestjs.io/docs/cli#--maxworkersnumstring) option.
 
 ```bash
 NODE_ENV=test FULL_PATH=http://localhost node --expose-gc ./node_modules/.bin/jest --logHeapUsage --maxWorkers=50%
 ```
+
+##### E2E tests
+
+Unlike Jest, Playwright test assertions are based on [actionability checks](https://playwright.dev/docs/actionability), 
+which means they are not suitable for checking every possible state of a given component. For instance, if a component 
+displays a loading message for async actions, and those actions complete too quickly, checking for the presence of the
+loading message might fail.
+
+For assertions like the above, Jest is a better fit, as it requires adding waits to ensure the test doesn't finish 
+before the component reaches its final state.
 
 ## Mocking
 
@@ -575,18 +613,6 @@ to URL/Cloudfront restrictions
 Should you need to find your feature branch files on S3, they are [here](https://s3.console.aws.amazon.com/s3/buckets/uql-dev-frontend?region=ap-southeast-2&prefix=espace/&showversions=false) (most common use is to cleanup after you finish with a feature branch: remove the S3 sub-folder from this location, the git branch, and the AWS pipeline).
 
 Note: prodtest requires a manual click for its deployment to happen: go to [this](https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend-prodtest/view?region=ap-southeast-2) link and click the orange release changes button.
-
-### Gotchas
-
-There are some build steps that are exclusive to master, staging and production branches:
-- npm run test:unit:ci1
-- npm run test:e2e:dashboard
-
-This means that even when a given branch passes tests and builds successfully in CB, it doesn't necessary mean that it's free issues.
-
-In order to identify possible issues before pushing master upstream, make sure to run the commands above locally after merging your changes to that branch.
-
-For more details, look at ./bin/codebuild-test.sh
 
 ## Google Analytics integration
 
