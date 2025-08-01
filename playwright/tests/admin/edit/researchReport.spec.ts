@@ -25,7 +25,6 @@ test.describe('Research Report admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        // Bibliographic tab
         await expect(page.getByTestId('bibliographic-section-header')).toHaveText('Bibliographic');
         const bibliographicSectionContent = page.getByTestId('bibliographic-section-content');
         const bibliographicAdminCard = bibliographicSectionContent.locator('.AdminCard').nth(4);
@@ -48,7 +47,6 @@ test.describe('Research Report admin edit', () => {
         );
 
         // ------------------------------------------ ADMIN TAB ----------------------------------------------
-        // Admin tab
         await expect(page.getByTestId('admin-section-header')).toHaveText('Admin');
         const adminSectionContent = page.getByTestId('admin-section-content');
         const adminInfoAdminCard = adminSectionContent.locator('.AdminCard').nth(1);
@@ -63,16 +61,12 @@ test.describe('Research Report admin edit', () => {
         await expect(adminInfoAdminCard.getByTestId('rek-license-input')).toHaveValue(
             record.fez_record_search_key_license.rek_license.toString(),
         );
-
-        // Find the parent element of the input, then locate the sibling combobox within that parent.
         const licenseInput = adminInfoAdminCard.getByTestId('rek-license-input');
-        // Assuming the combobox is a sibling within the same parent as the input
         const parentOfLicenseInput = licenseInput.locator('xpath=..');
         const licenseCombobox = parentOfLicenseInput.getByRole('combobox');
         await expect(licenseCombobox).toHaveText(record.fez_record_search_key_license.rek_license_lookup);
 
         // ---------------------------------------- GRANT INFORMATION TAB --------------------------------------------
-        // Grant Information tab
         await expect(page.getByTestId('grants-section-header')).toHaveText('Grants');
         const grantsSectionContent = page.getByTestId('grants-section-content');
         const grantInfoAdminCard = grantsSectionContent.locator('.AdminCard').first();

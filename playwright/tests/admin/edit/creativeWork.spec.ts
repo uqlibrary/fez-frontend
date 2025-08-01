@@ -127,10 +127,7 @@ test.describe('Creative Work admin edit, general', () => {
                 NTROSectionContent.locator('.AdminCard')
                     .first()
                     .locator('h4'),
-            ).toHaveText(
-                // Using locator chain directly
-                /Scale\/Significance of work & Creator research statement/,
-            );
+            ).toHaveText(/Scale\/Significance of work & Creator research statement/);
 
             for (const [index, author] of record.fez_record_search_key_author.map(item => item.rek_author).entries()) {
                 await rowAuthorDisplaysAs(page, index, author);
@@ -215,7 +212,7 @@ test.describe('Creative Work admin edit, general', () => {
             const moveDownButton = significanceStatementCard.getByTestId('rek-significance-list-row-1-move-down');
             await moveDownButton.click();
 
-            // authors ordering does not change
+            // note order change of the STATEMENT only
             await rowAuthorDisplaysAs(page, 0, 'Ashkanasy');
             await rowAuthorDisplaysAs(page, 1, 'Belanger');
             await rowAuthorDisplaysAs(page, 2, 'Bernal');
@@ -239,6 +236,7 @@ test.describe('Creative Work admin edit, general', () => {
 
             await clickRowEditButton(page, 1);
             await typeCKEditor(page, 'rek-creator-contribution-statement', statementList[0].newText);
+            // popup appears at foot of page, outside Admin section
             await assertChangeSelectFromTo(page, 'rek-significance', '', statementList[0].newSignificance);
 
             const updatedNTROSectionContentAfterEdit = page.getByTestId('ntro-section-content');
@@ -267,7 +265,9 @@ test.describe('Creative Work admin edit, general', () => {
             await rowScaleDisplaysAs(page, 2, statementList[0].newSignificance);
             await rowStatementDisplaysAs(page, 2, statementList[0].newText);
 
+            // save does not cause crash
             await page.getByTestId('submit-admin-top').click();
+            // Confirmation message
             const dialog = page.getByRole('dialog');
             await expect(dialog).toBeVisible();
             await expect(dialog.locator('h2')).toContainText('Work has been updated');

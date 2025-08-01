@@ -48,7 +48,6 @@ test.describe('Audio admin edit', () => {
         }
 
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        // Bibliographic tab
         const bibliographicCard = page.getByTestId('bibliographic-section-content');
         await expect(bibliographicCard.locator('h4').getByText('Bibliographic')).toBeVisible();
         await checkPartialDateFromRecordValue(
@@ -73,7 +72,6 @@ test.describe('Audio admin edit', () => {
         );
 
         const transcriptText = await readCKEditor(page, 'rek-transcript');
-        console.log('text=', transcriptText);
         expect(transcriptText).toContain(record.fez_record_search_key_transcript.rek_transcript.substring(0, 10));
 
         await expect(bibliographicCard.getByTestId('rek-alternate-genre-input')).toHaveValue(

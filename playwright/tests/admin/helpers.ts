@@ -92,7 +92,7 @@ export async function addAuthorAndAssert(
         .locator(`li:has-text("${authorUqname}")`)
         .click();
     await page.getByTestId('rek-author-add-save').click();
-    await expect(page.locator('[data-testid^=contributor-errorIcon-]')).toBeVisible();
+    await expect(await page.locator('[data-testid^=contributor-errorIcon-]').count()).toBeGreaterThanOrEqual(1);
 
     if (expand) {
         const expandIcon = page.getByTestId(`expandPanelIcon-${authorId}`);

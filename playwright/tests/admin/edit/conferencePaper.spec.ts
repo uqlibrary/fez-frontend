@@ -26,7 +26,6 @@ test.describe('Conference Paper admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        // Bibliographic tab
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
         await expect(bibliographicTab.locator('h4').getByText(/Title of paper/)).toBeVisible();
         await expect(bibliographicTab.locator('h4').getByText(/Conference name/)).toBeVisible();

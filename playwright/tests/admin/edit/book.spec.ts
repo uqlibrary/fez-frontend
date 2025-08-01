@@ -70,7 +70,6 @@ test.describe('Book admin edit', () => {
         await loadRecordForAdminEdit(page, recordWithIssn.rek_pid);
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
 
-        // Helper function for checking ISSN links
         const checkIssnLinks = async (container: Locator, issn: string) => {
             const sherpaLink =
                 (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_journal_link ||
@@ -186,7 +185,7 @@ test.describe('Book admin edit', () => {
 });
 
 test.describe('Author affiliations', () => {
-    const record = { ...recordList.data[0] }; // Assuming this record has the necessary author data
+    const record = { ...recordList.data[0] };
 
     test.beforeEach(async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);

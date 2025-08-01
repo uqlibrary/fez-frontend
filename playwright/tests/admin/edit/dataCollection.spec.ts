@@ -30,7 +30,6 @@ test.describe('Data Collection admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        // Bibliographic tab
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
         await expect(bibliographicTab.locator('h4').getByText(/Dataset name/)).toBeVisible();
 
@@ -60,7 +59,6 @@ test.describe('Author affiliations', () => {
             authorName: 'Steve Su (uqysu4)',
             orgName: 'The University of Queensland',
             rowId: 0,
-            allowed: false,
         });
     });
 });

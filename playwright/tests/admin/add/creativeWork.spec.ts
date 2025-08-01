@@ -4,7 +4,6 @@ import { clickAutoSuggestion } from '../../../lib/helpers';
 import { typeCKEditor } from '../../../lib/ckeditor';
 
 test.describe('As an admin, I can', () => {
-    // load the admin add page for a Creative Work with the indicated collection and subType and open the NTRO tab
     const loadNtroTabAdminAdd = async (page: Page, collectionRowId: number, subtypeName: string) => {
         await page.getByTestId('rek-ismemberof-input').fill('a');
         await clickAutoSuggestion(page, 'rek-ismemberof', collectionRowId);

@@ -52,17 +52,13 @@ test.describe('Conference Proceedings admin edit', () => {
         await adminEditNoAlerts(page);
 
         // ---------------------------------------------- FILES TAB --------------------------------------------------
-        // Files tab
         const filesTab = page.getByTestId('files-section-content');
         await expect(filesTab.locator('h4').getByText('Attached files')).toBeVisible();
-
-        // Locating the specific div for file details
         const fileDetailsDiv = filesTab.locator('[class*=MuiCardContent-root] > div:nth-child(3)');
         await expect(fileDetailsDiv.locator(`a[title="${visibleFilename}"]`)).toHaveCount(1);
         await expect(fileDetailsDiv.locator('input[name=fileDescription]')).toHaveValue(visibleFileDescription);
 
         // --------------------------------------------- SECURITY TAB ------------------------------------------------
-        // Security tab
         const securityTab = page.getByTestId('security-section-content');
         await expect(securityTab.locator('h4').nth(1)).toHaveText(`Datastream level security - ${record.rek_pid}`);
 
@@ -77,10 +73,8 @@ test.describe('Conference Proceedings admin edit', () => {
             );
         }
 
-        // To find "Override datastream security policy details" and its sibling div:
         const overrideHeading = securityTab.locator('h6').getByText('Override datastream security policy details');
         const dsiPolicyBlock = overrideHeading.locator('+ div'); // Selects the next sibling div
-
         await expect(dsiPolicyBlock.locator(`a[title="${visibleFilename}"]`)).toHaveText(visibleFilename);
         await expect(dsiPolicyBlock.locator(`input[name="${visibleFilename}"]`)).toHaveValue(
             visibleFileSecurityPolicy.toString(),
@@ -100,7 +94,6 @@ test.describe('Author affiliations', () => {
             authorName: 'Steve Su (uqysu4)',
             orgName: 'The University of Queensland',
             rowId: 0,
-            allowed: false,
         });
     });
 });

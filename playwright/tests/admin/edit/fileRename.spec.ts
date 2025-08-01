@@ -68,14 +68,14 @@ test.describe('File rename admin edit', () => {
 
         // rename pass 2
         await filesSectionContent.getByTestId(`${vars.editId}`).click();
-        await filesSectionContent.getByTestId(`${vars.editingId}`).fill(`${newFilename}d`); // Use fill to overwrite
+        await filesSectionContent.getByTestId(`${vars.editingId}`).fill(`${newFilename}d`);
         await expect(filesSectionContent.getByTestId(`${vars.editingId}`)).toHaveValue(`${newFilename}d`);
         await filesSectionContent.getByTestId(`${vars.saveId}`).click();
         await expect(filesSectionContent.getByTestId(`${vars.editedId}`)).toContainText(`${newFilename}d`);
 
         // cancel a rename
         await filesSectionContent.getByTestId(`${vars.editId}`).click();
-        await filesSectionContent.getByTestId(`${vars.editingId}`).fill(`${newFilename}d-again`); // Use fill
+        await filesSectionContent.getByTestId(`${vars.editingId}`).fill(`${newFilename}d-again`);
         await expect(filesSectionContent.getByTestId(`${vars.editingId}`)).toHaveValue(`${newFilename}d-again`);
         await filesSectionContent.getByTestId(`${vars.cancelId}`).click();
         await expect(filesSectionContent.getByTestId(`${vars.editedId}`)).toContainText(`${newFilename}d`);
@@ -89,7 +89,7 @@ test.describe('File rename admin edit', () => {
         await expect(filesSectionContent.getByTestId(`${vars.filenameText}`)).toContainText(vars.originalFilename);
 
         // invalid filename
-        await expect(page.getByTestId(`${alertId}`)).not.toBeVisible(); // Alert is outside filesSectionContent scope
+        await expect(page.getByTestId(`${alertId}`)).not.toBeVisible();
         await filesSectionContent.getByTestId(`${vars.editId}`).click();
         await filesSectionContent.getByTestId(`${vars.editingId}`).fill(invalidFilename);
         await filesSectionContent.getByTestId(`${vars.saveId}`).click();
@@ -99,8 +99,8 @@ test.describe('File rename admin edit', () => {
         await expect(filesSectionContent.getByTestId(`${vars.cancelId}`)).toBeVisible();
         await expect(filesSectionContent.getByTestId(`${vars.filenameText}`)).not.toBeVisible();
         await expect(filesSectionContent.getByTestId(`${vars.editedId}`)).not.toBeVisible();
-        await expect(page.getByTestId(`${alertId}`)).toBeVisible(); // Alert is outside filesSectionContent scope
-        await expect(page.getByTestId(`${alertId}`)).toContainText('invalid file name'); // Use toContainText for partial match
+        await expect(page.getByTestId(`${alertId}`)).toBeVisible();
+        await expect(page.getByTestId(`${alertId}`)).toContainText('invalid file name');
         await filesSectionContent.getByTestId(`${vars.cancelId}`).click();
         await expect(page.getByTestId(`${alertId}`)).not.toBeVisible(); // Alert is outside filesSectionContent scope
 
@@ -141,12 +141,12 @@ test.describe('File rename admin edit', () => {
         await filesSectionContent.getByTestId(`${vars.editingId}`).clear();
         await filesSectionContent.getByTestId(`${vars.editingId}`).fill(anotherExistingFilenamePart);
         await filesSectionContent.getByTestId(`${vars.saveId}`).click();
-        await expect(page.getByTestId(`${alertId}`)).toBeVisible(); // Alert is outside filesSectionContent scope
-        await expect(page.getByTestId(`${alertId}`)).toContainText('name matches with an existing file.'); // Use toContainText
+        await expect(page.getByTestId(`${alertId}`)).toBeVisible();
+        await expect(page.getByTestId(`${alertId}`)).toContainText('name matches with an existing file.');
         await filesSectionContent.getByTestId(`${vars.editingId}`).clear();
         await filesSectionContent.getByTestId(`${vars.editingId}`).fill(newFilename);
         await filesSectionContent.getByTestId(`${vars.saveId}`).click();
-        await expect(page.getByTestId(`${alertId}`)).not.toBeVisible(); // Alert is outside filesSectionContent scope
+        await expect(page.getByTestId(`${alertId}`)).not.toBeVisible();
 
         // pass 2 - can't rename another file using the original filename of a file we've renamed
         const vars2 = getIds(record, 13);
@@ -164,7 +164,7 @@ test.describe('File rename admin edit', () => {
         await filesSectionContent.getByTestId(`${vars3.editingId}`).clear();
         await filesSectionContent.getByTestId(`${vars3.editingId}`).fill(newFilename);
         await filesSectionContent.getByTestId(`${vars3.saveId}`).click();
-        await expect(page.getByTestId(`${alertId}`)).toContainText('name matches with an existing file.'); // Use toContainText
+        await expect(page.getByTestId(`${alertId}`)).toContainText('name matches with an existing file.');
     });
 
     test('should not present rename buttons on mobile', async ({ page }) => {

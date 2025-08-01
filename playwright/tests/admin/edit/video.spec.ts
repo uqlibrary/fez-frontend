@@ -27,9 +27,7 @@ test.describe('Video admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        // Bibliographic tab
         await expect(page.getByTestId('bibliographic-section-header')).toHaveText('Bibliographic');
-        // Corrected locator chaining: get bibliographic content, then find the 5th AdminCard
         const bibliographicContent = page.getByTestId('bibliographic-section-content');
         const bibliographicCard = bibliographicContent.locator('.AdminCard').nth(4);
         await expect(bibliographicCard.locator('h4')).toHaveText(/Bibliographic/);
@@ -45,9 +43,7 @@ test.describe('Video admin edit', () => {
         // Confirmation message
         const dialog = page.getByRole('dialog');
         await expect(dialog.locator('h2')).toContainText('Work has been updated');
-        // Locate the 'View updated work' button within the dialog and click it
         await dialog.locator('button', { hasText: 'View updated work' }).click();
-        // Verify URL
         await expect(page).toHaveURL(`/view/${record.rek_pid}`);
     });
 });
@@ -64,7 +60,6 @@ test.describe('Author affiliations', () => {
             authorName: 'Steve Su (uqysu4)',
             orgName: 'The University of Queensland',
             rowId: 4,
-            allowed: false,
         });
     });
 });

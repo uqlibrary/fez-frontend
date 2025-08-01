@@ -26,11 +26,9 @@ test.describe('Design admin edit', () => {
         await expect(page.getByTestId('rek-license-select')).toBeVisible();
 
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        // Bibliographic tab
         await expect(page.getByTestId('bibliographic-section-header')).toContainText('Bibliographic');
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
-        // Author Details tab
         await expect(page.getByTestId('authors-section-header')).toContainText('Authors');
         const authorsSectionContent = page.getByTestId('authors-section-content');
         await expect(authorsSectionContent.locator('h4').first()).toHaveText(/Designers/);
@@ -52,7 +50,6 @@ test.describe('Design admin edit', () => {
         }
 
         // ----------------------------------------- GRANT INFORMATION TAB ---------------------------------------------
-        // Grant information tab
         await expect(page.getByTestId('grants-section-header')).toContainText('Grants');
     });
 
@@ -61,14 +58,12 @@ test.describe('Design admin edit', () => {
         await expect(page.getByTestId('rek-license-select')).toBeVisible();
 
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        // Bibliographic tab
         await expect(page.getByTestId('bibliographic-section-header')).toContainText('Bibliographic');
         await expect(page.getByTestId('rek-job-number-input')).toHaveValue(
             record.fez_record_search_key_job_number.rek_job_number,
         );
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
-        // Author Details tab
         await expect(page.getByTestId('authors-section-header')).toContainText('Authors');
         const authorsSectionContent = page.getByTestId('authors-section-content');
         await expect(authorsSectionContent.locator('h4').first()).toHaveText(/Designers/);

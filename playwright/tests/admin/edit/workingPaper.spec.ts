@@ -29,13 +29,8 @@ test.describe('Working paper admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        // Bibliographic tab
         await expect(page.getByTestId('bibliographic-section-header')).toHaveText('Bibliographic');
-
-        // Locate the bibliographic content section
         const bibliographicContent = page.getByTestId('bibliographic-section-content');
-
-        // First AdminCard (Title section)
         const titleCard = bibliographicContent.locator('.AdminCard').nth(0);
         await expect(titleCard.locator('h4')).toHaveText(/Title/); // Using regex for "Title"
 
@@ -48,10 +43,8 @@ test.describe('Working paper admin edit', () => {
 
         expect(await readCKEditor(page, 'rek-title')).toContain(record.rek_title);
 
-        // Fourth AdminCard (Bibliographic section)
         const bibliographicCard = bibliographicContent.locator('.AdminCard').nth(4);
         await expect(bibliographicCard.locator('h4')).toHaveText(/Bibliographic/);
-
         await expect(bibliographicCard.getByTestId('rek-report-number-input')).toHaveValue(
             record.fez_record_search_key_report_number.rek_report_number,
         );
@@ -76,7 +69,6 @@ test.describe('Author affiliations', () => {
             authorName: 'Steve Su (uqysu4)',
             orgName: 'The University of Queensland',
             rowId: 1,
-            allowed: false,
         });
     });
 });

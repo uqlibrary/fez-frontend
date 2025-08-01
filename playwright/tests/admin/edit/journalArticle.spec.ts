@@ -3,14 +3,18 @@ import { test, expect } from '../../../test';
 import { default as recordList } from 'mock/data/records/publicationTypeListJournalArticle';
 import moment from 'moment';
 import {
+    addAffiliationAndAssert,
+    addAuthorAndAssert,
     adminEditCheckDefaultTab,
     adminEditCountCards,
     adminEditNoAlerts,
     adminEditTabbedView,
     adminEditVerifyAlerts,
+    assertAffiliation,
+    editAffiliationAndAssert,
     loadRecordForAdminEdit,
 } from '../helpers';
-import { readCKEditor } from '../../../lib/ckeditor';
+import { getCKEditorField, readCKEditor } from '../../../lib/ckeditor';
 import { checkPartialDateFromRecordValue } from '../../../lib/helpers';
 
 test.describe('Journal Article admin edit', () => {
@@ -36,7 +40,6 @@ test.describe('Journal Article admin edit', () => {
         await page.setViewportSize({ width: 1000, height: 1000 });
 
         // ---------------------------------------------- NOTES TAB --------------------------------------------------
-        // Notes tab
         await expect(page.getByTestId('notes-section-header')).toHaveText('Notes');
         let ckeditorText = await readCKEditor(page, 'rek-notes');
         expect(ckeditorText).toContain(record.fez_record_search_key_notes.rek_notes);
@@ -45,7 +48,6 @@ test.describe('Journal Article admin edit', () => {
         expect(ckeditorText).toContain(record.fez_internal_notes.ain_detail); // 'Not yet indexed in Scopus/ISI 3/5/13'
 
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
-        // Identifiers tab
         await expect(page.getByTestId('identifiers-section-header')).toHaveText('Identifiers');
         const identifiersSectionContent = page.getByTestId('identifiers-section-content');
         {
@@ -78,15 +80,12 @@ test.describe('Journal Article admin edit', () => {
         {
             const adminCard1 = identifiersSectionContent.locator('.AdminCard').nth(1);
             await expect(adminCard1.locator('h4')).toHaveText(/Manage links/);
-            // No content in mock.
         }
 
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        // Bibliographic tab
         await expect(page.getByTestId('bibliographic-section-header')).toHaveText('Bibliographic');
         const bibliographicSectionContent = page.getByTestId('bibliographic-section-content');
         const bibliographicCards = bibliographicSectionContent.locator('.AdminCard');
-
         {
             const card = bibliographicCards.first();
             await expect(card.locator('h4')).toHaveText(/Title/);
@@ -148,7 +147,6 @@ test.describe('Journal Article admin edit', () => {
             await expect(bibliographicCard.getByTestId('rek-issue-number-input')).toHaveValue(
                 record.fez_record_search_key_issue_number.rek_issue_number,
             );
-
             // No value for Article number in mock
             await expect(bibliographicCard.getByTestId('rek-start-page-input')).toHaveValue(
                 record.fez_record_search_key_start_page.rek_start_page,
@@ -210,7 +208,6 @@ test.describe('Journal Article admin edit', () => {
         await adminEditNoAlerts(page);
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
-        // Author Details tab
         await expect(page.getByTestId('authors-section-header')).toHaveText('Authors');
         const authorsSectionContent = page.getByTestId('authors-section-content');
         {
@@ -231,7 +228,6 @@ test.describe('Journal Article admin edit', () => {
         }
 
         // -------------------------------------- ADMIN TAB -----------------------------------------
-        // Admin tab
         const collections = record.fez_record_search_key_ismemberof.map(item => item.rek_ismemberof_lookup);
 
         await expect(page.getByTestId('admin-section-header')).toHaveText('Admin');
@@ -288,7 +284,6 @@ test.describe('Journal Article admin edit', () => {
             // No licence selected in mock
         }
 
-        // Collection removal check
         for (const _ of collections) {
             await collectionsCard
                 .locator('[class*="MuiChip-deleteIcon"]')
@@ -299,7 +294,6 @@ test.describe('Journal Article admin edit', () => {
         await adminEditVerifyAlerts(page, 1, ['You must select at least one collection']);
 
         // ----------------------------------------- GRANT INFORMATION TAB -------------------------------------------
-        // Grant Information tab
         await expect(page.getByTestId('grants-section-header')).toHaveText('Grants');
         const grantsSectionContent = page.getByTestId('grants-section-content');
         {
@@ -309,7 +303,6 @@ test.describe('Journal Article admin edit', () => {
         }
 
         // ---------------------------------------------- SECURITY TAB -----------------------------------------------
-        // Security tab
         await expect(page.getByTestId('security-section-header')).toHaveText('Security');
         await expect(page.getByTestId('record-security-card-header')).toHaveText(
             `Work level security - ${record.rek_pid}`,
@@ -329,19 +322,301 @@ test.describe('Journal Article admin edit', () => {
             await expect(securityCardContent.locator('input')).not.toBeChecked();
         }
     });
+
+    test.describe('Author Affiliations', () => {
+        test.beforeEach(async ({ page }) => {
+            await loadRecordForAdminEdit(page, record.rek_pid);
+        });
+
+        test('is only used for linked authors', async ({ page }) => {
+            await page.getByTestId('rek-author-add').click();
+            await page.getByTestId('rek-author-input').fill('User, Test');
+            await page.getByTestId('rek-author-add-save').click();
+            await expect(page.locator('[data-testid^="contributor-errorIcon-"]')).toHaveCount(2); // will be 3 authors, 2 existing with error icons
+        });
+
+        test('can be added and edited', async ({ page }) => {
+            // Add author with UQ ID and single affiliation
+            await addAuthorAndAssert(page, 'Steve Su (uqysu4)', 85004);
+            await addAffiliationAndAssert(page, 'Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
+
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
+
+            await page.getByTestId('deleteOrgBtn-877').click();
+
+            await expect(page.getByTestId('affiliationSaveBtn')).toBeDisabled();
+            await expect(page.getByTestId('orgSelect-877-input')).not.toBeVisible();
+            await expect(page.getByTestId('orgChip-877')).not.toBeVisible();
+
+            await addAffiliationAndAssert(page, 'Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
+
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
+            await page.getByTestId('affiliationSaveBtn').click();
+
+            await expect(page.getByTestId('detailPanel-85004').getByTestId('orgChip-877')).toContainText('100%');
+            await expect(page.getByTestId('detailPanel-85004')).toContainText(
+                'Aboriginal and Torres Strait Islander Studies Unit',
+            );
+
+            await expect(page.getByTestId('affiliationCancelBtn')).not.toBeVisible();
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeVisible();
+            await expect(page.getByTestId('orgChip-error')).not.toBeVisible();
+
+            await page.getByTestId('expandPanelIcon-85004').click();
+
+            // Add author with UQ ID and multiple affiliations
+            await addAuthorAndAssert(page, "O'Donoghue, Steven (uqsodono)", 75121);
+            await addAffiliationAndAssert(page, 'Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
+
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
+
+            // add suggested org (coverage)
+            await addAffiliationAndAssert(
+                page,
+                'Suggested: Information Systems and Resource Services (University of Queensland Library)',
+                1248,
+                '50%',
+                true,
+            );
+
+            await expect(page.getByTestId('orgChip-877')).toContainText('50%');
+
+            await addAffiliationAndAssert(page, 'Academic Administration Directorate', 1113, '33.333%');
+
+            await expect(page.getByTestId('orgChip-877')).toContainText('33.334%');
+            await expect(page.getByTestId('orgChip-1248')).toContainText('33.333%');
+
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
+            await page.getByTestId('affiliationSaveBtn').click();
+
+            await expect(page.getByTestId('detailPanel-75121').getByTestId('orgChip-877')).toContainText('33.334%');
+            await expect(page.getByTestId('detailPanel-75121')).toContainText(
+                'Aboriginal and Torres Strait Islander Studies Unit',
+            );
+            await expect(page.getByTestId('detailPanel-75121').getByTestId('orgChip-1248')).toContainText('33.333%');
+            await expect(page.getByTestId('detailPanel-75121')).toContainText(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
+            await expect(page.getByTestId('detailPanel-75121').getByTestId('orgChip-1113')).toContainText('33.333%');
+            await expect(page.getByTestId('detailPanel-75121')).toContainText('Academic Administration Directorate');
+
+            await expect(page.getByTestId('affiliationCancelBtn')).not.toBeVisible();
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeVisible();
+            await expect(page.getByTestId('orgChip-error')).not.toBeVisible();
+
+            await page.getByTestId('expandPanelIcon-75121').click();
+
+            // Add author with non-HERDC affiliation
+            await addAuthorAndAssert(page, 'Kisely, Steve (uqskisely)', 78152);
+            await addAffiliationAndAssert(page, 'Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
+
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
+
+            await addAffiliationAndAssert(page, 'Academic Administration', 973, '50%');
+
+            await expect(page.getByTestId('orgChip-877')).toContainText('50%');
+
+            await addAffiliationAndAssert(page, 'Academic Administration Directorate', 1113, '33.333%');
+
+            await expect(page.getByTestId('orgChip-877')).toContainText('33.334%');
+            await expect(page.getByTestId('orgChip-973')).toContainText('33.333%');
+
+            // now test resetting to non-herdc, which should clear the above
+            await addAffiliationAndAssert(page, '!NON-HERDC', 1062, '100%');
+            await expect(page.getByTestId('orgChip-877')).not.toBeVisible();
+            await expect(page.getByTestId('orgChip-973')).not.toBeVisible();
+            await expect(page.getByTestId('orgChip-1113')).not.toBeVisible();
+            // auto adds suggestion
+            await expect(page.getByTestId('orgChip-1248')).toContainText('0%');
+            await expect(page.getByTestId('orgSelect-1248-input')).toHaveValue(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
+            // hides the add autocomplete element
+            await expect(page.getByTestId('orgSelect-add-input')).not.toBeVisible();
+
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
+            await page.getByTestId('affiliationSaveBtn').click();
+
+            await expect(page.getByTestId('detailPanel-78152').getByTestId('orgChip-1062')).toContainText('100%');
+            await expect(page.getByTestId('detailPanel-78152')).toContainText('!NON-HERDC');
+            await expect(page.getByTestId('detailPanel-78152').getByTestId('orgChip-1248')).toContainText('0%');
+            await expect(page.getByTestId('detailPanel-78152')).toContainText(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
+
+            await expect(page.getByTestId('affiliationCancelBtn')).not.toBeVisible();
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeVisible();
+            await expect(page.getByTestId('orgChip-error')).not.toBeVisible();
+
+            // Now edit non-herdc to remove that option
+            await page.getByTestId('affiliationEditBtn-78152').click();
+
+            await expect(page.getByTestId('orgSelect-1062-input')).toHaveValue('!NON-HERDC');
+            await expect(page.getByTestId('orgChip-1062')).toContainText('100%');
+            await expect(page.getByTestId('orgSelect-1248-input')).toHaveValue(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
+            await expect(page.getByTestId('orgChip-1248')).toContainText('0%');
+
+            await page.getByTestId('deleteOrgBtn-1062').click();
+            await expect(page.getByTestId('orgSelect-1062-input')).not.toBeVisible();
+            await expect(page.getByTestId('orgChip-1062')).not.toBeVisible();
+            await expect(page.getByTestId('orgChip-1248')).toContainText('100%');
+
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
+            await page.getByTestId('affiliationSaveBtn').click();
+
+            await expect(page.getByTestId('detailPanel-78152').getByTestId('orgChip-1248')).toContainText('100%');
+            await expect(page.getByTestId('detailPanel-78152')).toContainText(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
+
+            // coverage - change the above org back to non-herdc
+            // currentOrgId, nextOrgId, nextOrgName, expectedPercent) =
+            await page.locator('[data-testid^=affiliationEditBtn-]').click();
+
+            await editAffiliationAndAssert(page, 1248, 1062, '!NON-HERDC', '100%');
+            // double check the suggested org has been re-added
+            await expect(page.getByTestId('orgSelect-1248-input')).toHaveValue(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
+            await expect(page.getByTestId('orgChip-1248')).toContainText('0%');
+
+            // hides the add autocomplete element
+            await expect(page.getByTestId('orgSelect-add-input')).not.toBeVisible();
+
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
+            await page.getByTestId('affiliationSaveBtn').click();
+
+            await expect(page.getByTestId('detailPanel-78152').getByTestId('orgChip-1062')).toContainText('100%');
+            await expect(page.getByTestId('detailPanel-78152')).toContainText('!NON-HERDC');
+            await expect(page.getByTestId('detailPanel-78152').getByTestId('orgChip-1248')).toContainText('0%');
+            await expect(page.getByTestId('detailPanel-78152')).toContainText(
+                'Information Systems and Resource Services (University of Queensland Library)',
+            );
+
+            await expect(page.getByTestId('affiliationCancelBtn')).not.toBeVisible();
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeVisible();
+            await expect(page.getByTestId('orgChip-error')).not.toBeVisible();
+
+            await page.getByTestId('expandPanelIcon-78152').click();
+        });
+
+        test('can fix < 100% error', async ({ page }) => {
+            await expect(page.locator('[data-testid^="contributor-errorIcon-80316"]')).toBeVisible();
+            await expect(page.locator('[data-testid^="contributor-errorIcon-3223"]')).toBeVisible();
+            await page.getByTestId('expandPanelIcon-80316').click();
+
+            await expect(
+                page
+                    .getByTestId('detailPanel-80316')
+                    .locator('p')
+                    .getByText('School of Chemistry and Molecular Biosciences'),
+            ).toBeVisible();
+            await expect(
+                page
+                    .getByTestId('detailPanel-80316')
+                    .locator('p')
+                    .getByText('Institute for Molecular Bioscience'),
+            ).toBeVisible();
+
+            const detailPanel = page.getByTestId('detailPanel-80316');
+            await expect(detailPanel.getByTestId('orgChip-881')).toContainText('50%');
+            await expect(detailPanel.getByTestId('orgChip-968')).toContainText('40%');
+            await expect(detailPanel.getByTestId('alert')).toContainText(
+                'Author affiliation information is incomplete - Percentage sum total of all affiliations must equal 100%',
+            );
+
+            // Editing the author's affiliations automatically recalculates %
+            await page.getByTestId('affiliationEditBtn-80316').click();
+            await assertAffiliation(page, 'School of Chemistry and Molecular Biosciences', 881, '50%');
+            await assertAffiliation(page, 'Institute for Molecular Bioscience', 968, '50%');
+
+            await page.getByTestId('affiliationCancelBtn').click();
+
+            // cancelling does not save the changes, affiliations still not 100%
+            await expect(detailPanel.getByTestId('orgChip-881')).toContainText('50%');
+            await expect(detailPanel.getByTestId('orgChip-968')).toContainText('40%');
+            await expect(detailPanel.getByTestId('alert')).toContainText(
+                'Author affiliation information is incomplete - Percentage sum total of all affiliations must equal 100%',
+            );
+
+            // hit the auto recalc button
+            await detailPanel
+                .getByTestId('alert')
+                .getByTestId('action-button')
+                .getByText('Recalculate Percentages')
+                .click();
+
+            await expect(detailPanel.getByTestId('orgChip-881')).toContainText('50%');
+            await expect(detailPanel.getByTestId('orgChip-968')).toContainText('50%');
+            await expect(detailPanel.getByTestId('alert')).not.toBeVisible();
+            await expect(page.locator('[data-testid^="contributor-errorIcon-80316"]')).not.toBeVisible();
+        });
+
+        test('coverage - does not lose edited affiliation information when moving between admin tabs', async ({
+            page,
+        }) => {
+            await adminEditTabbedView(page);
+
+            await page.getByTestId('authors-tab').click();
+
+            await expect(await page.locator('[data-testid^=contributor-errorIcon-]').count()).toBeGreaterThanOrEqual(1);
+
+            await page.getByTestId('expandPanelIcon-3223').click();
+
+            await expect(page.getByTestId('detailPanel-3223').getByTestId('orgChip-error')).toContainText('0%');
+            await expect(page.getByTestId('detailPanel-3223')).toContainText('No affiliations have been added');
+            await expect(page.getByTestId('alert')).toContainText(
+                'Author affiliation information is incomplete - Author requires at least one affiliation to be added',
+            );
+
+            await page.locator('[data-testid^=affiliationEditBtn-]').click();
+            await addAffiliationAndAssert(page, 'Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
+
+            await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
+            await page.getByTestId('affiliationSaveBtn').click();
+
+            await expect(page.getByTestId('detailPanel-3223').getByTestId('orgChip-877')).toContainText('100%');
+            await expect(page.getByTestId('detailPanel-3223')).toContainText(
+                'Aboriginal and Torres Strait Islander Studies Unit',
+            );
+
+            // add new author WITHOUT uq ID
+            await page.getByTestId('rek-author-add').click();
+            await page.getByTestId('rek-author-input').click();
+            await page.getByTestId('rek-author-input').fill('Test author');
+            await page.getByTestId('rek-author-add-save').click();
+
+            // nav away
+            await page.getByTestId('admin-tab').click();
+            await expect(page.locator('h4').getByText('Member of collections')).toBeVisible();
+            await page.getByTestId('notes-tab').click();
+            await expect(page.locator('h4').getByText('Additional notes')).toBeVisible();
+
+            // now nav back and assert
+            await page.getByTestId('authors-tab').click();
+            // check affiliations are still there
+            await page.getByTestId('expandPanelIcon-3223').click();
+            await expect(page.getByTestId('detailPanel-3223').getByTestId('orgChip-877')).toContainText('100%');
+            await expect(page.getByTestId('detailPanel-3223')).toContainText(
+                'Aboriginal and Torres Strait Islander Studies Unit',
+            );
+            // ensure the Test author is also still here
+            await expect(page.getByTestId('rek-author-list-row-2-name-as-published')).toContainText('Test author');
+        });
+    });
 });
 
 test.describe('Files tab functionality', () => {
-    // This describe block is separate as it loads a different record.
     test.beforeEach(async ({ page }) => {
-        // Use a different record for this test as per original journalArticle.spec.js
         const filesTabRecord = recordList.data[1];
         await loadRecordForAdminEdit(page, filesTabRecord.rek_pid);
     });
 
     test('should render the files tab as expected', async ({ page }) => {
         // ---------------------------------------------- FILES TAB --------------------------------------------------
-        const filesTabRecord = recordList.data[1]; // Redundant, already set in beforeEach
+        const filesTabRecord = recordList.data[1];
         // Files Tab
         await expect(page.getByTestId('files-section-header')).toHaveText('Files');
         const filesSectionContent = page.getByTestId('files-section-content');
@@ -367,7 +642,7 @@ test.describe('Files tab functionality', () => {
         if (filesTabRecord.rek_copyright === 'on') {
             await expect(copyrightCheckbox).toBeChecked();
         } else {
-            await expect(copyrightCheckbox).not.toBeChecked(); // Assuming if not 'on', it's not checked
+            await expect(copyrightCheckbox).not.toBeChecked();
         }
     });
 });

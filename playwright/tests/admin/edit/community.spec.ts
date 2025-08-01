@@ -11,7 +11,6 @@ test.describe('As an admin,', () => {
                 .first(),
         ).toBeVisible();
 
-        // Wait for event handlers to attach
         await typeCKEditor(page, 'rek-title', 'The University of Queensland Library With Extra Data UPDATED');
         await typeCKEditor(page, 'rek-description', 'Test community description UPDATED');
         await page.getByTestId('rek-keywords-list-row-1-delete').click();

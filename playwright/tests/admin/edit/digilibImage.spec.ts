@@ -33,7 +33,6 @@ test.describe('Digilib Image admin edit', () => {
 
     test('should render the different sections as expected', async ({ page }) => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        // Bibliographic tab
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
         await expect(page.getByTestId('bibliographic-section-header')).toHaveText('Bibliographic');
         await expect(bibliographicTab.locator('h4').getByText(/Bibliographic/)).toBeVisible();
@@ -284,7 +283,6 @@ test.describe('Digilib Image admin edit', () => {
         }
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
-        // Author Details tab
         await expect(page.getByTestId('authors-section-header')).toHaveText('Authors');
         const authorDetailsTab = page.getByTestId('authors-section-content');
 
@@ -337,7 +335,6 @@ test.describe('Digilib Image admin edit', () => {
         }
 
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
-        // Identifiers tab
         const identifiersTab = page.getByTestId('identifiers-section-content');
         await expect(identifiersTab.locator('h4').getByText(/Location/)).toBeVisible();
         const locations = record.fez_record_search_key_location.map(item => item.rek_location);
@@ -356,11 +353,9 @@ test.describe('Author affiliations', () => {
 
     test('should not be available for this work type', async ({ page }) => {
         await assertAffiliationsAllowed(page, {
-            // Ensure 'page' is passed as the first argument
-            authorName: 'Steve Su (uqysu4)', // Corrected from (page, uqysu4)
+            authorName: 'Steve Su (uqysu4)',
             orgName: 'The University of Queensland',
             rowId: 1,
-            allowed: false, // Explicitly state allowed: false
         });
     });
 });
