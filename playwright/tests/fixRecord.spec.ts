@@ -138,10 +138,7 @@ test.describe('Request correction form', () => {
             .locator('input');
         await input.fill('.com');
         await expect(page.locator('button', { hasText: /Submit/ }).first()).toBeDisabled();
-        await input.press('Home');
-        await input.press('Delete');
-        await input.press('Delete');
-        await input.pressSequentially('https://');
+        await input.fill('https://test.com');
         await expect(page.locator('button', { hasText: /Submit/ }).first()).not.toBeDisabled();
     });
 

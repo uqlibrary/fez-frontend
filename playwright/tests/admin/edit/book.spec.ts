@@ -103,7 +103,7 @@ test.describe('Book admin edit', () => {
 
         // Find existing entry with placeholder data
         const row1 = issnBlock.locator('#rek-issn-list-row-1');
-        await expect(row1).toContainText('1611-3349');
+        await expect(row1.getByText('1611-3349')).toBeVisible();
         await expect(row1.locator('a')).toHaveCount(1);
         await expect(row1.locator('a')).toHaveAttribute('title', 'Lecture Notes in Computer Science');
         await expect(row1.locator('a')).toHaveAttribute(
