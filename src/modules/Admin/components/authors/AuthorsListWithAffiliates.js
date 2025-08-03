@@ -430,7 +430,6 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
 
     const handleEdit = ({ values, table, row }) => {
         const updatedAuthor = { ...row.original, ...row._valuesCache, ...values };
-
         const errors = validate(updatedAuthor);
         /* istanbul ignore if  */
         if (!!errors) {
@@ -438,7 +437,10 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         }
 
         const duplicate =
-            data.filter(contributor => !!contributor.aut_id && contributor.aut_id === updatedAuthor.aut_id).length > 0;
+            data.filter(
+                (contributor, index) =>
+                    index !== row.index && !!contributor.aut_id && contributor.aut_id === updatedAuthor.aut_id,
+            ).length > 0;
 
         if (duplicate) {
             table.setEditingRow(null);

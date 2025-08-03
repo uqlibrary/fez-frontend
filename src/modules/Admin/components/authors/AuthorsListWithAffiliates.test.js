@@ -1,18 +1,6 @@
 import React from 'react';
 import AuthorsListWithAffiliates from './AuthorsListWithAffiliates';
-import {
-    act,
-    render,
-    fireEvent,
-    WithReduxStore,
-    within,
-    waitFor,
-    getTableBodyRows,
-    userEvent,
-    selectDropDownOptionByElement,
-    screen,
-    preview,
-} from 'test-utils';
+import { act, render, fireEvent, WithReduxStore, within, waitFor, getTableBodyRows, preview } from 'test-utils';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
 
