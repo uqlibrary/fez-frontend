@@ -74,9 +74,9 @@ test.describe('Book admin edit', () => {
             const sherpaLink =
                 (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_journal_link ||
                 sherpaMocks[0].srm_journal_link;
-            await expect(container.getByText(issn)).toBeVisible();
-            await expect(container).toContainText('SHERPA/RoMEO');
-            await expect(container).toContainText('Ulrichs');
+            await expect(container.getByText(issn, { exact: true })).toBeVisible();
+            await expect(container.getByText('SHERPA/RoMEO', { exact: true })).toBeVisible();
+            await expect(container.getByText('Ulrichs', { exact: true })).toBeVisible();
             await expect(container.locator('#sherparomeo-link')).toHaveAttribute('href', sherpaLink);
 
             let ulrichsID = issn.replace('-', '');
@@ -174,7 +174,7 @@ test.describe('Book admin edit', () => {
         await issnInput.press('Enter');
         await expect(row5.getByText('0000-0000')).toBeVisible();
         await expect(row5.locator('a')).not.toContainText('SHERPA/RoMEO'); // Check specific link element if needed
-        await expect(row5).toContainText('Ulrichs'); // Check parent container for Ulrichs text
+        await expect(row5.getByText('Ulrichs', { exact: true })).toBeVisible(); // Check parent container for Ulrichs text
 
         // New entry with unknown sherpa status
         const row6 = issnBlock.locator('#rek-issn-list-row-6');
