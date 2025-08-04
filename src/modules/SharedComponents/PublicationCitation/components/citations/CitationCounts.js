@@ -9,8 +9,6 @@ import * as Partials from './partials';
 import Grid from '@mui/material/Grid';
 
 export const CitationCounts = ({ publication, hideViewFullStatisticsLink }) => {
-    console.log('publication=', publication);
-    console.trace('CitationCounts');
     const theme = useTheme();
     const getTitle = title =>
         locale.components.publicationCitation.linkWillOpenInNewWindow.replace('[destination]', title);
