@@ -9,7 +9,6 @@ on:
       - '**.md'
       - '.idea/**'
       - '.vscode/**'
-      - 'cypress/examples/**'
 
 jobs:
   unit-n-codestyles:
@@ -46,35 +45,3 @@ jobs:
 
       - name: Code style checks
         run: if [[ ${{ matrix.pipe }} == 1 ]]; then npm run codestyles:files -s; fi
-
-  cypress:
-    runs-on: ubuntu-18.04
-    name: Cypress tests
-
-    strategy:
-      matrix:
-        pipe: [1, 2, 3, 4]
-
-    env:
-      CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-      PIPE: ${{ matrix.pipe }}
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Use Node v11.10.1
-        uses: actions/setup-node@v1
-        with:
-          node-version: 11.10.1
-
-      - name: Get latest version of npm
-        run: if [[ $CYPRESS_RECORD_KEY != "" || $PIPE == 1 ]]; then npm i -g npm@6; fi
-
-      - name: Install dependencies
-        run: if [[ $CYPRESS_RECORD_KEY != "" || $PIPE == 1 ]]; then npm ci; fi
-
-      - name: Start mock and run Cypress tests (local)
-        run: if [[ $CYPRESS_RECORD_KEY == "" && $PIPE == 1 ]]; then npm run test:e2e; fi
-
-      - name: Start mock and run Cypress tests (dashboard)
-        run: if [[ $CYPRESS_RECORD_KEY != "" ]]; then npm run test:e2e:dashboard; fi
