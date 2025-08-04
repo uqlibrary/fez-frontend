@@ -55,8 +55,8 @@ const getIcon = ({ index, rowData, disabled, inProblemState }) => {
         return (
             <ErrorOutlineOutlinedIcon
                 color="error"
-                id={`contributor-errorIcon-${index}`}
-                data-testid={`contributor-errorIcon-${index}`}
+                id={`contributor-errorIcon-${rowData.aut_id}`}
+                data-testid={`contributor-errorIcon-${rowData.aut_id}`}
             />
         );
     } else if (parseInt(rowData.uqIdentifier, 10)) {
@@ -546,7 +546,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                 header: '',
                 maxSize: 20,
                 grow: 0,
-                size: '20px',
+                size: 20,
                 muiTableBodyRowProps: {
                     sx: {
                         alignContent: 'center',
@@ -745,10 +745,13 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         onCreatingRowSave: handleCreate,
         onEditingRowSave: handleEdit,
         onEditingRowCancel: () => setEditRow(null),
-
-        muiTableBodyRowProps: ({ row }) => ({
-            id: `${contributorEditorId}-list-row-${row.index === -1 ? 'add' : row.index}`,
-            'data-testid': `${contributorEditorId}-list-row-${row.index === -1 ? 'add' : row.index}`,
+        muiTableBodyRowProps: ({ isDetailPanel, row }) => ({
+            id: `${contributorEditorId}-list-row-${row.index === -1 ? 'add' : row.index}${
+                isDetailPanel ? '-detailPanel' : ''
+            }`,
+            'data-testid': `${contributorEditorId}-list-row-${row.index === -1 ? 'add' : row.index}${
+                isDetailPanel ? '-detailPanel' : ''
+            }`,
             sx: {
                 ...(!!row.original.aut_id
                     ? { backgroundColor: theme.palette.secondary.light, color: theme.palette.primary.main }

@@ -7033,7 +7033,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
       >
         <table
           class="MuiTable-root css-1y8dota-MuiTable-root"
-          style="--header-mrt_row_expand-size: NaN; --col-mrt_row_expand-size: NaN; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 300; --col-uqIdentifier-size: 300; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+          style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 300; --col-uqIdentifier-size: 300; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
         >
           <thead
             class="MuiTableHead-root css-118e0ip-MuiTableHead-root"
@@ -7355,7 +7355,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
       >
         <table
           class="MuiTable-root css-1y8dota-MuiTable-root"
-          style="--header-mrt_row_expand-size: NaN; --col-mrt_row_expand-size: NaN; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 300; --col-uqIdentifier-size: 300; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+          style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 300; --col-uqIdentifier-size: 300; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
         >
           <thead
             class="MuiTableHead-root css-118e0ip-MuiTableHead-root"
@@ -7746,8 +7746,8 @@ exports[`ContributorsEditor renders full component for admin user with record af
             <tr
               class="MuiTableRow-root Mui-TableBodyCell-DetailPanel css-vdcjh9-MuiTableRow-root"
               data-index="1"
-              data-testid="test-list-row-0"
-              id="test-list-row-0"
+              data-testid="test-list-row-0-detailPanel"
+              id="test-list-row-0-detailPanel"
             >
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Mui-TableBodyCell-DetailPanel css-1260dmf-MuiTableCell-root"
