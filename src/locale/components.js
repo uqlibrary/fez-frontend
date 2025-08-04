@@ -1603,6 +1603,7 @@ export default {
                     },
                 },
                 tablePageSizeOptions: [10, 20, 50],
+                largeListDefaultPageSize: 50,
             },
         }),
         editors: {

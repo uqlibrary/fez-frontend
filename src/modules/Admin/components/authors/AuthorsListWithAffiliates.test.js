@@ -1,6 +1,16 @@
 import React from 'react';
 import AuthorsListWithAffiliates from './AuthorsListWithAffiliates';
-import { act, render, fireEvent, WithReduxStore, within, waitFor, getTableBodyRows, preview } from 'test-utils';
+import {
+    act,
+    render,
+    fireEvent,
+    WithReduxStore,
+    within,
+    waitFor,
+    getTableBodyRows,
+    userEvent,
+    waitForElementToBeRemoved,
+} from 'test-utils';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
 
@@ -24,6 +34,27 @@ describe('AuthorsListWithAffiliates', () => {
     afterEach(() => {
         jest.resetAllMocks();
     });
+
+    const assertButtonFauxDisabled = element => {
+        // with MRT, it does not appear possible to dynamically enable
+        // or disable the save button during editing.
+        // This function instead checks if the button still
+        // exists after being clicked. This should be the case
+        // when validation fails after the button click and
+        // the row remains in Edit mode.
+        fireEvent.click(element);
+        expect(element).toBeInTheDocument();
+    };
+    const assertButtonFauxEnabled = element => {
+        // with MRT, it does not appear possible to dynamically enable
+        // or disable the save button during editing.
+        // This function instead checks if the button has
+        // been removed after being clicked. This should be the case
+        // when validation passes after the button click, and
+        // the row exits Edit mode.
+        fireEvent.click(element);
+        expect(element).not.toBeInTheDocument();
+    };
 
     it('should render default list view', () => {
         const { getByTestId, getByText } = setup();
@@ -112,6 +143,17 @@ describe('AuthorsListWithAffiliates', () => {
         expect(container).toHaveTableRowsLength(10);
     });
 
+    it('should render a list of 100 contributors and set default page size accordingly', async () => {
+        const largeList = Array.from({ length: 101 }, (_, i) => ({
+            nameAsPublished: `test ${i + 1}`,
+        }));
+        const { container } = setup({
+            list: largeList,
+        });
+
+        expect(container).toHaveTableRowsLength(locale.components.authorsList('author').field.largeListDefaultPageSize);
+    });
+
     it('should render disabled row', () => {
         const { getByTestId } = setup({
             disabled: true,
@@ -130,6 +172,62 @@ describe('AuthorsListWithAffiliates', () => {
         expect(getByTestId('rek-author-list-row-0-delete').closest('button')).toHaveAttribute('disabled');
         expect(getByTestId('rek-author-list-row-1-edit').closest('button')).toHaveAttribute('disabled');
         expect(getByTestId('rek-author-list-row-1-delete').closest('button')).toHaveAttribute('disabled');
+    });
+
+    it('should handle deletion of rows', async () => {
+        const { getByTestId, findByTestId, queryByTestId } = setup({
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                    aut_id: 1,
+                    affiliation: '',
+                },
+                {
+                    nameAsPublished: 'test 2',
+                    aut_id: 2,
+                    affiliation: '',
+                },
+            ],
+        });
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test 1');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('test 2');
+
+        await userEvent.click(getByTestId('rek-author-list-row-0-delete').closest('button'));
+        await findByTestId('rek-author-delete-author-confirmation');
+
+        await userEvent.click(getByTestId('confirm-rek-author-delete-author-confirmation'));
+        await waitForElementToBeRemoved(() => getByTestId('rek-author-delete-author-confirmation'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test 2');
+        expect(queryByTestId('rek-author-list-row-1-name-as-published')).not.toBeInTheDocument();
+    });
+
+    it('should handle cancel deletion of rows', async () => {
+        const { getByTestId, findByTestId } = setup({
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                    aut_id: 1,
+                    affiliation: '',
+                },
+                {
+                    nameAsPublished: 'test 2',
+                    aut_id: 2,
+                    affiliation: '',
+                },
+            ],
+        });
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test 1');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('test 2');
+
+        await userEvent.click(getByTestId('rek-author-list-row-0-delete').closest('button'));
+        await findByTestId('rek-author-delete-author-confirmation');
+
+        await userEvent.click(getByTestId('cancel-rek-author-delete-author-confirmation'));
+        await waitForElementToBeRemoved(() => getByTestId('rek-author-delete-author-confirmation'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test 1');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('test 2');
     });
 
     it('should change order', () => {
@@ -166,26 +264,18 @@ describe('AuthorsListWithAffiliates', () => {
         expect(container).toHaveTableRowsLength(1);
     });
 
-    const assertButtonFauxDisabled = element => {
-        // with MRT, it does not appear possible to dynamically enable
-        // or disable the save button during editing.
-        // This function instead checks if the button still
-        // exists after being clicked. This should be the case
-        // when validation fails after the button click and
-        // the row remains in Edit mode.
-        fireEvent.click(element);
-        expect(element).toBeInTheDocument();
-    };
-    const assertButtonFauxEnabled = element => {
-        // with MRT, it does not appear possible to dynamically enable
-        // or disable the save button during editing.
-        // This function instead checks if the button has
-        // been removed after being clicked. This should be the case
-        // when validation passes after the button click, and
-        // the row exits Edit mode.
-        fireEvent.click(element);
-        expect(element).not.toBeInTheDocument();
-    };
+    it('should cancel adding a contributor correctly', () => {
+        const { container, getByTestId, getByText, queryByText } = setup();
+        expect(getByText('No records to display')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('rek-author-add'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.click(getByTestId('rek-author-add-cancel'));
+
+        expect(queryByText('No records to display')).toBeInTheDocument();
+        expect(container).toHaveTableRowsLength(0);
+    });
+
     it('should validate new contributor maxlength correctly', async () => {
         const { getByTestId, getByText, findByTestId } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();
@@ -431,6 +521,28 @@ describe('AuthorsListWithAffiliates', () => {
         expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('123456 - 111');
     });
 
+    it('should allow user to cancel edit', async () => {
+        const { container, getByTestId } = setup({
+            list: [
+                {
+                    nameAsPublished: 'Testing',
+                    uqIdentifier: '0',
+                    affiliation: '',
+                },
+            ],
+        });
+
+        expect(container).toHaveTableRowsLength(1);
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('Testing');
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'Testing Updated' } });
+        fireEvent.click(getByTestId('rek-author-update-cancel'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('Testing');
+    });
+
     it('should clear uq identifier', async () => {
         const { container, getByTestId } = setup({
             list: [
@@ -468,7 +580,7 @@ describe('AuthorsListWithAffiliates', () => {
 
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
         assertButtonFauxEnabled(getByTestId('rek-author-update-save').closest('button'));
-        preview.debug();
+
         // await waitFor(() => getByTestId('rek-author-list-row-0-uq-identifiers'));
         expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('');
     });
@@ -508,7 +620,6 @@ describe('AuthorsListWithAffiliates', () => {
         fireEvent.click(getByText('Testing'));
 
         fireEvent.click(getByTestId('rek-author-add-save'));
-        preview.debug();
         expect(container).toHaveTableRowsLength(1);
     });
 

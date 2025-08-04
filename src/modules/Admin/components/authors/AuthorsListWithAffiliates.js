@@ -24,8 +24,6 @@ import Typography from '@mui/material/Typography';
 import { UqIdField } from 'modules/SharedComponents/LookupFields';
 import { TextField as CustomTextField } from 'modules/SharedComponents/Toolbox/TextField';
 
-import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY } from 'config/general';
-import { default as globalLocale } from 'locale/global';
 import IconButton from '@mui/material/IconButton';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 import Tooltip from '@mui/material/Tooltip';
@@ -60,18 +58,18 @@ const getIcon = ({ index, rowData, disabled, inProblemState }) => {
             />
         );
     } else if (parseInt(rowData.uqIdentifier, 10)) {
-        return <HowToRegIcon color="primary" id={`contributor-linked-${index}`} />; // rowdata.index
+        return <HowToRegIcon color="primary" id={`contributor-linked-${index}`} />;
     }
     /* istanbul ignore next */
     if (disabled) {
         /* istanbul ignore next */
-        return <Lock color="secondary" id={`contributor-locked-${index}`} />; // rowdata.index
+        return <Lock color="secondary" id={`contributor-locked-${index}`} />;
     }
     return (
         <PersonOutlined
             color="secondary"
-            id={`contributor-unlinked-${index}`} // rowdata.index
-            data-testid={`contributor-unlinked-${index}`} // rowdata.index
+            id={`contributor-unlinked-${index}`}
+            data-testid={`contributor-unlinked-${index}`}
         />
     );
 };
@@ -148,20 +146,12 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
 
     const {
         tablePageSizeOptions,
+        largeListDefaultPageSize,
         header: {
             locale: { nameColumn, identifierColumn },
         },
         row: {
-            locale: {
-                // deleteRecordConfirmation,
-                moveUpHint,
-                moveDownHint,
-                deleteHint,
-                editHint,
-                // selectHint,
-                // lockedTooltip,
-                suffix,
-            },
+            locale: { moveUpHint, moveDownHint, deleteHint, editHint, suffix },
         },
         form: {
             locale: { addButton, nameAsPublishedLabel, nameAsPublishedHint, identifierLabel },
@@ -314,12 +304,6 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                     selectedItem.aut_lname &&
                                     `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`),
                             uqIdentifier: `${selectedItem.aut_id}`,
-                            orgaff:
-                                (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && globalLocale.global.orgTitle) ||
-                                contributor.orgaff,
-                            orgtype:
-                                (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) ||
-                                contributor.orgtype,
                             uqUsername: `${selectedItem.aut_org_username ||
                                 selectedItem.aut_student_username ||
                                 selectedItem.aut_ref_num}`,
@@ -469,8 +453,10 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
             const target = dataDelete.find(el => el.aut_id === row.aut_id);
             const index = dataDelete.indexOf(target);
             dataDelete.splice(index, 1);
+            console.log(dataDelete);
             setData([...dataDelete]);
         } catch (error) {
+            /* istanbul ignore next */
             console.error('Error deleting row:', error);
         } finally {
             setBusy(false);
@@ -516,7 +502,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         initialState: {
             density: 'compact',
             expanded: false,
-            pagination: { pageSize: data.length > 100 ? 50 : 10, pageIndex: 0 },
+            pagination: { pageSize: data.length > 100 ? largeListDefaultPageSize : 10, pageIndex: 0 },
         },
         state: {
             showAlertBanner: false,
@@ -642,6 +628,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                         <IconButton
                             onClick={() => {
                                 const index = row.index;
+                                /* istanbul ignore else */
                                 if (index > 0) {
                                     const newData = [...data];
                                     const temp = newData[index - 1];
@@ -670,6 +657,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                         <IconButton
                             onClick={() => {
                                 const index = row.index;
+                                /* istanbul ignore else */
                                 if (index < data.length - 1) {
                                     const newData = [...data];
                                     const temp = newData[index + 1];
