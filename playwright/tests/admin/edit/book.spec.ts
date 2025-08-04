@@ -65,7 +65,8 @@ test.describe('Book admin edit', () => {
         await adminEditVerifyAlerts(page, 1, ['Place of publication is required']);
     });
 
-    test('should render ISSN as expected', async ({ page }) => {
+    test('should render ISSN as expected', async ({ page } ) => {
+        await page.setViewportSize({ width: 960, height: 7000 });
         const recordWithIssn = recordList.data[1]; // Using a different record from the list for this test
         await loadRecordForAdminEdit(page, recordWithIssn.rek_pid);
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
@@ -74,9 +75,17 @@ test.describe('Book admin edit', () => {
             const sherpaLink =
                 (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_journal_link ||
                 sherpaMocks[0].srm_journal_link;
+
             await expect(container.getByText(issn, { exact: true })).toBeVisible();
-            await expect(container.getByText('SHERPA/RoMEO', { exact: true })).toBeVisible();
-            await expect(container.getByText('Ulrichs', { exact: true })).toBeVisible();
+            
+            await page.waitForSelector('a[data-testid="sherparomeo-link"]');
+
+            const sherpaRomeoLink = container.locator('a[data-testid="sherparomeo-link"]');
+            await expect(sherpaRomeoLink).toBeVisible();
+            await expect(container.locator('a[data-testid="sherparomeo-link"]')).toBeVisible();
+            await expect(container.locator('a').filter({ hasText: 'SHERPA/RoMEO' })).toBeVisible();
+            await expect(container.locator('a[data-testid="ulrichs-link"]')).toBeVisible();
+            await expect(container.locator('a').filter({ hasText: 'Ulrichs' })).toBeVisible();
             await expect(container.locator('#sherparomeo-link')).toHaveAttribute('href', sherpaLink);
 
             let ulrichsID = issn.replace('-', '');
@@ -113,13 +122,14 @@ test.describe('Book admin edit', () => {
         await expect(row1.locator('a')).toHaveAttribute('href', `${ULRICHS_URL_PREFIX}339301`);
         await row1.locator('button[aria-label="Edit this item"]').click();
 
-        // Edit issn to a different one with valid data
+        // // Edit issn to a different one with valid data
         const issnInput = issnBlock.locator('input');
         await issnInput.press('End');
         await issnInput.press('Backspace');
-        await issnInput.pressSequentially('0');
+        await issnInput.pressSequentially('0', {delay: 100});
         await issnInput.press('Enter');
-        await checkIssnLinks(row1, '1611-3340');
+        const updatedRow1 = issnBlock.locator('#rek-issn-list-row-1');
+        await checkIssnLinks(updatedRow1, '1611-3340');
 
         // Add a 3rd entry without match in API
         const row2 = issnBlock.locator('#rek-issn-list-row-2');
