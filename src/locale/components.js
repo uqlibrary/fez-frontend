@@ -1571,6 +1571,12 @@ export default {
                         },
                     },
                 },
+                deleteConfirmationLocale: {
+                    confirmationTitle: 'Delete author',
+                    confirmationMessage: 'Are you sure you want to delete this author?',
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 header: {
                     locale: {
                         contributorAssignmentColumn: 'Select your name',
@@ -1591,6 +1597,8 @@ export default {
                         editHint: 'Edit this item',
                     },
                 },
+                tablePageSizeOptions: [10, 20, 50],
+                largeListDefaultPageSize: 50,
             },
         }),
         editors: {
