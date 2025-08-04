@@ -50,28 +50,28 @@ const classes = {
     },
 };
 
-const getIcon = ({ rowData, disabled, inProblemState }) => {
+const getIcon = ({ index, rowData, disabled, inProblemState }) => {
     if (!!inProblemState) {
         return (
             <ErrorOutlineOutlinedIcon
                 color="error"
-                id={`contributor-errorIcon-${rowData.aut_id}`}
-                data-testid={`contributor-errorIcon-${rowData.aut_id}`}
+                id={`contributor-errorIcon-${index}`}
+                data-testid={`contributor-errorIcon-${index}`}
             />
         );
     } else if (parseInt(rowData.uqIdentifier, 10)) {
-        return <HowToRegIcon color="primary" id={`contributor-linked-${rowData.aut_id}`} />; // rowdata.index
+        return <HowToRegIcon color="primary" id={`contributor-linked-${index}`} />; // rowdata.index
     }
     /* istanbul ignore next */
     if (disabled) {
         /* istanbul ignore next */
-        return <Lock color="secondary" id={`contributor-locked-${rowData.aut_id}`} />; // rowdata.index
+        return <Lock color="secondary" id={`contributor-locked-${index}`} />; // rowdata.index
     }
     return (
         <PersonOutlined
             color="secondary"
-            id={`contributor-unlinked-${rowData.aut_id}`} // rowdata.index
-            data-testid={`contributor-unlinked-${rowData.aut_id}`} // rowdata.index
+            id={`contributor-unlinked-${index}`} // rowdata.index
+            data-testid={`contributor-unlinked-${index}`} // rowdata.index
         />
     );
 };
@@ -215,7 +215,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
 
                     return (
                         <NameAsPublished
-                            icon={getIcon({ rowData, disabled, inProblemState })}
+                            icon={getIcon({ index: row.index, rowData, disabled, inProblemState })}
                             text={
                                 <React.Fragment>
                                     <Typography
@@ -506,9 +506,11 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         enableRowDragging: false,
         enableRowSelection: false,
         enableColumnActions: false,
+        enableColumnOrdering: false,
         enableColumnFilterModes: false,
         enablePagination: data.length > 10,
         enableToolbarInternalActions: false,
+        enableGrouping: false,
         positionActionsColumn: 'last',
         manualExpanding: true,
         initialState: {
