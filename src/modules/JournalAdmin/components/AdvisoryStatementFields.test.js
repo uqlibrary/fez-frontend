@@ -5,7 +5,6 @@ import {
     assertRichTextEditorValue,
     render,
     setRichTextEditorValue,
-    turnOnJestPreviewOnTestFailure,
     userEvent,
     waitForText,
     waitElementToBeInDocument,
@@ -16,7 +15,6 @@ import { useValidatedForm } from 'hooks';
 import { AdvisoryStatementFields } from './AdvisoryStatementFields';
 import { JOURNAL_ADVISORY_STATEMENT_TYPE } from '../../../config/general';
 import { vocabulariesList } from '../../../mock/data';
-import * as repositories from '../../../repositories';
 import { screen, within } from '@testing-library/react';
 import { waitFor } from '@testing-library/dom';
 
@@ -58,7 +56,6 @@ function setup(props = {}) {
 }
 
 describe('Component JournalAdvisoryStatementTypeField', () => {
-    turnOnJestPreviewOnTestFailure();
     beforeEach(() => {
         defaultComponentProps = {
             type: {

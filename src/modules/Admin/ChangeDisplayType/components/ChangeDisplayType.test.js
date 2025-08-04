@@ -5,7 +5,6 @@ import {
     WithReduxStore,
     expectApiRequestToMatchSnapshot,
     waitForText,
-    turnOnJestPreviewOnTestFailure,
     waitToBeDisabled,
     waitToBeEnabled,
     selectDropDownOption,
@@ -37,8 +36,6 @@ function setup(props = {}) {
 }
 
 describe('ChangeDisplayType', () => {
-    turnOnJestPreviewOnTestFailure();
-
     const pid = publicationTypeListResearchReport.data[0].rek_pid;
     mockParams.pid = pid;
     const mockRecord = {

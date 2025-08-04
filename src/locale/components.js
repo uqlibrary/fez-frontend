@@ -310,11 +310,6 @@ export default {
                 Collection: 'Collection (lookup)',
                 Subject: 'Subject (lookup)',
             },
-            // help: {
-            //     title: 'Refining your results',
-            //     text: 'Help about ....',
-            //     buttonLabel: 'CLOSE'
-            // },
         },
         publicationStats: {
             publicationStatsTitle1: 'eSpace works',

@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {
+      "name": "UQLID",
+      "value": "abc123",
+      "domain": "localhost",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "UQLID_USER_GROUP",
+      "value": "LIBRARYSTAFFB",
+      "domain": "localhost",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}

@@ -63,7 +63,7 @@ export const MyIncompleteRecord = lazy(() =>
 );
 export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/Orcid')));
 export const PossiblyMyRecords = lazy(() =>
-    lazyRetry(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')),
+    lazyRetry(() => import('modules/PossiblyMyRecords/components/PossiblyMyRecords')),
 );
 export const ThesisSubmission = lazy(() =>
     lazyRetry(() => import('modules/ThesisSubmission/components/ThesisSubmission')),

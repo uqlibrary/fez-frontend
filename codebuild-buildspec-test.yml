@@ -1,30 +1,14 @@
 version: 0.2
 
 env:
-  #variables:
-     # key: "value"
-     # key: "value"
   parameter-store:
     GITHUB_URL: "/CodeBuild/fez-frontend/GITHUB_URL"
     PT_PROJECT: "/CodeBuild/fez-frontend/PT_PROJECT"
     PT_TOKEN: "/CodeBuild/fez-frontend/PT_TOKEN"
-    CYPRESS_RECORD_KEY: "/CodeBuild/fez-frontend/CYPRESS_RECORD_KEY"
     GOOGLE_MAPS_API_KEY: "/CodeBuild/fez-frontend/GOOGLE_MAPS_API_KEY"
     SENTRY_AUTH_TOKEN: "/CodeBuild/fez-frontend/SENTRY_AUTH_TOKEN"
     SENTRY_ORG: "/CodeBuild/fez-frontend/SENTRY_ORG"
     SENTRY_PROJECT: "/CodeBuild/fez-frontend/SENTRY_PROJECT"
-  #secrets-manager:
-     # key: secret-id:json-key:version-stage:version-id
-     # key: secret-id:json-key:version-stage:version-id
-  #exported-variables:
-     # - variable
-     # - variable
-  #git-credential-helper: yes
-#batch:
-  #fast-fail: true
-  #build-list:
-  #build-matrix:
-  #build-graph:
 phases:
   install:
     runtime-versions:
@@ -32,7 +16,6 @@ phases:
       nodejs: 20
     commands:
       - n 20
-      # - command
   pre_build:
     commands:
       sysctl fs.inotify.max_user_watches &&
@@ -56,9 +39,9 @@ reports:
     file-format: 'COBERTURAXML'
 artifacts:
   files:
-    - '**/*'
+    - 'coverage/**/*'
+    - 'playwright/.results/**/trace.zip'
   name: builds/$CODEBUILD_BUILD_NUMBER/coverage
-  base-directory: coverage
 #cache:
   #paths:
     # - paths

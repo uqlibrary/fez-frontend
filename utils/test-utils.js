@@ -295,7 +295,7 @@ const mockUseForm = implementation => {
     });
 };
 
-const turnOnJestPreviewOnTestFailure = (options = {}) =>
+const enableJestPreviewOnTestFailure = (options = {}) =>
     jestPreviewConfigure({
         autoPreview: true,
         ...options,
@@ -578,7 +578,7 @@ module.exports = {
     setFileUploaderFilesToClosedAccess,
     FormProviderWrapper,
     setFileUploaderFilesSecurityPolicy,
-    turnOnJestPreviewOnTestFailure,
+    enableJestPreviewOnTestFailure,
     mockWebApiFile,
     assertRequestData,
     assertRequest,
