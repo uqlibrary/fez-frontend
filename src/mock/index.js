@@ -3,7 +3,7 @@ import { api, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME, sessionApi } 
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
 import * as routes from 'repositories/routes';
-import * as mockData from './data';
+import * as data from './data';
 import * as mockTestingData from './data/testing/records';
 import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
 import * as journalsSearch from './data/journals/search';
@@ -22,6 +22,7 @@ export const setup = () => {
     // Get user from query string
     let user = queryString.parse(location.search || location.hash.substring(location.hash.indexOf('?'))).user;
 
+    const mockData = { ...data };
     mockData.accounts.uqrdav10 = mockData.uqrdav10.account;
     mockData.accounts.uqagrinb = mockData.uqagrinb.account;
     mockData.authorDetails.uqrdav10 = mockData.uqrdav10.authorDetails;

@@ -288,7 +288,6 @@ export const AttachedFiles = ({
         setEmbargoDateErrorMessage('');
     };
 
-    // tested in cypress
     /* istanbul ignore next */
     const onEmbargoDateChange = id => value => {
         const indexToChange = dataStreams.findIndex(item => item.dsi_id === id);
@@ -614,7 +613,6 @@ export const AttachedFiles = ({
                                     )}
                                 </Grid>
                                 {!!hasClearedEmbargoDate[getDsIndex(item.id)] && (
-                                    // tested in cypress admin-edit audio
                                     /* istanbul ignore next */
                                     <React.Fragment>
                                         <Grid

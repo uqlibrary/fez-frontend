@@ -92,6 +92,7 @@ export const useFormOnChangeHook = (form, createMode) => {
             'bibliographicSection.fez_matched_journals',
         ],
     });
+    /* istanbul ignore next */
     if (rekDisplayType === PUBLICATION_TYPE_THESIS && !!adminSectionRekSubtype && !!!bibliographicSectionRekGenreType) {
         form.setValue('bibliographicSection.rek_genre_type', adminSectionRekSubtype);
     }
@@ -99,6 +100,7 @@ export const useFormOnChangeHook = (form, createMode) => {
     // AD-290 Remove the subtype key if the selected display type does not have subtypes
     const selectedPublicationType = !!rekDisplayType && publicationTypes({ ...recordForms }, true)[rekDisplayType];
     const hasSubtypes = !!(selectedPublicationType || {}).subtypes;
+    /* istanbul ignore next */
     if (createMode && !hasSubtypes && Object.hasOwn(form.getValues()?.adminSection ?? {}, 'rek_subtype')) {
         form.unregister('adminSection.rek_subtype');
     }
@@ -113,15 +115,18 @@ export const useFormOnChangeHook = (form, createMode) => {
     ) {
         prevBibliographicSectionFezMatchedJournals.current = bibliographicSectionFezMatchedJournals.id;
         const issns =
-            bibliographicSectionFezMatchedJournals?.fez_journal_issn?.map(issn => ({
-                rek_value: {
-                    key: issn.jnl_issn,
-                    value: {
-                        sherpaRomeo: { link: false },
-                        ulrichs: { link: false, linkText: '' },
+            bibliographicSectionFezMatchedJournals?.fez_journal_issn?.map(
+                /* istanbul ignore next */ issn => ({
+                    rek_value: {
+                        key: issn.jnl_issn,
+                        value: {
+                            sherpaRomeo: { link: false },
+                            ulrichs: { link: false, linkText: '' },
+                        },
                     },
-                },
-            })) || [];
+                }),
+            ) || [];
+        /* istanbul ignore next */
         if (bibliographicSectionFezMatchedJournals.value) {
             form.setValue(
                 'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',

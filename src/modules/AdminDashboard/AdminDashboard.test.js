@@ -93,8 +93,6 @@ describe('AdminDashboard', () => {
     });
 
     // Note: at the time of writing (May 2024), mui-x/chart components do not work with Jest tests.
-    // Coverage for the when charts are shown etc. is covered in Cypress instead.
-
     describe('CustomTabPanel', () => {
         it('should render child', () => {
             const { getByTestId, getByText } = render(

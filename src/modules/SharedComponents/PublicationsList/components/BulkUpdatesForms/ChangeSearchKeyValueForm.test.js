@@ -127,8 +127,6 @@ describe('ChangeSearchKeyValueForm', () => {
 
         expect(getByTestId('rek-org-unit-name-input')).toBeInTheDocument();
 
-        // test Additional notes in cypress
-
         fireEvent.mouseDown(getByTestId('search-key-select'));
         fireEvent.click(getByText('Series'));
 
@@ -138,6 +136,5 @@ describe('ChangeSearchKeyValueForm', () => {
         fireEvent.click(getByText('Copyright notice'));
 
         expect(getByTestId('rek-rights-input')).toBeInTheDocument();
-        // Advisory statement tested in cypress
     });
 });

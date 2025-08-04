@@ -9,7 +9,6 @@ on:
       - "**.md"
       - ".idea/**"
       - ".vscode/**"
-      - "cypress/examples/**"
 
 jobs:
   unit:

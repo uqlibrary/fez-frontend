@@ -18,9 +18,6 @@ export const getStore = (state = {}) => {
         ),
     );
 
-    if (window?.Cypress) {
-        window.__store__ = storeInstance;
-    }
     return storeInstance;
 };
 
