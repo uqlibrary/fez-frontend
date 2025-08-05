@@ -34,7 +34,7 @@ import EditAuthorAffiliations from './EditAuthorAffiliations';
 import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
 
 import { useMrtTable } from 'hooks';
-import { validationRules } from './validationRules';
+import { default as validationRules } from './validationRules';
 
 const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
 
@@ -151,12 +151,11 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
             locale: { nameColumn, identifierColumn },
         },
         row: {
-            locale: { moveUpHint, moveDownHint, deleteHint, editHint, suffix },
+            locale: { moveUpHint, moveDownHint, deleteHint, editHint, suffix, deleteRecordConfirmation },
         },
         form: {
             locale: { addButton, nameAsPublishedLabel, nameAsPublishedHint, identifierLabel },
         },
-        deleteConfirmationLocale,
     } = locale;
 
     const {
@@ -773,7 +772,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                 onAction={handleDeleteApproved}
                 onClose={cancelDeleteConfirmModal}
                 isOpen={isOpen}
-                locale={deleteConfirmationLocale}
+                locale={deleteRecordConfirmation}
             />{' '}
             <MaterialReactTable table={table} />
         </Box>

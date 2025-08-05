@@ -1571,12 +1571,6 @@ export default {
                         },
                     },
                 },
-                deleteConfirmationLocale: {
-                    confirmationTitle: 'Delete author',
-                    confirmationMessage: 'Are you sure you want to delete this author?',
-                    cancelButtonLabel: 'No',
-                    confirmButtonLabel: 'Yes',
-                },
                 header: {
                     locale: {
                         contributorAssignmentColumn: 'Select your name',
@@ -1595,6 +1589,12 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         editHint: 'Edit this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete author',
+                            confirmationMessage: `Are you sure you want to delete this ${suffix}?`,
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
                     },
                 },
                 tablePageSizeOptions: [10, 20, 50],
