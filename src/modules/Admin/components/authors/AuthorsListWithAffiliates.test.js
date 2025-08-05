@@ -154,6 +154,23 @@ describe('AuthorsListWithAffiliates', () => {
         expect(container).toHaveTableRowsLength(locale.components.authorsList('author').field.largeListDefaultPageSize);
     });
 
+    it('should render a list of 100 contributors and provide functioning search filter', async () => {
+        const largeList = Array.from({ length: 101 }, (_, i) => ({
+            nameAsPublished: `test ${i + 1}`,
+        }));
+        const { container, getByLabelText, getByTestId, getByText, queryByText } = setup({
+            list: largeList,
+        });
+
+        expect(container).toHaveTableRowsLength(locale.components.authorsList('author').field.largeListDefaultPageSize);
+        await userEvent.click(getByLabelText('Show/Hide search'));
+        await userEvent.type(getByTestId('rek-author-search'), 'test 100');
+
+        await waitFor(() => expect(queryByText('test 2')).not.toBeInTheDocument());
+        expect(container).toHaveTableRowsLength(1);
+        expect(getByText('test 100')).toBeInTheDocument();
+    });
+
     it('should render disabled row', () => {
         const { getByTestId } = setup({
             disabled: true,
@@ -674,6 +691,34 @@ describe('AuthorsListWithAffiliates', () => {
         expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('');
         expect(getByTestId('rek-author-list-row-1-uq-identifiers')).toHaveTextContent('111');
     });
+
+    it('should not render affiliations for unlinked authors', () => {
+        const { container, getByTestId, queryByTestId, getByText } = setup({
+            list: [
+                {
+                    creatorRole: '',
+                    uqIdentifier: '1234',
+                    aut_display_name: 'Test Author',
+                    affiliation: '',
+                    aut_org_username: 'uqtest',
+                    nameAsPublished: 'Test Author',
+                    uqUsername: null,
+                    aut_student_username: '',
+                    aut_id: 1234,
+                    orgaff: '',
+                    orgtype: '',
+                    affiliations: [],
+                    id: 1,
+                },
+            ],
+        });
+
+        expect(container).toHaveTableRowsLength(1);
+        expect(getByText('Test Author')).toBeInTheDocument();
+        expect(getByTestId('expandPanelIcon-1234')).not.toBeVisible();
+        expect(queryByTestId('detailPanel-1234')).not.toBeInTheDocument();
+    });
+
     it('should render new affiliation view', async () => {
         const { container, getByTestId, getByText, getByRole, queryByTestId, queryByText } = setup({
             list: [

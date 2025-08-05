@@ -6957,7 +6957,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
       class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 css-1atu56z-MuiPaper-root"
     >
       <div
-        class="MuiBox-root css-1tbggly"
+        class="MuiBox-root css-9ac2p0"
       >
         <div
           class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
@@ -7005,7 +7005,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
         >
           <button
             aria-label="Add contributor"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-jgv3h2-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
             data-mui-internal-clone-element="true"
             data-testid="test-add-contributor"
             id="test-add-contributor"
@@ -7025,25 +7025,32 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               />
             </svg>
           </button>
+          <div
+            class="MuiBox-root css-1p0wbhh"
+          >
+            <div
+              class="MuiBox-root css-di3982"
+            />
+          </div>
         </div>
       </div>
       <div
         aria-busy="false"
-        class="MuiTableContainer-root css-nhjqqh-MuiTableContainer-root"
+        class="MuiTableContainer-root css-1jv9xuu-MuiTableContainer-root"
       >
         <table
-          class="MuiTable-root css-1y8dota-MuiTable-root"
+          class="MuiTable-root MuiTable-stickyHeader css-1p7so3p-MuiTable-root"
           style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 300; --col-uqIdentifier-size: 300; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
         >
           <thead
-            class="MuiTableHead-root css-118e0ip-MuiTableHead-root"
+            class="MuiTableHead-root css-dk8izd-MuiTableHead-root"
           >
             <tr
-              class="MuiTableRow-root MuiTableRow-head css-9d7k0g-MuiTableRow-root"
+              class="MuiTableRow-root MuiTableRow-head css-1mq9qti-MuiTableRow-root"
             >
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-18zqad7-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-lyaidp-MuiTableCell-root"
                 colspan="1"
                 data-index="0"
                 scope="col"
@@ -7065,7 +7072,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1a80g1d-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-qwz90p-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="1"
@@ -7147,7 +7154,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-12z4w84-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-otnrq4-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="2"
@@ -7206,7 +7213,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-1c3wjzw-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-bd1r8l-MuiTableCell-root"
                 colspan="1"
                 data-index="3"
                 scope="col"
@@ -7279,7 +7286,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
       class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 css-1atu56z-MuiPaper-root"
     >
       <div
-        class="MuiBox-root css-1tbggly"
+        class="MuiBox-root css-9ac2p0"
       >
         <div
           class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
@@ -7327,7 +7334,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
         >
           <button
             aria-label="Add contributor"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-jgv3h2-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
             data-mui-internal-clone-element="true"
             data-testid="test-add-contributor"
             id="test-add-contributor"
@@ -7347,25 +7354,32 @@ exports[`ContributorsEditor renders full component for admin user with record af
               />
             </svg>
           </button>
+          <div
+            class="MuiBox-root css-1p0wbhh"
+          >
+            <div
+              class="MuiBox-root css-di3982"
+            />
+          </div>
         </div>
       </div>
       <div
         aria-busy="false"
-        class="MuiTableContainer-root css-nhjqqh-MuiTableContainer-root"
+        class="MuiTableContainer-root css-1jv9xuu-MuiTableContainer-root"
       >
         <table
-          class="MuiTable-root css-1y8dota-MuiTable-root"
+          class="MuiTable-root MuiTable-stickyHeader css-1p7so3p-MuiTable-root"
           style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 300; --col-uqIdentifier-size: 300; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
         >
           <thead
-            class="MuiTableHead-root css-118e0ip-MuiTableHead-root"
+            class="MuiTableHead-root css-dk8izd-MuiTableHead-root"
           >
             <tr
-              class="MuiTableRow-root MuiTableRow-head css-9d7k0g-MuiTableRow-root"
+              class="MuiTableRow-root MuiTableRow-head css-1mq9qti-MuiTableRow-root"
             >
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-18zqad7-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-lyaidp-MuiTableCell-root"
                 colspan="1"
                 data-index="0"
                 scope="col"
@@ -7387,7 +7401,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1a80g1d-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-qwz90p-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="1"
@@ -7469,7 +7483,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeMedium css-12z4w84-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-otnrq4-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="2"
@@ -7528,7 +7542,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-1c3wjzw-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-bd1r8l-MuiTableCell-root"
                 colspan="1"
                 data-index="3"
                 scope="col"
@@ -7572,7 +7586,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 >
                   <button
                     aria-label="Expand"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j8gm43-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-14xa0mb-MuiButtonBase-root-MuiIconButton-root"
                     data-testid="expandPanelIcon-101"
                     id="expandPanelIcon-101"
                     tabindex="0"

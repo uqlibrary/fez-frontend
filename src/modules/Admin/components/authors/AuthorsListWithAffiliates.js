@@ -485,7 +485,11 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         getRowId: row => row.aut_id,
         createDisplayMode: 'row',
         editDisplayMode: 'row',
+        manualExpanding: true,
         enableEditing: true,
+        enableStickyHeader: true,
+        enablePagination: data.length > 10,
+        enableFilters: data.length > 10,
         enableExpandAll: false,
         enableColumnDragging: false,
         enableColumnResizing: false,
@@ -494,11 +498,12 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         enableColumnActions: false,
         enableColumnOrdering: false,
         enableColumnFilterModes: false,
-        enablePagination: data.length > 10,
-        enableToolbarInternalActions: false,
         enableGrouping: false,
+        enableFullScreenToggle: false,
+        enableDensityToggle: false,
+        enableHiding: false,
+        enableColumnFilters: false,
         positionActionsColumn: 'last',
-        manualExpanding: true,
         initialState: {
             density: 'compact',
             expanded: false,
@@ -542,7 +547,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         },
         muiTableContainerProps: {
             sx: {
-                ...(data.length > 10 ? { maxHeight: '500px' } : {}),
+                ...(data.length > 10 ? { maxHeight: '650px' } : {}),
             },
         },
         muiTableProps: {
@@ -559,6 +564,12 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
             rowsPerPageOptions: tablePageSizeOptions,
             showFirstButton: false,
             showLastButton: false,
+        },
+        muiSearchTextFieldProps: {
+            id: `${contributorEditorId}-search`,
+            inputProps: {
+                'data-testid': `${contributorEditorId}-search`,
+            },
         },
         icons: {
             SaveIcon: props => (
@@ -581,13 +592,14 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         muiExpandButtonProps: ({ table, row }) => ({
             id: `expandPanelIcon-${row.original.aut_id}`,
             ['data-testid']: `expandPanelIcon-${row.original.aut_id}`,
-            sx: { alignSelf: 'center' },
+            sx: {
+                alignSelf: 'center',
+                display: !!!row.original.uqUsername || row.original.uqUsername === '' ? 'none' : 'inline-flex',
+            },
             disabled: !!pendingDeleteRowId || !!isBusy || !!editingRow || table.getState().creatingRow !== null,
         }),
         renderDetailPanel: ({ row }) => {
-            return !!!row.original.uqUsername || row.original.uqUsername === '' ? (
-                /* istanbul ignore next */ <></>
-            ) : (
+            return !!!row.original.uqUsername || row.original.uqUsername === '' ? /* istanbul ignore next */ null : (
                 <AuthorDetailPanel
                     rowData={row.original}
                     locale={locale}
@@ -596,6 +608,9 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     onChange={handleAffiliationUpdate}
                 />
             );
+        },
+        muiTopToolbarProps: {
+            sx: { '& div:last-of-type': { flexDirection: 'row-reverse', justifyContent: 'flex-start' } },
         },
         renderTopToolbarCustomActions: ({ table }) => (
             <Tooltip title={addButton}>
@@ -610,7 +625,6 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                         // immediately force validation of new row
                         handleValidation({ id: 'mrt-row-create' }, columns[0].accessorKey, '');
                     }}
-                    sx={{ marginLeft: 'auto' }}
                 >
                     <AddCircle
                         color="primary"
