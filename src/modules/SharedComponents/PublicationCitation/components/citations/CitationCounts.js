@@ -32,18 +32,6 @@ export const CitationCounts = ({ publication, hideViewFullStatisticsLink }) => {
     return (
         <Grid container spacing={0}>
             <Grid item xs={12} sm={'auto'}>
-                {!!publication.fez_record_search_key_openalex_id &&
-                    !!publication.fez_record_search_key_openalex_id.rek_openalex_id && (
-                        <Partials.CitationCountView
-                            source="openalex"
-                            count={counts.openalex}
-                            link={sources.openalex.externalUrl.replace(
-                                '[id]',
-                                encodeURIComponent(publication.fez_record_search_key_openalex_id.rek_openalex_id),
-                            )}
-                            title={getTitle(sources.openalex.title)}
-                        />
-                    )}
                 {!!publication.fez_record_search_key_isi_loc &&
                     !!publication.fez_record_search_key_isi_loc.rek_isi_loc && (
                         <Partials.CitationCountView
@@ -96,6 +84,18 @@ export const CitationCounts = ({ publication, hideViewFullStatisticsLink }) => {
                         title={getTitle(txt.google.title)}
                     />
                 )}
+                {!!publication.fez_record_search_key_openalex_id &&
+                    !!publication.fez_record_search_key_openalex_id.rek_openalex_id && (
+                        <Partials.CitationCountView
+                            source="openalex"
+                            count={counts.openalex}
+                            link={sources.openalex.externalUrl.replace(
+                                '[id]',
+                                encodeURIComponent(publication.fez_record_search_key_openalex_id.rek_openalex_id),
+                            )}
+                            title={getTitle(sources.openalex.title)}
+                        />
+                    )}
                 <OpenAccessIcon
                     {...(publication.calculateOpenAccess ? publication.calculateOpenAccess() : {})}
                     style={{ marginBottom: '-5px' }}
