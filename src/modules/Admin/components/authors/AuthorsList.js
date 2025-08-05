@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from '@material-table/core';
+
+// eslint-disable-next-line camelcase
+import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
+
 import { useTheme } from '@mui/material/styles';
 import { numberToWords } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
@@ -33,19 +36,22 @@ import {
 import { default as globalLocale } from 'locale/global';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField/components/NewGenericSelectField';
 
+import { useMrtTable } from 'hooks';
+import { extendedValidationRules as validationRules } from './validationRules';
+
 const classes = {
     linked: {
         fontWeight: 500,
     },
 };
 
-const getIcon = rowData => {
+const getIcon = ({ index, rowData }) => {
     if (parseInt(rowData.uqIdentifier, 10)) {
-        return <HowToRegIcon color="primary" id={`contributor-linked-${rowData.tableData.id}`} />;
+        return <HowToRegIcon color="primary" id={`contributor-linked-${index}`} />;
     } else if (rowData.disabled) {
-        return <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />;
+        return <Lock color="secondary" id={`contributor-locked-${index}`} />;
     } else {
-        return <PersonOutlined color="secondary" id={`contributor-unlinked-${rowData.tableData.id}`} />;
+        return <PersonOutlined color="secondary" id={`contributor-unlinked-${index}`} />;
     }
 };
 
@@ -66,13 +72,6 @@ NameAsPublished.propTypes = {
     icon: PropTypes.element,
     text: PropTypes.element,
     linked: PropTypes.bool,
-};
-
-const isValid = value => !validation.isEmpty(value) && !validation.maxLength255Validator(value);
-
-const isIdValid = (id, type) => {
-    const validateMethod = AUTHOR_EXTERNAL_IDENTIFIER_TYPE.find(item => item.value === type);
-    return validateMethod ? validation[validateMethod.text.toLowerCase()](id) : undefined;
 };
 
 export const getColumns = ({
@@ -532,43 +531,74 @@ export const AuthorsList = ({
     showRoleInput,
     showExternalIdentifierInput,
 }) => {
-    const {
-        row: {
-            locale: {
-                // deleteRecordConfirmation,
-                moveUpHint,
-                moveDownHint,
-                deleteHint,
-                editHint,
-                // selectHint,
-                // lockedTooltip,
-                suffix,
-            },
-        },
-        form: {
-            locale: { addButton },
-        },
-    } = locale;
     const theme = useTheme();
-    const materialTableRef = React.createRef();
-    const columns = React.createRef();
-    columns.current = React.useMemo(
-        () =>
-            getColumns({
-                disabled,
-                suffix,
-                showRoleInput,
-                locale,
-                isNtro,
-                contributorEditorId,
-                showExternalIdentifierInput,
-            }),
-        [contributorEditorId, showExternalIdentifierInput, disabled, isNtro, locale, showRoleInput, suffix],
-    );
-
+    const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
     const prevList = React.useRef('');
 
-    const [data, setData] = React.useState([]);
+    // eslint-disable-next-line camelcase
+    const setEditing = ({ editing, aut_id }) => {
+        // eslint-disable-next-line camelcase
+        setIsEditing({ editing, aut_id });
+    };
+
+    // eslint-disable-next-line camelcase
+    const isEditing = aut_id => {
+        // eslint-disable-next-line camelcase
+        return editState.editing && editState.aut_id === aut_id;
+    };
+
+    const {
+        tablePageSizeOptions,
+        largeListDefaultPageSize,
+        header: {
+            locale: {
+                nameColumn,
+                roleColumn,
+                identifierColumn,
+                organisationColumn,
+                externalIdentifierColumn,
+                externalIdentifierTypeColumn,
+            },
+        },
+        row: {
+            locale: { moveUpHint, moveDownHint, deleteHint, editHint, suffix, deleteRecordConfirmation },
+        },
+        form: {
+            locale: {
+                addButton,
+                creatorRoleLabel,
+                creatorRoleHint,
+                nameAsPublishedLabel,
+                nameAsPublishedHint,
+                identifierLabel,
+                externalIdentifierLabel,
+                externalIdentifierHint,
+                externalIdentifierTypeLabel,
+            },
+        },
+    } = locale;
+
+    const {
+        data,
+        isBusy,
+        pendingDeleteRowId,
+        isOpen,
+        editingRow,
+        validationErrors,
+        setData,
+        setBusy,
+        setDeleteRow,
+        resetDeleteRow,
+        setEditRow,
+        resetEditRow,
+        validate,
+        getValidationError,
+        handleValidation,
+        clearValidationErrors,
+    } = useMrtTable(list, validationRules);
+
+    const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : {});
+
     const [triggerState, setTriggerState] = React.useState(true);
     React.useEffect(() => {
         const listStr = JSON.stringify(list);
