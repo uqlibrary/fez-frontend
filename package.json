@@ -169,7 +169,7 @@
         "@sentry/react": "^7.119.2",
         "@types/lodash": "^4.17.16",
         "axios": "^1.11.0",
-        "axios-cache-interceptor": "^1.8.0",
+        "axios-cache-interceptor": "^0.10.2",
         "can-deparam": "^1.1.1",
         "can-param": "^1.0.4",
         "classnames": "^2.5.1",
