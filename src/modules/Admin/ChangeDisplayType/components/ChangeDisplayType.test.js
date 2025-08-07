@@ -1,33 +1,31 @@
 import React from 'react';
-import ChangeDisplayType from './ChangeDisplayType';
+import {
+    render,
+    WithRouter,
+    WithReduxStore,
+    expectApiRequestToMatchSnapshot,
+    waitForText,
+    waitToBeDisabled,
+    waitToBeEnabled,
+    selectDropDownOption,
+    userEvent,
+    screen,
+    api,
+} from 'test-utils';
 import publicationTypeListResearchReport from 'mock/data/records/publicationTypeListResearchReport';
-import publicationTypeListAudio from 'mock/data/records/publicationTypeListAudio';
-import { render, WithReduxStore, WithRouter, fireEvent, createEvent } from 'test-utils';
+import ChangeDisplayType from './ChangeDisplayType';
+import { locale } from 'locale';
+import { pathConfig } from '../../../../config';
 
-const mockRecord = {
-    ...publicationTypeListResearchReport.data[0],
-    fez_record_search_key_publisher: {
-        rek_publisher: 'The University of Queensland',
-    },
-};
-
+const mockParams = {};
+const mockUseNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
-    useParams: jest.fn(() => ({ pid: mockRecord.rek_pid })),
+    useParams: () => mockParams,
+    useNavigate: () => mockUseNavigate,
 }));
 
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: jest.fn(),
-}));
-
-const setup = (testProps = {}) => {
-    const props = {
-        resetSubType: jest.fn(),
-        record: mockRecord,
-        ...testProps,
-    };
-
+function setup(props = {}) {
     return render(
         <WithReduxStore>
             <WithRouter>
@@ -35,125 +33,89 @@ const setup = (testProps = {}) => {
             </WithRouter>
         </WithReduxStore>,
     );
-};
+}
 
-describe('ChangeDisplayType form', () => {
-    const ReduxFormMock = require('redux-form/immutable');
-    let onChangeFn;
-    ReduxFormMock.Field.mockImplementation(
-        ({ name, title, required, disabled, label, floatingLabelText, onChange }) => {
-            onChangeFn = onChange;
-            return (
-                <field
-                    is="mock"
-                    name={name}
-                    title={title}
-                    required={required}
-                    disabled={disabled}
-                    label={label || floatingLabelText}
-                />
-            );
+describe('ChangeDisplayType', () => {
+    const pid = publicationTypeListResearchReport.data[0].rek_pid;
+    mockParams.pid = pid;
+    const mockRecord = {
+        ...publicationTypeListResearchReport.data[0],
+        fez_record_search_key_publisher: {
+            rek_publisher: 'The University of Queensland',
         },
-    );
+    };
 
-    it('should render empty form when no record supplied', () => {
-        const { container } = setup({ record: null });
-        expect(container).toMatchSnapshot();
-    });
+    const assertFormInitialState = async () => {
+        await waitToBeDisabled('change-display-type-submit');
+    };
 
-    it('should render loading message when record is loading', () => {
-        const { getByText } = setup({
-            loadingRecordToView: true,
-            record: null,
+    const selectDisplayType = async option => selectDropDownOption('rek-display-type-select', option);
+    const selectSubtype = async option => selectDropDownOption('rek-subtype-select', option);
+
+    const submitForm = async () => {
+        await userEvent.click(screen.getByTestId('change-display-type-submit'));
+        await waitToBeDisabled('change-display-type-submit');
+    };
+
+    beforeEach(() => api.reset());
+    afterEach(() => jest.resetAllMocks());
+
+    describe('rendering', () => {
+        it('should display loading page', async () => {
+            setup();
+            await waitForText(/loading/i);
         });
 
-        expect(getByText('Loading work')).toBeInTheDocument();
+        it('should display work not found page', async () => {
+            api.mock.records.get({ pid, status: 404 });
+            setup();
+            await waitForText(/Work not found/i);
+        });
     });
 
-    it('should render citation', () => {
-        const { getByTestId } = setup({
-            record: {
-                ...mockRecord,
-                fez_record_search_key_doi: {
-                    rek_doi: 'Testing',
-                },
-            },
+    describe('form submission', () => {
+        it('should correctly submit form and display success info for type without subtype', async () => {
+            api.mock.records.get({ pid, data: mockRecord }).update({ pid });
+            const { getByTestId } = setup();
+            await assertFormInitialState();
+
+            await selectDisplayType('Book');
+            await selectDisplayType('Image');
+            await submitForm();
+
+            await waitForText(locale.components.changeDisplayType.successAlert.message);
+            await waitToBeDisabled('change-display-type-submit');
+            await userEvent.click(getByTestId('confirm-changeDisplayTypeDone'));
+            expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.admin.edit(pid));
+            expectApiRequestToMatchSnapshot('patch', api.url.records.update(pid));
         });
 
-        expect(getByTestId('change-display-type-page-title')).toHaveTextContent(
-            `Change display type from ${mockRecord.rek_display_type_lookup} - ${mockRecord.rek_subtype}`,
-        );
-    });
+        it('should correctly submit form and display success info for type with subtype', async () => {
+            api.mock.records.get({ pid, data: mockRecord }).update({ pid });
+            setup();
+            await assertFormInitialState();
 
-    it('should render form loaded with submit button disabled', () => {
-        const { container } = setup({ record: mockRecord });
-        expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(1);
-    });
+            await selectDisplayType('Book');
+            await selectSubtype('Research book (original research)');
+            await submitForm();
 
-    it('should render lightbox upon submit', () => {
-        const { container } = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('_handleDefaultSubmit()', () => {
-        const { container } = setup({ record: mockRecord });
-        const form = container.querySelector('form');
-        const submitEvent = createEvent.submit(form);
-        fireEvent(form, submitEvent);
-        expect(submitEvent.defaultPrevented).toBe(true);
-    });
-
-    it('should display confirmation box after successful submission', () => {
-        const { container } = setup({ saveUpdated: true, record: mockRecord });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should clear subtype items on display type change', () => {
-        const resetFn = jest.fn();
-        setup({ record: mockRecord, resetSubType: resetFn });
-        onChangeFn();
-        expect(resetFn).toHaveBeenCalled();
-    });
-});
-
-describe('Change Display Type form - redirections', () => {
-    const { location } = window;
-
-    beforeAll(() => {
-        delete window.location;
-        window.location = { assign: jest.fn(), reload: jest.fn() };
-    });
-
-    afterAll(() => {
-        window.location = location;
-    });
-
-    it('should redirect to view page on form cancel', () => {
-        const { location } = window;
-        delete window.location;
-        window.location = { assign: jest.fn(), reload: jest.fn() };
-
-        const { getByRole } = setup({});
-        fireEvent.click(getByRole('button', { name: 'Cancel' }));
-        expect(window.location.assign).toBeCalledWith(`http://localhost/view/${mockRecord.rek_pid}`);
-
-        window.location = location;
-    });
-
-    it('should fire the correct submit function on button click', () => {
-        const mockRecord1 = { ...publicationTypeListAudio.data[0] };
-        const testFn = jest.fn();
-        const { getByRole } = setup({
-            handleSubmit: testFn,
-            disableSubmit: false,
-            saveRequesting: false,
-            record: mockRecord1,
+            await waitForText(locale.components.changeDisplayType.successAlert.message);
+            await waitToBeDisabled('change-display-type-submit');
+            await userEvent.click(screen.getByTestId('cancel-changeDisplayTypeDone'));
+            expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.records.view(pid));
+            expectApiRequestToMatchSnapshot('patch', api.url.records.update(pid));
         });
-        // expect(getAllByRole('button').length).toEqual(2);
-        fireEvent.click(getByRole('button', { name: 'Change display type' }));
-        expect(testFn).toHaveBeenCalled();
-    });
 
-    it('should fire the correct cancel function on button click', () => {});
+        it('should submit form and display server error', async () => {
+            api.mock.records.get({ pid, data: mockRecord }).fail.update({ pid });
+            setup();
+            await assertFormInitialState();
+
+            await selectDisplayType('Image');
+            await submitForm();
+
+            await waitForText(/Error has occurred/i);
+            await waitToBeEnabled('change-display-type-submit');
+        });
+    });
 });

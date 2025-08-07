@@ -10,6 +10,8 @@ const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const RobotstxtPlugin = require('robotstxt-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
 const options = {
     policy: [
         {
@@ -92,7 +94,7 @@ const webpackConfig = {
     entry: {
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         main: resolve(__dirname, './src/index.js'),
-        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'moment', 'redux-form'],
+        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'moment'],
     },
     // Where you want the output to go
     output: {
@@ -108,7 +110,47 @@ const webpackConfig = {
             publicPath: resolve(__dirname, './dist/', config.basePath),
         },
     },
+    module: {
+        rules: [
+            {
+                test: /\.(j|t)sx?$/,
+                include: [resolve(__dirname, 'src')],
+                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+                        plugins: [
+                            '@babel/plugin-proposal-export-default-from',
+                            ['@babel/plugin-transform-spread', { loose: true }],
+                        ].filter(Boolean),
+                    },
+                },
+            },
+            {
+                test: /\.scss/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            },
+            {
+                test: /\.(png|jp(e*)g|svg|gif)$/,
+                type: 'asset/resource',
+                generator: {
+                    publicPath: '/assets/',
+                    outputPath: 'assets/',
+                    filename: '[hash][ext]',
+                },
+            },
+        ],
+    },
     plugins: [
+        // this plugin is required for highlighting TS errors, please do not remove it
+        new ForkTsCheckerWebpackPlugin({
+            typescript: {
+                configFile: 'tsconfig.webpack-dist.json',
+            },
+            async: false,
+            devServer: false,
+        }),
         new webpack.ProvidePlugin({
             process: 'process/browser.js',
         }),
@@ -200,42 +242,6 @@ const webpackConfig = {
                 parallel: true,
                 extractComments: true,
             }),
-        ],
-    },
-    module: {
-        rules: [
-            {
-                test: /\.(j|t)sx?$/,
-                include: [resolve(__dirname, 'src')],
-                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        plugins: [
-                            '@babel/plugin-proposal-export-default-from',
-                            ['@babel/plugin-transform-spread', { loose: true }],
-                        ],
-                    },
-                },
-            },
-            {
-                test: /\.tsx?$/,
-                use: 'ts-loader?configFile=tsconfig.webpack-dist.json',
-                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
-            },
-            {
-                test: /\.scss/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-            },
-            {
-                test: /\.(png|jp(e*)g|svg|gif)$/,
-                type: 'asset/resource',
-                generator: {
-                    publicPath: '/assets/',
-                    outputPath: 'assets/',
-                    filename: '[hash][ext]',
-                },
-            },
         ],
     },
     resolve: {

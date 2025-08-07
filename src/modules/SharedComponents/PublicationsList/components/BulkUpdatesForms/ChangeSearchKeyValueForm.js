@@ -1,49 +1,60 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import Immutable from 'immutable';
-import { formValueSelector, getFormSyncErrors, Field, reduxForm, SubmissionError } from 'redux-form/immutable';
-
+import { useValidatedForm } from 'hooks';
+import { Field } from '../../../Toolbox/ReactHookForm';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import SearchKeyField, { getSearchKeyValueField } from './SearchKeyField';
-
 import { locale } from 'locale';
 import { validation } from 'config';
 import { changeSearchKeyValue } from 'actions';
+import { useWatch } from 'react-hook-form';
 
-const FORM_NAME = 'ChangeSearchKeyValueForm';
-const selector = formValueSelector(FORM_NAME);
-
-const onSubmit = (values, dispatch, props) => {
-    return dispatch(changeSearchKeyValue(Object.values(props.recordsSelected), values.toJS())).catch(error => {
-        throw new SubmissionError({ _error: error.message });
-    });
-};
-
-export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, submitSucceeded, onCancel }) => {
+export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
+    const dispatch = useDispatch();
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
-    const searchKey = useSelector(state => selector(state, 'search_key'));
-    const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
-    const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
+    const prevSearchKey = useRef(null);
 
-    React.useEffect(() => {
-        if (submitSucceeded) {
-            setTimeout(onCancel, 2000);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [submitSucceeded]);
+    const {
+        control,
+        setValue,
+        unregister,
+        safelyHandleSubmit,
+        formState: { isSubmitting, isSubmitSuccessful, hasServerError, hasError },
+    } = useValidatedForm({ defaultValues: { search_key: null } });
+    const searchKey = useWatch({ control, name: 'search_key' });
+
+    const onSubmit = safelyHandleSubmit(
+        async data => await dispatch(changeSearchKeyValue(Object.values(recordsSelected), data)),
+    );
+
+    // handle search key changes - remove old field and validate added one
+    useEffect(() => {
+        const prev = prevSearchKey.current;
+        prevSearchKey.current = searchKey;
+        if (!prev) return;
+
+        unregister(prev);
+        setValue(searchKey, null);
+        /* eslint-disable react-hooks/exhaustive-deps */
+    }, [searchKey]);
+
+    useEffect(() => {
+        if (!isSubmitSuccessful) return;
+        setTimeout(onCancel, 2000);
+    }, [isSubmitSuccessful, onCancel]);
 
     return (
         <form data-testid="change-search-key-value-form" id="change-search-key-value-form">
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <Field
+                        control={control}
                         component={SearchKeyField}
-                        disabled={submitting || submitSucceeded}
+                        disabled={isSubmitting || isSubmitSuccessful}
                         genericSelectFieldId="search-key"
                         label={txt.changeSearchKeyValueForm.formLabels.searchKey}
                         name="search_key"
@@ -55,8 +66,9 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                     <React.Fragment>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={getSearchKeyValueField(searchKey).component}
-                                disabled={submitting || submitSucceeded}
+                                disabled={isSubmitting || isSubmitSuccessful}
                                 label={txt.changeSearchKeyValueForm.formLabels.searchKeyValue}
                                 name={searchKey}
                                 required
@@ -66,10 +78,11 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 fullWidth
                                 textFieldId="edit-reason"
-                                disabled={submitting || submitSucceeded}
+                                disabled={isSubmitting || isSubmitSuccessful}
                                 label={txt.changeSearchKeyValueForm.formLabels.editNotes}
                                 name="edit_reason"
                                 multiline
@@ -84,7 +97,7 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                         children={txt.changeSearchKeyValueForm.formLabels.cancelButtonLabel}
                         data-analyticsid="change-search-key-value-cancel"
                         data-testid="change-search-key-value-cancel"
-                        disabled={submitting}
+                        disabled={isSubmitting}
                         fullWidth
                         id="change-search-key-value-cancel"
                         onClick={onCancel}
@@ -98,27 +111,27 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                         color="primary"
                         data-analyticsid="change-search-key-value-submit"
                         data-testid="change-search-key-value-submit"
-                        disabled={submitting || disableSubmit || submitSucceeded}
+                        disabled={hasError || isSubmitting || isSubmitSuccessful}
                         fullWidth
                         id="change-search-key-value-submit"
-                        onClick={handleSubmit}
+                        onClick={onSubmit}
                         variant="contained"
                     />
                 </Grid>
                 <Grid item xs={12}>
-                    {!!submitting && (
+                    {!!isSubmitting && (
                         <Alert
                             alertId="alert-info-change-search-key-value"
                             {...txt.changeSearchKeyValueForm.submittingAlert}
                         />
                     )}
-                    {!!submitSucceeded && (
+                    {!!isSubmitSuccessful && (
                         <Alert
                             alertId="alert-done-change-search-key-value"
                             {...txt.changeSearchKeyValueForm.successAlert}
                         />
                     )}
-                    {!!error && (
+                    {!!hasServerError && (
                         <Alert
                             alertId="alert-error-change-search-key-value"
                             {...txt.changeSearchKeyValueForm.errorAlert}
@@ -130,17 +143,9 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
     );
 };
 
-ChangeSearchKeyValueForm.propTypes = {
-    error: PropTypes.string,
-    handleSubmit: PropTypes.func,
+CreateOrUpdateDoiForm.propTypes = {
     onCancel: PropTypes.func,
-    submitting: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
+    recordsSelected: PropTypes.object,
 };
 
-const ChangeSearchKeyValueReduxForm = reduxForm({
-    form: FORM_NAME,
-    onSubmit,
-})(ChangeSearchKeyValueForm);
-
-export default React.memo(ChangeSearchKeyValueReduxForm);
+export default React.memo(CreateOrUpdateDoiForm);

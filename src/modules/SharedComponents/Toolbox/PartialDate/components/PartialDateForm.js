@@ -1,4 +1,4 @@
-import React, { memo, useState, useEffect } from 'react';
+import React, { memo, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import TextField from '@mui/material/TextField';
@@ -8,6 +8,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Grid from '@mui/material/Unstable_Grid2';
 import FormHelperText from '@mui/material/FormHelperText';
 import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
+import { useOnSelectiveMountEffect } from 'hooks';
 
 import moment from 'moment';
 
@@ -126,7 +127,6 @@ export const displayErrors = ({
                 locale.validationMessage.date;
             break;
         case STATUS_VALID:
-            // cypress does not like more concise format (?!?) (integration tests didnt either?!?!?)
             if (!!year && validMonthIndices.includes(month) && !!day) {
                 // date complete for non-partial-entry
                 date = '';
@@ -190,18 +190,14 @@ const PartialDateForm = props => {
         floatingTitle = 'Enter a date',
         required,
         hasError,
-        input,
-        meta,
         partialDateFormId,
         clearable,
         value,
+        state: { defaultValue } = {},
     } = props;
     const getDateObject = () => {
         const dateValue =
-            (value && moment(value)) ||
-            (input && input.value && moment(input.value)) ||
-            (meta && meta.initial && typeof meta.initial === 'string' && moment(meta.initial)) ||
-            null;
+            (value && moment(value)) || (typeof defaultValue === 'string' && moment(defaultValue)) || null;
 
         if (!!dateValue && dateValue.isValid() && !dateValue.isSame(PLACEHOLDER_ISO8601_ZULU_DATE)) {
             return {
@@ -235,40 +231,48 @@ const PartialDateForm = props => {
 
     const _onDateChanged = key => {
         return (event, index, value) => {
-            let newState = {};
-            if (event.target.value === '') {
-                // allow the field to be cleared (otherwise it sets NaN, which fires the validation)
-                newState = { [key]: '' };
+            const newState = { ...state };
+
+            if (key === 'year' && event.target.value === '') {
+                // Only clear the year field without affecting day and month
+                newState.year = '';
+            } else if (event.target.value === '') {
+                // Allow clearing other fields normally
+                newState[key] = '';
             } else {
-                newState = {
-                    [key]: parseInt(
-                        event.target.value === undefined ? /* istanbul ignore next */ value : event.target.value,
-                        10,
-                    ),
-                };
+                newState[key] = parseInt(
+                    event.target.value === undefined ? /* istanbul ignore next */ value : event.target.value,
+                    10,
+                );
             }
-            const newDateObject = { ...state, ...newState };
-            const fullDate = getFullDateFromState(newDateObject);
-            setState(newDateObject);
-            onChange?.(fullDate) || input?.onChange?.(fullDate);
+
+            const validationStatus = validate({ state: newState, allowPartial, disableFuture, clearable });
+            displayErrors({ state: newState, setError, validationStatus, allowPartial, required, clearable, locale });
+
+            if (validationStatus !== STATUS_FUTURE_DATE) {
+                const fullDate = getFullDateFromState(newState);
+                setState(newState);
+                if (key !== 'year' || newState.year !== '') {
+                    onChange?.(fullDate);
+                }
+            } else {
+                setState(newState); // Keep the existing day and month when year is in the future
+            }
         };
     };
 
-    useEffect(() => {
+    useOnSelectiveMountEffect(() => {
+        // Workaround due to RHF returning a 'value' whenever the user changes the date.
+        // It's necessary to only run this code block on first mount,
+        // and once after the value prop is first populated.
+        // This is effectively how it worked when using redux-form.
+        // Subsequent changes to date should come from the user via
+        // direct interaction with the date fields.
         const newDateObject = getDateObject();
-        /* istanbul ignore else */
-        if (
-            !!!state ||
-            state.day !== newDateObject.day ||
-            state.month !== newDateObject.month ||
-            state.year !== newDateObject.year
-        ) {
-            const newState = { ...state, ...newDateObject };
-            setState(newState);
-            // check for errors
-            (onChange || input?.onChange) && getFullDateFromState(newState);
-        }
-
+        const newState = { ...state, ...newDateObject };
+        setState(newState);
+        // check for errors
+        onChange && getFullDateFromState(newState);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value]);
 
@@ -389,11 +393,7 @@ PartialDateForm.propTypes = {
     required: PropTypes.bool,
     hasError: PropTypes.string,
     disableFuture: PropTypes.bool,
-    input: PropTypes.object,
-    meta: PropTypes.shape({
-        // TODO - remove after RHF migration
-        initial: PropTypes.oneOfType([PropTypes.string, PropTypes.object]), // added object type to avoid console errors
-    }),
+    state: PropTypes.object,
     partialDateFormId: PropTypes.string.isRequired,
     clearable: PropTypes.bool,
 };

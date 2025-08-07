@@ -15,7 +15,7 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls=":r4:"
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
@@ -73,7 +73,7 @@ exports[`HerdcCodeField component should render a current value 1`] = `
       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls=":r5:"
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
@@ -127,7 +127,7 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls=":r6:"
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
@@ -181,7 +181,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls=":r0:"
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
@@ -241,7 +241,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls=":r2:"
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
@@ -308,7 +308,7 @@ exports[`HerdcCodeField component should render when given a default value field
       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls=":r3:"
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
@@ -368,7 +368,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls=":r1:"
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"

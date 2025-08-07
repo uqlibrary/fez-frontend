@@ -25,12 +25,12 @@ export const ReportNumberField = props => {
             itemsList={itemsList}
             itemsLoading={itemsLoading}
             allowFreeText
-            errorText={props.meta ? props.meta.error : null}
-            error={props.meta ? !!props.meta.error : null}
+            error={!!props.state?.error}
+            errorText={props.state?.error}
             getOptionLabel={item => (!!item && String(item.value)) || ''}
             filterOptions={(options, { inputValue }) => matchSorter(options, inputValue, { keys: ['value'] })}
-            onChange={item => props.input.onChange(item.value)}
-            onClear={() => props.input.onChange(null)}
+            onChange={item => props.onChange(item.value)}
+            onClear={() => props.onChange(null)}
         />
     );
 };

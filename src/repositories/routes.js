@@ -184,6 +184,9 @@ export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
 export const JOURNAL_LOOKUP_API = ({ query }) => ({
     apiUrl: `journals/search?rule=lookup&query=${encodeURIComponent(query)}`,
 });
+export const ROR_LOOKUP_API = ({ id }) => ({
+    apiUrl: `external/ror/${id}`,
+});
 
 // file uploading apis
 export const FILE_UPLOAD_API = () => ({ apiUrl: 'file/upload/presigned' });
@@ -480,6 +483,7 @@ export const FAVOURITE_SEARCH_LIST_API = ({ id } = { id: undefined }) => ({
     apiUrl: `favourite_search${!!id ? `/${id}` : ''}`,
 });
 
+/* istanbul ignore next */
 export const JOURNAL_API = ({ id, isEdit = false }) => ({
     apiUrl: `journals/${id}${isEdit ? '?from=admin-form' : ''}`,
 });

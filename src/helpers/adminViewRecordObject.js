@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { parseHtmlToJSX } from 'helpers/general';
 import config from 'locale/viewRecord';
 import Button from '@mui/material/Button';
+import DOMPurify from 'dompurify';
 export const navigateToEdit = (navigate, pid) => {
     navigate(`/admin/edit/${pid}?tab=authors`);
 };
@@ -95,10 +96,8 @@ export const createDefaultDrawerDescriptorObject = (
     if (!adminViewRecordDefaultContentObject || !adminViewRecordDefaultContentIndex) return {};
 
     // Notes
-    const parsedNotesKey = formattedString(parseKey(fields.notes, content));
-    // don't ReactHtmlParse notes if they're empty and the above function has returned '-',
-    // otherwise ReactHtmlParse will return an array and will cause issues when rendering to screen.
-    const parsedNotes = parsedNotesKey !== '-' ? parseHtmlToJSX(parsedNotesKey) : parsedNotesKey;
+    const notes = parseKey(fields.notes, content)?.trim?.();
+    const parsedNotes = !notes?.length ? '-' : parseHtmlToJSX(DOMPurify.sanitize(notes));
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][0].value = locale.notes;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][1].value = parsedNotes;
 

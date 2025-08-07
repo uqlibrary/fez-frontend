@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 
-import ArrowDownward from '@mui/icons-material/ArrowDownward';
 import Check from '@mui/icons-material/Check';
 import Clear from '@mui/icons-material/Clear';
 import Delete from '@mui/icons-material/Delete';
@@ -11,5 +10,4 @@ export const tableIcons = {
     Clear: forwardRef((props, ref) => <Clear {...props} ref={ref} id="favourite-search-list-item-cancel-save" />),
     Delete: forwardRef((props, ref) => <Delete {...props} ref={ref} id="favourite-search-list-item-delete" />),
     Edit: forwardRef((props, ref) => <Edit {...props} ref={ref} id="favourite-search-list-item-edit" />),
-    SortArrow: forwardRef((props, ref) => <ArrowDownward {...props} ref={ref} />),
 };

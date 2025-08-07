@@ -1,17 +1,13 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { render, WithReduxStore, waitFor, waitForElementToBeRemoved } from 'test-utils';
-
 import * as DashboardActions from 'actions/adminDashboard';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data';
-
 import AdminDashboard, { CustomTabPanel } from './AdminDashboard';
 
 const setup = (props = {}, state = {}, renderer = render) => {
     return renderer(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <AdminDashboard {...props} />
         </WithReduxStore>,
     );
@@ -97,8 +93,6 @@ describe('AdminDashboard', () => {
     });
 
     // Note: at the time of writing (May 2024), mui-x/chart components do not work with Jest tests.
-    // Coverage for the when charts are shown etc. is covered in Cypress instead.
-
     describe('CustomTabPanel', () => {
         it('should render child', () => {
             const { getByTestId, getByText } = render(

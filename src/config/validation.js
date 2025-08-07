@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import Immutable from 'immutable';
 
 import locale from 'locale/validationErrors';
 import { MEDIATED_ACCESS_ID, ORG_TYPE_NOT_SET } from 'config/general';
@@ -93,6 +92,7 @@ export const getDoi = value => {
 };
 
 export const isValidDOIValue = value => {
+    if (!value?.trim?.()) return false;
     for (const regex of doiRegexps) {
         const anchoredRegex = new RegExp(`^${regex.source}`, regex.flags);
         const matches = value?.match(anchoredRegex);
@@ -126,6 +126,21 @@ export const isValidPublicationTitle = value => {
     return isValid.test(value.trim());
 };
 
+export const isValidOrcid = value => {
+    const isValid = /^(\d{4}-){3}\d{3}(\d|X)$/;
+    return isValid.test(value.toString().trim());
+};
+
+export const isValidRaid = value => {
+    const isValid = /[^\/]+\/[^\/]+/;
+    return isValid.test(value.toString().trim());
+};
+
+export const isValidROR = value => {
+    const isValid = /^0[a-z|0-9]{6}[0-9]{2}$/;
+    return isValid.test(value.toString().trim());
+};
+
 // Generic
 export const required = value => (value ? undefined : locale.validationErrors.required);
 
@@ -133,9 +148,7 @@ export const required = value => (value ? undefined : locale.validationErrors.re
 export const requireChecked = value => (value === 'on' ? undefined : locale.validationErrors.requireChecked);
 
 export const requiredList = value => {
-    return ((value instanceof Immutable.List && value.toJS()) || value || []).length > 0
-        ? undefined
-        : locale.validationErrors.required;
+    return !value?.length && locale.validationErrors.required;
 };
 
 export const email = value =>
@@ -146,6 +159,9 @@ export const url = value =>
         : spacelessMaxLength2000Validator(value);
 export const doi = value => (!!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined);
 export const pid = value => (!!value && !isValidPid(value) ? locale.validationErrors.pid : undefined);
+export const orcid = value => (!!value && !isValidOrcid(value) ? locale.validationErrors.orcid : undefined);
+export const raid = value => (!!value && !isValidRaid(value) ? locale.validationErrors.raid : undefined);
+export const ror = value => (!!value && !isValidROR(value) ? locale.validationErrors.ror : undefined);
 export const forRequired = itemList =>
     !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;
 
@@ -195,7 +211,7 @@ export const fileUploadRequired = value => {
 };
 
 export const fileUploadNotRequiredForMediated = (value, values) => {
-    const accessCondition = values.toJS().fez_record_search_key_access_conditions;
+    const accessCondition = values.fez_record_search_key_access_conditions;
     if (!!accessCondition && accessCondition.rek_access_conditions === MEDIATED_ACCESS_ID) {
         return undefined;
     } else {
@@ -266,28 +282,10 @@ export const isValidContributorLink = (link, required = false) => {
 // Google Scholar ID
 export const isValidGoogleScholarId = id => {
     const regex = /^[\w-]{12}$/;
-    if (regex.test(id)) {
-        return undefined;
-    } else {
+    if (id && !regex.test(id)) {
         return locale.validationErrors.googleScholarId;
     }
-};
-
-export const dateRange = (value, values) => {
-    const lowerInRange =
-        !!values.toJS().fez_record_search_key_start_date &&
-        !!values.toJS().fez_record_search_key_start_date.rek_start_date &&
-        moment(values.toJS().fez_record_search_key_start_date.rek_start_date);
-    const higherInRange =
-        !!values.toJS().fez_record_search_key_end_date &&
-        !!values.toJS().fez_record_search_key_end_date.rek_end_date &&
-        moment(values.toJS().fez_record_search_key_end_date.rek_end_date);
-
-    if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
-        return locale.validationErrors.collectionDateRange;
-    } else {
-        return '';
-    }
+    return undefined;
 };
 
 export const isValidDate = date => {
@@ -305,6 +303,15 @@ export const isDateSameOrBefore = (date, anotherDate) =>
     moment(date).isSameOrBefore(moment(anotherDate).format('YYYY-MM-DD'));
 
 export const isDateInBetween = (date, from, to) => isDateSameOrAfter(date, from) && isDateSameOrBefore(date, to);
+
+/**
+ * @param {?string} start
+ * @param {?string} end
+ * @param {string} message
+ * @return {string}
+ */
+export const dateRange = (start, end, message = locale.validationErrors.dateRange) =>
+    !!start && !!end && !isDateSameOrBefore(start, end) ? message : undefined;
 
 export const grantFormIsPopulated = value => (value === true ? locale.validationErrors.grants : undefined);
 

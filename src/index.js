@@ -11,13 +11,14 @@ import { useLocation, useNavigationType, createRoutesFromChildren, matchRoutes }
 import { setup } from 'mock';
 
 // pick utils
-import MomentUtils from '@date-io/moment';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 
 // Internal
 import Root from './Root';
 import AppErrorBoundary from './AppErrorBoundary';
 import 'sass/index.scss';
 import { store, reducers } from 'config/store';
+import { isTest } from './helpers/general';
 
 // Increase default (10) event listeners to 30
 require('events').EventEmitter.prototype._maxListeners = 30;
@@ -27,7 +28,7 @@ if (process.env.BRANCH !== 'production' && process.env.USE_MOCK) {
     setup();
 }
 
-if (process.env.ENABLE_LOG) {
+if (!isTest() && process.env.ENABLE_LOG) {
     Sentry.init({
         dsn: 'https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681',
         integrations: [
@@ -39,7 +40,6 @@ if (process.env.ENABLE_LOG) {
                 matchRoutes,
             }),
         ],
-        autoSessionTracking: true,
         environment: process.env.BRANCH,
         release: process.env.GIT_SHA,
         allowUrls: [/library\.uq\.edu\.au/],
@@ -70,13 +70,15 @@ if (process.env.ENABLE_LOG) {
 const render = () => {
     const root = createRoot(document.getElementById('react-root'));
     root.render(
-        <AppErrorBoundary>
-            <Provider store={store}>
-                <LocalizationProvider dateAdapter={MomentUtils}>
-                    <Root />
-                </LocalizationProvider>
-            </Provider>
-        </AppErrorBoundary>,
+        <React.StrictMode>
+            <AppErrorBoundary>
+                <Provider store={store}>
+                    <LocalizationProvider dateAdapter={AdapterMoment}>
+                        <Root />
+                    </LocalizationProvider>
+                </Provider>
+            </AppErrorBoundary>
+        </React.StrictMode>,
     );
 };
 

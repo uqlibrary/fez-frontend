@@ -1,6 +1,4 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import FileUploadRowStatus from './FileUploadRowStatus';
 import { render, WithReduxStore } from 'test-utils';
 
@@ -20,7 +18,7 @@ function setup(testProps = {}, testState = {}) {
     };
 
     return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <FileUploadRowStatus {...getProps(testProps)} />
         </WithReduxStore>,
     );

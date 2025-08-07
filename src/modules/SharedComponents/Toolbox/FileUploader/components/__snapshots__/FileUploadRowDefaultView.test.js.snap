@@ -222,7 +222,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
             class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
           >
             <div
-              aria-controls=":r7:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-open-access-0-select"
@@ -417,7 +417,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
           >
             <div
-              aria-controls=":r1:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-open-access-0-select"
@@ -624,7 +624,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
 }"
           >
             <div
-              aria-controls=":r4:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-security-policy-0-select"
@@ -825,7 +825,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
             class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
           >
             <div
-              aria-controls=":ra:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-open-access-0-select"
@@ -867,7 +867,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root css-hkwwb9-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
         >
           <div
             class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -876,10 +876,12 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
           >
             <input
               aria-invalid="true"
+              autocomplete="off"
               class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
               id=":rb:"
+              inputmode="text"
               placeholder="dd/mm/yyyy"
-              type="tel"
+              type="text"
               value="01/01/2017"
             />
             <div

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field as LegacyFieldWrapper } from 'redux-form/immutable';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import MenuItem from '@mui/material/MenuItem';
@@ -18,11 +17,33 @@ import { SeriesField } from 'modules/SharedComponents/LookupFields';
 import { validation } from 'config';
 import { default as componentLocale } from 'locale/components';
 import { AUDIENCE_SIZE, SIGNIFICANCE, LANGUAGE, QUALITY_INDICATORS } from 'config/general';
+import { Field } from '../../ReactHookForm';
+
+export const normalizeIsrc = value => {
+    const normalizedValue = value.replace(/([A-Z]{2})?-?(\w{3})?-?(\d{2})?-?(\d{5})?/g, (m, ...groups) => {
+        return groups
+            .slice(0, 4)
+            .filter(token => !!token)
+            .join('-');
+    });
+    return normalizedValue.toUpperCase();
+};
+
+export const transformIsrc = (searchKey, item, index) => ({
+    [searchKey.value]: item.replace('ISRC ', ''),
+    [searchKey.order]: index + 1,
+});
+
+export const transformIsmn = (searchKey, item, index) => ({
+    [searchKey.value]: item.replace('ISMN ', ''),
+    [searchKey.order]: index + 1,
+});
 
 export default class NtroFields extends React.PureComponent {
     static propTypes = {
+        control: PropTypes.object,
         canEdit: PropTypes.bool,
-        submitting: PropTypes.bool,
+        isSubmitting: PropTypes.bool,
         locale: PropTypes.object,
         hideIsmn: PropTypes.bool,
         hideIsrc: PropTypes.bool,
@@ -41,10 +62,10 @@ export default class NtroFields extends React.PureComponent {
         showSignificance: PropTypes.bool,
         hideAbstract: PropTypes.bool,
         disableDeleteAllGrants: PropTypes.bool,
-        fieldWrapper: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
     };
 
     static defaultProps = {
+        control: {},
         canEdit: false,
         hideIsmn: false,
         hideIsrc: false,
@@ -99,7 +120,7 @@ export default class NtroFields extends React.PureComponent {
                                 <a
                                     style={{ fontWeight: 700 }}
                                     target="_blank"
-                                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                                    href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/submission-data-requirements#s-lg-box-20836548"
                                 >
                                     here
                                 </a>
@@ -164,7 +185,6 @@ export default class NtroFields extends React.PureComponent {
                 title: 'Grant details',
             },
         },
-        fieldWrapper: LegacyFieldWrapper,
     };
 
     constructor(props) {
@@ -214,29 +234,9 @@ export default class NtroFields extends React.PureComponent {
         return (numberOfFieldsToDisplay > 0 && 12 / numberOfFieldsToDisplay) || 12;
     };
 
-    normalizeIsrc = value => {
-        const normalizedValue = value.replace(/([A-Z]{2})?-?(\w{3})?-?(\d{2})?-?(\d{5})?/g, (m, ...groups) => {
-            return groups
-                .slice(0, 4)
-                .filter(token => !!token)
-                .join('-');
-        });
-        return normalizedValue.toUpperCase();
-    };
-
-    transformIsrc = (searchKey, item, index) => ({
-        [searchKey.value]: item.replace('ISRC ', ''),
-        [searchKey.order]: index + 1,
-    });
-
-    transformIsmn = (searchKey, item, index) => ({
-        [searchKey.value]: item.replace('ISMN ', ''),
-        [searchKey.order]: index + 1,
-    });
-
     render() {
         const { contributionStatement, metadata, grantEditor } = this.props.locale;
-        const { fieldWrapper: Field } = this.props;
+        const control = this.props.control;
         return (
             <React.Fragment>
                 {(this.props.showContributionStatement || this.props.showSignificance) && (
@@ -249,8 +249,9 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid xs={12}>
                                         <Typography>{contributionStatement.fields.scaleOfWork.description}</Typography>
                                         <Field
+                                            control={control}
                                             component={SelectField}
-                                            disabled={this.props.submitting}
+                                            disabled={this.props.isSubmitting}
                                             name="significance"
                                             label={contributionStatement.fields.scaleOfWork.label}
                                             required
@@ -268,6 +269,7 @@ export default class NtroFields extends React.PureComponent {
                                 {this.props.showContributionStatement && (
                                     <Grid xs={12} style={{ marginTop: 24 }}>
                                         <Field
+                                            control={control}
                                             component={RichEditorField}
                                             name="impactStatement"
                                             fullWidth
@@ -275,7 +277,7 @@ export default class NtroFields extends React.PureComponent {
                                             description={contributionStatement.fields.impactStatement.placeholder}
                                             maxValue={2000}
                                             required
-                                            disabled={this.props.submitting}
+                                            disabled={this.props.isSubmitting}
                                             validate={[validation.required, validation.maxListEditorTextLength2000]}
                                             richEditorId="rek-creator-contribution-statement"
                                         />
@@ -305,12 +307,13 @@ export default class NtroFields extends React.PureComponent {
                                     {!this.props.hideAbstract && (
                                         <>
                                             <Field
+                                                control={control}
                                                 component={RichEditorField}
                                                 name="ntroAbstract"
                                                 fullWidth
                                                 title={metadata.fields.abstract.label}
                                                 description={metadata.fields.abstract.placeholder}
-                                                disabled={this.props.submitting}
+                                                disabled={this.props.isSubmitting}
                                                 validate={[validation.required, validation.maxListEditorTextLength65k]}
                                                 richEditorId="rek-description"
                                             />
@@ -320,6 +323,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideIsmn && (
                                     <Grid xs={12}>
                                         <Field
+                                            control={control}
                                             component={ListEditorField}
                                             remindToAdd
                                             name="fez_record_search_key_ismn"
@@ -328,14 +332,15 @@ export default class NtroFields extends React.PureComponent {
                                             locale={{ ...componentLocale.components.ismnForm.field }}
                                             listEditorId="ismn"
                                             searchKey={{ value: 'rek_ismn', order: 'rek_ismn_order' }}
-                                            disabled={this.props.submitting}
-                                            transformFunction={this.transformIsmn}
+                                            disabled={this.props.isSubmitting}
+                                            transformFunction={transformIsmn}
                                         />
                                     </Grid>
                                 )}
                                 {!this.props.hideIsrc && (
                                     <Grid xs={12}>
                                         <Field
+                                            control={control}
                                             component={ListEditorField}
                                             remindToAdd
                                             name="fez_record_search_key_isrc"
@@ -344,17 +349,18 @@ export default class NtroFields extends React.PureComponent {
                                             searchKey={{ value: 'rek_isrc', order: 'rek_isrc_order' }}
                                             locale={{ ...componentLocale.components.isrcForm.field }}
                                             listEditorId="isrc"
-                                            disabled={this.props.submitting}
-                                            inputNormalizer={this.normalizeIsrc}
-                                            transformFunction={this.transformIsrc}
+                                            disabled={this.props.isSubmitting}
+                                            inputNormalizer={normalizeIsrc}
+                                            transformFunction={transformIsrc}
                                         />
                                     </Grid>
                                 )}
                                 {!this.props.hideSeries && (
                                     <Grid xs={12}>
                                         <Field
+                                            control={control}
                                             component={SeriesField}
-                                            disabled={this.props.submitting}
+                                            disabled={this.props.isSubmitting}
                                             name="fez_record_search_key_series.rek_series"
                                             {...metadata.fields.series}
                                         />
@@ -363,12 +369,13 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideVolume && (
                                     <Grid xs={12} sm={this.row3Width}>
                                         <Field
+                                            control={control}
                                             component={TextField}
                                             name="fez_record_search_key_volume_number.rek_volume_number"
                                             textFieldId="rek-volume-number"
                                             type="text"
                                             fullWidth
-                                            disabled={this.props.submitting}
+                                            disabled={this.props.isSubmitting}
                                             label={metadata.fields.volume.label}
                                         />
                                     </Grid>
@@ -376,12 +383,13 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideIssue && (
                                     <Grid xs={12} sm={this.row3Width}>
                                         <Field
+                                            control={control}
                                             component={TextField}
                                             name="fez_record_search_key_issue_number.rek_issue_number"
                                             textFieldId="rek-issue-number"
                                             type="text"
                                             fullWidth
-                                            disabled={this.props.submitting}
+                                            disabled={this.props.isSubmitting}
                                             label={metadata.fields.issue.label}
                                         />
                                     </Grid>
@@ -389,12 +397,13 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideStartPage && (
                                     <Grid xs={12} sm={this.row3Width}>
                                         <Field
+                                            control={control}
                                             component={TextField}
                                             name="fez_record_search_key_start_page.rek_start_page"
                                             textFieldId="rek-start-page"
                                             type="text"
                                             fullWidth
-                                            disabled={this.props.submitting}
+                                            disabled={this.props.isSubmitting}
                                             label={metadata.fields.startPage.label}
                                         />
                                     </Grid>
@@ -402,12 +411,13 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideEndPage && (
                                     <Grid xs={12} sm={this.row3Width}>
                                         <Field
+                                            control={control}
                                             component={TextField}
                                             name="fez_record_search_key_end_page.rek_end_page"
                                             textFieldId="rek-end-page"
                                             type="text"
                                             fullWidth
-                                            disabled={this.props.submitting}
+                                            disabled={this.props.isSubmitting}
                                             label={metadata.fields.endPage.label}
                                         />
                                     </Grid>
@@ -415,13 +425,14 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideExtent && (
                                     <Grid xs={12} sm={this.row4Width}>
                                         <Field
+                                            control={control}
                                             component={TextField}
                                             id="rek-total-pages"
                                             name="fez_record_search_key_total_pages.rek_total_pages"
                                             textFieldId="rek-total-pages"
                                             type="text"
                                             fullWidth
-                                            disabled={this.props.submitting}
+                                            disabled={this.props.isSubmitting}
                                             label={metadata.fields.extent.label}
                                             placeholder={metadata.fields.extent.placeholder}
                                             required
@@ -432,12 +443,13 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideOriginalFormat && (
                                     <Grid xs={12} sm={this.row4Width}>
                                         <Field
+                                            control={control}
                                             component={TextField}
                                             name="fez_record_search_key_original_format.rek_original_format"
                                             textFieldId="rek-original-format"
                                             type="text"
                                             fullWidth
-                                            disabled={this.props.submitting}
+                                            disabled={this.props.isSubmitting}
                                             {...metadata.fields.physicalDescription}
                                         />
                                     </Grid>
@@ -445,9 +457,10 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideAudienceSize && (
                                     <Grid xs={12} sm={this.row5Width}>
                                         <Field
+                                            control={control}
                                             component={SelectField}
                                             name="fez_record_search_key_audience_size.rek_audience_size"
-                                            disabled={this.props.submitting}
+                                            disabled={this.props.isSubmitting}
                                             label={metadata.fields.audienceSize.label}
                                             required
                                             validate={[validation.required]}
@@ -464,10 +477,11 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideLanguage && (
                                     <Grid xs={12} sm={this.row5Width}>
                                         <Field
+                                            control={control}
                                             component={NewGenericSelectField}
                                             genericSelectFieldId="rek-language"
                                             name="languages"
-                                            disabled={this.props.submitting}
+                                            disabled={this.props.isSubmitting}
                                             {...metadata.fields.language}
                                             itemsList={LANGUAGE}
                                             multiple
@@ -478,8 +492,9 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hidePeerReviewActivity && (
                                     <Grid xs={12} sm={this.row5Width}>
                                         <Field
+                                            control={control}
                                             component={NewGenericSelectField}
-                                            disabled={this.props.submitting}
+                                            disabled={this.props.isSubmitting}
                                             genericSelectFieldId="rek-quality-indicator"
                                             id="quality-indicators"
                                             name="qualityIndicators"
@@ -500,10 +515,11 @@ export default class NtroFields extends React.PureComponent {
                     <Grid xs={12}>
                         <StandardCard title={grantEditor.title}>
                             <Field
+                                control={control}
                                 component={GrantListEditorField}
                                 canEdit={this.props.canEdit}
                                 name="grants"
-                                disabled={this.props.submitting}
+                                disabled={this.props.isSubmitting}
                                 disableDeleteAllGrants={this.props.disableDeleteAllGrants}
                                 validate={[validation.grantFormIsPopulated]}
                             />

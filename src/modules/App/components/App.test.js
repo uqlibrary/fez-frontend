@@ -1,10 +1,11 @@
 import React from 'react';
-import App, { StrictModeConditional } from './App';
+import App from './App';
 import { customRedirectors } from '../containers/App';
 import { accounts, authorDetails, currentAuthor } from 'mock/data';
 import { pathConfig } from 'config';
 import Cookies from 'js-cookie';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, waitForText } from 'test-utils';
+import locale from '../../../locale/global';
 
 const mockUseNavigate = jest.fn();
 let mockUseLocation = {};
@@ -491,25 +492,21 @@ describe('Application component', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('StrictModeConditional should wrap the App JSX', () => {
-        const { getByTestId, getByText } = render(
-            <StrictModeConditional condition wrapper={children => <div data-testid="wrapper">{children}</div>}>
-                <div>content here</div>
-            </StrictModeConditional>,
-        );
+    it('Should display login dialog logged-in user performs a search with an expired session token', async () => {
+        const { rerender } = setup({ account: account });
 
-        expect(getByTestId('wrapper')).toBeInTheDocument();
-        expect(getByText('content here')).toBeInTheDocument();
-    });
+        // since there are no visual cues to tell if the related side effect has been completed,
+        // make sure the text that will be displayed after a rerender without an account is not present
+        let isTextPresent = false;
+        try {
+            await waitForText(locale.global.loginAlert.message, { timeout: 1 });
+            isTextPresent = true;
+        } catch (e) {
+            expect(isTextPresent).toBeFalsy();
+        }
 
-    it('StrictModeConditional should not wrap the App JSX', () => {
-        const { queryByTestId, getByText } = render(
-            <StrictModeConditional condition={false} wrapper={children => <div data-testid="wrapper">{children}</div>}>
-                <div>content here</div>
-            </StrictModeConditional>,
-        );
-
-        expect(queryByTestId('wrapper')).not.toBeInTheDocument();
-        expect(getByText('content here')).toBeInTheDocument();
+        mockUseLocation.pathname = '/records/search';
+        setup({ account: null }, rerender);
+        await waitForText(locale.global.loginAlert.message);
     });
 });

@@ -1,17 +1,17 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { render } from '@testing-library/react';
+import { render, within } from '@testing-library/react';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
+import { FormProvider } from 'react-hook-form';
 
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 
-import { getStore } from '../src/config/store';
-import Immutable from 'immutable';
+import { getStore, storeInstance } from '../src/config/store';
 
 import mediaQuery from 'css-mediaquery';
 
@@ -23,9 +23,13 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
+import * as useValidatedForm from 'hooks/useValidatedForm';
 import * as useForm from 'hooks/useForm';
-import { lastRequests } from '../src/config/axios';
-import { api } from './api-mock';
+import { apiRequestHistory } from '../src/config/axios';
+import { api } from './MockApiWrapper';
+import { isEmptyObject } from '../src/helpers/general';
+import { locale } from 'locale';
+import { isPlainObject } from 'lodash';
 
 export const AllTheProviders = props => {
     return (
@@ -52,14 +56,15 @@ export const WithRouter = ({ children, route = '/', initialEntries = [route] }) 
     return <RouterProvider router={router} />;
 };
 
-export const withRedux = (initialState = Immutable.Map()) => WrappedComponent => {
-    return <Provider store={getStore(initialState)}>{WrappedComponent}</Provider>;
-};
+export const getReduxStoreState = namespace =>
+    namespace ? storeInstance.getState().toJS()[namespace] : storeInstance.getState().toJS();
 
-export const WithReduxStore = ({ initialState = Immutable.Map(), children }) => (
-    <Provider store={getStore(initialState)}>
+export const WithRedux = ({ initialState, children }) => <Provider store={getStore(initialState)}>{children}</Provider>;
+
+export const WithReduxStore = ({ initialState = {}, children }) => (
+    <WithRedux initialState={initialState}>
         <AllTheProviders>{children}</AllTheProviders>
-    </Provider>
+    </WithRedux>
 );
 
 export const assertTooltipText = async (trigger, tooltipText) => {
@@ -166,7 +171,7 @@ export const createMatchMedia = width => {
 
 const getFilenameExtension = filename => filename.split('.').pop();
 const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
-const addFilesToFileUploader = files => {
+const addFilesToFileUploader = async (files, timeout = 500) => {
     const { screen, fireEvent } = reactTestingLib;
     // create a list of Files
     const fileList = files.map(file => {
@@ -184,18 +189,10 @@ const addFilesToFileUploader = files => {
             types: ['Files'],
         },
     });
-};
-const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
-    const { fireEvent } = reactTestingLib;
-    // set all files to closed access
     for (const file of files) {
-        const index = files.indexOf(file);
         await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
-        fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
-        fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
     }
 };
-
 const assertEnabled = element =>
     expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
 const assertDisabled = element =>
@@ -208,14 +205,88 @@ const waitToBeDisabled = async element =>
     await waitFor(() =>
         expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled'),
     );
-const waitForText = async (text, options) =>
-    ((typeof text === 'string' && !!text.trim().length) || text) &&
-    !screen.queryByText(text) &&
-    (await waitFor(() => screen.getByText(text), options));
-const waitForTextToBeRemoved = async (text, options) =>
-    ((typeof text === 'string' && !!text.trim().length) || text) &&
-    screen.queryByText(text) &&
-    (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
+
+/**
+ * @param {string|function} dataTestId
+ * @param {object?} options
+ * @return {Promise<HTMLElement>}
+ */
+const waitElementToBeInDocument = async (dataTestId, options) =>
+    await waitFor(() => {
+        const element = typeof dataTestId === 'string' ? screen.getByTestId(dataTestId) : dataTestId();
+        expect(element).toBeInTheDocument();
+        return element;
+    }, options);
+
+/**
+ * note: it will match visible texts in DOM or input's values
+ * @param {string|RegExp} text
+ * @param {object?} options
+ * @return {Promise<HTMLElement>}
+ */
+const waitForText = async (text, options) => {
+    if (text === undefined || text === null || (typeof text === 'string' && !text.trim?.().length)) {
+        throw new Error('empty text');
+    }
+
+    return await waitFor(
+        async () =>
+            await waitElementToBeInDocument(
+                () =>
+                    (!options?.within && (screen.queryByText(text) || screen.queryByDisplayValue(text))) ||
+                    (options?.within &&
+                        (within(options.within()).queryByText(text) ||
+                            within(options.within).queryByDisplayValue(text))),
+                options,
+            ),
+        options,
+    );
+};
+
+/**
+ * @param {string|RegExp} text
+ * @param {object?} options
+ * @return {Promise<void>}
+ */
+const waitForTextToBeRemoved = async (text, options) => {
+    if (typeof text === 'string' && !text.trim().length) throw new Error('empty text');
+    screen.queryByText(text) && (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
+};
+
+const expectRequiredFieldError = async field =>
+    await waitFor(() => {
+        expect(screen.getByTestId(`${field}-helper-text`)).toBeInTheDocument();
+        expect(screen.getByTestId(`${field}-helper-text`)).toHaveTextContent(locale.validationErrors.required);
+    });
+
+const expectMissingRequiredFieldError = async field =>
+    screen.queryByTestId(`${field}-helper-text`) &&
+    (await waitFor(() => {
+        expect(screen.queryByTestId(`${field}-helper-text`)).not.toBeInTheDocument();
+    }));
+
+const setFileUploaderFilesToClosedAccess = async (files, waitForOptions = {}) => {
+    const { fireEvent } = reactTestingLib;
+    // set all files to closed access
+    for (const file of files) {
+        const index = files.indexOf(file);
+        await waitForText(new RegExp(getFilenameBasename(file)), waitForOptions);
+        fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
+        fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
+    }
+};
+const setFileUploaderFilesSecurityPolicy = async (files, optionName, timeout = 500) => {
+    const { fireEvent, within } = reactTestingLib;
+    // set all files to closed access
+    for (const file of files) {
+        const index = files.indexOf(file);
+        await waitForText(new RegExp(getFilenameBasename(file)), { timeout });
+        fireEvent.mouseDown(
+            within(screen.getByTestId('files-section-content')).getByTestId(`dsi-security-policy-${index}-select`),
+        );
+        fireEvent.click(screen.getByRole('option', { name: optionName }));
+    }
+};
 
 const originalUseForm = useForm.useForm;
 const mockUseForm = implementation => {
@@ -224,7 +295,7 @@ const mockUseForm = implementation => {
     });
 };
 
-const turnOnJestPreviewOnTestFailure = (options = {}) =>
+const enableJestPreviewOnTestFailure = (options = {}) =>
     jestPreviewConfigure({
         autoPreview: true,
         ...options,
@@ -240,14 +311,59 @@ const mockWebApiFile = () => {
     };
 };
 
-const assertRequestData = (data, request) => {
-    if (typeof data === 'object') {
-        expect(JSON.parse(request.data)).toStrictEqual(data);
-    } else if (typeof data === 'function') {
-        expect(data(request.data)).toBeTruthy();
+// eslint-disable-next-line react/prop-types
+export const FormProviderWrapper = ({ children, methods, ...props }) => {
+    const attributes = useValidatedForm.useValidatedForm(props);
+    return (
+        <FormProvider {...attributes} {...methods}>
+            {children}
+        </FormProvider>
+    );
+};
+
+/**
+ *
+ * @param {object|function?} expected
+ * @param {object} request
+ */
+const assertRequestData = (expected, request) => {
+    const actual = !isEmptyObject(request.data || {}) ? request.data : request.params;
+    if (typeof expected === 'object') {
+        expect(JSON.parse(actual)).toStrictEqual(expected);
+    } else if (typeof expected === 'function') {
+        expect(expected(actual)).toBeTruthy();
     }
 };
 
+const requestHistoryToString = history =>
+    JSON.stringify(
+        history.reduce((acc, item) => {
+            acc.push({ method: item.method, url: item.url, data: item.data, params: item.params });
+            return acc;
+        }, []),
+        null,
+        2,
+    );
+
+const debugApiRequestHistory = () => console.log(requestHistoryToString(apiRequestHistory));
+
+const requestFilter = ({ method, url, partialUrl }) => entry =>
+    (!method || entry.method === method) &&
+    (!url || entry.url === url) &&
+    (!partialUrl || entry.url.includes(partialUrl));
+
+const findRequestHistoryIndex = ({ history, method, url, partialUrl }) =>
+    history.findIndex(requestFilter({ method, url, partialUrl }));
+const assertRequestCount = ({ history, method, url, partialUrl }, expectation) =>
+    expect(history.filter(requestFilter({ method, url, partialUrl }))).toHaveLength(expectation);
+
+/**
+ * @param {string} method
+ * @param {string} url
+ * @param {string} partialUrl
+ * @param {function|object} data
+ * @param {object} request
+ */
 const assertRequest = ({ method, url, partialUrl, data, request }) => {
     if (method && method !== '*') {
         expect(request.method).toBe(method);
@@ -262,31 +378,37 @@ const assertRequest = ({ method, url, partialUrl, data, request }) => {
     assertRequestData(data, request);
 };
 
-const assertApiRequest = ({ method, url, partialUrl, data }) => {
-    // try to find the last request based on method, url and partialUrl if these are available
-    const index = lastRequests.findIndex(
-        entry =>
-            (!method || entry.method === method) &&
-            (!url || entry.url === url) &&
-            (!partialUrl || entry.url.includes(partialUrl)),
-    );
+const expectApiRequestCountToBe = (method, url, expectation) =>
+    assertRequestCount({ history: apiRequestHistory, method, url }, expectation);
 
+/**
+ * @param {number} count
+ */
+const expectApiRequestHistoryLengthToBe = (count = 0) => expect(apiRequestHistory).toHaveLength(count);
+const expectApiRequestHistoryToBeEmpty = () => expectApiRequestHistoryLengthToBe(0);
+
+/**
+ * Note: this method will pop matched request from history
+ * @param {string} method
+ * @param {string} url
+ * @param {string} partialUrl
+ * @param {?function|object} data
+ * @return {*}
+ */
+const assertApiRequest = ({ method, url, partialUrl, data }) => {
+    if (!method && !url && !partialUrl && isEmptyObject(data || {})) throw new Error('invalid params');
+
+    // try to find the last request based on method, url and partialUrl if these are available
+    const index = findRequestHistoryIndex({ history: apiRequestHistory, method, url, partialUrl });
     if (index < 0) {
         throw new Error(
             `No ${(method || 'N/A').toUpperCase()} request has been made to ${url ||
                 partialUrl ||
-                'N/A'}\n\nRequest queue:\n${JSON.stringify(
-                lastRequests.reduce((acc, item) => {
-                    acc.push({ method: item.method, url: item.url });
-                    return acc;
-                }, []),
-                null,
-                2,
-            )}`,
+                'N/A'}\n\nRequest queue:\n${requestHistoryToString(apiRequestHistory)}`,
         );
     }
     // pop match from queue, so that similar requests can be processed by consecutive calls
-    const [request] = lastRequests.splice(index, 1);
+    const [request] = apiRequestHistory.splice(index, 1);
     assertRequest({ method, url, partialUrl, data, request });
 
     return request;
@@ -297,12 +419,20 @@ const assertInstanceOfFile = data => {
     return true;
 };
 
-const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
+/**
+ * Note: this method will pop matched request from history
+ * @param {string} method
+ * @param {string} url
+ * @param {function?} assertPayload
+ * @param {function?} transformer
+ * @return {*}
+ */
+const expectApiRequestToMatchSnapshot = (method, url, assertPayload, transformer) => {
     const request = assertApiRequest({
         method,
         url,
         partialUrl: url,
-        data: data => expect(data).toMatchSnapshot() || true,
+        data: data => expect(transformer?.(data) ?? data).toMatchSnapshot() || true,
     });
     return typeof assertPayload === 'function' ? assertRequestData(assertPayload, request) : request;
 };
@@ -312,11 +442,113 @@ const previewAndHalt = () => {
     process.exit(0);
 };
 
+/**
+ * @param {string} id
+ * @param {string} option
+ * @param {number}  index
+ * @return {Promise<void>}
+ */
+const selectDropDownOption = async (id, option, index = 0) => {
+    await userEvent.click(screen.getByTestId(id));
+    await userEvent.click(screen.queryAllByRole('option', { name: option })[index]);
+};
+const selectDropDownOptionByElement = async (el, option, index = 0) => {
+    await userEvent.click(el);
+    await userEvent.click(screen.queryAllByRole('option', { name: option })[index]);
+};
+
+/**
+ * @param {string} fieldName
+ * @param {string} name
+ * @return {Promise<void>}
+ */
+const addContributorsEditorItem = async (fieldName, name = 'author') => {
+    await userEvent.type(screen.getByTestId(`${fieldName}-input`), name);
+    await userEvent.click(screen.getByTestId(`${fieldName}-add`));
+};
+
+/**
+ * @param {string} fieldName
+ * @param {string} name
+ * @return {Promise<void>}
+ */
+const addAndSelectContributorsEditorItem = async (fieldName, name = 'author') => {
+    await addContributorsEditorItem(fieldName, name);
+    await userEvent.click(screen.getByTestId(`${fieldName}-list-row-0-name-as-published`));
+};
+
+/**
+ * @param input
+ * @param value
+ * @return {Promise<void>}
+ */
+const clearAndType = async (input, value) => {
+    await userEvent.clear(screen.getByTestId(input));
+    await userEvent.type(screen.getByTestId(input), value);
+};
+
+// https://stackoverflow.com/a/73160202/1417494
+const sortObjectProps = obj => {
+    return Object.keys(obj)
+        .sort()
+        .reduce((ordered, key) => {
+            let value = obj[key];
+
+            if (isPlainObject(value)) {
+                ordered[key] = sortObjectProps(value);
+            } else {
+                if (Array.isArray(value)) {
+                    value = value.map(v => {
+                        // eslint-disable-next-line no-param-reassign
+                        if (isPlainObject(v)) v = sortObjectProps(v);
+                        return v;
+                    });
+                }
+                ordered[key] = value;
+            }
+            return ordered;
+        }, {});
+};
+
+/**
+ * @param {string} testId
+ * @return {Promise<Element>}
+ */
+const getRichTextEditor = async testId =>
+    await waitFor(() => {
+        const el = screen.getByTestId(testId).querySelector('.ck-editor__editable');
+        if (!el.ckeditorInstance) throw new Error('Waiting for CKEditor editable element');
+        return el;
+    });
+
+/**
+ * Note: value is set programmatically, not via DOM
+ * @param {string} testId
+ * @param {string} value
+ */
+const setRichTextEditorValue = async (testId, value) => {
+    const editor = await getRichTextEditor(testId);
+    await editor.ckeditorInstance.setData(value);
+    await userEvent.tab();
+};
+
+/**
+ * Note: assertion is done programmatically, not via DOM
+ * @param {string} testId
+ * @param {string|number|boolean|null|undefined} value
+ * @return void
+ */
+const assertRichTextEditorValue = async (testId, value) => {
+    const editor = await getRichTextEditor(testId);
+    expect(editor).toHaveTextContent(value, { exact: true });
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
     rtlRender,
-    withRedux,
+    WithRedux,
+    getReduxStoreState,
     AllTheProviders,
     WithReduxStore,
     assertTooltipText,
@@ -331,20 +563,37 @@ module.exports = {
     assertDisabled,
     waitToBeEnabled,
     waitToBeDisabled,
+    waitElementToBeInDocument,
     waitForText,
     waitForTextToBeRemoved,
+    expectRequiredFieldError,
+    expectMissingRequiredFieldError,
     mockUseForm,
     getFilenameExtension,
     getFilenameBasename,
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
-    turnOnJestPreviewOnTestFailure,
+    FormProviderWrapper,
+    setFileUploaderFilesSecurityPolicy,
+    enableJestPreviewOnTestFailure,
     mockWebApiFile,
     assertRequestData,
     assertRequest,
+    debugApiRequestHistory,
+    expectApiRequestCountToBe,
+    expectApiRequestHistoryLengthToBe,
+    expectApiRequestHistoryToBeEmpty,
     assertApiRequest,
     expectApiRequestToMatchSnapshot,
     assertInstanceOfFile,
     previewAndHalt,
+    setRichTextEditorValue,
+    assertRichTextEditorValue,
+    selectDropDownOption,
+    selectDropDownOptionByElement,
+    addContributorsEditorItem,
+    addAndSelectContributorsEditorItem,
+    clearAndType,
+    sortObjectProps,
     api,
 };

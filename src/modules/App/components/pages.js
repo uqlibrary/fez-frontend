@@ -19,9 +19,9 @@ const lazyRetry = (importFn, retries = 3, interval = 500) => {
 
 // lazy loaded components
 export const AddDataCollection = lazy(() =>
-    lazyRetry(() => import('modules/AddDataCollection/containers/AddDataCollection')),
+    lazyRetry(() => import('modules/AddDataCollection/components/AddDataCollection')),
 );
-export const Admin = lazy(() => lazyRetry(() => import('modules/Admin/containers/Admin')));
+export const Admin = lazy(() => lazyRetry(() => import('modules/Admin/components/AdminContainer')));
 export const AdminDashboard = lazy(() => lazyRetry(() => import('modules/AdminDashboard/AdminDashboard')));
 export const JournalAdmin = lazy(() =>
     lazyRetry(() => import('modules/JournalAdmin/components/JournalAdminContainer')),
@@ -29,14 +29,14 @@ export const JournalAdmin = lazy(() =>
 export const BatchImport = lazy(() => lazyRetry(() => import('modules/BatchImport/components/BatchImport')));
 export const BulkUpdates = lazy(() => lazyRetry(() => import('modules/BulkUpdates')));
 export const ChangeDisplayType = lazy(() =>
-    lazyRetry(() => import('modules/Admin/ChangeDisplayType/containers/ChangeDisplayType')),
+    lazyRetry(() => import('modules/Admin/ChangeDisplayType/components/ChangeDisplayType')),
 );
 export const ClaimRecord = lazy(() => lazyRetry(() => import('modules/ClaimRecord/components/ClaimRecord')));
 export const CollectionForm = lazy(() =>
     lazyRetry(() => import('modules/Admin/CollectionForm/components/CollectionForm')),
 );
 export const CommunityForm = lazy(() =>
-    lazyRetry(() => import('modules/Admin/CommunityForm/containers/CommunityForm')),
+    lazyRetry(() => import('modules/Admin/CommunityForm/components/CommunityForm')),
 );
 export const CommunityList = lazy(() => lazyRetry(() => import('modules/CommunityCollections/CommunityList')));
 export const ControlledVocabularies = lazy(() =>
@@ -63,7 +63,7 @@ export const MyIncompleteRecord = lazy(() =>
 );
 export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/Orcid')));
 export const PossiblyMyRecords = lazy(() =>
-    lazyRetry(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')),
+    lazyRetry(() => import('modules/PossiblyMyRecords/components/PossiblyMyRecords')),
 );
 export const ThesisSubmission = lazy(() =>
     lazyRetry(() => import('modules/ThesisSubmission/components/ThesisSubmission')),

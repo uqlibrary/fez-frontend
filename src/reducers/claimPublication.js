@@ -34,7 +34,7 @@ const handlers = {
     [actions.PUBLICATION_TO_CLAIM_CLEAR]: state => ({
         ...state,
         publicationToClaimFileUploadingError: false,
-        publicationToClaim: null,
+        // publicationToClaim: null,
         fullPublicationToClaim: null,
     }),
 

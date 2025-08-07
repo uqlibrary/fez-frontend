@@ -12,23 +12,40 @@ import { fieldConfig } from 'config/journalAdmin';
 export const FieldGridItem = ({ field, group, disabled }) => {
     const { jnlDisplayType } = useJournalContext();
     const methods = useFormContext();
-    if (!fieldConfig.default[field]) {
+    const config = fieldConfig.default[field];
+    if (!config) {
         console.warn('No field config found for', field);
         return '';
     }
 
+    if (config.composed) {
+        // add disable, error and errorText props to each component props
+        Object.keys(config.componentProps).forEach(k => {
+            config.componentProps[k].disabled = disabled;
+            const error = methods.getFieldState(config.componentProps[k].name).error;
+            if (error) {
+                config.componentProps[k].error = true;
+                config.componentProps[k].errorText = error;
+            }
+        });
+        return (
+            <Grid item xs={12} md={12 / group.length}>
+                <config.component {...config.componentProps} disabled={disabled} />
+            </Grid>
+        );
+    }
+
     const componentProps = {
-        ...fieldConfig.default[field].componentProps,
+        ...config.componentProps,
         ...(((fieldConfig.override[jnlDisplayType] || {})[field] || (() => {}))({}) || {}),
     };
     const error = methods.getFieldState(componentProps.name).error;
-
     return (
         <Grid item xs={12} md={12 / group.length}>
             <Field
                 name={componentProps.name}
                 control={methods.control}
-                component={fieldConfig.default[field].component}
+                component={config.component}
                 disabled={disabled}
                 {...componentProps}
                 {...(!!error ? { error: true, errorText: error } : {})}

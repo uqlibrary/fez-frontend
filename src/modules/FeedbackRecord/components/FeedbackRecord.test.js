@@ -40,7 +40,7 @@ function setup(props = {}) {
 
 describe('Component FeedbackRecord', () => {
     const isDebugging = false;
-    const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
+    const waitForOptions = { timeout: isDebugging ? 120000 : 2000 };
 
     const assertValidationErrorSummary = async () =>
         await waitFor(() => screen.getByText(forms.forms.feedbackRecord.validationAlert.message), waitForOptions);

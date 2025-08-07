@@ -1,7 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    userListLoading: true,
+    userListLoading: false,
     userListLoadingError: null,
     userListItemUpdating: false,
     userListItemUpdateSuccess: false,

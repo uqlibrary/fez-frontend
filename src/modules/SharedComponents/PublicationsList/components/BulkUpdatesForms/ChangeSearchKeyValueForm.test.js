@@ -1,11 +1,23 @@
 import React from 'react';
 import ChangeSearchKeyValueForm from './ChangeSearchKeyValueForm';
-import { act, render, WithRouter, WithReduxStore, fireEvent, waitFor } from 'test-utils';
-import * as repositories from 'repositories';
+import {
+    act,
+    render,
+    WithRouter,
+    WithReduxStore,
+    fireEvent,
+    waitFor,
+    expectApiRequestToMatchSnapshot,
+    api,
+    expectRequiredFieldError,
+    expectMissingRequiredFieldError,
+    assertDisabled,
+    assertEnabled,
+} from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
-        recordsSelected: [{ rek_pid: 'UQ:123456' }],
+        recordsSelected: { 'UQ:123456': { rek_pid: 'UQ:123456' } },
         onCancel: jest.fn(),
         ...testProps,
     };
@@ -20,33 +32,34 @@ function setup(testProps = {}) {
 }
 
 describe('ChangeSearchKeyValueForm', () => {
-    it('should correctly submit form and display success info', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
-        const { getByTestId, getByText, queryByTestId } = setup();
+    const assertFormInitialState = async () => {
+        await expectRequiredFieldError('search-key');
+        await expectMissingRequiredFieldError('rek-oa-status');
+        assertDisabled('change-search-key-value-submit');
+    };
 
-        // assert initial state of the form
-        expect(getByTestId('search-key-helper-text')).toBeInTheDocument();
-        expect(getByTestId('search-key-helper-text')).toHaveTextContent('This field is required');
-        expect(queryByTestId('rek-oa-status-select')).not.toBeInTheDocument();
-        expect(getByTestId('change-search-key-value-submit')).toHaveAttribute('disabled');
+    beforeEach(() => api.reset());
+
+    it('should correctly submit form and display success info', async () => {
+        api.mock.records.bulkUpdate();
+        const { getByTestId, getByText } = setup();
+        await assertFormInitialState();
 
         // interact with the form
         fireEvent.mouseDown(getByTestId('search-key-select'));
         fireEvent.click(getByText('OA status'));
 
         // assert next state of the form on display type selected (e.g. Book)
-        expect(queryByTestId('search-key-helper-text')).not.toBeInTheDocument();
-        expect(getByTestId('rek-oa-status-select')).toBeInTheDocument();
-        expect(getByTestId('rek-oa-status-helper-text')).toBeInTheDocument();
-        expect(getByTestId('rek-oa-status-helper-text')).toHaveTextContent('This field is required');
+        await expectMissingRequiredFieldError('search-key');
+        await expectRequiredFieldError('rek-oa-status');
         expect(getByTestId('change-search-key-value-submit')).toHaveAttribute('disabled');
 
         fireEvent.mouseDown(getByTestId('rek-oa-status-select'));
         fireEvent.click(getByText('DOI'));
 
         // assert next state of the form on display type selected (e.g. Research book)
-        expect(queryByTestId('rek-oa-status-helper-text')).not.toBeInTheDocument();
-        expect(getByTestId('change-search-key-value-submit')).not.toHaveAttribute('disabled');
+        await expectMissingRequiredFieldError('rek-oa-status');
+        assertEnabled('change-search-key-value-submit');
 
         fireEvent.change(getByTestId('edit-reason-input'), { target: { value: 'test edit reason' } });
 
@@ -57,35 +70,29 @@ describe('ChangeSearchKeyValueForm', () => {
 
         await waitFor(() => getByTestId('alert-done-change-search-key-value'));
         expect(getByTestId('alert-done-change-search-key-value')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should submit form and display error', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(500, {});
-        const { getByTestId, getByText, queryByTestId } = setup();
-
-        // assert initial state of the form
-        expect(getByTestId('search-key-helper-text')).toBeInTheDocument();
-        expect(getByTestId('search-key-helper-text')).toHaveTextContent('This field is required');
-        expect(queryByTestId('rek-oa-status-select')).not.toBeInTheDocument();
-        expect(getByTestId('change-search-key-value-submit')).toHaveAttribute('disabled');
+        api.mock.records.fail.bulkUpdate();
+        const { getByTestId, getByText } = setup();
+        await assertFormInitialState();
 
         // interact with the form
         fireEvent.mouseDown(getByTestId('search-key-select'));
         fireEvent.click(getByText('OA status'));
 
         // assert next state of the form on display type selected (e.g. Book)
-        expect(queryByTestId('search-key-helper-text')).not.toBeInTheDocument();
-        expect(getByTestId('rek-oa-status-select')).toBeInTheDocument();
-        expect(getByTestId('rek-oa-status-helper-text')).toBeInTheDocument();
-        expect(getByTestId('rek-oa-status-helper-text')).toHaveTextContent('This field is required');
+        await expectMissingRequiredFieldError('search-key');
+        await expectRequiredFieldError('rek-oa-status');
         expect(getByTestId('change-search-key-value-submit')).toHaveAttribute('disabled');
 
         fireEvent.mouseDown(getByTestId('rek-oa-status-select'));
         fireEvent.click(getByText('DOI'));
 
         // assert next state of the form on display type selected (e.g. Research book)
-        expect(queryByTestId('rek-oa-status-helper-text')).not.toBeInTheDocument();
-        expect(getByTestId('change-search-key-value-submit')).not.toHaveAttribute('disabled');
+        await expectMissingRequiredFieldError('rek-oa-status');
+        assertEnabled('change-search-key-value-submit');
 
         // submit form
         act(() => {
@@ -120,8 +127,6 @@ describe('ChangeSearchKeyValueForm', () => {
 
         expect(getByTestId('rek-org-unit-name-input')).toBeInTheDocument();
 
-        // test Additional notes in cypress
-
         fireEvent.mouseDown(getByTestId('search-key-select'));
         fireEvent.click(getByText('Series'));
 
@@ -131,7 +136,5 @@ describe('ChangeSearchKeyValueForm', () => {
         fireEvent.click(getByText('Copyright notice'));
 
         expect(getByTestId('rek-rights-input')).toBeInTheDocument();
-
-        // Advisory statement tested in cypress
     });
 });

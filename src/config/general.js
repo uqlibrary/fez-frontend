@@ -6,6 +6,9 @@ const getKeyValue = value => (process.env.NODE_ENV === 'production' ? `?key=${va
 
 export const RESOLVER_URL_PREFIX = 'https://resolver.library.uq.edu.au/openathens/redir?qurl=';
 
+export const ULRICHS_URL_PREFIX =
+    RESOLVER_URL_PREFIX + encodeURIComponent('https://ulrichsweb.serialssolutions.com/title/');
+
 export const prefixByUrlResolver = url => RESOLVER_URL_PREFIX + encodeURIComponent(url);
 
 export const numberToWords = value => {
@@ -24,8 +27,10 @@ export const UQ_FULL_NAME = 'The University of Queensland';
 // URLS - values are set in webpack build
 export const PRODUCTION_URL = 'https://espace.library.uq.edu.au/';
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
+export const PRODUCTION_API_URL = 'https://api.library.uq.edu.au/v1/';
+export const STAGING_API_URL = 'https://api.library.uq.edu.au/staging/';
 export const DEVELOPMENT_DOMAIN = 'development.library.uq.edu.au';
-export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
+export const API_URL = process.env.API_URL || STAGING_API_URL;
 export const APP_URL = process.env.APP_URL || STAGING_URL;
 export const IS_PRODUCTION = API_URL.indexOf('staging') === -1;
 export const IS_DEVELOPMENT_SERVER =
@@ -34,9 +39,11 @@ export const IS_DEVELOPMENT_SERVER =
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
 
-export const ORCID_BASE_URL = process.env.ORCID_URL || 'http://orcid.org';
+export const ORCID_BASE_URL = process.env.ORCID_URL || 'https://orcid.org';
 export const ORCID_CLIENT_ID = process.env.ORCID_CLIENT_ID || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
+
+export const ROR_BASE_URL = 'https://ror.org';
 
 export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js${getKeyValue(
     process.env.GOOGLE_MAPS_API_KEY,
@@ -61,6 +68,7 @@ export const PUBLICATION_TYPE_DESIGN = 316;
 export const PUBLICATION_TYPE_DIGILIB_IMAGE = 228;
 export const PUBLICATION_TYPE_GENERIC_DOCUMENT = 202;
 export const PUBLICATION_TYPE_IMAGE = 238;
+export const PUBLICATION_TYPE_INSTRUMENT = 378;
 export const PUBLICATION_TYPE_JOURNAL = 294;
 export const PUBLICATION_TYPE_JOURNAL_ARTICLE = 179;
 export const PUBLICATION_TYPE_MANUSCRIPT = 374;
@@ -115,6 +123,7 @@ export const DOCUMENT_TYPE_DESIGN = 'Design';
 export const DOCUMENT_TYPE_DIGILIB_IMAGE = 'Digilib Image';
 export const DOCUMENT_TYPE_GENERIC_DOCUMENT = 'Generic Document';
 export const DOCUMENT_TYPE_IMAGE = 'Image';
+export const DOCUMENT_TYPE_INSTRUMENT = 'Instrument';
 export const DOCUMENT_TYPE_JOURNAL = 'Journal';
 export const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
 export const DOCUMENT_TYPE_MANUSCRIPT = 'Manuscript';
@@ -136,6 +145,7 @@ export const PUBLICATION_TYPES_WITH_DOI = [
     PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_JOURNAL,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_THESIS,
@@ -150,6 +160,7 @@ export const CSV_INGEST_DOCUMENT_TYPES = [
     PUBLICATION_TYPE_DIGILIB_IMAGE,
     PUBLICATION_TYPE_DESIGN,
     PUBLICATION_TYPE_IMAGE,
+    PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_JOURNAL,
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_MANUSCRIPT,
@@ -170,6 +181,7 @@ export const DOCUMENT_TYPES_LOOKUP = {
     [PUBLICATION_TYPE_DIGILIB_IMAGE]: DOCUMENT_TYPE_DIGILIB_IMAGE,
     [PUBLICATION_TYPE_GENERIC_DOCUMENT]: DOCUMENT_TYPE_GENERIC_DOCUMENT,
     [PUBLICATION_TYPE_IMAGE]: DOCUMENT_TYPE_IMAGE,
+    [PUBLICATION_TYPE_INSTRUMENT]: DOCUMENT_TYPE_INSTRUMENT,
     [PUBLICATION_TYPE_JOURNAL]: DOCUMENT_TYPE_JOURNAL,
     [PUBLICATION_TYPE_JOURNAL_ARTICLE]: DOCUMENT_TYPE_JOURNAL_ARTICLE,
     [PUBLICATION_TYPE_MANUSCRIPT]: DOCUMENT_TYPE_MANUSCRIPT,
@@ -479,6 +491,13 @@ export const publicationTypes = (components, isAdmin = false) => ({
         formComponent: components ? components.ImageDocumentForm : null,
         hasFormComponent: true,
     },
+    [PUBLICATION_TYPE_INSTRUMENT]: {
+        id: PUBLICATION_TYPE_INSTRUMENT,
+        name: DOCUMENT_TYPE_INSTRUMENT,
+        class: 'Uqlibrary\\FezCore\\Types\\Instrument',
+        citationComponent: components ? components.InstrumentCitation : null,
+        hasFormComponent: false,
+    },
     [PUBLICATION_TYPE_JOURNAL]: {
         id: PUBLICATION_TYPE_JOURNAL,
         name: DOCUMENT_TYPE_JOURNAL,
@@ -617,6 +636,7 @@ export const ORG_UNITS_VOCAB_ID = 453703;
 export const FIELD_OF_RESEARCH_VOCAB_ID = 451780;
 export const AIATSIS_CODES_VOCAB_ID = 453669;
 export const SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID = 456993;
+export const JOURNAL_ADVISORY_STATEMENT_TYPE = 457074;
 
 export const UNPROCESSED_RECORDS_COLLECTION = {
     fez_record_search_key_ismemberof: [
@@ -1665,6 +1685,17 @@ export const OA_STATUS_TYPE = [
     { value: 454121, text: 'Gold' },
     { value: 454122, text: 'Hybrid' },
     { value: 454123, text: 'Bronze' },
+];
+
+export const ALTERNATE_IDENTIFIER_TYPE = [
+    { value: 457082, text: 'Serial Number' },
+    { value: 457083, text: 'Inventory Number' },
+    { value: 457084, text: 'Other' },
+];
+
+export const AUTHOR_EXTERNAL_IDENTIFIER_TYPE = [
+    { value: 457086, text: 'Orcid' },
+    { value: 457087, text: 'ROR' },
 ];
 
 export const SENSITIVE_HANDLING_NOTE_OTHER_TYPE = 456860;

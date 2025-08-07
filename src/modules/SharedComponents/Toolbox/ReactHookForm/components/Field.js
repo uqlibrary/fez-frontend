@@ -10,18 +10,17 @@ import Controller from './Controller';
  * @param validate
  * @return {string|null}
  */
-export const validateHandler = (value, formValues, validators) => {
+export const validateHandler = async (value, formValues, validators) => {
     if (!(validators instanceof Array)) {
         return null;
     }
 
-    for (let i = 0; i < validators.length; i++) {
-        if (!(validators[i] instanceof Function)) {
-            continue;
-        }
+    for (const validator of validators) {
+        if (typeof validator !== 'function') continue;
 
-        let result = validators[i](value, formValues);
-        if (!result?.trim) {
+        let result = await Promise.resolve(validator(value, formValues));
+
+        if (typeof result !== 'string') {
             continue;
         }
 
@@ -30,26 +29,32 @@ export const validateHandler = (value, formValues, validators) => {
             return result;
         }
     }
+
     return null;
 };
 
 /**
- * A Higher-Order Component (HoC) inspired by the Redux Form <Field> component.
- * It utilizes a custom HoC based on the React Hook Form <Controller> component, allowing for a smoother migration
- * from Redux Form to React Hook Form.
+ * A simple Higher-Order Component (HoC) inspired by the Redux Form <Field> component. It utilizes a custom HoC based
+ * on the React Hook Form <Controller> component.
  *
- * Similar to the original Redux Form <Field>, this component accepts an array of validators (`validate`).
- * These validators are applied to the field's value sequentially, in left-to-right order.
+ * Customizations relevant to specific components and cases should be added to a new component that extends
+ * this one.
  *
- * @param name
- * @param control
- * @param validate
- * @param Component
- * @param childProps
+ * Props notes:
+ * - validate: an array of validators that are checks the field's value sequentially, in left-to-right order.
+ * - normalize: function that gets called on every field's value change event.
+ *
+ * @param {string} name
+ * @param {object} control
+ * @param {*} rules
+ * @param {function} Component
+ * @param {[function]} validate
+ * @param {function} normalize
+ * @param {*} childProps
  * @return {Element}
  * @constructor
  */
-const Field = ({ name, control, validate, rules, component: Component, ...childProps }) => {
+const Field = ({ name, control, rules, component: Component, validate, normalize, ...childProps }) => {
     return (
         <Controller
             name={name}
@@ -60,8 +65,12 @@ const Field = ({ name, control, validate, rules, component: Component, ...childP
                     validateHandler(value, formValues, validate),
             }}
             render={({ field }) => {
-                // eslint-disable-next-line react/prop-types
-                if (!!childProps.noRef) delete field.ref;
+                if (typeof field.onChange === 'function' && typeof normalize === 'function') {
+                    const originalOnChange = field.onChange;
+                    field.onChange = event => {
+                        originalOnChange(normalize(event && event?.target ? event.target.value : event));
+                    };
+                }
                 return <Component {...childProps} {...field} />;
             }}
         />
@@ -74,6 +83,7 @@ Field.propTypes = {
     rules: PropTypes.object,
     validate: PropTypes.array,
     component: PropTypes.elementType.isRequired,
+    normalize: PropTypes.func,
 };
 
 export default Field;

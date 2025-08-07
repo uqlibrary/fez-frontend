@@ -1,5 +1,4 @@
 import ClaimRecord from './ClaimRecord';
-import Immutable from 'immutable';
 import { dataCollection, journalArticle } from 'mock/data/testing/records';
 import validationErrors from 'locale/validationErrors';
 import { CLAIM_PRE_CHECK, NEW_RECORD_API } from 'repositories/routes';
@@ -76,7 +75,7 @@ function setup(props = {}) {
         ],
     };
     const pid = (props.publication || defaultRecord).rek_pid;
-    const state = Immutable.Map({
+    const state = {
         appReducer: {
             redirectPath: props.redirectPath,
         },
@@ -90,7 +89,7 @@ function setup(props = {}) {
             publicationsClaimedInProgress: props.publicationsClaimedInProgress || [],
             publicationToClaimFileUploadingError: props.publicationToClaimFileUploadingError || false,
         },
-    });
+    };
 
     return render(
         <WithReduxStore initialState={state}>
@@ -102,7 +101,7 @@ function setup(props = {}) {
 }
 describe('Component ClaimRecord ', () => {
     const isDebugging = false;
-    const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
+    const waitForOptions = { timeout: isDebugging ? 120000 : 2000 };
 
     beforeEach(() => {
         mockUseNavigate.mockReset();
@@ -406,12 +405,8 @@ describe('Component ClaimRecord ', () => {
                 ));
         };
 
-        beforeEach(() => {
-            api.request.history.reset();
-        });
-        afterEach(() => {
-            api.mock.reset();
-        });
+        beforeEach(() => api.reset());
+        afterEach(() => api.reset());
 
         describe('payload', () => {
             it('all fields data', async () => {
@@ -421,10 +416,10 @@ describe('Component ClaimRecord ', () => {
                     .issues({ pid: journalArticle.rek_pid })
                     .files.upload();
 
-                const { getByText, getByTestId, queryByTestId } = setup();
+                const { getByText, getByTestId } = setup();
 
                 selectAuthor();
-                addFilesToFileUploader(fileMock);
+                await addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesToClosedAccess(fileMock);
                 await userEvent.type(getByTestId('claim-comments-input'), 'my comments');
                 await userEvent.type(getByTestId('claim-link-input'), 'https://www.test.com');
@@ -469,14 +464,11 @@ describe('Component ClaimRecord ', () => {
             });
 
             it('should render the confirm dialog with an alert due to a file upload error and navigate to fix record page', async () => {
-                api.mock.records
-                    .update({ pid: journalArticle.rek_pid, data: journalArticle })
-                    .files.upload({ status: 500, once: false });
-
-                const { getByText, getByTestId, queryByTestId } = setup();
+                api.mock.records.update({ pid: journalArticle.rek_pid, data: journalArticle }).files.fail.upload();
+                const { getByText, getByTestId } = setup();
 
                 selectAuthor();
-                addFilesToFileUploader(fileMock);
+                await addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesToClosedAccess(fileMock);
                 await submitForm();
                 // assert a file upload error

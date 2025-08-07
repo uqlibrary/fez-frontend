@@ -1,13 +1,23 @@
 import React from 'react';
 import AttachedFiles, { getFileOpenAccessStatus, checkFileNamesForDupes, getFilenameId } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
-import { rtlRender, fireEvent, waitFor, act, createMatchMedia, within } from 'test-utils';
+import {
+    rtlRender,
+    WithReduxStore,
+    FormProviderWrapper,
+    userEvent,
+    fireEvent,
+    waitFor,
+    act,
+    createMatchMedia,
+    within,
+} from 'test-utils';
 import { openAccessConfig } from 'config';
 import * as fileUploadLocale from '../FileUploader/locale';
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
 
 jest.mock('context');
-import { useRecordContext, useFormValuesContext } from 'context';
+import { useRecordContext } from 'context';
 import {
     AV_CHECK_STATE_CLEAN,
     AV_CHECK_STATE_INFECTED,
@@ -26,7 +36,7 @@ import moment from 'moment';
 
 jest.mock('react-player', () => () => <div>Mock React Player</div>);
 
-function setup(testProps = {}, renderer = rtlRender) {
+function setup({ values, ...testProps } = {}, renderer = rtlRender) {
     const { locale, ...restProps } = testProps;
     const props = {
         dataStreams: recordWithDatastreams.fez_datastream_info,
@@ -38,18 +48,31 @@ function setup(testProps = {}, renderer = rtlRender) {
             },
             ...locale,
         },
+        onRenameAttachedFile: jest.fn(),
+        onDeleteAttachedFile: jest.fn(),
+        openAccessStatusId: 0,
         ...restProps,
     };
-    return renderer(<AttachedFiles {...props} />);
+    return renderer(
+        <WithReduxStore>
+            <FormProviderWrapper
+                values={{
+                    filesSection: {
+                        fez_datastream_info: [],
+                        ...values,
+                    },
+                }}
+            >
+                <AttachedFiles {...props} />
+            </FormProviderWrapper>
+        </WithReduxStore>,
+    );
 }
 
 describe('AttachedFiles component', () => {
     beforeAll(() => {
         useRecordContext.mockImplementation(() => ({
             record: recordWithDatastreams,
-        }));
-        useFormValuesContext.mockImplementation(() => ({
-            openAccessStatusId: 0,
         }));
     });
 
@@ -133,7 +156,7 @@ describe('AttachedFiles component', () => {
     });
 
     it('should render with default props', () => {
-        const { container } = rtlRender(<AttachedFiles dataStreams={[]} />);
+        const { container } = setup({ dataStreams: [] });
         expect(container).toMatchSnapshot();
     });
 
@@ -241,13 +264,11 @@ describe('AttachedFiles component', () => {
         useRecordContext.mockImplementationOnce(() => ({
             record: { fez_record_search_key_oa_status: { rek_oa_status: 453695 } },
         }));
-        useFormValuesContext.mockImplementationOnce(() => ({
-            openAccessStatusId: 453697,
-        }));
         const onDateChangeFn = jest.fn();
         const { getByText, getAllByRole } = setup({
             canEdit: true,
             disabled: false,
+            openAccessStatusId: 453697,
             dataStreams: [
                 {
                     dsi_id: '252236',
@@ -309,7 +330,7 @@ describe('AttachedFiles component', () => {
         expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', '2018-01-26', 0);
     });
 
-    it('should yield an warning for when entering an invalid embargo date', async () => {
+    it('should yield a warning when entering an invalid embargo date', async () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
 
@@ -336,22 +357,18 @@ describe('AttachedFiles component', () => {
         });
 
         // set embargo date to an invalid date
-        act(() => {
-            fireEvent.change(getByTestId('dsi-embargo-date-0-input').firstChild, { target: { value: '12122222' } });
-        });
+        // act(() => {
+        await userEvent.type(getByTestId('dsi-embargo-date-0-input').firstChild, '12122222');
+        // });
         // make sure the invalid date warning has been raised
         const alert = await waitFor(() => getByTestId('alert-files'));
         expect(alert).toHaveTextContent(
             fileUploadLocale.default.fileUploadRow.invalidEmbargoDateWarning(datastream[0].dsi_dsid),
         );
         // change to a valid date
-        act(() => {
-            fireEvent.change(getByTestId('dsi-embargo-date-0-input').firstChild, {
-                target: {
-                    value: moment().format(GENERIC_DATE_FORMAT),
-                },
-            });
-        });
+        // act(() => {
+        await userEvent.type(getByTestId('dsi-embargo-date-0-input').firstChild, moment().format(GENERIC_DATE_FORMAT));
+        // });
         // make sure the warning has been cleared
         expect(alert).not.toBeInTheDocument();
     });
@@ -383,24 +400,22 @@ describe('AttachedFiles component', () => {
         });
 
         // set embargo date to an invalid date
-        act(() => {
-            fireEvent.change(getByTestId('dsi-embargo-date-0-input').firstChild, { target: { value: '12122222' } });
-        });
+        await userEvent.type(getByTestId('dsi-embargo-date-0-input').firstChild, '12122222');
+
         // make sure the invalid date warning has been raised
         const alert = await waitFor(() => getByTestId('alert-files'));
         expect(alert).toHaveTextContent(
             fileUploadLocale.default.fileUploadRow.invalidEmbargoDateWarning(datastream[0].dsi_dsid),
         );
-        act(() => {
-            fireEvent.keyUp(getByTestId('dsi-embargo-date-0-input').firstChild, { key: '1' });
-        });
+
+        await userEvent.type(getByTestId('dsi-embargo-date-0-input').firstChild, '1');
+
         expect(alert).toHaveTextContent(
             fileUploadLocale.default.fileUploadRow.invalidEmbargoDateWarning(datastream[0].dsi_dsid),
         );
         // clear date with backspace
-        act(() => {
-            fireEvent.keyUp(getByTestId('dsi-embargo-date-0-input').firstChild, { key: 'Backspace' });
-        });
+        await userEvent.type(getByTestId('dsi-embargo-date-0-input').firstChild, '{backspace}');
+
         // make sure the warning has been cleared
         expect(alert).not.toBeInTheDocument();
     });

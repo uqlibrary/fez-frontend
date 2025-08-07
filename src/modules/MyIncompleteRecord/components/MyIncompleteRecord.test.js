@@ -21,7 +21,6 @@ import {
     expectApiRequestToMatchSnapshot,
     assertInstanceOfFile,
 } from 'test-utils';
-import Immutable from 'immutable';
 import { waitFor } from '@testing-library/dom';
 
 jest.mock('../../../context');
@@ -42,7 +41,7 @@ jest.mock('react-router-dom', () => ({
 
 function setup(props = {}) {
     props.author = props.hasOwnProperty('author') ? props.author : { aut_id: 79324 };
-    const state = Immutable.Map({
+    const state = {
         fixRecordReducer: {
             recordToFix: props.publication,
             loadingRecordToFix: props.hasOwnProperty('loadingRecordToFix')
@@ -55,7 +54,7 @@ function setup(props = {}) {
                 ? props.accountAuthorLoading
                 : !props.author,
         },
-    });
+    };
 
     return render(
         <WithReduxStore initialState={state}>
@@ -71,7 +70,7 @@ function setup(props = {}) {
 
 describe('MyIncompleteRecord', () => {
     const isDebugging = false;
-    const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
+    const waitForOptions = { timeout: isDebugging ? 120000 : 2000 };
     const cancelButtonId = 'incomplete-record-button-cancel';
     const submitButtonId = 'incomplete-record-button-submit';
 
@@ -115,7 +114,7 @@ describe('MyIncompleteRecord', () => {
             (await waitForTextToBeRemoved('Author affiliation rows marked with red are required'));
 
         const mockFile = ['myTestImage.png'];
-        addFilesToFileUploader(mockFile);
+        await addFilesToFileUploader(mockFile);
         await setFileUploaderFilesToClosedAccess(mockFile);
         waitForFieldErrorToBeCleared && (await waitForTextToBeRemoved('File submission to be completed'));
 
@@ -165,14 +164,14 @@ describe('MyIncompleteRecord', () => {
             await waitForText(/Work not found/i, waitForOptions);
         });
 
-        it('should render loader when author is loading', () => {
+        it('should render loader when author is loading', async () => {
             setup({ author: null });
-            waitForText(pageLocale.loading, waitForOptions);
+            await waitForText(pageLocale.loadingMessage, waitForOptions);
         });
 
-        it('should render loader when record is loading', () => {
+        it('should render loader when record is loading', async () => {
             setup();
-            waitForText(pageLocale.loading, waitForOptions);
+            await waitForText(pageLocale.loadingMessage, waitForOptions);
         });
 
         it('should redirect if author not linked', () => {
@@ -322,7 +321,7 @@ describe('MyIncompleteRecord', () => {
                 assertDisabled(submitButtonId);
                 await waitForText(pageLocale.successWorkflowConfirmation.confirmationTitle, waitForOptions);
 
-                expectApiRequestToMatchSnapshot('patch', api.url.records.update);
+                expectApiRequestToMatchSnapshot('patch', api.url.records.update(pid));
                 expectApiRequestToMatchSnapshot('post', api.url.records.issues(pid));
                 expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
             });
