@@ -40,7 +40,6 @@ if (!isTest() && process.env.ENABLE_LOG) {
                 matchRoutes,
             }),
         ],
-        autoSessionTracking: true,
         environment: process.env.BRANCH,
         release: process.env.GIT_SHA,
         allowUrls: [/library\.uq\.edu\.au/],
