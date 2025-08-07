@@ -452,8 +452,9 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
             const target = dataDelete.find(el => el.aut_id === row.aut_id);
             const index = dataDelete.indexOf(target);
             dataDelete.splice(index, 1);
-            console.log(dataDelete);
-            setData([...dataDelete]);
+
+            setData(dataDelete);
+            onChange(dataDelete);
         } catch (error) {
             /* istanbul ignore next */
             console.error('Error deleting row:', error);

@@ -27,7 +27,6 @@ const defaultValidationRules = [
 export default defaultValidationRules;
 
 export const extendedValidationRules = [
-    ...defaultValidationRules,
     {
         id: 'externalIdentifier',
         validate: rowData => {

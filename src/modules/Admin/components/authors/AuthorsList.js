@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 // eslint-disable-next-line camelcase
@@ -9,15 +9,17 @@ import { useTheme } from '@mui/material/styles';
 import { numberToWords } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
 import Grid from '@mui/material/Grid';
-import Edit from '@mui/icons-material/Edit';
 import People from '@mui/icons-material/People';
 import PersonOutlined from '@mui/icons-material/PersonOutlined';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import Lock from '@mui/icons-material/Lock';
 import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
-import Delete from '@mui/icons-material/Delete';
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
 
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { tableIcons } from './AuthorsListIcons';
 import OrgAffiliationTypeSelector from 'modules/SharedComponents/ContributorsEditor/components/OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from 'modules/SharedComponents/ContributorsEditor/components/NonUqOrgAffiliationFormSection';
@@ -37,7 +39,9 @@ import { default as globalLocale } from 'locale/global';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField/components/NewGenericSelectField';
 
 import { useMrtTable } from 'hooks';
-import { extendedValidationRules as validationRules } from './validationRules';
+import { default as defaultValidationRules, extendedValidationRules } from './validationRules';
+
+const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
 
 const classes = {
     linked: {
@@ -74,433 +78,6 @@ NameAsPublished.propTypes = {
     linked: PropTypes.bool,
 };
 
-export const getColumns = ({
-    contributorEditorId,
-    disabled,
-    suffix,
-    showRoleInput,
-    locale,
-    isNtro,
-    showExternalIdentifierInput,
-}) => {
-    const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : {});
-    const {
-        header: {
-            locale: {
-                nameColumn,
-                roleColumn,
-                identifierColumn,
-                organisationColumn,
-                externalIdentifierColumn,
-                externalIdentifierTypeColumn,
-            },
-        },
-        form: {
-            locale: {
-                creatorRoleLabel,
-                creatorRoleHint,
-                nameAsPublishedLabel,
-                nameAsPublishedHint,
-                identifierLabel,
-                externalIdentifierLabel,
-                externalIdentifierHint,
-                externalIdentifierTypeLabel,
-            },
-        },
-    } = locale;
-    return [
-        {
-            cellStyle: () => ({
-                verticalAlign: 'top',
-            }),
-            title: (
-                <NameAsPublished
-                    icon={<People color="secondary" />}
-                    text={
-                        <Typography variant="caption" color="secondary">
-                            {nameColumn}
-                        </Typography>
-                    }
-                />
-            ),
-            field: 'nameAsPublished',
-            render: rowData => (
-                <NameAsPublished
-                    icon={getIcon({ ...rowData, disabled })}
-                    text={
-                        <React.Fragment>
-                            <Typography
-                                variant="body2"
-                                sx={{ ...linkedClass(rowData) }}
-                                id={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
-                                data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-name-as-published`}
-                            >
-                                {rowData.nameAsPublished}
-                            </Typography>
-                            <Typography variant="caption" sx={{ ...linkedClass(rowData) }}>{`${numberToWords(
-                                rowData.tableData.id + 1,
-                            )} ${suffix}`}</Typography>
-                        </React.Fragment>
-                    }
-                    linked={!!rowData.aut_id}
-                />
-            ),
-            editComponent: props => {
-                return (
-                    <Grid container spacing={2}>
-                        <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
-                            <PersonOutlined color="secondary" />
-                        </Grid>
-                        <Grid item style={{ flexGrow: '1' }}>
-                            <TextField
-                                autoFocus
-                                value={props.value || ''}
-                                onChange={e => props.onChange(e.target.value)}
-                                textFieldId={contributorEditorId}
-                                error={!isValid(props.rowData?.nameAsPublished)}
-                                errorText={validation.maxLength255Validator(props.rowData?.nameAsPublished)}
-                                label={nameAsPublishedLabel}
-                                placeholder={nameAsPublishedHint}
-                                required
-                                fullWidth
-                            />
-                        </Grid>
-                    </Grid>
-                );
-            },
-            validate: rowData => isValid(rowData.nameAsPublished),
-        },
-        {
-            cellStyle: () => ({
-                verticalAlign: 'top',
-            }),
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {identifierColumn}
-                </Typography>
-            ),
-            field: 'uqIdentifier',
-            render: rowData => (
-                <Typography
-                    variant="body2"
-                    sx={{ ...linkedClass(rowData) }}
-                    id={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
-                    data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
-                >
-                    {(!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
-                        (rowData.uqIdentifier !== '0' && rowData.uqIdentifier) ||
-                        ''}
-                </Typography>
-            ),
-            editComponent: props => {
-                const { rowData: contributor } = props;
-                const prefilledSearch = !contributor.uqIdentifier || contributor.uqIdentifier === '0';
-                const value =
-                    (prefilledSearch && contributor.nameAsPublished) ||
-                    (!!contributor.uqUsername && `${contributor.uqUsername} - ${contributor.uqIdentifier}`) ||
-                    contributor.uqIdentifier;
-
-                const handleChange = selectedItem => {
-                    const newValue = {
-                        ...selectedItem,
-                        nameAsPublished:
-                            contributor.nameAsPublished ||
-                            (selectedItem &&
-                                selectedItem.aut_lname &&
-                                `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`),
-                        uqIdentifier: `${selectedItem.aut_id}`,
-                        orgaff:
-                            (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && globalLocale.global.orgTitle) ||
-                            /* istanbul ignore next */ contributor.orgaff,
-                        orgtype:
-                            (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) ||
-                            /* istanbul ignore next */ contributor.orgtype,
-                        uqUsername: `${selectedItem.aut_org_username ||
-                            /* istanbul ignore next */ selectedItem.aut_student_username ||
-                            /* istanbul ignore next */ selectedItem.aut_ref_num}`,
-                    };
-                    props.onRowDataChange({ ...contributor, ...newValue });
-                };
-
-                const handleClear = /* istanbul ignore next */ () => {
-                    /* istanbul ignore next */
-                    props.onRowDataChange({
-                        nameAsPublished: contributor.nameAsPublished,
-                        creatorRole: contributor.creatorRole,
-                        orgaff: 'Missing',
-                        orgtype: '',
-                        uqIdentifier: '0',
-                        uqUsername: '',
-                        affiliation: '',
-                    });
-                };
-
-                return (
-                    <UqIdField
-                        {...props}
-                        clearOnInputClear
-                        floatingLabelText={identifierLabel}
-                        hintText="Type UQ author name to search"
-                        uqIdFieldId={`${contributorEditorId}-id`}
-                        key={!!contributor.uqIdentifier ? contributor.uqIdentifier : contributor.uqUsername || 'aut-id'}
-                        onChange={handleChange}
-                        onClear={handleClear}
-                        value={value}
-                        prefilledSearch={prefilledSearch}
-                    />
-                );
-            },
-            searchable: true,
-        },
-        ...(showExternalIdentifierInput
-            ? [
-                  {
-                      cellStyle: () => ({
-                          verticalAlign: 'top',
-                      }),
-                      title: (
-                          <Typography variant="caption" color="secondary">
-                              {externalIdentifierColumn}
-                          </Typography>
-                      ),
-                      field: 'externalIdentifier',
-                      width: '20%',
-                      render: rowData => (
-                          <Typography
-                              variant="body2"
-                              id={`${contributorEditorId}-list-row-${rowData.tableData.id}-external-identifier`}
-                              data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-external-identifier`}
-                          >
-                              {rowData.externalIdentifier}
-                          </Typography>
-                      ),
-                      editComponent: props => {
-                          return (
-                              <Grid container spacing={2}>
-                                  <Grid item style={{ flexGrow: '1' }}>
-                                      <TextField
-                                          value={props.value || ''}
-                                          onChange={e => props.onChange(e.target.value)}
-                                          textFieldId={`${contributorEditorId}-external-identifier`}
-                                          error={isIdValid(
-                                              props.rowData?.externalIdentifier,
-                                              props.rowData?.externalIdentifierType,
-                                          )}
-                                          errorText={isIdValid(
-                                              props.rowData?.externalIdentifier,
-                                              props.rowData?.externalIdentifierType,
-                                          )}
-                                          label={externalIdentifierLabel}
-                                          placeholder={externalIdentifierHint}
-                                          fullWidth
-                                      />
-                                  </Grid>
-                              </Grid>
-                          );
-                      },
-                      validate: rowData => isIdValid(rowData.externalIdentifier, rowData.externalIdentifierType),
-                  },
-                  {
-                      cellStyle: () => ({
-                          verticalAlign: 'top',
-                      }),
-                      title: (
-                          <Typography variant="caption" color="secondary">
-                              {externalIdentifierTypeColumn}
-                          </Typography>
-                      ),
-                      field: 'externalIdentifierType',
-                      width: '20%',
-                      render: rowData => (
-                          <Typography
-                              variant="body2"
-                              id={`${contributorEditorId}-list-row-${rowData.tableData.id}-external-identifier-type`}
-                              data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-external-identifier-type`}
-                          >
-                              {
-                                  AUTHOR_EXTERNAL_IDENTIFIER_TYPE.find(
-                                      type => type.value === rowData.externalIdentifierType,
-                                  )?.text
-                              }
-                          </Typography>
-                      ),
-                      editComponent: props => {
-                          const { rowData: contributor } = props;
-                          const handleChange = value => {
-                              props.onRowDataChange({ ...contributor, ...{ externalIdentifierType: value } });
-                          };
-
-                          return (
-                              <Grid container spacing={2}>
-                                  <Grid item style={{ flexGrow: '1' }}>
-                                      <NewGenericSelectField
-                                          {...props}
-                                          itemsList={AUTHOR_EXTERNAL_IDENTIFIER_TYPE}
-                                          onChange={handleChange}
-                                          value={props.value}
-                                          key={`${contributor.externalIdentifierType}-${contributor.externalIdentifier}`}
-                                          genericSelectFieldId={`${contributorEditorId}-external-identifier-type`}
-                                          label={externalIdentifierTypeLabel}
-                                      />
-                                  </Grid>
-                              </Grid>
-                          );
-                      },
-                  },
-              ]
-            : []),
-        ...(showRoleInput
-            ? [
-                  {
-                      title: (
-                          <Typography variant="caption" color="secondary">
-                              {roleColumn}
-                          </Typography>
-                      ),
-                      field: 'creatorRole',
-                      render: rowData => (
-                          <Typography
-                              variant="body2"
-                              sx={{ ...linkedClass(rowData) }}
-                              id={`${contributorEditorId}-list-row-${rowData.tableData.id}-role`}
-                              data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-role`}
-                          >
-                              {rowData.creatorRole}
-                          </Typography>
-                      ),
-                      editComponent: props => {
-                          const { rowData: contributor } = props;
-                          const handleChange = /* istanbul ignore next */ selectedItem => /* istanbul ignore next */ {
-                              const newValue = {
-                                  ...contributor,
-                                  creatorRole: selectedItem,
-                              };
-                              props.onRowDataChange({ ...contributor, ...newValue });
-                          };
-                          return (
-                              <RoleField
-                                  {...props}
-                                  fullWidth
-                                  key={`role-input-${(contributor.nameAsPublished || '').trim().length === 0}`}
-                                  id="creator-role-field"
-                                  floatingLabelText={creatorRoleLabel}
-                                  hintText={creatorRoleHint}
-                                  onChange={handleChange}
-                                  disabled={disabled || (contributor.nameAsPublished || '').trim().length === 0}
-                                  required
-                                  autoComplete="off"
-                                  allowFreeText
-                                  error={
-                                      (contributor.nameAsPublished || '').trim().length === 0
-                                          ? false
-                                          : (contributor.creatorRole || '').trim().length === 0
-                                  }
-                                  value={
-                                      !!contributor.creatorRole
-                                          ? /* istanbul ignore next */ {
-                                                value: contributor.creatorRole,
-                                                text: contributor.creatorRole,
-                                            }
-                                          : null
-                                  }
-                              />
-                          );
-                      },
-                  },
-              ]
-            : []),
-        ...(isNtro
-            ? [
-                  {
-                      title: (
-                          <Typography variant="caption" color="secondary">
-                              {organisationColumn}
-                          </Typography>
-                      ),
-                      field: 'orgaff',
-                      render: rowData => (
-                          <Grid container>
-                              <Grid item xs={12}>
-                                  <Typography
-                                      variant="body2"
-                                      sx={{ ...linkedClass(rowData) }}
-                                      id={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation`}
-                                      data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation`}
-                                  >
-                                      {rowData.orgaff}
-                                  </Typography>
-                              </Grid>
-                              <Grid item xs={12}>
-                                  <Typography
-                                      variant="caption"
-                                      sx={{ ...linkedClass(rowData) }}
-                                      id={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation-type`}
-                                      data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation-type`}
-                                  >
-                                      {`${(!!rowData.orgtype &&
-                                          !!ORG_TYPES_LOOKUP[rowData.orgtype] &&
-                                          `Organisation type: ${ORG_TYPES_LOOKUP[rowData.orgtype]}`) ||
-                                          ''}`}
-                                  </Typography>
-                              </Grid>
-                          </Grid>
-                      ),
-                      editComponent: /* istanbul ignore next */ props => {
-                          const { rowData: contributor } = props;
-
-                          /* istanbul ignore next */
-                          const handleOrgAffliationChange = event => {
-                              props.onRowDataChange({ ...contributor, orgaff: event.target.value });
-                          };
-                          /* istanbul ignore next */
-                          const handleOrgTypeChange = event => {
-                              props.onRowDataChange({ ...contributor, orgtype: event.target.value });
-                          };
-                          /* istanbul ignore next */
-                          const handleAffiliationChange = event => {
-                              const affiliation = event.target.value;
-                              props.onRowDataChange({
-                                  ...contributor,
-                                  affiliation: affiliation,
-                                  orgaff:
-                                      (affiliation === AFFILIATION_TYPE_UQ && globalLocale.global.orgTitle) ||
-                                      contributor.orgaff,
-                                  orgtype:
-                                      (affiliation === AFFILIATION_TYPE_UQ && ORG_TYPE_ID_UNIVERSITY) ||
-                                      contributor.orgtype,
-                              });
-                          };
-                          /* istanbul ignore next */
-                          return (
-                              <React.Fragment>
-                                  {isNtro && (
-                                      <OrgAffiliationTypeSelector
-                                          affiliation={contributor.affiliation}
-                                          onAffiliationChange={handleAffiliationChange}
-                                          disabled={disabled}
-                                      />
-                                  )}
-                                  {contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
-                                      <NonUqOrgAffiliationFormSection
-                                          {...props}
-                                          orgAffiliation={contributor.orgaff}
-                                          orgType={contributor.orgtype}
-                                          onOrgAffiliationChange={handleOrgAffliationChange}
-                                          onOrgTypeChange={handleOrgTypeChange}
-                                          disableAffiliationEdit={disabled}
-                                          disableOrgTypeEdit={disabled}
-                                          fullWidthFields
-                                      />
-                                  )}
-                              </React.Fragment>
-                          );
-                      },
-                  },
-              ]
-            : []),
-    ];
-};
-
 /* istanbul ignore next */
 export const AuthorDetail = rowData => {
     return (
@@ -531,21 +108,13 @@ export const AuthorsList = ({
     showRoleInput,
     showExternalIdentifierInput,
 }) => {
+    console.log(isNtro);
     const theme = useTheme();
-    const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
+    const [triggerState, setTriggerState] = React.useState(true);
     const prevList = React.useRef('');
-
-    // eslint-disable-next-line camelcase
-    const setEditing = ({ editing, aut_id }) => {
-        // eslint-disable-next-line camelcase
-        setIsEditing({ editing, aut_id });
-    };
-
-    // eslint-disable-next-line camelcase
-    const isEditing = aut_id => {
-        // eslint-disable-next-line camelcase
-        return editState.editing && editState.aut_id === aut_id;
-    };
+    const validationRules = showExternalIdentifierInput
+        ? [...defaultValidationRules, ...extendedValidationRules]
+        : defaultValidationRules;
 
     const {
         tablePageSizeOptions,
@@ -599,12 +168,440 @@ export const AuthorsList = ({
 
     const linkedClass = rowData => (!!rowData.aut_id ? classes.linked : {});
 
-    const [triggerState, setTriggerState] = React.useState(true);
+    const columns = useMemo(
+        () => [
+            {
+                accessorKey: 'nameAsPublished',
+                header: nameColumn,
+                Header: ({ column }) => (
+                    <NameAsPublished
+                        icon={<People color="secondary" />}
+                        text={
+                            <Typography variant="caption" color="secondary">
+                                {column.columnDef.header}
+                            </Typography>
+                        }
+                    />
+                ),
+                Cell: ({ cell, row }) => {
+                    const value = cell.getValue();
+                    const rowData = { ...row.original, ...row._valuesCache };
+
+                    return (
+                        <NameAsPublished
+                            icon={getIcon({ index: row.index, rowData, disabled })}
+                            text={
+                                <React.Fragment>
+                                    <Typography
+                                        variant="body2"
+                                        sx={{ ...linkedClass(rowData) }}
+                                        id={`${contributorEditorId}-list-row-${row.index}-name-as-published`}
+                                        data-testid={`${contributorEditorId}-list-row-${row.index}-name-as-published`}
+                                    >
+                                        {value}
+                                    </Typography>
+                                    <Typography variant="caption" sx={{ ...linkedClass(rowData) }}>{`${numberToWords(
+                                        row.index + 1,
+                                    )} ${suffix}`}</Typography>
+                                </React.Fragment>
+                            }
+                            linked={!!rowData.aut_id}
+                        />
+                    );
+                },
+                Edit: ({ row, column }) => {
+                    const value = row._valuesCache.nameAsPublished || '';
+                    const errors = validationErrors[row.id] || [];
+                    const error = getValidationError(errors, 'nameAsPublished');
+
+                    const handleChange = e => {
+                        row._valuesCache = {
+                            ...row._valuesCache,
+                            [column.id]: e.target.value || null,
+                        };
+                        handleValidation(row, column.id, e.target.value || null);
+                    };
+
+                    return (
+                        <Grid container spacing={2}>
+                            <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                                <PersonOutlined color="secondary" />
+                            </Grid>
+                            <Grid item style={{ flexGrow: '1' }}>
+                                <TextField
+                                    autoFocus
+                                    value={value}
+                                    onChange={handleChange}
+                                    textFieldId={contributorEditorId}
+                                    error={!!error}
+                                    errorText={validation.maxLength255Validator(value)}
+                                    label={nameAsPublishedLabel}
+                                    placeholder={nameAsPublishedHint}
+                                    required
+                                    fullWidth
+                                />
+                            </Grid>
+                        </Grid>
+                    );
+                },
+                size: 400,
+                grow: true,
+            },
+            {
+                accessorKey: 'uqIdentifier',
+                header: identifierColumn,
+                Header: ({ column }) => (
+                    <Typography variant="caption" color="secondary">
+                        {column.columnDef.header}
+                    </Typography>
+                ),
+                Cell: ({ row }) => {
+                    const rowData = { ...row.original, ...row._valuesCache };
+                    const identifierText =
+                        (!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
+                        (rowData.uqIdentifier && rowData.uqIdentifier !== '0' ? rowData.uqIdentifier : '');
+                    return (
+                        <Typography
+                            variant="body2"
+                            id={`${contributorEditorId}-list-row-${row.index}-uq-identifiers`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-uq-identifiers`}
+                        >
+                            {identifierText}
+                        </Typography>
+                    );
+                },
+                Edit: ({ row }) => {
+                    const contributor = { ...row.original, ...row._valuesCache };
+                    const prefilledSearch = !contributor.uqIdentifier || contributor.uqIdentifier === '0';
+                    const value =
+                        (prefilledSearch && contributor.nameAsPublished) ||
+                        (!!contributor.uqUsername && `${contributor.uqUsername} - ${contributor.uqIdentifier}`) ||
+                        contributor.uqIdentifier ||
+                        '';
+
+                    const handleChange = selectedItem => {
+                        const newValueCache = {
+                            ...selectedItem,
+                            nameAsPublished:
+                                contributor.nameAsPublished ||
+                                (selectedItem &&
+                                    selectedItem.aut_lname &&
+                                    `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`),
+                            uqIdentifier: `${selectedItem.aut_id}`,
+                            orgaff:
+                                (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && globalLocale.global.orgTitle) ||
+                                contributor.orgaff,
+                            orgtype:
+                                (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) ||
+                                contributor.orgtype,
+                            uqUsername: `${selectedItem.aut_org_username ||
+                                selectedItem.aut_student_username ||
+                                selectedItem.aut_ref_num}`,
+                        };
+                        const updatedValues = {
+                            ...row._valuesCache,
+                            ...newValueCache,
+                        };
+                        row._valuesCache = updatedValues;
+                        // table.setEditingRow({ ...row });
+                        handleValidation(row, 'nameAsPublished', newValueCache.nameAsPublished);
+                    };
+
+                    const handleClear = () => {
+                        row._valuesCache = {
+                            ...row._valuesCache,
+                            nameAsPublished: contributor.nameAsPublished,
+                            uqIdentifier: '0',
+                            creatorRole: contributor.creatorRole,
+                            orgaff: 'Missing',
+                        };
+                        row.original = {
+                            ...row.original,
+                            orgtype: '',
+                            uqUsername: '',
+                            affiliation: '',
+                        };
+                        handleValidation(row, 'nameAsPublished', contributor.nameAsPublished);
+                    };
+
+                    return (
+                        <UqIdField
+                            clearOnInputClear
+                            floatingLabelText={identifierLabel}
+                            hintText="Type UQ author name to search"
+                            uqIdFieldId={`${contributorEditorId}-id`}
+                            key={
+                                !!contributor.uqIdentifier
+                                    ? contributor.uqIdentifier
+                                    : contributor.uqUsername || 'aut-id'
+                            }
+                            onChange={handleChange}
+                            onClear={handleClear}
+                            value={value}
+                            prefilledSearch={prefilledSearch}
+                        />
+                    );
+                },
+                size: 300,
+                grow: false,
+            },
+            {
+                accessorKey: 'externalIdentifier',
+                header: externalIdentifierColumn,
+                Header: ({ column }) => (
+                    <Typography variant="caption" color="secondary">
+                        {column.columnDef.header}
+                    </Typography>
+                ),
+                Cell: ({ cell, row }) => {
+                    const value = cell.getValue();
+                    return (
+                        <Typography
+                            variant="body2"
+                            id={`${contributorEditorId}-list-row-${row.index}-external-identifier`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-external-identifier`}
+                        >
+                            {value}
+                        </Typography>
+                    );
+                },
+                Edit: ({ row, column }) => {
+                    const value = row._valuesCache.externalIdentifier || '';
+                    const errors = validationErrors[row.id] || [];
+                    const error = getValidationError(errors, 'externalIdentifier');
+
+                    const handleChange = e => {
+                        row._valuesCache = {
+                            ...row._valuesCache,
+                            [column.id]: e.target.value || null,
+                        };
+                        handleValidation(row, column.id, e.target.value || null);
+                    };
+                    return (
+                        <Grid container spacing={2}>
+                            <Grid item style={{ flexGrow: '1' }}>
+                                <TextField
+                                    value={value}
+                                    onChange={handleChange}
+                                    textFieldId={`${contributorEditorId}-external-identifier`}
+                                    error={!!error}
+                                    errorText={error}
+                                    label={externalIdentifierLabel}
+                                    placeholder={externalIdentifierHint}
+                                    fullWidth
+                                />
+                            </Grid>
+                        </Grid>
+                    );
+                },
+            },
+            {
+                accessorKey: 'externalIdentifierType',
+                header: externalIdentifierTypeColumn,
+                Header: ({ column }) => (
+                    <Typography variant="caption" color="secondary">
+                        {column.columnDef.header}
+                    </Typography>
+                ),
+                Cell: ({ cell, row }) => {
+                    const value = cell.getValue();
+                    return (
+                        <Typography
+                            variant="body2"
+                            id={`${contributorEditorId}-list-row-${row.index}-external-identifier-type`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-external-identifier-type`}
+                        >
+                            {AUTHOR_EXTERNAL_IDENTIFIER_TYPE.find(type => type.value === value)?.text}
+                        </Typography>
+                    );
+                },
+                Edit: ({ row, column }) => {
+                    const contributor = { ...row.original, ...row._valuesCache };
+                    const value = contributor.externalIdentifierType || '';
+
+                    const handleChange = value => {
+                        row._valuesCache = {
+                            ...row._valuesCache,
+                            [column.id]: value || null,
+                        };
+                        handleValidation(row, column.id, value || null);
+                    };
+                    return (
+                        <Grid container spacing={2}>
+                            <Grid item style={{ flexGrow: '1' }}>
+                                <NewGenericSelectField
+                                    itemsList={AUTHOR_EXTERNAL_IDENTIFIER_TYPE}
+                                    onChange={handleChange}
+                                    value={value}
+                                    key={`${contributor.externalIdentifierType}-${contributor.externalIdentifier}`}
+                                    genericSelectFieldId={`${contributorEditorId}-external-identifier-type`}
+                                    label={externalIdentifierTypeLabel}
+                                />
+                            </Grid>
+                        </Grid>
+                    );
+                },
+            },
+            {
+                accessorKey: 'creatorRole',
+                header: roleColumn,
+                Header: ({ column }) => (
+                    <Typography variant="caption" color="secondary">
+                        {column.columnDef.header}
+                    </Typography>
+                ),
+                Cell: ({ cell, row }) => {
+                    const value = cell.getValue();
+                    const rowData = { ...row.original, ...row._valuesCache };
+                    return (
+                        <Typography
+                            variant="body2"
+                            className={linkedClass(rowData)}
+                            id={`${contributorEditorId}-list-row-${row.index}-role`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-role`}
+                        >
+                            {value}
+                        </Typography>
+                    );
+                },
+                Edit: ({ row }) => {
+                    const handleChange = selectedItem => {
+                        row._valuesCache = {
+                            ...row._valuesCache,
+                            creatorRole: selectedItem,
+                        };
+                    };
+                    return (
+                        <RoleField
+                            fullWidth
+                            key={`role-input-${(row._valuesCache.nameAsPublished || '').trim().length === 0}`}
+                            id="creator-role-field"
+                            floatingLabelText={creatorRoleLabel}
+                            hintText={creatorRoleHint}
+                            onChange={handleChange}
+                            disabled={disabled || (row._valuesCache.nameAsPublished || '').trim().length === 0}
+                            required
+                            autoComplete="off"
+                            allowFreeText
+                            error={
+                                (row._valuesCache.nameAsPublished || '').trim().length === 0
+                                    ? false
+                                    : (row._valuesCache.creatorRole || '').trim().length === 0
+                            }
+                            value={
+                                !!row._valuesCache.creatorRole
+                                    ? { value: row._valuesCache.creatorRole, text: row._valuesCache.creatorRole }
+                                    : ''
+                            }
+                        />
+                    );
+                },
+            },
+            {
+                accessorKey: 'orgaff',
+                header: organisationColumn,
+                Header: ({ column }) => (
+                    <Typography variant="caption" color="secondary">
+                        {column.columnDef.header}
+                    </Typography>
+                ),
+                Cell: ({ row }) => {
+                    const rowData = { ...row.original, ...row._valuesCache };
+                    return (
+                        <Grid container>
+                            <Grid xs={12}>
+                                <Typography
+                                    variant="body2"
+                                    className={linkedClass(rowData)}
+                                    id={`${contributorEditorId}-list-row-${row.index}-affiliation`}
+                                    data-testid={`${contributorEditorId}-list-row-${row.index}-affiliation`}
+                                >
+                                    {rowData.orgaff}
+                                </Typography>
+                            </Grid>
+                            <Grid xs={12}>
+                                <Typography
+                                    variant="caption"
+                                    className={linkedClass(rowData)}
+                                    id={`${contributorEditorId}-list-row-${row.index}-affiliation-type`}
+                                    data-testid={`${contributorEditorId}-list-row-${row.index}-affiliation-type`}
+                                >
+                                    {`${(!!rowData.orgtype &&
+                                        !!ORG_TYPES_LOOKUP[rowData.orgtype] &&
+                                        `Organisation type: ${ORG_TYPES_LOOKUP[rowData.orgtype]}`) ||
+                                        ''}`}
+                                </Typography>
+                            </Grid>
+                        </Grid>
+                    );
+                },
+                Edit: ({ row }) => {
+                    const contributor = { ...row.original, ...row._valuesCache };
+
+                    const handleOrgAffliationChange = event => {
+                        row._valuesCache = {
+                            ...row._valuesCache,
+                            orgaff: event.target.value,
+                        };
+                    };
+                    const handleOrgTypeChange = event => {
+                        row.original = {
+                            ...row.original,
+                            orgtype: event.target.value,
+                        };
+                    };
+                    const handleAffiliationChange = event => {
+                        const affiliation = event.target.value;
+                        row._valuesCache = {
+                            ...row._valuesCache,
+                            orgaff:
+                                (affiliation === AFFILIATION_TYPE_UQ && globalLocale.global.orgTitle) ||
+                                contributor.orgaff,
+                        };
+                        row.original = {
+                            ...row.original,
+                            affiliation: affiliation,
+                            orgtype:
+                                (affiliation === AFFILIATION_TYPE_UQ && ORG_TYPE_ID_UNIVERSITY) || contributor.orgtype,
+                        };
+                    };
+                    return (
+                        <React.Fragment>
+                            {isNtro && (
+                                <OrgAffiliationTypeSelector
+                                    affiliation={contributor.affiliation}
+                                    onAffiliationChange={handleAffiliationChange}
+                                    disabled={disabled}
+                                />
+                            )}
+                            {contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
+                                <NonUqOrgAffiliationFormSection
+                                    orgAffiliation={contributor.orgaff}
+                                    orgType={contributor.orgtype}
+                                    onOrgAffiliationChange={handleOrgAffliationChange}
+                                    onOrgTypeChange={handleOrgTypeChange}
+                                    disableAffiliationEdit={disabled}
+                                    disableOrgTypeEdit={disabled}
+                                    fullWidthFields
+                                />
+                            )}
+                        </React.Fragment>
+                    );
+                },
+            },
+        ],
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [disabled, getValidationError, handleValidation, validationErrors],
+    );
+    // here - seems like the data var is losing values when traced out here.
+    // this came to light when trying to work out why the orgaff field above wont show in the table
+    console.log(data);
     React.useEffect(() => {
         const listStr = JSON.stringify(list);
         if (prevList.current !== listStr) {
             prevList.current = listStr;
             const result = [];
+            console.log(list);
             list.forEach((item, index) => {
                 delete item.tableData;
                 item.id = index;
@@ -620,245 +617,398 @@ export const AuthorsList = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [list]);
 
-    const handleAuthorUpdate = (action, newData, oldData) => {
-        const materialTable = materialTableRef.current;
-        let newList = [...data];
-
-        if (action === 'delete') {
-            const index = oldData.tableData.id;
-            newList = [...data.slice(0, index), ...data.slice(index + 1)];
-        } else {
-            /* istanbul ignore next */ if (
-                action === 'update' &&
-                data.filter(
-                    (contributor, index) =>
-                        index !== oldData.tableData.id &&
-                        !!contributor.aut_id &&
-                        /* istanbul ignore next */ contributor.aut_id === newData.aut_id,
-                ).length > 0
-            ) {
-                /* istanbul ignore next */
-                newList = [...data];
-            } else {
-                /* istanbul ignore next */ if (
-                    action === 'add' &&
-                    data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
-                ) {
-                    /* istanbul ignore next */
-                    newList = [...data];
-                } else {
-                    newList =
-                        action === 'update'
-                            ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
-                            : [...data, newData];
-                }
-            }
-        }
-
-        onChange(newList);
-        setData(newList);
-
-        materialTable.dataManager.changePaging(newList.length > 10);
-
-        materialTable.setState({
-            ...materialTable.dataManager.getRenderState(),
-            showAddRow: false,
-        });
+    const transformNewAuthorObject = newAuthor => {
+        delete newAuthor['mrt-row-actions'];
+        return [...data, { ...newAuthor, affiliations: [] }];
     };
 
+    const handleCreate = ({ values, table, row }) => {
+        const newAuthor = { ...row.original, ...row._valuesCache, ...values };
+
+        const errors = validate(newAuthor);
+
+        /* istanbul ignore if  */
+        if (!!errors) {
+            return;
+        }
+
+        const duplicate =
+            data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newAuthor.aut_id).length > 0;
+
+        if (duplicate) {
+            table.setCreatingRow(null);
+            resetEditRow();
+            setData([...data]);
+            return;
+        }
+
+        const transformedAuthorList = transformNewAuthorObject(newAuthor);
+
+        setData(transformedAuthorList);
+        table.setCreatingRow(null);
+        resetEditRow();
+
+        onChange(transformedAuthorList);
+    };
+
+    const handleEdit = ({ values, table, row }) => {
+        const updatedAuthor = { ...row.original, ...row._valuesCache, ...values };
+        const errors = validate(updatedAuthor);
+        /* istanbul ignore if  */
+        if (!!errors) {
+            return;
+        }
+
+        const duplicate =
+            data.filter(
+                (contributor, index) =>
+                    index !== row.index && !!contributor.aut_id && contributor.aut_id === updatedAuthor.aut_id,
+            ).length > 0;
+
+        if (duplicate) {
+            table.setEditingRow(null);
+            resetEditRow();
+            setData([...data]);
+            return;
+        }
+
+        const updatedAuthorList = [...data];
+        const target = updatedAuthorList.find(el => el.aut_id === row.original.aut_id);
+        const index = updatedAuthorList.indexOf(target);
+        updatedAuthorList[index] = updatedAuthor;
+
+        setData(updatedAuthorList);
+        table.setEditingRow(null);
+        resetEditRow();
+
+        onChange(updatedAuthorList);
+    };
+
+    const handleDeleteApproved = () => {
+        const row = data.find(row => row.aut_id === pendingDeleteRowId);
+        setBusy();
+        try {
+            const dataDelete = [...data];
+            const target = dataDelete.find(el => el.aut_id === row.aut_id);
+            const index = dataDelete.indexOf(target);
+            dataDelete.splice(index, 1);
+            setData(dataDelete);
+            onChange(dataDelete);
+        } catch (error) {
+            /* istanbul ignore next */
+            console.error('Error deleting row:', error);
+        } finally {
+            setBusy(false);
+        }
+    };
+
+    // DELETE action
+    const openDeleteConfirmModal = id => () => {
+        setDeleteRow(id);
+    };
+
+    const cancelDeleteConfirmModal = () => {
+        resetDeleteRow();
+    };
+
+    const table = useMaterialReactTable({
+        columns,
+        data,
+        getRowId: row => row.aut_id,
+        createDisplayMode: 'row',
+        editDisplayMode: 'row',
+        manualExpanding: true,
+        enableEditing: true,
+        enableStickyHeader: true,
+        enablePagination: data.length > 10,
+        enableFilters: data.length > 10,
+        enableExpandAll: false,
+        enableColumnDragging: false,
+        enableColumnResizing: false,
+        enableRowDragging: false,
+        enableRowSelection: false,
+        enableColumnActions: false,
+        enableColumnOrdering: false,
+        enableColumnFilterModes: false,
+        enableGrouping: false,
+        enableFullScreenToggle: false,
+        enableDensityToggle: false,
+        enableHiding: false,
+        enableColumnFilters: false,
+        positionActionsColumn: 'last',
+        initialState: {
+            columnVisibility: {
+                externalIdentifier: showExternalIdentifierInput,
+                externalIdentifierType: showExternalIdentifierInput,
+                creatorRole: showRoleInput,
+                orgaff: isNtro,
+            },
+            density: 'compact',
+            expanded: false,
+            pagination: { pageSize: data.length > 100 ? largeListDefaultPageSize : 10, pageIndex: 0 },
+        },
+        state: {
+            showAlertBanner: false,
+            showLoadingOverlay: isBusy,
+        },
+        displayColumnDefOptions: {
+            'mrt-row-actions': {
+                minSize: 100,
+                size: 100,
+                muiTableHeadCellProps: {
+                    align: 'center',
+                },
+                muiTableBodyCellProps: {
+                    sx: {
+                        justifyContent: 'flex-end',
+                        '& > div': {
+                            gap: 0,
+                            [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: {
+                                flexDirection: 'row-reverse',
+                                justifyContent: 'center',
+                            },
+                        },
+                    },
+                },
+            },
+            'mrt-row-expand': {
+                header: '',
+                maxSize: 20,
+                grow: 0,
+                size: 20,
+                muiTableBodyRowProps: {
+                    sx: {
+                        alignContent: 'center',
+                    },
+                },
+            },
+        },
+        muiTableContainerProps: {
+            sx: {
+                ...(data.length > 10 ? { maxHeight: '650px' } : {}),
+            },
+        },
+        muiTableProps: {
+            sx: {
+                borderCollapse: 'collapse',
+            },
+        },
+        muiDetailPanelProps: {
+            sx: {
+                backgroundColor: theme.palette.background.paper,
+            },
+        },
+        muiPaginationProps: {
+            rowsPerPageOptions: tablePageSizeOptions,
+            showFirstButton: false,
+            showLastButton: false,
+        },
+        muiSearchTextFieldProps: {
+            id: `${contributorEditorId}-search`,
+            inputProps: {
+                'data-testid': `${contributorEditorId}-search`,
+            },
+        },
+        icons: {
+            SaveIcon: props => (
+                <tableIcons.Check
+                    id={`${contributorEditorId}-${!!editingRow ? 'update' : 'add'}-save`}
+                    data-testid={`${contributorEditorId}-${!!editingRow ? 'update' : 'add'}-save`}
+                    color="secondary"
+                    {...props}
+                />
+            ),
+            CancelIcon: props => (
+                <tableIcons.Clear
+                    id={`${contributorEditorId}-${!!editingRow ? 'update' : 'add'}-cancel`}
+                    data-testid={`${contributorEditorId}-${!!editingRow ? 'update' : 'add'}-cancel`}
+                    color="secondary"
+                    {...props}
+                />
+            ),
+        },
+        muiExpandButtonProps: ({ table, row }) => ({
+            id: `expandPanelIcon-${row.original.aut_id}`,
+            ['data-testid']: `expandPanelIcon-${row.original.aut_id}`,
+            sx: {
+                alignSelf: 'center',
+                display: !!!row.original.uqUsername || row.original.uqUsername === '' ? 'none' : 'inline-flex',
+            },
+            disabled: !!pendingDeleteRowId || !!isBusy || !!editingRow || table.getState().creatingRow !== null,
+        }),
+        renderDetailPanel: ({ row }) => {
+            return !!!row.original.uqUsername || row.original.uqUsername === '' ? /* istanbul ignore next */ null : (
+                <AuthorDetail rowData={{ ...row.original, ...row._valuesCache }} />
+            );
+        },
+        muiTopToolbarProps: {
+            sx: { '& div:last-of-type': { flexDirection: 'row-reverse', justifyContent: 'flex-start' } },
+        },
+        renderTopToolbarCustomActions: ({ table }) => (
+            <Tooltip title={addButton}>
+                <IconButton
+                    id={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
+                    data-testid={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
+                    disabled={disabled || table.getState().creatingRow !== null}
+                    onClick={() => {
+                        resetEditRow();
+                        table.setEditingRow(null);
+                        table.setCreatingRow(true);
+                        // immediately force validation of new row
+                        handleValidation({ id: 'mrt-row-create' }, columns[0].accessorKey, '');
+                    }}
+                >
+                    <AddCircle
+                        color="primary"
+                        fontSize="large"
+                        id={`${contributorEditorId}-add`}
+                        data-testid={`${contributorEditorId}-add`}
+                    />
+                </IconButton>
+            </Tooltip>
+        ),
+        renderRowActions: ({ table, row }) => {
+            return (
+                <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
+                    <Tooltip title={moveUpHint}>
+                        <IconButton
+                            onClick={() => {
+                                const index = row.index;
+                                /* istanbul ignore else */
+                                if (index > 0) {
+                                    const newData = [...data];
+                                    const temp = newData[index - 1];
+                                    newData[index - 1] = newData[index];
+                                    newData[index] = temp;
+                                    setData(newData);
+                                    onChange(newData);
+                                }
+                            }}
+                            disabled={
+                                !!pendingDeleteRowId ||
+                                !!isBusy ||
+                                !!editingRow ||
+                                row.index === 0 ||
+                                table.getState().creatingRow !== null
+                            }
+                            id={`${contributorEditorId}-list-row-${row.index}-move-up`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-move-up`}
+                            size="small"
+                            color="primary"
+                        >
+                            <KeyboardArrowUp />
+                        </IconButton>{' '}
+                    </Tooltip>
+                    <Tooltip title={moveDownHint}>
+                        <IconButton
+                            onClick={() => {
+                                const index = row.index;
+                                /* istanbul ignore else */
+                                if (index < data.length - 1) {
+                                    const newData = [...data];
+                                    const temp = newData[index + 1];
+                                    newData[index + 1] = newData[index];
+                                    newData[index] = temp;
+                                    setData(newData);
+                                    onChange(newData);
+                                }
+                            }}
+                            disabled={
+                                !!pendingDeleteRowId ||
+                                !!isBusy ||
+                                !!editingRow ||
+                                row.index === data.length - 1 ||
+                                table.getState().creatingRow !== null
+                            }
+                            id={`${contributorEditorId}-list-row-${row.index}-move-down`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-move-down`}
+                            size="small"
+                            color="primary"
+                        >
+                            <KeyboardArrowDown />
+                        </IconButton>
+                    </Tooltip>
+
+                    <Tooltip title={editHint}>
+                        <IconButton
+                            onClick={() => {
+                                setEditRow(row);
+                                table.setCreatingRow(null);
+                                table.setEditingRow(row);
+                            }}
+                            disabled={
+                                disabled ||
+                                !!pendingDeleteRowId ||
+                                !!isBusy ||
+                                !!editingRow ||
+                                table.getState().creatingRow !== null
+                            }
+                            id={`${contributorEditorId}-list-row-${row.index}-edit`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-edit`}
+                            size="small"
+                            color="primary"
+                        >
+                            <tableIcons.Edit />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title={deleteHint}>
+                        <IconButton
+                            onClick={openDeleteConfirmModal(row.id)}
+                            disabled={
+                                disabled ||
+                                !!pendingDeleteRowId ||
+                                !!isBusy ||
+                                !!editingRow ||
+                                table.getState().creatingRow !== null
+                            }
+                            id={`${contributorEditorId}-list-row-${row.index}-delete`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-delete`}
+                            size="small"
+                            color="primary"
+                        >
+                            <tableIcons.Delete />
+                        </IconButton>
+                    </Tooltip>
+                </Box>
+            );
+        },
+        onCreatingRowCancel: () => {
+            resetEditRow();
+            clearValidationErrors();
+        },
+        onCreatingRowSave: handleCreate,
+        onEditingRowSave: handleEdit,
+        onEditingRowCancel: () => setEditRow(null),
+        muiTableBodyRowProps: ({ isDetailPanel, row }) => ({
+            id: `${contributorEditorId}-list-row-${row.index === -1 ? 'add' : row.index}${
+                isDetailPanel ? '-detailPanel' : ''
+            }`,
+            'data-testid': `${contributorEditorId}-list-row-${row.index === -1 ? 'add' : row.index}${
+                isDetailPanel ? '-detailPanel' : ''
+            }`,
+            sx: {
+                ...(!!row.original.aut_id
+                    ? { backgroundColor: theme.palette.secondary.light, color: theme.palette.primary.main }
+                    : {}),
+            },
+        }),
+    });
+
     return (
-        <MaterialTable
-            tableRef={materialTableRef}
-            columns={columns.current}
-            components={{
-                Container: props => (
-                    <div {...props} id={`${contributorEditorId}-list`} data-testid={`${contributorEditorId}-list`} />
-                ),
-                Action: props => {
-                    if (typeof props.action !== 'function' && !props.action.action && !props.action.isFreeAction) {
-                        const { icon: Icon, tooltip, ...restAction } = props.action;
-                        return (
-                            <MTableAction
-                                {...props}
-                                action={{
-                                    ...restAction,
-                                    icon: () => (
-                                        <Icon
-                                            id={`${contributorEditorId}-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase()}`}
-                                            data-testid={`${contributorEditorId}-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase()}`}
-                                        />
-                                    ),
-                                }}
-                            />
-                        );
-                    } else {
-                        return <MTableAction {...props} />;
-                    }
-                },
-                Row: props => (
-                    <MTableBodyRow
-                        {...props}
-                        id={`${contributorEditorId}-list-row-${props.index}`}
-                        data-testid={`${contributorEditorId}-list-row-${props.index}`}
-                    />
-                ),
-                EditRow: props => (
-                    <MTableEditRow
-                        {...props}
-                        id={`${contributorEditorId}-list-edit-row-${props.index}`}
-                        data-testid={`${contributorEditorId}-list-edit-row-${props.index}`}
-                        onEditingApproved={handleAuthorUpdate}
-                    />
-                ),
-            }}
-            actions={[
-                rowData => ({
-                    icon: props => <KeyboardArrowUp {...props} />,
-                    iconProps: {
-                        id: `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
-                        'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
-                    },
-                    tooltip: moveUpHint,
-                    disabled:
-                        disabled ||
-                        (rowData.itemIndex && /* istanbul ignore next */ rowData.itemIndex === 0) ||
-                        rowData.tableData.id === 0,
-                    onClick: /* istanbul ignore next */ () => /* istanbul ignore next */ {
-                        const index = rowData.tableData.id;
-                        const nextContributor = {
-                            ...data[index - 1],
-                        };
-                        const newRowData = { ...rowData };
-                        delete newRowData.tableData;
-                        const newList = [
-                            ...data.slice(0, index - 1),
-                            { ...newRowData },
-                            nextContributor,
-                            ...data.slice(index + 1),
-                        ];
-                        const newIndexedList = [];
-                        newList.map((item, index) => {
-                            newIndexedList.push({ ...item, id: index });
-                        });
-
-                        onChange(newIndexedList);
-                        setData(newIndexedList);
-                    },
-                }),
-                rowData => ({
-                    icon: props => <KeyboardArrowDown {...props} />,
-                    iconProps: {
-                        id: `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
-                        'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
-                    },
-                    tooltip: `${moveDownHint}-${rowData.tableData.id}`,
-                    disabled: disabled || rowData.tableData.id === data.length - 1,
-                    onClick: () => {
-                        const index = rowData.tableData.id;
-                        const nextContributor = data[index + 1];
-                        const newRowData = { ...rowData };
-                        delete newRowData.tableData;
-                        const newList = [
-                            ...data.slice(0, index),
-                            nextContributor,
-                            newRowData,
-                            ...data.slice(index + 2),
-                        ];
-                        const newIndexedList = [];
-                        newList.map((item, index) => {
-                            newIndexedList.push({ ...item, id: index });
-                        });
-
-                        onChange(newIndexedList);
-                        setData(newIndexedList);
-                    },
-                }),
-                rowData => ({
-                    icon: props => <Edit {...props} />,
-                    iconProps: {
-                        id: `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
-                        'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
-                    },
-                    disabled: disabled,
-                    tooltip: editHint,
-                    onClick: () => {
-                        const materialTable = materialTableRef.current;
-                        materialTable.dataManager.changeRowEditing(rowData, 'update');
-                        materialTable.setState({
-                            ...materialTable.dataManager.getRenderState(),
-                        });
-                    },
-                }),
-                rowData => ({
-                    icon: props => <Delete {...props} />,
-                    iconProps: {
-                        id: `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
-                        'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
-                    },
-                    disabled: disabled,
-                    tooltip: deleteHint,
-                    onClick: () => {
-                        const materialTable = materialTableRef.current;
-                        materialTable.dataManager.changeRowEditing(rowData, 'delete');
-                        materialTable.setState({
-                            ...materialTable.dataManager.getRenderState(),
-                        });
-                    },
-                }),
-                {
-                    icon: props => <AddCircle {...props} color="primary" fontSize="large" />,
-                    iconProps: {
-                        id: `${contributorEditorId}-add`,
-                        'data-testid': `${contributorEditorId}-add`,
-                    },
-                    isFreeAction: true,
-                    tooltip: addButton,
-                    onClick: () => {
-                        const materialTable = materialTableRef.current;
-                        materialTable.dataManager.changeRowEditing();
-                        materialTable.setState({
-                            ...materialTable.dataManager.getRenderState(),
-                            showAddRow: true,
-                        });
-                    },
-                },
-            ]}
-            data={data}
-            icons={tableIcons}
-            title=""
-            {...(!isNtro ? { detailPanel: AuthorDetail } : {})}
-            editable={{
-                onRowUpdateCancelled: /* istanbul ignore next */ () => {},
-            }}
-            options={{
-                actionsColumnIndex: -1,
-                grouping: false,
-                draggable: false,
-                addRowPosition: 'first',
-                search: data.length > 10,
-                emptyRowsWhenPaging: true,
-                ...(data.length > 10 ? { maxBodyHeight: 550 } : {}),
-                ...(data.length > 10 ? { paging: true } : { paging: false }),
-                .../* istanbul ignore next */ (data.length > 100 ? { pageSize: data.length > 100 ? 50 : 5 } : {}),
-                pageSizeOptions: [5, 50, 100, 200, 500],
-                padding: 'dense',
-                rowStyle: rowData => {
-                    if (!!rowData.aut_id) {
-                        return {
-                            backgroundColor: theme.palette.secondary.light,
-                            color: theme.palette.primary.main,
-                        };
-                    } else {
-                        return {};
-                    }
-                },
-                overflowY: list.length > 10 ? 'auto' : 'hidden',
-            }}
-        />
+        <Box
+            id={`${contributorEditorId}-list`}
+            data-testid={`${contributorEditorId}-list`}
+            sx={{ '& .MuiPaper-root': { border: 0, boxShadow: 0 } }}
+        >
+            <ConfirmationBox
+                confirmationBoxId={`${contributorEditorId}-delete-author-confirmation`}
+                onAction={handleDeleteApproved}
+                onClose={cancelDeleteConfirmModal}
+                isOpen={isOpen}
+                locale={deleteRecordConfirmation}
+            />{' '}
+            <MaterialReactTable table={table} />
+        </Box>
     );
 };
 
