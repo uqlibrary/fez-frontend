@@ -31,6 +31,7 @@ export const AutoCompleteAsynchronousField = ({
     supplemental,
     groupBy,
     clearSuggestionsOnClose = true,
+    fullWidth = false,
 }) => {
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState([]);
@@ -146,6 +147,7 @@ export const AutoCompleteAsynchronousField = ({
                 loading={loading}
                 popupIcon={false}
                 value={value}
+                fullWidth={fullWidth}
                 renderInput={params => (
                     <TextField
                         variant="standard"
@@ -245,6 +247,7 @@ AutoCompleteAsynchronousField.propTypes = {
     supplemental: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
     groupBy: PropTypes.func,
     clearSuggestionsOnClose: PropTypes.bool,
+    fullWidth: PropTypes.bool,
 };
 
 export default React.memo(AutoCompleteAsynchronousField);

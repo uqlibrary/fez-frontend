@@ -445,13 +445,10 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
     };
 
     const handleDeleteApproved = () => {
-        const row = data.find(row => row.aut_id === pendingDeleteRowId);
         setBusy();
         try {
             const dataDelete = [...data];
-            const target = dataDelete.find(el => el.aut_id === row.aut_id);
-            const index = dataDelete.indexOf(target);
-            dataDelete.splice(index, 1);
+            dataDelete.splice(pendingDeleteRowId, 1);
 
             setData(dataDelete);
             onChange(dataDelete);
@@ -482,10 +479,8 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
     const table = useMaterialReactTable({
         columns,
         data,
-        getRowId: row => row.aut_id,
         createDisplayMode: 'row',
         editDisplayMode: 'row',
-        manualExpanding: true,
         enableEditing: true,
         enableStickyHeader: true,
         enablePagination: data.length > 10,
@@ -721,7 +716,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     </Tooltip>
                     <Tooltip title={deleteHint}>
                         <IconButton
-                            onClick={openDeleteConfirmModal(row.id)}
+                            onClick={openDeleteConfirmModal(row.index)}
                             disabled={
                                 disabled ||
                                 !!pendingDeleteRowId ||

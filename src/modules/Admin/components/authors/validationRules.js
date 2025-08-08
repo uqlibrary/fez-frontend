@@ -30,11 +30,17 @@ export const extendedValidationRules = [
     {
         id: 'externalIdentifier',
         validate: rowData => {
-            const valid = isIdValid(rowData.externalIdentifier, rowData.externalIdentifierType);
+            const validationMessage = isIdValid(rowData.externalIdentifier, rowData.externalIdentifierType);
+            console.log(
+                'externalIdentifier validation',
+                validationMessage,
+                rowData.externalIdentifier,
+                rowData.externalIdentifierType,
+            );
             return (
-                !valid && {
+                !!validationMessage && {
                     field: 'externalIdentifier',
-                    message: 'required',
+                    message: validationMessage,
                 }
             );
         },

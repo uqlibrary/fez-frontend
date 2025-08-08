@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 // eslint-disable-next-line camelcase
@@ -49,10 +49,10 @@ const classes = {
     },
 };
 
-const getIcon = ({ index, rowData }) => {
+const getIcon = ({ index, rowData, disabled }) => {
     if (parseInt(rowData.uqIdentifier, 10)) {
         return <HowToRegIcon color="primary" id={`contributor-linked-${index}`} />;
-    } else if (rowData.disabled) {
+    } else if (disabled) {
         return <Lock color="secondary" id={`contributor-locked-${index}`} />;
     } else {
         return <PersonOutlined color="secondary" id={`contributor-unlinked-${index}`} />;
@@ -108,10 +108,10 @@ export const AuthorsList = ({
     showRoleInput,
     showExternalIdentifierInput,
 }) => {
-    console.log(isNtro);
     const theme = useTheme();
-    const [triggerState, setTriggerState] = React.useState(true);
-    const prevList = React.useRef('');
+    const [triggerState, setTriggerState] = useState(true);
+    const prevList = React.useRef('[]');
+
     const validationRules = showExternalIdentifierInput
         ? [...defaultValidationRules, ...extendedValidationRules]
         : defaultValidationRules;
@@ -151,6 +151,7 @@ export const AuthorsList = ({
         data,
         isBusy,
         pendingDeleteRowId,
+        isPendingDelete,
         isOpen,
         editingRow,
         validationErrors,
@@ -244,7 +245,8 @@ export const AuthorsList = ({
                         </Grid>
                     );
                 },
-                size: 400,
+                size: 250,
+                minSize: 250,
                 grow: true,
             },
             {
@@ -326,6 +328,7 @@ export const AuthorsList = ({
 
                     return (
                         <UqIdField
+                            fullWidth
                             clearOnInputClear
                             floatingLabelText={identifierLabel}
                             hintText="Type UQ author name to search"
@@ -342,8 +345,9 @@ export const AuthorsList = ({
                         />
                     );
                 },
-                size: 300,
-                grow: false,
+                size: 150,
+                minSize: 150,
+                grow: true,
             },
             {
                 accessorKey: 'externalIdentifier',
@@ -394,6 +398,8 @@ export const AuthorsList = ({
                         </Grid>
                     );
                 },
+                size: 175,
+                grow: true,
             },
             {
                 accessorKey: 'externalIdentifierType',
@@ -441,6 +447,7 @@ export const AuthorsList = ({
                         </Grid>
                     );
                 },
+                size: 150,
             },
             {
                 accessorKey: 'creatorRole',
@@ -496,6 +503,7 @@ export const AuthorsList = ({
                         />
                     );
                 },
+                size: 200,
             },
             {
                 accessorKey: 'orgaff',
@@ -537,12 +545,16 @@ export const AuthorsList = ({
                 },
                 Edit: ({ row }) => {
                     const contributor = { ...row.original, ...row._valuesCache };
+                    const [stateAffType, setStateAffType] = React.useState(contributor.affiliation);
+                    const [stateOrgAff, setStateOrgAff] = React.useState(contributor.orgaff || '');
 
                     const handleOrgAffliationChange = event => {
+                        const orgaff = event.target.value || '';
                         row._valuesCache = {
                             ...row._valuesCache,
-                            orgaff: event.target.value,
+                            orgaff,
                         };
+                        setStateOrgAff(orgaff);
                     };
                     const handleOrgTypeChange = event => {
                         row.original = {
@@ -564,19 +576,24 @@ export const AuthorsList = ({
                             orgtype:
                                 (affiliation === AFFILIATION_TYPE_UQ && ORG_TYPE_ID_UNIVERSITY) || contributor.orgtype,
                         };
+                        setStateAffType(affiliation);
                     };
                     return (
                         <React.Fragment>
                             {isNtro && (
-                                <OrgAffiliationTypeSelector
-                                    affiliation={contributor.affiliation}
-                                    onAffiliationChange={handleAffiliationChange}
-                                    disabled={disabled}
-                                />
+                                <Grid container>
+                                    <Grid xs={12}>
+                                        <OrgAffiliationTypeSelector
+                                            affiliation={contributor.affiliation}
+                                            onAffiliationChange={handleAffiliationChange}
+                                            disabled={disabled}
+                                        />
+                                    </Grid>
+                                </Grid>
                             )}
-                            {contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
+                            {stateAffType === AFFILIATION_TYPE_NOT_UQ && (
                                 <NonUqOrgAffiliationFormSection
-                                    orgAffiliation={contributor.orgaff}
+                                    orgAffiliation={stateOrgAff}
                                     orgType={contributor.orgtype}
                                     onOrgAffiliationChange={handleOrgAffliationChange}
                                     onOrgTypeChange={handleOrgTypeChange}
@@ -588,20 +605,26 @@ export const AuthorsList = ({
                         </React.Fragment>
                     );
                 },
+                muiTableBodyCellProps: () => ({
+                    sx: {
+                        flexDirection: 'column',
+                    },
+                }),
+                size: 250,
+                minSize: 200,
+                maxSize: 300,
+                grow: true,
             },
         ],
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [disabled, getValidationError, handleValidation, validationErrors],
     );
-    // here - seems like the data var is losing values when traced out here.
-    // this came to light when trying to work out why the orgaff field above wont show in the table
-    console.log(data);
+
     React.useEffect(() => {
         const listStr = JSON.stringify(list);
         if (prevList.current !== listStr) {
             prevList.current = listStr;
             const result = [];
-            console.log(list);
             list.forEach((item, index) => {
                 delete item.tableData;
                 item.id = index;
@@ -643,7 +666,6 @@ export const AuthorsList = ({
         }
 
         const transformedAuthorList = transformNewAuthorObject(newAuthor);
-
         setData(transformedAuthorList);
         table.setCreatingRow(null);
         resetEditRow();
@@ -676,7 +698,6 @@ export const AuthorsList = ({
         const target = updatedAuthorList.find(el => el.aut_id === row.original.aut_id);
         const index = updatedAuthorList.indexOf(target);
         updatedAuthorList[index] = updatedAuthor;
-
         setData(updatedAuthorList);
         table.setEditingRow(null);
         resetEditRow();
@@ -685,13 +706,10 @@ export const AuthorsList = ({
     };
 
     const handleDeleteApproved = () => {
-        const row = data.find(row => row.aut_id === pendingDeleteRowId);
         setBusy();
         try {
             const dataDelete = [...data];
-            const target = dataDelete.find(el => el.aut_id === row.aut_id);
-            const index = dataDelete.indexOf(target);
-            dataDelete.splice(index, 1);
+            dataDelete.splice(pendingDeleteRowId, 1);
             setData(dataDelete);
             onChange(dataDelete);
         } catch (error) {
@@ -703,8 +721,8 @@ export const AuthorsList = ({
     };
 
     // DELETE action
-    const openDeleteConfirmModal = id => () => {
-        setDeleteRow(id);
+    const openDeleteConfirmModal = index => () => {
+        setDeleteRow(index);
     };
 
     const cancelDeleteConfirmModal = () => {
@@ -714,10 +732,9 @@ export const AuthorsList = ({
     const table = useMaterialReactTable({
         columns,
         data,
-        getRowId: row => row.aut_id,
+        layoutMode: 'grid',
         createDisplayMode: 'row',
         editDisplayMode: 'row',
-        manualExpanding: true,
         enableEditing: true,
         enableStickyHeader: true,
         enablePagination: data.length > 10,
@@ -737,12 +754,6 @@ export const AuthorsList = ({
         enableColumnFilters: false,
         positionActionsColumn: 'last',
         initialState: {
-            columnVisibility: {
-                externalIdentifier: showExternalIdentifierInput,
-                externalIdentifierType: showExternalIdentifierInput,
-                creatorRole: showRoleInput,
-                orgaff: isNtro,
-            },
             density: 'compact',
             expanded: false,
             pagination: { pageSize: data.length > 100 ? largeListDefaultPageSize : 10, pageIndex: 0 },
@@ -750,6 +761,14 @@ export const AuthorsList = ({
         state: {
             showAlertBanner: false,
             showLoadingOverlay: isBusy,
+            columnVisibility: {
+                nameAsPublished: true,
+                uqIdentifier: true,
+                externalIdentifier: showExternalIdentifierInput,
+                externalIdentifierType: showExternalIdentifierInput,
+                creatorRole: showRoleInput,
+                orgaff: isNtro,
+            },
         },
         displayColumnDefOptions: {
             'mrt-row-actions': {
@@ -793,9 +812,17 @@ export const AuthorsList = ({
                 borderCollapse: 'collapse',
             },
         },
+        muiTableBodyCellProps: ({ column }) => ({
+            sx: {
+                alignItems: column.id === 'mrt-row-expand' ? 'center' : 'flex-start',
+            },
+        }),
         muiDetailPanelProps: {
             sx: {
                 backgroundColor: theme.palette.background.paper,
+                '& .MuiCollapse-root': {
+                    width: '100%',
+                },
             },
         },
         muiPaginationProps: {
@@ -832,15 +859,17 @@ export const AuthorsList = ({
             ['data-testid']: `expandPanelIcon-${row.original.aut_id}`,
             sx: {
                 alignSelf: 'center',
-                display: !!!row.original.uqUsername || row.original.uqUsername === '' ? 'none' : 'inline-flex',
             },
-            disabled: !!pendingDeleteRowId || !!isBusy || !!editingRow || table.getState().creatingRow !== null,
+            disabled: isPendingDelete || !!isBusy || !!editingRow || table.getState().creatingRow !== null,
         }),
-        renderDetailPanel: ({ row }) => {
-            return !!!row.original.uqUsername || row.original.uqUsername === '' ? /* istanbul ignore next */ null : (
-                <AuthorDetail rowData={{ ...row.original, ...row._valuesCache }} />
-            );
-        },
+        ...(!isNtro
+            ? {
+                  renderDetailPanel: ({ row }) => {
+                      return <AuthorDetail rowData={{ ...row.original, ...row._valuesCache }} />;
+                  },
+              }
+            : {}),
+
         muiTopToolbarProps: {
             sx: { '& div:last-of-type': { flexDirection: 'row-reverse', justifyContent: 'flex-start' } },
         },
@@ -885,7 +914,7 @@ export const AuthorsList = ({
                                 }
                             }}
                             disabled={
-                                !!pendingDeleteRowId ||
+                                isPendingDelete ||
                                 !!isBusy ||
                                 !!editingRow ||
                                 row.index === 0 ||
@@ -897,7 +926,7 @@ export const AuthorsList = ({
                             color="primary"
                         >
                             <KeyboardArrowUp />
-                        </IconButton>{' '}
+                        </IconButton>
                     </Tooltip>
                     <Tooltip title={moveDownHint}>
                         <IconButton
@@ -914,7 +943,7 @@ export const AuthorsList = ({
                                 }
                             }}
                             disabled={
-                                !!pendingDeleteRowId ||
+                                isPendingDelete ||
                                 !!isBusy ||
                                 !!editingRow ||
                                 row.index === data.length - 1 ||
@@ -953,10 +982,10 @@ export const AuthorsList = ({
                     </Tooltip>
                     <Tooltip title={deleteHint}>
                         <IconButton
-                            onClick={openDeleteConfirmModal(row.id)}
+                            onClick={openDeleteConfirmModal(row.index)}
                             disabled={
                                 disabled ||
-                                !!pendingDeleteRowId ||
+                                isPendingDelete ||
                                 !!isBusy ||
                                 !!editingRow ||
                                 table.getState().creatingRow !== null
