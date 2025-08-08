@@ -9,4 +9,4 @@ const router =
         ? createBrowserRouter
         : createHashRouter;
 
-export const createRouter = process.env.ENABLE_LOG ? Sentry.wrapCreateBrowserRouter(router) : router;
+export const createRouter = process.env.ENABLE_LOG ? Sentry.wrapCreateBrowserRouterV6(router) : router;
