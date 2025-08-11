@@ -147,7 +147,6 @@ export const AutoCompleteAsynchronousField = ({
                 loading={loading}
                 popupIcon={false}
                 value={value}
-                fullWidth={fullWidth}
                 renderInput={params => (
                     <TextField
                         variant="standard"
@@ -192,6 +191,7 @@ export const AutoCompleteAsynchronousField = ({
                     'data-analyticsid': `${autoCompleteAsynchronousFieldId}-options`,
                     'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
                 }}
+                {...(fullWidth && { fullWidth })}
                 {...((!!allowFreeText && { freeSolo: true }) || {})}
                 {...(groupBy && { groupBy })}
                 {...((!!OptionTemplate && {
