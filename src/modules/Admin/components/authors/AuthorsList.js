@@ -40,6 +40,7 @@ import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectFie
 
 import { useMrtTable } from 'hooks';
 import { default as defaultValidationRules, extendedValidationRules } from './validationRules';
+import { commitRowChanges } from './utils';
 
 const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
 
@@ -210,7 +211,7 @@ export const AuthorsList = ({
                         />
                     );
                 },
-                Edit: ({ row, column }) => {
+                Edit: ({ table, row, column }) => {
                     const value = row._valuesCache.nameAsPublished || '';
                     const errors = validationErrors[row.id] || [];
                     const error = getValidationError(errors, 'nameAsPublished');
@@ -223,6 +224,13 @@ export const AuthorsList = ({
                         handleValidation(row, column.id, e.target.value || null);
                     };
 
+                    const handleKeyPress = event => {
+                        /* istanbul ignore else */
+                        if (event.key === 'Enter') {
+                            commitRowChanges(table);
+                        }
+                    };
+
                     return (
                         <Grid container spacing={2}>
                             <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -233,6 +241,7 @@ export const AuthorsList = ({
                                     autoFocus
                                     value={value}
                                     onChange={handleChange}
+                                    onKeyPress={handleKeyPress}
                                     textFieldId={contributorEditorId}
                                     error={!!error}
                                     errorText={validation.maxLength255Validator(value)}
@@ -377,9 +386,9 @@ export const AuthorsList = ({
                     const handleChange = e => {
                         row._valuesCache = {
                             ...row._valuesCache,
-                            [column.id]: e.target.value || null,
+                            [column.id]: e.target.value || /* istanbul ignore next */ null,
                         };
-                        handleValidation(row, column.id, e.target.value || null);
+                        handleValidation(row, column.id, e.target.value || /* istanbul ignore next */ null);
                     };
                     return (
                         <Grid container spacing={2}>
@@ -428,9 +437,9 @@ export const AuthorsList = ({
                     const handleChange = value => {
                         row._valuesCache = {
                             ...row._valuesCache,
-                            [column.id]: value || null,
+                            [column.id]: value || /* istanbul ignore next */ null,
                         };
-                        handleValidation(row, column.id, value || null);
+                        handleValidation(row, column.id, value || /* istanbul ignore next */ null);
                     };
                     return (
                         <Grid container spacing={2}>
@@ -549,7 +558,7 @@ export const AuthorsList = ({
                     const [stateOrgAff, setStateOrgAff] = React.useState(contributor.orgaff || '');
 
                     const handleOrgAffliationChange = event => {
-                        const orgaff = event.target.value || '';
+                        const orgaff = event.target.value || /* istanbul ignore next */ '';
                         row._valuesCache = {
                             ...row._valuesCache,
                             orgaff,

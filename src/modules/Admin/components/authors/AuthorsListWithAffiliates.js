@@ -35,6 +35,7 @@ import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
 
 import { useMrtTable } from 'hooks';
 import { default as validationRules } from './validationRules';
+import { commitRowChanges } from './utils';
 
 const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
 
@@ -225,7 +226,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                         />
                     );
                 },
-                Edit: ({ row, column }) => {
+                Edit: ({ table, row, column }) => {
                     const value = row._valuesCache.nameAsPublished;
                     const errors = validationErrors[row.id] || [];
                     const error = getValidationError(errors, 'nameAsPublished');
@@ -238,6 +239,13 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                         handleValidation(row, column.id, e.target.value || null);
                     };
 
+                    const handleKeyPress = event => {
+                        /* istanbul ignore else */
+                        if (event.key === 'Enter') {
+                            commitRowChanges(table);
+                        }
+                    };
+
                     return (
                         <Grid container spacing={2}>
                             <Grid style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -248,6 +256,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                     autoFocus
                                     value={value}
                                     onChange={handleChange}
+                                    onKeyPress={handleKeyPress}
                                     textFieldId={contributorEditorId}
                                     error={!!error}
                                     errorText={validation.maxLength255Validator(value)}

@@ -137,6 +137,34 @@ describe('AuthorsList', () => {
         expect(container).toHaveTableRowsLength(10);
     });
 
+    it('should render a list of 100 contributors and set default page size accordingly', async () => {
+        const largeList = Array.from({ length: 101 }, (_, i) => ({
+            nameAsPublished: `test ${i + 1}`,
+        }));
+        const { container } = setup({
+            list: largeList,
+        });
+
+        expect(container).toHaveTableRowsLength(locale.components.authorsList('author').field.largeListDefaultPageSize);
+    });
+
+    it('should render a list of 100 contributors and provide functioning search filter', async () => {
+        const largeList = Array.from({ length: 101 }, (_, i) => ({
+            nameAsPublished: `test ${i + 1}`,
+        }));
+        const { container, getByLabelText, getByTestId, getByText, queryByText } = setup({
+            list: largeList,
+        });
+
+        expect(container).toHaveTableRowsLength(locale.components.authorsList('author').field.largeListDefaultPageSize);
+        fireEvent.click(getByLabelText('Show/Hide search'));
+        fireEvent.change(getByTestId('rek-author-search'), { target: { value: 'test 100' } });
+
+        await waitFor(() => expect(queryByText('test 2')).not.toBeInTheDocument());
+        expect(container).toHaveTableRowsLength(1);
+        expect(getByText('test 100')).toBeInTheDocument();
+    });
+
     it('should render disabled row', () => {
         const { getByTestId } = setup({
             disabled: true,
@@ -189,6 +217,18 @@ describe('AuthorsList', () => {
 
         expect(queryByText('No records to display')).not.toBeInTheDocument();
         expect(container).toHaveTableRowsLength(1);
+    });
+
+    it('should cancel adding a contributor correctly', () => {
+        const { container, getByTestId, getByText, queryByText } = setup();
+        expect(getByText('No records to display')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('rek-author-add'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.click(getByTestId('rek-author-add-cancel'));
+
+        expect(queryByText('No records to display')).toBeInTheDocument();
+        expect(container).toHaveTableRowsLength(0);
     });
 
     it('should validate new contributor maxlength correctly', async () => {
@@ -854,5 +894,24 @@ describe('AuthorsList', () => {
 
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
         expect(getByTestId('rek-author-role-label')).toHaveClass('Mui-error');
+    });
+
+    it('should show a creator role correctly', () => {
+        const { getByTestId } = setup({
+            showRoleInput: true,
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                    creatorRole: 'test creator role',
+                },
+            ],
+        });
+
+        expect(getByTestId('rek-author-list-row-0-role')).toHaveTextContent('test creator role');
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        expect(getByTestId('rek-author-role-input')).toHaveValue('test creator role');
+        fireEvent.change(getByTestId('rek-author-role-input'), { target: { value: 'updated creator role' } });
+        fireEvent.click(getByTestId('rek-author-update-save'));
+        expect(getByTestId('rek-author-list-row-0-role')).toHaveTextContent('updated creator role');
     });
 });
