@@ -878,6 +878,7 @@ export const CCL_BY_ND_4_0_ID = 456712;
 export const CCL_BY_NC_4_0_ID = 456713;
 export const CCL_BY_NC_SA_4_0_ID = 456714;
 export const CCL_BY_NC_ND_4_0_ID = 456715;
+export const CCL_ZERO_ID = 457088;
 
 export const CCL_SLUG_BY = 'by';
 export const CCL_SLUG_BY_SA = 'by-sa';
@@ -970,6 +971,11 @@ export const CREATIVE_COMMONS_LICENSES_4_0 = [
     },
 ];
 
+export const CCL_ZERO = {
+    value: CCL_ZERO_ID,
+    text: 'Creative Commons Zero 1.0 Universal (CC0 1.0)',
+};
+
 export const getCreativeCommonsUrl = version => conditionSlug =>
     `https://creativecommons.org/licenses/${conditionSlug}/${version}/deed.en`;
 
@@ -981,6 +987,7 @@ export const ALL_LICENCES = [
     ...CURRENT_LICENCES,
     ...CREATIVE_COMMONS_LICENSES_4_0,
     ...CREATIVE_COMMONS_LICENSES_3_0,
+    CCL_ZERO,
 ];
 
 export const ORG_TYPE_ID_MUSEUM = '453983';
