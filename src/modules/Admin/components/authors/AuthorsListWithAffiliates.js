@@ -34,7 +34,8 @@ import EditAuthorAffiliations from './EditAuthorAffiliations';
 import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
 
 import { useMrtTable } from 'hooks';
-import { validationRules } from './validationRules';
+import { default as validationRules } from './validationRules';
+import { commitRowChanges } from './utils';
 
 const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
 
@@ -151,12 +152,11 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
             locale: { nameColumn, identifierColumn },
         },
         row: {
-            locale: { moveUpHint, moveDownHint, deleteHint, editHint, suffix },
+            locale: { moveUpHint, moveDownHint, deleteHint, editHint, suffix, deleteRecordConfirmation },
         },
         form: {
             locale: { addButton, nameAsPublishedLabel, nameAsPublishedHint, identifierLabel },
         },
-        deleteConfirmationLocale,
     } = locale;
 
     const {
@@ -226,7 +226,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                         />
                     );
                 },
-                Edit: ({ row, column }) => {
+                Edit: ({ table, row, column }) => {
                     const value = row._valuesCache.nameAsPublished;
                     const errors = validationErrors[row.id] || [];
                     const error = getValidationError(errors, 'nameAsPublished');
@@ -239,6 +239,13 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                         handleValidation(row, column.id, e.target.value || null);
                     };
 
+                    const handleKeyPress = event => {
+                        /* istanbul ignore else */
+                        if (event.key === 'Enter') {
+                            commitRowChanges(table);
+                        }
+                    };
+
                     return (
                         <Grid container spacing={2}>
                             <Grid style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -249,6 +256,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                     autoFocus
                                     value={value}
                                     onChange={handleChange}
+                                    onKeyPress={handleKeyPress}
                                     textFieldId={contributorEditorId}
                                     error={!!error}
                                     errorText={validation.maxLength255Validator(value)}
@@ -446,15 +454,13 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
     };
 
     const handleDeleteApproved = () => {
-        const row = data.find(row => row.aut_id === pendingDeleteRowId);
         setBusy();
         try {
             const dataDelete = [...data];
-            const target = dataDelete.find(el => el.aut_id === row.aut_id);
-            const index = dataDelete.indexOf(target);
-            dataDelete.splice(index, 1);
-            console.log(dataDelete);
-            setData([...dataDelete]);
+            dataDelete.splice(pendingDeleteRowId, 1);
+
+            setData(dataDelete);
+            onChange(dataDelete);
         } catch (error) {
             /* istanbul ignore next */
             console.error('Error deleting row:', error);
@@ -482,10 +488,8 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
     const table = useMaterialReactTable({
         columns,
         data,
-        getRowId: row => row.aut_id,
         createDisplayMode: 'row',
         editDisplayMode: 'row',
-        manualExpanding: true,
         enableEditing: true,
         enableStickyHeader: true,
         enablePagination: data.length > 10,
@@ -721,7 +725,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     </Tooltip>
                     <Tooltip title={deleteHint}>
                         <IconButton
-                            onClick={openDeleteConfirmModal(row.id)}
+                            onClick={openDeleteConfirmModal(row.index)}
                             disabled={
                                 disabled ||
                                 !!pendingDeleteRowId ||
@@ -773,7 +777,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                 onAction={handleDeleteApproved}
                 onClose={cancelDeleteConfirmModal}
                 isOpen={isOpen}
-                locale={deleteConfirmationLocale}
+                locale={deleteRecordConfirmation}
             />{' '}
             <MaterialReactTable table={table} />
         </Box>
