@@ -861,7 +861,6 @@ describe('AuthorsListWithAffiliates', () => {
         act(() => {
             getByRole('button', { name: /Recalculate Percentages/ }).click();
         });
-
         expect(queryByText('Percentage sum total of all affiliations must equal 100%')).not.toBeInTheDocument();
 
         expect(getByTestId('orgChip-881')).toHaveTextContent('50%');
