@@ -207,7 +207,7 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('test 2');
     });
 
-    it('should add contributor correctly', () => {
+    it('should add contributor correctly', async () => {
         const { container, getByTestId, getByText, queryByText } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();
 

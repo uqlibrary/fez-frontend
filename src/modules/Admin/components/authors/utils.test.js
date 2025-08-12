@@ -1,85 +1,104 @@
-import * as Utils from './utils';
+import { commitRowChanges } from './utils';
 
 describe('commitRowChanges', () => {
-    it('should call onCreatingRowSave when creatingRow exists', async () => {
-        const mockOnCreatingRowSave = jest.fn();
+    it('does nothing when neither creatingRow nor editingRow exist', () => {
         const table = {
-            getState: jest.fn().mockReturnValue({
-                creatingRow: { _valuesCache: { foo: 'bar' } },
-                editingRow: null,
-            }),
+            getState: jest.fn(() => ({ creatingRow: null, editingRow: null })),
             options: {
-                onCreatingRowSave: mockOnCreatingRowSave,
+                onCreatingRowSave: jest.fn(),
+                onEditingRowSave: jest.fn(),
             },
         };
-        await Utils.commitRowChanges(table);
-        expect(mockOnCreatingRowSave).toHaveBeenCalledWith({
-            table,
-            row: { _valuesCache: { foo: 'bar' } },
-            values: { foo: 'bar' },
-        });
+
+        commitRowChanges(table);
+
+        expect(table.options.onCreatingRowSave).not.toHaveBeenCalled();
+        expect(table.options.onEditingRowSave).not.toHaveBeenCalled();
     });
 
-    it('should call onEditingRowSave when editingRow exists', async () => {
-        const mockOnEditingRowSave = jest.fn();
+    it('calls onCreatingRowSave when creatingRow exists', () => {
+        const row = { _valuesCache: { a: 1, b: 'x' } };
         const table = {
-            getState: jest.fn().mockReturnValue({
-                creatingRow: null,
-                editingRow: { _valuesCache: { baz: 'qux' } },
-            }),
+            getState: jest.fn(() => ({ creatingRow: row, editingRow: null })),
             options: {
-                onEditingRowSave: mockOnEditingRowSave,
+                onCreatingRowSave: jest.fn(),
+                onEditingRowSave: jest.fn(),
             },
         };
-        await Utils.commitRowChanges(table);
-        expect(mockOnEditingRowSave).toHaveBeenCalledWith({
-            table,
-            row: { _valuesCache: { baz: 'qux' } },
-            values: { baz: 'qux' },
-        });
+
+        commitRowChanges(table);
+
+        expect(table.options.onCreatingRowSave).toHaveBeenCalledTimes(1);
+        const arg = table.options.onCreatingRowSave.mock.calls[0][0];
+        expect(arg.table).toBe(table);
+        expect(arg.row).toBe(row);
+        expect(arg.values).toEqual({ a: 1, b: 'x' });
+        expect(table.options.onEditingRowSave).not.toHaveBeenCalled();
     });
 
-    it('should not call any save function if no row exists', async () => {
+    it('calls onEditingRowSave when editingRow exists', () => {
+        const row = { _valuesCache: { c: 3 } };
         const table = {
-            getState: jest.fn().mockReturnValue({
-                creatingRow: null,
-                editingRow: null,
-            }),
-            options: {},
-        };
-        await Utils.commitRowChanges(table);
-        // No save function should be called
-        expect(table.options.onCreatingRowSave).toBeUndefined();
-        expect(table.options.onEditingRowSave).toBeUndefined();
-    });
-
-    it('should handle missing _valuesCache gracefully', async () => {
-        const mockOnEditingRowSave = jest.fn();
-        const table = {
-            getState: jest.fn().mockReturnValue({
-                creatingRow: null,
-                editingRow: {},
-            }),
+            getState: jest.fn(() => ({ creatingRow: null, editingRow: row })),
             options: {
-                onEditingRowSave: mockOnEditingRowSave,
+                onCreatingRowSave: jest.fn(),
+                onEditingRowSave: jest.fn(),
             },
         };
-        await Utils.commitRowChanges(table);
-        expect(mockOnEditingRowSave).toHaveBeenCalledWith({
-            table,
-            row: {},
-            values: {},
-        });
+
+        commitRowChanges(table);
+
+        expect(table.options.onEditingRowSave).toHaveBeenCalledTimes(1);
+        const arg = table.options.onEditingRowSave.mock.calls[0][0];
+        expect(arg.table).toBe(table);
+        expect(arg.row).toBe(row);
+        expect(arg.values).toEqual({ c: 3 });
+        expect(table.options.onCreatingRowSave).not.toHaveBeenCalled();
     });
 
-    it('should not throw if save functions are missing', async () => {
+    it('prefers creatingRow when both creatingRow and editingRow exist', () => {
+        const creating = { _valuesCache: { create: true } };
+        const editing = { _valuesCache: { edit: true } };
         const table = {
-            getState: jest.fn().mockReturnValue({
-                creatingRow: { _valuesCache: { foo: 'bar' } },
-                editingRow: null,
-            }),
-            options: {},
+            getState: jest.fn(() => ({ creatingRow: creating, editingRow: editing })),
+            options: {
+                onCreatingRowSave: jest.fn(),
+                onEditingRowSave: jest.fn(),
+            },
         };
-        await expect(Utils.commitRowChanges(table)).resolves.toBeUndefined();
+
+        commitRowChanges(table);
+
+        expect(table.options.onCreatingRowSave).toHaveBeenCalledTimes(1);
+        const arg = table.options.onCreatingRowSave.mock.calls[0][0];
+        expect(arg.row).toBe(creating);
+        expect(arg.values).toEqual({ create: true });
+        expect(table.options.onEditingRowSave).not.toHaveBeenCalled();
+    });
+
+    it('passes empty values object when _valuesCache is missing', () => {
+        const row = {}; // no _valuesCache
+        const table = {
+            getState: jest.fn(() => ({ creatingRow: null, editingRow: row })),
+            options: {
+                onCreatingRowSave: jest.fn(),
+                onEditingRowSave: jest.fn(),
+            },
+        };
+
+        commitRowChanges(table);
+
+        const arg = table.options.onEditingRowSave.mock.calls[0][0];
+        expect(arg.values).toEqual({});
+    });
+
+    it('does not throw if handlers are undefined', () => {
+        const row = { _valuesCache: { a: 1 } };
+        const table = {
+            getState: jest.fn(() => ({ creatingRow: row, editingRow: null })),
+            options: {}, // no handlers
+        };
+
+        expect(() => commitRowChanges(table)).not.toThrow();
     });
 });

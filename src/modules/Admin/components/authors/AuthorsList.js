@@ -675,6 +675,7 @@ export const AuthorsList = ({
         }
 
         const transformedAuthorList = transformNewAuthorObject(newAuthor);
+
         setData(transformedAuthorList);
         table.setCreatingRow(null);
         resetEditRow();
@@ -704,9 +705,8 @@ export const AuthorsList = ({
         }
 
         const updatedAuthorList = [...data];
-        const target = updatedAuthorList.find(el => el.aut_id === row.original.aut_id);
-        const index = updatedAuthorList.indexOf(target);
-        updatedAuthorList[index] = updatedAuthor;
+        updatedAuthorList[row.index] = updatedAuthor;
+
         setData(updatedAuthorList);
         table.setEditingRow(null);
         resetEditRow();
@@ -719,6 +719,7 @@ export const AuthorsList = ({
         try {
             const dataDelete = [...data];
             dataDelete.splice(pendingDeleteRowId, 1);
+
             setData(dataDelete);
             onChange(dataDelete);
         } catch (error) {
@@ -761,6 +762,7 @@ export const AuthorsList = ({
         enableDensityToggle: false,
         enableHiding: false,
         enableColumnFilters: false,
+        autoResetPageIndex: false,
         positionActionsColumn: 'last',
         initialState: {
             density: 'compact',

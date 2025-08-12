@@ -413,11 +413,11 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
 
         const transformedAuthorList = transformNewAuthorObject(newAuthor);
 
+        setData(transformedAuthorList);
         table.setCreatingRow(null);
         resetEditRow();
 
         onChange(transformedAuthorList);
-        setData(transformedAuthorList);
     };
 
     const handleEdit = ({ values, table, row }) => {
@@ -442,15 +442,13 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         }
 
         const updatedAuthorList = [...data];
-        const target = updatedAuthorList.find(el => el.aut_id === row.original.aut_id);
-        const index = updatedAuthorList.indexOf(target);
-        updatedAuthorList[index] = updatedAuthor;
+        updatedAuthorList[row.index] = updatedAuthor;
 
+        setData(updatedAuthorList);
         table.setEditingRow(null);
         resetEditRow();
 
         onChange(updatedAuthorList);
-        setData(updatedAuthorList);
     };
 
     const handleDeleteApproved = () => {
@@ -472,8 +470,8 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
     const handleAffiliationUpdate = rowData => {
         const index = list.findIndex(item => item.aut_id === rowData.aut_id);
         const newList = [...list.slice(0, index), rowData, ...list.slice(index + 1)];
-        onChange(newList);
         setData(newList);
+        onChange(newList);
     };
 
     // DELETE action
@@ -507,6 +505,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         enableDensityToggle: false,
         enableHiding: false,
         enableColumnFilters: false,
+        autoResetPageIndex: false,
         positionActionsColumn: 'last',
         initialState: {
             density: 'compact',
