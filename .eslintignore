@@ -4,7 +4,6 @@ __mocks__
 bin
 coverage
 custom_modules
-cypress/examples
 dist
 node_modules
 scripts

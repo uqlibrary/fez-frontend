@@ -52,6 +52,22 @@ const authorsGetValue = record => {
         {},
     );
 
+    const authorExternalIdentifiers = (record.fez_record_search_key_author_identifier || []).reduce(
+        (authorExternalIdentifierObject, authorExternalIdentifier) => ({
+            ...authorExternalIdentifierObject,
+            [authorExternalIdentifier.rek_author_identifier_order]: authorExternalIdentifier,
+        }),
+        {},
+    );
+
+    const authorExternalIdentifiersType = (record.fez_record_search_key_author_identifier_type || []).reduce(
+        (authorExternalIdentifierTypeObject, authorExternalIdentifierType) => ({
+            ...authorExternalIdentifierTypeObject,
+            [authorExternalIdentifierType.rek_author_identifier_type_order]: authorExternalIdentifierType,
+        }),
+        {},
+    );
+
     const returnValue = (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => ({
         nameAsPublished: (authors[order] || {}).rek_author,
         creatorRole: (authorRoles[order] || {}).rek_author_role || '',
@@ -68,6 +84,8 @@ const authorsGetValue = record => {
                 ? AFFILIATION_TYPE_UQ
                 : AFFILIATION_TYPE_NOT_UQ,
         email: (authorEmails[order] || {}).rek_author_email || '',
+        externalIdentifier: (authorExternalIdentifiers[order] || {}).rek_author_identifier || '',
+        externalIdentifierType: (authorExternalIdentifiersType[order] || {}).rek_author_identifier_type || '',
         aut_org_username: ((authorIds[order] || {}).author || {}).aut_org_username || '',
         aut_student_username: ((authorIds[order] || {}).author || {}).aut_student_username || '',
         aut_display_name: (authorIds[order] || {}).rek_author_id_lookup || 0,
@@ -637,6 +655,39 @@ export default {
             return returnValue;
         },
     },
+    relatedServices: {
+        getValue: record => {
+            if (!record.fez_record_search_key_related_service) {
+                return [];
+            }
+            const relatedServiceIds = (record.fez_record_search_key_related_service || []).reduce(
+                (relatedServiceIdsObject, relatedServiceId) => ({
+                    ...relatedServiceIdsObject,
+                    [relatedServiceId.rek_related_service_order]: relatedServiceId,
+                }),
+                {},
+            );
+            const relatedServiceDescriptions = (record.fez_record_search_key_related_service_description || []).reduce(
+                (relatedServiceDescriptionsObject, relatedServiceDescription) => ({
+                    ...relatedServiceDescriptionsObject,
+                    [relatedServiceDescription.rek_related_service_description_order]: relatedServiceDescription,
+                }),
+                {},
+            );
+
+            const returnValue = record.fez_record_search_key_related_service.map(
+                ({ rek_related_service_order: order }) => ({
+                    relatedServiceId: relatedServiceIds[order].rek_related_service,
+                    relatedServiceDesc: (relatedServiceDescriptions[order] || {}).rek_related_service_description || '',
+                }),
+            );
+
+            delete record.fez_record_search_key_related_service;
+            delete record.fez_record_search_key_related_service_description;
+
+            return returnValue;
+        },
+    },
     files: {
         getValue: () => [],
     },
@@ -819,6 +870,54 @@ export default {
             delete record.fez_record_search_key_contact_details_email;
             return returnValue;
         },
+    },
+    ownerIdentifier: {
+        getValue: record => {
+            const returnValue = ((record.fez_record_search_key_contributor_identifier || [{}])[0] || {})
+                .rek_contributor_identifier;
+            delete record.fez_record_search_key_contributor_identifier;
+            return returnValue;
+        },
+    },
+    ownerIdentifierType: {
+        getValue: record => {
+            const returnValue = ((record.fez_record_search_key_contributor_identifier_type || [{}])[0] || {})
+                .rek_contributor_identifier_type;
+            delete record.fez_record_search_key_contributor_identifier_type;
+            return returnValue;
+        },
+    },
+    alternateIdentifiers: {
+        getValue: record => {
+            const returnValue = (record.fez_record_search_key_alternate_identifier || []).map(identifier => ({
+                rek_value: {
+                    key: identifier.rek_alternate_identifier,
+                    value: record.fez_record_search_key_alternate_identifier_type.find(
+                        type => type.rek_alternate_identifier_type_order === identifier.rek_alternate_identifier_order,
+                    )?.rek_alternate_identifier_type,
+                },
+                rek_order: identifier.rek_alternate_identifier_order,
+            }));
+
+            delete record.fez_record_search_key_subject;
+
+            return returnValue;
+        },
+    },
+    fez_record_search_key_instrument_type: {
+        getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_instrument_type'),
+    },
+    fez_record_search_key_measured_variable: {
+        getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_measured_variable'),
+    },
+    fez_record_search_key_model: {
+        getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_model'),
+    },
+    fez_record_search_key_raid: {
+        getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_raid'),
+    },
+    fez_record_search_key_resource_type: {
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_resource_type'),
     },
     fez_record_search_key_project_name: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_project_name'),

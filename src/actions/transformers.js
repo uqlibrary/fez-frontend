@@ -337,6 +337,44 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
     };
 };
 
+/**
+ * getRecordAuthorsExternalIdSearchKey - returns authors external identifier objects formatted for record request
+ *
+ * @param {array} authors - array of objects in format
+ *
+ * @returns {Object} formatted {
+ *     fez_record_search_key_author_identifier,
+ *     fez_record_search_key_author_identifier_type
+ * } for record request
+ */
+export const getRecordAuthorsExternalIdSearchKey = authors => {
+    // return empty object if all parameters are null
+    if (!authors || authors.length === 0) {
+        return {
+            fez_record_search_key_author_identifier: [],
+            fez_record_search_key_author_identifier_type: [],
+        };
+    }
+
+    const ids = [];
+    const idTypes = [];
+
+    authors.forEach((item, index) => {
+        if (!!item.externalIdentifier && !!item.externalIdentifierType) {
+            ids.push({ rek_author_identifier: item.externalIdentifier, rek_author_identifier_order: index + 1 });
+            idTypes.push({
+                rek_author_identifier_type: item.externalIdentifierType,
+                rek_author_identifier_type_order: index + 1,
+            });
+        }
+    });
+
+    return {
+        fez_record_search_key_author_identifier: ids,
+        fez_record_search_key_author_identifier_type: idTypes,
+    };
+};
+
 export const getRecordAuthorAffiliationSearchKey = authors => {
     if (!authors || authors.length === 0) {
         return {
@@ -906,6 +944,30 @@ export const getExternalSourceIdSearchKeys = data => {
     return result;
 };
 
+export const getAlternateIdentifierSearchKeys = (alternateIdentifiers = []) => {
+    if (!alternateIdentifiers || alternateIdentifiers.length === 0) return {};
+
+    const ids = [];
+    const types = [];
+    alternateIdentifiers.forEach(alternateIdentifier => {
+        ids.push({
+            rek_alternate_identifier: alternateIdentifier.rek_value.key,
+            rek_alternate_identifier_order: alternateIdentifier.rek_order,
+        });
+        if (alternateIdentifier.rek_value.value) {
+            types.push({
+                rek_alternate_identifier_type: alternateIdentifier.rek_value.value,
+                rek_alternate_identifier_type_order: alternateIdentifier.rek_order,
+            });
+        }
+    });
+
+    return {
+        fez_record_search_key_alternate_identifier: ids,
+        fez_record_search_key_alternate_identifier_type: types,
+    };
+};
+
 export const getLinkSearchKey = (links = []) => {
     if (!links || links.length === 0) return {};
 
@@ -1025,6 +1087,7 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         rek_pubmed_doc_type: pubmedDocType,
         rek_scopus_doc_type: scopusDocType,
         rek_wok_doc_type: wosDocType,
+        alternateIdentifiers,
         links,
         ...rest
     } = data;
@@ -1046,6 +1109,7 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         ...(!!pubmedCentralId?.rek_pubmed_central_id
             ? { fez_record_search_key_pubmed_central_id: pubmedCentralId }
             : {}),
+        ...getAlternateIdentifierSearchKeys(alternateIdentifiers),
         ...getLinkSearchKey(links),
         ...getLinkDescriptionSearchKey(links),
         ...(!!locations ? getRecordLocationSearchKey(locations) : {}),
@@ -1289,6 +1353,7 @@ export const getAuthorsSearchKeys = (authors, canHaveAffiliations = false) => ({
     ...getRecordAuthorAffiliations(authors, canHaveAffiliations),
     ...getRecordAuthorsSearchKey(authors),
     ...getRecordAuthorsIdSearchKey(authors),
+    ...getRecordAuthorsExternalIdSearchKey(authors),
     ...getRecordAuthorAffiliationSearchKey(authors),
     ...getRecordAuthorAffiliationTypeSearchKey(authors),
     ...getDatasetCreatorRolesSearchKey(authors),
@@ -1343,9 +1408,7 @@ export const getHerdcCodeSearchKey = record => {
         (!!record.rek_herdc_code && record.rek_herdc_code.value === null)
     ) {
         return {
-            fez_record_search_key_herdc_code: {
-                rek_herdc_code: null,
-            },
+            fez_record_search_key_herdc_code: {},
         };
     }
 
@@ -1358,17 +1421,38 @@ export const getHerdcCodeSearchKey = record => {
 
 export const getHerdcStatusSearchKey = record => {
     // return empty object if all parameters are null
-    if (!!!record.rek_herdc_status || (!!record.rek_herdc_status && record.rek_herdc_status.value === null)) {
+    if (
+        !!!record.rek_herdc_status ||
+        record.rek_herdc_status === '0' ||
+        (!!record.rek_herdc_status && record.rek_herdc_status.value === null)
+    ) {
         return {
-            fez_record_search_key_herdc_status: {
-                rek_herdc_status: null,
-            },
+            fez_record_search_key_herdc_status: {},
         };
     }
 
     return {
         fez_record_search_key_herdc_status: {
             rek_herdc_status: record.rek_herdc_status,
+        },
+    };
+};
+
+export const getRefereedStatusSearchKey = record => {
+    // return empty object if all parameters are null
+    if (
+        !!!record.rek_refereed_source ||
+        record.rek_refereed_source === '0' ||
+        (!!record.rek_refereed_source && record.rek_refereed_source.value === null)
+    ) {
+        return {
+            fez_record_search_key_refereed_source: {},
+        };
+    }
+
+    return {
+        fez_record_search_key_refereed_source: {
+            rek_refereed_source: record.rek_refereed_source,
         },
     };
 };
@@ -1381,7 +1465,7 @@ export const getOpenAccessStatusTypeSearchKey = record => {
         (!!record.rek_oa_status_type && record.rek_oa_status_type?.value === null)
     ) {
         return {
-            fez_record_search_key_oa_status_type: null,
+            fez_record_search_key_oa_status_type: {},
         };
     }
 
@@ -1425,6 +1509,29 @@ export const getOpenAccessStatusSearchKey = record => {
     };
 };
 
+export const getCollectionViewType = record => {
+    // return empty object if all parameters are null
+    if (!!!record?.rek_collection_view_type) return {};
+    return { fez_record_search_key_collection_view_type: { ...record } };
+};
+
+export const getOwnerIdentifierSearchKey = (ownerIdentifier, ownerIdentifierType) => {
+    return {
+        fez_record_search_key_contributor_identifier: [
+            {
+                rek_contributor_identifier: ownerIdentifier,
+                rek_contributor_identifier_order: 1,
+            },
+        ],
+        fez_record_search_key_contributor_identifier_type: [
+            {
+                rek_contributor_identifier_type: ownerIdentifierType,
+                rek_contributor_identifier_type_order: 1,
+            },
+        ],
+    };
+};
+
 export const getAdminSectionSearchKeys = (data = {}) => {
     const {
         collections,
@@ -1433,18 +1540,27 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         contactName,
         contactNameId,
         contactEmail,
+        ownerIdentifier,
+        ownerIdentifierType,
+        fez_record_search_key_collection_view_type: collectionViewType,
         fez_record_search_key_institutional_status: institutionalStatus,
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
+        fez_record_search_key_refereed_source: refereeStatus,
         fez_record_search_key_oa_status: openAccessStatus,
         fez_record_search_key_oa_status_type: openAccessStatusType,
         fez_record_search_key_license: license,
+        fez_record_search_key_start_date: startDate,
         fez_record_search_key_end_date: endDate,
+        fez_record_search_key_time_period_start_date: timePeriodStartDate,
+        fez_record_search_key_time_period_end_date: timePeriodEndDate,
         ...rest
     } = data;
+
     return {
         ...getRecordIsMemberOfSearchKey(communities),
         ...getRecordIsMemberOfSearchKey(collections),
+        ...getCollectionViewType(collectionViewType),
         ...getContentIndicatorSearchKey(contentIndicators),
         ...(!!contactName && !!contactEmail
             ? getDatasetContactDetailSearchKeys({ contactName, contactNameId, contactEmail })
@@ -1452,14 +1568,23 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!institutionalStatus ? getInstitutionalStatusSearchKey(institutionalStatus) : {}),
         ...(!!herdcCode ? getHerdcCodeSearchKey(herdcCode) : {}),
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
+        ...(!!refereeStatus ? getRefereedStatusSearchKey(refereeStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
         ...(!!openAccessStatusType ? getOpenAccessStatusTypeSearchKey(openAccessStatusType) : {}),
+        ...(!!ownerIdentifier ? getOwnerIdentifierSearchKey(ownerIdentifier, ownerIdentifierType) : {}),
         ...{
             fez_record_search_key_license: {
                 ...(!!license && license?.rek_license > 0 ? license : {}),
             },
         },
+        ...(!!startDate && !!startDate.rek_start_date ? { fez_record_search_key_start_date: { ...startDate } } : {}),
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
+        ...(!!timePeriodStartDate && !!timePeriodStartDate.rek_time_period_start_date
+            ? { fez_record_search_key_time_period_start_date: { ...timePeriodStartDate } }
+            : {}),
+        ...(!!timePeriodEndDate && !!timePeriodEndDate.rek_time_period_end_date
+            ? { fez_record_search_key_time_period_end_date: { ...timePeriodEndDate } }
+            : {}),
         ...rest,
     };
 };
@@ -1580,6 +1705,29 @@ export const getReasonSectionSearchKeys = (data = {}) => {
     const { reason } = data;
     return {
         ...(!!reason ? { reason: reason } : {}),
+    };
+};
+
+export const getRelatedServiceSectionSearchKeys = (data = {}) => {
+    if (!data.relatedServices) {
+        return {};
+    }
+
+    const ids = [];
+    const descs = [];
+    data.relatedServices.forEach((service, index) => {
+        ids.push({ rek_related_service: service.relatedServiceId, rek_related_service_order: index + 1 });
+        if (service.relatedServiceDesc) {
+            descs.push({
+                rek_related_service_description: service.relatedServiceDesc,
+                rek_related_service_description_order: index + 1,
+            });
+        }
+    });
+
+    return {
+        fez_record_search_key_related_service: ids,
+        fez_record_search_key_related_service_description: descs,
     };
 };
 

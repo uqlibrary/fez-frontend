@@ -55,7 +55,7 @@ export default {
                     <p>The journal you are attempting to access does not appear in our system.</p>
                     <p>
                         If you believe this is in error, please{' '}
-                        <a href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/contact-us">
+                        <a href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us">
                             contact the eSpace team.
                         </a>
                     </p>

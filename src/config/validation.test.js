@@ -136,6 +136,11 @@ describe('Validation method', () => {
         expect(testValue).toEqual('');
     });
 
+    it('should validate RAiD', () => {
+        expect(validation.raid('sdjflsjdlfjsl')).toEqual(locale.validationErrors.raid);
+        expect(validation.raid('10.1234/suffix')).toEqual(undefined);
+    });
+
     it('should validate max length', () => {
         expect(
             validation.spacelessMaxLength10Validator('sdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjsl'),
@@ -149,6 +154,7 @@ describe('Validation method', () => {
     });
 
     it('should validate doi', () => {
+        expect(validation.isValidDOIValue(null)).toBeFalsy();
         expect(validation.isValidDOIValue('10.1007/978-3-319-60492-3_52')).toBeTruthy();
         expect(validation.isValidDOIValue('10.1007/something')).toBeTruthy();
         expect(validation.isValidDOIValue('10.1021/jp030583+')).toBeTruthy();

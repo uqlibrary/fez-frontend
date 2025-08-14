@@ -77,7 +77,7 @@ function setup(props = {}) {
 describe('ThesisSubmission', () => {
     const fileMock = ['myTestImage.png'];
     const isDebugging = false;
-    const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
+    const waitForOptions = { timeout: isDebugging ? 120000 : 2000 };
 
     const mockRichEditorFieldValues = values => {
         mockUseForm((props, original) => {

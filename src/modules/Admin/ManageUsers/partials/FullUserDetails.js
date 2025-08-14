@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FormProvider } from 'react-hook-form';
 import { useForm } from 'hooks';
 import { useWatch } from 'react-hook-form';
@@ -15,10 +15,7 @@ import TableCell from '@mui/material/TableCell';
 import { ScrollToSection } from 'modules/SharedComponents/Toolbox/ScrollToSection';
 import NameData from './NameData';
 
-import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import { useConfirmationState } from 'hooks';
 import { default as locale } from 'locale/components';
-import UserDetailsRow from './UserDetailsRow';
 import { checkForExistingUser } from 'actions';
 
 const classes = {
@@ -29,7 +26,6 @@ const classes = {
 };
 
 export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled }) => {
-    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const validatedForm = useForm({
         defaultValues: rowData,
         mode: 'onChange',
@@ -47,31 +43,21 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
     const [apiError, setApiError] = React.useState('');
     const [submitting, setSubmitting] = React.useState(false);
 
+    const { userListItemUpdating, userAdding } = useSelector(state => state?.get('manageUsersReducer'));
+
     const dispatch = useDispatch();
     const { setError, clearErrors } = validatedForm;
 
-    const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}';
+    const disableSubmit =
+        !isDirty || isSubmitting || userListItemUpdating || userAdding || JSON.stringify(errors) !== '{}';
 
     const {
-        form: { deleteConfirmationLocale, editButton, cancelButton, addButton },
+        form: { editButton, cancelButton, addButton },
     } = locale.components.manageUsers;
 
     const handleSave = formValues => onEditingApproved(mode, formValues, rowData);
-    const handleDelete = () => onEditingApproved(mode, rowData, rowData);
     const handleCancel = () => onEditingCanceled(mode, rowData);
     const handleKeyPress = e => e.key === 'Escape' && onEditingCanceled(mode, rowData);
-
-    const handleCancelDelete = () => {
-        handleCancel();
-        hideConfirmation();
-    };
-
-    React.useEffect(() => {
-        if (mode === 'delete') {
-            showConfirmation();
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [mode]);
 
     React.useEffect(() => {
         trigger();
@@ -186,86 +172,76 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
 
     return (
         <React.Fragment>
-            {(mode === 'update' || mode === 'add') && (
-                <TableRow onKeyDown={handleKeyPress} id="user-edit-row" data-testid="user-edit-row">
-                    <TableCell colSpan={9}>
-                        <ScrollToSection scrollToSection>
-                            <FormProvider {...validatedForm}>
-                                <form onSubmit={handleSubmit(onSubmit)}>
-                                    <Box sx={{ ...classes.background }}>
-                                        <Grid container spacing={2}>
-                                            <Grid item xs={12}>
-                                                <NameData />
-                                            </Grid>
-                                            <Grid item xs={12}>
-                                                <Grid
-                                                    container
-                                                    direction="row-reverse"
-                                                    justifyContent="flex-start"
-                                                    alignItems="center"
-                                                    spacing={2}
-                                                >
-                                                    <Grid item>
-                                                        <Button
-                                                            id={`users-${mode}-this-user-save`}
-                                                            data-analyticsid={`users-${mode}-this-user-save`}
-                                                            data-testid={`users-${mode}-this-user-save`}
-                                                            disabled={disableSubmit || submitting || disabled}
-                                                            variant="contained"
-                                                            color="primary"
-                                                            type="submit"
-                                                        >
-                                                            {mode === 'update' ? editButton : addButton}
-                                                        </Button>
-                                                    </Grid>
-                                                    <Grid item>
-                                                        <Button
-                                                            id={`users-${mode}-this-user-cancel`}
-                                                            data-analyticsid={`users-${mode}-this-user-cancel`}
-                                                            data-testid={`users-${mode}-this-user-cancel`}
-                                                            disabled={disabled}
-                                                            variant="outlined"
-                                                            color="secondary"
-                                                            onClick={handleCancel}
-                                                        >
-                                                            {cancelButton}
-                                                        </Button>
-                                                    </Grid>
+            <TableRow onKeyDown={handleKeyPress} id="user-edit-row" data-testid="user-edit-row">
+                <TableCell sx={{ p: 0 }}>
+                    <ScrollToSection scrollToSection>
+                        <FormProvider {...validatedForm}>
+                            <form onSubmit={handleSubmit(onSubmit)}>
+                                <Box sx={{ ...classes.background }}>
+                                    <Grid container spacing={2} sx={{ position: 'relative' }}>
+                                        <Grid item xs={12} sx={{ paddingBottom: 2 }}>
+                                            <NameData />
+                                        </Grid>
+                                    </Grid>
+                                    <Grid
+                                        container
+                                        spacing={2}
+                                        sx={{
+                                            ...classes.background,
+                                            padding: 0,
+                                            position: 'sticky',
+                                            bottom: 0,
+                                        }}
+                                    >
+                                        <Grid item xs={12}>
+                                            <Grid
+                                                container
+                                                direction="row-reverse"
+                                                justifyContent="flex-start"
+                                                alignItems="center"
+                                                spacing={2}
+                                            >
+                                                <Grid item>
+                                                    <Button
+                                                        id={`users-${mode}-this-user-save`}
+                                                        data-analyticsid={`users-${mode}-this-user-save`}
+                                                        data-testid={`users-${mode}-this-user-save`}
+                                                        disabled={disableSubmit || submitting || disabled}
+                                                        variant="contained"
+                                                        color="primary"
+                                                        type="submit"
+                                                    >
+                                                        {mode === 'update' ? editButton : addButton}
+                                                    </Button>
+                                                </Grid>
+                                                <Grid item>
+                                                    <Button
+                                                        id={`users-${mode}-this-user-cancel`}
+                                                        data-analyticsid={`users-${mode}-this-user-cancel`}
+                                                        data-testid={`users-${mode}-this-user-cancel`}
+                                                        disabled={disabled}
+                                                        variant="outlined"
+                                                        color="secondary"
+                                                        onClick={handleCancel}
+                                                    >
+                                                        {cancelButton}
+                                                    </Button>
                                                 </Grid>
                                             </Grid>
+
                                             {(!!apiError || !!Object.keys(errors).length) && (
-                                                <Grid xs={12}>
+                                                <Grid item xs={12}>
                                                     <Alert alertId="api_error_alert" {...alertProps} />
                                                 </Grid>
                                             )}
                                         </Grid>
-                                    </Box>
-                                </form>
-                            </FormProvider>
-                        </ScrollToSection>
-                    </TableCell>
-                </TableRow>
-            )}
-
-            {mode === 'delete' && (
-                <TableRow
-                    onKeyDown={handleKeyPress}
-                    id="author-delete-row"
-                    data-testid="author-delete-row"
-                    sx={{ ...classes.background }}
-                >
-                    <ConfirmationBox
-                        confirmationBoxId="users-delete-this-user-confirmation"
-                        onAction={handleDelete}
-                        onClose={handleCancelDelete}
-                        isOpen={isOpen}
-                        locale={deleteConfirmationLocale}
-                    />
-                    <TableCell colSpan={3}>
-                        <UserDetailsRow rowData={rowData} />
-                    </TableCell>
-                </TableRow>
-            )}
+                                    </Grid>
+                                </Box>
+                            </form>
+                        </FormProvider>
+                    </ScrollToSection>
+                </TableCell>
+            </TableRow>
         </React.Fragment>
     );
 };

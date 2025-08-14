@@ -17,4 +17,5 @@ export { default as UqIdField } from './containers/UqIdField';
 export { default as FoROptionTemplate } from './OptionTemplates/FoROptionTemplate';
 export { default as JournalTemplate } from './OptionTemplates/JournalTemplate';
 export { default as GenericOptionTemplate } from './OptionTemplates/GenericOptionTemplate';
+export { default as RelatedServiceIdOptionTemplate } from './OptionTemplates/RelatedServiceIdOptionTemplate';
 export { default as TitleOrPidOptionTemplate } from './OptionTemplates/TitleOrPidOptionTemplate';

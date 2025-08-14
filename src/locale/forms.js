@@ -32,7 +32,7 @@ export default {
                                 style={{ fontWeight: 700 }}
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                                href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/content-indicators"
                             >
                                 here
                             </a>
@@ -157,7 +157,7 @@ export default {
                                 style={{ fontWeight: 700 }}
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                                href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/content-indicators"
                             >
                                 here
                             </a>

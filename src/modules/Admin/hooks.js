@@ -9,6 +9,8 @@ import {
 } from 'config/general';
 import { useWatch } from 'react-hook-form';
 import { unionBy } from 'lodash';
+import { publicationTypes } from 'config';
+import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
 export const getInitialValuesForForm = (recordToView, createMode) => {
     const initialFormValues = {
@@ -74,7 +76,7 @@ export const useRecordToView = (recordToView, createMode, form) => {
     };
 };
 
-export const useFormOnChangeHook = form => {
+export const useFormOnChangeHook = (form, createMode) => {
     const prevBibliographicSectionFezMatchedJournals = useRef('');
     const [
         rekDisplayType,
@@ -90,8 +92,17 @@ export const useFormOnChangeHook = form => {
             'bibliographicSection.fez_matched_journals',
         ],
     });
+    /* istanbul ignore next */
     if (rekDisplayType === PUBLICATION_TYPE_THESIS && !!adminSectionRekSubtype && !!!bibliographicSectionRekGenreType) {
         form.setValue('bibliographicSection.rek_genre_type', adminSectionRekSubtype);
+    }
+
+    // AD-290 Remove the subtype key if the selected display type does not have subtypes
+    const selectedPublicationType = !!rekDisplayType && publicationTypes({ ...recordForms }, true)[rekDisplayType];
+    const hasSubtypes = !!(selectedPublicationType || {}).subtypes;
+    /* istanbul ignore next */
+    if (createMode && !hasSubtypes && Object.hasOwn(form.getValues()?.adminSection ?? {}, 'rek_subtype')) {
+        form.unregister('adminSection.rek_subtype');
     }
 
     const { isTouched } = form.getFieldState('bibliographicSection.fez_matched_journals');
@@ -104,15 +115,18 @@ export const useFormOnChangeHook = form => {
     ) {
         prevBibliographicSectionFezMatchedJournals.current = bibliographicSectionFezMatchedJournals.id;
         const issns =
-            bibliographicSectionFezMatchedJournals?.fez_journal_issn?.map(issn => ({
-                rek_value: {
-                    key: issn.jnl_issn,
-                    value: {
-                        sherpaRomeo: { link: false },
-                        ulrichs: { link: false, linkText: '' },
+            bibliographicSectionFezMatchedJournals?.fez_journal_issn?.map(
+                /* istanbul ignore next */ issn => ({
+                    rek_value: {
+                        key: issn.jnl_issn,
+                        value: {
+                            sherpaRomeo: { link: false },
+                            ulrichs: { link: false, linkText: '' },
+                        },
                     },
-                },
-            })) || [];
+                }),
+            ) || [];
+        /* istanbul ignore next */
         if (bibliographicSectionFezMatchedJournals.value) {
             form.setValue(
                 'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',

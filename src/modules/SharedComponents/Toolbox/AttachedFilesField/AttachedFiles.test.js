@@ -5,6 +5,7 @@ import {
     rtlRender,
     WithReduxStore,
     FormProviderWrapper,
+    userEvent,
     fireEvent,
     userEvent,
     waitFor,
