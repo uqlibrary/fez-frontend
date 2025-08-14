@@ -402,7 +402,7 @@ export const Doi: React.FC<Doi> = ({
                                 // @ts-ignore
                                 message={errorMessage}
                                 type="error"
-                                testId="rek-doi-error"
+                                alertId="rek-doi-error"
                             />
                         )) ||
                             (!!warningMessage && (
@@ -410,7 +410,7 @@ export const Doi: React.FC<Doi> = ({
                                     // @ts-ignore
                                     message={warningMessage}
                                     type="warning"
-                                    testId="rek-doi-warning"
+                                    alertId="rek-doi-warning"
                                 />
                             ))}
                     </Grid>
@@ -431,7 +431,8 @@ export const Doi: React.FC<Doi> = ({
                         <Grid item xs={12}>
                             <Alert
                                 // @ts-ignore
-                                testId="rek-doi-submit-status"
+                                alertId="rek-doi-submit-status"
+                                message=""
                                 {...alertProps}
                             />
                         </Grid>

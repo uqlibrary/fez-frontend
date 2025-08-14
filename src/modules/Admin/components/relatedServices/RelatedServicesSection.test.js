@@ -1,3 +1,4 @@
+import React from 'react';
 import RelatedServicesSection from './RelatedServicesSection';
 
 jest.mock('../../../../context');
@@ -5,12 +6,19 @@ import { useRecordContext } from 'context';
 
 import { PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
+
+function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         ...testProps,
     };
-
-    return renderComponent(RelatedServicesSection, props, args);
+    return renderer(
+        <WithReduxStore>
+            <FormProviderWrapper values={{}}>
+                <RelatedServicesSection {...props} />
+            </FormProviderWrapper>
+        </WithReduxStore>,
+    );
 }
 
 describe('RelatedServicesSection', () => {
@@ -27,12 +35,12 @@ describe('RelatedServicesSection', () => {
     });
 
     it('should render default view', () => {
-        const render = setup({});
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
-        const render = setup({ disabled: true });
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup({ disabled: true });
+        expect(container).toMatchSnapshot();
     });
 });

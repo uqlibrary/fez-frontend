@@ -424,7 +424,7 @@ describe('Files Component ', () => {
         const code = 1234;
         const message = 'video failed';
         act(() => {
-            mockOnVideoFailed({ target: { error: { code, message } }} );
+            mockOnVideoFailed({ target: { error: { code, message } } });
         });
         expect(videoErrorCodeState).toEqual(code);
         expect(videoErrorMsgState).toEqual(message);
@@ -1019,7 +1019,7 @@ describe('Files Component ', () => {
             const fezDatastreamInfo = createFezDatastreamInfoArray(anotherSources, journalArticle.rek_pid);
             const { queryByTestId } = setup(
                 { publication: { ...journalArticle, fez_datastream_info: fezDatastreamInfo } },
-                { isShallow: false, renderer: rtlRender },
+                { renderer: rtlRender },
             );
 
             expect(fezDatastreamInfo).toMatchSnapshot();
@@ -1049,7 +1049,7 @@ describe('Files Component ', () => {
                         },
                     },
                 },
-                { isShallow: false, renderer: rtlRender },
+                { renderer: rtlRender },
             );
 
             expect(fezDatastreamInfo).toMatchSnapshot();
