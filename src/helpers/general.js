@@ -46,7 +46,6 @@ export const stripHtml = html => {
 };
 
 export const parseHtmlToJSX = html => {
-    console.log(HTMLReactParser(html));
     return HTMLReactParser(isString(html) ? html : '');
 };
 

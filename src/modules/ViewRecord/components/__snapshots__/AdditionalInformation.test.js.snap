@@ -11809,6 +11809,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <a
                     class=""
+                    data-discover="true"
                     data-testid="rek-contributor-0-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_contributor_id%5D%5Bvalue%5D=79391&searchQueryParams%5Brek_contributor_id%5D%5Blabel%5D=79391+(Tyson%2C+Gene+W.+)&searchMode=advanced"
                     style="color: rgb(0, 114, 0);"
@@ -11884,6 +11885,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <a
                     class=""
+                    data-discover="true"
                     data-testid="rek-author-0-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=96310&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=96310+(Parks%2C+Donovan+H.)&searchMode=advanced"
                     style="color: rgb(0, 114, 0);"
@@ -11898,6 +11900,7 @@ exports[`Additional Information Component  should render component with data col
                   , 
                   <a
                     class=""
+                    data-discover="true"
                     data-testid="rek-author-1-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=6366&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=6366+(Imelfort%2C+Michael)&searchMode=advanced"
                     style="color: rgb(0, 114, 0);"
@@ -11912,6 +11915,7 @@ exports[`Additional Information Component  should render component with data col
                   , 
                   <a
                     class=""
+                    data-discover="true"
                     data-testid="rek-author-2-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=76682&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=76682+(Skennerton%2C+Connor+T.)&searchMode=advanced"
                     style="color: rgb(0, 114, 0);"
@@ -11926,6 +11930,7 @@ exports[`Additional Information Component  should render component with data col
                   , 
                   <a
                     class=""
+                    data-discover="true"
                     data-testid="rek-author-3-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=20288&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=20288+(Hugenholtz%2C+Philip)&searchMode=advanced"
                     style="color: rgb(0, 114, 0);"
@@ -11941,6 +11946,7 @@ exports[`Additional Information Component  should render component with data col
                    and 
                   <a
                     class=""
+                    data-discover="true"
                     data-testid="rek-author-4-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=79391&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=79391+(Tyson%2C+Gene+W.)&searchMode=advanced"
                     style="color: rgb(0, 114, 0);"
@@ -12376,6 +12382,7 @@ exports[`Additional Information Component  should render component with data col
               >
                 <span>
                   <a
+                    data-discover="true"
                     data-testid="rek-license-lookup"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=453701"
                   >
@@ -12446,6 +12453,7 @@ exports[`Additional Information Component  should render component with data col
                     data-testid="rek-subject-0"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452086&searchQueryParams%5Ball%5D="
                     >
                       452086
@@ -12455,6 +12463,7 @@ exports[`Additional Information Component  should render component with data col
                     data-testid="rek-subject-1"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452109&searchQueryParams%5Ball%5D="
                     >
                       452109
@@ -12794,6 +12803,7 @@ exports[`Additional Information Component  should render component with data col
                     data-testid="rek-keywords-0"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Isolates&searchQueryParams%5Ball%5D="
                     >
                       Isolates
@@ -12803,6 +12813,7 @@ exports[`Additional Information Component  should render component with data col
                     data-testid="rek-keywords-1"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Single+cells&searchQueryParams%5Ball%5D="
                     >
                       Single cells
@@ -12812,6 +12823,7 @@ exports[`Additional Information Component  should render component with data col
                     data-testid="rek-keywords-2"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Metagenomic+data&searchQueryParams%5Ball%5D="
                     >
                       Metagenomic data
@@ -12821,6 +12833,7 @@ exports[`Additional Information Component  should render component with data col
                     data-testid="rek-keywords-3"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Genome+quality&searchQueryParams%5Ball%5D="
                     >
                       Genome quality
@@ -12830,6 +12843,7 @@ exports[`Additional Information Component  should render component with data col
                     data-testid="rek-keywords-4"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=CheckM&searchQueryParams%5Ball%5D="
                     >
                       CheckM
@@ -12903,6 +12917,7 @@ exports[`Additional Information Component  should render component with data col
                     data-testid="rek-seo-code-0"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences&searchQueryParams%5Ball%5D="
                     >
                       970106 Expanding Knowledge in the Biological Sciences
@@ -12967,6 +12982,7 @@ exports[`Additional Information Component  should render component with data col
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   data-testid="rek-publisher"
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Cold+Spring+Harbor+Laboratory+Press&searchMode=advanced"
                 >
@@ -13071,6 +13087,7 @@ exports[`Additional Information Component  should render component with data col
                     data-testid="rek-raid-0"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_raid%5D%5Bvalue%5D=10.1234%2Fxxx&searchMode=advanced"
                     >
                       10.1234/xxx
@@ -15006,6 +15023,7 @@ exports[`Additional Information Component  should render component with instrume
                 >
                   <a
                     class="authorNameLink"
+                    data-discover="true"
                     data-testid="rek-author-0-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=manufacturer&searchMode=advanced"
                   >
@@ -15110,6 +15128,7 @@ exports[`Additional Information Component  should render component with instrume
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   data-testid="rek-publisher"
                   href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=The+University+of+Queensland&searchMode=advanced"
                 >
@@ -15181,6 +15200,7 @@ exports[`Additional Information Component  should render component with instrume
                 >
                   <a
                     class="authorNameLink"
+                    data-discover="true"
                     data-testid="rek-contributor-0-link"
                     href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_contributor%5D%5Bvalue%5D=Owner+name&searchMode=advanced"
                   >

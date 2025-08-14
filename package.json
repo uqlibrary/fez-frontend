@@ -398,6 +398,7 @@
             ]
         ],
         "setupFiles": [
+            "./src/globals.setup.js",
             "./src/test.setup.js",
             "jest-localstorage-mock"
         ],

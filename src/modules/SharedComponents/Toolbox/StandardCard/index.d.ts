@@ -18,5 +18,5 @@ export interface StandardCardProps {
     title?: React.ReactNode;
 }
 
-export const StandardCard: React.FC<StandardCardProps>;
+export declare const StandardCard: React.FC<StandardCardProps>;
 export default StandardCard;

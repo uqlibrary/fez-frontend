@@ -6,7 +6,9 @@ export interface InlineLoaderProps {
     ariaLabel?: string;
 }
 
-export const InlineLoader: React.MemoExoticComponent<React.ComponentType<InlineLoaderProps>>;
+// Named export
+export declare const InlineLoader: React.MemoExoticComponent<React.ComponentType<InlineLoaderProps>>;
 
-declare const _default: React.MemoExoticComponent<React.ComponentType<InlineLoaderProps>>;
-export default _default;
+// Default export
+declare const InlineLoaderDefault: React.MemoExoticComponent<React.ComponentType<InlineLoaderProps>>;
+export default InlineLoaderDefault;

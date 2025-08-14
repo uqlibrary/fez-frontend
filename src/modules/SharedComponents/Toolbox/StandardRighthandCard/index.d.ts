@@ -13,5 +13,5 @@ export interface StandardRighthandCardProps {
     help?: StandardRighthandCardHelp;
 }
 
-export const StandardRighthandCard: React.FC<StandardRighthandCardProps>;
+export declare const StandardRighthandCard: React.FC<StandardRighthandCardProps>;
 export default StandardRighthandCard;

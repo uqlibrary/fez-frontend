@@ -104,8 +104,8 @@ export interface PublicationListLoadingProgressProps {
 
 export declare const filterCollectionViewTypes: () => any[];
 
-export const PublicationsList: React.FC<PublicationsListProps>;
-export const PublicationsListPaging: React.FC<PublicationsListPagingProps>;
-export const PublicationsListSorting: React.FC<PublicationsListSortingProps>;
-export const FacetsFilter: React.FC<FacetsFilterProps>;
-export const PublicationListLoadingProgress: React.FC<PublicationListLoadingProgressProps>;
+export declare const PublicationsList: React.FC<PublicationsListProps>;
+export declare const PublicationsListPaging: React.FC<PublicationsListPagingProps>;
+export declare const PublicationsListSorting: React.FC<PublicationsListSortingProps>;
+export declare const FacetsFilter: React.FC<FacetsFilterProps>;
+export declare const PublicationListLoadingProgress: React.FC<PublicationListLoadingProgressProps>;
