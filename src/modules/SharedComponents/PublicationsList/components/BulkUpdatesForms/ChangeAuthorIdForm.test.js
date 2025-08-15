@@ -80,7 +80,7 @@ describe('ChangeAuthorIdForm', () => {
             .replyOnce(200, {
                 data: [{ id: 111, value: 'Testing', aut_id: 111, aut_org_username: 'uqtest' }],
             });
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
         await assertFormInitialState();
 
         // interact with the form
@@ -123,7 +123,7 @@ describe('ChangeAuthorIdForm', () => {
             .replyOnce(200, {
                 data: [{ id: 111, value: 'Testing', aut_id: 111, aut_org_username: 'uqtest' }],
             });
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
         await assertFormInitialState();
 
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
@@ -208,7 +208,7 @@ describe('ChangeAuthorIdForm', () => {
             .replyOnce(200, {
                 data: [{ id: 123, value: 'Testing', aut_id: 123, aut_org_username: 'uqtest' }],
             });
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
         await assertFormInitialState();
 
         // interact with the form
