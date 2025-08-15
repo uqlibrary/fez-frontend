@@ -262,5 +262,32 @@ test.describe('Claim possible work', () => {
             // navigate away
             await expect(page).toHaveURL('/records/mine');
         });
+
+        test('should handle clicking the Back button', async ({ page }) => {
+            await page.goto('/records/possible');
+            await expect(page.locator('h2')).toHaveText(/Claim possible works/);
+            await page.getByTestId('expand-more-facet-category-display-type').click();
+            await page.getByTestId('facet-filter-nested-item-display-type-journal-article').click();
+            await expect(page.getByText('Journal Article (2)')).toBeVisible();
+            await expect(page.getByTestId('clear-facet-filter-nested-item-display-type-journal-article')).toBeVisible();
+
+            await page.goBack();
+            await page.waitForTimeout(500);
+
+            await expect(page.getByText('Journal Article (2)')).toBeVisible(); // facet should still be visible
+            await expect(
+                page.getByTestId('clear-facet-filter-nested-item-display-type-journal-article'),
+            ).not.toBeVisible();
+        });
+        test('should handle range changes', async ({ page }) => {
+            await page.goto('/records/possible');
+            await expect(page.locator('h2')).toHaveText(/Claim possible works/);
+            await page.getByTestId('expand-more-facet-category-date-range').click();
+            await page.getByTestId('from').fill('2020');
+            await page.getByTestId('to').fill('2031');
+            await page.getByText('Go').click();
+            await page.waitForTimeout(500);
+            await expect(page.getByText('2020 - 2031')).toBeVisible();
+        });
     });
 });

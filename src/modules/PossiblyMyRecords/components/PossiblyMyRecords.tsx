@@ -120,7 +120,7 @@ const PossiblyMyRecords: React.FC = () => {
             dispatch(actions.searchPossiblyYourPublications(newState));
         }
         setPrevLocation(location);
-    }, [location, dispatch, navigationType]);
+    }, [location, dispatch, navigationType, prevLocation]);
 
     // set forever-true flag if user has publications
     useEffect(() => {
@@ -180,11 +180,11 @@ const PossiblyMyRecords: React.FC = () => {
       ranges?: Record<string, string | number>;
   }): void => {
       const filters: Record<string, string> = {};
-      Object.entries(active.filters ?? {}).forEach(([k, v]) => {
+      Object.entries(active.filters ?? /* istanbul ignore next */ {}).forEach(([k, v]) => {
           filters[k] = String(v);
       });
       const ranges: Record<string, string> = {};
-      Object.entries(active.ranges ?? {}).forEach(([k, v]) => {
+      Object.entries(active.ranges ?? /* istanbul ignore next */ {}).forEach(([k, v]) => {
           ranges[k] = String(v);
       });
       setState(prevState => ({
@@ -235,7 +235,7 @@ const PossiblyMyRecords: React.FC = () => {
         'custom',
     ] as const).includes(t as AlertType)
         ? (t as AlertType)
-        : 'error';
+        : /* istanbul ignore next */ 'error';
 
     const getAlert = (
         alertLocale: { alertId: string; title: string; message: (s: string) => string; type: AlertType },

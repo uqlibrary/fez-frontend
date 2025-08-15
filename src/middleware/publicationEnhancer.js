@@ -135,20 +135,20 @@ export const enhancePublication = record => {
 };
 
 const publicationEnhancer = () => next => action => {
-    if (loadPublicationsListActions.test(action.type) && !!action.payload.data) {
+    if (loadPublicationsListActions.test(action?.type) && !!action.payload.data) {
         const enhancedPublications = action.payload.data.map(publication => ({
             ...enhancePublication(publication),
         }));
 
         const enhancedAction = {
-            type: action.type,
+            type: action?.type,
             payload: {
                 ...action.payload,
                 data: enhancedPublications,
             },
         };
         return next(enhancedAction);
-    } else if (loadPublicationActions.test(action.type)) {
+    } else if (loadPublicationActions.test(action?.type)) {
         const enhancedAction = {
             ...action,
             payload: {

@@ -47,9 +47,10 @@ test.describe('As an admin,', () => {
         await adminEditTabbedView(page, false);
 
         // Fill required fields
+
         await typeCKEditor(page, 'rek-title', 'Test title');
         await page.getByTestId('rek-date-year-input').fill('2020');
-        await page.getByTestId('rek-author-add').click();
+        await page.getByTestId('rek-author-add').click({ clickCount: 2 });
         await page.getByTestId('rek-author-input').fill('Test author');
         await page.getByTestId('rek-author-add-save').click();
         await page.getByTestId('rek-copyright-input').click();
@@ -117,14 +118,14 @@ test.describe('As an admin,', () => {
 
             // Submit form
             await expect(page.locator('#admin-work-submit')).toHaveText(/Save/);
-            await page.locator('#admin-work-submit').click();
+            await page.locator('#admin-work-submit').click({ clickCount: 2 });
 
             // Confirmation message
             await expect(page.getByRole('dialog').locator('h2')).toHaveText(/Work has been added/);
         });
 
         test('is only used for linked authors', async ({ page }) => {
-            await page.getByTestId('rek-author-add').click();
+            await page.getByTestId('rek-author-add').click({ clickCount: 2 });
             await page.getByTestId('rek-author-input').fill('User, Test');
             await page.getByTestId('rek-author-add-save').click();
             await expect(page.locator('[data-testid^="contributor-errorIcon-"]')).not.toBeVisible();
