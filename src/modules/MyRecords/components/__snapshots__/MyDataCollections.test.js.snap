@@ -485,7 +485,6 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                                 >
                                   <a
-                                    data-discover="true"
                                     href="/view/UQ:1"
                                   >
                                     1
@@ -855,7 +854,6 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                                 >
                                   <a
-                                    data-discover="true"
                                     href="/view/UQ:1"
                                   >
                                     1

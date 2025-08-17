@@ -309,7 +309,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                                 >
                                   <a
-                                    data-discover="true"
                                     href="/view/UQ:1"
                                   >
                                     1
@@ -434,7 +433,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                                 >
                                   <a
-                                    data-discover="true"
                                     href="/view/UQ:2"
                                   >
                                     2
@@ -559,7 +557,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                                 >
                                   <a
-                                    data-discover="true"
                                     href="/view/UQ:3"
                                   >
                                     3

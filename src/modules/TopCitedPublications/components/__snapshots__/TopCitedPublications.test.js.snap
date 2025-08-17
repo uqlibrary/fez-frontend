@@ -214,7 +214,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                           class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
-                            data-discover="true"
                             href="/view/UQ:330391"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
@@ -675,7 +674,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
                           class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
-                            data-discover="true"
                             href="/view/UQ:330391"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines

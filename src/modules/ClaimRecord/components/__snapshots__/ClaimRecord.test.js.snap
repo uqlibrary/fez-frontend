@@ -2943,7 +2943,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
-                                data-discover="true"
                                 href="/view/UQ:676287"
                               >
                                 TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -4239,7 +4238,6 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
-                                data-discover="true"
                                 href="/view/UQ:676287"
                               >
                                 TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -5550,7 +5548,6 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
-                                data-discover="true"
                                 href="/view/UQ:676287"
                               >
                                 TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -5955,7 +5952,6 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
-                                data-discover="true"
                                 href="/view/UQ:676287"
                               >
                                 TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
