@@ -126,7 +126,7 @@ describe('Component FeedbackRecord', () => {
     });
 
     it('should render takedown fields', async () => {
-        const { container, getByRole } = setup({ publication: mockRecordToFeedback });
+        const { container, getByRole, getByTestId } = setup({ publication: mockRecordToFeedback });
 
         await assertValidationErrorSummary();
         await userEvent.click(

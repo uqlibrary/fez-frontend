@@ -1,6 +1,7 @@
 import React from 'react';
 import mockData from 'mock/data/testing/journals/journals';
 import { JournalComparisonList } from './JournalComparisonList';
+import { JournalsListLegacy } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
 import { render, WithReduxStore } from 'test-utils';
 

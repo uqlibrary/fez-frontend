@@ -3,7 +3,14 @@
 const rule = require('./no-uql-token');
 const RuleTester = require('eslint').RuleTester;
 
-const ruleTester = new RuleTester({ languageOptions: { ecmaVersion: 6, sourceType: 'module' } });
+RuleTester.setDefaultConfig({
+    parserOptions: {
+        ecmaVersion: 6,
+        sourceType: 'module',
+    },
+});
+
+const ruleTester = new RuleTester();
 ruleTester.run('no-uql-token', rule, {
     valid: [
         {

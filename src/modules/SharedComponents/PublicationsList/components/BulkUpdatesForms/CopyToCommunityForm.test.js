@@ -64,7 +64,7 @@ describe('CopyToCommunityForm', () => {
                 ],
             });
 
-        const { getByTestId, getByText } = setup();
+        const { getByTestId, getByText, queryByText } = setup();
         await assertFormInitialState();
 
         // interact with the form
@@ -100,7 +100,7 @@ describe('CopyToCommunityForm', () => {
                 ],
             });
 
-        const { getByTestId, getByText } = setup();
+        const { getByTestId, getByText, queryByText } = setup();
         await assertFormInitialState();
 
         // interact with the form
@@ -134,7 +134,7 @@ describe('CopyToCommunityForm', () => {
                 ],
             });
 
-        const { getByTestId, getByText } = setup({ isRemoveFrom: true });
+        const { getByTestId, getByText, queryByText } = setup({ isRemoveFrom: true });
 
         // assert initial state of the form
         await waitForText(locale.validationErrors.required);
@@ -172,7 +172,7 @@ describe('CopyToCommunityForm', () => {
                 ],
             });
 
-        const { getByTestId, getByText } = setup({ isRemoveFrom: true });
+        const { getByTestId, getByText, queryByText } = setup({ isRemoveFrom: true });
 
         // assert initial state of the form
         await waitForText(locale.validationErrors.required);

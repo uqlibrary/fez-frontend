@@ -9,7 +9,7 @@ function setup(testProps = {}) {
         hideLabel: false,
         options: [
             { label: 'Option A', value: 'a' },
-            { label: 'Option B', value: 'b' },
+            { label: 'Option B', value: 'b' }
         ],
         onChange: jest.fn(),
         ...testProps,
@@ -35,7 +35,7 @@ describe('RadioGroupField tests', () => {
 
     it('should call onChange', () => {
         const onChangeFn = jest.fn();
-        const { getByTestId } = setup({
+        const {getByTestId } = setup({
             onChange: onChangeFn,
         });
 

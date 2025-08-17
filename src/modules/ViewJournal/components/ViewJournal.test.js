@@ -12,6 +12,7 @@ import {
     createMatchMedia,
 } from 'test-utils';
 import ViewJournal, { getAdvisoryStatement } from './ViewJournal';
+import { getAllByTestId } from '@testing-library/react';
 
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),

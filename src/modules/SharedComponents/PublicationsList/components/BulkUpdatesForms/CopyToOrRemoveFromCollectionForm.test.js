@@ -66,7 +66,7 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
                 ],
             });
 
-        const { getByTestId, getByText } = setup();
+        const { getByTestId, getByText, queryByText } = setup();
         await assertCopyToFormInitialState();
 
         // interact with the form
@@ -98,7 +98,7 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
                 ],
             });
 
-        const { getByTestId, getByText } = setup();
+        const { getByTestId, getByText, queryByText } = setup();
         await assertCopyToFormInitialState();
 
         // interact with the form
@@ -130,7 +130,7 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
                 ],
             });
 
-        const { getByTestId, getByText } = setup({ isRemoveFrom: true });
+        const { getByTestId, getByText, queryByText } = setup({ isRemoveFrom: true });
         await assertRemoveFromFormInitialState();
 
         // interact with the form
@@ -162,7 +162,7 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
                 ],
             });
 
-        const { getByTestId, getByText } = setup({ isRemoveFrom: true });
+        const { getByTestId, getByText, queryByText } = setup({ isRemoveFrom: true });
         await assertRemoveFromFormInitialState();
 
         // interact with the form

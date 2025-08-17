@@ -20,10 +20,8 @@ const selectors = {
     cancelButton: '[data-testid=cancel-delete-record]',
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const loadPage = async (page: Page, record: any) => await page.goto(`/admin/delete/${record.rek_pid}?user=uqstaff`);
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const assertNavigatedToViewPage = async (page: Page, record: any) =>
     await expect(page).toHaveURL(`/view/${record.rek_pid}`);
 

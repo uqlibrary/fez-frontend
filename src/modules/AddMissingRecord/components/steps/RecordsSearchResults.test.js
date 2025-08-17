@@ -1,5 +1,6 @@
 import React from 'react';
 import RecordsSearchResults from './RecordsSearchResults';
+import { accounts } from 'mock/data/account';
 import { render, WithReduxStore, WithRouter, waitFor, userEvent } from 'test-utils';
 import { SEARCH_EXTERNAL_RECORDS_API } from 'repositories/routes';
 

@@ -50,7 +50,10 @@ describe('Feedback record actions', () => {
         it('dispatches expected actions when loading a record to feedback from API with 404 error', async () => {
             mockApi.onAny().reply(404);
 
-            const expectedActions = [actions.FEEDBACK_RECORD_LOADING, actions.FEEDBACK_RECORD_LOAD_FAILED];
+            const expectedActions = [
+                actions.FEEDBACK_RECORD_LOADING,
+                actions.FEEDBACK_RECORD_LOAD_FAILED,
+            ];
             try {
                 await mockActionsStore.dispatch(feedbackRecordActions.loadRecordToFeedback(testPid));
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);

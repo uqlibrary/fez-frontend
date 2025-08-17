@@ -1,5 +1,6 @@
 import * as routes from './routes';
 import { IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL } from 'config/general';
+import { ROR_LOOKUP_API } from './routes';
 
 describe('Backend routes method', () => {
     it('should get zer-padded year', () => {
@@ -774,6 +775,7 @@ describe('Backend routes method', () => {
             },
         });
     });
+
 
     it('should construct url for THIRD_PARTY_LOOKUP_API_1FIELD', () => {
         expect(

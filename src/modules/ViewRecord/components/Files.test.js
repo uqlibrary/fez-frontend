@@ -424,7 +424,7 @@ describe('Files Component ', () => {
         const code = 1234;
         const message = 'video failed';
         act(() => {
-            mockOnVideoFailed({ target: { error: { code, message } } });
+            mockOnVideoFailed({ target: { error: { code, message } }} );
         });
         expect(videoErrorCodeState).toEqual(code);
         expect(videoErrorMsgState).toEqual(message);

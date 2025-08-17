@@ -1,0 +1,10 @@
+__mocks__
+.idea
+.vscode
+bin
+coverage
+custom_modules
+dist
+node_modules
+scripts
+**/mock/data/**/*.js
