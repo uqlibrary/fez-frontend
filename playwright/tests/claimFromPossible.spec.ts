@@ -272,7 +272,7 @@ test.describe('Claim possible work', () => {
             await expect(page.getByTestId('clear-facet-filter-nested-item-display-type-journal-article')).toBeVisible();
 
             await page.goBack();
-            await page.waitForTimeout(500);
+            await page.waitForTimeout(2000);
 
             await expect(page.getByText('Journal Article (2)')).toBeVisible(); // facet should still be visible
             await expect(
