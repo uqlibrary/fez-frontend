@@ -140,11 +140,6 @@ module.exports = {
                     outputStyle: 'expanded',
                     sourceMap: true,
                 },
-                eslint: {
-                    configFile: 'eslint.config.mjs',
-                    failOnWarning: false,
-                    failOnError: true,
-                },
                 postcss: {},
                 context: join(__dirname),
             },
