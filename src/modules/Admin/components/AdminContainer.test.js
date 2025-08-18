@@ -1,5 +1,4 @@
 import React from 'react';
-import Immutable from 'immutable';
 import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
 
 import * as Actions from 'actions/viewRecord';

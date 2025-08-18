@@ -14,7 +14,7 @@ import {
     editAffiliationAndAssert,
     loadRecordForAdminEdit,
 } from '../helpers';
-import { getCKEditorField, readCKEditor } from '../../../lib/ckeditor';
+import { readCKEditor } from '../../../lib/ckeditor';
 import { checkPartialDateFromRecordValue } from '../../../lib/helpers';
 
 test.describe('Journal Article admin edit', () => {
@@ -284,6 +284,7 @@ test.describe('Journal Article admin edit', () => {
             // No licence selected in mock
         }
 
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         for (const _ of collections) {
             await collectionsCard
                 .locator('[class*="MuiChip-deleteIcon"]')
