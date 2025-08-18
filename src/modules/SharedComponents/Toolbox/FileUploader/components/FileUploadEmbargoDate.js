@@ -1,61 +1,58 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { GENERIC_DATE_FORMAT } from 'config/general';
-import TextField from '@mui/material/TextField';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { red } from '@mui/material/colors';
+import moment from 'moment';
 
-export class FileUploadEmbargoDate extends PureComponent {
-    static propTypes = {
-        disabled: PropTypes.bool,
-        minDate: PropTypes.instanceOf(Date),
-        onChange: PropTypes.func,
-        onKeyUp: PropTypes.func,
-        value: PropTypes.string,
-        fileUploadEmbargoDateId: PropTypes.string,
+export const FileUploadEmbargoDate = ({ disabled, minDate, onChange, onKeyUp, value, fileUploadEmbargoDateId }) => {
+    const _onChange = value => {
+        onChange?.(value);
     };
 
-    _onChange = value => {
-        /* istanbul ignore else */
-        if (this.props.onChange) this.props.onChange(value);
+    const inputProps = {
+        disableUnderline: true,
+        'data-analyticsid': `${fileUploadEmbargoDateId}-input`,
+        'data-testid': `${fileUploadEmbargoDateId}-input`,
     };
 
-    render() {
-        const inputProps = {
-            disableUnderline: true,
-            'data-analyticsid': `${this.props.fileUploadEmbargoDateId}-input`,
-            'data-testid': `${this.props.fileUploadEmbargoDateId}-input`,
-        };
+    return (
+        <LocalizationProvider dateAdapter={AdapterMoment}>
+            <DatePicker
+                value={value && moment(value)}
+                format={GENERIC_DATE_FORMAT}
+                minDate={minDate && moment(minDate)}
+                onChange={_onChange}
+                disabled={disabled}
+                slotProps={{
+                    textField: ownerState => ({
+                        InputProps: inputProps,
+                        variant: 'standard',
+                        sx: {
+                            '& .MuiInput-input': {
+                                fontSize: 14,
+                                fontWeight: 400,
+                                ...(!ownerState.value?.isValid?.() ? { color: red[700] } : {}),
+                            },
+                        },
+                        onKeyUpCapture: onKeyUp,
+                        placeholder: GENERIC_DATE_FORMAT.toLowerCase(),
+                    }),
+                }}
+            />
+        </LocalizationProvider>
+    );
+};
+FileUploadEmbargoDate.propTypes = {
+    disabled: PropTypes.bool,
+    minDate: PropTypes.instanceOf(Date),
+    onChange: PropTypes.func,
+    onKeyUp: PropTypes.func,
+    value: PropTypes.string,
+    fileUploadEmbargoDateId: PropTypes.string,
+};
 
-        return (
-            <LocalizationProvider dateAdapter={AdapterMoment}>
-                <DatePicker
-                    value={this.props.value ? new Date(this.props.value) : null}
-                    inputFormat={GENERIC_DATE_FORMAT}
-                    minDate={this.props.minDate}
-                    onChange={this._onChange}
-                    disabled={this.props.disabled}
-                    InputProps={inputProps}
-                    renderInput={params => (
-                        <TextField
-                            {...params}
-                            onKeyUpCapture={this.props.onKeyUp}
-                            variant="standard"
-                            sx={{
-                                '& .MuiInput-input': {
-                                    fontSize: 14,
-                                    fontWeight: 400,
-                                    ...(params.error ? { color: red[700] } : {}),
-                                },
-                            }}
-                        />
-                    )}
-                />
-            </LocalizationProvider>
-        );
-    }
-}
-
-export default FileUploadEmbargoDate;
+export default React.memo(FileUploadEmbargoDate);

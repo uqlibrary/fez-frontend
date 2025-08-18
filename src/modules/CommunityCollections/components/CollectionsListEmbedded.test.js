@@ -1,11 +1,6 @@
 import React from 'react';
 import { act, render, fireEvent, WithReduxStore, WithRouter, waitFor, createMatchMedia, within } from 'test-utils';
-
 import * as mockData from 'mock/data';
-
-import { createMemoryHistory } from 'history';
-import Immutable from 'immutable';
-
 import CollectionsListEmbedded from './CollectionsListEmbedded';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
@@ -24,10 +19,10 @@ const testProps = {
     open: true,
 };
 
-const setup = (testProps = {}, state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] })) => {
+const setup = (testProps = {}, state = {}) => {
     return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
-            <WithRouter history={testHistory}>
+        <WithReduxStore initialState={state}>
+            <WithRouter>
                 <CollectionsListEmbedded {...testProps} />
             </WithRouter>
         </WithReduxStore>,
@@ -91,7 +86,10 @@ describe('CollectionsListEmbedded form', () => {
         const firstTestElement = getByTestId('embedded-collections-paging-bottom');
         const buttonNext = firstTestElement.querySelector('.paging-next');
 
-        buttonNext.click();
+        act(() => {
+            buttonNext.click();
+        });
+
         await waitFor(() => getByText('Sort results by'));
     });
 
@@ -114,11 +112,11 @@ describe('CollectionsListEmbedded form', () => {
         expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('10');
 
         const element = getByTestId('publication-list-sorting-page-size');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
+        const options = getAllByRole('option');
+        fireEvent.mouseDown(options[3]);
         act(() => {
-            const options = getAllByRole('option');
-            fireEvent.mouseDown(options[3]);
             options[3].click();
         });
         await waitFor(() => getByText('Sort results by'));
@@ -144,12 +142,12 @@ describe('CollectionsListEmbedded form', () => {
         expect(getByTestId('publication-list-sorting-sort-by')).toHaveTextContent('Title');
 
         const element = getByTestId('publication-list-sorting-sort-by');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
-        act(() => {
-            const options = getAllByRole('option');
 
-            fireEvent.mouseDown(options[2]);
+        const options = getAllByRole('option');
+        fireEvent.mouseDown(options[2]);
+        act(() => {
             options[2].click();
         });
 
@@ -184,13 +182,9 @@ describe('CollectionsListEmbedded form', () => {
         await waitFor(() => getByText('Export page results'));
 
         expect(getByTestId('export-publications-format')).toBeInTheDocument();
-        act(() => {
-            fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('button'));
-        });
+        fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('combobox'));
         expect(getByRole('listbox')).toBeInTheDocument();
-        act(() => {
-            fireEvent.click(getByTestId('export-publication-option-0'));
-        });
+        fireEvent.click(getByTestId('export-publication-option-0'));
         expect(getByTestId('collections-page-exporting')).toBeInTheDocument();
     });
 });

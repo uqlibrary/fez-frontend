@@ -1,45 +1,35 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import Highcharts from 'highcharts';
+import isEqual from 'lodash/isEqual';
 
-class Chart extends React.Component {
-    static propTypes = {
-        chartOptions: PropTypes.object.isRequired,
-        className: PropTypes.string,
-    };
+const Chart = ({ chartOptions, className }) => {
+    const chartRef = React.useRef();
+    const chart = React.useRef(null);
 
-    constructor(props) {
-        super(props);
-        this.chart = null;
-        this.chartRef = React.createRef();
-        this.printMedia = (window.matchMedia && window.matchMedia('print')) || null;
-    }
+    React.useEffect(() => {
+        chart.current = new Highcharts.Chart(chartRef.current, chartOptions);
 
-    componentDidMount() {
-        /* istanbul ignore else */
-        if (!!this.chartRef.current) {
-            this.chart = new Highcharts.Chart(this.chartRef.current, this.props.chartOptions);
+        return () => {
+            chart.current?.destroy();
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-            !!this.printMedia && this.printMedia.addListener(this.reflowChart);
-        }
-    }
+    React.useEffect(() => {
+        chart.current?.update(chartOptions);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [chartOptions]);
 
-    componentDidUpdate() {
-        this.chart && this.chart.update(this.props.chartOptions);
-    }
+    return <div className={className} ref={chartRef} />;
+};
 
-    componentWillUnmount() {
-        !!this.chart && this.chart.destroy();
+Chart.propTypes = {
+    chartOptions: PropTypes.object.isRequired,
+    className: PropTypes.string,
+};
 
-        !!this.chart && !!this.printMedia && this.printMedia.removeListener(this.reflowChart);
-    }
-
-    /* istanbul ignore next */
-    reflowChart = () => this.chart.reflow();
-
-    render() {
-        return <div className={this.props.className} ref={this.chartRef} />;
-    }
-}
-
-export default Chart;
+// export default React.memo(Chart);
+export default React.memo(Chart, (prevProps, nextProps) => {
+    return isEqual(prevProps.chartOptions, nextProps.chartOptions) && prevProps.className === nextProps.className;
+});

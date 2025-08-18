@@ -19,31 +19,38 @@ const lazyRetry = (importFn, retries = 3, interval = 500) => {
 
 // lazy loaded components
 export const AddDataCollection = lazy(() =>
-    lazyRetry(() => import('modules/AddDataCollection/containers/AddDataCollection')),
+    lazyRetry(() => import('modules/AddDataCollection/components/AddDataCollection')),
 );
-export const Admin = lazy(() => lazyRetry(() => import('modules/Admin/containers/Admin')));
+export const Admin = lazy(() => lazyRetry(() => import('modules/Admin/components/AdminContainer')));
+export const AdminDashboard = lazy(() => lazyRetry(() => import('modules/AdminDashboard/AdminDashboard')));
+export const JournalAdmin = lazy(() =>
+    lazyRetry(() => import('modules/JournalAdmin/components/JournalAdminContainer')),
+);
 export const BatchImport = lazy(() => lazyRetry(() => import('modules/BatchImport/components/BatchImport')));
 export const BulkUpdates = lazy(() => lazyRetry(() => import('modules/BulkUpdates')));
 export const ChangeDisplayType = lazy(() =>
-    lazyRetry(() => import('modules/Admin/ChangeDisplayType/containers/ChangeDisplayType')),
+    lazyRetry(() => import('modules/Admin/ChangeDisplayType/components/ChangeDisplayType')),
 );
-export const ClaimRecord = lazy(() => lazyRetry(() => import('modules/ClaimRecord/containers/ClaimRecord')));
+export const ClaimRecord = lazy(() => lazyRetry(() => import('modules/ClaimRecord/components/ClaimRecord')));
 export const CollectionForm = lazy(() =>
-    lazyRetry(() => import('modules/Admin/CollectionForm/containers/CollectionForm')),
+    lazyRetry(() => import('modules/Admin/CollectionForm/components/CollectionForm')),
 );
 export const CommunityForm = lazy(() =>
-    lazyRetry(() => import('modules/Admin/CommunityForm/containers/CommunityForm')),
+    lazyRetry(() => import('modules/Admin/CommunityForm/components/CommunityForm')),
 );
 export const CommunityList = lazy(() => lazyRetry(() => import('modules/CommunityCollections/CommunityList')));
+export const ControlledVocabularies = lazy(() =>
+    lazyRetry(() => import('modules/Admin/ControlledVocabularies/ControlledVocabularies')),
+);
 
 export const Dashboard = lazy(() => lazyRetry(() => import('modules/Dashboard/containers/Dashboard')));
-export const DeleteRecord = lazy(() => lazyRetry(() => import('modules/DeleteRecord/containers/DeleteRecord')));
+export const DeleteRecord = lazy(() => lazyRetry(() => import('modules/DeleteRecord/components/DeleteRecord')));
 export const Doi = lazy(() => lazyRetry(() => import('modules/Admin/Doi/containers/Doi')));
 export const FavouriteSearch = lazy(() =>
     lazyRetry(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch')),
 );
-export const FixRecord = lazy(() => lazyRetry(() => import('modules/FixRecord/containers/FixRecord')));
-export const GoogleScholar = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/GoogleScholar')));
+export const FixRecord = lazy(() => lazyRetry(() => import('modules/FixRecord/components/FixRecord')));
+export const FeedbackRecord = lazy(() => lazyRetry(() => import('modules/FeedbackRecord/components/FeedbackRecord')));
 export const ViewJournal = lazy(() => lazyRetry(() => import('modules/ViewJournal/components/ViewJournal')));
 export const ManageAuthors = lazy(() => lazyRetry(() => import('modules/Admin/ManageAuthors')));
 export const ManageUsers = lazy(() => lazyRetry(() => import('modules/Admin/ManageUsers')));
@@ -52,18 +59,17 @@ export const MasterJournalListIngest = lazy(() =>
 );
 export const MyEditorialAppointments = lazy(() => lazyRetry(() => import('modules/MyEditorialAppointments')));
 export const MyIncompleteRecord = lazy(() =>
-    lazyRetry(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord')),
+    lazyRetry(() => import('modules/MyIncompleteRecord/components/MyIncompleteRecord')),
 );
-export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/containers/Orcid')));
+export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/Orcid')));
 export const PossiblyMyRecords = lazy(() =>
-    lazyRetry(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')),
+    lazyRetry(() => import('modules/PossiblyMyRecords/components/PossiblyMyRecords')),
 );
-export const SbsSubmission = lazy(() => lazyRetry(() => import('modules/SbsSubmission/containers/SbsSubmission')));
 export const ThesisSubmission = lazy(() =>
-    lazyRetry(() => import('modules/ThesisSubmission/containers/ThesisSubmission')),
+    lazyRetry(() => import('modules/ThesisSubmission/components/ThesisSubmission')),
 );
 export const ThirdPartyLookupTool = lazy(() =>
-    lazyRetry(() => import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')),
+    lazyRetry(() => import('modules/ThirdPartyLookupTool/components/ThirdPartyLookupTool')),
 );
 
 // always load components
@@ -71,8 +77,8 @@ export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from '
 export { Index } from 'modules/Index';
 export { Masquerade } from 'modules/Masquerade';
 export { MyRecords, MyDataCollections, MyIncompleteRecords } from 'modules/MyRecords';
-export { default as NewViewRecord } from 'modules/ViewRecord/containers/NewViewRecord';
-export { NotFound } from 'modules/NotFound/components/NotFound';
+export { ViewRecord } from 'modules/ViewRecord/components/ViewRecord';
+export { PageNotFound } from 'modules/NotFound/components/PageNotFound';
 export { SearchRecords } from 'modules/SearchRecords';
 export { SearchJournals } from 'modules/SearchJournals';
 export { FavouriteJournals } from 'modules/FavouriteJournals';

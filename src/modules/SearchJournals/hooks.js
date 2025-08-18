@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory, useLocation } from 'react-router';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import deparam from 'can-deparam';
 import param from 'can-param';
@@ -114,8 +114,17 @@ export const useSelectedJournals = ({ state = {}, available = {} }) => {
     };
 };
 
+/**
+ * @typedef {{[p: string]: string, activeFacets: {ranges: (*|{}), filters: (*|{})}}} JournalSearchQueryParams
+ * @param path
+ * @return {{
+ *   handleSearch: handleSearch,
+ *   locationKey: *,
+ *   journalSearchQueryParams: JournalSearchQueryParams
+ * }}
+ */
 export const useJournalSearch = (path = pathConfig.journals.search) => {
-    const history = useHistory();
+    const navigate = useNavigate();
     const location = useLocation();
     const searchQueryParams = deparam(location.search.substr(1));
 
@@ -128,11 +137,7 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
     };
 
     const handleSearch = (searchQuery, state = {}) => {
-        history.push({
-            pathname: path,
-            search: param(searchQuery),
-            state: state,
-        });
+        navigate({ pathname: path, search: param(searchQuery) }, { state: state });
     };
 
     return {
@@ -142,6 +147,19 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
     };
 };
 
+/**
+ * @param onSearch {(params: JournalSearchQueryParams) = >void}
+ * @param journalSearchQueryParams {JournalSearchQueryParams}
+ * @param favourites
+ * @param allJournals
+ * @return {{
+ *   pageChanged: pageChanged,
+ *   handleExport: handleExport,
+ *   facetsChanged: facetsChanged,
+ *   pageSizeChanged: pageSizeChanged,
+ *   sortByChanged: sortByChanged
+ * }}
+ */
 export const useJournalSearchControls = (onSearch, journalSearchQueryParams, favourites, allJournals = false) => {
     const dispatch = useDispatch();
     const updateSemaphore = React.useRef(false);

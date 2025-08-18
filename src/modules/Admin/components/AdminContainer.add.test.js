@@ -1,0 +1,61 @@
+import React from 'react';
+import AdminContainer from './AdminContainer';
+import { recordWithDatastreams } from 'mock/data';
+import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
+import Cookies from 'js-cookie';
+
+jest.mock('../../../hooks/useIsMobileView');
+
+jest.mock('../submitHandler', () => ({
+    onSubmit: jest.fn(),
+}));
+
+jest.mock('js-cookie', () => jest.fn());
+
+const mockDispatch = jest.fn();
+jest.mock('react-redux', () => ({
+    ...jest.requireActual('react-redux'),
+    useDispatch: () => mockDispatch,
+}));
+
+function setup(testProps = {}, renderer = rtlRender) {
+    const props = {
+        authorDetails: {
+            username: 'uqstaff',
+        },
+        params: {
+            pid: 'UQ:111111',
+        },
+        loadRecordToView: jest.fn(),
+        loadingRecordToView: false,
+        recordToView: recordWithDatastreams,
+        handleSubmit: jest.fn(),
+        clearRecordToView: jest.fn(),
+        formValues: { rek_pid: 'UQ:252236', rek_subtype: 'Original Journal Article' },
+        ...testProps,
+    };
+
+    return renderer(
+        <WithReduxStore>
+            <WithRouter>
+                <AdminContainer {...props} />
+            </WithRouter>
+            ,
+        </WithReduxStore>,
+    );
+}
+
+describe('AdminContainer component', () => {
+    beforeEach(() => {
+        Cookies.get = jest.fn().mockImplementation(() => 'tabbed');
+        Cookies.set = jest.fn();
+    });
+
+    it('should show Add form', () => {
+        const { container } = setup({
+            createMode: true,
+            params: {},
+        });
+        expect(container).toMatchSnapshot();
+    });
+});

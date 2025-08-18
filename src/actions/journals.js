@@ -1,4 +1,4 @@
-import { destroy, get, post } from 'repositories/generic';
+import { destroy, get, post, put } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
     JOURNAL_API,
@@ -11,14 +11,28 @@ import {
 import { promptForDownload } from './exportPublicationsDataTransformers';
 import { store } from '../config/store';
 import { dismissAppAlert } from './app';
-import { lastRequest, api } from '../config/axios';
+import { apiLastRequest, api } from '../config/axios';
+import * as transformers from './journalTransformers';
+
+/**
+ * @param data
+ * @param replacer
+ * @return {any}
+ */
+export const sanitiseJnlData = (data, replacer) => JSON.parse(JSON.stringify(data, replacer));
+
+/**
+ * @param keys
+ * @return {function(*, *): undefined|*}
+ */
+const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
 
 // The below could potentially be applied on a broader scope
 // However, judging on how dismissAppAlert is used across the app,
 // it's hard to predict if that would suit all scenarios
 api.interceptors.response.use(response => {
     try {
-        if (lastRequest.url?.includes?.('journals/search')) {
+        if (apiLastRequest.url?.includes?.('journals/search')) {
             // dismiss error alert raised for previous error responses
             store.dispatch(dismissAppAlert());
         }
@@ -73,22 +87,23 @@ export const requestMJLIngest = directory => dispatch => {
     );
 };
 
-export const loadJournal = id => dispatch => {
-    dispatch({ type: actions.JOURNAL_LOADING });
+export const loadJournal = (id, isEdit = false) => dispatch => {
+    dispatch({ type: actions.VIEW_JOURNAL_LOADING });
     return (
         id &&
         !isNaN(id) &&
-        get(JOURNAL_API({ id })).then(
+        get(JOURNAL_API({ id, isEdit })).then(
             response => {
                 dispatch({
-                    type: actions.JOURNAL_LOADED,
+                    type: actions.VIEW_JOURNAL_LOADED,
                     payload: response.data,
                 });
+                return Promise.resolve(response.data);
             },
             error => {
                 dispatch({
-                    type: actions.JOURNAL_LOAD_FAILED,
-                    payload: error.message,
+                    type: actions.VIEW_JOURNAL_LOAD_FAILED,
+                    payload: error,
                 });
             },
         )
@@ -158,6 +173,10 @@ export const exportJournals = (searchQuery, favourites = false, allJournals = fa
     }
 };
 
+/**
+ * @param searchQuery
+ * @returns {AnyAction}
+ */
 export const retrieveFavouriteJournals = searchQuery => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
     return get(JOURNAL_FAVOURITES_API({ query: searchQuery })).then(
@@ -195,6 +214,10 @@ export const addToFavourites = ids => async dispatch => {
     );
 };
 
+/**
+ * @param ids: string[]
+ * @returns {AnyAction}
+ */
 export const removeFromFavourites = ids => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING });
     await randomWait(50, 100);
@@ -209,3 +232,79 @@ export const removeFromFavourites = ids => async dispatch => {
         },
     );
 };
+
+const getAdminJournalRequest = data => {
+    // delete extra form values from request object
+    const keys = [
+        'id',
+        'jnl_jid',
+        'journal',
+        'adminSection',
+        'bibliographicSection',
+        'uqDataSection',
+        'doajSection',
+        'indexedSection',
+    ];
+
+    return [
+        {
+            ...data.journal,
+            ...sanitiseJnlData(data, makeReplacer(keys)),
+            ...transformers.getAdminSectionSearchKeys(data.adminSection),
+            ...transformers.getBibliographicSectionSearchKeys(data.bibliographicSection),
+        },
+    ];
+};
+
+/**
+ * Update work request for admins: put record
+ * If error occurs on any stage failed action is displayed
+ * @param {object} data to be posted, refer to backend API data
+ * @returns {Promise}
+ */
+export function adminJournalUpdate(data) {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_UPDATE_JOURNAL_PROCESSING,
+        });
+        const [patchJournalRequest] = getAdminJournalRequest(data);
+        return Promise.resolve([])
+            .then(() => put(JOURNAL_API({ id: data.jnl_jid }), patchJournalRequest))
+            .then(response => {
+                dispatch({
+                    type: actions.ADMIN_UPDATE_JOURNAL_SUCCESS,
+                    payload: {
+                        pid: response.data,
+                    },
+                });
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.ADMIN_UPDATE_JOURNAL_FAILED,
+                    payload: error.errors,
+                });
+                return Promise.reject(error);
+            });
+    };
+}
+
+export function adminUnlockJournal() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_JOURNAL_UNLOCK,
+        });
+    };
+}
+
+/**
+ * Clear journal to be viewed
+ * @returns {action}
+ */
+export function adminJournalClear() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_JOURNAL_CLEAR,
+        });
+    };
+}

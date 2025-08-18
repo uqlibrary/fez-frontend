@@ -1,6 +1,10 @@
+import React from 'react';
 import globalLocale from 'locale/global';
 import moment from 'moment';
+import { prefixByUrlResolver } from 'config/general';
 import { default as viewJournalLocale } from 'locale/viewJournal';
+import { getIndicator, types } from 'modules/SharedComponents/JournalsList/components/partials/utils';
+import componentLocale from 'locale/components';
 
 export const viewJournalConfig = {
     basic: {
@@ -73,6 +77,32 @@ export const viewJournalConfig = {
                         },
                     ],
                     template: 'DefaultTemplate',
+                },
+            ],
+            [
+                {
+                    heading: 'Open Access',
+                    fieldId: 'jnl-open-access',
+                    getData: journalDetails =>
+                        [
+                            getIndicator({ type: types.published, data: journalDetails }),
+                            getIndicator({ type: types.accepted, data: journalDetails }),
+                        ].filter(item => item.element),
+                    template: 'MultiValueTemplate',
+                    templateProps: {
+                        getData: item => (
+                            <>
+                                <span>{item.element}</span>
+                                <span>
+                                    {`${
+                                        componentLocale.components.searchJournals.openAccessIndicators.tooltips[
+                                            item.type
+                                        ][item.status]
+                                    } (${item.type.charAt(0).toUpperCase() + item.type.slice(1)} Version)`}
+                                </span>
+                            </>
+                        ),
+                    },
                 },
             ],
             [
@@ -362,7 +392,7 @@ export const viewJournalConfig = {
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => 'https://go.openathens.net/redirector/uq.edu.au?url=https://jcr.clarivate.com',
+                        href: () => prefixByUrlResolver('https://jcr.clarivate.com'),
                         text: () => 'Go to JCR website',
                         title: 'Open JCR website in a new tab',
                     },
@@ -427,7 +457,7 @@ export const viewJournalConfig = {
     },
     jssci: {
         key: 'fez_journal_jcr_ssci',
-        title: 'Clarivate Journal Citation Reports - Social Science Citation index',
+        title: 'Clarivate Journal Citation Reports - Social Science Citation Index',
         rows: [
             [
                 {
@@ -484,7 +514,7 @@ export const viewJournalConfig = {
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => 'https://go.openathens.net/redirector/uq.edu.au?url=https://jcr.clarivate.com',
+                        href: () => prefixByUrlResolver('https://jcr.clarivate.com'),
                         text: () => 'Go to JCR website',
                         title: 'Open JCR website in a new tab',
                     },
@@ -547,6 +577,252 @@ export const viewJournalConfig = {
             },
         },
     },
+    jahci: {
+        key: 'fez_journal_jcr_ahci',
+        title: 'Clarivate Journal Citation Reports - Arts & Humanities Citation Index',
+        rows: [
+            [
+                {
+                    heading: 'Abbreviated title',
+                    fieldId: 'jnl-jcr-ahci-abbrev-title',
+                    data: [
+                        {
+                            path: ['fez_journal_jcr_ahci', 'jnl_jcr_ahci_abbrev_title'],
+                        },
+                    ],
+                },
+            ],
+            [
+                {
+                    heading: 'Impact factor',
+                    fieldId: 'jnl-jcr-ahci-impact-factor',
+                    data: [
+                        {
+                            path: ['fez_journal_jcr_ahci', 'jnl_jcr_ahci_impact_factor'],
+                        },
+                    ],
+                },
+            ],
+            [
+                {
+                    heading: '5 year impact factor',
+                    fieldId: 'jnl-jcr-ahci-5yr-impact-factor',
+                    data: [
+                        {
+                            path: ['fez_journal_jcr_ahci', 'jnl_jcr_ahci_5yr_impact_factor'],
+                        },
+                    ],
+                },
+            ],
+            [
+                {
+                    heading: 'JCR version',
+                    fieldId: 'jnl-jcr-ahci-source-date',
+                    data: [
+                        {
+                            path: ['fez_journal_jcr_ahci', 'jnl_jcr_ahci_source_year'],
+                        },
+                    ],
+                    template: 'DateTimeTemplate',
+                    templateProps: {
+                        format: 'YYYY',
+                    },
+                },
+            ],
+            [
+                {
+                    heading: 'JCR home page',
+                    fieldId: 'jcr-home-page-ahci',
+                    staticData: true,
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: () => prefixByUrlResolver('https://jcr.clarivate.com'),
+                        text: () => 'Go to JCR website',
+                        title: 'Open JCR website in a new tab',
+                    },
+                },
+            ],
+            [
+                {
+                    heading: 'JCR more info',
+                    fieldId: 'jcr-more-info-ahci',
+                    staticData: true,
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: () =>
+                            'https://clarivate.com/products/scientific-and-academic-research/research-discovery-and-workflow-solutions/webofscience-platform/web-of-science-core-collection/arts-humanities-citation-index/',
+                        text: () => 'More info about JCR AHCI',
+                        title: 'Open more info in a new tab',
+                    },
+                },
+            ],
+        ],
+        tabs: {
+            tabId: 'fez-journal-jcr-ahci-category',
+            tabKey: 'fez_journal_jcr_ahci_category',
+            tabTitle: 'jnl_jcr_ahci_category_description_lookup',
+            tabContent: {
+                rows: [
+                    [
+                        {
+                            heading: 'Ranking',
+                            fieldId: 'jnl-jcr-ahci-category-ranking',
+                            data: [
+                                {
+                                    path: ['jnl_jcr_ahci_category_ranking'],
+                                },
+                            ],
+                        },
+                    ],
+                    [
+                        {
+                            heading: 'Quartile',
+                            fieldId: 'jnl-jcr-ahci-category-quartile',
+                            data: [
+                                {
+                                    path: ['jnl_jcr_ahci_category_quartile'],
+                                },
+                            ],
+                        },
+                    ],
+                    [
+                        {
+                            heading: 'JIF Percentile',
+                            fieldId: 'jnl-jcr-ahci-category-jif-percentile',
+                            data: [
+                                {
+                                    path: ['jnl_jcr_ahci_category_jif_percentile'],
+                                },
+                            ],
+                        },
+                    ],
+                ],
+            },
+        },
+    },
+    jesci: {
+        key: 'fez_journal_jcr_esci',
+        title: 'Clarivate Journal Citation Reports - Emerging Sources Citation Index',
+        rows: [
+            [
+                {
+                    heading: 'Abbreviated title',
+                    fieldId: 'jnl-jcr-esci-abbrev-title',
+                    data: [
+                        {
+                            path: ['fez_journal_jcr_esci', 'jnl_jcr_esci_abbrev_title'],
+                        },
+                    ],
+                },
+            ],
+            [
+                {
+                    heading: 'Impact factor',
+                    fieldId: 'jnl-jcr-esci-impact-factor',
+                    data: [
+                        {
+                            path: ['fez_journal_jcr_esci', 'jnl_jcr_esci_impact_factor'],
+                        },
+                    ],
+                },
+            ],
+            [
+                {
+                    heading: '5 year impact factor',
+                    fieldId: 'jnl-jcr-esci-5yr-impact-factor',
+                    data: [
+                        {
+                            path: ['fez_journal_jcr_esci', 'jnl_jcr_esci_5yr_impact_factor'],
+                        },
+                    ],
+                },
+            ],
+            [
+                {
+                    heading: 'JCR version',
+                    fieldId: 'jnl-jcr-esci-source-date',
+                    data: [
+                        {
+                            path: ['fez_journal_jcr_esci', 'jnl_jcr_esci_source_year'],
+                        },
+                    ],
+                    template: 'DateTimeTemplate',
+                    templateProps: {
+                        format: 'YYYY',
+                    },
+                },
+            ],
+            [
+                {
+                    heading: 'JCR home page',
+                    fieldId: 'jcr-home-page-esci',
+                    staticData: true,
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: () => prefixByUrlResolver('https://jcr.clarivate.com'),
+                        text: () => 'Go to JCR website',
+                        title: 'Open JCR website in a new tab',
+                    },
+                },
+            ],
+            [
+                {
+                    heading: 'JCR more info',
+                    fieldId: 'jcr-more-info-esci',
+                    staticData: true,
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: () =>
+                            'https://clarivate.com/products/scientific-and-academic-research/research-discovery-and-workflow-solutions/webofscience-platform/web-of-science-core-collection/emerging-sources-citation-index/',
+                        text: () => 'More info about JCR ESCI',
+                        title: 'Open more info in a new tab',
+                    },
+                },
+            ],
+        ],
+        tabs: {
+            tabId: 'fez-journal-jcr-esci-category',
+            tabKey: 'fez_journal_jcr_esci_category',
+            tabTitle: 'jnl_jcr_esci_category_description_lookup',
+            tabContent: {
+                rows: [
+                    [
+                        {
+                            heading: 'Ranking',
+                            fieldId: 'jnl-jcr-esci-category-ranking',
+                            data: [
+                                {
+                                    path: ['jnl_jcr_esci_category_ranking'],
+                                },
+                            ],
+                        },
+                    ],
+                    [
+                        {
+                            heading: 'Quartile',
+                            fieldId: 'jnl-jcr-esci-category-quartile',
+                            data: [
+                                {
+                                    path: ['jnl_jcr_esci_category_quartile'],
+                                },
+                            ],
+                        },
+                    ],
+                    [
+                        {
+                            heading: 'JIF Percentile',
+                            fieldId: 'jnl-jcr-esci-category-jif-percentile',
+                            data: [
+                                {
+                                    path: ['jnl_jcr_esci_category_jif_percentile'],
+                                },
+                            ],
+                        },
+                    ],
+                ],
+            },
+        },
+    },
     'cite-score': {
         key: 'fez_journal_cite_score',
         title: 'Elsevier CiteScore',
@@ -587,8 +863,7 @@ export const viewJournalConfig = {
                     ],
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: item =>
-                            `https://go.openathens.net/redirector/uq.edu.au?url=https://www.scopus.com/sourceid/${item}`,
+                        href: item => prefixByUrlResolver(`https://www.scopus.com/sourceid/${item}`),
                         title: 'Open CiteScore record in a new tab',
                         text: () => 'Go to record in CiteScore',
                     },
@@ -934,19 +1209,32 @@ export const viewJournalConfig = {
                             publisher:
                                 journalDetails.fez_journal_read_and_publish &&
                                 journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_publisher,
+                            discount:
+                                journalDetails.fez_journal_read_and_publish &&
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted,
+                            capped:
+                                journalDetails.fez_journal_read_and_publish &&
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped,
                         };
                     },
                     template: 'EnclosedLinkTemplate',
                     templateProps: {
                         href: data =>
                             !!data.publisher ? viewJournalLocale.viewJournal.readAndPublish.externalUrl : '',
-                        prefix: data =>
-                            !!data.publisher
-                                ? viewJournalLocale.viewJournal.readAndPublish.prefixText.replace(
-                                      '<publisher>',
-                                      `${data.publisher}`,
-                                  )
-                                : 'No',
+                        prefix: data => {
+                            const { publisher, discount } = data;
+                            const { prefixText } = viewJournalLocale.viewJournal.readAndPublish;
+
+                            let returnData = publisher ? prefixText.replace('<publisher>', publisher) : 'No';
+                            if (publisher && discount) {
+                                returnData = returnData.replace('<discount>', ' discount available');
+                            } else {
+                                returnData = returnData.replace('<discount>', '');
+                            }
+
+                            return returnData;
+                        },
+
                         title: viewJournalLocale.viewJournal.readAndPublish.ariaLabel,
                         text: () => viewJournalLocale.viewJournal.readAndPublish.linkText,
                     },
@@ -989,6 +1277,21 @@ export const viewJournalConfig = {
                         prefix: item => `${item.count} `,
                         title: viewJournalLocale.viewJournal.authorCountWorks.ariaLabel,
                         text: item => (item.count > 0 ? 'View these articles in UQ eSpace' : ''),
+                    },
+                },
+            ],
+            [
+                {
+                    heading: 'Last updated',
+                    fieldId: 'jnl-read-and-publish-source-date',
+                    data: [
+                        {
+                            path: ['fez_journal_read_and_publish', 'jnl_read_and_publish_source_date'],
+                        },
+                    ],
+                    template: 'DateTimeTemplate',
+                    templateProps: {
+                        format: 'Do MMMM YYYY',
                     },
                 },
             ],

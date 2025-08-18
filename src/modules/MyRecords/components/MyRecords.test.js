@@ -17,10 +17,8 @@ function setup(testProps = {}, renderMethod = render) {
             pathname: pathConfig.records.mine,
             state: null,
         },
-        history: {
-            push: jest.fn(),
-            go: jest.fn(),
-        },
+        navigate: testProps.navigate || jest.fn(),
+        navigationType: testProps.navigationType || 'PUSH',
         accountLoading: false,
         authorDetails: {},
         exportPublicationsLoading: false,
@@ -208,7 +206,7 @@ describe('MyRecords test', () => {
 
         // change sortby
         let element = getByTestId('publication-list-sorting-sort-by');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
 
         fireEvent.click(getByRole('option', { name: 'Title' }));
@@ -216,7 +214,7 @@ describe('MyRecords test', () => {
 
         // change page size
         element = getByTestId('publication-list-sorting-page-size');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: '50' }));
         expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('50');
     });
@@ -232,18 +230,18 @@ describe('MyRecords test', () => {
         const testAction = jest.fn();
         const { container, rerender } = setup({
             accountLoading: true,
-            actions: { loadAuthorPublications: testAction },
             thisUrl: pathConfig.records.mine,
         });
 
         setup(
             {
-                history: { action: 'POP' },
+                navigationType: 'POP',
+                actions: { loadAuthorPublications: testAction },
                 location: { pathname: pathConfig.records.mine, state: { page: 2, hasPublications: true } },
             },
             rerender,
         );
-        // expect(testAction).toBeCalled();
+        expect(testAction).toBeCalled();
         expect(container).toMatchSnapshot();
     });
 
@@ -251,19 +249,20 @@ describe('MyRecords test', () => {
         const testAction = jest.fn();
         const { container, rerender } = setup({
             accountLoading: true,
-            actions: { loadAuthorPublications: testAction },
+
             thisUrl: pathConfig.records.mine,
         });
         setup(
             {
-                history: { action: 'POP' },
+                navigationType: 'POP',
+                actions: { loadAuthorPublications: testAction },
                 location: { pathname: pathConfig.records.mine, state: null },
                 loadingPublicationsList: false,
                 publicationsList: [],
             },
             rerender,
         );
-        // expect(testAction).toHaveBeenCalled();
+        expect(testAction).toHaveBeenCalled();
         expect(container).toMatchSnapshot();
     });
 
@@ -273,7 +272,7 @@ describe('MyRecords test', () => {
 
         setup(
             {
-                history: { action: 'PUSH' },
+                navigationType: 'PUSH',
                 location: { pathname: pathConfig.records.mine },
                 mine: {
                     loadingPublicationsList: false,
@@ -303,7 +302,7 @@ describe('MyRecords test', () => {
 
         expect(getByTestId('export-publications-format')).toBeInTheDocument();
         const element = getByTestId('export-publications-format');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
 
         fireEvent.click(getByRole('option', { name: 'Excel File' }));
@@ -329,12 +328,12 @@ describe('MyRecords test', () => {
 
         // change page size to export page size
         let element = getByTestId('publication-list-sorting-page-size');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: '1000' }));
         expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('1000');
 
         element = getByTestId('export-publications-format');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
 
         fireEvent.click(getByRole('option', { name: 'Excel File' }));

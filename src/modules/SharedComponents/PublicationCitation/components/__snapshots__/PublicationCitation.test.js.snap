@@ -118,7 +118,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                       />
                     </svg>
                     https://doi.org/10.1111/1440-1630.12585
@@ -169,7 +169,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth publicationAction buttonOrder0 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1duotrm-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="publication-action-undefined-primary"
             data-testid="publication-action-undefined-primary"
             disabled=""
@@ -203,7 +203,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth publicationAction buttonOrder1 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-undefined-secondary"
             tabindex="0"
             type="button"
@@ -235,7 +235,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth publicationAction buttonOrder2 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder2 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-undefined-secondary"
             tabindex="0"
             type="button"
@@ -469,7 +469,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -488,7 +488,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -531,7 +531,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth publicationAction buttonOrder0 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1duotrm-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="publication-action-UQ41878-primary"
             data-testid="publication-action-UQ41878-primary"
             disabled=""
@@ -565,7 +565,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth publicationAction buttonOrder1 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-UQ41878-secondary"
             tabindex="0"
             type="button"
@@ -597,7 +597,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth publicationAction buttonOrder2 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder2 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-UQ41878-secondary"
             tabindex="0"
             type="button"
@@ -716,7 +716,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         class="scopusCitationCount css-si3g8d"
                         data-analyticsid="citation-count-link"
                         data-testid="citation-count-link"
-                        href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
+                        href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
                         id="citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
@@ -778,7 +778,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:676287"
@@ -797,7 +797,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -902,7 +902,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         class="scopusCitationCount css-si3g8d"
                         data-analyticsid="citation-count-link"
                         data-testid="citation-count-link"
-                        href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
+                        href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
                         id="citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
@@ -964,7 +964,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:676287"
@@ -983,7 +983,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -1204,7 +1204,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -1223,7 +1223,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -1461,7 +1461,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -1480,7 +1480,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -1523,7 +1523,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-UQ41878-secondary"
             tabindex="0"
             type="button"
@@ -1737,7 +1737,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -1756,7 +1756,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -2013,7 +2013,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                       />
                     </svg>
                     https://doi.org/10.1242/jcs.196659
@@ -2062,7 +2062,7 @@ exports[`PublicationCitation  should render component with default item with ima
                         class="scopusCitationCount css-si3g8d"
                         data-analyticsid="citation-count-link"
                         data-testid="citation-count-link"
-                        href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
+                        href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
                         id="citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
@@ -2124,7 +2124,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:676287"
@@ -2143,7 +2143,7 @@ exports[`PublicationCitation  should render component with default item with ima
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -2397,7 +2397,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                       />
                     </svg>
                     https://doi.org/10.1242/jcs.196659
@@ -2446,7 +2446,7 @@ exports[`PublicationCitation  should render component with default item with ima
                         class="scopusCitationCount css-si3g8d"
                         data-analyticsid="citation-count-link"
                         data-testid="citation-count-link"
-                        href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
+                        href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
                         id="citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
@@ -2508,7 +2508,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:676287"
@@ -2527,7 +2527,7 @@ exports[`PublicationCitation  should render component with default item with ima
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -2742,7 +2742,7 @@ exports[`PublicationCitation  should render component with default item without 
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                       />
                     </svg>
                     https://doi.org/10.1242/jcs.196659
@@ -2791,7 +2791,7 @@ exports[`PublicationCitation  should render component with default item without 
                         class="scopusCitationCount css-si3g8d"
                         data-analyticsid="citation-count-link"
                         data-testid="citation-count-link"
-                        href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
+                        href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
                         id="citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
@@ -2853,7 +2853,7 @@ exports[`PublicationCitation  should render component with default item without 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:676287"
@@ -2872,7 +2872,7 @@ exports[`PublicationCitation  should render component with default item without 
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -3089,7 +3089,7 @@ exports[`PublicationCitation  should render component with default item without 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -3108,7 +3108,7 @@ exports[`PublicationCitation  should render component with default item without 
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -3243,7 +3243,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -3262,7 +3262,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -3500,7 +3500,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -3519,7 +3519,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -3757,7 +3757,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -3776,7 +3776,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -4014,7 +4014,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -4033,7 +4033,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -4278,7 +4278,7 @@ exports[`PublicationCitation  should render component with publication from mult
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -4297,7 +4297,7 @@ exports[`PublicationCitation  should render component with publication from mult
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -4338,7 +4338,7 @@ exports[`PublicationCitation  should render component with publication from mult
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                     />
                   </svg>
                   eSpace
@@ -4559,7 +4559,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -4578,7 +4578,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -4619,7 +4619,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                     />
                   </svg>
                   eSpace
@@ -4885,7 +4885,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                       />
                     </svg>
                     https://doi.org/10.1242/jcs.196659
@@ -4934,7 +4934,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                         class="scopusCitationCount css-si3g8d"
                         data-analyticsid="citation-count-link"
                         data-testid="citation-count-link"
-                        href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
+                        href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
                         id="citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
@@ -4996,7 +4996,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:676287"
@@ -5015,7 +5015,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -5236,7 +5236,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -5255,7 +5255,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -5298,7 +5298,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth publicationAction buttonOrder0 css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1duotrm-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="publication-action-UQ41878-primary"
             data-testid="publication-action-UQ41878-primary"
             tabindex="0"
@@ -5354,7 +5354,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
             >
               <a
                 aria-label="Full citation in Altmetric will open in a new window"
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="my-trending-pubs-altmetric-link"
                 data-testid="my-trending-pubs-altmetric-link"
                 href="http://www.test.com"
@@ -5557,7 +5557,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -5576,7 +5576,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -5655,7 +5655,7 @@ exports[`PublicationCitation  should render publication citation metric without 
             >
               <a
                 aria-label="Full citation in Altmetric will open in a new window"
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="my-trending-pubs-altmetric-link"
                 data-testid="my-trending-pubs-altmetric-link"
                 href="http://www.test.com"
@@ -5855,7 +5855,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -5874,7 +5874,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics
@@ -6148,7 +6148,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -6167,7 +6167,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                           />
                         </svg>
                         View full statistics

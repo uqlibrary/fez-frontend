@@ -1,11 +1,10 @@
-import { SubmissionError } from 'redux-form/immutable';
 import { adminUpdate, adminCreate, updateCollection, updateCommunity } from 'actions';
 import { detailedDiff } from 'deep-object-diff';
 
-export const onSubmit = (values, dispatch, { initialValues, match }) => {
-    const data = (values && values.toJS()) || null;
+export const onSubmit = (values, dispatch, { setServerError, initialValues, params }) => {
+    const data = values || null;
     const recType = (!!data.publication && data.publication.rek_object_type_lookup) || '';
-    const isEdit = !!data.publication && !!data.publication.rek_pid && data.publication.rek_pid === match.params.pid;
+    const isEdit = !!data.publication && !!data.publication.rek_pid && data.publication.rek_pid === params.pid;
 
     let action = null;
     let recValues = {};
@@ -15,7 +14,7 @@ export const onSubmit = (values, dispatch, { initialValues, match }) => {
     if (recType === 'Collection' || recType === 'Community') {
         recValues = { ...data };
     } else {
-        const initialData = (initialValues && initialValues.toJS()) || null;
+        const initialData = initialValues || null;
         const changes = detailedDiff(initialData, data);
         recValues = { ...changes };
     }
@@ -45,7 +44,10 @@ export const onSubmit = (values, dispatch, { initialValues, match }) => {
             break;
     }
 
-    return dispatch(action({ ...requestObject })).catch(error => {
-        throw new SubmissionError({ _error: error });
-    });
+    return dispatch(action({ ...requestObject }))
+        .then(() => Promise.resolve())
+        .catch(e => {
+            console.log(e);
+            setServerError(e);
+        });
 };

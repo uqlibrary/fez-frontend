@@ -35,6 +35,7 @@ export {
     publicationTypeListDigilibImage,
     publicationTypeListGenericDocument,
     publicationTypeListImage,
+    publicationTypeListInstrument,
     publicationTypeListJournal,
     publicationTypeListJournalArticle,
     publicationTypeListManuscript,
@@ -56,6 +57,8 @@ export {
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
     recordWithProblematicAuthorAffiliations,
+    recordWithRDM,
+    recordWithRDMMediatedAccess,
     recordBookWithAuthorAffiliations,
     unpublishedSearchList,
     UQ716942uqagrinb,
@@ -63,9 +66,13 @@ export {
     UQ339703,
     recordWithIncorrectAffiliation,
     recordWithOrphanedAffiliation,
+    recordThatFailsDeletion,
+    deletedRecord
 } from './records';
 
 export { vocabulariesList } from './vocabularies';
+export { vocabList } from './vocab';
+export { childVocabList } from './childVocab';
 export { hindexResponse, trendingPublications, currentAuthorStats } from './academicStats';
 export { searchKeyList } from './searchKeys';
 export { authorOrcidDetails, orcidSyncStatus, orcidSyncResponse, orcidSyncNullResponse } from './orcid';
@@ -76,10 +83,12 @@ export { mockRecordToFix } from './testing/records';
 export { journalLookup } from './journalLookup';
 export { keywordsSearch } from './journals/search/keyword/bio';
 export { journalDetails } from './journal';
+export { journalDoaj } from './journalDoaj';
 export { communityList } from './communityList'
 export { collectionList } from './collectionList'
 export { journalsList } from './journals';
 export { journalList } from './journalList';
+export { rorLookup } from './ror';
 
 export { bulkUpdatesList } from './bulkUpdates';
 
@@ -97,3 +106,6 @@ export { default as myEditorialAppointmentItem } from './myEditorialAppointments
 export { userList } from './testing/usersList';
 export { organisationalUnits } from './organisationalUnits';
 export { suggestedOrganisationalUnits } from './suggestedOrganisationalUnits';
+
+
+export { adminDashboardConfig, adminDashboardToday, adminDashboardQuickLinks, adminDashboardSystemAlerts, adminDashboardReportWorksData, adminDashboardReportSystemAlertsData } from './adminDashboard';

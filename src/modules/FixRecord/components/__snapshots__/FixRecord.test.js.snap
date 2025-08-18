@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component FixRecord form submission payload should submit fix record data 1`] = `"{"issue":"Added comments: \\n          my comments"}"`;
+
+exports[`Component FixRecord form submission payload should submit fix record data with new content indicator and file 1`] = `"{"issue":"Added comments: \\n          my comments \\n\\n                Added files: \\n          test.png \\n\\n        Selected Content Indicator(s): \\n          Case Study"}"`;
+
+exports[`Component FixRecord form submission payload should submit fix record data with new content indicator and file 2`] = `"{"rek_pid":"UQ:41878","fez_record_search_key_file_attachment_name":[{"rek_file_attachment_name":"test.png","rek_file_attachment_name_order":1}],"fez_record_search_key_file_attachment_embargo_date":[],"fez_record_search_key_file_attachment_access_condition":[{"rek_file_attachment_access_condition":1,"rek_file_attachment_access_condition_order":1}],"fez_record_search_key_file_attachment_security_policy":[],"fez_record_search_key_content_indicator":[{"rek_content_indicator":454079,"rek_content_indicator_order":1},{"rek_content_indicator":454080,"rek_content_indicator_order":2},{"rek_content_indicator":454081,"rek_content_indicator_order":3}]}"`;
+
+exports[`Component FixRecord form submission payload should submit fix record data with new content indicator and file 3`] = `
+File {
+  "path": "test.png",
+}
+`;
+
+exports[`Component FixRecord form submission payload should submit unclaim data 1`] = `"{"rek_pid":"UQ:41878","fez_record_search_key_author_id":[{"rek_author_id_pid":"UQ:41878","rek_author_id":0,"rek_author_id_order":1},{"rek_author_id":0,"rek_author_id_order":2},{"rek_author_id_pid":"UQ:41878","rek_author_id":786,"rek_author_id_order":3},{"rek_author_id_pid":"UQ:41878","rek_author_id":687,"rek_author_id_order":4},{"rek_author_id_pid":"UQ:41878","rek_author_id":4100,"rek_author_id_order":5}],"fez_record_search_key_contributor_id":[]}"`;
+
+exports[`Component FixRecord form submission payload should submit unclaim data 2`] = `"{"pid":"UQ:41878","type":"H"}"`;
+
 exports[`Component FixRecord should render fix record form 1`] = `
 <div>
   <div
@@ -282,198 +298,72 @@ exports[`Component FixRecord should render fix record form 1`] = `
                     class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
-                <field
-                  is="mock"
-                  label="Select an action"
-                  name="fixAction"
-                  required="true"
-                />
-              </div>
-            </div>
-          </div>
-          <div>
-            <span
-              class="MuiBox-root css-0"
-              data-testid="confirmDialogBox"
-            />
-          </div>
-          <span
-            class="MuiBox-root css-0"
-            data-testid="confirmDialogBox"
-          />
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-suggest-a-correction"
-              id="standard-card-suggest-a-correction"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
                 <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+                  style="width: 100%;"
                 >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-suggest-a-correction-header"
-                    id="standard-card-suggest-a-correction-header"
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    id="fix-action-label"
                   >
-                    Suggest a correction
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-suggest-a-correction-content"
-                data-testid="standard-card-suggest-a-correction-content"
-                id="standard-card-suggest-a-correction-content"
-              >
-                <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
-                >
+                    Select an action
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+                    >
+                       
+                      *
+                    </span>
+                  </label>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    data-testid="fix-action"
+                    required=""
                   >
-                    <field
-                      is="mock"
-                      label="Type changes or comments here"
-                      name="comments"
+                    <div
+                      aria-controls="<dynamic>"
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      aria-labelledby="fix-action-select"
+                      class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                      data-testid="fix-action-select"
+                      id="fix-action-select"
+                      role="combobox"
+                      tabindex="0"
+                    >
+                      <span
+                        class="notranslate"
+                      >
+                        ​
+                      </span>
+                    </div>
+                    <input
+                      aria-hidden="true"
+                      aria-invalid="false"
+                      aria-labelledby="fix-action-label"
+                      class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                      data-analyticsid="fix-action-input"
+                      data-testid="fix-action-input"
+                      id="fix-action-input"
+                      name="fixAction"
+                      required=""
+                      tabindex="-1"
+                      value=""
                     />
-                  </div>
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-                  >
-                    <field
-                      is="mock"
-                      label="Link (URL)"
-                      name="rek_link"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-optional:-content-indicators"
-              id="standard-card-optional:-content-indicators"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-optional:-content-indicators-header"
-                    id="standard-card-optional:-content-indicators-header"
-                  >
-                    Optional: Content Indicators
-                  </h3>
-                </div>
-                <div
-                  class="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
-                >
-                  <button
-                    aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                    data-analyticsid="help-icon"
-                    data-mui-internal-clone-element="true"
-                    data-testid="help-icon"
-                    id="help-icon"
-                    tabindex="0"
-                    type="button"
-                  >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
-                      data-testid="HelpOutlineIcon"
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                      data-testid="ArrowDropDownIcon"
                       focusable="false"
-                      role="img"
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                        d="M7 10l5 5 5-5z"
                       />
-                      <title>
-                        Click for more information
-                      </title>
                     </svg>
-                  </button>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-optional:-content-indicators-content"
-                data-testid="standard-card-optional:-content-indicators-content"
-                id="standard-card-optional:-content-indicators-content"
-              >
-                <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
-                >
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-                  >
-                    <p
-                      class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
-                    >
-                      If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest a correction above.
-                    </p>
-                  </div>
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-                  >
-                    <field
-                      is="mock"
-                      label="Add any relevant indicator(s)."
-                      name="contentIndicators"
-                    />
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-upload-files"
-              id="standard-card-upload-files"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-upload-files-header"
-                    id="standard-card-upload-files-header"
-                  >
-                    Upload files
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-upload-files-content"
-                data-testid="standard-card-upload-files-content"
-                id="standard-card-upload-files-content"
-              >
-                <div>
-                  Upload an Open Access file, HERDC evidence or an NTRO Research Statement
-                </div>
-                <field
-                  is="mock"
-                  name="files"
-                />
               </div>
             </div>
           </div>
@@ -488,25 +378,11 @@ exports[`Component FixRecord should render fix record form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
               Cancel
-            </button>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="fixSubmit"
-              data-testid="fix-submit"
-              id="fixSubmit"
-              tabindex="0"
-              type="button"
-            >
-              Submit
             </button>
           </div>
         </div>
@@ -908,12 +784,72 @@ exports[`Component FixRecord should render record citation, two actions in selec
                     class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
-                <field
-                  is="mock"
-                  label="Select an action"
-                  name="fixAction"
-                  required="true"
-                />
+                <div
+                  class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+                  style="width: 100%;"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    id="fix-action-label"
+                  >
+                    Select an action
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+                    >
+                       
+                      *
+                    </span>
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    data-testid="fix-action"
+                    required=""
+                  >
+                    <div
+                      aria-controls="<dynamic>"
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      aria-labelledby="fix-action-select"
+                      class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                      data-testid="fix-action-select"
+                      id="fix-action-select"
+                      role="combobox"
+                      tabindex="0"
+                    >
+                      <span
+                        class="notranslate"
+                      >
+                        ​
+                      </span>
+                    </div>
+                    <input
+                      aria-hidden="true"
+                      aria-invalid="false"
+                      aria-labelledby="fix-action-label"
+                      class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                      data-analyticsid="fix-action-input"
+                      data-testid="fix-action-input"
+                      id="fix-action-input"
+                      name="fixAction"
+                      required=""
+                      tabindex="-1"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                      data-testid="ArrowDropDownIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7 10l5 5 5-5z"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -928,7 +864,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
             class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -1224,12 +1160,68 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                     class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
                   />
                 </div>
-                <field
-                  is="mock"
-                  label="Select an action"
-                  name="fixAction"
-                  required="true"
-                />
+                <div
+                  class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+                  style="width: 100%;"
+                >
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="true"
+                    id="fix-action-label"
+                  >
+                    Select an action
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+                    >
+                       
+                      *
+                    </span>
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    data-testid="fix-action"
+                    required=""
+                  >
+                    <div
+                      aria-controls="<dynamic>"
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      aria-labelledby="fix-action-select"
+                      class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                      data-testid="fix-action-select"
+                      id="fix-action-select"
+                      role="combobox"
+                      tabindex="0"
+                    >
+                      I am not the author/editor/contributor of this work - I would like this work removed from my profile
+                    </div>
+                    <input
+                      aria-hidden="true"
+                      aria-invalid="false"
+                      aria-labelledby="fix-action-label"
+                      class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                      data-analyticsid="fix-action-input"
+                      data-testid="fix-action-input"
+                      id="fix-action-input"
+                      name="fixAction"
+                      required=""
+                      tabindex="-1"
+                      value="unclaim"
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                      data-testid="ArrowDropDownIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7 10l5 5 5-5z"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1287,7 +1279,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                              d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                             />
                           </svg>
                         </div>
@@ -1297,7 +1289,11 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                           <b>
                             WARNING - 
                           </b>
-                          You are about to remove this work from your eSpace profile.
+                          <span
+                            data-testid="alert-message"
+                          >
+                            You are about to remove this work from your eSpace profile.
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1321,7 +1317,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -1332,12 +1328,12 @@ exports[`Component FixRecord should render unclaim form 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="fixSubmit"
               data-testid="fix-submit"
               id="fixSubmit"
               tabindex="0"
-              type="button"
+              type="submit"
             >
               Submit
             </button>

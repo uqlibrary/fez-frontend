@@ -24,14 +24,18 @@ export const getIndicatorProps = ({ type, data }) => {
     }
 
     if (type === types.accepted) {
-        const entry = data.fez_journal_issn?.[0].fez_sherpa_romeo;
+        const entry = data.fez_journal_issn?.[0]?.fez_sherpa_romeo;
         if (entry?.srm_max_embargo_amount) indicatorProps.status = status.embargo;
         else indicatorProps.status = status.open;
     } else {
         if (data.fez_journal_read_and_publish) {
             const entry = data.fez_journal_read_and_publish;
-            if (!!entry.jnl_read_and_publish_is_capped) indicatorProps.status = status.cap;
-            else if (!!entry.jnl_read_and_publish_is_discounted) indicatorProps.status = status.fee;
+            if (
+                entry.jnl_read_and_publish_is_capped === 'Y' ||
+                entry.jnl_read_and_publish_is_capped === 'Approaching'
+            ) {
+                indicatorProps.status = status.cap;
+            } else if (!!entry.jnl_read_and_publish_is_discounted) indicatorProps.status = status.fee;
             else indicatorProps.status = status.open;
         } else {
             /* istanbul ignore else */
@@ -51,7 +55,11 @@ export const getIndicator = ({ type, data, tooltipLocale }) => {
                 id={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
                 data-testid={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
                 key={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
-                tooltip={tooltipLocale[indicatorProps.type][indicatorProps.status]}
+                tooltip={
+                    tooltipLocale && tooltipLocale.hasOwnProperty(indicatorProps.type)
+                        ? tooltipLocale[indicatorProps.type][indicatorProps.status]
+                        : null
+                }
                 {...indicatorProps}
             />
         ),

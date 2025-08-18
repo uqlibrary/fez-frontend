@@ -1,18 +1,24 @@
 import React from 'react';
 
-import Links from './Links';
-import { recordLinks } from 'mock/data/testing/records';
+import Links, { isDataTeamCollection } from './Links';
+import { recordLinks, recordWithRDM, recordWithRdmMediatedAccess } from 'mock/data/testing/records';
 import { openAccessConfig } from 'config';
 import { calculateOpenAccess } from 'middleware/publicationEnhancer';
-import { renderWithRouter } from 'test-utils';
+import { WithRouter, fireEvent, rtlRender } from 'test-utils';
 import { getIconTestId } from '../../SharedComponents/Partials/OpenAccessIcon';
 
 function setup(testProps = {}) {
     const props = {
         classes: {},
-        publication: testProps.publication || recordLinks,
+        publication: recordLinks,
+        isAdmin: false,
+        ...testProps,
     };
-    return renderWithRouter(<Links {...props} />);
+    return rtlRender(
+        <WithRouter>
+            <Links {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('Component Links ', () => {
@@ -301,6 +307,7 @@ describe('Component Links ', () => {
                     },
                 ],
             },
+            isAdmin: true,
         });
 
         expect(container).toMatchSnapshot();
@@ -322,6 +329,7 @@ describe('Component Links ', () => {
                     rek_embargo_to: '2100-01-01',
                 },
             },
+            isAdmin: true,
         });
 
         expect(container).toMatchSnapshot();
@@ -340,6 +348,7 @@ describe('Component Links ', () => {
                     rek_access_conditions: openAccessConfig.DATASET_MEDIATED_ACCESS_ID,
                 },
             },
+            isAdmin: true,
         });
 
         expect(container).toMatchSnapshot();
@@ -400,5 +409,131 @@ describe('Component Links ', () => {
         });
 
         expect(container).toMatchSnapshot();
+    });
+
+    it('should be able to trigger and cancel licence confirmation', () => {
+        const { getByTestId } = setup({
+            publication: recordWithRDM,
+        });
+        fireEvent.click(getByTestId('publication-0-link'));
+        expect(getByTestId('cancel-link-rdm-accept-licence')).toBeInTheDocument();
+        fireEvent.click(getByTestId('cancel-link-rdm-accept-licence'));
+    });
+
+    it('should not trigger licence popup if publication has a non-reuse licence', () => {
+        const { getByTestId, queryByTestId } = setup({
+            publication: {
+                ...recordWithRDM,
+                fez_record_search_key_license: {
+                    rek_license: 456713, // cc licence
+                },
+            },
+        });
+        fireEvent.click(getByTestId('publication-0-link'));
+        expect(queryByTestId('link-rdm-accept-licence')).not.toBeInTheDocument();
+        // as the clicked link is a standard href with target=_blank,
+        // assume clicking it worked as expected
+    });
+
+    it('should be able to trigger and accept licence confirmation', () => {
+        global.open = jest.fn();
+        const { getByTestId } = setup({
+            publication: recordWithRDM,
+        });
+        fireEvent.click(getByTestId('publication-0-link'));
+        expect(getByTestId('confirm-link-rdm-accept-licence')).toBeInTheDocument();
+        fireEvent.click(getByTestId('confirm-link-rdm-accept-licence'));
+
+        expect(global.open).toHaveBeenCalledWith(
+            'https://rdm.uq.edu.au/files/28783df0-dbaf-11ea-96e8-37be674663fa',
+            '_blank',
+            'noopener,noreferrer',
+        );
+    });
+
+    it('should replace RDM mediated links with a link to contact the data team for non-admin users', () => {
+        const { getByTestId } = setup({
+            publication: recordWithRdmMediatedAccess,
+        });
+        expect(getByTestId('publication-0-link')).toHaveAttribute('href', 'mailto:data@library.uq.edu.au');
+        expect(getByTestId('publication-0-link')).toHaveAttribute('title', 'Send email to data@library.uq.edu.au');
+    });
+
+    it('should not replace RDM mediated links with a link to contact the data team for non-admin users, if the publication is not in the required collection', () => {
+        const updatedRecordWithRdmMediatedAccess = {
+            ...recordWithRdmMediatedAccess,
+            fez_record_search_key_ismemberof: [
+                {
+                    rek_ismemberof_id: 12857393,
+                    rek_ismemberof_pid: 'UQ:8e39846',
+                    rek_ismemberof_xsdmf_id: null,
+                    rek_ismemberof: 'UQ:289097',
+                    rek_ismemberof_order: 1,
+                    parent: {
+                        rek_pid: 'UQ:289097',
+                        rek_security_policy: 5,
+                        rek_datastream_policy: 5,
+                    },
+                    rek_ismemberof_lookup: 'Some Group not in the list',
+                },
+            ],
+        };
+        const { getByTestId } = setup({
+            publication: updatedRecordWithRdmMediatedAccess,
+        });
+        expect(getByTestId('publication-0-link')).toHaveAttribute(
+            'href',
+            'https://rdm.uq.edu.au/files/2944bd40-791c-11ee-bd1b-c7b4fca67552',
+        );
+        expect(getByTestId('publication-0-link')).toHaveAttribute('title', 'Request access');
+    });
+
+    it('should show RDM mediated links for Admin users', () => {
+        const { getByTestId } = setup({
+            publication: recordWithRdmMediatedAccess,
+            isAdmin: true,
+        });
+        expect(getByTestId('publication-0-link')).toHaveAttribute(
+            'href',
+            'https://rdm.uq.edu.au/files/2944bd40-791c-11ee-bd1b-c7b4fca67552',
+        );
+        expect(getByTestId('publication-0-link')).toHaveAttribute('title', 'Request access');
+    });
+
+    it('isDataTeamCollection should return expected values', () => {
+        const test = {
+            fez_record_search_key_ismemberof: [
+                {
+                    rek_ismemberof_id: 12857393,
+                    rek_ismemberof_pid: 'UQ:8e39846',
+                    rek_ismemberof_xsdmf_id: null,
+                    rek_ismemberof: 'UQ:06510ce',
+                    rek_ismemberof_order: 1,
+                    parent: {
+                        rek_pid: 'UQ:06510ce',
+                        rek_security_policy: 5,
+                        rek_datastream_policy: 5,
+                    },
+                    rek_ismemberof_lookup: 'Research Data Collections',
+                },
+                {
+                    rek_ismemberof_id: 12857393,
+                    rek_ismemberof_pid: 'UQ:8e39846',
+                    rek_ismemberof_xsdmf_id: null,
+                    rek_ismemberof: 'UQ:289097',
+                    rek_ismemberof_order: 1,
+                    parent: {
+                        rek_pid: 'UQ:289097',
+                        rek_security_policy: 5,
+                        rek_datastream_policy: 5,
+                    },
+                    rek_ismemberof_lookup: 'Research Data Collections',
+                },
+            ],
+        };
+        expect(isDataTeamCollection(test)).toBeTruthy();
+        test.fez_record_search_key_ismemberof[0] = {};
+        expect(isDataTeamCollection(test)).not.toBeTruthy();
+        expect(isDataTeamCollection({})).not.toBeTruthy();
     });
 });

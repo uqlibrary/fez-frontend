@@ -15,3 +15,11 @@ exports[`AuthorsPublicationsPerYearChart  should render empty chart component 1`
   />
 </div>
 `;
+
+exports[`AuthorsPublicationsPerYearChart  should render with default props 1`] = `
+<div>
+  <div
+    class=" authors-publications-per-year-chart"
+  />
+</div>
+`;

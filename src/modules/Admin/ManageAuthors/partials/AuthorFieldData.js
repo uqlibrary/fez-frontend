@@ -6,18 +6,31 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import ColumnTitle from '../partials/ColumnTitle';
 import CircularProgress from '@mui/material/CircularProgress';
 import InputAdornment from '@mui/material/InputAdornment';
+import { useFormContext } from 'react-hook-form';
+
+import { useTheme } from '@mui/material/styles';
+import { useMediaQuery } from '@mui/system';
 
 export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props }) => {
+    const {
+        formState: { isValidating },
+    } = useFormContext();
+
+    const theme = useTheme();
+    const isMobileView = useMediaQuery(theme.breakpoints.down('md')) || false;
+
     return (
         <React.Fragment>
-            <Grid item xs={2}>
-                <Grid container justifyContent="flex-end">
-                    <Grid item>
-                        <ColumnTitle title={label} />
+            {!isMobileView && (
+                <Grid item xs={3}>
+                    <Grid container justifyContent="flex-end">
+                        <Grid item>
+                            <ColumnTitle title={label} />
+                        </Grid>
                     </Grid>
                 </Grid>
-            </Grid>
-            <Grid item xs={7}>
+            )}
+            <Grid item xs={12} md={6}>
                 <TextField
                     {...props}
                     label={label}
@@ -29,7 +42,7 @@ export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props
                             fontWeight: 400,
                         },
                         ...props.InputProps,
-                        ...((!!props.meta.asyncValidating && {
+                        ...((isValidating && {
                             endAdornment: (
                                 <InputAdornment position="end">
                                     <CircularProgress
@@ -46,13 +59,13 @@ export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props
                     }}
                     InputLabelProps={{
                         style: {
-                            ...(!props.meta.error ? { color: '#4085C6' } : {}),
+                            ...(props.error || { color: '#4085C6' }),
                             fontWeight: 400,
                         },
                     }}
                 />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} md={3}>
                 <FormHelperText variant="outlined">{helperText}</FormHelperText>
             </Grid>
         </React.Fragment>
@@ -62,9 +75,10 @@ export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props
 AuthorFieldData.propTypes = {
     authorFieldDataId: PropTypes.string,
     data: PropTypes.string,
-    meta: PropTypes.object,
+    state: PropTypes.object,
     label: PropTypes.string,
     helperText: PropTypes.string,
+    error: PropTypes.bool,
     InputProps: PropTypes.object,
     onChange: PropTypes.func,
 };

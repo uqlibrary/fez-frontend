@@ -1,7 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
+
 import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
+import { prefixByUrlResolver } from 'config/general';
+
+import HelpIcon from '@mui/icons-material/Help';
+import Tooltip from '@mui/material/Tooltip';
+import { DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS, getFormattedServerDate } from 'modules/AdminDashboard/config';
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -20,6 +26,267 @@ export const loremIpsum =
 
 export default {
     components: {
+        adminDashboard: {
+            title: 'Admin dashboard',
+            tabs: {
+                today: {
+                    tabLabel: 'TODAY',
+                    systemalerts: {
+                        title: 'System Alerts',
+                        total: { label: 'Total' },
+                        today: {
+                            label: 'New today',
+                        },
+                        assigned: {
+                            label: 'Assigned',
+                            suffix: (total, value) =>
+                                (!!total && !!value && ` (${Math.round((value / total) * 100)}%)`) || '',
+                        },
+                        unassigned: {
+                            label: 'Unassigned',
+                            suffix: (total, value) =>
+                                (!!total && !!value && ` (${Math.round((value / total) * 100)}%)`) || '',
+                        },
+                    },
+                    works: {
+                        unprocessed: 'Unprocessed Works',
+                        unprocessedSubText: 'view',
+                        processed: 'Processed Works',
+                        processedSubText: (dateFrom, dateTo) => {
+                            const from = getFormattedServerDate(dateFrom, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
+                            const to = getFormattedServerDate(dateTo, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
+                            return (
+                                <>
+                                    this iteration{' '}
+                                    <Tooltip title={`${from} to ${to}`} describeChild arrow>
+                                        <HelpIcon fontSize="small" />
+                                    </Tooltip>
+                                </>
+                            );
+                        },
+                    },
+                    openaccess: {
+                        researchOutput: {
+                            title: 'OA Status',
+                            subText: 'of research output',
+                            chart: {
+                                text: (current, total) =>
+                                    `${current}${total > 0 ? ` (${Math.round((current / total) * 100)}%)` : ''}`,
+                                subtext: total => `of ${total} records`,
+                            },
+                        },
+                    },
+                    quicklinks: {
+                        title: 'Quick Links ',
+                        addLinkText: '+ add',
+                        loading: {
+                            message: 'Loading quick links...',
+                            nodata: 'Add your first quick link using the "add" button',
+                        },
+                        link: {
+                            menu: {
+                                editLabel: 'Edit',
+                                deleteLabel: 'Delete',
+                                moveUpLabel: 'Move up',
+                                moveTopLabel: 'Move to top',
+                                moveDownLabel: 'Move down',
+                                moveBottomLabel: 'Move to bottom',
+                            },
+                        },
+                        admin: {
+                            add: {
+                                title: 'Add new quick link',
+                            },
+                            edit: {
+                                title: 'Edit ',
+                            },
+                            delete: {
+                                title: 'DELETE ',
+                            },
+                            button: {
+                                delete: 'Delete',
+                                save: 'Save',
+                                deleteBusy: 'Deleting...',
+                                saveBusy: 'Saving...',
+                                cancel: 'Cancel',
+                            },
+                            fields: {
+                                title: 'Title',
+                                link: 'Link',
+                            },
+                        },
+                        error: {
+                            title: 'Error',
+                            updating: 'An error occurred updating the quick link data.',
+                        },
+                    },
+                    loading: {
+                        message: 'Loading dashboard...',
+                        nodata: 'No data available',
+                        noconfig: 'No config available',
+                    },
+                },
+                systemalerts: {
+                    tabLabel: 'SYSTEM ALERTS',
+                    title: count => `${count} system alerts`,
+                    loading: {
+                        message: 'Loading system alerts...',
+                        nodata: 'No alerts available',
+                        noconfig: 'No config available',
+                    },
+                    updating: 'Updating...',
+                    columns: {
+                        createdDate: 'Created',
+                        topic: 'Topic',
+                        status: 'Status',
+                    },
+                    drawer: {
+                        markResolved: 'Mark as resolved',
+                        updating: 'Updating...',
+                        alertId: 'Alert ID',
+                        received: 'Received',
+                        status: 'Status',
+                        statusHelpText: 'Assign a staff member to this issue',
+                    },
+                    alertStatus: {
+                        UNASSIGNED: 'Unassigned',
+                        UNKNOWN: 'Unknown',
+                    },
+                    error: {
+                        title: 'Error',
+                        general: 'An error occurred while retrieving system alert data.',
+                        updateFailed: 'An error occurred updating the system alert data.',
+                    },
+                },
+                reports: {
+                    tabLabel: 'REPORTS',
+                    exportTitle: 'Export-only reports',
+                    displayTitle: 'Display reports',
+                    loading: {
+                        config: 'Loading config data...',
+                        nodata: 'No data available',
+                        noconfig: 'No config available',
+                    },
+                    label: {
+                        report: 'Report',
+                        systemId: 'System alert ID',
+                        dateFrom: 'From',
+                        dateTo: 'To',
+                        runReport: 'Run report',
+                        export: 'Export',
+                        exportReport: 'Export report',
+                        helperText: 'Report will download to your device or be emailed directly to you',
+                    },
+                    columns: {
+                        workshistory: {
+                            id: 'ID',
+                            dateCreated: 'Date created',
+                            pubDate: 'Date published',
+                            pid: 'PID',
+                            genre: 'Genre',
+                            subtype: 'Subtype',
+                            user: 'Username',
+                            action: 'Action',
+                        },
+                        systemalertlog: {
+                            id: 'ID',
+                            dateCreated: 'Date created',
+                            title: 'Title',
+                            assignedTo: 'Assigned to',
+                            assignedDate: 'Date assigned',
+                            resolvedBy: 'Resolved by',
+                            resolvedDate: 'Date resolved',
+                            content: 'Description',
+                            link: 'Link',
+                        },
+                    },
+                    error: {
+                        title: 'Error',
+                        general: 'An error occurred while retrieving the report.',
+                        required: 'Required',
+                        invalidDate: 'Invalid date',
+                        dateNotBefore: 'Must not be before "from" date',
+                        dateNotAfter: 'Must not be after "to" date',
+                        recordId: 'Must be a positive whole number',
+                    },
+                    alert: {
+                        noResults: reportName => ({
+                            title: 'Nothing to export',
+                            message: `No results were returned by the report '${reportName}'`,
+                            type: 'info',
+                            alertId: 'alert-export-report',
+                            allowDismiss: true,
+                        }),
+                        jobQueued: reportName => ({
+                            title: 'Report queued',
+                            message: `Your report '${reportName}' has been added to the queue. Exported data will be emailed to you directly.`,
+                            type: 'done',
+                            alertId: 'alert-export-report',
+                            allowDismiss: true,
+                        }),
+                    },
+                    options: {
+                        display: [
+                            {
+                                value: 'workshistory',
+                                label: 'Works history',
+                            },
+                            {
+                                value: 'systemalertlog',
+                                label: 'System alert log',
+                            },
+                        ],
+                    },
+                },
+            },
+            loading: {
+                config: 'Loading config data...',
+                nodata: 'No data available',
+                noconfig: 'No config available',
+            },
+        },
+        alternateIdentifierForm: {
+            title: 'Manage alternate identifiers',
+            field: {
+                form: {
+                    locale: {
+                        alternateIdentifierInputFieldLabel: 'Alternate Identifier',
+                        alternateIdentifierInputFieldHint: 'Enter alternate identifier',
+                        alternateIdentifierTypeInputFieldLabel: 'Identifier Type',
+                        alternateIdentifierTypeInputFieldHint: 'Enter Identifier Type',
+                        addButtonLabel: <span>Add&nbsp;identifier</span>,
+                        editButtonLabel: <span>Update&nbsp;identifier</span>,
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Alternate Identifier',
+                        reorderColumn: 'Reorder Alternate identifiers',
+                        deleteAll: 'Remove all Alternate identifiers',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Alternate identifiers?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
         publicationsList: {
             selectAllText: 'Select all',
         },
@@ -43,11 +310,6 @@ export default {
                 Collection: 'Collection (lookup)',
                 Subject: 'Subject (lookup)',
             },
-            // help: {
-            //     title: 'Refining your results',
-            //     text: 'Help about ....',
-            //     buttonLabel: 'CLOSE'
-            // },
         },
         publicationStats: {
             publicationStatsTitle1: 'eSpace works',
@@ -78,6 +340,10 @@ export default {
                 google: {
                     externalUrl: 'https://scholar.google.com/scholar?q=intitle:[id]',
                     title: 'Google scholar',
+                },
+                dimensions: {
+                    externalUrl: prefixByUrlResolver('https://app.dimensions.ai/details/publication/') + '[id]',
+                    title: 'Dimensions',
                 },
             },
             linkWillOpenInNewWindow: 'Full citation in [destination] will open in a new window',
@@ -893,6 +1159,171 @@ export default {
                 },
             },
         },
+        instrumentTypeForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Instrument type',
+                        inputFieldHint: 'Type Instrument type',
+                        addButtonLabel: 'Add',
+                        id: 'instrument-type-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Instrument type',
+                        reorderColumn: 'Reorder Instrument type',
+                        deleteAll: 'Remove all Instrument types',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Instrument types?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Instrument type up the order',
+                        moveDownHint: 'Move Instrument type down the order',
+                        deleteHint: 'Remove this Instrument type',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Instrument type',
+                            confirmationMessage: 'Are you sure you want to delete this Instrument type?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        measuredVariableForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Measured variable',
+                        inputFieldHint: 'Type Measured variable',
+                        addButtonLabel: 'Add',
+                        id: 'measured-variable-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Measured variable',
+                        reorderColumn: 'Reorder Measured variables',
+                        deleteAll: 'Remove all Measured variables',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Measured variables?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Measured variable up the order',
+                        moveDownHint: 'Move Measured variable down the order',
+                        deleteHint: 'Remove this Measured variable',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Measured variable',
+                            confirmationMessage: 'Are you sure you want to delete this Measured variable?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        modelForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Model',
+                        inputFieldHint: 'Type Model',
+                        addButtonLabel: 'Add',
+                        id: 'Model-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Model',
+                        reorderColumn: 'Reorder Models',
+                        deleteAll: 'Remove all Models',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Models?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Model up the order',
+                        moveDownHint: 'Move Model down the order',
+                        deleteHint: 'Remove this Model',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Model',
+                            confirmationMessage: 'Are you sure you want to delete this Model?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        raidForm: {
+            title: 'RAiD',
+            text: 'You can add RAiD values',
+            // help: {
+            //     title: 'RAiD value',
+            //     text: 'Acceptable RAiD formats are....',
+            //     buttonLabel: 'CLOSE'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'RAiD value',
+                        inputFieldHint: 'Enter RAiD, e.g. {prefix}/{suffix}',
+                        addButtonLabel: <span>Add&nbsp;RAiD</span>,
+                        editButtonLabel: <span>Update&nbsp;RAiD</span>,
+                        remindToAddText: (
+                            <span>
+                                Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
+                            </span>
+                        ),
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'RAiD',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        editHint: 'Edit this item',
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
         scaleOfSignificanceListForm: {
             title: 'Manage scale/significance of work and creator contribution statement',
             field: {
@@ -905,12 +1336,7 @@ export default {
                         addButtonLabel: <span>Add&nbsp;Scale of significance and Contribution statement</span>,
                         editButtonLabel: <span>Edit&nbsp;Scale of significance and Contribution statement</span>,
                         addEntryButton: 'Add entry',
-                        authorOrderAlert: {
-                            message:
-                                'Any changes made to the author order require that all contribution statements are also manually updated to match.',
-                            type: 'info',
-                            alertId: 'alert-info',
-                        },
+                        authorOrderAlert: null,
                     },
                 },
                 header: {
@@ -952,11 +1378,9 @@ export default {
                         addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
                         editButtonLabel: 'UPDATE SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
                         resetFormLabel: 'Cancel',
-                        authorOrderAlert: {
-                            message:
-                                'Any changes made to the author order require that all contribution statements are also manually updated to match.',
-                            type: 'info',
-                        },
+                        deleteHint: 'Clear this statement',
+                        authorOrderAlert: null,
+                        emptySignificanceLabel: 'Create a Missing Scale/Significance and Research Statement',
                     },
                 },
                 header: {
@@ -994,17 +1418,41 @@ export default {
             descriptionAuthorOrEditor:
                 'Please provide a list of authors and then select your name once from the list of authors or editors.',
             help: {
-                title: 'Authors/Designers name',
+                title: 'Add authors to a work',
                 text: (
-                    <p>
-                        For more information about identification of author/creator/designer, click{' '}
-                        <a
-                            target="_blank"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
-                        >
-                            here
-                        </a>
-                    </p>
+                    <>
+                        <div>
+                            <p>
+                                Add all author names (in format Last name, First name) in the order they appear on the
+                                work.
+                                <br />
+                                <br />
+                                Click on your name, to identify as the submitting author. A blue banner should appear.
+                                Detailed instructions are available{' '}
+                                <a
+                                    target="_blank"
+                                    href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/add-missing-work#s-lg-box-18496096"
+                                >
+                                    here
+                                </a>
+                                .
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Add authors to a non-traditional research output</h3>
+                            <p>
+                                For more information about identification of author, creator, designer, or curator etc.
+                                click{' '}
+                                <a
+                                    target="_blank"
+                                    href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/submission-data-requirements#s-lg-box-20836546"
+                                >
+                                    here
+                                </a>
+                                .
+                            </p>
+                        </div>
+                    </>
                 ),
                 buttonLabel: 'CLOSE',
             },
@@ -1087,6 +1535,9 @@ export default {
                         nameAsPublishedLabel: `${capitalizeFirstLetter(suffix)}'s name as published`,
                         nameAsPublishedHint: 'Type the name exactly as published (eg. Smith, John)',
                         identifierLabel: 'UQ identifier (if available)',
+                        externalIdentifierLabel: 'External identifier',
+                        externalIdentifierHint: 'Enter an external identifier',
+                        externalIdentifierTypeLabel: 'Identifier type',
                         addButton: `Add ${suffix}`,
                         creatorRoleLabel: "Enter creator's role",
                         creatorRoleHint:
@@ -1125,6 +1576,8 @@ export default {
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: `${capitalizeFirstLetter(suffix)}'s name as published`,
                         identifierColumn: 'UQ identifiers',
+                        externalIdentifierColumn: 'External identifier',
+                        externalIdentifierTypeColumn: 'External identifier type',
                         organisationColumn: 'Organisation/Organisation type',
                         roleColumn: 'Creator role',
                     },
@@ -1310,7 +1763,7 @@ export default {
                         For more information about identification of author/creator/designer, click{' '}
                         <a
                             target="_blank"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/submission-data-requirements#s-lg-box-20836546"
                         >
                             here
                         </a>
@@ -1711,11 +2164,6 @@ export default {
         subjectForm: {
             title: 'Subject',
             text: 'Select subject codes',
-            // help: {
-            //     title: 'Field of research',
-            //     text: 'more info',
-            //     buttonLabel: 'CLOSE'
-            // },
             field: {
                 form: {
                     locale: {
@@ -1728,6 +2176,46 @@ export default {
                 header: {
                     locale: {
                         nameColumn: 'Subject',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        sustainableDevelopmentGoal: {
+            title: 'Sustainable Development Goal',
+            text: 'Select SDGs',
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Begin typing to select and add SDG(s)',
+                        inputFieldHint: 'Start typing code or field name and select from list',
+                        addButtonLabel: <span>Add&nbsp;SDG</span>,
+                        editButtonLabel: <span>Edit&nbsp;SDG</span>,
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Sustainable Development Goal',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
                             confirmationTitle: 'Delete all',
@@ -1823,8 +2311,7 @@ export default {
         },
         culturalNoticeOC: {
             title: 'Open to Collaborate',
-            imagePath:
-                'https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg',
+            imagePath: 'https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png',
             text: (
                 <span>
                     The University of Queensland is committed to the development of new modes of collaboration,
@@ -1844,8 +2331,7 @@ export default {
         },
         culturalNoticeAI: {
             title: 'Attribution Incomplete',
-            imagePath:
-                'https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg',
+            imagePath: 'https://assets.library.uq.edu.au/local-contexts/ci_notice_attribution_incomplete.png',
             text: (
                 <span>
                     Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are
@@ -1877,20 +2363,17 @@ export default {
                                 the 'Major' or ‘Minor’ Scale/Significance option that you select on the form.{' '}
                                 <b>This is not for public view.</b>
                             </li>
-                            <li>
-                                An abstract/description of the work, up to 800 characters (approx. 100 words). This is
-                                for public view.
-                            </li>
+                            <li>An abstract/description of the work. This is for public view.</li>
                             <li>
                                 At least one evidence file, e.g. a .pdf, .mp4, .tiff or .wav copy, representation or
                                 review of the work.
                             </li>
                         </ol>
-
                         <p>
                             Note:
-                            <br />A research statement can be updated at any time via the REQUEST CORRECTION button for
-                            the work.
+                            <br />
+                            Your research statement, abstract or evidence file can be updated at any time via the
+                            REQUEST CORRECTION button for the work.
                         </p>
                     </React.Fragment>
                 ),
@@ -1909,7 +2392,7 @@ export default {
                                     <a
                                         style={{ fontWeight: 700 }}
                                         target="_blank"
-                                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
+                                        href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/submission-data-requirements#s-lg-box-20836546"
                                     >
                                         here
                                     </a>
@@ -1988,7 +2471,7 @@ export default {
                         type: 'TextField',
                         id: 'rek-title',
                         hint: 'Add a title',
-                        validation: ['required', 'spacelessMaxLength255Validator'],
+                        validation: ['required', 'maxLength255Validator'],
                         ariaLabel: 'Type a title to search for',
                     },
                     rek_book_title: {
@@ -2149,6 +2632,17 @@ export default {
                         id: 'rek-org-unit-name',
                         ariaLabel: 'Begin typing an school, centre or institute name to select an author from the list',
                     },
+                    rek_raid: {
+                        order: 8.5,
+                        map: '',
+                        title: 'RAiD',
+                        combiner: 'is',
+                        id: 'rek-raid',
+                        type: 'TextField',
+                        hint: 'Add a RAiD',
+                        validation: ['required', 'raid'],
+                        ariaLabel: 'Type a RAiD to search for',
+                    },
                     rek_display_type: {
                         order: 20,
                         map: 'Work type',
@@ -2282,6 +2776,19 @@ export default {
                     spiritual connections to Country. We recognise their valuable contributions to Australian and global
                     society, celebrating the unique knowledges, cultures, histories and languages that have been shared
                     and created for at least 65,000 years.
+                </span>
+            ),
+        },
+        genAiTermsOfUse: {
+            title: 'Restrictions on Use',
+            text: (
+                <span>
+                    You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s
+                    commercial licences with resource providers. You may not share, re-publish, copy or enter into AI
+                    technologies any part of an object accessed from our digital collections, unless expressly permitted
+                    in the licence terms for that digital object. Data/text mining, distribution, systematic copying and
+                    downloading of objects may also be prohibited. More information may be available in the rights
+                    statement located in an item's record.
                 </span>
             ),
         },
@@ -2992,7 +3499,7 @@ export default {
                         For more information about identification of photographer, click{' '}
                         <a
                             target="_blank"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/submission-data-requirements#s-lg-box-20836546"
                         >
                             here
                         </a>
@@ -3074,6 +3581,7 @@ export default {
         },
         bulkUpdatesList: {
             tableTitle: '',
+            noRowLabel: 'No records to display',
             columns: {
                 startedAt: {
                     title: 'Started at',
@@ -3106,6 +3614,8 @@ export default {
         },
         favouriteSearchList: {
             tableTitle: '',
+            noRowsLabel: 'No records to display',
+            deleteConfirmLabel: 'Are you sure you want to delete this row?',
             columns: {
                 realLink: {
                     title: 'Real link',
@@ -3423,6 +3933,12 @@ export default {
                     editHint: 'Edit this item',
                 },
             },
+            deleteConfirmationLocale: {
+                confirmationTitle: 'Delete appointment',
+                confirmationMessage: 'Are you sure you want to delete this editorial appointment?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes',
+            },
             successAlert: {
                 alertId: 'alert-done-editorial-appointment-add',
                 allowDismiss: true,
@@ -3468,7 +3984,10 @@ export default {
             },
         },
         manageAuthors: {
+            validationAlertTitle:
+                'Form cannot be submitted until all fields are valid. Please review all input fields.',
             loadingText: 'Loading authors',
+            title: 'Author information',
             header: {
                 columns: {
                     id: {
@@ -3670,8 +4189,12 @@ export default {
                 allowDismiss: true,
                 type: 'info',
             },
+            tablePageSizeOptions: [10, 20, 50],
+            tablePageSizeDefault: 20,
         },
         manageUsers: {
+            validationAlertTitle:
+                'Form cannot be submitted until all fields are valid. Please review all input fields.',
             loadingText: 'Loading users',
             title: 'User information',
             header: {
@@ -3692,10 +4215,20 @@ export default {
                         title: 'Status',
                     },
                     isAdmin: {
-                        title: 'Is admin?',
+                        title: (
+                            <>
+                                Is <br />
+                                admin?
+                            </>
+                        ),
                     },
                     isSuperAdmin: {
-                        title: 'Is superadmin?',
+                        title: (
+                            <>
+                                Is <br />
+                                superadmin?
+                            </>
+                        ),
                     },
                 },
             },
@@ -3794,6 +4327,8 @@ export default {
                 type: 'error',
                 message: 'A user could not be deleted.',
             },
+            tablePageSizeOptions: [10, 20, 50],
+            tablePageSizeDefault: 20,
         },
         communitiesCollections: {
             title: {
@@ -3840,6 +4375,84 @@ export default {
                 pageSize: 10,
                 sortBy: 'title',
                 sortDirection: 'Asc',
+            },
+        },
+        controlledVocabulary: {
+            paging: {
+                allButton: 'All',
+            },
+            admin: {
+                addButtonLabel: 'Add vocabulary',
+                addChildButtonLabel: 'Add child vocabulary',
+                editButtonLabel: 'Update vocabulary',
+                addTitle: 'Add vocabulary',
+                editTitle: 'Update vocabulary',
+                confirmButtonLabel: 'Save',
+                cancelButtonLabel: 'cancel',
+                form: {
+                    title: 'Title',
+                    description: 'Description',
+                    externalId: 'External ID',
+                    filename: 'Filename',
+                    order: 'Order',
+                    inactive: 'Inactive',
+                    error: {
+                        title: 'Error',
+                    },
+                },
+                tooltip: {
+                    hidden: 'This vocabulary is hidden',
+                    readonly: 'This vocabulary and children are read-only',
+                },
+            },
+            error: {
+                title: 'An error has occurred',
+            },
+            title: {
+                controlledVocabulary: 'Controlled Vocabulary',
+            },
+            loading: {
+                message: '...Loading Data...',
+            },
+            columns: {
+                labels: {
+                    id: 'ID',
+                    title: 'Title',
+                    order: 'Order',
+                    desc: 'Description',
+                    visibility: '',
+                    external_id: 'External ID',
+                    path: 'Path',
+                    actions: 'Actions',
+                    filename: 'Image',
+                },
+            },
+            form: {
+                actions: 'Actions',
+                addButtonLabel: 'Add User',
+                columns: {
+                    cvo_id: {
+                        label: 'ID',
+                    },
+                    cvo_title: {
+                        label: 'Title',
+                    },
+                    cvo_desc: {
+                        label: 'Description',
+                    },
+                    cvo_image_filename: {
+                        label: 'Image file name',
+                    },
+                    cvo_external_id: {
+                        label: 'External ID',
+                    },
+                    cvo_order: {
+                        label: 'Order',
+                    },
+                    cvo_hide: {
+                        label: 'Disable',
+                    },
+                },
             },
         },
         favouriteJournals: {
@@ -3900,7 +4513,7 @@ export default {
                                     <p>
                                         <a
                                             target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/strategic-scholarly-publishing?p=1#1"
+                                            href="https://web.library.uq.edu.au/research-and-publish/publish/publish-and-share/think"
                                         >
                                             Read more about Strategic Publishing
                                         </a>
@@ -3937,7 +4550,7 @@ export default {
                                     <p>
                                         The published version (
                                         <a
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=0#0"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/types-open-access"
                                             target="_blank"
                                         >
                                             also known as Gold open access
@@ -3947,7 +4560,7 @@ export default {
                                         versions can be made open access via Article process charges, without charges,
                                         or through the Library's{' '}
                                         <a
-                                            href="https://web.library.uq.edu.au/library-services/researchers/publish-and-share/read-and-publish-agreements-2022"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements"
                                             target="_blank"
                                         >
                                             agreements with some publishers
@@ -3957,7 +4570,7 @@ export default {
                                     <p>
                                         The accepted version (also referred to as{' '}
                                         <a
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=2#2"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/types-open-access"
                                             target="_blank"
                                         >
                                             self-archiving or Green open access
@@ -3975,7 +4588,7 @@ export default {
                                     <p>
                                         <a
                                             target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access"
                                         >
                                             Read more about open access
                                         </a>
@@ -3992,13 +4605,16 @@ export default {
                                     </p>
                                     <p>
                                         Some publishers have{' '}
-                                        <a href="https://web.library.uq.edu.au/node/4488/3" target="_blank">
+                                        <a
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/article-processing-charges"
+                                            target="_blank"
+                                        >
                                             Article processing charges (APCs)
                                         </a>{' '}
                                         a fee paid to make an article immediately available and openly accessible. The
                                         Library has{' '}
                                         <a
-                                            href="https://web.library.uq.edu.au/read-and-publish-agreements"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements"
                                             target="_blank"
                                         >
                                             agreements with some publishers
@@ -4012,7 +4628,7 @@ export default {
                                     <p>
                                         <a
                                             target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/publishing-your-work-open-access"
                                         >
                                             Read more
                                         </a>
@@ -4041,7 +4657,7 @@ export default {
                                     <li>
                                         <a
                                             target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/publish-share"
+                                            href="https://web.library.uq.edu.au/research-and-publish/publish"
                                         >
                                             Find out more about publishing at UQ Library
                                         </a>
@@ -4103,11 +4719,11 @@ export default {
                                 <React.Fragment>
                                     <p>Search journals by their assigned:</p>
                                     <ul>
-                                        <li>field of research code from the ERA process (ERA);</li>
-                                        <li>
+                                        <li key={'ERA'}>field of research code from the ERA process (ERA);</li>
+                                        <li key={'CITE'}>
                                             subject areas from the All Science Journal Classification (CiteScore); or
                                         </li>
-                                        <li>
+                                        <li key={'WOS'}>
                                             subjects from the Web of Science. For example: Science Citation Index
                                             Expanded (WOSSCIE) or Web of Science: Emerging Sources Citation Index
                                             (WOSESCI); Arts & Humanities Citation Index (WOSAHCI).
@@ -4226,6 +4842,16 @@ export default {
                     title: 'Refine results',
                     text: (
                         <React.Fragment>
+                            <h3>CiteScore highest quartile</h3>
+                            <p>Sort by CiteScore Quartile, where Q1 is best.</p>
+                            <h3>Evidence of Peer Review</h3>
+                            <p>Limit to peer reviewed or refereed journals. This data is provided via Ulrichsweb.</p>
+                            <h3>Highest quartile</h3>
+                            <p>Sort by the highest quartile a journal reaches across systems and subject categories.</p>
+                            <h3>Indexed in</h3>
+                            <p>Indicates database providers which index the journal.</p>
+                            <h3>Journal impact factor highest quartile</h3>
+                            <p>Sort by JIF Quartile, where Q1 is best.</p>
                             <h3>Listed in</h3>
                             <p>
                                 Indicates a journal has met the quality indicators/requirements for a list compiled by a
@@ -4233,30 +4859,24 @@ export default {
                             </p>
                             <p>The following lists are available:</p>
                             <ul>
-                                <li>ABDC (Australian Business Deans Council)</li>
-                                <li>CWTS (Centre of Science and Technology Studies at Leiden University)</li>
-                                <li>ERA (Excellence in Research Australia)</li>
+                                <li key={'ABDC'}>ABDC (Australian Business Deans Council)</li>
+                                <li key={'CWTS'}>
+                                    CWTS (Centre of Science and Technology Studies at Leiden University)
+                                </li>
+                                <li key={'ERA'}>ERA (Excellence in Research Australia)</li>
                             </ul>
-                            <h3>Indexed in</h3>
-                            <p>Indicates database providers which index the journal.</p>
                             <h3>Open access: accepted version</h3>
                             <p>
                                 Sort by length of time before an author accepted or self-archived version of an article
                                 is open and freely available via UQ eSpace.
                             </p>
-                            <h3>Journal impact factor highest quartile</h3>
-                            <p>Sort by JIF Quartile, where Q1 is best.</p>
-                            <h3>CiteScore highest quartile</h3>
-                            <p>Sort by CiteScore Quartile, where Q1 is best.</p>
-                            <h3>Highest quartile</h3>
-                            <p>Sort by the highest quartile a journal reaches across systems and subject categories.</p>
                             <h3>Open access: published version</h3>
                             <p>
                                 Sort by whether charges, such as Article Processing Charges (APCs), are paid to a
                                 publisher to make a publication immediately available and openly accessible.
                             </p>
-                            <h3>Evidence of Peer Review</h3>
-                            <p>Limit to peer reviewed or refereed journals. This data is provided via Ulrichsweb.</p>
+                            <h3>Favourite Journals</h3>
+                            <p>Limits results to favourited journals.</p>
                         </React.Fragment>
                     ),
                     testId: 'journal-search-facets',

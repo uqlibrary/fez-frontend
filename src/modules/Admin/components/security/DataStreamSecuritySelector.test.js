@@ -9,9 +9,7 @@ function setup(testProps = {}) {
             dataStreamFileBlock: 'dataStreamFileBlock',
             dataStreamFileName: 'dataStreamFileName',
         },
-        input: {
-            onChange: jest.fn(),
-        },
+        onChange: jest.fn(),
         attachedDataStreams: [],
         text: {
             overridePolicyPrompt: 'Override datastream security policy',
@@ -53,7 +51,7 @@ describe('DataStreamSecuritySelector component', () => {
         expect(asFragment()).toMatchSnapshot();
         expect(getByText(/test4.txt/)).toHaveAttribute('title', 'test4.txt');
         expect(getByText(/Administrator/i)).toHaveAttribute('id', 'dsi-security-policy-0-select');
-        expect(getByText(/Administrator/i)).toHaveAttribute('role', 'button');
+        expect(getByText(/Administrator/i)).toHaveAttribute('role', 'combobox');
     });
 
     it('should change security value for the file', async () => {

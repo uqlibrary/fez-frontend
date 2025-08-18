@@ -11,9 +11,6 @@ export const initialState = {
     itemsList: [],
     itemsLoading: false,
     itemsLoadingError: false,
-    journalDetails: false,
-    journalLoading: false,
-    journalLoadingError: false,
     journalSearchKeywordsLoading: false,
     journalSearchKeywords: { ...initialJournalSearchKeywords },
     journalSearchKeywordsError: null,
@@ -37,23 +34,6 @@ const handlers = {
         itemsList: [],
         itemsLoading: false,
         itemsLoadingError: true,
-    }),
-    [actions.JOURNAL_LOADING]: state => ({
-        ...state,
-        journalDetails: false,
-        journalLoading: true,
-        journalLoadingError: false,
-    }),
-    [actions.JOURNAL_LOADED]: (state, action) => ({
-        ...state,
-        journalDetails: action.payload,
-        journalLoading: false,
-    }),
-    [actions.JOURNAL_LOAD_FAILED]: state => ({
-        ...state,
-        journalDetails: false,
-        journalLoading: false,
-        journalLoadingError: true,
     }),
     [actions.JOURNAL_SEARCH_KEYWORDS_LOADING]: state => ({
         ...state,

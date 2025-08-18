@@ -9,6 +9,10 @@ import DialogContent from '@mui/material/DialogContent';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
+export const createConfirmDialogBoxRefAssigner = refObject => ref => {
+    refObject.current = ref;
+};
+
 export class ConfirmDialogBox extends Component {
     static propTypes = {
         className: PropTypes.string,
@@ -90,7 +94,7 @@ export class ConfirmDialogBox extends Component {
                 <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
                     <DialogTitle data-testid="message-title">{this.props.locale.confirmationTitle}</DialogTitle>
                     <DialogContent>
-                        <DialogContentText data-testid="message-content">
+                        <DialogContentText data-testid="message-content" component="div">
                             {this.props.locale.confirmationMessage}
                         </DialogContentText>
                     </DialogContent>

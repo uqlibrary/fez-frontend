@@ -2,15 +2,39 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import SearchComponent from '../components/SearchComponent';
 import * as actions from 'actions';
-import { withRouter } from 'react-router-dom';
 import deparam from 'can-deparam';
+import { withNavigate } from 'helpers/withNavigate';
+import { locale } from '../../../../locale';
 
 const defaultObj = {};
+const allowedAdvancedSearchFields = Object.keys(locale.components.searchComponent.advancedSearch.fieldTypes);
+
+/**
+ * Filter out with labels only.
+ *
+ * @param object
+ * @return {{}}
+ */
+const removeInvalidSearchQueryParams = searchQuery => ({
+    ...searchQuery,
+    searchQueryParams: Object.keys(searchQuery?.searchQueryParams || {}).reduce((validated, key) => {
+        const term = searchQuery.searchQueryParams[key];
+        // allow any params for non advanced searches,
+        // otherwise make sure given fields have values and are allowed
+        if (
+            searchQuery.searchMode !== 'advanced' ||
+            (term.hasOwnProperty('value') && allowedAdvancedSearchFields.includes(key))
+        ) {
+            validated[key] = term;
+        }
+        return validated;
+    }, {}),
+});
 
 export const mapStateToProps = (state, ownProps) => {
     let searchQuery;
     try {
-        searchQuery = deparam(ownProps.location.search.substr(1)) || {};
+        searchQuery = removeInvalidSearchQueryParams(deparam(ownProps.location.search.substr(1)) || {});
     } catch (e) {
         searchQuery = {};
     }
@@ -46,6 +70,5 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let SearchComponentContainer = connect(mapStateToProps, mapDispatchToProps)(SearchComponent);
-SearchComponentContainer = withRouter(SearchComponentContainer);
-export default SearchComponentContainer;
+const SearchComponentContainer = connect(mapStateToProps, mapDispatchToProps)(SearchComponent);
+export default withNavigate()(SearchComponentContainer);

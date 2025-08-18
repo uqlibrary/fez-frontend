@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import { OrcidSyncContext } from 'context';
+import { useNavigate } from 'react-router-dom';
 
+import { OrcidSyncContext } from 'context';
 import DashboardOrcidSync from '../containers/DashboardOrcidSync';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import locale from 'locale/pages';
@@ -42,16 +43,33 @@ export const renderIcon = (title, className) => {
     );
 };
 
+const getUrl = (item, values, link) => (values[item] ? link.linkedUrl[item] + values[item] : link.notLinkedUrl[item]);
+
 export const renderButton = args => {
     const { item, index, navHandler, values, authenticated, txt, link } = args;
-    const isLinkedExternal = values[item] && link.linkedUrl[item].indexOf('http') !== -1;
+    let isLinkedExternal = values[item] && link.linkedUrl[item].indexOf('http') !== -1;
     const isUnlinkedExternal = !values[item] && link.notLinkedUrl[item].indexOf('http') !== -1;
-    const isInternal = !values[item] && link.notLinkedUrl[item].indexOf('http') === -1;
+    let isInternal = !values[item] && link.notLinkedUrl[item].indexOf('http') === -1;
 
-    const url = values[item] ? link.linkedUrl[item] + values[item] : link.notLinkedUrl[item];
-    const title = values[item]
+    let url = getUrl(item, values, link);
+    let title = values[item]
         ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item])
         : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item]);
+
+    // google scholar id is linked via ORCID
+    if (item === 'google_scholar' && !values[item]) {
+        url = getUrl('orcid', values, link);
+        if (values.orcid) {
+            isInternal = false;
+            isLinkedExternal = true;
+            title = title.replace('Click for more information', 'Click to review via ORCID');
+        } else {
+            isInternal = true;
+            isLinkedExternal = false;
+            title = title.replace('Click for more information', 'Click to link via ORCID');
+        }
+    }
+
     const externalIconClassName = `fez-icon ${item} ${values[item] && authenticated[item] ? 'ok' : 'error'}`;
     const internalIconClassName = `fez-icon ${item} dashboard ${authenticated[item] ? 'ok' : 'error'}`;
 
@@ -93,60 +111,56 @@ export const renderButton = args => {
     );
 };
 
-export class DashboardResearcherIdsClass extends React.Component {
-    static propTypes = {
-        values: PropTypes.shape({
-            researcher: PropTypes.string,
-            scopus: PropTypes.string,
-            google_scholar: PropTypes.string,
-            orcid: PropTypes.string,
-        }),
-        authenticated: PropTypes.shape({
-            researcher: PropTypes.bool,
-            scopus: PropTypes.bool,
-            google_scholar: PropTypes.bool,
-            orcid: PropTypes.bool,
-        }),
-        history: PropTypes.object.isRequired,
+const DashboardResearcherIds = props => {
+    const navigate = useNavigate();
+
+    const navigateToRoute = (event, item) => {
+        const link = locale.pages.dashboard.header.dashboardResearcherIds.links;
+        navigate(link.notLinkedUrl[item]);
     };
 
-    navigateToRoute = (event, item) => {
-        const link = locale.pages.dashboard.header.dashboardResearcherIds.links;
-        this.props.history.push(link.notLinkedUrl[item]);
-    };
+    const txt = locale.pages.dashboard.header.dashboardResearcherIds;
+    const link = locale.pages.dashboard.header.dashboardResearcherIds.links;
 
-    render() {
-        const { values } = this.props;
-        const txt = locale.pages.dashboard.header.dashboardResearcherIds;
-        const link = locale.pages.dashboard.header.dashboardResearcherIds.links;
+    return (
+        <Grid container spacing={1} alignItems={'center'} style={{ marginTop: 12 }}>
+            {props.values &&
+                Object.keys(props.values).map((item, index) => {
+                    const navHandler = event => navigateToRoute(event, item);
+                    return renderButton({ item, index, navHandler, ...props, txt, link });
+                })}
 
-        return (
-            <Grid container spacing={1} alignItems={'center'} style={{ marginTop: 12 }}>
-                {values &&
-                    Object.keys(values).map((item, index) => {
-                        const navHandler = event => this.navigateToRoute(event, item);
-                        return renderButton({ item, index, navHandler, ...this.props, txt, link });
-                    })}
-
-                {values.orcid && (
-                    <Grid item>
-                        <a
-                            href={`${txt.orcidUrlPrefix}${values.orcid}`}
-                            id={'orcid'}
-                            target="_blank"
-                            aria-label={txt.orcidlinkLabel}
-                            title={txt.orcidlinkLabel}
-                            tabIndex={0}
-                        >
-                            <StyledOrcidLink variant={'caption'}>
-                                {`${txt.orcidLinkPrefix}${values.orcid}`}
-                            </StyledOrcidLink>
-                        </a>
-                    </Grid>
-                )}
-            </Grid>
-        );
-    }
-}
-const DashboardResearcherIds = props => <DashboardResearcherIdsClass {...props} />;
+            {props.values.orcid && (
+                <Grid item>
+                    <a
+                        href={`${txt.orcidUrlPrefix}${props.values.orcid}`}
+                        id={'orcid'}
+                        target="_blank"
+                        aria-label={txt.orcidlinkLabel}
+                        title={txt.orcidlinkLabel}
+                        tabIndex={0}
+                    >
+                        <StyledOrcidLink
+                            variant={'caption'}
+                        >{`${txt.orcidLinkPrefix}${props.values.orcid}`}</StyledOrcidLink>
+                    </a>
+                </Grid>
+            )}
+        </Grid>
+    );
+};
+DashboardResearcherIds.propTypes = {
+    values: PropTypes.shape({
+        researcher: PropTypes.string,
+        scopus: PropTypes.string,
+        google_scholar: PropTypes.string,
+        orcid: PropTypes.string,
+    }),
+    authenticated: PropTypes.shape({
+        researcher: PropTypes.bool,
+        scopus: PropTypes.bool,
+        google_scholar: PropTypes.bool,
+        orcid: PropTypes.bool,
+    }),
+};
 export default DashboardResearcherIds;

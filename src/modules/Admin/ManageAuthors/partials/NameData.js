@@ -1,6 +1,7 @@
+import { useFormContext } from 'react-hook-form';
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { Field, formValueSelector } from 'redux-form/immutable';
+
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
 
@@ -9,23 +10,22 @@ import AuthorFieldData from './AuthorFieldData';
 
 import { validation } from 'config';
 import { default as locale } from 'locale/components';
-import { FORM_NAME } from './manageAuthorConfig';
-
-const selector = formValueSelector(FORM_NAME);
 
 export const NameData = () => {
     const {
+        title: cardTitle,
         editRow: {
             fields: { title, displayName, firstName, middleName, lastName, position, email },
         },
     } = locale.components.manageAuthors;
-    const autEmail = useSelector(state => selector(state, 'aut_email'));
+    const { control } = useFormContext();
 
     return (
-        <StandardCard subCard title="Name information" smallTitle customTitleBgColor="#F7F7F7">
+        <StandardCard subCard title={cardTitle} smallTitle customTitleBgColor="#F7F7F7">
             <Grid container spacing={2} alignItems="center">
                 <Field
                     {...displayName}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-display-name"
                     name="aut_display_name"
@@ -34,6 +34,7 @@ export const NameData = () => {
                 />
                 <Field
                     {...title}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-title"
                     name="aut_title"
@@ -41,6 +42,7 @@ export const NameData = () => {
                 />
                 <Field
                     {...firstName}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-fname"
                     name="aut_fname"
@@ -49,6 +51,7 @@ export const NameData = () => {
                 />
                 <Field
                     {...middleName}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-mname"
                     name="aut_mname"
@@ -56,6 +59,7 @@ export const NameData = () => {
                 />
                 <Field
                     {...lastName}
+                    control={control}
                     component={AuthorFieldData}
                     name="aut_lname"
                     authorFieldDataId="aut-lname"
@@ -64,6 +68,7 @@ export const NameData = () => {
                 />
                 <Field
                     {...position}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-position"
                     name="aut_position"
@@ -71,10 +76,11 @@ export const NameData = () => {
                 />
                 <Field
                     {...email}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-email"
                     name="aut_email"
-                    {...(!!autEmail ? { validate: [validation.email, validation.spacelessMaxLength255Validator] } : {})}
+                    validate={[validation.email, validation.spacelessMaxLength255Validator]}
                 />
             </Grid>
         </StandardCard>

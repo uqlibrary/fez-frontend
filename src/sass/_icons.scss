@@ -2,6 +2,9 @@
   display: inline-block;
   vertical-align: text-top;
 
+  &.elsevier::before {
+    content: url(~/src/images/elsevier_logo.svg);
+  }
   &.scopus::before {
     content: url(~/src/images/scopus_icon.svg);
   }
@@ -22,6 +25,9 @@
   }
   &.google::before, &.google_scholar::before {
     content: url(~/src/images/google_scholar_icon.svg);
+  }
+  &.dimensions::before {
+    content: url(~/src/images/dimensions_icon.svg);
   }
 
   &.cc-by::before {
@@ -46,6 +52,10 @@
 
   &.cc-by-sa::before {
     content: url(~/src/images/creativecommons/by_sa.png);
+  }
+
+  &.cc-zero::before {
+    content: url(~/src/images/creativecommons/cc_zero.png);
   }
 
   &.xsmall {

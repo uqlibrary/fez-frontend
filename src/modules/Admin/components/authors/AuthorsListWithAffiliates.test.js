@@ -27,17 +27,6 @@ function setup(testProps = {}) {
 }
 
 describe('AuthorsListWithAffiliates', () => {
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
-
     afterEach(() => {
         jest.resetAllMocks();
     });
@@ -49,7 +38,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should render a list of upto 10 contributors and should not show paging or filtering options', () => {
-        const { getByTestId } = setup({
+        const { getAllByTestId } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -85,12 +74,12 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('rek-author-list-row-9')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(10);
     });
 
     it('should render a list of upto 10 contributors and should not show paging and searching options', () => {
-        const { getByTestId, queryByTestId } = setup({
+        const { getAllByTestId } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -129,9 +118,8 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('rek-author-list-row-4')).toBeInTheDocument();
-        expect(queryByTestId('rek-author-list-row-5')).not.toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(10);
     });
 
     it('should render disabled row', () => {
@@ -177,7 +165,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should add contributor correctly', () => {
-        const { getByTestId, getByText, queryByText } = setup();
+        const { getAllByTestId, getByTestId, getByText, queryByText } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('rek-author-add'));
@@ -185,7 +173,8 @@ describe('AuthorsListWithAffiliates', () => {
         fireEvent.click(getByTestId('rek-author-add-save'));
 
         expect(queryByText('No records to display')).not.toBeInTheDocument();
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(1);
     });
 
     it('should validate new contributor maxlength correctly', () => {
@@ -204,7 +193,7 @@ describe('AuthorsListWithAffiliates', () => {
 
     it('should validate existing contributor maxlength correctly', () => {
         const initialValue = 'test 1';
-        const { getByTestId } = setup({
+        const { getAllByTestId, getByTestId } = setup({
             list: [
                 {
                     nameAsPublished: initialValue,
@@ -213,7 +202,9 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(1);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
@@ -249,7 +240,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -264,7 +255,8 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -277,6 +269,7 @@ describe('AuthorsListWithAffiliates', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -312,7 +305,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -327,7 +320,8 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -340,6 +334,7 @@ describe('AuthorsListWithAffiliates', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -375,7 +370,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -392,7 +387,8 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -422,7 +418,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should clear uq identifier', async () => {
-        const { getByTestId } = setup({
+        const { getAllByTestId, getByTestId } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -439,7 +435,8 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -452,6 +449,7 @@ describe('AuthorsListWithAffiliates', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: '' } });
         });
 
@@ -477,7 +475,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getByTestId, getByText, queryByTestId } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -500,11 +498,11 @@ describe('AuthorsListWithAffiliates', () => {
 
         fireEvent.click(getByTestId('rek-author-add-save'));
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
-        expect(queryByTestId('rek-author-list-row-1')).not.toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(1);
     });
 
-    it('should render the same list if a existing user with the same uq id in the list has been added', async () => {
+    it('should render the same list if an existing user with the same uq id in the list has been added', async () => {
         mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
             data: [
                 {
@@ -577,7 +575,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             isNtro: true,
             list: [
                 {
@@ -595,7 +593,8 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -617,6 +616,7 @@ describe('AuthorsListWithAffiliates', () => {
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'), 'Testing');
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -652,7 +652,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             isNtro: true,
             list: [
                 {
@@ -672,7 +672,8 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -685,6 +686,7 @@ describe('AuthorsListWithAffiliates', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -818,7 +820,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should render new affiliation view', async () => {
-        const { getByTestId, getByText, getByRole, queryByTestId, queryByText } = setup({
+        const { getAllByTestId, getByTestId, getByText, getByRole, queryByTestId, queryByText } = setup({
             list: [
                 {
                     creatorRole: '',
@@ -886,9 +888,11 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
         // Check the first row is for a linked author, which should
         // have the new UI interface for affiliations.
-        const row = getByTestId('rek-author-list-row-0');
+        const row = tableRows[0];
         expect(row).toBeInTheDocument();
 
         expect(within(row).getByText('Robertson, Avril A. B. not 100%')).toBeInTheDocument();
@@ -910,7 +914,7 @@ describe('AuthorsListWithAffiliates', () => {
         expect(getByRole('button', { name: /Recalculate Percentages/ })).toBeInTheDocument();
 
         // Check there's a second row for an unlinked author
-        const row2 = getByTestId('rek-author-list-row-1');
+        const row2 = tableRows[1];
         expect(row2).toBeInTheDocument();
 
         expect(within(row2).getByText('Smith, John Coverage')).toBeInTheDocument();

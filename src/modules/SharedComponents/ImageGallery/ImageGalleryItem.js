@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import txt from 'locale/components';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 import { handleKeyboardPressActivate } from 'helpers/general';
 
@@ -31,9 +31,9 @@ const internalClasses = {
         lineHeight: '16px',
         display: '-webkit-box',
         lineClamp: '3',
-        '-webkit-line-clamp': '3',
+        WebkitLineClamp: '3',
         boxOrient: 'vertical',
-        '-webkit-box-orient': 'vertical',
+        WebkitBoxOrient: 'vertical',
         overflow: 'hidden',
         whiteSpace: 'normal',
         wordBreak: 'break-word',
@@ -67,8 +67,8 @@ const internalClasses = {
     },
 };
 
-const viewRecord = (history, url) => {
-    history.push(url);
+const viewRecord = (navigate, url) => {
+    navigate(url);
 };
 
 export const getAlertMessageText = ({ unavailable, restricted, advisory }) => {
@@ -82,24 +82,24 @@ export const getAlertMessageText = ({ unavailable, restricted, advisory }) => {
 
 const ImageGalleryItem = ({
     item,
-    withTitle,
-    withAlert,
+    withTitle = true,
+    withAlert = true,
     url,
-    history,
-    classes,
-    lazyLoading,
-    itemWidth,
-    itemHeight,
-    security,
+    classes = {},
+    lazyLoading = config.thumbnailImage.defaultLazyLoading,
+    itemWidth = config.thumbnailImage.defaultWidth,
+    itemHeight = config.thumbnailImage.defaultHeight,
+    security = { isAdmin: false, isAuthor: false, author: {} },
     ...rest
 }) => {
     const [restricted, setRestricted] = React.useState(false);
     const [advisory, setAdvisory] = React.useState(false);
     const [unavailable, setUnavailable] = React.useState(false);
-    let historyObject = useHistory();
+    const navigate = useNavigate();
+    /* let historyObject = useHistory();
     if (!!history) {
         historyObject = history;
-    }
+    } */
 
     const alertMessage = React.useMemo(() => {
         return getAlertMessageText({ unavailable, restricted, advisory });
@@ -109,7 +109,7 @@ const ImageGalleryItem = ({
     const clickLink =
         !!url && url.length > 0
             ? {
-                  onClick: () => viewRecord(historyObject, url),
+                  onClick: () => viewRecord(navigate, url),
                   role: 'button',
               }
             : {};
@@ -133,7 +133,7 @@ const ImageGalleryItem = ({
                 },
             }}
             tabIndex={0}
-            onKeyPress={key => handleKeyboardPressActivate(key, () => viewRecord(historyObject, url))}
+            onKeyPress={key => handleKeyboardPressActivate(key, () => viewRecord(navigate, url))}
             {...listItemAriaLabel}
             {...clickLink}
             {...rest}
@@ -201,7 +201,6 @@ ImageGalleryItem.propTypes = {
     withTitle: PropTypes.bool,
     withAlert: PropTypes.bool,
     url: PropTypes.string,
-    history: PropTypes.object,
     security: PropTypes.object,
     classes: PropTypes.shape({
         imageListItem: PropTypes.shape({
@@ -215,16 +214,6 @@ ImageGalleryItem.propTypes = {
     lazyLoading: PropTypes.bool,
     itemWidth: PropTypes.number,
     itemHeight: PropTypes.number,
-};
-
-ImageGalleryItem.defaultProps = {
-    withTitle: true,
-    withAlert: true,
-    classes: {},
-    security: { isAdmin: false, isAuthor: false, author: {} },
-    lazyLoading: config.thumbnailImage.defaultLazyLoading,
-    itemWidth: config.thumbnailImage.defaultWidth,
-    itemHeight: config.thumbnailImage.defaultHeight,
 };
 
 export default React.memo(ImageGalleryItem);

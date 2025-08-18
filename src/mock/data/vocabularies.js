@@ -1,4 +1,10 @@
-import { ORG_UNITS_VOCAB_ID, FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID } from 'config/general';
+import {
+    ORG_UNITS_VOCAB_ID,
+    FIELD_OF_RESEARCH_VOCAB_ID,
+    AIATSIS_CODES_VOCAB_ID,
+    SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID,
+    JOURNAL_ADVISORY_STATEMENT_TYPE,
+} from 'config/general';
 
 export const vocabulariesList = {
     [ORG_UNITS_VOCAB_ID]: {
@@ -32004,4 +32010,596 @@ export const vocabulariesList = {
         ],
         "filters": []
     },
+    [SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID]: {
+        total: 17,
+        data: [
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 456994,
+                controlled_vocab: {
+                    cvo_title: "01 - No poverty",
+                    cvo_desc: "End poverty in all its forms everywhere.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 456994,
+                            cvr_child_cvo_id: 457015,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 456994,
+                            cvr_child_cvo_id: 457031,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 456994,
+                            cvr_child_cvo_id: 457050,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 456995,
+                controlled_vocab: {
+                    cvo_title: "02 - Zero Hunger",
+                    cvo_desc:
+                        "End hunger, achieve food security and improved nutrition and promote sustainable agriculture.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 456995,
+                            cvr_child_cvo_id: 457016,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 456995,
+                            cvr_child_cvo_id: 457032,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 456995,
+                            cvr_child_cvo_id: 457051,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 456996,
+                controlled_vocab: {
+                    cvo_title: "03 - Good health and well-being",
+                    cvo_desc:
+                        "Ensure healthy lives and promote well-being for all at all ages.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 456996,
+                            cvr_child_cvo_id: 457017,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 456996,
+                            cvr_child_cvo_id: 457033,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 456996,
+                            cvr_child_cvo_id: 457052,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 456997,
+                controlled_vocab: {
+                    cvo_title: "04 - Quality education",
+                    cvo_desc:
+                        "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 456997,
+                            cvr_child_cvo_id: 457018,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 456997,
+                            cvr_child_cvo_id: 457034,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 456997,
+                            cvr_child_cvo_id: 457053,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 456998,
+                controlled_vocab: {
+                    cvo_title: "05 - Gender Equality",
+                    cvo_desc:
+                        "Achieve gender equality and empower all women and girls.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 456998,
+                            cvr_child_cvo_id: 457035,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 456998,
+                            cvr_child_cvo_id: 457048,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 456998,
+                            cvr_child_cvo_id: 457054,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 456999,
+                controlled_vocab: {
+                    cvo_title: "06 - Clean water and sanitation",
+                    cvo_desc:
+                        "Ensure availability and sustainable management of water and sanitation for all.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 456999,
+                            cvr_child_cvo_id: 457019,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 456999,
+                            cvr_child_cvo_id: 457036,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 456999,
+                            cvr_child_cvo_id: 457055,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 457000,
+                controlled_vocab: {
+                    cvo_title: "07 - Affordable and clean energy",
+                    cvo_desc:
+                        "Ensure access to affordable, reliable, sustainable and modern energy for all.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 457000,
+                            cvr_child_cvo_id: 457020,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457000,
+                            cvr_child_cvo_id: 457037,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457000,
+                            cvr_child_cvo_id: 457056,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 457001,
+                controlled_vocab: {
+                    cvo_title: "08 - Decent work and economic growth",
+                    cvo_desc:
+                        "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 457001,
+                            cvr_child_cvo_id: 457021,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457001,
+                            cvr_child_cvo_id: 457038,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457001,
+                            cvr_child_cvo_id: 457057,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 457002,
+                controlled_vocab: {
+                    cvo_title: "09 - Industry, innovation and infrastructure",
+                    cvo_desc:
+                        "Build resilient infrastructure, promote inclusive and sustainable industrialisation and foster innovation.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 457002,
+                            cvr_child_cvo_id: 457022,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457002,
+                            cvr_child_cvo_id: 457039,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457002,
+                            cvr_child_cvo_id: 457058,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 457003,
+                controlled_vocab: {
+                    cvo_title: "10 - Reduced inequalities",
+                    cvo_desc: "Reduce inequality within and among countries.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 457003,
+                            cvr_child_cvo_id: 457023,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457003,
+                            cvr_child_cvo_id: 457040,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457003,
+                            cvr_child_cvo_id: 457059,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 457004,
+                controlled_vocab: {
+                    cvo_title: "11 - Sustainable cities and communities",
+                    cvo_desc:
+                        "Make cities and human settlements inclusive, safe, resilient and sustainable.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 457004,
+                            cvr_child_cvo_id: 457024,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457004,
+                            cvr_child_cvo_id: 457041,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457004,
+                            cvr_child_cvo_id: 457060,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 457005,
+                controlled_vocab: {
+                    cvo_title: "12 - Responsible consumption and production",
+                    cvo_desc:
+                        "Ensure sustainable consumption and production patterns.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 457005,
+                            cvr_child_cvo_id: 457025,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457005,
+                            cvr_child_cvo_id: 457042,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457005,
+                            cvr_child_cvo_id: 457061,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 457006,
+                controlled_vocab: {
+                    cvo_title: "13 - Climate action",
+                    cvo_desc:
+                        "Take urgent action to combat climate change and its impacts.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 457006,
+                            cvr_child_cvo_id: 457026,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457006,
+                            cvr_child_cvo_id: 457043,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457006,
+                            cvr_child_cvo_id: 457062,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 457007,
+                controlled_vocab: {
+                    cvo_title: "14 - Life Below Water",
+                    cvo_desc:
+                        "Conserve and sustainably use the oceans, seas and marine resources for sustainable development.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 457007,
+                            cvr_child_cvo_id: 457027,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457007,
+                            cvr_child_cvo_id: 457044,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457007,
+                            cvr_child_cvo_id: 457063,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 457008,
+                controlled_vocab: {
+                    cvo_title: "15 - Life on land",
+                    cvo_desc:
+                        "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 457008,
+                            cvr_child_cvo_id: 457028,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457008,
+                            cvr_child_cvo_id: 457045,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457008,
+                            cvr_child_cvo_id: 457064,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 457009,
+                controlled_vocab: {
+                    cvo_title: "16 - Peace, justice and strong institutions",
+                    cvo_desc:
+                        "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 457009,
+                            cvr_child_cvo_id: 457029,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457009,
+                            cvr_child_cvo_id: 457046,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457009,
+                            cvr_child_cvo_id: 457065,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                cvr_parent_cvo_id: 456993,
+                cvr_child_cvo_id: 457010,
+                controlled_vocab: {
+                    cvo_title: "17 - Partnerships for the goals",
+                    cvo_desc:
+                        "Strengthen the means of implementation and revitalise the Global Partnership for Sustainable Development.",
+                    cvo_hide: 0,
+                    controlled_vocab_children: [
+                        {
+                            cvr_parent_cvo_id: 457010,
+                            cvr_child_cvo_id: 457030,
+                            controlled_vocab: {
+                                cvo_title: "Dimensions",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457010,
+                            cvr_child_cvo_id: 457047,
+                            controlled_vocab: {
+                                cvo_title: "WOS",
+                            },
+                        },
+                        {
+                            cvr_parent_cvo_id: 457010,
+                            cvr_child_cvo_id: 457066,
+                            controlled_vocab: {
+                                cvo_title: "Elsevier",
+                            },
+                        },
+                    ],
+                },
+            },
+        ],
+        filters: [],
+    },
+    [JOURNAL_ADVISORY_STATEMENT_TYPE]: {
+        total: 3,
+        data: [
+            {
+                controlled_vocab: {
+                    cvo_id: 459330,
+                    cvo_title: 'Warning',
+                    cvo_desc:
+                        'This is a default "warning" statement, used in case advisory statement text is not set',
+                },
+            },
+            {
+                controlled_vocab: {
+                    cvo_id: 459349,
+                    cvo_title: 'Error',
+                    cvo_desc: 'Default "error" statement text',
+                },
+            },
+            {
+                controlled_vocab: {
+                    cvo_id: 459352,
+                    cvo_title: 'Warning',
+                    cvo_desc: null,
+                },
+            },
+        ],
+    }
 };

@@ -2,11 +2,13 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 import { APP_URL } from 'config';
-import { PrintIcon } from './Icons';
-import { EmailIcon } from 'react-share';
+import Avatar from '@mui/material/Avatar';
+import { grey } from '@mui/material/colors';
+import PrintIcon from '@mui/icons-material/Print';
+import EmailOutlined from '@mui/icons-material/EmailOutlined';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
-export const SocialShare = ({ publication, size, spaceBetween, services, round }) => {
+export const SocialShare = ({ publication, size = 24, spaceBetween = 4, services }) => {
     const printPage = () => window.print();
     const locale = {
         email: {
@@ -16,7 +18,7 @@ export const SocialShare = ({ publication, size, spaceBetween, services, round }
                 title: 'Share this record via Email',
                 openInNewIcon: false,
             },
-            icon: EmailIcon,
+            icon: EmailOutlined,
         },
         print: {
             id: 'print',
@@ -43,7 +45,9 @@ export const SocialShare = ({ publication, size, spaceBetween, services, round }
                                 id={locale[item].id}
                                 data-testid={`social-share-${locale[item].id}-link`}
                             >
-                                <Icon size={size} round={round} />
+                                <Avatar sx={{ width: size, height: size, bgcolor: grey[600] }}>
+                                    <Icon sx={{ width: 0.7 * size, height: 0.7 * size }} />
+                                </Avatar>
                             </ExternalLink>
                         </Grid>
                     );
@@ -58,12 +62,4 @@ SocialShare.propTypes = {
     spaceBetween: PropTypes.number,
     services: PropTypes.array.isRequired,
     round: PropTypes.bool,
-};
-
-SocialShare.defaultProps = {
-    publication: {},
-    size: 24,
-    spaceBetween: 4,
-    services: [],
-    round: true,
 };

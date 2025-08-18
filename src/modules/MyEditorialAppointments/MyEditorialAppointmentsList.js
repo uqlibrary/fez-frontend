@@ -1,43 +1,52 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import MaterialTable, { MTableAction, MTableBodyRow, MTableEditRow } from '@material-table/core';
+// eslint-disable-next-line camelcase
+import { MaterialReactTable, useMaterialReactTable, MRT_EditActionButtons } from 'material-react-table';
 import moment from 'moment';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { tableIcons } from './MyEditorialAppointmentsListIcons';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { DialogActions, DialogContent, DialogTitle } from '@mui/material';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import TextField from '@mui/material/TextField';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { Box, Typography, Tooltip, IconButton } from '@mui/material';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { TextField as SharedTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { RoleField, JournalIdField } from 'modules/SharedComponents/LookupFields';
 import { default as locale } from 'locale/components';
+import { useMrtTable } from 'hooks';
+import { validationRules } from './validationRules';
 
-import {
-    EDITORIAL_APPOINTMENT_MAX_YEAR,
-    EDITORIAL_APPOINTMENT_MIN_YEAR,
-    EDITORIAL_ROLE_MAP,
-    EDITORIAL_ROLE_OPTIONS,
-    EDITORIAL_ROLE_OTHER,
-} from 'config/general';
+import { EDITORIAL_ROLE_MAP, EDITORIAL_ROLE_OPTIONS, EDITORIAL_ROLE_OTHER } from 'config/general';
+
+const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
+
+const StyledToolbar = styled(Typography)(() => ({
+    margin: '8px',
+    cursor: 'pointer',
+    flexDirection: 'column',
+    gridColumn: 2,
+}));
+
+const StyledDatePicker = styled(DesktopDatePicker)(({ theme }) => ({
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+        minWidth: '120px',
+    },
+}));
 
 export const CustomToolbar = props => {
     return (
-        <Typography
+        <StyledToolbar
             variant="h6"
             align="center"
-            style={{
-                margin: '8px',
-                cursor: 'pointer',
-            }}
             onClick={() => {
                 props.onChange(moment(new Date(), 'YYYY'));
             }}
@@ -45,62 +54,16 @@ export const CustomToolbar = props => {
             data-testid="eap-end-year-current"
         >
             {locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}
-        </Typography>
+        </StyledToolbar>
     );
 };
 
-const StyledDatePicker = styled(DatePicker)(({ theme }) => ({
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-        minWidth: '120px',
-    },
-}));
-
-const StyledResponsiveWrapper = styled('div')(({ theme }) => ({
-    [theme.breakpoints.down('md')]: {
-        '& [class*="MuiToolbar-root"]': {
-            padding: 0,
-            display: 'block',
-            marginBlockEnd: '12px',
-
-            '& > div:first-child': {
-                display: 'none',
-            },
-        },
-
-        '& [class*="MuiTable-root"]': {
-            '& thead': {
-                display: 'none',
-            },
-
-            '& tr[class*="MuiTableRow-root"]': {
-                display: 'block',
-                width: '100%',
-                boxSizing: 'border-box',
-
-                '& td[class*="MuiTableCell-root"]:last-of-type': {
-                    display: 'block',
-                    clear: 'both',
-                    width: '100% !important',
-                    boxSizing: 'border-box',
-                },
-            },
-            '& tr[class*="MuiTableRow-root"]:not(:last-of-type)': {
-                marginBottom: '12px',
-            },
-        },
-
-        '& button#my-editorial-appointments-add-new-editorial-appointment': {
-            width: '100%',
-        },
-    },
-}));
-
-export const GetColumns = () => {
+export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
     const theme = useTheme();
     const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
 
     const {
+        deleteConfirmationLocale,
         header: {
             columns: { journalName, role, startYear, endYear },
         },
@@ -115,557 +78,663 @@ export const GetColumns = () => {
                 startYearLabel,
                 endYearLabel,
                 endYearHint,
-                endYearErrorMessage,
+                addButtonTooltip,
+                editButtonTooltip,
+                deleteButtonTooltip,
             },
         },
     } = locale.components.myEditorialAppointmentsList;
-    return [
-        {
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {journalName.title}
-                </Typography>
-            ),
-            field: 'eap_journal_name',
-            render: rowData => (
-                <Typography
-                    variant="body2"
-                    data-testid={`eap-journal-name-${rowData.tableData.id}`}
-                    id={`eap-journal-name-${rowData.tableData.id}`}
-                >
-                    {rowData.eap_journal_name}
-                </Typography>
-            ),
-            editComponent: props => {
-                const { rowData } = props;
-                const handleChange = selectedItem => {
-                    props.onRowDataChange({
-                        ...rowData,
-                        eap_jnl_id: selectedItem.jnl_jid,
-                        eap_journal_name: selectedItem.jnl_title || selectedItem.value,
-                    });
-                };
-
-                return (
-                    <React.Fragment>
-                        <JournalIdField
-                            autoFocus
-                            journalIdFieldId="eap-journal-name"
-                            value={
-                                !!rowData.eap_jnl_id
-                                    ? { id: rowData.eap_jnl_id, value: props.value }
-                                    : { value: props.value }
-                            }
-                            onChange={handleChange}
-                            error={(rowData.eap_journal_name || '').length === 0}
-                            label={journalNameLabel}
-                            placeholder={journalNameHint}
-                            required
-                            fullWidth
-                            allowFreeText
-                            clearOnInputClear
-                            floatingLabelText="Journal name"
-                        />
-                    </React.Fragment>
-                );
-            },
-            validate: rowData => !!rowData.eap_journal_name && rowData.eap_journal_name !== '',
-            cellStyle: matchesMd
-                ? {
-                      width: '45%',
-                      maxWidth: '45%',
-                  }
-                : {
-                      display: 'block',
-                      width: '100%',
-                      boxSizing: 'border-box',
-                  },
-            headerStyle: {
-                width: '45%',
-                maxWidth: '45%',
-            },
-        },
-        {
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {role.title}
-                </Typography>
-            ),
-            field: 'eap_role_name',
-            render: rowData => (
-                <Typography
-                    variant="body2"
-                    id={`eap-role-name-${rowData.tableData.id}`}
-                    data-testid={`eap-role-name-${rowData.tableData.id}`}
-                >
-                    {`${EDITORIAL_ROLE_MAP[rowData.eap_role_cvo_id]}${
-                        !!rowData.eap_role_name ? ' (' + rowData.eap_role_name + ')' : ''
-                    }`}
-                </Typography>
-            ),
-            editComponent: props => {
-                const { rowData } = props;
-
-                const handleChange = selectedItem => {
-                    props.onRowDataChange({
-                        ...rowData,
-                        eap_role_cvo_id: selectedItem,
-                    });
-                };
-
-                const handleClear = () =>
-                    props.onRowDataChange({ ...rowData, eap_role_name: null, eap_role_cvo_id: null });
-
-                const handleRoleNameChangeForOther = e =>
-                    props.onRowDataChange({ ...rowData, eap_role_name: e.target.value });
-
-                return (
-                    <React.Fragment>
-                        <RoleField
-                            {...props}
-                            autoCompleteSelectFieldId="eap-role-cvo-id"
-                            fullWidth
-                            clearable
-                            key={`eap-role-${rowData.eap_role_cvo_id}`}
-                            id="eap-role-cvo-id"
-                            floatingLabelText={editorialRoleLabel}
-                            hintText={editorialRoleHint}
-                            onChange={handleChange}
-                            onClear={handleClear}
-                            itemsList={EDITORIAL_ROLE_OPTIONS}
-                            required
-                            autoComplete="off"
-                            error={!rowData.eap_role_cvo_id}
-                            value={
-                                !!rowData.eap_role_cvo_id
-                                    ? {
-                                          value: rowData.eap_role_cvo_id,
-                                          text: EDITORIAL_ROLE_MAP[rowData.eap_role_cvo_id],
-                                      }
-                                    : null
-                            }
-                        />
-                        {rowData.eap_role_cvo_id === EDITORIAL_ROLE_OTHER && (
-                            <SharedTextField
-                                value={rowData.eap_role_name || ''}
-                                onChange={handleRoleNameChangeForOther}
-                                textFieldId="eap-role-name"
-                                error={!rowData.eap_role_name}
-                                label={otherRoleLabel}
-                                placeholder={otherRoleHint}
-                                required
-                                fullWidth
-                            />
-                        )}
-                    </React.Fragment>
-                );
-            },
-            validate: rowData =>
-                !!rowData.eap_role_cvo_id &&
-                (rowData.eap_role_cvo_id === EDITORIAL_ROLE_OTHER ? !!rowData.eap_role_name : true),
-            cellStyle: matchesMd
-                ? {
-                      width: '25%',
-                      maxWidth: '25%',
-                  }
-                : {
-                      display: 'block',
-                      width: '100%',
-                      boxSizing: 'border-box',
-                  },
-            headerStyle: {
-                width: '25%',
-                maxWidth: '25%',
-            },
-        },
-        {
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {startYear.title}
-                </Typography>
-            ),
-            field: 'eap_start_year',
-            render: rowData => (
-                <Typography
-                    variant="body2"
-                    id={`eap-start-year-${rowData.tableData.id}`}
-                    data-testid={`eap-start-year-${rowData.tableData.id}`}
-                >
-                    {rowData.eap_start_year}
-                </Typography>
-            ),
-            editComponent: props => {
-                return (
-                    <LocalizationProvider dateAdapter={AdapterMoment}>
-                        <StyledDatePicker
-                            value={(!!props.value && moment(String(props.value), 'YYYY')) || null}
-                            onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
-                            views={['year']}
-                            openTo="year"
-                            disableFuture
-                            inputProps={{
-                                id: 'eap-start-year-input',
-                                'data-testid': 'eap-start-year-input',
-                                label: startYearLabel,
-                                'aria-label': startYearLabel,
-                                'aria-labelledby': 'eap-start-year-label',
-                            }}
-                            renderInput={params => {
-                                const value = params.inputProps?.value ?? /* istanbul ignore next */ null;
-                                return (
-                                    <TextField
-                                        {...params}
-                                        id="eap-start-year"
-                                        variant="standard"
-                                        required
-                                        label={startYearLabel}
-                                        InputLabelProps={{
-                                            id: 'eap-start-year-label',
-                                            'data-testid': 'eap-start-year-label',
-                                            htmlFor: 'eap-start-year-input',
-                                        }}
-                                        error={
-                                            !value ||
-                                            !moment(String(value), 'YYYY').isValid() ||
-                                            !moment(String(value), 'YYYY').isSameOrBefore(moment(), 'year')
-                                        }
-                                    />
-                                );
-                            }}
-                        />
-                    </LocalizationProvider>
-                );
-            },
-            validate: rowData => {
-                const startYearMoment = moment(String(rowData.eap_start_year), 'YYYY');
-                return (
-                    startYearMoment.isValid() &&
-                    startYearMoment.isSameOrBefore(moment(), 'year') &&
-                    startYearMoment.isSameOrAfter(moment(EDITORIAL_APPOINTMENT_MIN_YEAR, 'YYYY'))
-                );
-            },
-            cellStyle: matchesMd
-                ? {
-                      width: '15%',
-                      maxWidth: '15%',
-                      float: 'none',
-                  }
-                : {
-                      width: '100%',
-                      display: 'block',
-                      boxSizing: 'border-box',
-                  },
-            headerStyle: {
-                width: '15%',
-                maxWidth: '15%',
-            },
-        },
-        {
-            title: (
-                <Typography variant="caption" color="secondary">
-                    {endYear.title}
-                </Typography>
-            ),
-            field: 'eap_end_year',
-            render: rowData => (
-                <Typography
-                    variant="body2"
-                    id={`eap-end-year-${rowData.tableData.id}`}
-                    data-testid={`eap-end-year-${rowData.tableData.id}`}
-                >
-                    {moment(String(rowData.eap_end_year), 'YYYY').format('YYYY') === moment(new Date()).format('YYYY')
-                        ? locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel
-                        : rowData.eap_end_year}
-                </Typography>
-            ),
-            editComponent: ({ value, rowData, onChange }) => {
-                const minDate = new Date();
-                minDate.setFullYear(parseInt(rowData.eap_start_year, 10));
-                minDate.setDate(1);
-                minDate.setMonth(0);
-
-                return (
-                    <LocalizationProvider dateAdapter={AdapterMoment}>
-                        <StyledDatePicker
-                            value={(!!value && moment(String(value), 'YYYY')) || null}
-                            onChange={value => {
-                                onChange((!!value && value.format('YYYY')) || null);
-                            }}
-                            {...((!!value &&
-                                moment(String(value), 'YYYY').format('YYYY') === moment().format('YYYY') && {
-                                    inputFormat: `[${locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}]`,
-                                }) ||
-                                {})}
-                            views={['year']}
-                            openTo="year"
-                            closeOnSelect
-                            minDate={minDate}
-                            showToolbar
-                            ToolbarComponent={CustomToolbar}
-                            OpenPickerButtonProps={{
-                                id: 'eap-end-year-button-input',
-                                'data-testid': 'eap-end-year-button-input',
-                            }}
-                            inputProps={{
-                                id: 'eap-end-year-input',
-                                'data-testid': 'eap-end-year-input',
-                                label: endYearLabel,
-                                'aria-label': endYearLabel,
-                                'aria-labelledby': 'eap-end-year-label',
-                                placeholder: endYearHint,
-                            }}
-                            renderInput={params => {
-                                const displayValue = params.inputProps?.value ?? /* istanbul ignore next */ null;
-
-                                return (
-                                    <TextField
-                                        {...params}
-                                        value={displayValue}
-                                        id="eap-end-year"
-                                        variant="standard"
-                                        required
-                                        helperText={
-                                            !!value &&
-                                            (!moment(String(value), 'YYYY').isValid() ||
-                                                moment(String(value), 'YYYY').isBefore(
-                                                    moment(String(rowData.eap_start_year), 'YYYY'),
-                                                ))
-                                                ? endYearErrorMessage
-                                                : ''
-                                        }
-                                        label={endYearLabel}
-                                        InputLabelProps={{
-                                            id: 'eap-end-year-label',
-                                            'data-testid': 'eap-end-year-label',
-                                            htmlFor: 'eap-end-year-input',
-                                        }}
-                                        error={
-                                            !moment(String(value), 'YYYY').isValid() ||
-                                            moment(String(value), 'YYYY').isBefore(
-                                                moment(String(rowData.eap_start_year), 'YYYY'),
-                                            )
-                                        }
-                                    />
-                                );
-                            }}
-                        />
-                    </LocalizationProvider>
-                );
-            },
-            validate: rowData => {
-                const endYearMoment = moment(String(rowData.eap_end_year), 'YYYY');
-                return (
-                    endYearMoment.isValid() &&
-                    endYearMoment.isSameOrBefore(moment(EDITORIAL_APPOINTMENT_MAX_YEAR, 'YYYY')) &&
-                    endYearMoment.isSameOrAfter(moment(String(rowData.eap_start_year), 'YYYY'))
-                );
-            },
-            cellStyle: matchesMd
-                ? {
-                      width: '15%',
-                      maxWidth: '15%',
-                      float: 'none',
-                  }
-                : {
-                      width: '100%',
-                      display: 'block',
-                      boxSizing: 'border-box',
-                  },
-            headerStyle: {
-                width: '15%',
-                maxWidth: '15%',
-            },
-        },
-    ];
-};
-
-export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
-    const materialTableRef = React.createRef();
-    const columns = React.createRef();
-    columns.current = GetColumns();
 
     const {
-        form: {
-            locale: { addButtonTooltip, editButtonTooltip, deleteButtonTooltip },
-        },
-    } = locale.components.myEditorialAppointmentsList;
+        data,
+        isBusy,
+        pendingDeleteRowId,
+        isOpen,
+        editingRow,
+        validationErrors,
+        setData,
+        setBusy,
+        setDeleteRow,
+        resetDeleteRow,
+        setEditRow,
+        resetEditRow,
+        validate,
+        getValidationError,
+        handleValidation,
+        clearValidationErrors,
+    } = useMrtTable(list, validationRules);
 
-    const [data, setData] = React.useState(list);
-    const handleEditingApproved = props => (action, newData, oldData) => {
-        const invalid = props.columns.some(column => !column.validate(newData));
+    const columns = React.useMemo(
+        () => [
+            {
+                accessorKey: 'eap_journal_name',
+                header: journalName.title,
+                Header: ({ column }) => {
+                    return (
+                        <Typography variant="caption" color="secondary">
+                            {column.columnDef.header}
+                        </Typography>
+                    );
+                },
+                Cell: ({ cell, row }) => {
+                    const value = cell.getValue();
+                    return (
+                        <Typography
+                            variant="body2"
+                            data-testid={`eap-journal-name-${row.index}`}
+                            id={`eap-journal-name-${row.index}`}
+                        >
+                            {value}
+                        </Typography>
+                    );
+                },
+                Edit: ({ row, column }) => {
+                    const [state, setState] = React.useState({
+                        eap_jnl_id: row._valuesCache.eap_jnl_id || row.original.eap_jnl_id,
+                        eap_journal_name: row._valuesCache.eap_journal_name || row.original.eap_journal_name,
+                    });
+
+                    const errors = validationErrors[row.id] || [];
+                    const error = getValidationError(errors, 'eap_journal_name');
+
+                    const handleChange = selectedItem => {
+                        setState({
+                            eap_jnl_id: selectedItem.jnl_jid,
+                            eap_journal_name: selectedItem.jnl_title || selectedItem.value,
+                        });
+                        row.original.eap_jnl_id = selectedItem.jnl_jid;
+                        row._valuesCache[column.id] = selectedItem.jnl_title || selectedItem.value;
+
+                        handleValidation(row, 'eap_journal_name', row._valuesCache[column.id]);
+                    };
+
+                    return (
+                        <React.Fragment>
+                            <JournalIdField
+                                autoFocus
+                                journalIdFieldId="eap-journal-name"
+                                value={
+                                    !!state.eap_jnl_id
+                                        ? { id: state.eap_jnl_id, value: state.eap_journal_name }
+                                        : { value: state.eap_journal_name }
+                                }
+                                onChange={handleChange}
+                                error={!!error}
+                                label={journalNameLabel}
+                                placeholder={journalNameHint}
+                                required
+                                fullWidth
+                                allowFreeText
+                                clearOnInputClear
+                                floatingLabelText="Journal name"
+                            />
+                        </React.Fragment>
+                    );
+                },
+                size: 300,
+                grow: true,
+            },
+            { accessorKey: 'eap_role_name', header: '', enableEditing: false, Edit: () => null },
+            {
+                accessorKey: 'eap_role_cvo_id',
+                header: role.title,
+                Header: ({ column }) => {
+                    return (
+                        <Typography variant="caption" color="secondary">
+                            {column.columnDef.header}
+                        </Typography>
+                    );
+                },
+                Cell: ({ cell, row }) => {
+                    const value = cell.getValue();
+                    return (
+                        <Typography
+                            variant="body2"
+                            id={`eap-role-name-${row.index}`}
+                            data-testid={`eap-role-name-${row.index}`}
+                        >
+                            {`${EDITORIAL_ROLE_MAP[value]}${
+                                !!(row._valuesCache.eap_role_name || row.original.eap_role_name)
+                                    ? ` (${row._valuesCache.eap_role_name || row.original.eap_role_name})`
+                                    : ''
+                            }`}
+                        </Typography>
+                    );
+                },
+                Edit: ({ row, column }) => {
+                    const [state, setState] = React.useState({
+                        eap_role_cvo_id: row._valuesCache.eap_role_cvo_id || row.original.eap_role_cvo_id,
+                        eap_role_name: row._valuesCache.eap_role_name || row.original.eap_role_name || '',
+                    });
+
+                    const errors = validationErrors[row.id] || [];
+                    const error = getValidationError(errors, 'eap_role_cvo_id');
+                    const errorRoleName = getValidationError(errors, 'eap_role_name');
+
+                    const handleChange = selectedItem => {
+                        setState(prev => ({
+                            ...prev,
+                            eap_role_cvo_id: selectedItem,
+                            eap_role_name: null,
+                        }));
+                        row._valuesCache[column.id] = selectedItem;
+                        row._valuesCache.eap_role_name = null;
+                        handleValidation(row, 'eap_role_cvo_id', row._valuesCache[column.id]);
+                        handleValidation(row, 'eap_role_name', null);
+                    };
+
+                    const handleClear = () => {
+                        setState(prev => ({ ...prev, eap_role_cvo_id: null, eap_role_name: null }));
+                        row._valuesCache[column.id] = null;
+                        row._valuesCache.eap_role_name = null;
+                        handleValidation(row, 'eap_role_cvo_id', row._valuesCache[column.id]);
+                    };
+
+                    const handleRoleNameChangeForOther = e => {
+                        setState(prev => ({
+                            ...prev,
+                            eap_role_name: e.target.value,
+                        }));
+                        row._valuesCache.eap_role_name = e.target.value;
+
+                        handleValidation(row, 'eap_role_name', row._valuesCache.eap_role_name);
+                    };
+
+                    return (
+                        <React.Fragment>
+                            <RoleField
+                                autoCompleteSelectFieldId="eap-role-cvo-id"
+                                fullWidth
+                                clearable
+                                key={`eap-role-${state.eap_role_cvo_id}`}
+                                id="eap-role-cvo-id"
+                                floatingLabelText={editorialRoleLabel}
+                                hintText={editorialRoleHint}
+                                onChange={handleChange}
+                                onClear={handleClear}
+                                itemsList={EDITORIAL_ROLE_OPTIONS}
+                                required
+                                autoComplete="off"
+                                error={!!error}
+                                value={
+                                    !!state.eap_role_cvo_id
+                                        ? {
+                                              value: String(state.eap_role_cvo_id),
+                                              text: EDITORIAL_ROLE_MAP[String(state.eap_role_cvo_id)],
+                                          }
+                                        : null
+                                }
+                            />
+                            {String(state.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER && (
+                                <SharedTextField
+                                    value={state.eap_role_name || ''}
+                                    onChange={handleRoleNameChangeForOther}
+                                    textFieldId="eap-role-name"
+                                    error={!!errorRoleName}
+                                    label={otherRoleLabel}
+                                    placeholder={otherRoleHint}
+                                    required
+                                    fullWidth
+                                />
+                            )}
+                        </React.Fragment>
+                    );
+                },
+                size: 200,
+                grow: true,
+            },
+            {
+                accessorKey: 'eap_start_year',
+                header: startYear.title,
+                Header: ({ column }) => {
+                    return (
+                        <Typography variant="caption" color="secondary">
+                            {column.columnDef.header}
+                        </Typography>
+                    );
+                },
+                Cell: ({ cell, row }) => {
+                    const value = cell.getValue();
+                    return (
+                        <Typography
+                            variant="body2"
+                            id={`eap-start-year-${row.index}`}
+                            data-testid={`eap-start-year-${row.index}`}
+                        >
+                            {value}
+                        </Typography>
+                    );
+                },
+                Edit: ({ row, column }) => {
+                    const currentValue = row._valuesCache.eap_start_year || row.original.eap_start_year;
+                    const errors = validationErrors[row.id] || [];
+                    const error = getValidationError(errors, 'eap_start_year');
+
+                    return (
+                        <LocalizationProvider dateAdapter={AdapterMoment}>
+                            <StyledDatePicker
+                                value={(!!currentValue && moment(String(currentValue), 'YYYY')) || null}
+                                onChange={value => {
+                                    row._valuesCache = {
+                                        ...row._valuesCache,
+                                        [column.id]: (!!value && value.format('YYYY')) || null,
+                                    };
+                                    handleValidation(row, 'eap_start_year', value?.format('YYYY') || null);
+                                    // Re-validate end date when start date changes
+                                    const currentEndDate = row._valuesCache.eap_end_year || row.original.eap_end_year;
+                                    if (currentEndDate) {
+                                        handleValidation(row, 'eap_end_year', currentEndDate);
+                                    }
+                                }}
+                                format="YYYY"
+                                views={['year']}
+                                openTo="year"
+                                disableFuture
+                                closeOnSelect
+                                slotProps={{
+                                    textField: () => {
+                                        return {
+                                            inputProps: {
+                                                id: 'eap-start-year-input',
+                                                'data-testid': 'eap-start-year-input',
+                                                label: startYearLabel,
+                                                'aria-label': startYearLabel,
+                                                'aria-labelledby': 'eap-start-year-label',
+                                                readOnly: false,
+                                            },
+                                            id: 'eap-start-year',
+                                            variant: 'standard',
+                                            required: true,
+                                            label: startYearLabel,
+                                            InputLabelProps: {
+                                                id: 'eap-start-year-label',
+                                                'data-testid': 'eap-start-year-label',
+                                                htmlFor: 'eap-start-year-input',
+                                            },
+                                            error: !!error,
+                                        };
+                                    },
+                                }}
+                            />
+                        </LocalizationProvider>
+                    );
+                },
+                size: 100,
+                grow: false,
+            },
+            {
+                accessorKey: 'eap_end_year',
+                header: endYear.title,
+                Header: ({ column }) => {
+                    return (
+                        <Typography variant="caption" color="secondary">
+                            {column.columnDef.header}
+                        </Typography>
+                    );
+                },
+                Cell: ({ cell, row }) => {
+                    const value = cell.getValue();
+                    return (
+                        <Typography
+                            variant="body2"
+                            id={`eap-end-year-${row.index}`}
+                            data-testid={`eap-end-year-${row.index}`}
+                        >
+                            {moment(String(value), 'YYYY').format('YYYY') === moment(new Date()).format('YYYY')
+                                ? locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel
+                                : value}
+                        </Typography>
+                    );
+                },
+                Edit: ({ row, column }) => {
+                    const startYearValue = row._valuesCache.eap_start_year || row.original.eap_start_year;
+
+                    const errors = validationErrors[row.id] || [];
+                    const error = getValidationError(errors, 'eap_end_year');
+                    const currentValue = row._valuesCache.eap_end_year || row.original.eap_end_year;
+
+                    const minDate = new Date();
+                    minDate.setFullYear(parseInt(startYearValue, 10));
+                    minDate.setDate(1);
+                    minDate.setMonth(0);
+                    return (
+                        <LocalizationProvider dateAdapter={AdapterMoment}>
+                            <StyledDatePicker
+                                value={(!!currentValue && moment(String(currentValue), 'YYYY')) || null}
+                                onChange={value => {
+                                    row._valuesCache = {
+                                        ...row._valuesCache,
+                                        [column.id]: (!!value && value.format('YYYY')) || null,
+                                    };
+                                    handleValidation(row, 'eap_end_year', value?.format('YYYY') || null);
+                                }}
+                                {...((!!currentValue &&
+                                    moment(String(currentValue), 'YYYY').format('YYYY') === moment().format('YYYY') && {
+                                        format: `[${locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}]`,
+                                    }) ||
+                                    {})}
+                                format="YYYY"
+                                views={['year']}
+                                openTo="year"
+                                closeOnSelect
+                                minDate={minDate && moment(minDate)}
+                                slots={{
+                                    toolbar: CustomToolbar,
+                                }}
+                                slotProps={{
+                                    openPickerButton: {
+                                        id: 'eap-end-year-button-input',
+                                        'data-testid': 'eap-end-year-button-input',
+                                    },
+                                    toolbar: {
+                                        hidden: false,
+                                    },
+                                    textField: ownerState => {
+                                        const displayValue = ownerState.value ?? /* istanbul ignore next */ null;
+
+                                        return {
+                                            inputProps: {
+                                                id: 'eap-end-year-input',
+                                                'data-testid': 'eap-end-year-input',
+                                                label: endYearLabel,
+                                                'aria-label': endYearLabel,
+                                                'aria-labelledby': 'eap-end-year-label',
+                                                placeholder: endYearHint,
+                                                readOnly: false,
+                                            },
+                                            value: displayValue,
+                                            id: 'eap-end-year',
+                                            variant: 'standard',
+                                            required: true,
+                                            helperText: !!currentValue && !!error ? error : '',
+                                            label: endYearLabel,
+                                            InputLabelProps: {
+                                                id: 'eap-end-year-label',
+                                                'data-testid': 'eap-end-year-label',
+                                                htmlFor: 'eap-end-year-input',
+                                            },
+                                            error: !!error,
+                                        };
+                                    },
+                                }}
+                            />
+                        </LocalizationProvider>
+                    );
+                },
+                size: 100,
+                grow: false,
+            },
+        ],
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [getValidationError, handleValidation, validationErrors],
+    );
+
+    const handleCreate = ({ values, table, row }) => {
+        const newValues = { ...row.original, ...row._valuesCache, ...values };
+        const errors = validate(newValues);
         /* istanbul ignore if  */
-        if (invalid) {
+        if (!!errors) {
             return;
         }
-        props.onEditingApproved(action, newData, oldData);
+
+        setBusy();
+        handleRowAdd(newValues)
+            .then(data => {
+                setData(prevState => {
+                    return [...prevState, data];
+                });
+            })
+            .catch(() => setData(prevState => [...prevState]))
+            .finally(() => {
+                table.setCreatingRow(null);
+                resetEditRow();
+                setBusy(false);
+            });
     };
 
+    const handleEdit = ({ values, table, row }) => {
+        const newValues = { ...row.original, ...row._valuesCache, ...values };
+        const errors = validate(newValues);
+        /* istanbul ignore if  */
+        if (!!errors) {
+            return;
+        }
+        setBusy();
+        handleRowUpdate(newValues, row.original)
+            .then(data => {
+                setData(prevState => {
+                    const list = [...prevState];
+                    const target = list.find(el => el.eap_id === row.original.eap_id);
+                    const index = list.indexOf(target);
+                    list[index] = data;
+                    return list;
+                });
+            })
+            .catch(() => {
+                setData(prevState => [...prevState]);
+            })
+            .finally(() => {
+                table.setEditingRow(null);
+                resetEditRow();
+                setBusy(false);
+            });
+    };
+
+    const handleDeleteApproved = () => {
+        const row = data.find(row => row.eap_id === pendingDeleteRowId);
+        setBusy();
+        handleRowDelete(row)
+            .then(() => {
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                        const dataDelete = [...data];
+                        const target = dataDelete.find(el => el.eap_id === row.eap_id);
+                        const index = dataDelete.indexOf(target);
+                        dataDelete.splice(index, 1);
+                        setData([...dataDelete]);
+                        resolve();
+                    }, 1000);
+                });
+            })
+            .finally(() => setBusy(false));
+    };
+
+    // DELETE action
+    const openDeleteConfirmModal = id => () => {
+        setDeleteRow(id);
+    };
+
+    const cancelDeleteConfirmModal = () => {
+        resetDeleteRow();
+    };
+
+    const table = useMaterialReactTable({
+        columns,
+        data,
+        getRowId: row => row.eap_id,
+        createDisplayMode: matchesMd ? 'row' : 'modal',
+        editDisplayMode: matchesMd ? 'row' : 'modal',
+        enableEditing: true,
+        enableColumnDragging: false,
+        enableColumnResizing: false,
+        enableRowDragging: false,
+        enableRowSelection: false,
+        enableColumnActions: false,
+        enableColumnFilterModes: false,
+        enablePagination: false,
+        enableToolbarInternalActions: false,
+        positionActionsColumn: 'last',
+        state: {
+            showAlertBanner: false,
+            showLoadingOverlay: isBusy,
+        },
+        displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
+        renderCreateRowDialogContent: ({ table, row, internalEditComponents }) => (
+            <Box
+                id={`my-editorial-appointments-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                data-testid={`my-editorial-appointments-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+            >
+                <DialogTitle variant="h5">{addButtonTooltip}</DialogTitle>
+                <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                    {internalEditComponents}
+                </DialogContent>
+                <DialogActions>
+                    <MRT_EditActionButtons
+                        variant="text"
+                        table={table}
+                        row={row}
+                        sx={{ flexDirection: 'column', flexGrow: 1 }}
+                    />
+                </DialogActions>
+            </Box>
+        ),
+        renderEditRowDialogContent: ({ table, row, internalEditComponents }) => (
+            <Box
+                id={`my-editorial-appointments-dialog-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                data-testid={`my-editorial-appointments-dialog-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+            >
+                <DialogTitle variant="h5">{editButtonTooltip}</DialogTitle>
+                <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                    {internalEditComponents}
+                </DialogContent>
+                <DialogActions>
+                    <MRT_EditActionButtons
+                        variant="text"
+                        table={table}
+                        row={row}
+                        sx={{ flexDirection: 'column', flexGrow: 1 }}
+                    />
+                </DialogActions>
+            </Box>
+        ),
+        renderTopToolbarCustomActions: ({ table }) => (
+            <Button
+                id={`my-editorial-appointments-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                data-testid={`my-editorial-appointments-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                disabled={disabled || table.getState().creatingRow !== null}
+                variant="contained"
+                color="primary"
+                children={addButtonTooltip}
+                onClick={() => {
+                    resetEditRow();
+                    table.setEditingRow(null);
+                    table.setCreatingRow(true);
+                    // immediately force validation of new row
+                    handleValidation({ id: 'mrt-row-create' }, columns[0].accessorKey, '');
+                }}
+                sx={{ marginLeft: 'auto' }}
+            />
+        ),
+        renderRowActions: ({ row }) => {
+            return (
+                <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
+                    <Tooltip title={editButtonTooltip}>
+                        <IconButton
+                            onClick={() => {
+                                setEditRow(row);
+                                table.setCreatingRow(null);
+                                table.setEditingRow(row);
+                            }}
+                            disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
+                            id={`my-editorial-appointments-list-row-${
+                                row.index
+                            }-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                            data-testid={`my-editorial-appointments-list-row-${
+                                row.index
+                            }-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                        >
+                            <tableIcons.Edit />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title={deleteButtonTooltip}>
+                        <IconButton
+                            onClick={openDeleteConfirmModal(row.id)}
+                            disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
+                            id={`my-editorial-appointments-list-row-${
+                                row.index
+                            }-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                            data-testid={`my-editorial-appointments-list-row-${
+                                row.index
+                            }-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                        >
+                            <tableIcons.Delete />
+                        </IconButton>
+                    </Tooltip>
+                </Box>
+            );
+        },
+        onCreatingRowCancel: () => {
+            resetEditRow();
+            clearValidationErrors();
+        },
+        onCreatingRowSave: handleCreate,
+        onEditingRowSave: handleEdit,
+        onEditingRowCancel: () => setEditRow(null),
+        initialState: {
+            expanded: true,
+            columnVisibility: { eap_role_name: false },
+            columnPinning: { ['right']: ['mrt-row-actions'] },
+            sorting: [{ id: 'eap_role_cvo_id', desc: true }],
+        },
+        icons: {
+            SaveIcon: props => (
+                <tableIcons.Check
+                    id={`my-editorial-appointments-${!!editingRow ? 'edit' : 'add'}-save`}
+                    data-testid={`my-editorial-appointments-${!!editingRow ? 'edit' : 'add'}-save`}
+                    color="secondary"
+                    {...props}
+                />
+            ),
+            CancelIcon: props => (
+                <tableIcons.Clear
+                    id={`my-editorial-appointments-${!!editingRow ? 'edit' : 'add'}-cancel`}
+                    data-testid={`my-editorial-appointments-${!!editingRow ? 'edit' : 'add'}-cancel`}
+                    color="secondary"
+                    {...props}
+                />
+            ),
+        },
+        muiTableProps: {
+            sx: {
+                borderCollapse: 'collapse',
+            },
+        },
+        muiTableBodyCellProps: {
+            sx: {
+                '&:last-of-type > div': {
+                    gap: 0,
+                    [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: { flexDirection: 'row-reverse', justifyContent: 'flex-end' },
+                },
+                '&:not(:last-child)': { alignContent: 'flex-start' },
+            },
+        },
+        muiTableBodyRowProps: ({ row }) => ({
+            id: `my-editorial-appointments-list-row-${row.index === -1 ? 'add' : row.index}`,
+            'data-testid': `my-editorial-appointments-list-row-${row.index === -1 ? 'add' : row.index}`,
+            ...(moment(String(row._valuesCache.eap_end_year || row.original.eap_end_year), 'YYYY').isBefore(
+                moment(),
+                'year',
+            )
+                ? { style: { borderLeft: '8px solid red' } }
+                : {}),
+        }),
+    });
+
     return (
-        <MaterialTable
-            tableRef={materialTableRef}
-            columns={columns.current}
-            components={{
-                Container: props => (
-                    <StyledResponsiveWrapper
-                        {...props}
-                        id="my-editorial-appointments-list"
-                        data-testid="my-editorial-appointments-list"
-                    />
-                ),
-                Row: props => (
-                    <MTableBodyRow
-                        {...props}
-                        id={`my-editorial-appointments-list-row-${props.index}`}
-                        data-testid={`my-editorial-appointments-list-row-${props.index}`}
-                    />
-                ),
-                EditRow: props => (
-                    <MTableEditRow
-                        {...props}
-                        id={`my-editorial-appointments-list-${props.mode}-row`}
-                        data-testid={`my-editorial-appointments-list-${props.mode}-row`}
-                        onEditingApproved={handleEditingApproved(props)}
-                        sx={{
-                            '& td:not(:last-of-type)': {
-                                verticalAlign: 'top',
-                            },
-                        }}
-                    />
-                ),
-                Action: props => {
-                    /* istanbul ignore else */
-                    if (typeof props.action === 'function') {
-                        const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
-                        return (
-                            <MTableAction
-                                {...props}
-                                action={{
-                                    ...restAction,
-                                    tooltip,
-                                    icon: () => (
-                                        <Icon
-                                            disabled={props.disabled}
-                                            id={`my-editorial-appointments-list-row-${
-                                                props.data.tableData.id
-                                            }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            data-testid={`my-editorial-appointments-list-row-${
-                                                props.data.tableData.id
-                                            }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            {...restAction.iconProps}
-                                        />
-                                    ),
-                                }}
-                                size="small"
-                            />
-                        );
-                    }
-                    /* istanbul ignore else */
-                    if (!!props.action.icon) {
-                        //  Save or Cancel actions for Add/Edit/Delete actions
-                        const { icon: Icon, tooltip, ...restAction } = props.action;
-                        return (
-                            <MTableAction
-                                {...props}
-                                action={{
-                                    ...restAction,
-                                    icon: () => (
-                                        <Icon
-                                            id={`my-editorial-appointments-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            data-testid={`my-editorial-appointments-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                        />
-                                    ),
-                                }}
-                            />
-                        );
-                    }
-
-                    /* istanbul ignore else */
-                    if (!!props.action.tooltip) {
-                        //  Add action
-                        const { tooltip } = props.action;
-                        return (
-                            <Button
-                                id={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                data-testid={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                disabled={props.disabled || disabled}
-                                variant="contained"
-                                color="primary"
-                                children={tooltip}
-                                onClick={event => props.action.onClick(event, props.data)}
-                            />
-                        );
-                    }
-
-                    // Catch for erronious "Buttons" on rows after editing
-                    /* istanbul ignore next */
-                    return <React.Fragment />;
-                },
-            }}
-            data={data}
-            icons={tableIcons}
-            title=""
-            localization={{
-                body: {
-                    addTooltip: addButtonTooltip,
-                    editTooltip: editButtonTooltip,
-                    deleteTooltip: deleteButtonTooltip,
-                },
-            }}
-            editable={{
-                onRowUpdateCancelled: () => {},
-                onRowAdd: newData => {
-                    return handleRowAdd(newData)
-                        .then(data => {
-                            setData(prevState => {
-                                return [...prevState, data];
-                            });
-                        })
-                        .catch(() => setData(prevState => prevState));
-                },
-                onRowUpdate: (newData, oldData) => {
-                    return handleRowUpdate(newData, oldData)
-                        .then(data => {
-                            setData(prevState => {
-                                const list = [...prevState];
-                                const target = list.find(el => el.eap_id === oldData.eap_id);
-                                const index = list.indexOf(target);
-                                list[index] = data;
-                                return list;
-                            });
-                        })
-                        .catch(() => setData(prevState => prevState));
-                },
-                onRowDelete: oldData => {
-                    return handleRowDelete(oldData).then(() => {
-                        return new Promise(resolve => {
-                            setTimeout(() => {
-                                const dataDelete = [...data];
-                                const target = dataDelete.find(el => el.eap_id === oldData.eap_id);
-                                const index = dataDelete.indexOf(target);
-                                dataDelete.splice(index, 1);
-                                setData([...dataDelete]);
-                                resolve();
-                            }, 1000);
-                        });
-                    });
-                },
-            }}
-            options={{
-                actionsColumnIndex: -1,
-                addRowPosition: 'first',
-                paging: false,
-                search: data.length > 10,
-                rowStyle: rowData => ({
-                    borderLeft: moment(String(rowData.eap_end_year), 'YYYY').isBefore(moment(), 'year')
-                        ? '8px solid red'
-                        : '',
-                }),
-            }}
-        />
+        <Box
+            id="my-editorial-appointments-list"
+            data-testid="my-editorial-appointments-list"
+            sx={{ '& .MuiPaper-root': { border: 0, boxShadow: 0 } }}
+        >
+            <ConfirmationBox
+                confirmationBoxId="my-editorial-appointments-delete-appointment-confirmation"
+                onAction={handleDeleteApproved}
+                onClose={cancelDeleteConfirmModal}
+                isOpen={isOpen}
+                locale={deleteConfirmationLocale}
+            />
+            <MaterialReactTable table={table} />
+        </Box>
     );
 };
 

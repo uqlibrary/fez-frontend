@@ -60,6 +60,7 @@ export function loadUserList({ page, pageSize, search }) {
             return Promise.resolve({
                 data: response.data,
                 page: response.current_page - 1,
+                size: response.per_page,
                 totalCount: response.total,
             });
         } catch (e) {
@@ -175,7 +176,7 @@ export function checkForExistingUser(search, searchField, id, validation, asyncE
             .then(response => {
                 exceptionCaught = false;
                 if (
-                    response.total === 1 &&
+                    response.total >= 1 &&
                     response.data.filter(user => user.usr_id !== id && user[searchField] === search).length > 0
                 ) {
                     dispatch({

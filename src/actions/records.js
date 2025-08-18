@@ -38,7 +38,7 @@ const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
  * If error occurs on any stage failed action is dispatched
  * @param {object} data to be posted, refer to backend API
- * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise}
  */
 export function createNewRecord(data) {
     return dispatch => {
@@ -199,7 +199,7 @@ const prepareThesisSubmission = data => {
  * @param {object} preCreatedRecord If present, the newly created record from a previous attempt.
  * @param {string} formName the name of the form being submitted
  * @param {Array} fullyUploadedFiles List of names of files which have been uploaded already to the server
- * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise}
  */
 export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUploadedFiles = []) {
     return dispatch => {
@@ -341,6 +341,7 @@ const getAdminRecordRequest = data => {
         'filesSection',
         'securitySection',
         'reasonSection',
+        'relatedServicesSection',
         'culturalInstitutionNoticeSection',
     ];
 
@@ -367,6 +368,7 @@ const getAdminRecordRequest = data => {
             ...transformers.getSecuritySectionSearchKeys(data.securitySection),
             ...transformers.getNotesSectionSearchKeys(data.notesSection),
             ...transformers.getReasonSectionSearchKeys(data.reasonSection),
+            ...transformers.getRelatedServiceSectionSearchKeys(data.relatedServicesSection),
             ...transformers.getDatastreamInfo(
                 (data.publication || {}).fez_datastream_info || [],
                 (data.filesSection || {}).fez_datastream_info || [],
@@ -387,7 +389,7 @@ const getAdminRecordRequest = data => {
  * Save a new collection involves a single request.
  * If error occurs on any stage failed action is dispatched
  * @param {object} data to be posted, refer to backend API
- * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise}
  */
 export function createCollection(data, authorId) {
     return dispatch => {
@@ -456,7 +458,7 @@ export const updateCollection = data => {
  * Save a new community involves a single request.
  * If error occurs on any stage failed action is dispatched
  * @param {object} data to be posted, refer to backend API
- * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise}
  */
 export function createCommunity(data, authorId) {
     return dispatch => {
@@ -519,7 +521,7 @@ export const updateCommunity = data => {
  * Update work request for admins: patch record
  * If error occurs on any stage failed action is displayed
  * @param {object} data to be posted, refer to backend API data
- * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise}
  */
 export function adminUpdate(data) {
     const { files } = data.filesSection || {};
@@ -532,7 +534,6 @@ export function adminUpdate(data) {
             ...data.publication,
             collections: data.adminSection.collections,
         });
-
         return Promise.resolve([])
             .then(() =>
                 hasFilesToUpload
@@ -592,7 +593,7 @@ export function adminReset() {
  * Save a new record as an admin involves multiple requests.
  * If error occurs on any stage failed action is dispatched
  * @param {object} data to be posted, refer to backend API
- * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise}
  */
 export function adminCreate(data) {
     const {
@@ -667,24 +668,6 @@ export function adminCreate(data) {
     };
 }
 
-export const deleteAttachedFile = file => {
-    return dispatch => {
-        dispatch({
-            type: actions.ADMIN_DELETE_ATTACHED_FILE,
-            payload: file,
-        });
-    };
-};
-
-export const renameAttachedFile = (prev, next) => {
-    return dispatch => {
-        dispatch({
-            type: actions.ADMIN_RENAME_ATTACHED_FILE,
-            payload: { prev, next },
-        });
-    };
-};
-
 export const unlockRecord = (pid, unlockRecordCallback) => {
     return dispatch => {
         dispatch({
@@ -746,7 +729,7 @@ export const changeAuthorId = (records, data) => {
  * @param {bool} isBulkUpdate
  */
 export const changeDisplayType = (records, data, isBulkUpdate = false) => {
-    const changeDisplayTypeRequest = records.map(record => ({
+    const changeDisplayTypeRequest = records.map?.(record => ({
         rek_pid: record.rek_pid,
         ...data,
         fez_record_search_key_herdc_code: {

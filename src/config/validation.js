@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import Immutable from 'immutable';
 
 import locale from 'locale/validationErrors';
 import { MEDIATED_ACCESS_ID, ORG_TYPE_NOT_SET } from 'config/general';
@@ -19,6 +18,7 @@ export const spacelessMaxLengthValidator = max => value => {
 };
 
 export const maxLength255Validator = maxLengthValidator(255);
+export const maxLength1000Validator = maxLengthValidator(1000);
 export const spacelessMaxLength9Validator = spacelessMaxLengthValidator(9);
 export const spacelessMaxLength10Validator = spacelessMaxLengthValidator(10);
 export const spacelessMaxLength11Validator = spacelessMaxLengthValidator(11);
@@ -71,6 +71,7 @@ export const maxListEditorTextLength = max => value =>
 
 export const maxListEditorTextLength800 = maxListEditorTextLength(800);
 export const maxListEditorTextLength2000 = maxListEditorTextLength(2000);
+export const maxListEditorTextLength65k = maxListEditorTextLength(65535);
 
 const doiRegexps = [
     /10\.\d{4,9}\/[-._;()\/:A-Z0-9]+/i,
@@ -90,7 +91,17 @@ export const getDoi = value => {
     return null;
 };
 
-export const isValidDOIValue = value => !!getDoi(value);
+export const isValidDOIValue = value => {
+    if (!value?.trim?.()) return false;
+    for (const regex of doiRegexps) {
+        const anchoredRegex = new RegExp(`^${regex.source}`, regex.flags);
+        const matches = value?.match(anchoredRegex);
+        if (matches) {
+            return true;
+        }
+    }
+    return false;
+};
 
 export const sanitizeDoi = value => getDoi(value) || value;
 
@@ -115,6 +126,21 @@ export const isValidPublicationTitle = value => {
     return isValid.test(value.trim());
 };
 
+export const isValidOrcid = value => {
+    const isValid = /^(\d{4}-){3}\d{3}(\d|X)$/;
+    return isValid.test(value.toString().trim());
+};
+
+export const isValidRaid = value => {
+    const isValid = /[^\/]+\/[^\/]+/;
+    return isValid.test(value.toString().trim());
+};
+
+export const isValidROR = value => {
+    const isValid = /^0[a-z|0-9]{6}[0-9]{2}$/;
+    return isValid.test(value.toString().trim());
+};
+
 // Generic
 export const required = value => (value ? undefined : locale.validationErrors.required);
 
@@ -122,19 +148,20 @@ export const required = value => (value ? undefined : locale.validationErrors.re
 export const requireChecked = value => (value === 'on' ? undefined : locale.validationErrors.requireChecked);
 
 export const requiredList = value => {
-    return ((value instanceof Immutable.List && value.toJS()) || value || []).length > 0
-        ? undefined
-        : locale.validationErrors.required;
+    return !value?.length && locale.validationErrors.required;
 };
 
 export const email = value =>
-    !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
+    value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
 export const url = value =>
     value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value)
         ? locale.validationErrors.url
         : spacelessMaxLength2000Validator(value);
 export const doi = value => (!!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined);
 export const pid = value => (!!value && !isValidPid(value) ? locale.validationErrors.pid : undefined);
+export const orcid = value => (!!value && !isValidOrcid(value) ? locale.validationErrors.orcid : undefined);
+export const raid = value => (!!value && !isValidRaid(value) ? locale.validationErrors.raid : undefined);
+export const ror = value => (!!value && !isValidROR(value) ? locale.validationErrors.ror : undefined);
 export const forRequired = itemList =>
     !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;
 
@@ -180,13 +207,11 @@ export const validFileNames = value => {
 };
 
 export const fileUploadRequired = value => {
-    return value === undefined || (value.queue || {}).length === 0
-        ? locale.validationErrors.fileUploadRequired
-        : undefined;
+    return !value || value.queue?.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
 };
 
 export const fileUploadNotRequiredForMediated = (value, values) => {
-    const accessCondition = values.toJS().fez_record_search_key_access_conditions;
+    const accessCondition = values.fez_record_search_key_access_conditions;
     if (!!accessCondition && accessCondition.rek_access_conditions === MEDIATED_ACCESS_ID) {
         return undefined;
     } else {
@@ -257,28 +282,10 @@ export const isValidContributorLink = (link, required = false) => {
 // Google Scholar ID
 export const isValidGoogleScholarId = id => {
     const regex = /^[\w-]{12}$/;
-    if (regex.test(id)) {
-        return '';
-    } else {
+    if (id && !regex.test(id)) {
         return locale.validationErrors.googleScholarId;
     }
-};
-
-export const dateRange = (value, values) => {
-    const lowerInRange =
-        !!values.toJS().fez_record_search_key_start_date &&
-        !!values.toJS().fez_record_search_key_start_date.rek_start_date &&
-        moment(values.toJS().fez_record_search_key_start_date.rek_start_date);
-    const higherInRange =
-        !!values.toJS().fez_record_search_key_end_date &&
-        !!values.toJS().fez_record_search_key_end_date.rek_end_date &&
-        moment(values.toJS().fez_record_search_key_end_date.rek_end_date);
-
-    if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
-        return locale.validationErrors.collectionDateRange;
-    } else {
-        return '';
-    }
+    return undefined;
 };
 
 export const isValidDate = date => {
@@ -296,6 +303,15 @@ export const isDateSameOrBefore = (date, anotherDate) =>
     moment(date).isSameOrBefore(moment(anotherDate).format('YYYY-MM-DD'));
 
 export const isDateInBetween = (date, from, to) => isDateSameOrAfter(date, from) && isDateSameOrBefore(date, to);
+
+/**
+ * @param {?string} start
+ * @param {?string} end
+ * @param {string} message
+ * @return {string}
+ */
+export const dateRange = (start, end, message = locale.validationErrors.dateRange) =>
+    !!start && !!end && !isDateSameOrBefore(start, end) ? message : undefined;
 
 export const grantFormIsPopulated = value => (value === true ? locale.validationErrors.grants : undefined);
 
@@ -317,10 +333,17 @@ export const translateFormErrorsToText = formErrors => {
             errorMessagesList.push(locale.validationErrorsSummary[key]);
         }
     });
-
     return errorMessagesList.length > 0 ? errorMessagesList : null;
 };
 
+/**
+ * @param submitting {boolean}
+ * @param error {Object|undefined}
+ * @param formErrors {Object|undefined}
+ * @param submitSucceeded {boolean}
+ * @param alertLocale {Object}
+ * @return {Object}
+ */
 export const getErrorAlertProps = ({
     submitting = false,
     error,
@@ -347,7 +370,7 @@ export const getErrorAlertProps = ({
                 ...alertLocale.errorAlert,
                 message: message,
             };
-        } else if (formErrors && formErrors.size === undefined) {
+        } else if (!!formErrors && formErrors.constructor === Object && Object.keys(formErrors).length > 0) {
             // formErrors is set by form validation or validate method, it's reset once form is re-validated
             const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
             const keyPrefix = `validation-${alertLocale.validationAlert.type || 'warning'}`;
@@ -377,9 +400,10 @@ export const isFileValid = ({ files: { blacklist } }, isAdmin = false, isAdminEd
     return (!prefixMatch && !suffixMatch && isAdded(dataStream)) || (isAdmin && !isAdminEdit);
 };
 
-export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = false, allowOnlyEditor = false) => {
+export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = false, isEditorRequired = false) => {
     const authors = data.authors ?? data.authorsWithAffiliations;
     const errors = {};
+    // authors and editors are empty or no selected authors and editors for non-admin users
     if (
         (!authors && !data.editors) ||
         (!authors && data.editors && data.editors.length === 0) ||
@@ -389,16 +413,19 @@ export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = f
         (!isAdmin &&
             data.editors &&
             data.editors.length !== 0 &&
-            data.editors.filter(item => item.selected).length === 0)
+            data.editors.filter(item => item.selected).length === 0) ||
+        (isEditorRequired && data.editors && data.editors.length === 0)
     ) {
-        if (!allowOnlyEditor) {
+        if (!isEditorRequired) {
             errors.authors = isAdmin
                 ? locale.validationErrors.authorRequiredAdmin
                 : locale.validationErrors.authorRequired;
         }
         errors.editors = isAdmin ? locale.validationErrors.editorRequiredAdmin : locale.validationErrors.editorRequired;
+        // authors or editors but not both
     } else if (allowOnlyOne && authors && authors.length > 0 && data.editors && data.editors.length > 0) {
         errors.onlyOneOfAuthorOrEditor = locale.validationErrors.onlyOneOfAuthorOrEditor;
+        // editor is required
     }
     return errors;
 };

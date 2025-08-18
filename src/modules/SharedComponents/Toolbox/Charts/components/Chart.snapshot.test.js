@@ -63,43 +63,9 @@ describe('Chart component', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should set printMedia property', () => {
-        const test = jest.fn();
-        window.matchMedia = test;
-        setup();
-        expect(test).toBeCalled();
-    });
-
-    it('componentDidMount', () => {
-        const addListenerFn = jest.fn();
-        const printMediaMock = { addListener: addListenerFn, removeListener: jest.fn() };
-        window.matchMedia = jest.fn(() => printMediaMock);
-        setup();
-        expect(addListenerFn).toBeCalled();
-    });
-
-    it('componentDidUpdate', () => {
+    it('updates', () => {
         const { rerender, container } = setup();
         rerender(<Chart chartOptions={{ title: { text: 'test' } }} />);
         expect(container).toMatchSnapshot();
     });
-
-    it('componentWillUnmount', () => {
-        const removeListenerFn = jest.fn();
-        const printMediaMock = { addListener: jest.fn(), removeListener: removeListenerFn };
-        window.matchMedia = jest.fn(() => printMediaMock);
-        const { unmount } = setup();
-        unmount();
-        expect(removeListenerFn).toBeCalled();
-    });
-    /*
-    it('reflowChart', () => {
-        const wrapper = setup();
-        const test = jest.fn();
-        wrapper.instance().chart = {
-            reflow: test,
-        };
-        wrapper.instance().reflowChart();
-        expect(test).toBeCalled();
-    });*/
 });

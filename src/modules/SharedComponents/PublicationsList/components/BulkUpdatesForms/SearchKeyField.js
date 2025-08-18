@@ -19,7 +19,7 @@ import { OA_STATUS, SCOPUS_DOC_TYPES, WOS_DOC_TYPES } from 'config/general';
 import { selectFields } from 'locale/selectFields';
 
 // istanbul ignore next
-const normalizeFn = value => (!!value && value.hasOwnProperty('htmlText') ? value.htmlText : null);
+const normalizeFn = value => value.htmlText || value;
 
 export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {
     [BULK_UPDATE_SEARCH_KEY_OA_STATUS]: {
@@ -112,11 +112,8 @@ export const getSearchKeyValueField = searchKey => {
 export const SearchKeyField = fieldProps => {
     return (
         <NewGenericSelectField
-            error={!!fieldProps.meta.error}
-            errorText={fieldProps.meta.error}
             itemsList={Object.values(BULK_UPDATE_SEARCH_KEYS)}
-            onChange={fieldProps.input.onChange}
-            value={fieldProps.input.value || ''}
+            value={fieldProps.value || ''}
             selectPrompt="Please select a search key"
             {...fieldProps}
         />

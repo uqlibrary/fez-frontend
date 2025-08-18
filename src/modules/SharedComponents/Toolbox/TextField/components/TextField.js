@@ -9,6 +9,8 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
     // Assign the redux validation error to the MUI input error prop and remove it from the prop payload
     const helperText = filteredProps.errorText || undefined;
     const hideLabel = !!filteredProps.hideLabel;
+    const id = props.textFieldId ?? props.name ?? props.id;
+
     delete filteredProps.columnDef;
     delete filteredProps.errorText;
     delete filteredProps.hideLabel;
@@ -16,6 +18,7 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
     delete filteredProps.onRowDataChange;
     delete filteredProps.rowData;
     delete filteredProps.ariaLabel;
+
     return (
         <Fragment>
             <TextField
@@ -23,15 +26,15 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
                 {...filteredProps}
                 ref={ref}
                 helperText={helperText}
-                id={props.textFieldId}
-                data-testid={props.textFieldId}
+                id={id}
+                data-testid={id}
                 FormHelperTextProps={{
-                    'data-testid': `${props.textFieldId}-helper-text`,
+                    'data-testid': `${id}-helper-text`,
                 }}
                 inputProps={{
-                    id: `${props.textFieldId}-input`,
-                    'data-analyticsid': `${props.textFieldId}-input`,
-                    'data-testid': `${props.textFieldId}-input`,
+                    id: `${id}-input`,
+                    'data-analyticsid': `${id}-input`,
+                    'data-testid': `${id}-input`,
                     label: filteredProps.label,
                     'aria-label': props.ariaLabel || filteredProps.label,
                     ...(props.ariaLabelledby && { 'aria-labelledby': props.ariaLabelledby }),
@@ -39,9 +42,9 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
                 }}
                 InputLabelProps={{
                     shrink: filteredProps.floatinglabelfixed ? true : undefined,
-                    id: `${props.textFieldId}-label`,
-                    'data-testid': `${props.textFieldId}-label`,
-                    htmlFor: `${props.textFieldId}-input`,
+                    id: `${id}-label`,
+                    'data-testid': `${id}-label`,
+                    htmlFor: `${id}-input`,
                     hidden: hideLabel,
                     ...filteredProps.InputLabelProps,
                 }}
@@ -52,7 +55,7 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
 
 TextFieldWrapper.propTypes = {
     ...TextField.propTypes,
-    textFieldId: PropTypes.string.isRequired,
+    textFieldId: PropTypes.string,
     help: PropTypes.shape({
         title: PropTypes.string,
         text: PropTypes.any,

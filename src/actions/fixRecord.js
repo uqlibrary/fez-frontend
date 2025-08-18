@@ -6,7 +6,7 @@ import { putUploadFiles } from 'repositories';
 
 /**
  * Load publication
- * @param {object}
+ * @param {string}
  * @returns {action}
  */
 export function loadRecordToFix(pid) {
@@ -64,7 +64,7 @@ export function clearFixRecord() {
  *      upload files,
  * If error occurs on any stage failed action is displayed
  * @param {object} data to be posted, refer to backend API data: {publication, author, files}
- * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise}
  */
 export function fixRecord(data) {
     if (!data.publication || !data.author) {
@@ -157,7 +157,7 @@ export function fixRecord(data) {
 /**
  * Unclaim record
  * @param   {object}  data    Record to be unclaimed
- * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise}
  */
 export function unclaimRecord(data) {
     if (!data.publication || !data.author) {

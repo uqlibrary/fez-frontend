@@ -23,17 +23,6 @@ function setup(testProps = {}) {
 }
 
 describe('AuthorsList', () => {
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
-
     afterEach(() => {
         jest.resetAllMocks();
     });
@@ -45,7 +34,7 @@ describe('AuthorsList', () => {
     });
 
     it('should render a list of upto 10 contributors and should not show paging or filtering options', () => {
-        const { getByTestId } = setup({
+        const { getAllByTestId } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -81,12 +70,11 @@ describe('AuthorsList', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('rek-author-list-row-9')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(10);
     });
 
     it('should render a list of upto 10 contributors and should not show paging and searching options', () => {
-        const { getByTestId, queryByTestId } = setup({
+        const { getAllByTestId } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -125,9 +113,7 @@ describe('AuthorsList', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('rek-author-list-row-4')).toBeInTheDocument();
-        expect(queryByTestId('rek-author-list-row-5')).not.toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(5);
     });
 
     it('should render disabled row', () => {
@@ -173,7 +159,7 @@ describe('AuthorsList', () => {
     });
 
     it('should add contributor correctly', () => {
-        const { getByTestId, getByText, queryByText } = setup();
+        const { getAllByTestId, getByTestId, getByText, queryByText } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('rek-author-add'));
@@ -181,7 +167,7 @@ describe('AuthorsList', () => {
         fireEvent.click(getByTestId('rek-author-add-save'));
 
         expect(queryByText('No records to display')).not.toBeInTheDocument();
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(1);
     });
 
     it('should validate new contributor maxlength correctly', () => {
@@ -200,7 +186,7 @@ describe('AuthorsList', () => {
 
     it('should validate existing contributor maxlength correctly', () => {
         const initialValue = 'test 1';
-        const { getByTestId } = setup({
+        const { getAllByTestId, getByTestId } = setup({
             list: [
                 {
                     nameAsPublished: initialValue,
@@ -209,7 +195,7 @@ describe('AuthorsList', () => {
                 },
             ],
         });
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(1);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
@@ -245,7 +231,7 @@ describe('AuthorsList', () => {
                 },
             ],
         });
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -260,7 +246,7 @@ describe('AuthorsList', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -273,6 +259,7 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -308,7 +295,7 @@ describe('AuthorsList', () => {
                 },
             ],
         });
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -322,8 +309,7 @@ describe('AuthorsList', () => {
                 },
             ],
         });
-
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -336,6 +322,7 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -371,7 +358,7 @@ describe('AuthorsList', () => {
                 },
             ],
         });
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -388,7 +375,7 @@ describe('AuthorsList', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -418,7 +405,7 @@ describe('AuthorsList', () => {
     });
 
     it('should clear uq identifier', async () => {
-        const { getByTestId } = setup({
+        const { getAllByTestId, getByTestId } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -435,7 +422,7 @@ describe('AuthorsList', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -448,6 +435,7 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: '' } });
         });
 
@@ -473,7 +461,7 @@ describe('AuthorsList', () => {
                 },
             ],
         });
-        const { getByTestId, getByText, queryByTestId } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -496,8 +484,7 @@ describe('AuthorsList', () => {
 
         fireEvent.click(getByTestId('rek-author-add-save'));
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
-        expect(queryByTestId('rek-author-list-row-1')).not.toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(1);
     });
 
     it('should render the same list if a existing user with the same uq id in the list has been added', async () => {
@@ -573,7 +560,7 @@ describe('AuthorsList', () => {
                 },
             ],
         });
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             isNtro: true,
             list: [
                 {
@@ -591,7 +578,7 @@ describe('AuthorsList', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -613,6 +600,7 @@ describe('AuthorsList', () => {
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -648,7 +636,7 @@ describe('AuthorsList', () => {
                 },
             ],
         });
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             isNtro: true,
             list: [
                 {
@@ -668,7 +656,7 @@ describe('AuthorsList', () => {
             ],
         });
 
-        expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -681,6 +669,7 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -748,6 +737,34 @@ describe('AuthorsList', () => {
         fireEvent.click(getByTestId('rek-author-update-save'));
 
         expect(getByTestId('rek-author-list-row-0-role')).toHaveTextContent('Technician');
+    });
+
+    it('should be able to add and update external identifier', () => {
+        const externalId = '0000-0000-0000-0001';
+        const updatedExternalId = '02mhbdp94';
+        const { getByTestId, getAllByTestId, getByText } = setup({
+            showExternalIdentifierInput: true,
+        });
+
+        // add a new author
+        fireEvent.click(getByTestId('rek-author-add'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
+        fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
+        fireEvent.click(getByText('Orcid'));
+        fireEvent.click(getByTestId('rek-author-add-save'));
+
+        expect(getAllByTestId('mtablebodyrow').length).toBe(1);
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(externalId);
+
+        // update author
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: updatedExternalId } });
+        fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
+        fireEvent.click(getByText('ROR'));
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(updatedExternalId);
     });
 
     it('should delete row correctly', () => {

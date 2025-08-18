@@ -1,9 +1,11 @@
 import HTMLReactParser from 'html-react-parser';
+import diff from 'microdiff';
 
 // note: dd usage is stripped by WebpackStrip for dist builds
-global.dd = (...args) => args.forEach(arg => console.dir(arg, { depth: null }));
-global.dc = (...args) => args.forEach(arg => console.log(arg));
-global.dj = (...args) => args.forEach(arg => console.log(JSON.stringify(arg)));
+global.dd = (...args) => args.forEach(arg => console.dir.bind(console)(arg, { depth: null }));
+/* istanbul ignore next */
+global.dc = console.log;
+global.dj = (...args) => args.forEach(arg => console.log.bind(console)(JSON.stringify(arg)));
 
 /* istanbul ignore next */
 const tryCatch = (callback, _default = undefined) => {
@@ -17,9 +19,9 @@ const tryCatch = (callback, _default = undefined) => {
 export const isDevEnv = () => tryCatch(() => process.env.BRANCH === 'development', false);
 export const isJestTest = () => tryCatch(() => !!process.env.JEST_WORKER_ID, false);
 /* istanbul ignore next */
-export const isCypressTest = () => !!window.Cypress;
+export const isPlaywrightTest = () => tryCatch(() => !!process?.env?.PW_IS_RUNNING, false);
 /* istanbul ignore next */
-export const isTest = () => isJestTest() || isCypressTest();
+export const isTest = () => isJestTest() || isPlaywrightTest();
 
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
     if (!objArr2) {
@@ -87,7 +89,6 @@ export function hydrateMock(truncatedData) {
             });
             updateKeyWith = result;
         } else if (key.startsWith('fez_record_search_key_')) {
-            // eg fez_record_search_key_additional_notes is a single object of entries
             if (!!field && field.hasOwnProperty(shortKey)) {
                 updateKeyWith = {
                     [`${shortKey}_id`]: 6753442, // any random number to mock db long unique id
@@ -225,7 +226,6 @@ export function hydrateMock(truncatedData) {
         fez_record_search_key_wok_doc_types: [],
         fez_record_search_key_access_conditions: null,
         fez_record_search_key_acknowledgements: null,
-        fez_record_search_key_additional_notes: null,
         fez_record_search_key_advisory_statement: null,
         fez_record_search_key_alternate_genre: [],
         fez_record_search_key_alternative_title: [],
@@ -402,3 +402,163 @@ export const handleKeyboardPressActivate = (key, callbackFn) => {
 
     callbackFn();
 };
+
+/**
+ * Re-order a given object for a given set of keys, ignoring unexisting keys.
+ * @param object
+ * @param keys
+ * @return {*}
+ */
+export const reorderObjectKeys = (object, keys) =>
+    keys.reduce((newObject, key) => {
+        if (object.hasOwnProperty(key)) {
+            newObject[key] = object[key];
+        }
+        return newObject;
+    }, {});
+
+/**
+ * @param object
+ * @return {boolean}
+ */
+export const isEmptyObject = object =>
+    object && typeof object === 'object' && !(object instanceof Array) ? Object.keys(object)?.length === 0 : false;
+
+/**
+ * Get a subset of an object for a given set of keys
+ * Returns a new object without given keys. Use inclusive=true for the opposite.
+ * @param object
+ * @param keys {string[]}
+ * @param inclusive {boolean}
+ * @return {{}}
+ */
+export const filterObjectKeys = (object, keys, inclusive = false) =>
+    !object || typeof object !== 'object'
+        ? {}
+        : Object.keys(object).reduce((acc, key) => {
+              if ((!inclusive && !keys.includes(key)) || (inclusive && keys.includes(key))) {
+                  acc[key] = object[key];
+              }
+              return acc;
+          }, {});
+
+/**
+ * Reduce an array of object into a single object.
+ * @param objects
+ * @return {*}
+ */
+export const combineObjects = (...objects) =>
+    objects.reduce((acc, object) => ({ ...acc, ...(object && typeof object === 'object' ? object : {}) }), {});
+
+/**
+ * Uses microdiff.js, which is fast but ignores nested object key ordering.
+ * To fix this issue, it uses also JSON.stringify.
+ *
+ * @param array
+ * @param anotherArray
+ * @return {boolean}
+ */
+export const isArrayDeeplyEqual = (array, anotherArray) => {
+    return (
+        diff(array, anotherArray).length === 0 &&
+        diff(anotherArray, array).length === 0 &&
+        JSON.stringify(array) === JSON.stringify(anotherArray)
+    );
+};
+
+/**
+ * @param key {string}
+ * @return {boolean}
+ */
+export const isFezRecordRelationKey = key => !!key?.match?.(/^fez_record_search_key_[a-z_]+$/);
+
+/**
+ * @param relation {object}
+ * @return {boolean}
+ */
+export const hasAtLeastOneFezRecordField = relation =>
+    typeof relation === 'object' && !!Object.keys(relation).find(key => !!key?.match?.(/^rek_[a-z_]+$/));
+
+/**
+ * @param record {object}
+ * @param key {string}
+ * @return {boolean}
+ */
+export const isFezRecordOneToOneRelation = (record, key) =>
+    isFezRecordRelationKey(key) && hasAtLeastOneFezRecordField(record[key]);
+
+/**
+ * @param record {object}
+ * @param key {string}
+ * @return {boolean}
+ */
+export const isFezRecordOneToManyRelation = (record, key) =>
+    isFezRecordRelationKey(key) &&
+    record[key] instanceof Array &&
+    !!record[key].length &&
+    hasAtLeastOneFezRecordField(record[key][0]);
+
+/**
+ * Remove object keys when its value do not pass a given filter, are empty objects or empty arrays.
+ *
+ * @param obj {Object}
+ * @param filter {function}
+ * @return {Object}
+ */
+export const filterObject = (obj, filter) => {
+    if (!obj || obj instanceof Array || typeof obj !== 'object' || typeof filter !== 'function') {
+        return obj;
+    }
+
+    return Object.entries(obj).reduce((acc, [key, value]) => {
+        // ignore WebAPI File objects
+        if (value instanceof File) {
+            acc[key] = value;
+            return acc;
+        }
+
+        // handle arrays
+        if (value instanceof Array) {
+            const filtered = value
+                // ignore WebAPI File objects
+                .map(item => (item instanceof File ? item : filterObject(item, filter)))
+                .filter(item => !isEmptyObject(item));
+            // ignore empty arrays
+            if (!filtered.length) {
+                return acc;
+            }
+            acc[key] = filtered;
+            return acc;
+        }
+
+        // handle nested objects
+        if (typeof value === 'object') {
+            const filtered = filterObject(value, filter);
+            // ignore empty nested objects
+            if (isEmptyObject(filtered)) {
+                return acc;
+            }
+            acc[key] = filtered;
+            return acc;
+        }
+
+        if (filter(value, key)) {
+            acc[key] = value;
+        }
+        return acc;
+    }, {});
+};
+
+/**
+ *
+ * @param {string} value
+ * @return {string}
+ */
+export const numbersOnly = value => (value?.replace && value?.replace(/[^\d]/g, '')) || value;
+
+/**
+ * @param {{ selected: boolean }[]} items
+ * @param {string} attr
+ * @return {boolean}
+ */
+export const hasAtLeastOneItemSelected = (items, attr = 'selected') => !!items?.some?.(v => v[attr] === true);

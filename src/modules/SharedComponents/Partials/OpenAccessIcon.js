@@ -11,12 +11,12 @@ import Fade from '@mui/material/Fade';
 export const getIconTestId = id => `${id}-icon`;
 
 export const OpenAccessIcon = ({
-    style,
-    isOpenAccess,
-    embargoDate,
+    style = {},
+    isOpenAccess = false,
+    embargoDate = null,
     openAccessStatusId,
-    showEmbargoText,
-    securityStatus,
+    showEmbargoText = false,
+    securityStatus = true,
 }) => {
     const txt = locale.viewRecord.sections.links;
 
@@ -64,14 +64,6 @@ OpenAccessIcon.propTypes = {
     openAccessStatusId: PropTypes.number,
     showEmbargoText: PropTypes.bool,
     securityStatus: PropTypes.bool,
-};
-
-OpenAccessIcon.defaultProps = {
-    style: {},
-    isOpenAccess: false,
-    embargoDate: null,
-    showEmbargoText: false,
-    securityStatus: true,
 };
 
 export default OpenAccessIcon;

@@ -29,6 +29,9 @@ export const userIsAuthor = () => {
     return account && belongsToAuthor(account, record);
 };
 
+/**
+ * @return {[boolean,(function(): void),(function(): void)]}
+ */
 export const useConfirmationState = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -48,3 +51,7 @@ export { useIsUserSuperAdmin } from './useIsUserSuperAdmin';
 export { useRecordsSelector } from './useRecordsSelector';
 export { useWidth } from './useWidth';
 export { withIsMobileView, useIsMobileView } from './useIsMobileView';
+export { useForm } from './useForm';
+export { useValidatedForm } from './useValidatedForm';
+export { useOnSelectiveMountEffect } from './useOnSelectiveMountEffect';
+export { useMrtTable, useServerData } from './useMrtTable';

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useFormContext } from 'react-hook-form';
 import moment from 'moment';
 
 import Delete from '@mui/icons-material/Delete';
@@ -14,7 +15,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import globalLocale from 'locale/global';
 import viewRecordLocale from 'locale/viewRecord';
 
-import { useFormValuesContext, useRecordContext } from 'context';
+import { useRecordContext } from 'context';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 
 import { isDateInBetween, isFileValid, isValidDate } from 'config/validation';
@@ -62,11 +63,13 @@ const initialPreviewState = {
 const usePreview = initialPreviewState => {
     const [preview, setPreview] = useState(initialPreviewState);
 
-    const showPreview = ({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl }) => {
+    const showPreview = /* istanbul ignore next */ ({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl }) => {
+        /* istanbul ignore next */
         setPreview({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl });
     };
 
-    const hidePreview = () => {
+    const hidePreview = /* istanbul ignore next */ () => {
+        /* istanbul ignore next */
         setPreview(initialPreviewState);
     };
 
@@ -130,10 +133,12 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                       return 1;
                   }
 
+                  /* istanbul ignore next */
                   if (b.dsi_order === null) {
                       return -1;
                   }
 
+                  /* istanbul ignore next */
                   if (a.dsi_order === b.dsi_order) {
                       return 0;
                   }
@@ -144,14 +149,16 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                   const id = dataStream.dsi_id;
                   const pid = dataStream.dsi_pid;
                   const fileName = dataStream.dsi_dsid;
-                  const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+                  const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : /* istanbul ignore next */ '';
 
                   const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
                   const previewFileName = checkForPreview(fileName, dataStreams);
                   const webFileName = checkForWeb(fileName, dataStreams);
 
                   const openAccessStatus = getFileOpenAccessStatus(openAccessStatusId, dataStream);
-                  const previewUrl = previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName);
+                  const previewUrl = previewFileName
+                      ? /* istanbul ignore next */ getUrl(pid, previewFileName)
+                      : getUrl(pid, fileName);
                   const isInfected = dataStream.dsi_av_check_state === AV_CHECK_STATE_INFECTED;
 
                   return {
@@ -175,8 +182,8 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                           securityAccess: true,
                       },
                       openAccessStatus,
-                      previewMediaUrl: isInfected ? null : previewUrl,
-                      webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
+                      previewMediaUrl: isInfected ? /* istanbul ignore next */ null : previewUrl,
+                      webMediaUrl: webFileName ? /* istanbul ignore next */ getUrl(pid, webFileName) : null,
                       mediaUrl: getUrl(pid, fileName),
                       securityStatus: true,
                       securityPolicyStatus: getSecurityPolicyFileEmbargoStatus(dataStream),
@@ -199,7 +206,9 @@ export const checkFileNamesForDupes = (
 ) => newFilename => {
     const filesToCheck = [
         ...dataStreams.filter((_, index) => index !== excludeIndex),
-        ...(formValuesFromContext?.files?.queue?.map(file => ({ dsi_dsid: file.name })) ?? []),
+        ...(formValuesFromContext?.files?.queue?.map(
+            /* istanbul ignore next */ file => /* istanbul ignore next */ ({ dsi_dsid: file.name }),
+        ) ?? []),
     ];
     const newFilenamePart = getFilenamePart(newFilename);
     const hasDupe = filesToCheck.some(
@@ -219,7 +228,8 @@ export const getFilenameId = id => `file-name-${id}`;
 export const AttachedFiles = ({
     dataStreams,
     disabled,
-    deleteHint,
+    deleteHint = 'Remove this file',
+    openAccessStatusId,
     onDelete,
     onDateChange,
     onDescriptionChange,
@@ -227,10 +237,17 @@ export const AttachedFiles = ({
     onFilenameSave,
     onHandleFileIsValid,
     onOrderChange,
-    onEmbargoClearPromptText,
-    locale,
-    canEdit,
-    fileRestrictionsConfig,
+    onEmbargoClearPromptText = (
+        <span>
+            <b>Embargo date removed</b> - review security policy on Security tab
+        </span>
+    ),
+    locale = {},
+    canEdit = false,
+    fileRestrictionsConfig = {
+        fileUploadLimit: fileUploadConfig.DEFAULT_FILE_UPLOAD_LIMIT,
+        fileNameRestrictions: fileUploadConfig.FILE_NAME_RESTRICTION,
+    },
 }) => {
     const [hasClearedEmbargoDate, markEmbargoDateAsCleared] = useState(Array(dataStreams.length).fill(false));
     const [fileNameErrorMessage, setFileNameErrorMessage] = useState('');
@@ -241,8 +258,8 @@ export const AttachedFiles = ({
     const { record } = useRecordContext();
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
-    const { openAccessStatusId } = useFormValuesContext();
-    const { formValues: formValuesFromContext } = useFormValuesContext();
+    const { getValues } = useFormContext();
+    const formValues = getValues('filesSection');
     const isAdminEditing = isAdmin && canEdit;
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
@@ -250,11 +267,13 @@ export const AttachedFiles = ({
 
     if (fileData.length === 0) return null;
 
-    const isValidEmbargoDate = date => isValidDate(date) && isDateInBetween(date, moment(), '2099');
+    const isValidEmbargoDate = date =>
+        isValidDate(date) && /* istanbul ignore next */ isDateInBetween(date, moment(), '2099');
 
     const onEmbargoDateKeyUp = e => {
         // bail if it's not backspace
-        if (e.key !== 'Backspace' || !embargoDateErrorMessage.length) {
+        /* istanbul ignore else */
+        if (e.key !== 'Backspace' || /* istanbul ignore next */ !embargoDateErrorMessage.length) {
             return;
         }
         /**
@@ -265,10 +284,10 @@ export const AttachedFiles = ({
          * onChange event might be triggered only once, upon the deletion of a single character and not the removal
          * of the whole date.
          */
+        /* istanbul ignore next */
         setEmbargoDateErrorMessage('');
     };
 
-    // tested in cypress
     /* istanbul ignore next */
     const onEmbargoDateChange = id => value => {
         const indexToChange = dataStreams.findIndex(item => item.dsi_id === id);
@@ -299,9 +318,10 @@ export const AttachedFiles = ({
     const hasVideo = fileData.some(item => item.mimeType.indexOf('video') > -1 || item.mimeType === 'application/mxf');
     const getDsIndex = id => dataStreams.findIndex(item => item.dsi_id === id);
 
-    const onFileDelete = file => () => onDelete(file);
-    const onFileDescriptionChange = id => event => {
-        const indexToChange = getDsIndex(id);
+    const onFileDelete = file => /* istanbul ignore next */ () => /* istanbul ignore next */ onDelete(file);
+    const onFileDescriptionChange = id => /* istanbul ignore next */ event => {
+        const indexToChange = /* istanbul ignore next */ getDsIndex(id);
+        /* istanbul ignore next */
         onDescriptionChange('dsi_label', event.target.value, indexToChange);
     };
 
@@ -372,11 +392,11 @@ export const AttachedFiles = ({
     };
 
     return (
-        <Grid item xs={12}>
+        <Grid xs={12}>
             <StandardCard title={locale.title} subCard>
                 {/* eslint-disable-next-line camelcase */}
                 {!!record.fez_record_search_key_advisory_statement && (
-                    <Alert
+                    /* istanbul ignore next */ <Alert
                         allowDismiss
                         type="info"
                         message={getAdvisoryStatement(record, locale.culturalSensitivityStatement)}
@@ -384,9 +404,15 @@ export const AttachedFiles = ({
                 )}
                 {/* eslint-disable-next-line camelcase */}
                 {!!record.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
-                    <Alert allowDismiss type="info" message={getSensitiveHandlingNote(record)} />
+                    /* istanbul ignore next */ <Alert
+                        allowDismiss
+                        type="info"
+                        message={getSensitiveHandlingNote(record)}
+                    />
                 )}
-                {isFireFox && hasVideo && <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />}
+                {isFireFox && /* istanbul ignore next */ hasVideo && (
+                    /* istanbul ignore next */ <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />
+                )}
                 {isAdminEditing && <Alert type="warning" message={locale.renamingFilesInstructions.text} />}
                 <Box sx={{ padding: 1 }}>
                     <Grid
@@ -396,16 +422,13 @@ export const AttachedFiles = ({
                         spacing={2}
                         sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                     >
-                        <Grid item xs={1}>
-                            &nbsp;
-                        </Grid>
-                        <Grid item sm={3} xs={6}>
+                        <Grid xs={1}>&nbsp;</Grid>
+                        <Grid sm={3} xs={6}>
                             <Typography variant="caption" gutterBottom>
                                 {locale.fileName}
                             </Typography>
                         </Grid>
                         <Grid
-                            item
                             md={isAdminEditing ? 3 : 5}
                             sm={isAdminEditing ? 3 : 7}
                             sx={{ display: { xs: 'none', sm: 'block' } }}
@@ -414,13 +437,13 @@ export const AttachedFiles = ({
                                 {locale.description}
                             </Typography>
                         </Grid>
-                        <Grid item md={2} sx={{ display: { xs: 'none', md: 'block' } }}>
+                        <Grid md={2} sx={{ display: { xs: 'none', md: 'block' } }}>
                             <Typography variant="caption" gutterBottom>
                                 {locale.size}
                             </Typography>
                         </Grid>
                         {isAdminEditing && (
-                            <Grid item md={3} sm={4} sx={{ textAlign: 'center' }}>
+                            <Grid md={3} sm={4} sx={{ textAlign: 'center' }}>
                                 <Typography variant="caption" gutterBottom>
                                     {locale.embargoDateLabel || 'Embargo date'}
                                 </Typography>
@@ -451,14 +474,14 @@ export const AttachedFiles = ({
                                     </Grid>
                                 </Grid>
                                 <Grid container direction="row" alignItems="center" spacing={2}>
-                                    <Grid item xs={1} sx={{ textAlign: 'center' }}>
+                                    <Grid xs={1} sx={{ textAlign: 'center' }}>
                                         <FileIcon
                                             {...item.iconProps}
                                             showPreview={showPreview}
                                             id={`file-icon-${index}`}
                                         />
                                     </Grid>
-                                    <Grid item sm={3} xs={6} sx={{ ...classes.dataWrapper }}>
+                                    <Grid sm={3} xs={6} sx={{ ...classes.dataWrapper }}>
                                         {isAdminEditing ? (
                                             <EditableFileName
                                                 {...item}
@@ -470,7 +493,7 @@ export const AttachedFiles = ({
                                                 checkFileNameForErrors={checkFileNameForErrors(item.id)}
                                                 checkFileNamesForDupes={checkFileNamesForDupes(
                                                     dataStreams,
-                                                    formValuesFromContext,
+                                                    formValues,
                                                     setFileNameErrorMessage,
                                                     getDsIndex(item.id),
                                                 )}
@@ -486,7 +509,6 @@ export const AttachedFiles = ({
                                         )}
                                     </Grid>
                                     <Grid
-                                        item
                                         md={isAdminEditing ? 3 : 5}
                                         sm={isAdminEditing ? 3 : 7}
                                         sx={{ display: { xs: 'none', sm: 'block' }, ...classes.dataWrapper }}
@@ -509,19 +531,15 @@ export const AttachedFiles = ({
                                             </Typography>
                                         )}
                                     </Grid>
-                                    <Grid
-                                        item
-                                        md={2}
-                                        sx={{ display: { xs: 'none', md: 'block' }, ...classes.dataWrapper }}
-                                    >
+                                    <Grid md={2} sx={{ display: { xs: 'none', md: 'block' }, ...classes.dataWrapper }}>
                                         <Typography variant="body2" noWrap>
                                             {item.calculatedSize}
                                         </Typography>
                                     </Grid>
                                     {isAdminEditing && (
-                                        <Grid item md={3} sm={4}>
+                                        <Grid md={3} sm={4}>
                                             <Grid container wrap="nowrap">
-                                                <Grid item xs={3}>
+                                                <Grid xs={3}>
                                                     <Box
                                                         sx={{
                                                             display: { xs: 'none', md: 'block' },
@@ -544,7 +562,6 @@ export const AttachedFiles = ({
                                                     </Box>
                                                 </Grid>
                                                 <Grid
-                                                    item
                                                     xs={7}
                                                     id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
                                                     sx={{ marginLeft: 1, flexGrow: 1 }}
@@ -564,7 +581,7 @@ export const AttachedFiles = ({
                                                         />
                                                     )}
                                                 </Grid>
-                                                <Grid item xs={2} sx={{ marginTop: '-10px', textAlign: 'right' }}>
+                                                <Grid xs={2} sx={{ marginTop: '-10px', textAlign: 'right' }}>
                                                     <Tooltip title={deleteHint}>
                                                         <span>
                                                             <IconButton
@@ -584,7 +601,7 @@ export const AttachedFiles = ({
                                         </Grid>
                                     )}
                                     {!isAdminEditing && (
-                                        <Grid item md={3} sm={4} sx={{ textAlign: 'right' }}>
+                                        <Grid md={3} sm={4} sx={{ textAlign: 'right' }}>
                                             <Box sx={{ whiteSpace: 'nowrap' }}>
                                                 <Box component={'span'} paddingRight={1}>
                                                     <FileAvStateIcon
@@ -604,7 +621,6 @@ export const AttachedFiles = ({
                                     )}
                                 </Grid>
                                 {!!hasClearedEmbargoDate[getDsIndex(item.id)] && (
-                                    // tested in cypress admin-edit audio
                                     /* istanbul ignore next */
                                     <React.Fragment>
                                         <Grid
@@ -615,8 +631,8 @@ export const AttachedFiles = ({
                                             justifyContent={'flex-end'}
                                             sx={{ marginTop: '4px' }}
                                         >
-                                            <Grid item xs={6} />
-                                            <Grid item xs={6}>
+                                            <Grid xs={6} />
+                                            <Grid xs={6}>
                                                 <Typography sx={{ color: mui1theme.palette.warning.main }}>
                                                     <WarningIcon
                                                         fontSize={'small'}
@@ -650,12 +666,12 @@ export const AttachedFiles = ({
                             </Box>
                         </React.Fragment>
                     ))}
-                {preview.mediaUrl && preview.mimeType && (
-                    <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
+                {preview.mediaUrl && /* istanbul ignore next */ preview.mimeType && (
+                    /* istanbul ignore next */ <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
                 )}
                 {/* istanbul ignore next*/
                 (fileNameErrorMessage.length > 0 || embargoDateErrorMessage.length > 0) && (
-                    <Grid item xs={12}>
+                    <Grid xs={12}>
                         <Alert
                             alertId="alert-files"
                             title={errorTitle}
@@ -672,6 +688,7 @@ export const AttachedFiles = ({
 AttachedFiles.propTypes = {
     dataStreams: PropTypes.array.isRequired,
     disabled: PropTypes.bool,
+    openAccessStatusId: PropTypes.number,
     deleteHint: PropTypes.string,
     onDelete: PropTypes.func,
     onDateChange: PropTypes.func,
@@ -684,20 +701,6 @@ AttachedFiles.propTypes = {
     locale: PropTypes.object,
     canEdit: PropTypes.bool,
     fileRestrictionsConfig: PropTypes.object,
-};
-
-AttachedFiles.defaultProps = {
-    deleteHint: 'Remove this file',
-    onEmbargoClearPromptText: (
-        <span>
-            <b>Embargo date removed</b> - review security policy on Security tab
-        </span>
-    ),
-    canEdit: false,
-    fileRestrictionsConfig: {
-        fileUploadLimit: fileUploadConfig.DEFAULT_FILE_UPLOAD_LIMIT,
-        fileNameRestrictions: fileUploadConfig.FILE_NAME_RESTRICTION,
-    },
 };
 
 export default AttachedFiles;

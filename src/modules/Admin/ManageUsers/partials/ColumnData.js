@@ -10,6 +10,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 export const ColumnData = ({ columnDataId, data, copiable }) => {
     const [copied, setCopied] = React.useState(false);
+    const copyEnabled = !!navigator.clipboard;
 
     const handleCopy = event => {
         event.stopPropagation();
@@ -34,17 +35,20 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
                     ? {
                           endAdornment: (
                               <InputAdornment position="end">
-                                  <Tooltip title="Copy to clipboard">
-                                      <IconButton
-                                          aria-label="Copy to clipboard"
-                                          onClick={handleCopy}
-                                          id={`${columnDataId}-copy-text`}
-                                          data-analyticsid={`${columnDataId}-copy-text`}
-                                          data-testid={`${columnDataId}-copy-text`}
-                                          size="small"
-                                      >
-                                          <Copy color="secondary" fontSize="small" />
-                                      </IconButton>
+                                  <Tooltip title={copyEnabled ? 'Copy to clipboard' : 'Clipboard unavailable'}>
+                                      <span>
+                                          <IconButton
+                                              aria-label="Copy to clipboard"
+                                              onClick={handleCopy}
+                                              id={`${columnDataId}-copy-text`}
+                                              data-analyticsid={`${columnDataId}-copy-text`}
+                                              data-testid={`${columnDataId}-copy-text`}
+                                              size="small"
+                                              disabled={!copyEnabled}
+                                          >
+                                              <Copy color={copyEnabled ? 'secondary' : 'disabled'} fontSize="small" />
+                                          </IconButton>
+                                      </span>
                                   </Tooltip>
                               </InputAdornment>
                           ),

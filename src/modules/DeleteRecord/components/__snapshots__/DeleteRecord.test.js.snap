@@ -1,2315 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component DeleteRecord should display general alert if trying to delete a Community or Collection that errors 1`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-    >
-      <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
-        data-analyticsid="page-title"
-        data-testid="page-title"
-        id="page-title"
-      >
-        Delete work
-      </h2>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    />
-    <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-    >
-      <form>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-work-to-be-deleted"
-              id="standard-card-work-to-be-deleted"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-work-to-be-deleted-header"
-                    id="standard-card-work-to-be-deleted-header"
-                  >
-                    Work to be deleted
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-work-to-be-deleted-content"
-                data-testid="standard-card-work-to-be-deleted-content"
-                id="standard-card-work-to-be-deleted-content"
-              >
-                <div
-                  class="publicationCitation"
-                >
-                  <div
-                    class="css-0"
-                    data-testid="publication-citation-parent-UQ:12096"
-                    id="publication-citation-parent-UQ:12096"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                      >
-                        <div
-                          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                            style="min-width: 1px;"
-                          >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
-                            >
-                              <a
-                                href="/view/UQ:12096"
-                              >
-                                Aboriginal and Torres Strait Islander Studies Unit
-                              </a>
-                            </h6>
-                          </div>
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                          >
-                            <div
-                              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
-                            >
-                              <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
-                              >
-                                <div
-                                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                                >
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
-                                  >
-                                    <a
-                                      aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
-                                      href="https://scholar.google.com/scholar?q=intitle:Aboriginal%20and%20Torres%20Strait%20Islander%20Studies%20Unit"
-                                      id="citation-count-link"
-                                      rel="noopener noreferrer"
-                                      tabindex="0"
-                                      target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
-                                    >
-                                      <span
-                                        class="fez-icon google large"
-                                      />
-                                    </a>
-                                    <span
-                                      class="noOaIcon"
-                                      data-testid="oa-n/a-icon"
-                                    />
-                                  </div>
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                                  />
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr
-                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <span
-              class="MuiBox-root css-0"
-              data-testid="confirmDialogBox"
-            />
-          </div>
-          <span
-            class="MuiBox-root css-0"
-            data-testid="confirmDialogBox"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card"
-              id="standard-card"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-header"
-                    id="standard-card-header"
-                  >
-                    Describe the reason to 
-                    delete
-                     this work
-                    <div
-                      style="font-size: 60%;"
-                    >
-                      (visible to admins only, displayed under view record page's history)
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-content"
-                data-testid="standard-card-content"
-                id="standard-card-content"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <field
-                      is="mock"
-                      label="Please enter a reason why you are deleting this work"
-                      name="reason"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              data-testid="alert"
-              style="margin-top: 5px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
-                        data-testid="ErrorOutlineIcon"
-                        focusable="false"
-                        id="error-outline-icon"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
-                    >
-                      <b>
-                        Error - 
-                      </b>
-                      Error has occurred during request and request cannot be processed. Test error. Please contact eSpace administrators or try again later.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-          style="margin-top: 8px;"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="cancel-delete-record"
-              data-testid="cancel-delete-record"
-              id="cancel-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Cancel
-            </button>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="delete-admin"
-              data-testid="submit-delete-record"
-              id="submit-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-`;
+exports[`Component DeleteRecord form submission should allow enter reason and submit the form for a record without DOI 1`] = `"{"rek_status":8,"reason":"deletion reason","fez_record_search_key_doi_resolution_url":null,"fez_record_search_key_new_doi":null,"fez_record_search_key_deletion_notes":null}"`;
 
-exports[`Component DeleteRecord should display general alert if trying to delete a non-Community or Collection that errors 1`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-    >
-      <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
-        data-analyticsid="page-title"
-        data-testid="page-title"
-        id="page-title"
-      >
-        Delete work
-      </h2>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    />
-    <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-    >
-      <form>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-work-to-be-deleted"
-              id="standard-card-work-to-be-deleted"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-work-to-be-deleted-header"
-                    id="standard-card-work-to-be-deleted-header"
-                  >
-                    Work to be deleted
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-work-to-be-deleted-content"
-                data-testid="standard-card-work-to-be-deleted-content"
-                id="standard-card-work-to-be-deleted-content"
-              >
-                <div
-                  class="publicationCitation"
-                >
-                  <div
-                    class="css-0"
-                    data-testid="publication-citation-parent-UQ:41878"
-                    id="publication-citation-parent-UQ:41878"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                      >
-                        <div
-                          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                            style="min-width: 1px;"
-                          >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
-                            >
-                              <a
-                                href="/view/UQ:41878"
-                              >
-                                Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-                              </a>
-                            </h6>
-                          </div>
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
-                          >
-                            <div
-                              class="citationContent citationJournalArticle"
-                            >
-                              <span
-                                class="citationAuthors"
-                              >
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-0"
-                                >
-                                  Brown, M. A.
-                                </span>
-                                , 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-1"
-                                >
-                                  He, Y.
-                                </span>
-                                , 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-2"
-                                >
-                                  Rothnagel, J. A.
-                                </span>
-                                , 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-3"
-                                >
-                                  Saunders, N. A.
-                                </span>
-                                , 
-                                 and 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-4"
-                                >
-                                  Smith, R.
-                                </span>
-                                 
-                              </span>
-                              <span
-                                class="citationDate"
-                              >
-                                (
-                                2004
-                                ).
-                              </span>
-                              <span
-                                class="citationTitle"
-                              >
-                                 
-                                Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-                                .
-                              </span>
-                              <span
-                                class="citationJournalName"
-                              >
-                                 
-                                Molecular Biology of The Cell
-                                 
-                              </span>
-                              <span
-                                class="citationVolumeNumber"
-                              >
-                                 
-                                15
-                                 
-                              </span>
-                              <span
-                                class="citationIssueNumber empty"
-                              />
-                              <span
-                                class="citationArticleNumber empty"
-                              />
-                              <span
-                                class="citationPageRange"
-                              >
-                                <span
-                                  class="citationStartPage"
-                                >
-                                  252A
-                                </span>
-                                -
-                                <span
-                                  class="citationEndPage"
-                                >
-                                  253A
-                                </span>
-                              </span>
-                              <span>
-                                . 
-                              </span>
-                              <span
-                                class="citationDOI empty"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                          >
-                            <div
-                              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
-                            >
-                              <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
-                              >
-                                <div
-                                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                                >
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
-                                  >
-                                    <a
-                                      aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
-                                      href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                                      id="citation-count-link"
-                                      rel="noopener noreferrer"
-                                      tabindex="0"
-                                      target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
-                                    >
-                                      <span
-                                        class="fez-icon wos large"
-                                      />
-                                      <span
-                                        class="MuiBox-root css-19k1sqg"
-                                      >
-                                        2
-                                      </span>
-                                    </a>
-                                    <a
-                                      aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
-                                      href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                                      id="citation-count-link"
-                                      rel="noopener noreferrer"
-                                      tabindex="0"
-                                      target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
-                                    >
-                                      <span
-                                        class="fez-icon google large"
-                                      />
-                                    </a>
-                                    <span
-                                      class="noOaIcon"
-                                      data-testid="oa-n/a-icon"
-                                    />
-                                  </div>
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                                  />
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
-                          data-testid="rek-content-indicator"
-                          id="rek-content-indicator"
-                        >
-                          <div
-                            class="MuiBox-root css-w4835h"
-                          >
-                            Content Indicators
-                            :
-                          </div>
-                          Scholarship of Teaching and Learning, Protocol
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr
-                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <span
-              class="MuiBox-root css-0"
-              data-testid="confirmDialogBox"
-            />
-          </div>
-          <span
-            class="MuiBox-root css-0"
-            data-testid="confirmDialogBox"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card"
-              id="standard-card"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-header"
-                    id="standard-card-header"
-                  >
-                    Describe the reason to 
-                    delete
-                     this work
-                    <div
-                      style="font-size: 60%;"
-                    >
-                      (visible to admins only, displayed under view record page's history)
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-content"
-                data-testid="standard-card-content"
-                id="standard-card-content"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <field
-                      is="mock"
-                      label="Please enter a reason why you are deleting this work"
-                      name="reason"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              data-testid="alert"
-              style="margin-top: 5px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
-                        data-testid="ErrorOutlineIcon"
-                        focusable="false"
-                        id="error-outline-icon"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
-                    >
-                      <b>
-                        Error - 
-                      </b>
-                      Error has occurred during request and request cannot be processed. Test error. Please contact eSpace administrators or try again later.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-          style="margin-top: 8px;"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="cancel-delete-record"
-              data-testid="cancel-delete-record"
-              id="cancel-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Cancel
-            </button>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="delete-admin"
-              data-testid="submit-delete-record"
-              id="submit-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-`;
+exports[`Component DeleteRecord form submission should allow enter reason, new doi and submit form for a record with DataCite DOI 1`] = `"{"rek_status":8,"reason":"deletion reason","fez_record_search_key_doi_resolution_url":null,"fez_record_search_key_new_doi":{"rek_new_doi":"10.1234/uql5678"},"fez_record_search_key_deletion_notes":{"rek_deletion_notes":"deletion notes"}}"`;
 
-exports[`Component DeleteRecord should display general alert if trying to delete a non-Community or Collection that errors 2`] = `
-<div
-  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
->
-  <b>
-    Error - 
-  </b>
-  Error has occurred during request and request cannot be processed. Test error. Please contact eSpace administrators or try again later.
-</div>
-`;
+exports[`Component DeleteRecord form submission should allow enter reason, new doi resolution URL and submit form for a record with Crossref DOI 1`] = `"{"rek_status":8,"reason":"deletion reason","fez_record_search_key_doi_resolution_url":{"rek_doi_resolution_url":"https://web.library.uq.edu.au/test"},"fez_record_search_key_new_doi":null,"fez_record_search_key_deletion_notes":null}"`;
 
-exports[`Component DeleteRecord should display specific alert if trying to delete a Collection that is a part of at least one Community 1`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-    >
-      <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
-        data-analyticsid="page-title"
-        data-testid="page-title"
-        id="page-title"
-      >
-        Delete work
-      </h2>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    />
-    <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-    >
-      <form>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-work-to-be-deleted"
-              id="standard-card-work-to-be-deleted"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-work-to-be-deleted-header"
-                    id="standard-card-work-to-be-deleted-header"
-                  >
-                    Work to be deleted
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-work-to-be-deleted-content"
-                data-testid="standard-card-work-to-be-deleted-content"
-                id="standard-card-work-to-be-deleted-content"
-              >
-                <div
-                  class="publicationCitation"
-                >
-                  <div
-                    class="css-0"
-                    data-testid="publication-citation-parent-UQ:350647"
-                    id="publication-citation-parent-UQ:350647"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                      >
-                        <div
-                          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                            style="min-width: 1px;"
-                          >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
-                            >
-                              <a
-                                href="/view/UQ:350647"
-                              >
-                                Barikin, Amelia - Large Screens and the Transnational Public Sphere: Curating for Public Spaces
-                              </a>
-                            </h6>
-                          </div>
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                          >
-                            <div
-                              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
-                            >
-                              <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
-                              >
-                                <div
-                                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                                >
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
-                                  >
-                                    <a
-                                      aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
-                                      href="https://scholar.google.com/scholar?q=intitle:Barikin,%20Amelia%20-%20Large%20Screens%20and%20the%20Transnational%20Public%20Sphere:%20Curating%20for%20Public%20Spaces"
-                                      id="citation-count-link"
-                                      rel="noopener noreferrer"
-                                      tabindex="0"
-                                      target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
-                                    >
-                                      <span
-                                        class="fez-icon google large"
-                                      />
-                                    </a>
-                                    <span
-                                      class="noOaIcon"
-                                      data-testid="oa-n/a-icon"
-                                    />
-                                  </div>
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                                  />
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr
-                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <span
-              class="MuiBox-root css-0"
-              data-testid="confirmDialogBox"
-            />
-          </div>
-          <span
-            class="MuiBox-root css-0"
-            data-testid="confirmDialogBox"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card"
-              id="standard-card"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-header"
-                    id="standard-card-header"
-                  >
-                    Describe the reason to 
-                    delete
-                     this work
-                    <div
-                      style="font-size: 60%;"
-                    >
-                      (visible to admins only, displayed under view record page's history)
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-content"
-                data-testid="standard-card-content"
-                id="standard-card-content"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <field
-                      is="mock"
-                      label="Please enter a reason why you are deleting this work"
-                      name="reason"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              data-testid="alert"
-              style="margin-top: 5px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
-                        data-testid="ErrorOutlineIcon"
-                        focusable="false"
-                        id="error-outline-icon"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
-                    >
-                      <b>
-                        Error - 
-                      </b>
-                      Error occurred during request and request cannot be processed. The Collection contains records that must be manually unlinked first.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-          style="margin-top: 8px;"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="cancel-delete-record"
-              data-testid="cancel-delete-record"
-              id="cancel-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Cancel
-            </button>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="delete-admin"
-              data-testid="submit-delete-record"
-              id="submit-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-`;
+exports[`Component DeleteRecord form submission should submit form for a deleted record without DOI 1`] = `"{"rek_status":8,"fez_record_search_key_doi_resolution_url":null,"fez_record_search_key_new_doi":null,"fez_record_search_key_deletion_notes":null}"`;
 
-exports[`Component DeleteRecord should display specific alert if trying to delete a Community that contains Collections 1`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-    >
-      <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
-        data-analyticsid="page-title"
-        data-testid="page-title"
-        id="page-title"
-      >
-        Delete work
-      </h2>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    />
-    <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-    >
-      <form>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-work-to-be-deleted"
-              id="standard-card-work-to-be-deleted"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-work-to-be-deleted-header"
-                    id="standard-card-work-to-be-deleted-header"
-                  >
-                    Work to be deleted
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-work-to-be-deleted-content"
-                data-testid="standard-card-work-to-be-deleted-content"
-                id="standard-card-work-to-be-deleted-content"
-              >
-                <div
-                  class="publicationCitation"
-                >
-                  <div
-                    class="css-0"
-                    data-testid="publication-citation-parent-UQ:12096"
-                    id="publication-citation-parent-UQ:12096"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                      >
-                        <div
-                          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                            style="min-width: 1px;"
-                          >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
-                            >
-                              <a
-                                href="/view/UQ:12096"
-                              >
-                                Aboriginal and Torres Strait Islander Studies Unit
-                              </a>
-                            </h6>
-                          </div>
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                          >
-                            <div
-                              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
-                            >
-                              <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
-                              >
-                                <div
-                                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                                >
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
-                                  >
-                                    <a
-                                      aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
-                                      href="https://scholar.google.com/scholar?q=intitle:Aboriginal%20and%20Torres%20Strait%20Islander%20Studies%20Unit"
-                                      id="citation-count-link"
-                                      rel="noopener noreferrer"
-                                      tabindex="0"
-                                      target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
-                                    >
-                                      <span
-                                        class="fez-icon google large"
-                                      />
-                                    </a>
-                                    <span
-                                      class="noOaIcon"
-                                      data-testid="oa-n/a-icon"
-                                    />
-                                  </div>
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                                  />
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr
-                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <span
-              class="MuiBox-root css-0"
-              data-testid="confirmDialogBox"
-            />
-          </div>
-          <span
-            class="MuiBox-root css-0"
-            data-testid="confirmDialogBox"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card"
-              id="standard-card"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-header"
-                    id="standard-card-header"
-                  >
-                    Describe the reason to 
-                    delete
-                     this work
-                    <div
-                      style="font-size: 60%;"
-                    >
-                      (visible to admins only, displayed under view record page's history)
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-content"
-                data-testid="standard-card-content"
-                id="standard-card-content"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <field
-                      is="mock"
-                      label="Please enter a reason why you are deleting this work"
-                      name="reason"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              data-testid="alert"
-              style="margin-top: 5px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
-                        data-testid="ErrorOutlineIcon"
-                        focusable="false"
-                        id="error-outline-icon"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
-                    >
-                      <b>
-                        Error - 
-                      </b>
-                      Error occurred during request and request cannot be processed. The Community contains Collections that must be manually unlinked first.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-          style="margin-top: 8px;"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="cancel-delete-record"
-              data-testid="cancel-delete-record"
-              id="cancel-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Cancel
-            </button>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="delete-admin"
-              data-testid="submit-delete-record"
-              id="submit-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component DeleteRecord should render delete record form for records with Crossref UQ DOIs 1`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-    >
-      <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
-        data-analyticsid="page-title"
-        data-testid="page-title"
-        id="page-title"
-      >
-        Delete work
-      </h2>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    />
-    <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-    >
-      <form>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-work-to-be-deleted"
-              id="standard-card-work-to-be-deleted"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-work-to-be-deleted-header"
-                    id="standard-card-work-to-be-deleted-header"
-                  >
-                    Work to be deleted
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-work-to-be-deleted-content"
-                data-testid="standard-card-work-to-be-deleted-content"
-                id="standard-card-work-to-be-deleted-content"
-              >
-                <div
-                  class="publicationCitation"
-                >
-                  <div
-                    class="css-0"
-                    data-testid="publication-citation-parent-UQ:41878"
-                    id="publication-citation-parent-UQ:41878"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                      >
-                        <div
-                          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                            style="min-width: 1px;"
-                          >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
-                            >
-                              <a
-                                href="/view/UQ:41878"
-                              >
-                                Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-                              </a>
-                            </h6>
-                          </div>
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
-                          >
-                            <div
-                              class="citationContent citationJournalArticle"
-                            >
-                              <span
-                                class="citationAuthors"
-                              >
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-0"
-                                >
-                                  Brown, M. A.
-                                </span>
-                                , 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-1"
-                                >
-                                  He, Y.
-                                </span>
-                                , 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-2"
-                                >
-                                  Rothnagel, J. A.
-                                </span>
-                                , 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-3"
-                                >
-                                  Saunders, N. A.
-                                </span>
-                                , 
-                                 and 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-4"
-                                >
-                                  Smith, R.
-                                </span>
-                                 
-                              </span>
-                              <span
-                                class="citationDate"
-                              >
-                                (
-                                2004
-                                ).
-                              </span>
-                              <span
-                                class="citationTitle"
-                              >
-                                 
-                                Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-                                .
-                              </span>
-                              <span
-                                class="citationJournalName"
-                              >
-                                 
-                                Molecular Biology of The Cell
-                                 
-                              </span>
-                              <span
-                                class="citationVolumeNumber"
-                              >
-                                 
-                                15
-                                 
-                              </span>
-                              <span
-                                class="citationIssueNumber empty"
-                              />
-                              <span
-                                class="citationArticleNumber empty"
-                              />
-                              <span
-                                class="citationPageRange"
-                              >
-                                <span
-                                  class="citationStartPage"
-                                >
-                                  252A
-                                </span>
-                                -
-                                <span
-                                  class="citationEndPage"
-                                >
-                                  253A
-                                </span>
-                              </span>
-                              <span>
-                                . 
-                              </span>
-                              <span
-                                data-testid="rek-doi"
-                              >
-                                <a
-                                  aria-label="Open this DOI in an new window"
-                                  class="citationDoiLink css-1oqhn84"
-                                  data-analyticsid="citation-doi-link"
-                                  data-testid="citation-doi-link"
-                                  href="https://doi.org/10.1426412345"
-                                  id="citation-doi-link"
-                                  rel="noopener noreferrer"
-                                  tabindex="0"
-                                  target="_blank"
-                                  title="Open this DOI in an new window"
-                                >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
-                                    data-testid="OpenInNewIcon"
-                                    focusable="false"
-                                    id="citation-doi-link-new-window-icon"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                    />
-                                  </svg>
-                                  https://doi.org/10.1426412345
-                                </a>
-                              </span>
-                            </div>
-                          </div>
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                          >
-                            <div
-                              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
-                            >
-                              <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
-                              >
-                                <div
-                                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                                >
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
-                                  >
-                                    <a
-                                      aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
-                                      href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                                      id="citation-count-link"
-                                      rel="noopener noreferrer"
-                                      tabindex="0"
-                                      target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
-                                    >
-                                      <span
-                                        class="fez-icon wos large"
-                                      />
-                                      <span
-                                        class="MuiBox-root css-19k1sqg"
-                                      >
-                                        2
-                                      </span>
-                                    </a>
-                                    <a
-                                      aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
-                                      href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                                      id="citation-count-link"
-                                      rel="noopener noreferrer"
-                                      tabindex="0"
-                                      target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
-                                    >
-                                      <span
-                                        class="fez-icon google large"
-                                      />
-                                    </a>
-                                    <span
-                                      class="noOaIcon"
-                                      data-testid="oa-n/a-icon"
-                                    />
-                                  </div>
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                                  />
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
-                          data-testid="rek-content-indicator"
-                          id="rek-content-indicator"
-                        >
-                          <div
-                            class="MuiBox-root css-w4835h"
-                          >
-                            Content Indicators
-                            :
-                          </div>
-                          Scholarship of Teaching and Learning, Protocol
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr
-                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <span
-              class="MuiBox-root css-0"
-              data-testid="confirmDialogBox"
-            />
-          </div>
-          <span
-            class="MuiBox-root css-0"
-            data-testid="confirmDialogBox"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card"
-              id="standard-card"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-header"
-                    id="standard-card-header"
-                  >
-                    Describe the reason to 
-                    delete
-                     this work
-                    <div
-                      style="font-size: 60%;"
-                    >
-                      (visible to admins only, displayed under view record page's history)
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-content"
-                data-testid="standard-card-content"
-                id="standard-card-content"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <field
-                      is="mock"
-                      label="Please enter a reason why you are deleting this work"
-                      name="reason"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card"
-              id="standard-card"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-header"
-                    id="standard-card-header"
-                  >
-                    New Location
-                    <div
-                      style="font-size: 60%;"
-                    >
-                      (default to https://web.library.uq.edu.au/record-unavailable if left blank)
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-content"
-                data-testid="standard-card-content"
-                id="standard-card-content"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <field
-                      is="mock"
-                      label="Please enter the URL to which the DOI would resolve to"
-                      name="publication.fez_record_search_key_doi_resolution_url.rek_doi_resolution_url"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-          style="margin-top: 8px;"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="cancel-delete-record"
-              data-testid="cancel-delete-record"
-              id="cancel-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Cancel
-            </button>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="delete-admin"
-              data-testid="submit-delete-record"
-              id="submit-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component DeleteRecord should render delete record form for records with DataCite UQ DOIs 1`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-    >
-      <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
-        data-analyticsid="page-title"
-        data-testid="page-title"
-        id="page-title"
-      >
-        Delete work
-      </h2>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    />
-    <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-    >
-      <form>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-work-to-be-deleted"
-              id="standard-card-work-to-be-deleted"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-work-to-be-deleted-header"
-                    id="standard-card-work-to-be-deleted-header"
-                  >
-                    Work to be deleted
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-work-to-be-deleted-content"
-                data-testid="standard-card-work-to-be-deleted-content"
-                id="standard-card-work-to-be-deleted-content"
-              >
-                <div
-                  class="publicationCitation"
-                >
-                  <div
-                    class="css-0"
-                    data-testid="publication-citation-parent-UQ:41878"
-                    id="publication-citation-parent-UQ:41878"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                      >
-                        <div
-                          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                            style="min-width: 1px;"
-                          >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
-                            >
-                              <a
-                                href="/view/UQ:41878"
-                              >
-                                Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-                              </a>
-                            </h6>
-                          </div>
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
-                          >
-                            <div
-                              class="citationContent citationJournalArticle"
-                            >
-                              <span
-                                class="citationAuthors"
-                              >
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-0"
-                                >
-                                  Brown, M. A.
-                                </span>
-                                , 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-1"
-                                >
-                                  He, Y.
-                                </span>
-                                , 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-2"
-                                >
-                                  Rothnagel, J. A.
-                                </span>
-                                , 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-3"
-                                >
-                                  Saunders, N. A.
-                                </span>
-                                , 
-                                 and 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-4"
-                                >
-                                  Smith, R.
-                                </span>
-                                 
-                              </span>
-                              <span
-                                class="citationDate"
-                              >
-                                (
-                                2004
-                                ).
-                              </span>
-                              <span
-                                class="citationTitle"
-                              >
-                                 
-                                Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-                                .
-                              </span>
-                              <span
-                                class="citationJournalName"
-                              >
-                                 
-                                Molecular Biology of The Cell
-                                 
-                              </span>
-                              <span
-                                class="citationVolumeNumber"
-                              >
-                                 
-                                15
-                                 
-                              </span>
-                              <span
-                                class="citationIssueNumber empty"
-                              />
-                              <span
-                                class="citationArticleNumber empty"
-                              />
-                              <span
-                                class="citationPageRange"
-                              >
-                                <span
-                                  class="citationStartPage"
-                                >
-                                  252A
-                                </span>
-                                -
-                                <span
-                                  class="citationEndPage"
-                                >
-                                  253A
-                                </span>
-                              </span>
-                              <span>
-                                . 
-                              </span>
-                              <span
-                                data-testid="rek-doi"
-                              >
-                                <a
-                                  aria-label="Open this DOI in an new window"
-                                  class="citationDoiLink css-1oqhn84"
-                                  data-analyticsid="citation-doi-link"
-                                  data-testid="citation-doi-link"
-                                  href="https://doi.org/10.2364312345"
-                                  id="citation-doi-link"
-                                  rel="noopener noreferrer"
-                                  tabindex="0"
-                                  target="_blank"
-                                  title="Open this DOI in an new window"
-                                >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
-                                    data-testid="OpenInNewIcon"
-                                    focusable="false"
-                                    id="citation-doi-link-new-window-icon"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                                    />
-                                  </svg>
-                                  https://doi.org/10.2364312345
-                                </a>
-                              </span>
-                            </div>
-                          </div>
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                          >
-                            <div
-                              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
-                            >
-                              <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
-                              >
-                                <div
-                                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                                >
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
-                                  >
-                                    <a
-                                      aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
-                                      href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                                      id="citation-count-link"
-                                      rel="noopener noreferrer"
-                                      tabindex="0"
-                                      target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
-                                    >
-                                      <span
-                                        class="fez-icon wos large"
-                                      />
-                                      <span
-                                        class="MuiBox-root css-19k1sqg"
-                                      >
-                                        2
-                                      </span>
-                                    </a>
-                                    <a
-                                      aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
-                                      href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                                      id="citation-count-link"
-                                      rel="noopener noreferrer"
-                                      tabindex="0"
-                                      target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
-                                    >
-                                      <span
-                                        class="fez-icon google large"
-                                      />
-                                    </a>
-                                    <span
-                                      class="noOaIcon"
-                                      data-testid="oa-n/a-icon"
-                                    />
-                                  </div>
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                                  />
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
-                          data-testid="rek-content-indicator"
-                          id="rek-content-indicator"
-                        >
-                          <div
-                            class="MuiBox-root css-w4835h"
-                          >
-                            Content Indicators
-                            :
-                          </div>
-                          Scholarship of Teaching and Learning, Protocol
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr
-                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <span
-              class="MuiBox-root css-0"
-              data-testid="confirmDialogBox"
-            />
-          </div>
-          <span
-            class="MuiBox-root css-0"
-            data-testid="confirmDialogBox"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card"
-              id="standard-card"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-header"
-                    id="standard-card-header"
-                  >
-                    Describe the reason to 
-                    delete
-                     this work
-                    <div
-                      style="font-size: 60%;"
-                    >
-                      (visible to admins only, displayed under view record page's history)
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-content"
-                data-testid="standard-card-content"
-                id="standard-card-content"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <field
-                      is="mock"
-                      label="Please enter a reason why you are deleting this work"
-                      name="reason"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card"
-              id="standard-card"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-header"
-                    id="standard-card-header"
-                  >
-                    New DOI
-                    <div
-                      style="font-size: 60%;"
-                    >
-                      (displayed on the records deleted page)
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-content"
-                data-testid="standard-card-content"
-                id="standard-card-content"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <field
-                      is="mock"
-                      label="Please enter the DOI to which the record moved to"
-                      name="publication.fez_record_search_key_new_doi.rek_new_doi"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card"
-              id="standard-card"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-header"
-                    id="standard-card-header"
-                  >
-                    Deletion Notes
-                    <div
-                      style="font-size: 60%;"
-                    >
-                      (displayed on the records deleted page)
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-content"
-                data-testid="standard-card-content"
-                id="standard-card-content"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <field
-                      is="mock"
-                      name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-          style="margin-top: 8px;"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="cancel-delete-record"
-              data-testid="cancel-delete-record"
-              id="cancel-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Cancel
-            </button>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="delete-admin"
-              data-testid="submit-delete-record"
-              id="submit-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-`;
+exports[`Component DeleteRecord form submission should submit the form for a record without DOI 1`] = `"{"rek_status":8,"fez_record_search_key_doi_resolution_url":null,"fez_record_search_key_new_doi":null,"fez_record_search_key_deletion_notes":null}"`;
 
 exports[`Component DeleteRecord should render delete record form with data collection citation 1`] = `
 <div>
@@ -2495,7 +194,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     viewBox="0 0 24 24"
                                   >
                                     <path
-                                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                                     />
                                   </svg>
                                   https://doi.org/10.2364312345
@@ -2598,12 +297,6 @@ exports[`Component DeleteRecord should render delete record form with data colle
               </div>
             </div>
           </div>
-          <div>
-            <span
-              class="MuiBox-root css-0"
-              data-testid="confirmDialogBox"
-            />
-          </div>
           <span
             class="MuiBox-root css-0"
             data-testid="confirmDialogBox"
@@ -2650,11 +343,43 @@ exports[`Component DeleteRecord should render delete record form with data colle
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    <field
-                      is="mock"
-                      label="Please enter a reason why you are deleting this work"
-                      name="reason"
-                    />
+                    <div
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                      data-testid="reason"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="false"
+                        data-testid="reason-label"
+                        for="reason-input"
+                        id="reason-label"
+                      >
+                        Please enter a reason why you are deleting this work
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-19xtpfk-MuiInputBase-root-MuiInput-root"
+                      >
+                        <textarea
+                          aria-invalid="false"
+                          aria-label="Please enter a reason why you are deleting this work"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-66dh3a-MuiInputBase-input-MuiInput-input"
+                          data-analyticsid="reason-input"
+                          data-testid="reason-input"
+                          id="reason-input"
+                          label="Please enter a reason why you are deleting this work"
+                          name="reason"
+                          rows="3"
+                          style="height: 0px; overflow: hidden;"
+                        />
+                        <textarea
+                          aria-hidden="true"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-66dh3a-MuiInputBase-input-MuiInput-input"
+                          readonly=""
+                          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+                          tabindex="-1"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2700,11 +425,37 @@ exports[`Component DeleteRecord should render delete record form with data colle
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    <field
-                      is="mock"
-                      label="Please enter the DOI to which the record moved to"
-                      name="publication.fez_record_search_key_new_doi.rek_new_doi"
-                    />
+                    <div
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                      data-testid="rek-new-doi"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="false"
+                        data-testid="rek-new-doi-label"
+                        for="rek-new-doi-input"
+                        id="rek-new-doi-label"
+                      >
+                        Please enter the DOI to which the record moved to
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                      >
+                        <input
+                          aria-invalid="false"
+                          aria-label="Please enter the DOI to which the record moved to"
+                          class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                          data-analyticsid="rek-new-doi-input"
+                          data-testid="rek-new-doi-input"
+                          id="rek-new-doi-input"
+                          label="Please enter the DOI to which the record moved to"
+                          name="publication.fez_record_search_key_new_doi.rek_new_doi"
+                          placeholder="Enter a valid DOI (e.g. 10.123/456)"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2750,10 +501,22 @@ exports[`Component DeleteRecord should render delete record form with data colle
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    <field
-                      is="mock"
-                      name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
-                    />
+                    <div
+                      data-analyticsid="rek-deletion-notes"
+                      data-testid="rek-deletion-notes"
+                      id="rek-deletion-notes"
+                    >
+                      <span />
+                      <div />
+                      <span
+                        class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+                        style="display: inline-block;"
+                      >
+                        0
+                         characters of 
+                        2000
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2771,7 +534,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
             class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="cancel-delete-record"
               data-testid="cancel-delete-record"
               id="cancel-delete-record"
@@ -2785,12 +548,12 @@ exports[`Component DeleteRecord should render delete record form with data colle
             class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="delete-admin"
               data-testid="submit-delete-record"
               id="submit-delete-record"
               tabindex="0"
-              type="button"
+              type="submit"
             >
               Delete
             </button>
@@ -2986,7 +749,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     viewBox="0 0 24 24"
                                   >
                                     <path
-                                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                                     />
                                   </svg>
                                   https://doi.org/10.2364312345
@@ -3089,12 +852,6 @@ exports[`Component DeleteRecord should render delete record form with deleted da
               </div>
             </div>
           </div>
-          <div>
-            <span
-              class="MuiBox-root css-0"
-              data-testid="confirmDialogBox"
-            />
-          </div>
           <span
             class="MuiBox-root css-0"
             data-testid="confirmDialogBox"
@@ -3141,11 +898,43 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    <field
-                      is="mock"
-                      label="Please enter a reason why you are updating this work"
-                      name="reason"
-                    />
+                    <div
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                      data-testid="reason"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="false"
+                        data-testid="reason-label"
+                        for="reason-input"
+                        id="reason-label"
+                      >
+                        Please enter a reason why you are updating this work
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-19xtpfk-MuiInputBase-root-MuiInput-root"
+                      >
+                        <textarea
+                          aria-invalid="false"
+                          aria-label="Please enter a reason why you are updating this work"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-66dh3a-MuiInputBase-input-MuiInput-input"
+                          data-analyticsid="reason-input"
+                          data-testid="reason-input"
+                          id="reason-input"
+                          label="Please enter a reason why you are updating this work"
+                          name="reason"
+                          rows="3"
+                          style="height: 0px; overflow: hidden;"
+                        />
+                        <textarea
+                          aria-hidden="true"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-66dh3a-MuiInputBase-input-MuiInput-input"
+                          readonly=""
+                          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+                          tabindex="-1"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3191,11 +980,37 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    <field
-                      is="mock"
-                      label="Please enter the DOI to which the record moved to"
-                      name="publication.fez_record_search_key_new_doi.rek_new_doi"
-                    />
+                    <div
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                      data-testid="rek-new-doi"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="false"
+                        data-testid="rek-new-doi-label"
+                        for="rek-new-doi-input"
+                        id="rek-new-doi-label"
+                      >
+                        Please enter the DOI to which the record moved to
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                      >
+                        <input
+                          aria-invalid="false"
+                          aria-label="Please enter the DOI to which the record moved to"
+                          class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                          data-analyticsid="rek-new-doi-input"
+                          data-testid="rek-new-doi-input"
+                          id="rek-new-doi-input"
+                          label="Please enter the DOI to which the record moved to"
+                          name="publication.fez_record_search_key_new_doi.rek_new_doi"
+                          placeholder="Enter a valid DOI (e.g. 10.123/456)"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3241,10 +1056,22 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    <field
-                      is="mock"
-                      name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
-                    />
+                    <div
+                      data-analyticsid="rek-deletion-notes"
+                      data-testid="rek-deletion-notes"
+                      id="rek-deletion-notes"
+                    >
+                      <span />
+                      <div />
+                      <span
+                        class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+                        style="display: inline-block;"
+                      >
+                        0
+                         characters of 
+                        2000
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3262,7 +1089,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
             class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="cancel-delete-record"
               data-testid="cancel-delete-record"
               id="cancel-delete-record"
@@ -3276,12 +1103,12 @@ exports[`Component DeleteRecord should render delete record form with deleted da
             class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="delete-admin"
               data-testid="submit-delete-record"
               id="submit-delete-record"
               tabindex="0"
-              type="button"
+              type="submit"
             >
               Update
             </button>
@@ -3578,12 +1405,6 @@ exports[`Component DeleteRecord should render delete record form with deleted re
               </div>
             </div>
           </div>
-          <div>
-            <span
-              class="MuiBox-root css-0"
-              data-testid="confirmDialogBox"
-            />
-          </div>
           <span
             class="MuiBox-root css-0"
             data-testid="confirmDialogBox"
@@ -3630,11 +1451,43 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    <field
-                      is="mock"
-                      label="Please enter a reason why you are updating this work"
-                      name="reason"
-                    />
+                    <div
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                      data-testid="reason"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="false"
+                        data-testid="reason-label"
+                        for="reason-input"
+                        id="reason-label"
+                      >
+                        Please enter a reason why you are updating this work
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-19xtpfk-MuiInputBase-root-MuiInput-root"
+                      >
+                        <textarea
+                          aria-invalid="false"
+                          aria-label="Please enter a reason why you are updating this work"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-66dh3a-MuiInputBase-input-MuiInput-input"
+                          data-analyticsid="reason-input"
+                          data-testid="reason-input"
+                          id="reason-input"
+                          label="Please enter a reason why you are updating this work"
+                          name="reason"
+                          rows="3"
+                          style="height: 0px; overflow: hidden;"
+                        />
+                        <textarea
+                          aria-hidden="true"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-66dh3a-MuiInputBase-input-MuiInput-input"
+                          readonly=""
+                          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+                          tabindex="-1"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3652,7 +1505,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
             class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="cancel-delete-record"
               data-testid="cancel-delete-record"
               id="cancel-delete-record"
@@ -3666,463 +1519,18 @@ exports[`Component DeleteRecord should render delete record form with deleted re
             class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="delete-admin"
               data-testid="submit-delete-record"
               id="submit-delete-record"
               tabindex="0"
-              type="button"
+              type="submit"
             >
               Update
             </button>
           </div>
         </div>
       </form>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component DeleteRecord should render delete record form with record citation 1`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-    >
-      <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
-        data-analyticsid="page-title"
-        data-testid="page-title"
-        id="page-title"
-      >
-        Delete work
-      </h2>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    />
-    <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-    >
-      <form>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-work-to-be-deleted"
-              id="standard-card-work-to-be-deleted"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-work-to-be-deleted-header"
-                    id="standard-card-work-to-be-deleted-header"
-                  >
-                    Work to be deleted
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-work-to-be-deleted-content"
-                data-testid="standard-card-work-to-be-deleted-content"
-                id="standard-card-work-to-be-deleted-content"
-              >
-                <div
-                  class="publicationCitation"
-                >
-                  <div
-                    class="css-0"
-                    data-testid="publication-citation-parent-UQ:41878"
-                    id="publication-citation-parent-UQ:41878"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                      >
-                        <div
-                          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                            style="min-width: 1px;"
-                          >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
-                            >
-                              <a
-                                href="/view/UQ:41878"
-                              >
-                                Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-                              </a>
-                            </h6>
-                          </div>
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
-                          >
-                            <div
-                              class="citationContent citationJournalArticle"
-                            >
-                              <span
-                                class="citationAuthors"
-                              >
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-0"
-                                >
-                                  Brown, M. A.
-                                </span>
-                                , 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-1"
-                                >
-                                  He, Y.
-                                </span>
-                                , 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-2"
-                                >
-                                  Rothnagel, J. A.
-                                </span>
-                                , 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-3"
-                                >
-                                  Saunders, N. A.
-                                </span>
-                                , 
-                                 and 
-                                <span
-                                  class="citationAuthor"
-                                  data-testid="rek-author-4"
-                                >
-                                  Smith, R.
-                                </span>
-                                 
-                              </span>
-                              <span
-                                class="citationDate"
-                              >
-                                (
-                                2004
-                                ).
-                              </span>
-                              <span
-                                class="citationTitle"
-                              >
-                                 
-                                Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-                                .
-                              </span>
-                              <span
-                                class="citationJournalName"
-                              >
-                                 
-                                Molecular Biology of The Cell
-                                 
-                              </span>
-                              <span
-                                class="citationVolumeNumber"
-                              >
-                                 
-                                15
-                                 
-                              </span>
-                              <span
-                                class="citationIssueNumber empty"
-                              />
-                              <span
-                                class="citationArticleNumber empty"
-                              />
-                              <span
-                                class="citationPageRange"
-                              >
-                                <span
-                                  class="citationStartPage"
-                                >
-                                  252A
-                                </span>
-                                -
-                                <span
-                                  class="citationEndPage"
-                                >
-                                  253A
-                                </span>
-                              </span>
-                              <span>
-                                . 
-                              </span>
-                              <span
-                                class="citationDOI empty"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                          >
-                            <div
-                              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
-                            >
-                              <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
-                              >
-                                <div
-                                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                                >
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
-                                  >
-                                    <a
-                                      aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
-                                      href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                                      id="citation-count-link"
-                                      rel="noopener noreferrer"
-                                      tabindex="0"
-                                      target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
-                                    >
-                                      <span
-                                        class="fez-icon wos large"
-                                      />
-                                      <span
-                                        class="MuiBox-root css-19k1sqg"
-                                      >
-                                        2
-                                      </span>
-                                    </a>
-                                    <a
-                                      aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
-                                      href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                                      id="citation-count-link"
-                                      rel="noopener noreferrer"
-                                      tabindex="0"
-                                      target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
-                                    >
-                                      <span
-                                        class="fez-icon google large"
-                                      />
-                                    </a>
-                                    <span
-                                      class="noOaIcon"
-                                      data-testid="oa-n/a-icon"
-                                    />
-                                  </div>
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                                  />
-                                  <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
-                          data-testid="rek-content-indicator"
-                          id="rek-content-indicator"
-                        >
-                          <div
-                            class="MuiBox-root css-w4835h"
-                          >
-                            Content Indicators
-                            :
-                          </div>
-                          Scholarship of Teaching and Learning, Protocol
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr
-                    class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <span
-              class="MuiBox-root css-0"
-              data-testid="confirmDialogBox"
-            />
-          </div>
-          <span
-            class="MuiBox-root css-0"
-            data-testid="confirmDialogBox"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card"
-              id="standard-card"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-header"
-                    id="standard-card-header"
-                  >
-                    Describe the reason to 
-                    delete
-                     this work
-                    <div
-                      style="font-size: 60%;"
-                    >
-                      (visible to admins only, displayed under view record page's history)
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-content"
-                data-testid="standard-card-content"
-                id="standard-card-content"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <field
-                      is="mock"
-                      label="Please enter a reason why you are deleting this work"
-                      name="reason"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-          style="margin-top: 8px;"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-          />
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="cancel-delete-record"
-              data-testid="cancel-delete-record"
-              id="cancel-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Cancel
-            </button>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="delete-admin"
-              data-testid="submit-delete-record"
-              id="submit-delete-record"
-              tabindex="0"
-              type="button"
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component DeleteRecord should render loader when record is loading 1`] = `
-<div>
-  <div
-    style="padding: 8px;"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
-      />
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-        style="text-align: center;"
-      >
-        <span
-          aria-label="Loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
-          role="progressbar"
-          style="width: 18px; height: 18px;"
-        >
-          <svg
-            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
-            viewBox="22 22 44 44"
-          >
-            <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
-              cx="44"
-              cy="44"
-              fill="none"
-              r="21"
-              stroke-width="2"
-            />
-          </svg>
-        </span>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-        style="text-align: center;"
-      >
-        <span
-          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
-          style="font-size: 1.33rem;"
-        >
-          Loading work
-        </span>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
-      />
     </div>
   </div>
 </div>

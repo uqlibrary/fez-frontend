@@ -1,17 +1,28 @@
 import React from 'react';
 import RecordsSearchResults from './RecordsSearchResults';
 import { accounts } from 'mock/data/account';
-import { render, WithReduxStore, WithRouter, waitFor, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, waitFor, userEvent } from 'test-utils';
 import { SEARCH_EXTERNAL_RECORDS_API } from 'repositories/routes';
 
+const mockUseNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
+
 function setup(testProps = {}, renderMethod = render) {
-    const props = {
-        history: {},
-        account: accounts.uqresearcher || testProps.account || {},
-        ...testProps,
-    };
+    const { publicationsList = [], searchLoading, ...props } = { ...testProps };
     return renderMethod(
-        <WithReduxStore>
+        <WithReduxStore
+            initialState={{
+                searchRecordsReducer: {
+                    loadingPublicationSources: false,
+                    publicationsList,
+                    searchLoading,
+                },
+            }}
+        >
             <WithRouter>
                 <RecordsSearchResults {...props} />
             </WithRouter>
@@ -26,69 +37,42 @@ describe('Search record results', () => {
 
     afterEach(() => {
         mockApi.reset();
+        jest.clearAllMocks();
     });
 
     it('should render stepper and no results', () => {
-        const { container } = setup({
-            history: {},
-        });
+        const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 
     it('should render spinner', () => {
-        const { container } = setup({
-            history: {},
-            searchLoading: true,
-        });
+        const { container } = setup({ searchLoading: true });
         expect(container).toMatchSnapshot();
     });
 
-    it(
-        'should call componentDidUpdate lifecycle method and focus on ' +
-            'create new record button if no publications found',
-        () => {
-            const pushFn = jest.fn();
-            const { getByRole, rerender } = setup({
-                publicationList: [],
-                history: { push: pushFn },
-            });
-            setup({ publicationList: [], history: { push: pushFn } }, rerender);
-
-            expect(getByRole('button', { name: 'Create a new eSpace work' })).toHaveFocus();
-            fireEvent.click(getByRole('button', { name: 'Create a new eSpace work' }));
-
-            expect(pushFn).toHaveBeenCalled();
-        },
-    );
-
-    it('should navigate to find on cancel workflow', () => {
-        const cancelWorkflow = jest.fn();
-        const history = {
-            push: cancelWorkflow,
-        };
-
-        const { getByRole } = setup({
-            history: history,
+    it('should call useffect method and focus on ' + 'create new record button if no publications found', async () => {
+        const { getByRole, rerender } = setup({
+            publicationList: [],
         });
+        setup({ publicationList: [] }, rerender);
 
-        fireEvent.click(getByRole('button', { name: 'Abandon and search again' }));
-        expect(cancelWorkflow).toBeCalled();
+        expect(getByRole('button', { name: 'Create a new eSpace work' })).toHaveFocus();
+        await userEvent.click(getByRole('button', { name: 'Create a new eSpace work' }));
+
+        expect(mockUseNavigate).toHaveBeenCalled();
+    });
+
+    it('should navigate to find on cancel workflow', async () => {
+        const { getByRole } = setup();
+
+        await userEvent.click(getByRole('button', { name: 'Abandon and search again' }));
+        expect(mockUseNavigate).toHaveBeenCalled();
     });
 
     it(
         'should render a single claimable item with no authors on the record ' +
             '(record should appear in publicationsList prop)',
         async () => {
-            const navigateToClaimPublication = jest.fn();
-            const setClaimPublication = jest.fn();
-            const setRedirectPath = jest.fn();
-            const actions = {
-                setClaimPublication: setClaimPublication,
-                setRedirectPath: setRedirectPath,
-            };
-            const history = {
-                push: navigateToClaimPublication,
-            };
             const publicationsList = [
                 {
                     rek_pid: 'UQ:795469',
@@ -180,18 +164,12 @@ describe('Search record results', () => {
             ];
 
             const { getByTestId, getByRole, container } = setup({
-                history: history,
-                actions: actions,
                 publicationsList: publicationsList,
             });
 
             await waitFor(() => getByTestId('publication-citation-parent-UQ:795469'), { timeout: 2000, delay: 1000 });
-
-            fireEvent.click(getByRole('button', { name: 'Claim this work' }));
-
-            expect(setClaimPublication).toBeCalledWith(publicationsList[0]);
-            expect(navigateToClaimPublication).toBeCalledWith('/records/claim');
-            expect(setRedirectPath).toBeCalledWith('/records/add/find');
+            await userEvent.click(getByRole('button', { name: 'Claim this work' }));
+            expect(mockUseNavigate).toHaveBeenCalledWith('/records/claim');
             expect(container).toMatchSnapshot();
         },
     );
@@ -199,15 +177,7 @@ describe('Search record results', () => {
     it(
         'should render a single unclaimable item with no authors on the record ' +
             '(record should appear in publicationsListSubset prop)',
-        () => {
-            // const navigateToClaimPublication = jest.fn();
-            // const setClaimPublication = jest.fn();
-            // const actions = {
-            //     setClaimPublication: setClaimPublication,
-            // };
-            // const history = {
-            //     push: navigateToClaimPublication,
-            // };
+        async () => {
             const publicationsList = [
                 {
                     rek_pid: 'UQ:795469',
@@ -260,9 +230,10 @@ describe('Search record results', () => {
                 },
             ];
 
-            const { container } = setup({
+            const { container, getByTestId } = setup({
                 publicationsList: publicationsList,
             });
+            await waitFor(() => getByTestId('publication-citation-parent-UQ:795469'), { timeout: 2000, delay: 1000 });
             expect(container).toMatchSnapshot();
         },
     );
@@ -270,15 +241,7 @@ describe('Search record results', () => {
     it(
         'should render a single unclaimable item with no authors on the record ' +
             '(record should appear in publicationsListSubset prop) with full mount',
-        () => {
-            // const navigateToClaimPublication = jest.fn();
-            // const setClaimPublication = jest.fn();
-            // const actions = {
-            //     setClaimPublication: setClaimPublication,
-            // };
-            // const history = {
-            //     push: navigateToClaimPublication,
-            // };
+        async () => {
             const publicationsList = [
                 {
                     rek_pid: 'UQ:795469',
@@ -331,7 +294,8 @@ describe('Search record results', () => {
                 },
             ];
 
-            const { container } = setup({ publicationsList: publicationsList });
+            const { container, getByTestId } = setup({ publicationsList: publicationsList });
+            await waitFor(() => getByTestId('publication-citation-parent-UQ:795469'), { timeout: 2000, delay: 1000 });
             expect(container).toMatchSnapshot();
         },
     );
@@ -340,14 +304,6 @@ describe('Search record results', () => {
         'should render publications list with one publication to be able to claim ' +
             '(record should not appear in publicationsListSubset prop)',
         () => {
-            // const navigateToClaimPublication = jest.fn();
-            // const setClaimPublication = jest.fn();
-            // const actions = {
-            //     setClaimPublication: setClaimPublication,
-            // };
-            // const history = {
-            //     push: navigateToClaimPublication,
-            // };
             const publicationsList = [
                 {
                     rek_pid: 'UQ:255472',
@@ -393,14 +349,6 @@ describe('Search record results', () => {
     );
 
     it('should not return unclaimablePublicationsList (no pid)', async () => {
-        // const navigateToClaimPublication = jest.fn();
-        // const setClaimPublication = jest.fn();
-        // const actions = {
-        //     setClaimPublication: setClaimPublication,
-        // };
-        // const history = {
-        //     push: navigateToClaimPublication,
-        // };
         const publicationsList = [
             {
                 fez_record_search_key_author: [
@@ -448,14 +396,6 @@ describe('Search record results', () => {
     });
 
     it('should not return unclaimablePublicationsList (number of authors !== number of author_ids)', async () => {
-        // const navigateToClaimPublication = jest.fn();
-        // const setClaimPublication = jest.fn();
-        // const actions = {
-        //     setClaimPublication: setClaimPublication,
-        // };
-        // const history = {
-        //     push: navigateToClaimPublication,
-        // };
         const publicationsList = [
             {
                 rek_pid: 'UQ:111111',
@@ -501,14 +441,6 @@ describe('Search record results', () => {
         'should not return unclaimablePublicationsList (number of authors === 0 ' +
             'AND number of contributors !== number of contributor_id)',
         async () => {
-            // const navigateToClaimPublication = jest.fn();
-            // const setClaimPublication = jest.fn();
-            // const actions = {
-            //     setClaimPublication: setClaimPublication,
-            // };
-            // const history = {
-            //     push: navigateToClaimPublication,
-            // };
             const publicationsList = [
                 {
                     rek_pid: 'UQ:255472',
@@ -545,14 +477,6 @@ describe('Search record results', () => {
     );
 
     it('should not return unclaimablePublicationsList (found author ids, but one of them is 0)', async () => {
-        // const navigateToClaimPublication = jest.fn();
-        // const setClaimPublication = jest.fn();
-        // const actions = {
-        //     setClaimPublication: setClaimPublication,
-        // };
-        // const history = {
-        //     push: navigateToClaimPublication,
-        // };
         const publicationsList = [
             {
                 rek_pid: 'UQ:111111',
@@ -604,14 +528,6 @@ describe('Search record results', () => {
     });
 
     it('should not return unclaimablePublicationsList (found author ids, but one of them is null)', async () => {
-        // const navigateToClaimPublication = jest.fn();
-        // const setClaimPublication = jest.fn();
-        // const actions = {
-        //     setClaimPublication: setClaimPublication,
-        // };
-        // const history = {
-        //     push: navigateToClaimPublication,
-        // };
         const publicationsList = [
             {
                 rek_pid: 'UQ:111111',
@@ -663,14 +579,6 @@ describe('Search record results', () => {
     });
 
     it('should not return unclaimablePublicationsList (found contributor ids, but one of them is 0)', async () => {
-        // const navigateToClaimPublication = jest.fn();
-        // const setClaimPublication = jest.fn();
-        // const actions = {
-        //     setClaimPublication: setClaimPublication,
-        // };
-        // const history = {
-        //     push: navigateToClaimPublication,
-        // };
         const publicationsList = [
             {
                 rek_pid: 'UQ:111111',
@@ -722,14 +630,6 @@ describe('Search record results', () => {
     });
 
     it('should not return unclaimablePublicationsList (found contributor ids, but one of them is null)', async () => {
-        // const navigateToClaimPublication = jest.fn();
-        // const setClaimPublication = jest.fn();
-        // const actions = {
-        //     setClaimPublication: setClaimPublication,
-        // };
-        // const history = {
-        //     push: navigateToClaimPublication,
-        // };
         const publicationsList = [
             {
                 rek_pid: 'UQ:111111',
@@ -785,14 +685,6 @@ describe('Search record results', () => {
             'authors === number of author ids, number of contributors === number of contributos ids, ' +
             'all author ids > 0, all contributor ids > 0)',
         async () => {
-            // const navigateToClaimPublication = jest.fn();
-            // const setClaimPublication = jest.fn();
-            // const actions = {
-            //     setClaimPublication: setClaimPublication,
-            // };
-            // const history = {
-            //     push: navigateToClaimPublication,
-            // };
             const publicationsList = [
                 {
                     rek_pid: 'UQ:255472',

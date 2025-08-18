@@ -6,7 +6,6 @@ All action types are defined in src/actions/actionTypes.js
 
 ## Error handling
 
-- Only action creators which handle redux-form should return Promise.resolve() or Promise.reject(), eg claimPublication(), fixPublication()
 - Dispatch [ACTION]\_FAILED action in case something went wrong (even if it returns Promise.reject())
 
 ## Testing
@@ -59,7 +58,7 @@ describe('[ACTIONS NAME] actions', () => {
     it('dispatches expected actions for anon user', async () => {
         mockApi
             .onGet(repositories.routes.[ROUTE_API]())
-            .reply(403, {});
+            .reply(401, {});
 
         const expectedActions = [
             actions.[ACTION_TYPE]_LOADING,

@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import { parseHtmlToJSX } from 'helpers/general';
 import config from 'locale/viewRecord';
 import Button from '@mui/material/Button';
-export const navigateToEdit = (history, pid) => {
-    history.push(`/admin/edit/${pid}?tab=authors`);
+import DOMPurify from 'dompurify';
+export const navigateToEdit = (navigate, pid) => {
+    navigate(`/admin/edit/${pid}?tab=authors`);
 };
 
 export const formattedString = (type, lookup) => {
@@ -17,7 +18,7 @@ export const parseKey = (key, content) => {
     return key.split('.').reduce((prev, curr) => prev && prev[curr], content);
 };
 
-export const authorAffiliates = (key, content, history, pid, AAProblems) => {
+export const authorAffiliates = (key, content, navigate, pid, AAProblems) => {
     const hasError = AAProblems.length > 0;
     const authorAffiliate = parseKey(key, content) ?? null;
 
@@ -44,7 +45,7 @@ export const authorAffiliates = (key, content, history, pid, AAProblems) => {
         const EditButton = (
             <Button
                 key={'affil_cal_error_btn'}
-                onClick={() => navigateToEdit(history, pid)}
+                onClick={() => navigateToEdit(navigate, pid)}
                 style={{ marginTop: 10, width: '100%' }}
                 variant="outlined"
                 id="admin-fix-affiliations-button"
@@ -85,7 +86,7 @@ export const createDefaultDrawerDescriptorObject = (
     locale = {},
     content = [],
     fields = {},
-    history,
+    navigate,
     pid,
     shouldHandleAffiliations = false,
     AAProblems = [],
@@ -95,10 +96,8 @@ export const createDefaultDrawerDescriptorObject = (
     if (!adminViewRecordDefaultContentObject || !adminViewRecordDefaultContentIndex) return {};
 
     // Notes
-    const parsedNotesKey = formattedString(parseKey(fields.notes, content));
-    // don't ReactHtmlParse notes if they're empty and the above function has returned '-',
-    // otherwise ReactHtmlParse will return an array and will cause issues when rendering to screen.
-    const parsedNotes = parsedNotesKey !== '-' ? parseHtmlToJSX(parsedNotesKey) : parsedNotesKey;
+    const notes = parseKey(fields.notes, content)?.trim?.();
+    const parsedNotes = !notes?.length ? '-' : parseHtmlToJSX(DOMPurify.sanitize(notes));
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][0].value = locale.notes;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][1].value = parsedNotes;
 
@@ -110,7 +109,7 @@ export const createDefaultDrawerDescriptorObject = (
     adminViewRecordDefaultContentObject.sections[
         adminViewRecordDefaultContentIndex.authors
     ][1].value = !!shouldHandleAffiliations
-        ? authorAffiliates(fields.authorAffiliates, content, history, pid, AAProblems)
+        ? authorAffiliates(fields.authorAffiliates, content, navigate, pid, AAProblems)
         : config.viewRecord.adminViewRecordDrawerFields.affiliatesDoNotApply;
     // WoS
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][0].value = locale.wosId;

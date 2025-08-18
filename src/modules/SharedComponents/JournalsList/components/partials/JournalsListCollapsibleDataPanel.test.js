@@ -4,7 +4,6 @@ import TableBody from '@mui/material/TableBody';
 import JournalsListCollapsibleDataPanel from './JournalsListCollapsibleDataPanel';
 import mockData from 'mock/data/testing/journals/journals';
 import { WithReduxStore, render, createMatchMedia } from 'test-utils';
-import Immutable from 'immutable';
 
 const defaultTestData = {
     row: mockData[0],
@@ -15,7 +14,7 @@ const defaultTestData = {
 const setup = ({ testData = { ...defaultTestData }, ...state }) => {
     const onChange = state.onChange ?? jest.fn();
     return render(
-        <WithReduxStore initialState={Immutable.Map({ searchJournalsReducer: state })}>
+        <WithReduxStore initialState={{ searchJournalsReducer: state }}>
             <Table>
                 <TableBody>
                     <JournalsListCollapsibleDataPanel {...testData} {...state} onChange={onChange} />

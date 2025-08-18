@@ -1,7 +1,4 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form/immutable';
-import { Field } from 'redux-form/immutable';
+import React, { useEffect, useRef } from 'react';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
@@ -14,7 +11,6 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
-import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { pathConfig, validation } from 'config';
@@ -27,90 +23,79 @@ import {
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { doesListContainItem } from 'helpers/general';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
+import * as actions from 'actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, useParams } from 'react-router-dom';
+import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
+import { useForm } from '../../../hooks';
+import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
 
-export default class DeleteRecord extends PureComponent {
-    static propTypes = {
-        ...propTypes, // all redux-form props
-        recordToDelete: PropTypes.object,
-        loadingRecordToDelete: PropTypes.bool,
-        accountAuthorLoading: PropTypes.bool,
-        history: PropTypes.object.isRequired,
-        match: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired,
-        errors: PropTypes.object,
-    };
+const DeleteRecord = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    // constants
+    const txt = pagesLocale.pages.deleteRecord;
+    const formTxt = formsLocale.forms.deleteRecordForm;
+    // route params
+    const { pid } = useParams();
+    // app's global state
+    const { accountAuthorLoading } = useSelector(state => state.get('accountReducer'));
+    const { recordToDelete, loadingRecordToDelete } = useSelector(state => state.get('deleteRecordReducer'));
+    // to allow confirmDialogBox control
+    const confirmDialogBoxRef = useRef();
 
-    static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object,
-    };
+    const {
+        control,
+        safelyHandleSubmit,
+        mergeWithFormValues,
+        formState: { hasValidationError, isDirt, isSubmitting, isSubmitSuccessful, serverError },
+    } = useForm();
 
-    componentDidMount() {
-        if (this.props.actions && this.props.match.params && this.props.match.params.pid) {
-            this.props.actions.loadRecordToDelete(this.props.match.params.pid);
+    const onSubmit = safelyHandleSubmit(async () => {
+        const payload = mergeWithFormValues({ publication: { ...recordToDelete } });
+        // unfortunately, RTL doesn't render the editor as the browser does
+        /* istanbul ignore next */
+        if (payload.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText) {
+            payload.publication.fez_record_search_key_deletion_notes.rek_deletion_notes =
+                payload.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText;
         }
-    }
 
-    componentDidUpdate(prevProps) {
-        /* istanbul ignore else */
-        if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
-            this.successConfirmationBox &&
-                this.successConfirmationBox.showConfirmation &&
-                this.successConfirmationBox.showConfirmation();
-        }
-    }
+        await dispatch(
+            payload.publication.rek_status === DELETED
+                ? actions.deleteUpdatePartial({ ...payload })
+                : actions.deleteRecord({ ...payload }),
+        );
+    });
 
-    componentWillUnmount() {
-        // clear previously selected recordToDelete for a delete
-        this.props.actions.clearDeleteRecord();
-    }
-
-    #COMMUNITY_COLLECTION_KEY = 'communityCollection';
-
-    _navigateToSearchPage = () => {
-        this.props.history.push(pathConfig.records.search);
+    const navigateToSearchPage = () => {
+        navigate(pathConfig.records.search);
     };
 
-    _navigateToViewPage = () => {
-        this.props.history.push(pathConfig.records.view(this.props.match.params.pid));
+    const navigateToViewPage = () => {
+        navigate(pathConfig.records.view(pid));
     };
 
-    _setSuccessConfirmation = ref => {
-        this.successConfirmationBox = ref;
-    };
-
-    _cancel = () => {
-        this.props.history.goBack();
-    };
-    /* istanbul ignore next */
-    _handleDefaultSubmit = event => {
-        event && event.preventDefault();
-    };
-
-    _getCustomAlertMessage = (key, statusCode) => {
+    const getCustomAlertMessage = (key, statusCode) => {
         const errorObject = formsLocale.forms.deleteRecordForm.errorCustom[key]?.find(customError => {
             return customError.httpStatus === statusCode;
         });
-
         /* istanbul ignore next */
-        const message = !!errorObject ? errorObject.message : formsLocale.forms.deleteRecordForm.errorAlert.message;
-        return message; // could be string or function
+        return errorObject ? errorObject.message : formsLocale.forms.deleteRecordForm.errorAlert.message;
     };
 
-    _getErrorAlertProps = (rekType, errorResponse) => {
+    const getErrorAlertProps = (rekType, serverError) => {
         const defaultProps = {
-            ...this.props,
+            submitting: isSubmitting,
+            submitSucceeded: isSubmitSuccessful,
             alertLocale: formsLocale.forms.deleteRecordForm,
-            error: errorResponse?.message,
+            error: serverError?.message,
         };
 
         if (rekType !== 'Collection' && rekType !== 'Community') return defaultProps;
-        if (errorResponse?.status !== 409) return defaultProps;
+        if (serverError?.status !== 409) return defaultProps;
 
-        // if we're working with a collection or community and have received a 409 status error,
-        // we know for sure the reason for the failure is because the community contains collections,
-        // or the collection contains records. Therefore modify the object to be passed to
-        // validation.getErrorAlertProps to change the error message shown to the admin user.
-        const errorMessage = this._getCustomAlertMessage(this.#COMMUNITY_COLLECTION_KEY, errorResponse.status);
+        const errorMessage = getCustomAlertMessage('communityCollection', serverError.status);
         return {
             ...defaultProps,
             error: rekType,
@@ -123,193 +108,197 @@ export default class DeleteRecord extends PureComponent {
         };
     };
 
-    render() {
-        const txt = pagesLocale.pages.deleteRecord;
-        const formTxt = formsLocale.forms.deleteRecordForm;
-
-        if (this.props.accountAuthorLoading || this.props.loadingRecordToDelete) {
-            return (
-                <React.Fragment>
-                    <InlineLoader message={txt.loadingMessage} />
-                </React.Fragment>
-            );
+    useEffect(() => {
+        if (actions && pid && !recordToDelete?.rek_pid) {
+            dispatch(actions.loadRecordToDelete(pid));
         }
 
-        const hasCrossrefDoi = this.props.recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(
-            DOI_CROSSREF_PREFIX,
-        );
+        return () => {
+            // clear previously selected record for deletion
+            dispatch(actions.clearDeleteRecord());
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [dispatch, pid]);
 
-        const hasDataCiteDoi = this.props.recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(
-            DOI_DATACITE_PREFIX,
-        );
+    useEffect(() => {
+        if (isSubmitSuccessful) {
+            confirmDialogBoxRef.current?.showConfirmation?.();
+        }
+    }, [confirmDialogBoxRef, isSubmitSuccessful]);
 
-        const saveConfirmationLocale = { ...formTxt.successWorkflowConfirmation };
+    if (!loadingRecordToDelete && !recordToDelete) {
+        return <WorkNotFound />;
+    }
 
-        const errorResponse = this.props.error && JSON.parse(this.props.error);
-        const errorAlertProps = this._getErrorAlertProps(
-            // eslint-disable-next-line camelcase
-            this.props?.recordToDelete?.rek_display_type_lookup,
-            errorResponse,
-        );
-
-        const alertProps = validation.getErrorAlertProps({ ...errorAlertProps });
-
-        // eslint-disable-next-line camelcase
-        const rekDisplayTypeLowercase = this.props.recordToDelete?.rek_display_type_lookup?.toLowerCase();
-        const hideCitationText = doesListContainItem(PUBLICATION_EXCLUDE_CITATION_TEXT_LIST, rekDisplayTypeLowercase);
-        const isDeleted = this.props.recordToDelete?.rek_status === DELETED;
-
+    if (accountAuthorLoading || loadingRecordToDelete) {
         return (
-            <StandardPage title={txt.title(isDeleted)}>
-                <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
-                    <form onSubmit={this._handleDefaultSubmit}>
-                        <Grid container spacing={3}>
+            <React.Fragment>
+                <InlineLoader message={txt.loadingMessage} />
+            </React.Fragment>
+        );
+    }
+
+    const isDeleted = recordToDelete?.rek_status === DELETED;
+    const hasCrossrefDoi = recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(DOI_CROSSREF_PREFIX);
+    const hasDataCiteDoi = recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(DOI_DATACITE_PREFIX);
+
+    const saveConfirmationLocale = { ...formTxt.successWorkflowConfirmation };
+    const errorAlertProps = getErrorAlertProps(recordToDelete?.rek_display_type_lookup, serverError);
+    const alertProps = validation.getErrorAlertProps({ ...errorAlertProps });
+    const hideCitationText = doesListContainItem(
+        PUBLICATION_EXCLUDE_CITATION_TEXT_LIST,
+        recordToDelete?.rek_display_type_lookup?.toLowerCase(),
+    );
+
+    return (
+        <StandardPage title={txt.title(isDeleted)}>
+            <ConfirmDiscardFormChanges dirty={isDirt} isSubmitSuccessful={isSubmitSuccessful}>
+                <form onSubmit={onSubmit}>
+                    <Grid container spacing={3}>
+                        <Grid item xs={12}>
+                            <StandardCard title={txt.subTitle(isDeleted)} help={txt.help}>
+                                <PublicationCitation
+                                    publication={recordToDelete}
+                                    citationStyle={'header'}
+                                    hideCitationText={hideCitationText}
+                                />
+                            </StandardCard>
+                        </Grid>
+                        <ConfirmDialogBox
+                            onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}
+                            onAction={navigateToViewPage}
+                            onCancelAction={navigateToSearchPage}
+                            locale={saveConfirmationLocale}
+                        />
+                        <Grid item xs={12}>
+                            <StandardCard title={formTxt.reason.title(isDeleted)}>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={12}>
+                                        <Field
+                                            control={control}
+                                            component={TextField}
+                                            textFieldId="reason"
+                                            disabled={isSubmitting}
+                                            name="reason"
+                                            type="text"
+                                            fullWidth
+                                            multiline
+                                            rows={3}
+                                            label={formTxt.reason.label(isDeleted)}
+                                            validate={[validation.spacelessMaxLength255Validator]}
+                                        />
+                                    </Grid>
+                                </Grid>
+                            </StandardCard>
+                        </Grid>
+                        {hasCrossrefDoi && (
                             <Grid item xs={12}>
-                                <StandardCard title={txt.subTitle(isDeleted)} help={txt.help}>
-                                    <PublicationCitation
-                                        publication={this.props.recordToDelete}
-                                        citationStyle={'header'}
-                                        hideCitationText={hideCitationText}
-                                    />
-                                </StandardCard>
-                            </Grid>
-                            <NavigationDialogBox
-                                when={this.props.dirty && !this.props.submitSucceeded}
-                                txt={formTxt.cancelWorkflowConfirmation}
-                            />
-                            <ConfirmDialogBox
-                                onRef={this._setSuccessConfirmation}
-                                onAction={this._navigateToViewPage}
-                                onCancelAction={this._navigateToSearchPage}
-                                locale={saveConfirmationLocale}
-                            />
-                            <Grid item xs={12}>
-                                <StandardCard title={formTxt.reason.title(isDeleted)}>
+                                <StandardCard title={formTxt.doiResolutionUrl.title}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             <Field
+                                                control={control}
                                                 component={TextField}
-                                                textFieldId="reason"
-                                                disabled={this.props.submitting}
-                                                name="reason"
+                                                disabled={isSubmitting}
+                                                name="publication.fez_record_search_key_doi_resolution_url.rek_doi_resolution_url"
+                                                textFieldId="rek-doi-resolution-url"
                                                 type="text"
                                                 fullWidth
-                                                multiline
-                                                rows={3}
-                                                label={formTxt.reason.label(isDeleted)}
-                                                validate={[validation.spacelessMaxLength255Validator]}
+                                                validate={[validation.url, validation.spacelessMaxLength255Validator]}
+                                                label={formTxt.doiResolutionUrl.label}
+                                                placeholder={formTxt.doiResolutionUrl.placeholder}
                                             />
                                         </Grid>
                                     </Grid>
                                 </StandardCard>
                             </Grid>
-                            {hasCrossrefDoi && (
+                        )}
+                        {hasDataCiteDoi && (
+                            <>
                                 <Grid item xs={12}>
-                                    <StandardCard title={formTxt.doiResolutionUrl.title}>
+                                    <StandardCard title={formTxt.newDoi.title}>
                                         <Grid container spacing={2}>
                                             <Grid item xs={12}>
                                                 <Field
+                                                    control={control}
                                                     component={TextField}
-                                                    disabled={this.props.submitting}
-                                                    name="publication.fez_record_search_key_doi_resolution_url.rek_doi_resolution_url"
-                                                    textFieldId="rek-doi-resolution-url"
+                                                    disabled={isSubmitting}
+                                                    name="publication.fez_record_search_key_new_doi.rek_new_doi"
+                                                    textFieldId="rek-new-doi"
                                                     type="text"
                                                     fullWidth
                                                     validate={[
-                                                        validation.url,
+                                                        validation.doi,
                                                         validation.spacelessMaxLength255Validator,
                                                     ]}
-                                                    label={formTxt.doiResolutionUrl.label}
-                                                    placeholder={formTxt.doiResolutionUrl.placeholder}
+                                                    label={formTxt.newDoi.label}
+                                                    placeholder={formTxt.newDoi.placeholder}
                                                 />
                                             </Grid>
                                         </Grid>
                                     </StandardCard>
                                 </Grid>
-                            )}
-                            {hasDataCiteDoi && (
-                                <>
-                                    <Grid item xs={12}>
-                                        <StandardCard title={formTxt.newDoi.title}>
-                                            <Grid container spacing={2}>
-                                                <Grid item xs={12}>
-                                                    <Field
-                                                        component={TextField}
-                                                        disabled={this.props.submitting}
-                                                        name="publication.fez_record_search_key_new_doi.rek_new_doi"
-                                                        textFieldId="rek-new-doi"
-                                                        type="text"
-                                                        fullWidth
-                                                        validate={[
-                                                            validation.doi,
-                                                            validation.spacelessMaxLength255Validator,
-                                                        ]}
-                                                        label={formTxt.newDoi.label}
-                                                        placeholder={formTxt.newDoi.placeholder}
-                                                    />
-                                                </Grid>
-                                            </Grid>
-                                        </StandardCard>
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <StandardCard title={formTxt.notes.title}>
-                                            <Grid container spacing={2}>
-                                                <Grid item xs={12}>
-                                                    <Field
-                                                        component={RichEditorField}
-                                                        name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
-                                                        textFieldId="rek-deletion-notes-text"
-                                                        richEditorId="rek-deletion-notes"
-                                                        disabled={this.props.submitting}
-                                                        fullWidth
-                                                        multiline
-                                                        rows={5}
-                                                        validate={[validation.maxListEditorTextLength2000]}
-                                                        maxValue={2000}
-                                                    />
-                                                </Grid>
-                                            </Grid>
-                                        </StandardCard>
-                                    </Grid>
-                                </>
-                            )}
-                            {alertProps && (
                                 <Grid item xs={12}>
-                                    <Alert pushToTop {...alertProps} />
+                                    <StandardCard title={formTxt.notes.title}>
+                                        <Grid container spacing={2}>
+                                            <Grid item xs={12}>
+                                                <Field
+                                                    control={control}
+                                                    component={RichEditorField}
+                                                    name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
+                                                    textFieldId="rek-deletion-notes-text"
+                                                    richEditorId="rek-deletion-notes"
+                                                    disabled={isSubmitting}
+                                                    fullWidth
+                                                    multiline
+                                                    rows={5}
+                                                    validate={[validation.maxListEditorTextLength2000]}
+                                                    maxValue={2000}
+                                                />
+                                            </Grid>
+                                        </Grid>
+                                    </StandardCard>
                                 </Grid>
-                            )}
-                        </Grid>
-                        <Grid container spacing={3} style={{ marginTop: 8 }}>
-                            <Grid item xs />
-                            <Grid item>
-                                <Button
-                                    variant={'contained'}
-                                    fullWidth
-                                    children={txt.cancel}
-                                    disabled={this.props.submitting}
-                                    onClick={this._cancel}
-                                    id="cancel-delete-record"
-                                    data-testid="cancel-delete-record"
-                                    data-analyticsid="cancel-delete-record"
-                                />
+                            </>
+                        )}
+                        {alertProps && (
+                            <Grid item xs={12}>
+                                <Alert pushToTop {...alertProps} />
                             </Grid>
-                            <Grid item>
-                                <Button
-                                    variant={'contained'}
-                                    color={'primary'}
-                                    fullWidth
-                                    children={txt.submit(isDeleted)}
-                                    onClick={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.disableSubmit}
-                                    id="submit-delete-record"
-                                    data-analyticsid="delete-admin"
-                                    data-testid="submit-delete-record"
-                                />
-                            </Grid>
+                        )}
+                    </Grid>
+                    <Grid container spacing={3} style={{ marginTop: 8 }}>
+                        <Grid item xs />
+                        <Grid item>
+                            <Button
+                                variant={'contained'}
+                                fullWidth
+                                children={txt.cancel}
+                                disabled={isSubmitting}
+                                onClick={navigateToViewPage}
+                                id="cancel-delete-record"
+                                data-testid="cancel-delete-record"
+                                data-analyticsid="cancel-delete-record"
+                            />
                         </Grid>
-                    </form>
-                </ConfirmDiscardFormChanges>
-            </StandardPage>
-        );
-    }
-}
+                        <Grid item>
+                            <Button
+                                type="submit"
+                                variant={'contained'}
+                                color={'primary'}
+                                fullWidth
+                                children={txt.submit(isDeleted)}
+                                disabled={isSubmitting || hasValidationError}
+                                id="submit-delete-record"
+                                data-analyticsid="delete-admin"
+                                data-testid="submit-delete-record"
+                            />
+                        </Grid>
+                    </Grid>
+                </form>
+            </ConfirmDiscardFormChanges>
+        </StandardPage>
+    );
+};
+
+export default DeleteRecord;

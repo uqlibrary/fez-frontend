@@ -27,8 +27,6 @@ const publicationTypeListManuscript = {
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
             "fez_record_search_key_acknowledgements": "This project supported by the Queensland State Government.",
-            "fez_record_search_key_additional_notes":
-                "Written on letterhead from the Australian Branch B.R.C.S. [British Red Cross Society]. Letterhead at top of page bears the Red Cross emblem.",
             "fez_record_search_key_assigned_user_id": [3946],
             "fez_record_search_key_author": ["Fryer, John Denis, 1895-1923"],
             "fez_record_search_key_contributor": ["Fryer, Henry Hardy"],
@@ -70,6 +68,18 @@ const publicationTypeListManuscript = {
             "fez_record_search_key_rights":
                 "For all enquiries about this work, please contact the Fryer Library, The University of Queensland Library",
             "fez_record_search_key_security_policy": [5],
+            "fez_record_search_key_subject": [
+                {
+                    "rek_subject": 453013,
+                    "rek_subject_order": 1,
+                    "rek_subject_lookup": "190203 Electronic Media Art"
+                },
+                {
+                    "rek_subject": 453028,
+                    "rek_subject_order": 2,
+                    "rek_subject_lookup": "190406 Music Composition"
+                }
+            ],
             "fez_record_search_key_series": "John Denis Fryer Collection, UQFL23",
             "fez_record_search_key_source": "John Denis Fryer Collection, UQFL23, Box 1, Folder 3, item 13",
             "fez_datastream_info": [

@@ -1,8 +1,16 @@
 # ContributorEditor
 
+=== Notes related to Scale of Significance ===
+
+ContributorEditor has been adjusted to also take scale of significance (NTRO) into consideration as follows:
+* Editor now makes use of a Redux reducer, shared between contributor editor and scale of significance editor.
+* Redux reducer is enabled by passing prop useFormReducer into the component
+* Reucer allows for edits to the contributors to be reflected in the scale of significance editor in real-time (Previously, edits to the contributors did not appear on scale of significance editor, thus showing incorrect values)
+* Further changes to the scale of significance component shown in it's related readme.
+
 ReduxForm Field - adds ability for users to add a list of authors/editors to a record.
 
-Data is passed to redux form values in the following format:
+Data is passed in the following format:
 
 ```javascript
 [

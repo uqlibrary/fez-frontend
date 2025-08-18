@@ -171,7 +171,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
               viewBox="0 0 24 24"
             >
               <path
-                d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
               />
               <title>
                 Click for more information
@@ -225,7 +225,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                       >
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class=" css-1oqhn84"
+                          class="css-1oqhn84"
                           data-analyticsid="my-trending-pubs-altmetric-link"
                           data-testid="my-trending-pubs-altmetric-link"
                           href="https://queensland.altmetric.com/details/101417"
@@ -349,7 +349,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                 viewBox="0 0 24 24"
                               >
                                 <path
-                                  d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                                  d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                                 />
                               </svg>
                               https://doi.org/10.4049/jimmunol.1490012
@@ -398,7 +398,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                   class="scopusCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
-                                  href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
+                                  href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
                                   id="citation-count-link"
                                   rel="noopener noreferrer"
                                   tabindex="0"
@@ -512,7 +512,7 @@ exports[`Component TopCitedPublications should render top cited publications mod
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
               />
             </svg>
           </div>
@@ -522,7 +522,11 @@ exports[`Component TopCitedPublications should render top cited publications mod
             <b>
               There has been an error - 
             </b>
-            Trending works are temporarily unavailable
+            <span
+              data-testid="alert-message"
+            >
+              Trending works are temporarily unavailable
+            </span>
           </div>
         </div>
       </div>
@@ -627,7 +631,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
               viewBox="0 0 24 24"
             >
               <path
-                d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
               />
               <title>
                 Click for more information
@@ -681,7 +685,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                       >
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class=" css-1oqhn84"
+                          class="css-1oqhn84"
                           data-analyticsid="my-trending-pubs-altmetric-link"
                           data-testid="my-trending-pubs-altmetric-link"
                           href="https://queensland.altmetric.com/details/101417"
@@ -805,7 +809,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                 viewBox="0 0 24 24"
                               >
                                 <path
-                                  d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                                  d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
                                 />
                               </svg>
                               https://doi.org/10.4049/jimmunol.1490012
@@ -854,7 +858,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                   class="scopusCitationCount css-si3g8d"
                                   data-analyticsid="citation-count-link"
                                   data-testid="citation-count-link"
-                                  href="https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
+                                  href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
                                   id="citation-count-link"
                                   rel="noopener noreferrer"
                                   tabindex="0"

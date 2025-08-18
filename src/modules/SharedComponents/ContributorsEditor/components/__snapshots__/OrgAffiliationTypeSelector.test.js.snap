@@ -14,17 +14,18 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
       Org affiliation
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
       required=""
     >
       <div
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="org-affiliation-label org-affiliation-select"
         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="org-affiliation-select"
         id="org-affiliation-select"
-        role="button"
+        role="combobox"
         tabindex="0"
       >
         Not UQ
@@ -68,17 +69,18 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
       Org affiliation
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
       required=""
     >
       <div
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="org-affiliation-label org-affiliation-select"
         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="org-affiliation-select"
         id="org-affiliation-select"
-        role="button"
+        role="combobox"
         tabindex="0"
       >
         UQ
@@ -122,17 +124,18 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
       Org affiliation
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
       required=""
     >
       <div
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="org-affiliation-label org-affiliation-select"
         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="org-affiliation-select"
         id="org-affiliation-select"
-        role="button"
+        role="combobox"
         tabindex="0"
       >
         <span

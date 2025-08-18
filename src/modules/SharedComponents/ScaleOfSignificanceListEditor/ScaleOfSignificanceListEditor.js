@@ -5,13 +5,16 @@ import ListRow from '../Toolbox/ListEditor/components/ListRow';
 import ScaleOfSignificanceForm from './ScaleOfSignificanceForm';
 import { ScaleOfSignificanceTemplate } from './ScaleOfSignificanceTemplate';
 import FormHelperText from '@mui/material/FormHelperText';
-import IconButton from '@mui/material/IconButton';
-import Box from '@mui/material/Box';
-import AddCircle from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from 'actions';
+import { diff } from 'deep-object-diff';
 
-export default class ScaleOfSignificanceListEditor extends Component {
+export class ScaleOfSignificanceListEditor extends Component {
     static propTypes = {
+        contributors: PropTypes.object,
+        actions: PropTypes.any,
         className: PropTypes.string,
         searchKey: PropTypes.object.isRequired,
         maxCount: PropTypes.number,
@@ -24,7 +27,8 @@ export default class ScaleOfSignificanceListEditor extends Component {
         error: PropTypes.bool,
         errorText: PropTypes.string,
         remindToAdd: PropTypes.bool,
-        input: PropTypes.object,
+        name: PropTypes.string,
+        value: PropTypes.any,
         transformFunction: PropTypes.func.isRequired,
         maxInputLength: PropTypes.number,
         inputNormalizer: PropTypes.func,
@@ -36,6 +40,8 @@ export default class ScaleOfSignificanceListEditor extends Component {
         canEdit: PropTypes.bool,
         getItemSelectedToEdit: PropTypes.func,
         listEditorId: PropTypes.string.isRequired,
+        scaleOfSignificance: PropTypes.array,
+        clearedScaleAuthors: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -68,12 +74,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
 
     constructor(props) {
         super(props);
-
-        const valueAsJson =
-            ((props.input || /* istanbul ignore next */ {}).name &&
-                typeof (props.input.value || {}).toJS === 'function' &&
-                props.input.value.toJS()) ||
-            ((props.input || /* istanbul ignore next */ {}).name && props.input.value);
+        const valueAsJson = props.name && props.value;
         this.state = {
             itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
             itemIndexSelectedToEdit: null,
@@ -81,6 +82,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
             showAddForm: false,
             formMode: 'edit',
         };
+        this.state.originalItemList = this.state.itemList;
 
         this.transformOutput = this.transformOutput.bind(this);
         this.saveChangeToItem = this.saveChangeToItem.bind(this);
@@ -89,23 +91,34 @@ export default class ScaleOfSignificanceListEditor extends Component {
         this.deleteItem = this.deleteItem.bind(this);
         this.deleteAllItems = this.deleteAllItems.bind(this);
         this.loadEditForm = this.loadEditForm.bind(this);
-        this.showFormInAddMode = this.showFormInAddMode.bind(this);
         this.showFormInEditMode = this.showFormInEditMode.bind(this);
     }
 
-    componentDidUpdate() {
-        // notify parent component when local state has been updated, eg itemList added/removed/reordered
+    componentDidUpdate(prevProps, prevState) {
         /* istanbul ignore else */
-        if (this.props.onChange) {
+        if (
+            this.props.onChange &&
+            JSON.stringify(prevState?.itemList || /* istanbul ignore next */ []) !== JSON.stringify(this.state.itemList)
+        ) {
             this.props.onChange(this.transformOutput(this.state.itemList));
         }
-    }
 
+        if (Object.keys(diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance)).length > 0) {
+            this.setState({
+                itemList: [...this.props.scaleOfSignificance],
+            });
+        } else if (Object.keys(diff(this.state.itemList, prevState.itemList)).length > 0) {
+            this.props.actions.updateAdminScaleSignificance(this.state.itemList);
+        }
+    }
     transformOutput = items => {
         return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));
     };
 
     getItemSelectedToEdit = (mode, list, index) => {
+        // Edit likely never to be used in new editor.
+        // kept for backward compatibility
+        /* istanbul ignore next */
         if (mode === 'add') {
             return null;
         }
@@ -169,9 +182,11 @@ export default class ScaleOfSignificanceListEditor extends Component {
             };
             // If when the item is submitted, there is no maxCount,
             // its not exceeding the maxCount, is distinct and isnt already in the list...
+            /* istanbul ignore else */
             if (
                 this.state.formMode === 'edit' &&
-                ((!!item.key && !!item.value) || /* istanbul ignore next */ (!!item.id && !!item.value))
+                (((!!item.key || item.key === 0) && !!item.value) ||
+                    /* istanbul ignore next */ (!!item.id && !!item.value))
             ) {
                 // Item is an object with {key: 'something', value: 'something'} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
@@ -225,44 +240,63 @@ export default class ScaleOfSignificanceListEditor extends Component {
     moveUpList = (item, index) => {
         /* istanbul ignore next */
         if (index === 0) return;
-        const movedItem = this.state.itemList[index];
-        const swappedItem = this.state.itemList[index - 1];
+
+        const itemList = [...this.state.itemList];
+        itemList[index] = this.state.itemList[index - 1];
+        itemList[index - 1] = this.state.itemList[index];
+
+        const movedAuthor = { ...itemList[index].author };
+        const swappedAuthor = { ...itemList[index - 1].author };
+        itemList[index].author = swappedAuthor;
+        itemList[index - 1].author = movedAuthor;
         this.setState({
-            itemList: [
-                ...this.state.itemList.slice(0, index - 1),
-                movedItem,
-                swappedItem,
-                ...this.state.itemList.slice(index + 1),
-            ],
+            itemList: [...itemList],
         });
     };
 
     moveDownList = (item, index) => {
         /* istanbul ignore next */
         if (index === this.state.itemList.length - 1) return;
-        const movedItem = this.state.itemList[index];
-        const swappedItem = this.state.itemList[index + 1];
+        const itemList = [...this.state.itemList];
+        itemList[index] = this.state.itemList[index + 1];
+        itemList[index + 1] = this.state.itemList[index];
+
+        const movedAuthor = { ...itemList[index].author };
+        const swappedAuthor = { ...itemList[index + 1].author };
+        itemList[index].author = swappedAuthor;
+        itemList[index + 1].author = movedAuthor;
         this.setState({
-            itemList: [
-                ...this.state.itemList.slice(0, index),
-                swappedItem,
-                movedItem,
-                ...this.state.itemList.slice(index + 2),
-            ],
+            itemList: [...itemList],
         });
     };
 
     /* istanbul ignore next */
     deleteItem = (item, index) => {
+        const updatedState = [...this.state.itemList];
+        const itemToDelete = item;
+        itemToDelete.key = 0;
+        itemToDelete.value = {
+            plainText: 'Missing',
+            htmlText: 'Missing',
+        };
+        updatedState[index] = itemToDelete;
         this.setState({
-            itemList: this.state.itemList.filter((_, i) => i !== index),
+            itemList: [...updatedState],
         });
     };
 
     /* istanbul ignore next */
     deleteAllItems = () => {
+        const newList = [...this.state.itemList];
+        this.state.itemList.map((item, index) => {
+            newList[index].key = 0;
+            newList[index].value = {
+                plainText: 'Missing',
+                htmlText: 'Missing',
+            };
+        });
         this.setState({
-            itemList: [],
+            itemList: newList,
         });
     };
 
@@ -285,14 +319,6 @@ export default class ScaleOfSignificanceListEditor extends Component {
             });
     };
 
-    showFormInAddMode = () => {
-        this.setState({
-            showAddForm: true,
-            formMode: 'add',
-            buttonLabel: this.props.locale.form.locale.addButtonLabel,
-        });
-    };
-
     showFormInEditMode = (show = true) => {
         this.setState({
             showAddForm: show,
@@ -300,7 +326,6 @@ export default class ScaleOfSignificanceListEditor extends Component {
             buttonLabel: this.props.locale.form.locale.editButtonLabel,
         });
     };
-
     render() {
         const renderListsRows =
             !!this.state.itemList &&
@@ -323,6 +348,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
                         key={item.id || `${item}-${index}`}
                         index={index}
                         item={tempItem}
+                        canDelete={tempItem.scaleValue > 0}
                         canMoveDown={index !== this.state.itemList.length - 1}
                         canMoveUp={index !== 0}
                         onMoveUp={this.moveUpList}
@@ -372,24 +398,12 @@ export default class ScaleOfSignificanceListEditor extends Component {
                     )}
                     itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
                     listEditorId={this.props.listEditorId}
-                    input={this.props.input}
                     buttonLabel={this.state.buttonLabel}
                     showForm={this.showFormInEditMode}
                     formMode={this.state.formMode}
                     hidden={!this.state.showAddForm}
                 />
-                <Box display={this.state.showAddForm ? 'none' : 'flex'} justifyContent="flex-end" alignItems="flex-end">
-                    <IconButton
-                        data-analyticsid="rek-significance-showhidebutton"
-                        data-testid="rek-significance-showhidebutton"
-                        onClick={this.showFormInAddMode}
-                        aria-label={this.props.locale.form.locale.addEntryButton}
-                        size="small"
-                        style={{ color: '#fff', backgroundColor: '#51247A' }}
-                    >
-                        <AddCircle />
-                    </IconButton>
-                </Box>
+
                 <ListRowHeader
                     onDeleteAll={this.deleteAllItems}
                     hideReorder={this.props.hideReorder || this.state.itemList.length < 2}
@@ -413,3 +427,16 @@ export default class ScaleOfSignificanceListEditor extends Component {
         );
     }
 }
+
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch),
+    };
+}
+export const mapStateToProps = state => ({
+    ...(state && state.get('adminScaleOfSignificanceReducer')
+        ? state.get('adminScaleOfSignificanceReducer')
+        : /* istanbul ignore next */ null),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ScaleOfSignificanceListEditor);

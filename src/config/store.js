@@ -1,42 +1,24 @@
 import { applyMiddleware, compose, createStore } from 'redux';
-import { createReduxHistoryContext } from 'redux-first-history';
 import Immutable from 'immutable';
 import thunk from 'redux-thunk';
 import { publicationEnhancer, saveReducerOnSessionExpired, journalSearchKeywordsEnhancer } from 'middleware';
 import rootReducer from '../reducer';
-import { history } from './history';
 
-const { createReduxHistory, routerMiddleware, routerReducer } = createReduxHistoryContext({
-    history: history,
-    selectRouterState: state => state.get('router'),
-});
+export const reducers = rootReducer();
 
-export const reducers = rootReducer({ routerReducer });
+export let storeInstance = null;
+export const getStore = (state = {}) => {
+    const composeEnhancer = window?.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export const getStore = (initialState = Immutable.Map()) => {
-    const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-    const store = createStore(
+    storeInstance = createStore(
         reducers,
-        initialState,
+        Immutable.Map(state),
         composeEnhancer(
-            applyMiddleware(
-                routerMiddleware,
-                thunk,
-                publicationEnhancer,
-                saveReducerOnSessionExpired,
-                journalSearchKeywordsEnhancer,
-            ),
+            applyMiddleware(thunk, publicationEnhancer, saveReducerOnSessionExpired, journalSearchKeywordsEnhancer),
         ),
     );
 
-    if (window.Cypress) {
-        window.__store__ = store;
-    }
-
-    return store;
+    return storeInstance;
 };
 
 export const store = getStore();
-
-export const reduxHistory = createReduxHistory(store);

@@ -10,6 +10,7 @@ import * as Sentry from '@sentry/react';
 import param from 'can-param';
 import { pathConfig } from 'config/pathConfig';
 import { isDevEnv, isTest } from '../helpers/general';
+import { FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID } from 'config/general';
 
 let apiClient = axios.create({
     baseURL: API_URL,
@@ -28,9 +29,12 @@ if (!isDevEnv() && !isTest()) {
 
     // the place the below is declared matters - see https://axios-cache-interceptor.js.org/guide/interceptors
     const nonCachedRoutes = ['records/search', 'journals/search', 'orcid'];
+    const ignoreServerHeaderRoutes = [`vocabularies?cvo_ids=${FIELD_OF_RESEARCH_VOCAB_ID},${AIATSIS_CODES_VOCAB_ID}`];
     apiClient.interceptors.request.use(request => {
         const queryStringParams = Object.keys(request.params || {});
-        if (
+        if (!!request.cache && ignoreServerHeaderRoutes.find(route => request.url.includes(route))) {
+            request.cache.interpretHeader = false;
+        } else if (
             !!request.cache &&
             // disabled it when querystring params are present or when it partially matches a non cached route
             (queryStringParams.length ||
@@ -42,6 +46,9 @@ if (!isDevEnv() && !isTest()) {
             // disabled cache
             request.cache = false;
             return request;
+        }
+        if (!!request.cache) {
+            request.cache.cacheTakeover = false;
         }
         /* eslint-disable max-len */
         // dc(`the following request will be cached: ${request.url}${queryStringParams.length ? `?${JSON.stringify(request.params)}` : ''}`);
@@ -56,6 +63,13 @@ export const sessionApi = axios.create({
     crossdomain: true,
 });
 
+sessionApi.interceptors.request.use(request => {
+    if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+        request.headers[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
+    }
+    return request;
+});
+
 // need to generate a new token for each request otherwise if you try a new request with the old token,
 // axios will appear to cancel your request automatically
 export const generateCancelToken = () => {
@@ -63,26 +77,27 @@ export const generateCancelToken = () => {
     return CancelToken.source();
 };
 
-export const setupDefaults = () => {
-    // If there is a local cookie available, then set the api headers for x-uql-token
-    if (!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)) {
-        api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
-        sessionApi.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
-    }
-    // allow us to safely force a given SESSION_COOKIE_NAME during development
-    if (process.env.NODE_ENV === 'development' && !!process.env.SESSION_COOKIE_NAME) {
-        api.defaults.headers.common[TOKEN_NAME] = process.env.SESSION_COOKIE_NAME;
-        sessionApi.defaults.headers.common[TOKEN_NAME] = process.env.SESSION_COOKIE_NAME;
-    }
-};
-setupDefaults();
-
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
-export let lastRequest = null;
+export let apiRequestHistory = [];
+export let apiLastRequest = null;
+export const clearLastRequest = () => {
+    apiLastRequest = null;
+    apiRequestHistory = [];
+};
+
 let isGet = null;
 api.interceptors.request.use(request => {
-    lastRequest = request;
+    if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+        request.headers[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
+    }
+    apiLastRequest = request;
+    // keep track of last requests just for tests
+    if (isTest()) {
+        // keep only the last 10 requests in the queue
+        apiRequestHistory.length > 10 && apiRequestHistory.shift();
+        apiRequestHistory.push(request);
+    }
     isGet = request.method === 'get';
     if (
         (request.url?.includes('records/search') || request.url?.includes('records/export')) &&
@@ -90,9 +105,7 @@ api.interceptors.request.use(request => {
         !!request.params.mode &&
         request.params.mode === 'advanced'
     ) {
-        request.paramsSerializer = params => {
-            return param(params);
-        };
+        request.paramsSerializer = { serialize: params => param(params) };
     }
     return request;
 });
@@ -149,11 +162,19 @@ api.interceptors.response.use(
         let errorMessage = null;
         const errorStatus = error?.response?.status || -1;
         if (!handlesErrorsInternally) {
-            if (errorStatus === 403) {
+            if (errorStatus === 401) {
                 if (!!Cookies.get(SESSION_COOKIE_NAME)) {
-                    Cookies.remove(SESSION_COOKIE_NAME, { path: '/', domain: '.library.uq.edu.au' });
-                    Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME, { path: '/', domain: '.library.uq.edu.au' });
-                    delete api.defaults.headers.common[TOKEN_NAME];
+                    // dev
+                    Cookies.remove(SESSION_COOKIE_NAME);
+                    Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME);
+                    // live env
+                    const params = {
+                        path: '/',
+                        domain: '.library.uq.edu.au',
+                        secure: true,
+                    };
+                    Cookies.remove(SESSION_COOKIE_NAME, params);
+                    Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME, params);
                 }
 
                 if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc') {
@@ -188,7 +209,7 @@ api.interceptors.response.use(
 
         const shouldNotAppearInSentry =
             document.location.hostname === 'localhost' || // testing on AWS sometimes fires these
-            [401, 403].includes(errorStatus) || // login expired - no notice required
+            [401, 403, 404, 410].includes(errorStatus) || // login expired - no notice required
             errorStatus === 0 || // catch those "the network request was interrupted" we see so much
             errorStatus === '0' || // don't know what format it comes in
             errorStatus === 500 || // api should handle these

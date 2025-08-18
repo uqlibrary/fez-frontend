@@ -1,6 +1,6 @@
 /* prettier-ignore */
 {
-  "parser": "babel-eslint",          // https://github.com/babel/babel-eslint
+  "parser": "@babel/eslint-parser",          // https://github.com/babel/babel
   "env": {
     "browser": true,
     "node": true,
@@ -11,8 +11,6 @@
     "__DEV__": true,
     "afterAll": true,
     "beforeAll": true,
-    "cy": true,
-    "Cypress": true,
     "expect": true,
     "getElement": true,
     "renderComponent": true,
@@ -243,11 +241,29 @@
     "jsx-a11y/href-no-hash": "off",
     "uqlibrary/no-uql-token": 2
   },
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
   "plugins": [
     "react",
     "react-hooks",
     "jsx-a11y",
     "uqlibrary"
   ],
-  "extends": ["plugin:prettier/recommended"]
+  "extends": ["plugin:prettier/recommended"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint"],
+      "extends": [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint"
+      ]
+    }
+  ]
 }

@@ -7,38 +7,52 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import * as Sentry from '@sentry/react';
-import { Integrations } from '@sentry/tracing';
+import { useLocation, useNavigationType, createRoutesFromChildren, matchRoutes } from 'react-router-dom';
+import { setup } from 'mock';
 
 // pick utils
-import MomentUtils from '@date-io/moment';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 
 // Internal
 import Root from './Root';
 import AppErrorBoundary from './AppErrorBoundary';
 import 'sass/index.scss';
-import { store, reduxHistory, reducers } from 'config/store';
+import { store, reducers } from 'config/store';
+import { isTest } from './helpers/general';
 
 // Increase default (10) event listeners to 30
 require('events').EventEmitter.prototype._maxListeners = 30;
 
 // Import mock data if required
 if (process.env.BRANCH !== 'production' && process.env.USE_MOCK) {
-    require('./mock');
+    setup();
 }
 
-if (process.env.ENABLE_LOG) {
+if (!isTest() && process.env.ENABLE_LOG) {
     Sentry.init({
         dsn: 'https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681',
         integrations: [
-            new Integrations.BrowserTracing({
-                routingInstrumentation: Sentry.reactRouterV5Instrumentation(history),
+            Sentry.reactRouterV6BrowserTracingIntegration({
+                useEffect: React.useEffect,
+                useLocation,
+                useNavigationType,
+                createRoutesFromChildren,
+                matchRoutes,
             }),
         ],
-        autoSessionTracking: true,
         environment: process.env.BRANCH,
         release: process.env.GIT_SHA,
         allowUrls: [/library\.uq\.edu\.au/],
-        ignoreErrors: ['Object Not Found Matching Id'],
+        ignoreErrors: [
+            // Ignore browser extension errors
+            /window\.bannerNight/,
+            /mce-visual-caret-hidden/,
+            'Object Not Found Matching Id',
+            'Network Error',
+            'Request aborted',
+            'timeout exceeded',
+            'Failed to fetch',
+        ],
         beforeBreadcrumb(breadcrumb, hint) {
             if (breadcrumb.category === 'xhr' && breadcrumb.data.method !== 'GET' && !!hint.xhr.__sentry_xhr__) {
                 const data = {
@@ -56,13 +70,15 @@ if (process.env.ENABLE_LOG) {
 const render = () => {
     const root = createRoot(document.getElementById('react-root'));
     root.render(
-        <AppErrorBoundary>
-            <Provider store={store}>
-                <LocalizationProvider dateAdapter={MomentUtils}>
-                    <Root history={reduxHistory} />
-                </LocalizationProvider>
-            </Provider>
-        </AppErrorBoundary>,
+        <React.StrictMode>
+            <AppErrorBoundary>
+                <Provider store={store}>
+                    <LocalizationProvider dateAdapter={AdapterMoment}>
+                        <Root />
+                    </LocalizationProvider>
+                </Provider>
+            </AppErrorBoundary>
+        </React.StrictMode>,
     );
 };
 

@@ -31,4 +31,14 @@ describe('NewspaperArticleCitation renders ', () => {
         });
         expect(container).toMatchSnapshot();
     });
+
+    it('component with a doi view', () => {
+        const { container } = setup({
+            publication: {
+                ...newspaperArticle,
+                fez_record_search_key_doi: { rek_doi: '10.1111/1111' },
+            },
+        });
+        expect(container).toMatchSnapshot();
+    });
 });

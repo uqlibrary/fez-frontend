@@ -2,30 +2,64 @@ import React from 'react';
 import * as repositories from 'repositories';
 import { journalDetails } from 'mock/data/journal';
 
-import { render, waitForElementToBeRemoved, WithReduxStore, act, fireEvent, createMatchMedia } from 'test-utils';
-import ViewJournal from './ViewJournal';
+import {
+    render,
+    waitForElementToBeRemoved,
+    WithReduxStore,
+    WithRouter,
+    act,
+    fireEvent,
+    createMatchMedia,
+} from 'test-utils';
+import ViewJournal, { getAdvisoryStatement } from './ViewJournal';
+import { getAllByTestId } from '@testing-library/react';
 
-jest.mock('react-router', () => ({
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
     useParams: jest.fn(() => ({ id: 1 })),
 }));
 
 const setup = () => {
     return render(
         <WithReduxStore>
-            <ViewJournal />
+            <WithRouter>
+                <ViewJournal />
+            </WithRouter>
         </WithReduxStore>,
     );
 };
 
 describe('ViewJournal', () => {
-    it('should display error alert if journal is not loaded correctly', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(404);
+    it('should display journal not found page error on 404', async () => {
+        mockApi
+            .onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl))
+            .reply(404, { data: 'not found' });
+
+        const { getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByText('Journal not found')).toBeInTheDocument();
+    });
+
+    it('should display error alert if journal is not loaded correctly due to other errors', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(500);
 
         const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
         expect(getByTestId('alert-error-journal-load')).toBeInTheDocument();
+    });
+
+    it('should handle empty response', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {});
+
+        const { container, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(container).toMatchSnapshot();
     });
 
     it('should display journal details basic section', async () => {
@@ -90,11 +124,11 @@ describe('ViewJournal', () => {
         expect(getByTestId('ulr-title-0-value')).toHaveTextContent('American Journal of Public Health');
         expect(getByTestId('ulr-title-0-lookup-link')).toHaveAttribute(
             'href',
-            'https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41698',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41698',
         );
         expect(getByTestId('ulr-title-1-lookup-link')).toHaveAttribute(
             'href',
-            'https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41699',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41699',
         );
 
         // **************************************************************
@@ -172,7 +206,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jcr-home-page-scie-value')).toHaveTextContent('Go to JCR website');
         expect(getByTestId('jcr-home-page-scie-lookup-link')).toHaveAttribute(
             'href',
-            'https://go.openathens.net/redirector/uq.edu.au?url=https://jcr.clarivate.com',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fjcr.clarivate.com',
         );
 
         expect(getByTestId('jcr-more-info-scie-header')).toHaveTextContent('JCR more info');
@@ -228,7 +262,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jcr-home-page-ssci-value')).toHaveTextContent('Go to JCR website');
         expect(getByTestId('jcr-home-page-ssci-lookup-link')).toHaveAttribute(
             'href',
-            'https://go.openathens.net/redirector/uq.edu.au?url=https://jcr.clarivate.com',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fjcr.clarivate.com',
         );
 
         expect(getByTestId('jcr-more-info-ssci-header')).toHaveTextContent('JCR more info');
@@ -251,6 +285,90 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-jcr-ssci-category-jif-percentile-header')).toHaveTextContent('JIF Percentile');
         expect(getByTestId('jnl-jcr-ssci-category-jif-percentile-value')).toHaveTextContent('99.00');
 
+        // ***********************************************************
+        // Clarivate Journal Citation Reports - Arts & Humanities Citation Index
+        // ***********************************************************
+        expect(getByTestId('jnl-jcr-ahci-abbrev-title-header')).toHaveTextContent('Abbreviated title');
+        expect(getByTestId('jnl-jcr-ahci-abbrev-title-value')).toHaveTextContent('J ARCHAEOL RES');
+
+        expect(getByTestId('jnl-jcr-ahci-impact-factor-header')).toHaveTextContent('Impact factor');
+        expect(getByTestId('jnl-jcr-ahci-impact-factor-value')).toHaveTextContent('4.20');
+
+        expect(getByTestId('jnl-jcr-ahci-5yr-impact-factor-header')).toHaveTextContent('5 year impact factor');
+        expect(getByTestId('jnl-jcr-ahci-5yr-impact-factor-value')).toHaveTextContent('4.40');
+
+        expect(getByTestId('jnl-jcr-ahci-source-date-header')).toHaveTextContent('JCR version');
+        expect(getByTestId('jnl-jcr-ahci-source-date-value')).toHaveTextContent('2018');
+
+        expect(getByTestId('jcr-home-page-ahci-header')).toHaveTextContent('JCR home page');
+        expect(getByTestId('jcr-home-page-ahci-value')).toHaveTextContent('Go to JCR website');
+        expect(getByTestId('jcr-home-page-ahci-lookup-link')).toHaveAttribute(
+            'href',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fjcr.clarivate.com',
+        );
+
+        expect(getByTestId('jcr-more-info-ahci-header')).toHaveTextContent('JCR more info');
+        expect(getByTestId('jcr-more-info-ahci-value')).toHaveTextContent('More info about JCR AHCI');
+        expect(getByTestId('jcr-more-info-ahci-lookup-link')).toHaveAttribute(
+            'href',
+            'https://clarivate.com/products/scientific-and-academic-research/research-discovery-and-workflow-solutions/webofscience-platform/web-of-science-core-collection/arts-humanities-citation-index/',
+        );
+
+        expect(getByTestId('journal-details-tab-fez-journal-jcr-ahci-category-0-heading')).toHaveTextContent(
+            'ARCHAEOLOGY',
+        );
+
+        expect(getByTestId('jnl-jcr-ahci-category-ranking-header')).toHaveTextContent('Ranking');
+        expect(getByTestId('jnl-jcr-ahci-category-ranking-value')).toHaveTextContent('N/A');
+
+        expect(getByTestId('jnl-jcr-ahci-category-quartile-header')).toHaveTextContent('Quartile');
+        expect(getByTestId('jnl-jcr-ahci-category-quartile-value')).toHaveTextContent('N/A');
+
+        expect(queryByTestId('jnl-jcr-ahci-category-jif-percentile-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-jcr-ahci-category-jif-percentile-value')).not.toBeInTheDocument();
+
+        // ***********************************************************
+        // Clarivate Journal Citation Reports - Emerging Sources Citation Index
+        // ***********************************************************
+        expect(getByTestId('jnl-jcr-esci-abbrev-title-header')).toHaveTextContent('Abbreviated title');
+        expect(getByTestId('jnl-jcr-esci-abbrev-title-value')).toHaveTextContent('J ACOUST SOC KOREA');
+
+        expect(getByTestId('jnl-jcr-esci-impact-factor-header')).toHaveTextContent('Impact factor');
+        expect(getByTestId('jnl-jcr-esci-impact-factor-value')).toHaveTextContent('0.20');
+
+        expect(getByTestId('jnl-jcr-esci-5yr-impact-factor-header')).toHaveTextContent('5 year impact factor');
+        expect(getByTestId('jnl-jcr-esci-5yr-impact-factor-value')).toHaveTextContent('0.20');
+
+        expect(getByTestId('jnl-jcr-esci-source-date-header')).toHaveTextContent('JCR version');
+        expect(getByTestId('jnl-jcr-esci-source-date-value')).toHaveTextContent('2018');
+
+        expect(getByTestId('jcr-home-page-esci-header')).toHaveTextContent('JCR home page');
+        expect(getByTestId('jcr-home-page-esci-value')).toHaveTextContent('Go to JCR website');
+        expect(getByTestId('jcr-home-page-esci-lookup-link')).toHaveAttribute(
+            'href',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fjcr.clarivate.com',
+        );
+
+        expect(getByTestId('jcr-more-info-esci-header')).toHaveTextContent('JCR more info');
+        expect(getByTestId('jcr-more-info-esci-value')).toHaveTextContent('More info about JCR ESCI');
+        expect(getByTestId('jcr-more-info-esci-lookup-link')).toHaveAttribute(
+            'href',
+            'https://clarivate.com/products/scientific-and-academic-research/research-discovery-and-workflow-solutions/webofscience-platform/web-of-science-core-collection/emerging-sources-citation-index/',
+        );
+
+        expect(getByTestId('journal-details-tab-fez-journal-jcr-esci-category-0-heading')).toHaveTextContent(
+            'ACOUSTICS',
+        );
+
+        expect(getByTestId('jnl-jcr-esci-category-ranking-header')).toHaveTextContent('Ranking');
+        expect(getByTestId('jnl-jcr-esci-category-ranking-value')).toHaveTextContent('39/40');
+
+        expect(getByTestId('jnl-jcr-esci-category-quartile-header')).toHaveTextContent('Quartile');
+        expect(getByTestId('jnl-jcr-esci-category-quartile-value')).toHaveTextContent('Q4');
+
+        expect(queryByTestId('jnl-jcr-esci-category-jif-percentile-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-jcr-esci-category-jif-percentile-value')).not.toBeInTheDocument();
+
         // ******************************************************************
         // Elsevier CiteScore
         // ******************************************************************
@@ -264,7 +382,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-cite-score-source-id-value')).toHaveTextContent('Go to record in CiteScore');
         expect(getByTestId('jnl-cite-score-source-id-lookup-link')).toHaveAttribute(
             'href',
-            'https://go.openathens.net/redirector/uq.edu.au?url=https://www.scopus.com/sourceid/19561',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Fsourceid%2F19561',
         );
 
         expect(getByTestId('jnl-cite-score-snip-header')).toHaveTextContent('SNIP');
@@ -689,6 +807,52 @@ describe('ViewJournal', () => {
             });
 
             expect(queryByTestId('alert-error')).not.toBeInTheDocument();
+        });
+    });
+
+    it('should display journal with advisory statement', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                jnl_advisory_statement: 'Test advisory statement',
+            },
+        });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('page-title')).toHaveTextContent('American Journal of Public Health');
+
+        expect(getByText('Test advisory statement')).toBeInTheDocument();
+    });
+
+    it('should display read and publish warning banner', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_read_and_publish: {
+                    jnl_read_and_publish_is_capped: 'Approaching',
+                    jnl_read_and_publish_is_discounted: false,
+                },
+            },
+        });
+
+        const { getAllByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        const alerts = getAllByTestId('alert');
+        expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
+    });
+
+    describe('getAdvisoryStatement', () => {
+        it('should render html', () => {
+            const { getByTestId } = render(getAdvisoryStatement('<p data-testid="test">Tester</p>'));
+            expect(getByTestId('test')).toHaveTextContent('Tester');
+        });
+        it('should render nothing (coverage)', () => {
+            expect(getAdvisoryStatement()).toEqual('');
         });
     });
 });

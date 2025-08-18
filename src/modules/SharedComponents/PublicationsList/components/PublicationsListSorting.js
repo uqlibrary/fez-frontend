@@ -15,7 +15,25 @@ import { COLLECTION_VIEW_TYPE } from 'config/general';
 
 export const filterCollectionViewTypes = () => COLLECTION_VIEW_TYPE.filter(viewType => viewType.selectable !== false);
 
-const PublicationsListSorting = props => {
+const PublicationsListSorting = ({
+    bulkExportSize,
+    canUseExport,
+    exportData = {},
+    disabled,
+    initPageLength,
+    onExportPublications,
+    onPageSizeChanged,
+    onSortByChanged,
+    pageSize,
+    showDisplayAs = false,
+    sortingData = locale.components.sorting,
+    pagingData,
+    sortingDefaults = {},
+    sortBy,
+    sortDirection,
+    onDisplayRecordsAsChanged,
+    displayRecordsAs,
+}) => {
     const isAdmin = userIsAdmin();
     const isResearcher = userIsResearcher();
 
@@ -25,31 +43,29 @@ const PublicationsListSorting = props => {
     const pageLength = txt.recordsPerPage /* istanbul ignore next */ ?? [10, 20, 50, 100];
 
     // Allow cust page length if defined in props
-    if (props.initPageLength && pageLength.indexOf(props.initPageLength) === -1) {
-        pageLength.push(props.initPageLength);
+    if (initPageLength && pageLength.indexOf(initPageLength) === -1) {
+        pageLength.push(initPageLength);
         pageLength.sort((a, b) => a - b);
     }
 
     // get initial values from props
-    const initPropSortBy = props.sortBy || props.sortingData.sortBy[0].value;
-    const initPropSortDirection = props.sortDirection || locale.components.sorting.sortDirection[0];
+    const initPropSortBy = sortBy || sortingData.sortBy[0].value;
+    const initPropSortDirection = sortDirection || locale.components.sorting.sortDirection[0];
     const initPropPageSize =
-        props.initPageLength ||
-        props.pageSize ||
-        (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20);
+        initPageLength || pageSize || (pagingData && pagingData.per_page ? pagingData.per_page : 20);
 
-    const initPropDisplayRecordsAs = props.displayRecordsAs || COLLECTION_VIEW_TYPE[0].text;
+    const initPropDisplayRecordsAs = displayRecordsAs || COLLECTION_VIEW_TYPE[0].text;
 
     // sanitise values
-    const propSortBy = doesListContainItem(props.sortingData.sortBy, initPropSortBy)
+    const propSortBy = doesListContainItem(sortingData.sortBy, initPropSortBy)
         ? initPropSortBy
-        : props.sortingDefaults.sortBy ?? props.sortingData.sortBy[0].value;
+        : sortingDefaults.sortBy ?? sortingData.sortBy[0].value;
     const propSortDirection = doesListContainItem(locale.components.sorting.sortDirection, initPropSortDirection)
         ? initPropSortDirection
-        : props.sortingDefaults.sortDirection ?? locale.components.sorting.sortDirection[0];
+        : sortingDefaults.sortDirection ?? locale.components.sorting.sortDirection[0];
     const propPageSize = doesListContainItem(pageLength, initPropPageSize)
         ? initPropPageSize
-        : props.sortingDefaults.pageSize ?? pageLength[0];
+        : sortingDefaults.pageSize ?? pageLength[0];
 
     const selectableCollectionViewType = filterCollectionViewTypes();
 
@@ -57,63 +73,65 @@ const PublicationsListSorting = props => {
         ? initPropDisplayRecordsAs
         : selectableCollectionViewType[0].value ?? /* istanbul ignore next */ '';
 
-    const [sortBy, setSortBy] = React.useState(propSortBy);
-    const [sortDirection, setSortDirection] = React.useState(propSortDirection);
-    const [pageSize, setPageSize] = React.useState(propPageSize);
-    const [displayRecordsAs, setDisplayRecordsAs] = React.useState(propDisplayRecordsAs);
+    const [sortByState, setSortByState] = React.useState(propSortBy);
+    const [sortDirectionState, setSortDirectionState] = React.useState(propSortDirection);
+    const [pageSizeState, setPageSizeState] = React.useState(propPageSize);
+    const [displayRecordsAsState, setDisplayRecordsAsState] = React.useState(propDisplayRecordsAs);
 
     React.useEffect(() => {
-        if (sortBy !== propSortBy) setSortBy(propSortBy);
-        if (sortDirection !== propSortDirection) setSortDirection(propSortDirection);
-        if (pageSize !== propPageSize) setPageSize(propPageSize);
-        if (displayRecordsAs !== propDisplayRecordsAs) setDisplayRecordsAs(propDisplayRecordsAs);
+        if (sortByState !== propSortBy) setSortByState(propSortBy);
+        if (sortDirectionState !== propSortDirection) setSortDirectionState(propSortDirection);
+        if (pageSizeState !== propPageSize) setPageSizeState(propPageSize);
+        if (displayRecordsAsState !== propDisplayRecordsAs) setDisplayRecordsAsState(propDisplayRecordsAs);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [propSortBy, propSortDirection, propPageSize, propDisplayRecordsAs]);
 
     const pageSizeChanged = event => {
-        setPageSize(event.target.value);
-        props.onPageSizeChanged(event.target.value);
+        setPageSizeState(event.target.value);
+        onPageSizeChanged(event.target.value);
     };
 
     const orderDirectionsChanged = event => {
-        setSortDirection(event.target.value);
-        props.onSortByChanged(sortBy, event.target.value);
+        setSortDirectionState(event.target.value);
+        onSortByChanged(sortByState, event.target.value);
     };
 
     const sortByChanged = event => {
-        setSortBy(event.target.value);
-        props.onSortByChanged(event.target.value, sortDirection);
+        setSortByState(event.target.value);
+        onSortByChanged(event.target.value, sortDirectionState);
     };
 
     const displayRecordsAsChanged = event => {
-        setDisplayRecordsAs(event.target.value);
-        props.onDisplayRecordsAsChanged(event.target.value);
+        setDisplayRecordsAsState(event.target.value);
+        onDisplayRecordsAsChanged(event.target.value);
     };
 
     const exportPublicationsFormatChanged = value => {
-        props.onExportPublications({ exportPublicationsFormat: value });
+        onExportPublications({ exportPublicationsFormat: value });
     };
 
-    if (!props.pagingData || props.pagingData.total === 0 || !sortBy || !sortDirection || !pageSize) {
+    if (!pagingData || pagingData.total === 0 || !sortByState || !sortDirectionState || !pageSizeState) {
         return <span className="publicationsListSorting empty" />;
     }
 
-    const dropDownWidth = !!props.showDisplayAs ? 2 : 3;
+    const dropDownWidth = !!showDisplayAs ? 2 : 3;
 
     return (
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={3}>
                 <FormControl variant="standard" fullWidth>
-                    <InputLabel shrink>{props.sortingData.sortLabel}</InputLabel>
+                    <InputLabel id="sort-by-label" shrink>
+                        {sortingData.sortLabel}
+                    </InputLabel>
                     <Select
                         variant="standard"
-                        id="sortBy"
                         onChange={sortByChanged}
-                        value={sortBy}
-                        disabled={props.disabled}
+                        value={sortByState}
+                        disabled={disabled}
+                        labelId="sort-by-label"
                         data-testid="publication-list-sorting-sort-by"
                     >
-                        {props.sortingData.sortBy.map((item, index) => {
+                        {sortingData.sortBy.map((item, index) => {
                             return (
                                 <MenuItem
                                     key={index}
@@ -128,15 +146,17 @@ const PublicationsListSorting = props => {
                     </Select>
                 </FormControl>
             </Grid>
-            <Grid item xs={12} sm={6} md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}>
+            <Grid item xs={12} sm={6} md={canUseExport ? dropDownWidth : dropDownWidth + 1}>
                 <FormControl variant="standard" fullWidth>
-                    <InputLabel shrink>{txt.sortDirectionLabel}</InputLabel>
+                    <InputLabel id="sort-order-label" shrink>
+                        {txt.sortDirectionLabel}
+                    </InputLabel>
                     <Select
                         variant="standard"
-                        id="sortOrder"
                         onChange={orderDirectionsChanged}
-                        value={sortDirection}
-                        disabled={props.disabled}
+                        value={sortDirectionState}
+                        disabled={disabled}
+                        labelId="sort-order-label"
                         data-testid="publication-list-sorting-sort-order"
                     >
                         {txt.sortDirection.map((item, index) => {
@@ -154,20 +174,17 @@ const PublicationsListSorting = props => {
                     </Select>
                 </FormControl>
             </Grid>
-            <Grid
-                item
-                xs={12}
-                sm={props.canUseExport ? 6 : 12}
-                md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}
-            >
+            <Grid item xs={12} sm={canUseExport ? 6 : 12} md={canUseExport ? dropDownWidth : dropDownWidth + 1}>
                 <FormControl variant="standard" fullWidth>
-                    <InputLabel shrink>{props.sortingData.pageSize}</InputLabel>
+                    <InputLabel id="page-size-label" shrink>
+                        {sortingData.pageSize}
+                    </InputLabel>
                     <Select
                         variant="standard"
-                        id="pageSize"
-                        value={pageSize}
-                        disabled={props.disabled}
+                        value={pageSizeState}
+                        disabled={disabled}
                         onChange={pageSizeChanged}
+                        labelId="page-size-label"
                         data-testid="publication-list-sorting-page-size"
                     >
                         {pageLength.map(number => {
@@ -182,39 +199,36 @@ const PublicationsListSorting = props => {
                                 </MenuItem>
                             );
                         })}
-                        {props.canUseExport &&
+                        {canUseExport &&
                             (isAdmin || isResearcher) &&
-                            !!props.bulkExportSize && [
+                            !!bulkExportSize && [
                                 <ListSubheader key="export-heading" data-testid="search-export-size-heading">
                                     {txt.exportOnlyLabel}
                                 </ListSubheader>,
                                 <MenuItem
-                                    key={`records-per-page-${props.bulkExportSize}`}
-                                    value={props.bulkExportSize}
-                                    data-testid={`search-export-size-entry-${props.bulkExportSize}`}
-                                    id={`search-export-size-entry-${props.bulkExportSize}`}
+                                    key={`records-per-page-${bulkExportSize}`}
+                                    value={bulkExportSize}
+                                    data-testid={`search-export-size-entry-${bulkExportSize}`}
+                                    id={`search-export-size-entry-${bulkExportSize}`}
                                 >
-                                    {props.bulkExportSize}
+                                    {bulkExportSize}
                                 </MenuItem>,
                             ]}
                     </Select>
                 </FormControl>
             </Grid>
-            {!!props.showDisplayAs && (
-                <Grid
-                    item
-                    xs={12}
-                    sm={props.canUseExport ? 6 : 12}
-                    md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}
-                >
+            {!!showDisplayAs && (
+                <Grid item xs={12} sm={canUseExport ? 6 : 12} md={canUseExport ? dropDownWidth : dropDownWidth + 1}>
                     <FormControl variant="standard" fullWidth>
-                        <InputLabel shrink>{props.sortingData.displayRecordsAsLabel}</InputLabel>
+                        <InputLabel id="display-records-as-label" shrink>
+                            {sortingData.displayRecordsAsLabel}
+                        </InputLabel>
                         <Select
                             variant="standard"
-                            id="displayRecordsAs"
-                            value={displayRecordsAs}
-                            disabled={props.disabled}
+                            value={displayRecordsAsState}
+                            disabled={disabled}
                             onChange={displayRecordsAsChanged}
+                            labelId="display-records-as-label"
                             data-testid="publication-list-display-records-as"
                         >
                             {selectableCollectionViewType.map(item => {
@@ -233,12 +247,12 @@ const PublicationsListSorting = props => {
                     </FormControl>
                 </Grid>
             )}
-            {props.canUseExport && (
+            {canUseExport && (
                 <Grid item sm={6} md={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
                     <ExportPublications
                         onChange={exportPublicationsFormatChanged}
-                        disabled={props.disabled}
-                        exportData={props.exportData}
+                        disabled={disabled}
+                        exportData={exportData}
                     />
                 </Grid>
             )}
@@ -274,13 +288,6 @@ PublicationsListSorting.propTypes = {
     sortDirection: PropTypes.string,
     onDisplayRecordsAsChanged: PropTypes.func,
     displayRecordsAs: PropTypes.string,
-};
-
-PublicationsListSorting.defaultProps = {
-    exportData: {},
-    showDisplayAs: false,
-    sortingData: locale.components.sorting,
-    sortingDefaults: {},
 };
 
 export default PublicationsListSorting;

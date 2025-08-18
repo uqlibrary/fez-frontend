@@ -2,9 +2,6 @@ import {
     JOURNAL_LOOKUP_LOADING,
     JOURNAL_LOOKUP_LOADED,
     JOURNAL_LOOKUP_FAILED,
-    JOURNAL_LOADED,
-    JOURNAL_LOADING,
-    JOURNAL_LOAD_FAILED,
     JOURNAL_SEARCH_KEYWORDS_LOADED,
     JOURNAL_SEARCH_KEYWORDS_LOADING,
     JOURNAL_SEARCH_KEYWORDS_FAILED,
@@ -17,9 +14,6 @@ const initialState = {
     itemsList: [],
     itemsLoading: false,
     itemsLoadingError: false,
-    journalDetails: false,
-    journalLoading: false,
-    journalLoadingError: false,
     journalSearchKeywordsLoading: false,
     journalSearchKeywords: { ...initialJournalSearchKeywords },
     journalSearchKeywordsError: null,
@@ -77,59 +71,6 @@ describe('journalReducer reducer', () => {
         };
         const test = journalReducer(previousState, {
             type: JOURNAL_LOOKUP_FAILED,
-        });
-        expect(test).toEqual(expected);
-    });
-
-    it('sets details loading state', () => {
-        const previousState = {
-            ...initialState,
-        };
-        const expected = {
-            ...previousState,
-            journalLoading: true,
-        };
-        const test = journalReducer(previousState, { type: JOURNAL_LOADING });
-        expect(test).toEqual(expected);
-    });
-
-    it('sets details loaded state', () => {
-        const previousState = {
-            ...initialState,
-            journalLoading: true,
-        };
-        const expected = {
-            ...previousState,
-            journalDetails: [
-                {
-                    test: 'test1',
-                },
-            ],
-            journalLoading: false,
-        };
-        const test = journalReducer(previousState, {
-            type: JOURNAL_LOADED,
-            payload: [
-                {
-                    test: 'test1',
-                },
-            ],
-        });
-        expect(test).toEqual(expected);
-    });
-
-    it('sets details load failed state', () => {
-        const previousState = {
-            ...initialState,
-            journalLoading: true,
-        };
-        const expected = {
-            ...previousState,
-            journalLoading: false,
-            journalLoadingError: true,
-        };
-        const test = journalReducer(previousState, {
-            type: JOURNAL_LOAD_FAILED,
         });
         expect(test).toEqual(expected);
     });

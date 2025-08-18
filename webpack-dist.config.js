@@ -5,10 +5,13 @@ const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const RobotstxtPlugin = require('robotstxt-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
 const options = {
     policy: [
         {
@@ -91,7 +94,7 @@ const webpackConfig = {
     entry: {
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         main: resolve(__dirname, './src/index.js'),
-        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'moment', 'redux-form'],
+        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'moment'],
     },
     // Where you want the output to go
     output: {
@@ -107,7 +110,50 @@ const webpackConfig = {
             publicPath: resolve(__dirname, './dist/', config.basePath),
         },
     },
+    module: {
+        rules: [
+            {
+                test: /\.(j|t)sx?$/,
+                include: [resolve(__dirname, 'src')],
+                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+                        plugins: [
+                            '@babel/plugin-proposal-export-default-from',
+                            ['@babel/plugin-transform-spread', { loose: true }],
+                        ].filter(Boolean),
+                    },
+                },
+            },
+            {
+                test: /\.scss/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            },
+            {
+                test: /\.(png|jp(e*)g|svg|gif)$/,
+                type: 'asset/resource',
+                generator: {
+                    publicPath: '/assets/',
+                    outputPath: 'assets/',
+                    filename: '[hash][ext]',
+                },
+            },
+        ],
+    },
     plugins: [
+        // this plugin is required for highlighting TS errors, please do not remove it
+        new ForkTsCheckerWebpackPlugin({
+            typescript: {
+                configFile: 'tsconfig.webpack-dist.json',
+            },
+            async: false,
+            devServer: false,
+        }),
+        new webpack.ProvidePlugin({
+            process: 'process/browser.js',
+        }),
         new HtmlWebpackPlugin({
             favicon: resolve(__dirname, './public', 'favicon.ico'),
             filename: 'index.html',
@@ -155,6 +201,7 @@ const webpackConfig = {
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
             openAnalyzer: !process.env.CI_BRANCH,
         }),
+        new ESLintPlugin({ exclude: ['node_modules', 'custom_modules'] }),
         new RobotstxtPlugin(options),
         {
             // custom plugin that fires at the end of the build process, and outputs
@@ -197,50 +244,10 @@ const webpackConfig = {
             }),
         ],
     },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: [/node_modules/, /custom_modules/],
-                enforce: 'pre',
-                use: 'eslint-loader',
-            },
-            {
-                test: /\.js?$/,
-                include: [resolve(__dirname, 'src')],
-                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        plugins: [
-                            '@babel/plugin-proposal-export-namespace-from',
-                            '@babel/plugin-proposal-export-default-from',
-                            '@babel/plugin-proposal-class-properties',
-                            '@babel/plugin-syntax-dynamic-import',
-                            ['@babel/plugin-transform-spread', { loose: true }],
-                        ],
-                    },
-                },
-            },
-            {
-                test: /\.scss/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-            },
-            {
-                test: /\.(png|jp(e*)g|svg|gif)$/,
-                type: 'asset/resource',
-                generator: {
-                    publicPath: '/assets/',
-                    outputPath: 'assets/',
-                    filename: '[hash][ext]',
-                },
-            },
-        ],
-    },
     resolve: {
         descriptionFiles: ['package.json'],
         enforceExtension: false,
-        extensions: ['.jsx', '.js', '.json'],
+        extensions: ['.jsx', '.js', '.ts', '.tsx', '.json'],
         modules: ['src', 'node_modules', 'custom_modules'],
         fallback: {
             assert: require.resolve('assert'),
@@ -277,16 +284,18 @@ const webpackConfig = {
 
 // this is separated out because it causes local build to fail as the env vars required by Sentry arent available
 if (!!process.env.SENTRY_AUTH_TOKEN) {
-    const SentryCliPlugin = require('@sentry/webpack-plugin');
+    const { sentryWebpackPlugin } = require('@sentry/webpack-plugin');
 
     // if you need to run this locally, create .sentryclirc and add the variables from the codeship env variables
     // per https://docs.sentry.io/learn/cli/configuration/#configuration-file
     // and comment out the if around this section
+    webpackConfig.devtool = 'source-map';
     webpackConfig.plugins.push(
-        new SentryCliPlugin({
-            release: process.env.CI_COMMIT_ID,
-            include: './dist',
-            ignore: ['node_modules', 'webpack-dist.config.js', 'custom_modules'],
+        sentryWebpackPlugin({
+            org: process.env.SENTRY_ORG,
+            project: process.env.SENTRY_PROJECT,
+            // Auth tokens can be obtained from https://sentry.io/orgredirect/organizations/:orgslug/settings/auth-tokens/
+            authToken: process.env.SENTRY_AUTH_TOKEN,
         }),
     );
 }

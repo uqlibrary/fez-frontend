@@ -10,17 +10,18 @@ import GenericTemplate from './GenericTemplate';
 import FreeTextForm from './FreeTextForm';
 
 export const NewListEditor = ({
+    canAdd = true,
     canEdit,
     disabled,
     error,
     errorText,
     hideReorder,
     isValid,
-    inputNormalizer,
+    inputNormalizer = value => value,
     list,
     listEditorId,
-    ListEditorForm,
-    ListEditorItemTemplate,
+    ListEditorForm = FreeTextForm,
+    ListEditorItemTemplate = GenericTemplate,
     locale,
     maxCount,
     onChange,
@@ -28,7 +29,8 @@ export const NewListEditor = ({
     scrollList,
     scrollListHeight,
     searchKey,
-    transform,
+    transform = (list, searchKey) =>
+        list.map((listItem, index) => ({ [searchKey.value]: listItem, [searchKey.order]: index + 1 })),
 }) => {
     const [mode, setMode] = React.useState('add');
     const [indexToUpdate, setIndexToUpdate] = React.useState(null);
@@ -37,7 +39,9 @@ export const NewListEditor = ({
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleAdd = React.useCallback(item =>
-        setItemsList(itemsList => uniqWith([...itemsList, ...item], isEqual).slice(0, maxCount)),
+        setItemsList(itemsList =>
+            uniqWith([...itemsList, ...(Array.isArray(item) ? item : [item])], isEqual).slice(0, maxCount),
+        ),
     );
 
     /**
@@ -125,19 +129,21 @@ export const NewListEditor = ({
 
     return (
         <div id={`${listEditorId}-list-editor`}>
-            <ListEditorForm
-                key={`${listEditorId}-form-${mode}`}
-                mode={mode}
-                onSubmit={mode === 'add' ? handleAdd : handleUpdate}
-                disabled={disabled || (maxCount > 0 && itemsList.length >= maxCount)}
-                required={required}
-                isValid={isValid}
-                itemSelectedToEdit={itemToUpdate}
-                normalize={inputNormalizer}
-                listEditorFormId={`${listEditorId}-form-${mode}`}
-                listEditorId={listEditorId}
-                {...((locale && locale.form) || {})}
-            />
+            {canAdd && (
+                <ListEditorForm
+                    key={`${listEditorId}-form-${mode}`}
+                    mode={mode}
+                    onSubmit={mode === 'add' ? handleAdd : handleUpdate}
+                    disabled={disabled || (maxCount > 0 && itemsList.length >= maxCount)}
+                    required={required}
+                    isValid={isValid}
+                    itemSelectedToEdit={itemToUpdate}
+                    normalize={inputNormalizer}
+                    listEditorFormId={`${listEditorId}-form-${mode}`}
+                    listEditorId={listEditorId}
+                    {...((locale && locale.form) || {})}
+                />
+            )}
             {itemsList.length > 0 && (
                 <ListRowHeader
                     onDeleteAll={handleDeleteAll}
@@ -174,6 +180,7 @@ export const NewListEditor = ({
 };
 
 NewListEditor.propTypes = {
+    canAdd: PropTypes.bool,
     canEdit: PropTypes.bool,
     disabled: PropTypes.bool,
     distinctOnly: PropTypes.bool,
@@ -184,8 +191,8 @@ NewListEditor.propTypes = {
     inputNormalizer: PropTypes.func,
     list: PropTypes.array,
     listEditorId: PropTypes.string.isRequired,
-    ListEditorForm: PropTypes.elementType.isRequired,
-    ListEditorItemTemplate: PropTypes.elementType.isRequired,
+    ListEditorForm: PropTypes.elementType,
+    ListEditorItemTemplate: PropTypes.elementType,
     locale: PropTypes.object,
     maxCount: PropTypes.number,
     onChange: PropTypes.func,
@@ -194,14 +201,6 @@ NewListEditor.propTypes = {
     scrollListHeight: PropTypes.number,
     searchKey: PropTypes.object,
     transform: PropTypes.func,
-};
-
-NewListEditor.defaultProps = {
-    inputNormalizer: value => value,
-    ListEditorForm: FreeTextForm,
-    ListEditorItemTemplate: GenericTemplate,
-    transform: (list, searchKey) =>
-        list.map((listItem, index) => ({ [searchKey.value]: listItem, [searchKey.order]: index + 1 })),
 };
 
 export default React.memo(NewListEditor);

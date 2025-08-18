@@ -1,10 +1,17 @@
 import React from 'react';
 import SearchComponent from './SearchComponent';
-import { fireEvent, rtlRender, within } from 'test-utils';
+import { fireEvent, rtlRender, WithRouter, within } from 'test-utils';
 
 jest.mock('config/general', () => ({
     ...jest.requireActual('config/general'),
     MAX_PUBLIC_SEARCH_TEXT_LENGTH: 20,
+}));
+
+const mockUseNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
 }));
 
 function setup(testProps = {}, renderMethod = rtlRender) {
@@ -22,20 +29,21 @@ function setup(testProps = {}, renderMethod = rtlRender) {
         isOpenAccessInAdvancedMode: testProps.isOpenAccessInAdvancedMode || false,
         isAdmin: false,
         isUnpublishedBufferPage: false,
-
-        history: {
-            push: jest.fn(),
-        },
-        location: {
-            pathname: '',
-        },
         ...testProps,
     };
 
-    return renderMethod(<SearchComponent {...props} />);
+    return renderMethod(
+        <WithRouter>
+            <SearchComponent {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('SearchComponent', () => {
+    afterEach(() => {
+        mockUseNavigate.mockClear();
+    });
+
     it('should render default view', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
@@ -90,9 +98,6 @@ describe('SearchComponent', () => {
 
     it('should minimise advanced search in mobile context', () => {
         const props = {
-            history: {
-                push: jest.fn(),
-            },
             isMobile: true,
             isAdvancedSearch: true,
         };
@@ -120,9 +125,7 @@ describe('SearchComponent', () => {
     });
 
     it('should submit search for given search query params', () => {
-        const testHistoryPushMethod = jest.fn();
         const { getByRole } = setup({
-            history: { push: testHistoryPushMethod },
             page: 1,
             pageSize: 20,
             sortBy: 'score',
@@ -138,16 +141,14 @@ describe('SearchComponent', () => {
 
         fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
 
-        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+        expect(mockUseNavigate).toHaveBeenCalledWith({
             pathname: '/records/search',
             search: 'searchQueryParams%5Ball%5D=i+feel+lucky&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
         });
     });
 
     it('should update search query params', () => {
-        const testHistoryPushMethod = jest.fn();
         const { getByRole, rerender } = setup({
-            history: { push: testHistoryPushMethod },
             searchQueryParams: {
                 all: 'previous search',
             },
@@ -155,7 +156,6 @@ describe('SearchComponent', () => {
 
         setup(
             {
-                history: { push: testHistoryPushMethod },
                 isAdvancedSearch: true,
                 searchQueryParams: {
                     all: 'second search',
@@ -166,7 +166,6 @@ describe('SearchComponent', () => {
 
         setup(
             {
-                history: { push: testHistoryPushMethod },
                 searchQueryParams: {
                     all: 'third search',
                 },
@@ -176,7 +175,7 @@ describe('SearchComponent', () => {
 
         fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
 
-        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+        expect(mockUseNavigate).toHaveBeenCalledWith({
             pathname: '/records/search',
             search: 'searchQueryParams%5Ball%5D=third+search&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
         });
@@ -190,9 +189,7 @@ describe('SearchComponent', () => {
     });
 
     it('should handle advanced search', () => {
-        const testHistoryPushMethod = jest.fn();
         const { getByTestId, getByRole, getByText } = setup({
-            history: { push: testHistoryPushMethod },
             isAdmin: true,
             isUnpublishedBufferPage: true,
             isAdvancedSearch: true,
@@ -214,7 +211,7 @@ describe('SearchComponent', () => {
         });
 
         fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
-        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+        expect(mockUseNavigate).toHaveBeenCalledWith({
             pathname: '/admin/unpublished',
             search:
                 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=true' +
@@ -231,7 +228,7 @@ describe('SearchComponent', () => {
         fireEvent.click(getByRole('option', { name: 'In Review' }));
 
         fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
-        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+        expect(mockUseNavigate).toHaveBeenCalledWith({
             pathname: '/admin/unpublished',
             search:
                 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5BshowOpenAccessOnly%5D=true' +
@@ -246,9 +243,7 @@ describe('SearchComponent', () => {
         'should handle advanced search in unpublished page with year range, rek_status, ' +
             'rek_created_date and rek_updated_date key set for an admin',
         () => {
-            const testHistoryPushMethod = jest.fn();
             const { getByRole } = setup({
-                history: { push: testHistoryPushMethod },
                 isAdmin: true,
                 isUnpublishedBufferPage: true,
                 isAdvancedSearch: true,
@@ -286,7 +281,7 @@ describe('SearchComponent', () => {
             });
 
             fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
-            expect(testHistoryPushMethod).toHaveBeenCalledWith({
+            expect(mockUseNavigate).toHaveBeenCalledWith({
                 pathname: '/admin/unpublished',
                 search:
                     'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Branges%5D%5BCreated+date%5D=%5B1979-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BUpdated+date%5D=%5B1981-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2000&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2008&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchQueryParams%5Brek_status%5D%5Bvalue%5D=7&searchQueryParams%5Brek_status%5D%5Blabel%5D=&searchQueryParams%5Brek_created_date%5D%5Bvalue%5D=%5B1979-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&searchQueryParams%5Brek_created_date%5D%5Blabel%5D=%5B30%2F12%2F1979+to+01%2F01%2F1985%5D&searchQueryParams%5Brek_updated_date%5D%5Bvalue%5D=%5B1981-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&searchQueryParams%5Brek_updated_date%5D%5Blabel%5D=%5B30%2F12%2F1981+to+01%2F01%2F1985%5D&searchMode=advanced',
@@ -295,9 +290,7 @@ describe('SearchComponent', () => {
     );
 
     it('should handle advanced search with work type', () => {
-        const testHistoryPushMethod = jest.fn();
         const { getByRole } = setup({
-            history: { push: testHistoryPushMethod },
             isAdvancedSearch: true,
             searchQueryParams: {
                 rek_display_type: ['371'],
@@ -305,7 +298,7 @@ describe('SearchComponent', () => {
         });
 
         fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
-        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+        expect(mockUseNavigate).toHaveBeenCalledWith({
             pathname: '/records/search',
             search:
                 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_display_type%5D%5B%5D=371&searchMode=advanced',
@@ -313,14 +306,11 @@ describe('SearchComponent', () => {
     });
 
     it('should handle simple search', () => {
-        const testHistoryPushMethod = jest.fn();
-        const { getByRole, getByTestId } = setup({
-            history: { push: testHistoryPushMethod },
-        });
+        const { getByRole, getByTestId } = setup();
 
         fireEvent.change(getByTestId('simple-search-input'), { target: { value: 'i feel lucky' } });
         fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
-        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+        expect(mockUseNavigate).toHaveBeenCalledWith({
             pathname: '/records/search',
             search: 'searchQueryParams%5Ball%5D=i+feel+lucky&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
         });
@@ -398,7 +388,7 @@ describe('SearchComponent', () => {
 
     it('should update doc type values', () => {
         const { getByTestId, getByRole } = setup({ isAdvancedSearch: true });
-        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: 'Design' }));
         fireEvent.click(getByRole('option', { name: 'Data Collection' }));
         expect(getByTestId('rek-display-type-caption')).toHaveTextContent(
@@ -428,7 +418,7 @@ describe('SearchComponent', () => {
     });
 
     it('search component should display validation message for PID input', () => {
-        const { getByTestId, getByText, queryByTestId } = setup({ history: {} });
+        const { getByTestId, getByText, queryByTestId } = setup();
 
         fireEvent.click(getByTestId('show-advanced-search'));
         fireEvent.mouseDown(getByTestId('field-type-select'));

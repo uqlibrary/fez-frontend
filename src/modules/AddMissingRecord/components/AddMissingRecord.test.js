@@ -1,37 +1,48 @@
 import React from 'react';
 import AddMissingRecord from './AddMissingRecord';
+import { accounts } from 'mock/data/account';
 import { pathConfig } from 'config/pathConfig';
 import { render, WithReduxStore, WithRouter } from 'test-utils';
 
-function setup(testProps = {}) {
-    const props = {
-        ...testProps,
+const mockUseNavigate = jest.fn();
+let mockUseLocation = { pathname: '/' };
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+    useLocation: () => mockUseLocation,
+}));
 
-        rawSearchQuery: testProps.rawSearchQuery || '',
-        addRecordStep: testProps.addRecordStep || jest.fn(),
-        location: testProps.location || {
-            pathname: '',
+function setup(testProps = {}) {
+    const { rawSearchQuery, ...props } = testProps;
+    const state = {
+        accountReducer: {
+            account: {
+                account: accounts.uqresearcher,
+            },
+            author: {
+                aut_id: 111,
+            },
         },
-        match: testProps.match || {},
-        author: testProps.author || null,
-        actions: testProps.actions || {},
-        history: testProps.history || {
-            push: jest.fn(),
-        },
+        searchRecordsReducer: { rawSearchQuery },
     };
+
     return render(
-        <WithReduxStore>
+        <WithReduxStore initialState={state}>
             <WithRouter>
-                <AddMissingRecord {...props} />
+                <AddMissingRecord {...{ addRecordStep: jest.fn(), ...props }} />
             </WithRouter>
         </WithReduxStore>,
     );
 }
 
 describe('Component AddMissingRecord', () => {
+    afterEach(() => {
+        mockUseNavigate.mockClear();
+    });
+
     it('method getStepperIndex should return step [0] and Stepper should render the 1st step', () => {
+        mockUseLocation = { pathname: pathConfig.records.add.find };
         const props = {
-            location: { pathname: pathConfig.records.add.find },
             addRecordStep: () => <span />,
         };
         const { container } = setup({ ...props });
@@ -39,9 +50,9 @@ describe('Component AddMissingRecord', () => {
     });
 
     it('method getStepperIndex should return step [1] and Stepper should render the 2nd step', () => {
+        mockUseLocation = { pathname: pathConfig.records.add.results };
         const props = {
             rawSearchQuery: 'This is a test',
-            location: { pathname: pathConfig.records.add.results },
             addRecordStep: () => <span />,
         };
         const { container } = setup({ ...props });
@@ -49,9 +60,9 @@ describe('Component AddMissingRecord', () => {
     });
 
     it('should return 0 when landing on invalid location with tokens not equal to 3', () => {
+        mockUseLocation = { pathname: `${pathConfig.records.add.results}/test` };
         const props = {
             rawSearchQuery: 'This is a test',
-            location: { pathname: `${pathConfig.records.add.results}/test` },
             addRecordStep: () => <span />,
         };
         const { container } = setup({ ...props });
@@ -59,8 +70,9 @@ describe('Component AddMissingRecord', () => {
     });
 
     it('method getStepperIndex should return step [2] and Stepper should render the 3rd step', () => {
+        mockUseLocation = { pathname: pathConfig.records.add.new };
+
         const props = {
-            location: { pathname: pathConfig.records.add.new },
             addRecordStep: () => <span />,
         };
         const { container } = setup({ ...props });
@@ -71,16 +83,13 @@ describe('Component AddMissingRecord', () => {
         'should call back to step [0] (records/add/find) when there is no ' +
             'rawSearchQuery defined when landing on records/add/results',
         () => {
-            const testReplace = jest.fn();
+            mockUseLocation = { pathname: pathConfig.records.add.results };
             const props = {
                 rawSearchQuery: null,
-                history: { replace: testReplace },
-                location: { pathname: pathConfig.records.add.results },
-                match: { path: pathConfig.records.add.results },
                 addRecordStep: () => <span />,
             };
             setup({ ...props });
-            expect(testReplace).toBeCalledWith(pathConfig.records.add.find);
+            expect(mockUseNavigate).toBeCalledWith(pathConfig.records.add.find, { replace: true });
         },
     );
 });

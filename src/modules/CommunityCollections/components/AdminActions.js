@@ -30,14 +30,6 @@ export const AdminActions = ({
             options: null,
             isRecordEdit: true,
         },
-        {
-            label: 'More options',
-            url: pid => `https://espace.library.uq.edu.au/workflow/list_workflows2.php?pid=${pid}&href=%2Fbrowse`,
-            inApp: false,
-            showInDeleted: true,
-            options: null,
-            isRecordEdit: false,
-        },
     ],
     record,
 }) => {
@@ -56,18 +48,24 @@ export const AdminActions = ({
     };
 
     const menuOptions = adminActions.map(action => {
+        /* istanbul ignore next */
         const linkTarget = action.inApp ? '_self' : '_blank';
         const options = action.options || null;
         const url = action.url(pid);
         const clickHandler = (forceNewTab = false) =>
-            debounce(300, true, event => {
-                navigateToUrl(
-                    url,
-                    event.ctrlKey || forceNewTab ? '_blank' : linkTarget,
-                    !!action.isRecordEdit,
-                    options,
-                );
-            });
+            debounce(
+                300,
+                event => {
+                    navigateToUrl(
+                        url,
+                        /* istanbul ignore next */
+                        event.ctrlKey || forceNewTab ? '_blank' : linkTarget,
+                        !!action.isRecordEdit,
+                        options,
+                    );
+                },
+                { atBegin: true },
+            );
         const label = action.label;
         return {
             label,

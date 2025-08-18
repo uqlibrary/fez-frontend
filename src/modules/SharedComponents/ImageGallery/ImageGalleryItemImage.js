@@ -17,9 +17,9 @@ const StyledLazyLoadImage = styled(LazyLoadImage, {
 
 const ImageGalleryItemImage = ({
     item,
-    security,
+    security = { isAdmin: false, isAuthor: false, author: {} },
     customDefaultConfig = {},
-    classes,
+    classes = {},
     setRestricted,
     setAdvisory,
     setUnavailable,
@@ -91,11 +91,6 @@ ImageGalleryItemImage.propTypes = {
     setRestricted: PropTypes.func,
     setAdvisory: PropTypes.func,
     setUnavailable: PropTypes.func,
-};
-
-ImageGalleryItemImage.defaultProps = {
-    security: { isAdmin: false, isAuthor: false, author: {} },
-    classes: {},
 };
 
 export default React.memo(ImageGalleryItemImage);

@@ -66,7 +66,6 @@ export const trendingPublications = {
                 "rek_article_number_xsdmf_id":null,
                 "rek_article_number":"343"
             },
-            "fez_record_search_key_additional_notes":null,
             "fez_record_search_key_assigned_group_id":[
                 
             ],
@@ -3381,7 +3380,12 @@ export const trendingPublications = {
             "rek_ismemberof": "UQ:308300",
             "rek_ismemberof_order": 1,
             "rek_ismemberof_lookup": "Scopus Import"
-        }],
+        },
+            {
+                "rek_ismemberof": "UQ:774620b",
+                "rek_ismemberof_order": 2,
+                "rek_ismemberof_lookup": "Aboriingal"
+            }],
         "fez_record_search_key_issn": [{
             "rek_issn_id": 5403653,
             "rek_issn_pid": "UQ:a62a760",

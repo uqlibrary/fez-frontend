@@ -1,1 +1,1 @@
-export { default as ClaimRecord } from './containers/ClaimRecord';
+export { default as ClaimRecord } from './components/ClaimRecord';

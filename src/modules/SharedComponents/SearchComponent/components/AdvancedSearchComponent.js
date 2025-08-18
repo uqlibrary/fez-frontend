@@ -18,15 +18,15 @@ import AdvancedSearchCaption from './AdvancedSearchCaption';
 import * as validationRules from 'config/validation';
 
 export const AdvancedSearchComponent = ({
-    fieldRows,
-    docTypes,
-    yearFilter,
-    isOpenAccess,
-    isMinimised,
+    fieldRows = [{ searchField: '0', value: '', label: '' }],
+    docTypes = [],
+    yearFilter = { from: null, to: null, invalid: true },
+    isOpenAccess = false,
+    isMinimised = false,
     isLoading,
-    showUnpublishedFields,
-    createdRange,
-    updatedRange,
+    showUnpublishedFields = false,
+    createdRange = {},
+    updatedRange = {},
     onToggleSearchMode,
     onToggleMinimise,
     onToggleOpenAccess,
@@ -322,33 +322,6 @@ AdvancedSearchComponent.propTypes = {
 
     onAdvancedSearchRowChange: PropTypes.func.isRequired,
     onSearch: PropTypes.func.isRequired,
-};
-
-AdvancedSearchComponent.defaultProps = {
-    fieldRows: [
-        {
-            searchField: '0',
-            value: '',
-            label: '',
-        },
-    ],
-    yearFilter: {
-        from: null,
-        to: null,
-        invalid: true,
-    },
-    isMinimised: false,
-    isOpenAccess: false,
-    showUnpublishedFields: false,
-    createdRange: {},
-    updatedRange: {},
-
-    onToggleSearchMode: undefined,
-    onToggleMinimise: undefined,
-    onToggleOpenAccess: undefined,
-    onAdvancedSearchRowAdd: undefined,
-    onAdvancedSearchRowRemove: undefined,
-    onAdvancedSearchReset: undefined,
 };
 
 export default AdvancedSearchComponent;

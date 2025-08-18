@@ -12,9 +12,10 @@ exports[`ContentIndicatorsField component should mark dropdown as disabled when 
       id="rek-content-indicator-label"
     />
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
+        aria-controls="<dynamic>"
         aria-disabled="true"
         aria-expanded="false"
         aria-haspopup="listbox"
@@ -22,7 +23,7 @@ exports[`ContentIndicatorsField component should mark dropdown as disabled when 
         class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-content-indicator-select"
         id="rek-content-indicator-select"
-        role="button"
+        role="combobox"
       >
         <span
           class="notranslate"
@@ -70,16 +71,17 @@ exports[`ContentIndicatorsField component should not mark dropdown as disabled w
       id="rek-content-indicator-label"
     />
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-content-indicator-select"
         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-content-indicator-select"
         id="rek-content-indicator-select"
-        role="button"
+        role="combobox"
         tabindex="0"
       >
         <span
@@ -127,16 +129,17 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
       id="rek-content-indicator-label"
     />
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-content-indicator-select"
         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-content-indicator-select"
         id="rek-content-indicator-select"
-        role="button"
+        role="combobox"
         tabindex="0"
       >
         <span
@@ -186,16 +189,17 @@ exports[`ContentIndicatorsField component should render with given field props 1
       Test label
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-content-indicator-select"
         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-content-indicator-select"
         id="rek-content-indicator-select"
-        role="button"
+        role="combobox"
         tabindex="0"
       >
         <span
@@ -238,7 +242,7 @@ exports[`ContentIndicatorsField component should render with given field props 1
 </div>
 `;
 
-exports[`ContentIndicatorsField component should render with given field props in immutable list 1`] = `
+exports[`ContentIndicatorsField component should render with given field props in list 1`] = `
 <div>
   <div
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
@@ -252,16 +256,17 @@ exports[`ContentIndicatorsField component should render with given field props i
       Test label
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-content-indicator-select"
         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-content-indicator-select"
         id="rek-content-indicator-select"
-        role="button"
+        role="combobox"
         tabindex="0"
       >
         <span

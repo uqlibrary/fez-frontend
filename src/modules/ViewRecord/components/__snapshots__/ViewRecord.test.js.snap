@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewRecord should render not found 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
+      >
+        Work not found
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container css-dcferp-MuiGrid-root"
+        data-testid="workNotFoundGridContainer"
+        id="workNotFoundGridContainer"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div>
+            <p>
+              The work you are attempting to access does not appear in our system.
+            </p>
+            <p>
+              If you believe this is in error, please
+               
+              <a
+                href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
+              >
+                contact the eSpace team.
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

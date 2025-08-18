@@ -21,4 +21,14 @@ describe('ManuscriptCitation renders ', () => {
         const { container } = setup({ publication: manuscript });
         expect(container).toMatchSnapshot();
     });
+
+    it('component with a doi view', () => {
+        const { container } = setup({
+            publication: {
+                ...manuscript,
+                fez_record_search_key_doi: { rek_doi: '10.1111/1111' },
+            },
+        });
+        expect(container).toMatchSnapshot();
+    });
 });

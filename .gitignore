@@ -9,7 +9,7 @@ npm-debug.log*
 
 e2eTestLog
 chromedriver.log
-coverage
+/coverage
 yarn.lock
 frontend.json
 # ignore js bungle analyser files
@@ -19,8 +19,10 @@ bundle.js.map
 favicon.ico
 index.html
 stats.json
-cypress/videos
-cypress/screenshots
 
 # Code Coverage checker temp dir
 .nyc_output
+
+# Playwright
+/playwright/.results
+/playwright/.cache

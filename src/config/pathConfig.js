@@ -44,11 +44,9 @@ export const pathConfig = {
         collectionListAPI: 'communities',
     },
     communityList: '/communities',
-    collectionList: {
-        path: pid => `/communities/${pid}/collections`,
-    },
     dashboard: '/dashboard',
     about: '/about',
+    copyright: 'https://www.uq.edu.au/legal/copyright-privacy-disclaimer',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/habslodge',
     records: {
@@ -59,6 +57,7 @@ export const pathConfig = {
             new: '/records/add/new',
         },
         claim: '/records/claim',
+        feedback: pid => `/records/${pid}/feedback`,
         fix: pid => `/records/${pid}/fix`,
         incomplete: '/records/incomplete',
         incompleteFix: pid => `/records/${pid}/incomplete`,
@@ -150,6 +149,7 @@ export const pathConfig = {
                 },
             }),
         herdcStatus: herdcStatus => getSearchUrl({ searchQuery: { all: herdcStatus } }),
+        raid: raid => getSearchUrl({ searchQuery: { rek_raid: { value: raid } } }),
         subject: (subject, subjectLookup) =>
             getSearchUrl({
                 searchQuery: { all: '' },
@@ -159,9 +159,20 @@ export const pathConfig = {
                     },
                 },
             }),
+        sustainableDevelopmentGoal: (value, lookup) =>
+            getSearchUrl({
+                searchQuery: { all: '' },
+                activeFacets: {
+                    filters: {
+                        'Sustainable Development Goal': value,
+                        'Sustainable Development Goal (lookup)': lookup,
+                    },
+                },
+            }),
         institutionalStatus: institutionalStatus => getSearchUrl({ searchQuery: { all: institutionalStatus } }),
     },
     admin: {
+        dashboard: '/admin/dashboard',
         add: '/admin/add',
         changeDisplayType: pid => `/admin/change-display-type/${pid}`,
         bulkUpdates: '/admin/bulk-updates',
@@ -174,13 +185,14 @@ export const pathConfig = {
         editCommunity: pid => `/communities/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,
         favouriteSearch: '/admin/favourite-search',
-        legacyEspace: `${fullPath}/my_upo_tools.php`,
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
         unpublished: '/admin/unpublished',
         manageAuthors: '/admin/authors',
         manageUsers: '/admin/users',
         masterJournalListIngest: '/admin/master-journal-list-ingest',
+        journalEdit: id => `/admin/journal/edit/${id}`,
+        controlledVocabularies: '/admin/controlled-vocabularies',
     },
     authorIdentifiers: {
         orcid: {
@@ -190,15 +202,11 @@ export const pathConfig = {
             }/author-identifiers/orcid/link`,
             // unlink: '/author-identifiers/orcid/link'
         },
-        googleScholar: {
-            link: '/author-identifiers/google-scholar/link',
-            // unlink: '/author-identifiers/google-scholar/link'
-        },
     },
     authorStatistics: {
         url: id => `https://app.library.uq.edu.au/#/authors/${id}`,
     },
-    help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide',
+    help: 'https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets',
     digiteam: {
         batchImport: '/batch-import',
     },
@@ -207,7 +215,6 @@ export const pathConfig = {
     },
     journals: {
         search: '/journals/search/',
-        results: '/journals/results/',
         compare: '/journals/compare/',
         favourites: '/journals/favourites/',
     },

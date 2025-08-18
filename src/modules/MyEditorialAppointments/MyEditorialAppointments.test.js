@@ -1,6 +1,6 @@
 import React from 'react';
 import MyEditorialAppointments from './index';
-import { render, WithReduxStore, waitFor, createMatchMedia } from 'test-utils';
+import { render, WithReduxStore, waitFor, createMatchMedia, fireEvent } from 'test-utils';
 import * as MyEditorialAppointmentsActions from 'actions/myEditorialAppointments';
 import * as repository from 'repositories';
 
@@ -76,6 +76,40 @@ describe('MyEditorialAppointments', () => {
         expect(getByText('Start year')).toBeInTheDocument();
         expect(getByText('End year')).toBeInTheDocument();
     });
+
+    it('should render eap role name field', async () => {
+        mockApi.onGet(repository.routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl).replyOnce(200, {
+            data: [
+                {
+                    eap_id: 1,
+                    eap_journal_name: 'test',
+                    eap_jnl_id: 1234,
+                    eap_role_cvo_id: 454148,
+                    eap_start_year: '2006',
+                    eap_end_year: '2026',
+                    eap_role_name: 'Test Editor',
+                },
+            ],
+        });
+        const loadMyEditorialAppointmentsListFn = jest.spyOn(
+            MyEditorialAppointmentsActions,
+            'loadMyEditorialAppointmentsList',
+        );
+
+        const { container, getByText, getByTestId, getByRole } = setup({});
+        expect(getByText('Loading editorial appointments')).toBeInTheDocument();
+        expect(loadMyEditorialAppointmentsListFn).toBeCalled();
+
+        await waitFor(() => getByText('My editorial appointments'));
+        expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
+
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(1); // account for header row
+
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+
+        expect(getByRole('textbox', { name: 'Other role name' })).toHaveAttribute('value', 'Test Editor');
+    });
+
     it('should render table in desktop width', async () => {
         mockApi.onGet(repository.routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl).replyOnce(200, {
             data: [
@@ -104,18 +138,14 @@ describe('MyEditorialAppointments', () => {
             'loadMyEditorialAppointmentsList',
         );
 
-        const { getByText, getByTestId } = setup({});
+        const { container, getByText, getByTestId } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
         expect(loadMyEditorialAppointmentsListFn).toBeCalled();
 
         await waitFor(() => getByText('My editorial appointments'));
         expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
 
-        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
-        expect(document.querySelector('#my-editorial-appointments-list-row-0 td:first-of-type')).not.toHaveAttribute(
-            'style',
-            expect.stringContaining('display: block'),
-        );
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
     });
 
     it('should render table in phone width', async () => {
@@ -148,18 +178,13 @@ describe('MyEditorialAppointments', () => {
             'loadMyEditorialAppointmentsList',
         );
 
-        const { getByText, getByTestId } = setup({});
+        const { container, getByText, getByTestId } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
         expect(loadMyEditorialAppointmentsListFn).toBeCalled();
 
         await waitFor(() => getByText('My editorial appointments'));
         expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
-
-        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
-        expect(document.querySelector('#my-editorial-appointments-list-row-0 td:first-of-type')).toHaveAttribute(
-            'style',
-            expect.stringContaining('display: block'),
-        );
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
     });
 
     it('should render error message', async () => {

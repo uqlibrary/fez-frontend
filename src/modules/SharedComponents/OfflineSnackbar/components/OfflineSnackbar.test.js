@@ -3,12 +3,8 @@ import { OfflineSnackbar } from './OfflineSnackbar';
 import { act, rtlRender } from 'test-utils';
 import { waitForElementToBeRemoved } from '@testing-library/react';
 
-function setup(testProps = {}) {
-    const props = {
-        classes: {},
-        ...testProps,
-    };
-    return rtlRender(<OfflineSnackbar {...props} />);
+function setup() {
+    return rtlRender(<OfflineSnackbar />);
 }
 
 describe('Component OfflineSnackbar', () => {

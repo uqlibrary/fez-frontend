@@ -1,5 +1,4 @@
-import React, { Suspense, PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import React, { Suspense } from 'react';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
@@ -7,11 +6,9 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 
-// forms & custom components
 const PublicationsList = React.lazy(() =>
     import('modules/SharedComponents/PublicationsList/components/PublicationsList'),
 );
-
 /* istanbul ignore next */
 const PublicationListLoadingProgress = React.lazy(() =>
     import('modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress'),
@@ -20,47 +17,36 @@ const PublicationListLoadingProgress = React.lazy(() =>
 import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
 
-export default class RecordsSearchResults extends PureComponent {
-    static propTypes = {
-        publicationsList: PropTypes.array,
-        searchLoading: PropTypes.bool,
-        loadingPublicationSources: PropTypes.object,
-        history: PropTypes.object.isRequired,
-        actions: PropTypes.object,
-        rawSearchQuery: PropTypes.string,
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setClaimPublication, setRedirectPath } from '../../../../actions';
+
+export const RecordsSearchResults = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const { loadingPublicationSources, publicationsList, searchLoading, rawSearchQuery } = useSelector(state =>
+        state.get('searchRecordsReducer'),
+    );
+
+    const autoFocus = element => {
+        publicationsList.length === 0 && element?.focus();
     };
 
-    static defaultProps = {
-        publicationsList: [],
-        loadingPublicationSources: {},
+    const _showNewRecordForm = () => {
+        navigate(pathConfig.records.add.new);
     };
 
-    componentDidUpdate() {
-        /* istanbul ignore else */
-        if (this.showNewRecordButton && this.props.publicationsList.length === 0) {
-            this.showNewRecordButton.focus();
-        }
-    }
-
-    _setRef = node => {
-        this.showNewRecordButton = node;
+    const _cancelWorkflow = () => {
+        navigate(pathConfig.records.add.find);
     };
 
-    _showNewRecordForm = () => {
-        this.props.history.push(pathConfig.records.add.new);
+    const _claimPublication = item => {
+        dispatch(setClaimPublication(item));
+        dispatch(setRedirectPath(pathConfig.records.add.find));
+        navigate(pathConfig.records.claim);
     };
 
-    _cancelWorkflow = () => {
-        this.props.history.push(pathConfig.records.add.find);
-    };
-
-    _claimPublication = item => {
-        this.props.actions.setClaimPublication(item);
-        this.props.actions.setRedirectPath(pathConfig.records.add.find);
-        this.props.history.push(pathConfig.records.claim);
-    };
-
-    getUnclaimablePublicationsList = publicationsList => {
+    const getUnclaimablePublicationsList = publicationsList => {
         return publicationsList
             .filter(item => {
                 if (
@@ -95,109 +81,104 @@ export default class RecordsSearchResults extends PureComponent {
             .map(item => item.rek_pid);
     };
 
-    render() {
-        const searchResultsTxt = locale.pages.addRecord.step2;
-        const actions = [
-            {
-                label: searchResultsTxt.claim,
-                handleAction: this._claimPublication,
-                primary: true,
-                disabled: this.props.searchLoading,
-            },
-        ];
+    const searchResultsTxt = locale.pages.addRecord.step2;
+    const _actions = [
+        {
+            label: searchResultsTxt.claim,
+            handleAction: _claimPublication,
+            primary: true,
+            disabled: searchLoading,
+        },
+    ];
 
-        const unclaimablePublicationsList = this.getUnclaimablePublicationsList(this.props.publicationsList);
-        const unclaimable = [
-            {
-                label: searchResultsTxt.unclaimable,
-                disabled: true,
-                primary: false,
-            },
-        ];
+    const unclaimablePublicationsList = getUnclaimablePublicationsList(publicationsList);
+    const unclaimable = [
+        {
+            label: searchResultsTxt.unclaimable,
+            disabled: true,
+            primary: false,
+        },
+    ];
 
-        return (
-            <React.Fragment>
-                <Grid container spacing={3}>
-                    <Grid item xs sx={{ display: { xs: 'block', sm: 'none' } }}>
-                        <Suspense fallback={<div>Loading...</div>}>
-                            <PublicationListLoadingProgress
-                                mobile
-                                loadingPublicationSources={this.props.loadingPublicationSources}
-                            />
-                        </Suspense>
-                    </Grid>
-                    <Grid item xs sm={8} md={9}>
-                        {this.props.searchLoading && <InlineLoader message={searchResultsTxt.loadingMessage} />}
-                        {this.props.publicationsList.length > 0 && (
-                            <Grid item sm={12}>
-                                <StandardCard {...searchResultsTxt.searchResults}>
-                                    <Grid container spacing={2}>
-                                        <Grid item xs={12}>
-                                            {searchResultsTxt.searchResults.resultsText
-                                                .replace('[noOfResults]', this.props.publicationsList.length)
-                                                .replace('[searchQuery]', this.props.rawSearchQuery)}
-                                            {searchResultsTxt.searchResults.text}
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <PublicationsList
-                                                publicationsLoading={this.props.searchLoading}
-                                                publicationsList={this.props.publicationsList}
-                                                customActions={actions}
-                                                publicationsListSubset={unclaimablePublicationsList}
-                                                subsetCustomActions={unclaimable}
-                                                showSources
-                                            />
-                                        </Grid>
+    return (
+        <React.Fragment>
+            <Grid container spacing={3}>
+                <Grid item xs sx={{ display: { xs: 'block', sm: 'none' } }}>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <PublicationListLoadingProgress mobile loadingPublicationSources={loadingPublicationSources} />
+                    </Suspense>
+                </Grid>
+                <Grid item xs sm={8} md={9}>
+                    {searchLoading && <InlineLoader message={searchResultsTxt.loadingMessage} />}
+                    {publicationsList.length > 0 && (
+                        <Grid item sm={12}>
+                            <StandardCard {...searchResultsTxt.searchResults}>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={12}>
+                                        {searchResultsTxt.searchResults.resultsText
+                                            .replace('[noOfResults]', publicationsList.length)
+                                            .replace('[searchQuery]', rawSearchQuery)}
+                                        {searchResultsTxt.searchResults.text}
                                     </Grid>
-                                </StandardCard>
-                            </Grid>
-                        )}
-                        {!this.props.searchLoading && this.props.publicationsList.length === 0 && (
-                            <Grid item sm={12}>
-                                <StandardCard {...searchResultsTxt.noResultsFound}>
-                                    {searchResultsTxt.noResultsFound.text}
-                                </StandardCard>
-                            </Grid>
-                        )}
-                        {!this.props.searchLoading && (
-                            <Grid item sm={12}>
-                                <Grid container spacing={2} style={{ marginTop: 12 }}>
-                                    <Grid item xs />
-                                    <Grid item xs={12} md="auto">
-                                        <Button
-                                            fullWidth
-                                            // variant={'contained'}
-                                            onClick={this._cancelWorkflow}
-                                        >
-                                            {searchResultsTxt.cancel}
-                                        </Button>
-                                    </Grid>
-                                    <Grid item xs={12} md="auto">
-                                        <Button
-                                            fullWidth
-                                            variant={'contained'}
-                                            color="primary"
-                                            onClick={this._showNewRecordForm}
-                                            ref={this._setRef}
-                                        >
-                                            {searchResultsTxt.submit}
-                                        </Button>
+                                    <Grid item xs={12}>
+                                        <PublicationsList
+                                            publicationsLoading={searchLoading}
+                                            publicationsList={publicationsList}
+                                            customActions={_actions}
+                                            publicationsListSubset={unclaimablePublicationsList}
+                                            subsetCustomActions={unclaimable}
+                                            showSources
+                                        />
                                     </Grid>
                                 </Grid>
+                            </StandardCard>
+                        </Grid>
+                    )}
+                    {!searchLoading && publicationsList.length === 0 && (
+                        <Grid item sm={12}>
+                            <StandardCard {...searchResultsTxt.noResultsFound}>
+                                {searchResultsTxt.noResultsFound.text}
+                            </StandardCard>
+                        </Grid>
+                    )}
+                    {!searchLoading && (
+                        <Grid item sm={12}>
+                            <Grid container spacing={2} style={{ marginTop: 12 }}>
+                                <Grid item xs />
+                                <Grid item xs={12} md="auto">
+                                    <Button
+                                        fullWidth
+                                        // variant={'contained'}
+                                        onClick={_cancelWorkflow}
+                                    >
+                                        {searchResultsTxt.cancel}
+                                    </Button>
+                                </Grid>
+                                <Grid item xs={12} md="auto">
+                                    <Button
+                                        fullWidth
+                                        variant={'contained'}
+                                        color="primary"
+                                        onClick={_showNewRecordForm}
+                                        ref={autoFocus}
+                                    >
+                                        {searchResultsTxt.submit}
+                                    </Button>
+                                </Grid>
                             </Grid>
-                        )}
-                    </Grid>
-                    <Grid item sm={4} md={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        <StandardRighthandCard title={searchResultsTxt.searchResults.searchDashboard.title}>
-                            <Suspense fallback={<div>Loading...</div>}>
-                                <PublicationListLoadingProgress
-                                    loadingPublicationSources={this.props.loadingPublicationSources}
-                                />
-                            </Suspense>
-                        </StandardRighthandCard>
-                    </Grid>
+                        </Grid>
+                    )}
                 </Grid>
-            </React.Fragment>
-        );
-    }
-}
+                <Grid item sm={4} md={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <StandardRighthandCard title={searchResultsTxt.searchResults.searchDashboard.title}>
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <PublicationListLoadingProgress loadingPublicationSources={loadingPublicationSources} />
+                        </Suspense>
+                    </StandardRighthandCard>
+                </Grid>
+            </Grid>
+        </React.Fragment>
+    );
+};
+
+export default React.memo(RecordsSearchResults);

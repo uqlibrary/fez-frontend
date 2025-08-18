@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { pathConfig } from 'config';
 const BackToSearchButton = props => {
-    const history = useHistory();
+    const navigate = useNavigate();
     const { prevLocation, ...otherProps } = props;
     const handleReturnToSearchClick = () =>
-        prevLocation ? history.replace(prevLocation) : history.push(pathConfig.journals.search);
+        prevLocation ? navigate(prevLocation, { replace: true }) : navigate(pathConfig.journals.search);
     return (
         <Button
             variant="contained"

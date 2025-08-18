@@ -98,6 +98,95 @@ describe('transformers', () => {
         });
     });
 
+    describe('getRecordAlternateIdentifierSearchKey test', () => {
+        it('should return request object structure with alternate identifier and identifier type', () => {
+            const data = [
+                {
+                    rek_value: { key: 'id', value: '111' },
+                    rek_order: 1,
+                },
+                {
+                    rek_value: { key: 'id2', value: null },
+                    rek_order: 2,
+                },
+            ];
+            const expected = {
+                fez_record_search_key_alternate_identifier: [
+                    {
+                        rek_alternate_identifier: 'id',
+                        rek_alternate_identifier_order: 1,
+                    },
+                    {
+                        rek_alternate_identifier: 'id2',
+                        rek_alternate_identifier_order: 2,
+                    },
+                ],
+                fez_record_search_key_alternate_identifier_type: [
+                    {
+                        rek_alternate_identifier_type: '111',
+                        rek_alternate_identifier_type_order: 1,
+                    },
+                ],
+            };
+
+            expect(transformers.getAlternateIdentifierSearchKeys(data)).toEqual(expected);
+        });
+
+        it('should return empty object structure with missing alternate identifier', () => {
+            expect(transformers.getAlternateIdentifierSearchKeys([])).toEqual({});
+        });
+
+        it('should return empty request object structure if no link is provided', () => {
+            const data = {};
+            const expected = null;
+            const result = transformers.getRecordLinkSearchKey(data);
+            expect(result).toEqual(expected);
+        });
+    });
+
+    describe('getRecordAuthorExternalIdentifierSearchKey test', () => {
+        it('should return request object structure with external identifiers', () => {
+            const data = [
+                {
+                    externalIdentifier: 'ext id',
+                    externalIdentifierType: '111',
+                },
+                {
+                    externalIdentifier: 'ext id 2',
+                },
+                {
+                    externalIdentifierType: '222',
+                },
+            ];
+            const expected = {
+                fez_record_search_key_author_identifier: [
+                    {
+                        rek_author_identifier: 'ext id',
+                        rek_author_identifier_order: 1,
+                    },
+                ],
+                fez_record_search_key_author_identifier_type: [
+                    {
+                        rek_author_identifier_type: '111',
+                        rek_author_identifier_type_order: 1,
+                    },
+                ],
+            };
+            const result = transformers.getRecordAuthorsExternalIdSearchKey(data);
+            expect(result).toEqual(expected);
+        });
+
+        it('should return empty request object structure if no external id is provided', () => {
+            const data = [];
+            const expected = {
+                fez_record_search_key_author_identifier: [],
+                fez_record_search_key_author_identifier_type: [],
+            };
+            const result = transformers.getRecordAuthorsExternalIdSearchKey(data);
+            expect(result).toEqual(expected);
+        });
+    });
+
     describe('getCollectionsOnRecordWithSecurity', () => {
         it('should retrieve security policy of existing collections from search key', () => {
             const record = {
@@ -158,6 +247,71 @@ describe('transformers', () => {
 
         it('should handle empty list of collections', () => {
             expect(transformers.getCollectionsOnRecordWithSecurity({ rek_pid: 'UQ:275689' })).toEqual([]);
+        });
+    });
+
+    describe('getRecordRelatedServiceSearchKeys test', () => {
+        it('should return request object structure with related service and related service description', () => {
+            const data = {
+                relatedServices: [
+                    {
+                        relatedServiceId: 'id',
+                        relatedServiceDesc: 'desc',
+                    },
+                ],
+            };
+            const expected = {
+                fez_record_search_key_related_service: [
+                    {
+                        rek_related_service: 'id',
+                        rek_related_service_order: 1,
+                    },
+                ],
+                fez_record_search_key_related_service_description: [
+                    {
+                        rek_related_service_description: 'desc',
+                        rek_related_service_description_order: 1,
+                    },
+                ],
+            };
+
+            expect(transformers.getRelatedServiceSectionSearchKeys(data)).toEqual(expected);
+        });
+
+        it('should return request object structure with related service and empty related service description', () => {
+            const data = {
+                relatedServices: [
+                    {
+                        relatedServiceId: 'id',
+                        relatedServiceDesc: '',
+                    },
+                ],
+            };
+            const expected = {
+                fez_record_search_key_related_service: [
+                    {
+                        rek_related_service: 'id',
+                        rek_related_service_order: 1,
+                    },
+                ],
+                fez_record_search_key_related_service_description: [],
+            };
+
+            expect(transformers.getRelatedServiceSectionSearchKeys(data)).toEqual(expected);
+        });
+
+        it('should handle empty related service', () => {
+            const data = { relatedServices: [] };
+            const expected = {
+                fez_record_search_key_related_service: [],
+                fez_record_search_key_related_service_description: [],
+            };
+
+            expect(transformers.getRelatedServiceSectionSearchKeys(data)).toEqual(expected);
+        });
+
+        it('should handle undefined related service', () => {
+            expect(transformers.getRelatedServiceSectionSearchKeys({})).toEqual({});
         });
     });
 
@@ -856,6 +1010,44 @@ describe('transformers', () => {
         });
     });
 
+    describe('getFeedbackRequest test', () => {
+        const input = {
+            acknowledgement: 'private',
+            community: '',
+            communityParticipant: 'false',
+            contactNo: '',
+            culturalInfo: { other: 'other', otherText: 'other info', ceremonies: 'ceremonies' },
+            email: '',
+            firstName: 'first name',
+            isIcipHolder: 'true',
+            indigenousIdentity: 'islander',
+            hasKinshipConnection: 'false',
+            lastName: 'last name',
+            shareDetails: { anonymously: 'anonymously' },
+            specialCare: { womenOnly: 'womenOnly', otherText: 'special care info' },
+        };
+
+        it('should create issue request', () => {
+            const expected = {
+                rfb_pid: 'UQ:1',
+                rfb_acknowledgement: 'private',
+                rfb_community_participant: 'false',
+                rfb_cultural_info: ['other', 'ceremonies'],
+                rfb_cultural_info_other: 'other info',
+                rfb_first_name: 'first name',
+                rfb_is_icip_holder: 'true',
+                rfb_indigenous_identity: 'islander',
+                rfb_has_kinship_connection: 'false',
+                rfb_last_name: 'last name',
+                rfb_share_details: ['anonymously'],
+                rfb_special_care: ['womenOnly'],
+            };
+
+            const result = transformers.getFeedbackRecordData('UQ:1', input);
+            expect(result).toEqual(expected);
+        });
+    });
+
     describe('getRecordSubjectSearchKey test', () => {
         it('should return empty subject object', () => {
             expect(transformers.getRecordSubjectSearchKey()).toEqual({});
@@ -884,6 +1076,58 @@ describe('transformers', () => {
                 ],
             };
             const result = transformers.getRecordSubjectSearchKey(input);
+            expect(result).toEqual(expected);
+        });
+    });
+
+    describe('getSDGSearchKeys test', () => {
+        it('should return empty subject object', () => {
+            expect(transformers.getSDGSearchKeys()).toEqual({});
+            expect(transformers.getSDGSearchKeys([])).toEqual({});
+        });
+
+        it('should return subject list based on input', () => {
+            const input = [
+                {
+                    rek_order: 1,
+                    rek_value: { key: 456998, value: 'Dimensions', sdgCVOId: 456995, group: '02 - Zero Hunger' },
+                },
+                {
+                    rek_order: 2,
+                    rek_value: { key: 456999, value: 'WOS', sdgCVOId: 456995, group: '02 - Zero Hunger' },
+                },
+                {
+                    rek_order: 2,
+                    rek_value: { key: 456996, value: 'Dimensions', sdgCVOId: 456994, group: '01 - No poverty' },
+                },
+            ];
+            const expected = {
+                fez_record_search_key_sdg: [
+                    {
+                        rek_sdg: 456994,
+                        rek_sdg_order: 1,
+                    },
+                    {
+                        rek_sdg: 456995,
+                        rek_sdg_order: 2,
+                    },
+                ],
+                fez_record_search_key_sdg_source: [
+                    {
+                        rek_sdg_source: 456996,
+                        rek_sdg_source_order: 1,
+                    },
+                    {
+                        rek_sdg_source: 456998,
+                        rek_sdg_source_order: 2,
+                    },
+                    {
+                        rek_sdg_source: 456999,
+                        rek_sdg_source_order: 3,
+                    },
+                ],
+            };
+            const result = transformers.getSDGSearchKeys(input);
             expect(result).toEqual(expected);
         });
     });
@@ -2768,6 +3012,8 @@ describe('transformers', () => {
                 contactName: 'Test',
                 contactEmail: 'test@email.com',
                 contactNameId: { id: 1234 },
+                ownerIdentifier: '1234',
+                ownerIdentifierType: '1111',
                 fez_record_search_key_herdc_code: {
                     rek_herdc_code: '450003',
                     rek_herdc_code_id: 5013387,
@@ -2835,6 +3081,18 @@ describe('transformers', () => {
                         rek_contact_details_email_order: 1,
                     },
                 ],
+                fez_record_search_key_contributor_identifier: [
+                    {
+                        rek_contributor_identifier: '1234',
+                        rek_contributor_identifier_order: 1,
+                    },
+                ],
+                fez_record_search_key_contributor_identifier_type: [
+                    {
+                        rek_contributor_identifier_type: '1111',
+                        rek_contributor_identifier_type_order: 1,
+                    },
+                ],
                 fez_record_search_key_herdc_code: {
                     rek_herdc_code: '450003',
                 },
@@ -2891,8 +3149,17 @@ describe('transformers', () => {
                 fez_record_search_key_license: {
                     rek_license: '453607',
                 },
+                fez_record_search_key_start_date: {
+                    rek_start_date: '2019-03-14',
+                },
                 fez_record_search_key_end_date: {
                     rek_end_date: '2019-03-14',
+                },
+                fez_record_search_key_time_period_start_date: {
+                    rek_time_period_start_date: '2019-03-14',
+                },
+                fez_record_search_key_time_period_end_date: {
+                    rek_time_period_end_date: '2019-03-14',
                 },
             };
 
@@ -2953,8 +3220,17 @@ describe('transformers', () => {
                 fez_record_search_key_license: {
                     rek_license: '453607',
                 },
+                fez_record_search_key_start_date: {
+                    rek_start_date: '2019-03-14',
+                },
                 fez_record_search_key_end_date: {
                     rek_end_date: '2019-03-14',
+                },
+                fez_record_search_key_time_period_start_date: {
+                    rek_time_period_start_date: '2019-03-14',
+                },
+                fez_record_search_key_time_period_end_date: {
+                    rek_time_period_end_date: '2019-03-14',
                 },
             });
         });
@@ -3001,18 +3277,26 @@ describe('transformers', () => {
                         value: null,
                     },
                 },
+                fez_record_search_key_start_date: {
+                    rek_start_date: undefined,
+                },
+                fez_record_search_key_end_date: {
+                    rek_end_date: undefined,
+                },
+                fez_record_search_key_time_period_start_date: {
+                    rek_time_period_start_date: undefined,
+                },
+                fez_record_search_key_time_period_end_date: {
+                    rek_time_period_end_date: undefined,
+                },
             };
 
             expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-                fez_record_search_key_herdc_code: {
-                    rek_herdc_code: null,
-                },
-                fez_record_search_key_herdc_status: {
-                    rek_herdc_status: null,
-                },
+                fez_record_search_key_herdc_code: {},
+                fez_record_search_key_herdc_status: {},
                 fez_record_search_key_institutional_status: {},
                 fez_record_search_key_oa_status: {},
-                fez_record_search_key_oa_status_type: null,
+                fez_record_search_key_oa_status_type: {},
                 fez_record_search_key_license: {},
             });
         });
@@ -3064,15 +3348,11 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-                fez_record_search_key_herdc_code: {
-                    rek_herdc_code: null,
-                },
-                fez_record_search_key_herdc_status: {
-                    rek_herdc_status: null,
-                },
+                fez_record_search_key_herdc_code: {},
+                fez_record_search_key_herdc_status: {},
                 fez_record_search_key_institutional_status: {},
                 fez_record_search_key_oa_status: {},
-                fez_record_search_key_oa_status_type: null,
+                fez_record_search_key_oa_status_type: {},
                 fez_record_search_key_license: {},
             });
         });
@@ -4183,12 +4463,14 @@ describe('transformers', () => {
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
                 fez_author_affiliation: null,
                 fez_record_search_key_author: [],
+                fez_record_search_key_author_id: [],
                 fez_record_search_key_author_affiliation_country: [],
                 fez_record_search_key_author_affiliation_full_address: [],
                 fez_record_search_key_author_affiliation_id: [],
                 fez_record_search_key_author_affiliation_name: [],
                 fez_record_search_key_author_affiliation_type: [],
-                fez_record_search_key_author_id: [],
+                fez_record_search_key_author_identifier: [],
+                fez_record_search_key_author_identifier_type: [],
             });
         });
 
@@ -4252,6 +4534,8 @@ describe('transformers', () => {
                         rek_author_affiliation_type_order: 4,
                     },
                 ],
+                fez_record_search_key_author_identifier: [],
+                fez_record_search_key_author_identifier_type: [],
             });
         });
 
@@ -4316,6 +4600,8 @@ describe('transformers', () => {
                         rek_author_affiliation_type_order: 4,
                     },
                 ],
+                fez_record_search_key_author_identifier: [],
+                fez_record_search_key_author_identifier_type: [],
             });
         });
 
@@ -4372,27 +4658,19 @@ describe('transformers', () => {
         });
 
         it('should get architects search key', () => {
-            const data = {
-                architects: [
-                    { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
-                    { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
-                    { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
-                    { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
-                ],
-            };
+            const data = [
+                { nameAsPublished: 'Smith A.' },
+                { nameAsPublished: 'Smith B.' },
+                { nameAsPublished: 'Smith C.' },
+                { nameAsPublished: 'Smith D.' },
+            ];
 
-            expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
-                fez_record_search_key_architect: [
-                    { rek_architect: 'Smith A.', rek_architect_order: 1 },
-                    { rek_architect: 'Smith B.', rek_architect_order: 2 },
-                    { rek_architect: 'Smith C.', rek_architect_order: 3 },
-                    { rek_architect: 'Smith D.', rek_architect_order: 4 },
-                ],
-                fez_record_search_key_architect_id: [
-                    { rek_architect_id: 0, rek_architect_id_order: 1 },
-                    { rek_architect_id: 100, rek_architect_id_order: 2 },
-                    { rek_architect_id: 0, rek_architect_id_order: 3 },
-                    { rek_architect_id: 1001, rek_architect_id_order: 4 },
+            expect(transformers.getRecordArchitectsSearchKey(data)).toEqual({
+                fez_record_search_key_architect_name: [
+                    { rek_architect_name: 'Smith A.', rek_architect_name_order: 1 },
+                    { rek_architect_name: 'Smith B.', rek_architect_name_order: 2 },
+                    { rek_architect_name: 'Smith C.', rek_architect_name_order: 3 },
+                    { rek_architect_name: 'Smith D.', rek_architect_name_order: 4 },
                 ],
             });
         });
@@ -4519,6 +4797,8 @@ describe('transformers', () => {
                         rek_author_role_order: 4,
                     },
                 ],
+                fez_record_search_key_author_identifier: [],
+                fez_record_search_key_author_identifier_type: [],
             });
         });
 
@@ -4619,6 +4899,8 @@ describe('transformers', () => {
                         rek_author_role_order: 4,
                     },
                 ],
+                fez_record_search_key_author_identifier: [],
+                fez_record_search_key_author_identifier_type: [],
             });
         });
     });
@@ -5001,9 +5283,6 @@ describe('transformers', () => {
             const expected = {
                 fez_record_search_key_notes: {
                     rek_notes: '<p>This is test additional note</p>',
-                },
-                fez_record_search_key_additional_notes: {
-                    rek_additional_notes: '<p>This is test additional note</p>',
                 },
                 fez_internal_notes: null,
             };
@@ -5459,6 +5738,56 @@ describe('transformers', () => {
                 },
             ]);
         });
+
+        it('should reorder transform data', () => {
+            expect(
+                transformers.getCopyToCollectionData(
+                    [
+                        {
+                            rek_pid: 'UQ:11111',
+                            fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 2 }],
+                        },
+                    ],
+                    {
+                        search_key: 'rek_ismemberof',
+                        collections: [{ rek_pid: 'UQ:234' }],
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:11111',
+                    fez_record_search_key_ismemberof: [
+                        { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
+                        {
+                            rek_ismemberof: 'UQ:234',
+                            rek_ismemberof_order: 2,
+                        },
+                    ],
+                },
+            ]);
+        });
+
+        it('should not add duplicated collections', () => {
+            expect(
+                transformers.getCopyToCollectionData(
+                    [
+                        {
+                            rek_pid: 'UQ:11111',
+                            fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 2 }],
+                        },
+                    ],
+                    {
+                        search_key: 'rek_ismemberof',
+                        collections: [{ rek_pid: 'UQ:123' }],
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:11111',
+                    fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 }],
+                },
+            ]);
+        });
     });
 
     describe('getCopyToCommunityData', () => {
@@ -5516,6 +5845,31 @@ describe('transformers', () => {
                 },
             ]);
         });
+
+        it('should correctly reorder transform data', () => {
+            expect(
+                transformers.getRemoveFromCollectionData(
+                    [
+                        {
+                            rek_pid: 'UQ:11111',
+                            fez_record_search_key_ismemberof: [
+                                { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
+                                { rek_ismemberof: 'UQ:234', rek_ismemberof_order: 2 },
+                            ],
+                        },
+                    ],
+                    {
+                        search_key: 'rek_ismemberof',
+                        collections: [{ rek_pid: 'UQ:123' }],
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:11111',
+                    fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:234', rek_ismemberof_order: 1 }],
+                },
+            ]);
+        });
     });
 
     describe('getRemoveFromCommunityData', () => {
@@ -5570,9 +5924,28 @@ describe('transformers', () => {
     describe('getHerdcCodeSearchKey', () => {
         it('should correctly transform data for category code', () => {
             expect(transformers.getHerdcCodeSearchKey({ rek_herdc_code: '0' })).toEqual({
-                fez_record_search_key_herdc_code: {
-                    rek_herdc_code: null,
-                },
+                fez_record_search_key_herdc_code: {},
+                //     rek_herdc_code: null,
+                // },
+            });
+        });
+    });
+    describe('getHerdcStatusSearchKey', () => {
+        it('should correctly transform data for status code', () => {
+            expect(transformers.getHerdcStatusSearchKey({ rek_herdc_status: '0' })).toEqual({
+                fez_record_search_key_herdc_status: {},
+                //     rek_herdc_status: null,
+                // },
+            });
+        });
+    });
+
+    describe('getRefereedStatusSearchKey', () => {
+        it('should correctly transform data for source code', () => {
+            expect(transformers.getRefereedStatusSearchKey({ rek_refereed_source: '0' })).toEqual({
+                fez_record_search_key_refereed_source: {},
+                //     rek_refereed_source: null,
+                // },
             });
         });
     });
@@ -5580,7 +5953,7 @@ describe('transformers', () => {
     describe('getOpenAccessStatusTypeSearchKey', () => {
         it('should correctly transform data for OA status type', () => {
             expect(transformers.getOpenAccessStatusTypeSearchKey({ rek_oa_status_type: '0' })).toEqual({
-                fez_record_search_key_oa_status_type: null,
+                fez_record_search_key_oa_status_type: {},
             });
         });
     });
@@ -5640,6 +6013,34 @@ describe('transformers', () => {
             expect(
                 transformers.cleanDatastreamsObject([{ dsi_dsid: 'original.jpg', dsi_dsid_new: 'original.jpg' }]),
             ).toEqual([{ dsi_dsid: 'original.jpg' }]);
+        });
+    });
+
+    describe('getCollectionViewType', () => {
+        it('should return undefined if record is undefined', () => {
+            expect(transformers.getCollectionViewType()).toMatchObject({});
+        });
+
+        it('should return undefined if record is null', () => {
+            expect(transformers.getCollectionViewType(null)).toMatchObject({});
+        });
+
+        it('should return undefined if record is an empty object', () => {
+            expect(transformers.getCollectionViewType({})).toMatchObject({});
+        });
+
+        it('should return empty object if record contains an undefined rek_collection_view_type property', () => {
+            expect(transformers.getCollectionViewType({ rek_collection_view_type: undefined })).toMatchObject({});
+        });
+
+        it('should return empty object if record contains an empty object for the rek_collection_view_type property', () => {
+            expect(transformers.getCollectionViewType({ rek_collection_view_type: {} })).toMatchObject({});
+        });
+
+        it('should return a formatted object if the record contains a valid rek_collection_view_type property', () => {
+            expect(transformers.getCollectionViewType({ rek_collection_view_type: 123 })).toMatchObject({
+                fez_record_search_key_collection_view_type: { rek_collection_view_type: 123 },
+            });
         });
     });
 });

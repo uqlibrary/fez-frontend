@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import JWPlayer from '@jwplayer/jwplayer-react';
+import ReactPlayer from 'react-player';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -32,7 +32,7 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
         >
             <Grid container spacing={2} padding={0} justifyContent="flex-end" direction="row">
                 {mediaUrl && (
-                    <Grid item xs={12} sm="auto">
+                    <Grid xs={12} sm="auto">
                         <Button
                             id="open-original-file"
                             data-analyticsid="open-original-file"
@@ -48,7 +48,7 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
                 )}
 
                 {webMediaUrl && (
-                    <Grid item xs={12} sm="auto">
+                    <Grid xs={12} sm="auto">
                         <Button
                             id="open-web-file"
                             data-analyticsid="open-web-file"
@@ -63,7 +63,7 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
                     </Grid>
                 )}
 
-                <Grid item xs={12} sm="auto">
+                <Grid xs={12} sm="auto">
                     <Button id="close-preview" variant="contained" onClick={onClose} fullWidth>
                         {close}
                     </Button>
@@ -114,13 +114,13 @@ export const MediaPreview = ({ ...props }) => {
         <React.Fragment>
             <Grid container spacing={0} direction="row" style={{ marginTop: 32 }}>
                 <span ref={mediaPreviewRef} />
-                <Grid item xs>
+                <Grid xs>
                     <Typography id="medie-preview-title" variant="h6" component="h2">
                         {title}
                     </Typography>
                 </Grid>
                 {desktopVisible && (
-                    <Grid item>
+                    <Grid>
                         <MediaPreviewButtons {...{ id: 'media-preview-buttons-larger-screen', ...props }} />
                     </Grid>
                 )}
@@ -142,34 +142,30 @@ export const MediaPreview = ({ ...props }) => {
                 </div>
             )}
             {isVideo && !videoErrorMsg && (
-                <JWPlayer
-                    id="previewVideo"
-                    library="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
-                    onPlaylistItem={onVideoLoad}
-                    onSetupError={onVideoFailed}
-                    onError={onVideoFailed}
-                    autostart="viewable"
-                    file={previewMediaUrl}
-                    // TODO : Was put in for cloudfront not liking 'range' in request headers
-                    // playlist={
-                    //     [{
-                    //         sources: [
-                    //             {
-                    //                 file: previewMediaUrl,
-                    //                 onXhrOpen: (xhr, url) => {
-                    //                     console.log(url);
-                    //                     xhr.setRequestHeader('Range', '');
-                    //                 },
-                    //             },
-                    //         ],
-                    //     }]
-                    // }
-                />
+                <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
+                    <ReactPlayer
+                        id="previewVideo"
+                        style={{ backgroundColor: 'black', position: 'absolute', top: 0, left: 0 }}
+                        onReady={onVideoLoad}
+                        width={'100%'}
+                        height={'100%'}
+                        controls
+                        onError={onVideoFailed}
+                        url={previewMediaUrl}
+                        config={{
+                            file: {
+                                attributes: {
+                                    controlsList: 'nodownload',
+                                },
+                            },
+                        }}
+                    />
+                </div>
             )}
             {isPreviewable && !imageError && (
                 <Grid container spacing={4}>
-                    <Grid item xs />
-                    <Grid item xs="auto">
+                    <Grid xs />
+                    <Grid xs="auto">
                         <img
                             id="image-preview"
                             data-analyticsid="image-preview"
@@ -181,7 +177,7 @@ export const MediaPreview = ({ ...props }) => {
                             onError={onImageFailed}
                         />
                     </Grid>
-                    <Grid item xs />
+                    <Grid xs />
                 </Grid>
             )}
             {isVideo && !imageError && videoLoading && (
@@ -198,7 +194,6 @@ MediaPreview.propTypes = {
     mediaUrl: PropTypes.string.isRequired,
     previewMediaUrl: PropTypes.string.isRequired,
     mimeType: PropTypes.string.isRequired,
-
     videoErrorMsg: PropTypes.string,
     videoErrorCode: PropTypes.number,
     videoLoading: PropTypes.bool,

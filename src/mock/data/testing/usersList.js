@@ -1,5 +1,10 @@
 export const userList = {
-    "total": 1,
+    "total": 126489,
+    "took": 306,
+    "per_page": 20,
+    "current_page": 1,
+    "from": 1,
+    "to": 20,
     "data": [{
         "usr_id": 1000000293,
         "usr_created_date": "2017-02-16T23:11:37Z",
@@ -43,7 +48,9 @@ export const userList = {
         "usr_super_administrator": true,
         "usr_auth_rule_groups": "53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11",
         "usr_real_last_login_date": "2021-02-22T11:49:49Z",
-    }]
+    },
+    
+]
 };
 
 export const userListItem = {

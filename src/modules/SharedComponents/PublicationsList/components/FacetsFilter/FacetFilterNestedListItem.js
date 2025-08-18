@@ -20,7 +20,7 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
 const StyledListItemText = styled(ListItemText)(({ theme }) => ({
     ...theme.typography.body2,
     '&.MuiListItemText-inset': {
-        '&:first-child ': {
+        '&:first-of-type ': {
             paddingLeft: theme.spacing(2),
         },
     },

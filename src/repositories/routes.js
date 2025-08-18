@@ -184,6 +184,9 @@ export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
 export const JOURNAL_LOOKUP_API = ({ query }) => ({
     apiUrl: `journals/search?rule=lookup&query=${encodeURIComponent(query)}`,
 });
+export const ROR_LOOKUP_API = ({ id }) => ({
+    apiUrl: `external/ror/${id}`,
+});
 
 // file uploading apis
 export const FILE_UPLOAD_API = () => ({ apiUrl: 'file/upload/presigned' });
@@ -198,7 +201,12 @@ export const NEW_COLLECTION_API = () => ({ apiUrl: 'collections' });
 
 export const NEW_COMMUNITY_API = () => ({ apiUrl: 'communities' });
 
-export const EXISTING_RECORD_API = ({ pid, isEdit }) => ({
+/**
+ * @typedef {{pid: string, isEdit?: boolean}} ExistingRecordApiParams
+ * @param {ExistingRecordApiParams}
+ * @returns {{apiUrl: string}}
+ */
+export const EXISTING_RECORD_API = ({ pid, isEdit = false }) => ({
     apiUrl: `records/${pid}${isEdit ? '?from=admin-form' : ''}`,
 });
 
@@ -212,6 +220,25 @@ export const EXISTING_RECORD_VERSION_API = (pid, version) => ({
 export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
 export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
+
+// Controlled Vocabularies top list
+export const VOCAB_API = () => {
+    return {
+        apiUrl: 'vocabularies',
+    };
+};
+
+export const VOCAB_LIST_API = (cacheBuster = true) => {
+    return {
+        apiUrl: cacheBuster ? `vocabularies/list?cb=${Date.now()}` : 'vocabularies/list',
+    };
+};
+
+export const CHILD_VOCAB_LIST_API = (parentId, cacheBuster = true) => {
+    return {
+        apiUrl: cacheBuster ? `vocabularies/admin/${parentId}?cb=${Date.now()}` : `vocabularies/admin/${parentId}`,
+    };
+};
 
 // Communities and Collections
 export const COMMUNITY_LIST_API = config => {
@@ -233,6 +260,8 @@ export const COLLECTION_LIST_API = (config, action = null) => {
 };
 
 export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });
+
+export const RECORDS_FEEDBACK_API = ({ pid }) => ({ apiUrl: `records/${pid}/feedback` });
 
 // search/list records apis
 export const POSSIBLE_RECORDS_API = values => ({
@@ -454,8 +483,9 @@ export const FAVOURITE_SEARCH_LIST_API = ({ id } = { id: undefined }) => ({
     apiUrl: `favourite_search${!!id ? `/${id}` : ''}`,
 });
 
-export const JOURNAL_API = ({ id }) => ({
-    apiUrl: `journals/${id}`,
+/* istanbul ignore next */
+export const JOURNAL_API = ({ id, isEdit = false }) => ({
+    apiUrl: `journals/${id}${isEdit ? '?from=admin-form' : ''}`,
 });
 
 export const MY_EDITORIAL_APPOINTMENT_LIST_API = ({ id } = { id: undefined }) => ({
@@ -592,3 +622,47 @@ export const ORGANISATIONAL_UNITS = () => ({
 export const SUGGESTED_ORGANISATIONAL_UNITS = ({ authorId }) => ({
     apiUrl: `organisations/suggest?authorId=${authorId}`,
 });
+
+export const ADMIN_DASHBOARD_CONFIG_API = () => ({
+    apiUrl: 'dashboard/config',
+});
+
+export const ADMIN_DASHBOARD_TODAY_API = () => ({
+    apiUrl: 'dashboard/today',
+});
+
+export const ADMIN_DASHBOARD_QUICKLINKS_API = () => ({
+    apiUrl: 'dashboard/quicklinks',
+});
+
+export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = () => ({
+    apiUrl: 'dashboard/alerts',
+});
+
+export const simpleQueryEncode = request =>
+    Object.keys(request)
+        .filter(key => request[key] !== '' && request[key] !== undefined)
+        .map(key => key + '=' + encodeURIComponent(request[key]))
+        .join('&');
+
+// eslint-disable-next-line camelcase
+export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ report_type, date_from, date_to }) => {
+    // eslint-disable-next-line camelcase
+    const request = { sel_id: report_type, date_from, date_to };
+    const query = simpleQueryEncode(request);
+
+    return {
+        apiUrl: `dashboard/export-reports?${query}`,
+    };
+};
+
+// eslint-disable-next-line camelcase
+export const ADMIN_DASHBOARD_DISPLAY_REPORT_API = ({ report_type, date_from, date_to, record_id }) => {
+    // eslint-disable-next-line camelcase
+    const request = { report_type, date_from, date_to, record_id };
+    const query = simpleQueryEncode(request);
+
+    return {
+        apiUrl: `dashboard/reports?${query}`,
+    };
+};

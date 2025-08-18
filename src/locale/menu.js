@@ -3,6 +3,9 @@ export default {
         index: {
             primaryText: 'Home',
         },
+        adminDashboard: {
+            primaryText: 'Admin dashboard',
+        },
         myDashboard: {
             primaryText: 'My dashboard',
             // secondaryText is set to user's email
@@ -44,11 +47,12 @@ export default {
             primaryText: 'About',
             secondaryText: '',
         },
+        copyright: {
+            primaryText: 'Copyright Information',
+            isExternal: true,
+        },
         thirdPartyLookupTools: {
             primaryText: 'Lookup tools',
-        },
-        legacyEspace: {
-            primaryText: 'Switch to old interface',
         },
         help: {
             primaryText: 'Help',
@@ -87,6 +91,9 @@ export default {
         },
         manageUsers: {
             primaryText: 'Manage users',
+        },
+        controlledVocabularies: {
+            primaryText: 'Manage controlled vocabularies',
         },
         journals: {
             search: {

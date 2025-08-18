@@ -4,7 +4,7 @@ import { rtlRender, fireEvent, createMatchMedia } from 'test-utils';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
 
 jest.mock('./MediaPreviewUtils');
-jest.mock('@jwplayer/jwplayer-react', () => () => <div>Mock JW Player</div>);
+jest.mock('react-player', () => () => <div>Mock React Player</div>);
 function setup(testProps = {}) {
     const props = {
         fileName: testProps.fileName || 'https://test.com/test.jpg',
@@ -63,7 +63,7 @@ describe('Media Preview Component ', () => {
 
     it('should render component with video', () => {
         const { getByTestId, getByRole, getByText } = setup({ mimeType: 'video/mp4' });
-        expect(getByText('Mock JW Player')).toBeInTheDocument();
+        expect(getByText('Mock React Player')).toBeInTheDocument();
         expect(getByTestId('open-original-file')).toHaveTextContent('Open original file in a new window');
         expect(getByTestId('open-web-file')).toHaveTextContent('Open web version file in a new window');
         expect(getByRole('button', { name: 'Close' })).toBeInTheDocument();

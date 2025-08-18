@@ -1,71 +1,31 @@
 import PublicationForm from './PublicationForm';
-import Immutable from 'immutable';
-import { JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm, CreativeWorkForm } from './Forms';
 import React from 'react';
-import { render, WithReduxStore, WithRouter } from 'test-utils';
+import {
+    addAndSelectContributorsEditorItem,
+    addFilesToFileUploader,
+    assertDisabled,
+    assertInstanceOfFile,
+    expectApiRequestToMatchSnapshot,
+    expectApiRequestHistoryToBeEmpty,
+    render,
+    selectDropDownOption,
+    setFileUploaderFilesToClosedAccess,
+    setRichTextEditorValue,
+    userEvent,
+    waitForText,
+    waitForTextToBeRemoved,
+    waitToBeEnabled,
+    WithReduxStore,
+    WithRouter,
+    expectApiRequestCountToBe,
+    api,
+} from 'test-utils';
+import { screen } from '@testing-library/react';
+import publicationForm from '../../../../locale/publicationForm';
+import { SEARCH_KEY_LOOKUP_API } from '../../../../repositories/routes';
+import validationErrors from '../../../../locale/validationErrors';
 
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: props => {
-        return (
-            <field
-                is="mock"
-                name={props.name}
-                title={props.title}
-                required={props.required}
-                disabled={props.disabled}
-                label={props.label || props.floatingLabelText}
-                hasError={props.hasError}
-                validate={props.validate && props.validate.map(fn => fn.name)}
-            />
-        );
-    },
-}));
-
-function setup(testProps = {}, renderMethod = render) {
-    const props = {
-        autofill: jest.fn(),
-        blur: jest.fn(),
-        change: jest.fn(),
-        clearAsyncError: jest.fn(),
-        anyTouched: true,
-        asyncValidating: false,
-        asyncValidate: jest.fn(),
-        clearFields: jest.fn(),
-        clearSubmitErrors: jest.fn(),
-        destroy: jest.fn(),
-        dispatch: jest.fn(),
-        handleSubmit: jest.fn(),
-        initialize: jest.fn(),
-        reset: jest.fn(),
-        resetSection: jest.fn(),
-        touch: jest.fn(),
-        submit: jest.fn(),
-        untouch: jest.fn(),
-        clearSubmit: jest.fn(),
-        dirty: true,
-        form: 'form',
-        initialized: false,
-        invalid: false,
-        submitFailed: false,
-        submitSucceeded: false,
-        valid: true,
-        pure: true,
-        submitAsSideEffect: false,
-        // above are common immutable default props
-        formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
-        onFormCancel: testProps.onFormCancel || jest.fn(),
-        onFormSubmitSuccess: testProps.onFormSubmitSuccess || jest.fn(),
-        submitting: testProps.submitting || false,
-        pristine: testProps.pristine || false,
-        author: testProps.author || null,
-        actions: testProps.actions || {},
-        history: testProps.history || {
-            push: jest.fn(),
-        },
-        ...testProps,
-    };
-
+function setup(props = {}, renderMethod = render) {
     return renderMethod(
         <WithReduxStore>
             <WithRouter>
@@ -75,238 +35,330 @@ function setup(testProps = {}, renderMethod = render) {
     );
 }
 
-describe('Component PublicationForm', () => {
-    it('should render component initialised with just one field - publication type', () => {
-        const { container } = setup();
-        expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(1);
+describe('PublicationForm', () => {
+    afterEach(() => {
+        expect(screen.queryByText(/Unexpected Application Error!/i)).not.toBeInTheDocument();
     });
+    const selectDisplayType = async option => selectDropDownOption('rek-display-type-select', option);
+    const selectSubtype = async option => selectDropDownOption('rek-subtype-select', option);
 
-    it('should render component initialised with two fields - publication type and subtype', () => {
-        const { container } = setup({
-            initialValues: {
-                rek_display_type: 179,
-            },
-            hasSubtypes: true,
+    const selectTypeCombo = async (option, expectedAutoSelectedDisplayType) => {
+        await selectDisplayType(option);
+        expect(screen.getByTestId('rek-display-type-select')).toHaveTextContent(expectedAutoSelectedDisplayType);
+    };
+
+    const assertValidationErrorSummary = async (expectedErrors = []) => {
+        await waitForText(publicationForm.validationAlert.message);
+        for (const error of expectedErrors) {
+            await waitForText(error);
+        }
+    };
+    const assertMissingValidationErrorSummary = async unexpectedErrors => {
+        for (const error of unexpectedErrors) {
+            await waitForTextToBeRemoved(error);
+        }
+    };
+    const assertDisabledSubmitButton = () => assertDisabled(screen.getByTestId('submit-work'));
+
+    describe('work type selection', () => {
+        it('should allow selecting work type without a subtype and load a validated form', async () => {
+            setup();
+            await selectDisplayType('Image');
+
+            await assertValidationErrorSummary([
+                'Title is required',
+                'Publication date is required',
+                'Author/creator names are required',
+                'Editor/contributor names are required',
+            ]);
+            assertDisabledSubmitButton();
         });
 
-        expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(2);
-    });
+        it('should allow selecting work type with a subtype and load a validated form', async () => {
+            setup();
+            await selectDisplayType('Journal Article');
+            await selectSubtype('Article (original research)');
 
-    it('should render form after selecting both publication type and subtype (Journal article/Editorial)', () => {
-        const { container } = setup({
-            initialValues: {
-                rek_display_type: 179,
-                rek_subtype: 'Editorial',
-            },
-            hasSubtypes: true,
-            subtypeVocabId: 453573,
+            await assertValidationErrorSummary([
+                'Title is required',
+                'Journal name is required',
+                'Publication date is required',
+                'Author/creator names are required',
+                'Editor/contributor names are required',
+            ]);
+            assertDisabledSubmitButton();
         });
 
-        expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(2);
-    });
+        it('should allow selecting work type with a subtype via a predefined option and load a validated form', async () => {
+            setup();
+            await selectTypeCombo('Creative Work - Design/Architectural', 'Design');
 
-    it('should render component with JournalArticleForm', () => {
-        const { container, getByText } = setup({
-            initialValues: {
-                rek_display_type: 179,
-            },
-            hasSubtypes: true,
-            subtypeVocabId: 453573,
-            formComponent: JournalArticleForm,
+            await assertValidationErrorSummary([
+                'Title is required',
+                'Total page is required',
+                'Place of publication is required',
+                'Publisher is required',
+                'File submission to be completed',
+                'Abstract/Description is required',
+                'Quality indicator is required',
+                'Project start date is required',
+                'Author/creator names are required',
+                'Editor/contributor names are required',
+            ]);
+            assertDisabledSubmitButton();
         });
 
-        expect(container).toMatchSnapshot();
-        expect(getByText('Journal article information')).toBeInTheDocument();
-        expect(container.querySelectorAll('field[name=files]').length).toEqual(1);
-    });
+        it('should allow changing work type selection', async () => {
+            setup();
+            await selectDisplayType('Image');
+            await assertValidationErrorSummary(['Title is required']);
+            assertDisabledSubmitButton();
 
-    it('should render component with BookForm', () => {
-        const { getByText, container } = setup({
-            initialValues: {
-                rek_display_type: 174,
-            },
-            hasSubtypes: true,
-            subtypeVocabId: 1111,
-            formComponent: BookForm,
+            const journalArticleOnlyFieldValidationError = 'Journal name is required';
+            await selectDisplayType('Journal Article');
+            await selectSubtype('Article (original research)');
+            await assertValidationErrorSummary([journalArticleOnlyFieldValidationError]);
+            assertDisabledSubmitButton();
+
+            const ntroOnlyFieldValidationError = 'Quality indicator is required';
+            await selectTypeCombo('Creative Work - Design/Architectural', 'Design');
+            await assertValidationErrorSummary([ntroOnlyFieldValidationError]);
+            // make sure previous selected form's fields are removed
+            expect(screen.queryByText(journalArticleOnlyFieldValidationError)).not.toBeInTheDocument();
+            assertDisabledSubmitButton();
+
+            await selectDisplayType('Image');
+            await assertValidationErrorSummary(['Title is required']);
+            // make sure previous selected form's fields are removed
+            expect(screen.queryByText(ntroOnlyFieldValidationError)).not.toBeInTheDocument();
+            assertDisabledSubmitButton();
         });
 
-        expect(getByText('Book information')).toBeInTheDocument();
-        expect(container.querySelectorAll('field[name=files]').length).toEqual(1);
-        expect(container).toMatchSnapshot();
+        it('should persist initial value across work type selection change', async () => {
+            setup({ initialValues: { rek_title: 'test' } });
+            await selectDisplayType('Image');
+            await assertValidationErrorSummary();
+            await assertMissingValidationErrorSummary(['Title is required']);
+
+            await selectDisplayType('Journal Article');
+            await selectSubtype('Article (original research)');
+            await assertValidationErrorSummary();
+            await assertMissingValidationErrorSummary(['Title is required']);
+        });
     });
 
-    it('should render component with GenericDocument', () => {
-        const { getByText, container } = setup({
-            initialValues: {
-                rek_display_type: 202,
-            },
-            hasSubtypes: true,
-            subtypeVocabId: 2222,
-            formComponent: GenericDocumentForm,
+    describe('navigation', () => {
+        it('should call given onCancel callback', async () => {
+            const mockOnFormCancel = jest.fn();
+            setup({ onFormCancel: mockOnFormCancel });
+            await selectDisplayType('Image');
+            await userEvent.click(screen.getByText(publicationForm.cancel));
+            expect(mockOnFormCancel).toHaveBeenCalledTimes(1);
         });
-        expect(getByText('Generic document information')).toBeInTheDocument();
-
-        expect(container.querySelectorAll('field[name=files]').length).toEqual(1);
-        expect(container).toMatchSnapshot();
     });
 
-    it('should render component with ResearchReportForm', () => {
-        const { getByText, container } = setup({
-            initialValues: {
-                rek_display_type: 275,
-            },
-            hasSubtypes: true,
-            subtypeVocabId: 1111,
-            formComponent: ResearchReportForm,
-        });
-        expect(getByText('Research report information')).toBeInTheDocument();
+    describe('validation', () => {
+        it('should require at least one editor for edited books', async () => {
+            setup();
+            await selectDisplayType('Book');
+            await selectSubtype('Edited book');
 
-        expect(container.querySelectorAll('field[name=files]').length).toEqual(1);
-        expect(container).toMatchSnapshot();
+            const editorValidationError = ['Editor/contributor names are required'];
+            await assertValidationErrorSummary(editorValidationError);
+            await addAndSelectContributorsEditorItem('rek-contributor');
+            await assertMissingValidationErrorSummary(editorValidationError);
+        });
+
+        it('should validate start and end pages range', async () => {
+            setup();
+            await selectDisplayType('Book Chapter');
+            await selectSubtype('Other');
+
+            const pageRangeError = ['Please provide a valid start/end page range'];
+            await userEvent.type(screen.getByTestId('fez_record_search_key_start_page.rek_start_page-input'), '20');
+            await userEvent.type(screen.getByTestId('fez_record_search_key_end_page.rek_end_page-input'), '10');
+            await assertValidationErrorSummary(pageRangeError);
+            await userEvent.clear(screen.getByTestId('fez_record_search_key_start_page.rek_start_page-input'));
+            await userEvent.type(screen.getByTestId('fez_record_search_key_start_page.rek_start_page-input'), '9');
+            await assertMissingValidationErrorSummary(pageRangeError);
+        });
+
+        it('should validate date ranges for Design', async () => {
+            setup();
+            await selectDisplayType('Design');
+
+            const pageRangeError = ['Publication start/end dates are invalid'];
+            await assertMissingValidationErrorSummary(pageRangeError);
+            await userEvent.type(screen.getByTestId('rek-project-start-date-year-input'), '80');
+            await assertMissingValidationErrorSummary(pageRangeError);
+            await userEvent.type(screen.getByTestId('rek-end-date-year-input'), '70');
+            await assertValidationErrorSummary(pageRangeError);
+            await userEvent.clear(screen.getByTestId('rek-project-start-date-year-input'));
+            await userEvent.type(screen.getByTestId('rek-project-start-date-year-input'), '60');
+            await assertMissingValidationErrorSummary(pageRangeError);
+        });
+
+        it('should validate date ranges for Creative Work', async () => {
+            setup();
+            await selectDisplayType('Creative Work');
+            await selectSubtype('Live Performance of Creative Work - Music');
+
+            const pageRangeError = ['Publication start/end dates are invalid'];
+            await assertMissingValidationErrorSummary(pageRangeError);
+            await userEvent.type(screen.getByTestId('rek-date-year-input'), '80');
+            await assertMissingValidationErrorSummary(pageRangeError);
+            await userEvent.type(screen.getByTestId('rek-end-date-year-input'), '70');
+            await assertValidationErrorSummary(pageRangeError);
+            await userEvent.clear(screen.getByTestId('rek-date-year-input'));
+            await userEvent.type(screen.getByTestId('rek-date-year-input'), '60');
+            await assertMissingValidationErrorSummary(pageRangeError);
+        });
+
+        it('should validate added fields upon selecting an author', async () => {
+            setup();
+            await selectDisplayType('Design');
+
+            const expectedError = ['Scale/Significance of work is required', 'Creator research statement is required'];
+            await assertMissingValidationErrorSummary(expectedError);
+            await addAndSelectContributorsEditorItem('authors');
+            await assertValidationErrorSummary(expectedError);
+        });
     });
 
-    it('should render component with all fields disabled', () => {
-        const { container } = setup({
-            submitting: true,
-        });
-        container.querySelectorAll('field').forEach(field => {
-            expect(field).toHaveAttribute('disabled', 'true');
-        });
-        expect(container).toMatchSnapshot();
-    });
+    describe('form submission', () => {
+        const pid = 'UQ:1';
+        const fileMock = ['test.pdf'];
 
-    it('should call onFormSubmitSuccess method', () => {
-        const testMethod = jest.fn();
-        const { rerender } = setup({
-            onFormSubmitSuccess: testMethod,
-        });
-        setup(
-            {
-                submitSucceeded: true,
-                onFormSubmitSuccess: testMethod,
-            },
-            rerender,
-        );
-        expect(testMethod).toHaveBeenCalled();
-    });
+        beforeEach(() => api.reset());
+        afterEach(() => api.reset());
 
-    it('Shows an alert', () => {
-        const props = {
-            initialValues: {},
-            formComponent: null,
-            changeFormType: jest.fn(),
-            error: 'There is an error',
-            formErrors: ['error'],
+        const submitForm = async () => {
+            await waitToBeEnabled('submit-work');
+            await userEvent.click(screen.getByTestId('submit-work'));
         };
-        const { container, rerender } = setup({ ...props });
-        // export const getErrorAlertProps = ({
-        //     dirty = false,
-        //     submitting = false,
-        //     error,
-        //     formErrors,
-        //     submitSucceeded = false,
-        //     alertLocale = {},
-        // }) => {};
-        expect(container).toMatchSnapshot();
-        setup({ ...props, formComponent: () => 'test' }, rerender);
-        expect(container).toMatchSnapshot();
-        setup({ ...props, submitSucceeded: true }, rerender);
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should call getDerivedStateFromProps when props change', () => {
-        const changeDisplayType = jest.fn();
-        const changeFormType = jest.fn();
-        const props = {
-            initialValues: {},
-            changeDisplayType: changeDisplayType,
-            changeFormType: changeFormType,
+        const assertSavingMessage = async () => {
+            await waitForText(new RegExp(publicationForm.progressAlert.message, 'i'));
+            await waitForTextToBeRemoved(new RegExp(publicationForm.progressAlert.message, 'i'));
         };
-        const { container, rerender } = setup({ ...props });
 
-        setup(
-            {
-                ...props,
-                submitSucceeded: true,
-                hasSubtypes: false,
-                subtypes: null,
-                formComponent: null,
-                isNtro: false,
-                hasDefaultDocTypeSubType: false,
-                docTypeSubTypeCombo: null,
-            },
-            rerender,
-        );
+        it('should submit form with expected payload', async () => {
+            const pid = 'UQ:1';
+            const mockOnFormSubmitSuccess = jest.fn();
+            api.mock.records
+                .create({ pid })
+                .update({ pid })
+                .issues({ pid })
+                .files.upload();
 
-        // Testing conditional paths
-        expect(container).toMatchSnapshot();
-        setup(
-            {
-                ...props,
-                submitSucceeded: true,
-                hasSubtypes: true,
-                subtypes: null,
-                formComponent: null,
-                isNtro: false,
-                hasDefaultDocTypeSubType: false,
-                docTypeSubTypeCombo: null,
-            },
-            rerender,
-        );
+            setup({ onFormSubmitSuccess: mockOnFormSubmitSuccess });
+            await selectTypeCombo('Creative Work - Design/Architectural', 'Design');
 
-        expect(container).toMatchSnapshot();
+            await assertValidationErrorSummary([
+                'Title is required',
+                'Total page is required',
+                'Place of publication is required',
+                'Publisher is required',
+                'File submission to be completed',
+                'Abstract/Description is required',
+                'Quality indicator is required',
+                'Project start date is required',
+                'Author/creator names are required',
+                'Editor/contributor names are required',
+            ]);
 
-        setup(
-            {
-                ...props,
-                submitSucceeded: true,
-                hasSubtypes: true,
-                subtypes: ['test', 'test2'],
-                formComponent: null,
-                isNtro: false,
-                hasDefaultDocTypeSubType: false,
-                docTypeSubTypeCombo: null,
-            },
-            rerender,
-        );
+            // fill up form
+            await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
+            await userEvent.type(
+                screen.getByTestId('fez_record_search_key_publisher.rek_publisher-input'),
+                'publisher',
+            );
+            await userEvent.type(
+                screen.getByTestId('fez_record_search_key_place_of_publication.rek_place_of_publication-input'),
+                'place of publication',
+            );
+            await userEvent.type(screen.getByTestId('rek-project-start-date-year-input'), '1980');
+            await addAndSelectContributorsEditorItem('authors');
+            await userEvent.type(screen.getByTestId('rek-total-pages-input'), '123');
+            await selectDropDownOption(
+                'rek-quality-indicator-select',
+                'Disseminated via nationally recognised outlet or entity',
+            );
+            await selectDropDownOption('rek-significance-select', 'Minor');
+            await setRichTextEditorValue('rek-creator-contribution-statement', 'statement');
+            await setRichTextEditorValue('rek-description', 'abstract');
+            await addFilesToFileUploader(fileMock);
+            await setFileUploaderFilesToClosedAccess(fileMock);
 
-        expect(container).toMatchSnapshot();
-
-        setup(
-            {
-                ...props,
-                submitSucceeded: true,
-                hasSubtypes: true,
-                subtypes: ['test', 'test2'],
-                formComponent: null,
-                isNtro: true,
-                hasDefaultDocTypeSubType: true,
-                docTypeSubTypeCombo: null,
-            },
-            rerender,
-        );
-
-        expect(changeDisplayType).toHaveBeenCalled();
-        expect(changeFormType).toHaveBeenCalled();
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should require file upload for ntro fields', () => {
-        const { container } = setup({
-            formComponent: CreativeWorkForm,
-            initialValues: {
-                rek_display_type: 275,
-            },
-            hasSubtypes: true,
-            subtypeVocabId: 1111,
-            isNtro: true,
+            await submitForm();
+            await assertSavingMessage();
+            expect(mockOnFormSubmitSuccess).toHaveBeenCalledTimes(1);
+            expectApiRequestToMatchSnapshot('post', api.url.records.create, v => JSON.parse(v).isNtro === true);
+            expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
         });
-        expect(container.querySelector('field[name=files]')).toHaveAttribute(
-            'validate',
-            'fileUploadRequired,validFileUpload',
-        );
+
+        it('should perform async on submit', async () => {
+            const doiSearchUrl = SEARCH_KEY_LOOKUP_API({ searchKey: 'doi', searchQuery: '' }).apiUrl;
+            api.mock.records
+                .create({ pid })
+                // doi async validation
+                .instance.onGet(doiSearchUrl)
+                .replyOnce(200, { total: 1 })
+                .onGet(doiSearchUrl)
+                .replyOnce(200, { total: 0 });
+
+            setup({ onFormSubmitSuccess: jest.fn() });
+            await selectDisplayType('Image');
+
+            // fill up form
+            await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
+            await userEvent.type(screen.getByTestId('rek-date-year-input'), '1980');
+            await addAndSelectContributorsEditorItem('creators');
+            // fill up DOI
+            // invalid
+            const doiValidationError = ['DOI is invalid'];
+            await assertMissingValidationErrorSummary(doiValidationError);
+            await userEvent.type(screen.getByTestId('rek-doi-input'), 'abc');
+            await assertValidationErrorSummary(doiValidationError);
+            // valid
+            await userEvent.clear(screen.getByTestId('rek-doi-input'));
+            await userEvent.type(screen.getByTestId('rek-doi-input'), '10.1037/neu0000');
+            await assertMissingValidationErrorSummary(doiValidationError);
+            expectApiRequestHistoryToBeEmpty();
+            await userEvent.type(screen.getByTestId('rek-doi-input'), '5');
+            await assertMissingValidationErrorSummary(doiValidationError);
+            expectApiRequestHistoryToBeEmpty();
+
+            // should fail on async existing doi validation
+            await submitForm();
+            await assertValidationErrorSummary([validationErrors.validationErrors.doiExists]);
+            expectApiRequestToMatchSnapshot('get', doiSearchUrl);
+            expectApiRequestHistoryToBeEmpty();
+            // fix doi and retry
+            await userEvent.clear(screen.getByTestId('rek-doi-input'));
+            await userEvent.type(screen.getByTestId('rek-doi-input'), '10.1037/neu0000575');
+            await assertMissingValidationErrorSummary([validationErrors.validationErrors.doiExists]);
+            expectApiRequestHistoryToBeEmpty();
+
+            await submitForm();
+            await assertSavingMessage();
+            expectApiRequestToMatchSnapshot('post', api.url.records.create, v => !JSON.parse(v).isNtro);
+            expectApiRequestToMatchSnapshot('get', doiSearchUrl);
+            expectApiRequestCountToBe('get', doiSearchUrl, 0);
+        });
+
+        describe('error handling', () => {
+            it('should render server error', async () => {
+                setup();
+                await selectDisplayType('Image');
+
+                // fill up form
+                await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
+                await userEvent.type(screen.getByTestId('rek-date-year-input'), '1980');
+                await addAndSelectContributorsEditorItem('creators');
+
+                await submitForm();
+                await waitForText(/Error has occurred during request and request cannot be processed/i);
+            });
+        });
     });
 });

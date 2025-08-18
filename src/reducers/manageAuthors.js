@@ -1,7 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    authorListLoading: true,
+    authorListLoading: false,
     authorListLoadingError: null,
     authorListItemUpdating: false,
     authorListItemUpdateSuccess: false,
@@ -120,20 +120,6 @@ const handlers = {
     [actions.SCOPUS_INGEST_REQUEST_FAILED]: (state, action) => ({
         ...initialState,
         scopusIngestRequestError: action.payload,
-    }),
-
-    [actions.AUTHOR_CLEAR_ALERTS]: /* istanbul ignore next */ state => /* istanbul ignore next */ ({
-        ...state,
-        authorListItemUpdateSuccess: false,
-        authorListItemUpdateError: null,
-        authorListItemDeleteSuccess: false,
-        authorListItemDeleteError: null,
-        authorAddSuccess: false,
-        authorAddError: null,
-        existingAuthorFieldError: null,
-        bulkAuthorDeleteMessages: null,
-        scopusIngestRequestSuccess: false,
-        scopusIngestRequestError: false,
     }),
 };
 

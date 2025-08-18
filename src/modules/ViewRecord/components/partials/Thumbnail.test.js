@@ -1,5 +1,5 @@
 import React from 'react';
-import { Thumbnail } from './Thumbnail';
+import Thumbnail from './Thumbnail';
 import { rtlRender, fireEvent, within } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -43,26 +43,6 @@ describe('Thumbnail component', () => {
         expect(getByRole('progressbar')).toBeInTheDocument();
         expect(queryByTestId('LockIcon')).not.toBeInTheDocument();
     });
-
-    /**
-     * TODO: find a way to test broken image icon
-     */
-    /*
-    it('should show a broken thumbnail icon when the thumbnail wont load.', () => {
-        Object.defineProperty(window.Image.prototype, 'src', {
-            set() {
-                setTimeout(() => this.onerror(new Error('mocked error')), 100);
-            },
-        });
-        const { debug } = setup({
-            fileName: 'video.mov',
-            mediaUrl: 'video.flv',
-            mimeType: 'application/octet-stream',
-        });
-        debug(undefined, 100000);
-    });
-     */
-
     it('should render external link with a progress bar for FLV files', () => {
         const { getByRole } = setup({
             fileName: 'video.mov',
@@ -75,7 +55,7 @@ describe('Thumbnail component', () => {
         expect(within(element).getByRole('progressbar')).toBeInTheDocument();
     });
 
-    it('should render PDF files as a thumbnail only plus link to original', async () => {
+    it('should render PDF files as a thumbnail only plus link to original', () => {
         const { getByRole } = setup({
             fileName: 'original.pdf',
             mediaUrl: 'pdf.jpg',

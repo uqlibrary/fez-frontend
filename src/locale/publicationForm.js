@@ -8,6 +8,117 @@ import {
 } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { selectFields } from 'locale/selectFields';
 
+const thesisSubmission = {
+    title: 'Higher degree by research thesis deposit',
+    text: (
+        <span>
+            Required fields are marked with
+            <span className="requiredField">
+                <label>&nbsp;</label>
+            </span>
+        </span>
+    ),
+    notAllowedMessage: (
+        <p>
+            Are you submitting a HDR thesis? HDR theses are now submitted via the UQ Research Data Manager (UQRDM)
+            following{' '}
+            <a href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission">
+                this process
+            </a>
+            . Please see the{' '}
+            <a href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/hdr-support-thesis#s-lg-box-22941538">
+                UQRDM thesis submission guide
+            </a>{' '}
+            for more information.
+        </p>
+    ),
+    fileUpload: {
+        title: 'Upload files',
+        failedAlertLocale: {
+            type: 'error',
+            title: 'FILE UPLOAD ERROR',
+            messageWithRetry:
+                "There was an issue uploading your thesis files. You can try uploading again by clicking the 'Retry upload' button, but if you continue to have trouble uploading, please contact [linkStart]the Graduate School[linkEnd].",
+            message:
+                'Not all files were uploaded. Please contact [linkStart]the Graduate School[linkEnd] for assistance.',
+            emailRecipient: 'thesis@gradschool.uq.edu.au',
+            emailSubject: 'Problem with Submission to UQ eSpace - [studentFullName], [studentNumber]',
+            actionButtonLabel: 'Retry upload',
+        },
+        retrySuccessLocale: {
+            type: 'done',
+            title: 'FILE UPLOAD SUCCESS',
+            message: 'File upload retry succeeded.',
+        },
+        locale: {
+            instructions: '',
+            accessTermsAndConditions:
+                'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
+            validation: {
+                ['notFiles']: 'Invalid files ([fileNames])',
+                ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
+                ['invalidMimeTypeFiles']: 'File(s) ([fileNames]) are not supported',
+                ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
+                ['tooManyFiles']:
+                    'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
+                ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
+            },
+            successTitle: 'Success',
+            successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
+            delayNotice: 'Notice',
+            delayMessage: 'During peak times, there may be a delay before newly uploaded files appear on the work.',
+            errorTitle: 'Upload Errors',
+            fileUploadRestrictionHeading: 'File upload restrictions',
+            fileUploadRestrictions: (
+                <div>
+                    Maximum file size is 5GB. <br />
+                    PDF files must be saved using the following naming structure{' '}
+                    <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document name could be
+                    thesis, abstract, and etc. For example:
+                    <ul>
+                        <li>s1234567_phd_thesis.pdf</li>
+                        <li>s1234567_phd_abstract.pdf</li>
+                    </ul>
+                    Supplementary audio files are to be in MP3 format. <br />
+                    Supplementary video files are to be in WMV or AVI format. <br />
+                </div>
+            ),
+            fileUploadInstruction: <p>Click here to select files, or drag files into this area to upload</p>,
+        },
+        text: (
+            <div>
+                <span className="requiredField">
+                    <label>&nbsp;</label>
+                </span>
+            </div>
+        ),
+    },
+    cancelLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
+    cancel: 'Cancel',
+    submit: 'Deposit your thesis',
+    afterSubmitLink:
+        'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
+    afterSubmit: 'Return to the Graduate School website',
+    afterSubmitTitle: 'Your thesis has been deposited',
+    afterSubmitText: 'You will receive an email confirming your thesis deposit shortly.',
+    depositConfirmation: {
+        confirmationTitle: 'Thesis deposit',
+        confirmationMessage:
+            'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
+        cancelButtonLabel: 'No, continue editing',
+        confirmButtonLabel: 'Yes, deposit thesis',
+    },
+    sessionExpiredConfirmation: {
+        confirmationTitle: 'Session Expired',
+        confirmationMessage:
+            'Your session has expired and you will now be redirected to the login page and then redeposit your thesis.',
+        cancelButtonLabel: 'Cancel',
+        confirmButtonLabel: 'Redirect to login',
+    },
+    depositFailedMessage:
+        'Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.',
+};
+
 export default {
     cancel: 'Abandon and search again',
     submit: 'Submit for approval',
@@ -16,19 +127,35 @@ export default {
         inputLabelText: 'Work type',
         hintText: 'Select a Work type from the dropdown list',
         help: {
-            title: 'Non-traditional research output types',
+            title: 'Add a missing work',
             text: (
-                <p>
-                    For more information about each type, click{' '}
-                    <a
-                        style={{ fontWeight: 700 }}
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
-                    >
-                        here
-                    </a>
-                </p>
+                <>
+                    <p>
+                        For help manually adding a work, access the help guide{' '}
+                        <a
+                            style={{ fontWeight: 700 }}
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/add-missing-work"
+                        >
+                            here
+                        </a>
+                        .
+                    </p>
+                    <h3>Non-traditional research outputs</h3>
+                    <p>
+                        For help selecting the relevant type for your work, access the guide{' '}
+                        <a
+                            style={{ fontWeight: 700 }}
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/non-traditional-research-outputs#s-lg-box-20857679"
+                        >
+                            here
+                        </a>
+                        .
+                    </p>
+                </>
             ),
             buttonLabel: 'Close',
         },
@@ -48,7 +175,7 @@ export default {
                         style={{ fontWeight: 700 }}
                         target="_blank"
                         rel="noreferrer"
-                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                        href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/content-indicators"
                     >
                         here
                     </a>
@@ -258,6 +385,10 @@ export default {
         information: {
             title: 'Research report information',
             fieldLabels: {
+                orgUnitName: {
+                    floatingLabelText: 'School, Centre or Institute',
+                    hintText: 'Organisational unit, eg. School of Business',
+                },
                 documentTitle: {
                     label: 'Title',
                     placeholder: 'Type title of research report',
@@ -411,7 +542,7 @@ export default {
                     placeholder: 'Title of paper',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, department or centre',
+                    floatingLabelText: 'School, Centre or Institute',
                     hintText: '',
                 },
                 orgName: {
@@ -467,7 +598,7 @@ export default {
                                 this process
                             </a>
                             . Please see the{' '}
-                            <a href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376">
+                            <a href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/hdr-support-thesis#s-lg-box-22941538">
                                 UQRDM thesis submission guide
                             </a>{' '}
                             for more information.
@@ -486,8 +617,8 @@ export default {
                     hintText: '',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'Enrolling unit',
-                    hintText: 'Enrolling unit, eg. School of Business',
+                    floatingLabelText: 'School, Centre or Institute',
+                    hintText: 'School, Centre or Institute, eg. School of Business',
                 },
                 date: {
                     title: 'Publication date',
@@ -619,6 +750,10 @@ export default {
                     day: 'Day',
                     month: 'Month',
                     year: 'Year',
+                },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
                 },
             },
         },
@@ -922,7 +1057,7 @@ export default {
                     hintText: '',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, Institute or Centre',
+                    floatingLabelText: 'School, Centre or Institute',
                     hintText: '',
                 },
                 series: {
@@ -932,6 +1067,10 @@ export default {
                 reportNumber: {
                     floatingLabelText: 'Report number',
                     hintText: '',
+                },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
                 },
                 date: {
                     title: 'Date published',
@@ -973,7 +1112,7 @@ export default {
                     placeholder: 'Title of paper',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, Institute or Centre ',
+                    floatingLabelText: 'School, Centre or Institute',
                     hintText: '',
                 },
                 orgName: {
@@ -1001,6 +1140,10 @@ export default {
                 abstract: {
                     label: 'Abstract',
                     placeholder: 'Provide an abstract or summary of the work.',
+                },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
                 },
             },
         },
@@ -1105,154 +1248,27 @@ export default {
         title: 'Success',
         message: 'New work has been saved successfully.',
     },
-    thesisSubmission: {
-        hdrTitle: 'Higher degree by research thesis deposit',
-        sbsTitle: 'Professional doctorate deposit',
-        text: (
-            <span>
-                Required fields are marked with
-                <span className="requiredField">
-                    <label>&nbsp;</label>
-                </span>
-            </span>
-        ),
-        message: (
-            <p>
-                Are you submitting a HDR thesis? HDR theses are now submitted via the UQ Research Data Manager (UQRDM)
-                following{' '}
-                <a href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission">
-                    this process
-                </a>
-                . Please see the{' '}
-                <a href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376">
-                    UQRDM thesis submission guide
-                </a>{' '}
-                for more information.
-            </p>
-        ),
-        fileUpload: {
-            title: 'Upload files',
-            failedAlertLocale: {
-                type: 'error',
-                title: 'FILE UPLOAD ERROR',
-                messageWithRetry:
-                    "There was an issue uploading your thesis files. You can try uploading again by clicking the 'Retry upload' button, but if you continue to have trouble uploading, please contact [linkStart]the Graduate School[linkEnd].",
-                message:
-                    'Not all files were uploaded. Please contact [linkStart]the Graduate School[linkEnd] for assistance.',
-                emailRecipient: 'thesis@gradschool.uq.edu.au',
-                emailSubject: 'Problem with Submission to UQ eSpace - [studentFullName], [studentNumber]',
-                actionButtonLabel: 'Retry upload',
-            },
-            retrySuccessLocale: {
-                type: 'done',
-                title: 'FILE UPLOAD SUCCESS',
-                message: 'File upload retry succeeded.',
-            },
-            locale: {
-                instructions: '',
-                accessTermsAndConditions:
-                    'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
-                validation: {
-                    ['notFiles']: 'Invalid files ([fileNames])',
-                    ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
-                    ['invalidMimeTypeFiles']: 'File(s) ([fileNames]) are not supported',
-                    ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
-                    ['tooManyFiles']:
-                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
-                    ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
-                },
-                successTitle: 'Success',
-                successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
-                delayNotice: 'Notice',
-                delayMessage: 'During peak times, there may be a delay before newly uploaded files appear on the work.',
-                errorTitle: 'Upload Errors',
-                fileUploadRestrictionHeading: 'File upload restrictions',
-                fileUploadRestrictions: (
-                    <div>
-                        Maximum file size is 5GB. <br />
-                        PDF files must be saved using the following naming structure{' '}
-                        <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document name could
-                        be thesis, abstract, and etc. For example:
-                        <ul>
-                            <li>s1234567_phd_thesis.pdf</li>
-                            <li>s1234567_phd_abstract.pdf</li>
-                        </ul>
-                        Supplementary audio files are to be in MP 3 format. <br />
-                        Supplementary video files are to be in WMV or AVI format. <br />
-                    </div>
-                ),
-                fileUploadInstruction: <p>Click here to select files, or drag files into this area to upload</p>,
-            },
-            text: (
-                <div>
-                    <span className="requiredField">
-                        <label>&nbsp;</label>
-                    </span>
-                </div>
-            ),
-        },
-        cancelLink:
-            'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
-        cancel: 'Cancel',
-        submit: 'Deposit your thesis',
-        afterSubmitLink:
-            'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
-        afterSubmit: 'Return to the Graduate School website',
-        afterSubmitTitle: 'Your thesis has been deposited',
-        afterSubmitText: 'You will receive an email confirming your thesis deposit shortly.',
-        depositConfirmation: {
-            confirmationTitle: 'Thesis deposit',
-            confirmationMessage:
-                'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
-            cancelButtonLabel: 'No, continue editing',
-            confirmButtonLabel: 'Yes, deposit thesis',
-        },
-        sessionExpiredConfirmation: {
-            confirmationTitle: 'Session Expired',
-            confirmationMessage:
-                'Your session has expired and you will now be redirected to the login page and then redeposit your thesis.',
-            cancelButtonLabel: 'Cancel',
-            confirmButtonLabel: 'Redirect to login',
-        },
-        depositFailedMessage:
-            'Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.',
-    },
+    thesisSubmission,
     sbsSubmission: {
-        sbsTitle: 'Professional doctorate deposit',
-        text: (
-            <span>
-                Required fields are marked with
-                <span className="requiredField">
-                    <label>&nbsp;</label>
-                </span>
-            </span>
-        ),
+        ...thesisSubmission,
+        title: 'Professional doctorate deposit',
+        afterSubmitText:
+            'You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.',
+        cancelLink: undefined,
+        afterSubmitLink: undefined,
+        afterSubmit: undefined,
         fileUpload: {
-            title: 'Upload files',
+            ...thesisSubmission.fileUpload,
             failedAlertLocale: {
-                title: 'FILE UPLOAD ERROR',
-                type: 'error',
-                message:
-                    "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
-                actionButtonLabel: 'RESUBMIT YOUR THESIS',
+                ...thesisSubmission.fileUpload.failedAlertLocale,
+                messageWithRetry:
+                    "There was an issue uploading your thesis files. You can try uploading again by clicking the 'Retry upload' button, but if you continue to have trouble uploading, please contact [linkStart]UQ eSpace[linkEnd].",
+                message: 'Not all files were uploaded. Please contact [linkStart]UQ eSpace[linkEnd] for assistance.',
+                emailRecipient: 'espace@library.uq.edu.au',
             },
-            locale: {
-                instructions: '',
-                validation: {
-                    ['notFiles']: 'Invalid files ([fileNames])',
-                    ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
-                    ['invalidMimeTypeFiles']: 'File(s) ([fileNames]) are not supported',
-                    ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
-                    ['tooManyFiles']:
-                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
-                    ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
-                },
-                successTitle: 'Success',
-                successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
-                delayNotice: 'Notice',
-                delayMessage: 'During peak times, there may be a delay before newly uploaded files appear on the work.',
-                errorTitle: 'Upload Errors',
-                fileUploadRestrictionHeading: 'File upload restrictions',
+            locate: {
+                ...thesisSubmission.fileUpload.locale,
+                accessTermsAndConditions: undefined,
                 fileUploadRestrictions: (
                     <div>
                         Maximum file size is 5GB. <br />
@@ -1263,41 +1279,12 @@ export default {
                             <li>s1234567_pd_abstract.pdf</li>
                             <li>s1234567_pd_totalthesis.pdf</li>
                         </ul>
-                        Supplementary audio files are to be in MP 3 format. <br />
+                        Supplementary audio files are to be in MP3 format. <br />
                         Supplementary video files are to be in WMV or AVI format. <br />
                     </div>
                 ),
-                fileUploadInstruction: <p>Click here to select files, or drag files into this area to upload</p>,
             },
-            text: (
-                <div>
-                    <span className="requiredField">
-                        <label>&nbsp;</label>
-                    </span>
-                </div>
-            ),
         },
-        cancel: 'Cancel',
-        submit: 'Deposit your thesis',
-        afterSubmitTitle: 'Your thesis has been deposited',
-        afterSubmitText:
-            'You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.',
-        depositConfirmation: {
-            confirmationTitle: 'Thesis deposit',
-            confirmationMessage:
-                'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
-            cancelButtonLabel: 'No, continue editing',
-            confirmButtonLabel: 'Yes, deposit thesis',
-        },
-        sessionExpiredConfirmation: {
-            confirmationTitle: 'Session Expired',
-            confirmationMessage:
-                'Your session has expired and you will now be redirected to the login page and then redeposit your thesis.',
-            cancelButtonLabel: 'Cancel',
-            confirmButtonLabel: 'Redirect to login',
-        },
-        depositFailedMessage:
-            'Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.',
     },
     addDataset: {
         pageTitle: 'Add data collection',
@@ -1433,7 +1420,6 @@ export default {
                         label: 'Collection start date',
                         placeholder: 'Date that data started being collected',
                         name: 'fez_record_search_key_start_date.rek_start_date',
-                        rangeError: 'Date range is not valid',
                     },
                     collectionEnd: {
                         label: 'Collection end date',
@@ -1549,7 +1535,7 @@ export default {
             },
             keywords: {
                 description:
-                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)',
+                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the collection. (eg. one|two|three)',
                 field: {
                     form: {
                         locale: {
@@ -1619,7 +1605,7 @@ export default {
             },
             keywords: {
                 description:
-                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the thesis. (eg. one|two|three)',
+                    'Add up to 10 individual keywords, or a pipe separated list, that describe the content of the community. (eg. one|two|three)',
                 field: {
                     form: {
                         locale: {

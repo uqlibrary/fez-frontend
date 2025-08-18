@@ -23,12 +23,12 @@ This means that it's exactly like production, except for the git branch that use
 
 ## Technology
 
-- Code: `React (~16.8), Javascript (ES2015 - Babel), Immutable, SASS`
+- Code: `React (~20.11), Javascript (ES2015 - Babel), Immutable, SASS`
 - State: `Redux, ReduxForm`
 - Design: `Google Material Design` - [MUI 5](https://mui.com/material-ui) ([see notes below](#mui-v5-upgrade) on the upgrade to MUI 5)
 - Build and dev tools: `Webpack`
 - Unit tests: `Jest`
-- E2E tests: `Cypress`
+- E2E tests: `Playwright`
 - [Supported Browsers](https://web.library.uq.edu.au/site-information/web-browser-compatibility)
 
 ## Development
@@ -47,18 +47,19 @@ This means that it's exactly like production, except for the git branch that use
    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
    ```
-- With `nvm` installed and/or updated, install `node` version of at least 16.13.2:
+- With `nvm` installed and/or updated, install `node` version of at least 20.11.0:
 
    ```
-   nvm install 16.13.2 
+   nvm install 20.11.0 
    ```
 
 - Switch to the `node` version just installed and begin initial setup:
   ```
-  nvm use 16.13.2 && npm i -g npm@8.4 jest webpack-dev-server
+  nvm use 20.11.0 && npm i -g npm@10.4.0 jest webpack-dev-server
   ```
   See [gotchas](#gotchas) below for watchouts regarding `nvm` versions
   
+- if you are on a Mac, ensure xcode with developer applications is installed
   
 - In the root folder of `fez-frontend` install the required `npm` modules:
 
@@ -120,7 +121,7 @@ You should now be able to run one of the following commands from the CLI:
 - `npm run test:cs`
   - Runs Prettier and ESLint checks on all Javascript files in the project, then lists files with code style issues. Check the other npm scripts for ways to fix the issues automatically if possible.
 - `npm run test:e2e:cc`
-  - Runs Cypress tests with code coverage checks. HTML report will be available under `coverage/cypress` while and after tests run.
+  - Runs playwright tests with code coverage checks. HTML report will be available under `coverage/playwright` while and after tests run.
 
 Mock data is provided for all pages and actions under `src/mock/`.
 
@@ -187,6 +188,63 @@ eSpace currently takes only Alerts from Reusable - at some point in the future w
 Staging branch calls Reusable staging branch - all other branches call production Reusable, by default.
 
 To use local reusable in your local dev, swap the value of reusablejs in webpack.config.js (and restart your npm sun start:mock)
+
+### TypeScript Integration
+
+TypeScript support has been added to enable a progressive migration from JavaScript, allowing both JavaScript and TypeScript code 
+to coexist and work seamlessly together from a DX perspective.
+
+To achieve this, the `fork-ts-checker-webpack-plugin` Webpack plugin has been added and configured to validate TypeScript files exclusively, raising errors for 
+any syntax issues.
+
+#### Tooling
+
+`@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin` have been added and configured alongside `prettier` to enable 
+static type checking and consistent formatting for TypeScript files in IDEs.
+
+Alternatively, the `npm run tsc` and `npm run tsc:watch` scripts can be used to validate TypeScript files from the command line.
+
+#### Migrating JavaScript Code to TypeScript
+
+The first step in migrating a JS file to TS is renaming its extension from `.js` to `.ts` or `.tsx` for 
+components. This triggers the configured linters to check for type errors. Generally, TypeScript is effective at detecting 
+and inferring types automatically when the code and JSDoc blocks are correct. However, after renaming the file, it's likely 
+to encounter some type errors.
+
+##### Fixing Type Errors
+
+If type errors appear after renaming a JS file, they are usually legitimate issues. However, exceptions may occur 
+if TypeScript fails to infer the correct type or due to misconfigured JSDoc blocks. Most of the time, resolving these errors 
+involves fixing or refining **JSDoc comments**, especially for imports where the imported files will not be converted to 
+TypeScript. In other cases, adding explicit type annotations will often highlight previously undetected issues in the code.
+
+Variables holding non-primitive values will typically require type definitions, which can be addressed by creating TypeScript 
+types or interfaces. As a rule of thumb, these should be defined at the start of the file. For shared or abstract types and interfaces, 
+please place them in files under the `@types` folder in the project's root directory.
+
+##### Type Casting
+
+When TypeScript cannot infer a variable's type based on code or existing annotations, you can use **type casting** to enforce 
+the intended type. However, type casting should only be used when you are absolutely certain that lacking proper type 
+checking or conversion won't introduce bugs.
+
+##### Ignoring Type Errors
+
+The project is configured to raise errors for implicit `any` types. This is intentional, as using `any` effectively disables 
+type checking and negates the benefits of TypeScript. We want to avoid this. In cases where resolving 
+a type error is too complex, you can temporarily suppress it using `// @ts-ignore` comments.
+
+##### Examples
+
+Examples of files migrated to TypeScript include `FavouriteJournals.tsx` and `Doi.tsx`. For the latter, new types representing 
+eSpace models have been added to the `@types` folder, providing type inference for variables holding eSpace API data.
+
+#### Code Coverage
+
+Code coverage for TypeScript files is generated in the same way as for JavaScript files from `jest` and `playwright` tests. However, 
+a known `nyc` [bug](https://github.com/istanbuljs/nyc/issues/1302#issuecomment-961455318) may cause issues during the  
+coverage report merging step of the deployment process. As a workaround, ensure full coverage is achieved by either `jest` or `playwright`
+tests and add the file to the ignore list for the other tool in `package.json`.
 
 ### Webpack
 
@@ -274,6 +332,12 @@ new MiniCssExtractPlugin({
   ```javascript
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/);
   ```
+
+### React StrictMode
+At the time of writing, [StrictMode](https://react.dev/reference/react/StrictMode) has been enabled for a subset of components only. Redux Forms has been deprecated, causing StrictMode to output numerous console errors that can not be directly fixed. 
+
+Since Redux Form is mostly used in admin pages, these routes and select others have been excluded from StrictMode until such time that Redux Form is replaced in the repo. Look to `src/modules/App/components/App.js` for the implementation of the ```StrictModeConditional``` HoC that enables this selective application of StrictMode.
+
 
 ### <a name="gotchas" id="gotchas"></a>Gotchas
 
@@ -421,83 +485,74 @@ Before committing changes, locally run tests and update snapshots (if required).
 
 ### E2E testing
 
-We are using [Cypress](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Add-a-test-file) for
-our e2e UI testing.
+We use [Playwright](https://playwright.dev/docs/writing-tests) for our E2E testing.
 
-**NOTE**: If you are getting an error `Failed to deserialize the V8 snapshot blob` when running tests - be sure to delete your cypress cache - Windows: `\AppData\Local\Cypress\Cache`
+To run tests, simply use `npm run test:e2e`.
 
-To run tests, first start the build, using mock data, ie `npm run start:mock`
+To run all tests, including unit tests, use `npm run test:all`.\
+Then, to generate a combined code coverage report, use `npm run cc:reportAll`.\
+This workflow is useful for confidently pushing changes upstream.
 
-Then:
+#### Parallelism
 
-- use `npm run cypress:run`
-- or to open the Cypress UI use `npm run cypress:open`
-- or to watch the tests `npm run cypress:watch`.
+E2E tests run in [parallel](https://playwright.dev/docs/test-parallel) by default. In CI, this also includes **horizontal parallelism**  
+via test sharding, where they are split across independent CI steps to speed up execution.
 
-Before pushing to a branch make sure to run `npm run test:all`. This runs the unit and cypress tests.
+Unfortunately, Playwright doesn't support splitting tests based on their estimated or historical runtime. For this reason,
+to avoid test sharding imbalances, where one shard takes significantly longer than the others, please consider splitting 
+lengthy tests into multiple smaller ones.
 
-Codebuild runs `npm run test:e2e:ci1` `npm run test:e2e:ci2` and uses webpack-dev-server to serve the frontend with mock data.
+#### Debugging
 
-If there build issues in the CI server, you can enable the dashboard by updating bin/codebuild-test.sh to run
-`npm run test:e2e:ci1:dashboard` `npm run test:e2e:ci2:dashboard`. You can the watch video recordings of any failed test runs 
-and view some debug messages via the [Cypress dashboard](https://dashboard.cypress.io/projects/mvfnrv/runs). 
-We have open-source license which allows unlimited runs.
+By default, Playwright runs tests using a headless browser.
+To visualize tests in the browser, use `npm run test:e2e:show [?spec file]`.\
+This disables test parallelism for convenience.
 
-To manage the account, the admin username/pass is in PasswordState under "GitHub Cypress.io Admin User" (login to Github as this user, then use the github account to log into Cypress).
+Breakpoints are handy for pausing either the test execution (via IDE integration) or the code execution (via the `debugger` keyword or manual breakpoints).
+PhpStorm provides seamless integration.
 
-If you want Codebuild to run cypress tests before you merge to master, include the text `cypress` in the branch name and push and cypress tests will be run on that branch (set up in bin/codebuild-test.sh).
+##### Failed tests
+
+To debug a failed test, use:\
+`npm run test:e2e:debug playwright/.results/.../trace.zip`\
+This displays a storyline of the failed test using the [Playwright Trace Viewer](https://playwright.dev/docs/trace-viewer-intro),\
+where all sorts of detailed inspections are possible - network, DOM elements, etc.
+
+###### CI
+
+The above also applies to tests that fail on CI. In this case, the trace files need to be downloaded locally first. They
+are part of the artifacts uploaded to S3 as output of each test stage - please refer to the "Artifacts" section on
+the "Build Details" tab.
 
 #### Standardised selectors to target elements
 
-- We are following the best practice recommended by cypress to target elements using `data-testid` attribute
+- We are following the best practice recommended by playwright to target elements using `data-testid` attribute
 
 - Please have a look at below table for some current examples in eSpace frontend:
 
-| Element   | prop for ID               | ID attached to native elements for targetting                   |
-| --------- | ------------------------- | --------------------------------------------------------------- |
-| TextField | `textFieldId="rek-title"` | `<input id="rek-title-input"/>` `<label id="rek-title-label"/>` |
-
-#### Some tricks and tips
-
-- When simulating clicks which result in non-trivial DOM changes, you might need to `cy.wait(1000);` to wait 1 second after the click before posing any expectations. If possible, use `cy.waitUntil()` instead to wait for a particular condition to be true.
-- Custom cypress commands can be added to `cypress/support` to abstract out common actions. For example:
-
-  - When the form you are writing tests for has a browser alert box to prevent navigating away before its complete, add this to the top of your test to unbind the unload event handler. The issue might only present itself when trying to do another test by navigating to a new url, which never finishes loading because the browser is waiting for the alert from the previous page to be dismissed, which is actually not visible in Cypress UI!
-
-    ```javascript
-    afterEach(() => {
-      cy.killWindowUnloadHandler();
-    });
-    ```
-
-  - When using the MUI dialog confirmation, use the following for navigating to the homepage:
-
-    ```javascript
-    cy.navToHomeFromMenu(locale);
-    ```
-
-    where `locale` is:
-
-    ```javascript
-    {
-      confirmationTitle: '(Title of the confirmation dialogue)',
-      confirmButtonLabel: '(Text of the "Yes" button)'
-    }
-    ```
-
-    See `cypress/support/commands.js` to see how that works.
-
-- If a test occasionally fails as "requires a DOM element." add a `.should()` test after the `.get()`, to make it wait for the element to appear (`.should()` loops)
+| Element   | prop for ID               | ID attached to native elements for targeting                   |
+| --------- | ------------------------- | ---------------------------------------------------------------|
+| TextField | `textFieldId="rek-title"` | `<input id="rek-title-input"/>` `<label id="rek-title-label"/>`|
 
 #### Gotchas
 
+##### Unit tests
 When running ```npm test``` and related scripts natively in linux (without using a VM), jest can be quite demanding making the OS unresponsive.
-
 One way to avoid this is to restrict the number of CPU cores through jest's [--maxWorkers](https://jestjs.io/docs/cli#--maxworkersnumstring) option.
 
 ```bash
 NODE_ENV=test FULL_PATH=http://localhost node --expose-gc ./node_modules/.bin/jest --logHeapUsage --maxWorkers=50%
 ```
+
+##### E2E tests
+
+Unlike Jest, Playwright test assertions are based on [actionability checks](https://playwright.dev/docs/actionability), 
+which means they are not suitable for checking every possible state of a given component. For instance, if a component 
+displays a loading message for async actions, and those actions complete too quickly, checking for the presence of the
+loading message might fail.
+
+For assertions like the above, Jest is a better fit, as it requires adding waits to ensure the test doesn't finish 
+before the component reaches its final state.
 
 ## Mocking
 
@@ -543,7 +598,7 @@ Ask for review from team-mates if you'd like other eyes on your changes.
 
 ## Deployment
 
-Application deployment is 100% automated (except for prodtest) using AWS Codebuild (and Codepipeline), and is hosted in S3. All testing and deployment commands and configuration are stored in the buildspec yaml files in the repo. All secrets (access keys and tokens for PT, Cypress, Sentry and Google) are stored in AWS Parameter Store, and then populated into ENV variables in those buildspec yaml files. 
+Application deployment is 100% automated (except for prodtest) using AWS Codebuild (and Codepipeline), and is hosted in S3. All testing and deployment commands and configuration are stored in the buildspec yaml files in the repo. All secrets (access keys and tokens for PT, Sentry and Google) are stored in AWS Parameter Store, and then populated into ENV variables in those buildspec yaml files. 
 Deployment pipelines are setup for branches: "master", "staging", "prodtest", "production" and several key branches starting with "feature-".
 
 - Master branch is always deployed to staging/production
@@ -558,18 +613,6 @@ to URL/Cloudfront restrictions
 Should you need to find your feature branch files on S3, they are [here](https://s3.console.aws.amazon.com/s3/buckets/uql-dev-frontend?region=ap-southeast-2&prefix=espace/&showversions=false) (most common use is to cleanup after you finish with a feature branch: remove the S3 sub-folder from this location, the git branch, and the AWS pipeline).
 
 Note: prodtest requires a manual click for its deployment to happen: go to [this](https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend-prodtest/view?region=ap-southeast-2) link and click the orange release changes button.
-
-### Gotchas
-
-There are some build steps that are exclusive to master, staging and production branches:
-- npm run test:unit:ci1
-- npm run test:e2e:dashboard
-
-This means that even when a given branch passes tests and builds successfully in CB, it doesn't necessary mean that it's free issues.
-
-In order to identify possible issues before pushing master upstream, make sure to run the commands above locally after merging your changes to that branch.
-
-For more details, look at ./bin/codebuild-test.sh
 
 ## Google Analytics integration
 
@@ -590,7 +633,7 @@ The upgrade from Material-UI version 4 (MUI4) to MUI version 5 (MUI5) was comple
 - MUI5 values (px): `xs: 0, sm: 600, md: 900, lg: 1200, xl: 1536`
 2. MUI5 deprecated the widely used `<Hidden>` component. For this migration, the new `sx` element property was used to replace `<Hidden>` in _most circumstances_. Using `sx` does, however, raise a few awareness points:
 -  Code using `sx` for breakpoints will rely on the browser's CSS engine to determine when something is **visible or not**. This is in contrast to how `<Hidden>` was used in our codebase, which used JS to control **inserting or deleting** DOM elements.
-- When writing tests you must bear in mind the above, because `JSDOM` <mark>does not</mark> support a fully fledged CSS engine (https://github.com/jsdom/jsdom/blob/8e3a568d504353270691b5955af505155ae368bf/lib/jsdom/level2/style.js#L17). This is particularly important when writing tests that wish to check if an element is visible or not based on, for example browser window width (i.e. responsive design). These tests, in conjunction with `sx`, **will fail** because all elements are always visible due to the lack of a CSS engine. The recommendation here is to move these sorts of tests in to a Cypress spec, where you can assuredly test for element visibility using, for example `to.be.visible`. Note that this does imply that you will need to run convergence coverage checks that merge both Jest and Cypress in order to see your true code coverage.
+- When writing tests you must bear in mind the above, because `JSDOM` <mark>does not</mark> support a fully fledged CSS engine (https://github.com/jsdom/jsdom/blob/8e3a568d504353270691b5955af505155ae368bf/lib/jsdom/level2/style.js#L17). This is particularly important when writing tests that wish to check if an element is visible or not based on, for example browser window width (i.e. responsive design). These tests, in conjunction with `sx`, **will fail** because all elements are always visible due to the lack of a CSS engine. The recommendation here is to move these sorts of tests in to a Playwright spec, where you can assuredly test for element visibility using, for example `to.be.visible`. Note that this does imply that you will need to run convergence coverage checks that merge both Jest and Playwright in order to see your true code coverage.
 - An alternative to the above, but **only** to be used where it makes the most sense for performance and/or testing burden, is using the hook [useMediaQuery](https://mui.com/material-ui/react-use-media-query/) in your code to include or exclude parts of a component in the render block. This is JS based and therefore will work as expected in Jest tests.
 3. Enzyme snapshots have been regenerated to account for the new MUI5 components, and as such many tests also needed to be updated to match changes in the snapshot structure. A common difference encountered was references to a component such as `WithStyles(ForwardRef(Button))` had become `ForwardRef(Button)`, and will easy to fix is worth remembering. Check your snapshot structure if you find MUI4 Enzyme tests are failing.
 4. In a great many cases it was no longer possible to run shallow Enzyme tests against components. This appears to be caused by MUI5 components using `Theme` _requiring_ a theme provider, and as such these tests were failing when a component in the tree tried to access a theme via useStyles. The [MUI5 testing page](https://mui.com/material-ui/guides/testing/) has been updated and no longer recommend testing snapshots _at all_ (see v4 version [here](https://v4.mui.com/guides/testing/)). We will continue to do so, however, so the solution moving forward is to use `Mount` to create a deep snapshot. In most cases existing Enzyme tests can be easily updated to produce a deep snapshot by updating the `setup` method to include a 3rd parameter of the `getElement` function:
@@ -614,8 +657,8 @@ playElement.find('button').simulate('click');
 1. When testing dropdown boxes/lists (for example, with the `AutoCompleteAsynchronousField` component), your tests must ensure focus is in the target component before you attempt to change the contents of the input (`fireEvent.change()`), otherwise the expected popup window of options _will not appear_.
 1. By default, the MUI5 `ToolTips` component no longer uses a title attribute to hold the wrapped component's tooltip text. Instead the `aria-label` attribute is used, and tests need to be updated to reflect this.
 This behaviour can be changed by including the `describeChild`, however be aware of potential [accessibility issues](https://mui.com/material-ui/react-tooltip/#accessibility).
-Note also that there are some elements that can not have `aria-label` as an attribute (see https://github.com/dequelabs/axe-core/issues/3205), and as such you may encounter Cypress Axe failures if you _do not_ use the `describeChild` attribute.
-1. Cypress tests that look to enter text in to a multiline text field (i.e HMTL `TextArea`) may fail due to MUI5 inserting _two_ `TextArea` elements for each use of `<TextField multiline>`. Your tests should pick the first instance of the TextArea element for testing. No official information on this behaviour could be found at time of writing.
+Note also that there are some elements that can not have `aria-label` as an attribute (see https://github.com/dequelabs/axe-core/issues/3205), and as such you may encounter Playwright Axe failures if you _do not_ use the `describeChild` attribute.
+1. Playwright tests that look to enter text in to a multiline text field (i.e HMTL `TextArea`) may fail due to MUI5 inserting _two_ `TextArea` elements for each use of `<TextField multiline>`. Your tests should pick the first instance of the TextArea element for testing. No official information on this behaviour could be found at time of writing.
 1. `MyEditorialAppointments` component adds a custom `DatePicker` bar with a 'Current year' button. In MUI4 clicking this button would automatically clause the calendar popup, however in MUI5 this is no longer the case.
 
 ### Tests that could not be fixed
@@ -628,12 +671,33 @@ Despite many hours attempting to find a resolution to the Jest errors both produ
 
 ## CKEditor
 
-The Rich Editor is implemented with [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html). This is installed with npm modules. Because we needed an extra button on the toolbar, Change Case, we had to _build from source_
+The Rich Editor is implemented with [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html). This is installed with npm modules.
+Case Change is a premium feature (fees involved) since v41, but because we are using a free version of the Change Case plugin, we had to _build from source_
 
-Links
+### Links
 
-- CKE in React https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/react.html
-- Creating the custom build: https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start-other.html
+- CKEditor in React https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/react.html
+- Creating the custom build (Classic): https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start-other.html
+
+### Plugins
+
+- Autoformat
+- Bold
+- General HTML Support
+- Italic
+- Link
+- List
+- Paste From Office
+- Remove Format
+- Special Characters (Arrows, Currency, Essentials, Latin, Mathematical, Text)
+- Strikethrough
+- Subscript
+- Superscript
+- Text transformation
+- Underline
+- Word count
+- Letter Case Plugin
+  - https://github.com/maziyank/ckeditor5-letter-case
 
 If changes to ckeditor are required, these are sample commands:
 
@@ -647,6 +711,5 @@ If changes to ckeditor are required, these are sample commands:
 
 We don't seem to need to issue any `ci` or `run build` commands for non-ckeditor localhost development, when not making changes to ckeditor - react picks up the build directory.
 
-Note we are trapped below the latest version - past about V34, ckeditor crashes in cypress (although it runs fine in localhost) - probably the same cause as in https://github.com/ckeditor/ckeditor5/issues/12802
-
 CKeditor says all the `@ckeditor/ckeditor5-` packages should have the same version (although there are a short number of exceptions).
+

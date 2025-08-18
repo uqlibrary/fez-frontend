@@ -6,11 +6,12 @@ export COMMIT_INFO_EMAIL=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"
 export COMMIT_INFO_MESSAGE=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"%B")
 export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend/executions/${CI_BUILD_NUMBER}"
 export TZ='Australia/Brisbane'
+export PW_CC_REPORT_FILENAME="coverage-final-${PIPE_NUM}.json"
 
 # Run CC only on these branches
 # NB: These branches will require 3 pipelines to run all tests, branches not in this list require only 2.
 CODE_COVERAGE_REQUIRED=false
-if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == "feature-react-18" || $CI_BRANCH == *"coverage"*) ]]; then
+if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == "feature-react-18" || $CI_BRANCH == "feature-uqclien-1" || $CI_BRANCH == "feature-marcelopm-1" || $CI_BRANCH == *"coverage"*) ]]; then
     CODE_COVERAGE_REQUIRED=true
 fi
 
@@ -40,7 +41,7 @@ fi
 
 printf "(Build of branch \"$CI_BRANCH\")\n"
 
-function checkCodeStyle {
+function check_code_style() {
     FILES=$(npm run codestyles:files -s)
     if [[ "$?" == 0 ]]; then
         printf "\n\e[92mLooks good! Well done.\e[0m\n\n"
@@ -56,60 +57,55 @@ function checkCodeStyle {
     fi
 }
 
-npm run pretest:unit:ci
+function fix_coverage_report_paths() {
+    sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' "$1"
+}
+
+function install_pw_deps() {
+    printf "\n--- \e[INSTALLING PW DEPS [STARTING AT $(date)] 1\e[0m ---\n"
+    npx playwright install chromium-headless-shell
+    npx playwright install-deps chromium-headless-shell
+    printf "\n--- \e[ENDED INSTALLING PW DEPS AT $(date)] 1\e[0m ---\n"
+}
+
+function run_pw_test_shard() {
+    set -e
+
+    install_pw_deps
+
+    local SHARD_INDEX="$1"
+    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #$SHARD_INDEX [STARTING AT $(date)] 2\e[0m ---\n"
+    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+        npm run test:e2e:cc -- -- --shard="$SHARD_INDEX/2"
+        fix_coverage_report_paths "coverage/playwright/${PW_CC_REPORT_FILENAME}"
+    else
+        npm run test:e2e -- --shard="$SHARD_INDEX/2"
+    fi
+    printf "\n--- [ENDED RUNNING E2E TESTS GROUP #$SHARD_INDEX AT $(date)] \n"
+}
 
 case "$PIPE_NUM" in
 "1")
-    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        set -e
-        printf "\n--- \e[1mRUNNING E2E TESTS GROUP 1\e[0m ---\n"
-        # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the first group
-        source bin/codebuild-parallel.sh
-        npm run test:e2e:ci1
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
-    else
-        printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
-        checkCodeStyle
-        set -e
-        printf "\n--- \e[1mRUNNING UNIT TESTS 1\e[0m ---\n"
-        npm run test:unit:ci1:nocoverage
-    fi
+    run_pw_test_shard "$PIPE_NUM"
 ;;
 "2")
-    set -e
-
-    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the second group
-        source bin/codebuild-parallel.sh
-        printf "\n--- \e[1mRUNNING E2E TESTS GROUP 2\e[0m ---\n"
-        npm run test:e2e:ci2
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
-    else
-        printf "\n--- \e[1mRUNNING SERIAL UNIT TESTS\e[0m ---\n"
-        npm run test:unit:ci:serial:nocoverage
-        printf "\n--- \e[1mRUNNING UNIT TESTS 2\e[0m ---\n"
-        npm run test:unit:ci2:nocoverage
-    fi
+    run_pw_test_shard "$PIPE_NUM"
 ;;
 "3")
     export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
         printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
-        checkCodeStyle
+        check_code_style
         set -e
         printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
-        # Unit tests which require --runInBand
+        # Jest tests which are required to run in serial
         npm run test:unit:ci:serial
-        # Replace codebuild source path as we'll compile multiple of these together to get the final code coverage
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/jest/coverage-final.json
-        mv coverage/jest/coverage-final.json coverage-final.json
+        fix_coverage_report_paths coverage/jest-serial/coverage-final.json
 
-        # All other unit tests
+        # All other jest tests
         export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest/jest-html-report.html
         npm run test:unit:ci
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/jest/coverage-final.json
-
-        mkdir -p coverage/jest-serial && mv coverage-final.json coverage/jest-serial/coverage-final.json
+        fix_coverage_report_paths coverage/jest/coverage-final.json
     fi
 ;;
 *)

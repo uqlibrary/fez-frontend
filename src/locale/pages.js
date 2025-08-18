@@ -10,7 +10,12 @@ import locale from 'locale/components';
 import globalLocale from './global';
 
 import { pathConfig } from 'config/pathConfig';
-import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from '../config/general';
+import {
+    DOI_CROSSREF_PREFIX,
+    DOI_DATACITE_PREFIX,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_INSTRUMENT,
+} from 'config/general';
 /*
 
 NOTE:
@@ -52,14 +57,14 @@ export default {
                         <p>
                             You can also view our{' '}
                             <a
-                                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+                                href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="externalLink"
                                 title={
                                     globalLocale.global.linkWillOpenInNewWindow.replace(
                                         '[destination]',
-                                        'https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets',
+                                        'https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets',
                                     ) || undefined
                                 }
                                 tabIndex={0}
@@ -160,7 +165,7 @@ export default {
                 buttonLabel: 'CLOSE',
             },
         },
-        notFound: {
+        pageNotFound: {
             title: 'Page not found',
             children: (
                 <StandardCard>
@@ -174,6 +179,20 @@ export default {
                         </li>
                     </ul>
                 </StandardCard>
+            ),
+        },
+        workNotFound: {
+            title: 'Work not found',
+            message: (
+                <div>
+                    <p>The work you are attempting to access does not appear in our system.</p>
+                    <p>
+                        If you believe this is in error, please{' '}
+                        <a href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us">
+                            contact the eSpace team.
+                        </a>
+                    </p>
+                </div>
             ),
         },
         authenticationRequired: {
@@ -214,6 +233,10 @@ export default {
                 </StandardCard>
             ),
         },
+        adminDashboard: {
+            loading: 'Loading admin dashboard',
+            title: 'Admin dashboard',
+        },
         dashboard: {
             loading: 'Loading your dashboard',
             header: {
@@ -250,12 +273,11 @@ export default {
                         },
                         notLinkedUrl: {
                             scopus:
-                                'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid',
+                                'https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/google-scholar-scopus-and-other-profiles',
                             researcher:
-                                'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid',
-                            google_scholar:
-                                'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/google-scholar-profile',
-                            // google_scholar: pathConfig.authorIdentifiers.googleScholar.link,
+                                ' https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/web-science-researcher-profile',
+                            // google scholar is linked via ORCID
+                            google_scholar: pathConfig.authorIdentifiers.orcid.link,
                             orcid: pathConfig.authorIdentifiers.orcid.link,
                         },
                     },
@@ -536,6 +558,10 @@ export default {
                 alternateActionButtonLabel: 'Fix work',
             },
         },
+        feedbackRecord: {
+            loadingMessage: 'Loading work',
+            title: 'Feedback Form',
+        },
         fixRecord: {
             loadingMessage: 'Loading work',
             title: 'Request a correction, add more information or upload files',
@@ -592,20 +618,6 @@ export default {
                 ),
                 alertId: 'alert-info',
             },
-            notFound: {
-                title: 'Work not found',
-                message: (
-                    <div>
-                        <p>The work you are attempting to access does not appear in our system.</p>
-                        <p>
-                            If you believe this is in error, please{' '}
-                            <a href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/contact-us">
-                                contact the eSpace team.
-                            </a>
-                        </p>
-                    </div>
-                ),
-            },
             version: {
                 title: 'View Version',
                 alert: {
@@ -650,6 +662,8 @@ export default {
                     copied: 'Copied to clipboard',
                 },
             },
+            feedbackButton: 'Tell Us More',
+            feedbackButtonTooltip: 'Help care for our cultural collections',
         },
         searchRecords: {
             title: 'eSpace search',
@@ -740,104 +754,6 @@ export default {
             labels: {
                 submit: 'Masquerade',
                 hint: 'Enter a UQ staff or student username (eg. uqjsmith1 or s123456)',
-            },
-        },
-        googleScholarLink: {
-            title: 'Google Scholar identifier',
-            help: {
-                title: 'About Google Scholar',
-                text: (
-                    <div>
-                        <Typography component="h4" variant="h6">
-                            How to create Google Scholar profile?
-                        </Typography>
-                        <ol>
-                            <li>Sign to your Google account, or create one if you don't have one.</li>
-                            <li>
-                                After you sign in, the Citations sign up form will ask you to confirm the spelling of
-                                your name, to enter your affiliation, etc.
-                            </li>
-                            <li>On the next page, you will see a list of articles. Add the articles that are yours.</li>
-                            <li>
-                                Once you're done with adding articles, it will ask you what to do when the article data
-                                changes in Google Scholar. You can either have the updates applied to your profile
-                                automatically or you can choose to review them beforehand.
-                            </li>
-                            <li>
-                                Finally, you will see your profile.Once you are satisfied with the results, make your
-                                profile public.
-                            </li>
-                        </ol>
-                    </div>
-                ),
-                buttonLabel: 'CLOSE',
-            },
-            labels: {
-                submit: 'Save Google Scholar ID',
-                cancel: 'Cancel',
-                googleScholarIdField: {
-                    label: 'Google Scholar ID',
-                    placeholder: 'Enter your Google Scholar ID',
-                },
-            },
-            add: {
-                title: 'Add your Google Scholar identifier',
-                description: (
-                    <div>
-                        <p>
-                            Creating your Google Scholar Citation profile will make sure that Google Scholar will easily
-                            and accurately group all the citations of your works into one pool. A profile generally
-                            lists your name, chosen keywords of research interest, generated citation metrics, and
-                            citations (including links to citing articles).
-                        </p>
-                        <p>In order to create a Google Scholar Citation profile, you need a Google Account.</p>
-                        <p>
-                            For more information see the{' '}
-                            <a
-                                href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
-                                target="_blank"
-                            >
-                                Google Scholar Citations help page.
-                            </a>
-                        </p>
-                    </div>
-                ),
-            },
-            edit: {
-                title: 'Update your Google Scholar identifier',
-                description: (
-                    <div>
-                        <p>Update your Google Scholar ID below.</p>
-                        <p>
-                            For more information see the{' '}
-                            <a
-                                href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
-                                target="_blank"
-                            >
-                                Google Scholar Citations help page.
-                            </a>
-                        </p>
-                    </div>
-                ),
-            },
-            errorAlert: {
-                type: 'error_outline',
-                alertId: 'alert-error',
-                title: 'Error',
-            },
-            progressAlert: {
-                type: 'info_outline',
-                alertId: 'alert-info',
-                title: 'Saving',
-                message: 'Request is being processed.',
-                showLoader: true,
-            },
-            successAlert: {
-                type: 'done',
-                alertId: 'alert-done',
-                title: 'Google Scholar ID updated',
-                message: 'Your Google Scholar ID has been updated in your eSpace profile.',
-                allowDismiss: true,
             },
         },
         orcidLink: {
@@ -1028,7 +944,7 @@ export default {
                 noDoi: 'DOI (Preview)',
             },
             doiTemplate: (pid, displayType) =>
-                displayType === PUBLICATION_TYPE_DATA_COLLECTION
+                displayType === PUBLICATION_TYPE_DATA_COLLECTION || displayType === PUBLICATION_TYPE_INSTRUMENT
                     ? `${DOI_DATACITE_PREFIX}/${pid.slice(3)}`
                     : `${DOI_CROSSREF_PREFIX}/${pid.slice(3)}`,
             depositorNameTitle: 'Name',
@@ -1113,8 +1029,20 @@ export default {
                 reason: {
                     title: 'Reason for Edit',
                 },
+                relatedServices: {
+                    title: 'Related Services',
+                },
                 culturalInstitutionNotice: {
                     title: 'Cultural Institution (CI) Notice',
+                },
+                uqData: {
+                    title: 'UQ eSpace',
+                },
+                doaj: {
+                    title: 'Open Access (Directory of Open Access Journals - DOAJ)',
+                },
+                indexed: {
+                    title: 'Indexed in',
                 },
             },
             help: {
@@ -1191,6 +1119,7 @@ export default {
                     title: 'Error',
                     message: message =>
                         `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
+                    clear: 'Clear server-specific errors',
                 },
                 successAlert: {
                     type: 'done',
@@ -1222,6 +1151,10 @@ export default {
                     customType: 'error',
                     alertId: 'alert-error',
                 },
+            },
+            journal: {
+                title: 'Edit journal',
+                loadingMessage: 'Loading journal',
             },
         },
         deleteRecord: {
@@ -1306,6 +1239,9 @@ export default {
                     message: message => message,
                     alertId: 'alert-error',
                 },
+                advisoryStatement: {
+                    title: 'Advisory statement',
+                },
             },
         },
         authors: {
@@ -1316,19 +1252,8 @@ export default {
             title: 'Manage users',
             loadingMessage: 'Loading users',
         },
-        journals: {
-            search: {
-                title: 'Strategic publishing search',
-            },
-            results: {
-                title: 'Strategic publishing results',
-            },
-            compare: {
-                title: 'Strategic publishing compare',
-            },
-            favourites: {
-                title: 'Strategic publishing favourites',
-            },
+        controlledVocabularies: {
+            title: 'Controlled Vocabularies',
         },
     },
 };

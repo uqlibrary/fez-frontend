@@ -17,6 +17,11 @@ function setup(testProps = {}) {
 }
 
 describe('FacetsFilter', () => {
+    it('should render with default props', () => {
+        const { container } = rtlRender(<FacetsFilter />);
+        expect(container).toMatchSnapshot();
+    });
+
     it('should not render any filters', () => {
         const { getByTestId } = setup();
         expect(getByTestId('empty-facet-filters')).toBeInTheDocument();

@@ -24,7 +24,9 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
     const isInit = React.useRef(true);
 
     const throttledLoadSuggestions = React.useRef(
-        throttle(2000, newValue => dispatch(loadJournalSearchKeywords(newValue))),
+        throttle(2000, newValue => {
+            dispatch(loadJournalSearchKeywords(newValue));
+        }),
     );
     /**
      * Journal search input handler
@@ -72,8 +74,8 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
                 <TextField
                     autoFocus
                     textFieldId="journal-search-keywords"
-                    placeholder={txt.input.placeholder}
-                    ariaLabel={`${txt.input.aria_label} ${txt.input.placeholder}`}
+                    placeholder={txt.placeholder}
+                    ariaLabel={`${txt.aria_label} ${txt.placeholder}`}
                     name="journal-search-keywords-input"
                     autoComplete="off"
                     onChange={handleJournalSearchInput}

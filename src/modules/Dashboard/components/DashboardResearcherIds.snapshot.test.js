@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import { setupStoreForMount } from 'test.setup';
-import DashboardResearcherIds, { DashboardResearcherIdsClass } from './DashboardResearcherIds';
+import DashboardResearcherIds from './DashboardResearcherIds';
 
 import { AllTheProviders, render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
 
@@ -11,10 +11,15 @@ import { currentAuthor } from 'mock/data';
 jest.mock('../../../context');
 import { OrcidSyncContext } from 'context';
 
+const mockUseNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
+
 function setup(testProps) {
     // build full props list required by the component
     const props = {
-        classes: {},
         theme: {},
         ...testProps,
     };
@@ -30,7 +35,6 @@ function setup(testProps) {
 describe('Dashboard Researcher IDs test', () => {
     const testFn = jest.fn();
     const props = {
-        history: { push: testFn },
         classes: {},
         values: {
             researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
@@ -43,6 +47,7 @@ describe('Dashboard Researcher IDs test', () => {
 
     afterEach(() => {
         testFn.mockReset();
+        mockUseNavigate.mockClear();
     });
 
     it('Render the authors Researcher IDs as expected for a UQ researcher', () => {
@@ -51,7 +56,6 @@ describe('Dashboard Researcher IDs test', () => {
     });
 
     it('Testing clicking on ID internal links', () => {
-        const pushMock = jest.fn();
         const testValues = {
             ...props,
             values: {
@@ -59,7 +63,6 @@ describe('Dashboard Researcher IDs test', () => {
                 orcid: null,
             },
             authenticated: { researcher: false, scopus: false, google_scholar: false, orcid: false },
-            history: { push: pushMock },
         };
         const { container, getByTestId } = setup(testValues);
 
@@ -67,9 +70,9 @@ describe('Dashboard Researcher IDs test', () => {
 
         const link = getByTestId('orcid');
         fireEvent.click(link);
-        expect(pushMock).toHaveBeenCalledTimes(1);
+        expect(mockUseNavigate).toHaveBeenCalledTimes(1);
         fireEvent.keyPress(link, { key: 'Enter', keyCode: 13 });
-        expect(pushMock).toHaveBeenCalledTimes(2);
+        expect(mockUseNavigate).toHaveBeenCalledTimes(2);
     });
 
     it('Testing auth internal links', () => {
@@ -107,17 +110,43 @@ describe('Dashboard Researcher IDs test', () => {
             },
         };
 
-        const wrapper = render(
+        const { container } = render(
             <AllTheProviders>
                 <Provider store={setupStoreForMount().store}>
                     <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
                         <OrcidSyncContext.Provider value={context}>
-                            <DashboardResearcherIdsClass {...props} />
+                            <DashboardResearcherIds {...props} />
                         </OrcidSyncContext.Provider>
                     </MemoryRouter>
                 </Provider>
             </AllTheProviders>,
         );
-        expect(wrapper.asFragment()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
+    });
+
+    it('Testing google scholar id without orcid caption', () => {
+        const testValues = {
+            values: {
+                ...props.values,
+                orcid: undefined,
+                google_scholar: undefined,
+            },
+            authenticated: { researcher: true, scopus: true, google_scholar: true, orcid: true },
+        };
+        const { container } = setup(testValues);
+        expect(container).toMatchSnapshot();
+    });
+
+    it('Testing google scholar id with orcid caption', () => {
+        const testValues = {
+            ...props,
+            values: {
+                ...props.values,
+                google_scholar: undefined,
+            },
+            authenticated: { researcher: true, scopus: true, google_scholar: true, orcid: true },
+        };
+        const { container } = setup(testValues);
+        expect(container).toMatchSnapshot();
     });
 });

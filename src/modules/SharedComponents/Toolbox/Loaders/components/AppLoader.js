@@ -18,35 +18,27 @@ const StyledGrid = styled(Grid)(({ theme }) => ({
     textAlign: 'center !important',
 }));
 
-export class AppLoader extends React.Component {
-    static propTypes = {
-        title: PropTypes.string.isRequired,
-        logoImage: PropTypes.string,
-        logoText: PropTypes.string,
-    };
+export const AppLoader = ({ title, logoImage, logoText }) => {
+    return (
+        <StyledGrid container spacing={0} sx={{}}>
+            <Grid item m={'16px 0'}>
+                <CircularProgress size={80} thickness={1} sx={{ color: 'white.main', fontWeight: 'fontWeightLight' }} />
+            </Grid>
+            <Grid item m={'16px 0'}>
+                {logoImage && <Box className={`${logoImage}`} sx={{ width: '200px' }} alt={logoText} />}
+            </Grid>
+            <Grid item m={'16px 0'}>
+                <Typography variant={'h6'} sx={{ color: 'white.main', fontWeight: 'fontWeightLight' }}>
+                    {title}
+                </Typography>
+            </Grid>
+        </StyledGrid>
+    );
+};
+AppLoader.propTypes = {
+    title: PropTypes.string.isRequired,
+    logoImage: PropTypes.string,
+    logoText: PropTypes.string,
+};
 
-    render() {
-        const { title, logoImage, logoText } = this.props;
-        return (
-            <StyledGrid container spacing={0} sx={{}}>
-                <Grid item m={'16px 0'}>
-                    <CircularProgress
-                        size={80}
-                        thickness={1}
-                        sx={{ color: 'white.main', fontWeight: 'fontWeightLight' }}
-                    />
-                </Grid>
-                <Grid item m={'16px 0'}>
-                    {logoImage && <Box className={`${logoImage}`} sx={{ width: '200px' }} alt={logoText} />}
-                </Grid>
-                <Grid item m={'16px 0'}>
-                    <Typography variant={'h6'} sx={{ color: 'white.main', fontWeight: 'fontWeightLight' }}>
-                        {title}
-                    </Typography>
-                </Grid>
-            </StyledGrid>
-        );
-    }
-}
-
-export default AppLoader;
+export default React.memo(AppLoader);

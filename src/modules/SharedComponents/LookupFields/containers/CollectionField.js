@@ -1,53 +1,47 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import { AutoCompleteMultiSelectField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
-import { connect } from 'react-redux';
+
 import * as actions from 'actions';
 
-const mapStateToProps = (state, props) => {
-    const { itemsList, itemsLoading } = state.get('collectionsReducer') || {};
+export const CollectionField = props => {
+    const dispatch = useDispatch();
+    const { itemsList, itemsLoading } = useSelector(state => state.get('collectionsReducer')) || {};
 
-    const hasForm = !!((props || {}).meta || {}).form;
-    const defaultValue = hasForm
-        ? (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
-          (!!props.input.value && props.input.value) ||
-          []
-        : props.value || [];
+    const loadSuggestions = () => dispatch(actions.collectionsList());
+    // the following is needed due to unexpected state chances from re-renders
+    const hasForm = !!props?.state;
+    const defaultValue = props.value || [];
 
     // remove existing entries from full list of collections
     const existingCollectionPids = defaultValue.map(collection => collection.rek_pid || collection);
     const missingCollections = itemsList.filter(item => existingCollectionPids.indexOf(item.rek_pid) === -1);
 
-    return {
-        id: props.id,
-        autoCompleteAsynchronousFieldId: 'rek-ismemberof',
-        itemsList: missingCollections || [],
-        itemsLoading,
-        getOptionLabel: item => item.rek_title,
-        ...(hasForm
-            ? {
-                  defaultValue,
-                  error: !!props.meta.error,
-                  errorText: props.meta.error || '',
-              }
-            : {
-                  defaultValue: itemsList.filter(collection => defaultValue.includes(collection.rek_pid)),
-                  error: props.error,
-                  errorText: props.errorText || '',
-              }),
-        autoCompleteMultiSelectFieldId: props.collectionFieldId,
-    };
+    return (
+        <AutoCompleteMultiSelectField
+            {...props}
+            autoCompleteAsynchronousFieldId={'rek-ismemberof'}
+            itemsList={missingCollections || []}
+            itemsLoading={itemsLoading}
+            getOptionLabel={item => item.rek_title}
+            defaultValue={
+                hasForm ? defaultValue : itemsList.filter(collection => defaultValue.includes(collection.rek_pid))
+            }
+            error={!!props?.state?.error || !!props.error}
+            errorText={props?.state?.error || props.errorText || ''}
+            autoCompleteMultiSelectFieldId={props.collectionFieldId}
+            loadSuggestions={loadSuggestions}
+            onChange={item =>
+                hasForm ? props.onChange(item) : props.onChange(item.map(collection => collection.rek_pid))
+            }
+            onClear={() => props.onChange(null)}
+        />
+    );
 };
-
-const mapDispatchToProps = (dispatch, props) => ({
-    loadSuggestions: () => dispatch(actions.collectionsList()),
-    ...(!!((props || {}).meta || {}).form
-        ? {
-              onChange: item => props.input.onChange(item),
-              onClear: () => props.input.onChange(null),
-          }
-        : {
-              onChange: item => props.onChange(item.map(collection => collection.rek_pid)),
-              onClear: () => props.onChange(null),
-          }),
-});
-
-export const CollectionField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteMultiSelectField);
+CollectionField.propTypes = {
+    props: PropTypes.object,
+};
+export default React.memo(CollectionField);

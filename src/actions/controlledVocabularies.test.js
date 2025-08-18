@@ -15,7 +15,7 @@ describe('Controlled Vocabularies actions', () => {
 
     const testId = 451780;
 
-    it('dispatches expected actions to load voabularies from API successfully', async () => {
+    it('dispatches expected actions to load vocabularies from API successfully', async () => {
         const returnedApiData = vocabulariesList[testId];
         mockApi.onGet(repositories.routes.VOCABULARIES_API({ id: testId }).apiUrl).reply(200, returnedApiData);
 
@@ -28,8 +28,8 @@ describe('Controlled Vocabularies actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('dispatches expected actions to load voabularies from API for anon user', async () => {
-        mockApi.onAny().reply(403);
+    it('dispatches expected actions to load vocabularies from API for anon user', async () => {
+        mockApi.onAny().reply(401);
 
         const expectedActions = [
             `${actions.VOCABULARIES_LOADING}@${testId}`,
@@ -41,7 +41,7 @@ describe('Controlled Vocabularies actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('dispatches expected actions to load voabularies from API with 404 error', async () => {
+    it('dispatches expected actions to load vocabularies from API with 404 error', async () => {
         mockApi.onAny().reply(404);
 
         const expectedActions = [

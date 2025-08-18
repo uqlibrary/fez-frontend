@@ -7,17 +7,17 @@ import JournalSearchFacetsFilter, {
     showFavouritedOnlyFacet,
 } from './JournalSearchFacetsFilter';
 
-import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
 
-import { pathConfig } from 'config';
-import { createMemoryHistory } from 'history';
 import * as hooks from '../hooks';
+import { useLocation } from 'react-router-dom';
 
-const setup = ({
-    filters = {},
-    onFacetsChangedHandler: clickHandler = undefined,
-    testHistory = createMemoryHistory({ initialEntries: ['/'] }),
-}) => {
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useLocation: jest.fn(() => ({ pathname: '/', search: '' })),
+}));
+
+const setup = ({ filters = {}, onFacetsChangedHandler: clickHandler = undefined }, renderMethod = render) => {
     const { activeFacets = [], facets = {} } = filters;
     const testProps = {
         key: 'journal-search-facets-filter',
@@ -27,8 +27,8 @@ const setup = ({
         disabled: false,
     };
 
-    return render(
-        <WithRouter history={testHistory}>
+    return renderMethod(
+        <WithRouter>
             <WithReduxStore>
                 <JournalSearchFacetsFilter {...testProps} />
             </WithReduxStore>
@@ -41,6 +41,10 @@ const getIdText = label => {
 };
 
 describe('Search Journals Facets component', () => {
+    afterEach(() => {
+        useLocation.mockClear();
+    });
+
     it('should render favourite facets if no facets are provided by the api', () => {
         const { getByText } = setup(emptyFacets);
 
@@ -58,9 +62,7 @@ describe('Search Journals Facets component', () => {
 
             const facet = facets.filters.facets[key];
 
-            act(() => {
-                fireEvent.click(getByTestId(categoryId));
-            });
+            fireEvent.click(getByTestId(categoryId));
 
             facet.buckets.forEach(item => {
                 const title = key.endsWith('quartile') ? `Q${item.key}` : item.key;
@@ -69,9 +71,7 @@ describe('Search Journals Facets component', () => {
                 expect(queryByText(nestedItemLabel)).toBeInTheDocument();
             });
 
-            act(() => {
-                fireEvent.click(getByTestId(categoryId));
-            });
+            fireEvent.click(getByTestId(categoryId));
         });
     });
 
@@ -107,9 +107,7 @@ describe('Search Journals Facets component', () => {
                 expect(queryByText(nestedItemLabel)).not.toBeInTheDocument();
             });
 
-            act(() => {
-                fireEvent.click(getByTestId(categoryId));
-            });
+            fireEvent.click(getByTestId(categoryId));
 
             // Finally, repeat previous check this time to determine the
             // nested items *are* now present in the component.
@@ -120,9 +118,7 @@ describe('Search Journals Facets component', () => {
 
             // click again to remove item from DOM to avoid any
             // ID collisions with the next iterations
-            act(() => {
-                fireEvent.click(getByTestId(categoryId));
-            });
+            fireEvent.click(getByTestId(categoryId));
         });
     });
 
@@ -139,16 +135,12 @@ describe('Search Journals Facets component', () => {
 
             // click (expand) each category one at a time to
             // dynamicaly populate the nested items.
-            act(() => {
-                fireEvent.click(getByTestId(categoryId));
-            });
+            fireEvent.click(getByTestId(categoryId));
 
             item.facets.forEach(facet => {
                 const nestedButtonId = `facet-filter-nested-item-${getIdText(`${item.facetTitle}-${facet.title}`)}`;
 
-                act(() => {
-                    fireEvent.click(getByTestId(nestedButtonId));
-                });
+                fireEvent.click(getByTestId(nestedButtonId));
 
                 // Check the click callback was fired, and the expected parameters were received.
                 // Parameter should be an object with one or more keys and associated array e.g.
@@ -176,17 +168,13 @@ describe('Search Journals Facets component', () => {
 
                 // fire another click event on this nested list item to remove its
                 // key and value from the array
-                act(() => {
-                    fireEvent.click(getByTestId(nestedButtonId));
-                });
+                fireEvent.click(getByTestId(nestedButtonId));
             });
 
             // click category again to remove
             // nested items from DOM before next iteration
             // to avoid ID collisions
-            act(() => {
-                fireEvent.click(getByTestId(categoryId));
-            });
+            fireEvent.click(getByTestId(categoryId));
         });
     });
 
@@ -203,9 +191,7 @@ describe('Search Journals Facets component', () => {
 
             // click (expand) each category one at a time to
             // dynamicaly populate the nested items.
-            act(() => {
-                fireEvent.click(getByTestId(categoryId));
-            });
+            fireEvent.click(getByTestId(categoryId));
 
             item.facets.forEach(facet => {
                 const idText = getIdText(`${item.facetTitle}-${facet.title}`);
@@ -215,16 +201,12 @@ describe('Search Journals Facets component', () => {
                 // should not be in the document to begin with
                 expect(queryByTestId(nestedClearButtonId)).not.toBeInTheDocument();
 
-                act(() => {
-                    fireEvent.click(getByTestId(nestedButtonId));
-                });
+                fireEvent.click(getByTestId(nestedButtonId));
 
                 const nestedButton = getByTestId(nestedClearButtonId);
                 expect(nestedButton).toBeInTheDocument();
 
-                act(() => {
-                    fireEvent.click(getByTestId(nestedButtonId));
-                });
+                fireEvent.click(getByTestId(nestedButtonId));
 
                 // and finally, should be gone again
                 expect(queryByTestId(nestedClearButtonId)).not.toBeInTheDocument();
@@ -232,9 +214,7 @@ describe('Search Journals Facets component', () => {
 
             // click category again to remove
             // nested items from DOM before next iteration
-            act(() => {
-                fireEvent.click(getByTestId(categoryId));
-            });
+            fireEvent.click(getByTestId(categoryId));
         });
     });
 
@@ -244,22 +224,16 @@ describe('Search Journals Facets component', () => {
             '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing&keywords%5BKeyword-testing%5D%5Btype%5D=Keyword&keywords%5BKeyword-testing%5D%5Btext%5D=testing&keywords%5BKeyword-testing%5D%5Bid%5D=Keyword-testing&activeFacets%5Bfilters%5D%5BListed+in%5D%5B%5D=CWTS&activeFacets%5Bfilters%5D%5BIndexed+in%5D%5B%5D=Scopus&activeFacets%5Bfilters%5D%5BEmbargo%5D%5B%5D=12+months&page=1';
         const testQueryPartNoKeywords =
             '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing';
-        const path = pathConfig.journals.search;
-        const testHistory = createMemoryHistory({ initialEntries: [path] });
-        act(() =>
-            testHistory.push({
-                path,
-                search: testQueryPart,
-                state: {
-                    source: 'code',
-                },
-            }),
-        );
+
+        useLocation.mockImplementationOnce(() => ({
+            pathname: '/',
+            search: testQueryPart,
+        }));
 
         const mockActiveFiltersRef = jest.spyOn(hooks, 'useActiveFacetFilters');
         const nestedClearButtonId = 'clear-facet-filter-nested-item';
 
-        const { getByTestId, queryByTestId } = setup({ ...facets, testFacetChangeFn, testHistory });
+        const { getByTestId, queryByTestId, rerender } = setup({ ...facets, testFacetChangeFn });
         expect(getByTestId(`${nestedClearButtonId}-listed-in-cwts`)).toBeVisible();
         expect(getByTestId(`${nestedClearButtonId}-indexed-in-scopus`)).toBeVisible();
         // not in the mock api response
@@ -271,15 +245,13 @@ describe('Search Journals Facets component', () => {
             'Listed in': ['CWTS'],
         });
 
-        act(() =>
-            testHistory.push({
-                path,
-                search: testQueryPartNoKeywords,
-                state: {
-                    source: 'code',
-                },
-            }),
-        );
+        useLocation.mockImplementationOnce(() => ({
+            pathname: '/',
+            search: testQueryPartNoKeywords,
+        }));
+
+        // simulate comp is rerendered when change in query string
+        setup({ ...facets, testFacetChangeFn }, rerender);
 
         // Probably a bug in the codebase, but right now the custom hook will be called twice at this point
         // due to rerender and we're only interested in the second call to determine active facets have been cleared
@@ -295,9 +267,7 @@ describe('Search Journals Facets component', () => {
         const scopusClearFacetItemTestId = 'clear-facet-filter-nested-item-indexed-in-scopus';
 
         // expand Listed in
-        act(() => {
-            fireEvent.click(getByTestId('clickable-facet-category-indexed-in'));
-        });
+        fireEvent.click(getByTestId('clickable-facet-category-indexed-in'));
 
         expect(getByTestId(scieFacetItemTestId)).toBeVisible();
         expect(queryByTestId(scieClearFacetItemTestId)).not.toBeInTheDocument();
@@ -305,17 +275,13 @@ describe('Search Journals Facets component', () => {
         expect(queryByTestId(scopusClearFacetItemTestId)).not.toBeInTheDocument();
 
         // clicks on scie facet
-        act(() => {
-            fireEvent.click(getByTestId(scieFacetItemTestId));
-        });
+        fireEvent.click(getByTestId(scieFacetItemTestId));
 
         expect(getByTestId(scieClearFacetItemTestId)).toBeVisible();
         expect(queryByTestId(scopusClearFacetItemTestId)).not.toBeInTheDocument();
 
         // clicks on scopus facet
-        act(() => {
-            fireEvent.click(getByTestId(scopusFacetItemTestId));
-        });
+        fireEvent.click(getByTestId(scopusFacetItemTestId));
 
         expect(getByTestId(scieClearFacetItemTestId)).toBeVisible();
         expect(getByTestId(scopusClearFacetItemTestId)).toBeVisible();
@@ -328,23 +294,17 @@ describe('Search Journals Facets component', () => {
         const clearFacetItemTestId = 'clear-facet-filter-nested-item-listed-in-cwts';
 
         // expand Listed in
-        act(() => {
-            fireEvent.click(getByTestId('clickable-facet-category-listed-in'));
-        });
+        fireEvent.click(getByTestId('clickable-facet-category-listed-in'));
 
         expect(getByTestId(facetItemTestId)).toBeVisible();
         expect(queryByTestId(clearFacetItemTestId)).not.toBeInTheDocument();
 
-        act(() => {
-            fireEvent.click(getByTestId(facetItemTestId));
-        });
+        fireEvent.click(getByTestId(facetItemTestId));
 
         expect(getByTestId(clearFacetItemTestId)).toBeVisible();
 
         // reset the active filters
-        act(() => {
-            fireEvent.click(getByTestId('reset-facet-filters'));
-        });
+        fireEvent.click(getByTestId('reset-facet-filters'));
 
         expect(queryByTestId(clearFacetItemTestId)).not.toBeInTheDocument();
     });
@@ -359,16 +319,12 @@ describe('Search Journals Facets component', () => {
         const cwtsFacetFilterTestId = 'facet-filter-nested-item-listed-in-cwts';
         const clearCwtsFacetFilterTestId = 'clear-facet-filter-nested-item-listed-in-cwts';
         // expand the facet parent
-        act(() => {
-            fireEvent.click(getByTestId('clickable-facet-category-listed-in'));
-        });
+        fireEvent.click(getByTestId('clickable-facet-category-listed-in'));
         // make sure the filter is not active
         expect(getByTestId(cwtsFacetFilterTestId)).toBeVisible();
         expect(queryByTestId(clearCwtsFacetFilterTestId)).not.toBeInTheDocument();
         // make the filter active
-        act(() => {
-            fireEvent.click(getByTestId(cwtsFacetFilterTestId));
-        });
+        fireEvent.click(getByTestId(cwtsFacetFilterTestId));
         expect(getByTestId(clearCwtsFacetFilterTestId)).toBeVisible();
         // make sure the reset facet filter button is visible
         expect(queryByTestId(resetFacetFiltersButtonId)).toBeInTheDocument();
@@ -377,31 +333,23 @@ describe('Search Journals Facets component', () => {
         const scieFacetFilterTestId = 'facet-filter-nested-item-indexed-in-scie';
         const clearScieFacetFilterTestId = 'clear-facet-filter-nested-item-indexed-in-scie';
         // expand the facet parent
-        act(() => {
-            fireEvent.click(getByTestId('clickable-facet-category-indexed-in'));
-        });
+        fireEvent.click(getByTestId('clickable-facet-category-indexed-in'));
         // make sure the filter is not active
         expect(getByTestId(scieFacetFilterTestId)).toBeVisible();
         expect(queryByTestId(clearScieFacetFilterTestId)).not.toBeInTheDocument();
         // make the filter active
-        act(() => {
-            fireEvent.click(getByTestId(scieFacetFilterTestId));
-        });
+        fireEvent.click(getByTestId(scieFacetFilterTestId));
         expect(getByTestId(clearScieFacetFilterTestId)).toBeVisible();
         // make sure the reset facet filter button is visible
         expect(queryByTestId(resetFacetFiltersButtonId)).toBeInTheDocument();
 
         // deactivate the first filter
-        act(() => {
-            fireEvent.click(getByTestId(clearCwtsFacetFilterTestId));
-        });
+        fireEvent.click(getByTestId(clearCwtsFacetFilterTestId));
         expect(queryByTestId(clearCwtsFacetFilterTestId)).not.toBeInTheDocument();
         // make sure the reset facet filter button is visible
         expect(queryByTestId(resetFacetFiltersButtonId)).toBeInTheDocument();
         // deactivate the second filter
-        act(() => {
-            fireEvent.click(getByTestId(clearScieFacetFilterTestId));
-        });
+        fireEvent.click(getByTestId(clearScieFacetFilterTestId));
         expect(queryByTestId(clearScieFacetFilterTestId)).not.toBeInTheDocument();
         // make sure the reset facet filter button is NOT visible
         expect(queryByTestId(resetFacetFiltersButtonId)).not.toBeInTheDocument();

@@ -59,6 +59,10 @@ export const viewRecordsConfig = {
             className: 'cc-by-nc-nd',
             url: 'http://creativecommons.org/licenses/by-nc-nd/4.0/deed.en',
         },
+        457088: {
+            className: 'cc-zero',
+            url: 'https://creativecommons.org/publicdomain/zero/1.0/',
+        },
         // Permitted Re-use with Acknowledgement
         453701: {
             className: 'uq',
@@ -88,7 +92,6 @@ export const viewRecordsConfig = {
     htmlFields: [
         'rek_transcript',
         'rek_notes',
-        'rek_additional_notes',
         'rek_project_description',
         'rek_acknowledgements',
         'rek_advisory_statement',
@@ -422,6 +425,7 @@ export const viewRecordsConfig = {
             ],
         },
     ],
+    feedbackButtonCollectionWhiteList: ['UQ:229001'],
 };
 
 export const STATE_ADDED = 'A';

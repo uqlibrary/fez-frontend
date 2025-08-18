@@ -1,30 +1,35 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import { AutoCompleteSelectField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
-import { connect } from 'react-redux';
+
 import { DATA_COLLECTION_CREATOR_ROLES } from 'config/general';
 
-const mapStateToProps = (state, props) => {
-    return {
-        autoCompleteSelectFieldId: !!props.autoCompleteSelectFieldId
-            ? props.autoCompleteSelectFieldId
-            : 'rek-author-role',
-        itemsList: !!props.itemsList ? props.itemsList : DATA_COLLECTION_CREATOR_ROLES,
-        allowFreeText: props.allowFreeText || false,
-        clearOnSelect: props.clearInput,
-        errorText: null,
-        error: props.error,
-        getOptionLabel: item => (!!item && String(item.text)) || '',
-        defaultValue: (!!props.value && props.value) || null,
-        openOnFocus: true,
-        // required: props.required,
-        disabled: props.disabled,
-        clearable: props.clearable || false,
-    };
+export const RoleField = props => {
+    return (
+        <AutoCompleteSelectField
+            {...props}
+            autoCompleteSelectFieldId={
+                !!props.autoCompleteSelectFieldId ? props.autoCompleteSelectFieldId : 'rek-author-role'
+            }
+            itemsList={!!props.itemsList ? props.itemsList : DATA_COLLECTION_CREATOR_ROLES}
+            allowFreeText={props.allowFreeText || false}
+            clearOnSelect={props.clearInput}
+            errorText={null}
+            error={props.error}
+            getOptionLabel={item => (!!item && String(item.text)) || ''}
+            defaultValue={(!!props.value && props.value) || null}
+            openOnFocus
+            disabled={props.disabled}
+            clearable={props.clearable || false}
+            onChange={item => props.onChange(item.value)}
+            onClear={!!props.value ? props.onClear : () => {}}
+        />
+    );
 };
 
-const mapDispatchToProps = (dispatch, props) => ({
-    loadSuggestions: () => {},
-    onChange: item => props.onChange(item.value),
-    onClear: !!props.value ? props.onClear : () => {},
-});
-
-export const RoleField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteSelectField);
+RoleField.propTypes = {
+    props: PropTypes.object,
+};
+export default React.memo(RoleField);

@@ -60,7 +60,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                    d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
                   />
                   <title>
                     Click for more information
@@ -100,17 +100,18 @@ exports[`Add new record should render stepper and a publication form 1`] = `
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     required=""
                   >
                     <div
+                      aria-controls="<dynamic>"
                       aria-expanded="false"
                       aria-haspopup="listbox"
                       aria-labelledby="rek-display-type-select"
                       class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                       data-testid="rek-display-type-select"
                       id="rek-display-type-select"
-                      role="button"
+                      role="combobox"
                       tabindex="0"
                     >
                       <span
@@ -162,7 +163,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -173,3 +174,13 @@ exports[`Add new record should render stepper and a publication form 1`] = `
   </form>
 </div>
 `;
+
+exports[`Add new record should show and navigate to fix record on button click and display file upload error 1`] = `"{"rek_object_type":3,"rek_status":2,"fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:218198","rek_ismemberof_order":1}],"rek_date":"1911-01-01 00:00:00","isNtro":false,"rek_display_type":183,"rek_title":"title","fez_record_search_key_author":[{"rek_author":"author","rek_author_order":1}],"fez_record_search_key_author_id":[{"rek_author_id":44,"rek_author_id_order":1}],"fez_record_search_key_author_affiliation_id":[],"fez_record_search_key_author_affiliation_name":[],"fez_record_search_key_author_affiliation_country":[],"fez_record_search_key_author_affiliation_full_address":[],"fez_record_search_key_author_affiliation_type":[],"fez_record_search_key_language":[{"rek_language":"eng","rek_language_order":1}]}"`;
+
+exports[`Add new record should show and navigate to fix record on button click and display file upload error 2`] = `
+File {
+  "path": "myTestImage.png",
+}
+`;
+
+exports[`Add new record should show confirmation box and navigate to the correct route on button clicks 1`] = `"{"rek_object_type":3,"rek_status":2,"fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:218198","rek_ismemberof_order":1}],"rek_date":"1911-05-01 00:00:00","isNtro":false,"rek_display_type":183,"rek_title":"title","fez_record_search_key_author":[{"rek_author":"author","rek_author_order":1}],"fez_record_search_key_author_id":[{"rek_author_id":44,"rek_author_id_order":1}],"fez_record_search_key_author_affiliation_id":[],"fez_record_search_key_author_affiliation_name":[],"fez_record_search_key_author_affiliation_country":[],"fez_record_search_key_author_affiliation_full_address":[],"fez_record_search_key_author_affiliation_type":[],"fez_record_search_key_language":[{"rek_language":"eng","rek_language_order":1}]}"`;

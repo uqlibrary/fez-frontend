@@ -7,19 +7,18 @@ function setup(testProps) {
         classes: {
             fakeTitle: {},
         },
+        partialDateFieldId: 'test',
         ...testProps,
     };
     return rtlRender(<PartialDateField {...props} />);
 }
 
-describe('Redux-form Field PartialDateField snapshots tests', () => {
+describe('Field PartialDateField snapshots tests', () => {
     it('renders PartialDateField component', () => {
         const props = {
             name: 'partialDate',
             allowPartial: true,
-            input: {
-                onChange: () => {},
-            },
+            onChange: () => {},
         };
 
         const { container } = setup(props);
@@ -31,9 +30,7 @@ describe('Redux-form Field PartialDateField snapshots tests', () => {
             name: 'partialDate',
             allowPartial: true,
             className: 'requiredField',
-            input: {
-                onChange: () => {},
-            },
+            onChange: () => {},
         };
 
         const { container } = setup(props);
@@ -45,9 +42,7 @@ describe('Redux-form Field PartialDateField snapshots tests', () => {
             name: 'partialDate',
             allowPartial: false,
             className: 'requiredField',
-            input: {
-                onChange: () => {},
-            },
+            onChange: () => {},
         };
 
         const { container } = setup(props);

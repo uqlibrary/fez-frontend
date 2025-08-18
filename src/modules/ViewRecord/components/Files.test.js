@@ -1,7 +1,7 @@
 import React from 'react';
 import { journalArticle } from 'mock/data/testing/records';
 import { default as fileDataRecord } from 'mock/data/testing/fileData';
-import { default as Files, formatBytes, getFileOpenAccessStatus, untranscodedItem, getDownloadLicence } from './Files';
+import Files, { formatBytes, getFileOpenAccessStatus, untranscodedItem } from './Files';
 import * as mock from 'mock/data';
 import {
     AV_CHECK_STATE_CLEAN,
@@ -10,13 +10,12 @@ import {
     CURRENT_LICENCES,
     SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
     SENSITIVE_HANDLING_NOTE_TYPE,
-} from '../../../config/general';
-import { createFezDatastreamInfoArray, rtlRender, withDatastreams } from '../../../../utils/test-utils';
-import { getTestId as getAvStateIconTestId } from '../../SharedComponents/Toolbox/FileAvStateIcon/FileAvStateIcon';
+} from 'config/general';
+import { getTestId as getAvStateIconTestId } from 'modules/SharedComponents/Toolbox/FileAvStateIcon/FileAvStateIcon';
 import { getTestId as getThumbTestId } from './partials/Thumbnail';
-import { sanitiseId } from '../../../helpers/general';
-import { getAvState } from '../../../helpers/datastreams';
-import { renderWithRouter, fireEvent, act } from 'test-utils';
+import { sanitiseId } from 'helpers/general';
+import { getAvState } from 'helpers/datastreams';
+import { createFezDatastreamInfoArray, withDatastreams, rtlRender, WithRouter, fireEvent, act } from 'test-utils';
 
 jest.mock('./MediaPreview');
 
@@ -30,7 +29,11 @@ function setup(testProps) {
         author: testProps.author || mock.currentAuthor.uqresearcher.data,
         ...testProps,
     };
-    return renderWithRouter(<Files {...props} />);
+    return rtlRender(
+        <WithRouter>
+            <Files {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('Files Component ', () => {
@@ -232,6 +235,8 @@ describe('Files Component ', () => {
         const { container } = setup({
             publication: {
                 rek_pid: 'UQ:1',
+                // note: this might not represent real data, as attachments with same (extensionless) filenames are not
+                // allowed
                 fez_datastream_info: [
                     {
                         dsi_pid: 'UQ:1',
@@ -419,7 +424,7 @@ describe('Files Component ', () => {
         const code = 1234;
         const message = 'video failed';
         act(() => {
-            mockOnVideoFailed({ code, message });
+            mockOnVideoFailed({ target: { error: { code, message } }} );
         });
         expect(videoErrorCodeState).toEqual(code);
         expect(videoErrorMsgState).toEqual(message);
@@ -825,15 +830,6 @@ describe('Files Component ', () => {
             author: mock.currentAuthor.uqstaff.data,
         });
         expect(container).toMatchSnapshot();
-    });
-
-    it('getDownloadLicence()', () => {
-        const publicationWithRestrictiveLicense = {
-            ...fileDataRecord,
-            fez_record_search_key_license: { rek_license: CURRENT_LICENCES[0].value },
-        };
-        expect(getDownloadLicence(fileDataRecord)).toBe(undefined);
-        expect(getDownloadLicence(publicationWithRestrictiveLicense)).toEqual(CURRENT_LICENCES[0]);
     });
 
     it('Should render the correct icon for a valid transcoded file', () => {

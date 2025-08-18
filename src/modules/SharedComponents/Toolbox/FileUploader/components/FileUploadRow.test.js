@@ -3,6 +3,9 @@ import { FileUploadRow } from './FileUploadRow';
 import { render, WithReduxStore, fireEvent, within } from 'test-utils';
 import moment from 'moment';
 
+import * as Hook from 'hooks/useWidth';
+
+const useWidth = jest.spyOn(Hook, 'useWidth');
 function setup(testProps = {}) {
     const props = {
         index: 0,
@@ -23,8 +26,12 @@ function setup(testProps = {}) {
 }
 
 describe('FileUploadRow', () => {
+    beforeEach(() => {
+        useWidth.mockImplementation(() => 'md');
+    });
     it('renders with uploaded file', () => {
         const { container } = setup();
+
         expect(container).toMatchSnapshot();
     });
 
@@ -32,14 +39,14 @@ describe('FileUploadRow', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const { getByRole } = setup({
+        const { getByRole, getByLabelText } = setup({
             requireOpenAccessStatus: true,
             onAccessConditionChange: testFunction,
             uploadedFile: file,
             index: 0,
         });
 
-        fireEvent.mouseDown(getByRole('button', { name: 'Select access conditions' }));
+        fireEvent.mouseDown(getByLabelText('Select access conditions'));
         fireEvent.click(getByRole('option', { name: 'Closed Access' }));
         expect(testFunction).toHaveBeenCalledWith(file, 0, 1);
     });
@@ -62,14 +69,14 @@ describe('FileUploadRow', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const { getByRole } = setup({
+        const { getByRole, getByLabelText } = setup({
             requireOpenAccessStatus: true,
             onAccessConditionChange: testFunction,
             uploadedFile: file,
             index: 0,
         });
 
-        fireEvent.mouseDown(getByRole('button', { name: 'Select access conditions' }));
+        fireEvent.mouseDown(getByLabelText('Select access conditions'));
         fireEvent.click(getByRole('option', { name: 'Open Access' }));
         expect(testFunction).toHaveBeenCalledWith(file, 0, 5);
     });
@@ -78,7 +85,7 @@ describe('FileUploadRow', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const { getByRole } = setup({
+        const { getByRole, getByLabelText } = setup({
             requireOpenAccessStatus: true,
             isAdmin: true,
             onSecurityPolicyChange: testFunction,
@@ -86,7 +93,7 @@ describe('FileUploadRow', () => {
             index: 0,
         });
 
-        fireEvent.mouseDown(getByRole('button', { name: 'Select security policy' }));
+        fireEvent.mouseDown(getByLabelText('Select security policy'));
         fireEvent.click(getByRole('option', { name: 'Administrators' }));
         expect(testFunction).toHaveBeenCalledWith(file, 0, 1);
     });
@@ -95,7 +102,7 @@ describe('FileUploadRow', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const { getByRole } = setup({
+        const { getByRole, getByLabelText } = setup({
             requireOpenAccessStatus: true,
             isAdmin: true,
             onSecurityPolicyChange: testFunction,
@@ -103,7 +110,7 @@ describe('FileUploadRow', () => {
             index: 0,
         });
 
-        fireEvent.mouseDown(getByRole('button', { name: 'Select security policy' }));
+        fireEvent.mouseDown(getByLabelText('Select security policy'));
         fireEvent.click(getByRole('option', { name: 'Public' }));
         expect(testFunction).toHaveBeenCalledWith(file, 0, 5);
     });
@@ -122,7 +129,10 @@ describe('FileUploadRow', () => {
             target: { value: '01/01/2016' },
         });
 
-        expect(testFunction).toHaveBeenCalledWith(file, 0, moment('01/01/2016', 'DD/MM/YYYY', true));
+        expect(testFunction).toHaveBeenCalledWith(file, 0, expect.any(moment));
+        // Additional verification for actual date value sent in the mock call
+        const calledArg = testFunction.mock.calls[0][2];
+        expect(calledArg.format('DD/MM/YYYY')).toBe('01/01/2016');
     });
 
     it('call prop to move file down', () => {
@@ -150,9 +160,9 @@ describe('FileUploadRow', () => {
     });
 
     it('should show confirmation and delete file', () => {
+        useWidth.mockImplementation(() => 'xs');
         const onDeleteFn = jest.fn();
         const { container, getByTestId } = setup({
-            width: 'xs',
             onDelete: onDeleteFn,
         });
         expect(container).toMatchSnapshot();

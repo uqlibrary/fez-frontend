@@ -16,12 +16,12 @@ import SimpleSearchComponent from './SimpleSearchComponent';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
 import hash from 'hash-sum';
+import { withNavigate } from 'helpers/withNavigate';
 
-export default class SearchComponent extends PureComponent {
+export class SearchComponent extends PureComponent {
     static propTypes = {
         searchQueryParams: PropTypes.object,
         activeFacets: PropTypes.any,
-        updateFacetExcludesFromSearchFields: PropTypes.func,
         searchLoading: PropTypes.bool,
 
         isMobile: PropTypes.bool,
@@ -39,7 +39,7 @@ export default class SearchComponent extends PureComponent {
         isAdmin: PropTypes.bool,
         isUnpublishedBufferPage: PropTypes.bool,
 
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
         location: PropTypes.object,
     };
 
@@ -55,7 +55,6 @@ export default class SearchComponent extends PureComponent {
         isAdvancedSearch: false,
         isAdvancedSearchMinimised: false,
         isOpenAccessInAdvancedMode: false,
-        updateFacetExcludesFromSearchFields: () => {},
     };
 
     constructor(props) {
@@ -97,9 +96,10 @@ export default class SearchComponent extends PureComponent {
         const isAdvancedSearchMinimisedChanged =
             props.isMobile && props.isAdvancedSearchMinimised !== state.prevProps?.isAdvancedSearchMinimised;
         const searchQueryChanged =
-            props.searchQueryParams &&
-            state.prevProps?.searchQueryParams &&
-            hash(props.searchQueryParams) !== hash(state.prevProps?.searchQueryParams);
+            !state.prevProps?.searchQueryParams ||
+            (props.searchQueryParams &&
+                state.prevProps?.searchQueryParams &&
+                hash(props.searchQueryParams) !== hash(state.prevProps?.searchQueryParams));
 
         if (
             !isOpenAccessInAdvancedModeChanged &&
@@ -143,7 +143,6 @@ export default class SearchComponent extends PureComponent {
                 },
             };
         }
-        !!props.isAdvancedSearch && props.updateFacetExcludesFromSearchFields(state.advancedSearch.fieldRows);
 
         return { ...newState, prevProps: { ...props } };
     }
@@ -266,7 +265,7 @@ export default class SearchComponent extends PureComponent {
             return;
         }
 
-        this.props.history.push({
+        this.props.navigate({
             pathname: this.props.isUnpublishedBufferPage ? pathConfig.admin.unpublished : pathConfig.records.search,
             search: param(searchQuery),
         });
@@ -279,15 +278,6 @@ export default class SearchComponent extends PureComponent {
                 ...this.state.advancedSearch,
                 isMinimised: false,
             },
-        });
-    };
-
-    // search button is disabled when search string over the max length allowed
-    /* istanbul ignore next */
-    _displaySnackbar = message => {
-        this.setState({
-            snackbarMessage: message,
-            snackbarOpen: true,
         });
     };
 
@@ -529,7 +519,6 @@ export default class SearchComponent extends PureComponent {
                         onToggleSearchMode={this._toggleSearchMode}
                         onSearchTextChange={this._handleSimpleSearchTextChange}
                         onSearch={this._handleSimpleSearch}
-                        onInvalidSearch={this._displaySnackbar}
                     />
                 )}
                 {this.state.isAdvancedSearch && !this.props.isInHeader && (
@@ -563,3 +552,5 @@ export default class SearchComponent extends PureComponent {
         );
     }
 }
+
+export default withNavigate()(SearchComponent);

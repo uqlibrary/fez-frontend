@@ -143,25 +143,27 @@ export const renderIcon = type => {
 export const Alert = ({
     action,
     actionButtonLabel,
-    allowDismiss,
-    customIcon,
-    customType,
-    disableAlertClick,
+    allowDismiss = false,
+    customIcon = null,
+    customType = null,
+    disableAlertClick = false,
     dismissAction,
-    dismissTitle,
-    message,
-    showLoader,
+    dismissTitle = 'Click to dismiss this alert',
+    message = 'Unexpected error',
+    showLoader = false,
     alertId,
     title,
-    type,
-    wiggle,
+    type = 'error',
+    wiggle = null,
 }) => {
-    const renderedIcon = type !== 'custom' ? renderIcon(type) : customIcon;
+    /* istanbul ignore next */
+    const convertedType = type === 'success' ? 'done' : type;
+    const renderedIcon = convertedType !== 'custom' ? renderIcon(convertedType) : customIcon;
     return (
         <div data-testid="alert" style={{ marginTop: '5px' }}>
             <StyledGridWithIcon
                 container
-                type={!!customIcon ? customType : type}
+                type={!!customIcon ? customType : convertedType}
                 justifyContent="center"
                 alignItems="flex-start"
                 alignContent="center"
@@ -213,7 +215,7 @@ export const Alert = ({
                             onKeyDown={(!disableAlertClick && action) || undefined}
                         >
                             <b>{title && `${title} - `}</b>
-                            {message}
+                            <span data-testid="alert-message">{message}</span>
                         </StyledGridTitle>
                         {allowDismiss && dismissAction && (
                             <StyledGridDismissButton item sx={{ display: { xs: 'block', sm: 'none' } }}>
@@ -299,22 +301,11 @@ Alert.propTypes = {
         'info_outline',
         'help',
         'help_outline',
+        'success',
         'done',
         'custom',
     ]),
     wiggle: PropTypes.bool,
-};
-
-Alert.defaultProps = {
-    allowDismiss: false,
-    customIcon: null,
-    customType: null,
-    disableAlertClick: false,
-    dismissTitle: 'Click to dismiss this alert',
-    message: 'Unexpected error',
-    showLoader: false,
-    type: 'error',
-    wiggle: null,
 };
 
 export default Alert;

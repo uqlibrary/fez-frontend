@@ -1,7 +1,14 @@
 import React from 'react';
 import RichEditor from './RichEditor';
-import Immutable from 'immutable';
 import { rtlRender } from 'test-utils';
+
+class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+}
+
+window.ResizeObserver = ResizeObserver;
 
 function setup(testProps = {}, renderMethod = rtlRender) {
     const props = {
@@ -43,7 +50,7 @@ describe('RichEditor', () => {
         const { container } = setup({
             title: 'This is title with error',
             description: 'This is description with error',
-            meta: {
+            state: {
                 error: 'This field is required',
             },
             required: true,
@@ -53,10 +60,10 @@ describe('RichEditor', () => {
 
     it('should render error showing maxValue and instructions', () => {
         const { container } = setup({
-            value: Immutable.Map({ htmlText: 'This is test value' }),
+            value: { htmlText: 'This is test value' },
             maxValue: 10,
             instructions: 'test instructions',
-            meta: {
+            state: {
                 error: 'This field is required',
             },
             required: true,
@@ -77,7 +84,7 @@ describe('RichEditor', () => {
             value: { plainText: 'This is test value', get: jest.fn() },
             maxValue: 10,
             instructions: 'test instructions',
-            meta: {
+            state: {
                 error: 'This field is required',
             },
         });
@@ -89,7 +96,7 @@ describe('RichEditor', () => {
             value: { plainText: 'This is test value', get: jest.fn() },
             maxValue: 10,
             instructions: 'test instructions',
-            meta: {
+            state: {
                 error: (
                     <p>
                         <span>This field is required</span>
@@ -105,7 +112,7 @@ describe('RichEditor', () => {
             value: { plainText: 'This is test value', get: jest.fn() },
             maxValue: 10,
             instructions: 'test instructions',
-            meta: {
+            state: {
                 error: <span>This field is required</span>,
             },
         });
@@ -114,6 +121,45 @@ describe('RichEditor', () => {
 
     it('should render plain text value', () => {
         const { container } = setup({ value: 'test' });
+        expect(container).toMatchSnapshot();
+    });
+    it('should render input text value', () => {
+        const { container } = setup({ value: 'test' });
+        expect(container).toMatchSnapshot();
+    });
+    it('should render redux value using htmlText', () => {
+        const { container } = setup({ value: { htmlText: 'test' } });
+        expect(container).toMatchSnapshot();
+    });
+    it('should render redux value using plainText', () => {
+        const { container } = setup({ value: { plainText: 'test' } });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should handle null value', () => {
+        const { container } = setup({ value: null });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render error from react-hook-form', () => {
+        const { container } = setup({
+            title: 'This is title with error',
+            description: 'This is description with error',
+            required: true,
+            error: true,
+            errorText: 'This field is required',
+        });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render alternative error from react-hook-form', () => {
+        const { container } = setup({
+            title: 'This is title with error',
+            description: 'This is description with error',
+            required: true,
+            error: true,
+            errorText: { message: 'This field is required' },
+        });
         expect(container).toMatchSnapshot();
     });
 });

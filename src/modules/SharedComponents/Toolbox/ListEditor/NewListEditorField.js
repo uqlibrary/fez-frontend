@@ -2,56 +2,40 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NewListEditor from './components/NewListEditor';
 
-const getValue = (input, normalize, searchKey) =>
-    normalize(
-        (!!input && !!input.value && !!input.value.toJS && input.value.toJS()) ||
-            (!!input && !!input.value && input.value) ||
-            [],
-        searchKey,
-    );
-
-export const useItemsList = (input, normalize, searchKey) => {
-    const [value, setValue] = React.useState(getValue(input, normalize, searchKey));
-
-    return [value, setValue];
-};
-
 export const NewListEditorField = props => {
-    const { normalize, searchKey } = props;
-    const [value, setValue] = useItemsList(props.input, normalize, searchKey);
+    const {
+        normalize = (value, searchKey) => value.map(item => item[searchKey.value]),
+        searchKey = {
+            value: 'rek_value',
+            order: 'rek_order',
+        },
+    } = props;
 
-    React.useEffect(() => {
-        setValue(getValue(props.input, normalize, searchKey));
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [props.input]);
+    const value = React.useMemo(() => props.value || [], [props]);
+    const propNormalize = React.useCallback(() => normalize(value, searchKey), [normalize, searchKey, value]);
+    const propValueNormalised = propNormalize();
 
     return (
         <NewListEditor
-            key={value.length}
-            errorText={props.meta ? props.meta.error : null}
-            error={props.meta && !!props.meta.error}
-            onChange={props.input.onChange}
+            key={propValueNormalised.length}
+            error={!!props.state?.error}
+            errorText={props.state?.error}
             remindToAdd={props.remindToAdd}
-            list={value}
+            list={propValueNormalised}
+            searchKey={searchKey}
+            normalize={normalize}
             {...props}
         />
     );
 };
 
-NewListEditorField.defaultProps = {
-    searchKey: {
-        value: 'rek_value',
-        order: 'rek_order',
-    },
-    normalize: (value, searchKey) => value.map(item => item[searchKey.value]),
-};
-
 NewListEditorField.propTypes = {
     searchKey: PropTypes.object,
     normalize: PropTypes.func,
+    onChange: PropTypes.func,
     remindToAdd: PropTypes.bool,
-    input: PropTypes.object,
-    meta: PropTypes.object,
+    value: PropTypes.array,
+    state: PropTypes.object,
 };
 
 export default React.memo(NewListEditorField);

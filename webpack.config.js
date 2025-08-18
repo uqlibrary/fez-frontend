@@ -8,7 +8,9 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const port = 3000;
 const url = process.env.URL || 'localhost';
@@ -25,8 +27,6 @@ module.exports = {
     context: resolve(__dirname),
     devtool: 'source-map',
     entry: {
-        webpackDevClient: `webpack-dev-server/client?http://${url}:${port}`,
-        webPackDevServer: 'webpack/hot/only-dev-server',
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         index: join(__dirname, 'src', 'index.js'),
     },
@@ -58,27 +58,21 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
-                exclude: [/node_modules/, /custom_modules/],
-                enforce: 'pre',
-                use: 'eslint-loader',
-            },
-            {
-                test: /\.js?$/,
+                test: /\.(j|t)sx?$/,
                 include: [resolve(__dirname, 'src')],
                 exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
                 use: {
                     loader: 'babel-loader',
                     options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
                         plugins: [
-                            '@babel/plugin-proposal-export-namespace-from',
                             '@babel/plugin-proposal-export-default-from',
-                            '@babel/plugin-proposal-class-properties',
-                            '@babel/plugin-syntax-dynamic-import',
                             ['@babel/plugin-transform-spread', { loose: true }],
                             enableFastRefresh && 'react-refresh/babel',
-                            'istanbul',
+                            'babel-plugin-istanbul',
                         ].filter(Boolean),
+                        sourceMaps: true,
+                        inputSourceMap: true,
                     },
                 },
             },
@@ -112,6 +106,17 @@ module.exports = {
         ],
     },
     plugins: [
+        // this plugin is required for highlighting TS errors, please do not remove it
+        new ForkTsCheckerWebpackPlugin({
+            typescript: {
+                configFile: 'tsconfig.webpack.json',
+            },
+            async: true,
+            devServer: true, // required for webpack-dev-server to display TS errors
+        }),
+        new webpack.ProvidePlugin({
+            process: 'process/browser.js',
+        }),
         new HtmlWebpackPlugin({
             favicon: join(__dirname, 'public', 'favicon.ico'),
             filename: 'index.html',
@@ -160,12 +165,14 @@ module.exports = {
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
         }),
+        process.env.NODE_ENV === 'cc' &&
+            new ESLintPlugin({ exclude: ['node_modules', 'custom_modules', 'mock', 'mocks'] }),
         new Dotenv(),
     ].filter(Boolean),
     resolve: {
         descriptionFiles: ['package.json'],
         enforceExtension: false,
-        extensions: ['.jsx', '.js', '.json'],
+        extensions: ['.jsx', '.js', '.ts', '.tsx', '.json'],
         modules: ['src', 'node_modules', 'custom_modules'],
         fallback: {
             assert: require.resolve('assert'),
@@ -195,7 +202,6 @@ module.exports = {
     },
     optimization: {
         emitOnErrors: false,
-        // moduleIds: 'named',
         runtimeChunk: 'single',
         splitChunks: {
             chunks: 'all',

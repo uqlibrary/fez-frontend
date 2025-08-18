@@ -1,69 +1,56 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
-export default class DepartmentTechnicalReportCitation extends Component {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        hideDoiLink: PropTypes.bool,
-        citationStyle: PropTypes.string,
+export const DepartmentTechnicalReportCitation = ({ publication, hideDoiLink, citationStyle }) => {
+    const record = {
+        id: publication.rek_pid,
+        title: publication.rek_title,
+        series: publication.fez_record_search_key_series ? publication.fez_record_search_key_series.rek_series : null,
+        reportNumber: publication.fez_record_search_key_report_number
+            ? publication.fez_record_search_key_report_number.rek_report_number
+            : null,
+        orgUnitName: publication.fez_record_search_key_org_unit_name
+            ? publication.fez_record_search_key_org_unit_name.rek_org_unit_name
+            : null,
+        orgName: publication.fez_record_search_key_org_name
+            ? publication.fez_record_search_key_org_name.rek_org_name
+            : null,
+        doi: publication.fez_record_search_key_doi ? publication.fez_record_search_key_doi.rek_doi : null,
     };
 
-    constructor(props) {
-        super(props);
-    }
+    // eSpace citation view for Department Technical Report
+    return (
+        <div className="citationContent citationDepartmentTechnicalReport">
+            {/* {Author}*/}
+            <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
-    render() {
-        const record = {
-            id: this.props.publication.rek_pid,
-            title: this.props.publication.rek_title,
-            series: this.props.publication.fez_record_search_key_series
-                ? this.props.publication.fez_record_search_key_series.rek_series
-                : null,
-            reportNumber: this.props.publication.fez_record_search_key_report_number
-                ? this.props.publication.fez_record_search_key_report_number.rek_report_number
-                : null,
-            orgUnitName: this.props.publication.fez_record_search_key_org_unit_name
-                ? this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name
-                : null,
-            orgName: this.props.publication.fez_record_search_key_org_name
-                ? this.props.publication.fez_record_search_key_org_name.rek_org_name
-                : null,
-            doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi
-                : null,
-        };
+            {/* {Year| (|).}*/}
+            <Partials.DateCitationView date={publication.rek_date} />
 
-        // eSpace citation view for Department Technical Report
-        return (
-            <div className="citationContent citationDepartmentTechnicalReport">
-                {/* {Author}*/}
-                <Partials.AuthorsCitationView
-                    citationStyle={this.props.citationStyle}
-                    publication={this.props.publication}
-                />
+            {/* <i>{Title| |.}</i> */}
+            <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
-                {/* {Year| (|).}*/}
-                <Partials.DateCitationView date={this.props.publication.rek_date} />
+            {/* {Series Title| |,} */}
+            <Partials.CitationView className="citationSeries" value={record.series} suffix=", " />
 
-                {/* <i>{Title| |.}</i> */}
-                <Partials.CitationTitleView className="citationTitle" value={record.title} />
+            {/* {Report Number| |.} */}
+            <Partials.CitationView className="citationReportNumber" value={record.reportNumber} />
 
-                {/* {Series Title| |,} */}
-                <Partials.CitationView className="citationSeries" value={record.series} suffix=", " />
+            {/* {School, Centre or Institute| |,} */}
+            <Partials.CitationView className="citationOrgUnit" value={record.orgUnitName} suffix=", " />
 
-                {/* {Report Number| |.} */}
-                <Partials.CitationView className="citationReportNumber" value={record.reportNumber} />
+            {/* {Institution| |.} */}
+            <Partials.CitationView className="citationOrgName" value={record.orgName} />
 
-                {/* {School, Department or Centre| |,} */}
-                <Partials.CitationView className="citationOrgUnit" value={record.orgUnitName} suffix=", " />
-
-                {/* {Institution| |.} */}
-                <Partials.CitationView className="citationOrgName" value={record.orgName} />
-
-                {/* {doi| doi:|}*/}
-                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink} />
-            </div>
-        );
-    }
-}
+            {/* {doi| doi:|}*/}
+            <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
+        </div>
+    );
+};
+DepartmentTechnicalReportCitation.propTypes = {
+    publication: PropTypes.object.isRequired,
+    hideDoiLink: PropTypes.bool,
+    citationStyle: PropTypes.string,
+};
+export default React.memo(DepartmentTechnicalReportCitation);

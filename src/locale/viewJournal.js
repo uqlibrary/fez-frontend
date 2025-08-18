@@ -1,4 +1,7 @@
 import { APP_URL } from 'config/general';
+import React from 'react';
+
+const caulLink = 'https://caul.libguides.com/read-and-publish/home';
 
 export default {
     viewJournal: {
@@ -16,16 +19,48 @@ export default {
         readAndPublish: {
             heading: 'Read and publish agreement',
             ariaLabel: 'Click to view read and publish agreement',
-            prefixText: 'Yes, via <publisher> ',
+            prefixText: 'Yes<discount>, via <publisher> ',
             postfixText: '',
             linkText: 'Read and Publish Agreement',
-            externalUrl: 'https://web.library.uq.edu.au/read-and-publish-agreements',
+            externalUrl: 'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
             caulLink: {
                 heading: 'Limited amount available',
                 ariaLabel: 'Click to view CAUL information on number of remaining pre-paid APCs',
                 linkText: 'Check current status',
-                externalUrl: 'https://caul.libguides.com/read-and-publish/home',
+                externalUrl: caulLink,
             },
+            alert: {
+                title: 'Read and Publish Agreement',
+                approaching: (
+                    <p>
+                        The available cap for this title is projected to run out shortly. Please{' '}
+                        <a href={caulLink} target="_blank">
+                            check the current status
+                        </a>
+                        .
+                    </p>
+                ),
+                exceeded: (
+                    <p>
+                        The available cap for this title has been exceeded. For the remainder of the year open access
+                        publishing in this title will no longer be fully covered through the agreement.
+                    </p>
+                ),
+            },
+        },
+        notFound: {
+            title: 'Journal not found',
+            message: (
+                <div>
+                    <p>The journal you are attempting to access does not appear in our system.</p>
+                    <p>
+                        If you believe this is in error, please{' '}
+                        <a href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us">
+                            contact the eSpace team.
+                        </a>
+                    </p>
+                </div>
+            ),
         },
     },
 };

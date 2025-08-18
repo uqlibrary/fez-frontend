@@ -1,86 +1,88 @@
-import React, { PureComponent } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
+
+import Cookies from 'js-cookie';
+
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import locale from 'locale/pages';
-import { pathConfig } from 'config';
+import { pathConfig, SESSION_COOKIE_NAME } from 'config';
+import { PRE_MASQUERADE_SESSION_COOKIE_NAME } from 'config/general';
 
-export default class Masquerade extends PureComponent {
-    static propTypes = {
-        account: PropTypes.object.isRequired,
-    };
+const Masquerade = ({ account }) => {
+    const [userName, setUserName] = useState('');
+    const [loading, setLoading] = useState(false);
+    const txt = locale.pages.masquerade;
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            userName: '',
-            loading: false,
-        };
-    }
+    const masqueradeAs = event => {
+        if ((event && event.key && event.key !== 'Enter') || userName.length === 0) return;
 
-    _masqueradeAs = event => {
-        if ((event && event.key && event.key !== 'Enter') || this.state.userName.length === 0) return;
+        setLoading(true);
 
-        this.setState({
-            loading: true,
-        });
+        // store the old cookie so we can end the masquerade (done in reusable)
+        const expirationDate = new Date();
+        expirationDate.setTime(expirationDate.getTime() + 24 * 60 * 60 * 1000);
+        // cookie lasts one day - arbitrary decision.
+        // If the masquerade is left in place after that, it will just log them out.
+        const sessionCookieValue = Cookies.get(SESSION_COOKIE_NAME);
+        Cookies.set(PRE_MASQUERADE_SESSION_COOKIE_NAME, sessionCookieValue, { expires: expirationDate });
 
         const redirectUrl = `${window.location.protocol}//${window.location.hostname}${pathConfig.dashboard}`;
         window.location.assign(
-            `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(redirectUrl)}`,
+            `https://auth.library.uq.edu.au/masquerade?user=${userName}&return=${window.btoa(redirectUrl)}`,
         );
     };
 
-    _usernameChanged = event => {
-        this.setState({
-            userName: event.target.value,
-        });
+    const usernameChanged = event => {
+        setUserName(event.target.value);
     };
 
-    render() {
-        const txt = locale.pages.masquerade;
-
-        return (
-            <StandardPage>
-                <StandardCard title={txt.title} help={txt.help}>
-                    {this.props.account.canMasqueradeType && this.props.account.canMasqueradeType === 'readonly' ? (
-                        <Typography>{txt.description.readonly}</Typography>
-                    ) : (
-                        <Typography>{txt.description.full}</Typography>
-                    )}
-                    <Grid container spacing={3} alignItems={'flex-end'} style={{ marginTop: 12 }}>
-                        <Grid item xs>
-                            <TextField
-                                variant="standard"
-                                fullWidth
-                                id="userName"
-                                label={txt.labels.hint}
-                                value={this.state.userName}
-                                onChange={this._usernameChanged}
-                                onKeyPress={this._masqueradeAs}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={'auto'}>
-                            <Button
-                                variant="contained"
-                                id="submitMasquerade"
-                                data-analyticsid="submitMasquerade"
-                                data-testid="submit-masquerade"
-                                fullWidth
-                                color="primary"
-                                children={txt.labels.submit}
-                                disabled={this.state.loading}
-                                onClick={this._masqueradeAs}
-                                onKeyPress={this._masqueradeAs}
-                            />
-                        </Grid>
+    return (
+        <StandardPage>
+            <StandardCard title={txt.title} help={txt.help}>
+                {account.canMasqueradeType && account.canMasqueradeType === 'readonly' ? (
+                    <Typography>{txt.description.readonly}</Typography>
+                ) : (
+                    <Typography>{txt.description.full}</Typography>
+                )}
+                <Grid container spacing={3} alignItems={'flex-end'} style={{ marginTop: 12 }}>
+                    <Grid item xs>
+                        <TextField
+                            variant="standard"
+                            fullWidth
+                            id="userName"
+                            label={txt.labels.hint}
+                            value={userName}
+                            onChange={usernameChanged}
+                            InputProps={{ onKeyPress: masqueradeAs }}
+                        />
                     </Grid>
-                </StandardCard>
-            </StandardPage>
-        );
-    }
-}
+                    <Grid item xs={12} sm={'auto'}>
+                        <Button
+                            variant="contained"
+                            id="submitMasquerade"
+                            data-analyticsid="submitMasquerade"
+                            data-testid="submit-masquerade"
+                            fullWidth
+                            color="primary"
+                            children={txt.labels.submit}
+                            disabled={loading}
+                            onClick={masqueradeAs}
+                            onKeyUp={masqueradeAs}
+                        />
+                    </Grid>
+                </Grid>
+            </StandardCard>
+        </StandardPage>
+    );
+};
+
+Masquerade.propTypes = {
+    account: PropTypes.object.isRequired,
+};
+
+export default React.memo(Masquerade);

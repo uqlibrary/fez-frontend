@@ -1,6 +1,13 @@
 import React from 'react';
-import { rtlRender, fireEvent } from 'test-utils';
+import { rtlRender, fireEvent, WithReduxStore } from 'test-utils';
 import { ThirdPartyLookupTool } from './ThirdPartyLookupTool';
+import * as actions from 'actions';
+
+jest.mock('actions', () => ({
+    ...jest.requireActual('actions'),
+    loadThirdPartyResults: jest.fn(() => jest.fn()),
+}));
+
 jest.mock('locale', () => ({
     locale: {
         components: {
@@ -45,23 +52,35 @@ jest.mock('locale', () => ({
     },
 }));
 
-function setup(testProps) {
+function setup(testProps = {}, testState = {}) {
     const props = {
         ...testProps,
-        actions: testProps.actions || {},
     };
-    return rtlRender(<ThirdPartyLookupTool {...props} />);
+    const state = {
+        thirdPartyLookupToolReducer: {
+            ...testState,
+        },
+    };
+
+    return rtlRender(
+        <WithReduxStore initialState={state}>
+            <ThirdPartyLookupTool {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('Component ThirdPartyLookupTool', () => {
+    afterEach(() => {
+        jest.clearAllMocks();
+    });
+
     it('should render a form ready for input', () => {
-        const { container } = setup({});
+        const { container } = setup({}, { lookupResults: [] });
         expect(container).toMatchSnapshot();
     });
 
     it('should set state with submitted data', () => {
-        const loadResultMock = jest.fn();
-        const { container, getByRole } = setup({ actions: { loadThirdPartyResults: loadResultMock } });
+        const { container, getByRole } = setup({}, { lookupResults: [] });
 
         expect(getByRole('textbox', { name: 'primaryValue' }).value).toEqual('');
         expect(getByRole('textbox', { name: 'secondaryValue' }).value).toEqual('');
@@ -77,16 +96,16 @@ describe('Component ThirdPartyLookupTool', () => {
         expect(getByRole('textbox', { name: 'primaryValue' }).value).toEqual('a value');
         expect(getByRole('textbox', { name: 'secondaryValue' }).value).toEqual('another value');
 
-        expect(loadResultMock).toBeCalled();
+        expect(actions.loadThirdPartyResults).toHaveBeenCalled();
     });
 
     it('renders loading screen while loading data', () => {
-        const { container } = setup({ loadingResults: true });
+        const { container } = setup({}, { loadingResults: true });
         expect(container).toMatchSnapshot();
     });
 
     it('renders a results screen', () => {
-        const { container } = setup({ lookupResults: ['blah blah blah'] });
+        const { container } = setup({}, { lookupResults: ['blah blah blah'] });
         expect(container).toMatchSnapshot();
     });
 });

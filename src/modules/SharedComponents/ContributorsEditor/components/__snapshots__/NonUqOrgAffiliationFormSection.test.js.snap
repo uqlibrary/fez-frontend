@@ -28,7 +28,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
@@ -64,16 +64,17 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         >
           <div
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="org-affiliation-type-label org-affiliation-type"
             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             data-testid="org-affiliation-type"
             id="org-affiliation-type"
-            role="button"
+            role="combobox"
             tabindex="0"
           >
             Foundation
@@ -133,7 +134,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
@@ -169,16 +170,17 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         >
           <div
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="org-affiliation-type-label org-affiliation-type"
             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             data-testid="org-affiliation-type"
             id="org-affiliation-type"
-            role="button"
+            role="combobox"
             tabindex="0"
           >
             <span
@@ -242,7 +244,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
@@ -278,16 +280,17 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         >
           <div
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="org-affiliation-type-label org-affiliation-type"
             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             data-testid="org-affiliation-type"
             id="org-affiliation-type"
-            role="button"
+            role="combobox"
             tabindex="0"
           >
             Foundation
@@ -347,7 +350,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
@@ -383,16 +386,17 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         >
           <div
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="org-affiliation-type-label org-affiliation-type"
             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             data-testid="org-affiliation-type"
             id="org-affiliation-type"
-            role="button"
+            role="combobox"
             tabindex="0"
           >
             <span
@@ -456,7 +460,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render full width input fi
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
@@ -492,16 +496,17 @@ exports[`NonUqOrgAffiliationFormSection tests  should render full width input fi
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         >
           <div
+            aria-controls="<dynamic>"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="org-affiliation-type-label org-affiliation-type"
             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             data-testid="org-affiliation-type"
             id="org-affiliation-type"
-            role="button"
+            role="combobox"
             tabindex="0"
           >
             Foundation

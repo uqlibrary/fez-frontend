@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
-import { withWidth } from 'helpers/withWidth';
+import { useWidth } from 'hooks';
 
 const StyledStepper = styled(Stepper)(({ theme }) => ({
     padding: theme.spacing(3),
@@ -16,38 +16,26 @@ const StyledStepper = styled(Stepper)(({ theme }) => ({
     },
 }));
 
-export class CustomStepper extends Component {
-    static propTypes = {
-        activeStep: PropTypes.number,
-        steps: PropTypes.array.isRequired,
-        width: PropTypes.any,
-    };
+export const CustomStepper = ({ activeStep, steps }) => {
+    const width = useWidth();
+    return (
+        <StyledStepper activeStep={activeStep}>
+            {steps.map((step, index) => {
+                const label = width !== 'xs' && step.label;
+                return (
+                    <Step key={`stepper_${index}`}>
+                        <StepLabel sx={{ textOverflow: 'ellipsis', overflow: 'hidden' }}>
+                            <span>{label}</span>
+                        </StepLabel>
+                    </Step>
+                );
+            })}
+        </StyledStepper>
+    );
+};
+CustomStepper.propTypes = {
+    activeStep: PropTypes.number,
+    steps: PropTypes.array.isRequired,
+};
 
-    shouldComponentUpdate(nextProps) {
-        return (
-            nextProps.width !== this.props.width ||
-            nextProps.activeStep !== this.props.activeStep ||
-            nextProps.steps !== this.props.steps
-        );
-    }
-
-    render() {
-        const { activeStep, steps, width } = this.props;
-        return (
-            <StyledStepper activeStep={activeStep}>
-                {steps.map((step, index) => {
-                    const label = width !== 'xs' && step.label;
-                    return (
-                        <Step key={`stepper_${index}`}>
-                            <StepLabel sx={{ textOverflow: 'ellipsis', overflow: 'hidden' }}>
-                                <span>{label}</span>
-                            </StepLabel>
-                        </Step>
-                    );
-                })}
-            </StyledStepper>
-        );
-    }
-}
-
-export default withWidth()(CustomStepper);
+export default React.memo(CustomStepper);

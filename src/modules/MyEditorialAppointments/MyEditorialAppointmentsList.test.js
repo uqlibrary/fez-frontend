@@ -1,6 +1,16 @@
 import React from 'react';
 import MyEditorialAppointmentsList from './MyEditorialAppointmentsList';
-import { render, fireEvent, act, waitFor, WithReduxStore, createMatchMedia, within } from 'test-utils';
+import {
+    render,
+    fireEvent,
+    userEvent,
+    act,
+    waitFor,
+    WithReduxStore,
+    createMatchMedia,
+    within,
+    selectDropDownOption,
+} from 'test-utils';
 
 import { default as locale } from 'locale/components';
 
@@ -22,14 +32,7 @@ function setup(testProps = {}) {
 
 describe('MyEditorialAppointmentsList', () => {
     beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
+        window.matchMedia = createMatchMedia(window.innerWidth);
     });
 
     it('should render empty list', () => {
@@ -38,7 +41,7 @@ describe('MyEditorialAppointmentsList', () => {
     });
 
     it('should render rows for editorial appointments', () => {
-        const { getByTestId } = setup({
+        const { container } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -51,12 +54,11 @@ describe('MyEditorialAppointmentsList', () => {
                 },
             ],
         });
-
-        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(1);
     });
 
     it('should render rows with red indicator for expired editorial appointments', () => {
-        const { getByTestId } = setup({
+        const { container } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -69,12 +71,12 @@ describe('MyEditorialAppointmentsList', () => {
                 },
             ],
         });
-
-        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(1);
     });
 
     it('should validate inputs and render added info after adding', async () => {
-        const { getByTestId, getByText } = setup({
+        jest.resetAllMocks();
+        const { container, getByTestId } = setup({
             list: [],
         });
         fireEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
@@ -84,57 +86,102 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-start-year-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('eap-end-year-input')).toHaveAttribute('aria-invalid', 'true');
 
-        expect(getByTestId('my-editorial-appointments-add-save').closest('button')).toHaveAttribute('disabled');
-
-        fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
-        fireEvent.mouseDown(getByTestId('eap-role-cvo-id-input'));
-        fireEvent.click(getByText('Guest Editor'));
-        fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
-        fireEvent.change(getByTestId('eap-end-year-input'), { target: { value: '2009' } });
-
-        expect(getByTestId('my-editorial-appointments-list-add-row')).toHaveTextContent(
+        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        await selectDropDownOption('eap-role-cvo-id-input', 'Guest Editor');
+        await userEvent.type(getByTestId('eap-start-year-input'), '2010');
+        await userEvent.type(getByTestId('eap-end-year-input'), '2009');
+        expect(getByTestId('my-editorial-appointments-list-row-add').textContent).toContain(
             locale.components.myEditorialAppointmentsList.form.locale.endYearErrorMessage,
         );
 
-        fireEvent.change(getByTestId('eap-end-year-input'), { target: { value: '2020' } });
+        await userEvent.type(getByTestId('eap-end-year-input'), '{Control>}a{/Control}{Backspace}2020');
 
-        expect(getByTestId('my-editorial-appointments-add-save').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('my-editorial-appointments-list-row-add')).not.toHaveTextContent(
+            locale.components.myEditorialAppointmentsList.form.locale.endYearErrorMessage,
+        );
 
-        act(() => {
-            fireEvent.click(getByTestId('my-editorial-appointments-add-save'));
-        });
+        await userEvent.click(getByTestId('my-editorial-appointments-add-save'));
 
-        const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
+        await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(1));
+        const listItem = container.querySelectorAll('.MuiTableRow-root');
 
         expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
         expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
     });
 
+    it('should allow input of dates into eap-start-year and eap-end-year datepickers', async () => {
+        const { getByTestId, container } = setup({ list: [] });
+
+        // Start add flow
+        fireEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
+
+        // Fill required fields except years
+        await userEvent.type(getByTestId('eap-journal-name-input'), 'Journal of Testing');
+        await selectDropDownOption('eap-role-cvo-id-input', 'Guest Editor');
+
+        // Input start year
+        const startYearInput = getByTestId('eap-start-year-input');
+        await userEvent.type(getByTestId('eap-start-year-input'), '2015');
+        // fireEvent.change(startYearInput, { target: { value: '2015' } });
+        await waitFor(() => expect(startYearInput.value).toBe('2015'));
+
+        // Input end year
+        const endYearInput = getByTestId('eap-end-year-input');
+        await userEvent.type(getByTestId('eap-end-year-input'), '2020');
+        // fireEvent.change(endYearInput, { target: { value: '2020' } });
+        expect(endYearInput.value).toBe('2020');
+
+        await userEvent.click(getByTestId('my-editorial-appointments-add-save'));
+
+        await waitFor(() => container.querySelectorAll('.MuiTableRow-root'));
+        expect(getByTestId('eap-journal-name-0')).toHaveTextContent('Journal of Testing');
+        expect(getByTestId('eap-start-year-0')).toHaveTextContent('2015');
+        expect(getByTestId('eap-end-year-0')).toHaveTextContent('2020');
+    });
+
     it('should render previous list on unsuccessful add operation', async () => {
-        const { getByTestId, getByText, queryByTestId } = setup({
+        const { container, getByTestId, getByText } = setup({
             list: [],
             handleRowAdd: jest.fn(() => Promise.reject()),
         });
 
         fireEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
 
-        fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
-        fireEvent.mouseDown(getByTestId('eap-role-cvo-id-input'));
-        fireEvent.click(getByText('Guest Editor'));
-        fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
-        fireEvent.change(getByTestId('eap-end-year-input'), { target: { value: '2020' } });
+        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        await selectDropDownOption('eap-role-cvo-id-input', 'Guest Editor');
+        await userEvent.type(getByTestId('eap-start-year-input'), '2010');
+        await userEvent.type(getByTestId('eap-end-year-input'), '2020');
 
-        act(() => {
-            fireEvent.click(getByTestId('my-editorial-appointments-add-save'));
-        });
+        await userEvent.click(getByTestId('my-editorial-appointments-add-save').closest('button'));
 
         await waitFor(() => getByText('No records to display'));
 
-        expect(queryByTestId('my-editorial-appointments-list-row-0')).not.toBeInTheDocument();
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(0);
+    });
+
+    it('should render previous list when add operation cancelled', async () => {
+        const { container, getByTestId, getByText } = setup({
+            list: [],
+        });
+
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(0);
+
+        await userEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
+
+        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        await selectDropDownOption('eap-role-cvo-id-input', 'Guest Editor');
+        await userEvent.type(getByTestId('eap-start-year-input'), '2010');
+        await userEvent.type(getByTestId('eap-end-year-input'), '2020');
+
+        await userEvent.click(getByTestId('my-editorial-appointments-add-cancel').closest('button'));
+
+        await waitFor(() => getByText('No records to display'));
+
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(0);
     });
 
     it('should validate inputs and render updated info after editing', async () => {
-        const { getByTestId, getByLabelText, getByText } = setup({
+        const { container, getByTestId } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -147,58 +194,60 @@ describe('MyEditorialAppointmentsList', () => {
                 },
             ],
         });
-        const listItem = getByTestId('my-editorial-appointments-list-row-0');
+        const listItem = container.querySelector('.MuiTableRow-root');
 
         expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('test');
         expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Guest Editor');
         expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2006');
         expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('2026');
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+        await userEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
 
-        fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: '' } });
+        await userEvent.clear(getByTestId('eap-journal-name-input'));
+
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
 
-        fireEvent.click(getByLabelText('Clear'));
+        await userEvent.click(
+            getByTestId('eap-role-cvo-id-input')
+                .closest('div')
+                .querySelector('[aria-label=Clear]'),
+        );
+
         expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
 
-        fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '' } });
+        await userEvent.clear(getByTestId('eap-start-year-input'));
+
         expect(getByTestId('eap-start-year-input')).toHaveAttribute('aria-invalid', 'true');
 
-        fireEvent.change(getByTestId('eap-end-year-input'), { target: { value: '' } });
+        await userEvent.clear(getByTestId('eap-end-year-input'));
         expect(getByTestId('eap-end-year-input')).toHaveAttribute('aria-invalid', 'true');
 
-        expect(getByTestId('my-editorial-appointments-update-save').closest('button')).toHaveAttribute('disabled');
-
-        fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
-        fireEvent.mouseDown(getByTestId('eap-role-cvo-id-input'));
-        fireEvent.click(getByText('Other'));
+        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        await selectDropDownOption('eap-role-cvo-id-input', 'Other');
 
         expect(getByTestId('eap-role-name-input')).toBeInTheDocument();
-        fireEvent.change(getByTestId('eap-role-name-input'), { target: { value: 'Testing other role' } });
-        fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
-        fireEvent.change(getByTestId('eap-end-year-input'), { target: { value: '2020' } });
+        await userEvent.type(getByTestId('eap-role-name-input'), 'Testing other role');
+        await userEvent.type(getByTestId('eap-start-year-input'), '2010');
+        await userEvent.type(getByTestId('eap-end-year-input'), '2020');
 
-        act(() => {
-            fireEvent.click(getByTestId('my-editorial-appointments-update-save'));
-        });
+        await userEvent.click(getByTestId('my-editorial-appointments-edit-save').closest('button'));
 
-        await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
+        await waitFor(() => container.querySelector('.MuiTableRow-root'));
 
         expect(getByTestId('eap-journal-name-0')).toHaveTextContent('testing');
         expect(getByTestId('eap-start-year-0')).toHaveTextContent('2010');
         expect(getByTestId('eap-role-name-0')).toHaveTextContent('Other (Testing other role)');
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+        await userEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
 
-        fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: '' } });
+        await userEvent.clear(getByTestId('eap-journal-name-input'));
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
 
         fireEvent.keyDown(getByTestId('eap-journal-name-input'), { key: 'Enter', keyCode: 13 });
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
-        const { getByTestId } = setup({
+        const { getByTestId, findByTestId } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -213,23 +262,18 @@ describe('MyEditorialAppointmentsList', () => {
             handleRowUpdate: jest.fn(() => Promise.reject()),
         });
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+        await userEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
 
-        fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
-        fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
-        fireEvent.change(getByTestId('eap-end-year-input'), { target: { value: '2020' } });
+        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        await userEvent.type(getByTestId('eap-start-year-input'), '2010');
+        await userEvent.type(getByTestId('eap-end-year-input'), '2020');
 
-        act(() => {
-            fireEvent.click(getByTestId('my-editorial-appointments-update-save'));
-        });
-
-        await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
-
-        expect(getByTestId('eap-journal-name-0')).toHaveTextContent('test');
+        await userEvent.click(getByTestId('my-editorial-appointments-edit-save').closest('button'));
+        expect(await findByTestId('eap-journal-name-0')).toHaveTextContent('test');
     });
 
-    it('should render previous list on unsuccessful edit operation', async () => {
-        const { getByTestId } = setup({
+    it('should render previous list when edit operation cancelled', async () => {
+        const { getByTestId, findByTestId } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -243,23 +287,18 @@ describe('MyEditorialAppointmentsList', () => {
             ],
         });
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+        await userEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
 
-        fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
-        fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
-        fireEvent.change(getByTestId('eap-end-year-input'), { target: { value: '2020' } });
+        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        await userEvent.type(getByTestId('eap-start-year-input'), '2010');
+        await userEvent.type(getByTestId('eap-end-year-input'), '2020');
 
-        act(() => {
-            fireEvent.click(getByTestId('my-editorial-appointments-update-cancel'));
-        });
-
-        await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
-
-        expect(getByTestId('eap-journal-name-0')).toHaveTextContent('test');
+        await userEvent.click(getByTestId('my-editorial-appointments-edit-cancel').closest('button'));
+        expect(await findByTestId('eap-journal-name-0')).toHaveTextContent('test');
     });
 
     it('should delete my editorial appointment item', async () => {
-        const { getByTestId } = setup({
+        const { container, getByTestId, findByTestId, queryByTestId } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -281,30 +320,29 @@ describe('MyEditorialAppointmentsList', () => {
                 },
             ],
         });
-        const listItem0 = getByTestId('my-editorial-appointments-list-row-0');
-        expect(listItem0).toBeInTheDocument();
 
-        const listItem1 = getByTestId('my-editorial-appointments-list-row-1');
-        expect(listItem1).toBeInTheDocument();
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
+        await userEvent.click(getByTestId('my-editorial-appointments-list-row-0-delete-this-editorial-appointment'));
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-delete-this-editorial-appointment'));
+        await findByTestId('my-editorial-appointments-delete-appointment-confirmation'); // wait for the delete popup to appear
 
-        await act(() => {
-            fireEvent.click(getByTestId('my-editorial-appointments-delete-save'));
-        });
+        await userEvent.click(getByTestId('confirm-my-editorial-appointments-delete-appointment-confirmation'));
+
         await act(async () => {
             // coverage: allow time for the promise's timeout to update state
             await new Promise(res => setTimeout(res, 1100));
         });
-        const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
+        expect(queryByTestId('my-editorial-appointments-delete-appointment-confirmation')).not.toBeInTheDocument();
 
+        const listItem = await waitFor(() => container.querySelectorAll('.MuiTableRow-root'));
+        expect(listItem.length - 1).toBe(1);
         expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
         expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Editor');
     });
 
     it('should display "Current" for "eap_end_year" column if the year is same as current year', () => {
         global.mockDate.set('1/1/2022');
-        const { getByTestId } = setup({
+        const { container, getByTestId } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -318,13 +356,13 @@ describe('MyEditorialAppointmentsList', () => {
             ],
         });
 
-        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
+        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(1);
         expect(getByTestId('eap-end-year-0')).toHaveTextContent('Current');
     });
 
     it('should select "Current" year on clicking "Current" options from the year popup menu', async () => {
         global.mockDate.set('1/1/2022');
-        const { getByTestId, getByText } = setup({
+        const { getByTestId } = setup({
             list: [],
         });
 
@@ -335,38 +373,36 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-start-year-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('eap-end-year-input')).toHaveAttribute('aria-invalid', 'true');
 
-        expect(getByTestId('my-editorial-appointments-add-save').closest('button')).toHaveAttribute('disabled');
+        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        await selectDropDownOption('eap-role-cvo-id-input', 'Guest Editor');
+        await userEvent.type(getByTestId('eap-start-year-input'), '2010');
 
-        fireEvent.click(getByTestId('eap-journal-name-input'));
-        fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
-        fireEvent.mouseDown(getByTestId('eap-role-cvo-id-input'));
-        fireEvent.click(getByText('Guest Editor'));
-        fireEvent.click(getByTestId('eap-start-year-input'));
-        fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
-
-        fireEvent.click(getByTestId('eap-end-year-input'));
-        fireEvent.click(getByTestId('eap-end-year-button-input'));
+        await userEvent.click(within(getByTestId('eap-end-year-button-input')).getByTestId('CalendarIcon'));
 
         await waitFor(() => getByTestId('eap-end-year-current'));
-        fireEvent.click(getByTestId('eap-end-year-current'));
+        await userEvent.click(getByTestId('eap-end-year-current'));
 
-        act(() => {
-            fireEvent.click(getByTestId('my-editorial-appointments-add-save'));
-        });
+        await userEvent.click(getByTestId('my-editorial-appointments-add-save').closest('button'));
+        const listItem = document.querySelector('#my-editorial-appointments-list-row-0');
 
-        // const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
-
-        // expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
-        // expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
-        // expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('Current');
+        expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
+        expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('Current');
     });
 
-    describe('coverage', () => {
+    describe('mobile coverage', () => {
         beforeEach(() => {
-            window.matchMedia = createMatchMedia(800);
+            window.matchMedia = createMatchMedia(320);
         });
-        it('should show mobile cell style', () => {
-            const { getByTestId } = setup({
+        it('should show mobile add dialog', async () => {
+            const { getByTestId, findByTestId } = setup({
+                list: [],
+            });
+            await userEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
+            await findByTestId('my-editorial-appointments-dialog-add-new-editorial-appointment');
+        });
+        it('should show mobile edit dialog', async () => {
+            const { getByTestId, findByTestId } = setup({
                 list: [
                     {
                         eap_id: 1,
@@ -379,22 +415,8 @@ describe('MyEditorialAppointmentsList', () => {
                     },
                 ],
             });
-            const row = getByTestId('my-editorial-appointments-list-row-0');
-            expect(
-                within(row)
-                    .getByText('test')
-                    .closest('td'),
-            ).toHaveStyle('width: 100%');
-            expect(
-                within(row)
-                    .getByText('test')
-                    .closest('td'),
-            ).toHaveStyle('display: block');
-            expect(
-                within(row)
-                    .getByText('test')
-                    .closest('td'),
-            ).toHaveStyle('box-sizing: border-box');
+            await userEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+            await findByTestId('my-editorial-appointments-dialog-edit-this-editorial-appointment');
         });
     });
 });

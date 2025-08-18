@@ -1,6 +1,6 @@
 import React from 'react';
 import BulkUpdatesList from './BulkUpdatesList';
-import { rtlRender } from 'test-utils';
+import { rtlRender, waitFor } from 'test-utils';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -12,15 +12,19 @@ function setup(testProps = {}, renderer = rtlRender) {
 }
 
 describe('BulkUpdatesList', () => {
-    it('should render empty list', () => {
-        const { getByText } = setup();
-        expect(getByText('No records to display')).toBeInTheDocument();
+    it('should render empty list', async () => {
+        const { getByTestId, getByText } = setup();
+        await waitFor(() => {
+            expect(getByTestId('bulk-updates-list')).toBeInTheDocument();
+        });
+        expect(await getByText('No records to display')).toBeInTheDocument();
     });
 
-    it('should render rows for bulk updates', () => {
-        const { getByTestId } = setup({
+    it('should render rows for bulk updates', async () => {
+        const { getAllByTestId, getByTestId } = setup({
             list: [
                 {
+                    buj_id: 1,
                     buj_created_at: '2020-09-03 00:30:08',
                     buj_started_at: '2020-09-03 00:30:05',
                     buj_finished_at: '2020-09-03 00:30:11',
@@ -40,16 +44,20 @@ describe('BulkUpdatesList', () => {
             ],
         });
 
-        expect(getByTestId('bulk-updates-list-item-0')).toBeInTheDocument();
+        await waitFor(() => {
+            expect(getByTestId('bulk-updates-list')).toBeInTheDocument();
+        });
+        expect(await getAllByTestId('buj-created-at').length).toBe(1);
         // time is adjusted to local timezone, so for Brisbane the time is +10 hours
         expect(getByTestId('buj-created-at')).toHaveTextContent('2020-09-03 10:30:08');
         expect(getByTestId('buj-started-at')).toHaveTextContent('2020-09-03 10:30:05');
         expect(getByTestId('buj-finished-at')).toHaveTextContent('2020-09-03 10:30:11');
     });
-    it('should render a dash if date field is null', () => {
-        const { getByTestId } = setup({
+    it('should render a dash if date field is null', async () => {
+        const { getAllByTestId, getByTestId } = setup({
             list: [
                 {
+                    buj_id: 1,
                     buj_created_at: null,
                     buj_started_at: null,
                     buj_finished_at: null,
@@ -69,7 +77,10 @@ describe('BulkUpdatesList', () => {
             ],
         });
 
-        expect(getByTestId('bulk-updates-list-item-0')).toBeInTheDocument();
+        await waitFor(() => {
+            expect(getByTestId('bulk-updates-list')).toBeInTheDocument();
+        });
+        expect(await getAllByTestId('buj-created-at').length).toBe(1);
         expect(getByTestId('buj-created-at')).toHaveTextContent('-');
         expect(getByTestId('buj-started-at')).toHaveTextContent('-');
         expect(getByTestId('buj-finished-at')).toHaveTextContent('-');

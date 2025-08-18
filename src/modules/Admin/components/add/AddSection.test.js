@@ -1,30 +1,26 @@
 import React from 'react';
-import { AddSection } from './AddSection';
-import { rtlRender } from 'test-utils';
-
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: props => {
-        return (
-            <field
-                is="mock"
-                name={props.name}
-                title={props.title}
-                required={props.required}
-                disabled={props.disabled}
-                label={props.label || props.floatingLabelText}
-                hasError={props.hasError}
-            />
-        );
-    },
-}));
+import AddSection from './AddSection';
+import { render, WithReduxStore, WithRouter, FormProviderWrapper } from 'test-utils';
 
 function setup(testProps = {}) {
+    const { values = {}, ...rest } = testProps;
     const props = {
-        ...testProps,
+        ...rest,
     };
 
-    return rtlRender(<AddSection {...props} />);
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <FormProviderWrapper
+                    values={{
+                        ...values,
+                    }}
+                >
+                    <AddSection {...props} />
+                </FormProviderWrapper>
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
 
 describe('AddSection component', () => {
@@ -35,9 +31,28 @@ describe('AddSection component', () => {
 
     it('should render with subtypes', () => {
         const { container } = setup({
-            hasDefaultDocTypeSubType: true,
+            values: { rek_display_type: 130, adminSection: { rek_subtype: 'Fully published paper' } },
         });
-
         expect(container).toMatchSnapshot();
+    });
+    describe('with coverage', () => {
+        it('should render with default doc type sub type', () => {
+            const { container } = setup({
+                values: {
+                    rek_display_type: 1005,
+                    adminSection: {
+                        rek_subtype: 'Creative Work - Textual',
+                        collections: [
+                            {
+                                id: 'UQ:3838',
+                                rek_title: 'School of Languages and Cultures Publications',
+                            },
+                        ],
+                    },
+                },
+                disabled: true,
+            });
+            expect(container).toMatchSnapshot();
+        });
     });
 });

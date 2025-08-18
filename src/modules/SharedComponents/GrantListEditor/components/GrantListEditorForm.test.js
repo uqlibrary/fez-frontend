@@ -1,6 +1,6 @@
 import React from 'react';
 import GrantListEditorForm from './GrantListEditorForm';
-import { render, fireEvent } from 'test-utils';
+import { render, fireEvent, rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -16,6 +16,11 @@ function setup(testProps = {}) {
 }
 
 describe('GrantListEditorForm', () => {
+    it('should render with default props', () => {
+        const { container } = rtlRender(<GrantListEditorForm onAdd={jest.fn()} isPopulated={jest.fn()} />);
+        expect(container).toMatchSnapshot();
+    });
+
     it('should render default view', () => {
         const { getByTestId, getByText } = setup();
         expect(

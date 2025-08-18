@@ -32,7 +32,7 @@ export default {
                                 style={{ fontWeight: 700 }}
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                                href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/content-indicators"
                             >
                                 here
                             </a>
@@ -157,7 +157,7 @@ export default {
                                 style={{ fontWeight: 700 }}
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                                href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/content-indicators"
                             >
                                 here
                             </a>
@@ -320,6 +320,180 @@ export default {
                 title: 'Success',
                 message: 'Work has been deleted',
             },
+        },
+        feedbackRecord: {
+            introduction: (
+                <span>
+                    <p>Thank you for contributing more information about this collection item.</p>
+                    <p>
+                        This form is part of our commitment to{' '}
+                        <a
+                            target="_blank"
+                            href={
+                                'https://web.library.uq.edu.au/find-and-borrow/collections-overview/using-culturally-sensitive-collections'
+                            }
+                        >
+                            culturally sensitive collections
+                        </a>
+                        {'.'}
+                    </p>
+                </span>
+            ),
+            feedbackTypes: {
+                title: 'I would like to',
+                options: [
+                    { label: 'Provide feedback / suggestion /information for this record', value: 'feedback' },
+                    { label: 'Share a story about this material', value: 'story' },
+                    { label: 'Advise of cultural sensitivity / make a takedown request', value: 'takedown' },
+                ],
+            },
+            details: {
+                title: 'Your Details',
+                firstName: 'First Name',
+                lastName: 'Last Name',
+                contactDetail: 'Contact Detail (Email or Contact Number)',
+                community: 'Community',
+                shareDetails: {
+                    options: [
+                        { label: 'I’d like to share my details with UQ Library', value: '1' },
+                        { label: 'I’d like to share my feedback anonymously', value: '0' },
+                    ],
+                    default: '1',
+                },
+            },
+            indigenousIdentity: {
+                title: 'Do you identify as an Aboriginal and / or Torres Strait Islander person?',
+                options: [
+                    { label: 'Yes, Aboriginal', value: 'aboriginal' },
+                    { label: 'Yes, Torres Strait Islander', value: 'islander' },
+                    { label: 'Both, Aboriginal and Torres Strait Islander', value: 'both' },
+                    { label: 'No', value: 'no' },
+                ],
+            },
+            hasKinshipConnection: {
+                title: 'Do you have a kinship connection to this item?',
+                options: [
+                    { label: 'Yes', value: '1' },
+                    { label: 'No', value: '0' },
+                ],
+            },
+            isICIPHolder: {
+                title: 'Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?',
+                options: [
+                    { label: 'Yes', value: '1' },
+                    { label: 'No', value: '0' },
+                ],
+                helpPanel: {
+                    title: 'Indigenous Cultural and Intellectual Property (ICIP)',
+                    text: (
+                        <>
+                            <p>
+                                ICIP includes all aspects of cultural practices, traditional knowledge, resources, and
+                                knowledge systems developed by Aboriginal and Torres Strait Islander peoples as part of
+                                their Indigenous Identity. (
+                                <a target={'_blank'} href={'https://www.terrijanke.com.au/icip'}>
+                                    Terri Janke and Company (2022)
+                                </a>
+                                {')'}
+                            </p>
+                        </>
+                    ),
+                    buttonLabel: 'Close',
+                },
+            },
+            communityParticipant: {
+                title:
+                    'Do you consent to your name being included as a Community Participant in the UQ Library Aboriginal and Torres Strait Islander Community Feedback database?',
+                options: [
+                    { label: 'Yes', value: '1' },
+                    { label: 'No, I would like to remain anonymous', value: '0' },
+                ],
+            },
+            communityInfo: {
+                title: 'Do you have more information on this item?',
+                subTitle: 'This may include Country, Community, or Language, found in the item.',
+            },
+            relatedPeople: {
+                title: 'Have you identified any people, language and/or place in this item?',
+                subTitle: 'If yes, please provide their name and any known information.',
+            },
+            story: {
+                title: 'Would you like to share a story or provide more context about this item?',
+            },
+            culturalInfo: {
+                title: 'Does the item contain cultural information that is secret/sacred or sensitive?',
+                options: [
+                    { label: 'Mens Business', value: 'mensBusiness' },
+                    { label: 'Womens Business', value: 'womensBusiness' },
+                    { label: 'Sacred sites', value: 'sacredSites' },
+                    { label: 'Ceremonies', value: 'ceremonies' },
+                    { label: 'Other', value: 'other', appendTextField: true },
+                ],
+            },
+            specialCare: {
+                title: 'Does the item need to be managed with special care?',
+                options: [
+                    { label: 'No - The item does not contain sensitive material', value: 'no' },
+                    { label: 'Yes - A warning should be added', value: 'requireWarning' },
+                    { label: 'Yes - Only Men should view', value: 'menOnly' },
+                    { label: 'Yes - Only Women should view', value: 'womenOnly' },
+                    { label: 'Yes - Community must approve access to view this item', value: 'communityApproval' },
+                    { label: 'Other', value: 'other', appendTextField: true },
+                ],
+            },
+            acknowledgement: {
+                title: 'UQ Library is grateful for your assistance in caring for our collections',
+                subTitle: 'If attributing your contribution, how would you like to be acknowledged:',
+                options: [
+                    { label: 'Public Acknowledgement of my name on the record', value: 'public' },
+                    { label: 'Private Acknowledgement of my name in the Library’s records', value: 'private' },
+                    { label: 'Anonymous information provided by a guest', value: 'anonymous' },
+                ],
+                disclaimer:
+                    'The personal information on this form is requested in order to obtain your consent for the use as outlined above. The information will be used by UQ for the purpose of verifying that proper consent has been provided in accordance with the Information Privacy Act 2009 and UQ’s Privacy Management Policy and Procedures (PPL1.60.02). ',
+            },
+            validationAlert: {
+                type: 'warning',
+                title: 'Validation',
+                message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
+            },
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: message =>
+                    `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
+            },
+            progressAlert: {
+                type: 'info_outline',
+                title: 'Saving',
+                message: 'Request is being processed.',
+                showLoader: true,
+            },
+            successAlert: {
+                type: 'done',
+                title: 'Success',
+                message: 'Feedback has been submitted successfully.',
+            },
+            cancelWorkflowConfirmation: {
+                confirmationTitle: 'Cancel request',
+                confirmationMessage: 'Are you sure you want to cancel this request?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes',
+            },
+            successWorkflowConfirmation: {
+                confirmationTitle: 'Your feedback has been submitted',
+                confirmationMessage: (
+                    <span style={{ display: 'block', margin: '1em 0' }}>
+                        Thank you for submitting information about this record. A team member will action this as soon
+                        as possible.
+                    </span>
+                ),
+                confirmButtonLabel: 'Go to my dashboard',
+                guestConfirmationButtonLabel: 'Go to homepage',
+                cancelButtonLabel: 'Go back to view page',
+            },
+            cancel: 'Cancel',
+            submit: 'Submit',
         },
     },
 };

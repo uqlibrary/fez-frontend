@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
 
-import locale from 'locale/global';
 import Grid from '@mui/material/Grid';
 
 import ListItem from '@mui/material/ListItem';
@@ -87,32 +86,37 @@ const StyledActionsContainer = styled('div')(({ theme }) => ({
 }));
 
 export const ContributorRow = ({
-    canEdit,
+    canEdit = false,
     canMoveDown,
     canMoveUp,
     contributor,
     contributorRowId,
     disabled,
-    hideDelete,
-    hideReorder,
+    hideDelete = false,
+    hideReorder = false,
     index,
-    locale: {
-        deleteRecordConfirmation,
-        moveUpHint,
-        moveDownHint,
-        deleteHint,
-        editHint,
-        selectHint,
-        lockedTooltip,
-        suffix,
+    locale = {
+        deleteRecordConfirmation: {
+            confirmationTitle: 'Delete record',
+            confirmationMessage: 'Are you sure you want to delete this record?',
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes',
+        },
+        moveUpHint: 'Move record up the order',
+        moveDownHint: 'Move record down the order',
+        deleteHint: 'Remove this record',
+        editHint: 'Edit this record',
+        selectHint: 'Select this record ([name]) to assign it to you',
+        lockedTooltip: 'You are not able to edit this row',
+        suffix: ' listed contributor',
     },
     onSelect,
     onDelete,
     onEdit,
     onMoveDown,
     onMoveUp,
-    required,
-    enableSelect,
+    required = false,
+    enableSelect = false,
     showRoleInput,
 }) => {
     const theme = useTheme();
@@ -146,10 +150,10 @@ export const ContributorRow = ({
 
     const _onMoveDown = React.useCallback(
         e => {
+            e.preventDefault();
+            e.stopPropagation();
             /* istanbul ignore else */
             if (!disabled && onMoveDown) {
-                e.preventDefault();
-                e.stopPropagation();
                 onMoveDown(contributor, index);
             }
         },
@@ -195,9 +199,11 @@ export const ContributorRow = ({
         } else if (contributor.selected) {
             return <Person />;
         } else if ((disabled || contributor.disabled) && !enableSelect) {
-            return lockedTooltip ? (
-                <Tooltip title={lockedTooltip}>
-                    <Lock />
+            return locale.lockedTooltip ? (
+                <Tooltip title={locale.lockedTooltip}>
+                    <span>
+                        <Lock />
+                    </span>
                 </Tooltip>
             ) : (
                 <Lock />
@@ -209,11 +215,7 @@ export const ContributorRow = ({
 
     const selectedClass = contributor.selected ? classes.selected : {};
 
-    const ariaLabel =
-        (!disabled &&
-            `${selectHint.replace('[name]', contributor.nameAsPublished)} ${(required && locale.requiredLabel) ||
-                ''}`.trim()) ||
-        '';
+    const ariaLabel = (!disabled && `${locale.selectHint.replace('[name]', contributor.nameAsPublished)}`.trim()) || '';
 
     const listClasses = {
         ...classes.listItem,
@@ -228,7 +230,7 @@ export const ContributorRow = ({
                 onAction={_onDelete}
                 onClose={hideConfirmation}
                 isOpen={isOpen}
-                locale={deleteRecordConfirmation}
+                locale={locale.deleteRecordConfirmation}
                 confirmationBoxId={`${contributorRowId}-${index}-delete`}
             />
             <ListItem
@@ -253,7 +255,7 @@ export const ContributorRow = ({
                         width={width}
                         showRoleInput={showRoleInput}
                         selectedClass={selectedClass}
-                        suffix={suffix}
+                        suffix={locale.suffix}
                         contributorRowId={`${contributorRowId}-${index}`}
                     />
 
@@ -263,85 +265,93 @@ export const ContributorRow = ({
                     >
                         {canMoveUp && (
                             <Tooltip
-                                title={moveUpHint}
+                                title={locale.moveUpHint}
                                 disableFocusListener={disabled || hideReorder}
                                 disableHoverListener={disabled || hideReorder}
                                 disableTouchListener={disabled || hideReorder}
                             >
-                                <IconButton
-                                    id={`${contributorRowId}-move-up-${index}`}
-                                    data-analyticsid={`${contributorRowId}-${index}-move-up`}
-                                    data-testid={`${contributorRowId}-${index}-move-up`}
-                                    onClick={_onMoveUp}
-                                    disabled={disabled || hideReorder}
-                                    aria-label={moveUpHint}
-                                    size="large"
-                                >
-                                    <KeyboardArrowUp sx={{ ...selectedClass }} />
-                                </IconButton>
+                                <span>
+                                    <IconButton
+                                        id={`${contributorRowId}-move-up-${index}`}
+                                        data-analyticsid={`${contributorRowId}-${index}-move-up`}
+                                        data-testid={`${contributorRowId}-${index}-move-up`}
+                                        onClick={_onMoveUp}
+                                        disabled={disabled || hideReorder}
+                                        aria-label={locale.moveUpHint}
+                                        size="large"
+                                    >
+                                        <KeyboardArrowUp sx={{ ...selectedClass }} />
+                                    </IconButton>
+                                </span>
                             </Tooltip>
                         )}
                         {canMoveDown && (
                             <Tooltip
-                                title={moveDownHint}
+                                title={locale.moveDownHint}
                                 disableFocusListener={disabled || hideReorder}
                                 disableHoverListener={disabled || hideReorder}
                                 disableTouchListener={disabled || hideReorder}
                             >
-                                <IconButton
-                                    id={`${contributorRowId}-move-down-${index}`}
-                                    data-analyticsid={`${contributorRowId}-${index}-move-down`}
-                                    data-testid={`${contributorRowId}-${index}-move-down`}
-                                    onClick={_onMoveDown}
-                                    disabled={disabled || hideReorder}
-                                    aria-label={moveDownHint}
-                                    size="large"
-                                >
-                                    <KeyboardArrowDown sx={{ ...selectedClass }} />
-                                </IconButton>
+                                <span>
+                                    <IconButton
+                                        id={`${contributorRowId}-move-down-${index}`}
+                                        data-analyticsid={`${contributorRowId}-${index}-move-down`}
+                                        data-testid={`${contributorRowId}-${index}-move-down`}
+                                        onClick={_onMoveDown}
+                                        disabled={disabled || hideReorder}
+                                        aria-label={locale.moveDownHint}
+                                        size="large"
+                                    >
+                                        <KeyboardArrowDown sx={{ ...selectedClass }} />
+                                    </IconButton>
+                                </span>
                             </Tooltip>
                         )}
                         {canEdit && (
                             <Tooltip
-                                title={editHint}
+                                title={locale.editHint}
                                 disableFocusListener={disabled || !!contributor.disabled}
                                 disableHoverListener={disabled || !!contributor.disabled}
                                 disableTouchListener={disabled || !!contributor.disabled}
                             >
-                                <IconButton
-                                    aria-label={editHint}
-                                    onClick={_handleEdit}
-                                    disabled={disabled || !!contributor.disabled}
-                                    id={`${contributorRowId}-edit-${index}`}
-                                    data-analyticsid={`${contributorRowId}-${index}-edit`}
-                                    data-testid={`${contributorRowId}-${index}-edit`}
-                                    size="large"
-                                >
-                                    <Edit sx={{ ...selectedClass }} />
-                                </IconButton>
+                                <span>
+                                    <IconButton
+                                        aria-label={locale.editHint}
+                                        onClick={_handleEdit}
+                                        disabled={disabled || !!contributor.disabled}
+                                        id={`${contributorRowId}-edit-${index}`}
+                                        data-analyticsid={`${contributorRowId}-${index}-edit`}
+                                        data-testid={`${contributorRowId}-${index}-edit`}
+                                        size="large"
+                                    >
+                                        <Edit sx={{ ...selectedClass }} />
+                                    </IconButton>
+                                </span>
                             </Tooltip>
                         )}
                         <Tooltip
-                            title={deleteHint}
+                            title={locale.deleteHint}
                             disableFocusListener={disabled || hideDelete}
                             disableHoverListener={disabled || hideDelete}
                             disableTouchListener={disabled || hideDelete}
                         >
-                            <IconButton
-                                aria-label={deleteHint}
-                                onClick={e => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-                                    showConfirmation();
-                                }}
-                                disabled={disabled || hideDelete}
-                                id={`${contributorRowId}-delete-${index}`}
-                                data-analyticsid={`${contributorRowId}-${index}-delete`}
-                                data-testid={`${contributorRowId}-${index}-delete`}
-                                size="large"
-                            >
-                                <Delete sx={{ ...selectedClass }} />
-                            </IconButton>
+                            <span>
+                                <IconButton
+                                    aria-label={locale.deleteHint}
+                                    onClick={e => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        showConfirmation();
+                                    }}
+                                    disabled={disabled || hideDelete}
+                                    id={`${contributorRowId}-delete-${index}`}
+                                    data-analyticsid={`${contributorRowId}-${index}-delete`}
+                                    data-testid={`${contributorRowId}-${index}-delete`}
+                                    size="large"
+                                >
+                                    <Delete sx={{ ...selectedClass }} />
+                                </IconButton>
+                            </span>
                         </Tooltip>
                     </StyledActionsContainer>
                 </Grid>
@@ -371,28 +381,6 @@ ContributorRow.propTypes = {
     showRoleInput: PropTypes.bool,
 };
 
-ContributorRow.defaultProps = {
-    canEdit: false,
-    locale: {
-        suffix: ' listed contributor',
-        moveUpHint: 'Move record up the order',
-        moveDownHint: 'Move record down the order',
-        deleteHint: 'Remove this record',
-        editHint: 'Edit this record',
-        selectHint: 'Select this record ([name]) to assign it to you',
-        lockedTooltip: 'You are not able to edit this row',
-        deleteRecordConfirmation: {
-            confirmationTitle: 'Delete record',
-            confirmationMessage: 'Are you sure you want to delete this record?',
-            cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes',
-        },
-    },
-    hideReorder: false,
-    hideDelete: false,
-    required: false,
-    enableSelect: false,
-};
 /* istanbul ignore next */
 export default React.memo(ContributorRow, (pp, np) => {
     return (

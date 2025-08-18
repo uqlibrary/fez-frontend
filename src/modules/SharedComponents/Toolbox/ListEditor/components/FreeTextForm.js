@@ -15,15 +15,20 @@ const onItemChangeCallback = (setItem, normalize) => {
 
 export const FreeTextForm = ({
     onAdd,
-    isValid,
-    locale,
+    isValid = isValidKeyword(2000),
+    locale = {
+        id: 'free-text-input',
+        inputFieldLabel: 'Item name',
+        inputFieldHint: 'Please type the item name',
+        addButtonLabel: 'Add',
+    },
     disabled,
     error,
-    remindToAdd,
-    mode,
+    remindToAdd = false,
+    mode = 'add',
     normalize,
-    required,
-    itemSelectedToEdit,
+    required = false,
+    itemSelectedToEdit = '',
     listEditorFormId,
     listEditorId,
     onSubmit,
@@ -49,10 +54,16 @@ export const FreeTextForm = ({
 
     const addItem = event => {
         // add item if user hits 'enter' key on input field
-        if (disabled || (event && event.key && event.key !== 'Enter') || item.length === 0) {
+        if (
+            disabled ||
+            (event && event.key && event.key !== 'Enter') ||
+            item.length === 0 ||
+            // if isValid return casts to true, the value is invalid
+            (isValid && !!isValid(item))
+        ) {
             return;
         }
-
+        event.preventDefault();
         // pass on the selected item
         !!onAdd ? onAdd(item) : onSubmit(mode === 'add' ? [item] : item, indexOf);
         setItemSubmitted(true);
@@ -126,20 +137,6 @@ FreeTextForm.propTypes = {
     listEditorFormId: PropTypes.string,
     listEditorId: PropTypes.string,
     onSubmit: PropTypes.func,
-};
-
-FreeTextForm.defaultProps = {
-    isValid: isValidKeyword(2000),
-    remindToAdd: false,
-    locale: {
-        id: 'free-text-input',
-        inputFieldLabel: 'Item name',
-        inputFieldHint: 'Please type the item name',
-        addButtonLabel: 'Add',
-    },
-    required: false,
-    itemSelectedToEdit: '',
-    mode: 'add',
 };
 
 export default React.memo(FreeTextForm);

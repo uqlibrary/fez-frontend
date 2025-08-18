@@ -1,19 +1,34 @@
 import React from 'react';
 import { latestPubsPayload } from 'mock/data/testing/latestPublications';
-import { MyLatestPublications } from './MyLatestPublications';
+import MyLatestPublications from './MyLatestPublications';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import * as actions from 'actions';
 
-function setup(testProps = {}) {
+jest.mock('actions', () => ({
+    ...jest.requireActual('actions'),
+    searchLatestPublications: jest.fn(),
+}));
+const mockUseNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
+
+function setup(testProps = {}, testState = {}) {
     const props = {
-        history: {},
-        actions: {
-            searchLatestPublications: jest.fn(),
-        },
-        classes: { blueButton: 'blueButton' },
         ...testProps,
     };
+    const state = {
+        myLatestPublicationsReducer: {
+            latestPublicationsList: latestPubsPayload.data,
+            totalPublicationsCount: latestPubsPayload.total,
+        },
+        accountReducer: {},
+        ...testState,
+    };
     return render(
-        <WithReduxStore>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <MyLatestPublications {...props} />
             </WithRouter>
@@ -22,36 +37,33 @@ function setup(testProps = {}) {
 }
 
 describe('Component MyLatestPublications', () => {
-    it('should render latest publications', () => {
-        const { container } = setup({
-            latestPublicationsList: latestPubsPayload.data,
-            totalPublicationsCount: latestPubsPayload.total,
-        });
+    afterEach(() => {
+        jest.clearAllMocks();
+    });
+    it('should render latest publications', async () => {
+        const { container } = setup();
+
         expect(container).toMatchSnapshot();
     });
 
     it('should render loading indicator', () => {
-        const container = setup({ loadingLatestPublications: true });
+        const container = setup({}, { myLatestPublicationsReducer: { loadingLatestPublications: true } });
         expect(container).toMatchSnapshot();
     });
 
-    it('should fetch data if account author details is loaded', () => {
-        const testFn = jest.fn();
-        setup({ accountAuthorDetailsLoading: false, actions: { searchLatestPublications: testFn } });
-        expect(testFn).toHaveBeenCalled();
+    it('should fetch data if account author details have loaded', () => {
+        setup({}, { accountReducer: { author: {} } });
+        expect(actions.searchLatestPublications).toHaveBeenCalled();
     });
 
-    it('should not fetch data if account author details is still loading', () => {
-        const testFn = jest.fn();
-        setup({ accountAuthorDetailsLoading: true, actions: { searchLatestPublications: testFn } });
-        expect(testFn).not.toBeCalled();
+    it('should not fetch data if account author details are not loaded', () => {
+        setup();
+        expect(actions.searchLatestPublications).not.toHaveBeenCalled();
     });
 
     it('_viewMyResearch method', () => {
-        const testFn = jest.fn();
-        const { getByRole } = setup({ history: { push: testFn } });
+        const { getByRole } = setup();
         fireEvent.click(getByRole('button', { name: /View all/i }));
-        // wrapper.instance()._viewMyResearch();
-        expect(testFn).toHaveBeenCalledWith('/records/mine');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/records/mine');
     });
 });

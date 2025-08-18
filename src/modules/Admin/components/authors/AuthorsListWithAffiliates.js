@@ -6,6 +6,7 @@ import { useTheme } from '@mui/material/styles';
 import { numberToWords, validation } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
 import Grid from '@mui/material/Unstable_Grid2';
+import Box from '@mui/material/Box';
 import Edit from '@mui/icons-material/Edit';
 import People from '@mui/icons-material/People';
 import PersonOutlined from '@mui/icons-material/PersonOutlined';
@@ -74,12 +75,8 @@ const getIcon = ({ rowData, inProblemState }) => {
 export const NameAsPublished = React.memo(({ icon, text, linked }) => {
     return (
         <Grid container spacing={2}>
-            <Grid item sx={{ alignSelf: 'center', display: { xs: 'none', sm: 'block' } }}>
-                {icon}
-            </Grid>
-            <Grid item sx={{ ...(linked ? classes.linked : {}) }}>
-                {text}
-            </Grid>
+            <Grid sx={{ alignSelf: 'center', display: { xs: 'none', sm: 'block' } }}>{icon}</Grid>
+            <Grid sx={{ ...(linked ? classes.linked : {}) }}>{text}</Grid>
         </Grid>
     );
 });
@@ -150,10 +147,10 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInpu
             editComponent: props => {
                 return (
                     <Grid container spacing={2}>
-                        <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <Grid style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
                             <PersonOutlined color="secondary" />
                         </Grid>
-                        <Grid item style={{ flexGrow: '1' }}>
+                        <Grid style={{ flexGrow: '1' }}>
                             <CustomTextField
                                 autoFocus
                                 value={props.value || ''}
@@ -183,17 +180,16 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInpu
             ),
             field: 'uqIdentifier',
             render: rowData => {
-                const inProblemState = hasAffiliationProblemsByAuthor(rowData);
+                const identifierText =
+                    (!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
+                    (rowData.uqIdentifier && rowData.uqIdentifier !== '0' ? rowData.uqIdentifier : '');
                 return (
                     <Typography
                         variant="body2"
-                        sx={{ ...linkedClass(rowData, inProblemState) }}
                         id={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
                         data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
                     >
-                        {(!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
-                            (rowData.uqIdentifier !== '0' && rowData.uqIdentifier) ||
-                            ''}
+                        {identifierText}
                     </Typography>
                 );
             },
@@ -328,7 +324,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInpu
                       field: 'orgaff',
                       render: rowData => (
                           <Grid container>
-                              <Grid item xs={12}>
+                              <Grid xs={12}>
                                   <Typography
                                       variant="body2"
                                       className={linkedClass(rowData)}
@@ -338,7 +334,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInpu
                                       {rowData.orgaff}
                                   </Typography>
                               </Grid>
-                              <Grid item xs={12}>
+                              <Grid xs={12}>
                                   <Typography
                                       variant="caption"
                                       className={linkedClass(rowData)}
@@ -457,9 +453,11 @@ export const AuthorsListWithAffiliates = ({
     clearSuggestedOrganisationalUnits,
 }) => {
     const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
+    const prevList = React.useRef('');
 
     // eslint-disable-next-line camelcase
     const setEditing = ({ editing, aut_id }) => {
+        // eslint-disable-next-line camelcase
         setIsEditing({ editing, aut_id });
     };
 
@@ -498,20 +496,25 @@ export const AuthorsListWithAffiliates = ({
         isNtro,
         contributorEditorId,
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    //    [editState.editing],
-    // );
 
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
-        const result = [];
-        list.forEach((item, index) => {
-            delete item.tableData;
-            item.id = index;
-            result.push({ ...item });
-        });
-        setData(result);
+        const listStr = JSON.stringify(list);
+        /* istanbul ignore else */
+        if (prevList.current !== listStr) {
+            prevList.current = listStr;
+            const result = [];
+            list.forEach((item, index) => {
+                delete item.tableData;
+                item.id = index;
+                result.push({ ...item });
+            });
+            setData(result);
+        }
     }, [list]);
+
+    const transformNewAuthorObject = newAuthor => [...data, { ...newAuthor, affiliations: [] }];
+
     const handleAuthorUpdate = (action, newData, oldData) => {
         const materialTable = materialTableRef.current;
         let newList = [...data];
@@ -535,8 +538,16 @@ export const AuthorsListWithAffiliates = ({
         } else {
             newList =
                 action === 'update'
-                    ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
-                    : [...data, newData];
+                    ? [
+                          ...data.slice(0, oldData.tableData.id),
+                          {
+                              ...newData,
+                              affiliations: newData.affiliation === '' ? [] : newData.affiliations,
+                              id: oldData.tableData.id,
+                          },
+                          ...data.slice(oldData.tableData.id + 1),
+                      ]
+                    : transformNewAuthorObject(newData);
         }
 
         onChange(newList);
@@ -558,236 +569,235 @@ export const AuthorsListWithAffiliates = ({
     };
 
     return (
-        <MaterialTable
-            tableRef={materialTableRef}
-            columns={columns.current}
-            components={{
-                Container: props => (
-                    <div {...props} id={`${contributorEditorId}-list`} data-testid={`${contributorEditorId}-list`} />
-                ),
-                Action: props => {
-                    if (typeof props.action !== 'function' && !props.action.action && !props.action.isFreeAction) {
-                        const { icon: Icon, tooltip, ...restAction } = props.action;
-                        return (
-                            <MTableAction
-                                {...props}
-                                action={{
-                                    ...restAction,
-                                    icon: () => (
-                                        <Icon
-                                            id={`${contributorEditorId}-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase()}`}
-                                            data-testid={`${contributorEditorId}-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase()}`}
-                                        />
-                                    ),
-                                }}
-                            />
-                        );
-                    } else {
-                        return <MTableAction {...props} />;
-                    }
-                },
-                Row: props => (
-                    <MTableBodyRow
-                        {...props}
-                        id={`${contributorEditorId}-list-row-${props.index}`}
-                        data-testid={`${contributorEditorId}-list-row-${props.index}`}
-                    />
-                ),
-                EditRow: props => (
-                    <MTableEditRow
-                        {...props}
-                        id={`${contributorEditorId}-list-edit-row-${props.index}`}
-                        data-testid={`${contributorEditorId}-list-edit-row-${props.index}`}
-                        onEditingApproved={handleAuthorUpdate}
-                    />
-                ),
-            }}
-            actions={[
-                rowData => ({
-                    icon: props => <KeyboardArrowUp {...props} />,
-                    iconProps: {
-                        id: `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
-                        'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
+        <Box id={`${contributorEditorId}-list`} data-testid={`${contributorEditorId}-list`}>
+            <MaterialTable
+                tableRef={materialTableRef}
+                columns={columns.current}
+                components={{
+                    Action: props => {
+                        if (typeof props.action !== 'function' && !props.action.action && !props.action.isFreeAction) {
+                            const { icon: Icon, tooltip, ...restAction } = props.action;
+                            return (
+                                <MTableAction
+                                    {...props}
+                                    action={{
+                                        ...restAction,
+                                        icon: () => (
+                                            <Icon
+                                                id={`${contributorEditorId}-${(!!props.data.tableData &&
+                                                    props.data.tableData.editing) ||
+                                                    'add'}-${tooltip.toLowerCase()}`}
+                                                data-testid={`${contributorEditorId}-${(!!props.data.tableData &&
+                                                    props.data.tableData.editing) ||
+                                                    'add'}-${tooltip.toLowerCase()}`}
+                                            />
+                                        ),
+                                    }}
+                                />
+                            );
+                        } else {
+                            return <MTableAction {...props} />;
+                        }
                     },
-                    tooltip: moveUpHint,
-                    disabled:
-                        disabled ||
-                        editState.editing ||
-                        (rowData.itemIndex && /* istanbul ignore next */ rowData.itemIndex === 0) ||
-                        rowData.tableData.id === 0,
-                    onClick: () => {
-                        const index = rowData.tableData.id;
-                        const nextContributor = {
-                            ...data[index - 1],
-                        };
-                        const newRowData = { ...rowData };
-                        delete newRowData.tableData;
-                        const newList = [
-                            ...data.slice(0, index - 1),
-                            { ...newRowData },
-                            nextContributor,
-                            ...data.slice(index + 1),
-                        ];
-                        const newIndexedList = [];
-                        newList.map((item, index) => {
-                            newIndexedList.push({ ...item, id: index });
-                        });
-
-                        setData(newIndexedList);
-                        onChange(newIndexedList);
-                    },
-                }),
-                rowData => ({
-                    icon: props => <KeyboardArrowDown {...props} />,
-                    iconProps: {
-                        id: `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
-                        'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
-                    },
-                    tooltip: `${moveDownHint}-${rowData.tableData.id}`,
-                    disabled: disabled || editState.editing || rowData.tableData.id === data.length - 1,
-                    onClick: () => {
-                        const index = rowData.tableData.id;
-                        const nextContributor = data[index + 1];
-                        const newRowData = { ...rowData };
-                        delete newRowData.tableData;
-                        const newList = [
-                            ...data.slice(0, index),
-                            nextContributor,
-                            newRowData,
-                            ...data.slice(index + 2),
-                        ];
-                        const newIndexedList = [];
-                        newList.map((item, index) => {
-                            newIndexedList.push({ ...item, id: index });
-                        });
-
-                        setData(newIndexedList);
-                    },
-                }),
-                rowData => ({
-                    icon: props => <Edit {...props} />,
-                    iconProps: {
-                        id: `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
-                        'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
-                    },
-                    disabled: editState.editing || disabled,
-                    tooltip: editHint,
-                    onClick: () => {
-                        const materialTable = materialTableRef.current;
-                        materialTable.dataManager.changeRowEditing(rowData, 'update');
-                        materialTable.setState({
-                            ...materialTable.dataManager.getRenderState(),
-                        });
-                    },
-                }),
-                rowData => ({
-                    icon: props => <Delete {...props} />,
-                    iconProps: {
-                        id: `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
-                        'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
-                    },
-                    disabled: editState.editing || disabled,
-                    tooltip: deleteHint,
-                    onClick: () => {
-                        const materialTable = materialTableRef.current;
-                        materialTable.dataManager.changeRowEditing(rowData, 'delete');
-                        materialTable.setState({
-                            ...materialTable.dataManager.getRenderState(),
-                        });
-                    },
-                }),
-                {
-                    icon: props => <AddCircle {...props} color="primary" fontSize="large" />,
-                    iconProps: {
-                        id: `${contributorEditorId}-add`,
-                        'data-testid': `${contributorEditorId}-add`,
-                    },
-                    isFreeAction: true,
-                    tooltip: addButton,
-                    disabled: editState.editing || disabled,
-                    onClick: () => {
-                        const materialTable = materialTableRef.current;
-                        materialTable.dataManager.changeRowEditing();
-                        materialTable.setState({
-                            ...materialTable.dataManager.getRenderState(),
-                            showAddRow: true,
-                        });
-                    },
-                },
-            ]}
-            data={data}
-            icons={tableIcons}
-            title=""
-            detailPanel={[
-                rowData => {
-                    const conditionalIcon =
-                        !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro || editState.editing
-                            ? {
-                                  icon: () => {
-                                      return null;
-                                  },
-                              }
-                            : {
-                                  icon: () => (
-                                      <ChevronRight
-                                          fontSize="medium"
-                                          data-testid={`expandPanelIcon-${rowData.aut_id}`}
-                                          id={`expandPanelIcon-${rowData.aut_id}`}
-                                      />
-                                  ),
-                              };
-
-                    return {
-                        ...conditionalIcon,
-                        render: () => {
-                            return !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro
-                                ? /* istanbul ignore next */ null
-                                : authorDetailPanel({
-                                      rowData,
-                                      locale,
-                                      isEditing: isEditing(rowData.aut_id),
-                                      setEditing,
-                                      onChange: handleAffiliationUpdate,
-                                      loadOrganisationalUnitsList,
-                                      loadSuggestedOrganisationalUnitsList,
-                                      clearSuggestedOrganisationalUnits,
-                                  });
+                    Row: props => (
+                        <MTableBodyRow
+                            {...props}
+                            id={`${contributorEditorId}-list-row-${props.index}`}
+                            data-testid={`${contributorEditorId}-list-row-${props.index}`}
+                        />
+                    ),
+                    EditRow: props => (
+                        <MTableEditRow
+                            {...props}
+                            id={`${contributorEditorId}-list-edit-row-${props.index}`}
+                            data-testid={`${contributorEditorId}-list-edit-row-${props.index}`}
+                            onEditingApproved={handleAuthorUpdate}
+                        />
+                    ),
+                }}
+                actions={[
+                    rowData => ({
+                        icon: props => <KeyboardArrowUp {...props} />,
+                        iconProps: {
+                            id: `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
+                            'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
                         },
-                    };
-                },
-            ]}
-            editable={{
-                onRowUpdateCancelled: () => {},
-            }}
-            options={{
-                actionsColumnIndex: -1,
-                grouping: false,
-                draggable: false,
-                addRowPosition: 'first',
-                search: data.length > 10,
-                emptyRowsWhenPaging: true,
-                ...(data.length > 10 ? { maxBodyHeight: 550 } : {}),
-                ...(data.length > 10 ? { paging: true } : { paging: false }),
-                .../* istanbul ignore next */ (data.length > 100 ? { pageSize: data.length > 100 ? 50 : 5 } : {}),
-                pageSizeOptions: [5, 50, 100, 200, 500],
-                padding: 'dense',
-                rowStyle: rowData => {
-                    if (!!rowData.aut_id) {
+                        tooltip: moveUpHint,
+                        disabled:
+                            disabled ||
+                            editState.editing ||
+                            (rowData.itemIndex && /* istanbul ignore next */ rowData.itemIndex === 0) ||
+                            rowData.tableData.id === 0,
+                        onClick: () => {
+                            const index = rowData.tableData.id;
+                            const nextContributor = {
+                                ...data[index - 1],
+                            };
+                            const newRowData = { ...rowData };
+                            delete newRowData.tableData;
+                            const newList = [
+                                ...data.slice(0, index - 1),
+                                { ...newRowData },
+                                nextContributor,
+                                ...data.slice(index + 1),
+                            ];
+                            const newIndexedList = [];
+                            newList.map((item, index) => {
+                                newIndexedList.push({ ...item, id: index });
+                            });
+
+                            setData(newIndexedList);
+                            onChange(newIndexedList);
+                        },
+                    }),
+                    rowData => ({
+                        icon: props => <KeyboardArrowDown {...props} />,
+                        iconProps: {
+                            id: `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
+                            'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-down`,
+                        },
+                        tooltip: `${moveDownHint}-${rowData.tableData.id}`,
+                        disabled: disabled || editState.editing || rowData.tableData.id === data.length - 1,
+                        onClick: () => {
+                            const index = rowData.tableData.id;
+                            const nextContributor = data[index + 1];
+                            const newRowData = { ...rowData };
+                            delete newRowData.tableData;
+                            const newList = [
+                                ...data.slice(0, index),
+                                nextContributor,
+                                newRowData,
+                                ...data.slice(index + 2),
+                            ];
+                            const newIndexedList = [];
+                            newList.map((item, index) => {
+                                newIndexedList.push({ ...item, id: index });
+                            });
+
+                            setData(newIndexedList);
+                        },
+                    }),
+                    rowData => ({
+                        icon: props => <Edit {...props} />,
+                        iconProps: {
+                            id: `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
+                            'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-edit`,
+                        },
+                        disabled: editState.editing || disabled,
+                        tooltip: editHint,
+                        onClick: () => {
+                            const materialTable = materialTableRef.current;
+                            materialTable.dataManager.changeRowEditing(rowData, 'update');
+                            materialTable.setState({
+                                ...materialTable.dataManager.getRenderState(),
+                            });
+                        },
+                    }),
+                    rowData => ({
+                        icon: props => <Delete {...props} />,
+                        iconProps: {
+                            id: `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
+                            'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-delete`,
+                        },
+                        disabled: editState.editing || disabled,
+                        tooltip: deleteHint,
+                        onClick: () => {
+                            const materialTable = materialTableRef.current;
+                            materialTable.dataManager.changeRowEditing(rowData, 'delete');
+                            materialTable.setState({
+                                ...materialTable.dataManager.getRenderState(),
+                            });
+                        },
+                    }),
+                    {
+                        icon: props => <AddCircle {...props} color="primary" fontSize="large" />,
+                        iconProps: {
+                            id: `${contributorEditorId}-add`,
+                            'data-testid': `${contributorEditorId}-add`,
+                        },
+                        isFreeAction: true,
+                        tooltip: addButton,
+                        disabled: editState.editing || disabled,
+                        onClick: () => {
+                            const materialTable = materialTableRef.current;
+                            materialTable.dataManager.changeRowEditing();
+                            materialTable.setState({
+                                ...materialTable.dataManager.getRenderState(),
+                                showAddRow: true,
+                            });
+                        },
+                    },
+                ]}
+                data={data}
+                icons={tableIcons}
+                title=""
+                detailPanel={[
+                    rowData => {
+                        const conditionalIcon =
+                            !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro || editState.editing
+                                ? {
+                                      icon: () => {
+                                          return null;
+                                      },
+                                  }
+                                : {
+                                      icon: () => (
+                                          <ChevronRight
+                                              fontSize="medium"
+                                              data-testid={`expandPanelIcon-${rowData.aut_id}`}
+                                              id={`expandPanelIcon-${rowData.aut_id}`}
+                                          />
+                                      ),
+                                  };
+
                         return {
-                            backgroundColor: theme.palette.secondary.light,
-                            color: theme.palette.primary.main,
+                            ...conditionalIcon,
+                            render: () => {
+                                return !!!rowData.uqUsername || rowData.uqUsername === '' || isNtro
+                                    ? /* istanbul ignore next */ null
+                                    : authorDetailPanel({
+                                          rowData,
+                                          locale,
+                                          isEditing: isEditing(rowData.aut_id),
+                                          setEditing,
+                                          onChange: handleAffiliationUpdate,
+                                          loadOrganisationalUnitsList,
+                                          loadSuggestedOrganisationalUnitsList,
+                                          clearSuggestedOrganisationalUnits,
+                                      });
+                            },
                         };
-                    } else {
-                        return {};
-                    }
-                },
-                overflowY: list.length > 10 ? 'auto' : 'hidden',
-            }}
-        />
+                    },
+                ]}
+                editable={{
+                    onRowUpdateCancelled: () => {},
+                }}
+                options={{
+                    actionsColumnIndex: -1,
+                    grouping: false,
+                    draggable: false,
+                    addRowPosition: 'first',
+                    search: data.length > 10,
+                    emptyRowsWhenPaging: false,
+                    ...(data.length > 10 ? { maxBodyHeight: 600 } : {}),
+                    ...(data.length > 10 ? { paging: true } : { paging: false }),
+                    ...{ pageSize: /* istanbul ignore next */ data.length > 100 ? 50 : 10 },
+                    pageSizeOptions: [10, 50, 100, 200, 500],
+                    padding: 'dense',
+                    rowStyle: rowData => {
+                        if (!!rowData.aut_id) {
+                            return {
+                                backgroundColor: theme.palette.secondary.light,
+                                color: theme.palette.primary.main,
+                            };
+                        } else {
+                            return {};
+                        }
+                    },
+                    overflowY: list.length > 10 ? 'auto' : 'hidden',
+                }}
+            />
+        </Box>
     );
 };
 

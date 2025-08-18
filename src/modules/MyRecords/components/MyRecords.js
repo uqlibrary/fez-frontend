@@ -33,7 +33,8 @@ export default class MyRecords extends PureComponent {
         canUseExport: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
+        navigationType: PropTypes.string,
         actions: PropTypes.object,
     };
 
@@ -70,7 +71,7 @@ export default class MyRecords extends PureComponent {
         // handle browser back button - set state from location/dispatch action for this state
         if (
             state.prevProps?.location !== props.location &&
-            props.history.action === 'POP' &&
+            props.navigationType === 'POP' &&
             props.location.pathname === state.prevProps?.thisUrl
         ) {
             return {
@@ -100,14 +101,14 @@ export default class MyRecords extends PureComponent {
         return null;
     }
 
-    componentDidMount() {
-        if (!this.props.accountLoading) {
+    componentDidMount(prevProps) {
+        if (prevProps?.accountLoading !== this.props?.accountLoading && !this.props?.accountLoading) {
             this.props.actions.loadAuthorPublications({ ...this.state });
         }
     }
 
-    componentDidUpdate() {
-        if (!!this.state.reloadPublications) {
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.reloadPublications !== this.state.reloadPublications && !!this.state.reloadPublications) {
             this.props.actions.loadAuthorPublications({ ...this.state });
         }
     }
@@ -118,7 +119,7 @@ export default class MyRecords extends PureComponent {
                 pageSize: pageSize,
                 page: 1,
             },
-            this.pushPageHistory,
+            this.navigateTo,
         );
     };
 
@@ -127,7 +128,7 @@ export default class MyRecords extends PureComponent {
             {
                 page: page,
             },
-            this.pushPageHistory,
+            this.navigateTo,
         );
     };
 
@@ -137,7 +138,7 @@ export default class MyRecords extends PureComponent {
                 sortBy: sortBy,
                 sortDirection: sortDirection,
             },
-            this.pushPageHistory,
+            this.navigateTo,
         );
     };
 
@@ -147,7 +148,7 @@ export default class MyRecords extends PureComponent {
                 activeFacets: activeFacets,
                 page: 1,
             },
-            this.pushPageHistory,
+            this.navigateTo,
         );
     };
     /* istanbul ignore next */
@@ -159,8 +160,8 @@ export default class MyRecords extends PureComponent {
         );
     };
 
-    pushPageHistory = () => {
-        this.props.history.push({
+    navigateTo = () => {
+        this.props.navigate({
             pathname: `${this.props.thisUrl}`,
             search: `?ts=${Date.now()}`,
         });

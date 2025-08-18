@@ -1,8 +1,8 @@
 import React from 'react';
 import * as records from 'mock/data/testing/records';
-import AdditionalInformation from './AdditionalInformation';
+import AdditionalInformation, { formatDate } from './AdditionalInformation';
 import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
-import { renderWithRouter } from 'test-utils';
+import { rtlRender, WithRouter } from 'test-utils';
 import { initialize } from '@googlemaps/jest-mocks';
 import { useJsApiLoader } from '@react-google-maps/api';
 
@@ -31,7 +31,11 @@ function setup(testProps = {}) {
         account: {},
         ...testProps,
     };
-    return renderWithRouter(<AdditionalInformation {...props} />);
+    return rtlRender(
+        <WithRouter>
+            <AdditionalInformation {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('Additional Information Component ', () => {
@@ -43,8 +47,6 @@ describe('Additional Information Component ', () => {
     it('should render component with journal article', () => {
         const { container } = setup({ publication: records.journalArticle });
         expect(container).toMatchSnapshot();
-        // expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(1);
-        // expect(wrapper.find('.eraYearListed').text()).toEqual(' (ERA 2010 Journal(s) Listed)');
     });
 
     it('should render component with journal', () => {
@@ -56,6 +58,23 @@ describe('Additional Information Component ', () => {
         initialize();
         useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { container } = setup({ publication: records.dataCollection });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render component with data collection with raid', () => {
+        initialize();
+        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
+        const { container } = setup({
+            publication: {
+                ...records.dataCollection,
+                fez_record_search_key_raid: [
+                    {
+                        rek_raid: '10.1234/xxx',
+                        rek_raid_order: 1,
+                    },
+                ],
+            },
+        });
         expect(container).toMatchSnapshot();
     });
 
@@ -180,6 +199,46 @@ describe('Additional Information Component ', () => {
     it('should render component with image', () => {
         const { container } = setup({ publication: records.imageDocument });
         expect(container).toMatchSnapshot();
+    });
+
+    it('should render component with instrument', () => {
+        const { container } = setup({ publication: records.instrument });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should render component with orcid owner identifier', () => {
+        const id = '0000-0000-0000-0001';
+        const { getByTestId } = setup({
+            publication: {
+                ...records.instrument,
+                fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }],
+            },
+        });
+
+        expect(getByTestId('rek-contributor-identifier-link')).toHaveTextContent(id);
+    });
+
+    it('should render component with ror owner identifier', () => {
+        const id = '02mhbdp94';
+        const { getByTestId } = setup({
+            publication: {
+                ...records.instrument,
+                fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }],
+            },
+        });
+        expect(getByTestId('rek-contributor-identifier-link')).toHaveTextContent(id);
+    });
+
+    it('should render component with unrecognised owner identifier', () => {
+        const id = '12345';
+        const { getByText } = setup({
+            publication: {
+                ...records.instrument,
+                fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }],
+            },
+        });
+
+        expect(getByText(id)).toBeInTheDocument();
     });
 
     it('should render component with generic document', () => {
@@ -348,5 +407,22 @@ describe('Additional Information Component ', () => {
             },
         });
         expect(container).toMatchSnapshot();
+    });
+
+    describe('exported functions', () => {
+        it('formatDate', () => {
+            // valid date with default format
+            rtlRender(<>{formatDate('2016-09-13T01:19:06Z')}</>);
+            expect(document.querySelector('.citationDate')).toHaveTextContent('2016-09-13');
+
+            // valid date with specific format
+            rtlRender(<>{formatDate('2016-09-13T01:19:06Z', 'DD-MM-YYYY')}</>);
+            expect(document.querySelectorAll('.citationDate')[1]).toHaveTextContent('13-09-2016');
+
+            // invalid date with default format
+            rtlRender(<>{formatDate('2016-09-33T01:19:06Z')}</>);
+            expect(document.querySelectorAll('.citationDate')[2]).toHaveClass('empty');
+            expect(document.querySelectorAll('.citationDate')[2]).toHaveTextContent('');
+        });
     });
 });

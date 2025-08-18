@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component ContributorForm should render with default props 1`] = `
+<div>
+  <div>
+    Please 
+    <b>
+      add to a list of contributors below
+    </b>
+    , in the format and order that they are published.
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+    id="contributorForm"
+    style="margin-top: 8px;"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+        data-testid="name-as-published"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="false"
+          data-testid="name-as-published-label"
+          for="name-as-published-input"
+          id="name-as-published-label"
+        >
+          Name as published
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="Name as published"
+            autocomplete="off"
+            class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+            data-analyticsid="name-as-published-input"
+            data-testid="name-as-published-input"
+            id="name-as-published-input"
+            label="Name as published"
+            placeholder="Please type the name exactly as published"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+    style="margin-top: 8px;"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      style="margin-bottom: 8px;"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+        data-analyticsid="undefined-add"
+        data-testid="undefined-add"
+        disabled=""
+        id="undefined-add"
+        tabindex="-1"
+        type="button"
+      >
+        Add author
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -4,6 +4,7 @@ import {
     PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_JOURNAL,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_THESIS,
@@ -11,6 +12,9 @@ import {
 } from './general';
 
 // Field order values copied from locale/viewRecord.js:viewRecord.fields
+/**
+ * @type {{[number]: {fields: {field: string, order: number}[]}}}
+ */
 export const doiFields = {
     [PUBLICATION_TYPE_BOOK_CHAPTER]: {
         fields: [
@@ -243,6 +247,60 @@ export const doiFields = {
                 field: 'fez_record_search_key_issn',
                 order: 19,
                 needsSeriesForVisibility: true,
+            },
+        ],
+    },
+
+    [PUBLICATION_TYPE_INSTRUMENT]: {
+        fields: [
+            {
+                field: 'fez_record_search_key_author',
+                order: 1,
+            },
+            {
+                field: 'rek_title',
+                order: 2,
+            },
+            {
+                field: 'rek_description',
+                order: 3,
+            },
+            {
+                field: 'fez_record_search_key_publisher',
+                order: 4,
+                requiresUQ: true,
+            },
+            {
+                field: 'rek_date',
+                order: 5,
+            },
+            {
+                field: 'fez_record_search_key_contributor',
+                order: 6,
+            },
+            {
+                field: 'fez_record_search_key_start_date',
+                order: 7,
+            },
+            {
+                field: 'fez_record_search_key_end_date',
+                order: 8,
+            },
+            {
+                field: 'fez_record_search_key_measured_variable',
+                order: 9,
+            },
+            {
+                field: 'fez_record_search_key_instrument_type',
+                order: 10,
+            },
+            {
+                field: 'fez_record_search_key_alternate_identifier',
+                order: 11,
+            },
+            {
+                field: 'fez_record_search_key_resource_type',
+                order: 12,
             },
         ],
     },

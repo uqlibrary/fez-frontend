@@ -1,9 +1,8 @@
 import { ContributorsEditor, mapStateToProps } from './ContributorsEditor';
 import { authorsSearch } from 'mock/data';
-import Immutable from 'immutable';
 import React from 'react';
-import locale from 'locale/components';
-import { render, WithReduxStore, fireEvent, waitFor, within } from 'test-utils';
+import { locale } from 'locale';
+import { render, WithReduxStore, fireEvent, waitFor, within, userEvent } from 'test-utils';
 import * as repositories from 'repositories';
 
 function setup(testProps = {}, renderMethod = render) {
@@ -87,14 +86,12 @@ describe('ContributorsEditor', () => {
             showContributorAssignment: false,
             isAdmin: true,
             canEdit: true,
-            input: {
-                name: 'test',
-                value: [
-                    {
-                        aut_id: 101,
-                    },
-                ],
-            },
+            name: 'test',
+            value: [
+                {
+                    aut_id: 101,
+                },
+            ],
             record,
         });
         expect(container).toMatchSnapshot();
@@ -116,19 +113,12 @@ describe('ContributorsEditor', () => {
                     },
                 },
             },
-            meta: {
-                initial: {
-                    toJS: () => [{}],
+            name: 'test',
+            value: [
+                {
+                    aut_id: 101,
                 },
-            },
-            input: {
-                name: 'test',
-                value: [
-                    {
-                        aut_id: 101,
-                    },
-                ],
-            },
+            ],
         });
 
         expect(container).toMatchSnapshot();
@@ -228,17 +218,15 @@ describe('ContributorsEditor', () => {
             author: authorsSearch.data[0],
             showIdentifierLookup: true,
             showContributorAssignment: true,
-            input: {
-                name: 'test',
-                value: [
-                    {
-                        nameAsPublished: 'test 1',
-                    },
-                    {
-                        nameAsPublished: 'test 2',
-                    },
-                ],
-            },
+            name: 'test',
+            value: [
+                {
+                    nameAsPublished: 'test 1',
+                },
+                {
+                    nameAsPublished: 'test 2',
+                },
+            ],
         });
         fireEvent.click(getByRole('listitem', { name: 'Select this contributor (test 2) to assign it as you' }));
 
@@ -250,19 +238,17 @@ describe('ContributorsEditor', () => {
             editMode: true,
             author: authorsSearch.data[0],
             showContributorAssignment: true,
-            input: {
-                name: 'test',
-                value: [
-                    {
-                        nameAsPublished: 'test 1',
-                        aut_id: 410,
-                        selected: true,
-                    },
-                    {
-                        nameAsPublished: 'test 2',
-                    },
-                ],
-            },
+            name: 'test',
+            value: [
+                {
+                    nameAsPublished: 'test 1',
+                    aut_id: 410,
+                    selected: true,
+                },
+                {
+                    nameAsPublished: 'test 2',
+                },
+            ],
         });
 
         expect(queryByTestId('test-list-row-1-name-as-published')).toBeInTheDocument();
@@ -282,14 +268,12 @@ describe('ContributorsEditor', () => {
             author: authorsSearch.data[0],
             showIdentifierLookup: true,
             showContributorAssignment: true,
-            input: {
-                name: 'test',
-                value: [
-                    {
-                        nameAsPublished: 'test 1',
-                    },
-                ],
-            },
+            name: 'test',
+            value: [
+                {
+                    nameAsPublished: 'test 1',
+                },
+            ],
         });
 
         fireEvent.click(getByTestId('test-aut-id-input')); // add focus so control shows entered text
@@ -309,13 +293,11 @@ describe('ContributorsEditor', () => {
             editMode: true,
             author: authorsSearch.data[0],
             showContributorAssignment: true,
-            input: {
-                name: 'test',
-                value: [
-                    { nameAsPublished: 'test 1', disabled: false },
-                    { nameAsPublished: 'test 2', disabled: false },
-                ],
-            },
+            name: 'test',
+            value: [
+                { nameAsPublished: 'test 1', disabled: false },
+                { nameAsPublished: 'test 2', disabled: false },
+            ],
         });
         expect(queryByTestId('test-list-row-0-name-as-published')).toBeInTheDocument();
         expect(queryByTestId('test-list-row-1-name-as-published')).toBeInTheDocument();
@@ -331,10 +313,8 @@ describe('ContributorsEditor', () => {
             editMode: true,
             author: authorsSearch.data[0],
             showContributorAssignment: true,
-            input: {
-                name: 'test',
-                value: [{ nameAsPublished: 'test 1' }, { nameAsPublished: 'test 2' }],
-            },
+            name: 'test',
+            value: [{ nameAsPublished: 'test 1' }, { nameAsPublished: 'test 2' }],
         });
 
         expect(getByTestId('test-list-row-0-name-as-published')).toHaveTextContent('test 1');
@@ -350,10 +330,8 @@ describe('ContributorsEditor', () => {
             editMode: true,
             author: authorsSearch.data[0],
             showContributorAssignment: true,
-            input: {
-                name: 'test',
-                value: [{ nameAsPublished: 'test 1' }, { nameAsPublished: 'test 2' }],
-            },
+            name: 'test',
+            value: [{ nameAsPublished: 'test 1' }, { nameAsPublished: 'test 2' }],
         });
 
         expect(getByTestId('test-list-row-0-name-as-published')).toHaveTextContent('test 1');
@@ -373,18 +351,16 @@ describe('ContributorsEditor', () => {
             showIdentifierLookup: true,
             author: authorsSearch.data[0],
             locale: { errorMessage: 'dup id' },
-            input: {
-                name: 'test',
-                value: [
-                    {
-                        nameAsPublished: 'test',
-                        aut_id: authorsSearch.data[0].aut_id,
-                    },
-                    {
-                        nameAsPublished: 'Test 2',
-                    },
-                ],
-            },
+            name: 'test',
+            value: [
+                {
+                    nameAsPublished: 'test',
+                    aut_id: authorsSearch.data[0].aut_id,
+                },
+                {
+                    nameAsPublished: 'Test 2',
+                },
+            ],
         });
 
         fireEvent.click(getByTestId('test-list-row-1-edit'));
@@ -426,17 +402,15 @@ describe('ContributorsEditor', () => {
             editMode: true,
             showContributorAssignment: true,
             author: authorsSearch.data[0],
-            input: {
-                name: 'test',
-                value: [
-                    {
-                        nameAsPublished: 'test 1',
-                    },
-                    {
-                        nameAsPublished: 'test 2',
-                    },
-                ],
-            },
+            name: 'test',
+            value: [
+                {
+                    nameAsPublished: 'test 1',
+                },
+                {
+                    nameAsPublished: 'test 2',
+                },
+            ],
         });
 
         fireEvent.click(getByTestId('test-list-row-0-edit'));
@@ -445,19 +419,44 @@ describe('ContributorsEditor', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should keep authorId when editing a contributor that has been assigned as the publication author', async () => {
+        let contributors = [];
+        const { getByTestId } = setup({
+            onChange: values => (contributors = values),
+            canEdit: true,
+            forceSelectable: true,
+            author: authorsSearch.data[0],
+            name: 'test',
+            value: [],
+        });
+
+        // add a couple of contributors
+        await userEvent.type(getByTestId('test-input'), 'Author 1');
+        await userEvent.click(getByTestId('test-add'));
+        await userEvent.type(getByTestId('test-input'), 'Author 2');
+        await userEvent.click(getByTestId('test-add'));
+        // assign the first contributor as the pub author
+        await userEvent.click(getByTestId('test-list-row-0'));
+        // update the first contributor's name
+        await userEvent.click(getByTestId('test-list-row-0-edit'));
+        await userEvent.type(getByTestId('test-input'), ' (edited)');
+        await userEvent.click(getByTestId('test-add'));
+        // assert that the assigned and edited contributor has the expected authorId
+        expect(contributors[0].nameAsPublished).toEqual('Author 1 (edited)');
+        expect(contributors[0].authorId).toEqual(authorsSearch.data[0].aut_id);
+    });
+
     it('should not be able to select contributor in edit mode', () => {
         const { getByRole, getByTestId } = setup({
             editMode: true,
             canEdit: true,
             showContributorAssignment: true,
-            input: {
-                name: 'test',
-                value: [
-                    {
-                        nameAsPublished: 'test 1',
-                    },
-                ],
-            },
+            name: 'test',
+            value: [
+                {
+                    nameAsPublished: 'test 1',
+                },
+            ],
         });
 
         let listItem = getByTestId('test-list-row-0');
@@ -481,14 +480,12 @@ describe('ContributorsEditor', () => {
             canEdit: true,
             showIdentifierLookup: true,
             author: authorsSearch.data[0],
-            input: {
-                name: 'test',
-                value: [
-                    {
-                        nameAsPublished: 'test 1',
-                    },
-                ],
-            },
+            name: 'test',
+            value: [
+                {
+                    nameAsPublished: 'test 1',
+                },
+            ],
         });
 
         fireEvent.click(getByTestId('test-aut-id-input')); // add focus so control shows entered text
@@ -511,73 +508,119 @@ describe('ContributorsEditor', () => {
     it('renders 21 contributor rows wrapped in an infinite scroll', () => {
         const { container } = setup({
             canEdit: true,
-            input: {
-                name: 'test',
-                value: [
-                    { nameAsPublished: 1 },
-                    { nameAsPublished: 2 },
-                    { nameAsPublished: 3 },
-                    { nameAsPublished: 4 },
-                    { nameAsPublished: 5 },
-                    { nameAsPublished: 6 },
-                    { nameAsPublished: 7 },
-                    { nameAsPublished: 8 },
-                    { nameAsPublished: 9 },
-                    { nameAsPublished: 10 },
-                    { nameAsPublished: 11 },
-                    { nameAsPublished: 12 },
-                    { nameAsPublished: 3 },
-                    { nameAsPublished: 14 },
-                    { nameAsPublished: 15 },
-                    { nameAsPublished: 16 },
-                    { nameAsPublished: 17 },
-                    { nameAsPublished: 18 },
-                    { nameAsPublished: 19 },
-                    { nameAsPublished: 20 },
-                    { nameAsPublished: 21 },
-                ],
-            },
+            name: 'test',
+            value: [
+                { nameAsPublished: 1 },
+                { nameAsPublished: 2 },
+                { nameAsPublished: 3 },
+                { nameAsPublished: 4 },
+                { nameAsPublished: 5 },
+                { nameAsPublished: 6 },
+                { nameAsPublished: 7 },
+                { nameAsPublished: 8 },
+                { nameAsPublished: 9 },
+                { nameAsPublished: 10 },
+                { nameAsPublished: 11 },
+                { nameAsPublished: 12 },
+                { nameAsPublished: 3 },
+                { nameAsPublished: 14 },
+                { nameAsPublished: 15 },
+                { nameAsPublished: 16 },
+                { nameAsPublished: 17 },
+                { nameAsPublished: 18 },
+                { nameAsPublished: 19 },
+                { nameAsPublished: 20 },
+                { nameAsPublished: 21 },
+            ],
         });
 
         expect(container).toMatchSnapshot();
     });
 
-    it('should show validation error', () => {
+    it('should show given validation error', () => {
         const { container } = setup({
             contributors: [],
-            meta: { error: 'This is a test error' },
+            state: { error: 'This is a test error' },
         });
         expect(container).toMatchSnapshot();
     });
 
-    it('should update component', () => {
+    it('should show error when required props is true and there are no items selected', () => {
+        const { getByTestId } = setup({
+            name: 'test',
+            value: [
+                {
+                    nameAsPublished: 'author 2',
+                    aut_id: 410,
+                },
+                {
+                    nameAsPublished: 'author 2',
+                    aut_id: 420,
+                },
+            ],
+            required: true,
+        });
+        expect(getByTestId('test-error')).toHaveTextContent(
+            /Please provide a list as described and select one as you/i,
+        );
+    });
+
+    it('should not show error when required props is true and there are items selected', () => {
+        const { queryByTestId } = setup({
+            name: 'test',
+            value: [
+                {
+                    nameAsPublished: 'author 2',
+                    aut_id: 410,
+                },
+                {
+                    nameAsPublished: 'author 2',
+                    aut_id: 420,
+                    selected: true,
+                },
+            ],
+            required: true,
+        });
+        expect(queryByTestId('test-error')).not.toBeInTheDocument();
+    });
+
+    it('should not show error when required props is not true, even when there are no items selected', () => {
+        const { queryByTestId } = setup({
+            name: 'test',
+            value: [
+                {
+                    nameAsPublished: 'author 2',
+                    aut_id: 410,
+                },
+                {
+                    nameAsPublished: 'author 2',
+                    aut_id: 420,
+                },
+            ],
+        });
+        expect(queryByTestId('test-error')).not.toBeInTheDocument();
+    });
+
+    it('should call given onChange only when `contributors` change', () => {
         const onChangeFn = jest.fn();
-        const { rerender } = setup({
+        const { getByTestId, getByRole, rerender } = setup({
             onChange: onChangeFn,
         });
+        expect(onChangeFn).toHaveBeenCalledTimes(1);
 
-        setup({ onChange: onChangeFn, contributors: [{ displayName: 'test 1' }, { displayName: 'test 2' }] }, rerender);
+        fireEvent.change(getByTestId('test-input'), { target: { value: 'J.Smith' } });
+        fireEvent.click(getByRole('button', { name: 'Add contributor' }));
+        expect(getByTestId('test-list-row-0-name-as-published')).toHaveTextContent('J.Smith');
+        expect(onChangeFn).toHaveBeenCalledTimes(2);
 
-        expect(onChangeFn).toHaveBeenCalled();
+        setup({ onChange: onChangeFn }, rerender);
+        expect(onChangeFn).toHaveBeenCalledTimes(2);
     });
 
     it('should get contributors from props and input value set as an array', () => {
         const { container } = setup({
-            input: {
-                name: 'test',
-                value: [{ displayName: 'test 1' }, { displayName: 'test 2' }],
-            },
-        });
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should get contributors from props and input value set as an Immutable list', () => {
-        const { container } = setup({
-            input: {
-                name: 'test',
-                value: Immutable.List([{ displayName: 'test 1' }, { displayName: 'test 2' }]),
-            },
+            name: 'test',
+            value: [{ displayName: 'test 1' }, { displayName: 'test 2' }],
         });
 
         expect(container).toMatchSnapshot();
@@ -585,7 +628,7 @@ describe('ContributorsEditor', () => {
 
     it('should render error as html', () => {
         const { container } = setup({
-            meta: {
+            state: {
                 error: (
                     <p>
                         <span>test</span>
@@ -598,7 +641,7 @@ describe('ContributorsEditor', () => {
 
     it('should render error as one child', () => {
         const { container } = setup({
-            meta: {
+            state: {
                 error: <span>test</span>,
             },
         });
@@ -625,5 +668,26 @@ describe('ContributorsEditor', () => {
             author: null,
             record: null,
         });
+    });
+
+    it('should update contributors state upon input prop changes', () => {
+        const authorName = 'Author 1';
+        const { rerender, queryByText } = setup();
+        expect(queryByText(authorName)).not.toBeInTheDocument();
+
+        setup(
+            {
+                name: 'test',
+                value: [
+                    {
+                        nameAsPublished: authorName,
+                        aut_id: 410,
+                        selected: true,
+                    },
+                ],
+            },
+            rerender,
+        );
+        expect(queryByText(authorName)).toBeInTheDocument();
     });
 });

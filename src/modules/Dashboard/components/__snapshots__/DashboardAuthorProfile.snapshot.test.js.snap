@@ -265,7 +265,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                   class="css-hi05s4"
                   data-analyticsid="researcher-link"
                   data-testid="researcher-link"
-                  href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid"
+                  href=" https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/web-science-researcher-profile"
                   id="researcher-link"
                   rel="noopener noreferrer"
                   tabindex="0"
@@ -286,7 +286,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                   class="css-hi05s4"
                   data-analyticsid="scopus-link"
                   data-testid="scopus-link"
-                  href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid"
+                  href="https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/google-scholar-scopus-and-other-profiles"
                   id="scopus-link"
                   rel="noopener noreferrer"
                   tabindex="0"
@@ -304,20 +304,15 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                 class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <a
-                  class="css-hi05s4"
-                  data-analyticsid="google_scholar-link"
-                  data-testid="google_scholar-link"
-                  href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/google-scholar-profile"
-                  id="google_scholar-link"
-                  rel="noopener noreferrer"
+                  class="css-10b6o39"
+                  data-testid="google_scholar"
+                  id="google_scholar"
                   tabindex="0"
-                  target="_blank"
+                  title="You are not linked to Google Scholar - Click to link via ORCID"
                 >
                   <div
-                    aria-label="You are not linked to Google Scholar - Click for more information"
-                    class="fez-icon google_scholar error"
-                    data-mui-internal-clone-element="true"
-                    style="width: 32px; height: 32px; border-radius: 32px;"
+                    class="fez-icon google_scholar dashboard error"
+                    title="You are not linked to Google Scholar - Click to link via ORCID"
                   />
                 </a>
               </div>

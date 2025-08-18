@@ -1,98 +1,73 @@
 import React from 'react';
 import DeleteRecord from './DeleteRecord';
 import { mockRecordToDelete } from 'mock/data/testing/records';
-import { communityRecord, collectionRecord } from 'mock/data/testing/communityCollection';
-import Immutable from 'immutable';
-import { DELETED, DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
-import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { DELETED, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
+import {
+    expectApiRequestToMatchSnapshot,
+    api,
+    mockUseForm,
+    render,
+    waitForTextToBeRemoved,
+    waitToBeEnabled,
+    WithReduxStore,
+    WithRouter,
+} from 'test-utils';
+import userEvent from '@testing-library/user-event';
+import { screen } from '@testing-library/react';
+import { deletedRecord } from '../../../mock/data';
+import { publicationTypeListThesis, recordWithRDM } from '../../../mock/data/records';
+import { set } from 'lodash';
+const recordWithCrossrefDoi = publicationTypeListThesis.data[0];
+const recordWithDataCiteDoi = recordWithRDM;
 
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: props => {
-        return (
-            <field
-                is="mock"
-                name={props.name}
-                title={props.title}
-                required={props.required}
-                disabled={props.disable}
-                label={props.label || props.floatingLabelText}
-            />
-        );
-    },
+const mockUseNavigate = jest.fn();
+let mockParams = { pid: mockRecordToDelete.rek_pid };
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+    useParams: () => mockParams,
 }));
 
-function setup(testProps, renderMethod = render) {
-    const props = {
-        autofill: jest.fn(),
-        blur: jest.fn(),
-        change: jest.fn(),
-        clearAsyncError: jest.fn(),
-        anyTouched: true,
-        asyncValidating: false,
-        asyncValidate: jest.fn(),
-        clearFields: jest.fn(),
-        clearSubmitErrors: jest.fn(),
-        destroy: jest.fn(),
-        dispatch: jest.fn(),
-        initialize: jest.fn(),
-        reset: jest.fn(),
-        resetSection: jest.fn(),
-        touch: jest.fn(),
-        submit: jest.fn(),
-        untouch: jest.fn(),
-        clearSubmit: jest.fn(),
-        dirty: true,
-        form: 'form',
-        initialized: false,
-        submitFailed: false,
-        valid: true,
-        pure: true,
-        pristine: true,
-        submitAsSideEffect: false,
-        submitting: false,
-        invalid: false,
-        submitSucceeded: false,
-        recordToDelete: testProps.recordToDelete,
-        loadingRecordToDelete: testProps.loadingRecordToDelete || false,
-
-        handleSubmit: testProps.handleSubmit || jest.fn(),
-        initialValues:
-            testProps.initialValues ||
-            Immutable.Map({
-                publication: Immutable.Map(testProps.recordToDelete || mockRecordToDelete),
-            }),
-        actions: testProps.actions || { loadRecordToDelete: jest.fn(), clearDeleteRecord: jest.fn() },
-        history: testProps.history || { go: jest.fn() },
-        match: testProps.match || {},
-
-        ...testProps,
+function setup(props = {}, renderMethod = render) {
+    const state = {
+        accountReducer: {
+            accountAuthorLoading: props.accountAuthorLoading || false,
+        },
+        deleteRecordReducer: {
+            loadingRecordToDelete: props.loadingRecordToDelete || false,
+            recordToDelete: { ...props.recordToDelete },
+        },
     };
+
     return renderMethod(
-        <WithReduxStore>
+        <WithReduxStore initialState={state}>
             <WithRouter>
-                <DeleteRecord {...props} />
+                <DeleteRecord />
             </WithRouter>
         </WithReduxStore>,
     );
 }
 
 describe('Component DeleteRecord', () => {
-    it('should render loader when record is loading', () => {
-        const { container } = setup({ recordToDelete: mockRecordToDelete, loadingRecordToDelete: true });
-        expect(container).toMatchSnapshot();
+    afterEach(() => {
+        mockParams = {};
+        jest.restoreAllMocks();
     });
 
-    it('should render delete record form with record citation', () => {
-        const { container } = setup({ recordToDelete: mockRecordToDelete });
-        expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(1);
+    it('should render loader when current author info is not loaded', () => {
+        const { getByText } = setup({ accountAuthorLoading: true });
+        expect(getByText('Loading work')).toBeVisible();
+    });
+
+    it('should render loader when record is loading', () => {
+        const { getByText } = setup({ loadingRecordToDelete: true });
+        expect(getByText('Loading work')).toBeVisible();
     });
 
     it('should render delete record form with deleted record citation', () => {
         const { container } = setup({ recordToDelete: { ...mockRecordToDelete, rek_status: DELETED } });
         expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(1);
     });
 
     it('should render delete record form with data collection citation', () => {
@@ -104,7 +79,6 @@ describe('Component DeleteRecord', () => {
             },
         });
         expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(3);
     });
 
     it('should render delete record form with deleted data collection citation', () => {
@@ -117,158 +91,98 @@ describe('Component DeleteRecord', () => {
             },
         });
         expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(3);
     });
 
-    it('should render delete record form for records with Crossref UQ DOIs', () => {
-        const { container, getByTestId } = setup({
-            recordToDelete: {
-                ...mockRecordToDelete,
-                fez_record_search_key_doi: { rek_doi: `${DOI_CROSSREF_PREFIX}12345` },
-            },
-        });
-        expect(container).toMatchSnapshot();
-        expect(getByTestId('submit-delete-record')).toBeEnabled();
-        expect(container.getElementsByTagName('field').length).toEqual(2);
-    });
+    describe('form submission', () => {
+        const deletionReason = 'deletion reason';
 
-    it('should render delete record form for records with DataCite UQ DOIs', () => {
-        const { container, getByTestId } = setup({
-            recordToDelete: {
-                ...mockRecordToDelete,
-                fez_record_search_key_doi: { rek_doi: `${DOI_DATACITE_PREFIX}12345` },
-            },
-        });
-        expect(container).toMatchSnapshot();
-        expect(getByTestId('submit-delete-record')).toBeEnabled();
-        expect(container.getElementsByTagName('field').length).toEqual(3);
-    });
+        const mockUseParamPidValue = pid => (mockParams.pid = pid);
+        const mockGetAndDeleteRecordApiCalls = (record = mockRecordToDelete) => {
+            const pid = record.rek_pid;
+            mockUseParamPidValue(pid);
+            api.mock.records.get({ pid, data: { ...record } }).delete({ pid });
+        };
 
-    it('should display specific alert if trying to delete a Community that contains Collections', () => {
-        const { container, getByTestId } = setup({
-            recordToDelete: {
-                ...communityRecord,
-            },
-            error: '{"status":409,"data":"Can\'t delete a record that has child records","message":"Duplicate record"}',
-        });
+        const fillReason = async () => {
+            await waitForTextToBeRemoved('Loading work');
+            await userEvent.type(screen.getByTestId('reason-input'), deletionReason);
+        };
 
-        expect(container).toMatchSnapshot();
-        expect(getByTestId('alert')).toBeInTheDocument();
-    });
+        const submitForm = async () => {
+            await waitForTextToBeRemoved('Loading work');
+            await waitToBeEnabled(screen.getByTestId('submit-delete-record'));
+            await userEvent.click(screen.getByTestId('submit-delete-record'));
+            await waitForTextToBeRemoved('Request is being processed');
+        };
 
-    it('should display specific alert if trying to delete a Collection that is a part of at least one Community', () => {
-        const { container, getByTestId } = setup({
-            recordToDelete: {
-                ...collectionRecord,
-            },
-            error: '{"status":409,"data":"Can\'t delete a record that has child records","message":"Duplicate record"}',
-        });
-        expect(container).toMatchSnapshot();
-        expect(getByTestId('alert')).toBeInTheDocument();
-    });
+        beforeEach(() => api.reset());
+        afterEach(() => api.reset());
 
-    it('should display general alert if trying to delete a Community or Collection that errors', () => {
-        const { container, getByTestId } = setup({
-            recordToDelete: {
-                ...communityRecord,
-            },
-            error: '{"status":400,"data":"A message from the server","message":"Test error"}',
-        });
-        expect(container).toMatchSnapshot();
-        expect(getByTestId('alert')).toBeInTheDocument();
-    });
+        it('should submit the form for a record without DOI', async () => {
+            mockGetAndDeleteRecordApiCalls();
 
-    it('should display general alert if trying to delete a non-Community or Collection that errors', () => {
-        const { container, getByText, getByTestId } = setup({
-            recordToDelete: {
-                ...mockRecordToDelete,
-            },
-            error: '{"status":400,"data":"A message from the server","message":"Test error"}',
-        });
-        expect(container).toMatchSnapshot();
-        expect(getByText(/Test error/i)).toMatchSnapshot();
-        expect(getByTestId('alert')).toBeInTheDocument();
-    });
+            setup();
+            await submitForm();
 
-    it('should display confirmation box after successful submission and go to record view page', () => {
-        const pushMock = jest.fn();
-        const { getAllByText, getByTestId, rerender } = setup({
-            recordToDelete: mockRecordToDelete,
-            match: { params: { pid: 'UQ:1001' } },
+            expectApiRequestToMatchSnapshot('delete', `records/${mockRecordToDelete.rek_pid}`);
         });
 
-        setup(
-            {
-                recordToDelete: mockRecordToDelete,
-                dirty: true,
-                submitSucceeded: true,
-                history: { push: pushMock },
-                match: { params: { pid: 'UQ:1001' } },
-            },
-            rerender,
-        );
+        it('should submit form for a deleted record without DOI', async () => {
+            const pid = deletedRecord.rek_pid;
+            api.mock.records
+                .get({ pid, status: 410, data: { ...deletedRecord } })
+                .update({ pid, data: { ...deletedRecord } });
+            mockUseParamPidValue(pid);
 
-        // progress bar and modal
-        expect(getAllByText(/Work has been deleted/i).length).toEqual(2);
+            setup();
+            await submitForm();
 
-        fireEvent.click(getByTestId('confirm-dialog-box'));
-        expect(pushMock).toBeCalledWith('/view/UQ:1001');
-    });
-
-    it('should display confirmation box after successful submission and go to search page', () => {
-        const pushMock = jest.fn();
-        const { getByTestId, rerender } = setup({
-            recordToDelete: mockRecordToDelete,
-        });
-        setup(
-            {
-                recordToDelete: mockRecordToDelete,
-                dirty: true,
-                submitSucceeded: true,
-                history: { push: pushMock },
-                match: { params: { pid: 'UQ:1001' } },
-            },
-            rerender,
-        );
-
-        fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(pushMock).toBeCalledWith('/records/search');
-    });
-
-    it('should go back to previous page on cancel', () => {
-        const goBackMock = jest.fn();
-        const { getByTestId } = setup({ recordToDelete: mockRecordToDelete, history: { goBack: goBackMock } });
-        fireEvent.click(getByTestId('cancel-delete-record'));
-        expect(goBackMock).toBeCalled();
-    });
-
-    it('should run handleSubmit on submit', () => {
-        const handleSubmitMock = jest.fn();
-        const { getByTestId } = setup({
-            recordToDelete: mockRecordToDelete,
-            handleSubmit: handleSubmitMock,
-        });
-        fireEvent.click(getByTestId('submit-delete-record'));
-        expect(handleSubmitMock).toBeCalled();
-    });
-
-    /* it('should load record if record is not loaded', () => {
-        const actionFunction = jest.fn();
-        setup({
-            loadingRecordToDelete: false,
-            recordToDelete: null,
-            actions: { loadRecordToDelete: actionFunction },
-            match: { params: { pid: 'UQ:1001' } },
+            expectApiRequestToMatchSnapshot('patch', `records/${pid}`);
         });
 
-        expect(actionFunction).toHaveBeenCalledWith('UQ:1001');
-    });
+        it('should allow enter reason and submit the form for a record without DOI', async () => {
+            mockGetAndDeleteRecordApiCalls();
 
-    it('should clear record to delete when leaving the form', () => {
-        const actionFunction = jest.fn();
-        const wrapper = setup({ recordToDelete: mockRecordToDelete, actions: { clearDeleteRecord: actionFunction } });
-        wrapper.instance().componentWillUnmount();
-        expect(actionFunction).toHaveBeenCalled();
+            setup();
+            await fillReason();
+            await submitForm();
+
+            expectApiRequestToMatchSnapshot('delete', `records/${mockRecordToDelete.rek_pid}`);
+        });
+
+        it('should allow enter reason, new doi resolution URL and submit form for a record with Crossref DOI', async () => {
+            const doiResolutionUrl = 'https://web.library.uq.edu.au/test';
+            mockGetAndDeleteRecordApiCalls(recordWithCrossrefDoi);
+
+            setup();
+            await fillReason();
+            await userEvent.type(screen.getByTestId('rek-doi-resolution-url-input'), doiResolutionUrl);
+            await submitForm();
+
+            expectApiRequestToMatchSnapshot('delete', `records/${recordWithCrossrefDoi.rek_pid}`);
+        });
+
+        it('should allow enter reason, new doi and submit form for a record with DataCite DOI', async () => {
+            const pid = recordWithDataCiteDoi.rek_pid;
+            const newDoi = '10.1234/uql5678';
+            const deletionNotes = 'deletion notes';
+            mockGetAndDeleteRecordApiCalls(recordWithDataCiteDoi);
+            mockUseForm((props, original) =>
+                original(
+                    set(
+                        { values: {} },
+                        'values.publication.fez_record_search_key_deletion_notes.rek_deletion_notes',
+                        deletionNotes,
+                    ),
+                ),
+            );
+            setup();
+
+            await fillReason();
+            await userEvent.type(screen.getByTestId('rek-new-doi-input'), newDoi);
+            await submitForm();
+
+            expectApiRequestToMatchSnapshot('delete', `records/${pid}`);
+        });
     });
-    */
 });

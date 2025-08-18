@@ -1,6 +1,6 @@
 import * as routes from './routes';
 import { IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL } from 'config/general';
-import { JOURNAL_KEYWORDS_LOOKUP_API } from './routes';
+import { ROR_LOOKUP_API } from './routes';
 
 describe('Backend routes method', () => {
     it('should get zer-padded year', () => {
@@ -776,6 +776,7 @@ describe('Backend routes method', () => {
         });
     });
 
+
     it('should construct url for THIRD_PARTY_LOOKUP_API_1FIELD', () => {
         expect(
             routes.THIRD_PARTY_LOOKUP_API_1FIELD({
@@ -807,6 +808,10 @@ describe('Backend routes method', () => {
         ).toEqual({
             apiUrl: 'communities/UQ:123456/collections',
         });
+    });
+
+    it('should construct url for ROR_LOOKUP_API', () => {
+        expect(routes.ROR_LOOKUP_API({ id: 'id' })).toEqual({ apiUrl: 'external/ror/id' });
     });
 
     it('should construct url for BATCH_IMPORT_DIRECTORIES_API', () => {
@@ -877,6 +882,11 @@ describe('Backend routes method', () => {
     it('should construct url for journal details api', () => {
         expect(routes.JOURNAL_API({ id: '12' })).toEqual({
             apiUrl: 'journals/12',
+        });
+    });
+    it('should construct url for journal details api in edit mode', () => {
+        expect(routes.JOURNAL_API({ id: '12', isEdit: true })).toEqual({
+            apiUrl: 'journals/12?from=admin-form',
         });
     });
 
@@ -1031,5 +1041,56 @@ describe('Backend routes method', () => {
                 },
             },
         });
+    });
+
+    it('should construct url for VOCAB_API', () => {
+        expect(routes.VOCAB_API()).toEqual({ apiUrl: 'vocabularies' });
+    });
+
+    it('should construct url for VOCAB_LIST_API', () => {
+        expect(routes.VOCAB_LIST_API({}).apiUrl).toMatch('vocabularies/list');
+    });
+
+    it('should construct url for CHILD_VOCAB_LIST_API', () => {
+        expect(routes.CHILD_VOCAB_LIST_API(123).apiUrl).toMatch('vocabularies/admin/123');
+    });
+
+    it('should construct url for ADMIN_DASHBOARD_EXPORT_REPORT_API', () => {
+        expect(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ report_type: 123 }).apiUrl).toMatch(
+            'dashboard/export-reports?sel_id=123',
+        );
+    });
+    it('should construct url for ADMIN_DASHBOARD_DISPLAY_REPORT_API', () => {
+        expect(
+            routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({
+                report_type: 1,
+                date_from: '2024-01-01',
+                date_to: '2024-01-10',
+                record_id: 123,
+            }).apiUrl,
+        ).toMatch('dashboard/reports?report_type=1&date_from=2024-01-01&date_to=2024-01-10&record_id=123');
+
+        expect(
+            routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({
+                report_type: 1,
+                date_from: '2024-01-01',
+                date_to: '2024-01-10',
+            }).apiUrl,
+        ).toMatch('dashboard/reports?report_type=1&date_from=2024-01-01&date_to=2024-01-10');
+
+        expect(
+            routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({
+                report_type: 1,
+                date_from: '2024-01-01',
+            }).apiUrl,
+        ).toMatch('dashboard/reports?report_type=1&date_from=2024-01-01');
+
+        expect(
+            routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({
+                report_type: 1,
+            }).apiUrl,
+        ).toMatch('dashboard/reports?report_type=1');
+
+        expect(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({}).apiUrl).toMatch('dashboard/reports?');
     });
 });

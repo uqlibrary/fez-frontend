@@ -1,14 +1,7 @@
 import React from 'react';
 import ManageUsers from './index';
-import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
+import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent, userEvent } from 'test-utils';
 import * as repository from 'repositories';
-
-jest.mock('./helpers', () => ({
-    checkForExisting: jest.fn(),
-    clearAlerts: jest.fn(),
-}));
-
-import { checkForExisting } from './helpers';
 
 const setup = (testProps = {}) => {
     return render(
@@ -61,6 +54,10 @@ describe('ManageUsers', () => {
                     },
                 ],
                 total: 1,
+                per_page: 20,
+                current_page: 1,
+                from: 1,
+                to: 20,
             })
             .onPut(new RegExp(repository.routes.USER_API().apiUrl))
             .replyOnce(200, {
@@ -70,39 +67,61 @@ describe('ManageUsers', () => {
                     usr_email: 'test@uq.edu.au',
                     usr_username: 'uqtname',
                 },
+            })
+            .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtest', rule: 'lookup' } })
+            .replyOnce(200, {
+                data: [
+                    {
+                        usr_id: 1234,
+                        usr_full_name: 'Test',
+                        usr_email: 'test@uq.edu.au',
+                        usr_username: 'uqtest',
+                        usr_auth_rule_groups:
+                            '53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11',
+                    },
+                ],
+                total: 1,
+            })
+            .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtname', rule: 'lookup' } })
+            .replyOnce(200, {
+                data: [],
+                total: 0,
             });
-        const { getByTestId, getByText } = setup();
 
-        await waitForElementToBeRemoved(() => getByText('No records to display'));
+        const { getByTestId, findByTestId, queryByTestId, queryAllByText } = setup();
+
+        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
+        await findByTestId('standard-card-user-information');
+
+        expect(getByTestId('users-update-this-user-save')).toHaveAttribute('disabled');
 
         expect(getByTestId('usr-full-name-input')).toHaveAttribute('value', 'Test User');
         expect(getByTestId('usr-email-input')).toHaveAttribute('value', 't.user@library.uq.edu.au');
         expect(getByTestId('usr-username-input')).toHaveAttribute('value', 'uqvasai');
 
-        checkForExisting.mockImplementationOnce(
-            jest.fn(() =>
-                Promise.reject({
-                    usr_username: 'The supplied Username is already on file for another user.',
-                }),
-            ),
-        );
-
         fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test' } });
         fireEvent.change(getByTestId('usr-email-input'), { target: { value: 'test@uq.edu.au' } });
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtest' } });
 
-        await waitFor(() =>
-            expect(getByText('The supplied Username is already on file for another user.')).toBeInTheDocument(),
-        );
+        expect(getByTestId('users-update-this-user-save')).not.toHaveAttribute('disabled');
 
-        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve({})));
+        await userEvent.click(getByTestId('users-update-this-user-save'));
+
+        await waitFor(() => {
+            const messages = queryAllByText('The supplied username is already on file for another user.');
+            expect(messages.length).toBeGreaterThan(0);
+            messages.forEach(message => expect(message).toBeInTheDocument());
+        });
 
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
-        fireEvent.click(getByTestId('users-update-this-user-save'));
 
-        await waitFor(() => getByTestId('users-list-row-0'));
+        await userEvent.click(getByTestId('users-update-this-user-save'));
+
+        await waitFor(() => {
+            expect(queryByTestId('standard-card-user-information')).not.toBeInTheDocument();
+        });
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test');
         expect(getByTestId('usr-email-0')).toHaveAttribute('value', 'test@uq.edu.au');

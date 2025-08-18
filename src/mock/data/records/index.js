@@ -33,6 +33,7 @@ export { default as publicationTypeListDesign } from './publicationTypeListDesig
 export { default as publicationTypeListDigilibImage } from './publicationTypeListDigilibImage';
 export { default as publicationTypeListGenericDocument } from './publicationTypeListGenericDocument';
 export { default as publicationTypeListImage } from './publicationTypeListImage';
+export { default as publicationTypeListInstrument } from './publicationTypeListInstrument';
 export { default as publicationTypeListJournal } from './publicationTypeListJournal';
 export { default as publicationTypeListJournalArticle } from './publicationTypeListJournalArticle';
 export { default as publicationTypeListManuscript } from './publicationTypeListManuscript';
@@ -62,3 +63,7 @@ export { default as UQ339703} from './recordWithWSoD';
 export { default as recordWithNoAffiliationIssues } from './recordWithNoAffiliationIssues'
 export { default as recordWithIncorrectAffiliation } from './recordWithIncorrectAffiliation'
 export { default as recordWithOrphanedAffiliation } from './recordWithOrphanedAffiliation'
+export { default as recordWithRDM } from './recordWithRDM'
+export { default as recordWithRDMMediatedAccess } from './recordWithRDMMediatedAccess'
+export { default as recordThatFailsDeletion } from './recordThatFailsDeletion'
+export { default as deletedRecord } from './deletedRecord'
