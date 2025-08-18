@@ -18,6 +18,7 @@ export const numberToWords = value => {
 
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
+export const PRE_MASQUERADE_SESSION_COOKIE_NAME = 'UQLID_PREMASQUERADE'; // value must match reusable - name of cookie the pre-masquerade session token is stored in while masquerading
 export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
 export const TOKEN_NAME = 'X-Uql-Token';
 export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';

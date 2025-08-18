@@ -4,10 +4,14 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
+
+import Cookies from 'js-cookie';
+
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import locale from 'locale/pages';
-import { pathConfig } from 'config';
+import { pathConfig, SESSION_COOKIE_NAME } from 'config';
+import { PRE_MASQUERADE_SESSION_COOKIE_NAME } from 'config/general';
 
 const Masquerade = ({ account }) => {
     const [userName, setUserName] = useState('');
@@ -18,6 +22,14 @@ const Masquerade = ({ account }) => {
         if ((event && event.key && event.key !== 'Enter') || userName.length === 0) return;
 
         setLoading(true);
+
+        // store the old cookie so we can end the masquerade (done in reusable)
+        const expirationDate = new Date();
+        expirationDate.setTime(expirationDate.getTime() + 24 * 60 * 60 * 1000);
+        // cookie lasts one day - arbitrary decision.
+        // If the masquerade is left in place after that, it will just log them out.
+        const sessionCookieValue = Cookies.get(SESSION_COOKIE_NAME);
+        Cookies.set(PRE_MASQUERADE_SESSION_COOKIE_NAME, sessionCookieValue, { expires: expirationDate });
 
         const redirectUrl = `${window.location.protocol}//${window.location.hostname}${pathConfig.dashboard}`;
         window.location.assign(
