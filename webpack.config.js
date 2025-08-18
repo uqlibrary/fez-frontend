@@ -115,6 +115,9 @@ module.exports = {
             devServer: true, // required for webpack-dev-server to display TS errors
         }),
         new webpack.ProvidePlugin({
+            Buffer: ['buffer', 'Buffer'],
+        }),
+        new webpack.ProvidePlugin({
             process: 'process/browser.js',
         }),
         new HtmlWebpackPlugin({
