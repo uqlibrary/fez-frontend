@@ -171,7 +171,6 @@ export const ChangeDisplayType = () => {
                                         </Field>
                                     </Grid>
                                     {!!subitems && subitems.length > 0 && (
-                                        // tested in cypress changeDisplayType
                                         /* istanbul ignore next */
                                         <Grid item xs={12}>
                                             <Field
@@ -193,7 +192,6 @@ export const ChangeDisplayType = () => {
                             </StandardCard>
                         </Grid>
                         {alertProps && (
-                            // tested in cypress changeDisplayType
                             /* istanbul ignore next */
                             <Grid item xs={12}>
                                 <Alert

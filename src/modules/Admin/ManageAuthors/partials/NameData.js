@@ -1,6 +1,6 @@
 import { useFormContext } from 'react-hook-form';
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
@@ -13,6 +13,7 @@ import { default as locale } from 'locale/components';
 
 export const NameData = () => {
     const {
+        title: cardTitle,
         editRow: {
             fields: { title, displayName, firstName, middleName, lastName, position, email },
         },
@@ -20,7 +21,7 @@ export const NameData = () => {
     const { control } = useFormContext();
 
     return (
-        <StandardCard subCard title="Name information" smallTitle customTitleBgColor="#F7F7F7">
+        <StandardCard subCard title={cardTitle} smallTitle customTitleBgColor="#F7F7F7">
             <Grid container spacing={2} alignItems="center">
                 <Field
                     {...displayName}
@@ -84,9 +85,6 @@ export const NameData = () => {
             </Grid>
         </StandardCard>
     );
-};
-NameData.propTypes = {
-    control: PropTypes.object.isRequired,
 };
 
 export default React.memo(NameData);
