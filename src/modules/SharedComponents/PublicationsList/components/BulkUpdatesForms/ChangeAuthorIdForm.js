@@ -124,6 +124,8 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                             name={'search_author.author_id'}
                             required
                             validate={[validation.required]}
+                            prefilledSearch
+                            clearOnInputClear
                             uqIdFieldId="search-by-rek-author-id"
                             getOptionLabel={option => !!option && `${option.id} (${option.value})`}
                             normalize={value => value?.aut_id || value}
