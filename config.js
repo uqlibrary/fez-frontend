@@ -34,6 +34,7 @@ const deployment = {
         orcidUrl: 'https://sandbox.orcid.org',
         orcidClientId: 'APP-OXX6M6MBQ77GUVWX',
         reusablejs: 'http://assets.library.uq.edu.au/reusable-webcomponents-staging/uq-lib-reusable.min.js',
+        // reusablejs: 'http://localhost:8080/uq-lib-reusable.min.js', // swap if needed in dev
     },
     production: {
         url: () => 'https://espace.library.uq.edu.au/',
