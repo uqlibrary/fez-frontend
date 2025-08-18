@@ -141,7 +141,7 @@ module.exports = {
                     sourceMap: true,
                 },
                 eslint: {
-                    configFile: '.eslintrc',
+                    configFile: 'eslint.config.mjs',
                     failOnWarning: false,
                     failOnError: true,
                 },
