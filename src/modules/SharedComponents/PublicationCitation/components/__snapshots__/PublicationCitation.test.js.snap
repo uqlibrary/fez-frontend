@@ -299,6 +299,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -661,6 +662,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -848,6 +850,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -1034,6 +1037,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1291,6 +1295,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1567,6 +1572,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1849,6 +1855,7 @@ exports[`PublicationCitation  should render component with default item with ima
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -2232,6 +2239,7 @@ exports[`PublicationCitation  should render component with default item with ima
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -2577,6 +2585,7 @@ exports[`PublicationCitation  should render component with default item without 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -3175,6 +3184,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3329,6 +3339,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3586,6 +3597,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3843,6 +3855,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -4107,6 +4120,7 @@ exports[`PublicationCitation  should render component with publication from mult
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -4719,6 +4733,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -5064,6 +5079,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -5341,6 +5357,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -5642,6 +5659,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -5940,6 +5958,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth

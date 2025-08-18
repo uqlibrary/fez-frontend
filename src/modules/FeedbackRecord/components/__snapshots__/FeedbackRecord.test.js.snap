@@ -113,6 +113,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1816,6 +1817,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3315,6 +3317,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -4888,6 +4891,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth

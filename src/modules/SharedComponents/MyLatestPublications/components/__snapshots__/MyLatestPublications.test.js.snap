@@ -32,6 +32,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:678947"
                   >
                     Long noncoding RNAs CUPID1 and CUPID2 mediate breast cancer risk at 11q13 by modulating the response to DNA damage
@@ -501,6 +502,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:792104"
                   >
                     Conf A proceedings
@@ -691,6 +693,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:792110"
                   >
                     Testing book with cache
@@ -855,6 +858,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:792111"
                   >
                     Conference paper with caching
@@ -1022,6 +1026,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:396321"
                   >
                     Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer
