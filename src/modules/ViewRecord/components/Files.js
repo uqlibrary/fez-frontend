@@ -398,7 +398,7 @@ const Files = props => {
     return (
         <Grid xs={12}>
             <StandardCard title={locale.viewRecord.sections.files.title}>
-                {/* eslint-disable-next-line camelcase */}
+                {}
                 {!!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
                     <Alert
                         allowDismiss
@@ -406,7 +406,7 @@ const Files = props => {
                         message={getAdvisoryStatement(publication, locale.culturalSensitivityStatement)}
                     />
                 )}
-                {/* eslint-disable-next-line camelcase */}
+                {}
                 {!!publication.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
                     <Alert allowDismiss type={'info'} message={getSensitiveHandlingNote(publication)} />
                 )}

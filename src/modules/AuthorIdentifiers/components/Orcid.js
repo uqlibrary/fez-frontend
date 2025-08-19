@@ -66,7 +66,7 @@ const Orcid = () => {
 
     useEffect(() => {
         // author's orcid id has been updated successfully
-        // eslint-disable-next-line camelcase
+
         if (orcidResponse.code && orcidResponse.state && author?.aut_orcid_id) {
             dispatch(
                 showAppAlert({
@@ -76,7 +76,6 @@ const Orcid = () => {
             );
         }
 
-        // eslint-disable-next-line camelcase
         if (!accountAuthorLoading && (!author?.aut_id || author.aut_orcid_id)) {
             _navigateToDashboard();
             return;
@@ -120,7 +119,6 @@ const Orcid = () => {
         // (url contains required parameters)
         if (
             account &&
-            // eslint-disable-next-line camelcase
             !author?.aut_orcid_id &&
             orcidRequest.state &&
             orcidResponse.code &&
@@ -176,7 +174,7 @@ const Orcid = () => {
     };
 
     // wait for author and account to be loaded
-    // eslint-disable-next-line camelcase
+
     if (!author?.aut_id || !account) {
         return <div />;
     }

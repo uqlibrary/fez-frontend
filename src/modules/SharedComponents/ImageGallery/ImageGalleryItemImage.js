@@ -34,7 +34,7 @@ const ImageGalleryItemImage = ({
     const thumbnailBlacklisted = !fileData?.isWhiteListed ?? /* istanbul ignore next */ true;
     const thumbnailRestricted =
         (!!fileData?.thumbnailFileName && !fileData?.securityStatus) ?? /* istanbul ignore next */ false;
-    // eslint-disable-next-line camelcase
+
     const thumbnailAdvisory = item.fez_record_search_key_advisory_statement?.rek_advisory_statement ?? false;
 
     // at this stage fileData could still be null, which is fine as below will fall back to default image

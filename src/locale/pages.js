@@ -38,7 +38,6 @@ help: {
 As the contact details changes are only temporary I think this is an ok (not great) approach to display the external link icon.
 
 */
-/* eslint-disable max-len */
 export default {
     pages: {
         index: {

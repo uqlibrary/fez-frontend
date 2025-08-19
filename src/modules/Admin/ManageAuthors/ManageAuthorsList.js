@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { useSelector } from 'react-redux';
 
-// eslint-disable-next-line camelcase
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 
 import { debounce } from 'throttle-debounce';

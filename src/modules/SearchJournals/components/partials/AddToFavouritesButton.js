@@ -32,7 +32,7 @@ export const AddToFavouritesButton = ({ selectedJournals = {}, disabled, clearSe
                 isOpen={isDialogOpen}
                 locale={{
                     ...txt.confirmations.addToFavourites,
-                    // eslint-disable-next-line max-len
+
                     confirmationMessage: selectionCount
                         ? txt.confirmations.addToFavourites.confirmationMessage.replace('COUNT', selectionCount)
                         : '',

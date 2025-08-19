@@ -107,7 +107,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
         ? { ...sortingDefaults }
         : getSearchResultSortingParams(
               journalSearchQueryParams,
-              // eslint-disable-next-line camelcase
+
               journalsList?.per_page,
               sortingDefaults,
           );

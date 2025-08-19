@@ -10,7 +10,7 @@ import { useAccountContext } from 'context';
 
 const mockUseNavigate = jest.fn();
 let mockParams;
-/* eslint-disable react/prop-types */
+
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,

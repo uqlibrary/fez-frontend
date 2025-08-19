@@ -30,7 +30,6 @@ const authorPubsPayload = {
             rek_updated_date: '2017-11-15T01:55:58Z',
             rek_file_downloads: 0,
             rek_citation:
-                /* eslint-disable-next-line max-len */
                 '<a class="citation_author_name" title="Browse by Author Name for V. Asai" href="/list/author/V.+Asai/">V. Asai</a> and <a class="author_id_link" title="Browse by Author ID for M Brown" href="/list/author_id/1671/">M Brown</a> <i><a class="citation_title" title="Click to view Book: Testing book with cache" href="/view/UQ:792110">Testing book with cache</a></i>.   <span class="citation_place_of_publication">Testing book with cache</span>: <span class="citation_publisher">UQ</span>, <span class="citation_date">2017</span>.',
             rek_genre_xsdmf_id: null,
             rek_genre: null,
@@ -421,7 +420,6 @@ describe('Authors incomplete publications reducer', () => {
                 rek_updated_date: '2017-11-15T01:55:58Z',
                 rek_file_downloads: 0,
                 rek_citation:
-                    /* eslint-disable-next-line max-len */
                     '<a class="citation_author_name" title="Browse by Author Name for V. Asai" href="/list/author/V.+Asai/">V. Asai</a> and <a class="author_id_link" title="Browse by Author ID for M Brown" href="/list/author_id/1671/">M Brown</a> <i><a class="citation_title" title="Click to view Book: Testing book with cache" href="/view/UQ:792110">Testing book with cache</a></i>.   <span class="citation_place_of_publication">Testing book with cache</span>: <span class="citation_publisher">UQ</span>, <span class="citation_date">2017</span>.',
                 rek_genre_xsdmf_id: null,
                 rek_genre: null,
