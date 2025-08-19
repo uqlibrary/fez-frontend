@@ -8,6 +8,9 @@
   &.scopus::before {
     content: url(~/src/images/scopus_icon.svg);
   }
+  &.openalex::before {
+    content: url(~/src/images/openalex_icon.svg);
+  }
   &.pubmed::before {
     content: url(~/src/images/pubmed_icon.svg);
   }
