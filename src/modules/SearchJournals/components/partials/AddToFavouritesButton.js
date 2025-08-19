@@ -32,7 +32,6 @@ export const AddToFavouritesButton = ({ selectedJournals = {}, disabled, clearSe
                 isOpen={isDialogOpen}
                 locale={{
                     ...txt.confirmations.addToFavourites,
-
                     confirmationMessage: selectionCount
                         ? txt.confirmations.addToFavourites.confirmationMessage.replace('COUNT', selectionCount)
                         : '',

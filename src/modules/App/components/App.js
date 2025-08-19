@@ -120,7 +120,6 @@ const AppClass = ({
 
     useEffect(() => {
         // don't call the api for non author users since the api call requires an author
-
         if (!accountAuthorLoading && author?.aut_id) {
             actions.searchAuthorPublications({}, 'incomplete');
         }
@@ -185,7 +184,6 @@ const AppClass = ({
         account.class &&
         account.class.indexOf('IS_CURRENT') >= 0 &&
         account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
-
     const isAuthor = !isAuthorLoading && !!account && author?.aut_id;
     const hasIncompleteWorks = !!(
         incompleteRecordList &&

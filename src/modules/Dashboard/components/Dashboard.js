@@ -201,7 +201,6 @@ const Dashboard = ({
     const txt = locale.pages.dashboard;
     const loading =
         // nothing to load for non author users
-
         !!author?.aut_id && (loadingPublicationsByYear || accountAuthorDetailsLoading || loadingPublicationsStats);
     const userHasPublications = authorDetails && authorDetails.espace && authorDetails.espace.doc_count > 0;
     const barChart =

@@ -105,12 +105,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
 
     const { sortBy, sortDirection, pageSize } = journalsListLoading
         ? { ...sortingDefaults }
-        : getSearchResultSortingParams(
-              journalSearchQueryParams,
-
-              journalsList?.per_page,
-              sortingDefaults,
-          );
+        : getSearchResultSortingParams(journalSearchQueryParams, journalsList?.per_page, sortingDefaults);
 
     return (
         <Grid container spacing={2} id={`${id}-container`} data-testid={`${id}-container`}>

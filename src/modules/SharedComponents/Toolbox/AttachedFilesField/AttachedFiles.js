@@ -394,7 +394,6 @@ export const AttachedFiles = ({
     return (
         <Grid xs={12}>
             <StandardCard title={locale.title} subCard>
-                {}
                 {!!record.fez_record_search_key_advisory_statement && (
                     /* istanbul ignore next */ <Alert
                         allowDismiss
@@ -402,7 +401,6 @@ export const AttachedFiles = ({
                         message={getAdvisoryStatement(record, locale.culturalSensitivityStatement)}
                     />
                 )}
-                {}
                 {!!record.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
                     /* istanbul ignore next */ <Alert
                         allowDismiss

@@ -21,7 +21,6 @@ help: {
 - if help is not required, delete help: {} fully (including closing '},')
 
 */
-
 export default {
     title: 'Complete my work',
     loadingMessage: 'Loading work',

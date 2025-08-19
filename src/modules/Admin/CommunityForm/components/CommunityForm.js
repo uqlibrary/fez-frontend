@@ -44,7 +44,6 @@ export const CommunityForm = () => {
         delete data.internalNotes; // transformed above to fez_internal_notes: {ain_detail}
 
         const currentAuthor = author;
-
         return dispatch(createCommunity(data, currentAuthor?.aut_id)).catch(error => {
             setApiError(error);
         });

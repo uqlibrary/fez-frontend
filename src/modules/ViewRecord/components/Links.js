@@ -13,7 +13,6 @@ import { getDownloadLicence } from 'helpers/licence';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { PubmedCentralLink } from 'modules/SharedComponents/PubmedCentralLink';
-
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';

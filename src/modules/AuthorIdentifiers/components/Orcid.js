@@ -66,7 +66,6 @@ const Orcid = () => {
 
     useEffect(() => {
         // author's orcid id has been updated successfully
-
         if (orcidResponse.code && orcidResponse.state && author?.aut_orcid_id) {
             dispatch(
                 showAppAlert({
@@ -174,7 +173,6 @@ const Orcid = () => {
     };
 
     // wait for author and account to be loaded
-
     if (!author?.aut_id || !account) {
         return <div />;
     }

@@ -319,7 +319,6 @@ export class ContributorsEditor extends PureComponent {
                 this.state.contributors.map((item, itemIndex) => ({
                     ...item,
                     selected: !item.selected && index === itemIndex,
-
                     authorId: (!item.selected && index === itemIndex && this.props.author?.aut_id) || null,
                 }))) ||
             /* istanbul ignore next */ this.state.contributors;
