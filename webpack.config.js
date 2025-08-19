@@ -8,7 +8,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-// const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
@@ -160,8 +160,7 @@ module.exports = {
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
         }),
-        /* process.env.NODE_ENV === 'cc' &&
-            new ESLintPlugin({ exclude: ['node_modules', 'custom_modules', 'mock', 'mocks'] }), */
+        process.env.NODE_ENV === 'cc' && new ESLintPlugin({ exclude: ['node_modules', 'custom_modules', 'src/mock'] }),
         new Dotenv(),
     ].filter(Boolean),
     resolve: {
