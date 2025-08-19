@@ -134,7 +134,6 @@ export const SearchJournals = () => {
         if (!hasAnySelectedKeywords) {
             setShowInputControls(true);
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [hasAnySelectedKeywords]);
 
     /**

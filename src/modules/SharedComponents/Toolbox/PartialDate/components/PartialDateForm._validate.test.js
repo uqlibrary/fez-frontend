@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { validate, STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE, MONTH_UNSELECTED } from './PartialDateForm';
 
 const partialAllowedDateForm = (allowPartial = true) => ({ day, month, year }) =>

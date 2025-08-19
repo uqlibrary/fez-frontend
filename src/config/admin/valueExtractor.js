@@ -129,7 +129,6 @@ const editorsGetValue = record => {
     return returnValue;
 };
 
-// eslint-disable-next-line no-unused-vars
 export const deleteKey = (record, searchKey) => {
     const skipDeleteForKeys = [
         'rek_date',

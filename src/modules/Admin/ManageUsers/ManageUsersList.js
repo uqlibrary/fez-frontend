@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import { upperFirst } from 'lodash';
 
-// eslint-disable-next-line camelcase
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 
 import { debounce } from 'throttle-debounce';

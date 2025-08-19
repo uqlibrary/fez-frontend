@@ -201,7 +201,6 @@ const Dashboard = ({
     const txt = locale.pages.dashboard;
     const loading =
         // nothing to load for non author users
-        // eslint-disable-next-line camelcase
         !!author?.aut_id && (loadingPublicationsByYear || accountAuthorDetailsLoading || loadingPublicationsStats);
     const userHasPublications = authorDetails && authorDetails.espace && authorDetails.espace.doc_count > 0;
     const barChart =
@@ -291,9 +290,7 @@ const Dashboard = ({
         authorDetails && (authorDetails.is_administrator === 1 || authorDetails.is_super_administrator === 1);
 
     useEffect(() => {
-        // eslint-disable-next-line camelcase
         if (account && account.id && author?.aut_id) {
-            // eslint-disable-next-line camelcase
             // don't call the api for non author users since the api call requires an author
             actions.countPossiblyYourPublications(account.id);
             actions.loadAuthorPublicationsStats(account.id, authorDetails);

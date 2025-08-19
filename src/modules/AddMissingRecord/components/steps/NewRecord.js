@@ -37,7 +37,6 @@ export const NewRecord = () => {
     };
 
     // wait for author to load before rendering
-    // eslint-disable-next-line camelcase
     if (!author?.aut_id) {
         return <span />;
     }

@@ -75,7 +75,6 @@ export const NewGenericSelectField = ({
             setInputError(!!state.error);
             setInputErrorText(state.error);
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state]);
 
     /* Run this effect to set error state */
