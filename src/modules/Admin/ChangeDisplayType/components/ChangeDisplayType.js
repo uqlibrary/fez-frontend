@@ -40,7 +40,7 @@ const txt = {
 
 const renderTitle = record => {
     const prefixTxt = componentsLocale.components.changeDisplayType.title;
-    const subtypeSuffix = !!record.rek_subtype && ` - ${record.rek_subtype}`;
+    const subtypeSuffix = !!record.rek_subtype ? ` - ${record.rek_subtype}` : '';
     const pageTitle = parseHtmlToJSX(`${prefixTxt}${record.rek_display_type_lookup}${subtypeSuffix}`);
     return (
         <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="change-display-type-page-title">
