@@ -17,6 +17,9 @@ export const CitationCounts = ({ publication, hideViewFullStatisticsLink }) => {
     const { sources } = locale.global;
 
     const counts = {
+        openalex: publication.hasOwnProperty('rek_openalex_citation_count')
+            ? publication.rek_openalex_citation_count
+            : null,
         wos: publication.hasOwnProperty('rek_thomson_citation_count') ? publication.rek_thomson_citation_count : null,
         scopus: publication.hasOwnProperty('rek_scopus_citation_count') ? publication.rek_scopus_citation_count : null,
         google: publication.hasOwnProperty('rek_gs_citation_count') ? publication.rek_gs_citation_count : null,
@@ -81,6 +84,18 @@ export const CitationCounts = ({ publication, hideViewFullStatisticsLink }) => {
                         title={getTitle(txt.google.title)}
                     />
                 )}
+                {!!publication.fez_record_search_key_openalex_id &&
+                    !!publication.fez_record_search_key_openalex_id.rek_openalex_id && (
+                        <Partials.CitationCountView
+                            source="openalex"
+                            count={counts.openalex}
+                            link={sources.openalex.externalUrl.replace(
+                                '[id]',
+                                encodeURIComponent(publication.fez_record_search_key_openalex_id.rek_openalex_id),
+                            )}
+                            title={getTitle(sources.openalex.title)}
+                        />
+                    )}
                 <OpenAccessIcon
                     {...(publication.calculateOpenAccess ? publication.calculateOpenAccess() : {})}
                     style={{ marginBottom: '-5px' }}
