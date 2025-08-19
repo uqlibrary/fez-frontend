@@ -187,10 +187,7 @@ export default {
                 id: 'openalex',
                 title: 'OpenAlex',
                 priority: 5,
-                externalUrl:
-                    RESOLVER_URL_PREFIX +
-                    encodeURIComponent('https://openalex.org/works?page=1&filter=cited_by:') +
-                    '[id]',
+                externalUrl: 'https://openalex.org/works?page=1&filter=cites:' + '[id]',
                 idKey: 'fez_record_search_key_openalex_id.rek_openalex_id',
             },
         },
