@@ -271,8 +271,7 @@ export default {
                             orcid: 'https://orcid.org/',
                         },
                         notLinkedUrl: {
-                            scopus:
-                                'https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/google-scholar-scopus-and-other-profiles',
+                            scopus: 'https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/google-scholar-scopus-and-other-profiles',
                             researcher:
                                 ' https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/web-science-researcher-profile',
                             // google scholar is linked via ORCID
@@ -288,10 +287,8 @@ export default {
                             // Persistent help message
                             activated: 'Weekly automatic upload of your works to ORCID is activated.',
                             // Statuses
-                            done:
-                                'There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.',
-                            error:
-                                'There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.',
+                            done: 'There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.',
+                            error: 'There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.',
                             inProgress: 'A manual upload of your eSpace works to ORCID is in progress.',
                             // Date of last upload
                             lastUpload: 'The last upload was on [syncTime].',
@@ -428,8 +425,7 @@ export default {
             },
             searchResults: {
                 // title: 'Possibly your publications',
-                text:
-                    '[resultsCount] out of [totalCount] potential match(es) displayed. Select any item to claim it as your work.',
+                text: '[resultsCount] out of [totalCount] potential match(es) displayed. Select any item to claim it as your work.',
                 // help: {
                 //     title: 'Possibly your publications',
                 //     text: 'Help about ....',
@@ -465,8 +461,7 @@ export default {
             stepper: [{ label: 'Search for your work' }, { label: 'Search results' }, { label: 'Add your work' }],
             step1: {
                 title: 'Search for your works',
-                text:
-                    'Enter either the DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of work. This will allow us to check whether the work is already in eSpace or is available from another source.',
+                text: 'Enter either the DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of work. This will allow us to check whether the work is already in eSpace or is available from another source.',
                 // help: {
                 //     title: 'Search for your publication',
                 //     text: 'Help about search....',
@@ -481,8 +476,7 @@ export default {
             step2: {
                 noResultsFound: {
                     title: 'No matching works found',
-                    text:
-                        'We were unable to match any results to your search criteria. Please search again or create a new eSpace work.',
+                    text: 'We were unable to match any results to your search criteria. Please search again or create a new eSpace work.',
                     // help: {
                     //     title: 'No matching works found',
                     //     text: 'Why search didn\'t return any items....',
@@ -571,13 +565,11 @@ export default {
             actionsOptions: [
                 {
                     action: 'fix',
-                    title:
-                        'I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files',
+                    title: 'I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files',
                 },
                 {
                     action: 'unclaim',
-                    title:
-                        'I am not the author/editor/contributor of this work - I would like this work removed from my profile',
+                    title: 'I am not the author/editor/contributor of this work - I would like this work removed from my profile',
                 },
             ],
             cancel: 'Cancel',

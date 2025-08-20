@@ -216,9 +216,11 @@ export const getColumns = ({
                         orgtype:
                             (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) ||
                             /* istanbul ignore next */ contributor.orgtype,
-                        uqUsername: `${selectedItem.aut_org_username ||
+                        uqUsername: `${
+                            selectedItem.aut_org_username ||
                             /* istanbul ignore next */ selectedItem.aut_student_username ||
-                            /* istanbul ignore next */ selectedItem.aut_ref_num}`,
+                            /* istanbul ignore next */ selectedItem.aut_ref_num
+                        }`,
                     };
                     props.onRowDataChange({ ...contributor, ...newValue });
                 };
@@ -438,10 +440,12 @@ export const getColumns = ({
                                       id={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation-type`}
                                       data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation-type`}
                                   >
-                                      {`${(!!rowData.orgtype &&
-                                          !!ORG_TYPES_LOOKUP[rowData.orgtype] &&
-                                          `Organisation type: ${ORG_TYPES_LOOKUP[rowData.orgtype]}`) ||
-                                          ''}`}
+                                      {`${
+                                          (!!rowData.orgtype &&
+                                              !!ORG_TYPES_LOOKUP[rowData.orgtype] &&
+                                              `Organisation type: ${ORG_TYPES_LOOKUP[rowData.orgtype]}`) ||
+                                          ''
+                                      }`}
                                   </Typography>
                               </Grid>
                           </Grid>
@@ -654,12 +658,12 @@ export const AuthorsList = ({
                                     ...restAction,
                                     icon: () => (
                                         <Icon
-                                            id={`${contributorEditorId}-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase()}`}
-                                            data-testid={`${contributorEditorId}-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase()}`}
+                                            id={`${contributorEditorId}-${
+                                                (!!props.data.tableData && props.data.tableData.editing) || 'add'
+                                            }-${tooltip.toLowerCase()}`}
+                                            data-testid={`${contributorEditorId}-${
+                                                (!!props.data.tableData && props.data.tableData.editing) || 'add'
+                                            }-${tooltip.toLowerCase()}`}
                                         />
                                     ),
                                 }}

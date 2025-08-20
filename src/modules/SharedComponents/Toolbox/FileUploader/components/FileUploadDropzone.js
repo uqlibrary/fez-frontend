@@ -178,26 +178,14 @@ export const FileUploadDropzone = ({
             file =>
                 file &&
                 file.name &&
-                mimeTypeWhitelist.hasOwnProperty(
-                    file.name
-                        .split('.')
-                        .pop()
-                        .toString()
-                        .toLowerCase(),
-                ),
+                mimeTypeWhitelist.hasOwnProperty(file.name.split('.').pop().toString().toLowerCase()),
         );
         const invalidMimeTypeFiles = files
             .filter(
                 file =>
                     file &&
                     file.name &&
-                    !mimeTypeWhitelist.hasOwnProperty(
-                        file.name
-                            .split('.')
-                            .pop()
-                            .toString()
-                            .toLowerCase(),
-                    ),
+                    !mimeTypeWhitelist.hasOwnProperty(file.name.split('.').pop().toString().toLowerCase()),
             )
             .map(file => file.name);
         return { validMimeTypeFiles: validMimeTypeFiles, invalidMimeTypeFiles: invalidMimeTypeFiles };

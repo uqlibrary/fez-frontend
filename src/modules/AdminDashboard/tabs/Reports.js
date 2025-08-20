@@ -63,12 +63,8 @@ const Reports = () => {
 
     const [columns, setColumns] = React.useState(initColumns);
 
-    const [
-        exportReportAlertIsVisible,
-        hideExportReportAlert,
-        showExportReportAlert,
-        exportReportAlertProps,
-    ] = useAlertStatus({});
+    const [exportReportAlertIsVisible, hideExportReportAlert, showExportReportAlert, exportReportAlertProps] =
+        useAlertStatus({});
 
     const [exportAlertIsVisible, hideExportAlert] = useAlertStatus({
         message: adminDashboardExportReportFailed?.errorMessage,

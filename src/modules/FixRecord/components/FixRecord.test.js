@@ -158,9 +158,7 @@ describe('Component FixRecord', () => {
 
         const mockPatchRecordApiCall = () => api.mock.records.update({ pid });
         const mockUnclaimApiCalls = () => {
-            mockPatchRecordApiCall()
-                .instance.onPost(hideRecordUrl)
-                .replyOnce(200);
+            mockPatchRecordApiCall().instance.onPost(hideRecordUrl).replyOnce(200);
         };
         const mockFixRecordApiCall = () => api.mock.records.issues({ pid });
 
@@ -334,11 +332,7 @@ describe('Component FixRecord', () => {
             });
 
             it('should allow retries after a server error when fixing record', async () => {
-                mockApi
-                    .onPost(recordIssuesUrl)
-                    .replyOnce(500)
-                    .onPost(recordIssuesUrl)
-                    .replyOnce(200);
+                mockApi.onPost(recordIssuesUrl).replyOnce(500).onPost(recordIssuesUrl).replyOnce(200);
 
                 const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
 

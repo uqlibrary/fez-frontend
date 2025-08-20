@@ -72,7 +72,12 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
 
     const { authorListLoading, authorListItemDeleting } = useSelector(state => state?.get('manageAuthorsReducer'));
 
-    const { data: list, pagination, request, onPaginationChange } = useServerData({
+    const {
+        data: list,
+        pagination,
+        request,
+        onPaginationChange,
+    } = useServerData({
         actions,
         pageSize: tablePageSizeDefault,
     });
@@ -126,9 +131,11 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 Cell: ({ cell, row }) => (
                     <ColumnData
                         data={cell.getValue() || row.original.aut_student_username}
-                        columnDataId={`${(row._valuesCache.aut_org_username && 'aut-org-username') ||
+                        columnDataId={`${
+                            (row._valuesCache.aut_org_username && 'aut-org-username') ||
                             (row.original.aut_student_username && 'aut-student-username') ||
-                            'aut-org-username'}-${row.id}`}
+                            'aut-org-username'
+                        }-${row.id}`}
                     />
                 ),
                 size: 300,

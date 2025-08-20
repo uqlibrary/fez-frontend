@@ -39,7 +39,7 @@ export const getSearchResultSortingParams = (journalSearchQueryParams, journalsL
     };
     const pageSize = journalSearchQueryParams?.pageSize
         ? Number(journalSearchQueryParams.pageSize)
-        : journalsListPerPage ?? sortingDefaults?.pageSize ?? 20;
+        : (journalsListPerPage ?? sortingDefaults?.pageSize ?? 20);
     return { sortBy, sortDirection, pageSize };
 };
 

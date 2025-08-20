@@ -37,13 +37,8 @@ export const PublicationsList = ({
     showImageThumbnails = false,
     security = { isAdmin: false, isAuthor: false },
 }) => {
-    const {
-        shouldRenderRecordsSelectors,
-        recordsSelected,
-        allSelected,
-        handleClick,
-        handleSelectAll,
-    } = useRecordsSelector();
+    const { shouldRenderRecordsSelectors, recordsSelected, allSelected, handleClick, handleSelectAll } =
+        useRecordsSelector();
 
     const renderPublicationCitation = (index, publication) => {
         return (

@@ -74,7 +74,12 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
 
     const { userListLoading, userListItemDeleting } = useSelector(state => state?.get('manageUsersReducer'));
 
-    const { data: list, pagination, request, onPaginationChange } = useServerData({
+    const {
+        data: list,
+        pagination,
+        request,
+        onPaginationChange,
+    } = useServerData({
         actions,
         pageSize: tablePageSizeDefault,
     });

@@ -294,22 +294,28 @@ const Links = ({ publication, isAdmin }) => {
                         </Typography>
                     </Grid>
                 </Grid>
-                {// if publication has a PubMedCentral Id - display link, should be always OA
-                !!pubmedCentralId && (
-                    <LinkRow linkId="rek-pubmed-central-id" {...getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />
-                )}
-                {// if publication has a DOI - display a link, should be OA or OA with a date
-                !!doi && <LinkRow linkId="rek-doi" {...getDOILink(doi, doiOpenAccessStatus)} />}
-                {// publication has OA status of "Link (no DOI)" and has no actual links of its own
-                // then produce a google scholar link for the publication title
-                openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
-                    publication.fez_record_search_key_link &&
-                    publication.fez_record_search_key_link.length === 0 && (
-                        <LinkRow
-                            linkId="rek-title"
-                            {...getGoogleScholarLink(publication.rek_title, gcOpenAccessStatus)}
-                        />
-                    )}
+                {
+                    // if publication has a PubMedCentral Id - display link, should be always OA
+                    !!pubmedCentralId && (
+                        <LinkRow linkId="rek-pubmed-central-id" {...getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />
+                    )
+                }
+                {
+                    // if publication has a DOI - display a link, should be OA or OA with a date
+                    !!doi && <LinkRow linkId="rek-doi" {...getDOILink(doi, doiOpenAccessStatus)} />
+                }
+                {
+                    // publication has OA status of "Link (no DOI)" and has no actual links of its own
+                    // then produce a google scholar link for the publication title
+                    openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
+                        publication.fez_record_search_key_link &&
+                        publication.fez_record_search_key_link.length === 0 && (
+                            <LinkRow
+                                linkId="rek-title"
+                                {...getGoogleScholarLink(publication.rek_title, gcOpenAccessStatus)}
+                            />
+                        )
+                }
                 {hasLinks &&
                     publication.fez_record_search_key_link.map((item, index) => (
                         <LinkRow
