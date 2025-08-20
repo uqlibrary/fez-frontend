@@ -2057,8 +2057,7 @@ export default {
             title: 'Contributors',
             help: {
                 title: 'Contributors',
-                text:
-                    'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
+                text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
                 buttonLabel: 'CLOSE',
             },
             field: {
@@ -2444,7 +2443,7 @@ export default {
                 selectAria: 'Click to select a field to search from the list - [current_selection] currently selected',
                 deleteAria: 'Click to delete this search row',
                 fieldTypes: {
-                    '0': {
+                    0: {
                         order: 0, // order of appearance in adv search field list
                         map: '', // map refers to its real world lookup name to match Facets
                         title: 'Select a field',
@@ -3426,8 +3425,7 @@ export default {
             title: 'Architects',
             help: {
                 title: 'Architects',
-                text:
-                    'Type architects in the order and form they appear on the work or associated material. Additional boxes will appear for more architects.',
+                text: 'Type architects in the order and form they appear on the work or associated material. Additional boxes will appear for more architects.',
                 buttonLabel: 'CLOSE',
             },
             field: {
@@ -4477,8 +4475,7 @@ export default {
             },
             favouriteJournalsList: {
                 loading: 'Loading ...',
-                empty:
-                    "You haven't added any journals to this list. Use the checkboxes on the results page to add favourites.",
+                empty: "You haven't added any journals to this list. Use the checkboxes on the results page to add favourites.",
             },
             sortingDefaults: {
                 pageSize: 20,

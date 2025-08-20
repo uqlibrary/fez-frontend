@@ -207,11 +207,7 @@ describe('MyEditorialAppointmentsList', () => {
 
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
 
-        await userEvent.click(
-            getByTestId('eap-role-cvo-id-input')
-                .closest('div')
-                .querySelector('[aria-label=Clear]'),
-        );
+        await userEvent.click(getByTestId('eap-role-cvo-id-input').closest('div').querySelector('[aria-label=Clear]'));
 
         expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
 

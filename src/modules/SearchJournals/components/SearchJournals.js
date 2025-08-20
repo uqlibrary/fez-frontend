@@ -31,13 +31,8 @@ export const SearchJournals = () => {
     const dispatch = useDispatch();
     const { journalSearchQueryParams, handleSearch } = useJournalSearch();
     const initialKeywords = React.useRef(filterNonValidKeywords(journalSearchQueryParams?.keywords || {}));
-    const {
-        selectedKeywords,
-        setSelectedKeywords,
-        handleKeywordAdd,
-        handleKeywordDelete,
-        hasAnySelectedKeywords,
-    } = useSelectedKeywords(journalSearchQueryParams?.keywords);
+    const { selectedKeywords, setSelectedKeywords, handleKeywordAdd, handleKeywordDelete, hasAnySelectedKeywords } =
+        useSelectedKeywords(journalSearchQueryParams?.keywords);
     const [showInputControls, setShowInputControls] = React.useState(!hasAnySelectedKeywords);
     const fromHandleKeywordDelete = React.useRef(false);
     const fromHandleKeywordClear = React.useRef(false);
@@ -134,7 +129,6 @@ export const SearchJournals = () => {
         if (!hasAnySelectedKeywords) {
             setShowInputControls(true);
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [hasAnySelectedKeywords]);
 
     /**

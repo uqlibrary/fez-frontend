@@ -85,16 +85,9 @@ export const getMatchingFilename = (filenames, dataStreams) =>
 export const untranscodedItem = filename => {
     let file = null;
     if (filename.indexOf('_xt') >= 0) {
-        file = filename
-            .replace('_xt', '')
-            .split('.')
-            .slice(0, -1)
-            .join('.');
+        file = filename.replace('_xt', '').split('.').slice(0, -1).join('.');
     } else {
-        file = filename
-            .split('.')
-            .slice(0, -1)
-            .join('.');
+        file = filename.split('.').slice(0, -1).join('.');
     }
     return file;
 };
@@ -392,14 +385,16 @@ const Files = props => {
     return (
         <Grid xs={12}>
             <StandardCard title={locale.viewRecord.sections.files.title}>
-                {/* eslint-disable-next-line camelcase */}
                 {!!publication.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
                     <Alert allowDismiss type={'info'} message={getSensitiveHandlingNote(publication)} />
                 )}
-                {/* istanbul ignore next */ !!fileData.filter(({ requiresLoginToDownload }) => requiresLoginToDownload)
-                    .length > 0 && (
-                    <Alert {...{ ...globalLocale.global.loginAlertForFiles, action: redirectUserToLogin() }} />
-                )}
+                {
+                    /* istanbul ignore next */ !!fileData.filter(
+                        ({ requiresLoginToDownload }) => requiresLoginToDownload,
+                    ).length > 0 && (
+                        <Alert {...{ ...globalLocale.global.loginAlertForFiles, action: redirectUserToLogin() }} />
+                    )
+                }
                 <Box sx={{ padding: { xs: '8px 0', sm: 1 } }}>
                     <Grid
                         container

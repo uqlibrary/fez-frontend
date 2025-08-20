@@ -36,7 +36,6 @@ const Reports = () => {
     const dispatch = useDispatch();
 
     const {
-        // eslint-disable-next-line camelcase
         adminDashboardConfigData: { export_reports: exportReports },
     } = useSelector(state => state.get('adminDashboardConfigReducer'));
 
@@ -64,12 +63,8 @@ const Reports = () => {
 
     const [columns, setColumns] = React.useState(initColumns);
 
-    const [
-        exportReportAlertIsVisible,
-        hideExportReportAlert,
-        showExportReportAlert,
-        exportReportAlertProps,
-    ] = useAlertStatus({});
+    const [exportReportAlertIsVisible, hideExportReportAlert, showExportReportAlert, exportReportAlertProps] =
+        useAlertStatus({});
 
     const [exportAlertIsVisible, hideExportAlert] = useAlertStatus({
         message: adminDashboardExportReportFailed?.errorMessage,

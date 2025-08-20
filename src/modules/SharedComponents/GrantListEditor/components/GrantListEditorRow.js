@@ -134,15 +134,8 @@ export const GrantListEditorRow = ({
         );
     };
 
-    const {
-        deleteRecordConfirmation,
-        moveUpHint,
-        moveDownHint,
-        deleteHint,
-        editHint,
-        selectHint,
-        editButtonId,
-    } = locale;
+    const { deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, editHint, selectHint, editButtonId } =
+        locale;
 
     const ariaLabel =
         selectHint && selectHint.indexOf('[name]') > -1 ? selectHint.replace('[name]', grant.nameAsPublished) : null;

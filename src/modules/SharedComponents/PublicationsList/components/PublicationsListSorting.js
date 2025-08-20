@@ -59,19 +59,19 @@ const PublicationsListSorting = ({
     // sanitise values
     const propSortBy = doesListContainItem(sortingData.sortBy, initPropSortBy)
         ? initPropSortBy
-        : sortingDefaults.sortBy ?? sortingData.sortBy[0].value;
+        : (sortingDefaults.sortBy ?? sortingData.sortBy[0].value);
     const propSortDirection = doesListContainItem(locale.components.sorting.sortDirection, initPropSortDirection)
         ? initPropSortDirection
-        : sortingDefaults.sortDirection ?? locale.components.sorting.sortDirection[0];
+        : (sortingDefaults.sortDirection ?? locale.components.sorting.sortDirection[0]);
     const propPageSize = doesListContainItem(pageLength, initPropPageSize)
         ? initPropPageSize
-        : sortingDefaults.pageSize ?? pageLength[0];
+        : (sortingDefaults.pageSize ?? pageLength[0]);
 
     const selectableCollectionViewType = filterCollectionViewTypes();
 
     const propDisplayRecordsAs = doesListContainItem(selectableCollectionViewType, initPropDisplayRecordsAs)
         ? initPropDisplayRecordsAs
-        : selectableCollectionViewType[0].value ?? /* istanbul ignore next */ '';
+        : (selectableCollectionViewType[0].value ?? /* istanbul ignore next */ '');
 
     const [sortByState, setSortByState] = React.useState(propSortBy);
     const [sortDirectionState, setSortDirectionState] = React.useState(propSortDirection);

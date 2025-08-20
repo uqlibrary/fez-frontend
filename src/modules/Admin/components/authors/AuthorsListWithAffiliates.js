@@ -312,9 +312,11 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                     selectedItem.aut_lname &&
                                     `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`),
                             uqIdentifier: `${selectedItem.aut_id}`,
-                            uqUsername: `${selectedItem.aut_org_username ||
+                            uqUsername: `${
+                                selectedItem.aut_org_username ||
                                 selectedItem.aut_student_username ||
-                                selectedItem.aut_ref_num}`,
+                                selectedItem.aut_ref_num
+                            }`,
                             affiliations:
                                 contributor.aut_id !== selectedItem.aut_id
                                     ? []

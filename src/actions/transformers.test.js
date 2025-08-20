@@ -335,25 +335,17 @@ describe('transformers', () => {
                 {
                     access_condition_id: 5, // open access, should stay open
                     name: 'file1.txt',
-                    date: moment()
-                        .clone()
-                        .format('YYYY-MM-DD'), // today
+                    date: moment().clone().format('YYYY-MM-DD'), // today
                 },
                 {
                     access_condition_id: 5, // open access, should be closed 'cause in the future
                     name: 'file2.txt',
-                    date: moment()
-                        .clone()
-                        .add(30, 'days')
-                        .format('YYYY-MM-DD'), // future
+                    date: moment().clone().add(30, 'days').format('YYYY-MM-DD'), // future
                 },
                 {
                     access_condition_id: 5, // open access, should stay open 'cause in the past
                     name: 'file3.txt',
-                    date: moment()
-                        .clone()
-                        .add(-30, 'days')
-                        .format('YYYY-MM-DD'), // past
+                    date: moment().clone().add(-30, 'days').format('YYYY-MM-DD'), // past
                 },
                 {
                     access_condition_id: 1, // closed access, should stay closed
@@ -420,25 +412,17 @@ describe('transformers', () => {
                 {
                     security_policy: FILE_SECURITY_POLICY_PUBLIC, // Public access
                     name: 'file1.txt',
-                    date: moment()
-                        .clone()
-                        .format('YYYY-MM-DD'), // today
+                    date: moment().clone().format('YYYY-MM-DD'), // today
                 },
                 {
                     security_policy: FILE_SECURITY_POLICY_PUBLIC, // Public access, should revert to admin
                     name: 'file2.txt',
-                    date: moment()
-                        .clone()
-                        .add(30, 'days')
-                        .format('YYYY-MM-DD'), // future
+                    date: moment().clone().add(30, 'days').format('YYYY-MM-DD'), // future
                 },
                 {
                     security_policy: FILE_SECURITY_POLICY_PUBLIC, // Public access
                     name: 'file3.txt',
-                    date: moment()
-                        .clone()
-                        .add(-30, 'days')
-                        .format('YYYY-MM-DD'), // past
+                    date: moment().clone().add(-30, 'days').format('YYYY-MM-DD'), // past
                 },
                 {
                     security_policy: FILE_SECURITY_POLICY_ADMIN, // closed access
@@ -626,9 +610,7 @@ describe('transformers', () => {
                 {
                     access_condition_id: 1,
                     name: 'file.txt',
-                    date: moment()
-                        .clone()
-                        .format('YYYY-MM-DD'), // today
+                    date: moment().clone().format('YYYY-MM-DD'), // today
                 },
                 {
                     access_condition_id: 2,

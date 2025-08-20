@@ -305,9 +305,11 @@ export const AuthorsList = ({
                             orgtype:
                                 (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) ||
                                 contributor.orgtype,
-                            uqUsername: `${selectedItem.aut_org_username ||
+                            uqUsername: `${
+                                selectedItem.aut_org_username ||
                                 selectedItem.aut_student_username ||
-                                selectedItem.aut_ref_num}`,
+                                selectedItem.aut_ref_num
+                            }`,
                         };
                         const updatedValues = {
                             ...row._valuesCache,
@@ -543,10 +545,12 @@ export const AuthorsList = ({
                                     id={`${contributorEditorId}-list-row-${row.index}-affiliation-type`}
                                     data-testid={`${contributorEditorId}-list-row-${row.index}-affiliation-type`}
                                 >
-                                    {`${(!!rowData.orgtype &&
-                                        !!ORG_TYPES_LOOKUP[rowData.orgtype] &&
-                                        `Organisation type: ${ORG_TYPES_LOOKUP[rowData.orgtype]}`) ||
-                                        ''}`}
+                                    {`${
+                                        (!!rowData.orgtype &&
+                                            !!ORG_TYPES_LOOKUP[rowData.orgtype] &&
+                                            `Organisation type: ${ORG_TYPES_LOOKUP[rowData.orgtype]}`) ||
+                                        ''
+                                    }`}
                                 </Typography>
                             </Grid>
                         </Grid>

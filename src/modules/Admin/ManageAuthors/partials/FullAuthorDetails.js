@@ -63,7 +63,6 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
 
     React.useEffect(() => {
         trigger();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [trigger]);
 
     const watchedFields = useWatch({
