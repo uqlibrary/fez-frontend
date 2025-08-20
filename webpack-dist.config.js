@@ -82,9 +82,7 @@ const outputLastCommitHashes = ({
 };
 
 // get last commit hash, and use in output filenames.
-const currentCommitHash = execSync('git rev-parse --short HEAD')
-    .toString()
-    .trim();
+const currentCommitHash = execSync('git rev-parse --short HEAD').toString().trim();
 
 /** */
 
