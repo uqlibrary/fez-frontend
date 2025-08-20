@@ -346,9 +346,9 @@ describe('searchRecords reducer', () => {
                 idSearchKey: { key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc' },
                 isOnlyForEspace: true,
                 expectedIdCountHash: {
-                    '1233423532': 2,
-                    '454545545': 1,
-                    '98989898989': 1,
+                    1233423532: 2,
+                    454545545: 1,
+                    98989898989: 1,
                 },
             },
             {
@@ -356,13 +356,13 @@ describe('searchRecords reducer', () => {
                 idSearchKey: { key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc' },
                 isOnlyForEspace: false,
                 expectedIdCountHash: {
-                    '1233423532': 3,
-                    '454545545': 1,
-                    '98989898989': 1,
-                    '1232422532': 1,
-                    '222423532': 1,
-                    '1232423543': 1,
-                    '1232423512': 1,
+                    1233423532: 3,
+                    454545545: 1,
+                    98989898989: 1,
+                    1232422532: 1,
+                    222423532: 1,
+                    1232423543: 1,
+                    1232423512: 1,
                 },
             },
         ];

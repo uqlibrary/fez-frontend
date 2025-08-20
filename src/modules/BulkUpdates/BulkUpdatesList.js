@@ -21,12 +21,7 @@ const {
 
 const getColumns = () => {
     const getDateTime = date =>
-        !!date
-            ? moment
-                  .utc(date, 'YYYY-MM-DD HH:mm:ss')
-                  .local()
-                  .format('YYYY-MM-DD HH:mm:ss')
-            : '-';
+        !!date ? moment.utc(date, 'YYYY-MM-DD HH:mm:ss').local().format('YYYY-MM-DD HH:mm:ss') : '-';
 
     return [
         {

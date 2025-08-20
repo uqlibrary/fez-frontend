@@ -15,8 +15,10 @@ import { sanitizeDoi } from '../config/validation';
 
 const moment = require('moment');
 
-const pipe = (...functionsList) => values =>
-    functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
+const pipe =
+    (...functionsList) =>
+    values =>
+        functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
 
 export const getIssueValues = data => {
     const initialContentIndicators = (
