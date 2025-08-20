@@ -1,10 +1,4 @@
-import {
-    getAdvisoryStatement,
-    getAvState,
-    getAvStateDescription,
-    getSensitiveHandlingNote,
-    isDerivative,
-} from './datastreams';
+import { getAvState, getAvStateDescription, getSensitiveHandlingNote, isDerivative } from './datastreams';
 import {
     AV_CHECK_STATE_CLEAN,
     AV_CHECK_STATE_DEFAULT,
