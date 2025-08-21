@@ -1,16 +1,25 @@
-/* eslint-disable no-undef */
 import { validate, STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE, MONTH_UNSELECTED } from './PartialDateForm';
 
-const partialAllowedDateForm = (allowPartial = true) => ({ day, month, year }) =>
-    validate({ state: { day, month, year }, allowPartial });
-const partialNotAllowedDateForm = (allowPartial = false) => ({ day, month, year }) =>
-    validate({ state: { day, month, year }, allowPartial });
-const futureAllowedDateForm = (disableFuture = false) => ({ day, month, year }) =>
-    validate({ state: { day, month, year }, disableFuture });
-const futureNotAllowedDateForm = (disableFuture = true) => ({ day, month, year }) =>
-    validate({ state: { day, month, year }, disableFuture });
-const partialFutureNotAllowedDateForm = (allowPartial = true, disableFuture = true) => ({ day, month, year }) =>
-    validate({ state: { day, month, year }, allowPartial, disableFuture });
+const partialAllowedDateForm =
+    (allowPartial = true) =>
+    ({ day, month, year }) =>
+        validate({ state: { day, month, year }, allowPartial });
+const partialNotAllowedDateForm =
+    (allowPartial = false) =>
+    ({ day, month, year }) =>
+        validate({ state: { day, month, year }, allowPartial });
+const futureAllowedDateForm =
+    (disableFuture = false) =>
+    ({ day, month, year }) =>
+        validate({ state: { day, month, year }, disableFuture });
+const futureNotAllowedDateForm =
+    (disableFuture = true) =>
+    ({ day, month, year }) =>
+        validate({ state: { day, month, year }, disableFuture });
+const partialFutureNotAllowedDateForm =
+    (allowPartial = true, disableFuture = true) =>
+    ({ day, month, year }) =>
+        validate({ state: { day, month, year }, allowPartial, disableFuture });
 
 describe('PartialDateForm unit tests', () => {
     /**

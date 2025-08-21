@@ -216,9 +216,11 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInpu
                         orgtype:
                             (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) ||
                             contributor.orgtype,
-                        uqUsername: `${selectedItem.aut_org_username ||
+                        uqUsername: `${
+                            selectedItem.aut_org_username ||
                             selectedItem.aut_student_username ||
-                            selectedItem.aut_ref_num}`,
+                            selectedItem.aut_ref_num
+                        }`,
                         affiliations:
                             contributor.aut_id !== selectedItem.aut_id
                                 ? []
@@ -341,10 +343,12 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInpu
                                       id={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation-type`}
                                       data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-affiliation-type`}
                                   >
-                                      {`${(!!rowData.orgtype &&
-                                          !!ORG_TYPES_LOOKUP[rowData.orgtype] &&
-                                          `Organisation type: ${ORG_TYPES_LOOKUP[rowData.orgtype]}`) ||
-                                          ''}`}
+                                      {`${
+                                          (!!rowData.orgtype &&
+                                              !!ORG_TYPES_LOOKUP[rowData.orgtype] &&
+                                              `Organisation type: ${ORG_TYPES_LOOKUP[rowData.orgtype]}`) ||
+                                          ''
+                                      }`}
                                   </Typography>
                               </Grid>
                           </Grid>
@@ -584,12 +588,12 @@ export const AuthorsListWithAffiliates = ({
                                         ...restAction,
                                         icon: () => (
                                             <Icon
-                                                id={`${contributorEditorId}-${(!!props.data.tableData &&
-                                                    props.data.tableData.editing) ||
-                                                    'add'}-${tooltip.toLowerCase()}`}
-                                                data-testid={`${contributorEditorId}-${(!!props.data.tableData &&
-                                                    props.data.tableData.editing) ||
-                                                    'add'}-${tooltip.toLowerCase()}`}
+                                                id={`${contributorEditorId}-${
+                                                    (!!props.data.tableData && props.data.tableData.editing) || 'add'
+                                                }-${tooltip.toLowerCase()}`}
+                                                data-testid={`${contributorEditorId}-${
+                                                    (!!props.data.tableData && props.data.tableData.editing) || 'add'
+                                                }-${tooltip.toLowerCase()}`}
                                             />
                                         ),
                                     }}

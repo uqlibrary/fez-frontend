@@ -273,7 +273,6 @@ const PartialDateForm = props => {
         setState(newState);
         // check for errors
         onChange && getFullDateFromState(newState);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value]);
 
     const renderMonths = months.map((month, index) => (

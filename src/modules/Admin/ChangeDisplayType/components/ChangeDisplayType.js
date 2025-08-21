@@ -83,7 +83,6 @@ export const ChangeDisplayType = () => {
     // handles displayType changes
     useEffect(() => {
         setValue('rek_subtype', null);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [displayType, setValue]);
 
     // handles displaying confirmation dialog

@@ -898,10 +898,7 @@ describe('AuthorsListWithAffiliates', () => {
         expect(within(row).getByText('Robertson, Avril A. B. not 100%')).toBeInTheDocument();
         expect(within(row).getByTestId('contributor-errorIcon-88844')).toBeInTheDocument();
         act(() => {
-            within(row)
-                .getByTestId('expandPanelIcon-88844')
-                .closest('button')
-                .click();
+            within(row).getByTestId('expandPanelIcon-88844').closest('button').click();
         });
 
         await waitFor(() => getByText('School of Chemistry and Molecular Biosciences'));

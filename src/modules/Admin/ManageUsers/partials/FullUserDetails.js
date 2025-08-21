@@ -61,7 +61,6 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
 
     React.useEffect(() => {
         trigger();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [trigger]);
     const watchedFields = useWatch({ control, name: ['usr_username'] });
     // Track previous field values to validate only the changed field

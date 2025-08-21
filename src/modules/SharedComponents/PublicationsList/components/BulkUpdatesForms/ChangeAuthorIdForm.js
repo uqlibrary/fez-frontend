@@ -51,7 +51,6 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
         if (!searchAuthorByName) return;
         const count = authorNames.current.filter(author => !author.includes(searchAuthorByName)).length;
         setAuthorNameNoMatchCount(count);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchAuthorByName]);
 
     useEffect(() => {

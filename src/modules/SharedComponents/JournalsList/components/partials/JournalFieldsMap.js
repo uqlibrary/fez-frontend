@@ -87,11 +87,13 @@ const JournalFieldsMap = [
                                 data-testid={sanitiseId(`journal-list-header-${data.key}-${index}`)}
                             >
                                 {data.label}
-                                {/* istanbul ignore next */ !!data.subLabel && (
-                                    <Box component={'span'} sx={{ ...classes?.subLabel }}>
-                                        {data.subLabel}
-                                    </Box>
-                                )}
+                                {
+                                    /* istanbul ignore next */ !!data.subLabel && (
+                                        <Box component={'span'} sx={{ ...classes?.subLabel }}>
+                                            {data.subLabel}
+                                        </Box>
+                                    )
+                                }
                             </Typography>
                             {!!data.titleHelp && (
                                 <HelpIcon {...data.titleHelp} testId={`${data.key}-${index}`} iconSize={'small'} />

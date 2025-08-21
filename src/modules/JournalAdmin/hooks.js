@@ -3,14 +3,8 @@ import { useSelector } from 'react-redux';
 import { getInitialFormValues } from './helpers';
 
 export const useJournal = () => {
-    const {
-        journalToView,
-        isJournalLocked,
-        loadingJournalToView,
-        journalToViewError,
-        journalLoadingError,
-        error,
-    } = useSelector(state => state.get('viewJournalReducer'));
+    const { journalToView, isJournalLocked, loadingJournalToView, journalToViewError, journalLoadingError, error } =
+        useSelector(state => state.get('viewJournalReducer'));
 
     const { authorDetails, author } = useSelector(state => state.get('accountReducer'));
     const values = useMemo(() => {

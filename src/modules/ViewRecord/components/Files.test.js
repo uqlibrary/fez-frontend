@@ -90,7 +90,21 @@ describe('Files Component ', () => {
     afterEach(() => {
         MockDate.reset();
         // eslint-disable-next-line max-len
-        mockOnVideoLoad = mockOnVideoFailed = mockOnClose = mockOnImageFailed = mockOnImageFailed = filenameUrl = videoLoadingState = mediaUrlState = previewMediaUrlState = mimeTypeState = videoLoadingState = imageErrorState = videoErrorCodeState = videoErrorMsgState = undefined;
+        mockOnVideoLoad =
+            mockOnVideoFailed =
+            mockOnClose =
+            mockOnImageFailed =
+            mockOnImageFailed =
+            filenameUrl =
+            videoLoadingState =
+            mediaUrlState =
+            previewMediaUrlState =
+            mimeTypeState =
+            videoLoadingState =
+            imageErrorState =
+            videoErrorCodeState =
+            videoErrorMsgState =
+                undefined;
     });
 
     it('should render component', () => {
@@ -424,7 +438,7 @@ describe('Files Component ', () => {
         const code = 1234;
         const message = 'video failed';
         act(() => {
-            mockOnVideoFailed({ target: { error: { code, message } }} );
+            mockOnVideoFailed({ target: { error: { code, message } } });
         });
         expect(videoErrorCodeState).toEqual(code);
         expect(videoErrorMsgState).toEqual(message);
