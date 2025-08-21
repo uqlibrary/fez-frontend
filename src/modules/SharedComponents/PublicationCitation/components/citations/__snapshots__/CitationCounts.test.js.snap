@@ -327,6 +327,27 @@ exports[`CitationCounts should render component with all metrics 1`] = `
           1
         </span>
       </a>
+      <a
+        aria-label="Full citation in OpenAlex will open in a new window"
+        class="openalexCitationCount css-pi8u"
+        data-analyticsid="citation-count-link"
+        data-testid="citation-count-link"
+        href="https://openalex.org/works?page=1&filter=cites:12345"
+        id="citation-count-link"
+        rel="noopener noreferrer"
+        tabindex="0"
+        target="_blank"
+        title="Full citation in OpenAlex will open in a new window"
+      >
+        <span
+          class="fez-icon openalex large"
+        />
+        <span
+          class="MuiBox-root css-19k1sqg"
+        >
+          1
+        </span>
+      </a>
       <span
         class="noOaIcon"
         data-testid="oa-n/a-icon"
