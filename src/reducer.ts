@@ -17,4 +17,5 @@ const rootReducer = () =>
 export default rootReducer;
 
 // @ts-ignore
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type AppState = Map<string, any>;

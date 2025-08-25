@@ -15,8 +15,10 @@ import { sanitizeDoi } from '../config/validation';
 
 const moment = require('moment');
 
-const pipe = (...functionsList) => values =>
-    functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
+const pipe =
+    (...functionsList) =>
+    values =>
+        functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
 
 export const getIssueValues = data => {
     const initialContentIndicators = (
@@ -1183,9 +1185,7 @@ export const getFezMatchedJournalsKey = matchedJournal => {
  */
 export const getRekDate = (data, rekSubtype) => {
     if (
-        // eslint-disable-next-line camelcase
         rekSubtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK &&
-        // eslint-disable-next-line camelcase
         data.fez_record_search_key_project_start_date?.rek_project_start_date
     ) {
         // sync rek_date with rek_project_start_date
@@ -1193,7 +1193,7 @@ export const getRekDate = (data, rekSubtype) => {
             'YYYY-MM-DD 00:00:00',
         );
     }
-    // eslint-disable-next-line camelcase
+
     return !data.rek_date || !moment(data.rek_date).isValid()
         ? PLACEHOLDER_ISO8601_DATE
         : moment(data.rek_date).format('YYYY-MM-DD 00:00:00');

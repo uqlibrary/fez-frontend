@@ -30,14 +30,16 @@ export const ThirdPartyLookupFormResult = ({
                     <p>
                         {txt.thisForm.primaryFieldHeading} - {primaryValue}
                     </p>
-                    {// not all forms will have a second field; some of them shouldn't be reported
-                    !!txt.thisForm.secondaryFieldHeading &&
-                        !!txt.thisForm.reportSecondaryFieldInOutput &&
-                        secondaryValue && (
-                            <p>
-                                {txt.thisForm.secondaryFieldHeading} - {secondaryValue}
-                            </p>
-                        )}
+                    {
+                        // not all forms will have a second field; some of them shouldn't be reported
+                        !!txt.thisForm.secondaryFieldHeading &&
+                            !!txt.thisForm.reportSecondaryFieldInOutput &&
+                            secondaryValue && (
+                                <p>
+                                    {txt.thisForm.secondaryFieldHeading} - {secondaryValue}
+                                </p>
+                            )
+                    }
                     <StandardCard title={locale.resultsLabel ? locale.resultsLabel : 'Results'}>
                         {lookupResults.length > 0 && (
                             <Fragment>

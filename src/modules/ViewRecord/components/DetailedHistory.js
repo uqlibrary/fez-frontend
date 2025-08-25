@@ -14,10 +14,7 @@ import * as actions from 'actions';
 const moment = require('moment');
 
 const historyEventDate = date => {
-    return moment
-        .utc(date.pre_date)
-        .local()
-        .format('ddd MMM DD YYYY, hh:mm:ss A');
+    return moment.utc(date.pre_date).local().format('ddd MMM DD YYYY, hh:mm:ss A');
 };
 
 export const DetailedHistory = ({ record }) => {

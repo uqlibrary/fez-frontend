@@ -54,6 +54,10 @@
     content: url(~/src/images/creativecommons/by_sa.png);
   }
 
+  &.cc-zero::before {
+    content: url(~/src/images/creativecommons/cc_zero.png);
+  }
+
   &.xsmall {
     width: 6px;
     height: 6px;

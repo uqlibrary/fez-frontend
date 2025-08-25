@@ -10,7 +10,7 @@ import { useAccountContext } from 'context';
 
 const mockUseNavigate = jest.fn();
 let mockParams;
-/* eslint-disable react/prop-types */
+
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,
@@ -126,7 +126,7 @@ describe('Component FeedbackRecord', () => {
     });
 
     it('should render takedown fields', async () => {
-        const { container, getByRole, getByTestId } = setup({ publication: mockRecordToFeedback });
+        const { container, getByRole } = setup({ publication: mockRecordToFeedback });
 
         await assertValidationErrorSummary();
         await userEvent.click(

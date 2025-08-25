@@ -47,10 +47,10 @@ const SystemAlerts = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const columns = React.useMemo(() => getSystemAlertColumns(txt, adminDashboardConfigData.admin_users), [
-        adminDashboardConfigData.admin_users,
-        txt,
-    ]);
+    const columns = React.useMemo(
+        () => getSystemAlertColumns(txt, adminDashboardConfigData.admin_users),
+        [adminDashboardConfigData.admin_users, txt],
+    );
 
     const handleRowClick = params => {
         openDrawer(params.row);

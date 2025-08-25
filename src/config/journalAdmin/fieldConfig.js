@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import Immutable from 'immutable';
 import { validation } from 'config';
 import locale from 'locale/components';

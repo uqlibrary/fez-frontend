@@ -74,12 +74,8 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
     const theme = useTheme();
     const dispatch = useDispatch();
 
-    const {
-        organisationUnits,
-        organisationUnitsLoaded,
-        organisationUnitsLoading,
-        organisationUnitsFailed,
-    } = useSelector(state => state.get('organisationalUnitsReducer'));
+    const { organisationUnits, organisationUnitsLoaded, organisationUnitsLoading, organisationUnitsFailed } =
+        useSelector(state => state.get('organisationalUnitsReducer'));
     const {
         suggestedAuthorId,
         suggestedOrganisationUnits,

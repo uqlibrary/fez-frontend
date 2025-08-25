@@ -97,7 +97,6 @@ describe('SearchJournals', () => {
 
     it('should show all journals if appropriate keyword detected in URL on page load', () => {
         const initialEntries = [
-            // eslint-disable-next-line max-len
             '/?keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals',
         ];
 
