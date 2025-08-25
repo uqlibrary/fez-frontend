@@ -184,7 +184,7 @@ export default {
                 idKey: 'fez_record_search_key_doi.rek_doi',
             },
             openalex: {
-                id: 'openalex',
+                id: 'openAlex',
                 title: 'OpenAlex',
                 priority: 5,
                 externalUrl: 'https://openalex.org/works?page=1&filter=cites:' + '[id]',
