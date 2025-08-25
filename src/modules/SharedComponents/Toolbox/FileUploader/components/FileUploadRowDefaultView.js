@@ -150,11 +150,17 @@ export const FileUploadRowDefaultView = ({
                         />
                     </Grid>
                 )}
+                {console.log('requireOpenAccessStatus', requireOpenAccessStatus)}
                 {requireOpenAccessStatus && (
                     <Grid item sm={2}>
                         {((isAdmin && securityPolicy !== FILE_SECURITY_POLICY_PUBLIC) ||
                             (!isAdmin && accessConditionId !== FILE_ACCESS_CONDITION_OPEN)) && (
-                            <Typography variant="body2" gutterBottom data-testid={`dsi-embargo-date-${index}`}>
+                            <Typography
+                                variant="body2"
+                                component={'div'}
+                                gutterBottom
+                                data-testid={`dsi-embargo-date-${index}`}
+                            >
                                 {embargoDateClosedAccess}
                             </Typography>
                         )}

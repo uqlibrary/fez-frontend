@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
+import { updatedDiff } from 'deep-object-diff';
 
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 
@@ -375,10 +376,10 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
     );
 
     React.useEffect(() => {
-        const listStr = JSON.stringify(list);
+        const count = Object.keys(updatedDiff(prevList.current, list)).length;
         /* istanbul ignore else */
-        if (prevList.current !== listStr) {
-            prevList.current = listStr;
+        if (count > 0) {
+            prevList.current = list;
             const result = [];
             list.forEach((item, index) => {
                 delete item.tableData;

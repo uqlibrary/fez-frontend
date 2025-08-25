@@ -45,12 +45,12 @@ exports[`AdminInterface component should disabled button and render alert for fo
                 >
                   <span
                     aria-label="Switch to full form mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
                       checked=""
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -469,12 +469,12 @@ exports[`AdminInterface component should display job created alert 1`] = `
                 >
                   <span
                     aria-label="Switch to full form mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
                       checked=""
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -760,12 +760,12 @@ exports[`AdminInterface component should display job created alert 2`] = `
                 >
                   <span
                     aria-label="Switch to full form mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
                       checked=""
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -1104,12 +1104,12 @@ exports[`AdminInterface component should display successful alert 1`] = `
                 >
                   <span
                     aria-label="Switch to full form mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
                       checked=""
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -1395,12 +1395,12 @@ exports[`AdminInterface component should display successful alert 2`] = `
                 >
                   <span
                     aria-label="Switch to full form mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
                       checked=""
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -1747,11 +1747,11 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                 >
                   <span
                     aria-label="Switch to tabbed mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -2001,11 +2001,11 @@ exports[`AdminInterface component should render default view as a full form view
                 >
                   <span
                     aria-label="Switch to tabbed mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -2321,12 +2321,12 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                 >
                   <span
                     aria-label="Switch to full form mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
                       checked=""
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -2621,12 +2621,12 @@ exports[`AdminInterface component should render in create mode 1`] = `
                 >
                   <span
                     aria-label="Switch to full form mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
                       checked=""
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -2904,12 +2904,12 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                 >
                   <span
                     aria-label="Switch to full form mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
                       checked=""
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -3290,12 +3290,12 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                 >
                   <span
                     aria-label="Switch to full form mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
                       checked=""
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -3672,12 +3672,12 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                 >
                   <span
                     aria-label="Switch to full form mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
                       checked=""
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />

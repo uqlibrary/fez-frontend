@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Mobile AdminContainer component should render mobile view 1`] = `
+exports[`AdminContainer component should render default view 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -45,11 +45,11 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                 >
                   <span
                     aria-label="Switch to tabbed mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
-                      class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -1363,7 +1363,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
                           >
                             <div
-                              class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
+                              class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
                             >
                               <div
                                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -1701,7 +1701,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
                           >
                             <div
-                              class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
+                              class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
                             >
                               <div
                                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -1742,7 +1742,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
                           >
                             <div
-                              class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
+                              class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
                             >
                               <div
                                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -2337,144 +2337,86 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
                           >
                             <div
-                              class="MuiBox-root css-10q552o"
                               data-testid="rek-author-list"
                               id="rek-author-list"
+                              style="position: relative;"
                             >
-                               
                               <div
-                                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 css-1atu56z-MuiPaper-root"
+                                class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ig9rso-MuiToolbar-root"
                               >
                                 <div
-                                  class="MuiBox-root css-9ac2p0"
+                                  class="MuiBox-root css-15k1nh5"
+                                />
+                                <div
+                                  class="MuiBox-root css-p9qzma"
                                 >
-                                  <div
-                                    class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
-                                    style="min-height: 0px;"
-                                  >
+                                  <div>
                                     <div
-                                      class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                                      style="display: flex;"
                                     >
-                                      <div
-                                        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
-                                      >
+                                      <span>
                                         <div
-                                          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-3fnbcm-MuiPaper-root-MuiAlert-root"
-                                          role="alert"
+                                          style="display: flex;"
                                         >
-                                          <div
-                                            class="MuiAlert-message css-1pxa9xg-MuiAlert-message"
+                                          <button
+                                            aria-label="Add author"
+                                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-km7yoa-MuiButtonBase-root-MuiIconButton-root"
+                                            data-mui-internal-clone-element="true"
+                                            tabindex="0"
+                                            type="button"
                                           >
-                                            <div
-                                              class="MuiStack-root css-5kul5x-MuiStack-root"
+                                            <svg
+                                              aria-hidden="true"
+                                              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-k8ijg7-MuiSvgIcon-root"
+                                              data-testid="rek-author-add"
+                                              focusable="false"
+                                              id="rek-author-add"
+                                              viewBox="0 0 24 24"
                                             >
-                                              <div
-                                                class="MuiBox-root css-k008qs"
-                                              >
-                                                 
-                                              </div>
-                                            </div>
-                                          </div>
+                                              <path
+                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                                              />
+                                            </svg>
+                                          </button>
                                         </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="Mui-ToolbarDropZone MuiBox-root css-1fwjva3"
-                                    style="opacity: 0; visibility: hidden;"
-                                  >
-                                    <p
-                                      class="MuiTypography-root MuiTypography-body1 css-p3gdy2-MuiTypography-root"
-                                    >
-                                      Drop to group by 
-                                    </p>
-                                  </div>
-                                  <div
-                                    class="MuiBox-root css-wsew38"
-                                  >
-                                    <button
-                                      aria-label="Add author"
-                                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                                      data-mui-internal-clone-element="true"
-                                      data-testid="rek-author-add-author"
-                                      id="rek-author-add-author"
-                                      tabindex="0"
-                                      type="button"
-                                    >
-                                      <svg
-                                        aria-hidden="true"
-                                        class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-k8ijg7-MuiSvgIcon-root"
-                                        data-testid="rek-author-add"
-                                        focusable="false"
-                                        id="rek-author-add"
-                                        viewBox="0 0 24 24"
-                                      >
-                                        <path
-                                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-                                        />
-                                      </svg>
-                                    </button>
-                                    <div
-                                      class="MuiBox-root css-1p0wbhh"
-                                    >
-                                      <div
-                                        class="MuiBox-root css-di3982"
-                                      />
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
-                                <div
-                                  aria-busy="false"
-                                  class="MuiTableContainer-root css-1jv9xuu-MuiTableContainer-root"
-                                >
-                                  <table
-                                    class="MuiTable-root MuiTable-stickyHeader css-1mzoax2-MuiTable-root"
-                                    style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+                              </div>
+                              <div
+                                class="MuiBox-root css-2e16le"
+                              >
+                                <div>
+                                  <div
+                                    style="overflow-y: hidden;"
                                   >
-                                    <thead
-                                      class="MuiTableHead-root css-q4cnup-MuiTableHead-root"
-                                    >
-                                      <tr
-                                        class="MuiTableRow-root MuiTableRow-head css-wg427c-MuiTableRow-root"
+                                    <div>
+                                      <table
+                                        class="MuiTable-root css-rqglhn-MuiTable-root"
+                                        style="table-layout: auto;"
                                       >
-                                        <th
-                                          aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1stzk2g-MuiTableCell-root"
-                                          colspan="1"
-                                          data-index="0"
-                                          scope="col"
+                                        <thead
+                                          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
                                         >
-                                          <div
-                                            class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                                          <tr
+                                            class="MuiTableRow-root MuiTableRow-head css-1nri4vv-MuiTableRow-root"
                                           >
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-4ng264"
-                                            >
-                                              <div
-                                                class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-10aqj5p"
-                                              />
-                                            </div>
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                                            <th
+                                              class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingNone MuiTableCell-sizeMedium css-lw7zg6-MuiTableCell-root"
+                                              scope="col"
                                             />
-                                          </div>
-                                        </th>
-                                        <th
-                                          aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-iuk0p6-MuiTableCell-root"
-                                          colspan="1"
-                                          data-can-sort="true"
-                                          data-index="1"
-                                          scope="col"
-                                        >
-                                          <div
-                                            class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
-                                          >
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                                            <th
+                                              class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1g1pyhz-MuiTableCell-root"
+                                              scope="col"
+                                              style="box-sizing: border-box;"
                                             >
-                                              <div
-                                                class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
+                                              <span
+                                                aria-sort="none"
+                                                class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                                                data-testid="mtableheader-sortlabel"
+                                                role="columnheader"
+                                                tabindex="0"
                                               >
                                                 <div
                                                   class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -2504,543 +2446,441 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                                     </span>
                                                   </div>
                                                 </div>
-                                              </div>
-                                              <span
-                                                aria-label="Sort by Author's name as published ascending"
-                                                class="MuiBadge-root css-1c32n2y-MuiBadge-root"
-                                                data-mui-internal-clone-element="true"
-                                              >
-                                                <span
-                                                  aria-label="Sort by Author's name as published ascending"
-                                                  class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-118d58w-MuiButtonBase-root-MuiTableSortLabel-root"
-                                                  role="button"
-                                                  tabindex="0"
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                                  data-testid="ArrowDownwardIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
                                                 >
-                                                  <svg
-                                                    aria-hidden="true"
-                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
-                                                    data-testid="SyncAltIcon"
-                                                    focusable="false"
-                                                    style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
-                                                    viewBox="0 0 24 24"
-                                                  >
-                                                    <path
-                                                      d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
-                                                    />
-                                                  </svg>
-                                                </span>
-                                                <span
-                                                  class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-2v5rxe-MuiBadge-badge"
-                                                >
-                                                  0
-                                                </span>
+                                                  <path
+                                                    d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8z"
+                                                  />
+                                                </svg>
                                               </span>
-                                            </div>
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
-                                            />
-                                          </div>
-                                        </th>
-                                        <th
-                                          aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-s1h9dh-MuiTableCell-root"
-                                          colspan="1"
-                                          data-can-sort="true"
-                                          data-index="2"
-                                          scope="col"
-                                        >
-                                          <div
-                                            class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
-                                          >
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                                              <span
+                                                data-testid="material-table-column-sort-order-indicator"
+                                                style="width: 1em;"
+                                              />
+                                            </th>
+                                            <th
+                                              class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1g1pyhz-MuiTableCell-root"
+                                              scope="col"
+                                              style="box-sizing: border-box;"
                                             >
-                                              <div
-                                                class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
+                                              <span
+                                                aria-sort="none"
+                                                class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                                                data-testid="mtableheader-sortlabel"
+                                                role="columnheader"
+                                                tabindex="0"
                                               >
                                                 <span
                                                   class="MuiTypography-root MuiTypography-caption css-t2qmr3-MuiTypography-root"
                                                 >
                                                   UQ identifiers
                                                 </span>
-                                              </div>
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                                  data-testid="ArrowDownwardIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <path
+                                                    d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8z"
+                                                  />
+                                                </svg>
+                                              </span>
                                               <span
-                                                aria-label="Sort by UQ identifiers ascending"
-                                                class="MuiBadge-root css-1c32n2y-MuiBadge-root"
-                                                data-mui-internal-clone-element="true"
+                                                data-testid="material-table-column-sort-order-indicator"
+                                                style="width: 1em;"
+                                              />
+                                            </th>
+                                            <th
+                                              class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingCheckbox MuiTableCell-sizeMedium css-dgulbd-MuiTableCell-root"
+                                              scope="col"
+                                              style="text-align: center; width: 128px; box-sizing: border-box;"
+                                            >
+                                              <span
+                                                aria-disabled="true"
+                                                class="MuiButtonBase-root Mui-disabled MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                                                role="button"
+                                                tabindex="-1"
                                               >
-                                                <span
-                                                  aria-label="Sort by UQ identifiers ascending"
-                                                  class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-118d58w-MuiButtonBase-root-MuiTableSortLabel-root"
-                                                  role="button"
-                                                  tabindex="0"
+                                                Actions
+                                              </span>
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody
+                                          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+                                        >
+                                          <tr
+                                            class="MuiTableRow-root css-4wzszn-MuiTableRow-root"
+                                            data-testid="mtablebodyrow"
+                                            id="rek-author-list-row-0"
+                                            index="0"
+                                            level="0"
+                                            style="background-color: rgb(242, 242, 242); color: rgb(81, 36, 122);"
+                                          >
+                                            <td
+                                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeSmall css-1m13d3u-MuiTableCell-root"
+                                              style="width: 42px; text-align: center;"
+                                            >
+                                              <button
+                                                aria-label="Detail panel visibility toggle"
+                                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                                                style="transition: all ease 200ms; transform: none;"
+                                                tabindex="0"
+                                                type="button"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                  data-testid="ChevronRightIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <path
+                                                    d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </td>
+                                            <td
+                                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                                              data-testid="mtablecell"
+                                              style="box-sizing: border-box; font-family: inherit; font-weight: inherit; vertical-align: top;"
+                                              value="Heath, Andrew"
+                                            >
+                                              <div
+                                                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                                              >
+                                                <div
+                                                  class="MuiGrid-root MuiGrid-item css-i1djz7-MuiGrid-root"
                                                 >
                                                   <svg
                                                     aria-hidden="true"
-                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
-                                                    data-testid="SyncAltIcon"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-p1vlq3-MuiSvgIcon-root"
+                                                    data-testid="HowToRegIcon"
                                                     focusable="false"
-                                                    style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                                    id="contributor-linked-0"
                                                     viewBox="0 0 24 24"
                                                   >
                                                     <path
-                                                      d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                                      d="m9 17 3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m4.47 8.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"
+                                                      fill-rule="evenodd"
                                                     />
                                                   </svg>
-                                                </span>
-                                                <span
-                                                  class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-2v5rxe-MuiBadge-badge"
+                                                </div>
+                                                <div
+                                                  class="MuiGrid-root MuiGrid-item css-1speddz-MuiGrid-root"
                                                 >
-                                                  0
-                                                </span>
-                                              </span>
-                                            </div>
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
-                                            />
-                                          </div>
-                                        </th>
-                                        <th
-                                          aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-15yxn5a-MuiTableCell-root"
-                                          colspan="1"
-                                          data-index="3"
-                                          scope="col"
-                                        >
-                                          <div
-                                            class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
-                                          >
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-1v512cc"
+                                                  <p
+                                                    class="MuiTypography-root MuiTypography-body2 css-1f3fto2-MuiTypography-root"
+                                                    data-testid="rek-author-list-row-0-name-as-published"
+                                                    id="rek-author-list-row-0-name-as-published"
+                                                  >
+                                                    Heath, Andrew
+                                                  </p>
+                                                  <span
+                                                    class="MuiTypography-root MuiTypography-caption css-akvv22-MuiTypography-root"
+                                                  >
+                                                    First  listed author
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td
+                                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                                              data-testid="mtablecell"
+                                              style="box-sizing: border-box; font-family: inherit; font-weight: inherit; vertical-align: top;"
+                                              value="6168"
+                                            >
+                                              <p
+                                                class="MuiTypography-root MuiTypography-body2 css-1f3fto2-MuiTypography-root"
+                                                data-testid="rek-author-list-row-0-uq-identifiers"
+                                                id="rek-author-list-row-0-uq-identifiers"
+                                              >
+                                                6168
+                                              </p>
+                                            </td>
+                                            <td
+                                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeSmall css-1m13d3u-MuiTableCell-root"
+                                              style="width: 160px; padding: 0px 5px; box-sizing: border-box;"
                                             >
                                               <div
-                                                class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-bbxzxe"
+                                                style="display: flex;"
                                               >
-                                                Actions
+                                                <button
+                                                  aria-label="Move item up the order"
+                                                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
+                                                  data-mui-internal-clone-element="true"
+                                                  disabled=""
+                                                  tabindex="-1"
+                                                  type="button"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                    data-testid="rek-author-list-row-0-move-up"
+                                                    focusable="false"
+                                                    id="rek-author-list-row-0-move-up"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                                                    />
+                                                  </svg>
+                                                </button>
+                                                <button
+                                                  aria-label="Move item down the order-0"
+                                                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
+                                                  data-mui-internal-clone-element="true"
+                                                  tabindex="0"
+                                                  type="button"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                    data-testid="rek-author-list-row-0-move-down"
+                                                    focusable="false"
+                                                    id="rek-author-list-row-0-move-down"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
+                                                    />
+                                                  </svg>
+                                                </button>
+                                                <button
+                                                  aria-label="Edit this item"
+                                                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
+                                                  data-mui-internal-clone-element="true"
+                                                  tabindex="0"
+                                                  type="button"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                    data-testid="rek-author-list-row-0-edit"
+                                                    focusable="false"
+                                                    id="rek-author-list-row-0-edit"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                                                    />
+                                                  </svg>
+                                                </button>
+                                                <button
+                                                  aria-label="Remove this item"
+                                                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
+                                                  data-mui-internal-clone-element="true"
+                                                  tabindex="0"
+                                                  type="button"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                    data-testid="rek-author-list-row-0-delete"
+                                                    focusable="false"
+                                                    id="rek-author-list-row-0-delete"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                                                    />
+                                                  </svg>
+                                                </button>
                                               </div>
-                                            </div>
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
-                                            />
-                                          </div>
-                                        </th>
-                                      </tr>
-                                    </thead>
-                                    <tbody
-                                      class="MuiTableBody-root css-129p5vw-MuiTableBody-root"
-                                    >
-                                      <tr
-                                        class="MuiTableRow-root css-vjh4aa-MuiTableRow-root"
-                                        data-index="0"
-                                        data-testid="rek-author-list-row-0"
-                                        id="rek-author-list-row-0"
-                                      >
-                                        <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-rfu9y5-MuiTableCell-root"
-                                          data-index="0"
-                                        >
-                                          <span
-                                            aria-label="Expand"
-                                            class=""
-                                            data-mui-internal-clone-element="true"
+                                            </td>
+                                          </tr>
+                                          <tr
+                                            class="MuiTableRow-root css-4wzszn-MuiTableRow-root"
+                                            data-testid="mtablebodyrow"
+                                            id="rek-author-list-row-1"
+                                            index="1"
+                                            level="0"
+                                            style="background-color: rgb(242, 242, 242); color: rgb(81, 36, 122);"
                                           >
-                                            <button
-                                              aria-label="Expand"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j8gm43-MuiButtonBase-root-MuiIconButton-root"
-                                              data-testid="expandPanelIcon-6168"
-                                              id="expandPanelIcon-6168"
-                                              tabindex="0"
-                                              type="button"
+                                            <td
+                                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeSmall css-1m13d3u-MuiTableCell-root"
+                                              style="width: 42px; text-align: center;"
                                             >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                                data-testid="ExpandMoreIcon"
-                                                focusable="false"
-                                                style="transform: rotate(0deg); transition: transform 150ms;"
-                                                viewBox="0 0 24 24"
+                                              <button
+                                                aria-label="Detail panel visibility toggle"
+                                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                                                style="transition: all ease 200ms; transform: none;"
+                                                tabindex="0"
+                                                type="button"
                                               >
-                                                <path
-                                                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                                                />
-                                              </svg>
-                                            </button>
-                                          </span>
-                                        </td>
-                                        <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1er91cq-MuiTableCell-root"
-                                          data-index="1"
-                                        >
-                                          <div
-                                            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-                                          >
-                                            <div
-                                              class="MuiGrid-root MuiGrid-item css-i1djz7-MuiGrid-root"
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                  data-testid="ChevronRightIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <path
+                                                    d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </td>
+                                            <td
+                                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                                              data-testid="mtablecell"
+                                              style="box-sizing: border-box; font-family: inherit; font-weight: inherit; vertical-align: top;"
+                                              value="Marrington, Mary-Anne"
                                             >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-p1vlq3-MuiSvgIcon-root"
-                                                data-testid="HowToRegIcon"
-                                                focusable="false"
-                                                id="contributor-linked-0"
-                                                viewBox="0 0 24 24"
+                                              <div
+                                                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
                                               >
-                                                <path
-                                                  d="m9 17 3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m4.47 8.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"
-                                                  fill-rule="evenodd"
-                                                />
-                                              </svg>
-                                            </div>
-                                            <div
-                                              class="MuiGrid-root MuiGrid-item css-1speddz-MuiGrid-root"
+                                                <div
+                                                  class="MuiGrid-root MuiGrid-item css-i1djz7-MuiGrid-root"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-p1vlq3-MuiSvgIcon-root"
+                                                    data-testid="HowToRegIcon"
+                                                    focusable="false"
+                                                    id="contributor-linked-1"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="m9 17 3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m4.47 8.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"
+                                                      fill-rule="evenodd"
+                                                    />
+                                                  </svg>
+                                                </div>
+                                                <div
+                                                  class="MuiGrid-root MuiGrid-item css-1speddz-MuiGrid-root"
+                                                >
+                                                  <p
+                                                    class="MuiTypography-root MuiTypography-body2 css-1f3fto2-MuiTypography-root"
+                                                    data-testid="rek-author-list-row-1-name-as-published"
+                                                    id="rek-author-list-row-1-name-as-published"
+                                                  >
+                                                    Marrington, Mary-Anne
+                                                  </p>
+                                                  <span
+                                                    class="MuiTypography-root MuiTypography-caption css-akvv22-MuiTypography-root"
+                                                  >
+                                                    Second  listed author
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td
+                                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+                                              data-testid="mtablecell"
+                                              style="box-sizing: border-box; font-family: inherit; font-weight: inherit; vertical-align: top;"
+                                              value="84025"
                                             >
                                               <p
                                                 class="MuiTypography-root MuiTypography-body2 css-1f3fto2-MuiTypography-root"
-                                                data-testid="rek-author-list-row-0-name-as-published"
-                                                id="rek-author-list-row-0-name-as-published"
+                                                data-testid="rek-author-list-row-1-uq-identifiers"
+                                                id="rek-author-list-row-1-uq-identifiers"
                                               >
-                                                Heath, Andrew
+                                                84025
                                               </p>
-                                              <span
-                                                class="MuiTypography-root MuiTypography-caption css-akvv22-MuiTypography-root"
-                                              >
-                                                First  listed author
-                                              </span>
-                                            </div>
-                                          </div>
-                                        </td>
-                                        <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1a3btc6-MuiTableCell-root"
-                                          data-index="2"
-                                        >
-                                          <p
-                                            class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
-                                            data-testid="rek-author-list-row-0-uq-identifiers"
-                                            id="rek-author-list-row-0-uq-identifiers"
-                                          >
-                                            6168
-                                          </p>
-                                        </td>
-                                        <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-vu9x3e-MuiTableCell-root"
-                                          data-index="3"
-                                        >
-                                          <div
-                                            class="MuiBox-root css-4knjz3"
-                                          >
-                                            <button
-                                              aria-label="Move item up the order"
-                                              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-1l3c3t8-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-0-move-up"
-                                              disabled=""
-                                              id="rek-author-list-row-0-move-up"
-                                              tabindex="-1"
-                                              type="button"
+                                            </td>
+                                            <td
+                                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone MuiTableCell-sizeSmall css-1m13d3u-MuiTableCell-root"
+                                              style="width: 160px; padding: 0px 5px; box-sizing: border-box;"
                                             >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                                data-testid="KeyboardArrowUpIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
+                                              <div
+                                                style="display: flex;"
                                               >
-                                                <path
-                                                  d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                                />
-                                              </svg>
-                                            </button>
-                                            <button
-                                              aria-label="Move item down the order"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-1l3c3t8-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-0-move-down"
-                                              id="rek-author-list-row-0-move-down"
-                                              tabindex="0"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                                data-testid="KeyboardArrowDownIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
-                                                />
-                                              </svg>
-                                            </button>
-                                            <button
-                                              aria-label="Edit this item"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-1l3c3t8-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-0-edit"
-                                              id="rek-author-list-row-0-edit"
-                                              tabindex="0"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                                data-testid="EditIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
-                                                />
-                                              </svg>
-                                            </button>
-                                            <button
-                                              aria-label="Remove this item"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-1l3c3t8-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-0-delete"
-                                              id="rek-author-list-row-0-delete"
-                                              tabindex="0"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                                data-testid="DeleteIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                                                />
-                                              </svg>
-                                            </button>
-                                          </div>
-                                        </td>
-                                      </tr>
-                                      <tr
-                                        class="MuiTableRow-root Mui-TableBodyCell-DetailPanel css-1j07941-MuiTableRow-root"
-                                        data-index="1"
-                                        data-testid="rek-author-list-row-0-detailPanel"
-                                        id="rek-author-list-row-0-detailPanel"
-                                      >
-                                        <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Mui-TableBodyCell-DetailPanel css-r30pe0-MuiTableCell-root"
-                                          colspan="4"
-                                        />
-                                      </tr>
-                                      <tr
-                                        class="MuiTableRow-root css-vjh4aa-MuiTableRow-root"
-                                        data-index="2"
-                                        data-testid="rek-author-list-row-1"
-                                        id="rek-author-list-row-1"
-                                      >
-                                        <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-rfu9y5-MuiTableCell-root"
-                                          data-index="0"
-                                        >
-                                          <span
-                                            aria-label="Expand"
-                                            class=""
-                                            data-mui-internal-clone-element="true"
-                                          >
-                                            <button
-                                              aria-label="Expand"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j8gm43-MuiButtonBase-root-MuiIconButton-root"
-                                              data-testid="expandPanelIcon-84025"
-                                              id="expandPanelIcon-84025"
-                                              tabindex="0"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                                data-testid="ExpandMoreIcon"
-                                                focusable="false"
-                                                style="transform: rotate(0deg); transition: transform 150ms;"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                                                />
-                                              </svg>
-                                            </button>
-                                          </span>
-                                        </td>
-                                        <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1er91cq-MuiTableCell-root"
-                                          data-index="1"
-                                        >
-                                          <div
-                                            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
-                                          >
-                                            <div
-                                              class="MuiGrid-root MuiGrid-item css-i1djz7-MuiGrid-root"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-p1vlq3-MuiSvgIcon-root"
-                                                data-testid="HowToRegIcon"
-                                                focusable="false"
-                                                id="contributor-linked-1"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="m9 17 3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m4.47 8.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"
-                                                  fill-rule="evenodd"
-                                                />
-                                              </svg>
-                                            </div>
-                                            <div
-                                              class="MuiGrid-root MuiGrid-item css-1speddz-MuiGrid-root"
-                                            >
-                                              <p
-                                                class="MuiTypography-root MuiTypography-body2 css-1f3fto2-MuiTypography-root"
-                                                data-testid="rek-author-list-row-1-name-as-published"
-                                                id="rek-author-list-row-1-name-as-published"
-                                              >
-                                                Marrington, Mary-Anne
-                                              </p>
-                                              <span
-                                                class="MuiTypography-root MuiTypography-caption css-akvv22-MuiTypography-root"
-                                              >
-                                                Second  listed author
-                                              </span>
-                                            </div>
-                                          </div>
-                                        </td>
-                                        <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1a3btc6-MuiTableCell-root"
-                                          data-index="2"
-                                        >
-                                          <p
-                                            class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
-                                            data-testid="rek-author-list-row-1-uq-identifiers"
-                                            id="rek-author-list-row-1-uq-identifiers"
-                                          >
-                                            84025
-                                          </p>
-                                        </td>
-                                        <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-vu9x3e-MuiTableCell-root"
-                                          data-index="3"
-                                        >
-                                          <div
-                                            class="MuiBox-root css-4knjz3"
-                                          >
-                                            <button
-                                              aria-label="Move item up the order"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-1l3c3t8-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-1-move-up"
-                                              id="rek-author-list-row-1-move-up"
-                                              tabindex="0"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                                data-testid="KeyboardArrowUpIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                                />
-                                              </svg>
-                                            </button>
-                                            <button
-                                              aria-label="Move item down the order"
-                                              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-1l3c3t8-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-1-move-down"
-                                              disabled=""
-                                              id="rek-author-list-row-1-move-down"
-                                              tabindex="-1"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                                data-testid="KeyboardArrowDownIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
-                                                />
-                                              </svg>
-                                            </button>
-                                            <button
-                                              aria-label="Edit this item"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-1l3c3t8-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-1-edit"
-                                              id="rek-author-list-row-1-edit"
-                                              tabindex="0"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                                data-testid="EditIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
-                                                />
-                                              </svg>
-                                            </button>
-                                            <button
-                                              aria-label="Remove this item"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-1l3c3t8-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-1-delete"
-                                              id="rek-author-list-row-1-delete"
-                                              tabindex="0"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                                data-testid="DeleteIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                                                />
-                                              </svg>
-                                            </button>
-                                          </div>
-                                        </td>
-                                      </tr>
-                                      <tr
-                                        class="MuiTableRow-root Mui-TableBodyCell-DetailPanel css-1j07941-MuiTableRow-root"
-                                        data-index="3"
-                                        data-testid="rek-author-list-row-1-detailPanel"
-                                        id="rek-author-list-row-1-detailPanel"
-                                      >
-                                        <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Mui-TableBodyCell-DetailPanel css-r30pe0-MuiTableCell-root"
-                                          colspan="4"
-                                        />
-                                      </tr>
-                                    </tbody>
-                                    <tfoot
-                                      class="MuiTableFooter-root css-4ar9ic-MuiTableFooter-root"
-                                    />
-                                  </table>
-                                </div>
-                                <div
-                                  class="MuiBox-root css-10gei56"
-                                >
-                                  <div
-                                    class="MuiBox-root css-1llu0od"
-                                  >
-                                    <span />
-                                    <div
-                                      class="MuiBox-root css-qpxlqp"
-                                    />
+                                                <button
+                                                  aria-label="Move item up the order"
+                                                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
+                                                  data-mui-internal-clone-element="true"
+                                                  tabindex="0"
+                                                  type="button"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                    data-testid="rek-author-list-row-1-move-up"
+                                                    focusable="false"
+                                                    id="rek-author-list-row-1-move-up"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                                                    />
+                                                  </svg>
+                                                </button>
+                                                <button
+                                                  aria-label="Move item down the order-1"
+                                                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
+                                                  data-mui-internal-clone-element="true"
+                                                  disabled=""
+                                                  tabindex="-1"
+                                                  type="button"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                    data-testid="rek-author-list-row-1-move-down"
+                                                    focusable="false"
+                                                    id="rek-author-list-row-1-move-down"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
+                                                    />
+                                                  </svg>
+                                                </button>
+                                                <button
+                                                  aria-label="Edit this item"
+                                                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
+                                                  data-mui-internal-clone-element="true"
+                                                  tabindex="0"
+                                                  type="button"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                    data-testid="rek-author-list-row-1-edit"
+                                                    focusable="false"
+                                                    id="rek-author-list-row-1-edit"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                                                    />
+                                                  </svg>
+                                                </button>
+                                                <button
+                                                  aria-label="Remove this item"
+                                                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
+                                                  data-mui-internal-clone-element="true"
+                                                  tabindex="0"
+                                                  type="button"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                    data-testid="rek-author-list-row-1-delete"
+                                                    focusable="false"
+                                                    id="rek-author-list-row-1-delete"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                                                    />
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -3095,144 +2935,86 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
                           >
                             <div
-                              class="MuiBox-root css-10q552o"
                               data-testid="rek-contributor-list"
                               id="rek-contributor-list"
+                              style="position: relative;"
                             >
-                               
                               <div
-                                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 css-1atu56z-MuiPaper-root"
+                                class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ig9rso-MuiToolbar-root"
                               >
                                 <div
-                                  class="MuiBox-root css-9ac2p0"
+                                  class="MuiBox-root css-15k1nh5"
+                                />
+                                <div
+                                  class="MuiBox-root css-p9qzma"
                                 >
-                                  <div
-                                    class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
-                                    style="min-height: 0px;"
-                                  >
+                                  <div>
                                     <div
-                                      class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                                      style="display: flex;"
                                     >
-                                      <div
-                                        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
-                                      >
+                                      <span>
                                         <div
-                                          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-3fnbcm-MuiPaper-root-MuiAlert-root"
-                                          role="alert"
+                                          style="display: flex;"
                                         >
-                                          <div
-                                            class="MuiAlert-message css-1pxa9xg-MuiAlert-message"
+                                          <button
+                                            aria-label="Add editor"
+                                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-km7yoa-MuiButtonBase-root-MuiIconButton-root"
+                                            data-mui-internal-clone-element="true"
+                                            tabindex="0"
+                                            type="button"
                                           >
-                                            <div
-                                              class="MuiStack-root css-5kul5x-MuiStack-root"
+                                            <svg
+                                              aria-hidden="true"
+                                              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-k8ijg7-MuiSvgIcon-root"
+                                              data-testid="rek-contributor-add"
+                                              focusable="false"
+                                              id="rek-contributor-add"
+                                              viewBox="0 0 24 24"
                                             >
-                                              <div
-                                                class="MuiBox-root css-k008qs"
-                                              >
-                                                 
-                                              </div>
-                                            </div>
-                                          </div>
+                                              <path
+                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                                              />
+                                            </svg>
+                                          </button>
                                         </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="Mui-ToolbarDropZone MuiBox-root css-1fwjva3"
-                                    style="opacity: 0; visibility: hidden;"
-                                  >
-                                    <p
-                                      class="MuiTypography-root MuiTypography-body1 css-p3gdy2-MuiTypography-root"
-                                    >
-                                      Drop to group by 
-                                    </p>
-                                  </div>
-                                  <div
-                                    class="MuiBox-root css-wsew38"
-                                  >
-                                    <button
-                                      aria-label="Add editor"
-                                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                                      data-mui-internal-clone-element="true"
-                                      data-testid="rek-contributor-add-editor"
-                                      id="rek-contributor-add-editor"
-                                      tabindex="0"
-                                      type="button"
-                                    >
-                                      <svg
-                                        aria-hidden="true"
-                                        class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-k8ijg7-MuiSvgIcon-root"
-                                        data-testid="rek-contributor-add"
-                                        focusable="false"
-                                        id="rek-contributor-add"
-                                        viewBox="0 0 24 24"
-                                      >
-                                        <path
-                                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-                                        />
-                                      </svg>
-                                    </button>
-                                    <div
-                                      class="MuiBox-root css-1p0wbhh"
-                                    >
-                                      <div
-                                        class="MuiBox-root css-di3982"
-                                      />
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
-                                <div
-                                  aria-busy="false"
-                                  class="MuiTableContainer-root css-1jv9xuu-MuiTableContainer-root"
-                                >
-                                  <table
-                                    class="MuiTable-root MuiTable-stickyHeader css-1mzoax2-MuiTable-root"
-                                    style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+                              </div>
+                              <div
+                                class="MuiBox-root css-2e16le"
+                              >
+                                <div>
+                                  <div
+                                    style="overflow-y: hidden;"
                                   >
-                                    <thead
-                                      class="MuiTableHead-root css-q4cnup-MuiTableHead-root"
-                                    >
-                                      <tr
-                                        class="MuiTableRow-root MuiTableRow-head css-wg427c-MuiTableRow-root"
+                                    <div>
+                                      <table
+                                        class="MuiTable-root css-rqglhn-MuiTable-root"
+                                        style="table-layout: auto;"
                                       >
-                                        <th
-                                          aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1stzk2g-MuiTableCell-root"
-                                          colspan="1"
-                                          data-index="0"
-                                          scope="col"
+                                        <thead
+                                          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
                                         >
-                                          <div
-                                            class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                                          <tr
+                                            class="MuiTableRow-root MuiTableRow-head css-1nri4vv-MuiTableRow-root"
                                           >
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-4ng264"
-                                            >
-                                              <div
-                                                class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-10aqj5p"
-                                              />
-                                            </div>
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                                            <th
+                                              class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingNone MuiTableCell-sizeMedium css-lw7zg6-MuiTableCell-root"
+                                              scope="col"
                                             />
-                                          </div>
-                                        </th>
-                                        <th
-                                          aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-iuk0p6-MuiTableCell-root"
-                                          colspan="1"
-                                          data-can-sort="true"
-                                          data-index="1"
-                                          scope="col"
-                                        >
-                                          <div
-                                            class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
-                                          >
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                                            <th
+                                              class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1g1pyhz-MuiTableCell-root"
+                                              scope="col"
+                                              style="box-sizing: border-box;"
                                             >
-                                              <div
-                                                class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
+                                              <span
+                                                aria-sort="none"
+                                                class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                                                data-testid="mtableheader-sortlabel"
+                                                role="columnheader"
+                                                tabindex="0"
                                               >
                                                 <div
                                                   class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -3262,161 +3044,91 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                                     </span>
                                                   </div>
                                                 </div>
-                                              </div>
-                                              <span
-                                                aria-label="Sort by Editor's name as published descending"
-                                                class="MuiBadge-root css-1c32n2y-MuiBadge-root"
-                                                data-mui-internal-clone-element="true"
-                                              >
-                                                <span
-                                                  aria-label="Sort by Editor's name as published descending"
-                                                  class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-118d58w-MuiButtonBase-root-MuiTableSortLabel-root"
-                                                  role="button"
-                                                  tabindex="0"
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                                  data-testid="ArrowDownwardIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
                                                 >
-                                                  <svg
-                                                    aria-hidden="true"
-                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
-                                                    data-testid="SyncAltIcon"
-                                                    focusable="false"
-                                                    style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
-                                                    viewBox="0 0 24 24"
-                                                  >
-                                                    <path
-                                                      d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
-                                                    />
-                                                  </svg>
-                                                </span>
-                                                <span
-                                                  class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-2v5rxe-MuiBadge-badge"
-                                                >
-                                                  0
-                                                </span>
+                                                  <path
+                                                    d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8z"
+                                                  />
+                                                </svg>
                                               </span>
-                                            </div>
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
-                                            />
-                                          </div>
-                                        </th>
-                                        <th
-                                          aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-s1h9dh-MuiTableCell-root"
-                                          colspan="1"
-                                          data-can-sort="true"
-                                          data-index="2"
-                                          scope="col"
-                                        >
-                                          <div
-                                            class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
-                                          >
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                                              <span
+                                                data-testid="material-table-column-sort-order-indicator"
+                                                style="width: 1em;"
+                                              />
+                                            </th>
+                                            <th
+                                              class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1g1pyhz-MuiTableCell-root"
+                                              scope="col"
+                                              style="box-sizing: border-box;"
                                             >
-                                              <div
-                                                class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
+                                              <span
+                                                aria-sort="none"
+                                                class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                                                data-testid="mtableheader-sortlabel"
+                                                role="columnheader"
+                                                tabindex="0"
                                               >
                                                 <span
                                                   class="MuiTypography-root MuiTypography-caption css-t2qmr3-MuiTypography-root"
                                                 >
                                                   UQ identifiers
                                                 </span>
-                                              </div>
-                                              <span
-                                                aria-label="Sort by UQ identifiers descending"
-                                                class="MuiBadge-root css-1c32n2y-MuiBadge-root"
-                                                data-mui-internal-clone-element="true"
-                                              >
-                                                <span
-                                                  aria-label="Sort by UQ identifiers descending"
-                                                  class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-118d58w-MuiButtonBase-root-MuiTableSortLabel-root"
-                                                  role="button"
-                                                  tabindex="0"
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                                  data-testid="ArrowDownwardIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
                                                 >
-                                                  <svg
-                                                    aria-hidden="true"
-                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
-                                                    data-testid="SyncAltIcon"
-                                                    focusable="false"
-                                                    style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
-                                                    viewBox="0 0 24 24"
-                                                  >
-                                                    <path
-                                                      d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
-                                                    />
-                                                  </svg>
-                                                </span>
-                                                <span
-                                                  class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-2v5rxe-MuiBadge-badge"
-                                                >
-                                                  0
-                                                </span>
+                                                  <path
+                                                    d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8z"
+                                                  />
+                                                </svg>
                                               </span>
-                                            </div>
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
-                                            />
-                                          </div>
-                                        </th>
-                                        <th
-                                          aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-15yxn5a-MuiTableCell-root"
-                                          colspan="1"
-                                          data-index="3"
-                                          scope="col"
-                                        >
-                                          <div
-                                            class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
-                                          >
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-1v512cc"
+                                              <span
+                                                data-testid="material-table-column-sort-order-indicator"
+                                                style="width: 1em;"
+                                              />
+                                            </th>
+                                            <th
+                                              class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingCheckbox MuiTableCell-sizeMedium css-dgulbd-MuiTableCell-root"
+                                              scope="col"
+                                              style="text-align: center; width: 128px; box-sizing: border-box;"
                                             >
-                                              <div
-                                                class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-bbxzxe"
+                                              <span
+                                                aria-disabled="true"
+                                                class="MuiButtonBase-root Mui-disabled MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                                                role="button"
+                                                tabindex="-1"
                                               >
                                                 Actions
-                                              </div>
-                                            </div>
-                                            <div
-                                              class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
-                                            />
-                                          </div>
-                                        </th>
-                                      </tr>
-                                    </thead>
-                                    <tbody
-                                      class="MuiTableBody-root css-19hv8cu-MuiTableBody-root"
-                                    >
-                                      <tr
-                                        style="display: grid;"
-                                      >
-                                        <td
-                                          colspan="4"
-                                          style="display: grid;"
+                                              </span>
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody
+                                          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
                                         >
-                                          <p
-                                            class="MuiTypography-root MuiTypography-body1 css-dc4hy6-MuiTypography-root"
+                                          <tr
+                                            class="MuiTableRow-root css-4wzszn-MuiTableRow-root"
+                                            style="height: 36px;"
                                           >
-                                            No records to display
-                                          </p>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                    <tfoot
-                                      class="MuiTableFooter-root css-4ar9ic-MuiTableFooter-root"
-                                    />
-                                  </table>
-                                </div>
-                                <div
-                                  class="MuiBox-root css-10gei56"
-                                >
-                                  <div
-                                    class="MuiBox-root css-1llu0od"
-                                  >
-                                    <span />
-                                    <div
-                                      class="MuiBox-root css-qpxlqp"
-                                    />
+                                            <td
+                                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                                              colspan="4"
+                                              style="padding-top: 0px; padding-bottom: 0px; text-align: center;"
+                                            >
+                                              No records to display
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -4149,10 +3861,10 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
                             >
                               <span
-                                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                               >
                                 <input
-                                  class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
+                                  class="PrivateSwitchBase-input css-1m9pwf3"
                                   data-analyticsid="attributionIncomplete-input"
                                   data-indeterminate="false"
                                   data-testid="attributionIncomplete-input"
@@ -6108,11 +5820,11 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
                             >
                               <span
-                                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1p0vbhv-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-v3js7l-MuiButtonBase-root-MuiCheckbox-root"
                               >
                                 <input
                                   checked=""
-                                  class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
+                                  class="PrivateSwitchBase-input css-1m9pwf3"
                                   data-analyticsid="rek-copyright-input"
                                   data-indeterminate="false"
                                   data-testid="rek-copyright-input"
@@ -6299,10 +6011,10 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                             >
                               <span
-                                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                               >
                                 <input
-                                  class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
+                                  class="PrivateSwitchBase-input css-1m9pwf3"
                                   data-analyticsid="rek-security-inherited-input"
                                   data-indeterminate="false"
                                   data-testid="rek-security-inherited-input"
@@ -7200,6 +6912,174 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
           </div>
         </div>
       </form>
+    </div>
+  </div>
+  ,
+</div>
+`;
+
+exports[`AdminContainer component should render loading record view 1`] = `
+<div>
+  <div
+    style="padding: 8px;"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+      />
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+        style="text-align: center;"
+      >
+        <span
+          aria-label="Loading"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 18px; height: 18px;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="21"
+              stroke-width="2"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+        style="text-align: center;"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+          style="font-size: 1.33rem;"
+        >
+          Loading work
+        </span>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+      />
+    </div>
+  </div>
+  ,
+</div>
+`;
+
+exports[`AdminContainer component should render record not found view 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
+      >
+        Work not found
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container css-dcferp-MuiGrid-root"
+        data-testid="workNotFoundGridContainer"
+        id="workNotFoundGridContainer"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div>
+            <p>
+              The work you are attempting to access does not appear in our system.
+            </p>
+            <p>
+              If you believe this is in error, please
+               
+              <a
+                href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
+              >
+                contact the eSpace team.
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <span
+        class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+        style="opacity: 0.5;"
+      >
+        (404 - test)
+      </span>
+    </div>
+  </div>
+  ,
+</div>
+`;
+
+exports[`AdminContainer component should render work not found if record is not loaded 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        data-analyticsid="page-title"
+        data-testid="page-title"
+        id="page-title"
+      >
+        Work not found
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container css-dcferp-MuiGrid-root"
+        data-testid="workNotFoundGridContainer"
+        id="workNotFoundGridContainer"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div>
+            <p>
+              The work you are attempting to access does not appear in our system.
+            </p>
+            <p>
+              If you believe this is in error, please
+               
+              <a
+                href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
+              >
+                contact the eSpace team.
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   ,

@@ -7,6 +7,7 @@ export const overrideSecurityValueNormaliser = value => (value === true || value
 
 export const OverrideSecurity = ({ label, value, onChange, disabled, overrideSecurityId }) => {
     const normalisedValue = overrideSecurityValueNormaliser(value);
+    console.log({ normalisedValue, label, value, onChange, disabled, overrideSecurityId });
     return (
         <FormControlLabel
             control={

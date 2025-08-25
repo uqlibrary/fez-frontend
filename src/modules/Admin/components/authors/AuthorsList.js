@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
+import { updatedDiff } from 'deep-object-diff';
 
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 
@@ -633,9 +634,10 @@ export const AuthorsList = ({
     );
 
     React.useEffect(() => {
-        const listStr = JSON.stringify(list);
-        if (prevList.current !== listStr) {
-            prevList.current = listStr;
+        const count = Object.keys(updatedDiff(prevList.current, list)).length;
+        /* istanbul ignore else */
+        if (count > 0) {
+            prevList.current = list;
             const result = [];
             list.forEach((item, index) => {
                 delete item.tableData;
@@ -649,8 +651,7 @@ export const AuthorsList = ({
                 onChange(result);
             }
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [list]);
+    }, [list, onChange, setData, triggerState]);
 
     const transformNewAuthorObject = newAuthor => {
         delete newAuthor['mrt-row-actions'];
