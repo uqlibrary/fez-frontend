@@ -25,7 +25,6 @@ import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbo
 import { FezRecord } from '../../../@types/models/FezRecord';
 import { AppState } from '../../../reducer';
 
-
 interface ComponentState {
     page: number;
     pageSize: number;
@@ -44,7 +43,7 @@ const PossiblyMyRecords: React.FC = () => {
     const navigationType = useNavigationType();
     const location = useLocation();
     const dispatch = useDispatch();
-    const confirmDialogBoxRef = useRef<{ showConfirmation:() => void } | null>(null);
+    const confirmDialogBoxRef = useRef<{ showConfirmation: () => void } | null>(null);
 
     type PagingInformation = {
         from?: number;
@@ -175,25 +174,25 @@ const PossiblyMyRecords: React.FC = () => {
         navigate(pathConfig.records.claim);
     };
 
-  const facetsChanged = (active: {
-      filters?: Record<string, string | number | boolean>;
-      ranges?: Record<string, string | number>;
-  }): void => {
-      const filters: Record<string, string> = {};
-      Object.entries(active.filters ?? /* istanbul ignore next */ {}).forEach(([k, v]) => {
-          filters[k] = String(v);
-      });
-      const ranges: Record<string, string> = {};
-      Object.entries(active.ranges ?? /* istanbul ignore next */ {}).forEach(([k, v]) => {
-          ranges[k] = String(v);
-      });
-      setState(prevState => ({
-          ...prevState,
-          activeFacets: { filters, ranges },
-          page: 1,
-      }));
-      setShouldNavigate(true);
-  };
+    const facetsChanged = (active: {
+        filters?: Record<string, string | number | boolean>;
+        ranges?: Record<string, string | number>;
+    }): void => {
+        const filters: Record<string, string> = {};
+        Object.entries(active.filters ?? /* istanbul ignore next */ {}).forEach(([k, v]) => {
+            filters[k] = String(v);
+        });
+        const ranges: Record<string, string> = {};
+        Object.entries(active.ranges ?? /* istanbul ignore next */ {}).forEach(([k, v]) => {
+            ranges[k] = String(v);
+        });
+        setState(prevState => ({
+            ...prevState,
+            activeFacets: { filters, ranges },
+            page: 1,
+        }));
+        setShouldNavigate(true);
+    };
 
     const sortByChanged = (sortBy: string, sortDirection: string): void => {
         setState(prevState => ({
@@ -222,20 +221,22 @@ const PossiblyMyRecords: React.FC = () => {
     };
 
     const toAlertType = (t: string): AlertType =>
-    ([
-        'error',
-        'error_outline',
-        'warning',
-        'info',
-        'info_outline',
-        'help',
-        'help_outline',
-        'success',
-        'done',
-        'custom',
-    ] as const).includes(t as AlertType)
-        ? (t as AlertType)
-        : /* istanbul ignore next */ 'error';
+        (
+            [
+                'error',
+                'error_outline',
+                'warning',
+                'info',
+                'info_outline',
+                'help',
+                'help_outline',
+                'success',
+                'done',
+                'custom',
+            ] as const
+        ).includes(t as AlertType)
+            ? (t as AlertType)
+            : /* istanbul ignore next */ 'error';
 
     const getAlert = (
         alertLocale: { alertId: string; title: string; message: (s: string) => string; type: AlertType },
@@ -292,20 +293,22 @@ const PossiblyMyRecords: React.FC = () => {
             {getAlert(
                 { ...txt.hidePublicationFailedAlert, type: toAlertType(txt.hidePublicationFailedAlert.type) },
                 hidePublicationFailed,
-                hidePublicationFailedErrorMessage
+                hidePublicationFailedErrorMessage,
             )}
 
-            {// first time loading my possible publications - account hasn't
-            // been loaded or any my publications haven't been loaded
-            !state.hasPublications && (loadingPossiblePublicationsList || loadingPossibleCounts) && (
-                <Grid container>
-                    <Grid item xs />
-                    <Grid item>
-                        <InlineLoader message={txt.loadingMessage} />
+            {
+                // first time loading my possible publications - account hasn't
+                // been loaded or any my publications haven't been loaded
+                !state.hasPublications && (loadingPossiblePublicationsList || loadingPossibleCounts) && (
+                    <Grid container>
+                        <Grid item xs />
+                        <Grid item>
+                            <InlineLoader message={txt.loadingMessage} />
+                        </Grid>
+                        <Grid item xs />
                     </Grid>
-                    <Grid item xs />
-                </Grid>
-            )}
+                )
+            }
             {possiblePublicationsList.length > 0 && (
                 <ConfirmDialogBox
                     onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}
@@ -314,105 +317,114 @@ const PossiblyMyRecords: React.FC = () => {
                 />
             )}
             <Grid container spacing={3}>
-                {// no results to display
-                !loadingPossibleCounts && !loadingPossiblePublicationsList && possiblePublicationsList.length === 0 && (
-                    <Grid item xs={12}>
-                        <StandardCard {...txt.noResultsFound}>{txt.noResultsFound.text}</StandardCard>
-                    </Grid>
-                )}
-                {// results to display or loading if user is filtering/paging
-                state.hasPublications && (loadingPossiblePublicationsList || possiblePublicationsList.length > 0) && (
-                    <Grid item xs={12} md={9}>
-                        <StandardCard noHeader>
-                            {loadingPossiblePublicationsList && (
-                                <Grid container>
-                                    <Grid item xs />
-                                    <Grid item>
-                                        <InlineLoader message={txt.loadingMessage} />
-                                    </Grid>
-                                    <Grid item xs />
-                                </Grid>
-                            )}
-                            {!loadingPossiblePublicationsList && possiblePublicationsList.length > 0 && (
-                                <>
-                                    <Grid item xs>
-                                        <Typography>
-                                            {txt.searchResults.text
-                                                .replace('[resultsCount]', possiblePublicationsList.length)
-                                                .replace('[totalCount]', totalPossiblePubs)}
-                                        </Typography>
-                                    </Grid>
-                                    <Grid item xs style={{ marginTop: 16 }}>
-                                        {totalPossiblePubs > initialState.pageSize && (
-                                            <>
-                                                <Grid item xs>
-                                                    <PublicationsListSorting
-                                                        sortBy={state.sortBy}
-                                                        sortDirection={state.sortDirection}
-                                                        pageSize={state.pageSize}
-                                                        pagingData={pagingData}
-                                                        onSortByChanged={sortByChanged}
-                                                        onPageSizeChanged={pageSizeChanged}
-                                                        disabled={loadingPossiblePublicationsList}
-                                                        canUseExport={false}
-                                                    />
-                                                </Grid>
-                                                <Grid item xs>
-                                                    <PublicationsListPaging
-                                                        pagingData={pagingData}
-                                                        onPageChanged={pageChanged}
-                                                        disabled={loadingPossiblePublicationsList}
-                                                        pagingId="possibly-my-records-paging-top"
-                                                    />
-                                                </Grid>
-                                            </>
-                                        )}
-                                        <Grid item xs>
-                                            <PublicationsList
-                                                publicationsLoading={
-                                                    loadingPossiblePublicationsList || loadingPossibleCounts
-                                                }
-                                                publicationsList={possiblePublicationsList}
-                                                publicationsListSubset={publicationsClaimedInProgress}
-                                                subsetCustomActions={inProgress}
-                                                customActions={actionsList}
-                                            />
-                                        </Grid>
-                                        {totalPossiblePubs > initialState.pageSize && (
-                                            <Grid item xs>
-                                                <PublicationsListPaging
-                                                    loading={loadingPossiblePublicationsList}
-                                                    pagingData={pagingData}
-                                                    onPageChanged={pageChanged}
-                                                    disabled={loadingPossiblePublicationsList}
-                                                    pagingId="possibly-my-records-paging-bottom"
-                                                />
+                {
+                    // no results to display
+                    !loadingPossibleCounts &&
+                        !loadingPossiblePublicationsList &&
+                        possiblePublicationsList.length === 0 && (
+                            <Grid item xs={12}>
+                                <StandardCard {...txt.noResultsFound}>{txt.noResultsFound.text}</StandardCard>
+                            </Grid>
+                        )
+                }
+                {
+                    // results to display or loading if user is filtering/paging
+                    state.hasPublications &&
+                        (loadingPossiblePublicationsList || possiblePublicationsList.length > 0) && (
+                            <Grid item xs={12} md={9}>
+                                <StandardCard noHeader>
+                                    {loadingPossiblePublicationsList && (
+                                        <Grid container>
+                                            <Grid item xs />
+                                            <Grid item>
+                                                <InlineLoader message={txt.loadingMessage} />
                                             </Grid>
-                                        )}
-                                    </Grid>
-                                </>
-                            )}
-                        </StandardCard>
-                    </Grid>
-                )}
-                {// show available filters or selected filters
-                ((possiblePublicationsFacets && Object.keys(possiblePublicationsFacets).length > 0) ||
-                    (state.activeFacets?.filters && Object.keys(state.activeFacets.filters).length > 0) ||
-                    (state.activeFacets?.ranges && Object.keys(state.activeFacets.ranges).length > 0)) && (
-                    <Grid item sm={3} sx={{ display: { xs: 'none', md: 'block' } }}>
-                        <StandardRighthandCard title={txt.facetsFilter.title}>
-                            <FacetsFilter
-                                facetsData={possiblePublicationsFacets}
-                                onFacetsChanged={facetsChanged}
-                                activeFacets={state.activeFacets}
-                                disabled={loadingPossiblePublicationsList}
-                                excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                            />
-                        </StandardRighthandCard>
-                    </Grid>
-                )}
+                                            <Grid item xs />
+                                        </Grid>
+                                    )}
+                                    {!loadingPossiblePublicationsList && possiblePublicationsList.length > 0 && (
+                                        <>
+                                            <Grid item xs>
+                                                <Typography>
+                                                    {txt.searchResults.text
+                                                        .replace('[resultsCount]', possiblePublicationsList.length)
+                                                        .replace('[totalCount]', totalPossiblePubs)}
+                                                </Typography>
+                                            </Grid>
+                                            <Grid item xs style={{ marginTop: 16 }}>
+                                                {totalPossiblePubs > initialState.pageSize && (
+                                                    <>
+                                                        <Grid item xs>
+                                                            <PublicationsListSorting
+                                                                sortBy={state.sortBy}
+                                                                sortDirection={state.sortDirection}
+                                                                pageSize={state.pageSize}
+                                                                pagingData={pagingData}
+                                                                onSortByChanged={sortByChanged}
+                                                                onPageSizeChanged={pageSizeChanged}
+                                                                disabled={loadingPossiblePublicationsList}
+                                                                canUseExport={false}
+                                                            />
+                                                        </Grid>
+                                                        <Grid item xs>
+                                                            <PublicationsListPaging
+                                                                pagingData={pagingData}
+                                                                onPageChanged={pageChanged}
+                                                                disabled={loadingPossiblePublicationsList}
+                                                                pagingId="possibly-my-records-paging-top"
+                                                            />
+                                                        </Grid>
+                                                    </>
+                                                )}
+                                                <Grid item xs>
+                                                    <PublicationsList
+                                                        publicationsLoading={
+                                                            loadingPossiblePublicationsList || loadingPossibleCounts
+                                                        }
+                                                        publicationsList={possiblePublicationsList}
+                                                        publicationsListSubset={publicationsClaimedInProgress}
+                                                        subsetCustomActions={inProgress}
+                                                        customActions={actionsList}
+                                                    />
+                                                </Grid>
+                                                {totalPossiblePubs > initialState.pageSize && (
+                                                    <Grid item xs>
+                                                        <PublicationsListPaging
+                                                            loading={loadingPossiblePublicationsList}
+                                                            pagingData={pagingData}
+                                                            onPageChanged={pageChanged}
+                                                            disabled={loadingPossiblePublicationsList}
+                                                            pagingId="possibly-my-records-paging-bottom"
+                                                        />
+                                                    </Grid>
+                                                )}
+                                            </Grid>
+                                        </>
+                                    )}
+                                </StandardCard>
+                            </Grid>
+                        )
+                }
+                {
+                    // show available filters or selected filters
+                    ((possiblePublicationsFacets && Object.keys(possiblePublicationsFacets).length > 0) ||
+                        (state.activeFacets?.filters && Object.keys(state.activeFacets.filters).length > 0) ||
+                        (state.activeFacets?.ranges && Object.keys(state.activeFacets.ranges).length > 0)) && (
+                        <Grid item sm={3} sx={{ display: { xs: 'none', md: 'block' } }}>
+                            <StandardRighthandCard title={txt.facetsFilter.title}>
+                                <FacetsFilter
+                                    facetsData={possiblePublicationsFacets}
+                                    onFacetsChanged={facetsChanged}
+                                    activeFacets={state.activeFacets}
+                                    disabled={loadingPossiblePublicationsList}
+                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                    lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                />
+                            </StandardRighthandCard>
+                        </Grid>
+                    )
+                }
             </Grid>
         </StandardPage>
     );

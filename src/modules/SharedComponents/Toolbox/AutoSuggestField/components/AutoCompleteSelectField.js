@@ -27,6 +27,7 @@ export const AutoCompleteSelectField = ({
     onChange,
     onClear,
     required,
+    fullWidth = false,
 }) => {
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState(itemsList);
@@ -117,6 +118,7 @@ export const AutoCompleteSelectField = ({
                 'data-testid': `${autoCompleteSelectFieldId}-options`,
             }}
             {...((!!allowFreeText && { freeSolo: true }) || {})}
+            {...(fullWidth && { fullWidth })}
         />
     );
 };
@@ -135,6 +137,7 @@ AutoCompleteSelectField.propTypes = {
     onChange: PropTypes.func,
     onClear: PropTypes.func,
     required: PropTypes.bool,
+    fullWidth: PropTypes.bool,
 };
 
 export default React.memo(AutoCompleteSelectField);

@@ -14,7 +14,7 @@ import {
     editAffiliationAndAssert,
     loadRecordForAdminEdit,
 } from '../helpers';
-import { getCKEditorField, readCKEditor } from '../../../lib/ckeditor';
+import { readCKEditor } from '../../../lib/ckeditor';
 import { checkPartialDateFromRecordValue } from '../../../lib/helpers';
 
 test.describe('Journal Article admin edit', () => {
@@ -225,6 +225,18 @@ test.describe('Journal Article admin edit', () => {
                     `${authorUsernames[index]} - ${authorIDs[index]}`,
                 );
             }
+
+            await expect(page.getByTestId('rek-author-add')).toBeVisible();
+            await page.getByTestId('rek-author-add').click();
+
+            const editorDetailsTab = page.getByTestId('authors-section-content');
+            await expect(editorDetailsTab.locator('h4').getByText(/Authors/)).toBeVisible();
+
+            await editorDetailsTab.getByTestId('rek-author-input').fill('Author keyboard test');
+            await editorDetailsTab.getByTestId('rek-author-input').press('Enter');
+            await expect(editorDetailsTab.getByTestId('rek-author-list-row-2-name-as-published')).toContainText(
+                'Author keyboard test',
+            );
         }
 
         // -------------------------------------- ADMIN TAB -----------------------------------------
@@ -284,6 +296,7 @@ test.describe('Journal Article admin edit', () => {
             // No licence selected in mock
         }
 
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         for (const _ of collections) {
             await collectionsCard
                 .locator('[class*="MuiChip-deleteIcon"]')

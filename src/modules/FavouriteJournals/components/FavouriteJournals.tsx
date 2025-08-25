@@ -82,7 +82,7 @@ export const FavouriteJournals: React.FC = () => {
                                         journalSearchQueryParams={journalSearchQueryParams}
                                     />
                                 </Grid>
-                                <Grid style={{ paddingTop: !!response?.total ? 20 : 25 }} xs={12}>
+                                <Grid style={{ paddingTop: response?.total ? 20 : 25 }} xs={12}>
                                     <Grid container spacing={2} padding={0}>
                                         {!!response?.total && (
                                             <Grid xs={12} sm={6} md="auto">

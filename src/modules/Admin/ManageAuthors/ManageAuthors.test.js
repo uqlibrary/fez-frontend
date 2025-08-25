@@ -441,9 +441,9 @@ describe('ManageAuthors', () => {
             .onPost(`${repository.routes.AUTHOR_API().apiUrl}/delete-list`)
             .reply(200, {
                 data: {
-                    '2011': 'Author deleted',
-                    '2012': 'Author deleted',
-                    '2013': 'Author deleted',
+                    2011: 'Author deleted',
+                    2012: 'Author deleted',
+                    2013: 'Author deleted',
                 },
             });
 

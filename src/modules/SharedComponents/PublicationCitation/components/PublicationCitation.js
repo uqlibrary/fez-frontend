@@ -223,7 +223,6 @@ export const PublicationCitation = ({
     };
 
     const hasPublicationAdvisoryStatement = publication => {
-        // eslint-disable-next-line camelcase
         return !!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement;
     };
 

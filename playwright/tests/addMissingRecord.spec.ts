@@ -204,7 +204,7 @@ test.describe('Add missing record', () => {
 
     // a NON RHD student is prompted in case they have a student account
     test.describe('Non RHD adding a Thesis', () => {
-        test('is prompted that theses could be added elsewhere', async ({ page }, baseURL) => {
+        test('is prompted that theses could be added elsewhere', async ({ page }) => {
             await page.goto('/records/add/new?user=uqstaff');
             await page.getByTestId('rek-display-type-select').click();
             await page

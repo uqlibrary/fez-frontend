@@ -1,6 +1,16 @@
 import React from 'react';
 import AuthorsListWithAffiliates from './AuthorsListWithAffiliates';
-import { act, render, fireEvent, WithReduxStore, within, waitFor } from 'test-utils';
+import {
+    act,
+    render,
+    fireEvent,
+    WithReduxStore,
+    within,
+    waitFor,
+    getTableBodyRows,
+    userEvent,
+    waitForElementToBeRemoved,
+} from 'test-utils';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
 
@@ -8,14 +18,8 @@ const props = {
     contributorEditorId: 'rek-author',
     list: [],
     locale: locale.components.authorsList('author').field,
-    isNtro: false,
-    showRoleInput: false,
     disabled: false,
     onChange: jest.fn(),
-    organisationalUnitList: {},
-    suggestedOrganisationalUnitList: {},
-    loadOrganisationalUnitsList: jest.fn(),
-    loadSuggestedOrganisationalUnitsList: jest.fn(),
 };
 
 function setup(testProps = {}) {
@@ -31,6 +35,27 @@ describe('AuthorsListWithAffiliates', () => {
         jest.resetAllMocks();
     });
 
+    const assertButtonFauxDisabled = element => {
+        // with MRT, it does not appear possible to dynamically enable
+        // or disable the save button during editing.
+        // This function instead checks if the button still
+        // exists after being clicked. This should be the case
+        // when validation fails after the button click and
+        // the row remains in Edit mode.
+        fireEvent.click(element);
+        expect(element).toBeInTheDocument();
+    };
+    const assertButtonFauxEnabled = element => {
+        // with MRT, it does not appear possible to dynamically enable
+        // or disable the save button during editing.
+        // This function instead checks if the button has
+        // been removed after being clicked. This should be the case
+        // when validation passes after the button click, and
+        // the row exits Edit mode.
+        fireEvent.click(element);
+        expect(element).not.toBeInTheDocument();
+    };
+
     it('should render default list view', () => {
         const { getByTestId, getByText } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();
@@ -38,7 +63,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should render a list of upto 10 contributors and should not show paging or filtering options', () => {
-        const { getAllByTestId } = setup({
+        const { container } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -73,13 +98,11 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(10);
+        expect(container).toHaveTableRowsLength(10);
     });
 
-    it('should render a list of upto 10 contributors and should not show paging and searching options', () => {
-        const { getAllByTestId } = setup({
+    it('should render a list of upto 10 contributors and should not show paging and searching options', async () => {
+        const { container } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -117,9 +140,35 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
+        expect(container).toHaveTableRowsLength(10);
+    });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(10);
+    it('should render a list of 100 contributors and set default page size accordingly', async () => {
+        const largeList = Array.from({ length: 101 }, (_, i) => ({
+            nameAsPublished: `test ${i + 1}`,
+        }));
+        const { container } = setup({
+            list: largeList,
+        });
+
+        expect(container).toHaveTableRowsLength(locale.components.authorsList('author').field.largeListDefaultPageSize);
+    });
+
+    it('should render a list of 100 contributors and provide functioning search filter', async () => {
+        const largeList = Array.from({ length: 101 }, (_, i) => ({
+            nameAsPublished: `test ${i + 1}`,
+        }));
+        const { container, getByLabelText, getByTestId, getByText, queryByText } = setup({
+            list: largeList,
+        });
+
+        expect(container).toHaveTableRowsLength(locale.components.authorsList('author').field.largeListDefaultPageSize);
+        await userEvent.click(getByLabelText('Show/Hide search'));
+        await userEvent.type(getByTestId('rek-author-search'), 'test 100');
+
+        await waitFor(() => expect(queryByText('test 2')).not.toBeInTheDocument());
+        expect(container).toHaveTableRowsLength(1);
+        expect(getByText('test 100')).toBeInTheDocument();
     });
 
     it('should render disabled row', () => {
@@ -140,6 +189,62 @@ describe('AuthorsListWithAffiliates', () => {
         expect(getByTestId('rek-author-list-row-0-delete').closest('button')).toHaveAttribute('disabled');
         expect(getByTestId('rek-author-list-row-1-edit').closest('button')).toHaveAttribute('disabled');
         expect(getByTestId('rek-author-list-row-1-delete').closest('button')).toHaveAttribute('disabled');
+    });
+
+    it('should handle deletion of rows', async () => {
+        const { getByTestId, findByTestId, queryByTestId } = setup({
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                    aut_id: 1,
+                    affiliation: '',
+                },
+                {
+                    nameAsPublished: 'test 2',
+                    aut_id: 2,
+                    affiliation: '',
+                },
+            ],
+        });
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test 1');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('test 2');
+
+        await userEvent.click(getByTestId('rek-author-list-row-0-delete').closest('button'));
+        await findByTestId('rek-author-delete-author-confirmation');
+
+        await userEvent.click(getByTestId('confirm-rek-author-delete-author-confirmation'));
+        await waitForElementToBeRemoved(() => getByTestId('rek-author-delete-author-confirmation'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test 2');
+        expect(queryByTestId('rek-author-list-row-1-name-as-published')).not.toBeInTheDocument();
+    });
+
+    it('should handle cancel deletion of rows', async () => {
+        const { getByTestId, findByTestId } = setup({
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                    aut_id: 1,
+                    affiliation: '',
+                },
+                {
+                    nameAsPublished: 'test 2',
+                    aut_id: 2,
+                    affiliation: '',
+                },
+            ],
+        });
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test 1');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('test 2');
+
+        await userEvent.click(getByTestId('rek-author-list-row-0-delete').closest('button'));
+        await findByTestId('rek-author-delete-author-confirmation');
+
+        await userEvent.click(getByTestId('cancel-rek-author-delete-author-confirmation'));
+        await waitForElementToBeRemoved(() => getByTestId('rek-author-delete-author-confirmation'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test 1');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('test 2');
     });
 
     it('should change order', () => {
@@ -165,7 +270,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should add contributor correctly', () => {
-        const { getAllByTestId, getByTestId, getByText, queryByText } = setup();
+        const { container, getByTestId, getByText, queryByText } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('rek-author-add'));
@@ -173,27 +278,46 @@ describe('AuthorsListWithAffiliates', () => {
         fireEvent.click(getByTestId('rek-author-add-save'));
 
         expect(queryByText('No records to display')).not.toBeInTheDocument();
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(1);
+        expect(container).toHaveTableRowsLength(1);
     });
 
-    it('should validate new contributor maxlength correctly', () => {
-        const { getByTestId, getByText } = setup();
+    it('should cancel adding a contributor correctly', () => {
+        const { container, getByTestId, getByText, queryByText } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('rek-author-add'));
-        expect(getByTestId('rek-author-add-save').closest('button')).toHaveAttribute('disabled');
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.click(getByTestId('rek-author-add-cancel'));
+
+        expect(queryByText('No records to display')).toBeInTheDocument();
+        expect(container).toHaveTableRowsLength(0);
+    });
+
+    it('should validate new contributor maxlength correctly', async () => {
+        const { getByTestId, getByText, findByTestId } = setup();
+        expect(getByText('No records to display')).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('rek-author-add'));
+        await findByTestId('rek-author-add-save');
+        const element = getByTestId('rek-author-add-save').closest('button');
+        assertButtonFauxDisabled(element);
+
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1' } });
-        expect(getByTestId('rek-author-add-save').closest('button')).not.toHaveAttribute('disabled');
+        assertButtonFauxEnabled(element);
+
+        fireEvent.click(getByTestId('rek-author-add'));
+        await findByTestId('rek-author-add-save');
+        const element2 = getByTestId('rek-author-add-save').closest('button');
+
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1'.repeat(256) } });
-        expect(getByTestId('rek-author-add-save').closest('button')).toHaveAttribute('disabled');
+        assertButtonFauxDisabled(element2);
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1'.repeat(255) } });
-        expect(getByTestId('rek-author-add-save').closest('button')).not.toHaveAttribute('disabled');
+        assertButtonFauxEnabled(element2);
     });
 
     it('should validate existing contributor maxlength correctly', () => {
         const initialValue = 'test 1';
-        const { getAllByTestId, getByTestId } = setup({
+        const { container, getByTestId } = setup({
             list: [
                 {
                     nameAsPublished: initialValue,
@@ -203,20 +327,26 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(1);
+        expect(container).toHaveTableRowsLength(1);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
-        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
+        const element = getByTestId('rek-author-update-save').closest('button');
+        assertButtonFauxDisabled(element);
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: initialValue } });
-        expect(getByTestId('rek-author-update-save').closest('button')).not.toHaveAttribute('disabled');
+        assertButtonFauxEnabled(element);
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        const element2 = getByTestId('rek-author-update-save').closest('button');
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1' } });
-        expect(getByTestId('rek-author-update-save').closest('button')).not.toHaveAttribute('disabled');
+        assertButtonFauxEnabled(element2);
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        const element3 = getByTestId('rek-author-update-save').closest('button');
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1'.repeat(256) } });
-        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
+        assertButtonFauxDisabled(element3);
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '1'.repeat(255) } });
-        expect(getByTestId('rek-author-update-save').closest('button')).not.toHaveAttribute('disabled');
+        assertButtonFauxEnabled(element3);
     });
 
     it('should render a list and user should be able to edit', async () => {
@@ -240,7 +370,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getAllByTestId, getByTestId, getByText } = setup({
+        const { container, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -255,8 +385,7 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container).toHaveTableRowsLength(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -266,7 +395,7 @@ describe('AuthorsListWithAffiliates', () => {
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
-        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
+        assertButtonFauxDisabled(getByTestId('rek-author-update-save').closest('button'));
 
         act(() => {
             fireEvent.click(getByTestId('rek-author-id-input'));
@@ -276,9 +405,7 @@ describe('AuthorsListWithAffiliates', () => {
         fireEvent.click(getByText('Testing'));
 
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
-        expect(getByTestId('rek-author-update-save')).not.toHaveAttribute('disabled');
-
-        fireEvent.click(getByTestId('rek-author-update-save'));
+        assertButtonFauxEnabled(getByTestId('rek-author-update-save').closest('button'));
 
         // await waitFor(() => getByTestId('rek-author-list-row-0-uq-identifiers'));
         expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('uqtest - 111');
@@ -305,7 +432,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getAllByTestId, getByTestId, getByText } = setup({
+        const { container, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -320,8 +447,7 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container).toHaveTableRowsLength(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -331,7 +457,7 @@ describe('AuthorsListWithAffiliates', () => {
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
-        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
+        assertButtonFauxDisabled(getByTestId('rek-author-update-save').closest('button'));
 
         act(() => {
             fireEvent.click(getByTestId('rek-author-id-input'));
@@ -341,9 +467,7 @@ describe('AuthorsListWithAffiliates', () => {
         fireEvent.click(getByText('Testing'));
 
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
-        expect(getByTestId('rek-author-update-save')).not.toHaveAttribute('disabled');
-
-        fireEvent.click(getByTestId('rek-author-update-save'));
+        assertButtonFauxEnabled(getByTestId('rek-author-update-save').closest('button'));
 
         // await waitFor(() => getByTestId('rek-author-list-row-0-uq-identifiers'));
         expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('uqtest - 111');
@@ -370,7 +494,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getAllByTestId, getByTestId, getByText } = setup({
+        const { container, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -387,8 +511,7 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container).toHaveTableRowsLength(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -398,7 +521,7 @@ describe('AuthorsListWithAffiliates', () => {
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
-        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
+        assertButtonFauxDisabled(getByTestId('rek-author-update-save').closest('button'));
 
         act(() => {
             fireEvent.click(getByTestId('rek-author-id-input'));
@@ -409,16 +532,36 @@ describe('AuthorsListWithAffiliates', () => {
         fireEvent.click(getByText('Testing'));
 
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
-        expect(getByTestId('rek-author-update-save')).not.toHaveAttribute('disabled');
-
-        fireEvent.click(getByTestId('rek-author-update-save'));
+        assertButtonFauxEnabled(getByTestId('rek-author-update-save').closest('button'));
 
         // await waitFor(() => getByTestId('rek-author-list-row-0-uq-identifiers'));
         expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('123456 - 111');
     });
 
+    it('should allow user to cancel edit', async () => {
+        const { container, getByTestId } = setup({
+            list: [
+                {
+                    nameAsPublished: 'Testing',
+                    uqIdentifier: '0',
+                    affiliation: '',
+                },
+            ],
+        });
+
+        expect(container).toHaveTableRowsLength(1);
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('Testing');
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'Testing Updated' } });
+        fireEvent.click(getByTestId('rek-author-update-cancel'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('Testing');
+    });
+
     it('should clear uq identifier', async () => {
-        const { getAllByTestId, getByTestId } = setup({
+        const { container, getByTestId } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -435,8 +578,7 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container).toHaveTableRowsLength(2);
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
@@ -446,7 +588,7 @@ describe('AuthorsListWithAffiliates', () => {
 
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
-        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
+        assertButtonFauxDisabled(getByTestId('rek-author-update-save').closest('button'));
 
         act(() => {
             fireEvent.click(getByTestId('rek-author-id-input'));
@@ -454,9 +596,7 @@ describe('AuthorsListWithAffiliates', () => {
         });
 
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
-        expect(getByTestId('rek-author-update-save')).not.toHaveAttribute('disabled');
-
-        fireEvent.click(getByTestId('rek-author-update-save'));
+        assertButtonFauxEnabled(getByTestId('rek-author-update-save').closest('button'));
 
         // await waitFor(() => getByTestId('rek-author-list-row-0-uq-identifiers'));
         expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('');
@@ -475,7 +615,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getAllByTestId, getByTestId, getByText } = setup({
+        const { container, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -497,9 +637,7 @@ describe('AuthorsListWithAffiliates', () => {
         fireEvent.click(getByText('Testing'));
 
         fireEvent.click(getByTestId('rek-author-add-save'));
-
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(1);
+        expect(container).toHaveTableRowsLength(1);
     });
 
     it('should render the same list if an existing user with the same uq id in the list has been added', async () => {
@@ -554,273 +692,35 @@ describe('AuthorsListWithAffiliates', () => {
         expect(getByTestId('rek-author-list-row-1-uq-identifiers')).toHaveTextContent('111');
     });
 
-    it('should render a list and user should be able to edit for NTRO', async () => {
-        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
-            data: [
+    it('should not render affiliations for unlinked authors', () => {
+        const { container, getByTestId, queryByTestId, getByText } = setup({
+            list: [
                 {
-                    id: 111,
-                    value: 'Testing',
-                    aut_id: 111,
+                    creatorRole: '',
+                    uqIdentifier: '1234',
+                    aut_display_name: 'Test Author',
+                    affiliation: '',
                     aut_org_username: 'uqtest',
-                    aut_fname: 'UQ',
-                    aut_lname: 'Test',
-                },
-                {
-                    id: 112,
-                    value: 'test',
-                    aut_id: 112,
-                    aut_org_username: 'uqtest2',
-                    aut_fname: 'UQ2',
-                    aut_lname: 'Test2',
-                },
-            ],
-        });
-        const { getAllByTestId, getByTestId, getByText } = setup({
-            isNtro: true,
-            list: [
-                {
-                    nameAsPublished: 'test 1',
-                    uqIdentifier: '0',
+                    nameAsPublished: 'Test Author',
+                    uqUsername: null,
+                    aut_student_username: '',
+                    aut_id: 1234,
                     orgaff: '',
                     orgtype: '',
-                    affiliation: '',
-                },
-                {
-                    nameAsPublished: 'test 2',
-                    uqIdentifier: '1234',
-                    affiliation: '',
+                    affiliations: [],
+                    id: 1,
                 },
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
-
-        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
-        fireEvent.click(getByTestId('rek-author-update-save'));
-
-        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test');
-
-        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
-        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
-
-        fireEvent.mouseDown(getByTestId('org-affiliation-select'));
-        fireEvent.click(getByText('Not UQ'));
-
-        fireEvent.change(getByTestId('org-affiliation-name'), { target: { value: 'Test org' } });
-        fireEvent.mouseDown(getByTestId('org-affiliation-type'));
-        fireEvent.click(getByText('Government'));
-
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
-
-        act(() => {
-            fireEvent.click(getByTestId('rek-author-id-input'), 'Testing');
-            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
-        });
-        await waitFor(() => getByTestId('rek-author-id-options'));
-        fireEvent.click(getByText('Testing'));
-
-        expect(getByTestId('rek-author-update-save')).not.toHaveAttribute('disabled');
-
-        fireEvent.click(getByTestId('rek-author-update-save'));
-
-        expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('uqtest - 111');
-        expect(getByTestId('rek-author-list-row-0-affiliation')).toHaveTextContent('Test org');
-        expect(getByTestId('rek-author-list-row-0-affiliation-type')).toHaveTextContent('Government');
-    });
-
-    it('should render a list and user should be able to edit for NTRO 2', async () => {
-        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
-            data: [
-                {
-                    id: 111,
-                    value: 'Testing',
-                    aut_id: 111,
-                    aut_org_username: 'uqtest',
-                    aut_fname: 'UQ',
-                    aut_lname: 'Test',
-                },
-                {
-                    id: 112,
-                    value: 'test',
-                    aut_id: 112,
-                    aut_org_username: 'uqtest2',
-                    aut_fname: 'UQ2',
-                    aut_lname: 'Test2',
-                },
-            ],
-        });
-        const { getAllByTestId, getByTestId, getByText } = setup({
-            isNtro: true,
-            list: [
-                {
-                    nameAsPublished: 'test 1',
-                    uqIdentifier: '0',
-                    orgaff: '',
-                    orgtype: '',
-                    affiliation: '',
-                },
-                {
-                    nameAsPublished: 'test 2',
-                    uqIdentifier: '1234',
-                    orgaff: '',
-                    orgtype: '',
-                    affiliation: '',
-                },
-            ],
-        });
-
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
-
-        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
-        fireEvent.click(getByTestId('rek-author-update-save'));
-
-        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test');
-
-        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
-        expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
-
-        act(() => {
-            fireEvent.click(getByTestId('rek-author-id-input'));
-            fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
-        });
-        await waitFor(() => getByTestId('rek-author-id-options'));
-        fireEvent.click(getByText('Testing'));
-
-        fireEvent.mouseDown(getByTestId('org-affiliation-select'));
-        fireEvent.click(getByText('UQ'));
-
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
-        expect(getByTestId('rek-author-update-save')).not.toHaveAttribute('disabled');
-
-        fireEvent.click(getByTestId('rek-author-update-save'));
-
-        expect(getByTestId('rek-author-list-row-0-uq-identifiers')).toHaveTextContent('uqtest - 111');
-        expect(getByTestId('rek-author-list-row-0-affiliation')).toHaveTextContent('The University of Queensland');
-        expect(getByTestId('rek-author-list-row-0-affiliation-type')).toHaveTextContent('University');
-    });
-
-    it('should display role column and input field while editing', () => {
-        const { getByTestId, getByText } = setup({
-            showRoleInput: true,
-            list: [
-                {
-                    nameAsPublished: 'test 1',
-                },
-                {
-                    nameAsPublished: 'test 2',
-                    uqIdentifier: '1234',
-                    aut_id: 1234,
-                },
-            ],
-        });
-
-        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
-        fireEvent.mouseDown(getByTestId('rek-author-role-input'));
-        fireEvent.click(getByText('Technician'));
-        fireEvent.click(getByTestId('rek-author-update-save'));
-
-        expect(getByTestId('rek-author-list-row-0-role')).toHaveTextContent('Technician');
-    });
-
-    it('should display uqUsername and uqIdentifier correctly while editing', () => {
-        const { getByTestId, getByText } = setup({
-            showRoleInput: true,
-            list: [
-                {
-                    nameAsPublished: 'test 1',
-                    uqIdentifier: '1234',
-                    uqUsername: 'uqtest',
-                },
-                {
-                    nameAsPublished: 'test 2',
-                    uqIdentifier: '1234',
-                    aut_id: 1234,
-                },
-            ],
-        });
-
-        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
-        expect(getByTestId('rek-author-id-input')).toHaveAttribute('value', 'uqtest - 1234');
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
-        fireEvent.mouseDown(getByTestId('rek-author-role-input'));
-        fireEvent.click(getByText('Technician'));
-        fireEvent.click(getByTestId('rek-author-update-save'));
-
-        expect(getByTestId('rek-author-list-row-0-role')).toHaveTextContent('Technician');
-    });
-
-    it('should delete row correctly', () => {
-        const { getByTestId } = setup({
-            showRoleInput: true,
-            list: [
-                {
-                    nameAsPublished: 'test 1',
-                },
-                {
-                    nameAsPublished: 'test 2',
-                    uqIdentifier: '1234',
-                    aut_id: 1234,
-                },
-            ],
-        });
-        fireEvent.click(getByTestId('rek-author-list-row-0-delete'));
-        fireEvent.click(getByTestId('rek-author-delete-save'));
-
-        // expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test 2');
-    });
-
-    it('should clear uq identifier column', () => {
-        const { getByTestId, getByTitle } = setup({
-            showRoleInput: true,
-            list: [
-                {
-                    nameAsPublished: 'test 1',
-                },
-                {
-                    nameAsPublished: 'test 2',
-                    uqIdentifier: '1234',
-                    aut_id: 1234,
-                },
-            ],
-        });
-        fireEvent.click(getByTestId('rek-author-list-row-1-edit'));
-        fireEvent.click(getByTitle('Clear'));
-        fireEvent.click(getByTestId('rek-author-update-save'));
-
-        expect(getByTestId('rek-author-list-row-1-uq-identifiers')).toHaveTextContent('');
-    });
-
-    it('should handle row update cancelled; show error for creator role correctly', () => {
-        const { getByTestId } = setup({
-            showRoleInput: true,
-            list: [
-                {
-                    nameAsPublished: 'test 1',
-                },
-            ],
-        });
-        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
-        fireEvent.click(getByTestId('rek-author-update-cancel'));
-
-        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: '' } });
-
-        expect(getByTestId('rek-author-label')).toHaveClass('Mui-error');
-        expect(getByTestId('rek-author-role-label')).toHaveClass('Mui-disabled');
-
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
-        expect(getByTestId('rek-author-role-label')).toHaveClass('Mui-error');
+        expect(container).toHaveTableRowsLength(1);
+        expect(getByText('Test Author')).toBeInTheDocument();
+        expect(getByTestId('expandPanelIcon-1234')).not.toBeVisible();
+        expect(queryByTestId('detailPanel-1234')).not.toBeInTheDocument();
     });
 
     it('should render new affiliation view', async () => {
-        const { getAllByTestId, getByTestId, getByText, getByRole, queryByTestId, queryByText } = setup({
+        const { container, getByTestId, getByText, getByRole, queryByTestId, queryByText } = setup({
             list: [
                 {
                     creatorRole: '',
@@ -888,20 +788,16 @@ describe('AuthorsListWithAffiliates', () => {
             ],
         });
 
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(2);
+        expect(container).toHaveTableRowsLength(2);
         // Check the first row is for a linked author, which should
         // have the new UI interface for affiliations.
+        const tableRows = getTableBodyRows(container);
         const row = tableRows[0];
-        expect(row).toBeInTheDocument();
 
         expect(within(row).getByText('Robertson, Avril A. B. not 100%')).toBeInTheDocument();
         expect(within(row).getByTestId('contributor-errorIcon-88844')).toBeInTheDocument();
         act(() => {
-            within(row)
-                .getByTestId('expandPanelIcon-88844')
-                .closest('button')
-                .click();
+            within(row).getByTestId('expandPanelIcon-88844').closest('button').click();
         });
 
         await waitFor(() => getByText('School of Chemistry and Molecular Biosciences'));
@@ -915,7 +811,6 @@ describe('AuthorsListWithAffiliates', () => {
 
         // Check there's a second row for an unlinked author
         const row2 = tableRows[1];
-        expect(row2).toBeInTheDocument();
 
         expect(within(row2).getByText('Smith, John Coverage')).toBeInTheDocument();
         expect(within(row2).queryByTestId('expandPanelIcon')).not.toBeInTheDocument(); // unlinked dont have expand icons in this component
@@ -963,7 +858,6 @@ describe('AuthorsListWithAffiliates', () => {
         act(() => {
             getByRole('button', { name: /Recalculate Percentages/ }).click();
         });
-
         expect(queryByText('Percentage sum total of all affiliations must equal 100%')).not.toBeInTheDocument();
 
         expect(getByTestId('orgChip-881')).toHaveTextContent('50%');

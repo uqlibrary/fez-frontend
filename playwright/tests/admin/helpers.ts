@@ -187,7 +187,7 @@ export async function assertAffiliationsAllowed(page: Page, options: AssertAffil
     }
 
     if (!ntro) {
-        const iconSelector = allowed ? '[data-testid^=expandPanelIcon-]' : '[data-testid=ChevronRightIcon]';
+        const iconSelector = allowed ? '[data-testid^=expandPanelIcon-]' : '[data-testid=ExpandMoreIcon]';
         await page
             .locator(`[id=rek-author-list-row-${rowId}]`)
             .locator(iconSelector)

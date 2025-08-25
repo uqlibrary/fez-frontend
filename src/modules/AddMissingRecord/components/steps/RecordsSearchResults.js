@@ -6,12 +6,12 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 
-const PublicationsList = React.lazy(() =>
-    import('modules/SharedComponents/PublicationsList/components/PublicationsList'),
+const PublicationsList = React.lazy(
+    () => import('modules/SharedComponents/PublicationsList/components/PublicationsList'),
 );
 /* istanbul ignore next */
-const PublicationListLoadingProgress = React.lazy(() =>
-    import('modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress'),
+const PublicationListLoadingProgress = React.lazy(
+    () => import('modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress'),
 );
 
 import { pathConfig } from 'config/pathConfig';

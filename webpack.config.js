@@ -143,11 +143,6 @@ module.exports = {
                     outputStyle: 'expanded',
                     sourceMap: true,
                 },
-                eslint: {
-                    configFile: '.eslintrc',
-                    failOnWarning: false,
-                    failOnError: true,
-                },
                 postcss: {},
                 context: join(__dirname),
             },
@@ -168,8 +163,7 @@ module.exports = {
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
         }),
-        process.env.NODE_ENV === 'cc' &&
-            new ESLintPlugin({ exclude: ['node_modules', 'custom_modules', 'mock', 'mocks'] }),
+        process.env.NODE_ENV === 'cc' && new ESLintPlugin({ quiet: true }),
         new Dotenv(),
     ].filter(Boolean),
     resolve: {

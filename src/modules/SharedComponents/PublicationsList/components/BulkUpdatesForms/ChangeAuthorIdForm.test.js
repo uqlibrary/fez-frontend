@@ -80,7 +80,7 @@ describe('ChangeAuthorIdForm', () => {
             .replyOnce(200, {
                 data: [{ id: 111, value: 'Testing', aut_id: 111, aut_org_username: 'uqtest' }],
             });
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
         await assertFormInitialState();
 
         // interact with the form
@@ -123,7 +123,7 @@ describe('ChangeAuthorIdForm', () => {
             .replyOnce(200, {
                 data: [{ id: 111, value: 'Testing', aut_id: 111, aut_org_username: 'uqtest' }],
             });
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
         await assertFormInitialState();
 
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
@@ -178,6 +178,7 @@ describe('ChangeAuthorIdForm', () => {
         await waitFor(() => getByTestId('search-by-rek-author-id-options'));
         fireEvent.click(getByText('Testing'));
 
+        expect(getByTestId('search-by-rek-author-id-input').value).toBe('111 (Testing)');
         // assert next state of the form
         await expectMissingRequiredFieldError('search-by-rek-author-id');
 
@@ -208,7 +209,7 @@ describe('ChangeAuthorIdForm', () => {
             .replyOnce(200, {
                 data: [{ id: 123, value: 'Testing', aut_id: 123, aut_org_username: 'uqtest' }],
             });
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
         await assertFormInitialState();
 
         // interact with the form
@@ -242,11 +243,9 @@ describe('ChangeAuthorIdForm', () => {
     });
 
     it('should correctly clear author ID field', async () => {
-        api.mock.instance
-            .onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl)
-            .replyOnce(200, {
-                data: [{ id: 111, value: 'Testing', aut_id: 123, aut_org_username: 'uqtest' }],
-            });
+        api.mock.instance.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).reply(200, {
+            data: [{ id: 111, value: 'Testing', aut_id: 123, aut_org_username: 'uqtest' }],
+        });
         const { getByTestId, getByText, getAllByTitle } = setup();
 
         fireEvent.mouseDown(getByTestId('search-author-by-select'));
@@ -255,6 +254,7 @@ describe('ChangeAuthorIdForm', () => {
 
         await expectRequiredFieldError('search-by-rek-author-id');
 
+        // Click on clear button
         fireEvent.click(getByTestId('search-by-rek-author-id-input'));
         fireEvent.change(getByTestId('search-by-rek-author-id-input'), { target: { value: 'Test' } });
         await waitFor(() => getByTestId('search-by-rek-author-id-options'));
@@ -262,6 +262,17 @@ describe('ChangeAuthorIdForm', () => {
         fireEvent.click(getByText('Testing'));
         await userEvent.click(getAllByTitle('Clear')[0]);
 
+        await expectRequiredFieldError('search-by-rek-author-id');
+
+        // Manually clear the input text
+        fireEvent.click(getByTestId('search-by-rek-author-id-input'));
+        fireEvent.change(getByTestId('search-by-rek-author-id-input'), { target: { value: 'Test' } });
+        await waitFor(() => getByTestId('search-by-rek-author-id-options'));
+
+        fireEvent.click(getByText('Testing'));
+        await expectMissingRequiredFieldError('search-by-rek-author-id');
+
+        fireEvent.change(getByTestId('search-by-rek-author-id-input'), { target: { value: '' } });
         await expectRequiredFieldError('search-by-rek-author-id');
     });
 });

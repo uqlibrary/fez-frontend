@@ -105,11 +105,10 @@ export const AdminContainer = ({ createMode = false }) => {
     );
 
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
-    const toggleObject = React.useMemo(() => ({ tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle }), [
-        isMobileView,
-        tabbed,
-        handleToggle,
-    ]);
+    const toggleObject = React.useMemo(
+        () => ({ tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle }),
+        [isMobileView, tabbed, handleToggle],
+    );
 
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
 

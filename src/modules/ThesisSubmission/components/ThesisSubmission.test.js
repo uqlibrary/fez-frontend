@@ -29,7 +29,7 @@ jest.mock('../../../context');
 import ThesisSubmission, { getFormConstants } from './ThesisSubmission';
 
 const mockUseNavigate = jest.fn();
-/* eslint-disable react/prop-types */
+
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,

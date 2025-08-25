@@ -1,6 +1,5 @@
 import * as routes from './routes';
 import { IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL } from 'config/general';
-import { ROR_LOOKUP_API } from './routes';
 
 describe('Backend routes method', () => {
     it('should get zer-padded year', () => {
@@ -776,7 +775,6 @@ describe('Backend routes method', () => {
         });
     });
 
-
     it('should construct url for THIRD_PARTY_LOOKUP_API_1FIELD', () => {
         expect(
             routes.THIRD_PARTY_LOOKUP_API_1FIELD({
@@ -865,8 +863,7 @@ describe('Backend routes method', () => {
 
     it('should construct url for journal lookup api', () => {
         expect(routes.JOURNAL_LOOKUP_API({ query: 'test + - = & | > < ! ( ) { } [ ] ^ " ~ * ? : \\ /' })).toEqual({
-            apiUrl:
-                'journals/search?rule=lookup&query=test%20%2B%20-%20%3D%20%26%20%7C%20%3E%20%3C%20!%20(%20)%20%7B%20%7D%20%5B%20%5D%20%5E%20%22%20~%20*%20%3F%20%3A%20%5C%20%2F',
+            apiUrl: 'journals/search?rule=lookup&query=test%20%2B%20-%20%3D%20%26%20%7C%20%3E%20%3C%20!%20(%20)%20%7B%20%7D%20%5B%20%5D%20%5E%20%22%20~%20*%20%3F%20%3A%20%5C%20%2F',
         });
     });
 
@@ -874,8 +871,7 @@ describe('Backend routes method', () => {
         expect(
             routes.JOURNAL_KEYWORDS_LOOKUP_API({ query: 'test + - = & | > < ! ( ) { } [ ] ^ " ~ * ? : \\ /' }),
         ).toEqual({
-            apiUrl:
-                'journals/search?query=test%20%2B%20-%20%3D%20%26%20%7C%20%3E%20%3C%20!%20(%20)%20%7B%20%7D%20%5B%20%5D%20%5E%20%22%20~%20*%20%3F%20%3A%20%5C%20%2F',
+            apiUrl: 'journals/search?query=test%20%2B%20-%20%3D%20%26%20%7C%20%3E%20%3C%20!%20(%20)%20%7B%20%7D%20%5B%20%5D%20%5E%20%22%20~%20*%20%3F%20%3A%20%5C%20%2F',
         });
     });
 

@@ -72,10 +72,12 @@ const authorsGetValue = record => {
         nameAsPublished: (authors[order] || {}).rek_author,
         creatorRole: (authorRoles[order] || {}).rek_author_role || '',
         uqIdentifier: `${(authorIds[order] || {}).rek_author_id || 0}`,
-        uqUsername: `${((authorIds[order] || {}).author || {}).aut_org_username ||
+        uqUsername: `${
+            ((authorIds[order] || {}).author || {}).aut_org_username ||
             ((authorIds[order] || {}).author || {}).aut_student_username ||
             ((authorIds[order] || {}).author || {}).aut_ref_num ||
-            ''}`,
+            ''
+        }`,
         aut_id: (authorIds[order] || {}).rek_author_id || 0,
         orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
         orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
@@ -129,7 +131,6 @@ const editorsGetValue = record => {
     return returnValue;
 };
 
-// eslint-disable-next-line no-unused-vars
 export const deleteKey = (record, searchKey) => {
     const skipDeleteForKeys = [
         'rek_date',
@@ -375,8 +376,9 @@ export default {
                 .map(item => ({
                     rek_value: {
                         key: item.rek_sdg_source,
-                        value: `${item.sdg?.cvo_title} - ${item.rek_sdg_source_lookup ||
-                            `${item.rek_sdg_source} (cvo_id)`}`,
+                        value: `${item.sdg?.cvo_title} - ${
+                            item.rek_sdg_source_lookup || `${item.rek_sdg_source} (cvo_id)`
+                        }`,
                         group: item.sdg?.cvo_title,
                         sdgCVOId: item.sdg?.cvo_id,
                     },
