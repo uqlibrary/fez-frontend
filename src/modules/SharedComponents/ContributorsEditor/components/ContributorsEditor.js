@@ -62,6 +62,7 @@ export class ContributorsEditor extends PureComponent {
             errorTitle: 'Error',
             errorMessage: 'Unable to add an item with the same identifier.',
         },
+        shouldHandleAffiliations: false,
         showContributorAssignment: false,
         showIdentifierLookup: false,
         showRoleInput: false,

@@ -410,11 +410,9 @@ export const getRecordAuthorAffiliationTypeSearchKey = authors => {
     };
 };
 
-export const getRecordAuthorAffiliations = (authors, canHaveAffiliations = false) => {
-    if (!authors || authors.length === 0 || !canHaveAffiliations) {
-        return {
-            fez_author_affiliation: canHaveAffiliations ? [] : null,
-        };
+export const getRecordAuthorAffiliations = authors => {
+    if (!authors || authors.length === 0) {
+        return { fez_author_affiliation: [] };
     }
 
     return {
@@ -1376,12 +1374,10 @@ export const getArchitectsSearchKeys = architects => ({
 });
 
 export const getAuthorsSectionSearchKeys = (data = {}) => {
-    const { authors, authorsWithAffiliations, editors, supervisors, creators, architects } = data;
+    const { authors, editors, supervisors, creators, architects } = data;
 
     return {
-        ...(!!authors || !!authorsWithAffiliations
-            ? getAuthorsSearchKeys(!!authors ? authors : authorsWithAffiliations, !!authorsWithAffiliations)
-            : {}),
+        ...(!!authors ? getAuthorsSearchKeys(authors) : {}),
         ...(!!editors ? getContributorsSearchKeys(editors) : {}),
         ...(!!creators ? getCreatorsSearchKeys(creators) : {}),
         ...(!!architects ? getArchitectsSearchKeys(architects) : {}),
