@@ -8,6 +8,7 @@ export const assertEnabled = async (page: Page, selector: string) => expect(page
 
 export const assertDisabled = async (page: Page, selector: string) => expect(page.locator(selector)).toBeDisabled();
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const assertTriggersDisabled = async (page: Page, selector: string, callback: any) => {
     await assertEnabled(page, selector);
     await callback();
@@ -30,6 +31,7 @@ export const navToHomeFromMenu = async (
     }
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const fillInput = async (page: Page, selector: string, value: any, times: number = 1) => {
     await page.fill(selector, String(value).repeat(times));
 };

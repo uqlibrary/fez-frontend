@@ -32,7 +32,7 @@ import { pathConfig } from '../../../config';
 
 const mockUseNavigate = jest.fn();
 let mockParams;
-/* eslint-disable react/prop-types */
+
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,
@@ -307,10 +307,7 @@ describe('MyIncompleteRecord', () => {
         describe('payload', () => {
             it('all fields data', async () => {
                 const pid = mockRecordToFix.rek_pid;
-                api.mock.records
-                    .update({ pid })
-                    .issues({ pid })
-                    .files.upload();
+                api.mock.records.update({ pid }).issues({ pid }).files.upload();
 
                 mockRichEditorFieldValues();
                 const { getByTestId } = setup({ publication: mockRecordToFix });
@@ -330,10 +327,7 @@ describe('MyIncompleteRecord', () => {
         describe('post submission', () => {
             it('should navigate to dashboard after form submission', async () => {
                 const pid = mockRecordToFix.rek_pid;
-                api.mock.records
-                    .update({ pid })
-                    .issues({ pid })
-                    .files.upload();
+                api.mock.records.update({ pid }).issues({ pid }).files.upload();
 
                 mockRichEditorFieldValues();
                 const { getByTestId } = setup({ publication: mockRecordToFix });
@@ -365,10 +359,7 @@ describe('MyIncompleteRecord', () => {
 
             it('should display server error when it fails to upload file', async () => {
                 const pid = mockRecordToFix.rek_pid;
-                api.mock.records
-                    .update({ pid })
-                    .issues({ pid })
-                    .files.presignedUrl({ status: 500, once: false });
+                api.mock.records.update({ pid }).issues({ pid }).files.presignedUrl({ status: 500, once: false });
 
                 mockRichEditorFieldValues();
                 setup({ publication: mockRecordToFix });

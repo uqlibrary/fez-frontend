@@ -402,8 +402,7 @@ export default {
                 },
             },
             communityParticipant: {
-                title:
-                    'Do you consent to your name being included as a Community Participant in the UQ Library Aboriginal and Torres Strait Islander Community Feedback database?',
+                title: 'Do you consent to your name being included as a Community Participant in the UQ Library Aboriginal and Torres Strait Islander Community Feedback database?',
                 options: [
                     { label: 'Yes', value: '1' },
                     { label: 'No, I would like to remain anonymous', value: '0' },

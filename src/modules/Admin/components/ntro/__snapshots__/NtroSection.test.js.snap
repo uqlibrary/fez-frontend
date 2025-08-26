@@ -63,10 +63,10 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                       class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
                     >
                       <span
-                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                       >
                         <input
-                          class="PrivateSwitchBase-input css-1m9pwf3"
+                          class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                           data-analyticsid="empty-significance-statement-input"
                           data-indeterminate="false"
                           data-testid="empty-significance-statement-input"
@@ -454,10 +454,10 @@ exports[`NtroSection component should render default view 1`] = `
                       class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
                     >
                       <span
-                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                       >
                         <input
-                          class="PrivateSwitchBase-input css-1m9pwf3"
+                          class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                           data-analyticsid="empty-significance-statement-input"
                           data-indeterminate="false"
                           data-testid="empty-significance-statement-input"
@@ -845,10 +845,10 @@ exports[`NtroSection component should render design form fields 1`] = `
                       class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
                     >
                       <span
-                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                       >
                         <input
-                          class="PrivateSwitchBase-input css-1m9pwf3"
+                          class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                           data-analyticsid="empty-significance-statement-input"
                           data-indeterminate="false"
                           data-testid="empty-significance-statement-input"
@@ -1236,10 +1236,10 @@ exports[`NtroSection component should render disabled view 1`] = `
                       class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
                     >
                       <span
-                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                       >
                         <input
-                          class="PrivateSwitchBase-input css-1m9pwf3"
+                          class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                           data-analyticsid="empty-significance-statement-input"
                           data-indeterminate="false"
                           data-testid="empty-significance-statement-input"

@@ -115,11 +115,7 @@ describe('Author Affiliation helper functions:', () => {
         expect(helpers.getUniqueAffiliatedAuthorIds([])).toEqual([]);
 
         expect(helpers.getUniqueAffiliatedAuthorIds(record.fez_author_affiliation)).toEqual([
-            88844,
-            7624000,
-            7624839,
-            7624840,
-            7624841,
+            88844, 7624000, 7624839, 7624840, 7624841,
         ]);
     });
 

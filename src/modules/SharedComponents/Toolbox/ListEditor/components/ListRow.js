@@ -49,7 +49,6 @@ export const ListRow = ({
 
     const _handleEdit = useCallback(() => {
         !!onEdit && onEdit(index);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [index, onEdit]);
 
     const _handleMoveUp = useCallback(() => {

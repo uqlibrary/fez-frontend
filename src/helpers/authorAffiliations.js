@@ -18,7 +18,7 @@ export const deepClone = obj => {
 export const getFilteredAffiliations = (author, affiliations) =>
     affiliations.length > 0
         ? affiliations?.filter(item => item.af_author_id === author.rek_author_id)
-        : author.affiliations ?? [];
+        : (author.affiliations ?? []);
 
 export const hasValidAuthorAffiliations = record => {
     return record.fez_author_affiliation.every(item =>

@@ -160,7 +160,6 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                     readOnly: false,
                                 },
                             }}
-                            // eslint-disable-next-line react/prop-types
                             onChange={props =>
                                 handleDisplayReportChange({
                                     type: 'fromDate',
@@ -204,7 +203,6 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                     readOnly: false,
                                 },
                             }}
-                            // eslint-disable-next-line react/prop-types
                             onChange={props =>
                                 handleDisplayReportChange({
                                     type: 'toDate',

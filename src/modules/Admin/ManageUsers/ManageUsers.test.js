@@ -634,9 +634,9 @@ describe('ManageUsers', () => {
             .onPost(`${repository.routes.USER_API().apiUrl}/delete-list`)
             .replyOnce(200, {
                 data: {
-                    '2011': 'User deleted',
-                    '2012': 'User deleted',
-                    '2013': 'User deleted',
+                    2011: 'User deleted',
+                    2012: 'User deleted',
+                    2013: 'User deleted',
                 },
             });
 

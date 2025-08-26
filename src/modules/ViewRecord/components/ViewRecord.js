@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React from 'react';
 import { styled } from '@mui/material/styles';
 
@@ -164,7 +163,6 @@ export const ViewRecord = () => {
                 );
         }
         return (
-            // eslint-disable-next-line jsx-a11y/click-events-have-key-events
             <Badge
                 color="error"
                 overlap="circular"
@@ -315,7 +313,6 @@ export const ViewRecord = () => {
                         <Alert {...txt.deletedAlert} message={txt.deletedAlert.message(recordToView)} />
                     </Grid>
                 )}
-                {/* eslint-disable-next-line camelcase */}
                 {!!version && !!recordToView?.rek_version && (
                     <Grid xs={12} style={{ marginBottom: 24 }}>
                         <Alert

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
@@ -38,13 +37,8 @@ export const PublicationsList = ({
     showImageThumbnails = false,
     security = { isAdmin: false, isAuthor: false },
 }) => {
-    const {
-        shouldRenderRecordsSelectors,
-        recordsSelected,
-        allSelected,
-        handleClick,
-        handleSelectAll,
-    } = useRecordsSelector();
+    const { shouldRenderRecordsSelectors, recordsSelected, allSelected, handleClick, handleSelectAll } =
+        useRecordsSelector();
 
     const renderPublicationCitation = (index, publication) => {
         return (

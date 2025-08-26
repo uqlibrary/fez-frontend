@@ -48,7 +48,6 @@ const RECORD_ACTION_UNCLAIM = 'unclaim';
  */
 const isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
     return (
-        // eslint-disable-next-line camelcase
         !!author?.aut_id &&
         !!recordToFix &&
         recordToFix[searchKey] &&

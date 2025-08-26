@@ -1173,9 +1173,13 @@ export const viewJournalConfig = {
                     template: 'MultiValueTemplate',
                     templateProps: {
                         getData: item =>
-                            `${item.jnl_era_source_year} - ${(Array.isArray(item.fez_journal_era_for_code) &&
-                                item.fez_journal_era_for_code.map(code => code.jnl_era_for_code_lookup).join(', ')) ||
-                                ''}`,
+                            `${item.jnl_era_source_year} - ${
+                                (Array.isArray(item.fez_journal_era_for_code) &&
+                                    item.fez_journal_era_for_code
+                                        .map(code => code.jnl_era_for_code_lookup)
+                                        .join(', ')) ||
+                                ''
+                            }`,
                     },
                 },
             ],

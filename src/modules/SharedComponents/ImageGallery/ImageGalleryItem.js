@@ -103,7 +103,6 @@ const ImageGalleryItem = ({
 
     const alertMessage = React.useMemo(() => {
         return getAlertMessageText({ unavailable, restricted, advisory });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [restricted, advisory, unavailable]);
 
     const clickLink =

@@ -25,11 +25,7 @@ export const calculateOpenAccess = record => {
             (record.fez_record_search_key_embargo_to && record.fez_record_search_key_embargo_to.rek_embargo_to) || null;
         const publishedDate = record.rek_date;
         embargoDate =
-            !embargoDate && embargoDays
-                ? moment(publishedDate)
-                      .add(embargoDays, 'days')
-                      .format()
-                : embargoDate;
+            !embargoDate && embargoDays ? moment(publishedDate).add(embargoDays, 'days').format() : embargoDate;
         const pastEmgargoDate = !embargoDate || embargoDate < currentDate;
         const displayEmbargoDate =
             !!embargoDate && !pastEmgargoDate && embargoDate > currentDate

@@ -190,7 +190,7 @@ describe('form submission', () => {
                     ],
                 };
 
-                const { getByTestId } = setup(
+                const { getByTestId, findByTestId } = setup(
                     {},
                     {
                         viewRecordReducer: {
@@ -198,6 +198,12 @@ describe('form submission', () => {
                         },
                     },
                 );
+
+                // SECURITY
+                // override security
+                // [LS Aug 25] Don't know why this needs to be here, but if it's near the bottom
+                // where it used to be, the selector element never appears.
+                await userEvent.click(getByTestId('rek-security-inherited-input'));
 
                 // ADMIN
                 await selectDropDownOption('rek-herdc-code-select', 'A1 Authored Book (Research)');
@@ -295,17 +301,13 @@ describe('form submission', () => {
                     'rek-sensitive-handling-note-id-select',
                     'Indigenous/First Nations people should be aware that this output is about men’s business.',
                 );
-
-                // SECURITY
-                // override security
-                await userEvent.click(getByTestId('rek-security-inherited-input'));
+                await findByTestId('rek-security-policy-select', { timeout: 2000 });
 
                 // select a work override
                 await selectDropDownOption('rek-security-policy-select', 'Administrators');
 
                 // change security of a file to test
                 await selectDropDownOption('dsi-security-policy-5-select', 'Public');
-
                 await submitForm();
                 expectApiRequestToMatchSnapshot('post', api.url.files.create, null, data =>
                     sortObjectProps(JSON.parse(data)),

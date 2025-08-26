@@ -43,18 +43,20 @@ export const ThirdPartyLookupTool = () => {
     return (
         <StandardPage title={localeContent.title}>
             {loadingResults && <InlineLoader message={localeContent.loadingMessage} />}
-            {// this still needs work because we have to pass the specific form details for display
-            // pass through with the results? or via sendInputsToResultComponent ?
-            !loadingResults && !!lookupResults && lookupResults.length > 0 && (
-                <ThirdPartyLookupFormResult
-                    lookupResults={lookupResults}
-                    actions={actions}
-                    formDisplay={state.formDisplay}
-                    primaryValue={state.primaryValue}
-                    secondaryValue={state.secondaryValue}
-                    locale={localeContent}
-                />
-            )}
+            {
+                // this still needs work because we have to pass the specific form details for display
+                // pass through with the results? or via sendInputsToResultComponent ?
+                !loadingResults && !!lookupResults && lookupResults.length > 0 && (
+                    <ThirdPartyLookupFormResult
+                        lookupResults={lookupResults}
+                        actions={actions}
+                        formDisplay={state.formDisplay}
+                        primaryValue={state.primaryValue}
+                        secondaryValue={state.secondaryValue}
+                        locale={localeContent}
+                    />
+                )
+            }
 
             {!loadingResults &&
                 !!lookupResults &&

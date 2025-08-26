@@ -670,7 +670,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«rd»"
+                        id="«rh»"
                         type="text"
                         value=" to "
                       />
@@ -710,11 +710,11 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                     data-analyticsid="advanced-search-open-access"
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
@@ -1120,7 +1120,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r5»"
+                        id="«r7»"
                         type="text"
                         value=" to "
                       />
@@ -1160,11 +1160,11 @@ exports[`SearchComponent should render in advanced search and take in considerat
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                     data-analyticsid="advanced-search-open-access"
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
@@ -1717,7 +1717,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r49»"
+                        id="«r50»"
                         type="text"
                         value=" to "
                       />
@@ -1757,12 +1757,12 @@ exports[`SearchComponent should reset advanced search 1`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
                     checked=""
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                     data-analyticsid="advanced-search-open-access"
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
@@ -2239,7 +2239,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r3c»"
+                        id="«r3v»"
                         type="text"
                         value=" to "
                       />
@@ -2279,11 +2279,11 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                     data-analyticsid="advanced-search-open-access"
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
@@ -2788,7 +2788,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«rm»"
+                        id="«rs»"
                         type="text"
                         value=" to "
                       />
@@ -2828,11 +2828,11 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                     data-analyticsid="advanced-search-open-access"
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
@@ -3263,7 +3263,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r36»"
+                        id="«r3o»"
                         type="text"
                         value=" to "
                       />
@@ -3303,11 +3303,11 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                     data-analyticsid="advanced-search-open-access"
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
@@ -3789,7 +3789,7 @@ exports[`SearchComponent should update advanced search row on search text change
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r41»"
+                        id="«r4n»"
                         type="text"
                         value=" to "
                       />
@@ -3829,11 +3829,11 @@ exports[`SearchComponent should update advanced search row on search text change
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                     data-analyticsid="advanced-search-open-access"
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
@@ -4264,7 +4264,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r4t»"
+                        id="«r5n»"
                         type="text"
                         value=" to "
                       />
@@ -4375,7 +4375,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r51»"
+                        id="«r5r»"
                         type="text"
                         value=" to "
                       />
@@ -4507,7 +4507,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r56»"
+                        id="«r60»"
                         type="text"
                         value=" to "
                       />
@@ -4568,11 +4568,11 @@ exports[`SearchComponent should update date range filter 1`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                     data-analyticsid="advanced-search-open-access"
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
@@ -5003,7 +5003,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r4t»"
+                        id="«r5n»"
                         type="text"
                         value=" to "
                       />
@@ -5114,7 +5114,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r51»"
+                        id="«r5r»"
                         type="text"
                         value=" to "
                       />
@@ -5246,7 +5246,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r56»"
+                        id="«r60»"
                         type="text"
                         value=" to "
                       />
@@ -5307,11 +5307,11 @@ exports[`SearchComponent should update date range filter 2`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                     data-analyticsid="advanced-search-open-access"
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"

@@ -387,10 +387,10 @@ exports[`FilesSection component should render default view for Files on a Data C
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-v3js7l-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1p0vbhv-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                     data-analyticsid="rek-copyright-input"
                     data-indeterminate="false"
                     data-testid="rek-copyright-input"
@@ -832,10 +832,10 @@ exports[`FilesSection component should render default view for Files on a public
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-v3js7l-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1p0vbhv-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                     data-analyticsid="rek-copyright-input"
                     data-indeterminate="false"
                     data-testid="rek-copyright-input"

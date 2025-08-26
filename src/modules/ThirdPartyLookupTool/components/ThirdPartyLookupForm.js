@@ -115,29 +115,31 @@ export const ThirdPartyLookupForm = ({
                                     className={'primaryValue'}
                                 />
                             </div>
-                            {// not all forms will have a second field
-                            !!txt.thisForm.secondaryField && (
-                                <div>
-                                    <h4>{txt.thisForm.secondaryField.heading}</h4>
-                                    <p>{txt.thisForm.secondaryField.tip ? txt.thisForm.secondaryField.tip : ''}</p>
-                                    <TextField
-                                        variant="standard"
-                                        fullWidth
-                                        name={'secondaryValue'}
-                                        inputProps={{
-                                            'aria-label': txt.thisForm.secondaryField.fromAria || '',
-                                        }}
-                                        placeholder={
-                                            txt.thisForm.secondaryField.inputPlaceholder
-                                                ? txt.thisForm.secondaryField.inputPlaceholder
-                                                : ''
-                                        }
-                                        value={state.secondaryValue}
-                                        onChange={_onChange}
-                                        className={'secondaryValue'}
-                                    />
-                                </div>
-                            )}
+                            {
+                                // not all forms will have a second field
+                                !!txt.thisForm.secondaryField && (
+                                    <div>
+                                        <h4>{txt.thisForm.secondaryField.heading}</h4>
+                                        <p>{txt.thisForm.secondaryField.tip ? txt.thisForm.secondaryField.tip : ''}</p>
+                                        <TextField
+                                            variant="standard"
+                                            fullWidth
+                                            name={'secondaryValue'}
+                                            inputProps={{
+                                                'aria-label': txt.thisForm.secondaryField.fromAria || '',
+                                            }}
+                                            placeholder={
+                                                txt.thisForm.secondaryField.inputPlaceholder
+                                                    ? txt.thisForm.secondaryField.inputPlaceholder
+                                                    : ''
+                                            }
+                                            value={state.secondaryValue}
+                                            onChange={_onChange}
+                                            className={'secondaryValue'}
+                                        />
+                                    </div>
+                                )
+                            }
                             <p>{txt.thisForm.bottomTip ? txt.thisForm.bottomTip : ''}</p>
                             <Button
                                 children={txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}

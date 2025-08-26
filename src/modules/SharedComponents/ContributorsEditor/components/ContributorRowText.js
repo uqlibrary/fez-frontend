@@ -90,10 +90,12 @@ export const ContributorRowText = ({
                 >
                     {getListItemTypography(
                         `${contributor.aut_title} ${contributor.aut_display_name}`,
-                        `${(contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && contributor.orgaff) ||
-                            locale.global.orgTitle} (${contributor.aut_org_username ||
-                            contributor.aut_student_username ||
-                            contributor.aut_ref_num} - ${contributor.aut_id})`,
+                        `${
+                            (contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && contributor.orgaff) ||
+                            locale.global.orgTitle
+                        } (${
+                            contributor.aut_org_username || contributor.aut_student_username || contributor.aut_ref_num
+                        } - ${contributor.aut_id})`,
                         primaryTypographyClass,
                         secondaryTypographyClass,
                     )}
@@ -109,10 +111,12 @@ export const ContributorRowText = ({
                 >
                     {getListItemTypography(
                         `${contributor.orgaff}`,
-                        `${(!!contributor.orgtype &&
-                            !!ORG_TYPES_LOOKUP[contributor.orgtype] &&
-                            `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}`) ||
-                            ''}`,
+                        `${
+                            (!!contributor.orgtype &&
+                                !!ORG_TYPES_LOOKUP[contributor.orgtype] &&
+                                `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}`) ||
+                            ''
+                        }`,
                         primaryTypographyClass,
                         secondaryTypographyClass,
                     )}

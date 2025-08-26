@@ -31,6 +31,7 @@ export const AutoCompleteAsynchronousField = ({
     supplemental,
     groupBy,
     clearSuggestionsOnClose = true,
+    fullWidth = false,
 }) => {
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState([]);
@@ -190,6 +191,7 @@ export const AutoCompleteAsynchronousField = ({
                     'data-analyticsid': `${autoCompleteAsynchronousFieldId}-options`,
                     'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
                 }}
+                {...(fullWidth && { fullWidth })}
                 {...((!!allowFreeText && { freeSolo: true }) || {})}
                 {...(groupBy && { groupBy })}
                 {...((!!OptionTemplate && {
@@ -245,6 +247,7 @@ AutoCompleteAsynchronousField.propTypes = {
     supplemental: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
     groupBy: PropTypes.func,
     clearSuggestionsOnClose: PropTypes.bool,
+    fullWidth: PropTypes.bool,
 };
 
 export default React.memo(AutoCompleteAsynchronousField);

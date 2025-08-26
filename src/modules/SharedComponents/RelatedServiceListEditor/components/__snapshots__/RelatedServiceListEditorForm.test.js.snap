@@ -11,7 +11,7 @@ exports[`RelatedServiceListEditorForm should render with default props 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
     >
       <div
-        class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+        class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"

@@ -292,7 +292,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r4»"
+                        id="«r5»"
                         type="text"
                         value=" to "
                       />
@@ -332,11 +332,11 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     aria-label="Check to search for open access / full text works"
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                     data-analyticsid="advanced-search-open-access"
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"

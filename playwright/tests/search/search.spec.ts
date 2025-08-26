@@ -1,4 +1,4 @@
-import { test, expect, Page, Locator } from '../../test';
+import { test, expect, Page } from '../../test';
 
 import records from 'mock/data/records/internalTitleSearchList';
 

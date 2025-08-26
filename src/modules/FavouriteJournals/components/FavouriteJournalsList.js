@@ -66,7 +66,6 @@ export const FavouriteJournalsList = ({
                     onExportPublications={onExport}
                     onSortByChanged={onSortByChange}
                     onPageSizeChanged={onPageSizeChange}
-                    /* eslint-disable-next-line camelcase */
                     pageSize={journalsList?.per_page}
                 />
             </Grid>

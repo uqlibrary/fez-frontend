@@ -65,7 +65,6 @@ export const removeShadowSuffixFromTableNames = data => {
  * @param {object}
  * @returns {action}
  */
-// eslint-disable-next-line no-unused-vars
 export function loadRecordVersionToView(pid, version) {
     return dispatch => {
         dispatch({ type: actions.VIEW_RECORD_LOADING });

@@ -85,7 +85,6 @@ describe('Component FileUploadDropzone', () => {
         });
     });
 
-    // eslint-disable-next-line max-len
     it('should remove files with same filename but different extension from dropped incoming files if already exist', async () => {
         const onDropFn = jest.fn();
         const { getByTestId } = setup({ onDrop: onDropFn }, { fez_datastream_info: [{ dsi_dsid: 'hello.txt' }] });

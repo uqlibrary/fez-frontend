@@ -44,8 +44,10 @@ const AdminViewRecordDrawerContent = ({
                         aria-label="Close admin record drawer"
                         size="large"
                     >
-                        {/* istanbul ignore next */
-                        themeDirection === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+                        {
+                            /* istanbul ignore next */
+                            themeDirection === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />
+                        }
                     </IconButton>
                     {title}
                 </Typography>

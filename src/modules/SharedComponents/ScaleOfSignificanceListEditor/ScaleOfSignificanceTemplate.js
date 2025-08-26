@@ -6,7 +6,6 @@ import { numberToWords, SIGNIFICANCE_MAP } from 'config/general';
 import { parseHtmlToJSX } from 'helpers/general';
 
 export const ScaleOfSignificanceTemplate = ({ item }) => {
-    // eslint-disable-next-line camelcase
     const authorNameIfKnown = <>{!!item.author?.rek_author ? `(${item.author.rek_author})` : ''}</>;
     return (
         <Grid container>

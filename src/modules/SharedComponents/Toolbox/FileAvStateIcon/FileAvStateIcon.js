@@ -16,11 +16,7 @@ import moment from 'moment';
 import { sanitiseId } from '../../../../helpers/general';
 import { getAvStateDescription } from '../../../../helpers/datastreams';
 
-export const UTCDateToCurrentTZDate = date =>
-    moment
-        .utc(date)
-        .local()
-        .format('lll');
+export const UTCDateToCurrentTZDate = date => moment.utc(date).local().format('lll');
 
 export const getTestId = (state, id) => `${sanitiseId(id)}-file-av-state-icon-${state ?? AV_CHECK_STATE_DEFAULT}`;
 const getIcon = (state, id) => {

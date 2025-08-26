@@ -75,11 +75,7 @@ export function putUploadFile(pid, file, dispatch, formName, collections) {
             Metadata: getFileUploadMetadata(file, collections),
         })
             .then(uploadUrl => {
-                const extension = file.name
-                    .split('.')
-                    .pop()
-                    .toString()
-                    .toLowerCase();
+                const extension = file.name.split('.').pop().toString().toLowerCase();
                 const headers = {};
                 if (MIME_TYPE_WHITELIST.hasOwnProperty(extension)) {
                     headers['Content-Type'] = MIME_TYPE_WHITELIST[extension];

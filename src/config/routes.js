@@ -555,7 +555,6 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
         ]) ||
         [];
 
-    // eslint-disable-next-line camelcase
     const isAuthor = author?.aut_id;
     const incompletePage =
         (hasIncompleteWorks && [

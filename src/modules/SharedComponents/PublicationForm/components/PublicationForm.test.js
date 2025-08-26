@@ -244,11 +244,7 @@ describe('PublicationForm', () => {
         it('should submit form with expected payload', async () => {
             const pid = 'UQ:1';
             const mockOnFormSubmitSuccess = jest.fn();
-            api.mock.records
-                .create({ pid })
-                .update({ pid })
-                .issues({ pid })
-                .files.upload();
+            api.mock.records.create({ pid }).update({ pid }).issues({ pid }).files.upload();
 
             setup({ onFormSubmitSuccess: mockOnFormSubmitSuccess });
             await selectTypeCombo('Creative Work - Design/Architectural', 'Design');

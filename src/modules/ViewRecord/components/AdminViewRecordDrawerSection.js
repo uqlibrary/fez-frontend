@@ -20,8 +20,7 @@ export const AdminRecordDrawerSection = ({ section, index, copyToClipboard, vari
 
     return (
         <StyledSectionContent key={`section-${index}`}>
-            {// eslint-disable-next-line react/prop-types
-            section.map((block, blockIndex) => (
+            {section.map((block, blockIndex) => (
                 <AdminRecordDrawerBlock
                     block={block}
                     parentIndex={index}

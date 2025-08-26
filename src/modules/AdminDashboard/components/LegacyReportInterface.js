@@ -42,10 +42,10 @@ const LegacyReportInterface = ({ id, loading, disabled, items, onExportClick }) 
     const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
     const exportReport = actionState.report || defaultLegacyReportOption;
 
-    const { isValid, validationErrors } = React.useMemo(() => validator({ locale: txt.error, actionState }), [
-        txt.error,
-        actionState,
-    ]);
+    const { isValid, validationErrors } = React.useMemo(
+        () => validator({ locale: txt.error, actionState }),
+        [txt.error, actionState],
+    );
 
     const isDisabled = !isValid || disabled;
 

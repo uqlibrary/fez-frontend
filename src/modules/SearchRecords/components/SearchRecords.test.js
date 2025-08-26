@@ -337,8 +337,7 @@ describe('SearchRecords page', () => {
         expect(mockUseNavigate).toHaveBeenCalled();
         expect(mockUseNavigate).toHaveBeenCalledWith({
             pathname: '/records/search',
-            search:
-                'activeFacets%5Bfilters%5D%5BAuthor%5D=745&activeFacets%5BshowOpenAccessOnly%5D=false&page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
+            search: 'activeFacets%5Bfilters%5D%5BAuthor%5D=745&activeFacets%5BshowOpenAccessOnly%5D=false&page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
         });
     });
 

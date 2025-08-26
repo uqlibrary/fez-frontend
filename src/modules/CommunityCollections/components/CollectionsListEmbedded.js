@@ -33,11 +33,7 @@ const classes = {
 const returnDateField = (date, conf, classes) => {
     return (
         <Grid item xs={2} sx={{ ...classes, display: { xs: 'none', md: 'block' } }}>
-            <Typography variant="body2">
-                {moment(date)
-                    .local()
-                    .format(conf.dateFormat)}
-            </Typography>
+            <Typography variant="body2">{moment(date).local().format(conf.dateFormat)}</Typography>
         </Grid>
     );
 };

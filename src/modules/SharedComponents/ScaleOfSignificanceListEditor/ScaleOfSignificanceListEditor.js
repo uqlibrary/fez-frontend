@@ -334,7 +334,6 @@ export class ScaleOfSignificanceListEditor extends Component {
                     id: index,
                     // authorName: item.authorName || item.author?.rek_author || null,
                     author: {
-                        // eslint-disable-next-line camelcase
                         rek_author: item.author?.rek_author || this.state.itemList[index].author?.rek_author || null,
                     },
                     key: item.id,

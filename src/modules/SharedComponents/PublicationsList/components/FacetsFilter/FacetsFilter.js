@@ -140,12 +140,8 @@ export const FacetsFilter = ({
             ...props,
         });
     };
-    const {
-        yearPublishedCategory,
-        yearPublishedFacet,
-        resetButtonText,
-        openAccessFilter,
-    } = locale.components.facetsFilter;
+    const { yearPublishedCategory, yearPublishedFacet, resetButtonText, openAccessFilter } =
+        locale.components.facetsFilter;
 
     const facetsToDisplay = getFacetsToDisplay(facetsData, excludeFacetsList, renameFacetsList, lookupFacetsList);
 

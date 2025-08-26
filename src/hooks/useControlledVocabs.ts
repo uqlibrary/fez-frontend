@@ -12,6 +12,7 @@ const defaultState = {
 
 export const useControlledVocabs = (cvoId: number, transformer?: (data: Array<unknown>) => Array<unknown>) => {
     const { itemsKeyValueList, rawData: raw, ...state } =
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         useSelector((state: any) => state.get('controlledVocabulariesReducer')?.[cvoId]) || defaultState;
 
     return {

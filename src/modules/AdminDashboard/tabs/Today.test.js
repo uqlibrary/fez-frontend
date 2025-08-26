@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { render, WithReduxStore, waitForElementToBeRemoved, userEvent } from 'test-utils';
 import Today from './Today';

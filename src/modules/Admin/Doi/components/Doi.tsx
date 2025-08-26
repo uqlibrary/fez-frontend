@@ -125,9 +125,11 @@ export const getInvalidPreviewFields = (record: FezRecord) => {
     previewFields.map((fieldConfig: DoiFieldNames) => {
         const fieldName = fieldConfig.field;
         const subKey = fieldName.replace('fez_record_search_key', 'rek');
-        const value = (typeof record[fieldName] === 'object' && !Array.isArray(record[fieldName])
-            ? record[fieldName]?.[subKey]
-            : record[fieldName]) as string;
+        const value = (
+            typeof record[fieldName] === 'object' && !Array.isArray(record[fieldName])
+                ? record[fieldName]?.[subKey]
+                : record[fieldName]
+        ) as string;
 
         let isValid = true;
         switch (fieldName as string) {
@@ -235,7 +237,7 @@ export const getErrorMessage = (record: FezRecord) => {
 
         // Subtype restrictions
         const supportedSubtypes = !!displayType && !!doiFields[displayType] && doiFields[displayType].subtypes;
-        if (!!supportedSubtypes) {
+        if (supportedSubtypes) {
             const subtype = !!record && (record.rek_subtype as string);
             if (supportedSubtypes.indexOf(subtype) === -1) {
                 errorMessages.push(

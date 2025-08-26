@@ -31,15 +31,8 @@ export const getInitialValuesForForm = (recordToView, createMode) => {
 };
 export const useRecord = createMode => {
     const { authorDetails, author } = useSelector(state => state.get('accountReducer'));
-    const {
-        recordToView,
-        isRecordLocked,
-        loadingRecordToView,
-        isDeleted,
-        isJobCreated,
-        recordToViewError,
-        error,
-    } = useSelector(state => state.get('viewRecordReducer'));
+    const { recordToView, isRecordLocked, loadingRecordToView, isDeleted, isJobCreated, recordToViewError, error } =
+        useSelector(state => state.get('viewRecordReducer'));
 
     const initialFormValues = useMemo(() => {
         return getInitialValuesForForm(recordToView, createMode);

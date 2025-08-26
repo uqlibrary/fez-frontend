@@ -153,7 +153,7 @@ describe('Dashboard test', () => {
     it('does render the donut/bar graph cards when data is available', () => {
         const { container } = setup({
             authorDetails: mock.authorDetails.uqresearcher,
-            /* eslint-disable max-len */
+
             // prettier-ignore
             publicationsByYear: {
                 'series': [
@@ -165,7 +165,7 @@ describe('Dashboard test', () => {
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
             },
-            /* eslint-enable max-len */
+
             publicationTypesCount: [
                 ['Journal Article', 278],
                 ['Conference Paper', 42],
@@ -244,7 +244,7 @@ describe('Dashboard test', () => {
                 thomson_citation_count_i: { count: 10 },
                 scopus_citation_count_i: { count: 10 },
             },
-            /* eslint-disable max-len */
+
             // prettier-ignore
             publicationsByYear: {
                 'series': [
@@ -256,7 +256,7 @@ describe('Dashboard test', () => {
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
             },
-            /* eslint-enable max-len */
+
             publicationTypesCount: [
                 ['Journal Article', 278],
                 ['Conference Paper', 42],
@@ -280,7 +280,7 @@ describe('Dashboard test', () => {
                 thomson_citation_count_i: { count: 10, years: '1000 - 2019' },
                 scopus_citation_count_i: { count: 10, years: '1000 - 2019' },
             },
-            /* eslint-disable max-len */
+
             // prettier-ignore
             publicationsByYear: {
                 'series': [
@@ -292,7 +292,7 @@ describe('Dashboard test', () => {
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
             },
-            /* eslint-enable max-len */
+
             publicationTypesCount: [
                 ['Journal Article', 278],
                 ['Conference Paper', 42],
@@ -316,7 +316,7 @@ describe('Dashboard test', () => {
                 thomson_citation_count_i: { count: 10, years: '1000 - 2019' },
                 scopus_citation_count_i: { count: 10, years: '1000 - 2019' },
             },
-            /* eslint-disable max-len */
+
             // prettier-ignore
             publicationsByYear: {
                 'series': [
@@ -328,7 +328,7 @@ describe('Dashboard test', () => {
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
             },
-            /* eslint-enable max-len */
+
             publicationTypesCount: [
                 ['Journal Article', 278],
                 ['Conference Paper', 42],
@@ -398,7 +398,7 @@ describe('Dashboard test', () => {
             accountAuthorDetailsLoading: false,
             loadingPublicationsStats: false,
             publicationsStats: undefined,
-            /* eslint-disable max-len */
+
             // prettier-ignore
             publicationsByYear: {
                 'series': [
@@ -413,7 +413,6 @@ describe('Dashboard test', () => {
             },
         });
 
-        /* eslint-enable max-len */
         expect(container).toMatchSnapshot();
     });
 
@@ -428,7 +427,7 @@ describe('Dashboard test', () => {
                 thomson_citation_count_i: { count: 10 },
                 scopus_citation_count_i: { count: 10 },
             },
-            /* eslint-disable max-len */
+
             // prettier-ignore
             publicationsByYear: {
                 'series': [
@@ -440,7 +439,7 @@ describe('Dashboard test', () => {
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
             },
-            /* eslint-enable max-len */
+
             publicationTypesCount: [
                 ['Journal Article', 278],
                 ['Conference Paper', 42],

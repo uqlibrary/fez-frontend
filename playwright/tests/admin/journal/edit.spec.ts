@@ -66,7 +66,7 @@ test.describe('JournalAdmin', () => {
             const issnBlock = bibliographicTab.locator('.AdminCard', { has: page.locator('h4', { hasText: 'ISSN' }) });
 
             // Find existing entry
-            let row0 = page.getByTestId('jnl_issn_jid-list-row-0');
+            const row0 = page.getByTestId('jnl_issn_jid-list-row-0');
             await checkIssnLinks(row0, '0388-0001');
 
             // Find existing entry with placeholder data
@@ -94,7 +94,7 @@ test.describe('JournalAdmin', () => {
             await issnBlock.locator('input').fill('11111111');
             await issnBlock.locator('input').press('Enter');
 
-            let row2 = page.locator('#jnl_issn_jid-list-row-2');
+            const row2 = page.locator('#jnl_issn_jid-list-row-2');
             await expect(row2).toContainText('1111-1111');
             await expect(row2).not.toContainText('SHERPA/RoMEO');
             await expect(row2).not.toContainText('Ulrichs');
@@ -147,7 +147,7 @@ test.describe('JournalAdmin', () => {
             await issnBlock.locator('input').fill('00000000');
             await issnBlock.locator('input').press('Enter');
 
-            let row5 = page.locator('#jnl_issn_jid-list-row-5');
+            const row5 = page.locator('#jnl_issn_jid-list-row-5');
             await expect(row5).toContainText('0000-0000');
             await expect(row5.locator('a', { hasText: 'SHERPA/RoMEO' })).not.toBeVisible();
             await expect(row5.locator('a', { hasText: 'Ulrichs' })).toBeVisible();
@@ -155,7 +155,7 @@ test.describe('JournalAdmin', () => {
             // New entry with unknown sherpa status
             await issnBlock.locator('input').fill('66666666');
             await issnBlock.locator('input').press('Enter');
-            let row6 = page.locator('#jnl_issn_jid-list-row-6');
+            const row6 = page.locator('#jnl_issn_jid-list-row-6');
             await checkIssnLinks(row6, '6666-6666');
         });
 

@@ -92,7 +92,6 @@ export const FileUploadDropzone = ({
                     item =>
                         item.dsi_dsid.slice(0, item.dsi_dsid.lastIndexOf('.')).toLowerCase() ===
                             fileNameWithoutExt.toLowerCase() ||
-                        // eslint-disable-next-line camelcase
                         (!!item?.dsi_dsid_new &&
                             item.dsi_dsid_new.slice(0, item.dsi_dsid_new.lastIndexOf('.')).toLowerCase() ===
                                 fileNameWithoutExt.toLowerCase()),
@@ -179,26 +178,14 @@ export const FileUploadDropzone = ({
             file =>
                 file &&
                 file.name &&
-                mimeTypeWhitelist.hasOwnProperty(
-                    file.name
-                        .split('.')
-                        .pop()
-                        .toString()
-                        .toLowerCase(),
-                ),
+                mimeTypeWhitelist.hasOwnProperty(file.name.split('.').pop().toString().toLowerCase()),
         );
         const invalidMimeTypeFiles = files
             .filter(
                 file =>
                     file &&
                     file.name &&
-                    !mimeTypeWhitelist.hasOwnProperty(
-                        file.name
-                            .split('.')
-                            .pop()
-                            .toString()
-                            .toLowerCase(),
-                    ),
+                    !mimeTypeWhitelist.hasOwnProperty(file.name.split('.').pop().toString().toLowerCase()),
             )
             .map(file => file.name);
         return { validMimeTypeFiles: validMimeTypeFiles, invalidMimeTypeFiles: invalidMimeTypeFiles };
@@ -226,7 +213,6 @@ export const FileUploadDropzone = ({
      * @private
      */
     const _onDrop = (incomingFiles, rejectedFiles) => {
-        // eslint-disable-next-line camelcase
         const existingFiles = formValues?.formValues?.fez_datastream_info ?? [];
         const notFiles = [];
         // Remove folders from accepted files (async)

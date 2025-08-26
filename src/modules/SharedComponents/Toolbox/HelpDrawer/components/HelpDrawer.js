@@ -12,8 +12,11 @@ export const HelpDrawer = ({ buttonLabel = 'CLOSE' }) => {
     const dispatch = useDispatch();
 
     const helpDrawerState = useSelector(state => state.get('helpDrawer'));
-    const { open = false, title = '', text = '' } =
-        helpDrawerState?.toJS?.() || helpDrawerState || /* istanbul ignore next */ {};
+    const {
+        open = false,
+        title = '',
+        text = '',
+    } = helpDrawerState?.toJS?.() || helpDrawerState || /* istanbul ignore next */ {};
 
     let indexedText = null;
     const _hide = () => {

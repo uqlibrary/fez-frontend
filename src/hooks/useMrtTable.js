@@ -35,9 +35,8 @@ import { useDispatch } from 'react-redux';
         setSelectedRows,
         resetSelectedRows,
  */
-export const useMrtTable = (list, rules = []) => {
+export const useMrtTable = (list, validationRules = []) => {
     const [data, setData] = useState(list);
-
     const [state, setState] = useState({ busy: false, deleteRowId: null, editingRow: null });
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const [validationErrors, setValidationErrors] = useState({});
@@ -78,14 +77,14 @@ export const useMrtTable = (list, rules = []) => {
         (row, field, value) => {
             const currentValues = { ...row.original, ...row._valuesCache };
             const updatedValues = { ...currentValues, [field]: value };
-            const errors = validate(rules)(updatedValues);
+            const errors = validate(validationRules)(updatedValues);
 
             setValidationErrors(prev => ({
                 ...prev,
                 [row.id]: errors,
             }));
         },
-        [rules, validate],
+        [validationRules, validate],
     );
 
     const hasValidationErrors = id => Array.isArray(validationErrors[id]) && validationErrors[id].length > 0;
@@ -120,7 +119,7 @@ export const useMrtTable = (list, rules = []) => {
         resetEditRow,
         showConfirmation,
         hideConfirmation,
-        validate: validate(rules),
+        validate: validate(validationRules),
         getValidationError,
         handleValidation,
         clearValidationErrors,

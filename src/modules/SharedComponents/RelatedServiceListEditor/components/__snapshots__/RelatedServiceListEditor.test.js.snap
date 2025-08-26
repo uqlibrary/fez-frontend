@@ -12,7 +12,7 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -415,7 +415,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -972,7 +972,7 @@ exports[`RelatedServiceListEditor should delete all services 2`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -1092,7 +1092,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -1651,7 +1651,7 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -2054,7 +2054,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -2611,7 +2611,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -3168,7 +3168,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -3725,7 +3725,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -4282,7 +4282,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -4685,7 +4685,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -5088,7 +5088,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -5647,7 +5647,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -6206,7 +6206,7 @@ exports[`RelatedServiceListEditor should render default view 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -6326,7 +6326,7 @@ exports[`RelatedServiceListEditor should render error from props 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -6451,7 +6451,7 @@ exports[`RelatedServiceListEditor should render error from props as children 1`]
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -6581,7 +6581,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -7446,7 +7446,7 @@ exports[`RelatedServiceListEditor should render string error from props 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -7571,7 +7571,7 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -7974,7 +7974,7 @@ exports[`RelatedServiceListEditor should update on receiving new props 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
       >
         <div
-          class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-fzem9i-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"

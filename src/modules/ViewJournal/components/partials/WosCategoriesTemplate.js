@@ -12,9 +12,9 @@ const WosCategoriesTemplate = ({ data, templateProps, fieldId }) => {
         return categoryNames.map((categoryName, categoryIndex) => (
             <DefaultTemplate
                 key={`${fieldId}-${index}-${categoryIndex}`}
-                data={`${categoryName.trim()}${(!!categoryIssns[categoryIndex] &&
-                    ' (' + categoryIssns[categoryIndex].trim() + ')') ||
-                    ''}`}
+                data={`${categoryName.trim()}${
+                    (!!categoryIssns[categoryIndex] && ' (' + categoryIssns[categoryIndex].trim() + ')') || ''
+                }`}
                 fieldId={`${fieldId}-${index}-${categoryIndex}`}
             />
         ));

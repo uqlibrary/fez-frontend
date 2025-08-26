@@ -46,9 +46,9 @@ const StyledTableCell = styled(TableCell, {
     shouldForwardProp: prop => !['isSelectable'].includes(prop),
 })(({ theme, isSelectable }) => ({
     ...(isSelectable
-        ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
-        : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
-          /* istanbul ignore next */ {}),
+        ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {})
+        : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
+          /* istanbul ignore next */ {})),
     [theme.breakpoints.down('xs')]: { padding: 'none' },
     [theme.breakpoints.down('sm')]: {
         verticalAlign: 'top',
@@ -58,27 +58,27 @@ const StyledTableCell = styled(TableCell, {
     },
     [theme.breakpoints.up('sm')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
-              /* istanbul ignore next */ {}),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
+              /* istanbul ignore next */ {})),
     },
     [theme.breakpoints.up('md')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
-              /* istanbul ignore next */ {}),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
+              /* istanbul ignore next */ {})),
     },
     [theme.breakpoints.up('lg')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
-              /* istanbul ignore next */ {}),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
+              /* istanbul ignore next */ {})),
     },
     [theme.breakpoints.up('xl')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
-              /* istanbul ignore next */ {}),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
+              /* istanbul ignore next */ {})),
     },
 }));
 

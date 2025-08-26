@@ -20,7 +20,6 @@ export const userIsResearcher = () => {
 
 export const isIntWithin = (int, items, field) => items?.some(item => parseInt(item[field], 10) === parseInt(int, 10));
 export const belongsToAuthor = (author, record) =>
-    // eslint-disable-next-line camelcase
     isIntWithin(author?.aut_id, record?.fez_record_search_key_author_id, 'rek_author_id');
 
 export const userIsAuthor = () => {

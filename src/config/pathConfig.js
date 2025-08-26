@@ -28,9 +28,7 @@ export const getDatastreamVersionQueryString = (fileName, checksum) => {
         return '';
     }
 
-    const hash = createHash('md5')
-        .update(`${fileName}${checksum.trim()}`)
-        .digest('hex');
+    const hash = createHash('md5').update(`${fileName}${checksum.trim()}`).digest('hex');
 
     return hash;
 };

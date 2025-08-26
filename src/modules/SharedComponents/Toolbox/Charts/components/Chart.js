@@ -18,7 +18,6 @@ const Chart = ({ chartOptions, className }) => {
 
     React.useEffect(() => {
         chart.current?.update(chartOptions);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [chartOptions]);
 
     return <div className={className} ref={chartRef} />;

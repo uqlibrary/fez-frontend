@@ -209,7 +209,6 @@ describe('Author Affiliations', () => {
                 },
                 fields.viewRecord.adminViewRecordDrawerFields,
             );
-            console.log(content.sections[0]);
             expect(content.sections[0][1].value[0]).toBe('To: UQ eSpace Manager \n');
             expect(content.sections[0][1].value).toMatchSnapshot();
         });

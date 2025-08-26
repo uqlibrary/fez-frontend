@@ -94,8 +94,8 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                         {...(!!form.getFieldState('adminSection.collections').error
                                             ? {
                                                   error: true,
-                                                  errorText: form.getFieldState('adminSection.collections').error
-                                                      ?.message,
+                                                  errorText:
+                                                      form.getFieldState('adminSection.collections').error?.message,
                                               }
                                             : {})}
                                     />
@@ -140,8 +140,8 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                                 {...(!!form.getFieldState('adminSection.rek_subtype').error
                                                     ? {
                                                           error: true,
-                                                          errorText: form.getFieldState('adminSection.rek_subtype')
-                                                              .error,
+                                                          errorText:
+                                                              form.getFieldState('adminSection.rek_subtype').error,
                                                       }
                                                     : {})}
                                             >

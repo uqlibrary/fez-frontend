@@ -6,11 +6,11 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
     class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2capx-MuiButtonBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-18d7y9d-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
     >
       <input
         checked=""
-        class="PrivateSwitchBase-input css-1m9pwf3"
+        class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
         data-analyticsid="terms-and-conditions-input"
         data-indeterminate="false"
         data-testid="terms-and-conditions-input"
@@ -42,10 +42,10 @@ exports[`Component FileUploadTermsAndConditions should render default view 1`] =
     class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2capx-MuiButtonBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-18d7y9d-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
     >
       <input
-        class="PrivateSwitchBase-input css-1m9pwf3"
+        class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
         data-analyticsid="terms-and-conditions-input"
         data-indeterminate="false"
         data-testid="terms-and-conditions-input"

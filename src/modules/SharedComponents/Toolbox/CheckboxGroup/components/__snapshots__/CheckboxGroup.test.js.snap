@@ -20,11 +20,11 @@ exports[`CheckboxGroup tests renders CheckboxGroup component 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
             label="option A"
           >
             <input
-              class="PrivateSwitchBase-input css-1m9pwf3"
+              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
               data-analyticsid="test-a-option"
               data-indeterminate="false"
               data-testid="test-a-option"
@@ -57,11 +57,11 @@ exports[`CheckboxGroup tests renders CheckboxGroup component 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
             label="option b"
           >
             <input
-              class="PrivateSwitchBase-input css-1m9pwf3"
+              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
               data-analyticsid="test-b-option"
               data-indeterminate="false"
               data-testid="test-b-option"
@@ -130,11 +130,11 @@ exports[`CheckboxGroup tests renders an error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
             label="option A"
           >
             <input
-              class="PrivateSwitchBase-input css-1m9pwf3"
+              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
               data-analyticsid="test-a-option"
               data-indeterminate="false"
               data-testid="test-a-option"
@@ -167,11 +167,11 @@ exports[`CheckboxGroup tests renders an error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
             label="option b"
           >
             <input
-              class="PrivateSwitchBase-input css-1m9pwf3"
+              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
               data-analyticsid="test-b-option"
               data-indeterminate="false"
               data-testid="test-b-option"

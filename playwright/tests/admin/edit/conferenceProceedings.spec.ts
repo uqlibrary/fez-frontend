@@ -45,7 +45,7 @@ test.describe('Conference Proceedings admin edit', () => {
         // Author Details tab
         const editorDetailsTab = page.getByTestId('authors-section-content');
         await expect(editorDetailsTab.locator('h4').getByText(/Editors/)).toBeVisible();
-        await editorDetailsTab.getByTestId('rek-contributor-add').click();
+
         await editorDetailsTab.getByTestId('rek-contributor-input').fill('Editor');
         await editorDetailsTab.getByTestId('rek-contributor-input').press('Enter');
 
