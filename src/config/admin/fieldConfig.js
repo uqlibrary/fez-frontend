@@ -44,6 +44,8 @@ import {
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
 } from 'config/general';
 
+import { shouldHandleAuthorAffiliations } from 'helpers/authorAffiliations';
+
 import { AttributionIncompleteField } from 'modules/SharedComponents/Toolbox/AttributionIncompleteField';
 
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
@@ -900,20 +902,7 @@ export default {
                 locale: locale.components.authorsList('author').field,
                 contributorEditorId: 'rek-author',
                 isAdmin: true,
-                shouldHandleAffiliations: false,
                 useFormReducer: true,
-            },
-        },
-        authorsWithAffiliations: {
-            component: ContributorsEditorField,
-            componentProps: {
-                name: 'authorsSection.authorsWithAffiliations',
-                showIdentifierLookup: true,
-                locale: locale.components.authorsList('author').field,
-                contributorEditorId: 'rek-author',
-                isAdmin: true,
-                shouldHandleAffiliations: true,
-                useFormReducer: false,
             },
         },
         editors: {
@@ -1868,6 +1857,10 @@ export default {
     },
     override: {
         [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
+            authors: ({ isNtro, displayType, subtype }) => ({
+                isNtro,
+                shouldHandleAffiliations: !isNtro && shouldHandleAuthorAffiliations(displayType, subtype),
+            }),
             fez_record_search_key_journal_name: () => ({
                 required: false,
                 validate: null,
@@ -1894,7 +1887,10 @@ export default {
                 required: true,
                 validate: [validation.required],
             }),
-            authors: ({ isNtro }) => ({ isNtro }),
+            authors: ({ isNtro, displayType, subtype }) => ({
+                isNtro,
+                shouldHandleAffiliations: !isNtro && shouldHandleAuthorAffiliations(displayType, subtype),
+            }),
             fez_record_search_key_original_format: () => ({
                 label: 'Physical description',
             }),
@@ -1917,7 +1913,10 @@ export default {
                 required: true,
                 validate: [validation.required],
             }),
-            authors: ({ isNtro }) => ({ isNtro }),
+            authors: ({ isNtro, displayType, subtype }) => ({
+                isNtro,
+                shouldHandleAffiliations: !isNtro && shouldHandleAuthorAffiliations(displayType, subtype),
+            }),
             fez_record_search_key_original_format: () => ({
                 label: 'Physical description',
             }),
@@ -2079,7 +2078,10 @@ export default {
             }),
         },
         [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {
-            authors: ({ isNtro }) => ({ isNtro }),
+            authors: ({ isNtro, displayType, subtype }) => ({
+                isNtro,
+                shouldHandleAffiliations: !isNtro && shouldHandleAuthorAffiliations(displayType, subtype),
+            }),
             grants: () => ({ ...locale.components.grants }),
         },
         [PUBLICATION_TYPE_MANUSCRIPT]: {

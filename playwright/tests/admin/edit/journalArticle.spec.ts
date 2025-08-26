@@ -286,10 +286,7 @@ test.describe('Journal Article admin edit', () => {
 
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         for (const _ of collections) {
-            await collectionsCard
-                .locator('[class*="MuiChip-deleteIcon"]')
-                .first()
-                .click();
+            await collectionsCard.locator('[class*="MuiChip-deleteIcon"]').first().click();
         }
         await expect(collectionsCard.locator('#rek-ismemberof-helper-text')).toHaveText('This field is required');
         await adminEditVerifyAlerts(page, 1, ['You must select at least one collection']);
@@ -515,10 +512,7 @@ test.describe('Journal Article admin edit', () => {
                     .getByText('School of Chemistry and Molecular Biosciences'),
             ).toBeVisible();
             await expect(
-                page
-                    .getByTestId('detailPanel-80316')
-                    .locator('p')
-                    .getByText('Institute for Molecular Bioscience'),
+                page.getByTestId('detailPanel-80316').locator('p').getByText('Institute for Molecular Bioscience'),
             ).toBeVisible();
 
             const detailPanel = page.getByTestId('detailPanel-80316');
@@ -553,6 +547,21 @@ test.describe('Journal Article admin edit', () => {
             await expect(detailPanel.getByTestId('orgChip-968')).toContainText('50%');
             await expect(detailPanel.getByTestId('alert')).not.toBeVisible();
             await expect(page.locator('[data-testid^="contributor-errorIcon-80316"]')).not.toBeVisible();
+        });
+
+        test('author affiliation feature toggles with subtype', async ({ page }) => {
+            await expect(page.locator('[data-testid^="contributor-errorIcon-80316"]')).toBeVisible();
+
+            await page.getByTestId('rek-subtype-select').click();
+            await page.getByTestId('rek-subtype-options').locator('li', { hasText: 'Editorial' }).click();
+            await expect(page.locator('[data-testid^="contributor-errorIcon-80316"]')).not.toBeVisible();
+
+            await page.getByTestId('rek-subtype-select').click();
+            await page
+                .getByTestId('rek-subtype-options')
+                .locator('li', { hasText: 'Article (original research)' })
+                .click();
+            await expect(page.locator('[data-testid^="contributor-errorIcon-80316"]')).toBeVisible();
         });
 
         test('coverage - does not lose edited affiliation information when moving between admin tabs', async ({
