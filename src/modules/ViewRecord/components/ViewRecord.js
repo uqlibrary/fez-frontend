@@ -25,7 +25,7 @@ import * as actions from 'actions';
 import fields from 'locale/viewRecord';
 import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
 import { parseHtmlToJSX, doesListContainItem, stripHtml } from 'helpers/general';
-import { composeAuthorAffiliationProblems } from 'helpers/authorAffiliations';
+import { composeAuthorAffiliationProblems, shouldHandleAuthorAffiliations } from 'helpers/authorAffiliations';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -33,7 +33,6 @@ import { PublicationCitation } from 'modules/SharedComponents/PublicationCitatio
 import { SocialShare } from 'modules/SharedComponents/SocialShare';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { DetailedHistory } from './DetailedHistory';
-import { shouldHandleAuthorAffiliations } from 'modules/Admin/helpers';
 import AdditionalInformation from './AdditionalInformation';
 import AvailableVersions from './AvailableVersions';
 import Files from './Files';
@@ -135,7 +134,7 @@ export const ViewRecord = () => {
         let Component = null;
         const Problems =
             (recordToView &&
-                shouldHandleAuthorAffiliations(recordToView) &&
+                shouldHandleAuthorAffiliations(recordToView.rek_display_type, recordToView.rek_subtype) &&
                 composeAuthorAffiliationProblems(recordToView)) ||
             /* istanbul ignore next */ [];
         if (recordToView?.fez_internal_notes?.ain_detail) {
@@ -199,7 +198,7 @@ export const ViewRecord = () => {
                 fields.viewRecord.adminViewRecordDrawerFields,
                 navigate,
                 pid,
-                shouldHandleAuthorAffiliations(recordToView),
+                shouldHandleAuthorAffiliations(recordToView.rek_display_type, recordToView.rek_subtype),
                 composeAuthorAffiliationProblems(
                     recordToView,
                     locale.pages.viewRecord.adminRecordData.drawer.nameIfAuthorUnavailable,

@@ -2,7 +2,6 @@
 import React, { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 
-// eslint-disable-next-line camelcase
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 
 import { useTheme } from '@mui/material/styles';
