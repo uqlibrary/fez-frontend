@@ -543,6 +543,9 @@ const assertRichTextEditorValue = async (testId, value) => {
     expect(editor).toHaveTextContent(value, { exact: true });
 };
 
+const getTableBodyRows = element =>
+    element.querySelectorAll('tr.MuiTableRow-root:not(.Mui-TableBodyCell-DetailPanel):not(.MuiTableRow-head)');
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -595,5 +598,6 @@ module.exports = {
     addAndSelectContributorsEditorItem,
     clearAndType,
     sortObjectProps,
+    getTableBodyRows,
     api,
 };
