@@ -130,7 +130,6 @@ export const AuthorDetailPanel = ({ rowData, locale, isEditing, setEditing, onCh
 export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list, locale, onChange }) => {
     const theme = useTheme();
     const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
-    const prevList = React.useRef('');
 
     // eslint-disable-next-line camelcase
     const setEditing = ({ editing, aut_id }) => {
@@ -373,21 +372,6 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [disabled, getValidationError, handleValidation, validationErrors],
     );
-
-    React.useEffect(() => {
-        const listStr = JSON.stringify(list);
-        /* istanbul ignore else */
-        if (prevList.current !== listStr) {
-            prevList.current = listStr;
-            const result = [];
-            list.forEach((item, index) => {
-                delete item.tableData;
-                item.id = index;
-                result.push({ ...item });
-            });
-            setData(result);
-        }
-    }, [list, setData]);
 
     const transformNewAuthorObject = newAuthor => {
         delete newAuthor['mrt-row-actions'];

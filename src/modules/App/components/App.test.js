@@ -4,7 +4,7 @@ import { customRedirectors } from '../containers/App';
 import { accounts, authorDetails, currentAuthor } from 'mock/data';
 import { pathConfig } from 'config';
 import Cookies from 'js-cookie';
-import { render, WithReduxStore, WithRouter, fireEvent, waitForText } from 'test-utils';
+import { render, WithReduxStore, WithMemoryRouter, fireEvent, waitForText } from 'test-utils';
 import locale from '../../../locale/global';
 
 const mockUseNavigate = jest.fn();
@@ -42,9 +42,9 @@ function setup(testProps = {}, renderMethod = render) {
 
     return renderMethod(
         <WithReduxStore>
-            <WithRouter route={'/*'} initialEntries={['/']}>
+            <WithMemoryRouter route={'/*'} initialEntries={['/']}>
                 <App {...props} />
-            </WithRouter>
+            </WithMemoryRouter>
         </WithReduxStore>,
     );
 }
@@ -414,6 +414,7 @@ describe('Application component', () => {
             account: { name: 'test1' },
             actions: {
                 loadCurrentAccount: jest.fn(),
+                logout: jest.fn(),
             },
         });
 
@@ -423,6 +424,7 @@ describe('Application component', () => {
                 actions: {
                     loadCurrentAccount: jest.fn(),
                     searchAuthorPublications: testMethod,
+                    logout: jest.fn(),
                 },
                 author: { aut_id: 1 },
             },

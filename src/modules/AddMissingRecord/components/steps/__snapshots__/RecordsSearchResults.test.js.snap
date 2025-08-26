@@ -284,6 +284,7 @@ exports[`Search record results should render a single claimable item with no aut
                                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                               >
                                 <a
+                                  data-discover="true"
                                   href="/view/UQ:795469"
                                 >
                                   Early Onset Scoliosis - this is an edited book with editors only
@@ -1055,6 +1056,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                               >
                                 <a
+                                  data-discover="true"
                                   href="/view/UQ:795469"
                                 />
                               </h6>
@@ -1759,6 +1761,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                               >
                                 <a
+                                  data-discover="true"
                                   href="/view/UQ:795469"
                                 />
                               </h6>
@@ -2463,6 +2466,7 @@ exports[`Search record results should render publications list with one publicat
                                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                               >
                                 <a
+                                  data-discover="true"
                                   href="/view/UQ:255472"
                                 />
                               </h6>

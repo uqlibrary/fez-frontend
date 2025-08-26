@@ -790,7 +790,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
                   aria-invalid="true"
                   autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r7:"
+                  id="«rb»"
                   inputmode="text"
                   placeholder="dd/mm/yyyy"
                   type="text"

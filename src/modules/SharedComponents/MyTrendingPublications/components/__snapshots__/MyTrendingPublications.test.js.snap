@@ -162,6 +162,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
+                            data-discover="true"
                             href="/view/UQ:330391"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
@@ -516,6 +517,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
+                            data-discover="true"
                             href="/view/UQ:103860"
                           >
                             Prophylactic HPV vaccines: Underlying mechanisms
@@ -885,6 +887,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
+                            data-discover="true"
                             href="/view/UQ:330391"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines

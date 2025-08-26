@@ -1033,7 +1033,7 @@ describe('Files Component ', () => {
             const fezDatastreamInfo = createFezDatastreamInfoArray(anotherSources, journalArticle.rek_pid);
             const { queryByTestId } = setup(
                 { publication: { ...journalArticle, fez_datastream_info: fezDatastreamInfo } },
-                { isShallow: false, renderer: rtlRender },
+                { renderer: rtlRender },
             );
 
             expect(fezDatastreamInfo).toMatchSnapshot();
@@ -1063,7 +1063,7 @@ describe('Files Component ', () => {
                         },
                     },
                 },
-                { isShallow: false, renderer: rtlRender },
+                { renderer: rtlRender },
             );
 
             expect(fezDatastreamInfo).toMatchSnapshot();

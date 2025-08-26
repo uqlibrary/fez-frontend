@@ -74,7 +74,6 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
               name="fileDescription"
               placeholder="Description"
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -137,12 +136,12 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
       >
-        <p
+        <div
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
           data-testid="dsi-embargo-date-0"
         >
           No date required
-        </p>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"

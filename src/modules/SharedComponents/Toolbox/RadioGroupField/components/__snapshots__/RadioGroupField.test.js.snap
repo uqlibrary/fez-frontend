@@ -21,23 +21,23 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
         >
           <input
-            class="PrivateSwitchBase-input css-1m9pwf3"
+            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
             data-analyticsid="test-a-option"
             data-testid="test-a-option"
             id="test-a-option"
-            name=":r0:"
+            name="«r1»"
             type="radio"
             value="a"
           />
           <span
-            class="css-hyxlzm"
+            class="css-19y5vkv-MuiRadioButtonIcon-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
               data-testid="RadioButtonUncheckedIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -48,7 +48,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
             </svg>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
               data-testid="RadioButtonCheckedIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -69,23 +69,23 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
         >
           <input
-            class="PrivateSwitchBase-input css-1m9pwf3"
+            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
             data-analyticsid="test-b-option"
             data-testid="test-b-option"
             id="test-b-option"
-            name=":r0:"
+            name="«r1»"
             type="radio"
             value="b"
           />
           <span
-            class="css-hyxlzm"
+            class="css-19y5vkv-MuiRadioButtonIcon-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
               data-testid="RadioButtonUncheckedIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -96,7 +96,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
             </svg>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
               data-testid="RadioButtonCheckedIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -139,23 +139,23 @@ exports[`RadioGroupField tests renders an error 1`] = `
         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
         >
           <input
-            class="PrivateSwitchBase-input css-1m9pwf3"
+            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
             data-analyticsid="test-a-option"
             data-testid="test-a-option"
             id="test-a-option"
-            name=":r1:"
+            name="«r3»"
             type="radio"
             value="a"
           />
           <span
-            class="css-hyxlzm"
+            class="css-19y5vkv-MuiRadioButtonIcon-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
               data-testid="RadioButtonUncheckedIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -166,7 +166,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
             </svg>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
               data-testid="RadioButtonCheckedIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -187,23 +187,23 @@ exports[`RadioGroupField tests renders an error 1`] = `
         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
         >
           <input
-            class="PrivateSwitchBase-input css-1m9pwf3"
+            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
             data-analyticsid="test-b-option"
             data-testid="test-b-option"
             id="test-b-option"
-            name=":r1:"
+            name="«r3»"
             type="radio"
             value="b"
           />
           <span
-            class="css-hyxlzm"
+            class="css-19y5vkv-MuiRadioButtonIcon-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
               data-testid="RadioButtonUncheckedIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -214,7 +214,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
             </svg>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
               data-testid="RadioButtonCheckedIcon"
               focusable="false"
               viewBox="0 0 24 24"

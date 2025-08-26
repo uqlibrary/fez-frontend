@@ -85,7 +85,7 @@ export async function addAuthorAndAssert(
     expand = true,
     edit = true,
 ) {
-    await page.getByTestId('rek-author-add').click();
+    await page.getByTestId('rek-author-add').click({ clickCount: 2 });
     await page.getByTestId('rek-author-id-input').fill('uq');
     await page
         .getByTestId('rek-author-id-options')
@@ -173,7 +173,7 @@ export async function assertAffiliationsAllowed(page: Page, options: AssertAffil
     }
 
     await page.getByTestId('authors-tab').click();
-    await page.getByTestId('rek-author-add').click();
+    await page.getByTestId('rek-author-add').click({ clickCount: 2 });
     await page.getByTestId('rek-author-id-input').fill('uq');
 
     const authorOption = page.getByTestId('rek-author-id-options').locator(`li:has-text("${authorName}")`);

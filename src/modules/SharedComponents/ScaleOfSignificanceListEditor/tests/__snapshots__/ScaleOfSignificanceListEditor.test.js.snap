@@ -16,10 +16,10 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1m9pwf3"
+              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -134,14 +134,13 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-ihdtdm"
+                class="css-1whs34k-MuiNotchedOutlined-root"
               >
                 <span
                   class="notranslate"
@@ -259,10 +258,10 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1m9pwf3"
+              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -377,14 +376,13 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-ihdtdm"
+                class="css-1whs34k-MuiNotchedOutlined-root"
               >
                 <span
                   class="notranslate"
@@ -587,10 +585,10 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1m9pwf3"
+              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -706,14 +704,13 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-ihdtdm"
+                class="css-1whs34k-MuiNotchedOutlined-root"
               >
                 <span
                   class="notranslate"
@@ -919,10 +916,10 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1m9pwf3"
+              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -1037,14 +1034,13 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-ihdtdm"
+                class="css-1whs34k-MuiNotchedOutlined-root"
               >
                 <span
                   class="notranslate"
@@ -1247,10 +1243,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1m9pwf3"
+              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -1365,14 +1361,13 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-ihdtdm"
+                class="css-1whs34k-MuiNotchedOutlined-root"
               >
                 <span
                   class="notranslate"
@@ -1729,10 +1724,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1m9pwf3"
+              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -1847,14 +1842,13 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-ihdtdm"
+                class="css-1whs34k-MuiNotchedOutlined-root"
               >
                 <span
                   class="notranslate"
@@ -2211,10 +2205,10 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1m9pwf3"
+              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -2329,14 +2323,13 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-ihdtdm"
+                class="css-1whs34k-MuiNotchedOutlined-root"
               >
                 <span
                   class="notranslate"
