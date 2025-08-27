@@ -334,6 +334,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     const handleClear = () => {
                         row._valuesCache = {
                             ...row._valuesCache,
+                            aut_id: 0,
                             nameAsPublished: contributor.nameAsPublished,
                             uqIdentifier: '0',
                             creatorRole: contributor.creatorRole,
