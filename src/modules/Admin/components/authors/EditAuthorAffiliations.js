@@ -84,6 +84,14 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
         suggestedOrganisationUnitsFailed,
     } = useSelector(state => state.get('suggestedOrganisationalUnitsReducer'));
 
+    const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
+    const [currentAffiliations, actionDispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
+
+    const currentAffiliationOrgIds = React.useMemo(
+        () => currentAffiliations.map(item => item.af_org_id),
+        [currentAffiliations],
+    );
+
     React.useEffect(() => {
         const loadOrganisationalUnitsList = () => dispatch(loadOrganisationalUnits());
         const loadSuggestedOrganisationalUnitsList = authorId =>
@@ -123,13 +131,9 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
         suggestedOrganisationUnitsFailed,
         suggestedOrganisationUnitsLoaded,
         suggestedOrganisationUnitsLoading,
+        currentAffiliationOrgIds,
         setUniqueOrgs,
     ]);
-
-    const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
-    const [currentAffiliations, actionDispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
-
-    const currentAffiliationOrgIds = currentAffiliations.map(item => item.af_org_id);
 
     const {
         organisationalUnits: organisationalUnitsTitle,
@@ -176,6 +180,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                         }
                                         options={uniqueOrgs ?? /* istanbul ignore next */ []}
                                         getOptionLabel={option => option.org_title}
+                                        getOptionDisabled={option => currentAffiliationOrgIds.includes(option.org_id)}
                                         renderOption={(props, option) => (
                                             <Box
                                                 component="li"
