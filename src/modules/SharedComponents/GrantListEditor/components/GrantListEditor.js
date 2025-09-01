@@ -6,7 +6,7 @@ import GrantListEditorForm from './GrantListEditorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { useFormContext } from 'react-hook-form';
 
 const getGrantsFromProps = (name, value) => (name && value) || [];
@@ -144,11 +144,11 @@ const GrantListEditor = ({
     return (
         <div>
             {errorMessage && (
-                /* istanbul ignore next */ <Alert
+                /* istanbul ignore next */ (<Alert
                     title={this.props.locale.errorTitle}
                     message={errorMessage}
                     type="warning"
-                />
+                />)
             )}
             <GrantListEditorForm
                 onAdd={addGrant}

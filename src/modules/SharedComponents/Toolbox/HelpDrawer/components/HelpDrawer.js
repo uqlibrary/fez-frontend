@@ -5,7 +5,7 @@ import { hide } from '../actions';
 
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 export const HelpDrawer = ({ buttonLabel = 'CLOSE' }) => {

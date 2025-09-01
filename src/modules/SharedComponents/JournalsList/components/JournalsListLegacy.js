@@ -2,7 +2,7 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import JournalsListHeaderCol1 from './partials/JournalsListHeaderCol1';
 import JournalsListHeaderCol2Full from './partials/JournalsListHeaderCol2Full';
 import JournalsListDataCol1 from './partials/JournalsListDataCol1';
@@ -93,7 +93,7 @@ const JournalsListLegacy = ({
                     </StyledGridHeaderRow>
                     {/* Data */}
                     <Grid container spacing={0} padding={0} alignItems="center">
-                        <Grid xs={12} style={{ marginTop: 6 }}>
+                        <Grid style={{ marginTop: 6 }} size={12}>
                             {journals &&
                                 journals.length > 0 &&
                                 journals.map((item, index) => {

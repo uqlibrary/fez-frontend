@@ -7,7 +7,7 @@ import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
 import FileUploadTermsAndConditions from './FileUploadTermsAndConditions';
 import { Alert } from '../../Alert';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import * as config from '../config';
 import locale from '../locale';

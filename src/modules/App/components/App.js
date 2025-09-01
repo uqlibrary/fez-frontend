@@ -160,8 +160,8 @@ const AppClass = ({
 
     if (accountLoading) {
         return (
-            <StyledGrid container>
-                <Grid zeroMinWidth item xs={12}>
+            <StyledGrid container disableEqualOverflow>
+                <Grid xs={12}>
                     <AppLoader title={locale.global.title} logoImage="largeLogo" logoText={locale.global.logo.label} />
                 </Grid>
             </StyledGrid>
@@ -271,7 +271,7 @@ const AppClass = ({
                         justifyContent="flex-start"
                     >
                         {!docked && !menuDrawerOpen && !isThesisSubmissionPage && (
-                            <Grid item>
+                            <Grid>
                                 <Tooltip
                                     title={locale.global.mainNavButton.tooltip}
                                     placement="bottom-end"
@@ -291,8 +291,7 @@ const AppClass = ({
                             </Grid>
                         )}
                         <Grid
-                            item
-                            xs
+                            size="grow"
                             style={{
                                 paddingLeft: titleOffset,
                                 whiteSpace: 'nowrap',
@@ -302,13 +301,13 @@ const AppClass = ({
                         >
                             <Grid container spacing={2} alignItems="center" justifyContent="flex-start" wrap={'nowrap'}>
                                 {!docked && !menuDrawerOpen && (
-                                    <Grid item sx={{ display: { xs: 'none', sm: 'block' } }}>
+                                    <Grid sx={{ display: { xs: 'none', sm: 'block' } }}>
                                         <div id="logo" className="smallLogo" style={{ height: 66, width: 60 }}>
                                             {locale.global.logo.label}
                                         </div>
                                     </Grid>
                                 )}
-                                <Grid item xs={'auto'} style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                <Grid size={{ xs: 'auto' }} style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
                                     <StyledAppTitle variant="h5" component={'h1'} noWrap indentTitle={docked}>
                                         {locale.global.appTitle}
                                     </StyledAppTitle>
@@ -317,7 +316,7 @@ const AppClass = ({
                         </Grid>
                         {/* Search */}
                         {!isThesisSubmissionPage && !isSearchPage && (
-                            <Grid item xs={2} sm={4}>
+                            <Grid size={{ xs: 2, sm: 4 }}>
                                 <SearchComponent
                                     autoFocus={isIndex}
                                     isMobile={isMobile}
@@ -327,7 +326,7 @@ const AppClass = ({
                                 />
                             </Grid>
                         )}
-                        <Grid item>
+                        <Grid>
                             <AuthButton
                                 isAuthorizedUser={isAuthorizedUser}
                                 onClick={redirectUserToLogin(

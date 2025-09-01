@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 
 import { locale } from 'locale';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import ChevronRight from '@mui/icons-material/ChevronRight';
 import ChevronLeft from '@mui/icons-material/ChevronLeft';
 import Box from '@mui/material/Box';

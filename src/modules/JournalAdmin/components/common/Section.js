@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import AdminCard from '../AdminCard/components/AdminCard';
 import { FieldGridItem } from './FieldGridItem';
 

@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import FormHelperText from '@mui/material/FormHelperText';
 import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 import { useOnSelectiveMountEffect } from 'hooks';
@@ -284,14 +284,14 @@ const PartialDateForm = props => {
 
     return (
         <Grid container spacing={0} padding={0} id={partialDateFormId}>
-            <Grid xs={12}>
+            <Grid size={12}>
                 <InputLabel error={!!isError} shrink required={required}>
                     {floatingTitle}
                 </InputLabel>
             </Grid>
-            <Grid xs={12}>
+            <Grid size={12}>
                 <Grid container spacing={2} padding={0} style={{ marginTop: -12 }} flexWrap={'nowrap'}>
-                    <Grid xs>
+                    <Grid size="grow">
                         <TextField
                             name="day"
                             variant="standard"
@@ -315,7 +315,7 @@ const PartialDateForm = props => {
                         />
                         {isError && <FormHelperText error>{isError}</FormHelperText>}
                     </Grid>
-                    <Grid xs>
+                    <Grid size="grow">
                         <Select
                             name="month"
                             variant="standard"
@@ -350,7 +350,7 @@ const PartialDateForm = props => {
                             {renderMonths}
                         </Select>
                     </Grid>
-                    <Grid xs>
+                    <Grid size="grow">
                         <TextField
                             name="year"
                             variant="standard"

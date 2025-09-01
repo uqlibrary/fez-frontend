@@ -17,7 +17,7 @@ import { useQueryStringParams, useCommunityCollectionControls } from '../hooks';
 import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
 import param from 'can-param';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 const moment = require('moment');
 

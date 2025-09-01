@@ -6,7 +6,7 @@ import RelatedServiceListEditorForm from './RelatedServiceListEditorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { useFormContext } from 'react-hook-form';
 
 const getRelatedServicesFromProps = (name, value) => (name && value) || [];
@@ -155,11 +155,11 @@ const RelatedServiceListEditor = ({
     return (
         <div>
             {errorMessage && (
-                /* istanbul ignore next */ <Alert
+                /* istanbul ignore next */ (<Alert
                     title={this.props.locale.errorTitle}
                     message={errorMessage}
                     type="warning"
-                />
+                />)
             )}
             <RelatedServiceListEditorForm
                 onAdd={addRelatedService}

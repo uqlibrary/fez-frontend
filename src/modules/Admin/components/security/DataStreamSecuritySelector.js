@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import DataStreamSecurityItem from './DataStreamSecurityItem';
@@ -80,7 +80,7 @@ export const DataStreamSecuritySelector = ({ attachedDataStreams, collections, d
                         ))}
                     {dataStreamSecurity.length === 0 && (
                         /* istanbul ignore next */
-                        <Typography variant="body2">{text.noDataStreams}</Typography>
+                        (<Typography variant="body2">{text.noDataStreams}</Typography>)
                     )}
                 </Grid>
             </div>

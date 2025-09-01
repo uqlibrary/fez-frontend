@@ -73,12 +73,14 @@ export const StandardCard = ({
                         },
                     })}
                     title={title}
-                    titleTypographyProps={{
-                        variant: smallTitle ? 'h6' : 'h5',
-                        component: subCard ? 'h4' : 'h3',
-                        color: 'inherit',
-                        'data-testid': `${standardCardIdActual}-header`,
-                        id: `${standardCardIdActual}-header`,
+                    slotProps={{
+                        title: {
+                            variant: smallTitle ? 'h6' : 'h5',
+                            component: subCard ? 'h4' : 'h3',
+                            color: 'inherit',
+                            'data-testid': `${standardCardIdActual}-header`,
+                            id: `${standardCardIdActual}-header`,
+                        },
                     }}
                     action={!!help && !!help.text && <HelpIcon {...help} />}
                 />

@@ -202,7 +202,7 @@ export const adminTheme = createTheme({
                 },
             },
         },
-        MuiGrid2: {
+        MuiGrid: {
             styleOverrides: {
                 root: {
                     minWidth: 'auto',

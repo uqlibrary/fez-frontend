@@ -25,7 +25,7 @@ import {
 } from 'config/general';
 import { isValidOrcid, isValidROR } from 'config/validation';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
@@ -89,12 +89,20 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                     }}
                     alignItems="flex-start"
                 >
-                    <Grid xs={12} sm={3}>
+                    <Grid
+                        size={{
+                            xs: 12,
+                            sm: 3
+                        }}>
                         <Typography variant="body2" component={'span'} data-testid={labelTestId}>
                             {heading}
                         </Typography>
                     </Grid>
-                    <Grid xs={12} sm={9}>
+                    <Grid
+                        size={{
+                            xs: 12,
+                            sm: 9
+                        }}>
                         <Typography variant="body2" component={'span'}>
                             {data}
                         </Typography>
@@ -551,7 +559,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         return null;
     }
     return (
-        <Grid xs={12}>
+        <Grid size={12}>
             <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
                 {renderColumns()}
             </StandardCard>

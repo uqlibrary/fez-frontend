@@ -1,7 +1,7 @@
 import React, { useReducer, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import TextField from '@mui/material/TextField';
@@ -143,14 +143,13 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
     } = locale;
 
     return (
-        <Grid container xs={12} alignItems={'center'} spacing={2}>
-            <Grid xs={7} sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }}>
+        <Grid container alignItems={'center'} spacing={2} size={12}>
+            <Grid sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }} size={7}>
                 <Typography variant="caption">{organisationalUnitsTitle}</Typography>
             </Grid>
-            <Grid xs={5} sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }}>
+            <Grid sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }} size={5}>
                 <Typography variant="caption">{affiliationTitle}</Typography>
             </Grid>
-
             {(organisationUnitsLoading || suggestedOrganisationUnitsLoading) &&
                 !organisationUnitsFailed &&
                 !suggestedOrganisationUnitsFailed && <ContentLoader message={loadingOrganisationalUnitsText} />}
@@ -161,7 +160,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                     <React.Fragment>
                         {currentAffiliations.map((item, index) => (
                             <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
-                                <Grid xs={7} padding={1}>
+                                <Grid padding={1} size={7}>
                                     <Autocomplete
                                         id={`orgSelect-${item.af_org_id}`}
                                         clearOnBlur
@@ -232,7 +231,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                         }}
                                     />
                                 </Grid>
-                                <Grid xs={4} padding={1}>
+                                <Grid padding={1} size={4}>
                                     <Chip
                                         id={`orgChip-${item.af_org_id}`}
                                         data-testid={`orgChip-${item.af_org_id}`}
@@ -243,7 +242,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                     />
                                 </Grid>
 
-                                <Grid xs={1} justifyContent={'flex-end'} padding={1}>
+                                <Grid justifyContent={'flex-end'} padding={1} size={1}>
                                     {(hasNonHerdc(currentAffiliations) === false || isNonHerdc(item)) && (
                                         <IconButton
                                             aria-label="delete"
@@ -258,7 +257,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                             </React.Fragment>
                         ))}
                         {!hasNonHerdc(currentAffiliations) && (
-                            <Grid xs={7} padding={1}>
+                            <Grid padding={1} size={7}>
                                 <Autocomplete
                                     id={'orgSelect-add'}
                                     data-testid={'orgSelect-add'}
@@ -321,7 +320,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                         )}
                     </React.Fragment>
                 )}
-            <Grid container xs={12} justifyContent={'flex-end'}>
+            <Grid container justifyContent={'flex-end'} size={12}>
                 <Button
                     id="affiliationCancelBtn"
                     data-testid="affiliationCancelBtn"

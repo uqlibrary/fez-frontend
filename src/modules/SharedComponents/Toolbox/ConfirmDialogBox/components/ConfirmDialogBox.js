@@ -6,7 +6,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogContent from '@mui/material/DialogContent';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
 
 export const createConfirmDialogBoxRefAssigner = refObject => ref => {
@@ -115,7 +115,7 @@ export class ConfirmDialogBox extends Component {
                             </Grid>
                             {this.props.showAlternateActionButton && (
                                 // an optional middle button that will display in a warning colour
-                                <Grid item xs={12} sm={'auto'}>
+                                (<Grid item xs={12} sm={'auto'}>
                                     <Button
                                         variant={'contained'}
                                         data-analyticsid={`alternate-${this.props.confirmDialogBoxId}`}
@@ -131,7 +131,7 @@ export class ConfirmDialogBox extends Component {
                                         fullWidth
                                         onClick={this._onAlternateAction}
                                     />
-                                </Grid>
+                                </Grid>)
                             )}
                             {!this.props.hideCancelButton && (
                                 <Grid item xs={12} sm={'auto'}>

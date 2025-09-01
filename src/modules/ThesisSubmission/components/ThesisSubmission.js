@@ -27,7 +27,7 @@ import { THESIS_SUBMISSION_SUBTYPES, THESIS_UPLOAD_RETRIES } from 'config/genera
 import { useAccountContext } from 'context';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { useDispatch, useSelector } from 'react-redux';
 import { useValidatedForm } from '../../../hooks';
@@ -206,7 +206,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
         return (
             <StandardPage title={pageTitle} standardPageId="rhd-submission-user-blocked">
                 <Grid container spacing={3}>
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <Alert message={thesisLocale.notAllowedMessage} type="info" alertId="alert-info-rdm-redirect" />
                     </Grid>
                 </Grid>
@@ -218,10 +218,10 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
         return (
             <StandardPage title={pageTitle} standardPageId="rhd-submission-succeeded">
                 <Grid container spacing={3}>
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <StandardCard title={thesisLocale.afterSubmitTitle}>
                             <Grid container spacing={3}>
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <Typography>{thesisLocale.afterSubmitText}</Typography>
                                 </Grid>
                             </Grid>
@@ -230,7 +230,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                 </Grid>
                 {(newRecordFileUploadingOrIssueError || retries > 0) && (
                     <Grid container spacing={3}>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             {newRecordFileUploadingOrIssueError && (
                                 <Alert
                                     {...getFileUploadAlertProps(
@@ -251,7 +251,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                 )}
                 {isHdrThesis && thesisLocale.afterSubmit && (
                     <Grid container spacing={2}>
-                        <Grid xs />
+                        <Grid size="grow" />
                         <Grid>
                             <Button
                                 children={thesisLocale.afterSubmit}
@@ -290,10 +290,10 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                         locale={thesisLocale.depositConfirmation}
                     />
                     <Grid container spacing={3}>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.information.title} help={txt.information.help}>
                                 <Grid container spacing={3}>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={RichEditorField}
@@ -306,7 +306,11 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                             richEditorId="rek-title"
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={6}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 6
+                                        }}>
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -321,7 +325,11 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                             textFieldId="rek-author"
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={6}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 6
+                                        }}>
                                         <Field
                                             control={control}
                                             component={ThesisSubtypeSelectField}
@@ -335,7 +343,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                         />
                                     </Grid>
                                     {!isHdrThesis && (
-                                        <Grid xs={12}>
+                                        <Grid size={12}>
                                             <Field
                                                 control={control}
                                                 component={OrgNameField}
@@ -347,7 +355,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                             />
                                         </Grid>
                                     )}
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={OrgUnitNameField}
@@ -359,7 +367,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                         />
                                     </Grid>
                                     {!isHdrThesis && (
-                                        <Grid xs={12}>
+                                        <Grid size={12}>
                                             <Field
                                                 control={control}
                                                 component={PartialDateField}
@@ -375,7 +383,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                             />
                                         </Grid>
                                     )}
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={RichEditorField}
@@ -390,7 +398,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
                                 <Field
                                     control={control}
@@ -404,7 +412,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                 />
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txtFoR.title} help={txtFoR.help}>
                                 <Typography>{txtFoR.text}</Typography>
                                 <Field
@@ -422,7 +430,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                 />
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.keywords.title} help={txt.keywords.help}>
                                 <Typography>{txt.keywords.description}</Typography>
                                 <Field
@@ -448,7 +456,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                             </StandardCard>
                         </Grid>
                         {!isHdrThesis && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard title={txt.optional.fieldLabels.notes.title} help={txt.keywords.help}>
                                     <Field
                                         control={control}
@@ -464,7 +472,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                 </StandardCard>
                             </Grid>
                         )}
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={thesisLocale.fileUpload.title} help={thesisLocale.fileUpload.help}>
                                 <Field
                                     control={control}
@@ -479,14 +487,22 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                         </Grid>
 
                         {alertProps && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <Alert {...alertProps} alertId="thesis-submission-validation" />
                             </Grid>
                         )}
                     </Grid>
                     <Grid container spacing={2}>
-                        <Grid xs={false} sm />
-                        <Grid xs={12} sm="auto">
+                        <Grid
+                            size={{
+                                xs: false,
+                                sm: "grow"
+                            }} />
+                        <Grid
+                            size={{
+                                xs: 12,
+                                sm: "auto"
+                            }}>
                             <Button
                                 data-testid="cancel-deposit-thesis"
                                 variant="contained"
@@ -497,7 +513,11 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                 onClick={cancelSubmit}
                             />
                         </Grid>
-                        <Grid xs={12} sm="auto">
+                        <Grid
+                            size={{
+                                xs: 12,
+                                sm: "auto"
+                            }}>
                             <Button
                                 type="button"
                                 variant="contained"

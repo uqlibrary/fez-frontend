@@ -15,7 +15,7 @@ import InfoOutlined from '@mui/icons-material/InfoOutlined';
 import Help from '@mui/icons-material/Help';
 import HelpOutline from '@mui/icons-material/HelpOutline';
 import Done from '@mui/icons-material/Done';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 const icon = {
     '& .icon': {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Image from '@mui/icons-material/Image';
 import InsertDriveFile from '@mui/icons-material/InsertDriveFile';
 import PictureAsPdf from '@mui/icons-material/PictureAsPdf';
@@ -389,7 +389,7 @@ const Files = props => {
     if (fileData.length === 0) return null;
 
     return (
-        <Grid xs={12}>
+        <Grid size={12}>
             <StandardCard title={locale.viewRecord.sections.files.title}>
                 {!!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
                     <Alert
@@ -417,25 +417,41 @@ const Files = props => {
                         padding={0}
                         sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                     >
-                        <Grid xs={2} sm={1}>
+                        <Grid
+                            size={{
+                                xs: 2,
+                                sm: 1
+                            }}>
                             &nbsp;
                         </Grid>
-                        <Grid sm={4} data-testid="dsi-dsid-label">
+                        <Grid data-testid="dsi-dsid-label" size={{
+                            sm: 4
+                        }}>
                             <Typography variant="caption" gutterBottom>
                                 {locale.viewRecord.sections.files.fileName}
                             </Typography>
                         </Grid>
-                        <Grid sm={6} md={4} data-testid="dsi-label-label" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <Grid
+                            data-testid="dsi-label-label"
+                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                            size={{
+                                sm: 6,
+                                md: 4
+                            }}>
                             <Typography variant="caption" gutterBottom>
                                 {locale.viewRecord.sections.files.description}
                             </Typography>
                         </Grid>
-                        <Grid md={2} data-testid="dsi-size-label" sx={{ display: { xs: 'none', md: 'block' } }}>
+                        <Grid data-testid="dsi-size-label" sx={{ display: { xs: 'none', md: 'block' } }} size={{
+                            md: 2
+                        }}>
                             <Typography variant="caption" gutterBottom>
                                 {locale.viewRecord.sections.files.size}
                             </Typography>
                         </Grid>
-                        <Grid sm sx={{ display: { xs: 'none', sm: 'block' } }} />
+                        <Grid sx={{ display: { xs: 'none', sm: 'block' } }} size={{
+                            sm: "grow"
+                        }} />
                     </Grid>
                 </Box>
 
@@ -452,23 +468,25 @@ const Files = props => {
                             sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                         >
                             <Grid
-                                xs={2}
-                                sm={1}
                                 textAlign={'center'}
                                 data-analyticsid={`dsi-mimetype-${index}`}
                                 data-testid={`dsi-mimetype-${index}`}
-                            >
+                                size={{
+                                    xs: 2,
+                                    sm: 1
+                                }}>
                                 {item.icon}
                             </Grid>
                             <Grid
-                                xs={8}
-                                sm={4}
                                 textOverflow={'ellipsis'}
                                 whiteSpace={'nowrap'}
                                 overflow={'hidden'}
                                 data-analyticsid={`dsi-dsid-${index}`}
                                 data-testid={`dsi-dsid-${index}`}
-                            >
+                                size={{
+                                    xs: 8,
+                                    sm: 4
+                                }}>
                                 <FileName
                                     {...item}
                                     id={`file-name-${index}`}
@@ -483,36 +501,41 @@ const Files = props => {
                                 />
                             </Grid>
                             <Grid
-                                sm={6}
-                                md={4}
                                 textOverflow={'ellipsis'}
                                 whiteSpace={'nowrap'}
                                 overflow={'hidden'}
                                 data-testid={`dsi-label-${index}`}
                                 sx={{ display: { xs: 'none', sm: 'block' } }}
-                            >
+                                size={{
+                                    sm: 6,
+                                    md: 4
+                                }}>
                                 <Typography variant="body2" noWrap>
                                     {item.description}
                                 </Typography>
                             </Grid>
                             <Grid
-                                md={2}
                                 textOverflow={'ellipsis'}
                                 whiteSpace={'nowrap'}
                                 overflow={'hidden'}
                                 data-testid={`dsi-size-${index}`}
                                 sx={{ display: { xs: 'none', md: 'block' } }}
+                                size={{
+                                    md: 2
+                                }}
                             >
                                 <Typography variant="body2" noWrap>
                                     {item.calculatedSize}
                                 </Typography>
                             </Grid>
                             <Grid
-                                sm
                                 style={{ textAlign: 'right' }}
                                 data-analyticsid={`rek-oa-status-${index}`}
                                 data-testid={`rek-oa-status-${index}`}
                                 sx={{ display: { xs: 'none', sm: 'block' } }}
+                                size={{
+                                    sm: "grow"
+                                }}
                             >
                                 <Box style={{ whiteSpace: 'nowrap' }}>
                                     <Box component={'span'} paddingRight={1}>

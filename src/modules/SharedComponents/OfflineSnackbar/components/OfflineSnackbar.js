@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Snackbar from '@mui/material/Snackbar';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Link from '@mui/icons-material/Link';
 import LinkOff from '@mui/icons-material/LinkOff';
 import locale from 'locale/global';

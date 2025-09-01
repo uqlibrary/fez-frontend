@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../../SearchJournals/hooks';
 import { pathConfig } from '../../../config';
 
@@ -61,9 +61,9 @@ export const FavouriteJournals: React.FC = () => {
         // @ts-ignore
         <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
             <Grid container spacing={3} padding={0}>
-                <Grid xs>
+                <Grid size="grow">
                     <Grid container spacing={2} padding={0}>
-                        <Grid xs={12} flexGrow={1}>
+                        <Grid flexGrow={1} size={12}>
                             {/* @ts-ignore */}
                             <StandardCard noHeader>
                                 <Grid container spacing={2} padding={0}>
@@ -82,10 +82,15 @@ export const FavouriteJournals: React.FC = () => {
                                         journalSearchQueryParams={journalSearchQueryParams}
                                     />
                                 </Grid>
-                                <Grid style={{ paddingTop: response?.total ? 20 : 25 }} xs={12}>
+                                <Grid style={{ paddingTop: response?.total ? 20 : 25 }} size={12}>
                                     <Grid container spacing={2} padding={0}>
                                         {!!response?.total && (
-                                            <Grid xs={12} sm={6} md="auto">
+                                            <Grid
+                                                size={{
+                                                    xs: 12,
+                                                    sm: 6,
+                                                    md: "auto"
+                                                }}>
                                                 <LoadingButton
                                                     variant="contained"
                                                     type="submit"
@@ -101,7 +106,12 @@ export const FavouriteJournals: React.FC = () => {
                                                 />
                                             </Grid>
                                         )}
-                                        <Grid xs={12} sm={6} md="auto">
+                                        <Grid
+                                            size={{
+                                                xs: 12,
+                                                sm: 6,
+                                                md: "auto"
+                                            }}>
                                             <BackToSearchButton
                                                 // @ts-ignore
                                                 children={txt.buttons.returnToSearch.title}

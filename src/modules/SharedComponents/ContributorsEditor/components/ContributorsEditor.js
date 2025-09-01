@@ -6,7 +6,7 @@ import * as actions from 'actions';
 
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';

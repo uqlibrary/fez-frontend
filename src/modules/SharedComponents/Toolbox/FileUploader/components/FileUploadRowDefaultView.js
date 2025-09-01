@@ -8,7 +8,7 @@ import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, FILE_SECURITY_POLICY_P
 import { selectFields } from 'locale/selectFields';
 
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Input from '@mui/material/Input';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';

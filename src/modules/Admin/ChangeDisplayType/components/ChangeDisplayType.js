@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useConfirmationState, useForm, usePublicationSubtype } from 'hooks';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 
@@ -171,7 +171,7 @@ export const ChangeDisplayType = () => {
                                     </Grid>
                                     {!!subitems && subitems.length > 0 && (
                                         /* istanbul ignore next */
-                                        <Grid item xs={12}>
+                                        (<Grid item xs={12}>
                                             <Field
                                                 control={control}
                                                 component={SelectField}
@@ -185,20 +185,20 @@ export const ChangeDisplayType = () => {
                                             >
                                                 {subitems}
                                             </Field>
-                                        </Grid>
+                                        </Grid>)
                                     )}
                                 </Grid>
                             </StandardCard>
                         </Grid>
                         {alertProps && (
                             /* istanbul ignore next */
-                            <Grid item xs={12}>
+                            (<Grid item xs={12}>
                                 <Alert
                                     testId="change-display-type-submit-status"
                                     alertId="change-display-type-submit-status"
                                     {...alertProps}
                                 />
-                            </Grid>
+                            </Grid>)
                         )}
                         <Grid item xs={12}>
                             <Grid container spacing={2}>

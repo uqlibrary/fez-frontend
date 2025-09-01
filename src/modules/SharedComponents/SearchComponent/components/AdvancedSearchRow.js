@@ -10,7 +10,7 @@ import { locale } from 'locale';
 import AdvancedSearchRowInput from './AdvancedSearchRowInput';
 
 import Close from '@mui/icons-material/Close';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
