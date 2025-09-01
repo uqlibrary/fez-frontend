@@ -113,6 +113,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -295,11 +296,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
                               checked=""
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="share-details-1-option"
                               data-testid="share-details-1-option"
                               id="share-details-1-option"
@@ -308,11 +309,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="1"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -323,7 +324,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11zohuh-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1jq7105-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -344,10 +345,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="share-details-0-option"
                               data-testid="share-details-0-option"
                               id="share-details-0-option"
@@ -356,11 +357,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="0"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -371,7 +372,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -584,10 +585,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-aboriginal-option"
                               data-testid="indigenous-identity-aboriginal-option"
                               id="indigenous-identity-aboriginal-option"
@@ -596,11 +597,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="aboriginal"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -611,7 +612,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -632,10 +633,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-islander-option"
                               data-testid="indigenous-identity-islander-option"
                               id="indigenous-identity-islander-option"
@@ -644,11 +645,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="islander"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -659,7 +660,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -680,10 +681,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-both-option"
                               data-testid="indigenous-identity-both-option"
                               id="indigenous-identity-both-option"
@@ -692,11 +693,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="both"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -707,7 +708,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -728,10 +729,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-no-option"
                               data-testid="indigenous-identity-no-option"
                               id="indigenous-identity-no-option"
@@ -740,11 +741,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="no"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -755,7 +756,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -800,10 +801,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="has-kinship-connection-1-option"
                               data-testid="has-kinship-connection-1-option"
                               id="has-kinship-connection-1-option"
@@ -812,11 +813,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="1"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -827,7 +828,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -848,10 +849,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="has-kinship-connection-0-option"
                               data-testid="has-kinship-connection-0-option"
                               id="has-kinship-connection-0-option"
@@ -860,11 +861,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="0"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -875,7 +876,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -946,10 +947,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="is-icip-holder-1-option"
                               data-testid="is-icip-holder-1-option"
                               id="is-icip-holder-1-option"
@@ -958,11 +959,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="1"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -973,7 +974,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -994,10 +995,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="is-icip-holder-0-option"
                               data-testid="is-icip-holder-0-option"
                               id="is-icip-holder-0-option"
@@ -1006,11 +1007,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="0"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -1021,7 +1022,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -1092,11 +1093,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Provide feedback / suggestion /information for this record"
                         >
                           <input
-                            class="PrivateSwitchBase-input css-1m9pwf3"
+                            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                             data-analyticsid="feedback-types-feedback-option"
                             data-indeterminate="false"
                             data-testid="feedback-types-feedback-option"
@@ -1129,11 +1130,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Share a story about this material"
                         >
                           <input
-                            class="PrivateSwitchBase-input css-1m9pwf3"
+                            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                             data-analyticsid="feedback-types-story-option"
                             data-indeterminate="false"
                             data-testid="feedback-types-story-option"
@@ -1166,11 +1167,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Advise of cultural sensitivity / make a takedown request"
                         >
                           <input
-                            class="PrivateSwitchBase-input css-1m9pwf3"
+                            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                             data-analyticsid="feedback-types-takedown-option"
                             data-indeterminate="false"
                             data-testid="feedback-types-takedown-option"
@@ -1270,10 +1271,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         />
                         <fieldset
                           aria-hidden="true"
-                          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                          class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
                         >
                           <legend
-                            class="css-yjsfm1"
+                            class="css-njhac4-MuiNotchedOutlined-root"
                           >
                             <span>
                               This may include Country, Community, or Language, found in the item.
@@ -1328,10 +1329,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         />
                         <fieldset
                           aria-hidden="true"
-                          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                          class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
                         >
                           <legend
-                            class="css-yjsfm1"
+                            class="css-njhac4-MuiNotchedOutlined-root"
                           >
                             <span>
                               If yes, please provide their name and any known information.
@@ -1394,10 +1395,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="acknowledgement-public-option"
                               data-testid="acknowledgement-public-option"
                               id="acknowledgement-public-option"
@@ -1406,11 +1407,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="public"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -1421,7 +1422,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -1442,10 +1443,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="acknowledgement-private-option"
                               data-testid="acknowledgement-private-option"
                               id="acknowledgement-private-option"
@@ -1454,11 +1455,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="private"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -1469,7 +1470,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -1490,10 +1491,10 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="acknowledgement-anonymous-option"
                               data-testid="acknowledgement-anonymous-option"
                               id="acknowledgement-anonymous-option"
@@ -1502,11 +1503,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               value="anonymous"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -1517,7 +1518,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -1816,6 +1817,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1993,11 +1995,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
                               checked=""
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="share-details-1-option"
                               data-testid="share-details-1-option"
                               id="share-details-1-option"
@@ -2006,11 +2008,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="1"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2021,7 +2023,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11zohuh-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1jq7105-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2042,10 +2044,10 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="share-details-0-option"
                               data-testid="share-details-0-option"
                               id="share-details-0-option"
@@ -2054,11 +2056,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="0"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2069,7 +2071,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2282,10 +2284,10 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-aboriginal-option"
                               data-testid="indigenous-identity-aboriginal-option"
                               id="indigenous-identity-aboriginal-option"
@@ -2294,11 +2296,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="aboriginal"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2309,7 +2311,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2330,10 +2332,10 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-islander-option"
                               data-testid="indigenous-identity-islander-option"
                               id="indigenous-identity-islander-option"
@@ -2342,11 +2344,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="islander"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2357,7 +2359,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2378,10 +2380,10 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-both-option"
                               data-testid="indigenous-identity-both-option"
                               id="indigenous-identity-both-option"
@@ -2390,11 +2392,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="both"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2405,7 +2407,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2426,10 +2428,10 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-no-option"
                               data-testid="indigenous-identity-no-option"
                               id="indigenous-identity-no-option"
@@ -2438,11 +2440,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="no"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2453,7 +2455,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2498,10 +2500,10 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="has-kinship-connection-1-option"
                               data-testid="has-kinship-connection-1-option"
                               id="has-kinship-connection-1-option"
@@ -2510,11 +2512,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="1"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2525,7 +2527,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2546,10 +2548,10 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="has-kinship-connection-0-option"
                               data-testid="has-kinship-connection-0-option"
                               id="has-kinship-connection-0-option"
@@ -2558,11 +2560,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="0"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2573,7 +2575,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2644,10 +2646,10 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="is-icip-holder-1-option"
                               data-testid="is-icip-holder-1-option"
                               id="is-icip-holder-1-option"
@@ -2656,11 +2658,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="1"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2671,7 +2673,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2692,10 +2694,10 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="is-icip-holder-0-option"
                               data-testid="is-icip-holder-0-option"
                               id="is-icip-holder-0-option"
@@ -2704,11 +2706,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="0"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2719,7 +2721,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2790,11 +2792,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Provide feedback / suggestion /information for this record"
                         >
                           <input
-                            class="PrivateSwitchBase-input css-1m9pwf3"
+                            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                             data-analyticsid="feedback-types-feedback-option"
                             data-indeterminate="false"
                             data-testid="feedback-types-feedback-option"
@@ -2827,11 +2829,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Share a story about this material"
                         >
                           <input
-                            class="PrivateSwitchBase-input css-1m9pwf3"
+                            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                             data-analyticsid="feedback-types-story-option"
                             data-indeterminate="false"
                             data-testid="feedback-types-story-option"
@@ -2864,11 +2866,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Advise of cultural sensitivity / make a takedown request"
                         >
                           <input
-                            class="PrivateSwitchBase-input css-1m9pwf3"
+                            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                             data-analyticsid="feedback-types-takedown-option"
                             data-indeterminate="false"
                             data-testid="feedback-types-takedown-option"
@@ -2948,10 +2950,10 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="acknowledgement-public-option"
                               data-testid="acknowledgement-public-option"
                               id="acknowledgement-public-option"
@@ -2960,11 +2962,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="public"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2975,7 +2977,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -2996,10 +2998,10 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="acknowledgement-private-option"
                               data-testid="acknowledgement-private-option"
                               id="acknowledgement-private-option"
@@ -3008,11 +3010,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="private"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3023,7 +3025,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3044,10 +3046,10 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="acknowledgement-anonymous-option"
                               data-testid="acknowledgement-anonymous-option"
                               id="acknowledgement-anonymous-option"
@@ -3056,11 +3058,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               value="anonymous"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3071,7 +3073,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3315,6 +3317,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3497,11 +3500,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
                               checked=""
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="share-details-1-option"
                               data-testid="share-details-1-option"
                               id="share-details-1-option"
@@ -3510,11 +3513,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="1"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3525,7 +3528,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11zohuh-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1jq7105-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3546,10 +3549,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="share-details-0-option"
                               data-testid="share-details-0-option"
                               id="share-details-0-option"
@@ -3558,11 +3561,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="0"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3573,7 +3576,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3786,10 +3789,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-aboriginal-option"
                               data-testid="indigenous-identity-aboriginal-option"
                               id="indigenous-identity-aboriginal-option"
@@ -3798,11 +3801,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="aboriginal"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3813,7 +3816,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3834,10 +3837,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-islander-option"
                               data-testid="indigenous-identity-islander-option"
                               id="indigenous-identity-islander-option"
@@ -3846,11 +3849,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="islander"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3861,7 +3864,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3882,10 +3885,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-both-option"
                               data-testid="indigenous-identity-both-option"
                               id="indigenous-identity-both-option"
@@ -3894,11 +3897,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="both"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3909,7 +3912,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3930,10 +3933,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-no-option"
                               data-testid="indigenous-identity-no-option"
                               id="indigenous-identity-no-option"
@@ -3942,11 +3945,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="no"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -3957,7 +3960,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4002,10 +4005,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="has-kinship-connection-1-option"
                               data-testid="has-kinship-connection-1-option"
                               id="has-kinship-connection-1-option"
@@ -4014,11 +4017,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="1"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4029,7 +4032,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4050,10 +4053,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="has-kinship-connection-0-option"
                               data-testid="has-kinship-connection-0-option"
                               id="has-kinship-connection-0-option"
@@ -4062,11 +4065,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="0"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4077,7 +4080,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4148,10 +4151,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="is-icip-holder-1-option"
                               data-testid="is-icip-holder-1-option"
                               id="is-icip-holder-1-option"
@@ -4160,11 +4163,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="1"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4175,7 +4178,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4196,10 +4199,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="is-icip-holder-0-option"
                               data-testid="is-icip-holder-0-option"
                               id="is-icip-holder-0-option"
@@ -4208,11 +4211,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="0"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4223,7 +4226,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4294,11 +4297,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Provide feedback / suggestion /information for this record"
                         >
                           <input
-                            class="PrivateSwitchBase-input css-1m9pwf3"
+                            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                             data-analyticsid="feedback-types-feedback-option"
                             data-indeterminate="false"
                             data-testid="feedback-types-feedback-option"
@@ -4331,11 +4334,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Share a story about this material"
                         >
                           <input
-                            class="PrivateSwitchBase-input css-1m9pwf3"
+                            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                             data-analyticsid="feedback-types-story-option"
                             data-indeterminate="false"
                             data-testid="feedback-types-story-option"
@@ -4368,11 +4371,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Advise of cultural sensitivity / make a takedown request"
                         >
                           <input
-                            class="PrivateSwitchBase-input css-1m9pwf3"
+                            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                             data-analyticsid="feedback-types-takedown-option"
                             data-indeterminate="false"
                             data-testid="feedback-types-takedown-option"
@@ -4455,10 +4458,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                     />
                     <fieldset
                       aria-hidden="true"
-                      class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                      class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
                     >
                       <legend
-                        class="css-ihdtdm"
+                        class="css-1whs34k-MuiNotchedOutlined-root"
                       >
                         <span
                           class="notranslate"
@@ -4521,10 +4524,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="acknowledgement-public-option"
                               data-testid="acknowledgement-public-option"
                               id="acknowledgement-public-option"
@@ -4533,11 +4536,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="public"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4548,7 +4551,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4569,10 +4572,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="acknowledgement-private-option"
                               data-testid="acknowledgement-private-option"
                               id="acknowledgement-private-option"
@@ -4581,11 +4584,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="private"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4596,7 +4599,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4617,10 +4620,10 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="acknowledgement-anonymous-option"
                               data-testid="acknowledgement-anonymous-option"
                               id="acknowledgement-anonymous-option"
@@ -4629,11 +4632,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               value="anonymous"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4644,7 +4647,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -4888,6 +4891,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -5070,11 +5074,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
                               checked=""
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="share-details-1-option"
                               data-testid="share-details-1-option"
                               id="share-details-1-option"
@@ -5083,11 +5087,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="1"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5098,7 +5102,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11zohuh-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1jq7105-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5119,10 +5123,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="share-details-0-option"
                               data-testid="share-details-0-option"
                               id="share-details-0-option"
@@ -5131,11 +5135,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="0"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5146,7 +5150,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5359,10 +5363,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-aboriginal-option"
                               data-testid="indigenous-identity-aboriginal-option"
                               id="indigenous-identity-aboriginal-option"
@@ -5371,11 +5375,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="aboriginal"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5386,7 +5390,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5407,10 +5411,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-islander-option"
                               data-testid="indigenous-identity-islander-option"
                               id="indigenous-identity-islander-option"
@@ -5419,11 +5423,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="islander"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5434,7 +5438,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5455,10 +5459,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-both-option"
                               data-testid="indigenous-identity-both-option"
                               id="indigenous-identity-both-option"
@@ -5467,11 +5471,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="both"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5482,7 +5486,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5503,10 +5507,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="indigenous-identity-no-option"
                               data-testid="indigenous-identity-no-option"
                               id="indigenous-identity-no-option"
@@ -5515,11 +5519,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="no"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5530,7 +5534,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5575,10 +5579,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="has-kinship-connection-1-option"
                               data-testid="has-kinship-connection-1-option"
                               id="has-kinship-connection-1-option"
@@ -5587,11 +5591,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="1"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5602,7 +5606,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5623,10 +5627,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="has-kinship-connection-0-option"
                               data-testid="has-kinship-connection-0-option"
                               id="has-kinship-connection-0-option"
@@ -5635,11 +5639,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="0"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5650,7 +5654,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5721,10 +5725,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="is-icip-holder-1-option"
                               data-testid="is-icip-holder-1-option"
                               id="is-icip-holder-1-option"
@@ -5733,11 +5737,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="1"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5748,7 +5752,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5769,10 +5773,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="is-icip-holder-0-option"
                               data-testid="is-icip-holder-0-option"
                               id="is-icip-holder-0-option"
@@ -5781,11 +5785,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="0"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5796,7 +5800,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -5867,11 +5871,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Provide feedback / suggestion /information for this record"
                         >
                           <input
-                            class="PrivateSwitchBase-input css-1m9pwf3"
+                            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                             data-analyticsid="feedback-types-feedback-option"
                             data-indeterminate="false"
                             data-testid="feedback-types-feedback-option"
@@ -5904,11 +5908,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Share a story about this material"
                         >
                           <input
-                            class="PrivateSwitchBase-input css-1m9pwf3"
+                            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                             data-analyticsid="feedback-types-story-option"
                             data-indeterminate="false"
                             data-testid="feedback-types-story-option"
@@ -5941,11 +5945,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Advise of cultural sensitivity / make a takedown request"
                         >
                           <input
-                            class="PrivateSwitchBase-input css-1m9pwf3"
+                            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                             data-analyticsid="feedback-types-takedown-option"
                             data-indeterminate="false"
                             data-testid="feedback-types-takedown-option"
@@ -6026,11 +6030,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                           >
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                               label="Mens Business"
                             >
                               <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
+                                class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                                 data-analyticsid="cultural-info-mensBusiness-option"
                                 data-indeterminate="false"
                                 data-testid="cultural-info-mensBusiness-option"
@@ -6063,11 +6067,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                           >
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                               label="Womens Business"
                             >
                               <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
+                                class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                                 data-analyticsid="cultural-info-womensBusiness-option"
                                 data-indeterminate="false"
                                 data-testid="cultural-info-womensBusiness-option"
@@ -6100,11 +6104,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                           >
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                               label="Sacred sites"
                             >
                               <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
+                                class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                                 data-analyticsid="cultural-info-sacredSites-option"
                                 data-indeterminate="false"
                                 data-testid="cultural-info-sacredSites-option"
@@ -6137,11 +6141,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                           >
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                               label="Ceremonies"
                             >
                               <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
+                                class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                                 data-analyticsid="cultural-info-ceremonies-option"
                                 data-indeterminate="false"
                                 data-testid="cultural-info-ceremonies-option"
@@ -6174,11 +6178,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                           >
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                               label="Other"
                             >
                               <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
+                                class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                                 data-analyticsid="cultural-info-other-option"
                                 data-indeterminate="false"
                                 data-testid="cultural-info-other-option"
@@ -6251,11 +6255,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                           >
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                               label="No - The item does not contain sensitive material"
                             >
                               <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
+                                class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                                 data-analyticsid="special-care-no-option"
                                 data-indeterminate="false"
                                 data-testid="special-care-no-option"
@@ -6288,11 +6292,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                           >
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                               label="Yes - A warning should be added"
                             >
                               <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
+                                class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                                 data-analyticsid="special-care-requireWarning-option"
                                 data-indeterminate="false"
                                 data-testid="special-care-requireWarning-option"
@@ -6325,11 +6329,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                           >
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                               label="Yes - Only Men should view"
                             >
                               <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
+                                class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                                 data-analyticsid="special-care-menOnly-option"
                                 data-indeterminate="false"
                                 data-testid="special-care-menOnly-option"
@@ -6362,11 +6366,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                           >
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                               label="Yes - Only Women should view"
                             >
                               <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
+                                class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                                 data-analyticsid="special-care-womenOnly-option"
                                 data-indeterminate="false"
                                 data-testid="special-care-womenOnly-option"
@@ -6399,11 +6403,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                           >
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                               label="Yes - Community must approve access to view this item"
                             >
                               <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
+                                class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                                 data-analyticsid="special-care-communityApproval-option"
                                 data-indeterminate="false"
                                 data-testid="special-care-communityApproval-option"
@@ -6436,11 +6440,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                           >
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                               label="Other"
                             >
                               <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
+                                class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                                 data-analyticsid="special-care-other-option"
                                 data-indeterminate="false"
                                 data-testid="special-care-other-option"
@@ -6540,10 +6544,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="acknowledgement-public-option"
                               data-testid="acknowledgement-public-option"
                               id="acknowledgement-public-option"
@@ -6552,11 +6556,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="public"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -6567,7 +6571,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -6588,10 +6592,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="acknowledgement-private-option"
                               data-testid="acknowledgement-private-option"
                               id="acknowledgement-private-option"
@@ -6600,11 +6604,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="private"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -6615,7 +6619,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -6636,10 +6640,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
                           <span
-                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-4mh1mh-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
                           >
                             <input
-                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
                               data-analyticsid="acknowledgement-anonymous-option"
                               data-testid="acknowledgement-anonymous-option"
                               id="acknowledgement-anonymous-option"
@@ -6648,11 +6652,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               value="anonymous"
                             />
                             <span
-                              class="css-hyxlzm"
+                              class="css-19y5vkv-MuiRadioButtonIcon-root"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1nih4k0-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
@@ -6663,7 +6667,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yve00p-MuiSvgIcon-root-MuiRadioButtonIcon-root"
                                 data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"

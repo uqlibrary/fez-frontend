@@ -13,11 +13,11 @@ exports[`FormViewToggler component should render default view 1`] = `
       >
         <span
           aria-label="Switch to tabbed mode"
-          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
           data-mui-internal-clone-element="true"
         >
           <input
-            class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+            class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
             type="checkbox"
             value="tabbed"
           />
@@ -76,12 +76,12 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
       >
         <span
           aria-label="Switch to full form mode"
-          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-kkvbpa-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
           data-mui-internal-clone-element="true"
         >
           <input
             checked=""
-            class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+            class="PrivateSwitchBase-input MuiSwitch-input css-1p3z7et-MuiSwitchBase-root"
             type="checkbox"
             value="tabbed"
           />

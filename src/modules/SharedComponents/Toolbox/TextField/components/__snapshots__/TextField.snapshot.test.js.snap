@@ -20,7 +20,6 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
         id="test-input"
         name="testField"
         type="text"
-        value=""
       />
     </div>
   </div>
@@ -47,7 +46,6 @@ exports[`TextFieldWrapper snapshots tests renders TextField component appending 
         id="test-input"
         name="testField"
         type="text"
-        value=""
       />
     </div>
   </div>
@@ -86,7 +84,6 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
         label="test"
         name="testField"
         type="text"
-        value=""
       />
     </div>
   </div>
