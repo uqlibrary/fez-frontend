@@ -1,4 +1,4 @@
-import React, { useReducer, useRef } from 'react';
+import React, { useReducer, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
@@ -70,7 +70,7 @@ export const actionHandler = {
 };
 
 const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
-    const uniqueOrgs = useRef([]);
+    const [uniqueOrgs, setUniqueOrgs] = useState([]);
     const theme = useTheme();
     const dispatch = useDispatch();
 
@@ -83,6 +83,14 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
         suggestedOrganisationUnitsLoading,
         suggestedOrganisationUnitsFailed,
     } = useSelector(state => state.get('suggestedOrganisationalUnitsReducer'));
+
+    const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
+    const [currentAffiliations, actionDispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
+
+    const currentAffiliationOrgIds = React.useMemo(
+        () => currentAffiliations.map(item => item.af_org_id),
+        [currentAffiliations],
+    );
 
     React.useEffect(() => {
         const loadOrganisationalUnitsList = () => dispatch(loadOrganisationalUnits());
@@ -106,6 +114,12 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
             // dispatch
             clearSuggestedOrganisationalUnitsList();
             loadSuggestedOrganisationalUnitsList(rowData.aut_id);
+        } else if (organisationUnitsLoaded && suggestedOrganisationUnitsLoaded) {
+            // update suggestion list
+            const combinedArr = suggestedOrganisationUnits.concat(organisationUnits);
+            const uniqueIds = Array.from(new Set(combinedArr.map(item => item.org_id)));
+            const uniqueOptions = uniqueIds.map(id => combinedArr.find(obj => obj.org_id === id));
+            setUniqueOrgs(uniqueOptions);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [
@@ -117,18 +131,9 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
         suggestedOrganisationUnitsFailed,
         suggestedOrganisationUnitsLoaded,
         suggestedOrganisationUnitsLoading,
+        currentAffiliationOrgIds,
+        setUniqueOrgs,
     ]);
-
-    const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
-    const [currentAffiliations, actionDispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
-
-    if (uniqueOrgs.current.length === 0 && organisationUnitsLoaded && suggestedOrganisationUnitsLoaded) {
-        const combinedArr = suggestedOrganisationUnits.concat(organisationUnits);
-        const uniqueIds = Array.from(new Set(combinedArr.map(item => item.org_id)));
-        uniqueOrgs.current = uniqueIds.map(id => combinedArr.find(obj => obj.org_id === id));
-    }
-
-    const currentAffiliationOrgIds = currentAffiliations.map(item => item.af_org_id);
 
     const {
         organisationalUnits: organisationalUnitsTitle,
@@ -178,14 +183,15 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                         clearOnBlur
                                         disableClearable
                                         value={
-                                            uniqueOrgs.current?.find(
+                                            uniqueOrgs?.find(
                                                 org => org.org_id === item.af_org_id,
                                             ) ?? /* istanbul ignore next */ {
                                                 org_title: organisationMissingLabel,
                                             }
                                         }
-                                        options={uniqueOrgs.current ?? /* istanbul ignore next */ []}
+                                        options={uniqueOrgs ?? /* istanbul ignore next */ []}
                                         getOptionLabel={option => option.org_title}
+                                        getOptionDisabled={option => currentAffiliationOrgIds.includes(option.org_id)}
                                         renderOption={(props, option) => (
                                             <Box
                                                 component="li"
@@ -215,9 +221,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                 }}
                                                 InputProps={{
                                                     ...params.InputProps,
-                                                    error: !!!uniqueOrgs.current?.find(
-                                                        org => org.org_id === item.af_org_id,
-                                                    ),
+                                                    error: !!!uniqueOrgs?.find(org => org.org_id === item.af_org_id),
                                                 }}
                                             />
                                         )}
@@ -227,7 +231,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                     actionDispatch,
                                                     rowData,
                                                     newValue,
-                                                    uniqueOrgs.current[
+                                                    uniqueOrgs[
                                                         suggestedOrganisationUnits.length > 0
                                                             ? 0
                                                             : /* istanbul ignore next */ 1
@@ -295,9 +299,8 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                     clearOnBlur
                                     disableClearable
                                     options={
-                                        uniqueOrgs.current?.filter(
-                                            org => !currentAffiliationOrgIds.includes(org.org_id),
-                                        ) ?? /* istanbul ignore next */ []
+                                        uniqueOrgs?.filter(org => !currentAffiliationOrgIds.includes(org.org_id)) ??
+                                        /* istanbul ignore next */ []
                                     }
                                     getOptionLabel={option => option.org_title}
                                     renderOption={(props, option) => (
@@ -333,7 +336,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                 actionDispatch,
                                                 rowData,
                                                 newValue,
-                                                uniqueOrgs.current[
+                                                uniqueOrgs[
                                                     suggestedOrganisationUnits.length > 0
                                                         ? 0
                                                         : /* istanbul ignore next */ 1

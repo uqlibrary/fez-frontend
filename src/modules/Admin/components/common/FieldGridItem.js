@@ -19,6 +19,8 @@ export const FieldGridItem = ({ field, group, disabled, ...props }) => {
     const componentProps = {
         ...fieldConfig.default[field].componentProps,
         ...(((fieldConfig.override[record.rek_display_type] || {})[field] || (() => {}))({
+            displayType: record.rek_display_type,
+            subtype: form.getValues('adminSection.rek_subtype'),
             isNtro:
                 (NTRO_SUBTYPES.includes(record.rek_subtype) && record.rek_subtype !== NTRO_SUBTYPE_CW_TEXTUAL_WORK) ||
                 props.isNtro ||
