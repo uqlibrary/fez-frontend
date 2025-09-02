@@ -395,14 +395,14 @@ export const PublicationCitation = ({
                                     <Typography
                                         variant="h6"
                                         component="h6"
-                                        lineHeight={1}
-                                        letterSpacing={0}
-                                        mb={'6px'}
-                                        mr={'12px'}
+                                        className={'PublicationCitation-citationTitle'}
                                         sx={{
+                                            lineHeight: 1,
+                                            letterSpacing: 0,
+                                            mb: '6px',
+                                            mr: '12px',
                                             overflowWrap: 'break-word !important',
                                         }}
-                                        className={'PublicationCitation-citationTitle'}
                                     >
                                         {renderTitle()}
                                     </Typography>

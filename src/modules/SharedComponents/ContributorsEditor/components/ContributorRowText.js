@@ -20,7 +20,14 @@ const getListItemTypography = (primaryText, secondaryText, primaryTypographyClas
         }
         secondary={
             secondaryText && (
-                <Typography noWrap variant="caption" display={'block'} sx={{ ...secondaryTypographyClass }}>
+                <Typography
+                    noWrap
+                    variant="caption"
+                    sx={{
+                        display: 'block',
+                        ...secondaryTypographyClass,
+                    }}
+                >
                     {secondaryText}
                 </Typography>
             )

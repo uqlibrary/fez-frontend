@@ -164,7 +164,11 @@ const Reports = () => {
                     onExportClick={handleExportReportClick}
                 />
             </StandardCard>
-            <Box mt={2}>
+            <Box
+                sx={{
+                    mt: 2,
+                }}
+            >
                 <StandardCard noHeader>
                     <SectionTitle mb={2}>{txt.displayTitle}</SectionTitle>
                     <Grid container spacing={2} mb={2}>

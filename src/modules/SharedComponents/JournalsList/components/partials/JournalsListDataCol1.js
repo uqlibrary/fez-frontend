@@ -12,12 +12,9 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
         <Grid
             container
             spacing={1}
-            padding={0}
             direction="row"
             id={`journal-list-data-col-1-${index}`}
             data-testid={`journal-list-data-col-1-${index}`}
-            alignItems="center"
-            alignContent="center"
             style={{
                 borderBottom: '1px dashed #e6e6e6',
                 borderRight: '1px dashed #e6e6e6',
@@ -25,6 +22,11 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
                 height: 48,
                 overflow: 'hidden',
                 minWidth: '50%',
+            }}
+            sx={{
+                padding: 0,
+                alignItems: 'center',
+                alignContent: 'center',
             }}
         >
             {isSelectable && (

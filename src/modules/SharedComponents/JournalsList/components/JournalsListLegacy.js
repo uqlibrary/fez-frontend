@@ -92,7 +92,14 @@ const JournalsListLegacy = ({
                         })}
                     </StyledGridHeaderRow>
                     {/* Data */}
-                    <Grid container spacing={0} padding={0} alignItems="center">
+                    <Grid
+                        container
+                        spacing={0}
+                        sx={{
+                            padding: 0,
+                            alignItems: 'center',
+                        }}
+                    >
                         <Grid style={{ marginTop: 6 }} size={12}>
                             {journals &&
                                 journals.length > 0 &&

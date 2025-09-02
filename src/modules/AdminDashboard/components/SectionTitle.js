@@ -5,7 +5,15 @@ import Typography from '@mui/material/Typography';
 
 const SectionTitle = ({ children, ...rest }) => {
     return (
-        <Typography fontWeight={400} {...rest}>
+        <Typography
+            {...rest}
+            sx={[
+                {
+                    fontWeight: 400,
+                },
+                ...(Array.isArray(rest.sx) ? rest.sx : [rest.sx]),
+            ]}
+        >
             {children}
         </Typography>
     );

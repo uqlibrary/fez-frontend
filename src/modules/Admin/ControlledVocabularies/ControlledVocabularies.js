@@ -101,7 +101,11 @@ const ControlledVocabularies = () => {
                     state.portalId ?? 'portal-root',
                 )}
                 {!!!loadingVocabError && (
-                    <Box marginBlockStart={2}>
+                    <Box
+                        sx={{
+                            marginBlockStart: 2,
+                        }}
+                    >
                         <Box sx={{ overflow: 'auto', marginBottom: '10px' }}>
                             <StyledAddButtonWrapper data-testid="admin-add-vocabulary">
                                 <Button

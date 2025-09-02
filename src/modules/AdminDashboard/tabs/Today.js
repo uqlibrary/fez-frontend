@@ -101,10 +101,12 @@ const Today = () => {
                                             href={transformUrlToPlatform(LINK_UNPROCESSED_WORKS)}
                                         >
                                             <Typography
-                                                fontSize={'0.875rem'}
                                                 variant="span"
-                                                fontWeight={200}
-                                                display={'inline-block'}
+                                                sx={{
+                                                    fontSize: '0.875rem',
+                                                    fontWeight: 200,
+                                                    display: 'inline-block',
+                                                }}
                                             >
                                                 {txt.works.unprocessedSubText}
                                             </Typography>
@@ -138,7 +140,13 @@ const Today = () => {
                                 <PieChartContainer
                                     label={txt.works.processed}
                                     subtext={
-                                        <Typography fontSize={'0.875rem'} variant="span" fontWeight={200}>
+                                        <Typography
+                                            variant="span"
+                                            sx={{
+                                                fontSize: '0.875rem',
+                                                fontWeight: 200,
+                                            }}
+                                        >
                                             {txt.works.processedSubText(
                                                 adminDashboardTodayData.works.iteration.from,
                                                 adminDashboardTodayData.works.iteration.to,
@@ -173,7 +181,13 @@ const Today = () => {
                                 <GaugeChartContainer
                                     label={txt.openaccess.researchOutput.title}
                                     subtext={
-                                        <Typography fontSize={'0.875rem'} variant="span" fontWeight={200}>
+                                        <Typography
+                                            variant="span"
+                                            sx={{
+                                                fontSize: '0.875rem',
+                                                fontWeight: 200,
+                                            }}
+                                        >
                                             {txt.openaccess.researchOutput.subText}
                                         </Typography>
                                     }
@@ -196,7 +210,13 @@ const Today = () => {
                     </Grid>
 
                     {!!!adminDashboardTodayData && adminDashboardTodaySuccess && (
-                        <Typography fontSize={'1rem'} fontWeight={400} textAlign={'center'}>
+                        <Typography
+                            sx={{
+                                fontSize: '1rem',
+                                fontWeight: 400,
+                                textAlign: 'center',
+                            }}
+                        >
                             {txt.loading.nodata}
                         </Typography>
                     )}

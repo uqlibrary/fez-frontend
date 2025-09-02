@@ -31,7 +31,11 @@ const JournalsListCollapsibleDataPanel = ({ row, index, open }) => {
                     id={`journal-list-collapse-panel-${index}`}
                     data-testid={`journal-list-collapse-panel-${index}`}
                 >
-                    <Box padding={1}>
+                    <Box
+                        sx={{
+                            padding: 1,
+                        }}
+                    >
                         <Grid container>
                             {dataItems.map((item, itemIndex) => {
                                 const itemData = (row && item.translateFn(row)) || /* istanbul ignore next */ '';

@@ -60,13 +60,36 @@ export const FavouriteJournals: React.FC = () => {
     return (
         // @ts-ignore
         <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
-            <Grid container spacing={3} padding={0}>
+            <Grid
+                container
+                spacing={3}
+                sx={{
+                    padding: 0,
+                }}
+            >
                 <Grid size="grow">
-                    <Grid container spacing={2} padding={0}>
-                        <Grid flexGrow={1} size={12}>
+                    <Grid
+                        container
+                        spacing={2}
+                        sx={{
+                            padding: 0,
+                        }}
+                    >
+                        <Grid
+                            size={12}
+                            sx={{
+                                flexGrow: 1,
+                            }}
+                        >
                             {/* @ts-ignore */}
                             <StandardCard noHeader>
-                                <Grid container spacing={2} padding={0}>
+                                <Grid
+                                    container
+                                    spacing={2}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
                                     <FavouriteJournalsList
                                         journalsList={response}
                                         loading={loading}
@@ -83,7 +106,13 @@ export const FavouriteJournals: React.FC = () => {
                                     />
                                 </Grid>
                                 <Grid style={{ paddingTop: response?.total ? 20 : 25 }} size={12}>
-                                    <Grid container spacing={2} padding={0}>
+                                    <Grid
+                                        container
+                                        spacing={2}
+                                        sx={{
+                                            padding: 0,
+                                        }}
+                                    >
                                         {!!response?.total && (
                                             <Grid
                                                 size={{

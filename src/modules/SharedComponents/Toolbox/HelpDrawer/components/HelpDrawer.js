@@ -50,12 +50,14 @@ export const HelpDrawer = ({ buttonLabel = 'CLOSE' }) => {
             <Grid container spacing={5} id="help-drawer">
                 <Grid item xs={12}>
                     <Typography
-                        color={'primary.main'}
                         component={'h3'}
                         data-testid="help-drawer-title"
                         id="help-drawer-title"
                         key={'title'}
                         variant={'h6'}
+                        sx={{
+                            color: 'primary.main',
+                        }}
                     >
                         {title}
                     </Typography>

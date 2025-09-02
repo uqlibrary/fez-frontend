@@ -143,7 +143,13 @@ export const AdvancedSearchRow = props => {
                             </FormControl>
                         </Grid>
                         <Grid item xs={'auto'}>
-                            <Typography mt={'6px'}>{txt.fieldTypes[searchField].combiner}</Typography>
+                            <Typography
+                                sx={{
+                                    mt: '6px',
+                                }}
+                            >
+                                {txt.fieldTypes[searchField].combiner}
+                            </Typography>
                         </Grid>
                     </Grid>
                     {/* Select and combiner */}

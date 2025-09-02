@@ -45,7 +45,13 @@ const JournalsListCollapsibleDataPanelContent = ({ item, index, data, isFirstRow
                 ...(!isLastRow ? classes.collapsibleContainerDataRowBottom : {}),
             }}
         >
-            <Box display="flex" alignItems="flex-end" key={item.key}>
+            <Box
+                key={item.key}
+                sx={{
+                    display: 'flex',
+                    alignItems: 'flex-end',
+                }}
+            >
                 <Typography
                     variant="body1"
                     sx={{ ...classes.inputLabel }}

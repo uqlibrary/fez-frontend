@@ -11,11 +11,13 @@ const JournalsListDataCol2Full = ({ journal, index }) => {
         <Grid
             container
             spacing={0}
-            padding={0}
             id={`journal-list-data-col-2-full-${index}`}
             data-testid={`journal-list-data-col-2-full-${index}`}
-            alignItems="center"
             style={{ borderBottom: '1px dashed #e6e6e6' }}
+            sx={{
+                padding: 0,
+                alignItems: 'center',
+            }}
         >
             {JournalFieldsMap.slice(1).map(item => {
                 const itemData = (journal && item.translateFn(journal)) || '';

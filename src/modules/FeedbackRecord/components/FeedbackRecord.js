@@ -370,7 +370,13 @@ const FeedbackRecord = () => {
                         {feedbackTypes?.hasOwnProperty('takedown') && (
                             <Grid size={12}>
                                 <StandardCard>
-                                    <Grid container spacing={3} padding={0}>
+                                    <Grid
+                                        container
+                                        spacing={3}
+                                        sx={{
+                                            padding: 0,
+                                        }}
+                                    >
                                         <Grid size={12}>
                                             <Typography variant={'h6'}>{txtForm.culturalInfo.title}</Typography>
                                             <Field

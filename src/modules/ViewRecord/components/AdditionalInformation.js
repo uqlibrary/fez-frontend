@@ -81,13 +81,13 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                 <Grid
                     container
                     spacing={2}
-                    padding={0}
                     key={`additional-info-${heading}`}
                     sx={{
+                        padding: 0,
+                        alignItems: 'flex-start',
                         borderBottom: '1px solid',
                         borderBottomColor: 'secondary.light',
                     }}
-                    alignItems="flex-start"
                 >
                     <Grid
                         size={{

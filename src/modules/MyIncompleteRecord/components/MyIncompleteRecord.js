@@ -327,7 +327,13 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                         }}
                                     >
                                         {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
-                                            <Grid container alignItems="flex-start" width={'100%'}>
+                                            <Grid
+                                                container
+                                                sx={{
+                                                    alignItems: 'flex-start',
+                                                    width: '100%',
+                                                }}
+                                            >
                                                 <Grid
                                                     size={{
                                                         xs: 12,
@@ -362,7 +368,13 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                         }}
                                     >
                                         {!!recordToFix && !!recordToFix.rek_subtype && (
-                                            <Grid container alignItems="flex-start" width={'100%'}>
+                                            <Grid
+                                                container
+                                                sx={{
+                                                    alignItems: 'flex-start',
+                                                    width: '100%',
+                                                }}
+                                            >
                                                 <Grid
                                                     size={{
                                                         xs: 12,

@@ -284,7 +284,13 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                     <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
                     <Grid size={12}>
                         <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
-                            <Grid container spacing={1} padding={0}>
+                            <Grid
+                                container
+                                spacing={1}
+                                sx={{
+                                    padding: 0,
+                                }}
+                            >
                                 <Grid size={12}>
                                     <Field
                                         control={control}
@@ -344,7 +350,13 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                             {showContentIndicatorsField(values) && (
                                 <Grid size={12}>
                                     <StandardCard title={txt.contentIndicators.title} help={txt.contentIndicators.help}>
-                                        <Grid container spacing={3} padding={0}>
+                                        <Grid
+                                            container
+                                            spacing={3}
+                                            sx={{
+                                                padding: 0,
+                                            }}
+                                        >
                                             <Grid size={12}>
                                                 <Typography>{txt.contentIndicators.description}</Typography>
                                                 <Field

@@ -16,9 +16,12 @@ const PublicationDetails = ({ publication }) => {
             <Grid
                 container
                 spacing={2}
-                padding={0}
-                sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
-                alignItems="flex-start"
+                sx={{
+                    padding: 0,
+                    alignItems: 'flex-start',
+                    borderBottom: '1px solid',
+                    borderBottomColor: 'secondary.light',
+                }}
             >
                 <Grid
                     size={{

@@ -108,7 +108,9 @@ export const ViewField = ({ fieldConfig, headerColumnWidth }) => {
                         variant="body2"
                         id={`${fieldId}-header`}
                         data-testid={`${fieldId}-header`}
-                        fontWeight={400}
+                        sx={{
+                            fontWeight: 400,
+                        }}
                     >
                         {heading}
                     </Typography>

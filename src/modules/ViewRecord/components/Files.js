@@ -412,10 +412,13 @@ const Files = props => {
                     <Grid
                         container
                         direction="row"
-                        alignItems="center"
                         spacing={2}
-                        padding={0}
-                        sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
+                        sx={{
+                            alignItems: 'center',
+                            padding: 0,
+                            borderBottom: '1px solid',
+                            borderBottomColor: 'secondary.light',
+                        }}
                     >
                         <Grid
                             size={{
@@ -472,33 +475,40 @@ const Files = props => {
                         <Grid
                             container
                             direction="row"
-                            alignItems="center"
                             key={`file-${index}`}
                             spacing={2}
-                            padding={0}
                             wrap={'nowrap'}
-                            sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
+                            sx={{
+                                alignItems: 'center',
+                                padding: 0,
+                                borderBottom: '1px solid',
+                                borderBottomColor: 'secondary.light',
+                            }}
                         >
                             <Grid
-                                textAlign={'center'}
                                 data-analyticsid={`dsi-mimetype-${index}`}
                                 data-testid={`dsi-mimetype-${index}`}
                                 size={{
                                     xs: 2,
                                     sm: 1,
                                 }}
+                                sx={{
+                                    textAlign: 'center',
+                                }}
                             >
                                 {item.icon}
                             </Grid>
                             <Grid
-                                textOverflow={'ellipsis'}
-                                whiteSpace={'nowrap'}
-                                overflow={'hidden'}
                                 data-analyticsid={`dsi-dsid-${index}`}
                                 data-testid={`dsi-dsid-${index}`}
                                 size={{
                                     xs: 8,
                                     sm: 4,
+                                }}
+                                sx={{
+                                    textOverflow: 'ellipsis',
+                                    whiteSpace: 'nowrap',
+                                    overflow: 'hidden',
                                 }}
                             >
                                 <FileName
@@ -515,14 +525,16 @@ const Files = props => {
                                 />
                             </Grid>
                             <Grid
-                                textOverflow={'ellipsis'}
-                                whiteSpace={'nowrap'}
-                                overflow={'hidden'}
                                 data-testid={`dsi-label-${index}`}
-                                sx={{ display: { xs: 'none', sm: 'block' } }}
                                 size={{
                                     sm: 6,
                                     md: 4,
+                                }}
+                                sx={{
+                                    textOverflow: 'ellipsis',
+                                    whiteSpace: 'nowrap',
+                                    overflow: 'hidden',
+                                    display: { xs: 'none', sm: 'block' },
                                 }}
                             >
                                 <Typography variant="body2" noWrap>
@@ -530,13 +542,15 @@ const Files = props => {
                                 </Typography>
                             </Grid>
                             <Grid
-                                textOverflow={'ellipsis'}
-                                whiteSpace={'nowrap'}
-                                overflow={'hidden'}
                                 data-testid={`dsi-size-${index}`}
-                                sx={{ display: { xs: 'none', md: 'block' } }}
                                 size={{
                                     md: 2,
+                                }}
+                                sx={{
+                                    textOverflow: 'ellipsis',
+                                    whiteSpace: 'nowrap',
+                                    overflow: 'hidden',
+                                    display: { xs: 'none', md: 'block' },
                                 }}
                             >
                                 <Typography variant="body2" noWrap>
@@ -553,14 +567,24 @@ const Files = props => {
                                 }}
                             >
                                 <Box style={{ whiteSpace: 'nowrap' }}>
-                                    <Box component={'span'} paddingRight={1}>
+                                    <Box
+                                        component={'span'}
+                                        sx={{
+                                            paddingRight: 1,
+                                        }}
+                                    >
                                         <FileAvStateIcon
                                             state={item.avCheck?.state}
                                             checkedAt={item.avCheck?.date}
                                             id={`${item.pid}-${item.fileName}`}
                                         />
                                     </Box>
-                                    <Box component={'span'} paddingRight={1}>
+                                    <Box
+                                        component={'span'}
+                                        sx={{
+                                            paddingRight: 1,
+                                        }}
+                                    >
                                         <OpenAccessIcon
                                             {...item.openAccessStatus}
                                             securityStatus={item.securityStatus}

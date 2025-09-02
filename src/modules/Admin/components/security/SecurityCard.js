@@ -58,7 +58,13 @@ export const SecurityCard = ({ disabled }) => {
                     accentHeader
                     subCard
                 >
-                    <Grid container spacing={2} padding={0}>
+                    <Grid
+                        container
+                        spacing={2}
+                        sx={{
+                            padding: 0,
+                        }}
+                    >
                         {recordType === RECORD_TYPE_RECORD && (
                             <React.Fragment>
                                 <Grid size={12}>
@@ -123,7 +129,13 @@ export const SecurityCard = ({ disabled }) => {
                             subCard
                         >
                             {
-                                <Grid container spacing={1} padding={0}>
+                                <Grid
+                                    container
+                                    spacing={1}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
                                     <Grid size={12}>
                                         <InheritedSecurityDetails
                                             title={text.inheritedPolicy.dataStream.title}

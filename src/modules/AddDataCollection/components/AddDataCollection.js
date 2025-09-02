@@ -281,7 +281,13 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                     <Grid container spacing={3} className={'DataCollection'}>
                         <Grid size={12}>
                             <StandardCard title={txt.information.agreement.title}>
-                                <Grid container spacing={3} padding={0}>
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
                                     <Grid size={12}>
                                         <Field
                                             control={control}
@@ -299,7 +305,13 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                         </Grid>
                         <Grid size={12}>
                             <StandardCard title={txt.information.dataset.title}>
-                                <Grid container spacing={3} padding={0}>
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
                                     <Grid
                                         size={{
                                             xs: 12,
@@ -493,7 +505,13 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 title={txt.information.accessAndLicensing.title}
                                 help={getLicenceHelp(txt.information.accessAndLicensing.help)}
                             >
-                                <Grid container spacing={3} padding={0}>
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
                                     <Grid
                                         size={{
                                             xs: 12,
@@ -557,7 +575,13 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                         </Grid>
                         <Grid size={12}>
                             <StandardCard title={txt.information.project.title}>
-                                <Grid container spacing={3} padding={0}>
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
                                     <Grid size={12}>
                                         <Field
                                             control={control}
@@ -623,7 +647,13 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                         </Grid>
                         <Grid size={12}>
                             <StandardCard title={txt.information.optionalDatasetDetails.title}>
-                                <Grid container spacing={3} padding={0}>
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
                                     <Grid size={12}>
                                         <Field
                                             control={control}
@@ -760,7 +790,13 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                         </Grid>
                         <Grid size={12}>
                             <StandardCard title={txt.information.additionalNotes.title}>
-                                <Grid container spacing={2} padding={0}>
+                                <Grid
+                                    container
+                                    spacing={2}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
                                     <Grid size={12}>
                                         <Field
                                             control={control}

@@ -26,7 +26,14 @@ const StyledGridDropzone = styled(Grid)(({ theme }) => ({
 const FileUploadDropzoneStaticContent = ({ locale }) => (
     <StyledGridDropzone container className={'FileUploadTermsAndConditions-root'}>
         <Grid item xs={12} sm={6}>
-            <Typography fontSize={14} fontWeight={400} mt={'14px'} mb={'14px'}>
+            <Typography
+                sx={{
+                    fontSize: 14,
+                    fontWeight: 400,
+                    mt: '14px',
+                    mb: '14px',
+                }}
+            >
                 {locale.fileUploadRestrictionHeading}
             </Typography>
             {locale.fileUploadRestrictions}
