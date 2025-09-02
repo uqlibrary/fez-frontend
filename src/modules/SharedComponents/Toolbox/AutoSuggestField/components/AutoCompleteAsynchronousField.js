@@ -186,10 +186,12 @@ export const AutoCompleteAsynchronousField = ({
                         required={required}
                     />
                 )}
-                ListboxProps={{
-                    id: `${autoCompleteAsynchronousFieldId}-options`,
-                    'data-analyticsid': `${autoCompleteAsynchronousFieldId}-options`,
-                    'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
+                slotProps={{
+                    listbox: {
+                        id: `${autoCompleteAsynchronousFieldId}-options`,
+                        'data-analyticsid': `${autoCompleteAsynchronousFieldId}-options`,
+                        'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
+                    },
                 }}
                 {...(fullWidth && { fullWidth })}
                 {...((!!allowFreeText && { freeSolo: true }) || {})}

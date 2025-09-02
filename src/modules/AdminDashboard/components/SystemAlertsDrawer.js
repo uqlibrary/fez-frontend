@@ -202,10 +202,12 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                     }}
                                 />
                             )}
-                            ListboxProps={{
-                                id: `${rootId}-options`,
-                                'data-analyticsid': `${rootId}-options`,
-                                'data-testid': `${rootId}-options`,
+                            slotProps={{
+                                listbox: {
+                                    id: `${rootId}-options`,
+                                    'data-analyticsid': `${rootId}-options`,
+                                    'data-testid': `${rootId}-options`,
+                                },
                             }}
                             options={adminUsers}
                             getOptionLabel={option => option.preferred_name}

@@ -237,9 +237,11 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                 actionHandler[ACTIONS.CHANGE](actionDispatch, item, newValue);
                                             }
                                         }}
-                                        ListboxProps={{
-                                            id: `orgSelect-${item.af_org_id}-options`,
-                                            'data-testid': `orgSelect-${item.af_org_id}-options`,
+                                        slotProps={{
+                                            listbox: {
+                                                id: `orgSelect-${item.af_org_id}-options`,
+                                                'data-testid': `orgSelect-${item.af_org_id}-options`,
+                                            },
                                         }}
                                     />
                                 </Grid>
@@ -339,9 +341,11 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                             );
                                         } else actionHandler[ACTIONS.ADD](actionDispatch, rowData, newValue);
                                     }}
-                                    ListboxProps={{
-                                        id: 'orgSelect-add-options',
-                                        'data-testid': 'orgSelect-add-options',
+                                    slotProps={{
+                                        listbox: {
+                                            id: 'orgSelect-add-options',
+                                            'data-testid': 'orgSelect-add-options',
+                                        },
                                     }}
                                 />
                             </Grid>

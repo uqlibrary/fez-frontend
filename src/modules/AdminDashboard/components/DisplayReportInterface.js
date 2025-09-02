@@ -123,10 +123,12 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                 }}
                             />
                         )}
-                        ListboxProps={{
-                            id: `${id}-listbox`,
-                            'data-analyticsid': `${id}-listbox`,
-                            'data-testid': `${id}-listbox`,
+                        slotProps={{
+                            listbox: {
+                                id: `${id}-listbox`,
+                                'data-analyticsid': `${id}-listbox`,
+                                'data-testid': `${id}-listbox`,
+                            },
                         }}
                         value={actionState.report}
                         onChange={(_, value) => {

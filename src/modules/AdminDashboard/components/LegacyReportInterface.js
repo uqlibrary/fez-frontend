@@ -92,10 +92,12 @@ const LegacyReportInterface = ({ id, loading, disabled, items, onExportClick }) 
                                 }}
                             />
                         )}
-                        ListboxProps={{
-                            id: `${id}-listbox`,
-                            'data-analyticsid': `${id}-listbox`,
-                            'data-testid': `${id}-listbox`,
+                        slotProps={{
+                            listbox: {
+                                id: `${id}-listbox`,
+                                'data-analyticsid': `${id}-listbox`,
+                                'data-testid': `${id}-listbox`,
+                            },
                         }}
                         value={exportReport}
                         onChange={handleExportReportChange}

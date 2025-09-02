@@ -89,7 +89,6 @@ export const AutoCompleteSelectField = ({
             options={options}
             popupIcon={false}
             disabled={disabled}
-            PopperComponent={PopperMy}
             renderInput={params => (
                 <TextField
                     variant="standard"
@@ -112,10 +111,15 @@ export const AutoCompleteSelectField = ({
                     }}
                 />
             )}
-            ListboxProps={{
-                id: `${autoCompleteSelectFieldId}-options`,
-                'data-analyticsid': `${autoCompleteSelectFieldId}-options`,
-                'data-testid': `${autoCompleteSelectFieldId}-options`,
+            slots={{
+                popper: PopperMy,
+            }}
+            slotProps={{
+                listbox: {
+                    id: `${autoCompleteSelectFieldId}-options`,
+                    'data-analyticsid': `${autoCompleteSelectFieldId}-options`,
+                    'data-testid': `${autoCompleteSelectFieldId}-options`,
+                },
             }}
             {...((!!allowFreeText && { freeSolo: true }) || {})}
             {...(fullWidth && { fullWidth })}
