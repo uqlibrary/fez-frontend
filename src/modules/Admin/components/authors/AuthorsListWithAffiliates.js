@@ -345,6 +345,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                             orgtype: '',
                             uqUsername: '',
                             affiliation: '',
+                            affiliations: [],
                         };
                         handleValidation(row, 'nameAsPublished', contributor.nameAsPublished);
                     };
