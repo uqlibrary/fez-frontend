@@ -405,7 +405,8 @@ export const viewJournalConfig = {
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => 'https://clarivate.com/webofsciencegroup/solutions/webofscience-scie',
+                        href: () =>
+                            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
                         text: () => 'More info about JCR SCIE',
                         title: 'Open more info in a new tab',
                     },
@@ -527,7 +528,8 @@ export const viewJournalConfig = {
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => 'https://clarivate.com/webofsciencegroup/solutions/webofscience-ssci',
+                        href: () =>
+                            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
                         text: () => 'More info about JCR SSCI',
                         title: 'Open more info in a new tab',
                     },

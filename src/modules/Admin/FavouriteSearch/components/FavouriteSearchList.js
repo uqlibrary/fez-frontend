@@ -77,75 +77,152 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
         handleCancelClick,
     } = useDecoratedDataGrid(list, _handleRowUpdate, _handleRowDelete);
 
-    const columns = [
-        {
-            field: 'fvs_search_parameters',
-            headerName: favouriteSearchList.columns.realLink.title,
-            editable: !!deleteRowId,
-            renderCell: props => {
-                const index = rows.findIndex(row => row.fvs_id === props.id);
-                if (!!deleteRowId && props.row.fvs_id === deleteRowId) {
+    const columns = React.useMemo(
+        () => [
+            {
+                field: 'fvs_search_parameters',
+                headerName: favouriteSearchList.columns.realLink.title,
+                editable: !!deleteRowId,
+                renderCell: props => {
+                    const index = rows.findIndex(row => row.fvs_id === props.id);
+                    if (!!deleteRowId && props.row.fvs_id === deleteRowId) {
+                        return (
+                            <Typography
+                                data-testid={`delete-row-${index}`}
+                                id={`delete-row-${index}`}
+                                sx={{ ...classes.h6text }}
+                                component={'h6'}
+                            >
+                                {favouriteSearchList.deleteConfirmLabel}
+                            </Typography>
+                        );
+                    }
+
+                    return (
+                        <ExternalLink
+                            id={`fvs-search-parameters-${index}`}
+                            key={props.value}
+                            href={`${APP_URL}${PATH_PREFIX}${props.value.replace('/', '')}`}
+                            aria-label={locale.global.linkWillOpenInNewWindow.replace(
+                                '[destination]',
+                                props.row.fvs_description,
+                            )}
+                        >
+                            {favouriteSearchList.columns.realLink.cellText}
+                        </ExternalLink>
+                    );
+                },
+                minWidth: 200,
+                flex: 1,
+                cellClassName: 'cell-styled',
+                colSpan: (value, row) => {
+                    if (row.fvs_id === deleteRowId) return 4;
+                    return undefined;
+                },
+            },
+            {
+                field: 'fvs_description',
+                headerName: favouriteSearchList.columns.description.title,
+                editable: true,
+                renderCell: props => {
+                    const index = rows.findIndex(row => row.fvs_id === props.id);
                     return (
                         <Typography
-                            data-testid={`delete-row-${index}`}
-                            id={`delete-row-${index}`}
-                            sx={{ ...classes.h6text }}
-                            component={'h6'}
+                            data-testid={`fvs-description-${index}`}
+                            id={`fvs-description-${index}`}
+                            sx={{ ...classes.text }}
                         >
-                            {favouriteSearchList.deleteConfirmLabel}
+                            {props.value}
                         </Typography>
                     );
-                }
-
-                return (
-                    <ExternalLink
-                        id={`fvs-search-parameters-${index}`}
-                        key={props.value}
-                        href={`${APP_URL}${PATH_PREFIX}${props.value.replace('/', '')}`}
-                        aria-label={locale.global.linkWillOpenInNewWindow.replace(
-                            '[destination]',
-                            props.row.fvs_description,
-                        )}
-                    >
-                        {favouriteSearchList.columns.realLink.cellText}
-                    </ExternalLink>
-                );
+                },
+                renderEditCell: props => {
+                    return (
+                        <TextField
+                            InputProps={{
+                                style: {
+                                    fontSize: 13,
+                                },
+                            }}
+                            value={props.value}
+                            textFieldId="fvs-description"
+                            error={props.error}
+                            errorText={
+                                props.error ? favouriteSearchList.columns.description.validationMessage.empty : ''
+                            }
+                            onChange={e => {
+                                props.api.setEditCellValue({
+                                    id: props.id,
+                                    field: props.field,
+                                    value: e.target.value,
+                                });
+                            }}
+                            sx={{ alignSelf: 'center' }}
+                        />
+                    );
+                },
+                preProcessEditCellProps: params => ({
+                    ...params.props,
+                    error: params.props.value === '',
+                }),
+                minWidth: 250,
+                flex: 1,
+                cellClassName: 'cell-styled',
             },
-            flex: 1,
-            cellClassName: 'cell-styled',
-            colSpan: (value, row) => {
-                if (row.fvs_id === deleteRowId) return 4;
-                return undefined;
+            {
+                headerName: favouriteSearchList.columns.aliasedLink.title,
+                field: 'fvs_alias_link',
+                editable: false,
+                renderCell: props => {
+                    const index = rows.findIndex(row => row.fvs_id === props.id);
+                    return (
+                        <ExternalLink
+                            key={props.value}
+                            id={`fvs-alias-${index}`}
+                            href={`${APP_URL}${PATH_PREFIX}${props.row.fvs_alias}`}
+                            aria-label={locale.global.linkWillOpenInNewWindow.replace(
+                                '[destination]',
+                                props.row.fvs_description,
+                            )}
+                        >
+                            <Box component={'span'} sx={{ ...classes.text }}>
+                                {props.row.fvs_alias}
+                            </Box>
+                        </ExternalLink>
+                    );
+                },
+                minWidth: 200,
+                flex: 1,
+                cellClassName: 'cell-styled',
             },
-        },
-        {
-            field: 'fvs_description',
-            headerName: favouriteSearchList.columns.description.title,
-            editable: true,
-            renderCell: props => {
-                const index = rows.findIndex(row => row.fvs_id === props.id);
-                return (
-                    <Typography
-                        data-testid={`fvs-description-${index}`}
-                        id={`fvs-description-${index}`}
-                        sx={{ ...classes.text }}
-                    >
-                        {props.value}
-                    </Typography>
-                );
-            },
-            renderEditCell: props => {
-                return (
+            {
+                headerName: favouriteSearchList.columns.alias.title,
+                field: 'fvs_alias',
+                editable: true,
+                renderCell: props => {
+                    const index = rows.findIndex(row => row.fvs_id === props.id);
+                    return (
+                        <Typography>
+                            <Box
+                                component={'span'}
+                                sx={{ ...classes.text }}
+                                data-testid={`fvs-alias-${index}`}
+                                id={`fvs-alias-${index}`}
+                            >
+                                {props.value}
+                            </Box>
+                        </Typography>
+                    );
+                },
+                renderEditCell: props => (
                     <TextField
                         InputProps={{
                             style: {
                                 fontSize: 13,
                             },
                         }}
-                        value={props.value}
-                        textFieldId="fvs-description"
-                        error={props.error}
-                        errorText={props.error ? favouriteSearchList.columns.description.validationMessage.empty : ''}
+                        value={props.value || ''}
+                        textFieldId="fvs-alias"
                         onChange={e => {
                             props.api.setEditCellValue({
                                 id: props.id,
@@ -153,189 +230,135 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                                 value: e.target.value,
                             });
                         }}
+                        error={props.error}
+                        errorText={props.error ? favouriteSearchList.columns.alias.validationMessage.invalid : ''}
                         sx={{ alignSelf: 'center' }}
                     />
-                );
+                ),
+                preProcessEditCellProps: params => {
+                    return {
+                        ...params.props,
+                        error:
+                            params.props.value !== '' &&
+                            !new RegExp(favouriteSearchList.columns.alias.regex).test(params.props.value),
+                    };
+                },
+                minWidth: 150,
+                flex: 1,
+                cellClassName: 'cell-styled',
             },
-            preProcessEditCellProps: params => ({
-                ...params.props,
-                error: params.props.value === '',
-            }),
-            flex: 1,
-            cellClassName: 'cell-styled',
-        },
-        {
-            headerName: favouriteSearchList.columns.aliasedLink.title,
-            field: 'fvs_alias_link',
-            editable: false,
-            renderCell: props => {
-                const index = rows.findIndex(row => row.fvs_id === props.id);
-                return (
-                    <ExternalLink
-                        key={props.value}
-                        id={`fvs-alias-${index}`}
-                        href={`${APP_URL}${PATH_PREFIX}${props.row.fvs_alias}`}
-                        aria-label={locale.global.linkWillOpenInNewWindow.replace(
-                            '[destination]',
-                            props.row.fvs_description,
-                        )}
-                    >
-                        <Box component={'span'} sx={{ ...classes.text }}>
-                            {props.row.fvs_alias}
-                        </Box>
-                    </ExternalLink>
-                );
-            },
-            flex: 1,
-            cellClassName: 'cell-styled',
-        },
-        {
-            headerName: favouriteSearchList.columns.alias.title,
-            field: 'fvs_alias',
-            editable: true,
-            renderCell: props => {
-                const index = rows.findIndex(row => row.fvs_id === props.id);
-                return (
-                    <Typography>
-                        <Box
-                            component={'span'}
-                            sx={{ ...classes.text }}
-                            data-testid={`fvs-alias-${index}`}
-                            id={`fvs-alias-${index}`}
-                        >
-                            {props.value}
-                        </Box>
-                    </Typography>
-                );
-            },
-            renderEditCell: props => (
-                <TextField
-                    InputProps={{
-                        style: {
-                            fontSize: 13,
-                        },
-                    }}
-                    value={props.value || ''}
-                    textFieldId="fvs-alias"
-                    onChange={e => {
-                        props.api.setEditCellValue({
-                            id: props.id,
-                            field: props.field,
-                            value: e.target.value,
-                        });
-                    }}
-                    error={props.error}
-                    errorText={props.error ? favouriteSearchList.columns.alias.validationMessage.invalid : ''}
-                    sx={{ alignSelf: 'center' }}
-                />
-            ),
-            preProcessEditCellProps: params => {
-                return {
-                    ...params.props,
-                    error:
-                        params.props.value !== '' &&
-                        !new RegExp(favouriteSearchList.columns.alias.regex).test(params.props.value),
-                };
-            },
-            flex: 1,
-            cellClassName: 'cell-styled',
-        },
-        {
-            field: 'actions',
-            type: 'actions',
-            headerName: 'Actions',
-            width: 96,
-            cellClassName: 'cell-styled',
-            getActions: params => {
-                const isAnyInEditMdode = Object.values(rowModesModel).some(
-                    rowMode => rowMode.mode === GridRowModes.Edit,
-                );
-                const isAnyDeleting = !!deleteRowId;
-                const isInEditMode = rowModesModel[params.id]?.mode === GridRowModes.Edit;
-                const isDeleting = params.id === deleteRowId;
-                const index = rows.findIndex(row => row.fvs_id === params.id);
-                if (isInEditMode || isDeleting) {
+            {
+                field: 'actions',
+                type: 'actions',
+                headerName: 'Actions',
+                width: 96,
+                cellClassName: 'cell-styled',
+                getActions: params => {
+                    const isAnyInEditMdode = Object.values(rowModesModel).some(
+                        rowMode => rowMode.mode === GridRowModes.Edit,
+                    );
+                    const isAnyDeleting = !!deleteRowId;
+                    const isInEditMode = rowModesModel[params.id]?.mode === GridRowModes.Edit;
+                    const isDeleting = params.id === deleteRowId;
+                    const index = rows.findIndex(row => row.fvs_id === params.id);
+                    if (isInEditMode || isDeleting) {
+                        return [
+                            <GridActionsCellItem
+                                icon={<tableIcons.Check />}
+                                label="Save"
+                                sx={{
+                                    color: 'primary.main',
+                                }}
+                                onClick={!isDeleting ? handleSaveClick(params.id) : handleDeleteRow(params.id, rows)}
+                                data-testid={`favourite-search-list-item-${index}-save`}
+                            />,
+                            <GridActionsCellItem
+                                icon={<tableIcons.Clear />}
+                                label="Cancel"
+                                className="textPrimary"
+                                onClick={handleCancelClick(params.id)}
+                                color="inherit"
+                                data-testid={`favourite-search-list-item-${index}-cancel`}
+                            />,
+                        ];
+                    }
+
                     return [
                         <GridActionsCellItem
-                            icon={<tableIcons.Check />}
-                            label="Save"
-                            sx={{
-                                color: 'primary.main',
-                            }}
-                            onClick={!isDeleting ? handleSaveClick(params.id) : handleDeleteRow(params.id, rows)}
-                            data-testid={`favourite-search-list-item-${index}-save`}
+                            icon={<tableIcons.Edit />}
+                            label="Edit"
+                            className="textPrimary"
+                            onClick={handleEditClick(params.id)}
+                            color="inherit"
+                            data-testid={`favourite-search-list-item-${index}-edit`}
+                            disabled={isAnyInEditMdode || isAnyDeleting}
                         />,
                         <GridActionsCellItem
-                            icon={<tableIcons.Clear />}
-                            label="Cancel"
-                            className="textPrimary"
-                            onClick={handleCancelClick(params.id)}
+                            icon={<tableIcons.Delete />}
+                            label="Delete"
+                            onClick={handleDeleteClick(params.id)}
                             color="inherit"
-                            data-testid={`favourite-search-list-item-${index}-cancel`}
+                            data-testid={`favourite-search-list-item-${index}-delete`}
+                            disabled={isAnyInEditMdode || isAnyDeleting}
                         />,
                     ];
-                }
-
-                return [
-                    <GridActionsCellItem
-                        icon={<tableIcons.Edit />}
-                        label="Edit"
-                        className="textPrimary"
-                        onClick={handleEditClick(params.id)}
-                        color="inherit"
-                        data-testid={`favourite-search-list-item-${index}-edit`}
-                        disabled={isAnyInEditMdode || isAnyDeleting}
-                    />,
-                    <GridActionsCellItem
-                        icon={<tableIcons.Delete />}
-                        label="Delete"
-                        onClick={handleDeleteClick(params.id)}
-                        color="inherit"
-                        data-testid={`favourite-search-list-item-${index}-delete`}
-                        disabled={isAnyInEditMdode || isAnyDeleting}
-                    />,
-                ];
+                },
             },
-        },
-    ];
+        ],
+        [
+            deleteRowId,
+            favouriteSearchList,
+            handleCancelClick,
+            handleDeleteClick,
+            handleDeleteRow,
+            handleEditClick,
+            handleSaveClick,
+            rowModesModel,
+            rows,
+        ],
+    );
 
     return (
-        <Paper
-            sx={{
-                padding: 2,
-                display: 'flex',
-                flexDirection: 'column',
-            }}
-        >
-            <DataGrid
-                id="favourite-search-list"
-                data-testid="favourite-search-list"
-                rows={rows}
-                getRowId={row => row.fvs_id}
-                columns={columns}
-                editMode="row"
-                rowModesModel={rowModesModel}
-                loading={loading}
-                onRowModesModelChange={handleRowModesModelChange}
-                processRowUpdate={handleUpdateRow}
-                localeText={{ noRowsLabel: favouriteSearchList.noRowsLabel }}
+        <div style={{ width: '100%' }}>
+            <Paper
                 sx={{
-                    border: 0,
-                    '& .cell-styled': {
-                        lineHeight: 1.43,
-                        alignContent: 'center',
-                        ...classes.text,
-                    },
+                    padding: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
                 }}
-                disableDensitySelector
-                disableColumnMenu
-                disableColumnFilter
-                disableColumnSelector
-                disableSelectionOnClick
-                disableRowSelectionOnClick
-                disableVirtualization
-            />
-        </Paper>
+            >
+                <div style={{ flexGrow: 1 }}>
+                    <DataGrid
+                        id="favourite-search-list"
+                        data-testid="favourite-search-list"
+                        rows={rows}
+                        getRowId={row => row.fvs_id}
+                        columns={columns}
+                        editMode="row"
+                        rowModesModel={rowModesModel}
+                        loading={loading}
+                        onRowModesModelChange={handleRowModesModelChange}
+                        processRowUpdate={handleUpdateRow}
+                        localeText={{ noRowsLabel: favouriteSearchList.noRowsLabel }}
+                        sx={{
+                            border: 0,
+                            '& .cell-styled': {
+                                lineHeight: 1.43,
+                                alignContent: 'center',
+                                ...classes.text,
+                            },
+                        }}
+                        disableDensitySelector
+                        disableColumnMenu
+                        disableColumnFilter
+                        disableColumnSelector
+                        disableSelectionOnClick
+                        disableRowSelectionOnClick
+                        disableVirtualization
+                    />
+                </div>
+            </Paper>
+        </div>
     );
 };
 
