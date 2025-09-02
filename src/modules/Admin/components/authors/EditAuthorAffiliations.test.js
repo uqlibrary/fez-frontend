@@ -1,6 +1,6 @@
 import React from 'react';
 import EditAuthorAffiliations, { actionHandler } from './EditAuthorAffiliations';
-import { render, WithReduxStore } from 'test-utils';
+import { render, WithReduxStore, userEvent } from 'test-utils';
 import locale from 'locale/components';
 import { NON_HERDC_ID, ACTIONS } from 'helpers/authorAffiliations';
 import * as OrgActions from 'actions/organisationalUnits';
@@ -236,7 +236,7 @@ describe('EditAuthorAffiliations', () => {
             id: 6,
         };
 
-        const { getByTestId } = setup(
+        const { getByTestId, getByRole } = setup(
             {
                 rowData,
             },
@@ -251,6 +251,11 @@ describe('EditAuthorAffiliations', () => {
 
         expect(getByTestId('orgSelect-1-input')).toHaveValue('Test organisation');
         expect(getByTestId('orgSelect-2-input')).toHaveValue('Test suggested organisation');
+
+        // ensure selected options are disabled in the list to prevent being selected > 1 times
+        await userEvent.click(getByTestId('orgSelect-1-input'));
+        expect(getByRole('option', { name: 'Test suggested organisation' })).toHaveAttribute('aria-disabled', 'true');
+        expect(getByRole('option', { name: 'Test organisation' })).toHaveAttribute('aria-disabled', 'true');
 
         expect(getByTestId('affiliationCancelBtn')).toBeInTheDocument();
         expect(getByTestId('affiliationSaveBtn')).toBeInTheDocument();
@@ -339,7 +344,7 @@ describe('EditAuthorAffiliations', () => {
             id: 6,
         };
 
-        const { getByTestId } = setup(
+        const { getByTestId, getByRole } = setup(
             {
                 rowData,
                 onChange,
@@ -356,6 +361,12 @@ describe('EditAuthorAffiliations', () => {
         expect(getByTestId(`orgSelect-${NON_HERDC_ID}-input`)).toHaveValue('NON-HERDC');
         expect(getByTestId('orgSelect-2-input')).toHaveValue('First suggested organisation');
 
+        // ensure selected options are disabled in the list to prevent being selected > 1 times
+        await userEvent.click(getByTestId('orgSelect-1062-input'));
+        expect(getByRole('option', { name: 'NON-HERDC' })).toHaveAttribute('aria-disabled', 'true');
+        expect(getByRole('option', { name: 'First suggested organisation' })).toHaveAttribute('aria-disabled', 'true');
+
+        await userEvent.click(getByTestId('orgSelect-1062-input'));
         expect(getByTestId('affiliationCancelBtn')).toBeInTheDocument();
         expect(getByTestId('affiliationSaveBtn')).toBeInTheDocument();
         getByTestId('affiliationSaveBtn').click();
