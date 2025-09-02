@@ -288,18 +288,6 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'DOAJ seal',
-                    fieldId: 'jnl-doaj-seal',
-                    data: [
-                        {
-                            path: ['fez_journal_doaj', 'jnl_doaj_seal'],
-                        },
-                    ],
-                    template: 'BooleanTemplate',
-                },
-            ],
-            [
-                {
                     heading: 'Last updated',
                     fieldId: 'jnl-doaj-last-updated',
                     data: [

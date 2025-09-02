@@ -159,9 +159,6 @@ describe('ViewJournal', () => {
             'https://creativecommons.org/licenses/by/4.0/deed.en',
         );
 
-        expect(getByTestId('jnl-doaj-seal-header')).toHaveTextContent('DOAJ seal');
-        expect(getByTestId('jnl-doaj-seal-value')).toHaveTextContent('Yes');
-
         expect(getByTestId('jnl-doaj-last-updated-header')).toHaveTextContent('Last updated');
         expect(getByTestId('jnl-doaj-last-updated-value')).toHaveTextContent('3rd February 2020 at 2:17pm');
 
