@@ -180,7 +180,7 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                     WebkitBoxShadow: '5px 0 5px -2px rgba(0,0,0,0.15)',
                     boxShadow: '5px 0 5px -2px rgba(0,0,0,0.15)',
                 },
-                '& .MuiDrawer-paperAnchorDockedLeft': {
+                '&.MuiDrawer-docked.MuiDrawer-anchorLeft > .MuiDrawer-paper': {
                     border: 'none',
                 },
             }}
