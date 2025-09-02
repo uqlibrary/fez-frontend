@@ -420,13 +420,17 @@ const Files = props => {
                         <Grid
                             size={{
                                 xs: 2,
-                                sm: 1
-                            }}>
+                                sm: 1,
+                            }}
+                        >
                             &nbsp;
                         </Grid>
-                        <Grid data-testid="dsi-dsid-label" size={{
-                            sm: 4
-                        }}>
+                        <Grid
+                            data-testid="dsi-dsid-label"
+                            size={{
+                                sm: 4,
+                            }}
+                        >
                             <Typography variant="caption" gutterBottom>
                                 {locale.viewRecord.sections.files.fileName}
                             </Typography>
@@ -436,22 +440,30 @@ const Files = props => {
                             sx={{ display: { xs: 'none', sm: 'block' } }}
                             size={{
                                 sm: 6,
-                                md: 4
-                            }}>
+                                md: 4,
+                            }}
+                        >
                             <Typography variant="caption" gutterBottom>
                                 {locale.viewRecord.sections.files.description}
                             </Typography>
                         </Grid>
-                        <Grid data-testid="dsi-size-label" sx={{ display: { xs: 'none', md: 'block' } }} size={{
-                            md: 2
-                        }}>
+                        <Grid
+                            data-testid="dsi-size-label"
+                            sx={{ display: { xs: 'none', md: 'block' } }}
+                            size={{
+                                md: 2,
+                            }}
+                        >
                             <Typography variant="caption" gutterBottom>
                                 {locale.viewRecord.sections.files.size}
                             </Typography>
                         </Grid>
-                        <Grid sx={{ display: { xs: 'none', sm: 'block' } }} size={{
-                            sm: "grow"
-                        }} />
+                        <Grid
+                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                            size={{
+                                sm: 'grow',
+                            }}
+                        />
                     </Grid>
                 </Box>
 
@@ -473,8 +485,9 @@ const Files = props => {
                                 data-testid={`dsi-mimetype-${index}`}
                                 size={{
                                     xs: 2,
-                                    sm: 1
-                                }}>
+                                    sm: 1,
+                                }}
+                            >
                                 {item.icon}
                             </Grid>
                             <Grid
@@ -485,8 +498,9 @@ const Files = props => {
                                 data-testid={`dsi-dsid-${index}`}
                                 size={{
                                     xs: 8,
-                                    sm: 4
-                                }}>
+                                    sm: 4,
+                                }}
+                            >
                                 <FileName
                                     {...item}
                                     id={`file-name-${index}`}
@@ -508,8 +522,9 @@ const Files = props => {
                                 sx={{ display: { xs: 'none', sm: 'block' } }}
                                 size={{
                                     sm: 6,
-                                    md: 4
-                                }}>
+                                    md: 4,
+                                }}
+                            >
                                 <Typography variant="body2" noWrap>
                                     {item.description}
                                 </Typography>
@@ -521,7 +536,7 @@ const Files = props => {
                                 data-testid={`dsi-size-${index}`}
                                 sx={{ display: { xs: 'none', md: 'block' } }}
                                 size={{
-                                    md: 2
+                                    md: 2,
                                 }}
                             >
                                 <Typography variant="body2" noWrap>
@@ -534,7 +549,7 @@ const Files = props => {
                                 data-testid={`rek-oa-status-${index}`}
                                 sx={{ display: { xs: 'none', sm: 'block' } }}
                                 size={{
-                                    sm: "grow"
+                                    sm: 'grow',
                                 }}
                             >
                                 <Box style={{ whiteSpace: 'nowrap' }}>

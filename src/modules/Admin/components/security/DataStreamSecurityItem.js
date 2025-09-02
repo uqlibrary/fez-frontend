@@ -36,8 +36,9 @@ const DataStreamSecurityItem = ({
                 sx={{ ...classes.dataStreamFileName }}
                 size={{
                     xs: 12,
-                    sm: 6
-                }}>
+                    sm: 6,
+                }}
+            >
                 <Link title={dataStream.dsi_dsid} underline="hover">
                     {dataStream.dsi_dsid}
                 </Link>
@@ -49,8 +50,9 @@ const DataStreamSecurityItem = ({
             <Grid
                 size={{
                     xs: 12,
-                    sm: 6
-                }}>
+                    sm: 6,
+                }}
+            >
                 <PolicyDropdown
                     fieldName={dataStream.dsi_dsid}
                     fieldLabel={policyDropdownLabel}

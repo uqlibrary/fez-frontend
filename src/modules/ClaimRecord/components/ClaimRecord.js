@@ -385,8 +385,9 @@ const ClaimRecord = () => {
                         <Grid
                             size={{
                                 xs: 12,
-                                sm: 'auto'
-                            }}>
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 variant={'contained'}
                                 fullWidth
@@ -401,8 +402,9 @@ const ClaimRecord = () => {
                                 <Grid
                                     size={{
                                         xs: 12,
-                                        sm: "auto"
-                                    }}>
+                                        sm: 'auto',
+                                    }}
+                                >
                                     <Button
                                         type="submit"
                                         variant={'contained'}

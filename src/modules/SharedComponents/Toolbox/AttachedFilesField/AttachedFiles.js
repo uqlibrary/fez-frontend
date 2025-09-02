@@ -391,21 +391,21 @@ export const AttachedFiles = ({
         <Grid size={12}>
             <StandardCard title={locale.title} subCard>
                 {!!record.fez_record_search_key_advisory_statement && (
-                    /* istanbul ignore next */ (<Alert
+                    /* istanbul ignore next */ <Alert
                         allowDismiss
                         type="info"
                         message={getAdvisoryStatement(record, locale.culturalSensitivityStatement)}
-                    />)
+                    />
                 )}
                 {!!record.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
-                    /* istanbul ignore next */ (<Alert
+                    /* istanbul ignore next */ <Alert
                         allowDismiss
                         type="info"
                         message={getSensitiveHandlingNote(record)}
-                    />)
+                    />
                 )}
                 {isFireFox && /* istanbul ignore next */ hasVideo && (
-                    /* istanbul ignore next */ (<Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />)
+                    /* istanbul ignore next */ <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />
                 )}
                 {isAdminEditing && <Alert type="warning" message={locale.renamingFilesInstructions.text} />}
                 <Box sx={{ padding: 1 }}>
@@ -420,8 +420,9 @@ export const AttachedFiles = ({
                         <Grid
                             size={{
                                 sm: 3,
-                                xs: 6
-                            }}>
+                                xs: 6,
+                            }}
+                        >
                             <Typography variant="caption" gutterBottom>
                                 {locale.fileName}
                             </Typography>
@@ -430,15 +431,19 @@ export const AttachedFiles = ({
                             sx={{ display: { xs: 'none', sm: 'block' } }}
                             size={{
                                 md: isAdminEditing ? 3 : 5,
-                                sm: isAdminEditing ? 3 : 7
-                            }}>
+                                sm: isAdminEditing ? 3 : 7,
+                            }}
+                        >
                             <Typography variant="caption" gutterBottom>
                                 {locale.description}
                             </Typography>
                         </Grid>
-                        <Grid sx={{ display: { xs: 'none', md: 'block' } }} size={{
-                            md: 2
-                        }}>
+                        <Grid
+                            sx={{ display: { xs: 'none', md: 'block' } }}
+                            size={{
+                                md: 2,
+                            }}
+                        >
                             <Typography variant="caption" gutterBottom>
                                 {locale.size}
                             </Typography>
@@ -448,8 +453,9 @@ export const AttachedFiles = ({
                                 sx={{ textAlign: 'center' }}
                                 size={{
                                     md: 3,
-                                    sm: 4
-                                }}>
+                                    sm: 4,
+                                }}
+                            >
                                 <Typography variant="caption" gutterBottom>
                                     {locale.embargoDateLabel || 'Embargo date'}
                                 </Typography>
@@ -491,8 +497,9 @@ export const AttachedFiles = ({
                                         sx={{ ...classes.dataWrapper }}
                                         size={{
                                             sm: 3,
-                                            xs: 6
-                                        }}>
+                                            xs: 6,
+                                        }}
+                                    >
                                         {isAdminEditing ? (
                                             <EditableFileName
                                                 {...item}
@@ -523,8 +530,9 @@ export const AttachedFiles = ({
                                         sx={{ display: { xs: 'none', sm: 'block' }, ...classes.dataWrapper }}
                                         size={{
                                             md: isAdminEditing ? 3 : 5,
-                                            sm: isAdminEditing ? 3 : 7
-                                        }}>
+                                            sm: isAdminEditing ? 3 : 7,
+                                        }}
+                                    >
                                         {isAdminEditing ? (
                                             <TextField
                                                 fullWidth
@@ -543,9 +551,12 @@ export const AttachedFiles = ({
                                             </Typography>
                                         )}
                                     </Grid>
-                                    <Grid sx={{ display: { xs: 'none', md: 'block' }, ...classes.dataWrapper }} size={{
-                                        md: 2
-                                    }}>
+                                    <Grid
+                                        sx={{ display: { xs: 'none', md: 'block' }, ...classes.dataWrapper }}
+                                        size={{
+                                            md: 2,
+                                        }}
+                                    >
                                         <Typography variant="body2" noWrap>
                                             {item.calculatedSize}
                                         </Typography>
@@ -554,8 +565,9 @@ export const AttachedFiles = ({
                                         <Grid
                                             size={{
                                                 md: 3,
-                                                sm: 4
-                                            }}>
+                                                sm: 4,
+                                            }}
+                                        >
                                             <Grid container wrap="nowrap">
                                                 <Grid size={3}>
                                                     <Box
@@ -623,8 +635,9 @@ export const AttachedFiles = ({
                                             sx={{ textAlign: 'right' }}
                                             size={{
                                                 md: 3,
-                                                sm: 4
-                                            }}>
+                                                sm: 4,
+                                            }}
+                                        >
                                             <Box sx={{ whiteSpace: 'nowrap' }}>
                                                 <Box component={'span'} paddingRight={1}>
                                                     <FileAvStateIcon
@@ -645,7 +658,7 @@ export const AttachedFiles = ({
                                 </Grid>
                                 {!!hasClearedEmbargoDate[getDsIndex(item.id)] && (
                                     /* istanbul ignore next */
-                                    (<React.Fragment>
+                                    <React.Fragment>
                                         <Grid
                                             container
                                             spacing={1}
@@ -669,7 +682,7 @@ export const AttachedFiles = ({
                                                 </Typography>
                                             </Grid>
                                         </Grid>
-                                    </React.Fragment>)
+                                    </React.Fragment>
                                 )}
 
                                 <Grid container direction="row" alignItems="center" spacing={2}>
@@ -690,7 +703,7 @@ export const AttachedFiles = ({
                         </React.Fragment>
                     ))}
                 {preview.mediaUrl && /* istanbul ignore next */ preview.mimeType && (
-                    /* istanbul ignore next */ (<MediaPreview {...preview} onClose={hidePreview} id="media-preview" />)
+                    /* istanbul ignore next */ <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
                 )}
                 {
                     /* istanbul ignore next*/

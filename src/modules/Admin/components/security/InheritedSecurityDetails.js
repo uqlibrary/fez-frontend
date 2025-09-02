@@ -23,22 +23,25 @@ export const InheritedSecurityDetails = ({ title, collections, parentKey }) => (
                     <Grid
                         size={{
                             xs: 12,
-                            sm: 2
-                        }}>
+                            sm: 2,
+                        }}
+                    >
                         <Typography variant="subtitle1">{`${item.rek_ismemberof}`}</Typography>
                     </Grid>
                     <Grid
                         size={{
                             xs: 12,
-                            sm: 7
-                        }}>
+                            sm: 7,
+                        }}
+                    >
                         <Typography variant="subtitle2">{`${item.rek_ismemberof_lookup}`}</Typography>
                     </Grid>
                     <Grid
                         size={{
                             xs: 12,
-                            sm: 3
-                        }}>
+                            sm: 3,
+                        }}
+                    >
                         <Typography variant="body2">
                             <PolicyDescription selectedPolicyKey={(item.parent || {})[parentKey]} />
                         </Typography>

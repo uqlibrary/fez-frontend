@@ -49,8 +49,9 @@ const Links = ({ publication, isAdmin }) => {
                 data-testid={`${linkId}-link`}
                 size={{
                     xs: 12,
-                    sm: 6
-                }}>
+                    sm: 6,
+                }}
+            >
                 <Typography variant={'body2'} component={'span'}>
                     {link}
                 </Typography>
@@ -63,8 +64,9 @@ const Links = ({ publication, isAdmin }) => {
                 data-testid={`${linkId}-description`}
                 size={{
                     xs: 11,
-                    sm: 4
-                }}>
+                    sm: 4,
+                }}
+            >
                 <Typography variant={'body2'} component={'span'}>
                     {description}
                 </Typography>
@@ -74,8 +76,9 @@ const Links = ({ publication, isAdmin }) => {
                 data-testid={`${linkId}-oa-status`}
                 size={{
                     xs: 1,
-                    sm: 2
-                }}>
+                    sm: 2,
+                }}
+            >
                 <OpenAccessIcon {...openAccessStatus} style={{ marginBottom: '-5px' }} />
             </Grid>
         </Grid>
@@ -290,23 +293,33 @@ const Links = ({ publication, isAdmin }) => {
                         borderBottom: `1px solid ${theme.palette.secondary.light}`,
                     })}
                 >
-                    <Grid data-testid="link-label" size={{
-                        sm: 6
-                    }}>
+                    <Grid
+                        data-testid="link-label"
+                        size={{
+                            sm: 6,
+                        }}
+                    >
                         <Typography variant="caption" gutterBottom>
                             {txt.headerTitles.link}
                         </Typography>
                     </Grid>
-                    <Grid data-testid="description-label" sx={{ display: { xs: 'none', sm: 'block' } }} size={{
-                        sm: 4
-                    }}>
+                    <Grid
+                        data-testid="description-label"
+                        sx={{ display: { xs: 'none', sm: 'block' } }}
+                        size={{
+                            sm: 4,
+                        }}
+                    >
                         <Typography variant="caption" gutterBottom>
                             {txt.headerTitles.description}
                         </Typography>
                     </Grid>
-                    <Grid data-testid="oa-status-label" size={{
-                        sm: 2
-                    }}>
+                    <Grid
+                        data-testid="oa-status-label"
+                        size={{
+                            sm: 2,
+                        }}
+                    >
                         <Typography variant="caption" gutterBottom>
                             {txt.headerTitles.oaStatus}
                         </Typography>

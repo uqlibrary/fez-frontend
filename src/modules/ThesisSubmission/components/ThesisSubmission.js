@@ -309,8 +309,9 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: 6
-                                        }}>
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -328,8 +329,9 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: 6
-                                        }}>
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={ThesisSubtypeSelectField}
@@ -496,13 +498,15 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                         <Grid
                             size={{
                                 xs: false,
-                                sm: "grow"
-                            }} />
+                                sm: 'grow',
+                            }}
+                        />
                         <Grid
                             size={{
                                 xs: 12,
-                                sm: "auto"
-                            }}>
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 data-testid="cancel-deposit-thesis"
                                 variant="contained"
@@ -516,8 +520,9 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                         <Grid
                             size={{
                                 xs: 12,
-                                sm: "auto"
-                            }}>
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 type="button"
                                 variant="contained"

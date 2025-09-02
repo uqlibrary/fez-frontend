@@ -393,8 +393,9 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                     <Grid
                         size={{
                             xs: 12,
-                            sm: "auto"
-                        }}>
+                            sm: 'auto',
+                        }}
+                    >
                         <Button
                             color="secondary"
                             fullWidth
@@ -407,8 +408,9 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                         <Grid
                             size={{
                                 xs: 12,
-                                sm: "auto"
-                            }}>
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 onClick={handleSubmit}
                                 style={{ whiteSpace: 'nowrap' }}

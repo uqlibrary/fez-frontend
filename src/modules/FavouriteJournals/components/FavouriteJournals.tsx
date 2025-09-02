@@ -89,8 +89,9 @@ export const FavouriteJournals: React.FC = () => {
                                                 size={{
                                                     xs: 12,
                                                     sm: 6,
-                                                    md: "auto"
-                                                }}>
+                                                    md: 'auto',
+                                                }}
+                                            >
                                                 <LoadingButton
                                                     variant="contained"
                                                     type="submit"
@@ -110,8 +111,9 @@ export const FavouriteJournals: React.FC = () => {
                                             size={{
                                                 xs: 12,
                                                 sm: 6,
-                                                md: "auto"
-                                            }}>
+                                                md: 'auto',
+                                            }}
+                                        >
                                             <BackToSearchButton
                                                 // @ts-ignore
                                                 children={txt.buttons.returnToSearch.title}

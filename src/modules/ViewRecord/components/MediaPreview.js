@@ -35,8 +35,9 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
                     <Grid
                         size={{
                             xs: 12,
-                            sm: "auto"
-                        }}>
+                            sm: 'auto',
+                        }}
+                    >
                         <Button
                             id="open-original-file"
                             data-analyticsid="open-original-file"
@@ -55,8 +56,9 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
                     <Grid
                         size={{
                             xs: 12,
-                            sm: "auto"
-                        }}>
+                            sm: 'auto',
+                        }}
+                    >
                         <Button
                             id="open-web-file"
                             data-analyticsid="open-web-file"
@@ -74,8 +76,9 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
                 <Grid
                     size={{
                         xs: 12,
-                        sm: "auto"
-                    }}>
+                        sm: 'auto',
+                    }}
+                >
                     <Button id="close-preview" variant="contained" onClick={onClose} fullWidth>
                         {close}
                     </Button>

@@ -252,13 +252,15 @@ export const CollectionForm = ({ disableSubmit }) => {
                         <Grid
                             size={{
                                 xs: false,
-                                sm: "grow"
-                            }} />
+                                sm: 'grow',
+                            }}
+                        />
                         <Grid
                             size={{
                                 xs: 12,
-                                sm: "auto"
-                            }}>
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 data-analyticsid="cancel-collection"
                                 data-testid="cancel-collection"
@@ -274,8 +276,9 @@ export const CollectionForm = ({ disableSubmit }) => {
                         <Grid
                             size={{
                                 xs: 12,
-                                sm: "auto"
-                            }}>
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 data-analyticsid="submit-collection"
                                 data-testid="submit-collection"

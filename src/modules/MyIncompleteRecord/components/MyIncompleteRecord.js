@@ -331,8 +331,9 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                                 <Grid
                                                     size={{
                                                         xs: 12,
-                                                        sm: 3
-                                                    }}>
+                                                        sm: 3,
+                                                    }}
+                                                >
                                                     <Typography>
                                                         {
                                                             viewRecordLocale.viewRecord.headings.default
@@ -343,8 +344,9 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                                 <Grid
                                                     size={{
                                                         xs: 12,
-                                                        sm: 9
-                                                    }}>
+                                                        sm: 9,
+                                                    }}
+                                                >
                                                     <Typography>{recordToFix.rek_display_type_lookup}</Typography>
                                                 </Grid>
                                             </Grid>
@@ -364,8 +366,9 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                                 <Grid
                                                     size={{
                                                         xs: 12,
-                                                        sm: 3
-                                                    }}>
+                                                        sm: 3,
+                                                    }}
+                                                >
                                                     <Typography>
                                                         {
                                                             viewRecordLocale.viewRecord.headings.default
@@ -376,8 +379,9 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                                 <Grid
                                                     size={{
                                                         xs: 12,
-                                                        sm: 9
-                                                    }}>
+                                                        sm: 9,
+                                                    }}
+                                                >
                                                     <Typography>{recordToFix.rek_subtype}</Typography>
                                                 </Grid>
                                             </Grid>
@@ -467,8 +471,9 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                             <Grid
                                 size={{
                                     xs: 12,
-                                    md: "auto"
-                                }}>
+                                    md: 'auto',
+                                }}
+                            >
                                 <Button
                                     id="cancel-fix-work"
                                     data-testid="incomplete-record-button-cancel"
@@ -482,8 +487,9 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                             <Grid
                                 size={{
                                     xs: 12,
-                                    md: "auto"
-                                }}>
+                                    md: 'auto',
+                                }}
+                            >
                                 <Button
                                     id="update-my-work"
                                     data-testid="incomplete-record-button-submit"

@@ -303,8 +303,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: 12
-                                        }}>
+                                            sm: 12,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -322,8 +323,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: 12
-                                        }}>
+                                            sm: 12,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -341,8 +343,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: 6
-                                        }}>
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -358,8 +361,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: 6
-                                        }}>
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             id="contact-name-id-auto-complete"
@@ -376,8 +380,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: 12
-                                        }}>
+                                            sm: 12,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -393,8 +398,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: 12
-                                        }}>
+                                            sm: 12,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -410,8 +416,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: 6
-                                        }}>
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -426,8 +433,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: 6
-                                        }}>
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={PartialDateField}
@@ -490,8 +498,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                         size={{
                                             xs: 12,
                                             sm: 12,
-                                            md: 4
-                                        }}>
+                                            md: 4,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={NewGenericSelectField}
@@ -509,8 +518,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                         size={{
                                             xs: 12,
                                             sm: 12,
-                                            md: 4
-                                        }}>
+                                            md: 4,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={NewGenericSelectField}
@@ -528,8 +538,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                         size={{
                                             xs: 12,
                                             sm: 12,
-                                            md: 4
-                                        }}>
+                                            md: 4,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -668,8 +679,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: 6
-                                        }}>
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={PartialDateField}
@@ -689,8 +701,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: 6
-                                        }}>
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={PartialDateField}
@@ -807,13 +820,15 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                         <Grid
                             size={{
                                 xs: false,
-                                sm: "grow"
-                            }} />
+                                sm: 'grow',
+                            }}
+                        />
                         <Grid
                             size={{
                                 xs: 12,
-                                sm: "auto"
-                            }}>
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 variant="contained"
                                 fullWidth
@@ -827,8 +842,9 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                         <Grid
                             size={{
                                 xs: 12,
-                                sm: "auto"
-                            }}>
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 id="submit-data-collection"
                                 data-testid="submit-data-collection"

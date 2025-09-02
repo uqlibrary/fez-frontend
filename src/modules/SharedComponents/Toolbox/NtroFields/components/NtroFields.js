@@ -374,8 +374,9 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: this.row3Width
-                                        }}>
+                                            sm: this.row3Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -392,8 +393,9 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: this.row3Width
-                                        }}>
+                                            sm: this.row3Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -410,8 +412,9 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: this.row3Width
-                                        }}>
+                                            sm: this.row3Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -428,8 +431,9 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: this.row3Width
-                                        }}>
+                                            sm: this.row3Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -446,8 +450,9 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: this.row4Width
-                                        }}>
+                                            sm: this.row4Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -468,8 +473,9 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: this.row4Width
-                                        }}>
+                                            sm: this.row4Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -486,8 +492,9 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: this.row5Width
-                                        }}>
+                                            sm: this.row5Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={SelectField}
@@ -510,8 +517,9 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: this.row5Width
-                                        }}>
+                                            sm: this.row5Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={NewGenericSelectField}
@@ -529,8 +537,9 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid
                                         size={{
                                             xs: 12,
-                                            sm: this.row5Width
-                                        }}>
+                                            sm: this.row5Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={NewGenericSelectField}

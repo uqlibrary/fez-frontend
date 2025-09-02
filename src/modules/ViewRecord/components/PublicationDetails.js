@@ -23,8 +23,9 @@ const PublicationDetails = ({ publication }) => {
                 <Grid
                     size={{
                         xs: 12,
-                        sm: 3
-                    }}>
+                        sm: 3,
+                    }}
+                >
                     <Typography variant="body2" component={'span'} data-testid={`${rowId}-label`}>
                         {heading}
                     </Typography>
@@ -32,8 +33,9 @@ const PublicationDetails = ({ publication }) => {
                 <Grid
                     size={{
                         xs: 12,
-                        sm: 9
-                    }}>
+                        sm: 9,
+                    }}
+                >
                     <Typography variant="body2" component={'span'} data-testid={`${rowId}`}>
                         {data}
                     </Typography>

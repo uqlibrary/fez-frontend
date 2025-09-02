@@ -36,8 +36,9 @@ const NtroDetails = ({ publication, classes, account }) => {
                     data-testid={`${rowId}-label`}
                     size={{
                         xs: 12,
-                        sm: 3
-                    }}>
+                        sm: 3,
+                    }}
+                >
                     <Typography
                         variant="body2"
                         component={'span'}
@@ -60,8 +61,9 @@ const NtroDetails = ({ publication, classes, account }) => {
                 <Grid
                     size={{
                         xs: 12,
-                        sm: 9
-                    }}>
+                        sm: 9,
+                    }}
+                >
                     <Typography variant="body2" component={'span'} sx={{ ...sx }} data-testid={rowId}>
                         {data}
                     </Typography>
@@ -280,7 +282,7 @@ const NtroDetails = ({ publication, classes, account }) => {
                     )}
 
                 {/* Language */}
-                {/* eslint-disable-next-line max-len */}
+                {}
                 {publication.fez_record_search_key_language &&
                     publication.fez_record_search_key_language.length > 0 && (
                         <ViewNtroRow
