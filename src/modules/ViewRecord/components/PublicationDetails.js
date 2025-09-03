@@ -20,12 +20,22 @@ const PublicationDetails = ({ publication }) => {
                 sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                 alignItems="flex-start"
             >
-                <Grid xs={12} sm={3}>
+                <Grid
+                    size={{
+                        xs: 12,
+                        sm: 3,
+                    }}
+                >
                     <Typography variant="body2" component={'span'} data-testid={`${rowId}-label`}>
                         {heading}
                     </Typography>
                 </Grid>
-                <Grid xs={12} sm={9}>
+                <Grid
+                    size={{
+                        xs: 12,
+                        sm: 9,
+                    }}
+                >
                     <Typography variant="body2" component={'span'} data-testid={`${rowId}`}>
                         {data}
                     </Typography>
@@ -64,7 +74,7 @@ const PublicationDetails = ({ publication }) => {
         ) ?? headings.fez_record_search_key_ismemberof;
 
     return (
-        <Grid xs={12}>
+        <Grid size={12}>
             <StandardCard title={sectionTitle}>
                 {publication.rek_display_type_lookup && (
                     <ViewRecordRow

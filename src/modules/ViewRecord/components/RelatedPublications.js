@@ -74,7 +74,7 @@ const RelatedPublications = ({
     }
 
     return (
-        <Grid xs={12}>
+        <Grid size={12}>
             <StandardCard title={title} className="relatedPublications">
                 {renderList(publication, parentSearchKey, childrenSearchKey, showPublicationTitle)}
             </StandardCard>

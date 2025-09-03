@@ -93,7 +93,7 @@ const JournalsListLegacy = ({
                     </StyledGridHeaderRow>
                     {/* Data */}
                     <Grid container spacing={0} padding={0} alignItems="center">
-                        <Grid xs={12} style={{ marginTop: 6 }}>
+                        <Grid style={{ marginTop: 6 }} size={12}>
                             {journals &&
                                 journals.length > 0 &&
                                 journals.map((item, index) => {

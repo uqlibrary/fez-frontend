@@ -32,7 +32,13 @@ const NtroDetails = ({ publication, classes, account }) => {
                 sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                 alignItems="flex-start"
             >
-                <Grid xs={12} sm={3} data-testid={`${rowId}-label`}>
+                <Grid
+                    data-testid={`${rowId}-label`}
+                    size={{
+                        xs: 12,
+                        sm: 3,
+                    }}
+                >
                     <Typography
                         variant="body2"
                         component={'span'}
@@ -52,7 +58,12 @@ const NtroDetails = ({ publication, classes, account }) => {
                         </Typography>
                     )}
                 </Grid>
-                <Grid xs={12} sm={9}>
+                <Grid
+                    size={{
+                        xs: 12,
+                        sm: 9,
+                    }}
+                >
                     <Typography variant="body2" component={'span'} sx={{ ...sx }} data-testid={rowId}>
                         {data}
                     </Typography>
@@ -69,7 +80,7 @@ const NtroDetails = ({ publication, classes, account }) => {
     };
 
     return (
-        <Grid xs={12}>
+        <Grid size={12}>
             <StandardCard title={locale.viewRecord.sections.ntro.title}>
                 {/* Significance */}
                 {publication.fez_record_search_key_author &&

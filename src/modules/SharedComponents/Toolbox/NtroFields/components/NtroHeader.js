@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 const NtroHeader = ({}) => {
     const txt = componentLocale.components.ntroFields.header;
     return (
-        <Grid xs={12}>
+        <Grid size={12}>
             <Alert title={txt.title} message={txt.body} type="info_outline" />
         </Grid>
     );

@@ -29,12 +29,22 @@ const GrantDetails = ({ grantAgencyName, grantId, grantText, order, index }) => 
                 sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                 alignItems="flex-start"
             >
-                <Grid xs={12} sm={3}>
+                <Grid
+                    size={{
+                        xs: 12,
+                        sm: 3,
+                    }}
+                >
                     <Typography variant="body2" data-testid={`rek-grant-label-${index}`}>
                         {`${txt.fez_record_search_key_grant_agency}${(grantIdTitle && ` (${grantIdTitle})`) || ''}`}
                     </Typography>
                 </Grid>
-                <Grid xs={12} sm={9}>
+                <Grid
+                    size={{
+                        xs: 12,
+                        sm: 9,
+                    }}
+                >
                     <Typography variant="body2">
                         <span data-testid={`rek-grant-agency-${index}`}>{grantAgencyName.rek_grant_agency}</span>
                         {(grantIdValue && <span data-testid={`rek-grant-id-${index}`}> ({grantIdValue}) </span>) || ''}
@@ -90,7 +100,7 @@ export const GrantInformation = ({ publication }) => {
     };
 
     return (
-        <Grid xs={12}>
+        <Grid size={12}>
             <StandardCard title={locale.viewRecord.sections.grantInformation}>
                 {fundingText && (
                     <Typography id="grantInformation" variant="body2" gutterBottom data-testid="rek-grant-text">

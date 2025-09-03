@@ -14,13 +14,13 @@ export const SecuritySelector = ({ disabled, text, securityPolicy, fieldName, se
     return (
         <Grid container spacing={1}>
             {!!text.description && (
-                <Grid xs={12}>
+                <Grid size={12}>
                     <Typography variant="body2" component="p">
                         {text.description}
                     </Typography>
                 </Grid>
             )}
-            <Grid xs={12}>
+            <Grid size={12}>
                 <Field
                     control={form.control}
                     component={PolicyDropdown}

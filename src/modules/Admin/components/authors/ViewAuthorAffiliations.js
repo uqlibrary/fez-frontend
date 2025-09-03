@@ -42,13 +42,13 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
     }
 
     return (
-        <Grid container xs={12} spacing={2}>
-            <Grid xs={12} sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }}>
+        <Grid container spacing={2} size={12}>
+            <Grid sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }} size={12}>
                 <Typography variant="caption">{organisationalUnitsTitle}</Typography>
             </Grid>
             {affiliations.map(item => (
                 <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
-                    <Grid xs={2}>
+                    <Grid size={2}>
                         <Chip
                             id={`orgChip-${item.af_org_id}`}
                             data-testid={`orgChip-${item.af_org_id}`}
@@ -58,7 +58,7 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
                             color={hasProblems ? 'error' : 'primary'}
                         />
                     </Grid>
-                    <Grid xs={10}>
+                    <Grid size={10}>
                         <Typography variant="body2" color={hasProblems ? 'error' : 'primary'}>
                             {item.fez_org_structure?.org_title ?? organisationalUnitMissingTitle}
                         </Typography>
@@ -67,7 +67,7 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
             ))}
             {affiliations.length === 0 && (
                 <>
-                    <Grid xs={2}>
+                    <Grid size={2}>
                         <Chip
                             id={'orgChip-error'}
                             data-testid={'orgChip-error'}
@@ -77,7 +77,7 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
                             color={'error'}
                         />
                     </Grid>
-                    <Grid xs={10}>
+                    <Grid size={10}>
                         <Typography variant="body2" color={'error'}>
                             {noAffiliationsAddedTitle}
                         </Typography>
@@ -85,7 +85,7 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
                 </>
             )}
             {hasProblems && (
-                <Grid xs={12}>
+                <Grid size={12}>
                     <Alert type={'warning'} {...alertOptions} />
                 </Grid>
             )}

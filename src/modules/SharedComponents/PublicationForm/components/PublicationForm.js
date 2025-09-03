@@ -282,10 +282,10 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
             <form onSubmit={handleDefaultSubmit}>
                 <Grid container spacing={3}>
                     <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
                             <Grid container spacing={1} padding={0}>
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <Field
                                         control={control}
                                         component={SelectField}
@@ -302,7 +302,7 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                                     </Field>
                                 </Grid>
                                 {hasSubtype && (!subtype || subtypes.includes(subtype)) && (
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             key={`${displayType}${subtype}`}
                                             control={control}
@@ -330,7 +330,7 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                     {!!control && !!FormComponent && (
                         <React.Fragment>
                             {!!isNtro && <NtroHeader />}
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <FormComponent
                                     control={control}
                                     values={values}
@@ -342,10 +342,10 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                                 />
                             </Grid>
                             {showContentIndicatorsField(values) && (
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <StandardCard title={txt.contentIndicators.title} help={txt.contentIndicators.help}>
                                         <Grid container spacing={3} padding={0}>
-                                            <Grid xs={12}>
+                                            <Grid size={12}>
                                                 <Typography>{txt.contentIndicators.description}</Typography>
                                                 <Field
                                                     control={control}
@@ -363,7 +363,7 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                                     </StandardCard>
                                 </Grid>
                             )}
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
                                     <Field
                                         control={control}
@@ -383,14 +383,19 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                         </React.Fragment>
                     )}
                     {!!FormComponent && alertProps && (
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <Alert pushToTop {...alertProps} />
                         </Grid>
                     )}
                 </Grid>
                 <Grid container spacing={3}>
-                    <Grid xs />
-                    <Grid xs={12} sm="auto">
+                    <Grid size="grow" />
+                    <Grid
+                        size={{
+                            xs: 12,
+                            sm: 'auto',
+                        }}
+                    >
                         <Button
                             color="secondary"
                             fullWidth
@@ -400,7 +405,12 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                         />
                     </Grid>
                     {!!displayType && (!hasSubtype || subtype) && (
-                        <Grid xs={12} sm="auto">
+                        <Grid
+                            size={{
+                                xs: 12,
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 onClick={handleSubmit}
                                 style={{ whiteSpace: 'nowrap' }}

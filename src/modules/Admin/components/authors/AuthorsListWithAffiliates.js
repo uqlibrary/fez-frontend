@@ -96,7 +96,7 @@ export const AuthorDetailPanel = ({ rowData, locale, isEditing, setEditing, onCh
     } = locale;
 
     return (
-        <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }} data-testid={`detailPanel-${rowData.aut_id}`}>
+        <Grid container sx={{ padding: 2 }} data-testid={`detailPanel-${rowData.aut_id}`} size={11} offset={1}>
             <Typography variant="body2">
                 {affiliationsLocale.title}
                 {!isEditing && (

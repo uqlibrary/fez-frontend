@@ -32,7 +32,12 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
         >
             <Grid container spacing={2} padding={0} justifyContent="flex-end" direction="row">
                 {mediaUrl && (
-                    <Grid xs={12} sm="auto">
+                    <Grid
+                        size={{
+                            xs: 12,
+                            sm: 'auto',
+                        }}
+                    >
                         <Button
                             id="open-original-file"
                             data-analyticsid="open-original-file"
@@ -48,7 +53,12 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
                 )}
 
                 {webMediaUrl && (
-                    <Grid xs={12} sm="auto">
+                    <Grid
+                        size={{
+                            xs: 12,
+                            sm: 'auto',
+                        }}
+                    >
                         <Button
                             id="open-web-file"
                             data-analyticsid="open-web-file"
@@ -63,7 +73,12 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
                     </Grid>
                 )}
 
-                <Grid xs={12} sm="auto">
+                <Grid
+                    size={{
+                        xs: 12,
+                        sm: 'auto',
+                    }}
+                >
                     <Button id="close-preview" variant="contained" onClick={onClose} fullWidth>
                         {close}
                     </Button>
@@ -114,7 +129,7 @@ export const MediaPreview = ({ ...props }) => {
         <React.Fragment>
             <Grid container spacing={0} direction="row" style={{ marginTop: 32 }}>
                 <span ref={mediaPreviewRef} />
-                <Grid xs>
+                <Grid size="grow">
                     <Typography id="medie-preview-title" variant="h6" component="h2">
                         {title}
                     </Typography>
@@ -164,8 +179,8 @@ export const MediaPreview = ({ ...props }) => {
             )}
             {isPreviewable && !imageError && (
                 <Grid container spacing={4}>
-                    <Grid xs />
-                    <Grid xs="auto">
+                    <Grid size="grow" />
+                    <Grid size="auto">
                         <img
                             id="image-preview"
                             data-analyticsid="image-preview"
@@ -177,7 +192,7 @@ export const MediaPreview = ({ ...props }) => {
                             onError={onImageFailed}
                         />
                     </Grid>
-                    <Grid xs />
+                    <Grid size="grow" />
                 </Grid>
             )}
             {isVideo && !imageError && videoLoading && (
