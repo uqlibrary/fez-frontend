@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 const StyledGrid = styled(Grid)(({ theme }) => ({
-    '&.MuiGrid-item': {
+    '&.MuiGridLegacy-item': {
         maxWidth: '1200px',
         margin: '24px auto',
         width: '90%',

@@ -115,7 +115,12 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
                                         ...classes.inputLabel,
                                     }}
                                 >
-                                    <Box display="flex" alignItems="flex-end">
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            alignItems: 'flex-end',
+                                        }}
+                                    >
                                         <Typography variant="body1" sx={{ ...classes.inputLabel }}>
                                             {header.label}
                                             {!!header.subLabel && (

@@ -120,7 +120,7 @@ export const SimpleSearchComponent = ({
                                     item
                                     xs={'auto'}
                                     sx={{
-                                        '&.MuiGrid-item': {
+                                        '&.MuiGridLegacy-item': {
                                             padding: '4px',
                                         },
                                     }}
@@ -135,7 +135,7 @@ export const SimpleSearchComponent = ({
                                 item
                                 xs
                                 sx={{
-                                    '&.MuiGrid-item': {
+                                    '&.MuiGridLegacy-item': {
                                         padding: '4px',
                                     },
                                 }}

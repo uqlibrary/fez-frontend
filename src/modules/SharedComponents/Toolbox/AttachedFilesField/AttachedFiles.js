@@ -412,9 +412,12 @@ export const AttachedFiles = ({
                     <Grid
                         container
                         direction="row"
-                        alignItems="center"
                         spacing={2}
-                        sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
+                        sx={{
+                            alignItems: 'center',
+                            borderBottom: '1px solid',
+                            borderBottomColor: 'secondary.light',
+                        }}
                     >
                         <Grid size={1}>&nbsp;</Grid>
                         <Grid
@@ -471,8 +474,22 @@ export const AttachedFiles = ({
                                 data-testid={`fez-datastream-info-attached-list-row-${item.id}`}
                                 sx={{ padding: 1, borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                             >
-                                <Grid container direction="row" alignItems="center" spacing={2}>
-                                    <Grid padding={0} wrap="nowrap" textAlign={'center'} size={1}>
+                                <Grid
+                                    container
+                                    direction="row"
+                                    spacing={2}
+                                    sx={{
+                                        alignItems: 'center',
+                                    }}
+                                >
+                                    <Grid
+                                        wrap="nowrap"
+                                        size={1}
+                                        sx={{
+                                            padding: 0,
+                                            textAlign: 'center',
+                                        }}
+                                    >
                                         <IconButton
                                             disabled={index === 0}
                                             sx={{ ...classes.upDownArrow }}
@@ -485,7 +502,14 @@ export const AttachedFiles = ({
                                         </IconButton>
                                     </Grid>
                                 </Grid>
-                                <Grid container direction="row" alignItems="center" spacing={2}>
+                                <Grid
+                                    container
+                                    direction="row"
+                                    spacing={2}
+                                    sx={{
+                                        alignItems: 'center',
+                                    }}
+                                >
                                     <Grid sx={{ textAlign: 'center' }} size={1}>
                                         <FileIcon
                                             {...item.iconProps}
@@ -576,14 +600,24 @@ export const AttachedFiles = ({
                                                             whiteSpace: 'nowrap',
                                                         }}
                                                     >
-                                                        <Box component={'span'} paddingRight={1}>
+                                                        <Box
+                                                            component={'span'}
+                                                            sx={{
+                                                                paddingRight: 1,
+                                                            }}
+                                                        >
                                                             <FileAvStateIcon
                                                                 state={item.avCheck?.state}
                                                                 checkedAt={item.avCheck?.date}
                                                                 id={item.id}
                                                             />
                                                         </Box>
-                                                        <Box component={'span'} paddingRight={1}>
+                                                        <Box
+                                                            component={'span'}
+                                                            sx={{
+                                                                paddingRight: 1,
+                                                            }}
+                                                        >
                                                             <OpenAccessIcon
                                                                 {...item.openAccessStatus}
                                                                 securityStatus={item.securityStatus}
@@ -639,14 +673,24 @@ export const AttachedFiles = ({
                                             }}
                                         >
                                             <Box sx={{ whiteSpace: 'nowrap' }}>
-                                                <Box component={'span'} paddingRight={1}>
+                                                <Box
+                                                    component={'span'}
+                                                    sx={{
+                                                        paddingRight: 1,
+                                                    }}
+                                                >
                                                     <FileAvStateIcon
                                                         state={item.avCheck?.state}
                                                         checkedAt={item.avCheck?.date}
                                                         id={item.id}
                                                     />
                                                 </Box>
-                                                <Box component={'span'} paddingRight={1}>
+                                                <Box
+                                                    component={'span'}
+                                                    sx={{
+                                                        paddingRight: 1,
+                                                    }}
+                                                >
                                                     <OpenAccessIcon
                                                         {...item.openAccessStatus}
                                                         securityStatus={item.securityStatus}
@@ -662,10 +706,12 @@ export const AttachedFiles = ({
                                         <Grid
                                             container
                                             spacing={1}
-                                            alignContent={'flex-end'}
-                                            alignItems={'flex-end'}
-                                            justifyContent={'flex-end'}
-                                            sx={{ marginTop: '4px' }}
+                                            sx={{
+                                                alignContent: 'flex-end',
+                                                alignItems: 'flex-end',
+                                                justifyContent: 'flex-end',
+                                                marginTop: '4px',
+                                            }}
                                         >
                                             <Grid size={6} />
                                             <Grid size={6}>
@@ -685,8 +731,22 @@ export const AttachedFiles = ({
                                     </React.Fragment>
                                 )}
 
-                                <Grid container direction="row" alignItems="center" spacing={2}>
-                                    <Grid padding={0} wrap="nowrap" textAlign={'center'} size={1}>
+                                <Grid
+                                    container
+                                    direction="row"
+                                    spacing={2}
+                                    sx={{
+                                        alignItems: 'center',
+                                    }}
+                                >
+                                    <Grid
+                                        wrap="nowrap"
+                                        size={1}
+                                        sx={{
+                                            padding: 0,
+                                            textAlign: 'center',
+                                        }}
+                                    >
                                         <IconButton
                                             sx={{ ...classes.upDownArrow }}
                                             disabled={index === fileData.length - 1}

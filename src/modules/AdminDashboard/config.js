@@ -100,11 +100,24 @@ export const optionDoubleRowRender = (props, option) => {
             }}
             data-testid={props.id}
         >
-            <Typography component={'div'} variant="body1" color="textPrimary" fontWeight={500}>
+            <Typography
+                component={'div'}
+                variant="body1"
+                color="textPrimary"
+                sx={{
+                    fontWeight: 500,
+                }}
+            >
                 {option.sel_title}{' '}
                 {hasBindings && (
                     <Stack direction="row" spacing={1}>
-                        <Typography variant="body2" color="textPrimary" fontWeight={500}>
+                        <Typography
+                            variant="body2"
+                            color="textPrimary"
+                            sx={{
+                                fontWeight: 500,
+                            }}
+                        >
                             Requires:{' '}
                         </Typography>
                         {option.sel_bindings.map((binding, index) => (

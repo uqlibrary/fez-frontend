@@ -76,7 +76,13 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                             control={control}
                         />
                         {errors.qlk_title?.type === 'required' && (
-                            <Box sx={{ color: 'error.main' }} fontSize={'0.75rem'} role="alert">
+                            <Box
+                                role="alert"
+                                sx={{
+                                    fontSize: '0.75rem',
+                                    color: 'error.main',
+                                }}
+                            >
                                 Required
                             </Box>
                         )}
@@ -107,7 +113,13 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                             control={control}
                         />
                         {errors.qlk_link?.type === 'required' && (
-                            <Box sx={{ color: 'error.main' }} fontSize={'0.75rem'} role="alert">
+                            <Box
+                                role="alert"
+                                sx={{
+                                    fontSize: '0.75rem',
+                                    color: 'error.main',
+                                }}
+                            >
                                 Required
                             </Box>
                         )}

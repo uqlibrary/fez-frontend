@@ -251,7 +251,13 @@ const FixRecord = () => {
                                 />
                                 <Grid size={12}>
                                     <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
-                                        <Grid container spacing={2} padding={0}>
+                                        <Grid
+                                            container
+                                            spacing={2}
+                                            sx={{
+                                                padding: 0,
+                                            }}
+                                        >
                                             <Grid size={12}>
                                                 <Field
                                                     control={control}
@@ -288,7 +294,13 @@ const FixRecord = () => {
                                             title={txtFixForm.contentIndicators.title}
                                             help={txtFixForm.contentIndicators.help}
                                         >
-                                            <Grid container spacing={3} padding={0}>
+                                            <Grid
+                                                container
+                                                spacing={3}
+                                                sx={{
+                                                    padding: 0,
+                                                }}
+                                            >
                                                 <Grid size={12}>
                                                     <Typography>{txtFixForm.contentIndicators.description}</Typography>
                                                 </Grid>

@@ -220,7 +220,13 @@ export class PublicationsListPaging extends Component {
                             data-testid={`${this.props.pagingId}-mobile-controls`}
                             id={`${this.props.pagingId}-mobile-controls`}
                         >
-                            <Box textAlign={'center'} paddingLeft={1} paddingRight={1}>
+                            <Box
+                                sx={{
+                                    textAlign: 'center',
+                                    paddingLeft: 1,
+                                    paddingRight: 1,
+                                }}
+                            >
                                 <StyledPrevNextButton
                                     variant={'text'}
                                     children={txt.pageOf

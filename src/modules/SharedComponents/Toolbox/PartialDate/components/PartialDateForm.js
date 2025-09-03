@@ -283,14 +283,29 @@ const PartialDateForm = props => {
     const isError = error || hasError || '';
 
     return (
-        <Grid container spacing={0} padding={0} id={partialDateFormId}>
+        <Grid
+            container
+            spacing={0}
+            id={partialDateFormId}
+            sx={{
+                padding: 0,
+            }}
+        >
             <Grid size={12}>
                 <InputLabel error={!!isError} shrink required={required}>
                     {floatingTitle}
                 </InputLabel>
             </Grid>
             <Grid size={12}>
-                <Grid container spacing={2} padding={0} style={{ marginTop: -12 }} flexWrap={'nowrap'}>
+                <Grid
+                    container
+                    spacing={2}
+                    style={{ marginTop: -12 }}
+                    sx={{
+                        padding: 0,
+                        flexWrap: 'nowrap',
+                    }}
+                >
                     <Grid size="grow">
                         <TextField
                             name="day"

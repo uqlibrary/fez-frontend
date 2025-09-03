@@ -30,7 +30,15 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
             id={id}
             data-testid={id}
         >
-            <Grid container spacing={2} padding={0} justifyContent="flex-end" direction="row">
+            <Grid
+                container
+                spacing={2}
+                direction="row"
+                sx={{
+                    padding: 0,
+                    justifyContent: 'flex-end',
+                }}
+            >
                 {mediaUrl && (
                     <Grid
                         size={{

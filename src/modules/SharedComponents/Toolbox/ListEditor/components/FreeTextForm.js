@@ -103,7 +103,13 @@ export const FreeTextForm = ({
                     }}
                 />
                 {remindToAdd && remindToAddText && item.length !== 0 && !isValid(item) && (
-                    <Typography variant="caption" mt={'8px'} color={'#f06f0d'}>
+                    <Typography
+                        variant="caption"
+                        sx={{
+                            mt: '8px',
+                            color: '#f06f0d',
+                        }}
+                    >
                         {remindToAddText}
                     </Typography>
                 )}

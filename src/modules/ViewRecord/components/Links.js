@@ -34,16 +34,20 @@ const Links = ({ publication, isAdmin }) => {
         <Grid
             container
             spacing={2}
-            sx={theme => ({
-                padding: {
-                    xs: `${theme.spacing(1)} 0`,
-                    sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
+            sx={[
+                {
+                    alignItems: 'center',
+                    alignContent: 'center',
+                    justifyContent: 'center',
                 },
-                borderBottom: `1px solid ${theme.palette.secondary.light}`,
-            })}
-            alignItems={'center'}
-            alignContent={'center'}
-            justifyContent={'center'}
+                theme => ({
+                    padding: {
+                        xs: `${theme.spacing(1)} 0`,
+                        sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
+                    },
+                    borderBottom: `1px solid ${theme.palette.secondary.light}`,
+                }),
+            ]}
         >
             <Grid
                 data-testid={`${linkId}-link`}
@@ -57,14 +61,16 @@ const Links = ({ publication, isAdmin }) => {
                 </Typography>
             </Grid>
             <Grid
-                whiteSpace={'nowrap'}
-                textOverflow={'ellipsis'}
-                overflow={'hidden'}
                 data-analyticsid={`${linkId}-description`}
                 data-testid={`${linkId}-description`}
                 size={{
                     xs: 11,
                     sm: 4,
+                }}
+                sx={{
+                    whiteSpace: 'nowrap',
+                    textOverflow: 'ellipsis',
+                    overflow: 'hidden',
                 }}
             >
                 <Typography variant={'body2'} component={'span'}>
@@ -282,16 +288,20 @@ const Links = ({ publication, isAdmin }) => {
                 <Grid
                     container
                     direction="row"
-                    alignItems="center"
                     spacing={2}
-                    padding={0}
-                    sx={theme => ({
-                        padding: {
-                            xs: `${theme.spacing(1)} 0`,
-                            sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
+                    sx={[
+                        {
+                            alignItems: 'center',
+                            padding: 0,
                         },
-                        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-                    })}
+                        theme => ({
+                            padding: {
+                                xs: `${theme.spacing(1)} 0`,
+                                sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
+                            },
+                            borderBottom: `1px solid ${theme.palette.secondary.light}`,
+                        }),
+                    ]}
                 >
                     <Grid
                         data-testid="link-label"

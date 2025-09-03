@@ -141,16 +141,24 @@ export const CollectionForm = ({ disableSubmit }) => {
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
                 <form>
                     <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
-                    <Grid container spacing={3} padding={0}>
+                    <Grid
+                        container
+                        spacing={3}
+                        sx={{
+                            padding: 0,
+                        }}
+                    >
                         {!!!hasParams && (
                             <Grid size={12}>
                                 <StandardCard title={txt.title} help={txt.help}>
                                     <Grid
                                         container
                                         spacing={3}
-                                        padding={0}
                                         id="community-selector"
                                         data-testid="community-selector"
+                                        sx={{
+                                            padding: 0,
+                                        }}
                                     >
                                         <Grid size={12}>
                                             <Field
@@ -171,7 +179,13 @@ export const CollectionForm = ({ disableSubmit }) => {
                         {(!!hasParams || selectedCommunity) && (
                             <Grid size={12}>
                                 <StandardCard title={detailsTitle} help={txt.details.help}>
-                                    <Grid container spacing={3} padding={0}>
+                                    <Grid
+                                        container
+                                        spacing={3}
+                                        sx={{
+                                            padding: 0,
+                                        }}
+                                    >
                                         <Grid size={12}>
                                             <Field
                                                 control={control}
@@ -248,7 +262,13 @@ export const CollectionForm = ({ disableSubmit }) => {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={2} padding={0}>
+                    <Grid
+                        container
+                        spacing={2}
+                        sx={{
+                            padding: 0,
+                        }}
+                    >
                         <Grid
                             size={{
                                 xs: false,

@@ -87,15 +87,24 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
         !!row && (
             <Drawer anchor="right" open={open} onClose={handleCloseDrawer} id={rootId} data-testid={rootId}>
                 <Box
-                    sx={{ width: [320, 500] }}
                     role="presentation"
-                    padding={2}
-                    boxSizing={'border-box'}
-                    display={'flex'}
-                    flex={1}
-                    flexDirection={'column'}
+                    sx={{
+                        padding: 2,
+                        boxSizing: 'border-box',
+                        display: 'flex',
+                        flex: 1,
+                        flexDirection: 'column',
+                        width: [320, 500],
+                    }}
                 >
-                    <Typography component={'h2'} fontSize={'1.45rem'} fontWeight={500} data-testid={`${rootId}-title`}>
+                    <Typography
+                        component={'h2'}
+                        data-testid={`${rootId}-title`}
+                        sx={{
+                            fontSize: '1.45rem',
+                            fontWeight: 500,
+                        }}
+                    >
                         {row.sat_title}
                     </Typography>
                     {isUrl(row.sat_link) && (
@@ -106,22 +115,42 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                     <StyledDivider />
                     <Grid container spacing={1}>
                         <Grid item xs={4}>
-                            <Typography fontWeight={400} data-testid={`${rootId}-id-label`}>
+                            <Typography
+                                data-testid={`${rootId}-id-label`}
+                                sx={{
+                                    fontWeight: 400,
+                                }}
+                            >
                                 {txt.alertId}
                             </Typography>
                         </Grid>
                         <Grid item xs={8}>
-                            <Typography fontWeight={'normal'} data-testid={`${rootId}-id`}>
+                            <Typography
+                                data-testid={`${rootId}-id`}
+                                sx={{
+                                    fontWeight: 'normal',
+                                }}
+                            >
                                 {row.sat_id}
                             </Typography>
                         </Grid>
                         <Grid item xs={4}>
-                            <Typography fontWeight={400} data-testid={`${rootId}-date-created-label`}>
+                            <Typography
+                                data-testid={`${rootId}-date-created-label`}
+                                sx={{
+                                    fontWeight: 400,
+                                }}
+                            >
                                 {txt.received}
                             </Typography>
                         </Grid>
                         <Grid item xs={8}>
-                            <Typography fontWeight={'normal'} data-testid={`${rootId}-date-created`}>
+                            <Typography
+                                data-testid={`${rootId}-date-created`}
+                                sx={{
+                                    fontWeight: 'normal',
+                                }}
+                            >
                                 {getFormattedServerDate(row.sat_created_date, DEFAULT_DATE_FORMAT_WITH_TIME_24H)}
                             </Typography>
                         </Grid>
@@ -196,7 +225,14 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                         />
                     </Box>
                     {!!buttonLabel && (
-                        <Box display={'flex'} flex={1} flexDirection={'column'} justifyContent={'flex-end'}>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flex: 1,
+                                flexDirection: 'column',
+                                justifyContent: 'flex-end',
+                            }}
+                        >
                             <Button
                                 fullWidth
                                 color="primary"

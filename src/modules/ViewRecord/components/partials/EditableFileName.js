@@ -118,9 +118,11 @@ const EditableFileName = ({
                                 data-testid={`${props.id}-edited`}
                                 variant="body2"
                                 color="textPrimary"
-                                overflow={'hidden'}
-                                whiteSpace={'nowrap'}
-                                textOverflow={'ellipsis'}
+                                sx={{
+                                    overflow: 'hidden',
+                                    whiteSpace: 'nowrap',
+                                    textOverflow: 'ellipsis',
+                                }}
                             >
                                 {editedFilenameRef.current}
                             </Typography>

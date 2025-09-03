@@ -27,7 +27,7 @@ describe('JournalsListHeaderCol2 Full', () => {
         });
         expect(queryByTestId('help-icon-test-record')).toBeInTheDocument();
         const dataElement = queryByTestId('journal-list-header-full-test-record');
-        expect(dataElement.querySelector('div.MuiGrid-grid-xs-2').style.marginRight).toEqual('10px');
+        expect(dataElement.querySelector('div.MuiGridLegacy-grid-xs-2').style.marginRight).toEqual('10px');
     });
     it('Should show a title help if one provided, no margin', () => {
         const { queryByTestId } = setup({
@@ -39,7 +39,7 @@ describe('JournalsListHeaderCol2 Full', () => {
         });
         expect(queryByTestId('help-icon-test-record')).toBeInTheDocument();
         const dataElement = queryByTestId('journal-list-header-full-test-record');
-        expect(dataElement.querySelector('div.MuiGrid-grid-xs-2').style.marginRight).toEqual('0px');
+        expect(dataElement.querySelector('div.MuiGridLegacy-grid-xs-2').style.marginRight).toEqual('0px');
     });
 
     it('Should not show a title help if none provided', () => {

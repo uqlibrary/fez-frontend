@@ -176,7 +176,11 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     };
 
     return (
-        <Box display={'table'}>
+        <Box
+            sx={{
+                display: 'table',
+            }}
+        >
             <TableRow onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row">
                 <TableCell colSpan={4} sx={{ p: 0 }}>
                     <ScrollToSection scrollToSection>
