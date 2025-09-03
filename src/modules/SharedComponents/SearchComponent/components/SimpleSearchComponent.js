@@ -162,8 +162,12 @@ export const SimpleSearchComponent = ({
                                 <Tooltip
                                     title={txt.searchBoxPlaceholder}
                                     placement="bottom-end"
-                                    TransitionComponent={Fade}
-                                    TransitionProps={{ timeout: 300 }}
+                                    slots={{
+                                        transition: Fade,
+                                    }}
+                                    slotProps={{
+                                        transition: { timeout: 300 },
+                                    }}
                                 >
                                     <IconButton
                                         onClick={_handleToggleMobile}

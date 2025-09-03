@@ -151,33 +151,32 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                     label={txt.status}
                                     helperText={txt.statusHelpText}
                                     variant="standard"
-                                    InputProps={{
-                                        ...params.InputProps,
-                                        endAdornment: (
-                                            <React.Fragment>
-                                                {adminDashboardSystemAlertsUpdating ? (
-                                                    <CircularProgress color="inherit" size={20} />
-                                                ) : null}
-                                                {params.InputProps.endAdornment}
-                                            </React.Fragment>
-                                        ),
-                                    }}
-                                    inputProps={{
-                                        ...params.inputProps,
-                                        id: `${rootId}-assignee-input`,
-                                        'data-analyticsid': `${rootId}-assignee-input`,
-                                        'data-testid': `${rootId}-assignee-input`,
-                                    }}
-                                    InputLabelProps={{
-                                        'data-testid': `${rootId}-assignee-label`,
+                                    slotProps={{
+                                        input: {
+                                            ...params.InputProps,
+                                            endAdornment: (
+                                                <React.Fragment>
+                                                    {adminDashboardSystemAlertsUpdating ? (
+                                                        <CircularProgress color="inherit" size={20} />
+                                                    ) : null}
+                                                    {params.InputProps.endAdornment}
+                                                </React.Fragment>
+                                            ),
+                                        },
+
+                                        htmlInput: {
+                                            ...params.inputProps,
+                                            id: `${rootId}-assignee-input`,
+                                            'data-analyticsid': `${rootId}-assignee-input`,
+                                            'data-testid': `${rootId}-assignee-input`,
+                                        },
+
+                                        inputLabel: {
+                                            'data-testid': `${rootId}-assignee-label`,
+                                        },
                                     }}
                                 />
                             )}
-                            ListboxProps={{
-                                id: `${rootId}-options`,
-                                'data-analyticsid': `${rootId}-options`,
-                                'data-testid': `${rootId}-options`,
-                            }}
                             options={adminUsers}
                             getOptionLabel={option => option.preferred_name}
                             value={
@@ -187,6 +186,13 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                             }
                             onChange={handleAssignedChange}
                             disabled={adminDashboardSystemAlertsUpdating || !!row.sat_resolved_by}
+                            slotProps={{
+                                listbox: {
+                                    id: `${rootId}-options`,
+                                    'data-analyticsid': `${rootId}-options`,
+                                    'data-testid': `${rootId}-options`,
+                                },
+                            }}
                         />
                     </Box>
                     {!!buttonLabel && (

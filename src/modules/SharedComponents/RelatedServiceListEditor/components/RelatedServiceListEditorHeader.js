@@ -53,15 +53,19 @@ export const RelatedServiceListEditorHeader = ({
                             <Grid item xs={12} sm={5}>
                                 <ListItemText
                                     secondary={RelatedServiceID}
-                                    secondaryTypographyProps={{ variant: 'caption' }}
                                     style={{ padding: 0 }}
+                                    slotProps={{
+                                        secondary: { variant: 'caption' },
+                                    }}
                                 />
                             </Grid>
                             <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 <ListItemText
                                     secondary={RelatedServiceDesc}
-                                    secondaryTypographyProps={{ variant: 'caption' }}
                                     style={{ padding: 0 }}
+                                    slotProps={{
+                                        secondary: { variant: 'caption' },
+                                    }}
                                 />
                             </Grid>
                         </Grid>
@@ -72,9 +76,11 @@ export const RelatedServiceListEditorHeader = ({
                                 <Grid item xs={8} sx={{ display: { xs: 'none', md: 'block' } }}>
                                     <ListItemText
                                         secondary={reorderColumn}
-                                        secondaryTypographyProps={{ variant: 'caption' }}
                                         style={{ padding: 0 }}
                                         sx={{ textAlign: 'right' }}
+                                        slotProps={{
+                                            secondary: { variant: 'caption' },
+                                        }}
                                     />
                                 </Grid>
                                 <Grid

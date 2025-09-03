@@ -17,14 +17,16 @@ export const DateRangeForm = ({ from, to, setFrom, setTo, setDateRange, locale, 
                         type="number"
                         name="from"
                         id="from"
-                        inputProps={{
-                            'data-testid': 'from',
-                        }}
                         label={locale.fromFieldLabel}
                         defaultValue={from}
                         onChange={setFrom}
                         disabled={disabled}
                         fullWidth
+                        slotProps={{
+                            htmlInput: {
+                                'data-testid': 'from',
+                            },
+                        }}
                     />
                 </Grid>
                 <Grid item xs={4}>
@@ -33,14 +35,16 @@ export const DateRangeForm = ({ from, to, setFrom, setTo, setDateRange, locale, 
                         type="number"
                         name="to"
                         id="to"
-                        inputProps={{
-                            'data-testid': 'to',
-                        }}
                         label={locale.toFieldLabel}
                         defaultValue={to}
                         onChange={setTo}
                         disabled={disabled}
                         fullWidth
+                        slotProps={{
+                            htmlInput: {
+                                'data-testid': 'to',
+                            },
+                        }}
                     />
                 </Grid>
                 <Grid item>

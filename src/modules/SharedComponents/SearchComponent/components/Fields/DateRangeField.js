@@ -96,7 +96,9 @@ export const DateRangeField = ({
                         sx={{ width: '24px' }}
                         value=" to "
                         disabled
-                        InputProps={{ disableUnderline: true }}
+                        slotProps={{
+                            input: { disableUnderline: true },
+                        }}
                     />
                 </Grid>
                 <Grid item zeroMinWidth sx={{ flexGrow: 1, width: '1px' }}>

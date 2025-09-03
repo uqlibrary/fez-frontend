@@ -54,11 +54,13 @@ export const PublicationYearRangeField = ({
                         helperText={invalid && txt.invalidText}
                         placeholder={txt.fromHint}
                         aria-label={txt.fromAria}
-                        inputProps={{
-                            'aria-labelledby': 'from-label',
-                            'data-testid': 'from',
-                        }}
                         disabled={disabled}
+                        slotProps={{
+                            htmlInput: {
+                                'aria-labelledby': 'from-label',
+                                'data-testid': 'from',
+                            },
+                        }}
                     />
                 </Grid>
                 <Grid item xs={'auto'}>
@@ -67,9 +69,11 @@ export const PublicationYearRangeField = ({
                         sx={{ width: '24px' }}
                         value={' to '}
                         disabled
-                        InputProps={{
-                            disableUnderline: true,
-                            'aria-labelledby': 'combiner-label',
+                        slotProps={{
+                            input: {
+                                disableUnderline: true,
+                                'aria-labelledby': 'combiner-label',
+                            },
                         }}
                     />
                 </Grid>
@@ -85,9 +89,11 @@ export const PublicationYearRangeField = ({
                         placeholder={txt.toHint}
                         aria-label={txt.toAria}
                         disabled={disabled}
-                        inputProps={{
-                            'aria-labelledby': 'to-label',
-                            'data-testid': 'to',
+                        slotProps={{
+                            htmlInput: {
+                                'aria-labelledby': 'to-label',
+                                'data-testid': 'to',
+                            },
                         }}
                     />
                 </Grid>

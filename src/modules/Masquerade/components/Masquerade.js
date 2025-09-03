@@ -46,7 +46,9 @@ const Masquerade = ({ account }) => {
                             label={txt.labels.hint}
                             value={userName}
                             onChange={usernameChanged}
-                            InputProps={{ onKeyPress: masqueradeAs }}
+                            slotProps={{
+                                input: { onKeyPress: masqueradeAs },
+                            }}
                         />
                     </Grid>
                     <Grid item xs={12} sm={'auto'}>

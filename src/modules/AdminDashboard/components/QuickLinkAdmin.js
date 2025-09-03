@@ -64,8 +64,10 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                                     maxRows={2}
                                     disabled={isDelete}
                                     error={!!!field.value}
-                                    inputProps={{
-                                        'data-testid': 'qlk_title-input',
+                                    slotProps={{
+                                        htmlInput: {
+                                            'data-testid': 'qlk_title-input',
+                                        },
                                     }}
                                 />
                             )}
@@ -93,8 +95,10 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                                     maxRows={3}
                                     disabled={isDelete}
                                     error={!!!field.value}
-                                    inputProps={{
-                                        'data-testid': 'qlk_link-input',
+                                    slotProps={{
+                                        htmlInput: {
+                                            'data-testid': 'qlk_link-input',
+                                        },
                                     }}
                                 />
                             )}

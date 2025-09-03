@@ -54,11 +54,14 @@ export default function NonUqOrgAffiliationFormSection({
                     disabled={disableAffiliationEdit}
                     error={orgAffiliationError}
                     id="org-affiliation-name"
-                    inputProps={{
-                        'data-testid': 'org-affiliation-name',
-                    }}
-                    InputLabelProps={{
-                        'data-testid': 'org-affiliation-name-label',
+                    slotProps={{
+                        htmlInput: {
+                            'data-testid': 'org-affiliation-name',
+                        },
+
+                        inputLabel: {
+                            'data-testid': 'org-affiliation-name-label',
+                        },
                     }}
                 />
             </Grid>

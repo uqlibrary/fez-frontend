@@ -201,15 +201,20 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                 {...params}
                                                 size={'small'}
                                                 variant={'standard'}
-                                                inputProps={{
-                                                    ...params.inputProps,
-                                                    id: `orgSelect-${item.af_org_id}-input`,
-                                                    'data-testid': `orgSelect-${item.af_org_id}-input`,
-                                                    placeholder: organisationPlaceholderText,
-                                                }}
-                                                InputProps={{
-                                                    ...params.InputProps,
-                                                    error: !!!uniqueOrgs?.find(org => org.org_id === item.af_org_id),
+                                                slotProps={{
+                                                    input: {
+                                                        ...params.InputProps,
+                                                        error: !!!uniqueOrgs?.find(
+                                                            org => org.org_id === item.af_org_id,
+                                                        ),
+                                                    },
+
+                                                    htmlInput: {
+                                                        ...params.inputProps,
+                                                        id: `orgSelect-${item.af_org_id}-input`,
+                                                        'data-testid': `orgSelect-${item.af_org_id}-input`,
+                                                        placeholder: organisationPlaceholderText,
+                                                    },
                                                 }}
                                             />
                                         )}
@@ -229,9 +234,11 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                 actionHandler[ACTIONS.CHANGE](actionDispatch, item, newValue);
                                             }
                                         }}
-                                        ListboxProps={{
-                                            id: `orgSelect-${item.af_org_id}-options`,
-                                            'data-testid': `orgSelect-${item.af_org_id}-options`,
+                                        slotProps={{
+                                            listbox: {
+                                                id: `orgSelect-${item.af_org_id}-options`,
+                                                'data-testid': `orgSelect-${item.af_org_id}-options`,
+                                            },
                                         }}
                                     />
                                 </Grid>
@@ -293,10 +300,12 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                             size={'small'}
                                             variant={'standard'}
                                             placeholder={organisationPlaceholderText}
-                                            inputProps={{
-                                                ...params.inputProps,
-                                                id: 'orgSelect-add-input',
-                                                'data-testid': 'orgSelect-add-input',
+                                            slotProps={{
+                                                htmlInput: {
+                                                    ...params.inputProps,
+                                                    id: 'orgSelect-add-input',
+                                                    'data-testid': 'orgSelect-add-input',
+                                                },
                                             }}
                                         />
                                     )}
@@ -314,9 +323,11 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                             );
                                         } else actionHandler[ACTIONS.ADD](actionDispatch, rowData, newValue);
                                     }}
-                                    ListboxProps={{
-                                        id: 'orgSelect-add-options',
-                                        'data-testid': 'orgSelect-add-options',
+                                    slotProps={{
+                                        listbox: {
+                                            id: 'orgSelect-add-options',
+                                            'data-testid': 'orgSelect-add-options',
+                                        },
                                     }}
                                 />
                             </Grid>

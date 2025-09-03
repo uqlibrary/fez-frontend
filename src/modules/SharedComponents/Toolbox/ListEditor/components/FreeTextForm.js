@@ -85,11 +85,6 @@ export const FreeTextForm = ({
                     variant="standard"
                     fullWidth
                     id={`${listEditorId}-input`}
-                    inputProps={{
-                        ref: textField,
-                        'data-analyticsid': `${listEditorId}-input`,
-                        'data-testid': `${listEditorId}-input`,
-                    }}
                     label={inputFieldLabel}
                     placeholder={inputFieldHint}
                     value={item}
@@ -99,6 +94,13 @@ export const FreeTextForm = ({
                     helperText={inputLengthText}
                     disabled={disabled}
                     required={required}
+                    slotProps={{
+                        htmlInput: {
+                            ref: textField,
+                            'data-analyticsid': `${listEditorId}-input`,
+                            'data-testid': `${listEditorId}-input`,
+                        },
+                    }}
                 />
                 {remindToAdd && remindToAddText && item.length !== 0 && !isValid(item) && (
                     <Typography variant="caption" mt={'8px'} color={'#f06f0d'}>

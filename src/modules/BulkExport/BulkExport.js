@@ -40,7 +40,7 @@ const classes = {
 };
 
 const StyledDialog = styled(Dialog)(({ theme }) => ({
-    '& .MuiDialog-paperScrollPaper': {
+    '& .MuiDialog-scrollPaper > .MuiDialog-paper': {
         [theme.breakpoints.down('sm')]: {
             margin: 0,
         },

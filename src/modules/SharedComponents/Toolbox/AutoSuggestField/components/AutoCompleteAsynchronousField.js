@@ -155,42 +155,41 @@ export const AutoCompleteAsynchronousField = ({
                         error={error}
                         placeholder={placeholder}
                         helperText={(error && errorText) || ''}
-                        FormHelperTextProps={{
-                            'data-testid': `${autoCompleteAsynchronousFieldId}-helper-text`,
-                        }}
                         fullWidth
                         label={!hideLabel && floatingLabelText}
-                        InputProps={{
-                            ...params.InputProps,
-                            endAdornment: (
-                                <React.Fragment>
-                                    {loading ? (
-                                        <CircularProgress
-                                            color="inherit"
-                                            size={20}
-                                            id="loading-suggestions"
-                                            data-testid="loading-suggestions"
-                                        />
-                                    ) : null}
-                                    {params.InputProps.endAdornment}
-                                </React.Fragment>
-                            ),
-                        }}
-                        inputProps={{
-                            ...params.inputProps,
-                            'data-analyticsid': `${autoCompleteAsynchronousFieldId}-input`,
-                            'data-testid': `${autoCompleteAsynchronousFieldId}-input`,
-                        }}
                         value={inputValue}
                         onChange={handleSearchTextChange}
                         required={required}
+                        slotProps={{
+                            input: {
+                                ...params.InputProps,
+                                endAdornment: (
+                                    <React.Fragment>
+                                        {loading ? (
+                                            <CircularProgress
+                                                color="inherit"
+                                                size={20}
+                                                id="loading-suggestions"
+                                                data-testid="loading-suggestions"
+                                            />
+                                        ) : null}
+                                        {params.InputProps.endAdornment}
+                                    </React.Fragment>
+                                ),
+                            },
+
+                            htmlInput: {
+                                ...params.inputProps,
+                                'data-analyticsid': `${autoCompleteAsynchronousFieldId}-input`,
+                                'data-testid': `${autoCompleteAsynchronousFieldId}-input`,
+                            },
+
+                            formHelperText: {
+                                'data-testid': `${autoCompleteAsynchronousFieldId}-helper-text`,
+                            },
+                        }}
                     />
                 )}
-                ListboxProps={{
-                    id: `${autoCompleteAsynchronousFieldId}-options`,
-                    'data-analyticsid': `${autoCompleteAsynchronousFieldId}-options`,
-                    'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
-                }}
                 {...(fullWidth && { fullWidth })}
                 {...((!!allowFreeText && { freeSolo: true }) || {})}
                 {...(groupBy && { groupBy })}
@@ -215,6 +214,13 @@ export const AutoCompleteAsynchronousField = ({
                     },
                 }) ||
                     {})}
+                slotProps={{
+                    listbox: {
+                        id: `${autoCompleteAsynchronousFieldId}-options`,
+                        'data-analyticsid': `${autoCompleteAsynchronousFieldId}-options`,
+                        'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
+                    },
+                }}
             />
             {!!supplemental && <div style={{ marginTop: '0.5rem' }}>{supplemental}</div>}
         </React.Fragment>

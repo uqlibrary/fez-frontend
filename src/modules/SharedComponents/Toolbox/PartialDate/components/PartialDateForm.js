@@ -304,14 +304,16 @@ const PartialDateForm = props => {
                             onChange={_onDateChanged('day')}
                             onBlur={!allowPartial ? _onDateChanged('day') : undefined}
                             placeholder={locale.dayLabel}
-                            inputProps={{
-                                label: 'day',
-                                maxLength: 2,
-                                id: `${partialDateFormId}-day-input`,
-                                'data-analyticsid': `${partialDateFormId}-day-input`,
-                                'data-testid': `${partialDateFormId}-day-input`,
-                            }}
                             value={state?.day || ''}
+                            slotProps={{
+                                htmlInput: {
+                                    label: 'day',
+                                    maxLength: 2,
+                                    id: `${partialDateFormId}-day-input`,
+                                    'data-analyticsid': `${partialDateFormId}-day-input`,
+                                    'data-testid': `${partialDateFormId}-day-input`,
+                                },
+                            }}
                         />
                         {isError && <FormHelperText error>{isError}</FormHelperText>}
                     </Grid>
@@ -363,14 +365,16 @@ const PartialDateForm = props => {
                             onKeyPress={isNumber(locale)}
                             onChange={_onDateChanged('year')}
                             onBlur={_onDateChanged('year')}
-                            inputProps={{
-                                label: 'year',
-                                maxLength: 4,
-                                id: `${partialDateFormId}-year-input`,
-                                'data-analyticsid': `${partialDateFormId}-year-input`,
-                                'data-testid': `${partialDateFormId}-year-input`,
-                            }}
                             value={state?.year || ''}
+                            slotProps={{
+                                htmlInput: {
+                                    label: 'year',
+                                    maxLength: 4,
+                                    id: `${partialDateFormId}-year-input`,
+                                    'data-analyticsid': `${partialDateFormId}-year-input`,
+                                    'data-testid': `${partialDateFormId}-year-input`,
+                                },
+                            }}
                         />
                     </Grid>
                 </Grid>

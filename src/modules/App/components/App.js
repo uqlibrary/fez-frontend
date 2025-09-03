@@ -275,7 +275,9 @@ const AppClass = ({
                                 <Tooltip
                                     title={locale.global.mainNavButton.tooltip}
                                     placement="bottom-end"
-                                    TransitionComponent={Fade}
+                                    slots={{
+                                        transition: Fade,
+                                    }}
                                 >
                                     <IconButton
                                         aria-label={locale.global.mainNavButton.aria}

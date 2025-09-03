@@ -25,7 +25,9 @@ const getListItemTypography = (primaryText, secondaryText, primaryTypographyClas
                 </Typography>
             )
         }
-        secondaryTypographyProps={{ variant: 'caption' }}
+        slotProps={{
+            secondary: { variant: 'caption' },
+        }}
     />
 );
 
