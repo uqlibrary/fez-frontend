@@ -7,7 +7,7 @@ import { MaterialReactTable, useMaterialReactTable } from 'material-react-table'
 import { useTheme } from '@mui/material/styles';
 import { numberToWords, validation } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import People from '@mui/icons-material/People';
 import PersonOutlined from '@mui/icons-material/PersonOutlined';

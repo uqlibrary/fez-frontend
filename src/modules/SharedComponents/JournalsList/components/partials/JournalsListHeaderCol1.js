@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import JournalFieldsMap from './JournalFieldsMap';
 import Checkbox from '@mui/material/Checkbox';
 import InputLabel from '@mui/material/InputLabel';

@@ -6,7 +6,7 @@ import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { useConfirmationState, useValidatedForm } from 'hooks';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';

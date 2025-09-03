@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { useWatch } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';

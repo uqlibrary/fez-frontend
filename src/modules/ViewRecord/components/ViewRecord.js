@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Badge from '@mui/material/Badge';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';

@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import FormHelperText from '@mui/material/FormHelperText';
 import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 import { useOnSelectiveMountEffect } from 'hooks';

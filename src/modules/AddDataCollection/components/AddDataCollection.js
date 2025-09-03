@@ -36,7 +36,7 @@ import { locale } from 'locale';
 import { selectFields } from 'locale/selectFields';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { useNavigate } from 'react-router-dom';

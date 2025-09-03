@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';

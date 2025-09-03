@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import Skeleton from '@mui/material/Skeleton';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 import * as actions from 'actions';

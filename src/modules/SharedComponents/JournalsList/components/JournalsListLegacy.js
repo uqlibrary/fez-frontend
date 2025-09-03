@@ -2,7 +2,7 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import JournalsListHeaderCol1 from './partials/JournalsListHeaderCol1';
 import JournalsListHeaderCol2Full from './partials/JournalsListHeaderCol2Full';
 import JournalsListDataCol1 from './partials/JournalsListDataCol1';

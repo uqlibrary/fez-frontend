@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 
 import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import InputLabel from '@mui/material/InputLabel';
 
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';

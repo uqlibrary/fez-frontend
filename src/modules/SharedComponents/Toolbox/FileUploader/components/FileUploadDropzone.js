@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
 import { FormValuesContext } from 'context';

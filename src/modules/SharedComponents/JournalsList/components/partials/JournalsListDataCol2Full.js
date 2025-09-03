@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import JournalFieldsMap from './JournalFieldsMap';
 import Tooltip from '@mui/material/Tooltip';

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';

@@ -17,7 +17,7 @@ import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { CommunitySelectField } from 'modules/SharedComponents/SelectFields';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config/pathConfig';
 import CircularProgress from '@mui/material/CircularProgress';

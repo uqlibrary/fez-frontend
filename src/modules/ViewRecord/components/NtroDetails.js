@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import { default as global } from 'locale/global';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { general } from 'config';
@@ -271,7 +271,7 @@ const NtroDetails = ({ publication, classes, account }) => {
                     )}
 
                 {/* Language */}
-                {/* eslint-disable-next-line max-len */}
+                {}
                 {publication.fez_record_search_key_language &&
                     publication.fez_record_search_key_language.length > 0 && (
                         <ViewNtroRow

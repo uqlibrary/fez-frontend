@@ -5,7 +5,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Tooltip from '@mui/material/Tooltip';
 
 import Search from '@mui/icons-material/Search';

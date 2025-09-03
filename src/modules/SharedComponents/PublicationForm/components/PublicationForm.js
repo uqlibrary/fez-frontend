@@ -15,7 +15,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 

@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';

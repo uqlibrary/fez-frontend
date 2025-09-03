@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Image from '@mui/icons-material/Image';
 import InsertDriveFile from '@mui/icons-material/InsertDriveFile';
 import PictureAsPdf from '@mui/icons-material/PictureAsPdf';

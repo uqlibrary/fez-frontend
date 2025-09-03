@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
 import { DataGrid, gridClasses } from '@mui/x-data-grid';
 

@@ -6,7 +6,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 
 const RelatedPublications = ({
     publication,

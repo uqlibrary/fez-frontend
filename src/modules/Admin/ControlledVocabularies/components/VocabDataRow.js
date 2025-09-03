@@ -9,7 +9,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import locale from 'locale/components';
 import { isReadonlyVocab } from 'config/general';
 

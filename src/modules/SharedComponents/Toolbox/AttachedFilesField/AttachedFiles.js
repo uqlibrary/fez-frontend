@@ -4,7 +4,7 @@ import { useFormContext } from 'react-hook-form';
 import moment from 'moment';
 
 import Delete from '@mui/icons-material/Delete';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';

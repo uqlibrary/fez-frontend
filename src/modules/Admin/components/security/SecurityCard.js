@@ -4,7 +4,7 @@ import { useFormContext } from 'react-hook-form';
 import { useSelector } from 'react-redux';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import OverrideSecurity from './OverrideSecurity';
