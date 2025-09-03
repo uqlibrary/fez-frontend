@@ -138,6 +138,43 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         </p>
       </div>
     </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+        >
+          OpenAlex
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <span
+          aria-label="OpenAlex loading"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 12px; height: 12px;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
   </div>
   <span
     aria-valuemax="100"
@@ -344,6 +381,43 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         </span>
       </div>
     </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+        >
+          OpenAlex
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <span
+          aria-label="OpenAlex loading"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 12px; height: 12px;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
   </div>
   <span
     aria-valuemax="100"
@@ -491,6 +565,43 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       >
         <span
           aria-label="Crossref loading"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 12px; height: 12px;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20"
+              stroke-width="4"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+        >
+          OpenAlex
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      >
+        <span
+          aria-label="OpenAlex loading"
           class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
