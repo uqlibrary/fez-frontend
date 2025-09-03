@@ -20,7 +20,14 @@ const GrantDetails = ({ grantAgencyName, grantId, grantText, order, index }) => 
         hasGrantId && grantId.rek_grant_id !== ORG_TYPES_LOOKUP[ORG_TYPE_NOT_SET] ? grantId.rek_grant_id : '';
 
     return (
-        <Box sx={theme => ({ padding: { xs: `${theme.spacing(1)} 0`, sm: 1 } })} key={index}>
+        <Box
+            sx={theme => ({
+                padding: { xs: `${theme.spacing(1)} 0`, sm: 1 },
+                borderBottom: '1px solid',
+                borderBottomColor: 'secondary.light',
+            })}
+            key={index}
+        >
             <Grid
                 container
                 spacing={2}
@@ -28,8 +35,6 @@ const GrantDetails = ({ grantAgencyName, grantId, grantText, order, index }) => 
                 sx={{
                     padding: 0,
                     alignItems: 'flex-start',
-                    borderBottom: '1px solid',
-                    borderBottomColor: 'secondary.light',
                 }}
             >
                 <Grid

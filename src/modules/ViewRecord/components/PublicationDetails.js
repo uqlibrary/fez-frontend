@@ -12,15 +12,19 @@ import Box from '@mui/material/Box';
 
 const PublicationDetails = ({ publication }) => {
     const ViewRecordRow = ({ heading, data, rowId }) => (
-        <Box sx={theme => ({ padding: { xs: `${theme.spacing(1)} 0`, sm: theme.spacing(1) } })}>
+        <Box
+            sx={theme => ({
+                padding: { xs: `${theme.spacing(1)} 0`, sm: theme.spacing(1) },
+                borderBottom: '1px solid',
+                borderBottomColor: 'secondary.light',
+            })}
+        >
             <Grid
                 container
                 spacing={2}
                 sx={{
                     padding: 0,
                     alignItems: 'flex-start',
-                    borderBottom: '1px solid',
-                    borderBottomColor: 'secondary.light',
                 }}
             >
                 <Grid

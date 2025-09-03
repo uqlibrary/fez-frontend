@@ -75,6 +75,8 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             <Box
                 sx={theme => ({
                     padding: { xs: `${theme.spacing(1)} 0`, sm: 1 },
+                    borderBottom: '1px solid',
+                    borderBottomColor: 'secondary.light',
                 })}
                 key={index}
             >
@@ -85,8 +87,6 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                     sx={{
                         padding: 0,
                         alignItems: 'flex-start',
-                        borderBottom: '1px solid',
-                        borderBottomColor: 'secondary.light',
                     }}
                 >
                     <Grid

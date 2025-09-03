@@ -43,7 +43,7 @@ const Links = ({ publication, isAdmin }) => {
                 theme => ({
                     padding: {
                         xs: `${theme.spacing(1)} 0`,
-                        sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
+                        sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(2)} ${theme.spacing(1)}`,
                     },
                     borderBottom: `1px solid ${theme.palette.secondary.light}`,
                 }),
@@ -297,7 +297,7 @@ const Links = ({ publication, isAdmin }) => {
                         theme => ({
                             padding: {
                                 xs: `${theme.spacing(1)} 0`,
-                                sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
+                                sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(2)} ${theme.spacing(1)}`,
                             },
                             borderBottom: `1px solid ${theme.palette.secondary.light}`,
                         }),

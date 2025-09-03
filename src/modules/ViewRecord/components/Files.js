@@ -408,7 +408,13 @@ const Files = props => {
                         <Alert {...{ ...globalLocale.global.loginAlertForFiles, action: redirectUserToLogin() }} />
                     )
                 }
-                <Box sx={{ padding: { xs: '8px 0', sm: 1 } }}>
+                <Box
+                    sx={{
+                        padding: { xs: '8px 0', sm: 1 },
+                        borderBottom: '1px solid',
+                        borderBottomColor: 'secondary.light',
+                    }}
+                >
                     <Grid
                         container
                         direction="row"
@@ -416,8 +422,6 @@ const Files = props => {
                         sx={{
                             alignItems: 'center',
                             padding: 0,
-                            borderBottom: '1px solid',
-                            borderBottomColor: 'secondary.light',
                         }}
                     >
                         <Grid
@@ -471,7 +475,14 @@ const Files = props => {
                 </Box>
 
                 {fileData.map((item, index) => (
-                    <Box sx={{ padding: { xs: '8px 0', sm: 1 } }} key={index}>
+                    <Box
+                        sx={{
+                            padding: { xs: '8px 0', sm: 1 },
+                            borderBottom: '1px solid',
+                            borderBottomColor: 'secondary.light',
+                        }}
+                        key={index}
+                    >
                         <Grid
                             container
                             direction="row"
@@ -481,8 +492,6 @@ const Files = props => {
                             sx={{
                                 alignItems: 'center',
                                 padding: 0,
-                                borderBottom: '1px solid',
-                                borderBottomColor: 'secondary.light',
                             }}
                         >
                             <Grid
