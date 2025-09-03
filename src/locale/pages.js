@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 import LockIcon from '@mui/icons-material/Lock';
 import Typography from '@mui/material/Typography';
@@ -516,6 +515,10 @@ export default {
                             {
                                 id: 'crossref',
                                 title: 'Crossref',
+                            },
+                            {
+                                id: 'openalex',
+                                title: 'OpenAlex',
                             },
                         ],
                     },
