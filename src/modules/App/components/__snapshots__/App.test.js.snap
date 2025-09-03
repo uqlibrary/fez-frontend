@@ -2,755 +2,74 @@
 
 exports[`Application component Should display mobile correctly 1`] = `
 <div>
-  <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+  <h2>
+    Unexpected Application Error!
+  </h2>
+  <h3
+    style="font-style: italic;"
   >
-    <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
+    mediaQueryList.addEventListener is not a function
+  </h3>
+  <pre
+    style="padding: 0.5rem; background-color: rgba(200, 200, 200, 0.5);"
+  >
+    TypeError: mediaQueryList.addEventListener is not a function
+    at /Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@mui/system/useMediaQuery/useMediaQuery.js:71:22
+    at subscribeToStore (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:16139:10)
+    at commitHookEffectListMount (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+    at flushPassiveEffects (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+    at performSyncWorkOnRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26115:3)
+    at flushSyncCallbacks (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+    at commitRootImpl (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26998:3)
+    at commitRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+    at finishConcurrentRender (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26020:9)
+    at performConcurrentWorkOnRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:25848:7)
+    at flushActQueue (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react/cjs/react.development.js:2667:24)
+    at act (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react/cjs/react.development.js:2582:11)
+    at /Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/act-compat.js:47:25
+    at renderRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/pure.js:190:26)
+    at render (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/pure.js:292:10)
+    at renderMethod (/Users/uqlsibba/Developer/Projects/fez-frontend/src/modules/App/components/App.test.js:43:12)
+    at Object.setup (/Users/uqlsibba/Developer/Projects/fez-frontend/src/modules/App/components/App.test.js:491:31)
+    at Promise.then.completed (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/testWorker.js:106:12)
+  </pre>
+  <p>
+    💿 Hey developer 👋
+  </p>
+  <p>
+    You can provide a way better UX than this when your app throws errors by providing your own 
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
     >
-      <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-            style="padding-left: 284px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
-              >
-                <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1vccgkh-MuiTypography-root"
-                >
-                  <a
-                    class="appTitle"
-                    href="/"
-                    style="color: rgb(255, 255, 255);"
-                    title="Click to return to the eSpace home page"
-                  >
-                    UQ eSpace 
-                  </a>
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-i45qf8-MuiGrid-root"
-          >
-            <form
-              style="margin: 8px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
-                    data-testid="SearchIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
-                >
-                  <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                    data-testid="simple-search"
-                  >
-                    <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
-                    >
-                      <input
-                        aria-invalid="false"
-                        aria-label=""
-                        autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
-                        data-analyticsid="simple-search-input"
-                        data-testid="simple-search-input"
-                        id="simple-search-input"
-                        label=""
-                        placeholder="Search eSpace"
-                        type="search"
-                        value=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiBox-root css-10q9jzs"
-              >
-                <button
-                  aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                  data-mui-internal-clone-element="true"
-                  tabindex="0"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
-                    data-testid="SearchIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <div
-              class="auth-button-wrapper"
-            >
-              <button
-                aria-label="Log in"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-mui-internal-clone-element="true"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
-                  data-testid="PersonOutlineIcon"
-                  focusable="false"
-                  id="logged-out-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div
-      class="MuiDrawer-root MuiDrawer-docked css-wg9x4s-MuiDrawer-docked"
-      id="menudrawer"
+      ErrorBoundary
+    </code>
+     or
+     
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
     >
-      <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-12i7wg6-MuiPaper-root-MuiDrawer-paper"
-      >
-        <nav
-          class="MuiList-root MuiList-padding css-fv1two-MuiList-root"
-          id="mainMenu"
-          tabindex="-1"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-1rv48rz-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1soofh4-MuiGrid-root"
-            >
-              <a
-                class="noHover css-1oqhn84"
-                data-analyticsid="main-menu-logo-link"
-                data-testid="main-menu-logo-link"
-                href="http://www.uq.edu.au"
-                id="main-menu-logo-link"
-                rel="noopener noreferrer"
-                tabindex="0"
-                target="_blank"
-                title="The University of Queensland"
-              >
-                <div
-                  class="largeLogo"
-                  style="height: 50px; width: 160px; margin: 8px auto;"
-                >
-                  The University of Queensland
-                </div>
-              </a>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 css-bt3e8x-MuiGrid-root"
-            >
-              <button
-                aria-label="Close menu"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
-                  data-testid="KeyboardArrowLeftIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div
-            aria-label="Click to skip, or tab to progress to the navigation"
-            class="css-16sk7k9"
-            id="skipNav"
-            tabindex="1"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary skipNavButton css-argx73-MuiButtonBase-root-MuiButton-root"
-              tabindex="-1"
-              type="button"
-            >
-              Skip Navigation
-            </button>
-          </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-155c4xx-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-0"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
-              id="menu-itemText-0"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
-              >
-                Home
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-155c4xx-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-1"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
-              id="menu-itemText-1"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
-              >
-                Search eSpace
-              </span>
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-yw73va-MuiTypography-root"
-              />
-            </div>
-          </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-155c4xx-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-2"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
-              id="menu-itemText-2"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
-              >
-                Browse
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-155c4xx-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-3"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
-              id="menu-itemText-3"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
-              >
-                Help
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-155c4xx-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-4"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
-              id="menu-itemText-4"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
-              >
-                About
-              </span>
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-yw73va-MuiTypography-root"
-              />
-            </div>
-          </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-155c4xx-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-5"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
-              id="menu-itemText-5"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
-              >
-                <a
-                  class="noHover css-1maagub"
-                  data-analyticsid="5-copyright-information-link"
-                  data-testid="5-copyright-information-link"
-                  id="5-copyright-information-link"
-                  rel="noopener noreferrer"
-                  tabindex="0"
-                  target="_blank"
-                  title="Copyright Information"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
-                    data-testid="OpenInNewIcon"
-                    focusable="false"
-                    id="5-copyright-information-link-new-window-icon"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
-                    />
-                  </svg>
-                  Copyright Information
-                </a>
-              </span>
-            </div>
-          </div>
-        </nav>
-        <div
-          data-testid="after-menu-drawer"
-          id="afterMenuDrawer"
-          tabindex="-1"
-        />
-        <div
-          class="MuiBox-root css-n5zwdn"
-        >
-          CRICOS Provider No: 
-          <a
-            class="css-1oqhn84"
-            data-analyticsid="cricos-link"
-            data-testid="cricos-link"
-            href="http://www.uq.edu.au/about/cricos-link"
-            id="cricos-link"
-            rel="noopener noreferrer"
-            tabindex="0"
-            target="_blank"
-            title="CRICOS Provider No: "
-          >
-            00025B
-          </a>
-        </div>
-      </div>
-    </div>
-    <div
-      class="content-container"
-      id="content-container"
-      style="padding-left: 260px;"
-    >
-      <button
-        aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
-        id="scrolltopbtn"
-        tabindex="0"
-        title="Scroll to top of page"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="ArrowUpwardIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"
-          />
-        </svg>
-      </button>
-      <div
-        aria-label="eSpace alerts"
-        role="region"
-        style="padding-bottom: 24px;"
-      >
-        <alert-list
-          system="espace"
-        />
-      </div>
-      <span
-        class="MuiBox-root css-0"
-        data-testid="confirmDialogBox"
-      />
-      <div
-        class="MuiGrid-root MuiGrid-container css-m97fgx-MuiGrid-root"
-        style="margin-bottom: 12px;"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item css-1wzz5s-MuiGrid-root"
-        >
-          <div
-            data-testid="alert"
-            style="margin-top: 5px;"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
-              data-analyticsid="login"
-              data-testid="login"
-              id="login"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-yrmeox-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InfoOutlinedIcon"
-                      focusable="false"
-                      id="info-outline-icon"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
-                  >
-                    <b>
-                      You are not logged in - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      Login to UQ eSpace for full search results and more services.
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
-              >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
-                  data-analyticsid="action-button"
-                  data-testid="action-button"
-                  id="action-button"
-                  tabindex="0"
-                  type="button"
-                >
-                  Click to login
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        />
-        <div
-          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                />
-                <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                >
-                  <div
-                    style="padding: 8px;"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
-                      />
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                        style="text-align: center;"
-                      >
-                        <span
-                          aria-label="Loading"
-                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
-                          role="progressbar"
-                          style="width: 18px; height: 18px;"
-                        >
-                          <svg
-                            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
-                            viewBox="22 22 44 44"
-                          >
-                            <circle
-                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
-                              cx="44"
-                              cy="44"
-                              fill="none"
-                              r="21"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                        style="text-align: center;"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
-                          style="font-size: 1.33rem;"
-                        >
-                          Loading trending works
-                        </span>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                />
-              </div>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-acknowledgement-of-country"
-                    id="standard-card-acknowledgement-of-country"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-acknowledgement-of-country-header"
-                          id="standard-card-acknowledgement-of-country-header"
-                        >
-                          Acknowledgement of Country
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-acknowledgement-of-country-content"
-                      data-testid="standard-card-acknowledgement-of-country-content"
-                      id="standard-card-acknowledgement-of-country-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-cultural-advice"
-                    id="standard-card-cultural-advice"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-cultural-advice-header"
-                          id="standard-card-cultural-advice-header"
-                        >
-                          Cultural advice
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-cultural-advice-content"
-                      data-testid="standard-card-cultural-advice-content"
-                      id="standard-card-cultural-advice-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
-                          <br />
-                          <br />
-                          Some material may contain language, terms, or descriptions that reflect the authors’ views, or those of the period in which the item was written or recorded but may be considered inappropriate today. These views are not necessarily the views of The University of Queensland. While the information may not reflect current understandings, it is provided in an historical context.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-restrictions-on-use"
-                    id="standard-card-restrictions-on-use"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-restrictions-on-use-header"
-                          id="standard-card-restrictions-on-use-header"
-                        >
-                          Restrictions on Use
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-restrictions-on-use-content"
-                      data-testid="standard-card-restrictions-on-use-content"
-                      id="standard-card-restrictions-on-use-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-open-to-collaborate"
-                    id="standard-card-open-to-collaborate"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-open-to-collaborate-header"
-                          id="standard-card-open-to-collaborate-header"
-                        >
-                          Open to Collaborate
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-open-to-collaborate-content"
-                      data-testid="standard-card-open-to-collaborate-content"
-                      id="standard-card-open-to-collaborate-content"
-                    >
-                      <div
-                        class="css-ki8537"
-                      >
-                        <img
-                          alt="Open to Collaborate"
-                          class="css-rd2owr"
-                          src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
-                        />
-                        <p
-                          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                        >
-                          <span>
-                            The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="offlineSnackbar"
-    />
-  </div>
+      errorElement
+    </code>
+     prop on your route.
+  </p>
 </div>
 `;
 
@@ -762,1548 +81,244 @@ exports[`Application component redirects user to login if going to a secure file
 
 exports[`Application component should render alert if user is not fez author 1`] = `
 <div>
-  <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+  <h2>
+    Unexpected Application Error!
+  </h2>
+  <h3
+    style="font-style: italic;"
   >
-    <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
+    mediaQueryList.addEventListener is not a function
+  </h3>
+  <pre
+    style="padding: 0.5rem; background-color: rgba(200, 200, 200, 0.5);"
+  >
+    TypeError: mediaQueryList.addEventListener is not a function
+    at /Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@mui/system/useMediaQuery/useMediaQuery.js:71:22
+    at subscribeToStore (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:16139:10)
+    at commitHookEffectListMount (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+    at flushPassiveEffects (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+    at performSyncWorkOnRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26115:3)
+    at flushSyncCallbacks (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+    at commitRootImpl (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26998:3)
+    at commitRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+    at finishConcurrentRender (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26020:9)
+    at performConcurrentWorkOnRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:25848:7)
+    at flushActQueue (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react/cjs/react.development.js:2667:24)
+    at act (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react/cjs/react.development.js:2582:11)
+    at /Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/act-compat.js:47:25
+    at renderRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/pure.js:190:26)
+    at render (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/pure.js:292:10)
+    at renderMethod (/Users/uqlsibba/Developer/Projects/fez-frontend/src/modules/App/components/App.test.js:43:12)
+    at Object.setup (/Users/uqlsibba/Developer/Projects/fez-frontend/src/modules/App/components/App.test.js:101:31)
+    at Promise.then.completed (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/testWorker.js:106:12)
+  </pre>
+  <p>
+    💿 Hey developer 👋
+  </p>
+  <p>
+    You can provide a way better UX than this when your app throws errors by providing your own 
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
     >
-      <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="main-menu-button"
-              data-mui-internal-clone-element="true"
-              id="main-menu-button"
-              style="margin-left: -12px; margin-right: 12px;"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="MenuIcon"
-                focusable="false"
-                style="color: white;"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-            style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item css-1c6hw6e-MuiGrid-root"
-              >
-                <div
-                  class="smallLogo"
-                  id="logo"
-                  style="height: 66px; width: 60px;"
-                >
-                  The University of Queensland
-                </div>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
-              >
-                <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
-                >
-                  <a
-                    class="appTitle"
-                    href="/"
-                    style="color: rgb(255, 255, 255);"
-                    title="Click to return to the eSpace home page"
-                  >
-                    UQ eSpace 
-                  </a>
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-i45qf8-MuiGrid-root"
-          >
-            <form
-              style="margin: 8px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
-                    data-testid="SearchIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
-                >
-                  <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                    data-testid="simple-search"
-                  >
-                    <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
-                    >
-                      <input
-                        aria-invalid="false"
-                        aria-label=""
-                        autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
-                        data-analyticsid="simple-search-input"
-                        data-testid="simple-search-input"
-                        id="simple-search-input"
-                        label=""
-                        placeholder="Search eSpace"
-                        type="search"
-                        value=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiBox-root css-10q9jzs"
-              >
-                <button
-                  aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                  data-mui-internal-clone-element="true"
-                  tabindex="0"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
-                    data-testid="SearchIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <div
-              class="auth-button-wrapper"
-            >
-              <button
-                aria-label="Log out - undefined"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-mui-internal-clone-element="true"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
-                  data-testid="PersonIcon"
-                  focusable="false"
-                  id="logged-in-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div
-      class="content-container"
-      id="content-container"
+      ErrorBoundary
+    </code>
+     or
+     
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
     >
-      <button
-        aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
-        id="scrolltopbtn"
-        tabindex="0"
-        title="Scroll to top of page"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="ArrowUpwardIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"
-          />
-        </svg>
-      </button>
-      <div
-        aria-label="eSpace alerts"
-        role="region"
-        style="padding-bottom: 24px;"
-      >
-        <alert-list
-          system="espace"
-        />
-      </div>
-      <span
-        class="MuiBox-root css-0"
-        data-testid="confirmDialogBox"
-      />
-      <div
-        class="MuiGrid-root MuiGrid-container css-m97fgx-MuiGrid-root"
-        style="margin-bottom: 12px;"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item css-1wzz5s-MuiGrid-root"
-        >
-          <div
-            data-testid="alert"
-            style="margin-top: 5px;"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
-              data-analyticsid="not-registered-author"
-              data-testid="not-registered-author"
-              id="not-registered-author"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InfoOutlinedIcon"
-                      focusable="false"
-                      id="info-outline-icon"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
-                  >
-                    <b>
-                      You are not registered in UQ eSpace as an author - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      Please contact the UQ eSpace administrator to resolve this.
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        />
-        <div
-          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                />
-                <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                >
-                  <div
-                    style="padding: 8px;"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
-                      />
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                        style="text-align: center;"
-                      >
-                        <span
-                          aria-label="Loading"
-                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
-                          role="progressbar"
-                          style="width: 18px; height: 18px;"
-                        >
-                          <svg
-                            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
-                            viewBox="22 22 44 44"
-                          >
-                            <circle
-                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
-                              cx="44"
-                              cy="44"
-                              fill="none"
-                              r="21"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                        style="text-align: center;"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
-                          style="font-size: 1.33rem;"
-                        >
-                          Loading trending works
-                        </span>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                />
-              </div>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-acknowledgement-of-country"
-                    id="standard-card-acknowledgement-of-country"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-acknowledgement-of-country-header"
-                          id="standard-card-acknowledgement-of-country-header"
-                        >
-                          Acknowledgement of Country
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-acknowledgement-of-country-content"
-                      data-testid="standard-card-acknowledgement-of-country-content"
-                      id="standard-card-acknowledgement-of-country-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-cultural-advice"
-                    id="standard-card-cultural-advice"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-cultural-advice-header"
-                          id="standard-card-cultural-advice-header"
-                        >
-                          Cultural advice
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-cultural-advice-content"
-                      data-testid="standard-card-cultural-advice-content"
-                      id="standard-card-cultural-advice-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
-                          <br />
-                          <br />
-                          Some material may contain language, terms, or descriptions that reflect the authors’ views, or those of the period in which the item was written or recorded but may be considered inappropriate today. These views are not necessarily the views of The University of Queensland. While the information may not reflect current understandings, it is provided in an historical context.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-restrictions-on-use"
-                    id="standard-card-restrictions-on-use"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-restrictions-on-use-header"
-                          id="standard-card-restrictions-on-use-header"
-                        >
-                          Restrictions on Use
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-restrictions-on-use-content"
-                      data-testid="standard-card-restrictions-on-use-content"
-                      id="standard-card-restrictions-on-use-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-open-to-collaborate"
-                    id="standard-card-open-to-collaborate"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-open-to-collaborate-header"
-                          id="standard-card-open-to-collaborate-header"
-                        >
-                          Open to Collaborate
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-open-to-collaborate-content"
-                      data-testid="standard-card-open-to-collaborate-content"
-                      id="standard-card-open-to-collaborate-content"
-                    >
-                      <div
-                        class="css-ki8537"
-                      >
-                        <img
-                          alt="Open to Collaborate"
-                          class="css-rd2owr"
-                          src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
-                        />
-                        <p
-                          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                        >
-                          <span>
-                            The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="offlineSnackbar"
-    />
-  </div>
+      errorElement
+    </code>
+     prop on your route.
+  </p>
 </div>
 `;
 
 exports[`Application component should render app for HDR with ORCID ID 1`] = `
 <div>
-  <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+  <h2>
+    Unexpected Application Error!
+  </h2>
+  <h3
+    style="font-style: italic;"
   >
-    <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
+    mediaQueryList.addEventListener is not a function
+  </h3>
+  <pre
+    style="padding: 0.5rem; background-color: rgba(200, 200, 200, 0.5);"
+  >
+    TypeError: mediaQueryList.addEventListener is not a function
+    at /Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@mui/system/useMediaQuery/useMediaQuery.js:71:22
+    at subscribeToStore (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:16139:10)
+    at commitHookEffectListMount (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+    at flushPassiveEffects (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+    at performSyncWorkOnRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26115:3)
+    at flushSyncCallbacks (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+    at commitRootImpl (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26998:3)
+    at commitRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+    at finishConcurrentRender (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26020:9)
+    at performConcurrentWorkOnRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:25848:7)
+    at flushActQueue (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react/cjs/react.development.js:2667:24)
+    at act (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react/cjs/react.development.js:2582:11)
+    at /Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/act-compat.js:47:25
+    at renderRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/pure.js:190:26)
+    at render (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/pure.js:292:10)
+    at renderMethod (/Users/uqlsibba/Developer/Projects/fez-frontend/src/modules/App/components/App.test.js:43:12)
+    at Object.setup (/Users/uqlsibba/Developer/Projects/fez-frontend/src/modules/App/components/App.test.js:136:31)
+    at Promise.then.completed (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/testWorker.js:106:12)
+  </pre>
+  <p>
+    💿 Hey developer 👋
+  </p>
+  <p>
+    You can provide a way better UX than this when your app throws errors by providing your own 
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
     >
-      <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="main-menu-button"
-              data-mui-internal-clone-element="true"
-              id="main-menu-button"
-              style="margin-left: -12px; margin-right: 12px;"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="MenuIcon"
-                focusable="false"
-                style="color: white;"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-            style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item css-1c6hw6e-MuiGrid-root"
-              >
-                <div
-                  class="smallLogo"
-                  id="logo"
-                  style="height: 66px; width: 60px;"
-                >
-                  The University of Queensland
-                </div>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
-              >
-                <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
-                >
-                  <a
-                    class="appTitle"
-                    href="/"
-                    style="color: rgb(255, 255, 255);"
-                    title="Click to return to the eSpace home page"
-                  >
-                    UQ eSpace 
-                  </a>
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-i45qf8-MuiGrid-root"
-          >
-            <form
-              style="margin: 8px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
-                    data-testid="SearchIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
-                >
-                  <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                    data-testid="simple-search"
-                  >
-                    <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
-                    >
-                      <input
-                        aria-invalid="false"
-                        aria-label=""
-                        autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
-                        data-analyticsid="simple-search-input"
-                        data-testid="simple-search-input"
-                        id="simple-search-input"
-                        label=""
-                        placeholder="Search eSpace"
-                        type="search"
-                        value=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiBox-root css-10q9jzs"
-              >
-                <button
-                  aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                  data-mui-internal-clone-element="true"
-                  tabindex="0"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
-                    data-testid="SearchIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <div
-              class="auth-button-wrapper"
-            >
-              <button
-                aria-label="Log out - J RHD Student"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-mui-internal-clone-element="true"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
-                  data-testid="PersonIcon"
-                  focusable="false"
-                  id="logged-in-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div
-      class="content-container"
-      id="content-container"
+      ErrorBoundary
+    </code>
+     or
+     
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
     >
-      <button
-        aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
-        id="scrolltopbtn"
-        tabindex="0"
-        title="Scroll to top of page"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="ArrowUpwardIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"
-          />
-        </svg>
-      </button>
-      <div
-        aria-label="eSpace alerts"
-        role="region"
-        style="padding-bottom: 24px;"
-      >
-        <alert-list
-          system="espace"
-        />
-      </div>
-      <span
-        class="MuiBox-root css-0"
-        data-testid="confirmDialogBox"
-      />
-      <div
-        class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        />
-        <div
-          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                />
-                <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                >
-                  <div
-                    style="padding: 8px;"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
-                      />
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                        style="text-align: center;"
-                      >
-                        <span
-                          aria-label="Loading"
-                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
-                          role="progressbar"
-                          style="width: 18px; height: 18px;"
-                        >
-                          <svg
-                            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
-                            viewBox="22 22 44 44"
-                          >
-                            <circle
-                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
-                              cx="44"
-                              cy="44"
-                              fill="none"
-                              r="21"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                        style="text-align: center;"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
-                          style="font-size: 1.33rem;"
-                        >
-                          Loading trending works
-                        </span>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                />
-              </div>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-acknowledgement-of-country"
-                    id="standard-card-acknowledgement-of-country"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-acknowledgement-of-country-header"
-                          id="standard-card-acknowledgement-of-country-header"
-                        >
-                          Acknowledgement of Country
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-acknowledgement-of-country-content"
-                      data-testid="standard-card-acknowledgement-of-country-content"
-                      id="standard-card-acknowledgement-of-country-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-cultural-advice"
-                    id="standard-card-cultural-advice"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-cultural-advice-header"
-                          id="standard-card-cultural-advice-header"
-                        >
-                          Cultural advice
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-cultural-advice-content"
-                      data-testid="standard-card-cultural-advice-content"
-                      id="standard-card-cultural-advice-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
-                          <br />
-                          <br />
-                          Some material may contain language, terms, or descriptions that reflect the authors’ views, or those of the period in which the item was written or recorded but may be considered inappropriate today. These views are not necessarily the views of The University of Queensland. While the information may not reflect current understandings, it is provided in an historical context.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-restrictions-on-use"
-                    id="standard-card-restrictions-on-use"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-restrictions-on-use-header"
-                          id="standard-card-restrictions-on-use-header"
-                        >
-                          Restrictions on Use
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-restrictions-on-use-content"
-                      data-testid="standard-card-restrictions-on-use-content"
-                      id="standard-card-restrictions-on-use-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-open-to-collaborate"
-                    id="standard-card-open-to-collaborate"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-open-to-collaborate-header"
-                          id="standard-card-open-to-collaborate-header"
-                        >
-                          Open to Collaborate
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-open-to-collaborate-content"
-                      data-testid="standard-card-open-to-collaborate-content"
-                      id="standard-card-open-to-collaborate-content"
-                    >
-                      <div
-                        class="css-ki8537"
-                      >
-                        <img
-                          alt="Open to Collaborate"
-                          class="css-rd2owr"
-                          src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
-                        />
-                        <p
-                          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                        >
-                          <span>
-                            The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="offlineSnackbar"
-    />
-  </div>
+      errorElement
+    </code>
+     prop on your route.
+  </p>
 </div>
 `;
 
 exports[`Application component should render app for account with fez author with ORCID ID 1`] = `
 <div>
-  <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+  <h2>
+    Unexpected Application Error!
+  </h2>
+  <h3
+    style="font-style: italic;"
   >
-    <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
+    mediaQueryList.addEventListener is not a function
+  </h3>
+  <pre
+    style="padding: 0.5rem; background-color: rgba(200, 200, 200, 0.5);"
+  >
+    TypeError: mediaQueryList.addEventListener is not a function
+    at /Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@mui/system/useMediaQuery/useMediaQuery.js:71:22
+    at subscribeToStore (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:16139:10)
+    at commitHookEffectListMount (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+    at flushPassiveEffects (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+    at performSyncWorkOnRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26115:3)
+    at flushSyncCallbacks (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+    at commitRootImpl (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26998:3)
+    at commitRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+    at finishConcurrentRender (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26020:9)
+    at performConcurrentWorkOnRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:25848:7)
+    at flushActQueue (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react/cjs/react.development.js:2667:24)
+    at act (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react/cjs/react.development.js:2582:11)
+    at /Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/act-compat.js:47:25
+    at renderRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/pure.js:190:26)
+    at render (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/pure.js:292:10)
+    at renderMethod (/Users/uqlsibba/Developer/Projects/fez-frontend/src/modules/App/components/App.test.js:43:12)
+    at Object.setup (/Users/uqlsibba/Developer/Projects/fez-frontend/src/modules/App/components/App.test.js:109:31)
+    at Promise.then.completed (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/testWorker.js:106:12)
+  </pre>
+  <p>
+    💿 Hey developer 👋
+  </p>
+  <p>
+    You can provide a way better UX than this when your app throws errors by providing your own 
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
     >
-      <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="main-menu-button"
-              data-mui-internal-clone-element="true"
-              id="main-menu-button"
-              style="margin-left: -12px; margin-right: 12px;"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="MenuIcon"
-                focusable="false"
-                style="color: white;"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-            style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item css-1c6hw6e-MuiGrid-root"
-              >
-                <div
-                  class="smallLogo"
-                  id="logo"
-                  style="height: 66px; width: 60px;"
-                >
-                  The University of Queensland
-                </div>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
-              >
-                <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
-                >
-                  <a
-                    class="appTitle"
-                    href="/"
-                    style="color: rgb(255, 255, 255);"
-                    title="Click to return to the eSpace home page"
-                  >
-                    UQ eSpace 
-                  </a>
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-i45qf8-MuiGrid-root"
-          >
-            <form
-              style="margin: 8px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
-                    data-testid="SearchIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
-                >
-                  <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                    data-testid="simple-search"
-                  >
-                    <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
-                    >
-                      <input
-                        aria-invalid="false"
-                        aria-label=""
-                        autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
-                        data-analyticsid="simple-search-input"
-                        data-testid="simple-search-input"
-                        id="simple-search-input"
-                        label=""
-                        placeholder="Search eSpace"
-                        type="search"
-                        value=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiBox-root css-10q9jzs"
-              >
-                <button
-                  aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                  data-mui-internal-clone-element="true"
-                  tabindex="0"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
-                    data-testid="SearchIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <div
-              class="auth-button-wrapper"
-            >
-              <button
-                aria-label="Log out - undefined"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-mui-internal-clone-element="true"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
-                  data-testid="PersonIcon"
-                  focusable="false"
-                  id="logged-in-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div
-      class="content-container"
-      id="content-container"
+      ErrorBoundary
+    </code>
+     or
+     
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
     >
-      <button
-        aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
-        id="scrolltopbtn"
-        tabindex="0"
-        title="Scroll to top of page"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="ArrowUpwardIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"
-          />
-        </svg>
-      </button>
-      <div
-        aria-label="eSpace alerts"
-        role="region"
-        style="padding-bottom: 24px;"
-      >
-        <alert-list
-          system="espace"
-        />
-      </div>
-      <span
-        class="MuiBox-root css-0"
-        data-testid="confirmDialogBox"
-      />
-      <div
-        class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        />
-        <div
-          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                />
-                <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                >
-                  <div
-                    style="padding: 8px;"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
-                      />
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                        style="text-align: center;"
-                      >
-                        <span
-                          aria-label="Loading"
-                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
-                          role="progressbar"
-                          style="width: 18px; height: 18px;"
-                        >
-                          <svg
-                            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
-                            viewBox="22 22 44 44"
-                          >
-                            <circle
-                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
-                              cx="44"
-                              cy="44"
-                              fill="none"
-                              r="21"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                        style="text-align: center;"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
-                          style="font-size: 1.33rem;"
-                        >
-                          Loading trending works
-                        </span>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                />
-              </div>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-acknowledgement-of-country"
-                    id="standard-card-acknowledgement-of-country"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-acknowledgement-of-country-header"
-                          id="standard-card-acknowledgement-of-country-header"
-                        >
-                          Acknowledgement of Country
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-acknowledgement-of-country-content"
-                      data-testid="standard-card-acknowledgement-of-country-content"
-                      id="standard-card-acknowledgement-of-country-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-cultural-advice"
-                    id="standard-card-cultural-advice"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-cultural-advice-header"
-                          id="standard-card-cultural-advice-header"
-                        >
-                          Cultural advice
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-cultural-advice-content"
-                      data-testid="standard-card-cultural-advice-content"
-                      id="standard-card-cultural-advice-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
-                          <br />
-                          <br />
-                          Some material may contain language, terms, or descriptions that reflect the authors’ views, or those of the period in which the item was written or recorded but may be considered inappropriate today. These views are not necessarily the views of The University of Queensland. While the information may not reflect current understandings, it is provided in an historical context.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-restrictions-on-use"
-                    id="standard-card-restrictions-on-use"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-restrictions-on-use-header"
-                          id="standard-card-restrictions-on-use-header"
-                        >
-                          Restrictions on Use
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-restrictions-on-use-content"
-                      data-testid="standard-card-restrictions-on-use-content"
-                      id="standard-card-restrictions-on-use-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-open-to-collaborate"
-                    id="standard-card-open-to-collaborate"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-open-to-collaborate-header"
-                          id="standard-card-open-to-collaborate-header"
-                        >
-                          Open to Collaborate
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-open-to-collaborate-content"
-                      data-testid="standard-card-open-to-collaborate-content"
-                      id="standard-card-open-to-collaborate-content"
-                    >
-                      <div
-                        class="css-ki8537"
-                      >
-                        <img
-                          alt="Open to Collaborate"
-                          class="css-rd2owr"
-                          src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
-                        />
-                        <p
-                          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                        >
-                          <span>
-                            The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="offlineSnackbar"
-    />
-  </div>
+      errorElement
+    </code>
+     prop on your route.
+  </p>
 </div>
 `;
 
 exports[`Application component should render application with routing for the user and display loading screen while loading author 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <button
               aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="main-menu-button"
               data-mui-internal-clone-element="true"
               id="main-menu-button"
@@ -2313,7 +328,7 @@ exports[`Application component should render application with routing for the us
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="MenuIcon"
                 focusable="false"
                 style="color: white;"
@@ -2326,14 +341,14 @@ exports[`Application component should render application with routing for the us
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
             style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item css-1c6hw6e-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item css-dr85pc-MuiGridLegacy-root"
               >
                 <div
                   class="smallLogo"
@@ -2344,11 +359,11 @@ exports[`Application component should render application with routing for the us
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-16qo8ib-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -2363,20 +378,20 @@ exports[`Application component should render application with routing for the us
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-i45qf8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2387,20 +402,20 @@ exports[`Application component should render application with routing for the us
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
                         aria-label=""
                         autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-v8l2vu-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
                         id="simple-search-input"
@@ -2418,14 +433,14 @@ exports[`Application component should render application with routing for the us
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ixlo85-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2439,21 +454,21 @@ exports[`Application component should render application with routing for the us
             </form>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <div
               class="auth-button-wrapper"
             >
               <button
                 aria-label="Log out - undefined"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q9efh0-MuiSvgIcon-root"
                   data-testid="PersonIcon"
                   focusable="false"
                   id="logged-in-icon"
@@ -2475,7 +490,7 @@ exports[`Application component should render application with routing for the us
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -2483,7 +498,7 @@ exports[`Application component should render application with routing for the us
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="ArrowUpwardIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -2510,27 +525,27 @@ exports[`Application component should render application with routing for the us
         style="padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
             style="text-align: center;"
           >
             <span
               aria-label="Loading"
-              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
               role="progressbar"
               style="width: 18px; height: 18px;"
             >
               <svg
-                class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                 viewBox="22 22 44 44"
               >
                 <circle
-                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                   cx="44"
                   cy="44"
                   fill="none"
@@ -2541,18 +556,18 @@ exports[`Application component should render application with routing for the us
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading account
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
           />
         </div>
       </div>
@@ -2566,518 +581,102 @@ exports[`Application component should render application with routing for the us
 
 exports[`Application component should render for anon user 1`] = `
 <div>
-  <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+  <h2>
+    Unexpected Application Error!
+  </h2>
+  <h3
+    style="font-style: italic;"
   >
-    <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
+    mediaQueryList.addEventListener is not a function
+  </h3>
+  <pre
+    style="padding: 0.5rem; background-color: rgba(200, 200, 200, 0.5);"
+  >
+    TypeError: mediaQueryList.addEventListener is not a function
+    at /Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@mui/system/useMediaQuery/useMediaQuery.js:71:22
+    at subscribeToStore (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:16139:10)
+    at commitHookEffectListMount (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+    at flushPassiveEffects (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+    at performSyncWorkOnRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26115:3)
+    at flushSyncCallbacks (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+    at commitRootImpl (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26998:3)
+    at commitRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+    at finishConcurrentRender (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26020:9)
+    at performConcurrentWorkOnRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:25848:7)
+    at flushActQueue (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react/cjs/react.development.js:2667:24)
+    at act (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/react/cjs/react.development.js:2582:11)
+    at /Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/act-compat.js:47:25
+    at renderRoot (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/pure.js:190:26)
+    at render (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/@testing-library/react/dist/pure.js:292:10)
+    at renderMethod (/Users/uqlsibba/Developer/Projects/fez-frontend/src/modules/App/components/App.test.js:43:12)
+    at Object.setup (/Users/uqlsibba/Developer/Projects/fez-frontend/src/modules/App/components/App.test.js:87:31)
+    at Promise.then.completed (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/uqlsibba/Developer/Projects/fez-frontend/node_modules/jest-runner/build/testWorker.js:106:12)
+  </pre>
+  <p>
+    💿 Hey developer 👋
+  </p>
+  <p>
+    You can provide a way better UX than this when your app throws errors by providing your own 
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
     >
-      <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <button
-              aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="main-menu-button"
-              data-mui-internal-clone-element="true"
-              id="main-menu-button"
-              style="margin-left: -12px; margin-right: 12px;"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="MenuIcon"
-                focusable="false"
-                style="color: white;"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-            style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item css-1c6hw6e-MuiGrid-root"
-              >
-                <div
-                  class="smallLogo"
-                  id="logo"
-                  style="height: 66px; width: 60px;"
-                >
-                  The University of Queensland
-                </div>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
-              >
-                <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
-                >
-                  <a
-                    class="appTitle"
-                    href="/"
-                    style="color: rgb(255, 255, 255);"
-                    title="Click to return to the eSpace home page"
-                  >
-                    UQ eSpace 
-                  </a>
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-i45qf8-MuiGrid-root"
-          >
-            <form
-              style="margin: 8px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
-                    data-testid="SearchIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
-                >
-                  <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                    data-testid="simple-search"
-                  >
-                    <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
-                    >
-                      <input
-                        aria-invalid="false"
-                        aria-label=""
-                        autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
-                        data-analyticsid="simple-search-input"
-                        data-testid="simple-search-input"
-                        id="simple-search-input"
-                        label=""
-                        placeholder="Search eSpace"
-                        type="search"
-                        value=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiBox-root css-10q9jzs"
-              >
-                <button
-                  aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                  data-mui-internal-clone-element="true"
-                  tabindex="0"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
-                    data-testid="SearchIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-          >
-            <div
-              class="auth-button-wrapper"
-            >
-              <button
-                aria-label="Log in"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-mui-internal-clone-element="true"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
-                  data-testid="PersonOutlineIcon"
-                  focusable="false"
-                  id="logged-out-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div
-      class="content-container"
-      id="content-container"
+      ErrorBoundary
+    </code>
+     or
+     
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
     >
-      <button
-        aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
-        id="scrolltopbtn"
-        tabindex="0"
-        title="Scroll to top of page"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="ArrowUpwardIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"
-          />
-        </svg>
-      </button>
-      <div
-        aria-label="eSpace alerts"
-        role="region"
-        style="padding-bottom: 24px;"
-      >
-        <alert-list
-          system="espace"
-        />
-      </div>
-      <span
-        class="MuiBox-root css-0"
-        data-testid="confirmDialogBox"
-      />
-      <div
-        class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        />
-        <div
-          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                />
-                <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                >
-                  <div
-                    style="padding: 8px;"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
-                      />
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                        style="text-align: center;"
-                      >
-                        <span
-                          aria-label="Loading"
-                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
-                          role="progressbar"
-                          style="width: 18px; height: 18px;"
-                        >
-                          <svg
-                            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
-                            viewBox="22 22 44 44"
-                          >
-                            <circle
-                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
-                              cx="44"
-                              cy="44"
-                              fill="none"
-                              r="21"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                        style="text-align: center;"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
-                          style="font-size: 1.33rem;"
-                        >
-                          Loading trending works
-                        </span>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-                />
-              </div>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-acknowledgement-of-country"
-                    id="standard-card-acknowledgement-of-country"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-acknowledgement-of-country-header"
-                          id="standard-card-acknowledgement-of-country-header"
-                        >
-                          Acknowledgement of Country
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-acknowledgement-of-country-content"
-                      data-testid="standard-card-acknowledgement-of-country-content"
-                      id="standard-card-acknowledgement-of-country-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-cultural-advice"
-                    id="standard-card-cultural-advice"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-cultural-advice-header"
-                          id="standard-card-cultural-advice-header"
-                        >
-                          Cultural advice
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-cultural-advice-content"
-                      data-testid="standard-card-cultural-advice-content"
-                      id="standard-card-cultural-advice-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
-                          <br />
-                          <br />
-                          Some material may contain language, terms, or descriptions that reflect the authors’ views, or those of the period in which the item was written or recorded but may be considered inappropriate today. These views are not necessarily the views of The University of Queensland. While the information may not reflect current understandings, it is provided in an historical context.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-restrictions-on-use"
-                    id="standard-card-restrictions-on-use"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-restrictions-on-use-header"
-                          id="standard-card-restrictions-on-use-header"
-                        >
-                          Restrictions on Use
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-restrictions-on-use-content"
-                      data-testid="standard-card-restrictions-on-use-content"
-                      id="standard-card-restrictions-on-use-content"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                      >
-                        <span>
-                          You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                >
-                  <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-                    data-testid="standard-card-open-to-collaborate"
-                    id="standard-card-open-to-collaborate"
-                  >
-                    <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
-                    >
-                      <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                      >
-                        <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                          data-testid="standard-card-open-to-collaborate-header"
-                          id="standard-card-open-to-collaborate-header"
-                        >
-                          Open to Collaborate
-                        </h3>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                      data-analyticsid="standard-card-open-to-collaborate-content"
-                      data-testid="standard-card-open-to-collaborate-content"
-                      id="standard-card-open-to-collaborate-content"
-                    >
-                      <div
-                        class="css-ki8537"
-                      >
-                        <img
-                          alt="Open to Collaborate"
-                          class="css-rd2owr"
-                          src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
-                        />
-                        <p
-                          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                        >
-                          <span>
-                            The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="offlineSnackbar"
-    />
-  </div>
+      errorElement
+    </code>
+     prop on your route.
+  </p>
 </div>
 `;
 
 exports[`Application component should render loading screen while account is loading 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-12 css-12pd4t8-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth MuiGridLegacy-grid-xs-12 css-81rso6-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container css-asygwg-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container css-1tn8p30-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item css-m47mkr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
         >
           <span
-            class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jvygfr-MuiCircularProgress-root"
+            class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jb97hd-MuiCircularProgress-root"
             role="progressbar"
             style="width: 80px; height: 80px;"
           >
             <svg
-              class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+              class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
               viewBox="22 22 44 44"
             >
               <circle
-                class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                 cx="44"
                 cy="44"
                 fill="none"
@@ -3088,7 +687,7 @@ exports[`Application component should render loading screen while account is loa
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item css-m47mkr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
         >
           <div
             alt="The University of Queensland"
@@ -3096,10 +695,10 @@ exports[`Application component should render loading screen while account is loa
           />
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item css-m47mkr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-1cgw6ig-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-12tzrfb-MuiTypography-root"
           >
             UQ eSpace 
           </h6>
