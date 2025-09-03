@@ -177,7 +177,7 @@ const Dashboard = ({
 
     const renderAuthorProfile = () => (
         <Grid item xs={12}>
-            {orcidSyncEnabled && location.state?.showOrcidLinkingConfirmation && (
+            {location.state?.showOrcidLinkingConfirmation && (
                 <ConfirmDialogBox
                     locale={{
                         confirmationTitle: locale.pages.orcidLink.successAlert.title,
@@ -398,7 +398,7 @@ const Dashboard = ({
                         </Grid>
                     </React.Fragment>
                 )}
-                {/* render donut chart chart next to publication stats if both available */}
+                {/* render donut chart next to publication stats if both available */}
                 {donutChart && publicationStats && (
                     <React.Fragment>
                         <Grid item xs={12} sm={4}>
