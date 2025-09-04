@@ -155,14 +155,24 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'Journal URL',
-                    fieldId: 'ulr-open-access-url',
-                    data: [
-                        {
-                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_open_access_url'],
-                        },
-                    ],
-                    template: 'DefaultTemplate',
+                    heading: 'Journal home page',
+                    fieldId: 'jnl-homepage-url',
+                    getData: journalDetails =>
+                        (journalDetails.fez_journal_issn &&
+                            Array.isArray(journalDetails.fez_journal_issn) &&
+                            journalDetails.fez_journal_issn.length > 0 &&
+                            ((journalDetails.fez_journal_issn[0].fez_ulrichs &&
+                                journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url) ||
+                                (journalDetails.fez_journal_issn.length > 1 &&
+                                    journalDetails.fez_journal_issn[1].fez_ulrichs &&
+                                    journalDetails.fez_journal_issn[1].fez_ulrichs.ulr_open_access_url))) ||
+                        (journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_homepage_url),
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: item => item,
+                        text: item => item,
+                        title: 'View journal home page in a new tab',
+                    },
                 },
             ],
             [
@@ -237,23 +247,6 @@ export const viewJournalConfig = {
                         },
                     ],
                     template: 'BooleanTemplate',
-                },
-            ],
-            [
-                {
-                    heading: 'Journal home page',
-                    fieldId: 'jnl-doaj-homepage-url',
-                    data: [
-                        {
-                            path: ['fez_journal_doaj', 'jnl_doaj_homepage_url'],
-                        },
-                    ],
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: item => item,
-                        text: item => item,
-                        title: 'View journal home page in a new tab',
-                    },
                 },
             ],
             [

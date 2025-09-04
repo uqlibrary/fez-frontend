@@ -112,7 +112,12 @@ describe('ViewJournal', () => {
         expect(getByTestId('ulr-formats-header')).toHaveTextContent('Journal formats available');
         expect(getByTestId('ulr-formats-value')).toHaveTextContent('Print');
 
-        expect(queryByTestId('ulr-open-access-url-header')).not.toBeInTheDocument();
+        expect(getByTestId('jnl-homepage-url-header')).toHaveTextContent('Journal home page');
+        expect(getByTestId('jnl-homepage-url-value')).toHaveTextContent('https://www.hindawi.com/journals/aaa');
+        expect(getByTestId('jnl-homepage-url-lookup-link')).toHaveAttribute(
+            'href',
+            'https://www.hindawi.com/journals/aaa',
+        );
 
         expect(getByTestId('ulr-description-header')).toHaveTextContent('Description');
         expect(getByTestId('ulr-description-value')).toHaveTextContent(
@@ -139,13 +144,6 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('ulr-open-access-header')).toHaveTextContent('Open access');
         expect(getByTestId('ulr-open-access-value')).toHaveTextContent('Yes');
-
-        expect(getByTestId('jnl-doaj-homepage-url-header')).toHaveTextContent('Journal home page');
-        expect(getByTestId('jnl-doaj-homepage-url-value')).toHaveTextContent('https://www.hindawi.com/journals/aaa');
-        expect(getByTestId('jnl-doaj-homepage-url-lookup-link')).toHaveAttribute(
-            'href',
-            'https://www.hindawi.com/journals/aaa',
-        );
 
         expect(getByTestId('jnl-doaj-apc-average-price-header')).toHaveTextContent('Article processing charges');
         expect(getByTestId('jnl-doaj-apc-average-price-value')).toHaveTextContent('975 USD');
