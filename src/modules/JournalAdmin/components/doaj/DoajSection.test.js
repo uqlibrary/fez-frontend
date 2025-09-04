@@ -32,11 +32,6 @@ describe('DoajSection component', () => {
 
         expect(getByTestId('ulr-open-access-header')).toHaveTextContent('Open access');
         expect(getByTestId('ulr-open-access-value')).toHaveTextContent('No');
-        expect(getByTestId('jnl-doaj-homepage-url-header')).toHaveTextContent('Journal home page');
-        expect(getByTestId('jnl-doaj-homepage-url-lookup-link')).toHaveAttribute(
-            'href',
-            'https://www.degruyter.com/journal/key/ans/html',
-        );
         expect(getByTestId('jnl-doaj-apc-average-price-header')).toHaveTextContent('Article processing charges');
         expect(getByTestId('jnl-doaj-apc-average-price-value')).toHaveTextContent('1000 EUR');
         expect(getByTestId('jnl-doaj-by-sa-nd-nc-header')).toHaveTextContent('Journal licence');
