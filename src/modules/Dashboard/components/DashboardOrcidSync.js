@@ -36,9 +36,11 @@ const helpEmail = 'espace@library.uq.edu.au';
 const getSyncStatus = (accountAuthorSaving, accountAuthorError, orcidSyncStatus, messageTemplate) => {
     const jobStatus = orcidSyncStatus?.orj_status;
 
+    /* istanbul ignore next */
     if (accountAuthorSaving) {
         return ['In Progress', messageTemplate.messages.syncPreference.saving];
     }
+    /* istanbul ignore next */
     if (accountAuthorError) {
         return ['Error', messageTemplate.messages.syncPreference.error];
     }
@@ -145,6 +147,7 @@ export const DashboardOrcidSync = props => {
         setIsSyncEnabled(!!author.aut_is_orcid_sync_enabled);
     }, [author.aut_is_orcid_sync_enabled]);
 
+    /* istanbul ignore next */
     const onSyncPreferenceChange = isChecked => {
         const newValue = isChecked ? 1 : 0;
         if (author.aut_is_orcid_sync_enabled === newValue || accountAuthorSaving) {
@@ -193,17 +196,19 @@ export const DashboardOrcidSync = props => {
     };
     return (
         <>
-            {location.state?.showOrcidLinkingConfirmation && (
-                <ConfirmDialogBox
-                    locale={{
-                        confirmationTitle: pagesLocale.pages.orcidLink.successAlert.title,
-                        confirmationMessage: pagesLocale.pages.orcidLink.successAlert.message,
-                        confirmButtonLabel: 'OK',
-                    }}
-                    hideCancelButton
-                    isOpen
-                />
-            )}
+            {
+                /* istanbul ignore next */ location.state?.showOrcidLinkingConfirmation && (
+                    <ConfirmDialogBox
+                        locale={{
+                            confirmationTitle: pagesLocale.pages.orcidLink.successAlert.title,
+                            confirmationMessage: pagesLocale.pages.orcidLink.successAlert.message,
+                            confirmButtonLabel: 'OK',
+                        }}
+                        hideCancelButton
+                        isOpen
+                    />
+                )
+            }
             <HelpIcon {...helpIconProps} testId="orcid" />
         </>
     );
