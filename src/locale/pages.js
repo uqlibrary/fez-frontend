@@ -285,7 +285,6 @@ export default {
                     badgeTooltip: 'Information about uploading your eSpace works to ORCID',
                     helpDrawer: {
                         messages: {
-                            // Persistent help message
                             activated: 'Weekly automatic upload of your works to ORCID is activated.',
                             // Statuses
                             done: 'There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.',
@@ -294,11 +293,20 @@ export default {
                             // Date of last upload
                             lastUpload: 'The last upload was on [syncTime].',
                             noPrevious: 'There are no previous uploads of your eSpace works to ORCID.',
+                            syncPreference: {
+                                saving: 'Saving ORCID sync preferences.',
+                                error: 'Error while saving ORCID sync preferences.',
+                            },
                         },
                         title: 'ORCID Upload',
                         type: 'info',
                         actionButtonLabel: 'Upload works to ORCID',
                         alternateActionButtonLabel: 'View works in ORCID',
+                    },
+                },
+                dashboardOrcidSyncPreferences: {
+                    labels: {
+                        switch: 'Enable weekly automatic upload of your works to ORCID.',
                     },
                 },
             },

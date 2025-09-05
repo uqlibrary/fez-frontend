@@ -79,6 +79,8 @@ const Dashboard = ({
     authorDetails,
     author,
     accountAuthorDetailsLoading,
+    accountAuthorSaving,
+    accountAuthorError,
 
     // graph data
     loadingPublicationsByYear,
@@ -190,12 +192,14 @@ const Dashboard = ({
             )}
             <OrcidSyncContext.Provider
                 value={{
-                    showSyncUI: orcidSyncEnabled && !loadingOrcidSyncStatus,
                     orcidSyncProps: {
-                        author: author,
-                        orcidSyncStatus: orcidSyncStatus,
-                        requestingOrcidSync: requestingOrcidSync,
-                        requestOrcidSync: requestOrcidSync,
+                        author,
+                        accountAuthorSaving,
+                        accountAuthorError,
+                        orcidSyncEnabled,
+                        orcidSyncStatus,
+                        requestingOrcidSync,
+                        requestOrcidSync,
                     },
                 }}
             >
@@ -453,6 +457,8 @@ Dashboard.propTypes = {
     authorDetails: PropTypes.object,
     author: PropTypes.object,
     accountAuthorDetailsLoading: PropTypes.bool,
+    accountAuthorSaving: PropTypes.bool,
+    accountAuthorError: PropTypes.bool,
 
     // graph data
     loadingPublicationsByYear: PropTypes.bool,

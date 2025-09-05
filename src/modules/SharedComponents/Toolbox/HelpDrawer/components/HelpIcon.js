@@ -19,6 +19,7 @@ export const HelpIcon = ({
     tooltip = 'Click for more information',
     IconComponent = HelpOutlineIcon,
     testId,
+    disabled,
 }) => {
     const dispatch = useDispatch();
     const setDrawerContent = () => {
@@ -29,13 +30,15 @@ export const HelpIcon = ({
     return (
         <Tooltip title={tooltip} placement="bottom-end" TransitionComponent={Fade}>
             <IconButton
-                onClick={setDrawerContent}
                 aria-label={tooltip}
                 id={id}
                 data-analyticsid={id}
                 data-testid={id}
                 size={iconSize}
                 style={style}
+                {...(!disabled && {
+                    onClick: setDrawerContent,
+                })}
             >
                 <IconComponent
                     sx={{
@@ -62,6 +65,7 @@ HelpIcon.propTypes = {
     title: PropTypes.string,
     tooltip: PropTypes.string,
     style: PropTypes.object,
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(HelpIcon);

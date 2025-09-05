@@ -33,7 +33,6 @@ exports[`DashboardOrcidSyncMessage should render as expected 1`] = `
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
         >
-          Weekly automatic upload of your works to ORCID is activated.
           test2
         </div>
       </div>

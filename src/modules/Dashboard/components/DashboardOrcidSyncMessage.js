@@ -24,7 +24,6 @@ const DashboardOrcidSyncMessage = ({
                     />
                 </Grid>
                 <Grid item xs>
-                    {locale.messages.activated}
                     {lastSyncMessage}
                 </Grid>
             </Grid>

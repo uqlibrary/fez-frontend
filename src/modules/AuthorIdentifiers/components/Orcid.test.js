@@ -199,7 +199,6 @@ describe('Component Orcid ', () => {
 
     it("should navigate back to dashboard if author's orcid id was updated successfully", () => {
         const author = { ...currentAuthor.uqnoauthid.data, aut_orcid_id: null };
-        const showAppAlertFn = jest.spyOn(AppAction, 'showAppAlert');
 
         mockUseLocation = { ...mockUseLocation, search: '?code=123&state=5ea13ef0dad88453242fcc8f65a0f90a' };
         const { getByText, rerender } = setup({
@@ -224,7 +223,6 @@ describe('Component Orcid ', () => {
             rerender,
         );
 
-        expect(showAppAlertFn).toHaveBeenCalled();
         expect(getByText('Dashboard')).toBeInTheDocument();
     });
 

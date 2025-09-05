@@ -13,18 +13,16 @@ exports[`DashboardOrcidSync should render Error status 1`] = `
     type="button"
   >
     <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
       data-testid="SyncProblemIcon"
       focusable="false"
-      role="img"
+      size="20"
       viewBox="0 0 24 24"
     >
       <path
         d="M3 12c0 2.21.91 4.2 2.36 5.64L3 20h6v-6l-2.24 2.24C5.68 15.15 5 13.66 5 12c0-2.61 1.67-4.83 4-5.65V4.26C5.55 5.15 3 8.27 3 12m8 5h2v-2h-2zM21 4h-6v6l2.24-2.24C18.32 8.85 19 10.34 19 12c0 2.61-1.67 4.83-4 5.65v2.09c3.45-.89 6-4.01 6-7.74 0-2.21-.91-4.2-2.36-5.64zm-10 9h2V7h-2z"
       />
-      <title>
-        There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.
-      </title>
     </svg>
   </button>
 </div>
@@ -39,16 +37,13 @@ exports[`DashboardOrcidSync should render Pending status 1`] = `
     data-mui-internal-clone-element="true"
     data-testid="help-icon-orcid"
     id="help-icon-orcid"
-    style="margin-left: 2px; margin-bottom: 2px;"
     tabindex="0"
     type="button"
   >
     <span
-      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1w1pxvu-MuiCircularProgress-root"
-      font-size="small"
+      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
       role="progressbar"
-      style="width: 40px; height: 40px;"
-      titleaccess="A manual upload of your eSpace works to ORCID is in progress."
+      style="width: 20px; height: 20px;"
     >
       <svg
         class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
