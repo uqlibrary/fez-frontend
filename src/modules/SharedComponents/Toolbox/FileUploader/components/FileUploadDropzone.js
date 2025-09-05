@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
 import Grid from '@mui/material/Grid';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
-import { FormValuesContext } from 'context';
+import { useFormContext } from 'react-hook-form';
 
 /**
  * Remove invalid file names
@@ -32,7 +32,8 @@ export const FileUploadDropzone = ({
     fileUploadLimit = 10,
     disabled,
 }) => {
-    const formValues = useContext(FormValuesContext);
+    const form = useFormContext();
+    const formValues = form?.getValues('filesSection.fez_datastream_info');
 
     /* istanbul ignore next */
     const onReadFileError = (file, errors, resolve) => () => {
@@ -213,7 +214,7 @@ export const FileUploadDropzone = ({
      * @private
      */
     const _onDrop = (incomingFiles, rejectedFiles) => {
-        const existingFiles = formValues?.formValues?.fez_datastream_info ?? [];
+        const existingFiles = formValues ?? [];
         const notFiles = [];
         // Remove folders from accepted files (async)
         removeDroppedFolders([...incomingFiles], notFiles).then(onlyFiles => {
