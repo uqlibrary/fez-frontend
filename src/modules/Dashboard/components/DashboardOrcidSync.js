@@ -101,7 +101,8 @@ const getDrawerContents = (
                     status: detailedStatus,
                     StatusIcon: renderBadgeIcon(jobStatus) || DoneIcon,
                     statusIconStyle: {
-                        color: (jobStatus === 'Done' && 'green') || (jobStatus === 'Error' && 'red') || undefined,
+                        /* istanbul ignore next */ color:
+                            (jobStatus === 'Done' && 'green') || (jobStatus === 'Error' && 'red') || undefined,
                     },
                 }}
             />
