@@ -94,8 +94,6 @@ export class FileUploader extends PureComponent {
         this.props.clearFileUpload();
     }
 
-    // static contextType = FormValuesContext;
-
     /**
      * Delete file on a given index
      *
@@ -176,51 +174,6 @@ export class FileUploader extends PureComponent {
         file[config.FILE_META_KEY_EMBARGO_DATE] = moment(newValue).format();
 
         this.replaceFile(file, index);
-    };
-
-    shuffleFileOrder = (arr, from, to) => {
-        return arr.reduce((prev, current, idx, self) => {
-            /* istanbul ignore if */
-            if (from === to) {
-                prev.push(current);
-            }
-            if (idx === from) {
-                return prev;
-            }
-            if (from < to) {
-                prev.push(current);
-            }
-            /* istanbul ignore else */
-            if (idx === to) {
-                prev.push(self[from]);
-            }
-            if (from > to) {
-                prev.push(current);
-            }
-            return prev;
-        }, []);
-    };
-
-    _updateOrderUp = index => {
-        // Below needs to be moved into a seperate function
-        const filesToOrder = [...this.state.filesInQueue];
-        /* istanbul ignore else */
-        if (index > 0) {
-            const newOrder = this.shuffleFileOrder(filesToOrder, index, index - 1);
-            this.setState({
-                filesInQueue: [...newOrder],
-            });
-        }
-    };
-    _updateOrderDown = index => {
-        const filesToOrder = [...this.state.filesInQueue];
-        /* istanbul ignore else */
-        if (index < filesToOrder.length - 1) {
-            const newOrder = this.shuffleFileOrder(filesToOrder, index, index + 1);
-            this.setState({
-                filesInQueue: [...newOrder],
-            });
-        }
     };
 
     /**
@@ -393,31 +346,33 @@ export class FileUploader extends PureComponent {
             .replace('[maxFileSize]', `${maxFileSize}`)
             .replace('[fileSizeUnit]', fileSizeUnit === config.SIZE_UNIT_B ? config.SIZE_UNIT_B : `${fileSizeUnit}B`);
 
-        const filesInQueueRow = filesInQueue.map((file, index) => {
-            return (
-                <FileUploadRow
-                    key={file.name}
-                    fileUploadRowId={`fez-datastream-info-list-row-${index}`}
-                    rowCount={this.state.filesInQueue.length}
-                    index={index}
-                    uploadedFile={file}
-                    fileSizeUnit={fileSizeUnit}
-                    onDelete={this._deleteFile}
-                    onAccessConditionChange={this._updateFileAccessCondition}
-                    onEmbargoDateChange={this._updateFileEmbargoDate}
-                    onOrderUpClick={this._updateOrderUp}
-                    onOrderDownClick={this._updateOrderDown}
-                    onFileDescriptionChange={this._updateFileDescription}
-                    onSecurityPolicyChange={this._updateFileSecurityPolicy}
-                    defaultAccessCondition={defaultQuickTemplateId}
-                    requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
-                    disabled={disabled}
-                    focusOnIndex={this.state.focusOnIndex}
-                    locale={this.props.locale.fileUploadRow}
-                    isAdmin={this.props.isAdmin}
-                />
-            );
-        });
+        const filesInQueueRow = filesInQueue
+            .sort((a, b) => {
+                return a.name < b.name ? -1 : 1;
+            })
+            .map((file, index) => {
+                return (
+                    <FileUploadRow
+                        key={file.name}
+                        fileUploadRowId={`fez-datastream-info-list-row-${index}`}
+                        rowCount={this.state.filesInQueue.length}
+                        index={index}
+                        uploadedFile={file}
+                        fileSizeUnit={fileSizeUnit}
+                        onDelete={this._deleteFile}
+                        onAccessConditionChange={this._updateFileAccessCondition}
+                        onEmbargoDateChange={this._updateFileEmbargoDate}
+                        onFileDescriptionChange={this._updateFileDescription}
+                        onSecurityPolicyChange={this._updateFileSecurityPolicy}
+                        defaultAccessCondition={defaultQuickTemplateId}
+                        requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
+                        disabled={disabled}
+                        focusOnIndex={this.state.focusOnIndex}
+                        locale={this.props.locale.fileUploadRow}
+                        isAdmin={this.props.isAdmin}
+                    />
+                );
+            });
 
         return (
             <Grid container spacing={2}>

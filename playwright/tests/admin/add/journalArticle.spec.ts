@@ -146,10 +146,7 @@ test.describe('As an admin,', () => {
             await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
             await page.getByTestId('affiliationSaveBtn').click();
             await expect(
-                page
-                    .getByTestId('detailPanel-85004')
-                    .locator('[data-testid=orgChip-877]', { hasText: /100%/ })
-                    .first(),
+                page.getByTestId('detailPanel-85004').locator('[data-testid=orgChip-877]', { hasText: /100%/ }).first(),
             ).toBeVisible();
             await expect(
                 page
@@ -173,12 +170,7 @@ test.describe('As an admin,', () => {
                 '50%',
                 true,
             );
-            await expect(
-                page
-                    .getByTestId('orgChip-877')
-                    .getByText(/50%/)
-                    .first(),
-            ).toBeVisible();
+            await expect(page.getByTestId('orgChip-877').getByText(/50%/).first()).toBeVisible();
             await addAffiliationAndAssert(page, 'Academic Administration Directorate', 1113, '33.333%');
             await expect(
                 page
@@ -230,12 +222,7 @@ test.describe('As an admin,', () => {
             await addAffiliationAndAssert(page, 'Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
             await expect(page.getByTestId('affiliationSaveBtn')).not.toBeDisabled();
             await addAffiliationAndAssert(page, 'Academic Administration', 973, '50%');
-            await expect(
-                page
-                    .getByTestId('orgChip-877')
-                    .getByText(/50%/)
-                    .first(),
-            ).toBeVisible();
+            await expect(page.getByTestId('orgChip-877').getByText(/50%/).first()).toBeVisible();
             await addAffiliationAndAssert(page, 'Academic Administration Directorate', 1113, '33.333%');
             await expect(
                 page
@@ -257,12 +244,7 @@ test.describe('As an admin,', () => {
             await expect(page.getByTestId('orgChip-973')).not.toBeVisible();
             await expect(page.getByTestId('orgChip-1113')).not.toBeVisible();
             // auto adds suggestion
-            await expect(
-                page
-                    .getByTestId('orgChip-1248')
-                    .getByText(/0%/)
-                    .first(),
-            ).toBeVisible();
+            await expect(page.getByTestId('orgChip-1248').getByText(/0%/).first()).toBeVisible();
             await expect(page.getByTestId('orgSelect-1248-input')).toHaveValue(
                 'Information Systems and Resource Services (University of Queensland Library)',
             );
@@ -284,10 +266,7 @@ test.describe('As an admin,', () => {
                     .first(),
             ).toBeVisible();
             await expect(
-                page
-                    .getByTestId('detailPanel-78152')
-                    .locator('[data-testid=orgChip-1248]', { hasText: /0%/ })
-                    .first(),
+                page.getByTestId('detailPanel-78152').locator('[data-testid=orgChip-1248]', { hasText: /0%/ }).first(),
             ).toBeVisible();
             await expect(
                 page
@@ -302,30 +281,15 @@ test.describe('As an admin,', () => {
             // Now edit non-herdc to remove that option
             await page.getByTestId('affiliationEditBtn-78152').click();
             await expect(page.getByTestId('orgSelect-1062-input')).toHaveValue('!NON-HERDC');
-            await expect(
-                page
-                    .getByTestId('orgChip-1062')
-                    .getByText(/100%/)
-                    .first(),
-            ).toBeVisible();
+            await expect(page.getByTestId('orgChip-1062').getByText(/100%/).first()).toBeVisible();
             await expect(page.getByTestId('orgSelect-1248-input')).toHaveValue(
                 'Information Systems and Resource Services (University of Queensland Library)',
             );
-            await expect(
-                page
-                    .getByTestId('orgChip-1248')
-                    .getByText(/0%/)
-                    .first(),
-            ).toBeVisible();
+            await expect(page.getByTestId('orgChip-1248').getByText(/0%/).first()).toBeVisible();
             await page.getByTestId('deleteOrgBtn-1062').click();
             await expect(page.getByTestId('orgSelect-1062-input')).not.toBeVisible();
             await expect(page.getByTestId('orgChip-1062')).not.toBeVisible();
-            await expect(
-                page
-                    .getByTestId('orgChip-1248')
-                    .getByText(/100%/)
-                    .first(),
-            ).toBeVisible();
+            await expect(page.getByTestId('orgChip-1248').getByText(/100%/).first()).toBeVisible();
 
             // shows the add autocomplete element
             await expect(page.getByTestId('orgSelect-add-input')).toBeVisible();
@@ -352,12 +316,7 @@ test.describe('As an admin,', () => {
                 'Information Systems and Resource Services (University of Queensland Library)',
             );
             await expect(page.getByTestId('orgChip-1248')).toBeVisible();
-            await expect(
-                page
-                    .getByTestId('orgChip-1248')
-                    .getByText(/0%/)
-                    .first(),
-            ).toBeVisible();
+            await expect(page.getByTestId('orgChip-1248').getByText(/0%/).first()).toBeVisible();
 
             // hides the add autocomplete element
             await expect(page.getByTestId('orgSelect-add-input')).not.toBeVisible();
@@ -376,10 +335,7 @@ test.describe('As an admin,', () => {
                     .first(),
             ).toBeVisible();
             await expect(
-                page
-                    .getByTestId('detailPanel-78152')
-                    .locator('[data-testid=orgChip-1248]', { hasText: /0%/ })
-                    .first(),
+                page.getByTestId('detailPanel-78152').locator('[data-testid=orgChip-1248]', { hasText: /0%/ }).first(),
             ).toBeVisible();
             await expect(
                 page
@@ -404,16 +360,10 @@ test.describe('As an admin,', () => {
 
             // Choose display type
             await page.getByTestId('rek-display-type-select').click();
-            await page
-                .getByTestId('rek-display-type-options')
-                .getByText('Journal Article')
-                .click();
+            await page.getByTestId('rek-display-type-options').getByText('Journal Article').click();
 
             await page.getByTestId('rek-display-type-select').click();
-            await page
-                .getByTestId('rek-display-type-options')
-                .getByText('Working Paper')
-                .click();
+            await page.getByTestId('rek-display-type-options').getByText('Working Paper').click();
 
             await page.getByRole('button', { name: 'Create work' }).click();
 
