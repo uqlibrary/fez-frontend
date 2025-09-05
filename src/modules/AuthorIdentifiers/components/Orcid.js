@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createHash } from 'crypto';
 import { parse } from 'querystring';
 
