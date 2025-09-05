@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, WithReduxStore } from 'test-utils';
+import { render, WithReduxStore, WithRouter } from 'test-utils';
 import DashboardOrcidSyncContainer, { openUrl, DashboardOrcidSync } from './DashboardOrcidSync';
 
 function setup(testProps = {}) {
@@ -12,7 +12,9 @@ function setup(testProps = {}) {
     };
     return render(
         <WithReduxStore>
-            <DashboardOrcidSync {...props} />
+            <WithRouter>
+                <DashboardOrcidSync {...props} />
+            </WithRouter>
         </WithReduxStore>,
     );
 }
@@ -31,7 +33,9 @@ describe('DashboardOrcidSyncContainer', () => {
     it('should render properly', () => {
         const { container } = render(
             <WithReduxStore>
-                <DashboardOrcidSyncContainer author={{ aut_orcid_works_last_sync: '2020-02-14 16:23:30' }} />
+                <WithRouter>
+                    <DashboardOrcidSyncContainer author={{ aut_orcid_works_last_sync: '2020-02-14 16:23:30' }} />
+                </WithRouter>
             </WithReduxStore>,
         );
         expect(container).toMatchSnapshot();
