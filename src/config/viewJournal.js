@@ -288,18 +288,6 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'DOAJ seal',
-                    fieldId: 'jnl-doaj-seal',
-                    data: [
-                        {
-                            path: ['fez_journal_doaj', 'jnl_doaj_seal'],
-                        },
-                    ],
-                    template: 'BooleanTemplate',
-                },
-            ],
-            [
-                {
                     heading: 'Last updated',
                     fieldId: 'jnl-doaj-last-updated',
                     data: [
@@ -405,7 +393,8 @@ export const viewJournalConfig = {
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => 'https://clarivate.com/webofsciencegroup/solutions/webofscience-scie',
+                        href: () =>
+                            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
                         text: () => 'More info about JCR SCIE',
                         title: 'Open more info in a new tab',
                     },
@@ -527,7 +516,8 @@ export const viewJournalConfig = {
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => 'https://clarivate.com/webofsciencegroup/solutions/webofscience-ssci',
+                        href: () =>
+                            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
                         text: () => 'More info about JCR SSCI',
                         title: 'Open more info in a new tab',
                     },

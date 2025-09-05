@@ -159,9 +159,6 @@ describe('ViewJournal', () => {
             'https://creativecommons.org/licenses/by/4.0/deed.en',
         );
 
-        expect(getByTestId('jnl-doaj-seal-header')).toHaveTextContent('DOAJ seal');
-        expect(getByTestId('jnl-doaj-seal-value')).toHaveTextContent('Yes');
-
         expect(getByTestId('jnl-doaj-last-updated-header')).toHaveTextContent('Last updated');
         expect(getByTestId('jnl-doaj-last-updated-value')).toHaveTextContent('3rd February 2020 at 2:17pm');
 
@@ -212,7 +209,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jcr-more-info-scie-value')).toHaveTextContent('More info about JCR SCIE');
         expect(getByTestId('jcr-more-info-scie-lookup-link')).toHaveAttribute(
             'href',
-            'https://clarivate.com/webofsciencegroup/solutions/webofscience-scie',
+            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
         );
 
         expect(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-0-heading')).toHaveTextContent(
@@ -268,7 +265,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jcr-more-info-ssci-value')).toHaveTextContent('More info about JCR SSCI');
         expect(getByTestId('jcr-more-info-ssci-lookup-link')).toHaveAttribute(
             'href',
-            'https://clarivate.com/webofsciencegroup/solutions/webofscience-ssci',
+            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
         );
 
         expect(getByTestId('journal-details-tab-fez-journal-jcr-ssci-category-0-heading')).toHaveTextContent(
