@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { OrcidSyncContext } from 'context';
 
@@ -28,7 +28,6 @@ import locale from 'locale/pages';
 
 import { mui1theme as theme } from 'config';
 import { useIsMobileView } from 'hooks';
-import { ConfirmDialogBox } from '../../SharedComponents/Toolbox/ConfirmDialogBox';
 
 const StyledTabs = styled(Tabs)(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
@@ -113,7 +112,6 @@ const Dashboard = ({
     orcidSyncEnabled,
     loadOrcidSyncDelay = 5,
 }) => {
-    const location = useLocation();
     const navigate = useNavigate();
     const isMobileView = useIsMobileView();
     const [dashboardPubsTabs, setDashboardPubsTabs] = useState(1);
@@ -179,17 +177,6 @@ const Dashboard = ({
 
     const renderAuthorProfile = () => (
         <Grid item xs={12}>
-            {location.state?.showOrcidLinkingConfirmation && (
-                <ConfirmDialogBox
-                    locale={{
-                        confirmationTitle: locale.pages.orcidLink.successAlert.title,
-                        confirmationMessage: locale.pages.orcidLink.successAlert.message,
-                        confirmButtonLabel: 'OK',
-                    }}
-                    hideCancelButton
-                    isOpen
-                />
-            )}
             <OrcidSyncContext.Provider
                 value={{
                     orcidSyncProps: {

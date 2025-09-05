@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
@@ -8,6 +9,7 @@ import SyncProblemIcon from '@mui/icons-material/SyncProblem';
 import DoneIcon from '@mui/icons-material/Done';
 
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { locale as pagesLocale } from 'locale';
 import { updateCurrentAuthor } from 'actions';
 import * as actions from 'actions/actionTypes';
@@ -107,6 +109,7 @@ const getDrawerContents = (
 
 export const DashboardOrcidSync = props => {
     const dispatch = useDispatch();
+    const location = useLocation();
     const {
         author,
         accountAuthorSaving,
@@ -188,7 +191,22 @@ export const DashboardOrcidSync = props => {
         tooltip: tooltipText,
         disabled: !!accountAuthorSaving,
     };
-    return <HelpIcon {...helpIconProps} testId="orcid" />;
+    return (
+        <>
+            {location.state?.showOrcidLinkingConfirmation && (
+                <ConfirmDialogBox
+                    locale={{
+                        confirmationTitle: pagesLocale.pages.orcidLink.successAlert.title,
+                        confirmationMessage: pagesLocale.pages.orcidLink.successAlert.message,
+                        confirmButtonLabel: 'OK',
+                    }}
+                    hideCancelButton
+                    isOpen
+                />
+            )}
+            <HelpIcon {...helpIconProps} testId="orcid" />
+        </>
+    );
 };
 
 DashboardOrcidSync.propTypes = {
