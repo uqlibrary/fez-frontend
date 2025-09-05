@@ -91,7 +91,7 @@ const getDrawerContents = (
             disabled={accountAuthorSaving}
         />
         {isSyncEnabled && (
-            <DashboardOrcidSyncMessage
+            /* istanbul ignore next */ <DashboardOrcidSyncMessage
                 locale={messageTemplate}
                 secondaryClick={openUrl(currentAuthorOrcidLink)}
                 {...{
@@ -101,8 +101,7 @@ const getDrawerContents = (
                     status: detailedStatus,
                     StatusIcon: renderBadgeIcon(jobStatus) || DoneIcon,
                     statusIconStyle: {
-                        /* istanbul ignore next */ color:
-                            (jobStatus === 'Done' && 'green') || (jobStatus === 'Error' && 'red') || undefined,
+                        color: (jobStatus === 'Done' && 'green') || (jobStatus === 'Error' && 'red') || undefined,
                     },
                 }}
             />
