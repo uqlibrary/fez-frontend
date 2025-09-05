@@ -63,6 +63,7 @@ function fix_coverage_report_paths() {
 
 function install_pw_deps() {
     printf "\n--- \e[INSTALLING PW DEPS [STARTING AT $(date)] 1\e[0m ---\n"
+    curl -s www.google.com > /dev/null && echo "Internet connection [OK]" || echo "Internet connection [FAIL]"
     apt-get update
     npx playwright install chromium-headless-shell
     npx playwright install-deps chromium-headless-shell
