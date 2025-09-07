@@ -182,6 +182,35 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -861,6 +890,35 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -1572,6 +1630,35 @@ exports[`Dashboard test Should only render barChart 1`] = `
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -1892,6 +1979,35 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -2635,6 +2751,35 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -2984,6 +3129,35 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -3269,6 +3443,35 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -3733,6 +3936,35 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -4125,6 +4357,35 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -4480,6 +4741,35 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -4877,6 +5167,35 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -5098,6 +5417,35 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -5383,6 +5731,35 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -5604,6 +5981,35 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -5930,6 +6336,35 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -6461,6 +6896,35 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -6922,6 +7386,35 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -7383,6 +7876,35 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -8227,6 +8749,35 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -8512,6 +9063,35 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -8877,6 +9457,35 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -9398,6 +10007,35 @@ exports[`Dashboard test should get styles for full render 1`] = `
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
                         </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              data-testid="HelpOutlineIcon"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                              />
+                              <title>
+                                Information about uploading your eSpace works to ORCID
+                              </title>
+                            </svg>
+                          </button>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
@@ -9654,7 +10292,6 @@ exports[`Dashboard test should wait for ORCID sync to complete 1`] = `
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
                             id="help-icon-orcid"
-                            style="margin-left: 2px; margin-bottom: 2px;"
                             tabindex="0"
                             type="button"
                           >

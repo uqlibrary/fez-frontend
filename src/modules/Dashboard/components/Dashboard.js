@@ -78,6 +78,8 @@ const Dashboard = ({
     authorDetails,
     author,
     accountAuthorDetailsLoading,
+    accountAuthorSaving,
+    accountAuthorError,
 
     // graph data
     loadingPublicationsByYear,
@@ -177,12 +179,14 @@ const Dashboard = ({
         <Grid item xs={12}>
             <OrcidSyncContext.Provider
                 value={{
-                    showSyncUI: orcidSyncEnabled && !loadingOrcidSyncStatus,
                     orcidSyncProps: {
-                        author: author,
-                        orcidSyncStatus: orcidSyncStatus,
-                        requestingOrcidSync: requestingOrcidSync,
-                        requestOrcidSync: requestOrcidSync,
+                        author,
+                        accountAuthorSaving,
+                        accountAuthorError,
+                        orcidSyncEnabled,
+                        orcidSyncStatus,
+                        requestingOrcidSync,
+                        requestOrcidSync,
                     },
                 }}
             >
@@ -385,7 +389,7 @@ const Dashboard = ({
                         </Grid>
                     </React.Fragment>
                 )}
-                {/* render donut chart chart next to publication stats if both available */}
+                {/* render donut chart next to publication stats if both available */}
                 {donutChart && publicationStats && (
                     <React.Fragment>
                         <Grid item xs={12} sm={4}>
@@ -440,6 +444,8 @@ Dashboard.propTypes = {
     authorDetails: PropTypes.object,
     author: PropTypes.object,
     accountAuthorDetailsLoading: PropTypes.bool,
+    accountAuthorSaving: PropTypes.bool,
+    accountAuthorError: PropTypes.bool,
 
     // graph data
     loadingPublicationsByYear: PropTypes.bool,

@@ -3,6 +3,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import Typography from '@mui/material/Typography';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import OpenInNew from '@mui/icons-material/OpenInNew';
 
 import locale from 'locale/components';
@@ -283,7 +284,6 @@ export default {
                     badgeTooltip: 'Information about uploading your eSpace works to ORCID',
                     helpDrawer: {
                         messages: {
-                            // Persistent help message
                             activated: 'Weekly automatic upload of your works to ORCID is activated.',
                             // Statuses
                             done: 'There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.',
@@ -292,11 +292,20 @@ export default {
                             // Date of last upload
                             lastUpload: 'The last upload was on [syncTime].',
                             noPrevious: 'There are no previous uploads of your eSpace works to ORCID.',
+                            syncPreference: {
+                                saving: 'Saving ORCID sync preferences.',
+                                error: 'Error while saving ORCID sync preferences.',
+                            },
                         },
                         title: 'ORCID Upload',
                         type: 'info',
                         actionButtonLabel: 'Upload works to ORCID',
                         alternateActionButtonLabel: 'View works in ORCID',
+                    },
+                },
+                dashboardOrcidSyncPreferences: {
+                    labels: {
+                        switch: 'Enable weekly automatic upload of your works to ORCID.',
                     },
                 },
             },
@@ -897,8 +906,18 @@ export default {
                 type: 'done',
                 alertId: 'alert-done',
                 title: 'ORCID linked',
-                message:
-                    'Your ORCID has been linked to your eSpace profile. Works from Web of Science, Scopus PubMed and Crossref will be synced to your eSpace profile within the next 7 days.',
+                message: (
+                    <>
+                        <Alert
+                            message="You have successfully linked your ORCID to your UQ eSpace profile."
+                            type="done"
+                        />
+                        <span style={{ display: 'block', marginTop: '1em' }}>
+                            Works from Web of Science, Scopus, PubMed, and CrossRef will be synced to your UQ eSpace
+                            profile within the 7 days.
+                        </span>
+                    </>
+                ),
                 allowDismiss: true,
             },
             progressAlert: {
