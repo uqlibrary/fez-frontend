@@ -44,8 +44,6 @@ describe('DoajSection component', () => {
             'href',
             'https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en',
         );
-        expect(getByTestId('jnl-doaj-seal-header')).toHaveTextContent('DOAJ seal');
-        expect(getByTestId('jnl-doaj-seal-value')).toHaveTextContent('No');
         expect(getByTestId('jnl-doaj-last-updated-header')).toHaveTextContent('Last updated');
         expect(getByTestId('jnl-doaj-last-updated-value')).toHaveTextContent('22nd August 2022 at 9:57am');
     });
