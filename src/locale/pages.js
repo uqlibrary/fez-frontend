@@ -906,6 +906,7 @@ export default {
                 message: (
                     <>
                         <Alert
+                            alertId="orcid-sync-confirmation-message"
                             message="You have successfully linked your ORCID to your UQ eSpace profile."
                             type="done"
                         />

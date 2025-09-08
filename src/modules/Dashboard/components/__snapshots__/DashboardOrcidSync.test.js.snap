@@ -1,69 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DashboardOrcidSync should render Error status 1`] = `
-<div>
-  <button
-    aria-label="There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties."
-    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-    data-analyticsid="help-icon-orcid"
-    data-mui-internal-clone-element="true"
-    data-testid="help-icon-orcid"
-    id="help-icon-orcid"
-    tabindex="0"
-    type="button"
-  >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-      data-testid="SyncProblemIcon"
-      focusable="false"
-      size="20"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M3 12c0 2.21.91 4.2 2.36 5.64L3 20h6v-6l-2.24 2.24C5.68 15.15 5 13.66 5 12c0-2.61 1.67-4.83 4-5.65V4.26C5.55 5.15 3 8.27 3 12m8 5h2v-2h-2zM21 4h-6v6l2.24-2.24C18.32 8.85 19 10.34 19 12c0 2.61-1.67 4.83-4 5.65v2.09c3.45-.89 6-4.01 6-7.74 0-2.21-.91-4.2-2.36-5.64zm-10 9h2V7h-2z"
-      />
-    </svg>
-  </button>
-</div>
-`;
-
-exports[`DashboardOrcidSync should render Pending status 1`] = `
-<div>
-  <button
-    aria-label="A manual upload of your eSpace works to ORCID is in progress."
-    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-    data-analyticsid="help-icon-orcid"
-    data-mui-internal-clone-element="true"
-    data-testid="help-icon-orcid"
-    id="help-icon-orcid"
-    tabindex="0"
-    type="button"
-  >
-    <span
-      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
-      role="progressbar"
-      style="width: 20px; height: 20px;"
-    >
-      <svg
-        class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
-        viewBox="22 22 44 44"
-      >
-        <circle
-          class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
-          cx="44"
-          cy="44"
-          fill="none"
-          r="20.2"
-          stroke-width="3.6"
-        />
-      </svg>
-    </span>
-  </button>
-</div>
-`;
-
-exports[`DashboardOrcidSync should render properly 1`] = `
+exports[`DashboardOrcidSync Component should render Done status 1`] = `
 <div>
   <button
     aria-label="Information about uploading your eSpace works to ORCID"
@@ -93,7 +30,161 @@ exports[`DashboardOrcidSync should render properly 1`] = `
 </div>
 `;
 
-exports[`DashboardOrcidSyncContainer should render properly 1`] = `
+exports[`DashboardOrcidSync Component should render Error status 1`] = `
+<div>
+  <button
+    aria-label="There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties."
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+    data-analyticsid="help-icon-orcid"
+    data-mui-internal-clone-element="true"
+    data-testid="help-icon-orcid"
+    id="help-icon-orcid"
+    tabindex="0"
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+      data-testid="dashboard-orcid-sync-error-icon"
+      focusable="false"
+      size="20"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M3 12c0 2.21.91 4.2 2.36 5.64L3 20h6v-6l-2.24 2.24C5.68 15.15 5 13.66 5 12c0-2.61 1.67-4.83 4-5.65V4.26C5.55 5.15 3 8.27 3 12m8 5h2v-2h-2zM21 4h-6v6l2.24-2.24C18.32 8.85 19 10.34 19 12c0 2.61-1.67 4.83-4 5.65v2.09c3.45-.89 6-4.01 6-7.74 0-2.21-.91-4.2-2.36-5.64zm-10 9h2V7h-2z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`DashboardOrcidSync Component should render Pending status 1`] = `
+<div>
+  <button
+    aria-label="A manual upload of your eSpace works to ORCID is in progress."
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+    data-analyticsid="help-icon-orcid"
+    data-mui-internal-clone-element="true"
+    data-testid="help-icon-orcid"
+    id="help-icon-orcid"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+      data-testid="dashboard-orcid-sync-progress-icon"
+      role="progressbar"
+      style="width: 20px; height: 20px;"
+    >
+      <svg
+        class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20.2"
+          stroke-width="3.6"
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`DashboardOrcidSync Component should render properly 1`] = `
+<div>
+  <button
+    aria-label="Information about uploading your eSpace works to ORCID"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+    data-analyticsid="help-icon-orcid"
+    data-mui-internal-clone-element="true"
+    data-testid="help-icon-orcid"
+    id="help-icon-orcid"
+    tabindex="0"
+    type="button"
+  >
+    <svg
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+      data-testid="HelpOutlineIcon"
+      focusable="false"
+      role="img"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+      />
+      <title>
+        Information about uploading your eSpace works to ORCID
+      </title>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`DashboardOrcidSync Component should render properly when sync is disabled 1`] = `
+<div>
+  <button
+    aria-label="Information about uploading your eSpace works to ORCID"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+    data-analyticsid="help-icon-orcid"
+    data-mui-internal-clone-element="true"
+    data-testid="help-icon-orcid"
+    id="help-icon-orcid"
+    tabindex="0"
+    type="button"
+  >
+    <svg
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+      data-testid="HelpOutlineIcon"
+      focusable="false"
+      role="img"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+      />
+      <title>
+        Information about uploading your eSpace works to ORCID
+      </title>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`DashboardOrcidSync Component should render properly when sync is enabled 1`] = `
+<div>
+  <button
+    aria-label="Information about uploading your eSpace works to ORCID"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+    data-analyticsid="help-icon-orcid"
+    data-mui-internal-clone-element="true"
+    data-testid="help-icon-orcid"
+    id="help-icon-orcid"
+    tabindex="0"
+    type="button"
+  >
+    <svg
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+      data-testid="HelpOutlineIcon"
+      focusable="false"
+      role="img"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+      />
+      <title>
+        Information about uploading your eSpace works to ORCID
+      </title>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`DashboardOrcidSync Container should render properly 1`] = `
 <div>
   <button
     aria-label="Information about uploading your eSpace works to ORCID"
