@@ -47,7 +47,7 @@ const Orcid = () => {
     const [authoriseConfirmationBox, setAuthoriseConfirmationBox] = useState(null);
 
     const navigateToDashboard = showOrcidLinkingConfirmation => {
-        navigate(pathConfig.dashboard, { state: { showOrcidLinkingConfirmation } });
+        navigate(pathConfig.dashboard, { state: { showOrcidLinkingConfirmation: !!showOrcidLinkingConfirmation } });
     };
 
     const createOrcidStateId = account => {
