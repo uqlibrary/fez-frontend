@@ -17,28 +17,33 @@ import DashboardOrcidSyncMessage from './DashboardOrcidSyncMessage';
 import DashboardOrcidSyncPreferences from './DashboardOrcidSyncPreferences';
 import { debounce } from 'throttle-debounce';
 
-const updateSyncPreferences = (dispatch, author, value) =>
-    debounce(3000, () =>
+export const getOnSyncPreferenceChangeHandler = (
+    author,
+    accountAuthorSaving,
+    setIsSyncEnabled,
+    dispatch,
+    hideDrawer,
+) => {
+    const updateSyncPreferences = debounce(3000, value => {
         dispatch(
             updateCurrentAuthor(author.aut_id, {
                 ...author,
                 aut_is_orcid_sync_enabled: value,
             }),
-        ),
-    )();
+        );
+    });
 
-export const getOnSyncPreferenceChangeHandler =
-    (author, accountAuthorSaving, setIsSyncEnabled, dispatch, hideDrawer) => isChecked => {
+    return isChecked => {
         const value = isChecked ? 1 : 0;
         if (author.aut_is_orcid_sync_enabled === value || accountAuthorSaving) {
             return;
         }
         setIsSyncEnabled(isChecked);
-
         dispatch({ type: actions.CURRENT_AUTHOR_SAVING });
         hideDrawer();
-        updateSyncPreferences(dispatch, author, value);
+        updateSyncPreferences(value);
     };
+};
 
 export const openUrl = url => () => window.open(url, '_blank');
 
