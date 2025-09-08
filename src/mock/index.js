@@ -927,12 +927,11 @@ export const setup = () => {
             return [
                 (window.__PW__TEST_PATCH_AUTHOR_API_SHOULD_FAIL && 500) || 200,
                 {
-                    ...mockData.currentAuthor.uqresearcher,
+                    ...mockData.currentAuthor[user],
                     aut_is_orcid_sync_enabled: payload.aut_is_orcid_sync_enabled,
                 },
             ];
         })
-        // .reply(500, { message: ['error - failed PATCH AUTHOR_API'] })
 
         .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
         .reply(200, mockData.currentAuthor.uqstaff)
