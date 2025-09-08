@@ -67,6 +67,7 @@ exports[`DashboardOrcidSync Component should render Pending status 1`] = `
     data-mui-internal-clone-element="true"
     data-testid="help-icon-orcid"
     id="help-icon-orcid"
+    style="margin-left: 2px; margin-bottom: 2px;"
     tabindex="0"
     type="button"
   >

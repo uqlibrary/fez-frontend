@@ -2,6 +2,7 @@ import { expect, test } from '../test';
 
 test.describe('ORCiD Upload button', () => {
     test.beforeEach(async ({ page }) => {
+        await page.clock.install();
         await page.goto('/dashboard');
     });
 
@@ -22,5 +23,59 @@ test.describe('ORCiD Upload button', () => {
         await expect(drawerMessage).toBeVisible();
         await page.getByTestId('orcid-upload-start-button').click();
         await expect(drawerMessage).toBeHidden();
+    });
+
+    test('should close drawer and show progress icon when updating preferences', async ({ page }) => {
+        const helpIcon = page.getByTestId('help-icon-orcid');
+        const drawerMessage = page.getByTestId('help-drawer-message');
+        const progress = page.getByTestId('dashboard-orcid-sync-progress-icon');
+
+        await expect(drawerMessage).toBeHidden();
+        await helpIcon.click();
+        await expect(drawerMessage).toBeVisible();
+        await expect(progress).toBeHidden();
+
+        await page.getByTestId('orcid-sync-preferences-switch-input').locator('input').click();
+        await expect(drawerMessage).toBeHidden();
+        await expect(progress).toBeVisible();
+
+        // should not allow to open drawer until saving req. is processed
+        await progress.click();
+        await expect(drawerMessage).toBeHidden();
+
+        // should give used feedback of what's happening
+        const tooltip = page.getByText('Saving ORCID sync preferences.');
+        await expect(tooltip).toBeHidden();
+        await progress.hover();
+        await expect(tooltip).toBeVisible();
+
+        await page.clock.fastForward(3000);
+        await expect(helpIcon).toBeVisible();
+    });
+
+    test('should close drawer and show error icon when fail to update preferences', async ({ page }) => {
+        await page.evaluate(() => (window.__PW__TEST_PATCH_AUTHOR_API_SHOULD_FAIL = true), 'body');
+
+        const helpIcon = page.getByTestId('help-icon-orcid');
+        const drawerMessage = page.getByTestId('help-drawer-message');
+        const progress = page.getByTestId('dashboard-orcid-sync-progress-icon');
+        const errorIcon = page.getByTestId('dashboard-orcid-sync-error-icon');
+
+        await expect(drawerMessage).toBeHidden();
+        await helpIcon.click();
+        await expect(drawerMessage).toBeVisible();
+        await expect(progress).toBeHidden();
+
+        await page.getByTestId('orcid-sync-preferences-switch-input').locator('input').click();
+        await expect(drawerMessage).toBeHidden();
+        await expect(errorIcon).toBeHidden();
+        await expect(progress).toBeVisible();
+
+        await page.clock.fastForward(3000);
+        // should give used feedback of what's happening
+        const tooltip = page.getByText('Error while saving ORCID sync preferences.');
+        await expect(tooltip).toBeHidden();
+        await errorIcon.hover();
+        await expect(tooltip).toBeVisible();
     });
 });
