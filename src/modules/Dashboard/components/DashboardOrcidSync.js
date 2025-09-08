@@ -192,6 +192,13 @@ export const DashboardOrcidSync = props => {
         IconComponent: renderBadgeIcon(syncJobStatus),
         iconSize: 'small',
         showLoader: requestingOrcidSync,
+        style:
+            ((accountAuthorSaving || isInProgress) && {
+                marginLeft: '2px',
+                marginBottom: '2px',
+                cursor: 'default',
+            }) ||
+            {},
         text: getDrawerContents(
             isSyncEnabled,
             onSyncPreferenceChange,
