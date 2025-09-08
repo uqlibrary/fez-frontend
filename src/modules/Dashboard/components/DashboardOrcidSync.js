@@ -15,6 +15,27 @@ import { updateCurrentAuthor } from 'actions';
 import * as actions from 'actions/actionTypes';
 import DashboardOrcidSyncMessage from './DashboardOrcidSyncMessage';
 import DashboardOrcidSyncPreferences from './DashboardOrcidSyncPreferences';
+import { debounce } from 'throttle-debounce';
+
+export const getOnSyncPreferenceChangeHandler =
+    (author, accountAuthorSaving, setIsSyncEnabled, dispatch, hideDrawer) => isChecked => {
+        const value = isChecked ? 1 : 0;
+        if (author.aut_is_orcid_sync_enabled === value || accountAuthorSaving) {
+            return;
+        }
+        setIsSyncEnabled(isChecked);
+
+        dispatch({ type: actions.CURRENT_AUTHOR_SAVING });
+        hideDrawer();
+        debounce(3000, () =>
+            dispatch(
+                updateCurrentAuthor(author.aut_id, {
+                    ...author,
+                    aut_is_orcid_sync_enabled: value,
+                }),
+            ),
+        );
+    };
 
 export const openUrl = url => () => window.open(url, '_blank');
 
@@ -22,9 +43,9 @@ const renderBadgeIcon = status => {
     switch (status) {
         case 'Pending':
         case 'In Progress':
-            return () => <CircularProgress size={20} />;
+            return () => <CircularProgress data-testid={'dashboard-orcid-sync-progress-icon'} size={20} />;
         case 'Error':
-            return () => <SyncProblemIcon size={20} />;
+            return () => <SyncProblemIcon data-testid={'dashboard-orcid-sync-error-icon'} size={20} />;
         case 'Done':
         default:
             return undefined;
@@ -34,20 +55,18 @@ const renderBadgeIcon = status => {
 const helpEmail = 'espace@library.uq.edu.au';
 
 const getSyncStatus = (accountAuthorSaving, accountAuthorError, orcidSyncStatus, messageTemplate) => {
-    const jobStatus = orcidSyncStatus?.orj_status;
+    const syncJobStatus = orcidSyncStatus?.orj_status;
 
-    /* istanbul ignore next */
     if (accountAuthorSaving) {
         return ['In Progress', messageTemplate.messages.syncPreference.saving];
     }
-    /* istanbul ignore next */
     if (accountAuthorError) {
         return ['Error', messageTemplate.messages.syncPreference.error];
     }
 
     let tooltipText;
     let detailedStatus;
-    switch (jobStatus) {
+    switch (syncJobStatus) {
         case 'Pending':
         case 'In Progress':
             tooltipText = messageTemplate.messages.inProgress;
@@ -69,7 +88,7 @@ const getSyncStatus = (accountAuthorSaving, accountAuthorError, orcidSyncStatus,
             detailedStatus = messageTemplate.messages.done;
             break;
     }
-    return [jobStatus, tooltipText, detailedStatus];
+    return [syncJobStatus, tooltipText, detailedStatus];
 };
 
 const getDrawerContents = (
@@ -82,7 +101,7 @@ const getDrawerContents = (
     lastSyncMessage,
     primaryClick,
     detailedStatus,
-    jobStatus,
+    syncJobStatus,
 ) => (
     <>
         <DashboardOrcidSyncPreferences
@@ -99,12 +118,10 @@ const getDrawerContents = (
                     lastSyncMessage,
                     primaryClick,
                     status: detailedStatus,
-                    StatusIcon: renderBadgeIcon(jobStatus) || DoneIcon,
+                    StatusIcon: renderBadgeIcon(syncJobStatus) || DoneIcon,
                     statusIconStyle: {
                         color:
-                            /* istanbul ignore next */ (jobStatus === 'Done' && 'green') ||
-                            /* istanbul ignore next */ (jobStatus === 'Error' && 'red') ||
-                            /* istanbul ignore next */ undefined,
+                            (syncJobStatus === 'Done' && 'green') || (syncJobStatus === 'Error' && 'red') || undefined,
                     },
                 }}
             />
@@ -129,7 +146,7 @@ export const DashboardOrcidSync = props => {
         ? links.linkedUrl.orcid + author.aut_orcid_id
         : links.notLinkedUrl.orcid;
     const messageTemplate = pagesLocale.pages.dashboard.header.dashboardOrcidSync.helpDrawer;
-    const [jobStatus, tooltipText, detailedStatus] = getSyncStatus(
+    const [syncJobStatus, tooltipText, detailedStatus] = getSyncStatus(
         accountAuthorSaving,
         accountAuthorError,
         orcidSyncStatus,
@@ -142,7 +159,7 @@ export const DashboardOrcidSync = props => {
                 moment(author.aut_orcid_works_last_sync).format('Do MMMM, YYYY [at] h:mma'),
             )) ||
         messageTemplate.messages.noPrevious;
-    const isInProgress = ['Pending', 'In Progress'].indexOf(jobStatus) > -1;
+    const isInProgress = ['Pending', 'In Progress'].indexOf(syncJobStatus) > -1;
     const disableRequest = requestingOrcidSync || isInProgress;
     const [isSyncEnabled, setIsSyncEnabled] = useState(!!author.aut_is_orcid_sync_enabled);
 
@@ -150,27 +167,13 @@ export const DashboardOrcidSync = props => {
         setIsSyncEnabled(!!author.aut_is_orcid_sync_enabled);
     }, [author.aut_is_orcid_sync_enabled]);
 
-    /* istanbul ignore next */
-    const onSyncPreferenceChange = isChecked => {
-        const newValue = isChecked ? 1 : 0;
-        if (author.aut_is_orcid_sync_enabled === newValue || accountAuthorSaving) {
-            return;
-        }
-        setIsSyncEnabled(isChecked);
-
-        dispatch({ type: actions.CURRENT_AUTHOR_SAVING });
-        hideDrawer();
-        setTimeout(
-            () =>
-                dispatch(
-                    updateCurrentAuthor(author.aut_id, {
-                        ...author,
-                        aut_is_orcid_sync_enabled: newValue,
-                    }),
-                ),
-            3000,
-        );
-    };
+    const onSyncPreferenceChange = getOnSyncPreferenceChangeHandler(
+        author,
+        accountAuthorSaving,
+        setIsSyncEnabled,
+        dispatch,
+        hideDrawer,
+    );
 
     const primaryClick = () => {
         requestOrcidSync();
@@ -178,7 +181,7 @@ export const DashboardOrcidSync = props => {
     };
 
     const helpIconProps = {
-        IconComponent: renderBadgeIcon(jobStatus),
+        IconComponent: renderBadgeIcon(syncJobStatus),
         iconSize: 'small',
         showLoader: requestingOrcidSync,
         text: getDrawerContents(
@@ -191,7 +194,7 @@ export const DashboardOrcidSync = props => {
             lastSyncMessage,
             primaryClick,
             detailedStatus,
-            jobStatus,
+            syncJobStatus,
         ),
         title: messageTemplate.title,
         tooltip: tooltipText,
@@ -199,19 +202,17 @@ export const DashboardOrcidSync = props => {
     };
     return (
         <>
-            {
-                /* istanbul ignore next */ location.state?.showOrcidLinkingConfirmation && (
-                    <ConfirmDialogBox
-                        locale={{
-                            confirmationTitle: pagesLocale.pages.orcidLink.successAlert.title,
-                            confirmationMessage: pagesLocale.pages.orcidLink.successAlert.message,
-                            confirmButtonLabel: 'OK',
-                        }}
-                        hideCancelButton
-                        isOpen
-                    />
-                )
-            }
+            {location?.state?.showOrcidLinkingConfirmation && (
+                <ConfirmDialogBox
+                    locale={{
+                        confirmationTitle: pagesLocale.pages.orcidLink.successAlert.title,
+                        confirmationMessage: pagesLocale.pages.orcidLink.successAlert.message,
+                        confirmButtonLabel: 'OK',
+                    }}
+                    hideCancelButton
+                    isOpen
+                />
+            )}
             <HelpIcon {...helpIconProps} testId="orcid" />
         </>
     );

@@ -156,14 +156,6 @@ exports[`Component Orcid  should render if account doesnt have first name and la
 </div>
 `;
 
-exports[`Component Orcid  should render nothing if account is set, but author is null 1`] = `
-<div>
-  <div>
-    Dashboard
-  </div>
-</div>
-`;
-
 exports[`Component Orcid  should render nothing if account/author is not loaded 1`] = `
 <div>
   <div />
