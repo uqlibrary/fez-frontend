@@ -17,25 +17,33 @@ import DashboardOrcidSyncMessage from './DashboardOrcidSyncMessage';
 import DashboardOrcidSyncPreferences from './DashboardOrcidSyncPreferences';
 import { debounce } from 'throttle-debounce';
 
-export const getOnSyncPreferenceChangeHandler =
-    (author, accountAuthorSaving, setIsSyncEnabled, dispatch, hideDrawer) => isChecked => {
+export const getOnSyncPreferenceChangeHandler = (
+    author,
+    accountAuthorSaving,
+    setIsSyncEnabled,
+    dispatch,
+    hideDrawer,
+) => {
+    const updateSyncPreferences = debounce(3000, value => {
+        dispatch(
+            updateCurrentAuthor(author.aut_id, {
+                ...author,
+                aut_is_orcid_sync_enabled: value,
+            }),
+        );
+    });
+
+    return isChecked => {
         const value = isChecked ? 1 : 0;
         if (author.aut_is_orcid_sync_enabled === value || accountAuthorSaving) {
             return;
         }
         setIsSyncEnabled(isChecked);
-
         dispatch({ type: actions.CURRENT_AUTHOR_SAVING });
         hideDrawer();
-        debounce(3000, () =>
-            dispatch(
-                updateCurrentAuthor(author.aut_id, {
-                    ...author,
-                    aut_is_orcid_sync_enabled: value,
-                }),
-            ),
-        );
+        updateSyncPreferences(value);
     };
+};
 
 export const openUrl = url => () => window.open(url, '_blank');
 
@@ -184,6 +192,13 @@ export const DashboardOrcidSync = props => {
         IconComponent: renderBadgeIcon(syncJobStatus),
         iconSize: 'small',
         showLoader: requestingOrcidSync,
+        style:
+            ((accountAuthorSaving || isInProgress) && {
+                marginLeft: '2px',
+                marginBottom: '2px',
+                cursor: 'default',
+            }) ||
+            {},
         text: getDrawerContents(
             isSyncEnabled,
             onSyncPreferenceChange,

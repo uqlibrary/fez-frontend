@@ -177,6 +177,7 @@ describe('DashboardOrcidSync', () => {
             });
 
             it('should update local state and dispatch actions when sync preferences are being updated', () => {
+                debounce.mockImplementation((delay, callback) => callback);
                 const setIsSyncEnabledMock = jest.fn();
                 const dispatchMock = jest.fn();
                 const hideDrawerMock = jest.fn();
@@ -193,10 +194,6 @@ describe('DashboardOrcidSync', () => {
                 expect(dispatchMock).toHaveBeenCalledWith({ type: actions.CURRENT_AUTHOR_SAVING });
                 expect(hideDrawerMock).toHaveBeenCalled();
                 expect(debounce).toHaveBeenCalledWith(3000, expect.any(Function));
-
-                const [, debouncedFn] = debounce.mock.calls[0];
-                debouncedFn();
-
                 expect(updateCurrentAuthor).toHaveBeenCalledWith(defaultAuthor.aut_id, {
                     ...defaultAuthor,
                     aut_is_orcid_sync_enabled: 0,
