@@ -2,8 +2,9 @@
 
 exports[`WorkingPaperCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationWorkingPaper"
+    id="citation-content-UQ:176145"
   >
     <span
       class="citationAuthors"
@@ -95,14 +96,15 @@ exports[`WorkingPaperCitation renders  component with a mock espace record 1`] =
         https://doi.org/10.1242/jcs.196651
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationWorkingPaper"
+    id="citation-content-UQ:176145"
   >
     <span
       class="citationAuthors"
@@ -167,14 +169,15 @@ exports[`WorkingPaperCitation renders  component with an empty doi view 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationWorkingPaper"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -200,6 +203,6 @@ exports[`WorkingPaperCitation renders  component with empty publication 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

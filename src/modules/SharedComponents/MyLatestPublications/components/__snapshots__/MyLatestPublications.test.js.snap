@@ -41,8 +41,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:678947"
                 >
                   <span
                     class="citationAuthors"
@@ -338,7 +339,31 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       https://doi.org/10.1016/j.ajhg.2017.07.007
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:678947's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:678947"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:678947"
+                  id="citation-copy-text-UQ:678947"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -510,8 +535,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationDesign"
+                  id="citation-content-UQ:792104"
                 >
                   <span
                     class="citationEditors"
@@ -591,7 +617,31 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:792104's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:792104"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:792104"
+                  id="citation-copy-text-UQ:792104"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -700,8 +750,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationBook"
+                  id="citation-content-UQ:792110"
                 >
                   <span
                     class="citationAuthors"
@@ -755,7 +806,31 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:792110's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:792110"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:792110"
+                  id="citation-copy-text-UQ:792110"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -864,8 +939,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationConferencePaper"
+                  id="citation-content-UQ:792111"
                 >
                   <span
                     class="citationAuthors"
@@ -922,7 +998,31 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:792111's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:792111"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:792111"
+                  id="citation-copy-text-UQ:792111"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -1031,8 +1131,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:396321"
                 >
                   <span
                     class="citationAuthors"
@@ -1251,7 +1352,31 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       https://doi.org/10.1093/hmg/ddw177
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:396321's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:396321"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:396321"
+                  id="citation-copy-text-UQ:396321"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"

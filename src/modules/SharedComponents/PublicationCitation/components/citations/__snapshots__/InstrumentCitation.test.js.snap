@@ -2,8 +2,9 @@
 
 exports[`InstrumentCitation renders  component with a doi view 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationInstrument"
+    id="citation-content-UQ:23aac26"
   >
     <span
       class="citationAuthors"
@@ -66,14 +67,15 @@ exports[`InstrumentCitation renders  component with a doi view 1`] = `
         https://doi.org/10.1111/1111
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`InstrumentCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationInstrument"
+    id="citation-content-UQ:23aac26"
   >
     <span
       class="citationAuthors"
@@ -109,14 +111,15 @@ exports[`InstrumentCitation renders  component with a mock espace record 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`InstrumentCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationInstrument"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -133,6 +136,6 @@ exports[`InstrumentCitation renders  component with empty publication 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

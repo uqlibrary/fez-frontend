@@ -2,8 +2,9 @@
 
 exports[`SeminarPaperCitation renders  component with a doi view 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationSeminarPaper"
+    id="citation-content-UQ:240363"
   >
     <span
       class="citationAuthors"
@@ -81,14 +82,15 @@ exports[`SeminarPaperCitation renders  component with a doi view 1`] = `
         https://doi.org/10.1111/1111
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`SeminarPaperCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationSeminarPaper"
+    id="citation-content-UQ:240363"
   >
     <span
       class="citationAuthors"
@@ -139,14 +141,15 @@ exports[`SeminarPaperCitation renders  component with a mock espace record 1`] =
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`SeminarPaperCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationSeminarPaper"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -169,6 +172,6 @@ exports[`SeminarPaperCitation renders  component with empty publication 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

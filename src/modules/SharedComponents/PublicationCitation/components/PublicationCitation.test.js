@@ -125,11 +125,13 @@ describe('PublicationCitation ', () => {
             customActions: customActions,
         });
 
-        getAllByRole('button').forEach((button, index) => {
-            expect(button).toHaveTextContent(customActions[index].label);
-            fireEvent.click(button);
-            expect(customActions[index].handleAction).toBeCalled();
-        });
+        getAllByRole('button')
+            .filter(button => !button.getAttribute('data-testid')?.startsWith('publication-citation-copy-button-'))
+            .forEach((button, index) => {
+                expect(button).toHaveTextContent(customActions[index].label);
+                fireEvent.click(button);
+                expect(customActions[index].handleAction).toBeCalled();
+            });
     });
 
     it('should render button disabled with spinners on action buttons while loading', () => {

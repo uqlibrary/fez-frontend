@@ -54,6 +54,9 @@ import ImageGalleryItem from 'modules/SharedComponents/ImageGallery/ImageGallery
 import { default as imageConfig } from 'config/imageGalleryConfig';
 
 import { getWhiteListed } from 'modules/SharedComponents/ImageGallery/Utils';
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import Copy from '@mui/icons-material/FileCopyOutlined';
 
 const StyledGridActionButtons = styled(Grid)(({ theme }) => ({
     [theme.breakpoints.down('md')]: {
@@ -152,6 +155,59 @@ const classes = {
     }),
 };
 
+// keep a list of all available citations
+const citationComponents = {
+    AudioDocumentCitation,
+    BookChapterCitation,
+    BookCitation,
+    ConferencePaperCitation,
+    ConferenceProceedingsCitation,
+    CreativeWorkCitation,
+    DataCollectionCitation,
+    DepartmentTechnicalReportCitation,
+    DesignCitation,
+    DigilibImageCitation,
+    GenericDocumentCitation,
+    ImageDocumentCitation,
+    InstrumentCitation,
+    JournalArticleCitation,
+    JournalCitation,
+    ManuscriptCitation,
+    NewspaperArticleCitation,
+    PatentCitation,
+    PreprintCitation,
+    ResearchReportCitation,
+    SeminarPaperCitation,
+    ThesisCitation,
+    VideoDocumentCitation,
+    WorkingPaperCitation,
+};
+
+const handleCopy = pid => event => {
+    event.stopPropagation();
+    navigator?.clipboard?.writeText?.(document.getElementById(`citation-content-${pid}`).innerText);
+};
+
+const renderCopyCitationTextButton = pid => {
+    return (
+        <Tooltip title={'Copy citation text to clipboard'}>
+            <IconButton
+                aria-label={`Copy ${pid}'s citation text to clipboard`}
+                onClick={handleCopy(pid)}
+                id={`publication-citation-copy-button-${pid}`}
+                data-analyticsid={`publication-citation-copy-button-${pid}`}
+                data-testid={`publication-citation-copy-button-${pid}`}
+                style={{ padding: '0px' }}
+            >
+                <Copy
+                    style={{ width: 14, marginLeft: 6, marginTop: -6 }}
+                    sx={{ display: { xs: 'none', sm: 'inline' } }}
+                />
+            </IconButton>
+        </Tooltip>
+    );
+};
+
 export const PublicationCitation = ({
     citationStyle = 'notset',
     customActions,
@@ -180,40 +236,11 @@ export const PublicationCitation = ({
     const { account } = useSelector(state => state.get('accountReducer') || /* istanbul ignore next */ {});
 
     const hideViewFullStatisticsLink = !account;
-
     const txt = locale.components.publicationCitation;
     const recordValue = showMetrics && publication.metricData;
-
-    // keep a list of all available citations
-    const citationComponents = {
-        AudioDocumentCitation,
-        BookChapterCitation,
-        BookCitation,
-        ConferencePaperCitation,
-        ConferenceProceedingsCitation,
-        CreativeWorkCitation,
-        DataCollectionCitation,
-        DepartmentTechnicalReportCitation,
-        DesignCitation,
-        DigilibImageCitation,
-        GenericDocumentCitation,
-        ImageDocumentCitation,
-        InstrumentCitation,
-        JournalArticleCitation,
-        JournalCitation,
-        ManuscriptCitation,
-        NewspaperArticleCitation,
-        PatentCitation,
-        PreprintCitation,
-        ResearchReportCitation,
-        SeminarPaperCitation,
-        ThesisCitation,
-        VideoDocumentCitation,
-        WorkingPaperCitation,
-    };
-
     // get default actions from locale
     const defaultActions = locale.components.publicationCitation.defaultActions;
+    const publicationType = publicationTypes(citationComponents)?.[publication.rek_display_type];
 
     const _handleDefaultActions = action => {
         /* istanbul ignore else  */
@@ -267,13 +294,9 @@ export const PublicationCitation = ({
         );
     };
 
-    const renderCitation = publicationTypeId => {
-        const filteredPublicationType = publicationTypeId
-            ? publicationTypes(citationComponents)[publicationTypeId]
-            : null;
-
-        return (filteredPublicationType || {}).citationComponent ? (
-            React.createElement(filteredPublicationType.citationComponent, {
+    const renderCitation = (publicationType, publicationTypeId) => {
+        return publicationType?.citationComponent ? (
+            React.createElement(publicationType.citationComponent, {
                 publication: publication,
                 hideDoiLink: hideLinks,
                 citationStyle: citationStyle,
@@ -469,7 +492,8 @@ export const PublicationCitation = ({
                                         marginBottom: '6px',
                                     })}
                                 >
-                                    {renderCitation(publication.rek_display_type)}
+                                    {renderCitation(publicationType, publication.rek_display_type)}
+                                    {publicationType && renderCopyCitationTextButton(publication.rek_pid)}
                                 </Grid>
                             )}
                             {showUnpublishedBufferFields && (

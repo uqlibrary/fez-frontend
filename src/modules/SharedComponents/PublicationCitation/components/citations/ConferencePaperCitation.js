@@ -26,7 +26,7 @@ export const ConferencePaperCitation = ({ publication, hideDoiLink, citationStyl
 
     // eSpace citation view for conference paper
     return (
-        <div className="citationContent citationConferencePaper">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationConferencePaper">
             {/* {Author}*/}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -57,7 +57,7 @@ export const ConferencePaperCitation = ({ publication, hideDoiLink, citationStyl
 
             {/* {doi| doi:|} */}
             <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
-        </div>
+        </span>
     );
 };
 ConferencePaperCitation.propTypes = {

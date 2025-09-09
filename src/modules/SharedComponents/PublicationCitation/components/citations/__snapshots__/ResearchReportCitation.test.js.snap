@@ -2,8 +2,9 @@
 
 exports[`ResearchReportCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationResearchReport"
+    id="citation-content-UQ:684901"
   >
     <span
       class="citationAuthors"
@@ -77,14 +78,15 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1`]
         https://doi.org/10.129839/sometext
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`ResearchReportCitation renders  component with a mock espace record 1 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationResearchReport"
+    id="citation-content-UQ:684901"
   >
     <span
       class="citationAuthors"
@@ -158,14 +160,15 @@ exports[`ResearchReportCitation renders  component with a mock espace record 1 1
         https://doi.org/10.129839/sometext
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`ResearchReportCitation renders  component with an empty series view 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationResearchReport"
+    id="citation-content-UQ:684901"
   >
     <span
       class="citationAuthors"
@@ -239,14 +242,15 @@ exports[`ResearchReportCitation renders  component with an empty series view 1`]
         https://doi.org/10.129839/sometext
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`ResearchReportCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationResearchReport"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -269,6 +273,6 @@ exports[`ResearchReportCitation renders  component with empty publication 1`] = 
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

@@ -149,8 +149,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:678728"
                 >
                   <span
                     class="citationAuthors"
@@ -279,7 +280,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1016/j.mcn.2017.07.005
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:678728's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:678728"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:678728"
+                  id="citation-copy-text-UQ:678728"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -434,8 +459,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:410094"
                 >
                   <span
                     class="citationAuthors"
@@ -595,7 +621,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1038/ncomms12976
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:410094's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:410094"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:410094"
+                  id="citation-copy-text-UQ:410094"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -755,8 +805,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:398497"
                 >
                   <span
                     class="citationAuthors"
@@ -922,7 +973,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.18632/oncotarget.9781
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:398497's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:398497"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:398497"
+                  id="citation-copy-text-UQ:398497"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -1082,8 +1157,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:379178"
                 >
                   <span
                     class="citationAuthors"
@@ -1237,7 +1313,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1038/srep19654
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:379178's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:379178"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:379178"
+                  id="citation-copy-text-UQ:379178"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -1397,8 +1497,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:357538"
                 >
                   <span
                     class="citationAuthors"
@@ -1557,7 +1658,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1128/JVI.03440-14
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:357538's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:357538"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:357538"
+                  id="citation-copy-text-UQ:357538"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -1717,8 +1842,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:360881"
                 >
                   <span
                     class="citationAuthors"
@@ -1884,7 +2010,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1523/JNEUROSCI.3757-14.2015
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:360881's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:360881"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:360881"
+                  id="citation-copy-text-UQ:360881"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -2044,8 +2194,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:355233"
                 >
                   <span
                     class="citationAuthors"
@@ -2185,7 +2336,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1038/ncomms7297
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:355233's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:355233"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:355233"
+                  id="citation-copy-text-UQ:355233"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -2345,8 +2520,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:350994"
                 >
                   <span
                     class="citationAuthors"
@@ -2463,7 +2639,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1523/JNEUROSCI.3228-14.2015
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:350994's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:350994"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:350994"
+                  id="citation-copy-text-UQ:350994"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -2623,8 +2823,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:344420"
                 >
                   <span
                     class="citationAuthors"
@@ -2790,7 +2991,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1016/j.celrep.2014.08.059
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:344420's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:344420"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:344420"
+                  id="citation-copy-text-UQ:344420"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -2950,8 +3175,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:306039"
                 >
                   <span
                     class="citationAuthors"
@@ -3236,7 +3462,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1016/j.celrep.2013.06.017
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:306039's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:306039"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:306039"
+                  id="citation-copy-text-UQ:306039"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -3396,8 +3646,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:305893"
                 >
                   <span
                     class="citationAuthors"
@@ -3549,7 +3800,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1242/jcs.126813
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:305893's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:305893"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:305893"
+                  id="citation-copy-text-UQ:305893"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -3688,8 +3963,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:302599"
                 >
                   <span
                     class="citationAuthors"
@@ -3815,7 +4091,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1371/journal.pone.0060152
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:302599's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:302599"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:302599"
+                  id="citation-copy-text-UQ:302599"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -3954,8 +4254,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:294055"
                 >
                   <span
                     class="citationAuthors"
@@ -4100,7 +4401,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1083/jcb.201204092
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:294055's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:294055"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:294055"
+                  id="citation-copy-text-UQ:294055"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -4260,8 +4585,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:319620"
                 >
                   <span
                     class="citationAuthors"
@@ -4378,7 +4704,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1523/JNEUROSCI.2634-13.2013
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:319620's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:319620"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:319620"
+                  id="citation-copy-text-UQ:319620"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -4517,8 +4867,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:284237"
                 >
                   <span
                     class="citationAuthors"
@@ -4655,7 +5006,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1371/journal.pone.0046242
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:284237's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:284237"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:284237"
+                  id="citation-copy-text-UQ:284237"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -4794,8 +5169,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:279315"
                 >
                   <span
                     class="citationAuthors"
@@ -4977,7 +5353,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1371/journal.pone.0043041
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:279315's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:279315"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:279315"
+                  id="citation-copy-text-UQ:279315"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -5137,8 +5537,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:265967"
                 >
                   <span
                     class="citationAuthors"
@@ -5325,7 +5726,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1002/hep.24810
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:265967's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:265967"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:265967"
+                  id="citation-copy-text-UQ:265967"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -5485,8 +5910,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:278920"
                 >
                   <span
                     class="citationAuthors"
@@ -5631,7 +6057,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1091/mbc.E11-10-0847
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:278920's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:278920"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:278920"
+                  id="citation-copy-text-UQ:278920"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -5770,8 +6220,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationConferencePaper"
+                  id="citation-content-UQ:277856"
                 >
                   <span
                     class="citationAuthors"
@@ -5863,7 +6314,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1016/j.toxicon.2012.04.130
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:277856's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:277856"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:277856"
+                  id="citation-copy-text-UQ:277856"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -5981,8 +6456,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:256096"
                 >
                   <span
                     class="citationAuthors"
@@ -6148,7 +6624,31 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1074/jbc.M111.283879
                     </a>
                   </span>
-                </div>
+                </span>
+                <button
+                  aria-label="Copy UQ:256096's citation text to clipboard"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="citation-copy-text-UQ:256096"
+                  data-mui-internal-clone-element="true"
+                  data-testid="citation-copy-text-UQ:256096"
+                  id="citation-copy-text-UQ:256096"
+                  style="padding: 0px;"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
