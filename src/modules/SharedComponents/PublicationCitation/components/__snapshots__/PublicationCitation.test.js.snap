@@ -126,30 +126,36 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
                   </a>
                 </span>
               </span>
-              <button
-                aria-label="Copy undefined's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-undefined"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-undefined"
-                id="citation-copy-text-undefined"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-undefined"
+                  data-testid="publication-citation-copy-button-undefined"
+                  disabled=""
+                  id="publication-citation-copy-button-undefined"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -433,30 +439,36 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -1193,30 +1205,36 @@ exports[`PublicationCitation  should render component with content indicators 1`
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -1475,30 +1493,36 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -1776,30 +1800,36 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -2146,30 +2176,36 @@ exports[`PublicationCitation  should render component with default item with ima
                   </a>
                 </span>
               </span>
-              <button
-                aria-label="Copy UQ:676287's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:676287"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:676287"
-                id="citation-copy-text-UQ:676287"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:676287"
+                  data-testid="publication-citation-copy-button-UQ:676287"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:676287"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -2555,30 +2591,36 @@ exports[`PublicationCitation  should render component with default item with ima
                   </a>
                 </span>
               </span>
-              <button
-                aria-label="Copy UQ:676287's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:676287"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:676287"
-                id="citation-copy-text-UQ:676287"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:676287"
+                  data-testid="publication-citation-copy-button-UQ:676287"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:676287"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -2925,30 +2967,36 @@ exports[`PublicationCitation  should render component with default item without 
                   </a>
                 </span>
               </span>
-              <button
-                aria-label="Copy UQ:676287's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:676287"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:676287"
-                id="citation-copy-text-UQ:676287"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:676287"
+                  data-testid="publication-citation-copy-button-UQ:676287"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:676287"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -3228,30 +3276,36 @@ exports[`PublicationCitation  should render component with default item without 
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -3664,30 +3718,36 @@ exports[`PublicationCitation  should render component with default list hiding t
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -3946,30 +4006,36 @@ exports[`PublicationCitation  should render component with default list hiding t
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -4228,30 +4294,36 @@ exports[`PublicationCitation  should render component with empty custom actions 
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -4517,30 +4589,36 @@ exports[`PublicationCitation  should render component with publication from mult
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -4823,30 +4901,36 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -5243,30 +5327,36 @@ exports[`PublicationCitation  should render component without image if whitelist
                   </a>
                 </span>
               </span>
-              <button
-                aria-label="Copy UQ:676287's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:676287"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:676287"
-                id="citation-copy-text-UQ:676287"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:676287"
+                  data-testid="publication-citation-copy-button-UQ:676287"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:676287"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -5550,30 +5640,36 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -5896,30 +5992,36 @@ exports[`PublicationCitation  should render publication citation metric with cou
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -6219,30 +6321,36 @@ exports[`PublicationCitation  should render publication citation metric without 
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -6501,30 +6609,36 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                   class="citationDOI empty"
                 />
               </span>
-              <button
-                aria-label="Copy UQ:41878's citation text to clipboard"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="citation-copy-text-UQ:41878"
+              <span
+                aria-label="Feature unavailable"
+                class=""
                 data-mui-internal-clone-element="true"
-                data-testid="citation-copy-text-UQ:41878"
-                id="citation-copy-text-UQ:41878"
-                style="padding: 0px;"
-                tabindex="0"
-                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11yuopn-MuiSvgIcon-root"
-                  data-testid="FileCopyOutlinedIcon"
-                  focusable="false"
-                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                  viewBox="0 0 24 24"
+                <button
+                  aria-label="Unavailable feature"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="publication-citation-copy-button-UQ:41878"
+                  data-testid="publication-citation-copy-button-UQ:41878"
+                  disabled=""
+                  id="publication-citation-copy-button-UQ:41878"
+                  style="padding: 0px;"
+                  tabindex="-1"
+                  type="button"
                 >
-                  <path
-                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
+                    data-testid="FileCopyOutlinedIcon"
+                    focusable="false"
+                    style="width: 14px; margin-left: 6px; margin-top: -6px;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"

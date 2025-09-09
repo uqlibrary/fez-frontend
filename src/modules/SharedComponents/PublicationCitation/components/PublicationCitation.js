@@ -185,25 +185,30 @@ const citationComponents = {
 
 const handleCopy = pid => event => {
     event.stopPropagation();
-    navigator?.clipboard?.writeText?.(document.getElementById(`citation-content-${pid}`).innerText);
+    navigator?.clipboard?.writeText?.(document.getElementById(`citation-content-${pid}`)?.textContent?.trim?.());
 };
 
 const renderCopyCitationTextButton = pid => {
+    const isEnabled = !!navigator.clipboard;
     return (
-        <Tooltip title={'Copy citation text to clipboard'}>
-            <IconButton
-                aria-label={`Copy ${pid}'s citation text to clipboard`}
-                onClick={handleCopy(pid)}
-                id={`publication-citation-copy-button-${pid}`}
-                data-analyticsid={`publication-citation-copy-button-${pid}`}
-                data-testid={`publication-citation-copy-button-${pid}`}
-                style={{ padding: '0px' }}
-            >
-                <Copy
-                    style={{ width: 14, marginLeft: 6, marginTop: -6 }}
-                    sx={{ display: { xs: 'none', sm: 'inline' } }}
-                />
-            </IconButton>
+        <Tooltip title={isEnabled ? 'Copy citation text' : 'Feature unavailable'}>
+            <span>
+                <IconButton
+                    aria-label={isEnabled ? `Copy ${pid}'s citation text` : 'Unavailable feature'}
+                    onClick={handleCopy(pid)}
+                    id={`publication-citation-copy-button-${pid}`}
+                    data-analyticsid={`publication-citation-copy-button-${pid}`}
+                    data-testid={`publication-citation-copy-button-${pid}`}
+                    style={{ padding: '0px' }}
+                    disabled={!isEnabled}
+                >
+                    <Copy
+                        color={isEnabled ? 'secondary' : 'disabled'}
+                        style={{ width: 14, marginLeft: 6, marginTop: -6 }}
+                        sx={{ display: { xs: 'none', sm: 'inline' } }}
+                    />
+                </IconButton>
+            </span>
         </Tooltip>
     );
 };
