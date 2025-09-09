@@ -1692,6 +1692,7 @@ export const OA_STATUS_TYPE = [
     { value: 454121, text: 'Gold' },
     { value: 454122, text: 'Hybrid' },
     { value: 454123, text: 'Bronze' },
+    { value: 454124, text: 'Diamond' },
 ];
 
 export const ALTERNATE_IDENTIFIER_TYPE = [
