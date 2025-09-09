@@ -20,7 +20,7 @@ describe('ConfirmDiscardFormChanges', () => {
 
         expect(global.window.onbeforeunload).not.toBeNull();
 
-        global.window.onbeforeunload();
+        global.window.onbeforeunload(new Event('beforeunload'));
     });
 
     it('should not set function to prompt to discard form changes', () => {

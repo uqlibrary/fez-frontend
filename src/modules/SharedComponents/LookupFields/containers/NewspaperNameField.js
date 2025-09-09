@@ -32,6 +32,7 @@ const NewspaperNameField = props => {
             filterOptions={(options, { inputValue }) => matchSorter(options, inputValue, { keys: ['value'] })}
             floatingLabelText={props.floatingLabelText || 'Newspaper name'}
             loadSuggestions={loadSuggestions}
+            onChange={item => props.onChange(item.value)}
             onClear={() => props.onChange(null)}
         />
     );

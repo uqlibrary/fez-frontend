@@ -6,6 +6,9 @@ const getKeyValue = value => (process.env.NODE_ENV === 'production' ? `?key=${va
 
 export const RESOLVER_URL_PREFIX = 'https://resolver.library.uq.edu.au/openathens/redir?qurl=';
 
+export const ULRICHS_URL_PREFIX =
+    RESOLVER_URL_PREFIX + encodeURIComponent('https://ulrichsweb.serialssolutions.com/title/');
+
 export const prefixByUrlResolver = url => RESOLVER_URL_PREFIX + encodeURIComponent(url);
 
 export const numberToWords = value => {
@@ -24,8 +27,10 @@ export const UQ_FULL_NAME = 'The University of Queensland';
 // URLS - values are set in webpack build
 export const PRODUCTION_URL = 'https://espace.library.uq.edu.au/';
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
+export const PRODUCTION_API_URL = 'https://api.library.uq.edu.au/v1/';
+export const STAGING_API_URL = 'https://api.library.uq.edu.au/staging/';
 export const DEVELOPMENT_DOMAIN = 'development.library.uq.edu.au';
-export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
+export const API_URL = process.env.API_URL || STAGING_API_URL;
 export const APP_URL = process.env.APP_URL || STAGING_URL;
 export const IS_PRODUCTION = API_URL.indexOf('staging') === -1;
 export const IS_DEVELOPMENT_SERVER =
@@ -873,6 +878,7 @@ export const CCL_BY_ND_4_0_ID = 456712;
 export const CCL_BY_NC_4_0_ID = 456713;
 export const CCL_BY_NC_SA_4_0_ID = 456714;
 export const CCL_BY_NC_ND_4_0_ID = 456715;
+export const CCL_ZERO_ID = 457088;
 
 export const CCL_SLUG_BY = 'by';
 export const CCL_SLUG_BY_SA = 'by-sa';
@@ -965,6 +971,11 @@ export const CREATIVE_COMMONS_LICENSES_4_0 = [
     },
 ];
 
+export const CCL_ZERO = {
+    value: CCL_ZERO_ID,
+    text: 'Creative Commons Zero 1.0 Universal (CC0 1.0)',
+};
+
 export const getCreativeCommonsUrl = version => conditionSlug =>
     `https://creativecommons.org/licenses/${conditionSlug}/${version}/deed.en`;
 
@@ -976,6 +987,7 @@ export const ALL_LICENCES = [
     ...CURRENT_LICENCES,
     ...CREATIVE_COMMONS_LICENSES_4_0,
     ...CREATIVE_COMMONS_LICENSES_3_0,
+    CCL_ZERO,
 ];
 
 export const ORG_TYPE_ID_MUSEUM = '453983';
@@ -1697,8 +1709,7 @@ export const SENSITIVE_HANDLING_NOTE_OTHER_TYPE = 456860;
 export const SENSITIVE_HANDLING_NOTE_TYPE = [
     {
         value: 456855,
-        text:
-            'Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.',
+        text: 'Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.',
     },
     {
         value: 456856,
@@ -1837,26 +1848,7 @@ export const dataTeamCollections = ['UQ:06510ce'];
 
 /** read only controlled vocabularies (hard coded above) */
 const READONLY_VOCABS_IDS = [
-    453607,
-    453982,
-    453991,
-    453995,
-    453596,
-    454089,
-    454025,
-    450000,
-    453219,
-    453222,
-    453630,
-    453691,
-    454119,
-    456854,
-    454139,
-    453617,
-    453614,
-    456851,
-    456849,
-    456850,
-    453662,
+    453607, 453982, 453991, 453995, 453596, 454089, 454025, 450000, 453219, 453222, 453630, 453691, 454119, 456854,
+    454139, 453617, 453614, 456851, 456849, 456850, 453662,
 ];
 export const isReadonlyVocab = id => READONLY_VOCABS_IDS.includes(id);

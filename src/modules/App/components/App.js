@@ -95,7 +95,6 @@ const AppClass = ({
     useEffect(() => {
         if (!account?.id || hadLoggedInUser.current) return;
         hadLoggedInUser.current = true;
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [account?.id]);
 
     useEffect(() => {
@@ -121,7 +120,6 @@ const AppClass = ({
 
     useEffect(() => {
         // don't call the api for non author users since the api call requires an author
-        // eslint-disable-next-line camelcase
         if (!accountAuthorLoading && author?.aut_id) {
             actions.searchAuthorPublications({}, 'incomplete');
         }
@@ -177,7 +175,6 @@ const AppClass = ({
         authorDetails &&
         authorDetails.is_administrator !== 1 &&
         authorDetails.is_super_administrator !== 1 &&
-        // eslint-disable-next-line camelcase
         author?.aut_id &&
         !author.aut_orcid_id &&
         location.pathname !== pathConfig.authorIdentifiers.orcid.link;
@@ -187,7 +184,6 @@ const AppClass = ({
         account.class &&
         account.class.indexOf('IS_CURRENT') >= 0 &&
         account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
-    // eslint-disable-next-line camelcase
     const isAuthor = !isAuthorLoading && !!account && author?.aut_id;
     const hasIncompleteWorks = !!(
         incompleteRecordList &&
@@ -228,7 +224,6 @@ const AppClass = ({
             ...locale.global.loginAlert,
             action: redirectUserToLogin(),
         };
-        // eslint-disable-next-line camelcase
     } else if (!isPublicPage && !isAuthorLoading && !isJournalRelatedPage && account && (!author || !author.aut_id)) {
         // user is logged in, but doesn't have eSpace author identifier
         userStatusAlert = {

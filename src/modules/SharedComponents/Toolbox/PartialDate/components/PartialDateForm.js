@@ -127,7 +127,6 @@ export const displayErrors = ({
                 locale.validationMessage.date;
             break;
         case STATUS_VALID:
-            // cypress does not like more concise format (?!?) (integration tests didnt either?!?!?)
             if (!!year && validMonthIndices.includes(month) && !!day) {
                 // date complete for non-partial-entry
                 date = '';
@@ -274,7 +273,6 @@ const PartialDateForm = props => {
         setState(newState);
         // check for errors
         onChange && getFullDateFromState(newState);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value]);
 
     const renderMonths = months.map((month, index) => (

@@ -26,7 +26,7 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data, title 
         width: '100%',
     };
     return (
-        <Grid container style={{ marginTop: 8 }}>
+        <Grid container style={{ marginBottom: 20 }}>
             <Grid item xs={12}>
                 <Tabs
                     indicatorColor="primary"

@@ -40,7 +40,7 @@ const txt = {
 
 const renderTitle = record => {
     const prefixTxt = componentsLocale.components.changeDisplayType.title;
-    const subtypeSuffix = !!record.rek_subtype && ` - ${record.rek_subtype}`;
+    const subtypeSuffix = !!record.rek_subtype ? ` - ${record.rek_subtype}` : '';
     const pageTitle = parseHtmlToJSX(`${prefixTxt}${record.rek_display_type_lookup}${subtypeSuffix}`);
     return (
         <Typography variant="h2" color="primary" style={{ fontSize: 24 }} data-testid="change-display-type-page-title">
@@ -83,7 +83,6 @@ export const ChangeDisplayType = () => {
     // handles displayType changes
     useEffect(() => {
         setValue('rek_subtype', null);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [displayType, setValue]);
 
     // handles displaying confirmation dialog
@@ -171,7 +170,6 @@ export const ChangeDisplayType = () => {
                                         </Field>
                                     </Grid>
                                     {!!subitems && subitems.length > 0 && (
-                                        // tested in cypress changeDisplayType
                                         /* istanbul ignore next */
                                         <Grid item xs={12}>
                                             <Field
@@ -193,7 +191,6 @@ export const ChangeDisplayType = () => {
                             </StandardCard>
                         </Grid>
                         {alertProps && (
-                            // tested in cypress changeDisplayType
                             /* istanbul ignore next */
                             <Grid item xs={12}>
                                 <Alert

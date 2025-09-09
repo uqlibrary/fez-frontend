@@ -3,8 +3,6 @@ import PublicationsListPaging, { paginate } from './PublicationsListPaging';
 import { locale } from 'locale';
 import { rtlRender, fireEvent } from 'test-utils';
 
-// Responsiveness is handled in Cypress tests
-
 const getProps = (testProps = {}) => ({
     pagingId: 'test',
     classes: {},

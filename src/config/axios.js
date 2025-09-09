@@ -47,6 +47,9 @@ if (!isDevEnv() && !isTest()) {
             request.cache = false;
             return request;
         }
+        if (!!request.cache) {
+            request.cache.cacheTakeover = false;
+        }
         /* eslint-disable max-len */
         // dc(`the following request will be cached: ${request.url}${queryStringParams.length ? `?${JSON.stringify(request.params)}` : ''}`);
         return request;

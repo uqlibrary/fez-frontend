@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { render, WithReduxStore, waitForElementToBeRemoved, userEvent } from 'test-utils';
 import Today from './Today';
@@ -27,8 +26,6 @@ describe('Today tab', () => {
     });
 
     // Note: at the time of writing (May 2024), mui-x/chart components do not work with Jest tests.
-    // Coverage for the when charts are shown etc. is covered in Cypress instead.
-
     it('should render message if no Today data available', async () => {
         const { getByText, getByTestId } = setup(
             {},

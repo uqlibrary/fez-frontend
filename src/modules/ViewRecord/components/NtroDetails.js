@@ -272,26 +272,27 @@ const NtroDetails = ({ publication, classes, account }) => {
 
                 {/* Language */}
                 {/* eslint-disable-next-line max-len */}
-                {publication.fez_record_search_key_language && publication.fez_record_search_key_language.length > 0 && (
-                    <ViewNtroRow
-                        heading={locale.viewRecord.headings.NTRO.rek_language}
-                        data={publication.fez_record_search_key_language.map((item, index) => {
-                            return (
-                                <span key={index} data-testid={`rek-language-${index}`}>
-                                    {general.LANGUAGE.filter(language => {
-                                        return item.rek_language === language.value;
-                                    }).map(language => {
-                                        return language.text;
-                                    })}
-                                    {publication.fez_record_search_key_language.length > 1 &&
-                                        index < publication.fez_record_search_key_language.length - 1 &&
-                                        ', '}
-                                </span>
-                            );
-                        })}
-                        rowId="rek-language"
-                    />
-                )}
+                {publication.fez_record_search_key_language &&
+                    publication.fez_record_search_key_language.length > 0 && (
+                        <ViewNtroRow
+                            heading={locale.viewRecord.headings.NTRO.rek_language}
+                            data={publication.fez_record_search_key_language.map((item, index) => {
+                                return (
+                                    <span key={index} data-testid={`rek-language-${index}`}>
+                                        {general.LANGUAGE.filter(language => {
+                                            return item.rek_language === language.value;
+                                        }).map(language => {
+                                            return language.text;
+                                        })}
+                                        {publication.fez_record_search_key_language.length > 1 &&
+                                            index < publication.fez_record_search_key_language.length - 1 &&
+                                            ', '}
+                                    </span>
+                                );
+                            })}
+                            rowId="rek-language"
+                        />
+                    )}
 
                 {/* Original format */}
                 {publication.fez_record_search_key_original_format &&

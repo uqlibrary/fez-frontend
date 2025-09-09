@@ -198,30 +198,26 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
         : [];
 };
 
-export const checkFileNamesForDupes = (
-    dataStreams,
-    formValuesFromContext,
-    setErrorMessage,
-    excludeIndex,
-) => newFilename => {
-    const filesToCheck = [
-        ...dataStreams.filter((_, index) => index !== excludeIndex),
-        ...(formValuesFromContext?.files?.queue?.map(
-            /* istanbul ignore next */ file => /* istanbul ignore next */ ({ dsi_dsid: file.name }),
-        ) ?? []),
-    ];
-    const newFilenamePart = getFilenamePart(newFilename);
-    const hasDupe = filesToCheck.some(
-        dataStream =>
-            getFilenamePart(dataStream.dsi_dsid) === newFilenamePart ||
-            (!!dataStream.dsi_dsid_new && getFilenamePart(dataStream.dsi_dsid_new) === newFilenamePart),
-    );
-    !!hasDupe &&
-        setErrorMessage(
-            fileUploadLocale.default.validation.sameFileNameWithDifferentExt.replace('[fileNames]', newFilename),
+export const checkFileNamesForDupes =
+    (dataStreams, formValuesFromContext, setErrorMessage, excludeIndex) => newFilename => {
+        const filesToCheck = [
+            ...dataStreams.filter((_, index) => index !== excludeIndex),
+            ...(formValuesFromContext?.files?.queue?.map(
+                /* istanbul ignore next */ file => /* istanbul ignore next */ ({ dsi_dsid: file.name }),
+            ) ?? []),
+        ];
+        const newFilenamePart = getFilenamePart(newFilename);
+        const hasDupe = filesToCheck.some(
+            dataStream =>
+                getFilenamePart(dataStream.dsi_dsid) === newFilenamePart ||
+                (!!dataStream.dsi_dsid_new && getFilenamePart(dataStream.dsi_dsid_new) === newFilenamePart),
         );
-    return !hasDupe;
-};
+        !!hasDupe &&
+            setErrorMessage(
+                fileUploadLocale.default.validation.sameFileNameWithDifferentExt.replace('[fileNames]', newFilename),
+            );
+        return !hasDupe;
+    };
 
 export const getFilenameId = id => `file-name-${id}`;
 
@@ -288,7 +284,6 @@ export const AttachedFiles = ({
         setEmbargoDateErrorMessage('');
     };
 
-    // tested in cypress
     /* istanbul ignore next */
     const onEmbargoDateChange = id => value => {
         const indexToChange = dataStreams.findIndex(item => item.dsi_id === id);
@@ -614,7 +609,6 @@ export const AttachedFiles = ({
                                     )}
                                 </Grid>
                                 {!!hasClearedEmbargoDate[getDsIndex(item.id)] && (
-                                    // tested in cypress admin-edit audio
                                     /* istanbul ignore next */
                                     <React.Fragment>
                                         <Grid
@@ -663,17 +657,19 @@ export const AttachedFiles = ({
                 {preview.mediaUrl && /* istanbul ignore next */ preview.mimeType && (
                     /* istanbul ignore next */ <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
                 )}
-                {/* istanbul ignore next*/
-                (fileNameErrorMessage.length > 0 || embargoDateErrorMessage.length > 0) && (
-                    <Grid xs={12}>
-                        <Alert
-                            alertId="alert-files"
-                            title={errorTitle}
-                            message={fileNameErrorMessage || embargoDateErrorMessage}
-                            type={fileNameErrorMessage ? 'error' : 'warning'}
-                        />
-                    </Grid>
-                )}
+                {
+                    /* istanbul ignore next*/
+                    (fileNameErrorMessage.length > 0 || embargoDateErrorMessage.length > 0) && (
+                        <Grid xs={12}>
+                            <Alert
+                                alertId="alert-files"
+                                title={errorTitle}
+                                message={fileNameErrorMessage || embargoDateErrorMessage}
+                                type={fileNameErrorMessage ? 'error' : 'warning'}
+                            />
+                        </Grid>
+                    )
+                }
             </StandardCard>
         </Grid>
     );

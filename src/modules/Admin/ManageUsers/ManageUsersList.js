@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import { upperFirst } from 'lodash';
 
-// eslint-disable-next-line camelcase
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 
 import { debounce } from 'throttle-debounce';
@@ -17,6 +16,9 @@ import TextField from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
+
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
@@ -33,6 +35,8 @@ import { clearAlerts } from './helpers';
 import { useMrtTable, useServerData } from 'hooks';
 
 export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowDelete }) => {
+    const theme = useTheme();
+    const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
     const dispatch = useDispatch();
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -68,11 +72,14 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         [],
     );
 
-    const { userListLoading, userListItemUpdating, userListItemDeleting, userAdding } = useSelector(state =>
-        state?.get('manageUsersReducer'),
-    );
+    const { userListLoading, userListItemDeleting } = useSelector(state => state?.get('manageUsersReducer'));
 
-    const { data: list, pagination, request, onPaginationChange } = useServerData({
+    const {
+        data: list,
+        pagination,
+        request,
+        onPaginationChange,
+    } = useServerData({
         actions,
         pageSize: tablePageSizeDefault,
     });
@@ -320,23 +327,24 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         state: {
             showAlertBanner: false,
             isLoading: userListLoading,
-            showLoadingOverlay: userListLoading || userListItemUpdating || userListItemDeleting || userAdding || isBusy,
+            showLoadingOverlay: userListLoading || userListItemDeleting || isBusy,
             pagination,
             rowSelection: selectedRows,
         },
         muiPaginationProps: {
             rowsPerPageOptions: tablePageSizeOptions,
         },
-        muiEditRowDialogProps: {
-            sx: {
-                '& .MuiDialog-paper': {
-                    maxWidth: { xs: '100%', lg: '60vw' },
-                    margin: { xs: 0, lg: 4 },
-                    width: '100%',
-                    display: 'table',
-                },
+        muiEditRowDialogProps: ({ table }) => ({
+            maxWidth: 'md',
+            fullWidth: true,
+            fullScreen: isMobileView,
+            onClose: (e, reason) => {
+                /* istanbul ignore else */
+                if (reason !== 'backdropClick') {
+                    handleCancel(table)();
+                }
             },
-        },
+        }),
         muiTableProps: {
             sx: {
                 borderCollapse: 'collapse',
@@ -349,6 +357,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         },
         muiTableBodyCellProps: {
             sx: {
+                alignContent: 'flex-start',
                 padding: 1,
             },
         },

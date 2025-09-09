@@ -232,7 +232,8 @@ export const isValidIsbn = subject => {
     // Checks for ISBN-10 or ISBN-13 format
     // https://www.safaribooksonline.com/library/view/regular-expressions-cookbook/9781449327453/ch04s13.html
     // Edited to remove "ISBN" / "ISBN-10" / "ISBN-13" prefix.
-    const regex = /^(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$/;
+    const regex =
+        /^(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$/;
     return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isbn;
 };
 
@@ -394,11 +395,13 @@ export const getErrorAlertProps = ({
     return alertProps;
 };
 
-export const isFileValid = ({ files: { blacklist } }, isAdmin = false, isAdminEdit = false) => dataStream => {
-    const prefixMatch = !!dataStream.dsi_dsid.match(blacklist.namePrefixRegex);
-    const suffixMatch = !!dataStream.dsi_dsid.match(blacklist.nameSuffixRegex);
-    return (!prefixMatch && !suffixMatch && isAdded(dataStream)) || (isAdmin && !isAdminEdit);
-};
+export const isFileValid =
+    ({ files: { blacklist } }, isAdmin = false, isAdminEdit = false) =>
+    dataStream => {
+        const prefixMatch = !!dataStream.dsi_dsid.match(blacklist.namePrefixRegex);
+        const suffixMatch = !!dataStream.dsi_dsid.match(blacklist.nameSuffixRegex);
+        return (!prefixMatch && !suffixMatch && isAdded(dataStream)) || (isAdmin && !isAdminEdit);
+    };
 
 export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = false, isEditorRequired = false) => {
     const authors = data.authors ?? data.authorsWithAffiliations;

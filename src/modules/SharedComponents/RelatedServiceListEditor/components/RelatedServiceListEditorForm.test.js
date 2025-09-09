@@ -1,7 +1,6 @@
 import React from 'react';
 import RelatedServiceListEditorForm from './RelatedServiceListEditorForm';
-import { render, fireEvent, WithReduxStore, waitFor, waitForElementToBeRemoved } from 'test-utils';
-import * as repositories from 'repositories';
+import { render, fireEvent, WithReduxStore } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -43,7 +42,7 @@ describe('RelatedServiceListEditorForm', () => {
     });
 
     it('should disable add related service button when id is empty', () => {
-        const { getByTestId, getByRole, queryByText } = setup({ required: false });
+        const { getByTestId, getByRole } = setup({ required: false });
 
         fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: '123' } });
         expect(getByRole('button', { name: 'Add related service' })).not.toHaveAttribute('disabled', '');

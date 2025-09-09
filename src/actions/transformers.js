@@ -15,8 +15,10 @@ import { sanitizeDoi } from '../config/validation';
 
 const moment = require('moment');
 
-const pipe = (...functionsList) => values =>
-    functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
+const pipe =
+    (...functionsList) =>
+    values =>
+        functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
 
 export const getIssueValues = data => {
     const initialContentIndicators = (
@@ -408,11 +410,9 @@ export const getRecordAuthorAffiliationTypeSearchKey = authors => {
     };
 };
 
-export const getRecordAuthorAffiliations = (authors, canHaveAffiliations = false) => {
-    if (!authors || authors.length === 0 || !canHaveAffiliations) {
-        return {
-            fez_author_affiliation: canHaveAffiliations ? [] : null,
-        };
+export const getRecordAuthorAffiliations = authors => {
+    if (!authors || authors.length === 0) {
+        return { fez_author_affiliation: [] };
     }
 
     return {
@@ -1183,9 +1183,7 @@ export const getFezMatchedJournalsKey = matchedJournal => {
  */
 export const getRekDate = (data, rekSubtype) => {
     if (
-        // eslint-disable-next-line camelcase
         rekSubtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK &&
-        // eslint-disable-next-line camelcase
         data.fez_record_search_key_project_start_date?.rek_project_start_date
     ) {
         // sync rek_date with rek_project_start_date
@@ -1193,7 +1191,7 @@ export const getRekDate = (data, rekSubtype) => {
             'YYYY-MM-DD 00:00:00',
         );
     }
-    // eslint-disable-next-line camelcase
+
     return !data.rek_date || !moment(data.rek_date).isValid()
         ? PLACEHOLDER_ISO8601_DATE
         : moment(data.rek_date).format('YYYY-MM-DD 00:00:00');
@@ -1376,12 +1374,10 @@ export const getArchitectsSearchKeys = architects => ({
 });
 
 export const getAuthorsSectionSearchKeys = (data = {}) => {
-    const { authors, authorsWithAffiliations, editors, supervisors, creators, architects } = data;
+    const { authors, editors, supervisors, creators, architects } = data;
 
     return {
-        ...(!!authors || !!authorsWithAffiliations
-            ? getAuthorsSearchKeys(!!authors ? authors : authorsWithAffiliations, !!authorsWithAffiliations)
-            : {}),
+        ...(!!authors ? getAuthorsSearchKeys(authors) : {}),
         ...(!!editors ? getContributorsSearchKeys(editors) : {}),
         ...(!!creators ? getCreatorsSearchKeys(creators) : {}),
         ...(!!architects ? getArchitectsSearchKeys(architects) : {}),
@@ -1408,9 +1404,7 @@ export const getHerdcCodeSearchKey = record => {
         (!!record.rek_herdc_code && record.rek_herdc_code.value === null)
     ) {
         return {
-            fez_record_search_key_herdc_code: {
-                rek_herdc_code: null,
-            },
+            fez_record_search_key_herdc_code: {},
         };
     }
 
@@ -1423,17 +1417,38 @@ export const getHerdcCodeSearchKey = record => {
 
 export const getHerdcStatusSearchKey = record => {
     // return empty object if all parameters are null
-    if (!!!record.rek_herdc_status || (!!record.rek_herdc_status && record.rek_herdc_status.value === null)) {
+    if (
+        !!!record.rek_herdc_status ||
+        record.rek_herdc_status === '0' ||
+        (!!record.rek_herdc_status && record.rek_herdc_status.value === null)
+    ) {
         return {
-            fez_record_search_key_herdc_status: {
-                rek_herdc_status: null,
-            },
+            fez_record_search_key_herdc_status: {},
         };
     }
 
     return {
         fez_record_search_key_herdc_status: {
             rek_herdc_status: record.rek_herdc_status,
+        },
+    };
+};
+
+export const getRefereedStatusSearchKey = record => {
+    // return empty object if all parameters are null
+    if (
+        !!!record.rek_refereed_source ||
+        record.rek_refereed_source === '0' ||
+        (!!record.rek_refereed_source && record.rek_refereed_source.value === null)
+    ) {
+        return {
+            fez_record_search_key_refereed_source: {},
+        };
+    }
+
+    return {
+        fez_record_search_key_refereed_source: {
+            rek_refereed_source: record.rek_refereed_source,
         },
     };
 };
@@ -1446,7 +1461,7 @@ export const getOpenAccessStatusTypeSearchKey = record => {
         (!!record.rek_oa_status_type && record.rek_oa_status_type?.value === null)
     ) {
         return {
-            fez_record_search_key_oa_status_type: null,
+            fez_record_search_key_oa_status_type: {},
         };
     }
 
@@ -1527,6 +1542,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_institutional_status: institutionalStatus,
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
+        fez_record_search_key_refereed_source: refereeStatus,
         fez_record_search_key_oa_status: openAccessStatus,
         fez_record_search_key_oa_status_type: openAccessStatusType,
         fez_record_search_key_license: license,
@@ -1548,6 +1564,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!institutionalStatus ? getInstitutionalStatusSearchKey(institutionalStatus) : {}),
         ...(!!herdcCode ? getHerdcCodeSearchKey(herdcCode) : {}),
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
+        ...(!!refereeStatus ? getRefereedStatusSearchKey(refereeStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
         ...(!!openAccessStatusType ? getOpenAccessStatusTypeSearchKey(openAccessStatusType) : {}),
         ...(!!ownerIdentifier ? getOwnerIdentifierSearchKey(ownerIdentifier, ownerIdentifierType) : {}),

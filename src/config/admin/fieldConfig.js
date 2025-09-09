@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import Immutable from 'immutable';
 import { validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
 import locale from 'locale/components';
@@ -44,6 +43,8 @@ import {
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
 } from 'config/general';
+
+import { shouldHandleAuthorAffiliations } from 'helpers/authorAffiliations';
 
 import { AttributionIncompleteField } from 'modules/SharedComponents/Toolbox/AttributionIncompleteField';
 
@@ -398,8 +399,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'rek-native-script-book-title',
-                name:
-                    'bibliographicSection.fez_record_search_key_native_script_book_title.rek_native_script_book_title',
+                name: 'bibliographicSection.fez_record_search_key_native_script_book_title.rek_native_script_book_title',
                 fullWidth: true,
                 label: 'Native script book title',
                 placeholder: '',
@@ -429,8 +429,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'rek-native-script-conference-name',
-                name:
-                    'bibliographicSection.fez_record_search_key_native_script_conference_name.rek_native_script_conference_name',
+                name: 'bibliographicSection.fez_record_search_key_native_script_conference_name.rek_native_script_conference_name',
                 fullWidth: true,
                 label: 'Native script conference name',
                 placeholder: 'Native script conference name',
@@ -440,8 +439,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'rek-roman-script-conference-name',
-                name:
-                    'bibliographicSection.fez_record_search_key_roman_script_conference_name.rek_roman_script_conference_name',
+                name: 'bibliographicSection.fez_record_search_key_roman_script_conference_name.rek_roman_script_conference_name',
                 fullWidth: true,
                 label: 'Roman script conference name',
                 placeholder: 'Roman script conference name',
@@ -451,8 +449,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'rek-translated-conference-name',
-                name:
-                    'bibliographicSection.fez_record_search_key_translated_conference_name.rek_translated_conference_name',
+                name: 'bibliographicSection.fez_record_search_key_translated_conference_name.rek_translated_conference_name',
                 fullWidth: true,
                 label: 'Translated conference name',
                 placeholder: 'Translated conference name',
@@ -462,8 +459,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'rek-native-script-proceedings-title',
-                name:
-                    'bibliographicSection.fez_record_search_key_native_script_proceedings_title.rek_native_script_proceedings_title',
+                name: 'bibliographicSection.fez_record_search_key_native_script_proceedings_title.rek_native_script_proceedings_title',
                 fullWidth: true,
                 label: 'Native script proceedings title',
                 placeholder: 'Native script proceedings title',
@@ -473,8 +469,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'rek-roman-script-proceedings-title',
-                name:
-                    'bibliographicSection.fez_record_search_key_roman_script_proceedings_title.rek_roman_script_proceedings_title',
+                name: 'bibliographicSection.fez_record_search_key_roman_script_proceedings_title.rek_roman_script_proceedings_title',
                 fullWidth: true,
                 label: 'Roman script proceedings title',
                 placeholder: 'Roman script proceedings title',
@@ -484,8 +479,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'rek-translated-proceedings-title',
-                name:
-                    'bibliographicSection.fez_record_search_key_translated_proceedings_title.rek_translated_proceedings_title',
+                name: 'bibliographicSection.fez_record_search_key_translated_proceedings_title.rek_translated_proceedings_title',
                 fullWidth: true,
                 label: 'Translated proceedings title',
                 placeholder: 'Translated proceedings title',
@@ -844,8 +838,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'rek-native-script-journal-name',
-                name:
-                    'bibliographicSection.fez_record_search_key_native_script_journal_name.rek_native_script_journal_name',
+                name: 'bibliographicSection.fez_record_search_key_native_script_journal_name.rek_native_script_journal_name',
                 label: 'Native script journal name',
                 placeholder: '',
                 fullWidth: true,
@@ -855,8 +848,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'rek-roman-script-journal-name',
-                name:
-                    'bibliographicSection.fez_record_search_key_roman_script_journal_name.rek_roman_script_journal_name',
+                name: 'bibliographicSection.fez_record_search_key_roman_script_journal_name.rek_roman_script_journal_name',
                 label: 'Roman script journal name',
                 placeholder: '',
                 fullWidth: true,
@@ -910,20 +902,7 @@ export default {
                 locale: locale.components.authorsList('author').field,
                 contributorEditorId: 'rek-author',
                 isAdmin: true,
-                shouldHandleAffiliations: false,
                 useFormReducer: true,
-            },
-        },
-        authorsWithAffiliations: {
-            component: ContributorsEditorField,
-            componentProps: {
-                name: 'authorsSection.authorsWithAffiliations',
-                showIdentifierLookup: true,
-                locale: locale.components.authorsList('author').field,
-                contributorEditorId: 'rek-author',
-                isAdmin: true,
-                shouldHandleAffiliations: true,
-                useFormReducer: false,
             },
         },
         editors: {
@@ -1878,6 +1857,10 @@ export default {
     },
     override: {
         [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
+            authors: ({ isNtro, displayType, subtype }) => ({
+                isNtro,
+                shouldHandleAffiliations: !isNtro && shouldHandleAuthorAffiliations(displayType, subtype),
+            }),
             fez_record_search_key_journal_name: () => ({
                 required: false,
                 validate: null,
@@ -1904,7 +1887,10 @@ export default {
                 required: true,
                 validate: [validation.required],
             }),
-            authors: ({ isNtro }) => ({ isNtro }),
+            authors: ({ isNtro, displayType, subtype }) => ({
+                isNtro,
+                shouldHandleAffiliations: !isNtro && shouldHandleAuthorAffiliations(displayType, subtype),
+            }),
             fez_record_search_key_original_format: () => ({
                 label: 'Physical description',
             }),
@@ -1927,7 +1913,10 @@ export default {
                 required: true,
                 validate: [validation.required],
             }),
-            authors: ({ isNtro }) => ({ isNtro }),
+            authors: ({ isNtro, displayType, subtype }) => ({
+                isNtro,
+                shouldHandleAffiliations: !isNtro && shouldHandleAuthorAffiliations(displayType, subtype),
+            }),
             fez_record_search_key_original_format: () => ({
                 label: 'Physical description',
             }),
@@ -2089,7 +2078,10 @@ export default {
             }),
         },
         [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {
-            authors: ({ isNtro }) => ({ isNtro }),
+            authors: ({ isNtro, displayType, subtype }) => ({
+                isNtro,
+                shouldHandleAffiliations: !isNtro && shouldHandleAuthorAffiliations(displayType, subtype),
+            }),
             grants: () => ({ ...locale.components.grants }),
         },
         [PUBLICATION_TYPE_MANUSCRIPT]: {

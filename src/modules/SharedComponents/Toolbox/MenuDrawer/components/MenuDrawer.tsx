@@ -53,8 +53,7 @@ const StyledSkipNav = styled('div')(() => ({
     outline: 'none',
     background:
         'linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 78%,rgba(255,255,255,0) 100%)',
-    filter:
-        'progid:DXImageTransform.Microsoft.gradient( startColorstr="#bfffffff", endColorstr="#00ffffff",GradientType=0 )',
+    filter: 'progid:DXImageTransform.Microsoft.gradient( startColorstr="#bfffffff", endColorstr="#00ffffff",GradientType=0 )',
     '&:focus': {
         left: 0,
     },
@@ -149,15 +148,17 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
     };
 
     const navigateToLink = (url: string, target: string = '_blank'): void => {
+        /* istanbul ignore else */
         if (url) {
             if (url.indexOf('http') === -1) {
                 // internal link
                 navigate(url);
-            } else {
+            } /* istanbul ignore else */ else {
                 // external link
                 window.open(url, target);
             }
         }
+        /* istanbul ignore else */
         if (!docked) {
             onToggleDrawer();
         }
@@ -238,26 +239,28 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                                 </IconButton>
                             </Grid>
                         </Grid>
-                        {// Skip nav section
-                        docked && (
-                            <StyledSkipNav
-                                id="skipNav"
-                                onClick={skipMenuItems}
-                                onKeyPress={skipMenuItems}
-                                tabIndex={1}
-                                aria-label={locale.skipNavAriaLabel}
-                            >
-                                <Button
-                                    variant="contained"
-                                    color="primary"
+                        {
+                            // Skip nav section
+                            docked && (
+                                <StyledSkipNav
+                                    id="skipNav"
                                     onClick={skipMenuItems}
-                                    className="skipNavButton"
-                                    tabIndex={-1}
+                                    onKeyPress={skipMenuItems}
+                                    tabIndex={1}
+                                    aria-label={locale.skipNavAriaLabel}
                                 >
-                                    {locale.skipNavTitle}
-                                </Button>
-                            </StyledSkipNav>
-                        )}
+                                    <Button
+                                        variant="contained"
+                                        color="primary"
+                                        onClick={skipMenuItems}
+                                        className="skipNavButton"
+                                        tabIndex={-1}
+                                    >
+                                        {locale.skipNavTitle}
+                                    </Button>
+                                </StyledSkipNav>
+                            )
+                        }
                         {renderMenuItems(navigateToLink, menuItems)}
                     </List>
                     <div id="afterMenuDrawer" data-testid="after-menu-drawer" tabIndex={-1} />

@@ -283,8 +283,7 @@ describe('SearchComponent', () => {
             fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
             expect(mockUseNavigate).toHaveBeenCalledWith({
                 pathname: '/admin/unpublished',
-                search:
-                    'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Branges%5D%5BCreated+date%5D=%5B1979-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BUpdated+date%5D=%5B1981-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2000&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2008&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchQueryParams%5Brek_status%5D%5Bvalue%5D=7&searchQueryParams%5Brek_status%5D%5Blabel%5D=&searchQueryParams%5Brek_created_date%5D%5Bvalue%5D=%5B1979-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&searchQueryParams%5Brek_created_date%5D%5Blabel%5D=%5B30%2F12%2F1979+to+01%2F01%2F1985%5D&searchQueryParams%5Brek_updated_date%5D%5Bvalue%5D=%5B1981-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&searchQueryParams%5Brek_updated_date%5D%5Blabel%5D=%5B30%2F12%2F1981+to+01%2F01%2F1985%5D&searchMode=advanced',
+                search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Branges%5D%5BCreated+date%5D=%5B1979-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BUpdated+date%5D=%5B1981-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2000&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2008&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchQueryParams%5Brek_status%5D%5Bvalue%5D=7&searchQueryParams%5Brek_status%5D%5Blabel%5D=&searchQueryParams%5Brek_created_date%5D%5Bvalue%5D=%5B1979-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&searchQueryParams%5Brek_created_date%5D%5Blabel%5D=%5B30%2F12%2F1979+to+01%2F01%2F1985%5D&searchQueryParams%5Brek_updated_date%5D%5Bvalue%5D=%5B1981-12-30T14%3A00%3A00Z+TO+1985-01-01T13%3A59%3A59Z%5D&searchQueryParams%5Brek_updated_date%5D%5Blabel%5D=%5B30%2F12%2F1981+to+01%2F01%2F1985%5D&searchMode=advanced',
             });
         },
     );
@@ -300,8 +299,7 @@ describe('SearchComponent', () => {
         fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
         expect(mockUseNavigate).toHaveBeenCalledWith({
             pathname: '/records/search',
-            search:
-                'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_display_type%5D%5B%5D=371&searchMode=advanced',
+            search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_display_type%5D%5B%5D=371&searchMode=advanced',
         });
     });
 

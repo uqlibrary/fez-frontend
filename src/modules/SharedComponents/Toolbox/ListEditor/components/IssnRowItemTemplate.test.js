@@ -7,6 +7,7 @@ import {
     mapStateToProps,
 } from './IssnRowItemTemplate';
 import { rtlRender } from 'test-utils';
+import { ULRICHS_URL_PREFIX } from '../../../../../config/general';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -277,8 +278,6 @@ describe('IssnRowItemTemplate', () => {
             };
 
             const sherpaLink = 'http://v2.sherpa.ac.uk/id/publication/9999999';
-            const ulrichsLinkPrefix =
-                'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F';
             const ulrichsTitleId = '12345678';
 
             it('should return props for initial render', () => {
@@ -331,7 +330,7 @@ describe('IssnRowItemTemplate', () => {
                                 link: sherpaLink,
                             },
                             ulrichs: {
-                                link: `${ulrichsLinkPrefix}${ulrichsTitleId}`,
+                                link: `${ULRICHS_URL_PREFIX}${ulrichsTitleId}`,
                                 title: 'Testing 2',
                             },
                         },
@@ -360,7 +359,7 @@ describe('IssnRowItemTemplate', () => {
                                 link: '',
                             },
                             ulrichs: {
-                                link: `${ulrichsLinkPrefix}${ulrichsTitleId}`,
+                                link: `${ULRICHS_URL_PREFIX}${ulrichsTitleId}`,
                                 title: '',
                             },
                         },
@@ -432,7 +431,7 @@ describe('IssnRowItemTemplate', () => {
                                 link: sherpaLink,
                             },
                             ulrichs: {
-                                link: `${ulrichsLinkPrefix}${ulrichsTitleId}`,
+                                link: `${ULRICHS_URL_PREFIX}${ulrichsTitleId}`,
                                 title: 'Testing 2',
                             },
                         },

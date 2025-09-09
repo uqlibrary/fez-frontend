@@ -12,7 +12,6 @@ import {
     createMatchMedia,
 } from 'test-utils';
 import ViewJournal, { getAdvisoryStatement } from './ViewJournal';
-import { getAllByTestId } from '@testing-library/react';
 
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
@@ -113,7 +112,12 @@ describe('ViewJournal', () => {
         expect(getByTestId('ulr-formats-header')).toHaveTextContent('Journal formats available');
         expect(getByTestId('ulr-formats-value')).toHaveTextContent('Print');
 
-        expect(queryByTestId('ulr-open-access-url-header')).not.toBeInTheDocument();
+        expect(getByTestId('jnl-homepage-url-header')).toHaveTextContent('Journal home page');
+        expect(getByTestId('jnl-homepage-url-value')).toHaveTextContent('https://www.hindawi.com/journals/aaa');
+        expect(getByTestId('jnl-homepage-url-lookup-link')).toHaveAttribute(
+            'href',
+            'https://www.hindawi.com/journals/aaa',
+        );
 
         expect(getByTestId('ulr-description-header')).toHaveTextContent('Description');
         expect(getByTestId('ulr-description-value')).toHaveTextContent(
@@ -141,13 +145,6 @@ describe('ViewJournal', () => {
         expect(getByTestId('ulr-open-access-header')).toHaveTextContent('Open access');
         expect(getByTestId('ulr-open-access-value')).toHaveTextContent('Yes');
 
-        expect(getByTestId('jnl-doaj-homepage-url-header')).toHaveTextContent('Journal home page');
-        expect(getByTestId('jnl-doaj-homepage-url-value')).toHaveTextContent('https://www.hindawi.com/journals/aaa');
-        expect(getByTestId('jnl-doaj-homepage-url-lookup-link')).toHaveAttribute(
-            'href',
-            'https://www.hindawi.com/journals/aaa',
-        );
-
         expect(getByTestId('jnl-doaj-apc-average-price-header')).toHaveTextContent('Article processing charges');
         expect(getByTestId('jnl-doaj-apc-average-price-value')).toHaveTextContent('975 USD');
 
@@ -159,9 +156,6 @@ describe('ViewJournal', () => {
             'href',
             'https://creativecommons.org/licenses/by/4.0/deed.en',
         );
-
-        expect(getByTestId('jnl-doaj-seal-header')).toHaveTextContent('DOAJ seal');
-        expect(getByTestId('jnl-doaj-seal-value')).toHaveTextContent('Yes');
 
         expect(getByTestId('jnl-doaj-last-updated-header')).toHaveTextContent('Last updated');
         expect(getByTestId('jnl-doaj-last-updated-value')).toHaveTextContent('3rd February 2020 at 2:17pm');
@@ -213,7 +207,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jcr-more-info-scie-value')).toHaveTextContent('More info about JCR SCIE');
         expect(getByTestId('jcr-more-info-scie-lookup-link')).toHaveAttribute(
             'href',
-            'https://clarivate.com/webofsciencegroup/solutions/webofscience-scie',
+            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
         );
 
         expect(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-0-heading')).toHaveTextContent(
@@ -269,7 +263,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jcr-more-info-ssci-value')).toHaveTextContent('More info about JCR SSCI');
         expect(getByTestId('jcr-more-info-ssci-lookup-link')).toHaveAttribute(
             'href',
-            'https://clarivate.com/webofsciencegroup/solutions/webofscience-ssci',
+            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
         );
 
         expect(getByTestId('journal-details-tab-fez-journal-jcr-ssci-category-0-heading')).toHaveTextContent(
@@ -500,6 +494,79 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-nature-index-source-date-header')).toHaveTextContent('Nature Index');
         expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('Yes, 2019');
+    });
+
+    it('should display ulr open access url from second issn', async () => {
+        const homepageUrl = 'https://homepage.url/from/issn2';
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '0090-0036',
+                        jnl_issn_order: 1,
+                        fez_ulrichs: {
+                            ulr_open_access: '1',
+                            ulr_open_access_url: null,
+                        },
+                    },
+                    {
+                        jnl_issn: '1541-0048',
+                        jnl_issn_order: 2,
+                        fez_ulrichs: {
+                            ulr_open_access: '1',
+                            ulr_open_access_url: homepageUrl,
+                        },
+                    },
+                ],
+            },
+        });
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-homepage-url-header')).toHaveTextContent('Journal home page');
+        expect(getByTestId('jnl-homepage-url-value')).toHaveTextContent(homepageUrl);
+        expect(getByTestId('jnl-homepage-url-lookup-link')).toHaveAttribute('href', homepageUrl);
+    });
+
+    it('should display ulr open access url from doaj', async () => {
+        const homepageUrl = 'https://homepage.url/from/doaj';
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '0090-0036',
+                        jnl_issn_order: 1,
+                        fez_ulrichs: {
+                            ulr_open_access: '0',
+                            ulr_open_access_url: null,
+                        },
+                    },
+                    {
+                        jnl_issn: '1541-0048',
+                        jnl_issn_order: 2,
+                        fez_ulrichs: {
+                            ulr_open_access: '0',
+                            ulr_open_access_url: null,
+                        },
+                    },
+                ],
+                fez_journal_doaj: {
+                    jnl_doaj_homepage_url: homepageUrl,
+                },
+            },
+        });
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-homepage-url-header')).toHaveTextContent('Journal home page');
+        expect(getByTestId('jnl-homepage-url-value')).toHaveTextContent(homepageUrl);
+        expect(getByTestId('jnl-homepage-url-lookup-link')).toHaveAttribute('href', homepageUrl);
     });
 
     it('Should not show sherpa romeo links when journal links is not available', async () => {

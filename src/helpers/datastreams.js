@@ -31,9 +31,7 @@ export const isAdded = datastream => {
 export const getSensitiveHandlingNote = record =>
     isSensitiveHandlingNoteTypeOther(
         record.fez_record_search_key_sensitive_handling_note_id.rek_sensitive_handling_note_id,
-    ) &&
-    // eslint-disable-next-line camelcase
-    !!record.fez_record_search_key_sensitive_handling_note_other?.rek_sensitive_handling_note_other
+    ) && !!record.fez_record_search_key_sensitive_handling_note_other?.rek_sensitive_handling_note_other
         ? record.fez_record_search_key_sensitive_handling_note_other.rek_sensitive_handling_note_other
         : SENSITIVE_HANDLING_NOTE_TYPE.find(
               item =>

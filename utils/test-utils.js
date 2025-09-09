@@ -295,7 +295,7 @@ const mockUseForm = implementation => {
     });
 };
 
-const turnOnJestPreviewOnTestFailure = (options = {}) =>
+const enableJestPreviewOnTestFailure = (options = {}) =>
     jestPreviewConfigure({
         autoPreview: true,
         ...options,
@@ -543,6 +543,9 @@ const assertRichTextEditorValue = async (testId, value) => {
     expect(editor).toHaveTextContent(value, { exact: true });
 };
 
+const getTableBodyRows = element =>
+    element.querySelectorAll('tr.MuiTableRow-root:not(.Mui-TableBodyCell-DetailPanel):not(.MuiTableRow-head)');
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -575,7 +578,7 @@ module.exports = {
     setFileUploaderFilesToClosedAccess,
     FormProviderWrapper,
     setFileUploaderFilesSecurityPolicy,
-    turnOnJestPreviewOnTestFailure,
+    enableJestPreviewOnTestFailure,
     mockWebApiFile,
     assertRequestData,
     assertRequest,
@@ -595,5 +598,6 @@ module.exports = {
     addAndSelectContributorsEditorItem,
     clearAndType,
     sortObjectProps,
+    getTableBodyRows,
     api,
 };

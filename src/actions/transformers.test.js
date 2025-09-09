@@ -335,25 +335,17 @@ describe('transformers', () => {
                 {
                     access_condition_id: 5, // open access, should stay open
                     name: 'file1.txt',
-                    date: moment()
-                        .clone()
-                        .format('YYYY-MM-DD'), // today
+                    date: moment().clone().format('YYYY-MM-DD'), // today
                 },
                 {
                     access_condition_id: 5, // open access, should be closed 'cause in the future
                     name: 'file2.txt',
-                    date: moment()
-                        .clone()
-                        .add(30, 'days')
-                        .format('YYYY-MM-DD'), // future
+                    date: moment().clone().add(30, 'days').format('YYYY-MM-DD'), // future
                 },
                 {
                     access_condition_id: 5, // open access, should stay open 'cause in the past
                     name: 'file3.txt',
-                    date: moment()
-                        .clone()
-                        .add(-30, 'days')
-                        .format('YYYY-MM-DD'), // past
+                    date: moment().clone().add(-30, 'days').format('YYYY-MM-DD'), // past
                 },
                 {
                     access_condition_id: 1, // closed access, should stay closed
@@ -420,25 +412,17 @@ describe('transformers', () => {
                 {
                     security_policy: FILE_SECURITY_POLICY_PUBLIC, // Public access
                     name: 'file1.txt',
-                    date: moment()
-                        .clone()
-                        .format('YYYY-MM-DD'), // today
+                    date: moment().clone().format('YYYY-MM-DD'), // today
                 },
                 {
                     security_policy: FILE_SECURITY_POLICY_PUBLIC, // Public access, should revert to admin
                     name: 'file2.txt',
-                    date: moment()
-                        .clone()
-                        .add(30, 'days')
-                        .format('YYYY-MM-DD'), // future
+                    date: moment().clone().add(30, 'days').format('YYYY-MM-DD'), // future
                 },
                 {
                     security_policy: FILE_SECURITY_POLICY_PUBLIC, // Public access
                     name: 'file3.txt',
-                    date: moment()
-                        .clone()
-                        .add(-30, 'days')
-                        .format('YYYY-MM-DD'), // past
+                    date: moment().clone().add(-30, 'days').format('YYYY-MM-DD'), // past
                 },
                 {
                     security_policy: FILE_SECURITY_POLICY_ADMIN, // closed access
@@ -626,9 +610,7 @@ describe('transformers', () => {
                 {
                     access_condition_id: 1,
                     name: 'file.txt',
-                    date: moment()
-                        .clone()
-                        .format('YYYY-MM-DD'), // today
+                    date: moment().clone().format('YYYY-MM-DD'), // today
                 },
                 {
                     access_condition_id: 2,
@@ -2153,13 +2135,10 @@ describe('transformers', () => {
 
     describe('getRecordAuthorAffiliations tests', () => {
         it('should return null object 1', () => {
-            expect(transformers.getRecordAuthorAffiliations()).toEqual({ fez_author_affiliation: null });
-        });
-        it('should return null object 2', () => {
-            expect(transformers.getRecordAuthorAffiliations([], false)).toEqual({ fez_author_affiliation: null });
+            expect(transformers.getRecordAuthorAffiliations()).toEqual({ fez_author_affiliation: [] });
         });
         it('should return empty array object', () => {
-            expect(transformers.getRecordAuthorAffiliations([], true)).toEqual({ fez_author_affiliation: [] });
+            expect(transformers.getRecordAuthorAffiliations([])).toEqual({ fez_author_affiliation: [] });
         });
         it('should return array object', () => {
             const authors = [
@@ -2191,22 +2170,6 @@ describe('transformers', () => {
             };
 
             expect(transformers.getRecordAuthorAffiliations(authors, true)).toEqual(expected);
-        });
-    });
-
-    describe('getAuthorsSearchKeys', () => {
-        it('should handle the canHaveAffiliations param (coverage)', () => {
-            const authors = [
-                { nameAsPublished: 'Smith D.', disabled: false, selected: true, authorId: 100 },
-                { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1000 },
-            ];
-
-            expect(transformers.getAuthorsSearchKeys(authors)).toEqual(
-                expect.objectContaining({ fez_author_affiliation: null }),
-            );
-            expect(transformers.getAuthorsSearchKeys(authors, true)).toEqual(
-                expect.objectContaining({ fez_author_affiliation: [] }),
-            );
         });
     });
 
@@ -3292,15 +3255,11 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-                fez_record_search_key_herdc_code: {
-                    rek_herdc_code: null,
-                },
-                fez_record_search_key_herdc_status: {
-                    rek_herdc_status: null,
-                },
+                fez_record_search_key_herdc_code: {},
+                fez_record_search_key_herdc_status: {},
                 fez_record_search_key_institutional_status: {},
                 fez_record_search_key_oa_status: {},
-                fez_record_search_key_oa_status_type: null,
+                fez_record_search_key_oa_status_type: {},
                 fez_record_search_key_license: {},
             });
         });
@@ -3352,15 +3311,11 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
-                fez_record_search_key_herdc_code: {
-                    rek_herdc_code: null,
-                },
-                fez_record_search_key_herdc_status: {
-                    rek_herdc_status: null,
-                },
+                fez_record_search_key_herdc_code: {},
+                fez_record_search_key_herdc_status: {},
                 fez_record_search_key_institutional_status: {},
                 fez_record_search_key_oa_status: {},
-                fez_record_search_key_oa_status_type: null,
+                fez_record_search_key_oa_status_type: {},
                 fez_record_search_key_license: {},
             });
         });
@@ -4469,7 +4424,7 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
-                fez_author_affiliation: null,
+                fez_author_affiliation: [],
                 fez_record_search_key_author: [],
                 fez_record_search_key_author_id: [],
                 fez_record_search_key_author_affiliation_country: [],
@@ -4493,7 +4448,7 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
-                fez_author_affiliation: null,
+                fez_author_affiliation: [],
                 fez_record_search_key_author: [
                     { rek_author: 'Smith A.', rek_author_order: 1 },
                     { rek_author: 'Smith B.', rek_author_order: 2 },
@@ -4549,7 +4504,7 @@ describe('transformers', () => {
 
         it('should get authors search key for authors with affiliations', () => {
             const data = {
-                authorsWithAffiliations: [
+                authors: [
                     { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
                     { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
                     { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
@@ -4738,7 +4693,7 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
-                fez_author_affiliation: null,
+                fez_author_affiliation: [],
                 fez_record_search_key_author: [
                     { rek_author: 'Smith A.', rek_author_order: 1 },
                     { rek_author: 'Smith B.', rek_author_order: 2 },
@@ -4844,7 +4799,7 @@ describe('transformers', () => {
             };
 
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
-                fez_author_affiliation: null,
+                fez_author_affiliation: [],
                 fez_record_search_key_author: [
                     { rek_author: 'Smith A.', rek_author_order: 1 },
                     { rek_author: 'Smith B.', rek_author_order: 2 },
@@ -5932,9 +5887,28 @@ describe('transformers', () => {
     describe('getHerdcCodeSearchKey', () => {
         it('should correctly transform data for category code', () => {
             expect(transformers.getHerdcCodeSearchKey({ rek_herdc_code: '0' })).toEqual({
-                fez_record_search_key_herdc_code: {
-                    rek_herdc_code: null,
-                },
+                fez_record_search_key_herdc_code: {},
+                //     rek_herdc_code: null,
+                // },
+            });
+        });
+    });
+    describe('getHerdcStatusSearchKey', () => {
+        it('should correctly transform data for status code', () => {
+            expect(transformers.getHerdcStatusSearchKey({ rek_herdc_status: '0' })).toEqual({
+                fez_record_search_key_herdc_status: {},
+                //     rek_herdc_status: null,
+                // },
+            });
+        });
+    });
+
+    describe('getRefereedStatusSearchKey', () => {
+        it('should correctly transform data for source code', () => {
+            expect(transformers.getRefereedStatusSearchKey({ rek_refereed_source: '0' })).toEqual({
+                fez_record_search_key_refereed_source: {},
+                //     rek_refereed_source: null,
+                // },
             });
         });
     });
@@ -5942,7 +5916,7 @@ describe('transformers', () => {
     describe('getOpenAccessStatusTypeSearchKey', () => {
         it('should correctly transform data for OA status type', () => {
             expect(transformers.getOpenAccessStatusTypeSearchKey({ rek_oa_status_type: '0' })).toEqual({
-                fez_record_search_key_oa_status_type: null,
+                fez_record_search_key_oa_status_type: {},
             });
         });
     });
