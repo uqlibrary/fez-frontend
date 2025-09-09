@@ -214,7 +214,7 @@ export const FileUploadDropzone = ({
      * @private
      */
     const _onDrop = (incomingFiles, rejectedFiles) => {
-        const existingFiles = formValues ?? [];
+        const existingFiles = formValues || [];
         const notFiles = [];
         // Remove folders from accepted files (async)
         removeDroppedFolders([...incomingFiles], notFiles).then(onlyFiles => {
