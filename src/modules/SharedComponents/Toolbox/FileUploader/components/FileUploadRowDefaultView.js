@@ -150,7 +150,6 @@ export const FileUploadRowDefaultView = ({
                         />
                     </Grid>
                 )}
-                {console.log('requireOpenAccessStatus', requireOpenAccessStatus)}
                 {requireOpenAccessStatus && (
                     <Grid item sm={2}>
                         {((isAdmin && securityPolicy !== FILE_SECURITY_POLICY_PUBLIC) ||

@@ -90,7 +90,7 @@
     "axe-core": "^4.8.3",
     "axios-mock-adapter": "^2.1.0",
     "babel-jest": "^29.7.0",
-    "babel-loader": "10.0.0",
+    "babel-loader": "^9.1.2",
     "babel-plugin-dynamic-import-node": "^2.3.3",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
@@ -121,7 +121,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-html-reporter": "^3.10.2",
     "jest-localstorage-mock": "^2.4.26",
-    "jest-preview": "^0.3.1",
+    "jest-preview": "^0.3.2",
     "jsdom": "^20.0.3",
     "mini-css-extract-plugin": "^2.7.2",
     "mockdate": "^3.0.5",
@@ -230,98 +230,98 @@
     "istanbul-lib-coverage": "3.2.2"
   },
   "engines": {
-    "npm": ">=10.2.3",
-    "node": ">=20.0.0"
+    "npm": ">=10.8.2",
+    "node": ">=20.11.0"
   },
   "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react",
+      "@babel/preset-typescript"
+    ],
+    "env": {
+      "development": {
         "presets": [
+          "@babel/env",
+          "@babel/react",
+          "@babel/preset-typescript"
+        ]
+      },
+      "production": {
+        "presets": [
+          [
             "@babel/env",
-            "@babel/react",
-            "@babel/preset-typescript"
-        ],
-        "env": {
-            "development": {
-                "presets": [
-                    "@babel/env",
-                    "@babel/react",
-                    "@babel/preset-typescript"
-                ]
-            },
-            "production": {
-                "presets": [
-                    [
-                        "@babel/env",
-                        {
-                            "modules": false,
-                            "targets": {
-                                "ie": 11
-                            }
-                        }
-                    ]
-                ],
-                "plugins": [
-                    "@babel/plugin-transform-react-constant-elements",
-                    "transform-react-remove-prop-types",
-                    "@babel/plugin-proposal-export-default-from",
-                    [
-                        "@babel/plugin-transform-spread",
-                        {
-                            "loose": true
-                        }
-                    ]
-                ]
-            },
-            "test": {
-                "presets": [
-                    "@babel/env",
-                    "@babel/react",
-                    "@babel/preset-typescript"
-                ],
-                "plugins": [
-                    [
-                        "dynamic-import-node",
-                        {
-                            "noInterop": true
-                        }
-                    ],
-                    [
-                        "@babel/plugin-transform-runtime",
-                        {
-                            "helpers": false,
-                            "regenerator": true,
-                            "corejs": false
-                        }
-                    ],
-                    "@babel/plugin-proposal-export-default-from"
-                ]
-            },
-            "cc": {
-                "presets": [
-                    "@babel/env",
-                    "@babel/react",
-                    "@babel/preset-typescript"
-                ],
-                "plugins": [
-                    [
-                        "dynamic-import-node",
-                        {
-                            "noInterop": true
-                        }
-                    ],
-                    [
-                        "@babel/plugin-transform-runtime",
-                        {
-                            "helpers": false,
-                            "regenerator": true,
-                            "corejs": false
-                        }
-                    ],
-                    "@babel/plugin-proposal-export-default-from",
-                    "istanbul"
-                ]
+            {
+              "modules": false,
+              "targets": {
+                "ie": 11
+              }
             }
-        }
-    },
+          ]
+        ],
+        "plugins": [
+          "@babel/plugin-transform-react-constant-elements",
+          "transform-react-remove-prop-types",
+          "@babel/plugin-proposal-export-default-from",
+          [
+            "@babel/plugin-transform-spread",
+            {
+              "loose": true
+            }
+          ]
+        ]
+      },
+      "test": {
+        "presets": [
+          "@babel/env",
+          "@babel/react",
+          "@babel/preset-typescript"
+        ],
+        "plugins": [
+          [
+            "dynamic-import-node",
+            {
+              "noInterop": true
+            }
+          ],
+          [
+            "@babel/plugin-transform-runtime",
+            {
+              "helpers": false,
+              "regenerator": true,
+              "corejs": false
+            }
+          ],
+          "@babel/plugin-proposal-export-default-from"
+        ]
+      },
+      "cc": {
+        "presets": [
+          "@babel/env",
+          "@babel/react",
+          "@babel/preset-typescript"
+        ],
+        "plugins": [
+          [
+            "dynamic-import-node",
+            {
+              "noInterop": true
+            }
+          ],
+          [
+            "@babel/plugin-transform-runtime",
+            {
+              "helpers": false,
+              "regenerator": true,
+              "corejs": false
+            }
+          ],
+          "@babel/plugin-proposal-export-default-from",
+          "istanbul"
+        ]
+      }
+    }
+  },
   "jest": {
     "transform": {
       ".*": "<rootDir>/node_modules/babel-jest"
