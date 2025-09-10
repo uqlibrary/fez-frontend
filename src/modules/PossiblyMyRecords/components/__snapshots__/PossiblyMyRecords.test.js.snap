@@ -699,94 +699,112 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                   class="MuiList-root MuiList-padding MuiList-dense css-b7dj7n-MuiList-root"
                 >
                   <li
-                    aria-expanded="false"
-                    class="MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-sq0s5e-MuiListItem-root"
-                    data-testid="clickable-facet-category-display-type"
-                    id="clickable-facet-category-display-type"
+                    class="MuiListItem-root MuiListItem-dense MuiListItem-gutters css-19f6boz-MuiListItem-root"
                   >
                     <div
-                      class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
+                      aria-expanded="false"
+                      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-jscz35-MuiButtonBase-root-MuiListItemButton-root"
+                      data-testid="clickable-facet-category-display-type"
+                      id="clickable-facet-category-display-type"
+                      role="button"
+                      tabindex="0"
                     >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-yezk6h-MuiTypography-root"
-                        data-testid="facet-category-display-type"
-                        id="facet-category-display-type"
+                      <div
+                        class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
                       >
-                        Work type
-                      </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-yezk6h-MuiTypography-root"
+                          data-testid="facet-category-display-type"
+                          id="facet-category-display-type"
+                        >
+                          Work type
+                        </p>
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="expand-more-facet-category-display-type"
+                        focusable="false"
+                        id="expand-more-facet-category-display-type"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        />
+                      </svg>
                     </div>
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                      data-testid="expand-more-facet-category-display-type"
-                      focusable="false"
-                      id="expand-more-facet-category-display-type"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                      />
-                    </svg>
                   </li>
                   <li
-                    aria-expanded="false"
-                    class="MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-sq0s5e-MuiListItem-root"
-                    data-testid="clickable-facet-category-keywords"
-                    id="clickable-facet-category-keywords"
+                    class="MuiListItem-root MuiListItem-dense MuiListItem-gutters css-19f6boz-MuiListItem-root"
                   >
                     <div
-                      class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
+                      aria-expanded="false"
+                      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-jscz35-MuiButtonBase-root-MuiListItemButton-root"
+                      data-testid="clickable-facet-category-keywords"
+                      id="clickable-facet-category-keywords"
+                      role="button"
+                      tabindex="0"
                     >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-yezk6h-MuiTypography-root"
-                        data-testid="facet-category-keywords"
-                        id="facet-category-keywords"
+                      <div
+                        class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
                       >
-                        Keywords
-                      </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-yezk6h-MuiTypography-root"
+                          data-testid="facet-category-keywords"
+                          id="facet-category-keywords"
+                        >
+                          Keywords
+                        </p>
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="expand-more-facet-category-keywords"
+                        focusable="false"
+                        id="expand-more-facet-category-keywords"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        />
+                      </svg>
                     </div>
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                      data-testid="expand-more-facet-category-keywords"
-                      focusable="false"
-                      id="expand-more-facet-category-keywords"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                      />
-                    </svg>
                   </li>
                   <li
-                    aria-expanded="false"
-                    class="MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding css-sq0s5e-MuiListItem-root"
-                    data-testid="clickable-facet-category-date-range"
-                    id="clickable-facet-category-date-range"
+                    class="MuiListItem-root MuiListItem-dense MuiListItem-gutters css-19f6boz-MuiListItem-root"
                   >
                     <div
-                      class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
+                      aria-expanded="false"
+                      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-jscz35-MuiButtonBase-root-MuiListItemButton-root"
+                      data-testid="clickable-facet-category-date-range"
+                      id="clickable-facet-category-date-range"
+                      role="button"
+                      tabindex="0"
                     >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-yezk6h-MuiTypography-root"
-                        data-testid="facet-category-date-range"
-                        id="facet-category-date-range"
+                      <div
+                        class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
                       >
-                        Published year range
-                      </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-yezk6h-MuiTypography-root"
+                          data-testid="facet-category-date-range"
+                          id="facet-category-date-range"
+                        >
+                          Published year range
+                        </p>
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="expand-more-facet-category-date-range"
+                        focusable="false"
+                        id="expand-more-facet-category-date-range"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        />
+                      </svg>
                     </div>
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                      data-testid="expand-more-facet-category-date-range"
-                      focusable="false"
-                      id="expand-more-facet-category-date-range"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                      />
-                    </svg>
                   </li>
                 </nav>
               </div>
