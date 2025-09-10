@@ -24,7 +24,7 @@ import globalLocale from 'locale/global';
 import * as actions from 'actions';
 import fields from 'locale/viewRecord';
 import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
-import { parseHtmlToJSX, doesListContainItem } from 'helpers/general';
+import { parseHtmlToJSX, doesListContainItem, stripHtml } from 'helpers/general';
 import { composeAuthorAffiliationProblems, shouldHandleAuthorAffiliations } from 'helpers/authorAffiliations';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -322,6 +322,18 @@ export const ViewRecord = () => {
                         />
                         <br />
                         <Alert {...txt.version.alert.warning} />
+                    </Grid>
+                )}
+                {/* eslint-disable-next-line camelcase */}
+                {!!recordToView.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
+                    <Grid xs={12} style={{ marginBottom: 24 }}>
+                        <Alert
+                            allowDismiss
+                            type={'info'}
+                            message={stripHtml(
+                                recordToView.fez_record_search_key_advisory_statement.rek_advisory_statement,
+                            )}
+                        />
                     </Grid>
                 )}
                 <Grid container spacing={3}>

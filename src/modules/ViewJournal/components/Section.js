@@ -35,14 +35,14 @@ export const Section = ({ sectionKey, sectionConfig, wrapped = true }) => {
                     title={sectionConfig.title}
                     smallTitle
                 >
-                    {viewRows}
                     {tabbedFields}
+                    {viewRows}
                 </StandardCard>
             )}
             {!wrapped && (
                 <>
-                    {viewRows}
                     {tabbedFields}
+                    {viewRows}
                 </>
             )}
         </Grid>
