@@ -390,7 +390,6 @@ export const AttachedFiles = ({
     return (
         <Grid size={12}>
             <StandardCard title={locale.title} subCard>
-                {/* eslint-disable-next-line camelcase */}
                 {!!record.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
                     /* istanbul ignore next */ <Alert
                         allowDismiss

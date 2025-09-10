@@ -167,7 +167,7 @@
     "@mui/system": "^7.3.2",
     "@mui/x-charts": "^7.6.2",
     "@mui/x-data-grid": "^7.29.5",
-    "@mui/x-date-pickers": "^7.14.0",
+    "@mui/x-date-pickers": "^8.11.1",
     "@react-google-maps/api": "^2.19.2",
     "@sentry/react": "^10.2.0",
     "@types/lodash": "^4.17.16",
@@ -233,7 +233,7 @@
   },
   "engines": {
     "npm": ">=10.8.2",
-    "node": ">=20.11.0"
+    "node": ">=20.19.0"
   },
   "babel": {
     "presets": [
