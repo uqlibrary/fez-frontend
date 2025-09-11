@@ -16,26 +16,6 @@ export const deleteCallbackFactory = (dataStreams, onDeleteAttachedFile, onChang
     return [callback, [dataStreams, onDeleteAttachedFile, onChange]];
 };
 
-export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams) => {
-    const callback = (fileId, oldPosition, newPosition) => {
-        const newDataStreams = [...dataStreams];
-
-        newDataStreams.map(
-            (item, index) =>
-                (item.dsi_order = item.hasOwnProperty('dsi_order') && !!item.dsi_order ? item.dsi_order : index + 1),
-        );
-
-        const sourceFileIndex = newDataStreams.findIndex(item => item.dsi_id === fileId);
-        const replaceFileIndex = newDataStreams.findIndex(item => item.dsi_order === newPosition);
-
-        newDataStreams[sourceFileIndex].dsi_order = newPosition;
-        newDataStreams[replaceFileIndex].dsi_order = oldPosition;
-
-        setDataStreams(newDataStreams);
-    };
-    return [callback, [dataStreams, setDataStreams]];
-};
-
 export const handleDatastreamChange =
     (dataStreams, setDataStreams, onRenameAttachedFile) => (key, value, index, previousFilename) => {
         const newDataStreams = [...dataStreams];
@@ -76,11 +56,6 @@ export const AttachedFilesField = ({ onRenameAttachedFile, onDeleteAttachedFile,
     }, [newPropsDataStreams, newPropsDataStreamsString]);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleDataStreamOrderChange = useCallback(
-        ...datastreamOrderChangeCallbackFactory(dataStreams, setDataStreams),
-    );
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, onDeleteAttachedFile, props.onChange));
 
     return (
@@ -91,7 +66,6 @@ export const AttachedFilesField = ({ onRenameAttachedFile, onDeleteAttachedFile,
             onFilenameChange={handleDatastreamChange(dataStreams, setDataStreams, onRenameAttachedFile)}
             onFilenameSave={handleDatastreamMultiChange(dataStreams, setDataStreams, onRenameAttachedFile)}
             onHandleFileIsValid={handleDatastreamChange(dataStreams, setDataStreams)}
-            onOrderChange={handleDataStreamOrderChange}
             dataStreams={dataStreams}
             {...props}
         />

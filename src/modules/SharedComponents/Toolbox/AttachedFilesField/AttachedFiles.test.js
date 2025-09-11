@@ -244,20 +244,77 @@ describe('AttachedFiles component', () => {
             onDescriptionChange: onDescriptionChangeFn,
             onOrderChange: onOrderChangeFn,
         });
-
         fireEvent.click(getByTestId('delete-file-3'));
-        expect(onDeleteFn).toHaveBeenCalledWith('FezACML_UQ_252236.xml');
+        expect(onDeleteFn).toHaveBeenCalledWith('FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml');
 
         fireEvent.change(getByTestId('dsi-label-2-input'), { target: { value: 'test file description' } });
-        expect(onDescriptionChangeFn).toHaveBeenCalledWith('dsi_label', 'test file description', 2);
-
-        fireEvent.click(getByTestId('order-down-file-1'));
-        expect(onOrderChangeFn).toHaveBeenCalledWith(2, 2, 3);
-
-        fireEvent.click(getByTestId('order-up-file-2'));
-        expect(onOrderChangeFn).toHaveBeenLastCalledWith(3, 3, 2);
+        expect(onDescriptionChangeFn).toHaveBeenCalledWith('dsi_label', 'test file description', 4);
     });
 
+    it('should render files ordered alphabetically, regardless of dsi_order', async () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
+        userIsAdmin.mockImplementation(() => true);
+        useRecordContext.mockImplementationOnce(() => ({
+            record: { fez_record_search_key_oa_status: { rek_oa_status: 453695 } },
+        }));
+        const onDateChangeFn = jest.fn();
+        setup({
+            canEdit: true,
+            disabled: false,
+            openAccessStatusId: 453697,
+            dataStreams: [
+                {
+                    dsi_id: '252236',
+                    dsi_pid: 'UQ:252236',
+                    dsi_dsid: 'C_file.pdf',
+                    dsi_embargo_date: '2018-01-01',
+                    dsi_label: 'UPO Guide v.4',
+                    dsi_mimetype: 'application/pdf',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 5,
+                    dsi_order: 1,
+                },
+                {
+                    dsi_id: '252236',
+                    dsi_pid: 'UQ:252236',
+                    dsi_dsid: 'A_file.pdf',
+                    dsi_embargo_date: '2018-01-01',
+                    dsi_label: 'UPO Guide v.4',
+                    dsi_mimetype: 'application/pdf',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 5,
+                    dsi_order: 2,
+                },
+                {
+                    dsi_id: '252236',
+                    dsi_pid: 'UQ:252236',
+                    dsi_dsid: 'B_file.pdf',
+                    dsi_embargo_date: '2018-01-01',
+                    dsi_label: 'UPO Guide v.4',
+                    dsi_mimetype: 'application/pdf',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 5,
+                    dsi_order: 3,
+                },
+            ],
+            onDateChange: onDateChangeFn,
+            onDelete: jest.fn(),
+        });
+        const fileList = document.querySelectorAll('#standard-card-files-content > .MuiBox-root');
+        expect(fileList).toHaveLength(4); // (3 + header)
+        expect(fileList[1]).toHaveTextContent('A_file.pdf');
+        expect(fileList[2]).toHaveTextContent('B_file.pdf');
+        expect(fileList[3]).toHaveTextContent('C_file.pdf');
+    });
     it('should render embargo date field for open access file with embargo date in future', async () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
@@ -289,7 +346,7 @@ describe('AttachedFiles component', () => {
         });
 
         act(() => {
-            fireEvent.click(getAllByRole('button')[2]);
+            fireEvent.click(getAllByRole('button')[1]);
         });
 
         const calendar = await waitFor(() => getAllByRole('presentation')[0]);
@@ -322,7 +379,7 @@ describe('AttachedFiles component', () => {
         });
 
         act(() => {
-            fireEvent.click(getAllByRole('button')[2]);
+            fireEvent.click(getAllByRole('button')[1]);
         });
 
         const calendar = await waitFor(() => getAllByRole('presentation')[0]);

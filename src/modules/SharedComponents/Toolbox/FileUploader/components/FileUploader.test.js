@@ -86,6 +86,34 @@ describe('Component FileUploader', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should alphabetically order files as they are added', async () => {
+        // default view
+        const useWidth = jest.spyOn(Hook, 'useWidth');
+        useWidth.mockImplementation(() => 'sm');
+
+        const { container, getByText, getByTestId } = setup();
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [
+                    new File(['B hello'], 'C_hello.png', { type: 'image/png' }),
+                    new File(['A hello'], 'B_hello.png', { type: 'image/png' }),
+                ],
+                types: ['Files', 'Files'],
+            },
+        });
+        await waitFor(() => getByText(/B_hello\.png/i));
+        expect(container).toMatchSnapshot();
+
+        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: [new File(['A hello'], 'A_hello.png', { type: 'image/png' })],
+                types: ['Files'],
+            },
+        });
+        await waitFor(() => getByText(/A_hello\.png/i));
+        expect(container).toMatchSnapshot();
+    });
+
     it('should drag and drop 2 files', async () => {
         // default view
         const useWidth = jest.spyOn(Hook, 'useWidth');
@@ -229,34 +257,6 @@ describe('Component FileUploader', () => {
         fireEvent.mouseDown(getByTestId('dsi-security-policy-1-select'));
         fireEvent.click(getByRole('option', { name: 'Public' }));
 
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should handle file order change', async () => {
-        // default view
-        const useWidth = jest.spyOn(Hook, 'useWidth');
-        useWidth.mockImplementation(() => 'sm');
-
-        const { container, getByTestId, getByText } = setup({ requireOpenAccessStatus: true });
-        expect(container).toMatchSnapshot();
-
-        // drag and drop 2 files
-        fireEvent.drop(getByTestId('fez-datastream-info-input'), {
-            dataTransfer: {
-                files: [
-                    new File(['hello'], 'hello.png', { type: 'image/png' }),
-                    new File(['hello2'], 'hello2.png', { type: 'image/png' }),
-                ],
-                types: ['Files', 'Files'],
-            },
-        });
-
-        await waitFor(() => getByText(/hello\.png/i));
-
-        fireEvent.click(getByTestId('new-file-upload-up-1'));
-        expect(container).toMatchSnapshot();
-
-        fireEvent.click(getByTestId('new-file-upload-down-0'));
         expect(container).toMatchSnapshot();
     });
 

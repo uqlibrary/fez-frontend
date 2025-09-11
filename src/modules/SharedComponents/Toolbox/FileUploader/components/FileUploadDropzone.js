@@ -237,7 +237,11 @@ export const FileUploadDropzone = ({
             );
 
             onDrop(
-                limitedFiles.map(file => ({ fileData: file, name: file.name, size: file.size })),
+                limitedFiles
+                    .map(file => ({ fileData: file, name: file.name, size: file.size }))
+                    .sort((a, b) => {
+                        return a.name < b.name ? -1 : 1;
+                    }),
                 {
                     tooBigFiles: rejectedFiles.map(file => file.file.name),
                     notFiles: notFiles,
