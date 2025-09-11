@@ -17,6 +17,8 @@ import {
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+
 /*
 
 NOTE:
@@ -911,8 +913,11 @@ export default {
                             type="done"
                         />
                         <span style={{ display: 'block', marginTop: '1em' }}>
-                            Works from Web of Science, Scopus, PubMed, and CrossRef will be synced to your UQ eSpace
-                            profile within the 7 days.
+                            Works in your ORCID profile from Web of Science, Scopus, PubMed, and CrossRef will be synced
+                            to your UQ eSpace profile within 7 days. Read more about{' '}
+                            <ExternalLink href="https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/orcid">
+                                populating your ORCID.
+                            </ExternalLink>
                         </span>
                     </>
                 ),

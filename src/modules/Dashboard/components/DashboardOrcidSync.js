@@ -16,6 +16,7 @@ import * as actions from 'actions/actionTypes';
 import DashboardOrcidSyncMessage from './DashboardOrcidSyncMessage';
 import DashboardOrcidSyncPreferences from './DashboardOrcidSyncPreferences';
 import { debounce } from 'throttle-debounce';
+import { Settings } from '@mui/icons-material';
 
 export const getOnSyncPreferenceChangeHandler = (
     author,
@@ -47,7 +48,7 @@ export const getOnSyncPreferenceChangeHandler = (
 
 export const openUrl = url => () => window.open(url, '_blank');
 
-const renderBadgeIcon = status => {
+const renderBadgeIcon = (status, defaultValue = undefined) => {
     switch (status) {
         case 'Pending':
         case 'In Progress':
@@ -56,7 +57,7 @@ const renderBadgeIcon = status => {
             return () => <SyncProblemIcon data-testid={'dashboard-orcid-sync-error-icon'} size={20} />;
         case 'Done':
         default:
-            return undefined;
+            return defaultValue;
     }
 };
 
@@ -189,7 +190,7 @@ export const DashboardOrcidSync = props => {
     };
 
     const helpIconProps = {
-        IconComponent: renderBadgeIcon(syncJobStatus),
+        IconComponent: renderBadgeIcon(syncJobStatus, () => <Settings size={20} />),
         iconSize: 'small',
         showLoader: requestingOrcidSync,
         style:
