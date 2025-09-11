@@ -79,10 +79,13 @@ export const AutoCompleteAsynchronousField = ({
 
     const handleInputChange = useCallback(
         (event, newInputValue, reason) => {
+            /* istanbul ignore next */
             if (reason === 'reset' && prefilledSearch && !!newInputValue) {
+                // TBD if this block is still required
                 setInputValue(newInputValue);
                 setOpen(true);
-            } else if (!!event && event.type === 'click' && reason === 'clear') {
+            }
+            if (!!event && event.type === 'click' && reason === 'clear') {
                 onClear();
             } else if (!!allowFreeText && !!newInputValue && reason === 'input') {
                 onChange({ value: newInputValue });

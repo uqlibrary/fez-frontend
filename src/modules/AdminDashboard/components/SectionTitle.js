@@ -7,12 +7,10 @@ const SectionTitle = ({ children, ...rest }) => {
     return (
         <Typography
             {...rest}
-            sx={[
-                {
-                    fontWeight: 400,
-                },
-                ...(Array.isArray(rest.sx) ? rest.sx : [rest.sx]),
-            ]}
+            sx={{
+                fontWeight: 400,
+                ...(rest.sx ? { ...rest.sx } : {}),
+            }}
         >
             {children}
         </Typography>
