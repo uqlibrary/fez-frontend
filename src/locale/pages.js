@@ -1058,6 +1058,9 @@ export default {
                 indexed: {
                     title: 'Indexed in',
                 },
+                readAndPublish: {
+                    title: 'Publisher Agreements',
+                },
             },
             help: {
                 tooltip: 'Learn about keyboard shortcuts',
