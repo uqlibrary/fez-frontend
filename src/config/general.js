@@ -1684,7 +1684,7 @@ export const OA_STATUS = [
     { value: '453700', text: 'Mediated Access' },
     { value: '453954', text: 'PMC' },
     { value: '454116', text: 'RDM open' },
-    { value: '454118', text: 'Not yet assessed (Unpaywall)' },
+    { value: '454118', text: 'Not yet assessed (OpenAlex)' },
 ];
 
 export const OA_STATUS_TYPE = [
