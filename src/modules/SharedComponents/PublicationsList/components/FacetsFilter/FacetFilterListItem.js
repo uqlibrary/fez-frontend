@@ -14,7 +14,7 @@ export const FacetsFilterListItem = ({ title, disabled, nestedItems, id, isActiv
     const handleIsOpen = useCallback(() => setIsOpen(!isOpen), [isOpen]);
     return (
         <Fragment key={`facet_fragment_${id}`}>
-            <ListItem key={`facet_filter_${id}`} disablePadding>
+            <ListItem key={`facet_filter_${id}`} component="div" disablePadding>
                 <ListItemButton
                     disabled={disabled}
                     id={`clickable-${id}`}

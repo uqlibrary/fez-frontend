@@ -24,7 +24,7 @@ export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, face
     const itemText = primaryText.indexOf('(') > 0 ? primaryText.slice(0, primaryText.indexOf('(')) : primaryText;
     const idText = sanitiseId(`${facet}-${itemText}`);
     return (
-        <ListItem key={`facet-filter-nested-item-${index}`} disablePadding>
+        <ListItem key={`facet-filter-nested-item-${index}`} component="div" disablePadding>
             <ListItemButton
                 id={`facet-filter-nested-item-${idText}`}
                 data-testid={`facet-filter-nested-item-${idText}`}

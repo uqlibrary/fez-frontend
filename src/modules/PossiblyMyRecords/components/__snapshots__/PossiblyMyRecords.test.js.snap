@@ -698,7 +698,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 <nav
                   class="MuiList-root MuiList-padding MuiList-dense css-b7dj7n-MuiList-root"
                 >
-                  <li
+                  <div
                     class="MuiListItem-root MuiListItem-dense MuiListItem-gutters css-19f6boz-MuiListItem-root"
                   >
                     <div
@@ -733,8 +733,8 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                         />
                       </svg>
                     </div>
-                  </li>
-                  <li
+                  </div>
+                  <div
                     class="MuiListItem-root MuiListItem-dense MuiListItem-gutters css-19f6boz-MuiListItem-root"
                   >
                     <div
@@ -769,8 +769,8 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                         />
                       </svg>
                     </div>
-                  </li>
-                  <li
+                  </div>
+                  <div
                     class="MuiListItem-root MuiListItem-dense MuiListItem-gutters css-19f6boz-MuiListItem-root"
                   >
                     <div
@@ -805,7 +805,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                         />
                       </svg>
                     </div>
-                  </li>
+                  </div>
                 </nav>
               </div>
             </div>
