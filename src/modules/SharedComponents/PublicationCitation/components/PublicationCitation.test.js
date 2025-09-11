@@ -375,7 +375,7 @@ describe('PublicationCitation ', () => {
         });
         jest.spyOn(navigator.clipboard, 'writeText');
 
-        const { getByTestId } = setup();
+        const { getByTestId } = setup({ showCopyTextButton: true });
         await userEvent.click(getByTestId(`publication-citation-copy-button-${mockRecordToFix.rek_pid}`));
 
         expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
@@ -387,7 +387,7 @@ describe('PublicationCitation ', () => {
         Object.assign(navigator, {
             clipboard: undefined,
         });
-        const { getByTestId } = setup();
+        const { getByTestId } = setup({ showCopyTextButton: true });
         expect(getByTestId(`publication-citation-copy-button-${mockRecordToFix.rek_pid}`)).toHaveAttribute('disabled');
     });
 });

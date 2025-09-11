@@ -211,36 +211,6 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                 </a>
                               </span>
                             </span>
-                            <span
-                              aria-label="Feature unavailable"
-                              class=""
-                              data-mui-internal-clone-element="true"
-                            >
-                              <button
-                                aria-label="Unavailable feature"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="publication-citation-copy-button-null"
-                                data-testid="publication-citation-copy-button-null"
-                                disabled=""
-                                id="publication-citation-copy-button-null"
-                                style="padding: 0px;"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
-                                  data-testid="FileCopyOutlinedIcon"
-                                  focusable="false"
-                                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                                  />
-                                </svg>
-                              </button>
-                            </span>
                           </div>
                           <div
                             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -938,36 +908,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                   https://doi.org/10.14264/uql.2016.841
                                 </a>
                               </span>
-                            </span>
-                            <span
-                              aria-label="Feature unavailable"
-                              class=""
-                              data-mui-internal-clone-element="true"
-                            >
-                              <button
-                                aria-label="Unavailable feature"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="publication-citation-copy-button-null"
-                                data-testid="publication-citation-copy-button-null"
-                                disabled=""
-                                id="publication-citation-copy-button-null"
-                                style="padding: 0px;"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
-                                  data-testid="FileCopyOutlinedIcon"
-                                  focusable="false"
-                                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                                  />
-                                </svg>
-                              </button>
                             </span>
                           </div>
                           <div
@@ -1697,36 +1637,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </span>
-                            <span
-                              aria-label="Feature unavailable"
-                              class=""
-                              data-mui-internal-clone-element="true"
-                            >
-                              <button
-                                aria-label="Unavailable feature"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="publication-citation-copy-button-null"
-                                data-testid="publication-citation-copy-button-null"
-                                disabled=""
-                                id="publication-citation-copy-button-null"
-                                style="padding: 0px;"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
-                                  data-testid="FileCopyOutlinedIcon"
-                                  focusable="false"
-                                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                                  />
-                                </svg>
-                              </button>
                             </span>
                           </div>
                           <div
@@ -2516,36 +2426,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                 </a>
                               </span>
                             </span>
-                            <span
-                              aria-label="Feature unavailable"
-                              class=""
-                              data-mui-internal-clone-element="true"
-                            >
-                              <button
-                                aria-label="Unavailable feature"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="publication-citation-copy-button-null"
-                                data-testid="publication-citation-copy-button-null"
-                                disabled=""
-                                id="publication-citation-copy-button-null"
-                                style="padding: 0px;"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
-                                  data-testid="FileCopyOutlinedIcon"
-                                  focusable="false"
-                                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                                  />
-                                </svg>
-                              </button>
-                            </span>
                           </div>
                           <div
                             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -3238,36 +3118,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </span>
-                            <span
-                              aria-label="Feature unavailable"
-                              class=""
-                              data-mui-internal-clone-element="true"
-                            >
-                              <button
-                                aria-label="Unavailable feature"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="publication-citation-copy-button-UQ:676287"
-                                data-testid="publication-citation-copy-button-UQ:676287"
-                                disabled=""
-                                id="publication-citation-copy-button-UQ:676287"
-                                style="padding: 0px;"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
-                                  data-testid="FileCopyOutlinedIcon"
-                                  focusable="false"
-                                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                                  />
-                                </svg>
-                              </button>
                             </span>
                           </div>
                           <div
@@ -4565,36 +4415,6 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                 </a>
                               </span>
                             </span>
-                            <span
-                              aria-label="Feature unavailable"
-                              class=""
-                              data-mui-internal-clone-element="true"
-                            >
-                              <button
-                                aria-label="Unavailable feature"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="publication-citation-copy-button-UQ:676287"
-                                data-testid="publication-citation-copy-button-UQ:676287"
-                                disabled=""
-                                id="publication-citation-copy-button-UQ:676287"
-                                style="padding: 0px;"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
-                                  data-testid="FileCopyOutlinedIcon"
-                                  focusable="false"
-                                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                                  />
-                                </svg>
-                              </button>
-                            </span>
                           </div>
                           <div
                             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -5856,36 +5676,6 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                 </a>
                               </span>
                             </span>
-                            <span
-                              aria-label="Feature unavailable"
-                              class=""
-                              data-mui-internal-clone-element="true"
-                            >
-                              <button
-                                aria-label="Unavailable feature"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="publication-citation-copy-button-UQ:676287"
-                                data-testid="publication-citation-copy-button-UQ:676287"
-                                disabled=""
-                                id="publication-citation-copy-button-UQ:676287"
-                                style="padding: 0px;"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
-                                  data-testid="FileCopyOutlinedIcon"
-                                  focusable="false"
-                                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                                  />
-                                </svg>
-                              </button>
-                            </span>
                           </div>
                           <div
                             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -6340,36 +6130,6 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </span>
-                            <span
-                              aria-label="Feature unavailable"
-                              class=""
-                              data-mui-internal-clone-element="true"
-                            >
-                              <button
-                                aria-label="Unavailable feature"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="publication-citation-copy-button-UQ:676287"
-                                data-testid="publication-citation-copy-button-UQ:676287"
-                                disabled=""
-                                id="publication-citation-copy-button-UQ:676287"
-                                style="padding: 0px;"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorDisabled MuiSvgIcon-fontSizeMedium css-ygmz69-MuiSvgIcon-root"
-                                  data-testid="FileCopyOutlinedIcon"
-                                  focusable="false"
-                                  style="width: 14px; margin-left: 6px; margin-top: -6px;"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11zM8 21V7h6v5h5v9z"
-                                  />
-                                </svg>
-                              </button>
                             </span>
                           </div>
                           <div

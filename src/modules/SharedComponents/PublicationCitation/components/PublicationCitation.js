@@ -233,6 +233,7 @@ export const PublicationCitation = ({
     showSources = false,
     showUnpublishedBufferFields = false,
     showImageThumbnails = false,
+    showCopyTextButton = false,
     security = { isAdmin: false, isAuthor: false },
 }) => {
     const theme = useTheme();
@@ -498,7 +499,9 @@ export const PublicationCitation = ({
                                     })}
                                 >
                                     {renderCitation(publicationType, publication.rek_display_type)}
-                                    {publicationType && renderCopyCitationTextButton(publication.rek_pid)}
+                                    {showCopyTextButton &&
+                                        publicationType &&
+                                        renderCopyCitationTextButton(publication.rek_pid)}
                                 </Grid>
                             )}
                             {showUnpublishedBufferFields && (
@@ -598,6 +601,7 @@ PublicationCitation.propTypes = {
     showSources: PropTypes.bool,
     showUnpublishedBufferFields: PropTypes.bool,
     showImageThumbnails: PropTypes.bool,
+    showCopyTextButton: PropTypes.bool,
     security: PropTypes.object,
 };
 
