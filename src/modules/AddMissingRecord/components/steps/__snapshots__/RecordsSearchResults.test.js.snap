@@ -483,7 +483,7 @@ exports[`Search record results should render a single claimable item with no aut
                           class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root UQ795469 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-focusVisible MuiButton-root UQ795469 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-alav1n-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root UQ795469 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ795469 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-alav1n-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="publication-action-UQ795469-primary"
                             data-testid="publication-action-UQ795469-primary"
                             tabindex="0"
@@ -3397,7 +3397,7 @@ exports[`Search record results should render stepper and no results 1`] = `
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-auto css-1b8i5mh-MuiGridLegacy-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-focusVisible MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >

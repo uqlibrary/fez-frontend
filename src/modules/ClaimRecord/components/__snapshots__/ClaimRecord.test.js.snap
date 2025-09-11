@@ -4,8 +4,7 @@ exports[`Component ClaimRecord  form submission payload all fields data 1`] = `"
 
 exports[`Component ClaimRecord  form submission payload all fields data 2`] = `
 File {
-  "path": "./myTestImage.png",
-  "relativePath": "./myTestImage.png",
+  "path": "myTestImage.png",
 }
 `;
 
@@ -627,7 +626,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                             data-testid="fez-datastream-info-input"
                             id="Uploader"
                             multiple=""
-                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                            style="display: none;"
                             tabindex="-1"
                             type="file"
                           />
@@ -1329,7 +1328,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                             data-testid="fez-datastream-info-input"
                             id="Uploader"
                             multiple=""
-                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                            style="display: none;"
                             tabindex="-1"
                             type="file"
                           />
@@ -2162,7 +2161,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                             data-testid="fez-datastream-info-input"
                             id="Uploader"
                             multiple=""
-                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                            style="display: none;"
                             tabindex="-1"
                             type="file"
                           />
@@ -2758,7 +2757,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             data-testid="fez-datastream-info-input"
                             id="Uploader"
                             multiple=""
-                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                            style="display: none;"
                             tabindex="-1"
                             type="file"
                           />
@@ -4067,7 +4066,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             data-testid="fez-datastream-info-input"
                             id="Uploader"
                             multiple=""
-                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                            style="display: none;"
                             tabindex="-1"
                             type="file"
                           />
@@ -5390,7 +5389,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                             data-testid="fez-datastream-info-input"
                             id="Uploader"
                             multiple=""
-                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                            style="display: none;"
                             tabindex="-1"
                             type="file"
                           />

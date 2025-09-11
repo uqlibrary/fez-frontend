@@ -31,7 +31,7 @@ exports[`Component FileUploader should delete all files 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -150,7 +150,7 @@ exports[`Component FileUploader should delete first file 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -575,7 +575,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -1136,7 +1136,7 @@ exports[`Component FileUploader should handle file order change 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -1255,7 +1255,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -1967,7 +1967,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -2693,7 +2693,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -2814,7 +2814,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -2933,7 +2933,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -3494,7 +3494,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -3613,7 +3613,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -4388,7 +4388,7 @@ exports[`Component FileUploader should render default component 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -4507,7 +4507,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -4626,7 +4626,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -4745,7 +4745,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -4864,7 +4864,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -5575,7 +5575,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -6278,7 +6278,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -7045,7 +7045,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -7164,7 +7164,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -7725,7 +7725,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -7844,7 +7844,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -8563,7 +8563,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -9276,7 +9276,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -10055,7 +10055,7 @@ exports[`Component FileUploader should render security policy selector if admin 
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -10174,7 +10174,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />
@@ -10648,7 +10648,7 @@ exports[`Component FileUploader should update file description 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="display: none;"
               tabindex="-1"
               type="file"
             />

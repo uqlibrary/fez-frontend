@@ -8,8 +8,7 @@ exports[`Component FixRecord form submission payload should submit fix record da
 
 exports[`Component FixRecord form submission payload should submit fix record data with new content indicator and file 3`] = `
 File {
-  "path": "./test.png",
-  "relativePath": "./test.png",
+  "path": "test.png",
 }
 `;
 

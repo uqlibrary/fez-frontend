@@ -1096,7 +1096,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-focusVisible PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Provide feedback / suggestion /information for this record"
                         >
                           <input
@@ -1127,14 +1127,6 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             >
                               <span
                                 class="MuiTouchRipple-child MuiTouchRipple-childLeaving"
-                              />
-                            </span>
-                            <span
-                              class="css-y4cjyz-MuiTouchRipple-ripple MuiTouchRipple-ripple MuiTouchRipple-rippleVisible MuiTouchRipple-ripplePulsate"
-                              style="width: 1px; height: 1px; top: -0.5px; left: -0.5px;"
-                            >
-                              <span
-                                class="MuiTouchRipple-child MuiTouchRipple-childPulsate"
                               />
                             </span>
                           </span>
@@ -4366,7 +4358,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-focusVisible PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Share a story about this material"
                         >
                           <input
@@ -4397,14 +4389,6 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             >
                               <span
                                 class="MuiTouchRipple-child MuiTouchRipple-childLeaving"
-                              />
-                            </span>
-                            <span
-                              class="css-y4cjyz-MuiTouchRipple-ripple MuiTouchRipple-ripple MuiTouchRipple-rippleVisible MuiTouchRipple-ripplePulsate"
-                              style="width: 1px; height: 1px; top: -0.5px; left: -0.5px;"
-                            >
-                              <span
-                                class="MuiTouchRipple-child MuiTouchRipple-childPulsate"
                               />
                             </span>
                           </span>
@@ -6003,7 +5987,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-focusVisible PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                           label="Advise of cultural sensitivity / make a takedown request"
                         >
                           <input
@@ -6034,14 +6018,6 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             >
                               <span
                                 class="MuiTouchRipple-child MuiTouchRipple-childLeaving"
-                              />
-                            </span>
-                            <span
-                              class="css-y4cjyz-MuiTouchRipple-ripple MuiTouchRipple-ripple MuiTouchRipple-rippleVisible MuiTouchRipple-ripplePulsate"
-                              style="width: 1px; height: 1px; top: -0.5px; left: -0.5px;"
-                            >
-                              <span
-                                class="MuiTouchRipple-child MuiTouchRipple-childPulsate"
                               />
                             </span>
                           </span>

@@ -81,7 +81,7 @@ export const ConfirmationBox = ({
                     )}
                     {showAlternateActionButton && (
                         // an optional middle button that will display in a warning colour
-                        (<Grid item xs={12} sm={'auto'}>
+                        <Grid item xs={12} sm={'auto'}>
                             <Button
                                 variant={'contained'}
                                 sx={{
@@ -98,7 +98,7 @@ export const ConfirmationBox = ({
                                 data-analyticsid={`confirm-alternate-${confirmationBoxId}`}
                                 data-testid={`confirm-alternate-${confirmationBoxId}`}
                             />
-                        </Grid>)
+                        </Grid>
                     )}
                     {!hideCancelButton && (
                         <Grid item xs={12} sm={'auto'}>
