@@ -10,6 +10,21 @@ import * as journalsSearch from './data/journals/search';
 
 export const escapeRegExp = input => input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, '\\$&');
 
+const playwrightWaitIfRequired = async () => {
+    if (window.__PW__TEST_API_MOCK_IS_PAUSED) {
+        await new Promise(resolve => {
+            const wait = () => {
+                if (!window.__PW__TEST_API_MOCK_IS_PAUSED) {
+                    resolve();
+                } else {
+                    setTimeout(wait, 200);
+                }
+            };
+            wait();
+        });
+    }
+};
+
 export const setup = () => {
     const queryString = require('query-string');
     const mock = new MockAdapter(api, { delayResponse: 200 });
@@ -922,10 +937,11 @@ export const setup = () => {
         // .reply(500, { message: ['error - failed PUT EXISTING_COMMUNITY_API'] })
 
         .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
-        .reply(config => {
+        .reply(async config => {
+            await playwrightWaitIfRequired();
             const payload = JSON.parse(config.data);
             return [
-                (window.__PW__TEST_PATCH_AUTHOR_API_SHOULD_FAIL && 500) || 200,
+                (window.__PW__TEST_API_MOCK_RESPONSE_SHOULD_FAIL && 500) || 200,
                 {
                     ...mockData.currentAuthor[user],
                     aut_is_orcid_sync_enabled: payload.aut_is_orcid_sync_enabled,

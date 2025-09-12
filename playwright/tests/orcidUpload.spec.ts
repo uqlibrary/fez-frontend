@@ -1,4 +1,5 @@
 import { expect, test } from '../test';
+import { apiMockIsPaused, apiMockResponseShouldFail } from '../lib/helpers';
 
 test.describe('ORCiD Upload button', () => {
     test.beforeEach(async ({ page }) => {
@@ -26,6 +27,7 @@ test.describe('ORCiD Upload button', () => {
     });
 
     test('should close drawer and show progress icon when updating preferences', async ({ page }) => {
+        await apiMockIsPaused(page, true);
         const helpIcon = page.getByTestId('help-icon-orcid');
         const drawerMessage = page.getByTestId('help-drawer-message');
         const progress = page.getByTestId('dashboard-orcid-sync-progress-icon');
@@ -44,17 +46,20 @@ test.describe('ORCiD Upload button', () => {
         await expect(drawerMessage).toBeHidden();
 
         // should give used feedback of what's happening
-        const tooltip = page.getByText('Saving ORCID sync preferences.');
-        await expect(tooltip).toBeHidden();
+        const savingHelpText = page.getByText('Saving ORCID sync preferences.');
+        await expect(savingHelpText).toBeHidden();
         await progress.hover();
-        await expect(tooltip).toBeVisible();
+        await expect(savingHelpText).toBeVisible();
 
         await page.clock.fastForward(3000);
+        await apiMockIsPaused(page, false);
+        await expect(progress).toBeHidden();
         await expect(helpIcon).toBeVisible();
     });
 
     test('should close drawer and show error icon when fail to update preferences', async ({ page }) => {
-        await page.evaluate(() => (window.__PW__TEST_PATCH_AUTHOR_API_SHOULD_FAIL = true), 'body');
+        await apiMockIsPaused(page, true);
+        await apiMockResponseShouldFail(page, true);
 
         const helpIcon = page.getByTestId('help-icon-orcid');
         const drawerMessage = page.getByTestId('help-drawer-message');
@@ -72,6 +77,8 @@ test.describe('ORCiD Upload button', () => {
         await expect(progress).toBeVisible();
 
         await page.clock.fastForward(3000);
+        await apiMockIsPaused(page, false);
+        await expect(progress).toBeHidden();
         // should give used feedback of what's happening
         const tooltip = page.getByText('Error while saving ORCID sync preferences.');
         await expect(tooltip).toBeHidden();

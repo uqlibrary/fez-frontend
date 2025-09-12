@@ -18,12 +18,13 @@ jest.mock('react', () => {
     };
 });
 
-jest.mock('throttle-debounce', () => {
-    return {
-        ...jest.requireActual('throttle-debounce'),
-        debounce: jest.fn(),
-    };
-});
+const debounceCalls = [];
+jest.mock('throttle-debounce', () => ({
+    debounce: jest.fn((delay, callback) => {
+        debounceCalls.push([delay, callback]);
+        return (...args) => callback(...args);
+    }),
+}));
 
 jest.mock('actions', () => {
     return {
@@ -66,7 +67,7 @@ describe('DashboardOrcidSync', () => {
     beforeEach(() => {
         useState.mockImplementation(initialState => [initialState, setIsSyncEnabledMock]);
     });
-    afterEach(() => jest.resetAllMocks());
+    afterEach(() => jest.clearAllMocks());
 
     describe('Container', () => {
         it('should render properly', () => {
@@ -193,7 +194,10 @@ describe('DashboardOrcidSync', () => {
                 expect(setIsSyncEnabledMock).toHaveBeenCalledWith(false);
                 expect(dispatchMock).toHaveBeenCalledWith({ type: actions.CURRENT_AUTHOR_SAVING });
                 expect(hideDrawerMock).toHaveBeenCalled();
-                expect(debounce).toHaveBeenCalledWith(3000, expect.any(Function));
+                // mocking debounce won't work as expected, using an object to capture and assert its calls
+                expect(debounceCalls.length).toBe(1);
+                expect(debounceCalls[0][0]).toBe(3000);
+                expect(typeof debounceCalls[0][1] === 'function').toBeTruthy();
                 expect(updateCurrentAuthor).toHaveBeenCalledWith(defaultAuthor.aut_id, {
                     ...defaultAuthor,
                     aut_is_orcid_sync_enabled: 0,

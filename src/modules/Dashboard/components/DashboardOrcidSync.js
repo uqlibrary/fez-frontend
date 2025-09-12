@@ -16,6 +16,16 @@ import * as actions from 'actions/actionTypes';
 import DashboardOrcidSyncMessage from './DashboardOrcidSyncMessage';
 import DashboardOrcidSyncPreferences from './DashboardOrcidSyncPreferences';
 import { debounce } from 'throttle-debounce';
+import { Settings } from '@mui/icons-material';
+
+const updateSyncPreferences = debounce(3000, (dispatch, author, value) => {
+    dispatch(
+        updateCurrentAuthor(author.aut_id, {
+            ...author,
+            aut_is_orcid_sync_enabled: value,
+        }),
+    );
+});
 
 export const getOnSyncPreferenceChangeHandler = (
     author,
@@ -24,15 +34,6 @@ export const getOnSyncPreferenceChangeHandler = (
     dispatch,
     hideDrawer,
 ) => {
-    const updateSyncPreferences = debounce(3000, value => {
-        dispatch(
-            updateCurrentAuthor(author.aut_id, {
-                ...author,
-                aut_is_orcid_sync_enabled: value,
-            }),
-        );
-    });
-
     return isChecked => {
         const value = isChecked ? 1 : 0;
         if (author.aut_is_orcid_sync_enabled === value || accountAuthorSaving) {
@@ -41,13 +42,13 @@ export const getOnSyncPreferenceChangeHandler = (
         setIsSyncEnabled(isChecked);
         dispatch({ type: actions.CURRENT_AUTHOR_SAVING });
         hideDrawer();
-        updateSyncPreferences(value);
+        updateSyncPreferences(dispatch, author, value);
     };
 };
 
 export const openUrl = url => () => window.open(url, '_blank');
 
-const renderBadgeIcon = status => {
+const renderBadgeIcon = (status, defaultValue = undefined) => {
     switch (status) {
         case 'Pending':
         case 'In Progress':
@@ -56,7 +57,7 @@ const renderBadgeIcon = status => {
             return () => <SyncProblemIcon data-testid={'dashboard-orcid-sync-error-icon'} size={20} />;
         case 'Done':
         default:
-            return undefined;
+            return defaultValue;
     }
 };
 
@@ -189,7 +190,7 @@ export const DashboardOrcidSync = props => {
     };
 
     const helpIconProps = {
-        IconComponent: renderBadgeIcon(syncJobStatus),
+        IconComponent: renderBadgeIcon(syncJobStatus, () => <Settings size={20} />),
         iconSize: 'small',
         showLoader: requestingOrcidSync,
         style:
