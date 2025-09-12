@@ -8,7 +8,7 @@ import { locale as pagesLocale } from '../../../locale';
 const DashboardOrcidSyncPreferences = ({ checked, disabled, onChange }) => {
     return (
         <Grid container spacing={4} style={{ marginTop: '0' }} data-testid="orcid-sync-preferences-panel">
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <FormControlLabel
                     control={
                         <Switch checked={checked} onChange={e => onChange(e.target.checked)} disabled={disabled} />
