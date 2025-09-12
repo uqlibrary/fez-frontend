@@ -3,10 +3,10 @@
 exports[`CitationCounts should not render View full statistics link on public pages for anonymous user 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <a
         aria-label="Full citation in Web of science will open in a new window"
@@ -98,10 +98,10 @@ exports[`CitationCounts should not render View full statistics link on public pa
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
     />
   </div>
 </div>
@@ -110,10 +110,10 @@ exports[`CitationCounts should not render View full statistics link on public pa
 exports[`CitationCounts should render component with a mock record metrics 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <a
         aria-label="Full citation in Scopus will open in a new window"
@@ -179,7 +179,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
         class="css-qsfl36"
@@ -194,7 +194,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="full-statistics-link-new-window-icon"
@@ -208,7 +208,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
     />
   </div>
 </div>
@@ -217,10 +217,10 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
 exports[`CitationCounts should render component with all metrics 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <a
         aria-label="Full citation in Web of science will open in a new window"
@@ -354,7 +354,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
         class="css-qsfl36"
@@ -369,7 +369,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="full-statistics-link-new-window-icon"
@@ -383,7 +383,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
     />
   </div>
 </div>
@@ -392,10 +392,10 @@ exports[`CitationCounts should render component with all metrics 1`] = `
 exports[`CitationCounts should render component with no metrics 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <span
         class="noOaIcon"
@@ -403,10 +403,10 @@ exports[`CitationCounts should render component with no metrics 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
     />
   </div>
 </div>
@@ -415,10 +415,10 @@ exports[`CitationCounts should render component with no metrics 1`] = `
 exports[`CitationCounts should render null as 0 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <a
         aria-label="Full citation in Dimensions will open in a new window"
@@ -463,10 +463,10 @@ exports[`CitationCounts should render null as 0 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
     />
   </div>
 </div>
@@ -475,10 +475,10 @@ exports[`CitationCounts should render null as 0 1`] = `
 exports[`CitationCounts should render open access icon when required 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <a
         aria-label="Full citation in Scopus will open in a new window"
@@ -544,7 +544,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
         class="css-qsfl36"
@@ -559,7 +559,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="full-statistics-link-new-window-icon"
@@ -573,7 +573,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
     />
   </div>
 </div>

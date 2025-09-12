@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import Cookies from 'js-cookie';
 
@@ -58,7 +58,9 @@ const Masquerade = ({ account }) => {
                             label={txt.labels.hint}
                             value={userName}
                             onChange={usernameChanged}
-                            InputProps={{ onKeyPress: masqueradeAs }}
+                            slotProps={{
+                                input: { onKeyPress: masqueradeAs },
+                            }}
                         />
                     </Grid>
                     <Grid item xs={12} sm={'auto'}>

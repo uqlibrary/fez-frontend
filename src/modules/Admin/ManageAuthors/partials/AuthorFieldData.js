@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import FormHelperText from '@mui/material/FormHelperText';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import ColumnTitle from '../partials/ColumnTitle';

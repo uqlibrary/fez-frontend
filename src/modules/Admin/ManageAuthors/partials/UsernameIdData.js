@@ -4,7 +4,7 @@ import React from 'react';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useWatch } from 'react-hook-form';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import OverriddenIcon from '@mui/icons-material/Lock';
 import NotOverriddenIcon from '@mui/icons-material/LockOpenOutlined';
 import Tooltip from '@mui/material/Tooltip';

@@ -7,7 +7,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
@@ -106,13 +106,15 @@ export const ThirdPartyLookupForm = ({
                                             ? txt.thisForm.primaryField.inputPlaceholder
                                             : ''
                                     }
-                                    inputProps={{
-                                        'aria-label': txt.thisForm.primaryField.fromAria || '',
-                                    }}
                                     value={state.primaryValue}
                                     onChange={_onChange}
                                     required
                                     className={'primaryValue'}
+                                    slotProps={{
+                                        htmlInput: {
+                                            'aria-label': txt.thisForm.primaryField.fromAria || '',
+                                        },
+                                    }}
                                 />
                             </div>
                             {
@@ -125,9 +127,6 @@ export const ThirdPartyLookupForm = ({
                                             variant="standard"
                                             fullWidth
                                             name={'secondaryValue'}
-                                            inputProps={{
-                                                'aria-label': txt.thisForm.secondaryField.fromAria || '',
-                                            }}
                                             placeholder={
                                                 txt.thisForm.secondaryField.inputPlaceholder
                                                     ? txt.thisForm.secondaryField.inputPlaceholder
@@ -136,6 +135,11 @@ export const ThirdPartyLookupForm = ({
                                             value={state.secondaryValue}
                                             onChange={_onChange}
                                             className={'secondaryValue'}
+                                            slotProps={{
+                                                htmlInput: {
+                                                    'aria-label': txt.thisForm.secondaryField.fromAria || '',
+                                                },
+                                            }}
                                         />
                                     </div>
                                 )

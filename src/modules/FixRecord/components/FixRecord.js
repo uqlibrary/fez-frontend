@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
@@ -219,7 +219,7 @@ const FixRecord = () => {
             <ConfirmDiscardFormChanges dirty={isDirty} isSubmitSuccessful={isSubmitSuccessful}>
                 <form onSubmit={onSubmit}>
                     <Grid container spacing={3}>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.subTitle} help={txt.help}>
                                 <PublicationCitation publication={recordToFix} citationStyle={'header'} />
                                 <Field
@@ -249,10 +249,16 @@ const FixRecord = () => {
                                     onCancelAction={navigateToDashboard}
                                     locale={saveConfirmationLocale}
                                 />
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
-                                        <Grid container spacing={2} padding={0}>
-                                            <Grid xs={12}>
+                                        <Grid
+                                            container
+                                            spacing={2}
+                                            sx={{
+                                                padding: 0,
+                                            }}
+                                        >
+                                            <Grid size={12}>
                                                 <Field
                                                     control={control}
                                                     component={TextField}
@@ -266,7 +272,7 @@ const FixRecord = () => {
                                                     label={txtFixForm.comments.fieldLabels.comments}
                                                 />
                                             </Grid>
-                                            <Grid xs={12}>
+                                            <Grid size={12}>
                                                 <Field
                                                     control={control}
                                                     component={TextField}
@@ -283,16 +289,22 @@ const FixRecord = () => {
                                     </StandardCard>
                                 </Grid>
                                 {showContentIndicatorsField(recordToFix) && (
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <StandardCard
                                             title={txtFixForm.contentIndicators.title}
                                             help={txtFixForm.contentIndicators.help}
                                         >
-                                            <Grid container spacing={3} padding={0}>
-                                                <Grid xs={12}>
+                                            <Grid
+                                                container
+                                                spacing={3}
+                                                sx={{
+                                                    padding: 0,
+                                                }}
+                                            >
+                                                <Grid size={12}>
                                                     <Typography>{txtFixForm.contentIndicators.description}</Typography>
                                                 </Grid>
-                                                <Grid xs={12}>
+                                                <Grid size={12}>
                                                     <Field
                                                         control={control}
                                                         component={ContentIndicatorsField}
@@ -309,7 +321,7 @@ const FixRecord = () => {
                                         </StandardCard>
                                     </Grid>
                                 )}
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <StandardCard title={txtFixForm.fileUpload.title} help={txtFixForm.fileUpload.help}>
                                         {txtFixForm.fileUpload.description}
                                         <Field
@@ -325,7 +337,7 @@ const FixRecord = () => {
                             </React.Fragment>
                         )}
                         {fixAction === RECORD_ACTION_UNCLAIM && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard title={txtUnclaimForm.title} help={txtUnclaimForm.help}>
                                     <Alert {...txtUnclaimForm.alert} />
                                     {txtUnclaimForm.description}
@@ -340,13 +352,13 @@ const FixRecord = () => {
                         )}
 
                         {alertProps && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <Alert pushToTop {...alertProps} />
                             </Grid>
                         )}
                     </Grid>
                     <Grid container spacing={3}>
-                        <Grid xs />
+                        <Grid size="grow" />
                         <Grid>
                             <Button
                                 variant={'contained'}

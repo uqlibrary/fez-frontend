@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -31,7 +31,7 @@ export const FavouriteJournalsList = ({
 
     if (loading) {
         return (
-            <Grid id="favourite-journals-list-loading" data-testid="favourite-journals-list-loading" xs={12}>
+            <Grid id="favourite-journals-list-loading" data-testid="favourite-journals-list-loading" size={12}>
                 <InlineLoader message={txt.loading} />
             </Grid>
         );
@@ -39,7 +39,7 @@ export const FavouriteJournalsList = ({
 
     if (error) {
         return (
-            <Grid id="favourite-journals-list-error" data-testid="favourite-journals-list-error" xs={12}>
+            <Grid id="favourite-journals-list-error" data-testid="favourite-journals-list-error" size={12}>
                 <Alert {...error} />
             </Grid>
         );
@@ -47,7 +47,7 @@ export const FavouriteJournalsList = ({
 
     if (!journalsList.total) {
         return (
-            <Grid id="favourite-journals-list-empty" data-testid="favourite-journals-list-empty" xs={12}>
+            <Grid id="favourite-journals-list-empty" data-testid="favourite-journals-list-empty" size={12}>
                 {txt.empty}
             </Grid>
         );
@@ -55,7 +55,7 @@ export const FavouriteJournalsList = ({
 
     return (
         <>
-            <Grid xs={12}>
+            <Grid size={12}>
                 <PublicationsListSorting
                     canUseExport
                     exportData={locale.components.searchJournals.export}
@@ -69,7 +69,7 @@ export const FavouriteJournalsList = ({
                     pageSize={journalsList?.per_page}
                 />
             </Grid>
-            <Grid xs={12}>
+            <Grid size={12}>
                 <PublicationsListPaging
                     disabled={loading}
                     loading={loading}
@@ -78,7 +78,7 @@ export const FavouriteJournalsList = ({
                     pagingId="search-journals-paging-top"
                 />
             </Grid>
-            <Grid xs={12}>
+            <Grid size={12}>
                 <JournalsList
                     journals={journalsList?.data}
                     onSelectionChange={onSelectionChange}
@@ -87,7 +87,7 @@ export const FavouriteJournalsList = ({
                     isAllSelected={isAllSelected}
                 />
             </Grid>
-            <Grid xs={12}>
+            <Grid size={12}>
                 <PublicationsListPaging
                     disabled={loading}
                     loading={loading}

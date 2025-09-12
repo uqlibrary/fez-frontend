@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useConfirmationState, useForm, usePublicationSubtype } from 'hooks';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 

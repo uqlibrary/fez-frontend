@@ -17,7 +17,7 @@ import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { CommunitySelectField } from 'modules/SharedComponents/SelectFields';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config/pathConfig';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -108,14 +108,14 @@ export const CollectionForm = ({ disableSubmit }) => {
         return (
             <StandardPage title={txt.title}>
                 <Grid container spacing={3}>
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <StandardCard title={txt.afterSubmitTitle}>
                             <Typography>{txt.afterSubmitText}</Typography>
                         </StandardCard>
                     </Grid>
                 </Grid>
                 <Grid container spacing={2}>
-                    <Grid xs />
+                    <Grid size="grow" />
                     <Grid>
                         <Button variant="contained" fullWidth onClick={reloadForm} data-testid="add-another-collection">
                             {txt.reloadFormButton}
@@ -141,18 +141,26 @@ export const CollectionForm = ({ disableSubmit }) => {
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
                 <form>
                     <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
-                    <Grid container spacing={3} padding={0}>
+                    <Grid
+                        container
+                        spacing={3}
+                        sx={{
+                            padding: 0,
+                        }}
+                    >
                         {!!!hasParams && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard title={txt.title} help={txt.help}>
                                     <Grid
                                         container
                                         spacing={3}
-                                        padding={0}
                                         id="community-selector"
                                         data-testid="community-selector"
+                                        sx={{
+                                            padding: 0,
+                                        }}
                                     >
-                                        <Grid xs={12}>
+                                        <Grid size={12}>
                                             <Field
                                                 control={control}
                                                 component={CommunitySelectField}
@@ -169,10 +177,16 @@ export const CollectionForm = ({ disableSubmit }) => {
                             </Grid>
                         )}
                         {(!!hasParams || selectedCommunity) && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard title={detailsTitle} help={txt.details.help}>
-                                    <Grid container spacing={3} padding={0}>
-                                        <Grid xs={12}>
+                                    <Grid
+                                        container
+                                        spacing={3}
+                                        sx={{
+                                            padding: 0,
+                                        }}
+                                    >
+                                        <Grid size={12}>
                                             <Field
                                                 control={control}
                                                 component={TextField}
@@ -188,7 +202,7 @@ export const CollectionForm = ({ disableSubmit }) => {
                                             />
                                         </Grid>
 
-                                        <Grid xs={12}>
+                                        <Grid size={12}>
                                             <Field
                                                 control={control}
                                                 component={TextField}
@@ -204,7 +218,7 @@ export const CollectionForm = ({ disableSubmit }) => {
                                             />
                                         </Grid>
 
-                                        <Grid xs={12}>
+                                        <Grid size={12}>
                                             <Typography>{txt.formLabels.keywords.description}</Typography>
                                             <Field
                                                 control={control}
@@ -224,7 +238,7 @@ export const CollectionForm = ({ disableSubmit }) => {
                                             />
                                         </Grid>
 
-                                        <Grid xs={12}>
+                                        <Grid size={12}>
                                             <Typography>{txt.formLabels.internalNotes.label}</Typography>
                                             <Field
                                                 control={control}
@@ -243,14 +257,30 @@ export const CollectionForm = ({ disableSubmit }) => {
                             </Grid>
                         )}
                         {!!apiError && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <Alert alertId="api_error_alert" type="error_outline" message={apiError} />
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={2} padding={0}>
-                        <Grid xs={false} sm />
-                        <Grid xs={12} sm="auto">
+                    <Grid
+                        container
+                        spacing={2}
+                        sx={{
+                            padding: 0,
+                        }}
+                    >
+                        <Grid
+                            size={{
+                                xs: false,
+                                sm: 'grow',
+                            }}
+                        />
+                        <Grid
+                            size={{
+                                xs: 12,
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 data-analyticsid="cancel-collection"
                                 data-testid="cancel-collection"
@@ -263,7 +293,12 @@ export const CollectionForm = ({ disableSubmit }) => {
                                 {txt.cancel}
                             </Button>
                         </Grid>
-                        <Grid xs={12} sm="auto">
+                        <Grid
+                            size={{
+                                xs: 12,
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 data-analyticsid="submit-collection"
                                 data-testid="submit-collection"
