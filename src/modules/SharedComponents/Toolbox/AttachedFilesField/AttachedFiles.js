@@ -527,73 +527,75 @@ export const AttachedFiles = ({
                                             sm: 4,
                                         }}
                                     >
-                                        <Grid size={3}>
-                                            <Box
-                                                sx={{
-                                                    display: { xs: 'none', md: 'block' },
-                                                    whiteSpace: 'nowrap',
-                                                }}
-                                            >
+                                        <Grid container wrap="nowrap">
+                                            <Grid size={3}>
                                                 <Box
-                                                    component={'span'}
                                                     sx={{
-                                                        paddingRight: 1,
+                                                        display: { xs: 'none', md: 'block' },
+                                                        whiteSpace: 'nowrap',
                                                     }}
                                                 >
-                                                    <FileAvStateIcon
-                                                        state={item.avCheck?.state}
-                                                        checkedAt={item.avCheck?.date}
-                                                        id={item.id}
-                                                    />
-                                                </Box>
-                                                <Box
-                                                    component={'span'}
-                                                    sx={{
-                                                        paddingRight: 1,
-                                                    }}
-                                                >
-                                                    <OpenAccessIcon
-                                                        {...item.openAccessStatus}
-                                                        securityStatus={item.securityStatus}
-                                                    />
-                                                </Box>
-                                            </Box>
-                                        </Grid>
-                                        <Grid
-                                            id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
-                                            sx={{ marginLeft: 1, flexGrow: 1 }}
-                                            size={7}
-                                        >
-                                            {(openAccessConfig.openAccessFiles.includes(openAccessStatusId) ||
-                                                !!item.securityPolicyStatus.isEmbargoed) && (
-                                                <FileUploadEmbargoDate
-                                                    value={
-                                                        item.openAccessStatus.embargoDate ??
-                                                        item.securityPolicyStatus.embargoDate
-                                                    }
-                                                    onChange={onEmbargoDateChange(item.id)}
-                                                    onKeyUp={onEmbargoDateKeyUp}
-                                                    disabled={disabled}
-                                                    fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
-                                                    minDate={moment().toDate()}
-                                                />
-                                            )}
-                                        </Grid>
-                                        <Grid sx={{ marginTop: '-10px', textAlign: 'right' }} size={2}>
-                                            <Tooltip title={deleteHint}>
-                                                <span>
-                                                    <IconButton
-                                                        id={`delete-file-${index}`}
-                                                        data-testid={`delete-file-${index}`}
-                                                        data-analyticsid={`delete-file-${index}`}
-                                                        onClick={onFileDelete(item.fileName)}
-                                                        disabled={disabled}
-                                                        sx={{ padding: '12px' }}
+                                                    <Box
+                                                        component={'span'}
+                                                        sx={{
+                                                            paddingRight: 1,
+                                                        }}
                                                     >
-                                                        <Delete />
-                                                    </IconButton>
-                                                </span>
-                                            </Tooltip>
+                                                        <FileAvStateIcon
+                                                            state={item.avCheck?.state}
+                                                            checkedAt={item.avCheck?.date}
+                                                            id={item.id}
+                                                        />
+                                                    </Box>
+                                                    <Box
+                                                        component={'span'}
+                                                        sx={{
+                                                            paddingRight: 1,
+                                                        }}
+                                                    >
+                                                        <OpenAccessIcon
+                                                            {...item.openAccessStatus}
+                                                            securityStatus={item.securityStatus}
+                                                        />
+                                                    </Box>
+                                                </Box>
+                                            </Grid>
+                                            <Grid
+                                                id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
+                                                sx={{ marginLeft: 1, flexGrow: 1 }}
+                                                size={7}
+                                            >
+                                                {(openAccessConfig.openAccessFiles.includes(openAccessStatusId) ||
+                                                    !!item.securityPolicyStatus.isEmbargoed) && (
+                                                    <FileUploadEmbargoDate
+                                                        value={
+                                                            item.openAccessStatus.embargoDate ??
+                                                            item.securityPolicyStatus.embargoDate
+                                                        }
+                                                        onChange={onEmbargoDateChange(item.id)}
+                                                        onKeyUp={onEmbargoDateKeyUp}
+                                                        disabled={disabled}
+                                                        fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
+                                                        minDate={moment().toDate()}
+                                                    />
+                                                )}
+                                            </Grid>
+                                            <Grid sx={{ marginTop: '-10px', textAlign: 'right' }} size={2}>
+                                                <Tooltip title={deleteHint}>
+                                                    <span>
+                                                        <IconButton
+                                                            id={`delete-file-${index}`}
+                                                            data-testid={`delete-file-${index}`}
+                                                            data-analyticsid={`delete-file-${index}`}
+                                                            onClick={onFileDelete(item.fileName)}
+                                                            disabled={disabled}
+                                                            sx={{ padding: '12px' }}
+                                                        >
+                                                            <Delete />
+                                                        </IconButton>
+                                                    </span>
+                                                </Tooltip>
+                                            </Grid>
                                         </Grid>
                                     </Grid>
                                 )}
