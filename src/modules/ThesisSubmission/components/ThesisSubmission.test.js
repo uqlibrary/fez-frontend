@@ -77,7 +77,7 @@ function setup(props = {}) {
 describe('ThesisSubmission', () => {
     const fileMock = ['myTestImage.png'];
     const isDebugging = false;
-    const waitForOptions = { timeout: isDebugging ? 120000 : 4000 };
+    const waitForOptions = { timeout: isDebugging ? 120000 : 2000 };
 
     const mockRichEditorFieldValues = values => {
         mockUseForm((props, original) => {
@@ -114,7 +114,7 @@ describe('ThesisSubmission', () => {
         await userEvent.click(screen.getByText('0101 Pure Mathematics'));
         await userEvent.type(screen.getByTestId('rek-keywords-input'), 'keyword');
         await userEvent.click(screen.getByTestId('rek-keywords-add'));
-        await addFilesToFileUploader(fileMock);
+        await addFilesToFileUploader(fileMock, 2000);
         await assertNoValidationErrorSummary();
     };
 
