@@ -11,36 +11,36 @@ exports[`Component MyTrendingPublications should not render trending publication
 exports[`Component MyTrendingPublications should render loading indicator 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <div
         style="padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
             style="text-align: center;"
           >
             <span
               aria-label="Loading"
-              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
               role="progressbar"
               style="width: 18px; height: 18px;"
             >
               <svg
-                class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                 viewBox="22 22 44 44"
               >
                 <circle
-                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                   cx="44"
                   cy="44"
                   fill="none"
@@ -51,18 +51,18 @@ exports[`Component MyTrendingPublications should render loading indicator 1`] = 
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading your trending works
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
           />
         </div>
       </div>
@@ -74,20 +74,20 @@ exports[`Component MyTrendingPublications should render loading indicator 1`] = 
 exports[`Component MyTrendingPublications should render trending publications 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
     id="myTrendingPublications"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
           >
             <div
               class="fez-icon scopus xxlarge"
@@ -95,17 +95,17 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             Scopus citation count
           </h6>
           <h6
-            class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
           >
             The + (plus) value indicates how much the citation count has increased in the last three months.
           </h6>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
         >
           <button
             aria-label="Click for more information"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
             data-testid="help-icon"
@@ -114,7 +114,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -130,7 +130,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           </button>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1a5tvbh-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-ay4hr2-MuiGridLegacy-root"
         >
           <div
             class="MuiBox-root css-0"
@@ -146,20 +146,20 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 id="publication-citation-parent-UQ:330391"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                         >
                           <a
                             href="/view/UQ:330391"
@@ -169,7 +169,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto citationMetrics css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto citationMetrics css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
@@ -184,22 +184,22 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           title="Full citation in Scopus will open in a new window"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 count css-1yxa96n-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 count css-15rj26v-MuiTypography-root"
                               >
                                 13
                               </h6>
                             </div>
                             <div
-                              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-1yxa96n-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-15rj26v-MuiTypography-root"
                                 title="Difference in citations"
                               >
                                 +
@@ -210,7 +210,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                       >
                         <div
                           class="citationContent citationJournalArticle"
@@ -299,7 +299,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                                 data-testid="OpenInNewIcon"
                                 focusable="false"
                                 id="citation-doi-link-new-window-icon"
@@ -315,19 +315,19 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                          class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
@@ -414,10 +414,10 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 />
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                               />
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                               />
                             </div>
                           </div>
@@ -428,20 +428,20 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
           >
             <div
               class="fez-icon thomson xxlarge"
@@ -449,17 +449,17 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             Web of Science citation count
           </h6>
           <h6
-            class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
           >
             The + (plus) value indicates how much the citation count has increased in the last three months.
           </h6>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
         >
           <button
             aria-label="Click for more information"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
             data-testid="help-icon"
@@ -468,7 +468,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -484,7 +484,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           </button>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1a5tvbh-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-ay4hr2-MuiGridLegacy-root"
         >
           <div
             class="MuiBox-root css-0"
@@ -500,20 +500,20 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 id="publication-citation-parent-UQ:103860"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                         >
                           <a
                             href="/view/UQ:103860"
@@ -523,7 +523,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto citationMetrics css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto citationMetrics css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -538,22 +538,22 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           title="Full citation in Web of science will open in a new window"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 count css-1yxa96n-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 count css-15rj26v-MuiTypography-root"
                               >
                                 83
                               </h6>
                             </div>
                             <div
-                              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-1yxa96n-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-15rj26v-MuiTypography-root"
                                 title="Difference in citations"
                               >
                                 +
@@ -564,7 +564,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                       >
                         <div
                           class="citationContent citationJournalArticle"
@@ -668,7 +668,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                                 data-testid="OpenInNewIcon"
                                 focusable="false"
                                 id="citation-doi-link-new-window-icon"
@@ -684,19 +684,19 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                          class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
@@ -783,10 +783,10 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 />
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                               />
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                               />
                             </div>
                           </div>
@@ -797,20 +797,20 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
           >
             <div
               class="fez-icon altmetric xxlarge"
@@ -818,17 +818,17 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             Altmetric score
           </h6>
           <h6
-            class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
           >
             The +plus score indicates recent increase in social media activity
           </h6>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
         >
           <button
             aria-label="Click for more information"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
             data-testid="help-icon"
@@ -837,7 +837,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -853,7 +853,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           </button>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1a5tvbh-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-ay4hr2-MuiGridLegacy-root"
         >
           <div
             class="MuiBox-root css-0"
@@ -869,20 +869,20 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 id="publication-citation-parent-UQ:330391"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                         >
                           <a
                             href="/view/UQ:330391"
@@ -892,7 +892,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto citationMetrics css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto citationMetrics css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
@@ -907,22 +907,22 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           title="Full citation in Altmetric will open in a new window"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 count css-1yxa96n-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 count css-15rj26v-MuiTypography-root"
                               >
                                 5
                               </h6>
                             </div>
                             <div
-                              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-1yxa96n-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-15rj26v-MuiTypography-root"
                                 title="Difference in social media activities"
                               >
                                 +
@@ -933,7 +933,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                       >
                         <div
                           class="citationContent citationJournalArticle"
@@ -1022,7 +1022,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                                 data-testid="OpenInNewIcon"
                                 focusable="false"
                                 id="citation-doi-link-new-window-icon"
@@ -1038,19 +1038,19 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                          class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
@@ -1137,10 +1137,10 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 />
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                               />
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                               />
                             </div>
                           </div>
@@ -1151,7 +1151,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
               />
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -157,7 +157,7 @@ const ClaimRecord = () => {
         return (
             <StandardPage>
                 <Grid container>
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <InlineLoader message={txt.publicationLoading} />
                     </Grid>
                 </Grid>
@@ -211,7 +211,7 @@ const ClaimRecord = () => {
         <React.Fragment>
             {publicationToClaimFileUploadingError && (
                 <Grid container>
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <Alert pushToTop {...txt.successWorkflowConfirmation.fileFailConfirmationAlert} />
                     </Grid>
                 </Grid>
@@ -228,7 +228,7 @@ const ClaimRecord = () => {
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
                 <form onSubmit={onSubmit}>
                     <Grid container spacing={3}>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
                                 <PublicationCitation publication={publication} citationStyle="header" />
                             </StandardCard>
@@ -250,7 +250,7 @@ const ClaimRecord = () => {
                                 {publication.fez_record_search_key_author &&
                                     publication.fez_record_search_key_author.length > 0 &&
                                     !authorLinked && (
-                                        <Grid xs={12}>
+                                        <Grid size={12}>
                                             <StandardCard
                                                 title={txt.authorLinking.title}
                                                 help={txt.authorLinking.help}
@@ -275,7 +275,7 @@ const ClaimRecord = () => {
                                     publication.fez_record_search_key_contributor &&
                                     publication.fez_record_search_key_contributor.length > 0 &&
                                     !contributorLinked && (
-                                        <Grid xs={12}>
+                                        <Grid size={12}>
                                             <StandardCard
                                                 title={txt.contributorLinking.title}
                                                 help={txt.contributorLinking.help}
@@ -300,10 +300,10 @@ const ClaimRecord = () => {
                                             </StandardCard>
                                         </Grid>
                                     )}
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <StandardCard title={txt.comments.title} help={txt.comments.help}>
                                         <Grid container spacing={2}>
-                                            <Grid xs={12}>
+                                            <Grid size={12}>
                                                 <Field
                                                     control={control}
                                                     component={TextField}
@@ -317,7 +317,7 @@ const ClaimRecord = () => {
                                                     label={txt.comments.fieldLabels.comments}
                                                 />
                                             </Grid>
-                                            <Grid xs={12}>
+                                            <Grid size={12}>
                                                 <Field
                                                     control={control}
                                                     component={TextField}
@@ -334,16 +334,16 @@ const ClaimRecord = () => {
                                     </StandardCard>
                                 </Grid>
                                 {showContentIndicatorsField(publication) && (
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <StandardCard
                                             title={txt.contentIndicators.title}
                                             help={txt.contentIndicators.help}
                                         >
                                             <Grid container spacing={3}>
-                                                <Grid xs={12}>
+                                                <Grid size={12}>
                                                     <Typography>{txt.contentIndicators.description}</Typography>
                                                 </Grid>
-                                                <Grid xs={12}>
+                                                <Grid size={12}>
                                                     <Field
                                                         control={control}
                                                         component={ContentIndicatorsField}
@@ -360,7 +360,7 @@ const ClaimRecord = () => {
                                         </StandardCard>
                                     </Grid>
                                 )}
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
                                         <Field
                                             control={control}
@@ -375,14 +375,19 @@ const ClaimRecord = () => {
                             </>
                         )}
                         {alertProps && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <Alert {...alertProps} />
                             </Grid>
                         )}
                     </Grid>
                     <Grid container spacing={3}>
-                        <Grid xs sx={{ display: { xs: 'none', sm: 'block' } }} />
-                        <Grid xs={12} sm={'auto'}>
+                        <Grid sx={{ display: { xs: 'none', sm: 'block' } }} size="grow" />
+                        <Grid
+                            size={{
+                                xs: 12,
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 variant={'contained'}
                                 fullWidth
@@ -394,7 +399,12 @@ const ClaimRecord = () => {
                         </Grid>
                         {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&
                             !(!publication.rek_pid && isSubmitFailure) && (
-                                <Grid xs={12} sm="auto">
+                                <Grid
+                                    size={{
+                                        xs: 12,
+                                        sm: 'auto',
+                                    }}
+                                >
                                     <Button
                                         type="submit"
                                         variant={'contained'}

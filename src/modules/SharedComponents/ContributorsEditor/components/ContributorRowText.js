@@ -4,7 +4,7 @@ import { userIsAdmin } from 'hooks';
 import locale from 'locale/global';
 import { numberToWords } from 'config';
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPES_LOOKUP } from 'config/general';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 
@@ -20,12 +20,21 @@ const getListItemTypography = (primaryText, secondaryText, primaryTypographyClas
         }
         secondary={
             secondaryText && (
-                <Typography noWrap variant="caption" display={'block'} sx={{ ...secondaryTypographyClass }}>
+                <Typography
+                    noWrap
+                    variant="caption"
+                    sx={{
+                        display: 'block',
+                        ...secondaryTypographyClass,
+                    }}
+                >
                     {secondaryText}
                 </Typography>
             )
         }
-        secondaryTypographyProps={{ variant: 'caption' }}
+        slotProps={{
+            secondary: { variant: 'caption' },
+        }}
     />
 );
 

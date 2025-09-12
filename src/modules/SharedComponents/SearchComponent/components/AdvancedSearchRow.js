@@ -10,7 +10,7 @@ import { locale } from 'locale';
 import AdvancedSearchRowInput from './AdvancedSearchRowInput';
 
 import Close from '@mui/icons-material/Close';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
@@ -143,7 +143,13 @@ export const AdvancedSearchRow = props => {
                             </FormControl>
                         </Grid>
                         <Grid item xs={'auto'}>
-                            <Typography mt={'6px'}>{txt.fieldTypes[searchField].combiner}</Typography>
+                            <Typography
+                                sx={{
+                                    mt: '6px',
+                                }}
+                            >
+                                {txt.fieldTypes[searchField].combiner}
+                            </Typography>
                         </Grid>
                     </Grid>
                     {/* Select and combiner */}

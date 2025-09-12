@@ -3,13 +3,13 @@
 exports[`AddDataCollection test should get save confirmation locale correctly 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -18,10 +18,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <form>
         <span
@@ -30,24 +30,25 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         />
         <span />
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 DataCollection css-dkd71f-MuiGrid2-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 DataCollection css-1u8xl8z-MuiGrid-root"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-deposit-agreement"
               id="standard-card-deposit-agreement"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                     data-testid="standard-card-deposit-agreement-header"
                     id="standard-card-deposit-agreement-header"
                   >
@@ -56,16 +57,16 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                 data-analyticsid="standard-card-deposit-agreement-content"
                 data-testid="standard-card-deposit-agreement-content"
                 id="standard-card-deposit-agreement-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-g79o35-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -79,21 +80,22 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </div>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-dataset-information"
               id="standard-card-dataset-information"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                     data-testid="standard-card-dataset-information-header"
                     id="standard-card-dataset-information-header"
                   >
@@ -102,16 +104,16 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                 data-analyticsid="standard-card-dataset-information-content"
                 data-testid="standard-card-dataset-information-content"
                 id="standard-card-dataset-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-g79o35-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-xvszvy-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -122,7 +124,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-xvszvy-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -133,7 +135,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -144,7 +146,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -155,7 +157,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-xvszvy-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -166,7 +168,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-xvszvy-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -176,7 +178,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -186,7 +188,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -200,21 +202,22 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </div>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-anzsrc-field-of-research-(for)-codes"
               id="standard-card-anzsrc-field-of-research-(for)-codes"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                     data-testid="standard-card-anzsrc-field-of-research-(for)-codes-header"
                     id="standard-card-anzsrc-field-of-research-(for)-codes-header"
                   >
@@ -223,13 +226,13 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                 data-analyticsid="standard-card-anzsrc-field-of-research-(for)-codes-content"
                 data-testid="standard-card-anzsrc-field-of-research-(for)-codes-content"
                 id="standard-card-anzsrc-field-of-research-(for)-codes-content"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
                 >
                   Select Field of Research (FoR) codes
                 </p>
@@ -243,21 +246,22 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </div>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 Creators css-16fnxy3-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 Creators css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-creators"
               id="standard-card-creators"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                     data-testid="standard-card-creators-header"
                     id="standard-card-creators-header"
                   >
@@ -266,7 +270,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                 data-analyticsid="standard-card-creators-content"
                 data-testid="standard-card-creators-content"
                 id="standard-card-creators-content"
@@ -281,21 +285,22 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </div>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-access-and-licence"
               id="standard-card-access-and-licence"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                     data-testid="standard-card-access-and-licence-header"
                     id="standard-card-access-and-licence-header"
                   >
@@ -303,11 +308,11 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   </h3>
                 </div>
                 <div
-                  class="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+                  class="MuiCardHeader-action css-116l9hl-MuiCardHeader-action"
                 >
                   <button
                     aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
@@ -316,7 +321,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -333,16 +338,16 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                 data-analyticsid="standard-card-access-and-licence-content"
                 data-testid="standard-card-access-and-licence-content"
                 id="standard-card-access-and-licence-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-g79o35-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-s6c5hx-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -353,7 +358,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-s6c5hx-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -364,7 +369,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 MuiGrid2-grid-md-4 css-lugrm1-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-s6c5hx-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -378,21 +383,22 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </div>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-project-information"
               id="standard-card-project-information"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                     data-testid="standard-card-project-information-header"
                     id="standard-card-project-information-header"
                   >
@@ -401,16 +407,16 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                 data-analyticsid="standard-card-project-information-content"
                 data-testid="standard-card-project-information-content"
                 id="standard-card-project-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-g79o35-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -421,7 +427,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -432,7 +438,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -441,7 +447,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -454,21 +460,22 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </div>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-dataset-details"
               id="standard-card-dataset-details"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                     data-testid="standard-card-dataset-details-header"
                     id="standard-card-dataset-details-header"
                   >
@@ -477,16 +484,16 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                 data-analyticsid="standard-card-dataset-details-content"
                 data-testid="standard-card-dataset-details-content"
                 id="standard-card-dataset-details-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-g79o35-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -495,7 +502,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -505,7 +512,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -514,7 +521,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -524,7 +531,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -533,7 +540,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                     style="margin-left: 8px; margin-right: 8px;"
                   >
                     <div
@@ -543,7 +550,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -553,7 +560,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -567,21 +574,22 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </div>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-geographic-coordinates"
               id="standard-card-geographic-coordinates"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                     data-testid="standard-card-geographic-coordinates-header"
                     id="standard-card-geographic-coordinates-header"
                   >
@@ -590,13 +598,13 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                 data-analyticsid="standard-card-geographic-coordinates-content"
                 data-testid="standard-card-geographic-coordinates-content"
                 id="standard-card-geographic-coordinates-content"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
                 >
                   Use this tool to specify the geographic co-ordinates the data relates to
                 </span>
@@ -609,21 +617,22 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </div>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-related-datasets/work"
               id="standard-card-related-datasets/work"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                     data-testid="standard-card-related-datasets/work-header"
                     id="standard-card-related-datasets/work-header"
                   >
@@ -632,7 +641,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                 data-analyticsid="standard-card-related-datasets/work-content"
                 data-testid="standard-card-related-datasets/work-content"
                 id="standard-card-related-datasets/work-content"
@@ -646,21 +655,22 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </div>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-additional-information"
               id="standard-card-additional-information"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                     data-testid="standard-card-additional-information-header"
                     id="standard-card-additional-information-header"
                   >
@@ -669,16 +679,16 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                 data-analyticsid="standard-card-additional-information-content"
                 data-testid="standard-card-additional-information-content"
                 id="standard-card-additional-information-content"
               >
                 <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1eg9cx8-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -688,7 +698,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     />
                   </div>
                   <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
                       disabled="false"
@@ -702,21 +712,22 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </div>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-upload-files"
               id="standard-card-upload-files"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                     data-testid="standard-card-upload-files-header"
                     id="standard-card-upload-files-header"
                   >
@@ -725,7 +736,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                 data-analyticsid="standard-card-upload-files-content"
                 data-testid="standard-card-upload-files-content"
                 id="standard-card-upload-files-content"
@@ -739,27 +750,27 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </div>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
               data-testid="alert"
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container css-1dx371l-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
                         data-testid="DoneIcon"
                         focusable="false"
                         id="done-icon"
@@ -771,7 +782,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                     >
                       <b>
                         Success - 
@@ -789,17 +800,17 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-true css-25dekx-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-grow css-gootkv-MuiGrid-root"
           />
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
               aria-label="Cancel"
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-15uh0tt-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -807,11 +818,11 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </button>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
               aria-label="Submit for approval"
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
               data-testid="submit-data-collection"
               id="submit-data-collection"
               tabindex="0"

@@ -10,7 +10,7 @@ import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 export const GenericDocumentForm = ({ control, isSubmitting }) => {

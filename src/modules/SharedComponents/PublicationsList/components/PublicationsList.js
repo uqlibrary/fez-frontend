@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
@@ -82,7 +82,13 @@ export const PublicationsList = ({
     return (
         <Grid container spacing={1}>
             <Grid item xs={12} sm>
-                <Box display="flex" alignItems="center" height="100%">
+                <Box
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        height: '100%',
+                    }}
+                >
                     <FormControlLabel
                         sx={{ alignItems: 'center', margin: 0 }}
                         control={
@@ -111,7 +117,13 @@ export const PublicationsList = ({
                 sm
                 sx={{ display: Object.keys(recordsSelected).length > 0 ? '' : 'none' }}
             >
-                <Box display="flex" alignItems="center" height="100%">
+                <Box
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        height: '100%',
+                    }}
+                >
                     <BulkUpdatesActions
                         shouldDisplay={Object.keys(recordsSelected).length > 0}
                         recordsSelected={recordsSelected}

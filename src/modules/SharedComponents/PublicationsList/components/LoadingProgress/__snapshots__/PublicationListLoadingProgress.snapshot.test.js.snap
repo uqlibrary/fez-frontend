@@ -6,32 +6,32 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
     class="MuiBox-root css-130f8nx"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           eSpace
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <span
           aria-label="eSpace loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
           <svg
-            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
             viewBox="22 22 44 44"
           >
             <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
               cx="44"
               cy="44"
               fill="none"
@@ -43,22 +43,22 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           Web of science
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
         >
           5
            
@@ -67,22 +67,22 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           Scopus
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
         >
           0
            
@@ -91,22 +91,22 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           PubMed
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
         >
           0
            
@@ -115,22 +115,22 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           Crossref
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
         >
           0
            
@@ -180,11 +180,11 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="100"
-    class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-determinate css-1bf3nn9-MuiLinearProgress-root"
+    class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-determinate css-1w9bbf4-MuiLinearProgress-root"
     role="progressbar"
   >
     <span
-      class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate css-1ne4dpe-MuiLinearProgress-bar1"
+      class="MuiLinearProgress-bar MuiLinearProgress-bar1 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate css-i9m1j0-MuiLinearProgress-bar1"
       style="transform: translateX(0%);"
     />
   </span>
@@ -197,32 +197,32 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
     class="MuiBox-root css-130f8nx"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           eSpace
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <span
           aria-label="eSpace loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
           <svg
-            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
             viewBox="22 22 44 44"
           >
             <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
               cx="44"
               cy="44"
               fill="none"
@@ -234,32 +234,32 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           Web of science
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <span
           aria-label="Web of science loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
           <svg
-            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
             viewBox="22 22 44 44"
           >
             <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
               cx="44"
               cy="44"
               fill="none"
@@ -271,32 +271,32 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           Scopus
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <span
           aria-label="Scopus loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
           <svg
-            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
             viewBox="22 22 44 44"
           >
             <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
               cx="44"
               cy="44"
               fill="none"
@@ -308,32 +308,32 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           PubMed
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <span
           aria-label="PubMed loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
           <svg
-            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
             viewBox="22 22 44 44"
           >
             <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
               cx="44"
               cy="44"
               fill="none"
@@ -345,32 +345,32 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           Crossref
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <span
           aria-label="Crossref loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
           <svg
-            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
             viewBox="22 22 44 44"
           >
             <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
               cx="44"
               cy="44"
               fill="none"
@@ -423,11 +423,11 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="0"
-    class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-determinate css-1bf3nn9-MuiLinearProgress-root"
+    class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-determinate css-1w9bbf4-MuiLinearProgress-root"
     role="progressbar"
   >
     <span
-      class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate css-1ne4dpe-MuiLinearProgress-bar1"
+      class="MuiLinearProgress-bar MuiLinearProgress-bar1 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate css-i9m1j0-MuiLinearProgress-bar1"
       style="transform: translateX(-100%);"
     />
   </span>
@@ -440,32 +440,32 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
     class="MuiBox-root css-130f8nx"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           eSpace
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <span
           aria-label="eSpace loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
           <svg
-            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
             viewBox="22 22 44 44"
           >
             <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
               cx="44"
               cy="44"
               fill="none"
@@ -477,22 +477,22 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           Web of science
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
         >
           5
            
@@ -501,22 +501,22 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           Scopus
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
         >
           4
            
@@ -525,22 +525,22 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           PubMed
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-q1ioi0-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
         >
           12
            
@@ -549,32 +549,32 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1d10t9u-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
         >
           Crossref
         </p>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       >
         <span
           aria-label="Crossref loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
           <svg
-            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
             viewBox="22 22 44 44"
           >
             <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
               cx="44"
               cy="44"
               fill="none"
@@ -627,11 +627,11 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="75"
-    class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-determinate css-1bf3nn9-MuiLinearProgress-root"
+    class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-determinate css-1w9bbf4-MuiLinearProgress-root"
     role="progressbar"
   >
     <span
-      class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate css-1ne4dpe-MuiLinearProgress-bar1"
+      class="MuiLinearProgress-bar MuiLinearProgress-bar1 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate css-i9m1j0-MuiLinearProgress-bar1"
       style="transform: translateX(-25%);"
     />
   </span>

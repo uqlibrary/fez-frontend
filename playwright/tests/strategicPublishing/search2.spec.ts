@@ -16,10 +16,7 @@ test.describe('Strategic Publishing - Search', () => {
     test('Removing keyword should not change scroll position', async ({ page }) => {
         await page.getByTestId('journal-search-keywords-input').fill('bio');
         await page.getByTestId('journal-search-item-addable-keyword-bioe-27').click();
-        await page
-            .getByTestId('journal-search-chip-keyword-bioe')
-            .getByTestId('CancelIcon')
-            .click();
+        await page.getByTestId('journal-search-chip-keyword-bioe').getByTestId('CancelIcon').click();
         await expect(page.getByTestId('journal-search-chip-keyword-bioe')).not.toBeVisible();
     });
 
@@ -227,20 +224,14 @@ test.describe('Strategic Publishing - Search', () => {
 
             await expect(ResultTitles).toHaveCount(resultsLengthWithTwoKeywords);
 
-            await page
-                .getByTestId('journal-search-chip-title-glycobiology')
-                .locator('svg')
-                .click();
+            await page.getByTestId('journal-search-chip-title-glycobiology').locator('svg').click();
 
             await expect(page.getByTestId('journal-search-chip-title-glycobiology')).not.toBeVisible();
             await expect(page).not.toHaveURL(/keywords%5BTitle-glycobiology/);
 
             await expect(ResultTitles).toHaveCount(resultsLengthWithOneKeyword);
 
-            await page
-                .getByTestId('journal-search-chip-title-biological')
-                .locator('svg')
-                .click();
+            await page.getByTestId('journal-search-chip-title-biological').locator('svg').click();
 
             await assertNotSearchParams(page);
             await expect(page.getByTestId('journal-search-card')).toBeVisible();

@@ -4,21 +4,21 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1pviqsb-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -29,40 +29,40 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             First  listed contributor
           </span>
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-5 css-1dnx02d-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-5 css-65iimg-MuiGridLegacy-root"
         data-testid="test-list-row-0-uq-details"
         id="test-list-row-0-uq-details"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
@@ -80,7 +80,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -89,7 +89,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -110,21 +110,21 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1pviqsb-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -135,40 +135,40 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             First  listed contributor
           </span>
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-5 css-1dnx02d-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-5 css-65iimg-MuiGridLegacy-root"
         data-testid="test-list-row-0-uq-details"
         id="test-list-row-0-uq-details"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
@@ -186,7 +186,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -195,7 +195,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -216,21 +216,21 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 <div>
   <li
     aria-label="Select this record (A. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1pviqsb-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -241,20 +241,20 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -272,7 +272,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -281,7 +281,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -302,21 +302,21 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 <div>
   <li
     aria-label="Select this record (A. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1pviqsb-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -327,20 +327,20 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -358,7 +358,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -367,7 +367,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -388,21 +388,21 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1pviqsb-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -413,40 +413,40 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             First  listed contributor
           </span>
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-5 css-1dnx02d-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-5 css-65iimg-MuiGridLegacy-root"
         data-testid="test-list-row-0-uq-details"
         id="test-list-row-0-uq-details"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
@@ -464,7 +464,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Move record up the order"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-move-up"
             data-testid="test-list-row-0-move-up"
             id="test-list-row-move-up-0"
@@ -473,7 +473,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="KeyboardArrowUpIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -491,7 +491,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Move record down the order"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-move-down"
             data-testid="test-list-row-0-move-down"
             id="test-list-row-move-down-0"
@@ -500,7 +500,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="KeyboardArrowDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -518,7 +518,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -527,7 +527,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -548,21 +548,21 @@ exports[`Component ContributorRow a row with index and contributor with author d
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1wati88-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-1xlb6x9-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -573,20 +573,20 @@ exports[`Component ContributorRow a row with index and contributor with author d
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-qvw9r7-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -604,7 +604,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -613,7 +613,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -634,21 +634,21 @@ exports[`Component ContributorRow a row with index and contributor with author d
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1wati88-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-1xlb6x9-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -659,20 +659,20 @@ exports[`Component ContributorRow a row with index and contributor with author d
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-qvw9r7-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -690,7 +690,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -699,7 +699,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -720,21 +720,21 @@ exports[`Component ContributorRow a row with index and contributor with author d
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1pviqsb-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -745,40 +745,40 @@ exports[`Component ContributorRow a row with index and contributor with author d
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             First  listed contributor
           </span>
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-5 css-1dnx02d-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-5 css-65iimg-MuiGridLegacy-root"
         data-testid="test-list-row-0-uq-details"
         id="test-list-row-0-uq-details"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
@@ -796,7 +796,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -805,7 +805,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -826,21 +826,21 @@ exports[`Component ContributorRow a row with index and creator with creator role
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1wati88-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-1xlb6x9-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -851,35 +851,35 @@ exports[`Component ContributorRow a row with index and creator with creator role
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-qvw9r7-MuiTypography-root"
           >
             First  listed contributor
           </span>
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-5 css-2v8532-MuiGridLegacy-root"
         data-testid="test-list-row-0-role"
         id="test-list-row-0-role"
       >
         <div
-          class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+          class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
           >
             Investigator
           </p>
@@ -897,7 +897,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -906,7 +906,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -927,21 +927,21 @@ exports[`Component ContributorRow a row with index and creator with creator role
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1wati88-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-1xlb6x9-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -952,35 +952,35 @@ exports[`Component ContributorRow a row with index and creator with creator role
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-qvw9r7-MuiTypography-root"
           >
             First  listed contributor
           </span>
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-5 css-2v8532-MuiGridLegacy-root"
         data-testid="test-list-row-0-role"
         id="test-list-row-0-role"
       >
         <div
-          class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+          class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
           >
             Investigator
           </p>
@@ -998,7 +998,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1007,7 +1007,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1028,21 +1028,21 @@ exports[`Component ContributorRow should handle edits 1`] = `
 <div>
   <li
     aria-label="Select this record (A. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1pviqsb-MuiListItem-root"
     data-testid="test-list-row-2"
     id="test-list-row-2"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1053,20 +1053,20 @@ exports[`Component ContributorRow should handle edits 1`] = `
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-2-name-as-published"
         id="test-list-row-2-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             Third  listed contributor
           </span>
@@ -1084,7 +1084,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
         >
           <button
             aria-label="Edit this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-2-edit"
             data-testid="test-list-row-2-edit"
             id="test-list-row-edit-2"
@@ -1093,13 +1093,13 @@ exports[`Component ContributorRow should handle edits 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="EditIcon"
               focusable="false"
               viewBox="0 0 24 24"
             >
               <path
-                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
               />
             </svg>
           </button>
@@ -1111,7 +1111,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-2-delete"
             data-testid="test-list-row-2-delete"
             id="test-list-row-delete-2"
@@ -1120,7 +1120,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1141,17 +1141,17 @@ exports[`Component ContributorRow should render a row with a disabled contributo
 <div>
   <li
     aria-label="Select this record (undefined) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-oq4and-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1wa01ha-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="-1"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
       >
         <span
           aria-label="You are not able to edit this row"
@@ -1160,27 +1160,27 @@ exports[`Component ContributorRow should render a row with a disabled contributo
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
             data-testid="LockIcon"
             focusable="false"
             viewBox="0 0 24 24"
           >
             <path
-              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2m3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1z"
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2m3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1z"
             />
           </svg>
         </span>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+          class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -1198,7 +1198,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1207,7 +1207,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1228,21 +1228,21 @@ exports[`Component ContributorRow should render contributor row linked class for
 <div>
   <li
     aria-label="Select this record (Test) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1oz0d3v-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1fm2ijt-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="HowToRegIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1254,20 +1254,20 @@ exports[`Component ContributorRow should render contributor row linked class for
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             Test
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -1285,7 +1285,7 @@ exports[`Component ContributorRow should render contributor row linked class for
         >
           <button
             aria-label="Edit this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-edit"
             data-testid="test-list-row-0-edit"
             id="test-list-row-edit-0"
@@ -1294,13 +1294,13 @@ exports[`Component ContributorRow should render contributor row linked class for
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="EditIcon"
               focusable="false"
               viewBox="0 0 24 24"
             >
               <path
-                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
               />
             </svg>
           </button>
@@ -1312,7 +1312,7 @@ exports[`Component ContributorRow should render contributor row linked class for
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1321,7 +1321,7 @@ exports[`Component ContributorRow should render contributor row linked class for
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1342,21 +1342,21 @@ exports[`Component ContributorRow should render row as required 1`] = `
 <div>
   <li
     aria-label="Select this record (Test) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1iaanil-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-yy8s7b-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1367,20 +1367,20 @@ exports[`Component ContributorRow should render row as required 1`] = `
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             Test
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -1398,7 +1398,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1407,7 +1407,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1428,21 +1428,21 @@ exports[`Component ContributorRow should render with default props 1`] = `
 <div>
   <li
     aria-label="Select this record (A. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1pviqsb-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1453,20 +1453,20 @@ exports[`Component ContributorRow should render with default props 1`] = `
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -1484,7 +1484,7 @@ exports[`Component ContributorRow should render with default props 1`] = `
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1493,7 +1493,7 @@ exports[`Component ContributorRow should render with default props 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1514,21 +1514,21 @@ exports[`Component ContributorRow should render with missing aria label if selec
 <div>
   <li
     aria-label=""
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1pviqsb-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="PersonOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1539,20 +1539,20 @@ exports[`Component ContributorRow should render with missing aria label if selec
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
         data-testid="test-list-row-0-name-as-published"
         id="test-list-row-0-name-as-published"
       >
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
           >
             First undefined
           </span>
@@ -1568,7 +1568,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
           data-mui-internal-clone-element="true"
         >
           <button
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1577,7 +1577,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"

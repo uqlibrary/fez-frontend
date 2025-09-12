@@ -39,7 +39,7 @@ describe('FormViewToggler component', () => {
             toggleTabbed: toggleFn,
         }));
         const { getByRole } = setup();
-        fireEvent.click(getByRole('checkbox'));
+        fireEvent.click(getByRole('switch'));
         expect(toggleFn).toHaveBeenCalled();
     });
 });

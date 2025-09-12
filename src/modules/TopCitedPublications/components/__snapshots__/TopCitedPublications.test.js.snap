@@ -3,39 +3,39 @@
 exports[`Component TopCitedPublications should render loading indicator 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <div
         style="padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
             style="text-align: center;"
           >
             <span
               aria-label="Loading"
-              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
               role="progressbar"
               style="width: 18px; height: 18px;"
             >
               <svg
-                class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                 viewBox="22 22 44 44"
               >
                 <circle
-                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                   cx="44"
                   cy="44"
                   fill="none"
@@ -46,24 +46,24 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading trending works
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
           />
         </div>
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     />
   </div>
 </div>
@@ -72,30 +72,31 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
 exports[`Component TopCitedPublications should render tabs larger than xs width properly 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
     data-testid="standard-card"
     id="standard-card"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
       data-analyticsid="standard-card-content"
       data-testid="standard-card-content"
       id="standard-card-content"
     >
       <div
-        class="MuiTabs-root css-1g4qssd-MuiTabs-root"
+        class="MuiTabs-root css-1lco6rl-MuiTabs-root"
       >
         <div
-          class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+          class="MuiTabs-scroller MuiTabs-fixed css-s2t35c-MuiTabs-scroller"
           style="overflow: hidden; margin-bottom: 0px;"
         >
           <div
-            class="MuiTabs-flexContainer MuiTabs-centered css-1wf8b0h-MuiTabs-flexContainer"
+            class="MuiTabs-list MuiTabs-flexContainer MuiTabs-centered css-1hqdth1-MuiTabs-list"
             role="tablist"
           >
             <button
               aria-selected="true"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected css-uk6zre-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected css-1ib8lk2-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="0"
               type="button"
@@ -106,7 +107,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
             </button>
             <button
               aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-uk6zre-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-1ib8lk2-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="-1"
               type="button"
@@ -117,7 +118,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
             </button>
             <button
               aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-uk6zre-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-1ib8lk2-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="-1"
               type="button"
@@ -128,20 +129,20 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
             </button>
           </div>
           <span
-            class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
+            class="MuiTabs-indicator css-s8ua9-MuiTabs-indicator"
             style="left: 0px; width: 0px;"
           />
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container css-1ozqwjr-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container css-tqtdln-MuiGridLegacy-root"
         style="margin-top: 24px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-j4livs-MuiTypography-root"
           >
             <div
               class="fez-icon altmetric xxlarge"
@@ -150,12 +151,12 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
           </h6>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
           style="margin-top: -12px;"
         >
           <button
             aria-label="Click for more information"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
             data-testid="help-icon"
@@ -164,7 +165,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -180,7 +181,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
           </button>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           id="topCitedPublications"
           style="padding-top: 24px;"
         >
@@ -198,20 +199,20 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                 id="publication-citation-parent-UQ:330391"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                         >
                           <a
                             href="/view/UQ:330391"
@@ -221,7 +222,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto citationMetrics css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto citationMetrics css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
@@ -236,13 +237,13 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                           title="Full citation in Altmetric will open in a new window"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-1yxa96n-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-15rj26v-MuiTypography-root"
                                 title="Difference in social media activities"
                               >
                                 +
@@ -253,7 +254,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                       >
                         <div
                           class="citationContent citationJournalArticle"
@@ -342,7 +343,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                                 data-testid="OpenInNewIcon"
                                 focusable="false"
                                 id="citation-doi-link-new-window-icon"
@@ -358,19 +359,19 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                          class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
@@ -457,10 +458,10 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                 />
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                               />
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                               />
                             </div>
                           </div>
@@ -471,7 +472,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
               />
             </div>
           </div>
@@ -489,23 +490,23 @@ exports[`Component TopCitedPublications should render top cited publications mod
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container css-1q04yrf-MuiGridLegacy-root"
       data-analyticsid="alert-error"
       data-testid="alert-error"
       id="alert-error"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
               data-testid="ErrorIcon"
               focusable="false"
               id="error-icon"
@@ -517,7 +518,7 @@ exports[`Component TopCitedPublications should render top cited publications mod
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
           >
             <b>
               There has been an error - 
@@ -538,30 +539,31 @@ exports[`Component TopCitedPublications should render top cited publications mod
 exports[`Component TopCitedPublications should render top cited publications with default width xs 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
     data-testid="standard-card"
     id="standard-card"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
       data-analyticsid="standard-card-content"
       data-testid="standard-card-content"
       id="standard-card-content"
     >
       <div
-        class="MuiTabs-root css-1g4qssd-MuiTabs-root"
+        class="MuiTabs-root css-1lco6rl-MuiTabs-root"
       >
         <div
-          class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+          class="MuiTabs-scroller MuiTabs-fixed css-s2t35c-MuiTabs-scroller"
           style="overflow: hidden; margin-bottom: 0px;"
         >
           <div
-            class="MuiTabs-flexContainer MuiTabs-centered css-1wf8b0h-MuiTabs-flexContainer"
+            class="MuiTabs-list MuiTabs-flexContainer MuiTabs-centered css-1hqdth1-MuiTabs-list"
             role="tablist"
           >
             <button
               aria-selected="true"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected css-uk6zre-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected css-1ib8lk2-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="0"
               type="button"
@@ -570,7 +572,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
             </button>
             <button
               aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-uk6zre-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-1ib8lk2-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="-1"
               type="button"
@@ -579,7 +581,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
             </button>
             <button
               aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-uk6zre-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-1ib8lk2-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="-1"
               type="button"
@@ -588,20 +590,20 @@ exports[`Component TopCitedPublications should render top cited publications wit
             </button>
           </div>
           <span
-            class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
+            class="MuiTabs-indicator css-s8ua9-MuiTabs-indicator"
             style="left: 0px; width: 0px;"
           />
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container css-1ozqwjr-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container css-tqtdln-MuiGridLegacy-root"
         style="margin-top: 24px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-1fjevb6-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-j4livs-MuiTypography-root"
           >
             <div
               class="fez-icon altmetric xxlarge"
@@ -610,12 +612,12 @@ exports[`Component TopCitedPublications should render top cited publications wit
           </h6>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
           style="margin-top: -12px;"
         >
           <button
             aria-label="Click for more information"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
             data-testid="help-icon"
@@ -624,7 +626,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -640,7 +642,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
           </button>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           id="topCitedPublications"
           style="padding-top: 24px;"
         >
@@ -658,20 +660,20 @@ exports[`Component TopCitedPublications should render top cited publications wit
                 id="publication-citation-parent-UQ:330391"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                         >
                           <a
                             href="/view/UQ:330391"
@@ -681,7 +683,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto citationMetrics css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto citationMetrics css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
@@ -696,13 +698,13 @@ exports[`Component TopCitedPublications should render top cited publications wit
                           title="Full citation in Altmetric will open in a new window"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-1yxa96n-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-15rj26v-MuiTypography-root"
                                 title="Difference in social media activities"
                               >
                                 +
@@ -713,7 +715,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                       >
                         <div
                           class="citationContent citationJournalArticle"
@@ -802,7 +804,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                             >
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                                 data-testid="OpenInNewIcon"
                                 focusable="false"
                                 id="citation-doi-link-new-window-icon"
@@ -818,19 +820,19 @@ exports[`Component TopCitedPublications should render top cited publications wit
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                          class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
@@ -917,10 +919,10 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                 />
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                               />
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                               />
                             </div>
                           </div>
@@ -931,7 +933,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                 </div>
               </div>
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
               />
             </div>
           </div>

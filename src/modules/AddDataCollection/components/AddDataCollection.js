@@ -36,7 +36,7 @@ import { locale } from 'locale';
 import { selectFields } from 'locale/selectFields';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { useNavigate } from 'react-router-dom';
@@ -151,7 +151,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
     const saveConfirmationLocale = { ...locale.pages.addDataset.successWorkflowConfirmation };
     saveConfirmationLocale.confirmationMessage = (
         <Grid container spacing={3}>
-            <Grid xs={12}>
+            <Grid size={12}>
                 {props.newRecordFileUploadingOrIssueError && (
                     <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />
                 )}
@@ -279,10 +279,16 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                     />
                     <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
                     <Grid container spacing={3} className={'DataCollection'}>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.information.agreement.title}>
-                                <Grid container spacing={3} padding={0}>
-                                    <Grid xs={12}>
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={DepositAgreementField}
@@ -297,10 +303,21 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.information.dataset.title}>
-                                <Grid container spacing={3} padding={0}>
-                                    <Grid xs={12} sm={12}>
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 12,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -315,7 +332,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             validate={[validation.required]}
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={12}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 12,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -330,7 +352,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             validate={[validation.required]}
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={6}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -343,7 +370,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             validate={[validation.required]}
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={6}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             id="contact-name-id-auto-complete"
@@ -357,7 +389,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             authorIdFieldId="rek-contributor-id"
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={12}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 12,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -370,7 +407,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             validate={[validation.required, validation.email]}
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={12}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 12,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -383,7 +425,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             validate={[validation.doi]}
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={6}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -395,7 +442,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             {...txt.information.dataset.fieldLabels.publisher}
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={6}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={PartialDateField}
@@ -412,7 +464,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard
                                 title={txt.information.dataset.fieldLabels.fieldOfResearchCodes.title}
                                 help={txtFoR.help}
@@ -432,7 +484,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 />
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12} className={'Creators'}>
+                        <Grid className={'Creators'} size={12}>
                             <StandardCard title={txt.information.creator.title}>
                                 <Field
                                     control={control}
@@ -448,13 +500,25 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 />
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard
                                 title={txt.information.accessAndLicensing.title}
                                 help={getLicenceHelp(txt.information.accessAndLicensing.help)}
                             >
-                                <Grid container spacing={3} padding={0}>
-                                    <Grid xs={12} sm={12} md={4}>
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 12,
+                                            md: 4,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={NewGenericSelectField}
@@ -468,7 +532,13 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             {...txt.information.accessAndLicensing.fieldLabels.accessConditions}
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={12} md={4}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 12,
+                                            md: 4,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={NewGenericSelectField}
@@ -482,7 +552,13 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             {...selectFields.license}
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={12} md={4}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 12,
+                                            md: 4,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -497,10 +573,16 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.information.project.title}>
-                                <Grid container spacing={3} padding={0}>
-                                    <Grid xs={12}>
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -516,7 +598,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             validate={[validation.required]}
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -533,7 +615,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                         />
                                     </Grid>
 
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={NewListEditorField}
@@ -548,7 +630,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             disabled={isSubmitting}
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={NewListEditorField}
@@ -563,10 +645,16 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.information.optionalDatasetDetails.title}>
-                                <Grid container spacing={3} padding={0}>
-                                    <Grid xs={12}>
+                                <Grid
+                                    container
+                                    spacing={3}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={NewListEditorField}
@@ -581,10 +669,10 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             disabled={isSubmitting}
                                         />
                                     </Grid>
-                                    <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
+                                    <Grid style={{ marginLeft: 8, marginRight: 8 }} size={12}>
                                         <Divider />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={NewListEditorField}
@@ -599,10 +687,10 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             disabled={isSubmitting}
                                         />
                                     </Grid>
-                                    <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
+                                    <Grid style={{ marginLeft: 8, marginRight: 8 }} size={12}>
                                         <Divider />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={NewListEditorField}
@@ -615,10 +703,15 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             ListEditorForm={KeywordsForm}
                                         />
                                     </Grid>
-                                    <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
+                                    <Grid style={{ marginLeft: 8, marginRight: 8 }} size={12}>
                                         <Divider />
                                     </Grid>
-                                    <Grid xs={12} sm={6}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={PartialDateField}
@@ -635,7 +728,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             hasError={dateError}
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={6}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: 6,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={PartialDateField}
@@ -656,7 +754,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard
                                 title={txt.information.optionalDatasetDetails.fieldLabels.geographicCoordinates.label}
                             >
@@ -674,7 +772,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 />
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard
                                 title={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets.title}
                             >
@@ -690,10 +788,16 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 />
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.information.additionalNotes.title}>
-                                <Grid container spacing={2} padding={0}>
-                                    <Grid xs={12}>
+                                <Grid
+                                    container
+                                    spacing={2}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -706,7 +810,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             {...txt.information.additionalNotes.fieldLabels.notes}
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -722,7 +826,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.fileUpload.title}>
                                 <Field
                                     control={control}
@@ -737,20 +841,30 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                         </Grid>
 
                         {alertProps && !isSubmitSuccessful && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <Alert {...alertProps} />
                             </Grid>
                         )}
 
                         {!!apiError && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <Alert alertId="api-error-alert" type="error_outline" message={apiError} />
                             </Grid>
                         )}
                     </Grid>
                     <Grid container spacing={2}>
-                        <Grid xs={false} sm />
-                        <Grid xs={12} sm="auto">
+                        <Grid
+                            size={{
+                                xs: false,
+                                sm: 'grow',
+                            }}
+                        />
+                        <Grid
+                            size={{
+                                xs: 12,
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 variant="contained"
                                 fullWidth
@@ -761,7 +875,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 color={'default'}
                             />
                         </Grid>
-                        <Grid xs={12} sm="auto">
+                        <Grid
+                            size={{
+                                xs: 12,
+                                sm: 'auto',
+                            }}
+                        >
                             <Button
                                 id="submit-data-collection"
                                 data-testid="submit-data-collection"

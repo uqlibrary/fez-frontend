@@ -17,7 +17,7 @@ import {
     NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT,
     NTRO_SUBTYPE_RREB_OTHER,
 } from 'config/general';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import { numbersOnly } from 'helpers/general';
 

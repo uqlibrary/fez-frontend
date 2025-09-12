@@ -78,7 +78,13 @@ const JournalFieldsMap = [
             translateFn: (data, index, classes) => {
                 return (
                     <Typography variant="body1" component="div">
-                        <Box display="flex" alignItems="flex-end" key={data.key}>
+                        <Box
+                            key={data.key}
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'flex-end',
+                            }}
+                        >
                             <Typography
                                 variant="body1"
                                 sx={{ ...classes?.inputLabel }}
@@ -223,7 +229,13 @@ const JournalFieldsMap = [
             translateFn: (data, index, classes) => {
                 return (
                     <Typography variant="body1" component="div">
-                        <Box display="flex" alignItems="flex-end" key={data.key}>
+                        <Box
+                            key={data.key}
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'flex-end',
+                            }}
+                        >
                             <Typography
                                 variant="body1"
                                 sx={{ ...classes?.inputLabel }}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import validationLocale from 'locale/validationErrors';
 import { RelatedServiceIdField } from 'modules/SharedComponents/LookupFields/containers/RelatedServiceIdField';

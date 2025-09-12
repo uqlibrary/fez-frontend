@@ -3,17 +3,17 @@
 exports[`Component FileUploadRowMobileView should not render access selector or date picker if access condition is not required to select 1`] = `
 <div>
   <ul
-    class="MuiList-root MuiList-padding css-1lmvyhv-MuiList-root"
+    class="MuiList-root MuiList-padding css-1rbmvro-MuiList-root"
   >
     <li
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="AttachmentIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -24,17 +24,17 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
         </svg>
       </div>
       <div
-        class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         data-analyticsid="dsi-dsid-0"
         data-testid="dsi-dsid-0"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap MuiListItemText-primary css-et701d-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap MuiListItemText-primary css-idtmck-MuiTypography-root"
         >
           test.pdf (100 MB)
         </p>
         <span
-          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
         >
           File name
         </span>
@@ -47,17 +47,17 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
 exports[`Component FileUploadRowMobileView should not render embargo date picker if access condition is set to closed access 1`] = `
 <div>
   <ul
-    class="MuiList-root MuiList-padding css-1lmvyhv-MuiList-root"
+    class="MuiList-root MuiList-padding css-1rbmvro-MuiList-root"
   >
     <li
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="AttachmentIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -68,31 +68,31 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         </svg>
       </div>
       <div
-        class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         data-analyticsid="dsi-dsid-0"
         data-testid="dsi-dsid-0"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap MuiListItemText-primary css-et701d-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap MuiListItemText-primary css-idtmck-MuiTypography-root"
         >
           test.pdf (100 MB)
         </p>
         <span
-          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
         >
           File name
         </span>
       </div>
     </li>
     <li
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="LockOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -103,23 +103,23 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
         </svg>
       </div>
       <div
-        class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
       >
         <span
-          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
         >
           <div
-            class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+            class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-ydg547-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-hc0tq9-MuiInputBase-root-MuiInput-root"
             >
               <div
-                aria-controls="<dynamic>"
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 aria-labelledby="dsi-open-access-0-select"
-                class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                aria-required="true"
+                class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                 data-testid="dsi-open-access-0-select"
                 id="dsi-open-access-0-select"
                 role="combobox"
@@ -131,7 +131,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
                 aria-hidden="true"
                 aria-invalid="false"
                 aria-labelledby="dsi-open-access-0-label"
-                class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                 data-analyticsid="dsi-open-access-0-input"
                 data-testid="dsi-open-access-0-input"
                 id="dsi-open-access-0-input"
@@ -141,7 +141,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
               />
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                 data-testid="ArrowDropDownIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -154,24 +154,24 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
           </div>
         </span>
         <span
-          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
         >
           File access
         </span>
       </div>
     </li>
     <li
-      class="MuiListItem-container css-oyakqy-MuiListItem-container"
+      class="MuiListItem-container css-xw6fwh-MuiListItem-container"
     >
       <div
-        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-15z8t9h-MuiListItem-root"
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-whw0d-MuiListItem-root"
       >
         <div
-          class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+          class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
             data-testid="CalendarTodayOutlinedIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -182,27 +182,27 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
           </svg>
         </div>
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
             </p>
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
           >
             Embargo date
           </span>
         </div>
       </div>
       <div
-        class="MuiListItemSecondaryAction-root css-inawym-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-1q2o4t4-MuiListItemSecondaryAction-root"
       >
         <span
           aria-label="Remove this file"
@@ -210,7 +210,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
           data-mui-internal-clone-element="true"
         >
           <button
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
             tabindex="0"
@@ -218,7 +218,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -238,17 +238,17 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
 exports[`Component FileUploadRowMobileView should render default view 1`] = `
 <div>
   <ul
-    class="MuiList-root MuiList-padding css-1lmvyhv-MuiList-root"
+    class="MuiList-root MuiList-padding css-1rbmvro-MuiList-root"
   >
     <li
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="AttachmentIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -259,31 +259,31 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         </svg>
       </div>
       <div
-        class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         data-analyticsid="dsi-dsid-0"
         data-testid="dsi-dsid-0"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap MuiListItemText-primary css-et701d-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap MuiListItemText-primary css-idtmck-MuiTypography-root"
         >
           test.pdf (100 MB)
         </p>
         <span
-          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
         >
           File name
         </span>
       </div>
     </li>
     <li
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="LockOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -294,23 +294,24 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
         </svg>
       </div>
       <div
-        class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
       >
         <span
-          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
         >
           <div
-            class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+            class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-ydg547-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-hc0tq9-MuiInputBase-root-MuiInput-root"
             >
               <div
-                aria-controls="<dynamic>"
                 aria-expanded="false"
                 aria-haspopup="listbox"
+                aria-invalid="true"
                 aria-labelledby="dsi-open-access-0-select"
-                class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                aria-required="true"
+                class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                 data-testid="dsi-open-access-0-select"
                 id="dsi-open-access-0-select"
                 role="combobox"
@@ -322,7 +323,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
                 aria-hidden="true"
                 aria-invalid="true"
                 aria-labelledby="dsi-open-access-0-label"
-                class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                 data-analyticsid="dsi-open-access-0-input"
                 data-testid="dsi-open-access-0-input"
                 id="dsi-open-access-0-input"
@@ -332,7 +333,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
               />
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                 data-testid="ArrowDropDownIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -343,7 +344,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
               </svg>
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
               data-testid="dsi-open-access-0-helper-text"
               id="dsi-open-access-0-helper-text"
             >
@@ -352,24 +353,24 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
           </div>
         </span>
         <span
-          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
         >
           File access
         </span>
       </div>
     </li>
     <li
-      class="MuiListItem-container css-oyakqy-MuiListItem-container"
+      class="MuiListItem-container css-xw6fwh-MuiListItem-container"
     >
       <div
-        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-15z8t9h-MuiListItem-root"
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-whw0d-MuiListItem-root"
       >
         <div
-          class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+          class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
             data-testid="CalendarTodayOutlinedIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -380,27 +381,27 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
           </svg>
         </div>
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
             </p>
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
           >
             Embargo date
           </span>
         </div>
       </div>
       <div
-        class="MuiListItemSecondaryAction-root css-inawym-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-1q2o4t4-MuiListItemSecondaryAction-root"
       >
         <span
           aria-label="Remove this file"
@@ -408,7 +409,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
           data-mui-internal-clone-element="true"
         >
           <button
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
             tabindex="0"
@@ -416,7 +417,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -436,17 +437,17 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
 exports[`Component FileUploadRowMobileView should render default view for admin 1`] = `
 <div>
   <ul
-    class="MuiList-root MuiList-padding css-1lmvyhv-MuiList-root"
+    class="MuiList-root MuiList-padding css-1rbmvro-MuiList-root"
   >
     <li
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="AttachmentIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -457,31 +458,31 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
         </svg>
       </div>
       <div
-        class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         data-analyticsid="dsi-dsid-0"
         data-testid="dsi-dsid-0"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap MuiListItemText-primary css-et701d-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap MuiListItemText-primary css-idtmck-MuiTypography-root"
         >
           test.pdf (100 MB)
         </p>
         <span
-          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
         >
           File name
         </span>
       </div>
     </li>
     <li
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="LockOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -492,28 +493,29 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
         </svg>
       </div>
       <div
-        class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
       >
         <span
-          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
         >
           <div
-            class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+            class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
             style="width: 100%;"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-qie0cp-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+              class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-qy5r7j-MuiInputBase-root-MuiInput-root-MuiSelect-root"
               required=""
               validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
             >
               <div
-                aria-controls="<dynamic>"
                 aria-expanded="false"
                 aria-haspopup="listbox"
+                aria-invalid="true"
                 aria-labelledby="dsi-security-policy-0-select"
-                class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                aria-required="true"
+                class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                 data-testid="dsi-security-policy-0-select"
                 id="dsi-security-policy-0-select"
                 role="combobox"
@@ -525,7 +527,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
                 aria-hidden="true"
                 aria-invalid="true"
                 aria-labelledby="dsi-security-policy-0-label"
-                class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                 data-analyticsid="dsi-security-policy-0-input"
                 data-testid="dsi-security-policy-0-input"
                 id="dsi-security-policy-0-input"
@@ -536,7 +538,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
               />
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                 data-testid="ArrowDropDownIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -547,31 +549,31 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
               </svg>
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
             >
               This field is required
             </p>
           </div>
         </span>
         <span
-          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
         >
           File access
         </span>
       </div>
     </li>
     <li
-      class="MuiListItem-container css-oyakqy-MuiListItem-container"
+      class="MuiListItem-container css-xw6fwh-MuiListItem-container"
     >
       <div
-        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-15z8t9h-MuiListItem-root"
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-whw0d-MuiListItem-root"
       >
         <div
-          class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+          class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
             data-testid="CalendarTodayOutlinedIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -582,27 +584,27 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
           </svg>
         </div>
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
             </p>
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
           >
             Embargo date
           </span>
         </div>
       </div>
       <div
-        class="MuiListItemSecondaryAction-root css-inawym-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-1q2o4t4-MuiListItemSecondaryAction-root"
       >
         <span
           aria-label="Remove this file"
@@ -610,7 +612,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
           data-mui-internal-clone-element="true"
         >
           <button
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
             tabindex="0"
@@ -618,7 +620,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -638,17 +640,17 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
 exports[`Component FileUploadRowMobileView should render embargo date picker if access condition is set to open access 1`] = `
 <div>
   <ul
-    class="MuiList-root MuiList-padding css-1lmvyhv-MuiList-root"
+    class="MuiList-root MuiList-padding css-1rbmvro-MuiList-root"
   >
     <li
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="AttachmentIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -659,31 +661,31 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         </svg>
       </div>
       <div
-        class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         data-analyticsid="dsi-dsid-0"
         data-testid="dsi-dsid-0"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap MuiListItemText-primary css-et701d-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap MuiListItemText-primary css-idtmck-MuiTypography-root"
         >
           test.pdf (100 MB)
         </p>
         <span
-          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
         >
           File name
         </span>
       </div>
     </li>
     <li
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1q2he3h-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="LockOutlinedIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -694,23 +696,23 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
         </svg>
       </div>
       <div
-        class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+        class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
       >
         <span
-          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
         >
           <div
-            class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+            class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-ydg547-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-hc0tq9-MuiInputBase-root-MuiInput-root"
             >
               <div
-                aria-controls="<dynamic>"
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 aria-labelledby="dsi-open-access-0-select"
-                class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                aria-required="true"
+                class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                 data-testid="dsi-open-access-0-select"
                 id="dsi-open-access-0-select"
                 role="combobox"
@@ -722,7 +724,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
                 aria-hidden="true"
                 aria-invalid="false"
                 aria-labelledby="dsi-open-access-0-label"
-                class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                 data-analyticsid="dsi-open-access-0-input"
                 data-testid="dsi-open-access-0-input"
                 id="dsi-open-access-0-input"
@@ -732,7 +734,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
               />
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                 data-testid="ArrowDropDownIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -745,24 +747,24 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
           </div>
         </span>
         <span
-          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
         >
           File access
         </span>
       </div>
     </li>
     <li
-      class="MuiListItem-container css-oyakqy-MuiListItem-container"
+      class="MuiListItem-container css-xw6fwh-MuiListItem-container"
     >
       <div
-        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-15z8t9h-MuiListItem-root"
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-whw0d-MuiListItem-root"
       >
         <div
-          class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root"
+          class="MuiListItemIcon-root css-cokf1l-MuiListItemIcon-root"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
             data-testid="CalendarTodayOutlinedIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -773,41 +775,41 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
           </svg>
         </div>
         <div
-          class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
           >
             <div
-              class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
+              class="MuiFormControl-root MuiTextField-root css-16hn5e4-MuiFormControl-root-MuiTextField-root"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-hc0tq9-MuiInputBase-root-MuiInput-root"
                 data-analyticsid="dsi-embargo-date-0-input"
                 data-testid="dsi-embargo-date-0-input"
               >
                 <input
                   aria-invalid="true"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r7:"
+                  class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  id=":re:"
                   inputmode="text"
                   placeholder="dd/mm/yyyy"
                   type="text"
                   value="01/01/2017"
                 />
                 <div
-                  class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
+                  class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
                 >
                   <button
                     aria-label="Choose date, selected date is Jan 1, 2017"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1d2b2o6-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
                     tabindex="0"
                     type="button"
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                       data-testid="CalendarIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -822,14 +824,14 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
             </div>
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
           >
             Embargo date
           </span>
         </div>
       </div>
       <div
-        class="MuiListItemSecondaryAction-root css-inawym-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-1q2o4t4-MuiListItemSecondaryAction-root"
       >
         <span
           aria-label="Remove this file"
@@ -837,7 +839,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
           data-mui-internal-clone-element="true"
         >
           <button
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
             tabindex="0"
@@ -845,7 +847,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
