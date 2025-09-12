@@ -18,6 +18,15 @@ import DashboardOrcidSyncPreferences from './DashboardOrcidSyncPreferences';
 import { debounce } from 'throttle-debounce';
 import { Settings } from '@mui/icons-material';
 
+const updateSyncPreferences = debounce(3000, (dispatch, author, value) => {
+    dispatch(
+        updateCurrentAuthor(author.aut_id, {
+            ...author,
+            aut_is_orcid_sync_enabled: value,
+        }),
+    );
+});
+
 export const getOnSyncPreferenceChangeHandler = (
     author,
     accountAuthorSaving,
@@ -25,15 +34,6 @@ export const getOnSyncPreferenceChangeHandler = (
     dispatch,
     hideDrawer,
 ) => {
-    const updateSyncPreferences = debounce(3000, value => {
-        dispatch(
-            updateCurrentAuthor(author.aut_id, {
-                ...author,
-                aut_is_orcid_sync_enabled: value,
-            }),
-        );
-    });
-
     return isChecked => {
         const value = isChecked ? 1 : 0;
         if (author.aut_is_orcid_sync_enabled === value || accountAuthorSaving) {
@@ -42,7 +42,7 @@ export const getOnSyncPreferenceChangeHandler = (
         setIsSyncEnabled(isChecked);
         dispatch({ type: actions.CURRENT_AUTHOR_SAVING });
         hideDrawer();
-        updateSyncPreferences(value);
+        updateSyncPreferences(dispatch, author, value);
     };
 };
 

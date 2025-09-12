@@ -4,6 +4,17 @@ import { BrowserContext } from '@playwright/test';
 import moment from 'moment/moment';
 import path from 'path';
 
+/**
+ * PW Clock management doesn't work with Axios Mock Adapter, so we have to rely on global vars.
+ * See where window.__PW__TEST_API_MOCK_IS_PAUSED is used in /mock/index.js
+ */
+export const apiMockIsPaused = async (page: Page, value = true) =>
+    await page.evaluate(value => (window.__PW__TEST_API_MOCK_IS_PAUSED = value), value);
+
+// See where window.__PW__TEST_API_MOCK_RESPONSE_SHOULD_FAIL is used in /mock/index.js
+export const apiMockResponseShouldFail = async (page: Page, value = true) =>
+    await page.evaluate(value => (window.__PW__TEST_API_MOCK_RESPONSE_SHOULD_FAIL = value), value);
+
 export const assertEnabled = async (page: Page, selector: string) => expect(page.locator(selector)).toBeEnabled();
 
 export const assertDisabled = async (page: Page, selector: string) => expect(page.locator(selector)).toBeDisabled();
