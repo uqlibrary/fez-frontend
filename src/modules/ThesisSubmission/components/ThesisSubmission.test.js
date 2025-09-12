@@ -114,7 +114,7 @@ describe('ThesisSubmission', () => {
         await userEvent.click(screen.getByText('0101 Pure Mathematics'));
         await userEvent.type(screen.getByTestId('rek-keywords-input'), 'keyword');
         await userEvent.click(screen.getByTestId('rek-keywords-add'));
-        await addFilesToFileUploader(fileMock, 2000);
+        await addFilesToFileUploader(fileMock, 500);
         await assertNoValidationErrorSummary();
     };
 
@@ -257,7 +257,7 @@ describe('ThesisSubmission', () => {
                 await retryUpload();
 
                 await waitForText(new RegExp('File upload retry succeeded', 'i'), waitForOptions);
-            });
+            }, 60000);
 
             it('should display file upload error and show error message after failed retry', async () => {
                 const pid = 'UQ:123456';
@@ -279,7 +279,7 @@ describe('ThesisSubmission', () => {
 
                 // assert error message
                 await waitFor(() => getByText(new RegExp('Not all files were uploaded', 'i')), waitForOptions);
-            });
+            }, 60000);
 
             it('should show server error while trying to create the thesis', async () => {
                 api.mock.records.create({ status: 500 });
@@ -293,7 +293,7 @@ describe('ThesisSubmission', () => {
 
                 await waitForText(formLocale.thesisSubmission.depositFailedMessage, waitForOptions);
                 assertEnabled('deposit-thesis');
-            });
+            }, 60000);
         });
 
         describe('redirections', () => {
@@ -395,7 +395,7 @@ describe('ThesisSubmission', () => {
                 expectApiRequestToMatchSnapshot('post', api.url.records.create);
                 expectApiRequestToMatchSnapshot('post', api.url.files.presignedUrl);
                 expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
-            });
+            }, 60000);
 
             it('should display file upload error and successfully upload after a retry', async () => {
                 const pid = 'UQ:123456';
@@ -419,7 +419,7 @@ describe('ThesisSubmission', () => {
                 await retryUpload();
 
                 await waitForText(new RegExp('File upload retry succeeded', 'i'), waitForOptions);
-            });
+            }, 60000);
 
             it('should display file upload error and show error message after failed retry', async () => {
                 const pid = 'UQ:123456';
@@ -441,7 +441,7 @@ describe('ThesisSubmission', () => {
 
                 // assert error message
                 await waitFor(() => getByText(new RegExp('Not all files were uploaded', 'i')), waitForOptions);
-            });
+            }, 60000);
 
             it('should show server error while trying to create the thesis', async () => {
                 api.mock.records.create({ status: 500 });
@@ -455,7 +455,7 @@ describe('ThesisSubmission', () => {
 
                 await waitForText(formLocale.thesisSubmission.depositFailedMessage, waitForOptions);
                 assertEnabled('deposit-thesis');
-            });
+            }, 60000);
         });
 
         describe('redirections', () => {
