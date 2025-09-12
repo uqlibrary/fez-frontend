@@ -488,40 +488,6 @@ describe('AttachedFiles component', () => {
         expect(getByText('TEST ALERT')).toBeInTheDocument();
     });
 
-    it('should show alert for advisory statement', () => {
-        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
-        userIsAdmin.mockImplementation(() => true);
-        useRecordContext.mockImplementation(() => ({
-            record: { fez_record_search_key_advisory_statement: { rek_advisory_statement: 'test advisory statement' } },
-        }));
-
-        const { getByText } = setup({
-            canEdit: true,
-            locale: {
-                culturalSensitivityStatement: 'test advisory',
-            },
-        });
-
-        expect(getByText('test advisory statement')).toBeInTheDocument();
-    });
-
-    it('should show alert for advisory statement from locale', () => {
-        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
-        userIsAdmin.mockImplementation(() => true);
-        useRecordContext.mockImplementation(() => ({
-            record: { fez_record_search_key_advisory_statement: { rek_advisory_statement: null } },
-        }));
-
-        const { getByText } = setup({
-            canEdit: true,
-            locale: {
-                culturalSensitivityStatement: 'test advisory',
-            },
-        });
-
-        expect(getByText('test advisory')).toBeInTheDocument();
-    });
-
     it('should show alert for sensitive handling note', () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);

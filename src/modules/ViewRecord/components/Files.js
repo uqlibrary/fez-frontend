@@ -22,16 +22,10 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import FileName from './partials/FileName';
 import MediaPreview from './MediaPreview';
 import Thumbnail from './partials/Thumbnail';
-import {
-    getAdvisoryStatement,
-    getAvStateDescription,
-    getSensitiveHandlingNote,
-    isAdded,
-    isDerivative,
-} from 'helpers/datastreams';
+import { getAvStateDescription, getSensitiveHandlingNote, isAdded, isDerivative } from 'helpers/datastreams';
 import { getDownloadLicence } from 'helpers/licence';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
-import { FileAvStateIcon } from '../../SharedComponents/Toolbox/FileAvStateIcon';
+import { FileAvStateIcon } from 'modules/SharedComponents/Toolbox/FileAvStateIcon';
 import Box from '@mui/material/Box';
 
 export const getSecurityAccess = (dataStream, props) => {
@@ -378,13 +372,7 @@ const Files = props => {
     return (
         <Grid xs={12}>
             <StandardCard title={locale.viewRecord.sections.files.title}>
-                {!!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
-                    <Alert
-                        allowDismiss
-                        type={'info'}
-                        message={getAdvisoryStatement(publication, locale.culturalSensitivityStatement)}
-                    />
-                )}
+                {/* eslint-disable-next-line camelcase */}
                 {!!publication.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
                     <Alert allowDismiss type={'info'} message={getSensitiveHandlingNote(publication)} />
                 )}

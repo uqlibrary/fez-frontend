@@ -33,11 +33,11 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { checkForPreview, checkForThumbnail, checkForWeb, formatBytes } from 'modules/ViewRecord/components/Files';
 
 import { FileIcon } from './FileIcon';
-import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
+import { getSensitiveHandlingNote } from 'helpers/datastreams';
 import * as fileUploadLocale from '../FileUploader/locale';
 import Box from '@mui/material/Box';
 import { FileAvStateIcon } from '../FileAvStateIcon';
-import { AV_CHECK_STATE_INFECTED } from '../../../../config/general';
+import { AV_CHECK_STATE_INFECTED } from 'config/general';
 
 const classes = {
     dataWrapper: {
@@ -370,13 +370,7 @@ export const AttachedFiles = ({
     return (
         <Grid xs={12}>
             <StandardCard title={locale.title} subCard>
-                {!!record.fez_record_search_key_advisory_statement && (
-                    /* istanbul ignore next */ <Alert
-                        allowDismiss
-                        type="info"
-                        message={getAdvisoryStatement(record, locale.culturalSensitivityStatement)}
-                    />
-                )}
+                {/* eslint-disable-next-line camelcase */}
                 {!!record.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
                     /* istanbul ignore next */ <Alert
                         allowDismiss

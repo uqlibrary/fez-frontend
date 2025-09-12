@@ -115,28 +115,6 @@ describe('Files Component ', () => {
         const { container } = setup({
             publication: {
                 ...journalArticle,
-                fez_record_search_key_advisory_statement: {
-                    rek_advisory_statement: null,
-                },
-            },
-        });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should not render advisory statement', () => {
-        const { container } = setup({
-            publication: {
-                ...journalArticle,
-                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello' },
-            },
-        });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render advisory statement', () => {
-        const { container } = setup({
-            publication: {
-                ...journalArticle,
                 fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello' },
             },
         });
@@ -219,7 +197,6 @@ describe('Files Component ', () => {
                         dsi_size: 97786,
                     },
                 ],
-                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'No statement' },
                 fez_record_search_key_sensitive_handling_note_id: {
                     rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
                 },
@@ -980,7 +957,6 @@ describe('Files Component ', () => {
                         rek_ismemberof_order: 1,
                     },
                 ],
-                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'No statement' },
                 fez_record_search_key_sensitive_handling_note_id: {
                     rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
                 },
