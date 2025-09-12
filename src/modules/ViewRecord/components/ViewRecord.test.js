@@ -235,6 +235,32 @@ describe('ViewRecord', () => {
         expect(getByTestId(txt.alert.warning.alertId)).toBeInTheDocument();
     });
 
+    it('should render advisory statement', () => {
+        const { getByTestId } = setup({
+            viewRecordReducer: {
+                recordToView: {
+                    ...record,
+                    fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello' },
+                },
+            },
+        });
+
+        expect(getByTestId('alert-message')).toHaveTextContent('hello');
+    });
+
+    it('should not render advisory statement', () => {
+        const { queryByTestId } = setup({
+            viewRecordReducer: {
+                recordToView: {
+                    ...record,
+                    fez_record_search_key_advisory_statement: { rek_advisory_statement: null },
+                },
+            },
+        });
+
+        expect(queryByTestId('alert-message')).not.toBeInTheDocument();
+    });
+
     it('should render deleted record correctly', () => {
         const { getByText } = setup({ viewRecordReducer: { isDeleted: true, recordToView: record } });
         expect(getByText('This work has been deleted.')).toBeInTheDocument();

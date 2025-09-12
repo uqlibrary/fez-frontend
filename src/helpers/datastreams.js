@@ -1,6 +1,5 @@
 import { viewRecordsConfig } from '../config';
 import { STATE_DELETED } from '../config/viewRecord';
-import { stripHtml } from './general';
 import {
     AV_CHECK_STATE_DEFAULT,
     AV_CHECK_STATES,
@@ -24,14 +23,6 @@ export const isDerivative = dataStream => {
 
 export const isAdded = datastream => {
     return datastream.dsi_state !== STATE_DELETED;
-};
-
-/**
- * @param record
- */
-export const getAdvisoryStatement = (record, _default) => {
-    const value = record?.fez_record_search_key_advisory_statement?.rek_advisory_statement;
-    return value ? stripHtml(value) : stripHtml(_default);
 };
 
 /**

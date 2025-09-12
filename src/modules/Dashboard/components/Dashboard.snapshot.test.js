@@ -25,6 +25,7 @@ jest.mock('react-router-dom', () => ({
     useNavigate: () => mockUseNavigate,
 }));
 
+const loadOrcidSyncDelay = 1;
 function setup(testProps = {}, renderMethod = render) {
     const props = {
         theme: {},
@@ -54,6 +55,7 @@ function setup(testProps = {}, renderMethod = render) {
             publicationsListFacets: {},
             ...testProps.incomplete,
         },
+        loadOrcidSyncDelay,
         ...orcidSyncInitialState,
         ...testProps,
     };
@@ -68,10 +70,7 @@ function setup(testProps = {}, renderMethod = render) {
 
 describe('Dashboard test', () => {
     afterEach(() => {
-        Object.values(mockActions).forEach(action => {
-            action.mockClear();
-        });
-        mockUseNavigate.mockRestore();
+        jest.clearAllMocks();
     });
 
     it('renders alert for non-authors', () => {
@@ -553,21 +552,6 @@ describe('Dashboard test', () => {
         expect(mockUseNavigate).toBeCalledWith('/records/incomplete');
     });
 
-    /* it('calls action to sync to ORCID', () => {
-        const testFn = jest.fn();
-        const { getByTestId } = setup({
-            loadingOrcidSyncStatus: false,
-            orcidSyncEnabled: true,
-            actions: {
-                ...mockActions,
-                requestOrcidSync: testFn,
-            },
-        });
-
-        fireEvent.click(getByTestId('help-icon-orcid'));
-        expect(testFn).toHaveBeenCalledTimes(1);
-    });*/
-
     it('sets context for showing ORCID sync UI', () => {
         const { container } = setup({
             orcidSyncEnabled: true,
@@ -592,33 +576,107 @@ describe('Dashboard test', () => {
         expect(isWaitingForSync()).toBe(false);
     });
 
-    it('should wait for ORCID sync to complete', () => {
-        jest.useFakeTimers();
-        const { container, rerender } = setup({
-            orcidSyncEnabled: false,
-            loadingOrcidSyncStatus: true,
+    describe('Load Orcid Sync Status', () => {
+        beforeEach(() => jest.useFakeTimers());
+
+        it('should check sync status a few secs after mount', () => {
+            setup({
+                orcidSyncEnabled: true,
+                loadingOrcidSyncStatus: false,
+            });
+
+            expect(mockActions.loadOrcidSyncStatus).not.toHaveBeenCalled();
+            jest.runAllTimers();
+            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalled();
         });
-        jest.runAllTimers();
-        setup(
-            {
+
+        it('should not make additional requests to check sync status when not requested', () => {
+            setup({
                 orcidSyncEnabled: true,
                 loadingOrcidSyncStatus: false,
-                orcidSyncStatus: {
-                    orj_status: 'Pending',
+            });
+
+            jest.runAllTimers();
+            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
+            // explicitly advance in time - it should be covered by the above jest.runAllTimers();
+            jest.advanceTimersByTime(loadOrcidSyncDelay * 10000);
+            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
+        });
+
+        it('should make additional sync status requests upon user requests', () => {
+            const { rerender } = setup({
+                orcidSyncEnabled: true,
+                loadingOrcidSyncStatus: false,
+            });
+
+            jest.runAllTimers();
+            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
+
+            setup(
+                {
+                    orcidSyncEnabled: true,
+                    loadingOrcidSyncStatus: true,
                 },
-            },
-            rerender,
-        );
-        jest.runAllTimers();
-        expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
-        setup(
-            {
+                rerender,
+            );
+
+            jest.runAllTimers();
+            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
+
+            setup(
+                {
+                    orcidSyncEnabled: true,
+                    loadingOrcidSyncStatus: false,
+                    orcidSyncStatus: {
+                        orj_status: 'Pending',
+                    },
+                },
+                rerender,
+            );
+
+            jest.runAllTimers();
+            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(2);
+        });
+
+        it('should cancel scheduled sync status request before making new ones', () => {
+            const spy = jest.spyOn(window, 'clearTimeout');
+
+            const { rerender } = setup({
                 orcidSyncEnabled: true,
                 loadingOrcidSyncStatus: false,
-                orcidSyncStatus: null,
-            },
-            rerender,
-        );
-        expect(container).toMatchSnapshot();
+            });
+
+            jest.runAllTimers();
+            // first call
+            expect(spy).toHaveBeenNthCalledWith(1, null);
+
+            setup({ orcidSyncEnabled: true, loadingOrcidSyncStatus: true }, rerender);
+            jest.runAllTimers();
+
+            setup(
+                {
+                    orcidSyncEnabled: true,
+                    loadingOrcidSyncStatus: false,
+                    orcidSyncStatus: { orj_status: 'Pending' },
+                },
+                rerender,
+            );
+            jest.runAllTimers();
+
+            // call before to unmount
+            expect(spy).toHaveBeenNthCalledWith(spy.mock.calls.length - 1, expect.any(Number));
+        });
+
+        it('should cancel scheduled sync status request on unmount', () => {
+            const spy = jest.spyOn(window, 'clearTimeout');
+            const { unmount } = setup({
+                orcidSyncEnabled: true,
+                loadingOrcidSyncStatus: false,
+            });
+
+            spy.mockReset();
+            unmount();
+            expect(spy).toHaveBeenCalledWith(expect.any(Number));
+        });
     });
 });
