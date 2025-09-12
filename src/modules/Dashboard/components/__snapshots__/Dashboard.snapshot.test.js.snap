@@ -188,7 +188,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -197,7 +197,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -899,7 +899,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -908,7 +908,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -1644,7 +1644,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -1653,7 +1653,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -1995,7 +1995,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -2004,7 +2004,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -2770,7 +2770,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -2779,7 +2779,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -3149,7 +3149,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -3158,7 +3158,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -3464,7 +3464,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -3473,7 +3473,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -3959,7 +3959,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -3968,7 +3968,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -4382,7 +4382,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -4391,7 +4391,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -4769,7 +4769,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -4778,7 +4778,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -5197,7 +5197,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -5206,7 +5206,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -5448,7 +5448,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -5457,7 +5457,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -5763,7 +5763,7 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -5772,7 +5772,7 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -6014,7 +6014,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -6023,7 +6023,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -6370,7 +6370,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -6379,7 +6379,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -6934,7 +6934,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -6943,7 +6943,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -7426,7 +7426,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -7435,7 +7435,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -7918,7 +7918,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -7927,7 +7927,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -8798,7 +8798,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -8807,7 +8807,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -9113,7 +9113,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -9122,7 +9122,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -9508,7 +9508,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -9517,7 +9517,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"
@@ -10060,7 +10060,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                         >
                           <button
                             aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -10069,7 +10069,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                             type="button"
                           >
                             <svg
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
                               data-testid="HelpOutlineIcon"
                               focusable="false"
                               role="img"

@@ -4,7 +4,7 @@ exports[`DashboardOrcidSync Component should render Done status 1`] = `
 <div>
   <button
     aria-label="Information about uploading your eSpace works to ORCID"
-    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
     data-testid="help-icon-orcid"
@@ -13,7 +13,7 @@ exports[`DashboardOrcidSync Component should render Done status 1`] = `
     type="button"
   >
     <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
       data-testid="HelpOutlineIcon"
       focusable="false"
       role="img"
@@ -34,7 +34,7 @@ exports[`DashboardOrcidSync Component should render Error status 1`] = `
 <div>
   <button
     aria-label="There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties."
-    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
     data-testid="help-icon-orcid"
@@ -44,7 +44,7 @@ exports[`DashboardOrcidSync Component should render Error status 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
       data-testid="dashboard-orcid-sync-error-icon"
       focusable="false"
       size="20"
@@ -62,7 +62,7 @@ exports[`DashboardOrcidSync Component should render Pending status 1`] = `
 <div>
   <button
     aria-label="A manual upload of your eSpace works to ORCID is in progress."
-    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
     data-testid="help-icon-orcid"
@@ -72,17 +72,17 @@ exports[`DashboardOrcidSync Component should render Pending status 1`] = `
     type="button"
   >
     <span
-      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
       data-testid="dashboard-orcid-sync-progress-icon"
       role="progressbar"
       style="width: 20px; height: 20px;"
     >
       <svg
-        class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+        class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
         viewBox="22 22 44 44"
       >
         <circle
-          class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+          class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
           cx="44"
           cy="44"
           fill="none"
@@ -99,7 +99,7 @@ exports[`DashboardOrcidSync Component should render properly 1`] = `
 <div>
   <button
     aria-label="Information about uploading your eSpace works to ORCID"
-    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
     data-testid="help-icon-orcid"
@@ -108,7 +108,7 @@ exports[`DashboardOrcidSync Component should render properly 1`] = `
     type="button"
   >
     <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
       data-testid="HelpOutlineIcon"
       focusable="false"
       role="img"
@@ -129,7 +129,7 @@ exports[`DashboardOrcidSync Component should render properly when sync is disabl
 <div>
   <button
     aria-label="Information about uploading your eSpace works to ORCID"
-    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
     data-testid="help-icon-orcid"
@@ -138,7 +138,7 @@ exports[`DashboardOrcidSync Component should render properly when sync is disabl
     type="button"
   >
     <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
       data-testid="HelpOutlineIcon"
       focusable="false"
       role="img"
@@ -159,7 +159,7 @@ exports[`DashboardOrcidSync Component should render properly when sync is enable
 <div>
   <button
     aria-label="Information about uploading your eSpace works to ORCID"
-    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
     data-testid="help-icon-orcid"
@@ -168,7 +168,7 @@ exports[`DashboardOrcidSync Component should render properly when sync is enable
     type="button"
   >
     <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
       data-testid="HelpOutlineIcon"
       focusable="false"
       role="img"
@@ -189,7 +189,7 @@ exports[`DashboardOrcidSync Container should render properly 1`] = `
 <div>
   <button
     aria-label="Information about uploading your eSpace works to ORCID"
-    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
     data-testid="help-icon-orcid"
@@ -198,7 +198,7 @@ exports[`DashboardOrcidSync Container should render properly 1`] = `
     type="button"
   >
     <svg
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-8dorju-MuiSvgIcon-root"
       data-testid="HelpOutlineIcon"
       focusable="false"
       role="img"

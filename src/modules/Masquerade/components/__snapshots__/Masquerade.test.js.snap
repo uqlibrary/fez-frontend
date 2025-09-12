@@ -76,11 +76,11 @@ exports[`Component Masquerade Should render form as expected 1`] = `
              When masquerading as a user, you will effectively become that user, and changes you make will apply to the account!
           </p>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-oa57e2-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-2kdqtc-MuiGrid-root"
             style="margin-top: 12px;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -107,7 +107,7 @@ exports[`Component Masquerade Should render form as expected 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -204,11 +204,11 @@ exports[`Component Masquerade Should render readonly description 1`] = `
              As a read-only masquerader, you can view all parts of the profile, but you are not able to make any changes to the account.
           </p>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-oa57e2-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-2kdqtc-MuiGrid-root"
             style="margin-top: 12px;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -235,7 +235,7 @@ exports[`Component Masquerade Should render readonly description 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
