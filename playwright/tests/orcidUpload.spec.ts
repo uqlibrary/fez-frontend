@@ -31,6 +31,7 @@ test.describe('ORCiD Upload button', () => {
         const helpIcon = page.getByTestId('help-icon-orcid');
         const drawerMessage = page.getByTestId('help-drawer-message');
         const progress = page.getByTestId('dashboard-orcid-sync-progress-icon');
+        const savingHelpText = page.getByText('Saving ORCID sync preferences.');
 
         await expect(drawerMessage).toBeHidden();
         await helpIcon.click();
@@ -42,12 +43,11 @@ test.describe('ORCiD Upload button', () => {
         await expect(progress).toBeVisible();
 
         // should not allow to open drawer until saving req. is processed
+        await expect(savingHelpText).toBeHidden();
         await progress.click();
         await expect(drawerMessage).toBeHidden();
 
         // should give used feedback of what's happening
-        const savingHelpText = page.getByText('Saving ORCID sync preferences.');
-        await expect(savingHelpText).toBeHidden();
         await progress.hover();
         await expect(savingHelpText).toBeVisible();
 
