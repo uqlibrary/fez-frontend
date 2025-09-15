@@ -213,7 +213,7 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'Sherpa Romeo open access and archiving policies',
+                    heading: 'View Open Policy Finder',
                     fieldId: 'srm-journal-link',
                     data: [
                         {
@@ -227,6 +227,7 @@ export const viewJournalConfig = {
                     templateProps: {
                         href: item => item.srm_journal_link,
                         title: 'View SHERPA/RoMEO details in a new tab',
+                        ariaLabel: item => `Click to view ISSN ${item.srm_issn} SHERPA/RoMEO details in a new tab`,
                         text: item => item.srm_issn,
                     },
                 },
