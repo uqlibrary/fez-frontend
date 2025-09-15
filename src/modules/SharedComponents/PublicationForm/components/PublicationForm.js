@@ -400,20 +400,20 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                         </Grid>
                     )}
                 </Grid>
-                <Grid container spacing={3}>
-                    <Grid size="grow" />
-                    <Grid
-                        size={{
-                            xs: 12,
-                            sm: 'auto',
-                        }}
-                    >
+                <Grid
+                    container
+                    spacing={2}
+                    padding={2}
+                    sx={{ justifyContent: 'flex-end', pr: 0, pl: { xs: 0, sm: 'auto' } }}
+                >
+                    <Grid size={{ xs: 12, sm: 'auto' }}>
                         <Button
                             color="secondary"
                             fullWidth
                             children={txt.cancel}
                             disabled={isSubmitting}
                             onClick={onFormCancel}
+                            sx={{ sm: { width: 'auto' } }}
                         />
                     </Grid>
                     {!!displayType && (!hasSubtype || subtype) && (
@@ -434,6 +434,7 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                                 fullWidth
                                 children={txt.submit}
                                 disabled={isSubmitting || !isEmptyObject(formLevelError) || hasValidationError}
+                                sx={{ sm: { width: 'auto' } }}
                             />
                         </Grid>
                     )}
