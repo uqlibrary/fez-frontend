@@ -512,7 +512,7 @@ export const AttachedFiles = ({
                                     )}
                                 </Grid>
                                 <Grid
-                                    sx={{ display: { xs: 'none', sm: 'block' }, ...classes.dataWrapper }}
+                                    sx={{ display: { xs: 'none', md: 'block' }, ...classes.dataWrapper }}
                                     size={{
                                         md: 2,
                                     }}
