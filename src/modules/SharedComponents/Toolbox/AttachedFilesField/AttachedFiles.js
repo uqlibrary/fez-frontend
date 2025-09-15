@@ -452,8 +452,9 @@ export const AttachedFiles = ({
                                 sx={{
                                     alignItems: 'center',
                                 }}
+                                flexWrap={'nowrap'}
                             >
-                                <Grid sx={{ textAlign: 'center' }} size={1}>
+                                <Grid size={1} sx={{ textAlign: 'center' }}>
                                     <FileIcon {...item.iconProps} showPreview={showPreview} id={`file-icon-${index}`} />
                                 </Grid>
                                 <Grid
@@ -561,9 +562,9 @@ export const AttachedFiles = ({
                                                 </Box>
                                             </Grid>
                                             <Grid
+                                                size={7}
                                                 id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
                                                 sx={{ marginLeft: 1, flexGrow: 1 }}
-                                                size={7}
                                             >
                                                 {(openAccessConfig.openAccessFiles.includes(openAccessStatusId) ||
                                                     !!item.securityPolicyStatus.isEmbargoed) && (

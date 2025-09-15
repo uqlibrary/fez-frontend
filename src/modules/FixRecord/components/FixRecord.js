@@ -357,30 +357,38 @@ const FixRecord = () => {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={3}>
-                        <Grid size="grow" />
-                        <Grid>
+                    <Grid
+                        container
+                        spacing={2}
+                        padding={2}
+                        sx={{ justifyContent: 'flex-end', pr: 0, pl: { xs: 0, sm: 'auto' } }}
+                    >
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 variant={'contained'}
-                                fullWidth
                                 children={txt.cancel}
                                 disabled={isSubmitting}
                                 onClick={cancelFix}
                                 color={'default'}
+                                fullWidth
+                                sx={{ xs: { width: '100%' }, sm: { width: 'auto' } }}
                             />
                         </Grid>
+
                         {fixAction && (
-                            <Grid>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
+                                {' '}
                                 <Button
                                     type="submit"
                                     variant={'contained'}
                                     color={'primary'}
-                                    fullWidth
                                     children={txt.submit}
                                     disabled={isSubmitting || !isEmptyObject(formLevelError) || hasValidationError}
                                     id="fixSubmit"
                                     data-testid="fix-submit"
                                     data-analyticsid="fixSubmit"
+                                    fullWidth
+                                    sx={{ xs: { width: '100%' }, sm: { width: 'auto' } }}
                                 />
                             </Grid>
                         )}
