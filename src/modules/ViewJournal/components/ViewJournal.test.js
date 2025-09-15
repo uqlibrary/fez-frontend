@@ -198,9 +198,7 @@ describe('ViewJournal', () => {
             'https://doaj.org/toc/0090-0036',
         );
 
-        expect(getByTestId('srm-journal-link-header')).toHaveTextContent(
-            'Sherpa Romeo open access and archiving policies',
-        );
+        expect(getByTestId('srm-journal-link-header')).toHaveTextContent('View Open Policy Finder');
         expect(getByTestId('srm-journal-link-0-value')).toHaveTextContent('0090-0036');
         expect(getByTestId('srm-journal-link-0-lookup-link')).toHaveAttribute(
             'href',
