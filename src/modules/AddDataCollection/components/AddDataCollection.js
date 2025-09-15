@@ -852,13 +852,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={2}>
-                        <Grid
-                            size={{
-                                xs: false,
-                                sm: 'grow',
-                            }}
-                        />
+                    <Grid
+                        container
+                        spacing={2}
+                        padding={2}
+                        sx={{ justifyContent: 'flex-end', pr: 0, pl: { xs: 0, sm: 'auto' } }}
+                    >
                         <Grid
                             size={{
                                 xs: 12,
@@ -873,6 +872,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 disabled={isSubmitting}
                                 onClick={_restartWorkflow}
                                 color={'default'}
+                                sx={{ sm: { width: 'auto' } }}
                             />
                         </Grid>
                         <Grid
@@ -891,6 +891,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 aria-label={formLocale.addDataset.submit}
                                 onClick={handleSubmit(onSubmit)}
                                 disabled={isSubmitting || disableSubmit || JSON.stringify(errors) !== '{}'}
+                                sx={{ sm: { width: 'auto' } }}
                             />
                         </Grid>
                     </Grid>

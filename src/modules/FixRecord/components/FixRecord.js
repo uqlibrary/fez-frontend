@@ -371,13 +371,12 @@ const FixRecord = () => {
                                 onClick={cancelFix}
                                 color={'default'}
                                 fullWidth
-                                sx={{ xs: { width: '100%' }, sm: { width: 'auto' } }}
+                                sx={{ sm: { width: 'auto' } }}
                             />
                         </Grid>
 
                         {fixAction && (
                             <Grid size={{ xs: 12, sm: 'auto' }}>
-                                {' '}
                                 <Button
                                     type="submit"
                                     variant={'contained'}
@@ -388,7 +387,7 @@ const FixRecord = () => {
                                     data-testid="fix-submit"
                                     data-analyticsid="fixSubmit"
                                     fullWidth
-                                    sx={{ xs: { width: '100%' }, sm: { width: 'auto' } }}
+                                    sx={{ sm: { width: 'auto' } }}
                                 />
                             </Grid>
                         )}

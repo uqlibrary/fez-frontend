@@ -800,17 +800,14 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1peu8cu-MuiGrid-root"
         >
-          <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-grow css-gootkv-MuiGrid-root"
-          />
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
               aria-label="Cancel"
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-15uh0tt-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-15rrvmf-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -822,7 +819,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
           >
             <button
               aria-label="Submit for approval"
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-qh3gja-MuiButtonBase-root-MuiButton-root"
               data-testid="submit-data-collection"
               id="submit-data-collection"
               tabindex="0"

@@ -380,8 +380,12 @@ const ClaimRecord = () => {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={3}>
-                        <Grid sx={{ display: { xs: 'none', sm: 'block' } }} size="grow" />
+                    <Grid
+                        container
+                        spacing={2}
+                        padding={2}
+                        sx={{ justifyContent: 'flex-end', pr: 0, pl: { xs: 0, sm: 'auto' } }}
+                    >
                         <Grid
                             size={{
                                 xs: 12,
@@ -395,6 +399,7 @@ const ClaimRecord = () => {
                                 disabled={isSubmitting}
                                 onClick={cancelClaim}
                                 color={'default'}
+                                sx={{ sm: { width: 'auto' } }}
                             />
                         </Grid>
                         {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&
@@ -415,6 +420,7 @@ const ClaimRecord = () => {
                                         id="claimSubmit"
                                         data-testid="claim-record-submit"
                                         data-analyticsid="claimSubmit"
+                                        sx={{ sm: { width: 'auto' } }}
                                     />
                                 </Grid>
                             )}

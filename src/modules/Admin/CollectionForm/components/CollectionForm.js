@@ -265,22 +265,10 @@ export const CollectionForm = ({ disableSubmit }) => {
                     <Grid
                         container
                         spacing={2}
-                        sx={{
-                            padding: 0,
-                        }}
+                        padding={2}
+                        sx={{ justifyContent: 'flex-end', pr: 0, pl: { xs: 0, sm: 'auto' } }}
                     >
-                        <Grid
-                            size={{
-                                xs: false,
-                                sm: 'grow',
-                            }}
-                        />
-                        <Grid
-                            size={{
-                                xs: 12,
-                                sm: 'auto',
-                            }}
-                        >
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 data-analyticsid="cancel-collection"
                                 data-testid="cancel-collection"
@@ -289,6 +277,7 @@ export const CollectionForm = ({ disableSubmit }) => {
                                 disabled={isSubmitting}
                                 onClick={returnHome}
                                 color={'default'}
+                                sx={{ sm: { width: 'auto' } }}
                             >
                                 {txt.cancel}
                             </Button>
@@ -307,6 +296,7 @@ export const CollectionForm = ({ disableSubmit }) => {
                                 fullWidth
                                 onClick={handleSubmit(onSubmit)}
                                 disabled={isSubmitting || disableSubmit || JSON.stringify(errors) !== '{}'}
+                                sx={{ sm: { width: 'auto' } }}
                             >
                                 {isSubmitting ? (
                                     <CircularProgress
