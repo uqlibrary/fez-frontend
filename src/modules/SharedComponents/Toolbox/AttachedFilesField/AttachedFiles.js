@@ -452,6 +452,7 @@ export const AttachedFiles = ({
                                 sx={{
                                     alignItems: 'center',
                                 }}
+                                flexWrap={'nowrap'}
                             >
                                 <Grid size={1} sx={{ textAlign: 'center' }}>
                                     <FileIcon {...item.iconProps} showPreview={showPreview} id={`file-icon-${index}`} />
@@ -513,8 +514,7 @@ export const AttachedFiles = ({
                                 <Grid
                                     sx={{ display: { xs: 'none', sm: 'block' }, ...classes.dataWrapper }}
                                     size={{
-                                        md: isAdminEditing ? 3 : 5,
-                                        sm: isAdminEditing ? 3 : 7,
+                                        md: 2,
                                     }}
                                 >
                                     <Typography variant="body2" noWrap>
