@@ -89,7 +89,6 @@ describe('Files Component ', () => {
 
     afterEach(() => {
         MockDate.reset();
-        // eslint-disable-next-line max-len
         mockOnVideoLoad =
             mockOnVideoFailed =
             mockOnClose =
@@ -324,7 +323,6 @@ describe('Files Component ', () => {
                 ],
             },
         });
-
         expect(container).toMatchSnapshot();
     });
 
