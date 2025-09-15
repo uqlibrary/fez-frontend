@@ -6,35 +6,6 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
     class="MuiBox-root css-moxgk8"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-    >
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-      >
-        <button
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-          data-analyticsid="new-file-upload-up-0"
-          data-testid="new-file-upload-up-0"
-          disabled=""
-          id="new-file-upload-down-0"
-          tabindex="-1"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-            data-testid="ExpandLessIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div
       class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
     >
       <div
@@ -105,34 +76,6 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
         </span>
       </div>
     </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-    >
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-      >
-        <button
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-          data-analyticsid="new-file-upload-down-0"
-          data-testid="new-file-upload-down-0"
-          id="new-file-upload-down-0"
-          tabindex="0"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-            data-testid="ExpandMoreIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
   </div>
 </div>
 `;
@@ -142,35 +85,6 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
   <div
     class="MuiBox-root css-moxgk8"
   >
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-    >
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-      >
-        <button
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-          data-analyticsid="new-file-upload-up-0"
-          data-testid="new-file-upload-up-0"
-          disabled=""
-          id="new-file-upload-down-0"
-          tabindex="-1"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-            data-testid="ExpandLessIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
     <div
       class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
     >
@@ -300,34 +214,6 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         </span>
       </div>
     </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-    >
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-      >
-        <button
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-          data-analyticsid="new-file-upload-down-0"
-          data-testid="new-file-upload-down-0"
-          id="new-file-upload-down-0"
-          tabindex="0"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-            data-testid="ExpandMoreIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
   </div>
 </div>
 `;
@@ -337,35 +223,6 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
   <div
     class="MuiBox-root css-moxgk8"
   >
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-    >
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-      >
-        <button
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-          data-analyticsid="new-file-upload-up-0"
-          data-testid="new-file-upload-up-0"
-          disabled=""
-          id="new-file-upload-down-0"
-          tabindex="-1"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-            data-testid="ExpandLessIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
     <div
       class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
     >
@@ -503,34 +360,6 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         </span>
       </div>
     </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-    >
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-      >
-        <button
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-          data-analyticsid="new-file-upload-down-0"
-          data-testid="new-file-upload-down-0"
-          id="new-file-upload-down-0"
-          tabindex="0"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-            data-testid="ExpandMoreIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
   </div>
 </div>
 `;
@@ -540,35 +369,6 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
   <div
     class="MuiBox-root css-moxgk8"
   >
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-    >
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-      >
-        <button
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-          data-analyticsid="new-file-upload-up-0"
-          data-testid="new-file-upload-up-0"
-          disabled=""
-          id="new-file-upload-down-0"
-          tabindex="-1"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-            data-testid="ExpandLessIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
     <div
       class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
     >
@@ -710,34 +510,6 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
         </span>
       </div>
     </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-    >
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-      >
-        <button
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-          data-analyticsid="new-file-upload-down-0"
-          data-testid="new-file-upload-down-0"
-          id="new-file-upload-down-0"
-          tabindex="0"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-            data-testid="ExpandMoreIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
   </div>
 </div>
 `;
@@ -747,35 +519,6 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
   <div
     class="MuiBox-root css-moxgk8"
   >
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-    >
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-      >
-        <button
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-          data-analyticsid="new-file-upload-up-0"
-          data-testid="new-file-upload-up-0"
-          disabled=""
-          id="new-file-upload-down-0"
-          tabindex="-1"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-            data-testid="ExpandLessIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
     <div
       class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
     >
@@ -880,7 +623,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
               aria-invalid="true"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              id=":rp:"
+              id=":ri:"
               inputmode="text"
               placeholder="dd/mm/yyyy"
               type="text"
@@ -939,34 +682,6 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
             </svg>
           </button>
         </span>
-      </div>
-    </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-    >
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-      >
-        <button
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-          data-analyticsid="new-file-upload-down-0"
-          data-testid="new-file-upload-down-0"
-          id="new-file-upload-down-0"
-          tabindex="0"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-            data-testid="ExpandMoreIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-            />
-          </svg>
-        </button>
       </div>
     </div>
   </div>

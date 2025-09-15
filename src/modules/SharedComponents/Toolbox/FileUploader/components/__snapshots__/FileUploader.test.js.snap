@@ -1,5 +1,979 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component FileUploader should alphabetically order files as they are added 1`] = `
+<div>
+  <div
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+  >
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
+      >
+        You may add up to 5 files (max 1KB each)
+      </p>
+      <div
+        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        >
+          <div
+            id="FileUploadDropZone"
+            role="presentation"
+            style="padding: 0px;"
+            tabindex="0"
+          >
+            <input
+              aria-label="Upload files"
+              data-analyticsid="fez-datastream-info-input"
+              data-testid="fez-datastream-info-input"
+              id="Uploader"
+              multiple=""
+              style="display: none;"
+              tabindex="-1"
+              type="file"
+            />
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container FileUploadTermsAndConditions-root css-cid41t-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
+                >
+                  File upload restrictions
+                </p>
+                <div>
+                  Please ensure:
+                  <ul>
+                    <li>
+                      files are under 5GB in size
+                    </li>
+                    <li>
+                      file names begin with a letter and are less than 45 characters long
+                    </li>
+                    <li>
+                      file names contain only upper and lowercase alphanumeric characters, and underscores
+                    </li>
+                    <li>
+                      file names must not contain any spaces
+                    </li>
+                    <li>
+                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                      <br />
+                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+                    </li>
+                    <li>
+                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                    </li>
+                    <li>
+                      file names, regardless of extension, must be unique
+                    </li>
+                    <li>
+                      files are uploaded individually and not inside a folder
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
+              >
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-v3yw6j-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
+                      data-testid="CloudUploadIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  >
+                    <p>
+                      Click here to select files,
+                      <br />
+                      or drag files into this area to upload
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+    >
+      <div
+        data-testid="alert"
+        style="margin-top: 5px;"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container css-1dx371l-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+                  data-testid="DoneIcon"
+                  focusable="false"
+                  id="done-icon"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+              >
+                <b>
+                  Success - 
+                </b>
+                <span
+                  data-testid="alert-message"
+                >
+                  Successfully added 2 file(s) to upload queue.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+    >
+      <div
+        data-testid="alert"
+        style="margin-top: 5px;"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container css-xsukhl-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+                  data-testid="WarningIcon"
+                  focusable="false"
+                  id="warning-icon"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+              >
+                <b>
+                  Notice - 
+                </b>
+                <span
+                  data-testid="alert-message"
+                >
+                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+    >
+      <div
+        class="MuiBox-root css-130f8nx"
+      >
+        <div
+          style="flex-grow: 1; padding: 4px;"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-xvphft-MuiGridLegacy-root"
+            gutter="8"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-8 css-kfiyyp-MuiGridLegacy-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              >
+                File name
+              </span>
+            </div>
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              >
+                Description
+              </span>
+            </div>
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+            >
+              <span
+                aria-label="Remove all files from the upload queue"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="delete-all-files"
+                  data-testid="delete-all-files"
+                  id="delete-all-files"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      data-testid="fez-datastream-info-list"
+    >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
+      <div
+        class="MuiBox-root css-moxgk8"
+        data-testid="fez-datastream-info-list-row-0"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-8 css-kfiyyp-MuiGridLegacy-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
+              data-testid="dsi-dsid-0"
+            >
+              B_hello.png
+               (
+              7.0B
+              )
+            </p>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+              data-testid="dsi-label-upload-0"
+            >
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  data-analyticsid="dsi-label-upload-0-input"
+                  data-testid="dsi-label-upload-0-input"
+                  id="dsi-label-upload-0-input"
+                  maxlength="255"
+                  name="fileDescription"
+                  placeholder="Description"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+          >
+            <span
+              aria-label="Remove this file"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="dsi-dsid-0-delete"
+                data-testid="dsi-dsid-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                  />
+                </svg>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
+      <div
+        class="MuiBox-root css-moxgk8"
+        data-testid="fez-datastream-info-list-row-1"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-8 css-kfiyyp-MuiGridLegacy-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
+              data-testid="dsi-dsid-1"
+            >
+              C_hello.png
+               (
+              7.0B
+              )
+            </p>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+              data-testid="dsi-label-upload-1"
+            >
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  data-analyticsid="dsi-label-upload-1-input"
+                  data-testid="dsi-label-upload-1-input"
+                  id="dsi-label-upload-1-input"
+                  maxlength="255"
+                  name="fileDescription"
+                  placeholder="Description"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+          >
+            <span
+              aria-label="Remove this file"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="dsi-dsid-1-delete"
+                data-testid="dsi-dsid-1-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                  />
+                </svg>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component FileUploader should alphabetically order files as they are added 2`] = `
+<div>
+  <div
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+  >
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
+      >
+        You may add up to 5 files (max 1KB each)
+      </p>
+      <div
+        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        >
+          <div
+            id="FileUploadDropZone"
+            role="presentation"
+            style="padding: 0px;"
+            tabindex="0"
+          >
+            <input
+              aria-label="Upload files"
+              data-analyticsid="fez-datastream-info-input"
+              data-testid="fez-datastream-info-input"
+              id="Uploader"
+              multiple=""
+              style="display: none;"
+              tabindex="-1"
+              type="file"
+            />
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container FileUploadTermsAndConditions-root css-cid41t-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
+                >
+                  File upload restrictions
+                </p>
+                <div>
+                  Please ensure:
+                  <ul>
+                    <li>
+                      files are under 5GB in size
+                    </li>
+                    <li>
+                      file names begin with a letter and are less than 45 characters long
+                    </li>
+                    <li>
+                      file names contain only upper and lowercase alphanumeric characters, and underscores
+                    </li>
+                    <li>
+                      file names must not contain any spaces
+                    </li>
+                    <li>
+                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                      <br />
+                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+                    </li>
+                    <li>
+                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                    </li>
+                    <li>
+                      file names, regardless of extension, must be unique
+                    </li>
+                    <li>
+                      files are uploaded individually and not inside a folder
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
+              >
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-v3yw6j-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
+                      data-testid="CloudUploadIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  >
+                    <p>
+                      Click here to select files,
+                      <br />
+                      or drag files into this area to upload
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+    >
+      <div
+        data-testid="alert"
+        style="margin-top: 5px;"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container css-1dx371l-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+                  data-testid="DoneIcon"
+                  focusable="false"
+                  id="done-icon"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+              >
+                <b>
+                  Success - 
+                </b>
+                <span
+                  data-testid="alert-message"
+                >
+                  Successfully added 3 file(s) to upload queue.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+    >
+      <div
+        data-testid="alert"
+        style="margin-top: 5px;"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container css-xsukhl-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+                  data-testid="WarningIcon"
+                  focusable="false"
+                  id="warning-icon"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+              >
+                <b>
+                  Notice - 
+                </b>
+                <span
+                  data-testid="alert-message"
+                >
+                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+    >
+      <div
+        class="MuiBox-root css-130f8nx"
+      >
+        <div
+          style="flex-grow: 1; padding: 4px;"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-xvphft-MuiGridLegacy-root"
+            gutter="8"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-8 css-kfiyyp-MuiGridLegacy-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              >
+                File name
+              </span>
+            </div>
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              >
+                Description
+              </span>
+            </div>
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+            >
+              <span
+                aria-label="Remove all files from the upload queue"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="delete-all-files"
+                  data-testid="delete-all-files"
+                  id="delete-all-files"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      data-testid="fez-datastream-info-list"
+    >
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
+      <div
+        class="MuiBox-root css-moxgk8"
+        data-testid="fez-datastream-info-list-row-0"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-8 css-kfiyyp-MuiGridLegacy-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
+              data-testid="dsi-dsid-0"
+            >
+              A_hello.png
+               (
+              7.0B
+              )
+            </p>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+              data-testid="dsi-label-upload-0"
+            >
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  data-analyticsid="dsi-label-upload-0-input"
+                  data-testid="dsi-label-upload-0-input"
+                  id="dsi-label-upload-0-input"
+                  maxlength="255"
+                  name="fileDescription"
+                  placeholder="Description"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+          >
+            <span
+              aria-label="Remove this file"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="dsi-dsid-0-delete"
+                data-testid="dsi-dsid-0-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                  />
+                </svg>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
+      <div
+        class="MuiBox-root css-moxgk8"
+        data-testid="fez-datastream-info-list-row-1"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-8 css-kfiyyp-MuiGridLegacy-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
+              data-testid="dsi-dsid-1"
+            >
+              B_hello.png
+               (
+              7.0B
+              )
+            </p>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+              data-testid="dsi-label-upload-1"
+            >
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  data-analyticsid="dsi-label-upload-1-input"
+                  data-testid="dsi-label-upload-1-input"
+                  id="dsi-label-upload-1-input"
+                  maxlength="255"
+                  name="fileDescription"
+                  placeholder="Description"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+          >
+            <span
+              aria-label="Remove this file"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="dsi-dsid-1-delete"
+                data-testid="dsi-dsid-1-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                  />
+                </svg>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <span
+        class="MuiBox-root css-0"
+        data-testid="confirmDialogBox"
+      />
+      <div
+        class="MuiBox-root css-moxgk8"
+        data-testid="fez-datastream-info-list-row-2"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-8 css-kfiyyp-MuiGridLegacy-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
+              data-testid="dsi-dsid-2"
+            >
+              C_hello.png
+               (
+              7.0B
+              )
+            </p>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+              data-testid="dsi-label-upload-2"
+            >
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  data-analyticsid="dsi-label-upload-2-input"
+                  data-testid="dsi-label-upload-2-input"
+                  id="dsi-label-upload-2-input"
+                  maxlength="255"
+                  name="fileDescription"
+                  placeholder="Description"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+          >
+            <span
+              aria-label="Remove this file"
+              class=""
+              data-mui-internal-clone-element="true"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="dsi-dsid-2-delete"
+                data-testid="dsi-dsid-2-delete"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                  />
+                </svg>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Component FileUploader should delete all files 1`] = `
 <div>
   <div
@@ -410,35 +1384,6 @@ exports[`Component FileUploader should delete first file 1`] = `
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -507,35 +1452,6 @@ exports[`Component FileUploader should delete first file 1`] = `
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -835,35 +1751,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -934,34 +1821,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
             </span>
           </div>
         </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
       <span
         class="MuiBox-root css-0"
@@ -971,34 +1830,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
         class="MuiBox-root css-moxgk8"
         data-testid="fez-datastream-info-list-row-1"
       >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
         <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
@@ -1068,1578 +1899,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component FileUploader should handle file order change 1`] = `
-<div>
-  <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
-  >
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-    >
-      <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
-      >
-        You may add up to 5 files (max 1KB each)
-      </p>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-        >
-          <div
-            id="FileUploadDropZone"
-            role="presentation"
-            style="padding: 0px;"
-            tabindex="0"
-          >
-            <input
-              aria-label="Upload files"
-              data-analyticsid="fez-datastream-info-input"
-              data-testid="fez-datastream-info-input"
-              id="Uploader"
-              multiple=""
-              style="display: none;"
-              tabindex="-1"
-              type="file"
-            />
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-container FileUploadTermsAndConditions-root css-cid41t-MuiGridLegacy-root"
-            >
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
-              >
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
-                >
-                  File upload restrictions
-                </p>
-                <div>
-                  Please ensure:
-                  <ul>
-                    <li>
-                      files are under 5GB in size
-                    </li>
-                    <li>
-                      file names begin with a letter and are less than 45 characters long
-                    </li>
-                    <li>
-                      file names contain only upper and lowercase alphanumeric characters, and underscores
-                    </li>
-                    <li>
-                      file names must not contain any spaces
-                    </li>
-                    <li>
-                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-                      <br />
-                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                    </li>
-                    <li>
-                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
-                    </li>
-                    <li>
-                      file names, regardless of extension, must be unique
-                    </li>
-                    <li>
-                      files are uploaded individually and not inside a folder
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
-              >
-                <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-v3yw6j-MuiGridLegacy-root"
-                >
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
-                      data-testid="CloudUploadIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                  >
-                    <p>
-                      Click here to select files,
-                      <br />
-                      or drag files into this area to upload
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component FileUploader should handle file order change 2`] = `
-<div>
-  <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
-  >
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-    >
-      <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
-      >
-        You may add up to 5 files (max 1KB each)
-      </p>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-        >
-          <div
-            id="FileUploadDropZone"
-            role="presentation"
-            style="padding: 0px;"
-            tabindex="0"
-          >
-            <input
-              aria-label="Upload files"
-              data-analyticsid="fez-datastream-info-input"
-              data-testid="fez-datastream-info-input"
-              id="Uploader"
-              multiple=""
-              style="display: none;"
-              tabindex="-1"
-              type="file"
-            />
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-container FileUploadTermsAndConditions-root css-cid41t-MuiGridLegacy-root"
-            >
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
-              >
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
-                >
-                  File upload restrictions
-                </p>
-                <div>
-                  Please ensure:
-                  <ul>
-                    <li>
-                      files are under 5GB in size
-                    </li>
-                    <li>
-                      file names begin with a letter and are less than 45 characters long
-                    </li>
-                    <li>
-                      file names contain only upper and lowercase alphanumeric characters, and underscores
-                    </li>
-                    <li>
-                      file names must not contain any spaces
-                    </li>
-                    <li>
-                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-                      <br />
-                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                    </li>
-                    <li>
-                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
-                    </li>
-                    <li>
-                      file names, regardless of extension, must be unique
-                    </li>
-                    <li>
-                      files are uploaded individually and not inside a folder
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
-              >
-                <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-v3yw6j-MuiGridLegacy-root"
-                >
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
-                      data-testid="CloudUploadIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                  >
-                    <p>
-                      Click here to select files,
-                      <br />
-                      or drag files into this area to upload
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-    >
-      <div
-        data-testid="alert"
-        style="margin-top: 5px;"
-      >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container css-1dx371l-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
-            >
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="DoneIcon"
-                  focusable="false"
-                  id="done-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
-                  />
-                </svg>
-              </div>
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
-              >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-    >
-      <div
-        data-testid="alert"
-        style="margin-top: 5px;"
-      >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container css-xsukhl-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
-            >
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
-                  focusable="false"
-                  id="warning-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
-                  />
-                </svg>
-              </div>
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
-              >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-    >
-      <div
-        class="MuiBox-root css-130f8nx"
-      >
-        <div
-          style="flex-grow: 1; padding: 4px;"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-xvphft-MuiGridLegacy-root"
-            gutter="8"
-          >
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 MuiGridLegacy-grid-md-3 css-ngslpu-MuiGridLegacy-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
-              >
-                File name
-              </span>
-            </div>
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
-              >
-                Description
-              </span>
-            </div>
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
-              >
-                Access conditions
-              </span>
-            </div>
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
-              >
-                Embargo release date
-              </span>
-            </div>
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
-            >
-              <span
-                aria-label="Remove all files from the upload queue"
-                class=""
-                data-mui-internal-clone-element="true"
-              >
-                <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
-                  data-analyticsid="delete-all-files"
-                  data-testid="delete-all-files"
-                  id="delete-all-files"
-                  tabindex="0"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                    data-testid="DeleteForeverIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                    />
-                  </svg>
-                </button>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-      data-testid="fez-datastream-info-list"
-    >
-      <span
-        class="MuiBox-root css-0"
-        data-testid="confirmDialogBox"
-      />
-      <div
-        class="MuiBox-root css-moxgk8"
-        data-testid="fez-datastream-info-list-row-0"
-      >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 MuiGridLegacy-grid-md-3 css-ngslpu-MuiGridLegacy-root"
-          >
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
-              data-testid="dsi-dsid-0"
-            >
-              hello2.png
-               (
-              6.0B
-              )
-            </p>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-              data-testid="dsi-label-upload-0"
-            >
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-              >
-                <input
-                  aria-invalid="false"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                  data-analyticsid="dsi-label-upload-0-input"
-                  data-testid="dsi-label-upload-0-input"
-                  id="dsi-label-upload-0-input"
-                  maxlength="255"
-                  name="fileDescription"
-                  placeholder="Description"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
-            >
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl MuiSelect-root css-1ygkfzo-MuiInputBase-root-MuiInput-root"
-              >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  aria-invalid="true"
-                  aria-labelledby="dsi-open-access-0-select"
-                  aria-required="true"
-                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                  data-testid="dsi-open-access-0-select"
-                  id="dsi-open-access-0-select"
-                  role="combobox"
-                  tabindex="0"
-                >
-                  Select access conditions
-                </div>
-                <input
-                  aria-hidden="true"
-                  aria-invalid="true"
-                  aria-labelledby="dsi-open-access-0-label"
-                  autofocus=""
-                  class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                  data-analyticsid="dsi-open-access-0-input"
-                  data-testid="dsi-open-access-0-input"
-                  id="dsi-open-access-0-input"
-                  required=""
-                  tabindex="-1"
-                  value=""
-                />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
-                  data-testid="ArrowDropDownIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M7 10l5 5 5-5z"
-                  />
-                </svg>
-              </div>
-              <p
-                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-15g82cj-MuiFormHelperText-root"
-                data-testid="dsi-open-access-0-helper-text"
-                id="dsi-open-access-0-helper-text"
-              >
-                This field is required
-              </p>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
-          >
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
-              data-testid="dsi-embargo-date-0"
-            >
-              No date required
-            </p>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
-          >
-            <span
-              aria-label="Remove this file"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="dsi-dsid-0-delete"
-                data-testid="dsi-dsid-0-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <span
-        class="MuiBox-root css-0"
-        data-testid="confirmDialogBox"
-      />
-      <div
-        class="MuiBox-root css-moxgk8"
-        data-testid="fez-datastream-info-list-row-1"
-      >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 MuiGridLegacy-grid-md-3 css-ngslpu-MuiGridLegacy-root"
-          >
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
-              data-testid="dsi-dsid-1"
-            >
-              hello.png
-               (
-              5.0B
-              )
-            </p>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-              data-testid="dsi-label-upload-1"
-            >
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-              >
-                <input
-                  aria-invalid="false"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                  data-analyticsid="dsi-label-upload-1-input"
-                  data-testid="dsi-label-upload-1-input"
-                  id="dsi-label-upload-1-input"
-                  maxlength="255"
-                  name="fileDescription"
-                  placeholder="Description"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
-            >
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1ygkfzo-MuiInputBase-root-MuiInput-root"
-              >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  aria-invalid="true"
-                  aria-labelledby="dsi-open-access-1-select"
-                  aria-required="true"
-                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                  data-testid="dsi-open-access-1-select"
-                  id="dsi-open-access-1-select"
-                  role="combobox"
-                  tabindex="0"
-                >
-                  Select access conditions
-                </div>
-                <input
-                  aria-hidden="true"
-                  aria-invalid="true"
-                  aria-labelledby="dsi-open-access-1-label"
-                  class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                  data-analyticsid="dsi-open-access-1-input"
-                  data-testid="dsi-open-access-1-input"
-                  id="dsi-open-access-1-input"
-                  required=""
-                  tabindex="-1"
-                  value=""
-                />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
-                  data-testid="ArrowDropDownIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M7 10l5 5 5-5z"
-                  />
-                </svg>
-              </div>
-              <p
-                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-15g82cj-MuiFormHelperText-root"
-                data-testid="dsi-open-access-1-helper-text"
-                id="dsi-open-access-1-helper-text"
-              >
-                This field is required
-              </p>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
-          >
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
-              data-testid="dsi-embargo-date-1"
-            >
-              No date required
-            </p>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
-          >
-            <span
-              aria-label="Remove this file"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="dsi-dsid-1-delete"
-                data-testid="dsi-dsid-1-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Component FileUploader should handle file order change 3`] = `
-<div>
-  <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
-  >
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-    >
-      <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
-      >
-        You may add up to 5 files (max 1KB each)
-      </p>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-        >
-          <div
-            id="FileUploadDropZone"
-            role="presentation"
-            style="padding: 0px;"
-            tabindex="0"
-          >
-            <input
-              aria-label="Upload files"
-              data-analyticsid="fez-datastream-info-input"
-              data-testid="fez-datastream-info-input"
-              id="Uploader"
-              multiple=""
-              style="display: none;"
-              tabindex="-1"
-              type="file"
-            />
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-container FileUploadTermsAndConditions-root css-cid41t-MuiGridLegacy-root"
-            >
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
-              >
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
-                >
-                  File upload restrictions
-                </p>
-                <div>
-                  Please ensure:
-                  <ul>
-                    <li>
-                      files are under 5GB in size
-                    </li>
-                    <li>
-                      file names begin with a letter and are less than 45 characters long
-                    </li>
-                    <li>
-                      file names contain only upper and lowercase alphanumeric characters, and underscores
-                    </li>
-                    <li>
-                      file names must not contain any spaces
-                    </li>
-                    <li>
-                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-                      <br />
-                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                    </li>
-                    <li>
-                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
-                    </li>
-                    <li>
-                      file names, regardless of extension, must be unique
-                    </li>
-                    <li>
-                      files are uploaded individually and not inside a folder
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
-              >
-                <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-v3yw6j-MuiGridLegacy-root"
-                >
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
-                      data-testid="CloudUploadIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                  >
-                    <p>
-                      Click here to select files,
-                      <br />
-                      or drag files into this area to upload
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-    >
-      <div
-        data-testid="alert"
-        style="margin-top: 5px;"
-      >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container css-1dx371l-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
-            >
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="DoneIcon"
-                  focusable="false"
-                  id="done-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
-                  />
-                </svg>
-              </div>
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
-              >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-    >
-      <div
-        data-testid="alert"
-        style="margin-top: 5px;"
-      >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container css-xsukhl-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
-            >
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
-                  focusable="false"
-                  id="warning-icon"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
-                  />
-                </svg>
-              </div>
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
-              >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-    >
-      <div
-        class="MuiBox-root css-130f8nx"
-      >
-        <div
-          style="flex-grow: 1; padding: 4px;"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-xvphft-MuiGridLegacy-root"
-            gutter="8"
-          >
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 MuiGridLegacy-grid-md-3 css-ngslpu-MuiGridLegacy-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
-              >
-                File name
-              </span>
-            </div>
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
-              >
-                Description
-              </span>
-            </div>
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
-              >
-                Access conditions
-              </span>
-            </div>
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
-              >
-                Embargo release date
-              </span>
-            </div>
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
-            >
-              <span
-                aria-label="Remove all files from the upload queue"
-                class=""
-                data-mui-internal-clone-element="true"
-              >
-                <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
-                  data-analyticsid="delete-all-files"
-                  data-testid="delete-all-files"
-                  id="delete-all-files"
-                  tabindex="0"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                    data-testid="DeleteForeverIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                    />
-                  </svg>
-                </button>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
-      data-testid="fez-datastream-info-list"
-    >
-      <span
-        class="MuiBox-root css-0"
-        data-testid="confirmDialogBox"
-      />
-      <div
-        class="MuiBox-root css-moxgk8"
-        data-testid="fez-datastream-info-list-row-0"
-      >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 MuiGridLegacy-grid-md-3 css-ngslpu-MuiGridLegacy-root"
-          >
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
-              data-testid="dsi-dsid-0"
-            >
-              hello.png
-               (
-              5.0B
-              )
-            </p>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-              data-testid="dsi-label-upload-0"
-            >
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-              >
-                <input
-                  aria-invalid="false"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                  data-analyticsid="dsi-label-upload-0-input"
-                  data-testid="dsi-label-upload-0-input"
-                  id="dsi-label-upload-0-input"
-                  maxlength="255"
-                  name="fileDescription"
-                  placeholder="Description"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
-            >
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl MuiSelect-root css-1ygkfzo-MuiInputBase-root-MuiInput-root"
-              >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  aria-invalid="true"
-                  aria-labelledby="dsi-open-access-0-select"
-                  aria-required="true"
-                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                  data-testid="dsi-open-access-0-select"
-                  id="dsi-open-access-0-select"
-                  role="combobox"
-                  tabindex="0"
-                >
-                  Select access conditions
-                </div>
-                <input
-                  aria-hidden="true"
-                  aria-invalid="true"
-                  aria-labelledby="dsi-open-access-0-label"
-                  autofocus=""
-                  class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                  data-analyticsid="dsi-open-access-0-input"
-                  data-testid="dsi-open-access-0-input"
-                  id="dsi-open-access-0-input"
-                  required=""
-                  tabindex="-1"
-                  value=""
-                />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
-                  data-testid="ArrowDropDownIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M7 10l5 5 5-5z"
-                  />
-                </svg>
-              </div>
-              <p
-                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-15g82cj-MuiFormHelperText-root"
-                data-testid="dsi-open-access-0-helper-text"
-                id="dsi-open-access-0-helper-text"
-              >
-                This field is required
-              </p>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
-          >
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
-              data-testid="dsi-embargo-date-0"
-            >
-              No date required
-            </p>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
-          >
-            <span
-              aria-label="Remove this file"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="dsi-dsid-0-delete"
-                data-testid="dsi-dsid-0-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <span
-        class="MuiBox-root css-0"
-        data-testid="confirmDialogBox"
-      />
-      <div
-        class="MuiBox-root css-moxgk8"
-        data-testid="fez-datastream-info-list-row-1"
-      >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 MuiGridLegacy-grid-md-3 css-ngslpu-MuiGridLegacy-root"
-          >
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
-              data-testid="dsi-dsid-1"
-            >
-              hello2.png
-               (
-              6.0B
-              )
-            </p>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-              data-testid="dsi-label-upload-1"
-            >
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-              >
-                <input
-                  aria-invalid="false"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                  data-analyticsid="dsi-label-upload-1-input"
-                  data-testid="dsi-label-upload-1-input"
-                  id="dsi-label-upload-1-input"
-                  maxlength="255"
-                  name="fileDescription"
-                  placeholder="Description"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
-            >
-              <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1ygkfzo-MuiInputBase-root-MuiInput-root"
-              >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  aria-invalid="true"
-                  aria-labelledby="dsi-open-access-1-select"
-                  aria-required="true"
-                  class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                  data-testid="dsi-open-access-1-select"
-                  id="dsi-open-access-1-select"
-                  role="combobox"
-                  tabindex="0"
-                >
-                  Select access conditions
-                </div>
-                <input
-                  aria-hidden="true"
-                  aria-invalid="true"
-                  aria-labelledby="dsi-open-access-1-label"
-                  class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                  data-analyticsid="dsi-open-access-1-input"
-                  data-testid="dsi-open-access-1-input"
-                  id="dsi-open-access-1-input"
-                  required=""
-                  tabindex="-1"
-                  value=""
-                />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
-                  data-testid="ArrowDropDownIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M7 10l5 5 5-5z"
-                  />
-                </svg>
-              </div>
-              <p
-                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-15g82cj-MuiFormHelperText-root"
-                data-testid="dsi-open-access-1-helper-text"
-                id="dsi-open-access-1-helper-text"
-              >
-                This field is required
-              </p>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
-          >
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
-              data-testid="dsi-embargo-date-1"
-            >
-              No date required
-            </p>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
-          >
-            <span
-              aria-label="Remove this file"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="dsi-dsid-1-delete"
-                data-testid="dsi-dsid-1-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -3193,35 +2452,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -3292,34 +2522,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
             </span>
           </div>
         </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
       <span
         class="MuiBox-root css-0"
@@ -3329,34 +2531,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
         class="MuiBox-root css-moxgk8"
         data-testid="fez-datastream-info-list-row-1"
       >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
         <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
@@ -3426,35 +2600,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -3891,35 +3036,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -4023,7 +3139,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   aria-invalid="false"
                   autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                  id=":r5s:"
+                  id=":r4m:"
                   inputmode="text"
                   placeholder="dd/mm/yyyy"
                   type="text"
@@ -4084,34 +3200,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
             </span>
           </div>
         </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
       <span
         class="MuiBox-root css-0"
@@ -4121,34 +3209,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         class="MuiBox-root css-moxgk8"
         data-testid="fez-datastream-info-list-row-1"
       >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
         <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
@@ -4284,35 +3344,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -5142,35 +4173,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -5307,34 +4309,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </span>
           </div>
         </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
       <span
         class="MuiBox-root css-0"
@@ -5344,34 +4318,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         class="MuiBox-root css-moxgk8"
         data-testid="fez-datastream-info-list-row-1"
       >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
         <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
@@ -5507,35 +4453,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -5853,35 +4770,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -6010,34 +4898,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </span>
           </div>
         </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
       <span
         class="MuiBox-root css-0"
@@ -6047,34 +4907,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         class="MuiBox-root css-moxgk8"
         data-testid="fez-datastream-info-list-row-1"
       >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
         <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
@@ -6210,35 +5042,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -6556,35 +5359,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -6713,34 +5487,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </span>
           </div>
         </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
       <span
         class="MuiBox-root css-0"
@@ -6750,34 +5496,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         class="MuiBox-root css-moxgk8"
         data-testid="fez-datastream-info-list-row-1"
       >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
         <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
@@ -6941,35 +5659,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -7424,35 +6113,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -7523,34 +6183,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             </span>
           </div>
         </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
       <span
         class="MuiBox-root css-0"
@@ -7560,34 +6192,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         class="MuiBox-root css-moxgk8"
         data-testid="fez-datastream-info-list-row-1"
       >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
         <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
@@ -7657,35 +6261,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -8122,35 +6697,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -8291,34 +6837,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
             </span>
           </div>
         </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
       <span
         class="MuiBox-root css-0"
@@ -8328,34 +6846,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         class="MuiBox-root css-moxgk8"
         data-testid="fez-datastream-info-list-row-1"
       >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
         <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
@@ -8495,35 +6985,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -8841,35 +7302,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -9004,34 +7436,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
             </span>
           </div>
         </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
       <span
         class="MuiBox-root css-0"
@@ -9041,34 +7445,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         class="MuiBox-root css-moxgk8"
         data-testid="fez-datastream-info-list-row-1"
       >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
         <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
@@ -9208,35 +7584,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -9554,35 +7901,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -9717,34 +8035,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
             </span>
           </div>
         </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              id="new-file-upload-down-0"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
       <span
         class="MuiBox-root css-0"
@@ -9754,34 +8044,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         class="MuiBox-root css-moxgk8"
         data-testid="fez-datastream-info-list-row-1"
       >
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-1"
-              data-testid="new-file-upload-up-1"
-              id="new-file-upload-down-1"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
         <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
@@ -9892,7 +8154,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   aria-invalid="false"
                   autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                  id=":r3b:"
+                  id=":r35:"
                   inputmode="text"
                   placeholder="dd/mm/yyyy"
                   type="text"
@@ -9951,35 +8213,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-1"
-              data-testid="new-file-upload-down-1"
-              disabled=""
-              id="new-file-upload-down-1"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -10483,35 +8716,6 @@ exports[`Component FileUploader should set max files error message 1`] = `
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -10580,35 +8784,6 @@ exports[`Component FileUploader should set max files error message 1`] = `
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -10926,35 +9101,6 @@ exports[`Component FileUploader should update file description 1`] = `
         data-testid="fez-datastream-info-list-row-0"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-145oo3t-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-up-0"
-              data-testid="new-file-upload-up-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandLessIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
           class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
         >
           <div
@@ -11089,35 +9235,6 @@ exports[`Component FileUploader should update file description 1`] = `
                 </svg>
               </button>
             </span>
-          </div>
-        </div>
-        <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-1dxuvpo-MuiGridLegacy-root"
-        >
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-pg4tn7-MuiGridLegacy-root"
-          >
-            <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1mlhtz3-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="new-file-upload-down-0"
-              data-testid="new-file-upload-down-0"
-              disabled=""
-              id="new-file-upload-down-0"
-              tabindex="-1"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                data-testid="ExpandMoreIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
