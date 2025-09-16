@@ -326,7 +326,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -406,7 +405,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -773,7 +771,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -853,7 +850,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -933,7 +929,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -1419,7 +1414,6 @@ exports[`Component FileUploader should delete first file 1`] = `
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -1786,7 +1780,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -1866,7 +1859,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -2487,7 +2479,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -2567,7 +2558,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -3071,7 +3061,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -3139,7 +3128,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   aria-invalid="false"
                   autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r30:"
+                  id="«r3g»"
                   inputmode="text"
                   placeholder="dd/mm/yyyy"
                   type="text"
@@ -3245,7 +3234,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -3308,12 +3296,12 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
               data-testid="dsi-embargo-date-1"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -3354,10 +3342,10 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2capx-MuiButtonBase-root-MuiCheckbox-root"
+          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-18d7y9d-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
         >
           <input
-            class="PrivateSwitchBase-input css-1m9pwf3"
+            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
             data-analyticsid="terms-and-conditions-input"
             data-indeterminate="false"
             data-testid="terms-and-conditions-input"
@@ -4207,7 +4195,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -4270,12 +4257,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -4352,7 +4339,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -4415,12 +4401,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
               data-testid="dsi-embargo-date-1"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -4802,7 +4788,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -4858,12 +4843,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -4940,7 +4925,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -5003,12 +4987,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
               data-testid="dsi-embargo-date-1"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -5390,7 +5374,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -5446,12 +5429,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -5528,7 +5511,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -5596,7 +5578,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   aria-invalid="false"
                   autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r1d:"
+                  id="«r1n»"
                   inputmode="text"
                   placeholder="dd/mm/yyyy"
                   type="text"
@@ -5666,10 +5648,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2capx-MuiButtonBase-root-MuiCheckbox-root"
+          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-18d7y9d-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
         >
           <input
-            class="PrivateSwitchBase-input css-1m9pwf3"
+            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
             data-analyticsid="terms-and-conditions-input"
             data-indeterminate="false"
             data-testid="terms-and-conditions-input"
@@ -6144,7 +6126,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -6224,7 +6205,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -6728,7 +6708,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -6795,12 +6774,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -6877,7 +6856,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -6944,12 +6922,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
               data-testid="dsi-embargo-date-1"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -7331,7 +7309,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -7393,12 +7370,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -7475,7 +7452,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -7542,12 +7518,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
               data-testid="dsi-embargo-date-1"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -7929,7 +7905,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -7991,12 +7966,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -8073,7 +8048,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -8147,7 +8121,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   aria-invalid="false"
                   autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r1v:"
+                  id="«r2b»"
                   inputmode="text"
                   placeholder="dd/mm/yyyy"
                   type="text"
@@ -8217,10 +8191,10 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2capx-MuiButtonBase-root-MuiCheckbox-root"
+          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-18d7y9d-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
         >
           <input
-            class="PrivateSwitchBase-input css-1m9pwf3"
+            class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
             data-analyticsid="terms-and-conditions-input"
             data-indeterminate="false"
             data-testid="terms-and-conditions-input"
@@ -8744,7 +8718,6 @@ exports[`Component FileUploader should set max files error message 1`] = `
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -9129,7 +9102,6 @@ exports[`Component FileUploader should update file description 1`] = `
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -9192,12 +9164,12 @@ exports[`Component FileUploader should update file description 1`] = `
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
