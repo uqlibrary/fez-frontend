@@ -1827,7 +1827,7 @@ exports[`PublicationCitation  should render component with default item with ima
           height="150"
           id="imageGalleryItemImage-UQ:676287"
           loading="lazy"
-          src="https://fez-staging.library.uq.edu.au/view/UQ:676287/thumbnail_image.jpg"
+          src="http://localhost/view/UQ:676287/thumbnail_image.jpg"
           width="150"
         />
       </div>
