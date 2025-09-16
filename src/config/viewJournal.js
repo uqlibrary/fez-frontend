@@ -155,14 +155,24 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'Journal URL',
-                    fieldId: 'ulr-open-access-url',
-                    data: [
-                        {
-                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_open_access_url'],
-                        },
-                    ],
-                    template: 'DefaultTemplate',
+                    heading: 'Journal home page',
+                    fieldId: 'jnl-homepage-url',
+                    getData: journalDetails =>
+                        (journalDetails.fez_journal_issn &&
+                            Array.isArray(journalDetails.fez_journal_issn) &&
+                            journalDetails.fez_journal_issn.length > 0 &&
+                            ((journalDetails.fez_journal_issn[0].fez_ulrichs &&
+                                journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url) ||
+                                (journalDetails.fez_journal_issn.length > 1 &&
+                                    journalDetails.fez_journal_issn[1].fez_ulrichs &&
+                                    journalDetails.fez_journal_issn[1].fez_ulrichs.ulr_open_access_url))) ||
+                        (journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_homepage_url),
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: item => item,
+                        text: item => item,
+                        title: 'View journal home page in a new tab',
+                    },
                 },
             ],
             [
@@ -241,23 +251,6 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'Journal home page',
-                    fieldId: 'jnl-doaj-homepage-url',
-                    data: [
-                        {
-                            path: ['fez_journal_doaj', 'jnl_doaj_homepage_url'],
-                        },
-                    ],
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: item => item,
-                        text: item => item,
-                        title: 'View journal home page in a new tab',
-                    },
-                },
-            ],
-            [
-                {
                     heading: 'Article processing charges',
                     fieldId: 'jnl-doaj-apc-average-price',
                     mergeData: true,
@@ -284,18 +277,6 @@ export const viewJournalConfig = {
                             nc: !!journalDetails.fez_journal_doaj.jnl_doaj_nc,
                         },
                     template: 'CreativeCommonsLicenceTemplate',
-                },
-            ],
-            [
-                {
-                    heading: 'DOAJ seal',
-                    fieldId: 'jnl-doaj-seal',
-                    data: [
-                        {
-                            path: ['fez_journal_doaj', 'jnl_doaj_seal'],
-                        },
-                    ],
-                    template: 'BooleanTemplate',
                 },
             ],
             [
@@ -405,7 +386,8 @@ export const viewJournalConfig = {
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => 'https://clarivate.com/webofsciencegroup/solutions/webofscience-scie',
+                        href: () =>
+                            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
                         text: () => 'More info about JCR SCIE',
                         title: 'Open more info in a new tab',
                     },
@@ -527,7 +509,8 @@ export const viewJournalConfig = {
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => 'https://clarivate.com/webofsciencegroup/solutions/webofscience-ssci',
+                        href: () =>
+                            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
                         text: () => 'More info about JCR SSCI',
                         title: 'Open more info in a new tab',
                     },
