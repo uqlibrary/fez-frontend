@@ -69,10 +69,9 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       name="rek_copyright"
-                      required="true"
+                      required=""
                     />
                   </div>
                 </div>
@@ -116,62 +115,56 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-xvszvy-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="Dataset name"
                       name="rek_title"
-                      required="true"
+                      required=""
                     />
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-xvszvy-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="Dataset description"
                       name="rek_description"
-                      required="true"
+                      required=""
                     />
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="Contact name"
                       name="contact.contactName"
-                      required="true"
+                      required=""
                     />
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="Contact name ID"
                       name="contact.contactNameId"
-                      required="true"
+                      required=""
                     />
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-xvszvy-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="Contact email"
                       name="contact.contactEmail"
-                      required="true"
+                      required=""
                     />
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-xvszvy-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="DOI"
                       name="fez_record_search_key_doi.rek_doi"
@@ -181,7 +174,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="Publisher"
                       name="fez_record_search_key_publisher.rek_publisher"
@@ -191,10 +183,9 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       name="rek_date"
-                      required="true"
+                      required=""
                     />
                   </div>
                 </div>
@@ -237,10 +228,9 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   Select Field of Research (FoR) codes
                 </p>
                 <field
-                  disabled="false"
                   is="mock"
                   name="fieldOfResearch"
-                  required="true"
+                  required=""
                 />
               </div>
             </div>
@@ -276,10 +266,9 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 id="standard-card-creators-content"
               >
                 <field
-                  disabled="false"
                   is="mock"
                   name="authors"
-                  required="true"
+                  required=""
                 />
               </div>
             </div>
@@ -350,29 +339,26 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-s6c5hx-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="Access conditions"
                       name="fez_record_search_key_access_conditions.rek_access_conditions"
-                      required="true"
+                      required=""
                     />
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-s6c5hx-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="License"
                       name="fez_record_search_key_license.rek_license"
-                      required="true"
+                      required=""
                     />
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-s6c5hx-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="Copyright notice"
                       name="fez_record_search_key_rights.rek_rights"
@@ -419,29 +405,26 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="Project name"
                       name="fez_record_search_key_project_name.rek_project_name"
-                      required="true"
+                      required=""
                     />
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="Project description"
                       name="fez_record_search_key_project_description.rek_project_description"
-                      required="true"
+                      required=""
                     />
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       name="fez_record_search_key_grant_agency"
                     />
@@ -450,7 +433,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       name="fez_record_search_key_grant_id"
                     />
@@ -496,7 +478,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       name="fez_record_search_key_type_of_data"
                     />
@@ -515,7 +496,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       name="fez_record_search_key_software_required"
                     />
@@ -534,7 +514,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       name="fez_record_search_key_keywords"
                     />
@@ -553,7 +532,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       haserror=""
                       is="mock"
                       name="fez_record_search_key_start_date.rek_start_date"
@@ -563,7 +541,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       haserror=""
                       is="mock"
                       name="fez_record_search_key_end_date.rek_end_date"
@@ -609,7 +586,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   Use this tool to specify the geographic co-ordinates the data relates to
                 </span>
                 <field
-                  disabled="false"
                   is="mock"
                   name="geographicArea"
                 />
@@ -647,7 +623,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 id="standard-card-related-datasets/work-content"
               >
                 <field
-                  disabled="false"
                   is="mock"
                   name="fez_record_search_key_isdatasetof"
                 />
@@ -691,7 +666,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="Additional information"
                       name="fez_record_search_key_notes.rek_notes"
@@ -701,7 +675,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <field
-                      disabled="false"
                       is="mock"
                       label="Link to data in external repository"
                       name="rek_link"
@@ -742,7 +715,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 id="standard-card-upload-files-content"
               >
                 <field
-                  disabled="false"
                   is="mock"
                   name="files"
                 />

@@ -5,7 +5,16 @@ import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { RECORD_TYPE_RECORD } from 'config/general';
 
 import * as redux from 'react-redux';
-import { render, WithReduxStore, WithRouter, FormProviderWrapper, fireEvent, within, act } from 'test-utils';
+import {
+    render,
+    WithReduxStore,
+    WithRouter,
+    WithMemoryRouter,
+    FormProviderWrapper,
+    fireEvent,
+    within,
+    act,
+} from 'test-utils';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
@@ -31,7 +40,7 @@ jest.mock('react-router-dom', () => ({
     useLocation: () => mockUseLocation,
 }));
 
-function setup({ values, ...testProps } = {}, renderMethod = render) {
+function setup({ values, ...testProps } = {}, RouterWrapper = WithRouter, renderMethod = render) {
     const props = {
         createMode: false,
         authorDetails: {
@@ -53,7 +62,7 @@ function setup({ values, ...testProps } = {}, renderMethod = render) {
 
     return renderMethod(
         <WithReduxStore>
-            <WithRouter>
+            <RouterWrapper>
                 <FormProviderWrapper
                     values={{
                         ...values,
@@ -61,7 +70,7 @@ function setup({ values, ...testProps } = {}, renderMethod = render) {
                 >
                     <AdminInterface {...props} />
                 </FormProviderWrapper>
-            </WithRouter>
+            </RouterWrapper>
         </WithReduxStore>,
     );
 }
@@ -606,14 +615,17 @@ describe('AdminInterface component', () => {
 
     it('should display successful alert', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
-        const { container, getByTestId, rerender } = setup({
-            tabs: {
-                bibliographic: {
-                    activated: true,
-                    component: () => 'BibliographySectionComponent',
+        const { container, getByTestId, rerender } = setup(
+            {
+                tabs: {
+                    bibliographic: {
+                        activated: true,
+                        component: () => 'BibliographySectionComponent',
+                    },
                 },
             },
-        });
+            WithMemoryRouter,
+        );
 
         expect(container).toMatchSnapshot();
 
@@ -630,6 +642,7 @@ describe('AdminInterface component', () => {
                     },
                 },
             },
+            WithMemoryRouter,
             rerender,
         );
         fireEvent.click(getByTestId('confirm-dialog-box'));
@@ -638,14 +651,17 @@ describe('AdminInterface component', () => {
 
     it('should display job created alert', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
-        const { container, getByTestId, rerender } = setup({
-            tabs: {
-                bibliographic: {
-                    activated: true,
-                    component: () => 'BibliographySectionComponent',
+        const { container, getByTestId, rerender } = setup(
+            {
+                tabs: {
+                    bibliographic: {
+                        activated: true,
+                        component: () => 'BibliographySectionComponent',
+                    },
                 },
             },
-        });
+            WithMemoryRouter,
+        );
         expect(container).toMatchSnapshot();
 
         mockFormState.formState.isSubmitting = false;
@@ -662,6 +678,7 @@ describe('AdminInterface component', () => {
                     },
                 },
             },
+            WithMemoryRouter,
             rerender,
         );
 
@@ -679,12 +696,12 @@ describe('AdminInterface component', () => {
             },
         }));
 
-        const { getByTestId, rerender } = setup();
+        const { getByTestId, rerender } = setup({}, WithMemoryRouter);
 
         mockFormState.formState.isSubmitting = false;
         mockFormState.formState.isSubmitSuccessful = true;
 
-        setup({}, rerender);
+        setup({}, WithMemoryRouter, rerender);
         fireEvent.click(getByTestId('cancel-dialog-box'));
         expect(mockUseNavigate).toHaveBeenCalledTimes(0);
     });
@@ -699,11 +716,11 @@ describe('AdminInterface component', () => {
             },
         }));
 
-        const { getByTestId, rerender } = setup();
+        const { getByTestId, rerender } = setup({}, WithMemoryRouter);
 
         mockFormState.formState.isSubmitting = false;
         mockFormState.formState.isSubmitSuccessful = true;
-        setup({}, rerender);
+        setup({}, WithMemoryRouter, rerender);
         fireEvent.click(getByTestId('cancel-dialog-box'));
         expect(mockUseNavigate).toHaveBeenCalledWith('/view/UQ:111111');
     });

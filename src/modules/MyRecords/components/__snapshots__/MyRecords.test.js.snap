@@ -686,6 +686,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                                 >
                                   <a
+                                    data-discover="true"
                                     href="/view/UQ:1"
                                   >
                                     1
@@ -1344,6 +1345,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                                 >
                                   <a
+                                    data-discover="true"
                                     href="/view/UQ:1"
                                   >
                                     1
@@ -2002,6 +2004,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                                 >
                                   <a
+                                    data-discover="true"
                                     href="/view/UQ:1"
                                   >
                                     1

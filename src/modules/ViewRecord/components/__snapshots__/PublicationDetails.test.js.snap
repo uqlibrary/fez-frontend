@@ -136,6 +136,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
                     data-testid="rek-ismemberof-0"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A289097&searchMode=advanced"
                     >
                       Research Data Collections
@@ -146,6 +147,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
                     data-testid="rek-ismemberof-1"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3825&searchMode=advanced"
                     >
                       School of Chemistry and Molecular Biosciences
@@ -294,6 +296,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
                     data-testid="rek-ismemberof-0"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A289097&searchMode=advanced"
                     >
                       Research Data Collections
@@ -579,6 +582,7 @@ exports[`Publication Details Component  should render component 1`] = `
                     data-testid="rek-ismemberof-0"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3825&searchMode=advanced"
                     >
                       School of Chemistry and Molecular Biosciences
@@ -589,6 +593,7 @@ exports[`Publication Details Component  should render component 1`] = `
                     data-testid="rek-ismemberof-1"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A218311&searchMode=advanced"
                     >
                       HERDC Pre-Audit
@@ -599,6 +604,7 @@ exports[`Publication Details Component  should render component 1`] = `
                     data-testid="rek-ismemberof-2"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A171723&searchMode=advanced"
                     >
                       UQ Centre for Clinical Research Publications
@@ -609,6 +615,7 @@ exports[`Publication Details Component  should render component 1`] = `
                     data-testid="rek-ismemberof-3"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3858&searchMode=advanced"
                     >
                       Institute for Molecular Bioscience - Publications
@@ -619,6 +626,7 @@ exports[`Publication Details Component  should render component 1`] = `
                     data-testid="rek-ismemberof-4"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3860&searchMode=advanced"
                     >
                       Australian Institute for Bioengineering and Nanotechnology Publications
@@ -629,6 +637,7 @@ exports[`Publication Details Component  should render component 1`] = `
                     data-testid="rek-ismemberof-5"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3831&searchMode=advanced"
                     >
                       School of Medicine Publications
@@ -884,6 +893,7 @@ exports[`Publication Details Component  should render with publication without s
                     data-testid="rek-ismemberof-0"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3825&searchMode=advanced"
                     >
                       School of Chemistry and Molecular Biosciences
@@ -894,6 +904,7 @@ exports[`Publication Details Component  should render with publication without s
                     data-testid="rek-ismemberof-1"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A218311&searchMode=advanced"
                     >
                       HERDC Pre-Audit
@@ -904,6 +915,7 @@ exports[`Publication Details Component  should render with publication without s
                     data-testid="rek-ismemberof-2"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A171723&searchMode=advanced"
                     >
                       UQ Centre for Clinical Research Publications
@@ -914,6 +926,7 @@ exports[`Publication Details Component  should render with publication without s
                     data-testid="rek-ismemberof-3"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3858&searchMode=advanced"
                     >
                       Institute for Molecular Bioscience - Publications
@@ -924,6 +937,7 @@ exports[`Publication Details Component  should render with publication without s
                     data-testid="rek-ismemberof-4"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3860&searchMode=advanced"
                     >
                       Australian Institute for Bioengineering and Nanotechnology Publications
@@ -934,6 +948,7 @@ exports[`Publication Details Component  should render with publication without s
                     data-testid="rek-ismemberof-5"
                   >
                     <a
+                      data-discover="true"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3831&searchMode=advanced"
                     >
                       School of Medicine Publications

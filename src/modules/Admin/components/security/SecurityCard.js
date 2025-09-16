@@ -45,6 +45,7 @@ export const SecurityCard = ({ disabled }) => {
     const dataStreams = formValues?.dataStreams;
     const isOverrideSecurityChecked =
         formValues?.rek_security_inherited === true || formValues?.rek_security_inherited === 0;
+
     const securityPolicy = formValues?.rek_security_policy;
     const dataStreamPolicy = formValues?.rek_datastream_policy;
 

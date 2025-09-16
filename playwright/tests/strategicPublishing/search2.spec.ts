@@ -168,6 +168,7 @@ test.describe('Strategic Publishing - Search', () => {
             await page.locator('li[role="option"]:has-text("20")').click();
 
             // assert everything selected is in the URL
+            await page.waitForTimeout(6000);
             await expect(page).toHaveURL(/keywords%5BTitle-glycobiology/);
             await expect(page).toHaveURL(/keywords%5BTitle-biological/);
             await expect(page).toHaveURL(/CWTS/);

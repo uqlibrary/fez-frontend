@@ -1,22 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSignificanceListEditor> 1`] = `
-<Memo(Connect(ScaleOfSignificanceListEditor))
-  error={false}
-  listEditorId="rek-significance"
-  onChange={[MockFunction]}
-/>
+{
+  "$$typeof": Symbol(react.transitional.element),
+  "_owner": null,
+  "_store": {},
+  "key": null,
+  "props": {
+    "error": false,
+    "errorText": undefined,
+    "listEditorId": "rek-significance",
+    "onChange": [MockFunction],
+  },
+  "type": {
+    "$$typeof": Symbol(react.memo),
+    "WrappedComponent": [Function],
+    "compare": null,
+    "type": [Function],
+  },
+}
 `;
 
 exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSignificanceListEditor> with error attributes 1`] = `
-<Memo(Connect(ScaleOfSignificanceListEditor))
-  error={false}
-  listEditorId="rek-significance"
-  onChange={[MockFunction]}
-  state={
-    {
+{
+  "$$typeof": Symbol(react.transitional.element),
+  "_owner": null,
+  "_store": {},
+  "key": null,
+  "props": {
+    "error": false,
+    "errorText": undefined,
+    "listEditorId": "rek-significance",
+    "onChange": [MockFunction],
+    "state": {
       "errorText": "test",
-    }
-  }
-/>
+    },
+  },
+  "type": {
+    "$$typeof": Symbol(react.memo),
+    "WrappedComponent": [Function],
+    "compare": null,
+    "type": [Function],
+  },
+}
 `;

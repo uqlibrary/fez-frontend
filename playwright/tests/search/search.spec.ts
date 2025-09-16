@@ -143,10 +143,12 @@ test.describe('Search', () => {
                 '?searchQueryParams%5Ball%5D=dog&page=1&pageSize=20&sortBy=score&sortDirection=Desc';
             await page.getByTestId('simple-search-input').fill('cat');
             await page.getByTestId('simple-search-input').press('Enter');
+            await page.waitForTimeout(1000);
             await expect(page).toHaveURL(new RegExp(catSearchString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))); // Use regex for URL matching, escape special chars
             await page.getByTestId('simple-search-input').clear();
             await page.getByTestId('simple-search-input').fill('dog');
             await page.getByTestId('simple-search-input').press('Enter');
+            await page.waitForTimeout(1000);
             await expect(page).toHaveURL(new RegExp(dogSearchString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
 
             await page.goBack();
@@ -305,7 +307,7 @@ test.describe('Search', () => {
                     .getByRole('combobox')
                     .getByText(/Image Gallery/),
             ).toBeVisible();
-
+            await page.waitForTimeout(1000);
             await assertFirstRowItemCount(page, 4);
         });
 
@@ -336,6 +338,7 @@ test.describe('Search', () => {
                     .getByRole('combobox')
                     .getByText(/Image Gallery/),
             ).toBeVisible();
+            await page.waitForTimeout(1000);
 
             await assertFirstRowItemCount(page, 3);
         });
@@ -367,6 +370,7 @@ test.describe('Search', () => {
                     .getByRole('combobox')
                     .getByText(/Image Gallery/),
             ).toBeVisible();
+            await page.waitForTimeout(1000);
 
             await assertFirstRowItemCount(page, 2);
         });
