@@ -793,7 +793,7 @@ export default {
         "rek_oa_status_pid": "UQ:40186z",
         "rek_oa_status_xsdmf_id": null,
         "rek_oa_status": 453696,
-        "rek_oa_status_lookup": "File (Author Post-print)"
+        "rek_oa_status_lookup": "File (Author Accepted Manuscript)"
     },
     "fez_record_search_key_oa_status_type": null,
     "fez_record_search_key_place_of_publication": {
