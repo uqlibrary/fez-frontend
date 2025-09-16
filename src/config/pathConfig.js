@@ -59,6 +59,8 @@ export const pathConfig = {
         fix: pid => `/records/${pid}/fix`,
         incomplete: '/records/incomplete',
         incompleteFix: pid => `/records/${pid}/incomplete`,
+        oacompliance: '/records/oacompliance',
+        oacomplianceFix: pid => `/records/${pid}/oacompliance`,
         mine: '/records/mine',
         possible: '/records/possible',
         search: '/records/search',

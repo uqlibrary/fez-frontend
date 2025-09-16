@@ -91,6 +91,9 @@ const Dashboard = ({
     // incomplete Record lure
     incomplete,
 
+    // Open Access Compliance Record lure
+    oacompliance,
+
     // wos/scopus data
     loadingPublicationsStats,
     publicationsStats,
@@ -109,6 +112,8 @@ const Dashboard = ({
     orcidSyncEnabled,
     loadOrcidSyncDelay = 5,
 }) => {
+    console.log('oacompliance', oacompliance);
+    console.log('incomplete', incomplete);
     const navigate = useNavigate();
     const isMobileView = useIsMobileView();
     const [dashboardPubsTabs, setDashboardPubsTabs] = useState(1);
@@ -164,6 +169,10 @@ const Dashboard = ({
 
     const redirectToIncompleteRecordlist = () => {
         navigate(pathConfig.records.incomplete);
+    };
+
+    const redirectToOaComplianceRecordlist = () => {
+        navigate(pathConfig.records.oacompliance);
     };
 
     const requestOrcidSync = () => {
@@ -315,6 +324,26 @@ const Dashboard = ({
                 )}
                 {!loading && authorDetails && (
                     <React.Fragment>
+                        {!!txt.oacomplianceRecordLure &&
+                            !!oacompliance &&
+                            !oacompliance.loadingPublicationsList &&
+                            oacompliance.publicationsListPagingData &&
+                            oacompliance.publicationsListPagingData.total > 0 && (
+                                <Grid item xs={12} style={{ marginTop: -27 }}>
+                                    <Alert
+                                        title={txt.oacomplianceRecordLure.title}
+                                        message={txt.oacomplianceRecordLure.message
+                                            .replace('[count]', oacompliance.publicationsListPagingData.total)
+                                            .replace('[plural]', pluralTextReplacement)
+                                            .replace('[verbEnding]', verbEndingTextReplacement)}
+                                        actionButtonLabel={txt.oacomplianceRecordLure.actionButtonLabel}
+                                        action={redirectToOaComplianceRecordlist}
+                                        type="custom"
+                                        customType={txt.oacomplianceRecordLure.type}
+                                        customIcon={txt.oacomplianceRecordLure.icon}
+                                    />
+                                </Grid>
+                            )}
                         {!!txt.incompleteRecordLure &&
                             !!incomplete &&
                             !incomplete.loadingPublicationsList &&
@@ -453,6 +482,9 @@ Dashboard.propTypes = {
 
     // incomplete Record lure
     incomplete: PropTypes.object,
+
+    // Open Access Compliance Record lure
+    oacompliance: PropTypes.object,
 
     // wos/scopus data
     loadingPublicationsStats: PropTypes.bool,

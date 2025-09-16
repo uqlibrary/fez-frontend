@@ -1,10 +1,10 @@
-/* eslint-disable max-len */
 import React from 'react';
 import LockIcon from '@mui/icons-material/Lock';
 import Typography from '@mui/material/Typography';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import OpenInNew from '@mui/icons-material/OpenInNew';
+import LockOpenTwoToneIcon from '@mui/icons-material/LockOpenTwoTone';
 
 import locale from 'locale/components';
 import globalLocale from './global';
@@ -331,6 +331,13 @@ export default {
                 message: 'We have found [count] work(s) that require[verbEnding] more information.',
                 type: 'warning',
                 actionButtonLabel: 'View and Complete',
+            },
+            oacomplianceRecordLure: {
+                title: 'OA Compliance Required',
+                message: 'We have found [count] work(s) that do not meet Open Access grant eligibility.',
+                type: 'warning',
+                actionButtonLabel: 'View and Fix',
+                icon: <LockOpenTwoToneIcon id="unlock-outline-icon" className="icon" />,
             },
         },
         myResearch: {
