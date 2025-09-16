@@ -23,6 +23,12 @@ const StyledDivider = styled(Divider)(({ theme }) => ({
     marginBottom: theme.spacing(2),
 }));
 
+const renderCreatorsUsername = row =>
+    (row?.creator?.usr_username?.trim?.().toLowerCase?.() === 'webcron' && (
+        <span style={{ color: '#999' }}>System</span>
+    )) ||
+    row?.creator?.usr_username;
+
 const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpdate }) => {
     const config = useSelector(
         state => state.get('adminDashboardConfigReducer')?.adminDashboardConfigData || /* istanbul ignore next */ {},
@@ -123,6 +129,16 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                         <Grid item xs={8}>
                             <Typography fontWeight={'normal'} data-testid={`${rootId}-date-created`}>
                                 {getFormattedServerDate(row.sat_created_date, DEFAULT_DATE_FORMAT_WITH_TIME_24H)}
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Typography fontWeight={400} data-testid={`${rootId}-creator-label`}>
+                                {txt.creator}
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={8}>
+                            <Typography fontWeight={'normal'} data-testid={`${rootId}-creator`}>
+                                {renderCreatorsUsername(row)}
                             </Typography>
                         </Grid>
                     </Grid>
