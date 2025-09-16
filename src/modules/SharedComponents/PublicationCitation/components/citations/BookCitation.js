@@ -29,7 +29,7 @@ export const BookCitation = ({ publication, hideDoiLink, citationStyle }) => {
     // {doi| doi:|}
 
     return (
-        <div className="citationContent citationBook">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationBook">
             {/* {Author} */}
             {!record.isEditedBook && (
                 <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
@@ -71,7 +71,7 @@ export const BookCitation = ({ publication, hideDoiLink, citationStyle }) => {
 
             {/* {doi| doi:|} */}
             <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
-        </div>
+        </span>
     );
 };
 BookCitation.propTypes = {

@@ -247,6 +247,7 @@ export const ViewRecord = () => {
                             isPublicationDeleted={isDeleted}
                             citationStyle={'header'}
                             hideCitationText={hideCitationText}
+                            showCopyTextButton
                         />
                     </Grid>
 

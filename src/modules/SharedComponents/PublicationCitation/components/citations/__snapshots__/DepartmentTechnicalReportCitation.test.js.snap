@@ -2,8 +2,9 @@
 
 exports[`DepartmentTechnicalReportCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationDepartmentTechnicalReport"
+    id="citation-content-UQ:165945"
   >
     <span
       class="citationAuthors"
@@ -57,14 +58,15 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`DepartmentTechnicalReportCitation renders  component with an empty doi view and report number 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationDepartmentTechnicalReport"
+    id="citation-content-UQ:165945"
   >
     <span
       class="citationAuthors"
@@ -118,14 +120,15 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`DepartmentTechnicalReportCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationDepartmentTechnicalReport"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -151,6 +154,6 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

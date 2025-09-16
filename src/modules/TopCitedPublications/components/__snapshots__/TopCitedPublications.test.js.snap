@@ -255,8 +255,9 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                       <div
                         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                       >
-                        <div
+                        <span
                           class="citationContent citationJournalArticle"
+                          id="citation-content-UQ:330391"
                         >
                           <span
                             class="citationAuthors"
@@ -355,7 +356,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                               https://doi.org/10.4049/jimmunol.1490012
                             </a>
                           </span>
-                        </div>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -715,8 +716,9 @@ exports[`Component TopCitedPublications should render top cited publications wit
                       <div
                         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
                       >
-                        <div
+                        <span
                           class="citationContent citationJournalArticle"
+                          id="citation-content-UQ:330391"
                         >
                           <span
                             class="citationAuthors"
@@ -815,7 +817,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                               https://doi.org/10.4049/jimmunol.1490012
                             </a>
                           </span>
-                        </div>
+                        </span>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"

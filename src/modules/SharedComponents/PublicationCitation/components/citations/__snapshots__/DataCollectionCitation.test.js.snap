@@ -2,8 +2,9 @@
 
 exports[`DataCollectionCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationDataCollection"
+    id="citation-content-UQ:407731"
   >
     <span
       class="citationAuthors"
@@ -102,14 +103,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
         https://doi.org/10.14264/uql.2016.841
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`DataCollectionCitation renders  component with a mock espace record with a missing date 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationDataCollection"
+    id="citation-content-UQ:407731"
   >
     <span
       class="citationAuthors"
@@ -204,14 +206,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         https://doi.org/10.14264/uql.2016.841
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`DataCollectionCitation renders  component with a mock espace record with a missing title 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationDataCollection"
+    id="citation-content-UQ:407731"
   >
     <span
       class="citationAuthors"
@@ -306,14 +309,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         https://doi.org/10.14264/uql.2016.841
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`DataCollectionCitation renders  component with a mock espace record with missing authors 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationDataCollection"
+    id="citation-content-UQ:407731"
   >
     <span
       class="citationAuthors empty"
@@ -376,14 +380,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         https://doi.org/10.14264/uql.2016.841
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`DataCollectionCitation renders  component with a mock espace record with missing document type 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationDataCollection"
+    id="citation-content-UQ:407731"
   >
     <span
       class="citationAuthors"
@@ -478,14 +483,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         https://doi.org/10.14264/uql.2016.841
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`DataCollectionCitation renders  component with a mock espace record with missing doi 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationDataCollection"
+    id="citation-content-UQ:407731"
   >
     <span
       class="citationAuthors"
@@ -557,14 +563,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`DataCollectionCitation renders  component with a mock espace record with missing publisher 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationDataCollection"
+    id="citation-content-UQ:407731"
   >
     <span
       class="citationAuthors"
@@ -659,14 +666,15 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
         https://doi.org/10.14264/uql.2016.841
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`DataCollectionCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationDataCollection"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -686,6 +694,6 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

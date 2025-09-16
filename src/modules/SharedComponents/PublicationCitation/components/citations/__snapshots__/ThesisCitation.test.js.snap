@@ -2,8 +2,9 @@
 
 exports[`ThesisCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationThesis"
+    id="citation-content-UQ:170415"
   >
     <span
       class="citationAuthors"
@@ -54,14 +55,15 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`ThesisCitation renders  component with an empty doi view 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationThesis"
+    id="citation-content-UQ:170415"
   >
     <span
       class="citationAuthors"
@@ -112,14 +114,15 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`ThesisCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationThesis"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -142,6 +145,6 @@ exports[`ThesisCitation renders  component with empty publication 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

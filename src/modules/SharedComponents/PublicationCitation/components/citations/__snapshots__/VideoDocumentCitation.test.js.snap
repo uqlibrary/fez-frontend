@@ -2,8 +2,9 @@
 
 exports[`VideoDocumentCitation renders  component with a doi view 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationVideo"
+    id="citation-content-UQ:161756"
   >
     <span
       class="citationAuthors"
@@ -67,14 +68,15 @@ exports[`VideoDocumentCitation renders  component with a doi view 1`] = `
         https://doi.org/10.1111/1111
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`VideoDocumentCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationVideo"
+    id="citation-content-UQ:161756"
   >
     <span
       class="citationAuthors"
@@ -111,14 +113,15 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`VideoDocumentCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationVideo"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -135,6 +138,6 @@ exports[`VideoDocumentCitation renders  component with empty publication 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

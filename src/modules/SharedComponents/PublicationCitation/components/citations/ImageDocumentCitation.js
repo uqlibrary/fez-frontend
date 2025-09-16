@@ -14,7 +14,7 @@ export const ImageDocumentCitation = ({ publication, citationStyle }) => {
     // {Creator}{Publication Year| (|).}<i>{Title| |.}</i>{Source| |.}
 
     return (
-        <div className="citationContent citationImageDocument">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationImageDocument">
             {/* {Creator} */}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -29,7 +29,7 @@ export const ImageDocumentCitation = ({ publication, citationStyle }) => {
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} />
-        </div>
+        </span>
     );
 };
 ImageDocumentCitation.propTypes = {
