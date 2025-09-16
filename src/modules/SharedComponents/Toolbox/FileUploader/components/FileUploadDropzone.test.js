@@ -1,9 +1,7 @@
 import React from 'react';
 import FileUploadDropzone, { removeInvalidFileNames } from './FileUploadDropzone';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
-import { rtlRender, fireEvent, waitFor } from 'test-utils';
-
-import { FormValuesContext } from 'context';
+import { rtlRender, fireEvent, waitFor, FormProviderWrapper } from 'test-utils';
 
 function setup(testProps = {}, formValues = {}) {
     const props = {
@@ -16,9 +14,9 @@ function setup(testProps = {}, formValues = {}) {
         ...testProps,
     };
     return rtlRender(
-        <FormValuesContext.Provider value={{ formValues }}>
+        <FormProviderWrapper values={{ filesSection: { ...formValues } }}>
             <FileUploadDropzone {...props} />
-        </FormValuesContext.Provider>,
+        </FormProviderWrapper>,
     );
 }
 

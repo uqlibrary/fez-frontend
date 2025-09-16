@@ -1,6 +1,6 @@
 import React from 'react';
 import FieldGridItem from './FieldGridItem';
-import { rtlRender, WithReduxStore, FormProviderWrapper, preview } from 'test-utils';
+import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
 
 jest.mock('../../../../context');
 import { useRecordContext } from 'context';
@@ -74,7 +74,6 @@ describe('FieldGridItem', () => {
         const { container } = setup({
             field: 'editors',
         });
-        preview.debug();
         expect(container).toMatchSnapshot();
     });
 

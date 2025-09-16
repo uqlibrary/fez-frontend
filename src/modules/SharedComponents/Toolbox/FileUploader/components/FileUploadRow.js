@@ -31,8 +31,6 @@ export const FileUploadRow = ({
     onDelete,
     onAccessConditionChange,
     onEmbargoDateChange,
-    onOrderUpClick,
-    onOrderDownClick,
     onFileDescriptionChange,
     onSecurityPolicyChange,
     requireOpenAccessStatus,
@@ -70,12 +68,6 @@ export const FileUploadRow = ({
     const _updateEmbargoDate = newValue => {
         onEmbargoDateChange(uploadedFile, index, newValue);
     };
-    const _onOrderUpClick = newIndex => {
-        onOrderUpClick(index, newIndex);
-    };
-    const _onOrderDownClick = newIndex => {
-        onOrderDownClick(index, newIndex);
-    };
 
     const { deleteRecordConfirmation } = locale;
 
@@ -106,8 +98,6 @@ export const FileUploadRow = ({
                 disabled={disabled}
                 onDelete={_showConfirmation}
                 onAccessConditionChange={_updateAccessCondition}
-                onOrderUpClick={_onOrderUpClick}
-                onOrderDownClick={_onOrderDownClick}
                 onFileDescriptionChange={_updateFileDescription}
                 onEmbargoDateChange={_updateEmbargoDate}
                 onSecurityPolicyChange={_updateSecurityPolicy}

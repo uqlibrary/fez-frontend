@@ -276,21 +276,8 @@ const Files = props => {
                       return item;
                   })
                   .sort((a, b) => {
-                      if (a.dsi_order === null) {
-                          return 1;
-                      }
-
-                      if (b.dsi_order === null) {
-                          return -1;
-                      }
-
-                      if (a.dsi_order === b.dsi_order) {
-                          return 0;
-                      }
-
-                      return a.dsi_order < b.dsi_order ? -1 : 1;
+                      return a.dsi_dsid < b.dsi_dsid ? -1 : 1;
                   })
-
                   .map(dataStream => {
                       const pid = publication.rek_pid;
                       const fileName = dataStream.dsi_dsid;

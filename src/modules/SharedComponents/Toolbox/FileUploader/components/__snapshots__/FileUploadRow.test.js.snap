@@ -10,35 +10,6 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
     class="MuiBox-root css-moxgk8"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-h494si-MuiGrid-root"
-      >
-        <button
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
-          data-analyticsid="new-file-upload-up-0"
-          data-testid="new-file-upload-up-0"
-          disabled=""
-          id="new-file-upload-down-0"
-          tabindex="-1"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-            data-testid="ExpandLessIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
     >
       <div
@@ -172,34 +143,6 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
             </svg>
           </button>
         </span>
-      </div>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1jxkhgz-MuiGrid-root"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-th47u9-MuiGrid-root"
-      >
-        <button
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gjcflr-MuiButtonBase-root-MuiIconButton-root"
-          data-analyticsid="new-file-upload-down-0"
-          data-testid="new-file-upload-down-0"
-          id="new-file-upload-down-0"
-          tabindex="0"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-            data-testid="ExpandMoreIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-            />
-          </svg>
-        </button>
       </div>
     </div>
   </div>
