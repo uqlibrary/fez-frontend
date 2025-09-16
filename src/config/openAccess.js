@@ -45,7 +45,7 @@ export const labels = {
     [OPEN_ACCESS_ID_DOI]: 'DOI',
     [OPEN_ACCESS_ID_LINK_NO_DOI]: 'Link (no DOI)',
     [OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION]: 'File (Publisher version)',
-    [OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT]: 'File (Author post-print)',
+    [OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT]: 'File (Author Accepted Manuscript)',
     [OPEN_ACCESS_ID_OTHER]: 'Other',
     [OPEN_ACCESS_ID_NOT_OPEN_ACCESS]: 'Not Open Access',
     [OPEN_ACCESS_ID_MEDIATED_ACCESS]: 'Mediated Access',
