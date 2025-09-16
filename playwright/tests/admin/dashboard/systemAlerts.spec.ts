@@ -52,24 +52,27 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
         await systemAlertsTab.click();
         await expect(systemAlertsTab).toHaveAttribute('aria-selected', 'true');
 
-        await expect(getByTestId(page, 'standard-card-content')).toContainText('8 system alerts');
+        await expect(getByTestId(page, 'standard-card-content')).toContainText('9 system alerts');
     });
 
     test('renders table as expected', async ({ page }) => {
         // no need to check every row, just check
         // a couple that have a different status
-        await expect(page.getByRole('row')).toHaveCount(9);
+        await expect(page.getByRole('row')).toHaveCount(10);
         await assertAccessibility(page, 'div.StandardPage', { disabledRules: ['aria-required-children'] });
 
-        const firstRow = getRow(page, 1);
-        await expect(getCell(firstRow, 1)).toContainText('Issues on record - UQ:34555c6');
-        await expect(getByTestId(getCell(firstRow, 2), 'alert-status-12')).toContainText('Feeney, Michael');
+        {
+            const row = getRow(page, 1);
+            await expect(getCell(row, 1)).toContainText('Issues on record - UQ:34555c6');
+            await expect(getByTestId(getCell(row, 2), 'alert-status-12')).toContainText('Feeney, Michael');
+        }
+        {
+            const row = getRow(page, 4);
+            await expect(getCell(row, 1)).toContainText('My Works - Claimed Work - UQ:1494946 - uqmdeben');
+            await expect(getByTestId(getCell(row, 2), 'alert-status-13')).toContainText('Staff, Another');
+        }
 
-        const thirdRow = getRow(page, 3);
-        await expect(getCell(thirdRow, 1)).toContainText('My Works - Claimed Work - UQ:1494946 - uqmdeben');
-        await expect(getByTestId(getCell(thirdRow, 2), 'alert-status-13')).toContainText('Staff, Another');
-
-        await expect(page.locator('.MuiTablePagination-displayedRows')).toHaveText('1–8 of 8');
+        await expect(page.locator('.MuiTablePagination-displayedRows')).toHaveText('1–9 of 9');
         await expect(page.locator('.MuiTablePagination-input > input')).toHaveValue('10');
     });
 
