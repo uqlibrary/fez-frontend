@@ -122,6 +122,7 @@ const AppClass = ({
         // don't call the api for non author users since the api call requires an author
         if (!accountAuthorLoading && author?.aut_id) {
             actions.searchAuthorPublications({}, 'incomplete');
+            actions.searchAuthorPublications({}, 'oacompliance');
         }
     }, [accountAuthorLoading, actions, author?.aut_id]);
 

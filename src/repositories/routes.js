@@ -300,6 +300,17 @@ export const INCOMPLETE_RECORDS_API = values => ({
     },
 });
 
+export const OACOMPLIANCE_RECORDS_API = values => ({
+    apiUrl: 'records/search',
+    options: {
+        params: {
+            rule: 'oacompliance',
+            ...getStandardSearchParams(values),
+            ...getOpenAccessSearchParams(values),
+        },
+    },
+});
+
 export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = values => ({
     apiUrl: 'records/search',
     options: {

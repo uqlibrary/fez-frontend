@@ -128,6 +128,8 @@ export const setup = () => {
             // AUTHOR_PUBLICATIONS_STATS_ONLY_API
             else if (config.params.rule === 'incomplete') {
                 return [200, mockData.incompleteNTROlist];
+            } else if (config.params.rule === 'oacompliance') {
+                return [200, mockData.oaNonComplianceList];
             } else if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
                 return [200, mockData.currentAuthorStats];
             } else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
