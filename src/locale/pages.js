@@ -1253,5 +1253,28 @@ export default {
         controlledVocabularies: {
             title: 'Controlled Vocabularies',
         },
+        openAccessPublications: {
+            pageTitle: 'My Open Access',
+            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
+            loadingMessage: 'Searching for open access non-compliant works',
+            noResultsFound: {
+                title: 'No open access works found',
+                text: (
+                    <div>
+                        <p>No open access works were found for you to rectify.</p>
+                    </div>
+                ),
+            },
+            publicationsList: {
+                complete: 'Open access this work',
+            },
+            facetsFilter: {
+                ...locale.components.facetsFilter,
+                excludeFacetsList: [...locale.components.facetsFilter.excludeFacetsList, 'Author'],
+            },
+        },
+        openAccessPublication: {
+            title: 'Complete my open access work',
+        },
     },
 };

@@ -306,7 +306,6 @@ export const OACOMPLIANCE_RECORDS_API = values => ({
         params: {
             rule: 'oacompliance',
             ...getStandardSearchParams(values),
-            ...getOpenAccessSearchParams(values),
         },
     },
 });

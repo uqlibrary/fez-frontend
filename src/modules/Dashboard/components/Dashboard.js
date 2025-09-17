@@ -112,8 +112,6 @@ const Dashboard = ({
     orcidSyncEnabled,
     loadOrcidSyncDelay = 5,
 }) => {
-    console.log('oacompliance', oacompliance);
-    console.log('incomplete', incomplete);
     const navigate = useNavigate();
     const isMobileView = useIsMobileView();
     const [dashboardPubsTabs, setDashboardPubsTabs] = useState(1);
@@ -172,7 +170,7 @@ const Dashboard = ({
     };
 
     const redirectToOaComplianceRecordlist = () => {
-        navigate(pathConfig.records.oacompliance);
+        navigate(pathConfig.records.openAccessCompliance);
     };
 
     const requestOrcidSync = () => {

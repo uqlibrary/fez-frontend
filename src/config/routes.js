@@ -277,6 +277,13 @@ export const getRoutesConfig = ({
                       exact: true,
                       pageTitle: locale.pages.addRecord.title,
                   },
+                  {
+                      path: pathConfig.records.openAccessCompliance,
+                      element: <components.MyOpenAccessRecords />,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.openAccessPublications.title,
+                  },
                   ...(authorDetails
                       ? [
                             {
