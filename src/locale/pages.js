@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import OpenInNew from '@mui/icons-material/OpenInNew';
-import LockOpenTwoToneIcon from '@mui/icons-material/LockOpenTwoTone';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 import locale from 'locale/components';
 import globalLocale from './global';
@@ -337,7 +337,7 @@ export default {
                 message: 'We have found [count] work(s) that do not meet Open Access grant eligibility.',
                 type: 'warning',
                 actionButtonLabel: 'View and Fix',
-                icon: <LockOpenTwoToneIcon id="unlock-outline-icon" className="icon" />,
+                icon: <LockOpenIcon id="unlock-outline-icon" className="icon" />,
             },
         },
         myResearch: {

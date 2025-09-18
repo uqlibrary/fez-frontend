@@ -339,6 +339,7 @@ const Dashboard = ({
                                         type="custom"
                                         customType={txt.oacomplianceRecordLure.type}
                                         customIcon={txt.oacomplianceRecordLure.icon}
+                                        wiggle
                                     />
                                 </Grid>
                             )}

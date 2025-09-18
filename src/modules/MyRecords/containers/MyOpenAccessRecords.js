@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
         accountLoading: state.get('accountReducer').accountLoading,
         ...state.get('publicationsReducer').oacompliance,
         localePages: locale.pages.openAccessPublications,
-        thisUrl: pathConfig.records.openAccess,
+        thisUrl: pathConfig.records.openAccessCompliance,
         publicationsListCustomActions: [
             {
                 label: locale.pages.openAccessPublications.publicationsList.complete,
