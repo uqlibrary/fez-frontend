@@ -193,8 +193,8 @@ const AppClass = ({
     );
     const hasOaComplianceWorks = !!(
         incompleteRecordList &&
-        incompleteRecordList.oacompliance.publicationsListPagingData &&
-        incompleteRecordList.oacompliance.publicationsListPagingData.total > 0
+        incompleteRecordList.oacompliance?.publicationsListPagingData &&
+        incompleteRecordList.oacompliance?.publicationsListPagingData.total > 0
     );
     const menuItems = routes.getMenuConfig(
         account,
