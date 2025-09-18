@@ -6,20 +6,19 @@ import { rtlRender, WithRouter } from 'test-utils';
 import { initialize } from '@googlemaps/jest-mocks';
 import { useJsApiLoader } from '@react-google-maps/api';
 
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 jest.mock('@react-google-maps/api', () => ({
     useJsApiLoader: jest.fn(),
-    Polygon: props => <div id="mock-polygon" />,
-    Marker: props => <div id="mock-marker" />,
+    Polygon: () => <div id="mock-polygon" />,
+    Marker: () => <div id="mock-marker" />,
     GoogleMap: props => (
         <div>
             <div id="mock-google-maps" />
             {props.children}
         </div>
     ),
-    StandaloneSearchBox: props => <div id="mock-search-box" />,
-    DrawingManager: props => <div id="mock-drawing-manager" />,
+    StandaloneSearchBox: () => <div id="mock-search-box" />,
+    DrawingManager: () => <div id="mock-drawing-manager" />,
 }));
 
 function setup(testProps = {}) {
@@ -292,7 +291,7 @@ describe('Additional Information Component ', () => {
     });
 
     it('should render oa status value link in the component with thesis', () => {
-        records.thesis.fez_record_search_key_oa_status.rek_oa_status_lookup = 'File (Author Post-print)';
+        records.thesis.fez_record_search_key_oa_status.rek_oa_status_lookup = 'File (Author Accepted Manuscript)';
         const { container } = setup({ publication: records.thesis });
         expect(container).toMatchSnapshot();
     });
