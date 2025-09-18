@@ -284,6 +284,13 @@ export const getRoutesConfig = ({
                       exact: true,
                       pageTitle: locale.pages.openAccessPublications.title,
                   },
+                  {
+                      path: pathConfig.records.openAccessComplianceFix(pid),
+                      element: <components.FixRecord openAccess />,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.openAccessComplianceRecord.title,
+                  },
                   ...(authorDetails
                       ? [
                             {
@@ -518,7 +525,14 @@ export const getRoutesConfig = ({
     ];
 };
 
-export const getMenuConfig = (account, author, authorDetails, disabled, hasIncompleteWorks = false) => {
+export const getMenuConfig = (
+    account,
+    author,
+    authorDetails,
+    disabled,
+    hasIncompleteWorks = false,
+    hasOaComplianceWorks = false,
+) => {
     const homePage = [
         {
             linkTo: pathConfig.index,
@@ -568,6 +582,14 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             {
                 linkTo: pathConfig.records.incomplete,
                 ...locale.menu.incompleteRecords,
+            },
+        ]) ||
+        [];
+    const oaCompliancePage =
+        (hasOaComplianceWorks && [
+            {
+                linkTo: pathConfig.records.openAccessCompliance,
+                ...locale.menu.myOpenAccess,
             },
         ]) ||
         [];
@@ -623,6 +645,8 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       linkTo: pathConfig.records.add.find,
                       ...locale.menu.addMissingRecord,
                   },
+
+                  ...oaCompliancePage,
                   {
                       linkTo: pathConfig.dataset.mine,
                       ...locale.menu.myDatasets,

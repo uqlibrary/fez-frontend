@@ -582,6 +582,26 @@ export default {
             cancel: 'Cancel',
             submit: 'Submit',
         },
+        openAccessComplianceRecord: {
+            loadingMessage: 'Loading work',
+            title: 'Upload a suitable publication file to open access your work',
+            subTitle: 'Work to make open access',
+            fieldLabels: {
+                action: 'Select an action',
+            },
+            actionsOptions: [
+                {
+                    action: 'fix',
+                    title: 'I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files',
+                },
+                {
+                    action: 'unclaim',
+                    title: 'I am not the author/editor/contributor of this work - I would like this work removed from my profile',
+                },
+            ],
+            cancel: 'Cancel',
+            submit: 'Submit',
+        },
         viewRecord: {
             loadingMessage: 'Loading work',
             thumbnailTitle: 'Click to open a preview of [image]',
@@ -1254,7 +1274,7 @@ export default {
             title: 'Controlled Vocabularies',
         },
         openAccessPublications: {
-            pageTitle: 'My Open Access',
+            pageTitle: 'My open access',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             loadingMessage: 'Searching for open access non-compliant works',
             noResultsFound: {

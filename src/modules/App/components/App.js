@@ -191,12 +191,18 @@ const AppClass = ({
         incompleteRecordList.incomplete.publicationsListPagingData &&
         incompleteRecordList.incomplete.publicationsListPagingData.total > 0
     );
+    const hasOaComplianceWorks = !!(
+        incompleteRecordList &&
+        incompleteRecordList.oacompliance.publicationsListPagingData &&
+        incompleteRecordList.oacompliance.publicationsListPagingData.total > 0
+    );
     const menuItems = routes.getMenuConfig(
         account,
         author,
         authorDetails,
         isHdrStudent && !isAuthor,
         hasIncompleteWorks,
+        hasOaComplianceWorks,
     );
 
     const isPublicPage = isPublic(menuItems);

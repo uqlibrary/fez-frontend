@@ -34,6 +34,7 @@ import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { useWatch } from 'react-hook-form';
 import validationErrors from '../../../locale/validationErrors';
 import { isEmptyObject } from '../../../helpers/general';
+import PropTypes from 'prop-types';
 
 // constants
 const RECORD_ACTION_FIX = 'fix';
@@ -107,18 +108,36 @@ const fixOptions = pagesLocale.pages.fixRecord.actionsOptions.map((item, index) 
     <MenuItem value={item.action} children={item.title} key={`fix_record_action_${index}`} />
 ));
 
-const saveConfirmationLocale = { ...formsLocale.forms.fixPublicationForm.successWorkflowConfirmation };
+const localContent = {
+    fix: {
+        txt: pagesLocale.pages.fixRecord,
+        txtFixForm: formsLocale.forms.fixPublicationForm,
+        defaultFixAction: '',
+        nextAction: pathConfig.records.mine,
+        saveConfirmationLocale: { ...formsLocale.forms.fixPublicationForm.successWorkflowConfirmation },
+    },
+    openAccess: {
+        txt: pagesLocale.pages.openAccessComplianceRecord,
+        txtFixForm: formsLocale.forms.openAccessComplianceForm,
+        defaultFixAction: RECORD_ACTION_FIX,
+        nextAction: pathConfig.records.openAccessCompliance,
+        saveConfirmationLocale: { ...formsLocale.forms.openAccessComplianceForm.successWorkflowConfirmation },
+    },
+};
 
-const FixRecord = () => {
+const FixRecord = ({ openAccess = false }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     // route params
     const { pid } = useParams();
+
+    const { txt, txtFixForm, defaultFixAction, nextAction, saveConfirmationLocale } = openAccess
+        ? localContent.openAccess
+        : localContent.fix;
+
     // to allow confirmDialogBox control
     const confirmDialogBoxRef = useRef();
     // constants
-    const txt = pagesLocale.pages.fixRecord;
-    const txtFixForm = formsLocale.forms.fixPublicationForm;
     const txtUnclaimForm = formsLocale.forms.unclaimPublicationForm;
     // app's global state
     const { author, accountAuthorLoading } = useSelector(state => state.get('accountReducer'));
@@ -140,7 +159,7 @@ const FixRecord = () => {
     } = useValidatedForm({
         // use values instead of defaultValues, as the first triggers a re-render upon updates
         values: {
-            fixAction: '',
+            fixAction: defaultFixAction,
             comments: '',
             rek_link: '',
             contentIndicators,
@@ -187,15 +206,14 @@ const FixRecord = () => {
         return <div />;
     }
 
-    // navigation
-    const navigateToMyResearch = () => {
-        navigate(pathConfig.records.mine);
+    const navigateToNext = () => {
+        navigate(nextAction);
     };
     const navigateToDashboard = () => {
         navigate(pathConfig.dashboard);
     };
     const cancelFix = () => {
-        navigateToMyResearch();
+        navigateToNext();
     };
 
     // dialog & alert
@@ -222,22 +240,24 @@ const FixRecord = () => {
                         <Grid xs={12}>
                             <StandardCard title={txt.subTitle} help={txt.help}>
                                 <PublicationCitation publication={recordToFix} citationStyle={'header'} />
-                                <Field
-                                    control={control}
-                                    component={SelectField}
-                                    disabled={isSubmitting}
-                                    name="fixAction"
-                                    label={txt.fieldLabels.action}
-                                    validate={[validation.required]}
-                                    required
-                                    selectFieldId="fix-action"
-                                    data-testid="fix-action"
-                                >
-                                    {fixOptions}
-                                </Field>
+                                {!openAccess && (
+                                    <Field
+                                        control={control}
+                                        component={SelectField}
+                                        disabled={isSubmitting}
+                                        name="fixAction"
+                                        label={txt.fieldLabels.action}
+                                        validate={[validation.required]}
+                                        required
+                                        selectFieldId="fix-action"
+                                        data-testid="fix-action"
+                                    >
+                                        {fixOptions}
+                                    </Field>
+                                )}
                             </StandardCard>
                         </Grid>
-                        {fixAction === RECORD_ACTION_FIX && (
+                        {(fixAction === RECORD_ACTION_FIX || openAccess) && (
                             <React.Fragment>
                                 <NavigationDialogBox
                                     when={isDirty && !isSubmitSuccessful}
@@ -245,7 +265,7 @@ const FixRecord = () => {
                                 />
                                 <ConfirmDialogBox
                                     onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}
-                                    onAction={navigateToMyResearch}
+                                    onAction={navigateToNext}
                                     onCancelAction={navigateToDashboard}
                                     locale={saveConfirmationLocale}
                                 />
@@ -282,7 +302,7 @@ const FixRecord = () => {
                                         </Grid>
                                     </StandardCard>
                                 </Grid>
-                                {showContentIndicatorsField(recordToFix) && (
+                                {!openAccess && showContentIndicatorsField(recordToFix) && (
                                     <Grid xs={12}>
                                         <StandardCard
                                             title={txtFixForm.contentIndicators.title}
@@ -331,7 +351,7 @@ const FixRecord = () => {
                                     {txtUnclaimForm.description}
                                     <ConfirmDialogBox
                                         onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}
-                                        onAction={navigateToMyResearch}
+                                        onAction={navigateToNext}
                                         onCancelAction={cancelFix}
                                         locale={txtUnclaimForm.successWorkflowConfirmation}
                                     />
@@ -378,5 +398,7 @@ const FixRecord = () => {
         </StandardPage>
     );
 };
-
+FixRecord.propTypes = {
+    openAccess: PropTypes.bool,
+};
 export default FixRecord;
