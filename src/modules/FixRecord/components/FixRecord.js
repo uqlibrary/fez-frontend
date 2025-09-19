@@ -228,7 +228,9 @@ const FixRecord = ({ openAccess = false }) => {
     const onSubmit = safelyHandleSubmit(async () => {
         const data = mergeWithFormValues({ author, publication });
         await dispatch(
-            data.fixAction === RECORD_ACTION_UNCLAIM ? actions.unclaimRecord(data) : actions.fixRecord(data),
+            data.fixAction === RECORD_ACTION_UNCLAIM
+                ? actions.unclaimRecord(data)
+                : actions.fixRecord(data, openAccess),
         );
     });
 

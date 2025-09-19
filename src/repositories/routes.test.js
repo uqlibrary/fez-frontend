@@ -190,6 +190,22 @@ describe('Backend routes method', () => {
         });
     });
 
+    it('should construct url for OACOMPLIANCE_RECORDS_API', () => {
+        expect(routes.OACOMPLIANCE_RECORDS_API({})).toEqual({
+            apiUrl: 'records/search',
+            options: {
+                params: {
+                    export_to: '',
+                    order_by: 'desc',
+                    page: 1,
+                    per_page: 20,
+                    rule: 'oacompliance',
+                    sort: 'score',
+                },
+            },
+        });
+    });
+
     it('should construct url for SEARCH_INTERNAL_RECORDS_API', () => {
         const testCases = [
             {
@@ -579,6 +595,13 @@ describe('Backend routes method', () => {
 
     it('should construct url for RECORDS_ISSUES_API', () => {
         expect(routes.RECORDS_ISSUES_API({ pid: 'UQ:1001' })).toEqual({ apiUrl: 'records/UQ:1001/issues' });
+    });
+
+    it('should construct url for MAKE_OPEN_ACCESS_API', () => {
+        expect(routes.MAKE_OPEN_ACCESS_API({ pid: 'UQ:1001' })).toEqual({
+            apiUrl: 'records/UQ:1001/issues',
+            options: { params: { myOpenAccess: 1 } },
+        });
     });
 
     it('should construct url for NEW_COLLECTION_API', () => {

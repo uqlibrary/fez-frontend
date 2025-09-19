@@ -56,7 +56,7 @@ export const setup = () => {
         }
         return [404, {}];
     });
-
+    
     mock.onGet(routes.SEARCH_INTERNAL_RECORDS_API({}, 'export').apiUrl).reply(config => {
         const headers = {
             excel: {
@@ -781,6 +781,8 @@ export const setup = () => {
         .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
         // .reply(500, { message: ['error - failed FILE_UPLOAD_API'] })
         .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
+        .reply(200, { data: '' })
+        .onPost(new RegExp(escapeRegExp(routes.MAKE_OPEN_ACCESS_API({ pid: '.*' }).apiUrl)))
         .reply(200, { data: '' })
         // .reply(500, { message: ['error - failed POST RECORDS_ISSUES_API'] })
         .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API().apiUrl)))
