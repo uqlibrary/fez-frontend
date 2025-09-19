@@ -291,7 +291,7 @@ describe('Additional Information Component ', () => {
     });
 
     it('should render oa status value link in the component with thesis', () => {
-        records.thesis.fez_record_search_key_oa_status.rek_oa_status_lookup = 'File (Author Post-print)';
+        records.thesis.fez_record_search_key_oa_status.rek_oa_status_lookup = 'File (Author Accepted Manuscript)';
         const { container } = setup({ publication: records.thesis });
         expect(container).toMatchSnapshot();
     });

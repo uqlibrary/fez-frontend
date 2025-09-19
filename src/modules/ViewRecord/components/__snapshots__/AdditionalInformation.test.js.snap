@@ -26856,7 +26856,7 @@ exports[`Additional Information Component  should render oa status value link in
                 <span
                   data-testid="rek-oa-status"
                 >
-                  File (Author Post-print)
+                  File (Author Accepted Manuscript)
                 </span>
               </span>
             </div>
