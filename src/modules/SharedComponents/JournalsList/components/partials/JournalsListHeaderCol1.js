@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import Grid from '@mui/material/GridLegacy';
 import JournalFieldsMap from './JournalFieldsMap';
@@ -15,7 +14,7 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
             id="journal-list-header"
             data-testid="journal-list-header"
             alignItems="center"
-            sx={theme => ({
+            sx={() => ({
                 width: '101%',
                 borderBottom: '1px solid #CCC',
                 marginBottom: '6px',
@@ -29,7 +28,7 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                         <Checkbox
                             id="journal-list-header-col-1-select-all"
                             onChange={onChange}
-                            sx={theme => ({
+                            sx={() => ({
                                 padding: '2px',
                                 marginTop: '4px',
                             })}
@@ -49,7 +48,7 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                 xs
                 id="journal-list-header-col-1"
                 data-testid="journal-list-header-col-1"
-                sx={theme => ({
+                sx={() => ({
                     paddingLeft: 1,
                     ...(isSelectable ? { paddingLeft: 2 } : {}),
                 })}
