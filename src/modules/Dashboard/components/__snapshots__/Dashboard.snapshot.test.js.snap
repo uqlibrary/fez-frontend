@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
+exports[`Dashboard test Snapshots Rendering MyLatestPublications tab 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -679,7 +679,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
 </div>
 `;
 
-exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
+exports[`Dashboard test Snapshots Rendering MyTrendingPublications tab 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -1429,7 +1429,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
 </div>
 `;
 
-exports[`Dashboard test Should only render barChart 1`] = `
+exports[`Dashboard test Snapshots Should only render barChart 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -1710,7 +1710,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
 </div>
 `;
 
-exports[`Dashboard test componentDidMount without account id 1`] = `
+exports[`Dashboard test Snapshots componentDidMount without account id 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -2389,7 +2389,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
 </div>
 `;
 
-exports[`Dashboard test displays a lure to a single work when the user has incomplete NTRO submissions 1`] = `
+exports[`Dashboard test Snapshots displays a lure to a single work when the user has incomplete NTRO submissions 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -2738,7 +2738,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
 </div>
 `;
 
-exports[`Dashboard test displays a lure when the user has incomplete NTRO submissions 1`] = `
+exports[`Dashboard test Snapshots displays a lure when the user has incomplete NTRO submissions 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -3087,7 +3087,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
 </div>
 `;
 
-exports[`Dashboard test does render latest and trending publications tabs correctly 1`] = `
+exports[`Dashboard test Snapshots does render latest and trending publications tabs correctly 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -3551,7 +3551,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
 </div>
 `;
 
-exports[`Dashboard test does render latest publications tab correctly 1`] = `
+exports[`Dashboard test Snapshots does render latest publications tab correctly 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -3943,7 +3943,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
 </div>
 `;
 
-exports[`Dashboard test does render the donut/bar graph cards when data is available 1`] = `
+exports[`Dashboard test Snapshots does render the donut/bar graph cards when data is available 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -4298,7 +4298,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
 </div>
 `;
 
-exports[`Dashboard test does render trending publications tab correctly 1`] = `
+exports[`Dashboard test Snapshots does render trending publications tab correctly 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -4695,7 +4695,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
 </div>
 `;
 
-exports[`Dashboard test doesn't render either the publications lure or the add a record lure while the pub count is still loading 1`] = `
+exports[`Dashboard test Snapshots doesn't render either the publications lure or the add a record lure while the pub count is still loading 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -4916,513 +4916,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
 </div>
 `;
 
-exports[`Dashboard test doesn't render possibly your publications lure and shows the add a record lure 1`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    />
-    <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        >
-          <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-fam12c-MuiPaper-root-MuiCard-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1194a8g-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-              >
-                <div
-                  aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
-                  title="Professor J Researcher"
-                >
-                  <img
-                    class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
-                    src="https://its-ss-academicportal.s3.amazonaws.com/prod/uqresearchers/photo/thumbnail_14.jpg"
-                  />
-                </div>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      >
-                        <h6
-                          class="MuiTypography-root MuiTypography-h6 css-s0bjcf-MuiTypography-root"
-                        >
-                          Professor
-                           
-                          J
-                           
-                          Researcher
-                        </h6>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
-                        >
-                          <b>
-                            Affiliate Professor
-                          </b>
-                          , Institute for Molecular Bioscience
-                        </span>
-                        <span
-                          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
-                        >
-                          <b>
-                            Affiliate Professorial Res Fellow
-                          </b>
-                          , School of Chemistry and Molecular Biosciences
-                        </span>
-                        <span
-                          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
-                        >
-                          <b>
-                            ARC Australian Laureate Fellow
-                          </b>
-                          , The University of Queensland Diamantina Institute
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
-                      style="margin-top: 12px;"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                      >
-                        <a
-                          class="css-hi05s4"
-                          data-analyticsid="researcher-link"
-                          data-testid="researcher-link"
-                          href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
-                          id="researcher-link"
-                          rel="noopener noreferrer"
-                          tabindex="0"
-                          target="_blank"
-                        >
-                          <div
-                            aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
-                            class="fez-icon researcher ok"
-                            data-mui-internal-clone-element="true"
-                            style="width: 32px; height: 32px; border-radius: 32px;"
-                          />
-                        </a>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                      >
-                        <a
-                          class="css-hi05s4"
-                          data-analyticsid="scopus-link"
-                          data-testid="scopus-link"
-                          href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
-                          id="scopus-link"
-                          rel="noopener noreferrer"
-                          tabindex="0"
-                          target="_blank"
-                        >
-                          <div
-                            aria-label="Your Scopus ID is 35478294000 - Click to review"
-                            class="fez-icon scopus ok"
-                            data-mui-internal-clone-element="true"
-                            style="width: 32px; height: 32px; border-radius: 32px;"
-                          />
-                        </a>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                      >
-                        <a
-                          class="css-hi05s4"
-                          data-analyticsid="google_scholar-link"
-                          data-testid="google_scholar-link"
-                          href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
-                          id="google_scholar-link"
-                          rel="noopener noreferrer"
-                          tabindex="0"
-                          target="_blank"
-                        >
-                          <div
-                            aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-                            class="fez-icon google_scholar ok"
-                            data-mui-internal-clone-element="true"
-                            style="width: 32px; height: 32px; border-radius: 32px;"
-                          />
-                        </a>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                      >
-                        <a
-                          class="css-hi05s4"
-                          data-analyticsid="orcid-link"
-                          data-testid="orcid-link"
-                          href="https://orcid.org/0000-0001-1111-1111"
-                          id="orcid-link"
-                          rel="noopener noreferrer"
-                          tabindex="0"
-                          target="_blank"
-                        >
-                          <div
-                            aria-label="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
-                            class="fez-icon orcid ok"
-                            data-mui-internal-clone-element="true"
-                            style="width: 32px; height: 32px; border-radius: 32px;"
-                          />
-                        </a>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                      >
-                        <a
-                          aria-label="Click to visit your ORCID profile"
-                          href="https://orcid.org/0000-0001-1111-1111"
-                          id="orcid"
-                          tabindex="0"
-                          target="_blank"
-                          title="Click to visit your ORCID profile"
-                        >
-                          <span
-                            class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
-                          >
-                             orcid.org/0000-0001-1111-1111
-                          </span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1qn4t39-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-          style="margin-top: -27px;"
-        >
-          <div
-            data-testid="alert"
-            style="margin-top: 5px;"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-yrmeox-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
-                      data-testid="InfoOutlinedIcon"
-                      focusable="false"
-                      id="info-outline-icon"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
-                  >
-                    <b>
-                      Add your work to eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
-              >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
-                  data-analyticsid="action-button"
-                  data-testid="action-button"
-                  id="action-button"
-                  tabindex="0"
-                  type="button"
-                >
-                  Add a missing work
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Dashboard test doesn't render possibly your publications lure or the add a record lure 1`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    />
-    <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        >
-          <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-fam12c-MuiPaper-root-MuiCard-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1194a8g-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-              >
-                <div
-                  aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
-                  title="Professor J Researcher"
-                >
-                  <img
-                    class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
-                    src="https://its-ss-academicportal.s3.amazonaws.com/prod/uqresearchers/photo/thumbnail_14.jpg"
-                  />
-                </div>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      >
-                        <h6
-                          class="MuiTypography-root MuiTypography-h6 css-s0bjcf-MuiTypography-root"
-                        >
-                          Professor
-                           
-                          J
-                           
-                          Researcher
-                        </h6>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
-                        >
-                          <b>
-                            Affiliate Professor
-                          </b>
-                          , Institute for Molecular Bioscience
-                        </span>
-                        <span
-                          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
-                        >
-                          <b>
-                            Affiliate Professorial Res Fellow
-                          </b>
-                          , School of Chemistry and Molecular Biosciences
-                        </span>
-                        <span
-                          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
-                        >
-                          <b>
-                            ARC Australian Laureate Fellow
-                          </b>
-                          , The University of Queensland Diamantina Institute
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
-                      style="margin-top: 12px;"
-                    >
-                      <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                      >
-                        <a
-                          class="css-hi05s4"
-                          data-analyticsid="researcher-link"
-                          data-testid="researcher-link"
-                          href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
-                          id="researcher-link"
-                          rel="noopener noreferrer"
-                          tabindex="0"
-                          target="_blank"
-                        >
-                          <div
-                            aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
-                            class="fez-icon researcher ok"
-                            data-mui-internal-clone-element="true"
-                            style="width: 32px; height: 32px; border-radius: 32px;"
-                          />
-                        </a>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                      >
-                        <a
-                          class="css-hi05s4"
-                          data-analyticsid="scopus-link"
-                          data-testid="scopus-link"
-                          href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
-                          id="scopus-link"
-                          rel="noopener noreferrer"
-                          tabindex="0"
-                          target="_blank"
-                        >
-                          <div
-                            aria-label="Your Scopus ID is 35478294000 - Click to review"
-                            class="fez-icon scopus ok"
-                            data-mui-internal-clone-element="true"
-                            style="width: 32px; height: 32px; border-radius: 32px;"
-                          />
-                        </a>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                      >
-                        <a
-                          class="css-hi05s4"
-                          data-analyticsid="google_scholar-link"
-                          data-testid="google_scholar-link"
-                          href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
-                          id="google_scholar-link"
-                          rel="noopener noreferrer"
-                          tabindex="0"
-                          target="_blank"
-                        >
-                          <div
-                            aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-                            class="fez-icon google_scholar ok"
-                            data-mui-internal-clone-element="true"
-                            style="width: 32px; height: 32px; border-radius: 32px;"
-                          />
-                        </a>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                      >
-                        <a
-                          class="css-hi05s4"
-                          data-analyticsid="orcid-link"
-                          data-testid="orcid-link"
-                          href="https://orcid.org/0000-0001-1111-1111"
-                          id="orcid-link"
-                          rel="noopener noreferrer"
-                          tabindex="0"
-                          target="_blank"
-                        >
-                          <div
-                            aria-label="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
-                            class="fez-icon orcid ok"
-                            data-mui-internal-clone-element="true"
-                            style="width: 32px; height: 32px; border-radius: 32px;"
-                          />
-                        </a>
-                      </div>
-                      <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                      >
-                        <a
-                          aria-label="Click to visit your ORCID profile"
-                          href="https://orcid.org/0000-0001-1111-1111"
-                          id="orcid"
-                          tabindex="0"
-                          target="_blank"
-                          title="Click to visit your ORCID profile"
-                        >
-                          <span
-                            class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
-                          >
-                             orcid.org/0000-0001-1111-1111
-                          </span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1qn4t39-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Dashboard test doesn't render the bar/donut graph cards when no data is available 1`] = `
+exports[`Dashboard test Snapshots doesn't render possibly your publications lure and shows the add a record lure 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -5707,7 +5201,513 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
 </div>
 `;
 
-exports[`Dashboard test publicationStats should not render stats 2 1`] = `
+exports[`Dashboard test Snapshots doesn't render possibly your publications lure or the add a record lure 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-fam12c-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1194a8g-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+              >
+                <div
+                  aria-label="Photograph of  Professor J Researcher"
+                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  title="Professor J Researcher"
+                >
+                  <img
+                    class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+                    src="https://its-ss-academicportal.s3.amazonaws.com/prod/uqresearchers/photo/thumbnail_14.jpg"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      >
+                        <h6
+                          class="MuiTypography-root MuiTypography-h6 css-s0bjcf-MuiTypography-root"
+                        >
+                          Professor
+                           
+                          J
+                           
+                          Researcher
+                        </h6>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      >
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+                        >
+                          <b>
+                            Affiliate Professor
+                          </b>
+                          , Institute for Molecular Bioscience
+                        </span>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+                        >
+                          <b>
+                            Affiliate Professorial Res Fellow
+                          </b>
+                          , School of Chemistry and Molecular Biosciences
+                        </span>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+                        >
+                          <b>
+                            ARC Australian Laureate Fellow
+                          </b>
+                          , The University of Queensland Diamantina Institute
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
+                      style="margin-top: 12px;"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                      >
+                        <a
+                          class="css-hi05s4"
+                          data-analyticsid="researcher-link"
+                          data-testid="researcher-link"
+                          href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
+                          id="researcher-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                        >
+                          <div
+                            aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                            class="fez-icon researcher ok"
+                            data-mui-internal-clone-element="true"
+                            style="width: 32px; height: 32px; border-radius: 32px;"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                      >
+                        <a
+                          class="css-hi05s4"
+                          data-analyticsid="scopus-link"
+                          data-testid="scopus-link"
+                          href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
+                          id="scopus-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                        >
+                          <div
+                            aria-label="Your Scopus ID is 35478294000 - Click to review"
+                            class="fez-icon scopus ok"
+                            data-mui-internal-clone-element="true"
+                            style="width: 32px; height: 32px; border-radius: 32px;"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                      >
+                        <a
+                          class="css-hi05s4"
+                          data-analyticsid="google_scholar-link"
+                          data-testid="google_scholar-link"
+                          href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
+                          id="google_scholar-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                        >
+                          <div
+                            aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+                            class="fez-icon google_scholar ok"
+                            data-mui-internal-clone-element="true"
+                            style="width: 32px; height: 32px; border-radius: 32px;"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                      >
+                        <a
+                          class="css-hi05s4"
+                          data-analyticsid="orcid-link"
+                          data-testid="orcid-link"
+                          href="https://orcid.org/0000-0001-1111-1111"
+                          id="orcid-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                        >
+                          <div
+                            aria-label="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
+                            class="fez-icon orcid ok"
+                            data-mui-internal-clone-element="true"
+                            style="width: 32px; height: 32px; border-radius: 32px;"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                      >
+                        <a
+                          aria-label="Click to visit your ORCID profile"
+                          href="https://orcid.org/0000-0001-1111-1111"
+                          id="orcid"
+                          tabindex="0"
+                          target="_blank"
+                          title="Click to visit your ORCID profile"
+                        >
+                          <span
+                            class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+                          >
+                             orcid.org/0000-0001-1111-1111
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1qn4t39-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dashboard test Snapshots doesn't render the bar/donut graph cards when no data is available 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-fam12c-MuiPaper-root-MuiCard-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1194a8g-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+              >
+                <div
+                  aria-label="Photograph of  Professor J Researcher"
+                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  title="Professor J Researcher"
+                >
+                  <img
+                    class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+                    src="https://its-ss-academicportal.s3.amazonaws.com/prod/uqresearchers/photo/thumbnail_14.jpg"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      >
+                        <h6
+                          class="MuiTypography-root MuiTypography-h6 css-s0bjcf-MuiTypography-root"
+                        >
+                          Professor
+                           
+                          J
+                           
+                          Researcher
+                        </h6>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      >
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+                        >
+                          <b>
+                            Affiliate Professor
+                          </b>
+                          , Institute for Molecular Bioscience
+                        </span>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+                        >
+                          <b>
+                            Affiliate Professorial Res Fellow
+                          </b>
+                          , School of Chemistry and Molecular Biosciences
+                        </span>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+                        >
+                          <b>
+                            ARC Australian Laureate Fellow
+                          </b>
+                          , The University of Queensland Diamantina Institute
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
+                      style="margin-top: 12px;"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                      >
+                        <a
+                          class="css-hi05s4"
+                          data-analyticsid="researcher-link"
+                          data-testid="researcher-link"
+                          href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
+                          id="researcher-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                        >
+                          <div
+                            aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                            class="fez-icon researcher ok"
+                            data-mui-internal-clone-element="true"
+                            style="width: 32px; height: 32px; border-radius: 32px;"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                      >
+                        <a
+                          class="css-hi05s4"
+                          data-analyticsid="scopus-link"
+                          data-testid="scopus-link"
+                          href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
+                          id="scopus-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                        >
+                          <div
+                            aria-label="Your Scopus ID is 35478294000 - Click to review"
+                            class="fez-icon scopus ok"
+                            data-mui-internal-clone-element="true"
+                            style="width: 32px; height: 32px; border-radius: 32px;"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                      >
+                        <a
+                          class="css-hi05s4"
+                          data-analyticsid="google_scholar-link"
+                          data-testid="google_scholar-link"
+                          href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
+                          id="google_scholar-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                        >
+                          <div
+                            aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+                            class="fez-icon google_scholar ok"
+                            data-mui-internal-clone-element="true"
+                            style="width: 32px; height: 32px; border-radius: 32px;"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                      >
+                        <a
+                          class="css-hi05s4"
+                          data-analyticsid="orcid-link"
+                          data-testid="orcid-link"
+                          href="https://orcid.org/0000-0001-1111-1111"
+                          id="orcid-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                        >
+                          <div
+                            aria-label="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
+                            class="fez-icon orcid ok"
+                            data-mui-internal-clone-element="true"
+                            style="width: 32px; height: 32px; border-radius: 32px;"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                      >
+                        <a
+                          aria-label="Click to visit your ORCID profile"
+                          href="https://orcid.org/0000-0001-1111-1111"
+                          id="orcid"
+                          tabindex="0"
+                          target="_blank"
+                          title="Click to visit your ORCID profile"
+                        >
+                          <span
+                            class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+                          >
+                             orcid.org/0000-0001-1111-1111
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1qn4t39-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          style="margin-top: -27px;"
+        >
+          <div
+            data-testid="alert"
+            style="margin-top: 5px;"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-yrmeox-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                      data-testid="InfoOutlinedIcon"
+                      focusable="false"
+                      id="info-outline-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                  >
+                    <b>
+                      Add your work to eSpace - 
+                    </b>
+                    <span
+                      data-testid="alert-message"
+                    >
+                      We found nothing new for you to claim, but you may add a work any time.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="action-button"
+                  data-testid="action-button"
+                  id="action-button"
+                  tabindex="0"
+                  type="button"
+                >
+                  Add a missing work
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dashboard test Snapshots publicationStats should not render stats 2 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -5787,7 +5787,7 @@ exports[`Dashboard test publicationStats should not render stats 2 1`] = `
 </div>
 `;
 
-exports[`Dashboard test publicationStats should render stats 1`] = `
+exports[`Dashboard test Snapshots publicationStats should render stats 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -6318,7 +6318,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
 </div>
 `;
 
-exports[`Dashboard test publicationStats should render stats 1 1`] = `
+exports[`Dashboard test Snapshots publicationStats should render stats 1 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -6779,7 +6779,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
 </div>
 `;
 
-exports[`Dashboard test publicationStats should render stats 2 1`] = `
+exports[`Dashboard test Snapshots publicationStats should render stats 2 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -7240,7 +7240,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
 </div>
 `;
 
-exports[`Dashboard test publicationStats should render stats with ancient date 1`] = `
+exports[`Dashboard test Snapshots publicationStats should render stats with ancient date 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -7775,7 +7775,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
 </div>
 `;
 
-exports[`Dashboard test publicationStats should render stats with ancient date without author data 1`] = `
+exports[`Dashboard test Snapshots publicationStats should render stats with ancient date without author data 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -8084,7 +8084,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date w
 </div>
 `;
 
-exports[`Dashboard test renders alert for non-authors 1`] = `
+exports[`Dashboard test Snapshots renders alert for non-authors 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -8330,7 +8330,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
 </div>
 `;
 
-exports[`Dashboard test renders dashboard header only 1`] = `
+exports[`Dashboard test Snapshots renders dashboard header only 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -8615,7 +8615,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
 </div>
 `;
 
-exports[`Dashboard test renders loading for authors 1`] = `
+exports[`Dashboard test Snapshots renders loading for authors 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -8689,13 +8689,132 @@ exports[`Dashboard test renders loading for authors 1`] = `
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
         />
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          style="margin-top: -27px;"
+        >
+          <div
+            data-testid="alert"
+            style="margin-top: 5px;"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
+              data-analyticsid="dashboard-orcid-linking-dashboard"
+              data-testid="dashboard-orcid-linking-dashboard"
+              id="dashboard-orcid-linking-dashboard"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-yrmeox-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                      data-testid="InfoOutlinedIcon"
+                      focusable="false"
+                      id="info-outline-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                  >
+                    <b>
+                      Link now! - 
+                    </b>
+                    <span
+                      data-testid="alert-message"
+                    >
+                      You can authorise UQ eSpace to update ORCID on your behalf.
+                    </span>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item css-zxylgf-MuiGrid-root"
+                  >
+                    <button
+                      aria-label="Click to dismiss this alert"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                      data-analyticsid="dismiss-mobile"
+                      data-testid="dismiss-mobile"
+                      id="dismiss-mobile"
+                      tabindex="0"
+                      title="Click to dismiss this alert"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-i4bv87-MuiSvgIcon-root"
+                        data-testid="CloseIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="action-button"
+                  data-testid="action-button"
+                  id="action-button"
+                  tabindex="0"
+                  type="button"
+                >
+                  Link your ORCID profile now
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-1lq6dh0-MuiGrid-root"
+              >
+                <button
+                  aria-label="Click to dismiss this alert"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="dismiss"
+                  data-testid="dismiss"
+                  id="dismiss"
+                  tabindex="0"
+                  title="Click to dismiss this alert"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-i4bv87-MuiSvgIcon-root"
+                    data-testid="CloseIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Dashboard test renders possibly your publications lure but not the add a record lure 1`] = `
+exports[`Dashboard test Snapshots renders possibly your publications lure but not the add a record lure 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -8980,7 +9099,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
 </div>
 `;
 
-exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
+exports[`Dashboard test Snapshots sets context for showing ORCID sync UI 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
@@ -9255,7 +9374,7 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
 </div>
 `;
 
-exports[`Dashboard test should get styles for full render 1`] = `
+exports[`Dashboard test Snapshots should get styles for full render 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"

@@ -115,7 +115,7 @@ const Dashboard = ({
     const isMobileView = useIsMobileView();
     const [dashboardPubsTabs, setDashboardPubsTabs] = useState(1);
     const [orcidSyncStatusRefreshCount, setOrcidSyncStatusRefreshCount] = useState(0);
-    const [hideOrcidLinkingLure, setHideOrcidLinkingLure] = useState(
+    const [hideOrcidLinkingDialog, setHideOrcidLinkingDialog] = useState(
         Cookies.get(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG) === 'hide',
     );
     const lastOrcidSyncStatusRequestRef = useRef(null);
@@ -140,8 +140,8 @@ const Dashboard = ({
     };
 
     useEffect(() => {
-        hideOrcidLinkingLure && Cookies.set(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG, 'hide');
-    }, [hideOrcidLinkingLure]);
+        hideOrcidLinkingDialog && Cookies.set(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG, 'hide');
+    }, [hideOrcidLinkingDialog]);
 
     useEffect(() => {
         _loadOrcidSync(fibonacci(orcidSyncStatusRefreshCount, 1));
@@ -165,7 +165,7 @@ const Dashboard = ({
 
     const navigateToOrcidLinking = () => navigate(pathConfig.authorIdentifiers.orcid.link);
 
-    const dismissOrcidLinkingLure = () => setHideOrcidLinkingLure(true);
+    const dismissOrcidLinkingLure = () => setHideOrcidLinkingDialog(true);
 
     const _addPublication = () => {
         navigate(pathConfig.records.add.find);
@@ -376,13 +376,14 @@ const Dashboard = ({
                     </React.Fragment>
                 )}
                 {/* render orcid linking lure */}
-                {!author?.aut_orcid_id && !hideOrcidLinkingLure && (
+                {author?.aut_id && !author?.aut_orcid_id && !hideOrcidLinkingDialog && (
                     <Grid item xs={12} style={{ marginTop: -27 }}>
                         <Alert
                             title={txt.orcidLinkingLure.title}
                             message={txt.orcidLinkingLure.message}
                             type={txt.orcidLinkingLure.type}
                             actionButtonLabel={txt.orcidLinkingLure.actionButtonLabel}
+                            alertId="dashboard-orcid-linking-dashboard"
                             action={navigateToOrcidLinking}
                             dismissAction={dismissOrcidLinkingLure}
                             allowDismiss
