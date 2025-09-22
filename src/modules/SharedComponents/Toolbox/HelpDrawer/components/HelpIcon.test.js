@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import HelpIcon from './HelpIcon';
 import { rtlRender, fireEvent, WithReduxStore } from 'test-utils';
 
@@ -32,11 +32,22 @@ describe('HelpIcon snapshots tests', () => {
         expect(getByTestId('help-icon-test')).toBeInTheDocument();
     });
 
-    it('should set drawer content', () => {
+    it('should open drawer', () => {
         const showFn = jest.spyOn(actions, 'show');
         const { getByTestId } = setup();
 
         fireEvent.click(getByTestId('help-icon'));
+        expect(showFn).toHaveBeenCalledWith('This is the title', 'This is some text', 'This is a button');
+    });
+
+    it('should expose openDrawer via ref', () => {
+        const showFn = jest.spyOn(actions, 'show');
+        const ref = createRef();
+
+        expect(showFn).not.toHaveBeenCalled();
+        setup({ ref });
+
+        ref.current?.openDrawer();
         expect(showFn).toHaveBeenCalledWith('This is the title', 'This is some text', 'This is a button');
     });
 });
