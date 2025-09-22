@@ -29,7 +29,7 @@ import locale from 'locale/pages';
 import { mui1theme as theme } from 'config';
 import { useIsMobileView } from 'hooks';
 import Cookies from 'js-cookie';
-import { COOKIE_DASHBOARD_ORCID_LINKING_DIALOG } from '../../../config/general';
+import { DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE } from '../../../config/general';
 
 const StyledTabs = styled(Tabs)(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
@@ -118,7 +118,7 @@ const Dashboard = ({
     const [dashboardPubsTabs, setDashboardPubsTabs] = useState(1);
     const [orcidSyncStatusRefreshCount, setOrcidSyncStatusRefreshCount] = useState(0);
     const [hideTurnOnOrcidSyncReminder, setHideTurnOnOrcidSyncReminder] = useState(
-        Cookies.get(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG) === 'hide',
+        String(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)) === 'true',
     );
     const lastOrcidSyncStatusRequestRef = useRef(null);
     const orcidSyncSettingsButtonRef = useRef(null);
@@ -143,10 +143,6 @@ const Dashboard = ({
     };
 
     useEffect(() => {
-        hideTurnOnOrcidSyncReminder && Cookies.set(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG, 'hide');
-    }, [hideTurnOnOrcidSyncReminder]);
-
-    useEffect(() => {
         _loadOrcidSync(fibonacci(orcidSyncStatusRefreshCount, 1));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [orcidSyncStatusRefreshCount]);
@@ -162,13 +158,19 @@ const Dashboard = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [loadingOrcidSyncStatus]);
 
+    const openOrcidSyncSettings = () => {
+        orcidSyncSettingsButtonRef.current?.openDrawer?.();
+        setHideTurnOnOrcidSyncReminder(true);
+    };
+
+    const dismissEnableOrcidSyncDialog = () => {
+        Cookies.set(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE, 'true');
+        setHideTurnOnOrcidSyncReminder(true);
+    };
+
     const _claimYourPublications = () => {
         navigate(pathConfig.records.possible);
     };
-
-    const openOrcidSyncSettings = () => orcidSyncSettingsButtonRef.current?.openDrawer?.();
-
-    const dismissEnableOrcidSyncDialog = () => setHideTurnOnOrcidSyncReminder(true);
 
     const _addPublication = () => {
         navigate(pathConfig.records.add.find);

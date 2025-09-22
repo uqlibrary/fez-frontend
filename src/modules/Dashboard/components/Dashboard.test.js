@@ -4,7 +4,7 @@ import * as mock from 'mock/data';
 import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 import { within } from '@testing-library/react';
-import { COOKIE_DASHBOARD_ORCID_LINKING_DIALOG } from '../../../config/general';
+import { DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE } from '../../../config/general';
 import Cookies from 'js-cookie';
 
 const publicationTotalCount = {
@@ -29,7 +29,6 @@ jest.mock('react-router-dom', () => ({
 }));
 
 const mockHelpIconOpenDrawer = jest.fn();
-
 jest.mock('modules/SharedComponents/Toolbox/HelpDrawer', () => {
     const React = require('react');
     return {
@@ -86,7 +85,7 @@ function setup(testProps = {}, renderMethod = render) {
 
 describe('Dashboard test', () => {
     afterEach(() => {
-        Cookies.remove(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG);
+        Cookies.remove(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE);
         jest.clearAllMocks();
     });
 
@@ -262,19 +261,20 @@ describe('Dashboard test', () => {
             expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
         });
 
-        it('should open ORCID Sync Settings Drawer on action button click', () => {
-            const { getByTestId } = setup({
+        it('should open ORCID Sync Settings Drawer on button click and hide itself', () => {
+            const { getByTestId, queryByTestId } = setup({
                 author: {
                     ...mock.currentAuthor.uqresearcher.data,
                     aut_is_orcid_sync_enabled: 0,
                 },
             });
             fireEvent.click(within(getByTestId('dashboard-orcid-linking-dashboard')).getByTestId('action-button'));
+            expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
             expect(mockHelpIconOpenDrawer).toHaveBeenCalledTimes(1);
         });
 
-        it('should allow hiding it', () => {
-            expect(Cookies.get(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG)).toBeUndefined();
+        it('should allow dismissing it', () => {
+            expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBeUndefined();
             const { getByTestId, queryByTestId } = setup({
                 author: {
                     ...mock.currentAuthor.uqresearcher.data,
@@ -287,11 +287,11 @@ describe('Dashboard test', () => {
             fireEvent.click(within(getByTestId('dashboard-orcid-linking-dashboard')).getByTestId('dismiss-mobile'));
 
             expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
-            expect(Cookies.get(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG)).toBe('hide');
+            expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBe('true');
         });
 
         it('should not display if it has been dismissed before', () => {
-            expect(Cookies.get(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG)).toBeUndefined();
+            expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBeUndefined();
             const { getByTestId, queryByTestId, rerender } = setup({
                 author: {
                     ...mock.currentAuthor.uqresearcher.data,
@@ -300,7 +300,7 @@ describe('Dashboard test', () => {
             });
             expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
 
-            Cookies.set(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG, 'hide');
+            Cookies.set(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE, 'hide');
             rerender();
             expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
         });
