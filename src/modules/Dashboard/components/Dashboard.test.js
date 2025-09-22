@@ -3,7 +3,6 @@ import Dashboard, { fibonacci, isWaitingForSync } from './Dashboard';
 import * as mock from 'mock/data';
 import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
-import { pathConfig } from '../../../config';
 import { within } from '@testing-library/react';
 import { COOKIE_DASHBOARD_ORCID_LINKING_DIALOG } from '../../../config/general';
 import Cookies from 'js-cookie';
@@ -28,6 +27,19 @@ jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,
 }));
+
+const mockHelpIconOpenDrawer = jest.fn();
+
+jest.mock('modules/SharedComponents/Toolbox/HelpDrawer', () => {
+    const React = require('react');
+    return {
+        ...jest.requireActual('modules/SharedComponents/Toolbox/HelpDrawer'),
+        HelpIcon: React.forwardRef((props, ref) => {
+            React.useImperativeHandle(ref, () => ({ openDrawer: mockHelpIconOpenDrawer }));
+            return <div data-testid="mock-help-icon" />;
+        }),
+    };
+});
 
 const loadOrcidSyncDelay = 1;
 function setup(testProps = {}, renderMethod = render) {
@@ -250,7 +262,7 @@ describe('Dashboard test', () => {
             expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
         });
 
-        it('should navigate to ORCID linking page on clicking action button', () => {
+        it('should open ORCID Sync Settings Drawer on action button click', () => {
             const { getByTestId } = setup({
                 author: {
                     ...mock.currentAuthor.uqresearcher.data,
@@ -258,7 +270,7 @@ describe('Dashboard test', () => {
                 },
             });
             fireEvent.click(within(getByTestId('dashboard-orcid-linking-dashboard')).getByTestId('action-button'));
-            expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.authorIdentifiers.orcid.link);
+            expect(mockHelpIconOpenDrawer).toHaveBeenCalledTimes(1);
         });
 
         it('should allow hiding it', () => {
