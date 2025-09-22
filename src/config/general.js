@@ -42,6 +42,7 @@ export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.libr
 export const ORCID_BASE_URL = process.env.ORCID_URL || 'https://orcid.org';
 export const ORCID_CLIENT_ID = process.env.ORCID_CLIENT_ID || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
+export const COOKIE_DASHBOARD_ORCID_LINKING_DIALOG = 'dashboard-orcid-linking-dialog';
 
 export const ROR_BASE_URL = 'https://ror.org';
 
