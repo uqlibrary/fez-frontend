@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { styled } from '@mui/material/styles';
 
@@ -8,7 +7,6 @@ import JournalsListHeaderCol2Full from './partials/JournalsListHeaderCol2Full';
 import JournalsListDataCol1 from './partials/JournalsListDataCol1';
 import JournalsListDataCol2Full from './partials/JournalsListDataCol2Full';
 import JournalFieldsMap from './partials/JournalFieldsMap';
-import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 
 const StyledGridWrapper = styled(Grid)(({ theme }) => ({
@@ -32,7 +30,7 @@ const StyledGridMoreColumnsWidth = styled(Grid, {
     flexGrow: 1,
 }));
 
-const StyledGridHeaderRow = styled(Grid)(({ theme }) => ({
+const StyledGridHeaderRow = styled(Grid)(() => ({
     borderBottom: '1px solid #CCC',
     width: '100%',
     overflowY: 'hidden',

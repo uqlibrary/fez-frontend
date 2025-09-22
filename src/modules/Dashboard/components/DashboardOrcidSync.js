@@ -149,6 +149,7 @@ export const DashboardOrcidSync = props => {
         orcidSyncStatus,
         requestOrcidSync,
         requestingOrcidSync,
+        settingsButtonRef,
     } = props;
     const links = pagesLocale.pages.dashboard.header.dashboardResearcherIds.links;
     const currentAuthorOrcidLink = !!author.aut_orcid_id
@@ -215,6 +216,7 @@ export const DashboardOrcidSync = props => {
         title: messageTemplate.title,
         tooltip: tooltipText,
         disabled: !!accountAuthorSaving,
+        ref: settingsButtonRef,
     };
     return (
         <>
@@ -242,6 +244,7 @@ DashboardOrcidSync.propTypes = {
     orcidSyncStatus: PropTypes.object,
     requestOrcidSync: PropTypes.func,
     requestingOrcidSync: PropTypes.bool,
+    settingsButtonRef: PropTypes.object,
 };
 
 export default DashboardOrcidSync;
