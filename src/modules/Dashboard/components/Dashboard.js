@@ -375,7 +375,8 @@ const Dashboard = ({
                         )}
                     </React.Fragment>
                 )}
-                {true && !hideOrcidLinkingLure && (
+                {/* render orcid linking lure */}
+                {!author?.aut_orcid_id && !hideOrcidLinkingLure && (
                     <Grid item xs={12} style={{ marginTop: -27 }}>
                         <Alert
                             title={txt.orcidLinkingLure.title}
