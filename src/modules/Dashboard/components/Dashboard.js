@@ -28,6 +28,8 @@ import locale from 'locale/pages';
 
 import { mui1theme as theme } from 'config';
 import { useIsMobileView } from 'hooks';
+import Cookies from 'js-cookie';
+import { COOKIE_DASHBOARD_ORCID_LINKING_DIALOG } from '../../../config/general';
 
 const StyledTabs = styled(Tabs)(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
@@ -113,6 +115,9 @@ const Dashboard = ({
     const isMobileView = useIsMobileView();
     const [dashboardPubsTabs, setDashboardPubsTabs] = useState(1);
     const [orcidSyncStatusRefreshCount, setOrcidSyncStatusRefreshCount] = useState(0);
+    const [hideOrcidLinkingLure, setHideOrcidLinkingLure] = useState(
+        Cookies.get(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG) === 'hide',
+    );
     const lastOrcidSyncStatusRequestRef = useRef(null);
 
     const _loadOrcidSync = (waitTime = 1) => {
@@ -135,6 +140,10 @@ const Dashboard = ({
     };
 
     useEffect(() => {
+        hideOrcidLinkingLure && Cookies.set(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG, 'hide');
+    }, [hideOrcidLinkingLure]);
+
+    useEffect(() => {
         _loadOrcidSync(fibonacci(orcidSyncStatusRefreshCount, 1));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [orcidSyncStatusRefreshCount]);
@@ -154,6 +163,10 @@ const Dashboard = ({
         navigate(pathConfig.records.possible);
     };
 
+    const navigateToOrcidLinking = () => navigate(pathConfig.authorIdentifiers.orcid.link);
+
+    const dismissOrcidLinkingLure = () => setHideOrcidLinkingLure(true);
+
     const _addPublication = () => {
         navigate(pathConfig.records.add.find);
     };
@@ -162,7 +175,7 @@ const Dashboard = ({
         setDashboardPubsTabs(value);
     };
 
-    const redirectToIncompleteRecordlist = () => {
+    const redirectToIncompleteRecordList = () => {
         navigate(pathConfig.records.incomplete);
     };
 
@@ -329,7 +342,7 @@ const Dashboard = ({
                                             .replace('[verbEnding]', verbEndingTextReplacement)}
                                         type={txt.incompleteRecordLure.type}
                                         actionButtonLabel={txt.incompleteRecordLure.actionButtonLabel}
-                                        action={redirectToIncompleteRecordlist}
+                                        action={redirectToIncompleteRecordList}
                                     />
                                 </Grid>
                             )}
@@ -361,6 +374,19 @@ const Dashboard = ({
                             )
                         )}
                     </React.Fragment>
+                )}
+                {true && !hideOrcidLinkingLure && (
+                    <Grid item xs={12} style={{ marginTop: -27 }}>
+                        <Alert
+                            title={txt.orcidLinkingLure.title}
+                            message={txt.orcidLinkingLure.message}
+                            type={txt.orcidLinkingLure.type}
+                            actionButtonLabel={txt.orcidLinkingLure.actionButtonLabel}
+                            action={navigateToOrcidLinking}
+                            dismissAction={dismissOrcidLinkingLure}
+                            allowDismiss
+                        />
+                    </Grid>
                 )}
                 {/* render charts/stats depending on availability of data */}
                 {barChart && (publicationStats || (!donutChart && !publicationStats)) && (
