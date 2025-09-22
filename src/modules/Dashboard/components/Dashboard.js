@@ -117,10 +117,11 @@ const Dashboard = ({
     const isMobileView = useIsMobileView();
     const [dashboardPubsTabs, setDashboardPubsTabs] = useState(1);
     const [orcidSyncStatusRefreshCount, setOrcidSyncStatusRefreshCount] = useState(0);
-    const [hideOrcidLinkingDialog, setHideOrcidLinkingDialog] = useState(
+    const [hideTurnOnOrcidSyncReminder, setHideTurnOnOrcidSyncReminder] = useState(
         Cookies.get(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG) === 'hide',
     );
     const lastOrcidSyncStatusRequestRef = useRef(null);
+    const orcidSyncSettingsButtonRef = useRef(null);
 
     const _loadOrcidSync = (waitTime = 1) => {
         if (!waitTime || !author?.aut_orcid_id || !orcidSyncEnabled || loadingOrcidSyncStatus) {
@@ -142,8 +143,8 @@ const Dashboard = ({
     };
 
     useEffect(() => {
-        hideOrcidLinkingDialog && Cookies.set(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG, 'hide');
-    }, [hideOrcidLinkingDialog]);
+        hideTurnOnOrcidSyncReminder && Cookies.set(COOKIE_DASHBOARD_ORCID_LINKING_DIALOG, 'hide');
+    }, [hideTurnOnOrcidSyncReminder]);
 
     useEffect(() => {
         _loadOrcidSync(fibonacci(orcidSyncStatusRefreshCount, 1));
@@ -165,9 +166,9 @@ const Dashboard = ({
         navigate(pathConfig.records.possible);
     };
 
-    const navigateToOrcidLinking = () => navigate(pathConfig.authorIdentifiers.orcid.link);
+    const openOrcidSyncSettings = () => orcidSyncSettingsButtonRef.current?.openDrawer?.();
 
-    const dismissEnableOrcidSyncDialog = () => setHideOrcidLinkingDialog(true);
+    const dismissEnableOrcidSyncDialog = () => setHideTurnOnOrcidSyncReminder(true);
 
     const _addPublication = () => {
         navigate(pathConfig.records.add.find);
@@ -197,6 +198,7 @@ const Dashboard = ({
                         orcidSyncStatus,
                         requestingOrcidSync,
                         requestOrcidSync,
+                        settingsButtonRef: orcidSyncSettingsButtonRef,
                     },
                 }}
             >
@@ -379,21 +381,23 @@ const Dashboard = ({
                         )}
                     </React.Fragment>
                 )}
-                {/* render orcid linking lure */}
-                {author?.aut_orcid_id && !author?.aut_is_orcid_sync_enabled && !hideOrcidLinkingDialog && (
-                    <Grid item xs={12} style={{ marginTop: -27 }}>
-                        <Alert
-                            title={txt.enableOrcidSyncingLure.title}
-                            message={txt.enableOrcidSyncingLure.message}
-                            type={txt.enableOrcidSyncingLure.type}
-                            actionButtonLabel={txt.enableOrcidSyncingLure.actionButtonLabel}
-                            alertId="dashboard-orcid-linking-dashboard"
-                            action={navigateToOrcidLinking}
-                            dismissAction={dismissEnableOrcidSyncDialog}
-                            allowDismiss
-                        />
-                    </Grid>
-                )}
+                {/* render orcid sync lure */}
+                {author?.aut_orcid_id &&
+                    String(author?.aut_is_orcid_sync_enabled) !== '1' &&
+                    !hideTurnOnOrcidSyncReminder && (
+                        <Grid item xs={12} style={{ marginTop: -27 }}>
+                            <Alert
+                                title={txt.enableOrcidSyncingLure.title}
+                                message={txt.enableOrcidSyncingLure.message}
+                                type={txt.enableOrcidSyncingLure.type}
+                                actionButtonLabel={txt.enableOrcidSyncingLure.actionButtonLabel}
+                                alertId="dashboard-orcid-linking-dashboard"
+                                action={openOrcidSyncSettings}
+                                dismissAction={dismissEnableOrcidSyncDialog}
+                                allowDismiss
+                            />
+                        </Grid>
+                    )}
                 {/* render charts/stats depending on availability of data */}
                 {barChart && (publicationStats || (!donutChart && !publicationStats)) && (
                     <Grid item xs={12}>
