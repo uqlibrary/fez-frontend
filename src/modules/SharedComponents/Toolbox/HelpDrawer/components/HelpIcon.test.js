@@ -22,6 +22,8 @@ function setup(testProps = {}) {
 }
 
 describe('HelpIcon snapshots tests', () => {
+    afterEach(() => jest.clearAllMocks());
+
     it('renders help icon', () => {
         const { getByTestId } = setup();
         expect(getByTestId('help-icon')).toBeInTheDocument();
