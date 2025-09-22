@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Snackbar from '@mui/material/Snackbar';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Link from '@mui/icons-material/Link';
 import LinkOff from '@mui/icons-material/LinkOff';
 import locale from 'locale/global';
@@ -62,10 +62,12 @@ export const OfflineSnackbar = () => {
                 onClose={handleRequestClose}
                 message={snackbarProps.message}
                 autoHideDuration={snackbarProps.autoHideDuration}
-                ClickAwayListenerProps={{
-                    onClickAway: /* istanbul ignore next */ () => {
-                        /* istanbul ignore next */
-                        return false;
+                slotProps={{
+                    clickAwayListener: {
+                        onClickAway: /* istanbul ignore next */ () => {
+                            /* istanbul ignore next */
+                            return false;
+                        },
                     },
                 }}
             />

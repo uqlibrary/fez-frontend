@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import DataStreamSecurityItem from './DataStreamSecurityItem';
@@ -58,11 +58,14 @@ export const DataStreamSecuritySelector = ({ attachedDataStreams, collections, d
             <Typography variant="h6">{text.overridePrompt}</Typography>
             <div style={{ marginTop: 8, padding: 16 }}>
                 <Grid
-                    alignContent="flex-end"
-                    alignItems="flex-start"
-                    sx={{ backgroundColor: 'rgba(0,0,0,0.05)', padding: '12px' }}
                     container
                     spacing={4}
+                    sx={{
+                        alignContent: 'flex-end',
+                        alignItems: 'flex-start',
+                        backgroundColor: 'rgba(0,0,0,0.05)',
+                        padding: '12px',
+                    }}
                 >
                     {dataStreamSecurity.length > 0 &&
                         dataStreamSecurity.map((dataStream, index) => (

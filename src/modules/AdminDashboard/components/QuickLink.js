@@ -67,9 +67,9 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
         if (link.qlk_link.startsWith(platform)) {
             if (link.qlk_amount !== null) {
                 return abbreviateNumber(link.qlk_amount, 1);
-            } else return <ScheduleIcon fontSize="small" />;
-        } else return <OpenInNew fontSize="small" />;
-    }, [link.qlk_link, link.qlk_amount, platform]);
+            } else return <ScheduleIcon fontSize="small" data-testid={`ScheduleIcon-${link.qlk_id}`} />;
+        } else return <OpenInNew fontSize="small" data-testid={`OpenInNewIcon-${link.qlk_id}`} />;
+    }, [link.qlk_link, link.qlk_amount, link.qlk_id, platform]);
 
     return (
         <Card role="listitem" {...rest}>
@@ -141,6 +141,7 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
 
 QuickLink.propTypes = {
     link: PropTypes.shape({
+        qlk_id: PropTypes.number.isRequired,
         qlk_title: PropTypes.string.isRequired,
         qlk_link: PropTypes.string.isRequired,
         qlk_amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
