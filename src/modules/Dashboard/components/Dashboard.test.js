@@ -220,24 +220,31 @@ describe('Dashboard test', () => {
     });
 
     describe('ORCID Linking dialog', () => {
-        it('should not display when author data is not available', () => {
+        it('should not display for authors without an ORCID', () => {
             const { queryByTestId } = setup({
-                authorDetails: null,
-                author: null,
+                author: {
+                    ...mock.currentAuthor.uqresearcher.data,
+                    aut_orcid_id: null,
+                },
             });
             expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
         });
 
-        it('should not display for authors with an ORCID', () => {
-            const { queryByTestId } = setup();
+        it('should not display for authors with ORCID syncing enabled', () => {
+            const { queryByTestId } = setup({
+                author: {
+                    ...mock.currentAuthor.uqresearcher.data,
+                    aut_is_orcid_sync_enabled: 1,
+                },
+            });
             expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
         });
 
-        it('should display for authors without an ORCID', () => {
+        it('should display for authors with ORCID syncing disabled', () => {
             const { getByTestId } = setup({
                 author: {
                     ...mock.currentAuthor.uqresearcher.data,
-                    aut_orcid_id: null,
+                    aut_is_orcid_sync_enabled: 0,
                 },
             });
             expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
@@ -247,7 +254,7 @@ describe('Dashboard test', () => {
             const { getByTestId } = setup({
                 author: {
                     ...mock.currentAuthor.uqresearcher.data,
-                    aut_orcid_id: null,
+                    aut_is_orcid_sync_enabled: 0,
                 },
             });
             fireEvent.click(within(getByTestId('dashboard-orcid-linking-dashboard')).getByTestId('action-button'));
@@ -259,7 +266,7 @@ describe('Dashboard test', () => {
             const { getByTestId, queryByTestId } = setup({
                 author: {
                     ...mock.currentAuthor.uqresearcher.data,
-                    aut_orcid_id: null,
+                    aut_is_orcid_sync_enabled: 0,
                 },
             });
 
@@ -276,7 +283,7 @@ describe('Dashboard test', () => {
             const { getByTestId, queryByTestId, rerender } = setup({
                 author: {
                     ...mock.currentAuthor.uqresearcher.data,
-                    aut_orcid_id: null,
+                    aut_is_orcid_sync_enabled: 0,
                 },
             });
             expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();

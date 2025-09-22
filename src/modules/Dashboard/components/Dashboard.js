@@ -167,7 +167,7 @@ const Dashboard = ({
 
     const navigateToOrcidLinking = () => navigate(pathConfig.authorIdentifiers.orcid.link);
 
-    const dismissOrcidLinkingLure = () => setHideOrcidLinkingDialog(true);
+    const dismissEnableOrcidSyncDialog = () => setHideOrcidLinkingDialog(true);
 
     const _addPublication = () => {
         navigate(pathConfig.records.add.find);
@@ -380,16 +380,16 @@ const Dashboard = ({
                     </React.Fragment>
                 )}
                 {/* render orcid linking lure */}
-                {author?.aut_id && !author?.aut_orcid_id && !hideOrcidLinkingDialog && (
+                {author?.aut_orcid_id && !author?.aut_is_orcid_sync_enabled && !hideOrcidLinkingDialog && (
                     <Grid item xs={12} style={{ marginTop: -27 }}>
                         <Alert
-                            title={txt.orcidLinkingLure.title}
-                            message={txt.orcidLinkingLure.message}
-                            type={txt.orcidLinkingLure.type}
-                            actionButtonLabel={txt.orcidLinkingLure.actionButtonLabel}
+                            title={txt.enableOrcidSyncingLure.title}
+                            message={txt.enableOrcidSyncingLure.message}
+                            type={txt.enableOrcidSyncingLure.type}
+                            actionButtonLabel={txt.enableOrcidSyncingLure.actionButtonLabel}
                             alertId="dashboard-orcid-linking-dashboard"
                             action={navigateToOrcidLinking}
-                            dismissAction={dismissOrcidLinkingLure}
+                            dismissAction={dismissEnableOrcidSyncDialog}
                             allowDismiss
                         />
                     </Grid>

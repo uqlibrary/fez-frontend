@@ -330,11 +330,11 @@ export default {
                 type: 'info_outline',
                 actionButtonLabel: 'Add a missing work',
             },
-            orcidLinkingLure: {
-                title: 'Link now!',
+            enableOrcidSyncingLure: {
+                title: 'Enable now!',
                 message: 'You can authorise UQ eSpace to update ORCID on your behalf.',
                 type: 'info_outline',
-                actionButtonLabel: 'Link your ORCID profile now',
+                actionButtonLabel: 'Enable ORCID sync now',
             },
             publicationsByYearChart: {
                 title: 'eSpace works per year',
