@@ -112,8 +112,8 @@ export const createFezDatastreamInfoArray = (datastreams, pid = null, withPrevie
             const derivativeMimetype = mimetype.includes('audio')
                 ? 'audio/mp3'
                 : mimetype.includes('video')
-                ? 'video/mp4'
-                : 'image/jpg';
+                  ? 'video/mp4'
+                  : 'image/jpg';
 
             (derivativeMimetype.includes('image') ? ['preview_', 'thumbnail_', 'web_'] : ['']).forEach(prefix => {
                 processed.push({
@@ -162,10 +162,8 @@ export const getDatastreamByFilename = (filename, datastreams) =>
 export const createMatchMedia = width => {
     return query => ({
         matches: mediaQuery.match(query, { width }),
-        /* istanbul ignore next */
-        addListener: () => {},
-        /* istanbul ignore next */
-        removeListener: () => {},
+        addEventListener: () => {},
+        removeEventListener: () => {},
     });
 };
 
@@ -311,7 +309,6 @@ const mockWebApiFile = () => {
     };
 };
 
-// eslint-disable-next-line react/prop-types
 export const FormProviderWrapper = ({ children, methods, ...props }) => {
     const attributes = useValidatedForm.useValidatedForm(props);
     return (
@@ -347,10 +344,12 @@ const requestHistoryToString = history =>
 
 const debugApiRequestHistory = () => console.log(requestHistoryToString(apiRequestHistory));
 
-const requestFilter = ({ method, url, partialUrl }) => entry =>
-    (!method || entry.method === method) &&
-    (!url || entry.url === url) &&
-    (!partialUrl || entry.url.includes(partialUrl));
+const requestFilter =
+    ({ method, url, partialUrl }) =>
+    entry =>
+        (!method || entry.method === method) &&
+        (!url || entry.url === url) &&
+        (!partialUrl || entry.url.includes(partialUrl));
 
 const findRequestHistoryIndex = ({ history, method, url, partialUrl }) =>
     history.findIndex(requestFilter({ method, url, partialUrl }));
@@ -402,9 +401,9 @@ const assertApiRequest = ({ method, url, partialUrl, data }) => {
     const index = findRequestHistoryIndex({ history: apiRequestHistory, method, url, partialUrl });
     if (index < 0) {
         throw new Error(
-            `No ${(method || 'N/A').toUpperCase()} request has been made to ${url ||
-                partialUrl ||
-                'N/A'}\n\nRequest queue:\n${requestHistoryToString(apiRequestHistory)}`,
+            `No ${(method || 'N/A').toUpperCase()} request has been made to ${
+                url || partialUrl || 'N/A'
+            }\n\nRequest queue:\n${requestHistoryToString(apiRequestHistory)}`,
         );
     }
     // pop match from queue, so that similar requests can be processed by consecutive calls

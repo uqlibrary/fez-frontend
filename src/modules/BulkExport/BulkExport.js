@@ -12,7 +12,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import Dialog from '@mui/material/Dialog';
 import ErrorIcon from '@mui/icons-material/Error';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import IconButton from '@mui/material/IconButton';
 import MuiDialogContent from '@mui/material/DialogContent';
 import MuiDialogTitle from '@mui/material/DialogTitle';
@@ -40,7 +40,7 @@ const classes = {
 };
 
 const StyledDialog = styled(Dialog)(({ theme }) => ({
-    '& .MuiDialog-paperScrollPaper': {
+    '& .MuiDialog-scrollPaper > .MuiDialog-paper': {
         [theme.breakpoints.down('sm')]: {
             margin: 0,
         },

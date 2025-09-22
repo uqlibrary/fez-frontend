@@ -7,7 +7,7 @@ import { MaterialReactTable, useMaterialReactTable } from 'material-react-table'
 import { useTheme } from '@mui/material/styles';
 import { numberToWords, validation } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import People from '@mui/icons-material/People';
 import PersonOutlined from '@mui/icons-material/PersonOutlined';
@@ -96,7 +96,7 @@ export const AuthorDetailPanel = ({ rowData, locale, isEditing, setEditing, onCh
     } = locale;
 
     return (
-        <Grid container xs={11} xsOffset={1} sx={{ padding: 2 }} data-testid={`detailPanel-${rowData.aut_id}`}>
+        <Grid container sx={{ padding: 2 }} data-testid={`detailPanel-${rowData.aut_id}`} size={11} offset={1}>
             <Typography variant="body2">
                 {affiliationsLocale.title}
                 {!isEditing && (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTabbedContext } from 'context';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Tooltip from '@mui/material/Tooltip';
 import Switch from '@mui/material/Switch';
 

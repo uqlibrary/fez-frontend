@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import { useJournalContext } from 'context';
 import { fieldConfig } from 'config/journalAdmin';

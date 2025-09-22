@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 // forms & custom components
 import { pathConfig } from 'config';
 import locale from 'locale/pages';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearNewRecord } from '../../../../actions';
 import { createConfirmDialogBoxRefAssigner } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
