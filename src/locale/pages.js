@@ -330,7 +330,7 @@ export default {
                 type: 'info_outline',
                 actionButtonLabel: 'Add a missing work',
             },
-            enableOrcidSyncingLure: {
+            enableOrcidSyncLure: {
                 title: 'Enable now!',
                 message: 'You can authorise UQ eSpace to update ORCID on your behalf.',
                 type: 'info_outline',
