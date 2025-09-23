@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import JournalSearchInput from './JournalSearchInput';
 import SelectedKeywords from './SelectedKeywords';
 import KeywordsBrowser from './KeywordsBrowser';

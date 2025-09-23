@@ -6,7 +6,7 @@ import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList
 import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { useActiveFacetFilters, useJournalSearch } from '../hooks';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import { sanitiseId } from 'helpers/general';
 

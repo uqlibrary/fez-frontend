@@ -6,7 +6,7 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
@@ -100,11 +100,24 @@ export const optionDoubleRowRender = (props, option) => {
             }}
             data-testid={props.id}
         >
-            <Typography component={'div'} variant="body1" color="textPrimary" fontWeight={500}>
+            <Typography
+                component={'div'}
+                variant="body1"
+                color="textPrimary"
+                sx={{
+                    fontWeight: 500,
+                }}
+            >
                 {option.sel_title}{' '}
                 {hasBindings && (
                     <Stack direction="row" spacing={1}>
-                        <Typography variant="body2" color="textPrimary" fontWeight={500}>
+                        <Typography
+                            variant="body2"
+                            color="textPrimary"
+                            sx={{
+                                fontWeight: 500,
+                            }}
+                        >
                             Requires:{' '}
                         </Typography>
                         {option.sel_bindings.map((binding, index) => (

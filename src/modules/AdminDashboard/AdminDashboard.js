@@ -69,11 +69,16 @@ const AdminDashboard = () => {
         <StandardPage title={txt.title}>
             {adminDashboardConfigLoading && <InlineLoader message={txt.loading.config} />}
             {((!adminDashboardConfigLoading && !!!adminDashboardConfigData) || !!adminDashboardConfigError) && (
-                <Typography fontSize={'1rem'} fontWeight={400} textAlign={'center'}>
+                <Typography
+                    sx={{
+                        fontSize: '1rem',
+                        fontWeight: 400,
+                        textAlign: 'center',
+                    }}
+                >
                     {txt.loading.noconfig}
                 </Typography>
             )}
-
             {!!adminDashboardConfigData && (
                 <>
                     <Tabs value={activeTab} onChange={handleChange} aria-label="admin dashboard tabbed interface">
