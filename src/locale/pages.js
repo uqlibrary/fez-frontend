@@ -329,6 +329,12 @@ export default {
                 type: 'info_outline',
                 actionButtonLabel: 'Add a missing work',
             },
+            enableOrcidSyncingLure: {
+                title: 'Enable now!',
+                message: 'You can authorise UQ eSpace to update ORCID on your behalf.',
+                type: 'info_outline',
+                actionButtonLabel: 'Enable ORCID sync now',
+            },
             publicationsByYearChart: {
                 title: 'eSpace works per year',
                 yAxisTitle: 'Total works',

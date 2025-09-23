@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
+exports[`Dashboard test Snapshots Rendering MyLatestPublications tab 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -186,29 +186,9 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -709,7 +689,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
 </div>
 `;
 
-exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
+exports[`Dashboard test Snapshots Rendering MyTrendingPublications tab 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -895,29 +875,9 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -1491,7 +1451,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
 </div>
 `;
 
-exports[`Dashboard test Should only render barChart 1`] = `
+exports[`Dashboard test Snapshots Should only render barChart 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -1638,29 +1598,9 @@ exports[`Dashboard test Should only render barChart 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -1801,7 +1741,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
 </div>
 `;
 
-exports[`Dashboard test componentDidMount without account id 1`] = `
+exports[`Dashboard test Snapshots componentDidMount without account id 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -1987,29 +1927,9 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -2510,7 +2430,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
 </div>
 `;
 
-exports[`Dashboard test displays a lure to a single work when the user has incomplete NTRO submissions 1`] = `
+exports[`Dashboard test Snapshots displays a lure to a single work when the user has incomplete NTRO submissions 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -2760,29 +2680,9 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -2887,7 +2787,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
 </div>
 `;
 
-exports[`Dashboard test displays a lure when the user has incomplete NTRO submissions 1`] = `
+exports[`Dashboard test Snapshots displays a lure when the user has incomplete NTRO submissions 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -3137,29 +3037,9 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -3264,7 +3144,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
 </div>
 `;
 
-exports[`Dashboard test does render latest and trending publications tabs correctly 1`] = `
+exports[`Dashboard test Snapshots does render latest and trending publications tabs correctly 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -3450,29 +3330,9 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -3757,7 +3617,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
 </div>
 `;
 
-exports[`Dashboard test does render latest publications tab correctly 1`] = `
+exports[`Dashboard test Snapshots does render latest publications tab correctly 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -3943,29 +3803,9 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -4178,7 +4018,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
 </div>
 `;
 
-exports[`Dashboard test does render the donut/bar graph cards when data is available 1`] = `
+exports[`Dashboard test Snapshots does render the donut/bar graph cards when data is available 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -4364,29 +4204,9 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -4563,7 +4383,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
 </div>
 `;
 
-exports[`Dashboard test does render trending publications tab correctly 1`] = `
+exports[`Dashboard test Snapshots does render trending publications tab correctly 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -4749,29 +4569,9 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -4989,7 +4789,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
 </div>
 `;
 
-exports[`Dashboard test doesn't render either the publications lure or the add a record lure while the pub count is still loading 1`] = `
+exports[`Dashboard test Snapshots doesn't render either the publications lure or the add a record lure while the pub count is still loading 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -5175,29 +4975,9 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -5238,7 +5018,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
 </div>
 `;
 
-exports[`Dashboard test doesn't render possibly your publications lure and shows the add a record lure 1`] = `
+exports[`Dashboard test Snapshots doesn't render possibly your publications lure and shows the add a record lure 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -5424,29 +5204,9 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -5551,7 +5311,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
 </div>
 `;
 
-exports[`Dashboard test doesn't render possibly your publications lure or the add a record lure 1`] = `
+exports[`Dashboard test Snapshots doesn't render possibly your publications lure or the add a record lure 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -5737,29 +5497,9 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -5800,7 +5540,7 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
 </div>
 `;
 
-exports[`Dashboard test doesn't render the bar/donut graph cards when no data is available 1`] = `
+exports[`Dashboard test Snapshots doesn't render the bar/donut graph cards when no data is available 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -5986,29 +5726,9 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -6113,7 +5833,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
 </div>
 `;
 
-exports[`Dashboard test publicationStats should not render stats 2 1`] = `
+exports[`Dashboard test Snapshots publicationStats should not render stats 2 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -6193,7 +5913,7 @@ exports[`Dashboard test publicationStats should not render stats 2 1`] = `
 </div>
 `;
 
-exports[`Dashboard test publicationStats should render stats 1`] = `
+exports[`Dashboard test Snapshots publicationStats should render stats 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -6340,29 +6060,9 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -6755,7 +6455,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
 </div>
 `;
 
-exports[`Dashboard test publicationStats should render stats 1 1`] = `
+exports[`Dashboard test Snapshots publicationStats should render stats 1 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -6902,29 +6602,9 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -7245,7 +6925,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
 </div>
 `;
 
-exports[`Dashboard test publicationStats should render stats 2 1`] = `
+exports[`Dashboard test Snapshots publicationStats should render stats 2 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -7392,29 +7072,9 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -7735,7 +7395,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
 </div>
 `;
 
-exports[`Dashboard test publicationStats should render stats with ancient date 1`] = `
+exports[`Dashboard test Snapshots publicationStats should render stats with ancient date 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -7882,29 +7542,9 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -8301,7 +7941,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
 </div>
 `;
 
-exports[`Dashboard test publicationStats should render stats with ancient date without author data 1`] = `
+exports[`Dashboard test Snapshots publicationStats should render stats with ancient date without author data 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -8613,7 +8253,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date w
 </div>
 `;
 
-exports[`Dashboard test renders alert for non-authors 1`] = `
+exports[`Dashboard test Snapshots renders alert for non-authors 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -8760,29 +8400,9 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -8887,7 +8507,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
 </div>
 `;
 
-exports[`Dashboard test renders dashboard header only 1`] = `
+exports[`Dashboard test Snapshots renders dashboard header only 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -9073,29 +8693,9 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -9200,7 +8800,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
 </div>
 `;
 
-exports[`Dashboard test renders loading for authors 1`] = `
+exports[`Dashboard test Snapshots renders loading for authors 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -9280,7 +8880,7 @@ exports[`Dashboard test renders loading for authors 1`] = `
 </div>
 `;
 
-exports[`Dashboard test renders possibly your publications lure but not the add a record lure 1`] = `
+exports[`Dashboard test Snapshots renders possibly your publications lure but not the add a record lure 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -9466,29 +9066,9 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -9593,7 +9173,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
 </div>
 `;
 
-exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
+exports[`Dashboard test Snapshots sets context for showing ORCID sync UI 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -9740,29 +9320,9 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
@@ -9867,7 +9427,7 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
 </div>
 `;
 
-exports[`Dashboard test should get styles for full render 1`] = `
+exports[`Dashboard test Snapshots should get styles for full render 1`] = `
 <div>
   <div
     class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
@@ -10014,29 +9574,9 @@ exports[`Dashboard test should get styles for full render 1`] = `
                         <span
                           class="css-1o7ot5c"
                         >
-                          <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
-                            data-analyticsid="help-icon-orcid"
-                            data-mui-internal-clone-element="true"
-                            data-testid="help-icon-orcid"
-                            id="help-icon-orcid"
-                            tabindex="0"
-                            type="button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                              data-testid="SettingsIcon"
-                              focusable="false"
-                              size="20"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
-                              />
-                            </svg>
-                          </button>
+                          <div
+                            data-testid="mock-help-icon"
+                          />
                         </span>
                       </div>
                       <div
