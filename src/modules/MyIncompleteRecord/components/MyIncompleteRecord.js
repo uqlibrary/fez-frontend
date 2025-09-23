@@ -6,7 +6,7 @@ import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { useConfirmationState, useValidatedForm } from 'hooks';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -313,10 +313,10 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                             locale={txt.successWorkflowConfirmation}
                         />
                         <Grid container spacing={3}>
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <Alert title={txt.prompt.title} message={txt.prompt.message} type={txt.prompt.type} />
                             </Grid>
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
                                     <Grid
                                         container
@@ -327,8 +327,19 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                         }}
                                     >
                                         {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
-                                            <Grid container alignItems="flex-start" width={'100%'}>
-                                                <Grid xs={12} sm={3}>
+                                            <Grid
+                                                container
+                                                sx={{
+                                                    alignItems: 'flex-start',
+                                                    width: '100%',
+                                                }}
+                                            >
+                                                <Grid
+                                                    size={{
+                                                        xs: 12,
+                                                        sm: 3,
+                                                    }}
+                                                >
                                                     <Typography>
                                                         {
                                                             viewRecordLocale.viewRecord.headings.default
@@ -336,7 +347,12 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                                         }
                                                     </Typography>
                                                 </Grid>
-                                                <Grid xs={12} sm={9}>
+                                                <Grid
+                                                    size={{
+                                                        xs: 12,
+                                                        sm: 9,
+                                                    }}
+                                                >
                                                     <Typography>{recordToFix.rek_display_type_lookup}</Typography>
                                                 </Grid>
                                             </Grid>
@@ -352,8 +368,19 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                         }}
                                     >
                                         {!!recordToFix && !!recordToFix.rek_subtype && (
-                                            <Grid container alignItems="flex-start" width={'100%'}>
-                                                <Grid xs={12} sm={3}>
+                                            <Grid
+                                                container
+                                                sx={{
+                                                    alignItems: 'flex-start',
+                                                    width: '100%',
+                                                }}
+                                            >
+                                                <Grid
+                                                    size={{
+                                                        xs: 12,
+                                                        sm: 3,
+                                                    }}
+                                                >
                                                     <Typography>
                                                         {
                                                             viewRecordLocale.viewRecord.headings.default
@@ -361,7 +388,12 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                                         }
                                                     </Typography>
                                                 </Grid>
-                                                <Grid xs={12} sm={9}>
+                                                <Grid
+                                                    size={{
+                                                        xs: 12,
+                                                        sm: 9,
+                                                    }}
+                                                >
                                                     <Typography>{recordToFix.rek_subtype}</Typography>
                                                 </Grid>
                                             </Grid>
@@ -385,7 +417,7 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                     {...ntroFieldProps}
                                 />
                             )}
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard title={authors.title} help={authors.help}>
                                     <Typography>{authors.description}</Typography>
                                     <Field
@@ -405,7 +437,7 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                 </StandardCard>
                             </Grid>
 
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard title={txt.fields.notes.title}>
                                     <Field
                                         control={control}
@@ -424,7 +456,7 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                 </StandardCard>
                             </Grid>
                             {!hasAnyFiles && (
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <StandardCard title={txt.fields.fileUpload.title}>
                                         <Field
                                             control={control}
@@ -440,15 +472,20 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                 </Grid>
                             )}
                             {alertProps && (
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <Alert pushToTop {...alertProps} />
                                 </Grid>
                             )}
                         </Grid>
                         <Grid container spacing={3}>
-                            <Grid xs sx={{ display: { xs: 'none', md: 'block' } }} />
+                            <Grid sx={{ display: { xs: 'none', md: 'block' } }} size="grow" />
 
-                            <Grid xs={12} md="auto">
+                            <Grid
+                                size={{
+                                    xs: 12,
+                                    md: 'auto',
+                                }}
+                            >
                                 <Button
                                     id="cancel-fix-work"
                                     data-testid="incomplete-record-button-cancel"
@@ -459,7 +496,12 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                     onClick={navigateToMyIncomplete}
                                 />
                             </Grid>
-                            <Grid xs={12} md="auto">
+                            <Grid
+                                size={{
+                                    xs: 12,
+                                    md: 'auto',
+                                }}
+                            >
                                 <Button
                                     id="update-my-work"
                                     data-testid="incomplete-record-button-submit"

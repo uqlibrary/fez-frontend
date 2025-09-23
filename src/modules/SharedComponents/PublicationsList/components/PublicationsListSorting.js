@@ -5,7 +5,7 @@ import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import ListSubheader from '@mui/material/ListSubheader';
 
 import { ExportPublications } from 'modules/SharedComponents/ExportPublications';

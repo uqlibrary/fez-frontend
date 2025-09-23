@@ -3,29 +3,29 @@
 exports[`HerdcCodeField component should not render unknown value 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
     />
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-code-select"
         id="rek-herdc-code-select"
         role="combobox"
         tabindex="0"
       >
         <span
+          aria-hidden="true"
           class="notranslate"
         >
           ​
@@ -35,7 +35,7 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
         aria-hidden="true"
         aria-invalid="false"
         aria-labelledby="rek-herdc-code-label"
-        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
         data-testid="rek-herdc-code-input"
         id="rek-herdc-code-input"
@@ -44,7 +44,7 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
         data-testid="ArrowDropDownIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -61,23 +61,22 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
 exports[`HerdcCodeField component should render a current value 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
     />
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-code-select"
         id="rek-herdc-code-select"
         role="combobox"
@@ -89,7 +88,7 @@ exports[`HerdcCodeField component should render a current value 1`] = `
         aria-hidden="true"
         aria-invalid="false"
         aria-labelledby="rek-herdc-code-label"
-        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
         data-testid="rek-herdc-code-input"
         id="rek-herdc-code-input"
@@ -98,7 +97,7 @@ exports[`HerdcCodeField component should render a current value 1`] = `
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
         data-testid="ArrowDropDownIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -115,23 +114,22 @@ exports[`HerdcCodeField component should render a current value 1`] = `
 exports[`HerdcCodeField component should render a deprecated value 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
     />
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-code-select"
         id="rek-herdc-code-select"
         role="combobox"
@@ -143,7 +141,7 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
         aria-hidden="true"
         aria-invalid="false"
         aria-labelledby="rek-herdc-code-label"
-        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
         data-testid="rek-herdc-code-input"
         id="rek-herdc-code-input"
@@ -152,7 +150,7 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
         data-testid="ArrowDropDownIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -169,29 +167,29 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
 exports[`HerdcCodeField component should render default view 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
     />
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-code-select"
         id="rek-herdc-code-select"
         role="combobox"
         tabindex="0"
       >
         <span
+          aria-hidden="true"
           class="notranslate"
         >
           ​
@@ -201,7 +199,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
         aria-hidden="true"
         aria-invalid="false"
         aria-labelledby="rek-herdc-code-label"
-        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
         data-testid="rek-herdc-code-input"
         id="rek-herdc-code-input"
@@ -210,7 +208,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
         data-testid="ArrowDropDownIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -227,10 +225,10 @@ exports[`HerdcCodeField component should render default view 1`] = `
 exports[`HerdcCodeField component should render immutable list as selected value with given field props 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
@@ -238,20 +236,21 @@ exports[`HerdcCodeField component should render immutable list as selected value
       Test label
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
+        aria-invalid="true"
         aria-labelledby="rek-herdc-code-select"
-        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-code-select"
         id="rek-herdc-code-select"
         role="combobox"
         tabindex="0"
       >
         <span
+          aria-hidden="true"
           class="notranslate"
         >
           ​
@@ -261,7 +260,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
         aria-hidden="true"
         aria-invalid="true"
         aria-labelledby="rek-herdc-code-label"
-        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
         data-testid="rek-herdc-code-input"
         id="rek-herdc-code-input"
@@ -270,7 +269,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
         data-testid="ArrowDropDownIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -281,7 +280,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
       </svg>
     </div>
     <p
-      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-1d7hrfi-MuiFormHelperText-root"
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-u90aml-MuiFormHelperText-root"
       data-testid="rek-herdc-code-helper-text"
       id="rek-herdc-code-helper-text"
     >
@@ -294,10 +293,10 @@ exports[`HerdcCodeField component should render immutable list as selected value
 exports[`HerdcCodeField component should render when given a default value field props 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
@@ -305,20 +304,20 @@ exports[`HerdcCodeField component should render when given a default value field
       Test label
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-code-select"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-code-select"
         id="rek-herdc-code-select"
         role="combobox"
         tabindex="0"
       >
         <span
+          aria-hidden="true"
           class="notranslate"
         >
           ​
@@ -328,7 +327,7 @@ exports[`HerdcCodeField component should render when given a default value field
         aria-hidden="true"
         aria-invalid="false"
         aria-labelledby="rek-herdc-code-label"
-        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
         data-testid="rek-herdc-code-input"
         id="rek-herdc-code-input"
@@ -337,7 +336,7 @@ exports[`HerdcCodeField component should render when given a default value field
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
         data-testid="ArrowDropDownIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -354,10 +353,10 @@ exports[`HerdcCodeField component should render when given a default value field
 exports[`HerdcCodeField component should render with given field props 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+    class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="rek-herdc-code-label"
       id="rek-herdc-code-label"
@@ -365,20 +364,21 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
       Test label
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
+        aria-invalid="true"
         aria-labelledby="rek-herdc-code-select"
-        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-code-select"
         id="rek-herdc-code-select"
         role="combobox"
         tabindex="0"
       >
         <span
+          aria-hidden="true"
           class="notranslate"
         >
           ​
@@ -388,7 +388,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
         aria-hidden="true"
         aria-invalid="true"
         aria-labelledby="rek-herdc-code-label"
-        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
         data-analyticsid="rek-herdc-code-input"
         data-testid="rek-herdc-code-input"
         id="rek-herdc-code-input"
@@ -397,7 +397,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
         data-testid="ArrowDropDownIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -408,7 +408,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
       </svg>
     </div>
     <p
-      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-1d7hrfi-MuiFormHelperText-root"
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-u90aml-MuiFormHelperText-root"
       data-testid="rek-herdc-code-helper-text"
       id="rek-herdc-code-helper-text"
     >

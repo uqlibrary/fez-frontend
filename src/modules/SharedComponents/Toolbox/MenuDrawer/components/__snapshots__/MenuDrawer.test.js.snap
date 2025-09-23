@@ -14,13 +14,13 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
     aria-hidden="true"
   />
   <div
-    class="MuiDrawer-root MuiDrawer-modal MuiModal-root css-fgtof9-MuiModal-root-MuiDrawer-root"
+    class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-modal MuiModal-root css-46941x-MuiModal-root-MuiDrawer-root"
     id="menudrawer"
     role="presentation"
   >
     <div
       aria-hidden="true"
-      class="MuiBackdrop-root MuiModal-backdrop css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop"
+      class="MuiBackdrop-root MuiModal-backdrop css-4nmryk-MuiBackdrop-root-MuiModal-backdrop"
       style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
     />
     <div
@@ -28,19 +28,22 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
       tabindex="0"
     />
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation16 MuiDrawer-paper MuiDrawer-paperAnchorLeft css-4t3x6l-MuiPaper-root-MuiDrawer-paper"
+      aria-modal="true"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation16 MuiDrawer-paper MuiDrawer-paperAnchorLeft css-cyqh1t-MuiPaper-root-MuiDrawer-paper"
+      role="dialog"
+      style="--Paper-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);"
       tabindex="-1"
     >
       <nav
-        class="MuiList-root MuiList-padding css-fv1two-MuiList-root"
+        class="MuiList-root MuiList-padding css-slfd0z-MuiList-root"
         id="mainMenu"
         tabindex="-1"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-ml3dib-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-81r0vt-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1soofh4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-12 css-gc29ga-MuiGridLegacy-root"
           >
             <a
               class="noHover css-1oqhn84"
@@ -62,17 +65,17 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
             </a>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 css-bt3e8x-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 css-123wywt-MuiGridLegacy-root"
           >
             <button
               aria-label="Close menu"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
               tabindex="0"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1w28gxx-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-idy4w4-MuiSvgIcon-root"
                 data-testid="KeyboardArrowLeftIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -81,65 +84,64 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
                   d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
-        <div
-          class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-bshv44-MuiButtonBase-root-MuiListItem-root"
-          id="menu-item-0"
-          role="button"
-          tabindex="0"
+        <li
+          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
         >
           <div
-            class="MuiListItemText-root MuiListItemText-multiline css-5e9f31-MuiListItemText-root"
-            id="menu-itemText-0"
+            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-4bx69l-MuiButtonBase-root-MuiListItemButton-root"
+            id="menu-item-0"
+            role="button"
+            tabindex="0"
           >
-            <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+            <div
+              class="MuiListItemText-root MuiListItemText-multiline css-15grfq4-MuiListItemText-root"
+              id="menu-itemText-0"
             >
-              Primary text 0
-            </span>
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
-            >
-              secondary text 0
-            </p>
+              <span
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+              >
+                Primary text 0
+              </span>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-1a1whku-MuiTypography-root"
+              >
+                secondary text 0
+              </p>
+            </div>
           </div>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </div>
+        </li>
         <hr
-          class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+          class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
         />
-        <div
-          class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-bshv44-MuiButtonBase-root-MuiListItem-root"
-          id="menu-item-2"
-          role="button"
-          tabindex="0"
+        <li
+          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
         >
           <div
-            class="MuiListItemText-root MuiListItemText-multiline css-5e9f31-MuiListItemText-root"
-            id="menu-itemText-2"
+            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-4bx69l-MuiButtonBase-root-MuiListItemButton-root"
+            id="menu-item-2"
+            role="button"
+            tabindex="0"
           >
-            <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+            <div
+              class="MuiListItemText-root MuiListItemText-multiline css-15grfq4-MuiListItemText-root"
+              id="menu-itemText-2"
             >
-              Primary text 1
-            </span>
-            <p
-              class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
-            >
-              secondary text 1
-            </p>
+              <span
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+              >
+                Primary text 1
+              </span>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-1a1whku-MuiTypography-root"
+              >
+                secondary text 1
+              </p>
+            </div>
           </div>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </div>
+        </li>
       </nav>
       <div
         data-testid="after-menu-drawer"
@@ -179,22 +181,23 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
 >
   <div>
     <div
-      class="MuiDrawer-root MuiDrawer-docked css-wg9x4s-MuiDrawer-docked"
+      class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-docked css-ihupkb-MuiDrawer-docked"
       id="menudrawer"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-12i7wg6-MuiPaper-root-MuiDrawer-paper"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-1lwhjos-MuiPaper-root-MuiDrawer-paper"
+        style="--Paper-shadow: none;"
       >
         <nav
-          class="MuiList-root MuiList-padding css-fv1two-MuiList-root"
+          class="MuiList-root MuiList-padding css-slfd0z-MuiList-root"
           id="mainMenu"
           tabindex="-1"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-ml3dib-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-81r0vt-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1soofh4-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-12 css-gc29ga-MuiGridLegacy-root"
             >
               <a
                 class="noHover css-1oqhn84"
@@ -216,17 +219,17 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
               </a>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 css-bt3e8x-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 css-123wywt-MuiGridLegacy-root"
             >
               <button
                 aria-label="Close menu"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                 tabindex="0"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1w28gxx-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-idy4w4-MuiSvgIcon-root"
                   data-testid="KeyboardArrowLeftIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -235,9 +238,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
                     d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -248,69 +248,68 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
             tabindex="1"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary skipNavButton css-sghohy-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary skipNavButton css-74d805-MuiButtonBase-root-MuiButton-root"
               tabindex="-1"
               type="button"
             >
               Skip navigation
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-bshv44-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-0"
-            role="button"
-            tabindex="0"
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
           >
             <div
-              class="MuiListItemText-root MuiListItemText-multiline css-5e9f31-MuiListItemText-root"
-              id="menu-itemText-0"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-4bx69l-MuiButtonBase-root-MuiListItemButton-root"
+              id="menu-item-0"
+              role="button"
+              tabindex="0"
             >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+              <div
+                class="MuiListItemText-root MuiListItemText-multiline css-15grfq4-MuiListItemText-root"
+                id="menu-itemText-0"
               >
-                Primary text 0
-              </span>
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
-              >
-                secondary text 0
-              </p>
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  Primary text 0
+                </span>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-1a1whku-MuiTypography-root"
+                >
+                  secondary text 0
+                </p>
+              </div>
             </div>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
-          </div>
+          </li>
           <hr
-            class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+            class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
           />
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-bshv44-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-2"
-            role="button"
-            tabindex="0"
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
           >
             <div
-              class="MuiListItemText-root MuiListItemText-multiline css-5e9f31-MuiListItemText-root"
-              id="menu-itemText-2"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-4bx69l-MuiButtonBase-root-MuiListItemButton-root"
+              id="menu-item-2"
+              role="button"
+              tabindex="0"
             >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+              <div
+                class="MuiListItemText-root MuiListItemText-multiline css-15grfq4-MuiListItemText-root"
+                id="menu-itemText-2"
               >
-                Primary text 1
-              </span>
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
-              >
-                secondary text 1
-              </p>
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  Primary text 1
+                </span>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-1a1whku-MuiTypography-root"
+                >
+                  secondary text 1
+                </p>
+              </div>
             </div>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
-          </div>
+          </li>
         </nav>
         <div
           data-testid="after-menu-drawer"

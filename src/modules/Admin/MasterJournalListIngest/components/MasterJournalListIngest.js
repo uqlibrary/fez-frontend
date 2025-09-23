@@ -3,7 +3,7 @@ import { useValidatedForm } from 'hooks';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useDispatch } from 'react-redux';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';

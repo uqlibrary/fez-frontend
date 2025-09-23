@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import locale from 'locale/viewRecord';
@@ -34,36 +34,57 @@ const Links = ({ publication, isAdmin }) => {
         <Grid
             container
             spacing={2}
-            sx={theme => ({
-                padding: {
-                    xs: `${theme.spacing(1)} 0`,
-                    sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
+            sx={[
+                {
+                    alignItems: 'center',
+                    alignContent: 'center',
+                    justifyContent: 'center',
                 },
-                borderBottom: `1px solid ${theme.palette.secondary.light}`,
-            })}
-            alignItems={'center'}
-            alignContent={'center'}
-            justifyContent={'center'}
+                theme => ({
+                    padding: {
+                        xs: `${theme.spacing(1)} 0`,
+                        sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(2)} ${theme.spacing(1)}`,
+                    },
+                    borderBottom: `1px solid ${theme.palette.secondary.light}`,
+                }),
+            ]}
         >
-            <Grid xs={12} sm={6} data-testid={`${linkId}-link`}>
+            <Grid
+                data-testid={`${linkId}-link`}
+                size={{
+                    xs: 12,
+                    sm: 6,
+                }}
+            >
                 <Typography variant={'body2'} component={'span'}>
                     {link}
                 </Typography>
             </Grid>
             <Grid
-                xs={11}
-                sm={4}
-                whiteSpace={'nowrap'}
-                textOverflow={'ellipsis'}
-                overflow={'hidden'}
                 data-analyticsid={`${linkId}-description`}
                 data-testid={`${linkId}-description`}
+                size={{
+                    xs: 11,
+                    sm: 4,
+                }}
+                sx={{
+                    whiteSpace: 'nowrap',
+                    textOverflow: 'ellipsis',
+                    overflow: 'hidden',
+                }}
             >
                 <Typography variant={'body2'} component={'span'}>
                     {description}
                 </Typography>
             </Grid>
-            <Grid xs={1} sm={2} style={{ textAlign: 'right' }} data-testid={`${linkId}-oa-status`}>
+            <Grid
+                style={{ textAlign: 'right' }}
+                data-testid={`${linkId}-oa-status`}
+                size={{
+                    xs: 1,
+                    sm: 2,
+                }}
+            >
                 <OpenAccessIcon {...openAccessStatus} style={{ marginBottom: '-5px' }} />
             </Grid>
         </Grid>
@@ -255,7 +276,7 @@ const Links = ({ publication, isAdmin }) => {
     }
 
     return (
-        <Grid xs={12}>
+        <Grid size={12}>
             <ConfirmationBox
                 confirmationBoxId="link-rdm-accept-licence"
                 isOpen={state.isOpen}
@@ -267,28 +288,48 @@ const Links = ({ publication, isAdmin }) => {
                 <Grid
                     container
                     direction="row"
-                    alignItems="center"
                     spacing={2}
-                    padding={0}
-                    sx={theme => ({
-                        padding: {
-                            xs: `${theme.spacing(1)} 0`,
-                            sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
+                    sx={[
+                        {
+                            alignItems: 'center',
+                            padding: 0,
                         },
-                        borderBottom: `1px solid ${theme.palette.secondary.light}`,
-                    })}
+                        theme => ({
+                            padding: {
+                                xs: `${theme.spacing(1)} 0`,
+                                sm: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(2)} ${theme.spacing(1)}`,
+                            },
+                            borderBottom: `1px solid ${theme.palette.secondary.light}`,
+                        }),
+                    ]}
                 >
-                    <Grid sm={6} data-testid="link-label">
+                    <Grid
+                        data-testid="link-label"
+                        size={{
+                            sm: 6,
+                        }}
+                    >
                         <Typography variant="caption" gutterBottom>
                             {txt.headerTitles.link}
                         </Typography>
                     </Grid>
-                    <Grid sm={4} data-testid="description-label" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <Grid
+                        data-testid="description-label"
+                        sx={{ display: { xs: 'none', sm: 'block' } }}
+                        size={{
+                            sm: 4,
+                        }}
+                    >
                         <Typography variant="caption" gutterBottom>
                             {txt.headerTitles.description}
                         </Typography>
                     </Grid>
-                    <Grid sm={2} data-testid="oa-status-label">
+                    <Grid
+                        data-testid="oa-status-label"
+                        size={{
+                            sm: 2,
+                        }}
+                    >
                         <Typography variant="caption" gutterBottom>
                             {txt.headerTitles.oaStatus}
                         </Typography>

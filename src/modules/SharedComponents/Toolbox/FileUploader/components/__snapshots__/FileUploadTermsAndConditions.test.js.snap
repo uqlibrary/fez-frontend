@@ -3,14 +3,14 @@
 exports[`Component FileUploadTermsAndConditions should render checked if terms and conditions accepted 1`] = `
 <div>
   <label
-    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-16v659t-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2capx-MuiButtonBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-j70m0u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
     >
       <input
         checked=""
-        class="PrivateSwitchBase-input css-1m9pwf3"
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
         data-analyticsid="terms-and-conditions-input"
         data-indeterminate="false"
         data-testid="terms-and-conditions-input"
@@ -19,7 +19,7 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
         data-testid="CheckBoxIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
       </svg>
     </span>
     <p
-      class="MuiTypography-root MuiTypography-body1 css-1qz58uz-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-1a33fq3-MuiTypography-root"
     />
   </label>
 </div>
@@ -39,13 +39,13 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
 exports[`Component FileUploadTermsAndConditions should render default view 1`] = `
 <div>
   <label
-    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-16v659t-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2capx-MuiButtonBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-j70m0u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
     >
       <input
-        class="PrivateSwitchBase-input css-1m9pwf3"
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
         data-analyticsid="terms-and-conditions-input"
         data-indeterminate="false"
         data-testid="terms-and-conditions-input"
@@ -54,7 +54,7 @@ exports[`Component FileUploadTermsAndConditions should render default view 1`] =
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
         data-testid="CheckBoxOutlineBlankIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -65,7 +65,7 @@ exports[`Component FileUploadTermsAndConditions should render default view 1`] =
       </svg>
     </span>
     <p
-      class="MuiTypography-root MuiTypography-body1 css-hpta27-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-14cyzb0-MuiTypography-root"
     />
   </label>
 </div>

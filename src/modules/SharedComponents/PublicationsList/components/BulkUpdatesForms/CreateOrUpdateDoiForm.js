@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import { locale } from 'locale';
 import { createOrUpdateDoi } from 'actions';

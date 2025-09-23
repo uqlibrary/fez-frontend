@@ -9,7 +9,7 @@ import * as actions from 'actions';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 
 export const MyLatestPublications = ({ isAdmin = false }) => {

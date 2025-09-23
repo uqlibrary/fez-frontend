@@ -37,6 +37,8 @@ function setup(testProps = {}, renderMethod = render) {
             matches: testProps.isMobile || false,
             addListener: function addListener() {},
             removeListener: function removeListener() {},
+            addEventListener: function addListener() {},
+            removeEventListener: function removeListener() {},
         };
     };
 

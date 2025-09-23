@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
@@ -115,7 +115,12 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
                                         ...classes.inputLabel,
                                     }}
                                 >
-                                    <Box display="flex" alignItems="flex-end">
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            alignItems: 'flex-end',
+                                        }}
+                                    >
                                         <Typography variant="body1" sx={{ ...classes.inputLabel }}>
                                             {header.label}
                                             {!!header.subLabel && (

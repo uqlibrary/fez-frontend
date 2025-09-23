@@ -3,38 +3,38 @@
 exports[`FilesSection component should render default view for Files on a Data Collection publication type 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container undefined AdminCard css-1sthlmf-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-bnen19-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-p8dwjx-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
                 >
                    
                   Files
@@ -44,30 +44,30 @@ exports[`FilesSection component should render default view for Files on a Data C
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
                   >
                     You may add up to 10 files (max 5GB each)
                   </p>
                   <div
-                    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                     >
                       <div
                         id="FileUploadDropZone"
@@ -86,13 +86,13 @@ exports[`FilesSection component should render default view for Files on a Data C
                           type="file"
                         />
                         <div
-                          class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
+                          class="MuiGridLegacy-root MuiGridLegacy-container FileUploadTermsAndConditions-root css-cid41t-MuiGridLegacy-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
                           >
                             <p
-                              class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
                             >
                               File upload restrictions
                             </p>
@@ -129,17 +129,17 @@ exports[`FilesSection component should render default view for Files on a Data C
                             </div>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-v3yw6j-MuiGridLegacy-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
                                   data-testid="CloudUploadIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -150,7 +150,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                 </svg>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                               >
                                 <p>
                                   Click here to select files,
@@ -172,32 +172,32 @@ exports[`FilesSection component should render default view for Files on a Data C
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container undefined AdminCard css-1sthlmf-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-bnen19-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-p8dwjx-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
                 >
                    
                   Advisory statement
@@ -207,13 +207,13 @@ exports[`FilesSection component should render default view for Files on a Data C
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <div
                 data-analyticsid="rek-advisory-statement"
@@ -222,7 +222,7 @@ exports[`FilesSection component should render default view for Files on a Data C
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
                     style="opacity: 0.666;"
                   >
                     Advisory statement
@@ -236,32 +236,32 @@ exports[`FilesSection component should render default view for Files on a Data C
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container undefined AdminCard css-1sthlmf-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-bnen19-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-p8dwjx-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
                 >
                    
                   Sensitive Handling Note
@@ -271,19 +271,19 @@ exports[`FilesSection component should render default view for Files on a Data C
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-sensitive-handling-note-id-label"
                   id="rek-sensitive-handling-note-id-label"
@@ -291,20 +291,20 @@ exports[`FilesSection component should render default view for Files on a Data C
                   Sensitive Handling Note
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-sensitive-handling-note-id-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-sensitive-handling-note-id-select"
                     id="rek-sensitive-handling-note-id-select"
                     role="combobox"
                     tabindex="0"
                   >
                     <span
+                      aria-hidden="true"
                       class="notranslate"
                     >
                       ​
@@ -314,7 +314,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-sensitive-handling-note-id-label"
-                    class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                     data-analyticsid="rek-sensitive-handling-note-id-input"
                     data-testid="rek-sensitive-handling-note-id-input"
                     id="rek-sensitive-handling-note-id-input"
@@ -323,7 +323,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -340,32 +340,32 @@ exports[`FilesSection component should render default view for Files on a Data C
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container undefined AdminCard css-1sthlmf-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-bnen19-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-p8dwjx-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
                 >
                    
                   Deposit agreement
@@ -375,22 +375,22 @@ exports[`FilesSection component should render default view for Files on a Data C
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <label
-                class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
+                class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-16v659t-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-v3js7l-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-oretft-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
                     data-analyticsid="rek-copyright-input"
                     data-indeterminate="false"
                     data-testid="rek-copyright-input"
@@ -399,7 +399,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-testid="CheckBoxOutlineBlankIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -410,7 +410,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                   </svg>
                 </span>
                 <div
-                  class="MuiTypography-root MuiTypography-body1 css-oaumxi-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1pdno6g-MuiTypography-root"
                   data-testid="rek-copyright-label"
                   id="rek-copyright-label"
                 >
@@ -448,38 +448,38 @@ exports[`FilesSection component should render default view for Files on a Data C
 exports[`FilesSection component should render default view for Files on a publication type that DOES show advisory statement 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container undefined AdminCard css-1sthlmf-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-bnen19-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-p8dwjx-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
                 >
                    
                   Files
@@ -489,30 +489,30 @@ exports[`FilesSection component should render default view for Files on a public
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
                   >
                     You may add up to 10 files (max 5GB each)
                   </p>
                   <div
-                    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                     >
                       <div
                         id="FileUploadDropZone"
@@ -531,13 +531,13 @@ exports[`FilesSection component should render default view for Files on a public
                           type="file"
                         />
                         <div
-                          class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
+                          class="MuiGridLegacy-root MuiGridLegacy-container FileUploadTermsAndConditions-root css-cid41t-MuiGridLegacy-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
                           >
                             <p
-                              class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
                             >
                               File upload restrictions
                             </p>
@@ -574,17 +574,17 @@ exports[`FilesSection component should render default view for Files on a public
                             </div>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-v3yw6j-MuiGridLegacy-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
                                   data-testid="CloudUploadIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -595,7 +595,7 @@ exports[`FilesSection component should render default view for Files on a public
                                 </svg>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                               >
                                 <p>
                                   Click here to select files,
@@ -617,32 +617,32 @@ exports[`FilesSection component should render default view for Files on a public
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container undefined AdminCard css-1sthlmf-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-bnen19-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-p8dwjx-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
                 >
                    
                   Advisory statement
@@ -652,13 +652,13 @@ exports[`FilesSection component should render default view for Files on a public
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <div
                 data-analyticsid="rek-advisory-statement"
@@ -667,7 +667,7 @@ exports[`FilesSection component should render default view for Files on a public
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
                     style="opacity: 0.666;"
                   >
                     Advisory statement
@@ -681,32 +681,32 @@ exports[`FilesSection component should render default view for Files on a public
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container undefined AdminCard css-1sthlmf-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-bnen19-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-p8dwjx-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
                 >
                    
                   Sensitive Handling Note
@@ -716,19 +716,19 @@ exports[`FilesSection component should render default view for Files on a public
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-sensitive-handling-note-id-label"
                   id="rek-sensitive-handling-note-id-label"
@@ -736,20 +736,20 @@ exports[`FilesSection component should render default view for Files on a public
                   Sensitive Handling Note
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-sensitive-handling-note-id-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-sensitive-handling-note-id-select"
                     id="rek-sensitive-handling-note-id-select"
                     role="combobox"
                     tabindex="0"
                   >
                     <span
+                      aria-hidden="true"
                       class="notranslate"
                     >
                       ​
@@ -759,7 +759,7 @@ exports[`FilesSection component should render default view for Files on a public
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-sensitive-handling-note-id-label"
-                    class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                     data-analyticsid="rek-sensitive-handling-note-id-input"
                     data-testid="rek-sensitive-handling-note-id-input"
                     id="rek-sensitive-handling-note-id-input"
@@ -768,7 +768,7 @@ exports[`FilesSection component should render default view for Files on a public
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -785,32 +785,32 @@ exports[`FilesSection component should render default view for Files on a public
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container undefined AdminCard css-1sthlmf-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-bnen19-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-p8dwjx-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
                 >
                    
                   Copyright agreement
@@ -820,22 +820,22 @@ exports[`FilesSection component should render default view for Files on a public
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <label
-                class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
+                class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-16v659t-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-v3js7l-MuiButtonBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-oretft-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
-                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
                     data-analyticsid="rek-copyright-input"
                     data-indeterminate="false"
                     data-testid="rek-copyright-input"
@@ -844,7 +844,7 @@ exports[`FilesSection component should render default view for Files on a public
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-testid="CheckBoxOutlineBlankIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -855,7 +855,7 @@ exports[`FilesSection component should render default view for Files on a public
                   </svg>
                 </span>
                 <div
-                  class="MuiTypography-root MuiTypography-body1 css-oaumxi-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1pdno6g-MuiTypography-root"
                   data-testid="rek-copyright-label"
                   id="rek-copyright-label"
                 >

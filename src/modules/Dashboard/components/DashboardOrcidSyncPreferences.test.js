@@ -19,20 +19,20 @@ describe('DashboardOrcidSyncPreferences', () => {
 
     it('renders switch as checked when checked={true}', () => {
         setup({ checked: true });
-        const switchInput = screen.getByRole('checkbox');
+        const switchInput = screen.getByRole('switch');
         expect(switchInput).toBeChecked();
     });
 
     it('renders switch as disabled when disabled={true}', () => {
         setup({ disabled: true });
-        const switchInput = screen.getByRole('checkbox');
+        const switchInput = screen.getByRole('switch');
         expect(switchInput).toBeDisabled();
     });
 
     it('calls onChange when toggled', () => {
         const handleChange = jest.fn();
         setup({ checked: false, onChange: handleChange });
-        const switchInput = screen.getByRole('checkbox');
+        const switchInput = screen.getByRole('switch');
 
         fireEvent.click(switchInput);
 

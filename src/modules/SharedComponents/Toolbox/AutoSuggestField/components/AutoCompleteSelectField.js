@@ -89,7 +89,6 @@ export const AutoCompleteSelectField = ({
             options={options}
             popupIcon={false}
             disabled={disabled}
-            PopperComponent={PopperMy}
             renderInput={params => (
                 <TextField
                     variant="standard"
@@ -101,24 +100,32 @@ export const AutoCompleteSelectField = ({
                     value={inputValue}
                     onChange={handleSearchTextChange}
                     required={required}
-                    inputProps={{
-                        ...params.inputProps,
-                        id: `${autoCompleteSelectFieldId}-input`,
-                        'data-analyticsid': `${autoCompleteSelectFieldId}-input`,
-                        'data-testid': `${autoCompleteSelectFieldId}-input`,
-                    }}
-                    InputLabelProps={{
-                        'data-testid': `${autoCompleteSelectFieldId}-label`,
+                    slotProps={{
+                        htmlInput: {
+                            ...params.inputProps,
+                            id: `${autoCompleteSelectFieldId}-input`,
+                            'data-analyticsid': `${autoCompleteSelectFieldId}-input`,
+                            'data-testid': `${autoCompleteSelectFieldId}-input`,
+                        },
+
+                        inputLabel: {
+                            'data-testid': `${autoCompleteSelectFieldId}-label`,
+                        },
                     }}
                 />
             )}
-            ListboxProps={{
-                id: `${autoCompleteSelectFieldId}-options`,
-                'data-analyticsid': `${autoCompleteSelectFieldId}-options`,
-                'data-testid': `${autoCompleteSelectFieldId}-options`,
-            }}
             {...((!!allowFreeText && { freeSolo: true }) || {})}
             {...(fullWidth && { fullWidth })}
+            slots={{
+                popper: PopperMy,
+            }}
+            slotProps={{
+                listbox: {
+                    id: `${autoCompleteSelectFieldId}-options`,
+                    'data-analyticsid': `${autoCompleteSelectFieldId}-options`,
+                    'data-testid': `${autoCompleteSelectFieldId}-options`,
+                },
+            }}
         />
     );
 };

@@ -58,10 +58,12 @@ export const FileUploadRowMobileView = ({
                 <ListItemText
                     primary={`${name} (${size})`}
                     secondary={filenameColumn}
-                    primaryTypographyProps={{ variant: 'body1', noWrap: true }}
-                    secondaryTypographyProps={{ variant: 'caption' }}
                     data-analyticsid={`dsi-dsid-${index}`}
                     data-testid={`dsi-dsid-${index}`}
+                    slotProps={{
+                        primary: { variant: 'body1', noWrap: true },
+                        secondary: { variant: 'caption' },
+                    }}
                 />
             </ListItem>
             {requireOpenAccessStatus && (
@@ -70,7 +72,12 @@ export const FileUploadRowMobileView = ({
                         <ListItemIcon>
                             <LockOutlined />
                         </ListItemIcon>
-                        <ListItemText secondary={fileAccessColumn} secondaryTypographyProps={{ variant: 'caption' }}>
+                        <ListItemText
+                            secondary={fileAccessColumn}
+                            slotProps={{
+                                secondary: { variant: 'caption' },
+                            }}
+                        >
                             {!!isAdmin && requireOpenAccessStatus && (
                                 <PolicyDropdown
                                     fieldName={name}
@@ -119,8 +126,10 @@ export const FileUploadRowMobileView = ({
                         </ListItemIcon>
                         <ListItemText
                             secondary={embargoDateColumn}
-                            primaryTypographyProps={{ variant: 'body1' }}
-                            secondaryTypographyProps={{ variant: 'caption' }}
+                            slotProps={{
+                                primary: { variant: 'body1' },
+                                secondary: { variant: 'caption' },
+                            }}
                         >
                             {((isAdmin && securityPolicy !== FILE_SECURITY_POLICY_PUBLIC) ||
                                 (!isAdmin && accessConditionId !== FILE_ACCESS_CONDITION_OPEN)) && (

@@ -6,7 +6,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogContent from '@mui/material/DialogContent';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 export const ConfirmationBox = ({
     actionButtonColor,

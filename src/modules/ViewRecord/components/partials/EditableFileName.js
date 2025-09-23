@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -118,9 +118,11 @@ const EditableFileName = ({
                                 data-testid={`${props.id}-edited`}
                                 variant="body2"
                                 color="textPrimary"
-                                overflow={'hidden'}
-                                whiteSpace={'nowrap'}
-                                textOverflow={'ellipsis'}
+                                sx={{
+                                    overflow: 'hidden',
+                                    whiteSpace: 'nowrap',
+                                    textOverflow: 'ellipsis',
+                                }}
                             >
                                 {editedFilenameRef.current}
                             </Typography>

@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 
 import { locale } from 'locale';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import ChevronRight from '@mui/icons-material/ChevronRight';
 import ChevronLeft from '@mui/icons-material/ChevronLeft';
 import Box from '@mui/material/Box';
@@ -220,7 +220,13 @@ export class PublicationsListPaging extends Component {
                             data-testid={`${this.props.pagingId}-mobile-controls`}
                             id={`${this.props.pagingId}-mobile-controls`}
                         >
-                            <Box textAlign={'center'} paddingLeft={1} paddingRight={1}>
+                            <Box
+                                sx={{
+                                    textAlign: 'center',
+                                    paddingLeft: 1,
+                                    paddingRight: 1,
+                                }}
+                            >
                                 <StyledPrevNextButton
                                     variant={'text'}
                                     children={txt.pageOf

@@ -6,7 +6,7 @@ import locale from 'locale/components';
 
 import * as actions from 'actions';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -85,13 +85,17 @@ const SystemAlerts = () => {
 
     return (
         <StandardCard noHeader>
-            <Typography fontSize={'1.25rem'} fontWeight={'300'}>
+            <Typography
+                sx={{
+                    fontSize: '1.25rem',
+                    fontWeight: '300',
+                }}
+            >
                 {txt.title(adminDashboardSystemAlertsData?.length ?? /* istanbul ignore next */ '')}
                 {!!adminDashboardSystemAlertsData && !!adminDashboardSystemAlertsLoading && (
                     <CircularProgress color="inherit" size={20} sx={{ marginInlineStart: 1 }} />
                 )}
             </Typography>
-
             {alertIsVisible && (
                 <Grid item xs={12} sx={{ mb: 1 }}>
                     <Alert

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
 

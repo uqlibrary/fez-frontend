@@ -388,29 +388,32 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     title=""
                     placeholder={searchPlaceholder}
                     variant="standard"
-                    inputProps={{
-                        inputMode: 'search',
-                        'data-testid': 'authors-search-input',
-                        'aria-label': searchAriaLabel,
-                    }}
-                    InputProps={{
-                        startAdornment: (
-                            <InputAdornment position="start">
-                                <tableIcons.Search />
-                            </InputAdornment>
-                        ),
-                        endAdornment: (
-                            <InputAdornment position="end">
-                                <IconButton disabled={!!!searchTerm} onClick={() => handleSearch()}>
-                                    <tableIcons.Clear />
-                                </IconButton>
-                            </InputAdornment>
-                        ),
-                    }}
                     sx={{ width: { md: '300px' } }}
                     value={searchTerm}
                     onChange={handleSearch}
                     disabled={table.getState().creatingRow !== null}
+                    slotProps={{
+                        input: {
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                    <tableIcons.Search />
+                                </InputAdornment>
+                            ),
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <IconButton disabled={!!!searchTerm} onClick={() => handleSearch()}>
+                                        <tableIcons.Clear />
+                                    </IconButton>
+                                </InputAdornment>
+                            ),
+                        },
+
+                        htmlInput: {
+                            inputMode: 'search',
+                            'data-testid': 'authors-search-input',
+                            'aria-label': searchAriaLabel,
+                        },
+                    }}
                 />
                 <Button
                     id={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)

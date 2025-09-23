@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GroupsWithinCard component should render default view 1`] = `
-<ForwardRef(Grid)
+<ForwardRef(GridLegacy)
   item={true}
   xs={12}
 >
@@ -9,7 +9,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
     accentHeader={true}
     title="Title"
   >
-    <ForwardRef(Grid)
+    <ForwardRef(GridLegacy)
       container={true}
       spacing={1}
     >
@@ -22,9 +22,9 @@ exports[`GroupsWithinCard component should render default view 1`] = `
           ]
         }
       />
-    </ForwardRef(Grid)>
+    </ForwardRef(GridLegacy)>
   </AdminCard>
-</ForwardRef(Grid)>
+</ForwardRef(GridLegacy)>
 `;
 
 exports[`GroupsWithoutCard component should render default view 1`] = `
@@ -43,7 +43,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
 `;
 
 exports[`Section component should render default view 1`] = `
-<ForwardRef(Grid)
+<ForwardRef(GridLegacy)
   container={true}
   spacing={1}
 >
@@ -51,16 +51,16 @@ exports[`Section component should render default view 1`] = `
     disabled={false}
     title="Title"
   />
-</ForwardRef(Grid)>
+</ForwardRef(GridLegacy)>
 `;
 
 exports[`Section component should render default view 2`] = `
-<ForwardRef(Grid)
+<ForwardRef(GridLegacy)
   container={true}
   spacing={1}
 >
   <Memo
     disabled={false}
   />
-</ForwardRef(Grid)>
+</ForwardRef(GridLegacy)>
 `;

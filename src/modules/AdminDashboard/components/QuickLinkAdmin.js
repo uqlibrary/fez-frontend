@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { useForm, Controller } from 'react-hook-form';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
@@ -64,8 +64,10 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                                     maxRows={2}
                                     disabled={isDelete}
                                     error={!!!field.value}
-                                    inputProps={{
-                                        'data-testid': 'qlk_title-input',
+                                    slotProps={{
+                                        htmlInput: {
+                                            'data-testid': 'qlk_title-input',
+                                        },
                                     }}
                                 />
                             )}
@@ -74,7 +76,13 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                             control={control}
                         />
                         {errors.qlk_title?.type === 'required' && (
-                            <Box sx={{ color: 'error.main' }} fontSize={'0.75rem'} role="alert">
+                            <Box
+                                role="alert"
+                                sx={{
+                                    fontSize: '0.75rem',
+                                    color: 'error.main',
+                                }}
+                            >
                                 Required
                             </Box>
                         )}
@@ -93,8 +101,10 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                                     maxRows={3}
                                     disabled={isDelete}
                                     error={!!!field.value}
-                                    inputProps={{
-                                        'data-testid': 'qlk_link-input',
+                                    slotProps={{
+                                        htmlInput: {
+                                            'data-testid': 'qlk_link-input',
+                                        },
                                     }}
                                 />
                             )}
@@ -103,7 +113,13 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                             control={control}
                         />
                         {errors.qlk_link?.type === 'required' && (
-                            <Box sx={{ color: 'error.main' }} fontSize={'0.75rem'} role="alert">
+                            <Box
+                                role="alert"
+                                sx={{
+                                    fontSize: '0.75rem',
+                                    color: 'error.main',
+                                }}
+                            >
                                 Required
                             </Box>
                         )}
