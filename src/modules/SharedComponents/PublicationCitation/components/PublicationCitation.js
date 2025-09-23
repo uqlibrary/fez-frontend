@@ -12,7 +12,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 import { locale } from 'locale';
@@ -395,14 +395,14 @@ export const PublicationCitation = ({
                                     <Typography
                                         variant="h6"
                                         component="h6"
-                                        lineHeight={1}
-                                        letterSpacing={0}
-                                        mb={'6px'}
-                                        mr={'12px'}
+                                        className={'PublicationCitation-citationTitle'}
                                         sx={{
+                                            lineHeight: 1,
+                                            letterSpacing: 0,
+                                            mb: '6px',
+                                            mr: '12px',
                                             overflowWrap: 'break-word !important',
                                         }}
-                                        className={'PublicationCitation-citationTitle'}
                                     >
                                         {renderTitle()}
                                     </Typography>
@@ -484,7 +484,7 @@ export const PublicationCitation = ({
                                             <Grid
                                                 item
                                                 xs="auto"
-                                                sx={{ '&.MuiGrid-root': { flexGrow: 1, whiteSpace: 'nowrap' } }}
+                                                sx={{ '&.MuiGridLegacy-root': { flexGrow: 1, whiteSpace: 'nowrap' } }}
                                             >
                                                 <CitationCounts
                                                     publication={publication}

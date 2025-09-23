@@ -29,7 +29,7 @@ import Fade from '@mui/material/Fade';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/icons-material/Menu';
 
@@ -275,7 +275,9 @@ const AppClass = ({
                                 <Tooltip
                                     title={locale.global.mainNavButton.tooltip}
                                     placement="bottom-end"
-                                    TransitionComponent={Fade}
+                                    slots={{
+                                        transition: Fade,
+                                    }}
                                 >
                                     <IconButton
                                         aria-label={locale.global.mainNavButton.aria}

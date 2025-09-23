@@ -28,25 +28,29 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
                 helperText={helperText}
                 id={id}
                 data-testid={id}
-                FormHelperTextProps={{
-                    'data-testid': `${id}-helper-text`,
-                }}
-                inputProps={{
-                    id: `${id}-input`,
-                    'data-analyticsid': `${id}-input`,
-                    'data-testid': `${id}-input`,
-                    label: filteredProps.label,
-                    'aria-label': props.ariaLabel || filteredProps.label,
-                    ...(props.ariaLabelledby && { 'aria-labelledby': props.ariaLabelledby }),
-                    ...filteredProps.inputProps,
-                }}
-                InputLabelProps={{
-                    shrink: filteredProps.floatinglabelfixed ? true : undefined,
-                    id: `${id}-label`,
-                    'data-testid': `${id}-label`,
-                    htmlFor: `${id}-input`,
-                    hidden: hideLabel,
-                    ...filteredProps.InputLabelProps,
+                slotProps={{
+                    htmlInput: {
+                        id: `${id}-input`,
+                        'data-analyticsid': `${id}-input`,
+                        'data-testid': `${id}-input`,
+                        label: filteredProps.label,
+                        'aria-label': props.ariaLabel || filteredProps.label,
+                        ...(props.ariaLabelledby && { 'aria-labelledby': props.ariaLabelledby }),
+                        ...filteredProps.inputProps,
+                    },
+
+                    inputLabel: {
+                        shrink: filteredProps.floatinglabelfixed ? true : undefined,
+                        id: `${id}-label`,
+                        'data-testid': `${id}-label`,
+                        htmlFor: `${id}-input`,
+                        hidden: hideLabel,
+                        ...filteredProps.InputLabelProps,
+                    },
+
+                    formHelperText: {
+                        'data-testid': `${id}-helper-text`,
+                    },
                 }}
             />
         </Fragment>

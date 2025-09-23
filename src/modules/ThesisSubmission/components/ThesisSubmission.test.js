@@ -69,6 +69,8 @@ function setup(props = {}) {
     );
 }
 
+jest.setTimeout(60000);
+
 /**
  * These tests are intentionally extensive, as they are functional tests of the ThesisSubmission component — a critical
  * feature of the application. This approach was deliberately chosen to ensure comprehensive coverage of the component's

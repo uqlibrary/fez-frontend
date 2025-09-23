@@ -1,8 +1,9 @@
+@use "sass:color";
 #topCitedPublications {
   @for $i from 1 through 20 {
     div:nth-of-type(#{$i}) {
       .citationMetrics, .citationMetrics a {
-        color: adjust-hue(hsl(0, 100%, 23%), calc($i/20)*60) !important;
+        color: color.adjust(hsl(0, 100%, 23%), $hue: calc($i/20)*60) !important;
       }
     }
   }

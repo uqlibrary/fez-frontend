@@ -3,13 +3,13 @@
 exports[`Component AddMissingRecord method getStepperIndex should return step [0] and Stepper should render the 1st step 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -18,26 +18,26 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <div
-        class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
+        class="MuiStepper-root MuiStepper-horizontal css-x1tdhg-MuiStepper-root"
       >
         <div
-          class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+          class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
           >
             <span
-              class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+              class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -47,7 +47,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -58,10 +58,10 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
               </svg>
             </span>
             <span
-              class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -69,24 +69,24 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
           </span>
         </div>
         <div
-          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
         >
           <span
-            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
           />
         </div>
         <div
-          class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+          class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1peinwa-MuiStepLabel-root"
           >
             <span
-              class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+              class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -96,7 +96,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -107,10 +107,10 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
               </svg>
             </span>
             <span
-              class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -118,24 +118,24 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
           </span>
         </div>
         <div
-          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
         >
           <span
-            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
           />
         </div>
         <div
-          class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+          class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1peinwa-MuiStepLabel-root"
           >
             <span
-              class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+              class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -145,7 +145,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -156,10 +156,10 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
               </svg>
             </span>
             <span
-              class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -176,13 +176,13 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
 exports[`Component AddMissingRecord method getStepperIndex should return step [1] and Stepper should render the 2nd step 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -191,26 +191,26 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <div
-        class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
+        class="MuiStepper-root MuiStepper-horizontal css-x1tdhg-MuiStepper-root"
       >
         <div
-          class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
+          class="MuiStep-root MuiStep-horizontal Mui-completed css-mlh15c-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
           >
             <span
-              class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
+              class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
                 data-testid="CheckCircleIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -221,10 +221,10 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
               </svg>
             </span>
             <span
-              class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-completed css-17flbue-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -232,24 +232,24 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
           </span>
         </div>
         <div
-          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-j5w0w9-MuiStepConnector-root"
+          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-9ydz1a-MuiStepConnector-root"
         >
           <span
-            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
           />
         </div>
         <div
-          class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+          class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
           >
             <span
-              class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+              class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -259,7 +259,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -270,10 +270,10 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
               </svg>
             </span>
             <span
-              class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -281,24 +281,24 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
           </span>
         </div>
         <div
-          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
         >
           <span
-            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
           />
         </div>
         <div
-          class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+          class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1peinwa-MuiStepLabel-root"
           >
             <span
-              class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+              class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -308,7 +308,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -319,10 +319,10 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
               </svg>
             </span>
             <span
-              class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -339,13 +339,13 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
 exports[`Component AddMissingRecord method getStepperIndex should return step [2] and Stepper should render the 3rd step 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -354,26 +354,26 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <div
-        class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
+        class="MuiStepper-root MuiStepper-horizontal css-x1tdhg-MuiStepper-root"
       >
         <div
-          class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
+          class="MuiStep-root MuiStep-horizontal Mui-completed css-mlh15c-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
           >
             <span
-              class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
+              class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
                 data-testid="CheckCircleIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -384,10 +384,10 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
               </svg>
             </span>
             <span
-              class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-completed css-17flbue-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -395,24 +395,24 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
           </span>
         </div>
         <div
-          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-completed css-j5w0w9-MuiStepConnector-root"
+          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-completed css-9ydz1a-MuiStepConnector-root"
         >
           <span
-            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
           />
         </div>
         <div
-          class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
+          class="MuiStep-root MuiStep-horizontal Mui-completed css-mlh15c-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
           >
             <span
-              class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
+              class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
                 data-testid="CheckCircleIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -423,10 +423,10 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
               </svg>
             </span>
             <span
-              class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-completed css-17flbue-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -434,24 +434,24 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
           </span>
         </div>
         <div
-          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-j5w0w9-MuiStepConnector-root"
+          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-9ydz1a-MuiStepConnector-root"
         >
           <span
-            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
           />
         </div>
         <div
-          class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+          class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
           >
             <span
-              class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+              class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -461,7 +461,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -472,10 +472,10 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
               </svg>
             </span>
             <span
-              class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -492,13 +492,13 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
 exports[`Component AddMissingRecord should return 0 when landing on invalid location with tokens not equal to 3 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -507,26 +507,26 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <div
-        class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
+        class="MuiStepper-root MuiStepper-horizontal css-x1tdhg-MuiStepper-root"
       >
         <div
-          class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+          class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
           >
             <span
-              class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+              class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -536,7 +536,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -547,10 +547,10 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
               </svg>
             </span>
             <span
-              class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -558,24 +558,24 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
           </span>
         </div>
         <div
-          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
         >
           <span
-            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
           />
         </div>
         <div
-          class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+          class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1peinwa-MuiStepLabel-root"
           >
             <span
-              class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+              class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -585,7 +585,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -596,10 +596,10 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
               </svg>
             </span>
             <span
-              class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -607,24 +607,24 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
           </span>
         </div>
         <div
-          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
         >
           <span
-            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
           />
         </div>
         <div
-          class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+          class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
         >
           <span
-            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
+            class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1peinwa-MuiStepLabel-root"
           >
             <span
-              class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+              class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -634,7 +634,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -645,10 +645,10 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
               </svg>
             </span>
             <span
-              class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
               >
                 <span />
               </span>
