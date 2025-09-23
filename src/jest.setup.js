@@ -74,14 +74,16 @@ const extensions = {
         return pass
             ? {
                   message: () =>
-                      `expected ${element.tagName} to have ${length} rows, received ${totalLength -
-                          (options.includeHeader ? 0 : 1)}`,
+                      `expected ${element.tagName} to have ${length} rows, received ${
+                          totalLength - (options.includeHeader ? 0 : 1)
+                      }`,
                   pass: true,
               }
             : {
                   message: () =>
-                      `expected ${element.tagName} to have ${length} rows, received ${totalLength -
-                          (options.includeHeader ? 0 : 1)}`,
+                      `expected ${element.tagName} to have ${length} rows, received ${
+                          totalLength - (options.includeHeader ? 0 : 1)
+                      }`,
                   pass: false,
               };
     },

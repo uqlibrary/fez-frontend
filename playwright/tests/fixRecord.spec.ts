@@ -77,10 +77,7 @@ test.describe('Request correction form', () => {
             .getByText(/I am the author/)
             .first()
             .click();
-        await page
-            .getByText(fixFormLocale.contentIndicators.title)
-            .first()
-            .scrollIntoViewIfNeeded();
+        await page.getByText(fixFormLocale.contentIndicators.title).first().scrollIntoViewIfNeeded();
         await page.getByTestId('rek-content-indicator-select').click();
         // Click new item in multiselect modal
         await page
@@ -132,10 +129,7 @@ test.describe('Request correction form', () => {
         await expect(page.getByText(/URL is not valid/)).toBeVisible();
         // Confirm form submission is disabled until URL is fixed
         await expect(page.locator('button', { hasText: /Submit/ }).first()).toBeDisabled();
-        const input = page
-            .locator('.StandardCard', { hasText: fixFormLocale.comments.title })
-            .first()
-            .locator('input');
+        const input = page.locator('.StandardCard', { hasText: fixFormLocale.comments.title }).first().locator('input');
         await input.fill('.com');
         await expect(page.locator('button', { hasText: /Submit/ }).first()).toBeDisabled();
         await input.fill('https://test.com');

@@ -94,11 +94,7 @@ test.describe('Homepage', () => {
                 .getByText(/About these metrics/)
                 .first(),
         ).toBeVisible();
-        await page
-            .getByTestId('help-drawer-close')
-            .getByText(/CLOSE/)
-            .first()
-            .click();
+        await page.getByTestId('help-drawer-close').getByText(/CLOSE/).first().click();
         await expect(page.getByTestId('help-drawer-title')).not.toBeVisible();
     });
 });
