@@ -19,10 +19,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
     const clearField = async (page: Page, fieldTestId: string) => {
         const fieldLocator = page.getByTestId(fieldTestId);
         await fieldLocator.locator('..').click();
-        await fieldLocator
-            .locator('..')
-            .locator('button[title="Clear"]')
-            .click();
+        await fieldLocator.locator('..').locator('button[title="Clear"]').click();
     };
 
     test.beforeEach(async ({ page }) => {
@@ -115,10 +112,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
         await expect(page.getByTestId('alert')).toContainText('Nothing to export');
 
         // dismiss for coverage
-        await page
-            .getByTestId('alert')
-            .getByTestId('dismiss')
-            .click();
+        await page.getByTestId('alert').getByTestId('dismiss').click();
         await expect(page.getByTestId('alert')).not.toBeAttached();
     });
 
@@ -161,18 +155,9 @@ test.describe('Admin Dashboard - Reports tab', () => {
             await expect(page.getByTestId('report-export-only-input')).toHaveValue('Queued report two bindings');
 
             // check the mui calendar appears if button clicked.
-            await page
-                .getByTestId('report-export-only-date-from')
-                .locator('button')
-                .click();
-            await page
-                .getByTestId('report-export-only-date-to')
-                .locator('button')
-                .click();
-            await page
-                .getByTestId('report-export-only-date-to')
-                .locator('button')
-                .click();
+            await page.getByTestId('report-export-only-date-from').locator('button').click();
+            await page.getByTestId('report-export-only-date-to').locator('button').click();
+            await page.getByTestId('report-export-only-date-to').locator('button').click();
             await fillDateInput(page, 'to', '01/01/2020');
             // date from should be in error state
             await expect(page.getByTestId('report-export-only-date-from-input')).toHaveAttribute('required');
@@ -342,24 +327,15 @@ test.describe('Admin Dashboard - Reports tab', () => {
 
         // check the mui calendar appears if button clicked.
         await expect(page.getByLabel('calendar view is open, switch to year view')).not.toBeVisible();
-        await page
-            .getByTestId('report-display-export-date-from')
-            .locator('button')
-            .click();
+        await page.getByTestId('report-display-export-date-from').locator('button').click();
         await expect(
             async () => await page.getByLabel('calendar view is open, switch to year view').isVisible(),
         ).toPass();
-        await page
-            .getByTestId('report-display-export-date-to')
-            .locator('button')
-            .click();
+        await page.getByTestId('report-display-export-date-to').locator('button').click();
         await expect(
             async () => await page.getByLabel('calendar view is open, switch to year view').isVisible(),
         ).toPass();
-        await page
-            .getByTestId('report-display-export-date-to')
-            .locator('button')
-            .click();
+        await page.getByTestId('report-display-export-date-to').locator('button').click();
         await expect(page.getByLabel('calendar view is open, switch to year view')).not.toBeVisible();
         await page.getByTestId('report-display-export-date-to-input').fill('01/01/2020');
         // date from should be in error state

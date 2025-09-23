@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 import { DEFAULT_DATE_FORMAT_WITH_TIME_24H, SYSTEM_ALERT_ACTION, getFormattedServerDate, isUrl } from '../config';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -87,15 +87,24 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
         !!row && (
             <Drawer anchor="right" open={open} onClose={handleCloseDrawer} id={rootId} data-testid={rootId}>
                 <Box
-                    sx={{ width: [320, 500] }}
                     role="presentation"
-                    padding={2}
-                    boxSizing={'border-box'}
-                    display={'flex'}
-                    flex={1}
-                    flexDirection={'column'}
+                    sx={{
+                        padding: 2,
+                        boxSizing: 'border-box',
+                        display: 'flex',
+                        flex: 1,
+                        flexDirection: 'column',
+                        width: [320, 500],
+                    }}
                 >
-                    <Typography component={'h2'} fontSize={'1.45rem'} fontWeight={500} data-testid={`${rootId}-title`}>
+                    <Typography
+                        component={'h2'}
+                        data-testid={`${rootId}-title`}
+                        sx={{
+                            fontSize: '1.45rem',
+                            fontWeight: 500,
+                        }}
+                    >
                         {row.sat_title}
                     </Typography>
                     {isUrl(row.sat_link) && (
@@ -106,22 +115,42 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                     <StyledDivider />
                     <Grid container spacing={1}>
                         <Grid item xs={4}>
-                            <Typography fontWeight={400} data-testid={`${rootId}-id-label`}>
+                            <Typography
+                                data-testid={`${rootId}-id-label`}
+                                sx={{
+                                    fontWeight: 400,
+                                }}
+                            >
                                 {txt.alertId}
                             </Typography>
                         </Grid>
                         <Grid item xs={8}>
-                            <Typography fontWeight={'normal'} data-testid={`${rootId}-id`}>
+                            <Typography
+                                data-testid={`${rootId}-id`}
+                                sx={{
+                                    fontWeight: 'normal',
+                                }}
+                            >
                                 {row.sat_id}
                             </Typography>
                         </Grid>
                         <Grid item xs={4}>
-                            <Typography fontWeight={400} data-testid={`${rootId}-date-created-label`}>
+                            <Typography
+                                data-testid={`${rootId}-date-created-label`}
+                                sx={{
+                                    fontWeight: 400,
+                                }}
+                            >
                                 {txt.received}
                             </Typography>
                         </Grid>
                         <Grid item xs={8}>
-                            <Typography fontWeight={'normal'} data-testid={`${rootId}-date-created`}>
+                            <Typography
+                                data-testid={`${rootId}-date-created`}
+                                sx={{
+                                    fontWeight: 'normal',
+                                }}
+                            >
                                 {getFormattedServerDate(row.sat_created_date, DEFAULT_DATE_FORMAT_WITH_TIME_24H)}
                             </Typography>
                         </Grid>
@@ -151,33 +180,32 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                     label={txt.status}
                                     helperText={txt.statusHelpText}
                                     variant="standard"
-                                    InputProps={{
-                                        ...params.InputProps,
-                                        endAdornment: (
-                                            <React.Fragment>
-                                                {adminDashboardSystemAlertsUpdating ? (
-                                                    <CircularProgress color="inherit" size={20} />
-                                                ) : null}
-                                                {params.InputProps.endAdornment}
-                                            </React.Fragment>
-                                        ),
-                                    }}
-                                    inputProps={{
-                                        ...params.inputProps,
-                                        id: `${rootId}-assignee-input`,
-                                        'data-analyticsid': `${rootId}-assignee-input`,
-                                        'data-testid': `${rootId}-assignee-input`,
-                                    }}
-                                    InputLabelProps={{
-                                        'data-testid': `${rootId}-assignee-label`,
+                                    slotProps={{
+                                        input: {
+                                            ...params.InputProps,
+                                            endAdornment: (
+                                                <React.Fragment>
+                                                    {adminDashboardSystemAlertsUpdating ? (
+                                                        <CircularProgress color="inherit" size={20} />
+                                                    ) : null}
+                                                    {params.InputProps.endAdornment}
+                                                </React.Fragment>
+                                            ),
+                                        },
+
+                                        htmlInput: {
+                                            ...params.inputProps,
+                                            id: `${rootId}-assignee-input`,
+                                            'data-analyticsid': `${rootId}-assignee-input`,
+                                            'data-testid': `${rootId}-assignee-input`,
+                                        },
+
+                                        inputLabel: {
+                                            'data-testid': `${rootId}-assignee-label`,
+                                        },
                                     }}
                                 />
                             )}
-                            ListboxProps={{
-                                id: `${rootId}-options`,
-                                'data-analyticsid': `${rootId}-options`,
-                                'data-testid': `${rootId}-options`,
-                            }}
                             options={adminUsers}
                             getOptionLabel={option => option.preferred_name}
                             value={
@@ -187,10 +215,24 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                             }
                             onChange={handleAssignedChange}
                             disabled={adminDashboardSystemAlertsUpdating || !!row.sat_resolved_by}
+                            slotProps={{
+                                listbox: {
+                                    id: `${rootId}-options`,
+                                    'data-analyticsid': `${rootId}-options`,
+                                    'data-testid': `${rootId}-options`,
+                                },
+                            }}
                         />
                     </Box>
                     {!!buttonLabel && (
-                        <Box display={'flex'} flex={1} flexDirection={'column'} justifyContent={'flex-end'}>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flex: 1,
+                                flexDirection: 'column',
+                                justifyContent: 'flex-end',
+                            }}
+                        >
                             <Button
                                 fullWidth
                                 color="primary"

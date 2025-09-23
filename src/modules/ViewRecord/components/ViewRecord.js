@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Badge from '@mui/material/Badge';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
@@ -238,7 +238,7 @@ export const ViewRecord = () => {
                     />
                 )}
                 <StyledGridWithTopMargin container>
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <PublicationCitation
                             publication={recordToView}
                             hideTitle
@@ -251,7 +251,7 @@ export const ViewRecord = () => {
                     </Grid>
 
                     {!isDeleted && !!recordToView && (
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <Grid container spacing={2} style={{ marginBottom: 4 }}>
                                 {isAdmin && !isDeleted && (
                                     <Grid>
@@ -285,7 +285,7 @@ export const ViewRecord = () => {
                                         </Tooltip>
                                     </Grid>
                                 )}
-                                <Grid xs sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Grid sx={{ display: 'flex', alignItems: 'center' }} size="grow">
                                     {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
                                         <Chip label={recordToView.rek_status_lookup} variant="outlined" />
                                     )}
@@ -303,17 +303,17 @@ export const ViewRecord = () => {
                     )}
                 </StyledGridWithTopMargin>
                 {isAdmin && (
-                    <Grid xs={12} style={{ marginBottom: 24 }}>
+                    <Grid style={{ marginBottom: 24 }} size={12}>
                         <DetailedHistory record={recordToView} />
                     </Grid>
                 )}
                 {isDeleted && (
-                    <Grid xs={12} style={{ marginBottom: 24 }}>
+                    <Grid style={{ marginBottom: 24 }} size={12}>
                         <Alert {...txt.deletedAlert} message={txt.deletedAlert.message(recordToView)} />
                     </Grid>
                 )}
                 {!!version && !!recordToView?.rek_version && (
-                    <Grid xs={12} style={{ marginBottom: 24 }}>
+                    <Grid style={{ marginBottom: 24 }} size={12}>
                         <Alert
                             {...{
                                 ...txt.version.alert.version,

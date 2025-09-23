@@ -3,14 +3,14 @@
 exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
     style="margin-top: 12px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="researcher-link"
         data-testid="researcher-link"
         href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
@@ -28,10 +28,10 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="scopus-link"
         data-testid="scopus-link"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -49,10 +49,10 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="google_scholar-link"
         data-testid="google_scholar-link"
         href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
@@ -70,10 +70,10 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="orcid-link"
         data-testid="orcid-link"
         href="https://orcid.org/0000-0001-1111-1111"
@@ -91,7 +91,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
         aria-label="Click to visit your ORCID profile"
@@ -102,7 +102,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
         title="Click to visit your ORCID profile"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
         >
            orcid.org/0000-0001-1111-1111
         </span>
@@ -115,14 +115,14 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
 exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
     style="margin-top: 12px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="researcher-link"
         data-testid="researcher-link"
         href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
@@ -140,10 +140,10 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="scopus-link"
         data-testid="scopus-link"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -161,10 +161,10 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="google_scholar-link"
         data-testid="google_scholar-link"
         href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
@@ -182,10 +182,10 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-10b6o39"
+        class="css-ozogg6"
         data-testid="orcid"
         id="orcid"
         tabindex="0"
@@ -204,14 +204,14 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
 exports[`Dashboard Researcher IDs test Testing clicking on ID internal links 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
     style="margin-top: 12px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="researcher-link"
         data-testid="researcher-link"
         href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
@@ -229,10 +229,10 @@ exports[`Dashboard Researcher IDs test Testing clicking on ID internal links 1`]
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="scopus-link"
         data-testid="scopus-link"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -250,10 +250,10 @@ exports[`Dashboard Researcher IDs test Testing clicking on ID internal links 1`]
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="google_scholar-link"
         data-testid="google_scholar-link"
         href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
@@ -271,10 +271,10 @@ exports[`Dashboard Researcher IDs test Testing clicking on ID internal links 1`]
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-10b6o39"
+        class="css-ozogg6"
         data-testid="orcid"
         id="orcid"
         tabindex="0"
@@ -293,14 +293,14 @@ exports[`Dashboard Researcher IDs test Testing clicking on ID internal links 1`]
 exports[`Dashboard Researcher IDs test Testing google scholar id with orcid caption 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
     style="margin-top: 12px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="researcher-link"
         data-testid="researcher-link"
         href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
@@ -318,10 +318,10 @@ exports[`Dashboard Researcher IDs test Testing google scholar id with orcid capt
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="scopus-link"
         data-testid="scopus-link"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -339,10 +339,10 @@ exports[`Dashboard Researcher IDs test Testing google scholar id with orcid capt
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="google_scholar-link"
         data-testid="google_scholar-link"
         href="https://orcid.org/0000-0001-1111-1111"
@@ -360,10 +360,10 @@ exports[`Dashboard Researcher IDs test Testing google scholar id with orcid capt
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="orcid-link"
         data-testid="orcid-link"
         href="https://orcid.org/0000-0001-1111-1111"
@@ -381,7 +381,7 @@ exports[`Dashboard Researcher IDs test Testing google scholar id with orcid capt
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
         aria-label="Click to visit your ORCID profile"
@@ -392,7 +392,7 @@ exports[`Dashboard Researcher IDs test Testing google scholar id with orcid capt
         title="Click to visit your ORCID profile"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
         >
            orcid.org/0000-0001-1111-1111
         </span>
@@ -405,14 +405,14 @@ exports[`Dashboard Researcher IDs test Testing google scholar id with orcid capt
 exports[`Dashboard Researcher IDs test Testing google scholar id without orcid caption 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
     style="margin-top: 12px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="researcher-link"
         data-testid="researcher-link"
         href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
@@ -430,10 +430,10 @@ exports[`Dashboard Researcher IDs test Testing google scholar id without orcid c
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="scopus-link"
         data-testid="scopus-link"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -451,10 +451,10 @@ exports[`Dashboard Researcher IDs test Testing google scholar id without orcid c
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-10b6o39"
+        class="css-ozogg6"
         data-testid="google_scholar"
         id="google_scholar"
         tabindex="0"
@@ -467,10 +467,10 @@ exports[`Dashboard Researcher IDs test Testing google scholar id without orcid c
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-10b6o39"
+        class="css-ozogg6"
         data-testid="orcid"
         id="orcid"
         tabindex="0"
@@ -489,14 +489,14 @@ exports[`Dashboard Researcher IDs test Testing google scholar id without orcid c
 exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
     style="margin-top: 12px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="researcher-link"
         data-testid="researcher-link"
         href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
@@ -514,10 +514,10 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="scopus-link"
         data-testid="scopus-link"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -535,10 +535,10 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="google_scholar-link"
         data-testid="google_scholar-link"
         href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
@@ -556,10 +556,10 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="orcid-link"
         data-testid="orcid-link"
         href="https://orcid.org/0000-0001-1111-1111"
@@ -577,7 +577,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
         aria-label="Click to visit your ORCID profile"
@@ -588,7 +588,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
         title="Click to visit your ORCID profile"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
         >
            orcid.org/0000-0001-1111-1111
         </span>
@@ -601,14 +601,14 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
 exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
     style="margin-top: 12px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="researcher-link"
         data-testid="researcher-link"
         href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
@@ -626,10 +626,10 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="scopus-link"
         data-testid="scopus-link"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -647,10 +647,10 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="google_scholar-link"
         data-testid="google_scholar-link"
         href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
@@ -668,10 +668,10 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
-        class="css-hi05s4"
+        class="css-ztx283"
         data-analyticsid="orcid-link"
         data-testid="orcid-link"
         href="https://orcid.org/0000-0001-1111-1111"
@@ -692,7 +692,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       >
         <button
           aria-label="Information about uploading your eSpace works to ORCID"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="help-icon-orcid"
           data-mui-internal-clone-element="true"
           data-testid="help-icon-orcid"
@@ -702,7 +702,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
             data-testid="SettingsIcon"
             focusable="false"
             size="20"
@@ -716,7 +716,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       </span>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
         aria-label="Click to visit your ORCID profile"
@@ -727,7 +727,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         title="Click to visit your ORCID profile"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
         >
            orcid.org/0000-0001-1111-1111
         </span>

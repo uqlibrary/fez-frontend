@@ -50,11 +50,13 @@ export const AutoCompleteMultiSelectField = ({
                     label={floatingLabelText}
                     placeholder={hintText}
                     required={required}
-                    inputProps={{
-                        ...params.inputProps,
-                        id: `${autoCompleteMultiSelectFieldId}-input`,
-                        'data-analyticsid': `${autoCompleteMultiSelectFieldId}-input`,
-                        'data-testid': `${autoCompleteMultiSelectFieldId}-input`,
+                    slotProps={{
+                        htmlInput: {
+                            ...params.inputProps,
+                            id: `${autoCompleteMultiSelectFieldId}-input`,
+                            'data-analyticsid': `${autoCompleteMultiSelectFieldId}-input`,
+                            'data-testid': `${autoCompleteMultiSelectFieldId}-input`,
+                        },
                     }}
                 />
             )}
@@ -68,11 +70,6 @@ export const AutoCompleteMultiSelectField = ({
                     />
                 ))
             }
-            ListboxProps={{
-                id: `${autoCompleteMultiSelectFieldId}-options`,
-                'data-analyticsid': `${autoCompleteMultiSelectFieldId}-options`,
-                'data-testid': `${autoCompleteMultiSelectFieldId}-options`,
-            }}
             {...(!!OptionTemplate
                 ? {
                       renderOption: (props, option) => (
@@ -83,6 +80,13 @@ export const AutoCompleteMultiSelectField = ({
                   }
                 : {})}
             {...((!!defaultValue && { value: defaultValue }) || {})}
+            slotProps={{
+                listbox: {
+                    id: `${autoCompleteMultiSelectFieldId}-options`,
+                    'data-analyticsid': `${autoCompleteMultiSelectFieldId}-options`,
+                    'data-testid': `${autoCompleteMultiSelectFieldId}-options`,
+                },
+            }}
         />
     );
 };

@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';

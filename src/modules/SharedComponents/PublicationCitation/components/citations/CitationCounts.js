@@ -6,7 +6,7 @@ import { locale } from 'locale';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 export const CitationCounts = ({ publication, hideViewFullStatisticsLink }) => {
     const theme = useTheme();

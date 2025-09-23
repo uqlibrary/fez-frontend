@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, WithRouter } from 'test-utils';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import ScrollToPos from './ScrollToPos';
 
