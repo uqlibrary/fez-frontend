@@ -5,10 +5,7 @@ import { readCKEditor, typeCKEditor } from '../../../lib/ckeditor';
 import { ULRICHS_URL_PREFIX } from 'config/general';
 
 const removeJournalLock = async (page: Page) => {
-    await page
-        .getByTestId('alert-error')
-        .getByTestId('action-button')
-        .click();
+    await page.getByTestId('alert-error').getByTestId('action-button').click();
 };
 
 const checkIssnLinks = async (container: Locator, issn: string) => {

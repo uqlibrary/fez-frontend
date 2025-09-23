@@ -71,10 +71,7 @@ export async function assertChangeSelectFromTo(page: Page, item: string, changeF
         await select.click();
     }
 
-    await page
-        .getByTestId(`${item}-options`)
-        .locator(`:text("${changeTo}")`)
-        .click();
+    await page.getByTestId(`${item}-options`).locator(`:text("${changeTo}")`).click();
     await expect(select).toContainText(changeTo);
 }
 
@@ -87,10 +84,7 @@ export async function addAuthorAndAssert(
 ) {
     await page.getByTestId('rek-author-add').click();
     await page.getByTestId('rek-author-id-input').fill('uq');
-    await page
-        .getByTestId('rek-author-id-options')
-        .locator(`li:has-text("${authorUqname}")`)
-        .click();
+    await page.getByTestId('rek-author-id-options').locator(`li:has-text("${authorUqname}")`).click();
     await page.getByTestId('rek-author-add-save').click();
     await expect(await page.locator('[data-testid^=contributor-errorIcon-]').count()).toBeGreaterThanOrEqual(1);
 
@@ -131,10 +125,7 @@ export async function addAffiliationAndAssert(
 ) {
     const addInput = page.getByTestId('orgSelect-add-input');
     await addInput.click();
-    await page
-        .getByTestId('orgSelect-add-options')
-        .getByText(orgName, { exact: true })
-        .click();
+    await page.getByTestId('orgSelect-add-options').getByText(orgName, { exact: true }).click();
 
     const actualOrgName = suggested ? orgName.replace('Suggested: ', '') : orgName;
     await assertAffiliation(page, actualOrgName, orgId, expectedPercent);
@@ -149,10 +140,7 @@ export async function editAffiliationAndAssert(
 ) {
     const currentInput = page.getByTestId(`orgSelect-${currentOrgId}-input`);
     await currentInput.click();
-    await page
-        .getByTestId(`orgSelect-${currentOrgId}-options`)
-        .getByText(nextOrgName, { exact: true })
-        .click();
+    await page.getByTestId(`orgSelect-${currentOrgId}-options`).getByText(nextOrgName, { exact: true }).click();
     await assertAffiliation(page, nextOrgName, nextOrgId, expectedPercent);
 }
 
@@ -188,10 +176,7 @@ export async function assertAffiliationsAllowed(page: Page, options: AssertAffil
 
     if (!ntro) {
         const iconSelector = allowed ? '[data-testid^=expandPanelIcon-]' : '[data-testid=ExpandMoreIcon]';
-        await page
-            .locator(`[id=rek-author-list-row-${rowId}]`)
-            .locator(iconSelector)
-            .click();
+        await page.locator(`[id=rek-author-list-row-${rowId}]`).locator(iconSelector).click();
     }
 
     const authorList = page.getByTestId('rek-author-list');

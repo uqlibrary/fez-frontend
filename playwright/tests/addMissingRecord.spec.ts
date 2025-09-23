@@ -103,12 +103,7 @@ test.describe('Add missing record', () => {
             ];
 
             for (const [index, cardHeading] of cards.entries()) {
-                await expect(
-                    page
-                        .locator('h3')
-                        .nth(index)
-                        .getByText(cardHeading),
-                ).toBeVisible();
+                await expect(page.locator('h3').nth(index).getByText(cardHeading)).toBeVisible();
             }
 
             // Submit button
@@ -138,10 +133,7 @@ test.describe('Add missing record', () => {
             await page.getByText(/New Author/).click();
             await expect(page.locator('#submit-work')).toBeEnabled();
             await page.locator('#rek-author-list-row-delete-0').click();
-            await page
-                .locator('button')
-                .getByText(/Yes/)
-                .click();
+            await page.locator('button').getByText(/Yes/).click();
             await expect(page.locator('#submit-work')).toBeDisabled();
             await expect(validationErrors).toHaveCount(2);
             await page.locator('#rek-contributor-input').fill('New Editor');
@@ -329,20 +321,12 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-grant-agency-input').fill('First Grant');
             await page.getByTestId('rek-grant-id-input').fill('12345');
             await page.getByTestId('rek-grant-type-select').click();
-            await page
-                .getByTestId('rek-grant-type-options')
-                .locator('li[role=option]')
-                .getByText(/NGO/)
-                .click();
+            await page.getByTestId('rek-grant-type-options').locator('li[role=option]').getByText(/NGO/).click();
             await page.getByTestId('rek-grant-add').click();
             await page.getByTestId('rek-grant-agency-input').fill('Second Grant');
             await page.getByTestId('rek-grant-id-input').fill('23456');
             await page.getByTestId('rek-grant-type-select').click();
-            await page
-                .getByTestId('rek-grant-type-options')
-                .locator('li[role=option]')
-                .getByText(/NGO/)
-                .click();
+            await page.getByTestId('rek-grant-type-options').locator('li[role=option]').getByText(/NGO/).click();
             await page.getByTestId('rek-grant-add').click();
             await expect(page.getByTestId('grant-list-move-up=0')).toHaveAttribute('disabled', /.*/);
             await expect(page.getByTestId('grant-list-move-down=1')).toHaveAttribute('disabled', /.*/);
