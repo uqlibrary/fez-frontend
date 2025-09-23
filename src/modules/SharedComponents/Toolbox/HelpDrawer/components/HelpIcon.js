@@ -34,12 +34,12 @@ export const HelpIcon = forwardRef(
         const id = sanitiseId(`help-icon${!!testId ? `-${testId}` : ''}`);
         return (
             <Tooltip
-            title={tooltip}
-            placement="bottom-end"
-            slots={{
-                transition: Fade,
-            }}
-        >
+                title={tooltip}
+                placement="bottom-end"
+                slots={{
+                    transition: Fade,
+                }}
+            >
                 <IconButton
                     id={id}
                     ref={ref}
