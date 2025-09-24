@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
@@ -54,11 +54,14 @@ export default function NonUqOrgAffiliationFormSection({
                     disabled={disableAffiliationEdit}
                     error={orgAffiliationError}
                     id="org-affiliation-name"
-                    inputProps={{
-                        'data-testid': 'org-affiliation-name',
-                    }}
-                    InputLabelProps={{
-                        'data-testid': 'org-affiliation-name-label',
+                    slotProps={{
+                        htmlInput: {
+                            'data-testid': 'org-affiliation-name',
+                        },
+
+                        inputLabel: {
+                            'data-testid': 'org-affiliation-name-label',
+                        },
                     }}
                 />
             </Grid>

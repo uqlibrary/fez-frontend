@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
@@ -239,7 +239,7 @@ const FixRecord = ({ openAccess = false }) => {
             <ConfirmDiscardFormChanges dirty={isDirty} isSubmitSuccessful={isSubmitSuccessful}>
                 <form onSubmit={onSubmit}>
                     <Grid container spacing={3}>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.subTitle} help={txt.help}>
                                 <PublicationCitation publication={recordToFix} citationStyle={'header'} />
                                 {!openAccess && (
@@ -271,10 +271,16 @@ const FixRecord = ({ openAccess = false }) => {
                                     onCancelAction={navigateToDashboard}
                                     locale={saveConfirmationLocale}
                                 />
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
-                                        <Grid container spacing={2} padding={0}>
-                                            <Grid xs={12}>
+                                        <Grid
+                                            container
+                                            spacing={2}
+                                            sx={{
+                                                padding: 0,
+                                            }}
+                                        >
+                                            <Grid size={12}>
                                                 <Field
                                                     control={control}
                                                     component={TextField}
@@ -288,7 +294,7 @@ const FixRecord = ({ openAccess = false }) => {
                                                     label={txtFixForm.comments.fieldLabels.comments}
                                                 />
                                             </Grid>
-                                            <Grid xs={12}>
+                                            <Grid size={12}>
                                                 <Field
                                                     control={control}
                                                     component={TextField}
@@ -305,16 +311,22 @@ const FixRecord = ({ openAccess = false }) => {
                                     </StandardCard>
                                 </Grid>
                                 {!openAccess && showContentIndicatorsField(recordToFix) && (
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <StandardCard
                                             title={txtFixForm.contentIndicators.title}
                                             help={txtFixForm.contentIndicators.help}
                                         >
-                                            <Grid container spacing={3} padding={0}>
-                                                <Grid xs={12}>
+                                            <Grid
+                                                container
+                                                spacing={3}
+                                                sx={{
+                                                    padding: 0,
+                                                }}
+                                            >
+                                                <Grid size={12}>
                                                     <Typography>{txtFixForm.contentIndicators.description}</Typography>
                                                 </Grid>
-                                                <Grid xs={12}>
+                                                <Grid size={12}>
                                                     <Field
                                                         control={control}
                                                         component={ContentIndicatorsField}
@@ -331,7 +343,7 @@ const FixRecord = ({ openAccess = false }) => {
                                         </StandardCard>
                                     </Grid>
                                 )}
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <StandardCard title={txtFixForm.fileUpload.title} help={txtFixForm.fileUpload.help}>
                                         {txtFixForm.fileUpload.description}
                                         <Field
@@ -347,7 +359,7 @@ const FixRecord = ({ openAccess = false }) => {
                             </React.Fragment>
                         )}
                         {fixAction === RECORD_ACTION_UNCLAIM && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard title={txtUnclaimForm.title} help={txtUnclaimForm.help}>
                                     <Alert {...txtUnclaimForm.alert} />
                                     {txtUnclaimForm.description}
@@ -362,35 +374,42 @@ const FixRecord = ({ openAccess = false }) => {
                         )}
 
                         {alertProps && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <Alert pushToTop {...alertProps} />
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={3}>
-                        <Grid xs />
-                        <Grid>
+                    <Grid
+                        container
+                        spacing={2}
+                        padding={2}
+                        sx={{ justifyContent: 'flex-end', pr: 0, pl: { xs: 0, sm: 'auto' } }}
+                    >
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 variant={'contained'}
-                                fullWidth
                                 children={txt.cancel}
                                 disabled={isSubmitting}
                                 onClick={cancelFix}
                                 color={'default'}
+                                fullWidth
+                                sx={{ sm: { width: 'auto' } }}
                             />
                         </Grid>
+
                         {fixAction && (
-                            <Grid>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     type="submit"
                                     variant={'contained'}
                                     color={'primary'}
-                                    fullWidth
                                     children={txt.submit}
                                     disabled={isSubmitting || !isEmptyObject(formLevelError) || hasValidationError}
                                     id="fixSubmit"
                                     data-testid="fix-submit"
                                     data-analyticsid="fixSubmit"
+                                    fullWidth
+                                    sx={{ sm: { width: 'auto' } }}
                                 />
                             </Grid>
                         )}

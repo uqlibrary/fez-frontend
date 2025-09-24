@@ -8,7 +8,7 @@ import DashboardOrcidSync from '../containers/DashboardOrcidSync';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import locale from 'locale/pages';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
 
