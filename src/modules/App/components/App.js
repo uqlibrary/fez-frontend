@@ -122,7 +122,7 @@ const AppClass = ({
         // don't call the api for non author users since the api call requires an author
         if (!accountAuthorLoading && author?.aut_id) {
             actions.searchAuthorPublications({}, 'incomplete');
-            actions.searchAuthorPublications({}, 'oacompliance');
+            actions.searchAuthorPublications({}, 'noncompliantoa');
         }
     }, [accountAuthorLoading, actions, author?.aut_id]);
 
@@ -193,8 +193,8 @@ const AppClass = ({
     );
     const hasOaComplianceWorks = !!(
         incompleteRecordList &&
-        incompleteRecordList.oacompliance?.publicationsListPagingData &&
-        incompleteRecordList.oacompliance?.publicationsListPagingData.total > 0
+        incompleteRecordList.noncompliantoa?.publicationsListPagingData &&
+        incompleteRecordList.noncompliantoa?.publicationsListPagingData.total > 0
     );
     const menuItems = routes.getMenuConfig(
         account,

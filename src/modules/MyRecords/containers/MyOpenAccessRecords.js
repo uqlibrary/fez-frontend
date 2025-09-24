@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => {
     return {
         authorDetails: state.get('accountReducer').authorDetails || {},
         accountLoading: state.get('accountReducer').accountLoading,
-        ...state.get('publicationsReducer').oacompliance,
+        ...state.get('publicationsReducer').noncompliantoa,
         localePages: locale.pages.openAccessPublications,
         thisUrl: pathConfig.records.openAccessCompliance,
         publicationsListCustomActions: [
@@ -26,7 +26,7 @@ function mapDispatchToProps(dispatch) {
     return {
         actions: {
             ...bindActionCreators(actions, dispatch),
-            loadAuthorPublications: state => dispatch(actions.searchAuthorPublications(state, 'oacompliance')),
+            loadAuthorPublications: state => dispatch(actions.searchAuthorPublications(state, 'noncompliantoa')),
         },
     };
 }

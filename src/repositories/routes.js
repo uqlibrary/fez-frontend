@@ -309,7 +309,7 @@ export const OACOMPLIANCE_RECORDS_API = values => ({
     apiUrl: 'records/search',
     options: {
         params: {
-            rule: 'oacompliance',
+            rule: 'noncompliantoa',
             ...getStandardSearchParams(values),
         },
     },

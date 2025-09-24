@@ -199,7 +199,7 @@ describe('Backend routes method', () => {
                     order_by: 'desc',
                     page: 1,
                     per_page: 20,
-                    rule: 'oacompliance',
+                    rule: 'noncompliantoa',
                     sort: 'score',
                 },
             },

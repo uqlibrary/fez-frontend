@@ -77,7 +77,7 @@ function searchAuthorPublicationsApiEndpoint(type) {
             return routes.CURRENT_USER_RECORDS_API;
         case 'incomplete':
             return routes.INCOMPLETE_RECORDS_API;
-        case 'oacompliance':
+        case 'noncompliantoa':
             return routes.OACOMPLIANCE_RECORDS_API;
         default:
             throw new Error('Please provide valid type');

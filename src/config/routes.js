@@ -663,11 +663,6 @@ export const getMenuConfig = (
                       linkTo: pathConfig.authorStatistics.url(account.id),
                       ...locale.menu.authorStatistics,
                   },
-                  //   {
-                  //       linkTo: pathConfig.communityList,
-                  //       ...locale.menu.communityList,
-                  //       public: true,
-                  //   },
                   {
                       divider: true,
                       path: '/234234234242',
@@ -677,10 +672,6 @@ export const getMenuConfig = (
         ...userPages,
         ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
-                  //   {
-                  //       linkTo: pathConfig.admin.community,
-                  //       ...locale.menu.communityForm,
-                  //   },
                   {
                       linkTo: pathConfig.admin.collection,
                       ...locale.menu.collectionForm,

@@ -92,7 +92,7 @@ const Dashboard = ({
     incomplete,
 
     // Open Access Compliance Record lure
-    oacompliance,
+    noncompliantoa,
 
     // wos/scopus data
     loadingPublicationsStats,
@@ -323,15 +323,15 @@ const Dashboard = ({
                 {!loading && authorDetails && (
                     <React.Fragment>
                         {!!txt.oacomplianceRecordLure &&
-                            !!oacompliance &&
-                            !oacompliance.loadingPublicationsList &&
-                            oacompliance.publicationsListPagingData &&
-                            oacompliance.publicationsListPagingData.total > 0 && (
+                            !!noncompliantoa &&
+                            !noncompliantoa.loadingPublicationsList &&
+                            noncompliantoa.publicationsListPagingData &&
+                            noncompliantoa.publicationsListPagingData.total > 0 && (
                                 <Grid item xs={12} style={{ marginTop: -27 }}>
                                     <Alert
                                         title={txt.oacomplianceRecordLure.title}
                                         message={txt.oacomplianceRecordLure.message
-                                            .replace('[count]', oacompliance.publicationsListPagingData.total)
+                                            .replace('[count]', noncompliantoa.publicationsListPagingData.total)
                                             .replace('[plural]', pluralTextReplacement)
                                             .replace('[verbEnding]', verbEndingTextReplacement)}
                                         actionButtonLabel={txt.oacomplianceRecordLure.actionButtonLabel}
@@ -483,7 +483,7 @@ Dashboard.propTypes = {
     incomplete: PropTypes.object,
 
     // Open Access Compliance Record lure
-    oacompliance: PropTypes.object,
+    noncompliantoa: PropTypes.object,
 
     // wos/scopus data
     loadingPublicationsStats: PropTypes.bool,

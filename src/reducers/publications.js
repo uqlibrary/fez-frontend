@@ -11,7 +11,7 @@ export const getInitialState = () => ({
     mine: initialState,
     incomplete: initialState,
     datasets: initialState,
-    oacompliance: initialState,
+    noncompliantoa: initialState,
 });
 
 const handlers = {
