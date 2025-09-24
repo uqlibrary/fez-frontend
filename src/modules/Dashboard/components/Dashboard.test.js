@@ -110,6 +110,27 @@ describe('Dashboard test', () => {
         expect(mockUseNavigate).toBeCalledWith('/records/incomplete');
     });
 
+    it('redirectToOaComplianceRecordlist method', () => {
+        const { getByText } = setup({
+            noncompliantoa: {
+                publicationsList: [],
+                publicationsListPagingData: {
+                    total: 1,
+                    took: 30,
+                    per_page: 20,
+                    current_page: 1,
+                    from: 1,
+                    to: 1,
+                    data: [1],
+                    filters: {},
+                },
+            },
+            authorDetails: mock.authorDetails.uqresearcher,
+        });
+        fireEvent.click(getByText(/View and Fix/i));
+        expect(mockUseNavigate).toBeCalledWith('/records/my-open-access');
+    });
+
     it('should have helper to generate fibonacci numbers', () => {
         const fibonacciSeries = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
         fibonacciSeries.forEach((num, index) => {
@@ -642,7 +663,7 @@ describe('Dashboard test', () => {
                         { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
                     ],
                     'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-                    // eslint-disable-next-line prettier/prettier
+                     
                 },
             });
 
