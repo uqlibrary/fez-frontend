@@ -1,10 +1,10 @@
-/* eslint-disable max-len */
 import React from 'react';
 import LockIcon from '@mui/icons-material/Lock';
 import Typography from '@mui/material/Typography';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import OpenInNew from '@mui/icons-material/OpenInNew';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 import locale from 'locale/components';
 import globalLocale from './global';
@@ -332,6 +332,13 @@ export default {
                 type: 'warning',
                 actionButtonLabel: 'View and Complete',
             },
+            oacomplianceRecordLure: {
+                title: 'OA Compliance Required',
+                message: 'We have found [count] work(s) that do not meet Open Access grant eligibility.',
+                type: 'warning',
+                actionButtonLabel: 'View and Fix',
+                icon: <LockOpenIcon id="unlock-outline-icon" className="icon" />,
+            },
         },
         myResearch: {
             pageTitle: 'My works',
@@ -559,6 +566,26 @@ export default {
             loadingMessage: 'Loading work',
             title: 'Request a correction, add more information or upload files',
             subTitle: 'Work to be amended',
+            fieldLabels: {
+                action: 'Select an action',
+            },
+            actionsOptions: [
+                {
+                    action: 'fix',
+                    title: 'I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files',
+                },
+                {
+                    action: 'unclaim',
+                    title: 'I am not the author/editor/contributor of this work - I would like this work removed from my profile',
+                },
+            ],
+            cancel: 'Cancel',
+            submit: 'Submit',
+        },
+        openAccessComplianceRecord: {
+            loadingMessage: 'Loading work',
+            title: 'Upload a suitable publication file to open access your work',
+            subTitle: 'Work to make open access',
             fieldLabels: {
                 action: 'Select an action',
             },
@@ -1245,6 +1272,29 @@ export default {
         },
         controlledVocabularies: {
             title: 'Controlled Vocabularies',
+        },
+        openAccessPublications: {
+            pageTitle: 'My open access',
+            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
+            loadingMessage: 'Searching for open access non-compliant works',
+            noResultsFound: {
+                title: 'No open access works found',
+                text: (
+                    <div>
+                        <p>No open access works were found for you to rectify.</p>
+                    </div>
+                ),
+            },
+            publicationsList: {
+                complete: 'Open access this work',
+            },
+            facetsFilter: {
+                ...locale.components.facetsFilter,
+                excludeFacetsList: [...locale.components.facetsFilter.excludeFacetsList, 'Author'],
+            },
+        },
+        openAccessPublication: {
+            title: 'Complete my open access work',
         },
     },
 };

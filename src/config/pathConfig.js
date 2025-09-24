@@ -59,6 +59,8 @@ export const pathConfig = {
         fix: pid => `/records/${pid}/fix`,
         incomplete: '/records/incomplete',
         incompleteFix: pid => `/records/${pid}/incomplete`,
+        openAccessCompliance: '/records/my-open-access',
+        openAccessComplianceFix: pid => `/records/${pid}/make-open-access`,
         mine: '/records/mine',
         possible: '/records/possible',
         search: '/records/search',
