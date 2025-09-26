@@ -1,4 +1,4 @@
-import publicationEnhancer, { calculateOpenAccess } from './publicationEnhancer';
+import publicationEnhancer, { calculateOpenAccess, potentiallyOpenAccessible } from './publicationEnhancer';
 
 describe('publication enhancer', () => {
     const MockDate = require('mockdate');
@@ -25,6 +25,7 @@ describe('publication enhancer', () => {
             expect.objectContaining({
                 payload: {
                     calculateOpenAccess: expect.any(Function),
+                    potentiallyOpenAccessible: expect.any(Function),
                     rek_pid: 'UQ:1234',
                     rek_title: 'Title',
                     rek_description: 'Description',
@@ -69,6 +70,40 @@ describe('publication enhancer', () => {
         publicationEnhancer()(next)({ type: 'FIX_RECORD_LOADED', payload: publication });
     });
 
+    it('should not determine potentially open accessible status without rek_pid', () => {
+        const publication = {
+            rek_title: 'Title',
+            rek_description: 'Description',
+            rek_formatted_title: null,
+            rek_formatted_abstract: 'Abstract',
+        };
+        const next = jest.fn(action => {
+            const result = action.payload.potentiallyOpenAccessible();
+            expect(result).toBeNull();
+        });
+        publicationEnhancer()(next)({ type: 'FIX_RECORD_LOADED', payload: publication });
+    });
+
+    it('should determine potentially open accessible status with rek_pid', () => {
+        const publication = {
+            rek_pid: 'UQ:1234',
+            rek_title: 'Title',
+            rek_description: 'Description',
+            rek_formatted_title: null,
+            rek_formatted_abstract: 'Abstract',
+            rek_created_date: '2025-01-01T00:00:00Z',
+            fez_record_search_key_oa_status: {
+                rek_oa_status: 453700, // Not OA
+            },
+            rek_display_type_lookup: 'Journal Article',
+        };
+        const next = jest.fn(action => {
+            const result = action.payload.potentiallyOpenAccessible();
+            expect(typeof result).toBe('boolean');
+        });
+        publicationEnhancer()(next)({ type: 'FIX_RECORD_LOADED', payload: publication });
+    });
+
     it('should add a method to a list of publication to calculate open access', () => {
         const payload = {
             data: [
@@ -97,6 +132,7 @@ describe('publication enhancer', () => {
                     rek_formatted_abstract: 'Abstract',
                     rek_formatted_title: null,
                     calculateOpenAccess: expect.any(Function),
+                    potentiallyOpenAccessible: expect.any(Function),
                 },
                 {
                     rek_pid: 'UQ:1235',
@@ -105,6 +141,7 @@ describe('publication enhancer', () => {
                     rek_formatted_abstract: 'Abstract',
                     rek_formatted_title: null,
                     calculateOpenAccess: expect.any(Function),
+                    potentiallyOpenAccessible: expect.any(Function),
                 },
             ],
             count: 2,
@@ -147,6 +184,7 @@ describe('publication enhancer', () => {
                     rek_formatted_abstract: 'Abstract',
                     rek_formatted_title: null,
                     calculateOpenAccess: expect.any(Function),
+                    potentiallyOpenAccessible: expect.any(Function),
                 },
                 {
                     rek_pid: 'UQ:1235',
@@ -155,6 +193,7 @@ describe('publication enhancer', () => {
                     rek_formatted_abstract: 'Abstract',
                     rek_formatted_title: null,
                     calculateOpenAccess: expect.any(Function),
+                    potentiallyOpenAccessible: expect.any(Function),
                 },
             ],
         };
@@ -649,6 +688,7 @@ describe('publication enhancer', () => {
                             rek_formatted_abstract: null,
                             rek_formatted_title: null,
                             calculateOpenAccess: expect.any(Function),
+                            potentiallyOpenAccessible: expect.any(Function),
                         },
                     ],
                 },
@@ -674,6 +714,7 @@ describe('publication enhancer', () => {
                             rek_pid: 'UQ:1234',
                             rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
                             calculateOpenAccess: expect.any(Function),
+                            potentiallyOpenAccessible: expect.any(Function),
                             rek_formatted_abstract: 'html<ul><li>one</li><li>tow</li></ul>hello<p>good bye</p>',
                             rek_formatted_title: null,
                         },
@@ -702,8 +743,159 @@ describe('publication enhancer', () => {
                     rek_formatted_title: null,
                     rek_formatted_abstract: null,
                     calculateOpenAccess: expect.any(Function),
+                    potentiallyOpenAccessible: expect.any(Function),
                 },
             }),
         );
+    });
+
+    describe('potentiallyOpenAccessible', () => {
+        it('should return true for a journal article with not open access status within time limit and no files', () => {
+            const publication = {
+                rek_pid: 'UQ:1234',
+                rek_date: '2018-06-15T00:00:00Z', // 2 years ago from mocked date 2020-01-01
+                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                fez_record_search_key_oa_status: {
+                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                },
+                fez_record_search_key_file_attachment_name: [],
+            };
+
+            const result = potentiallyOpenAccessible(publication);
+            expect(result).toBe(true);
+        });
+
+        it('should return true for a journal article with not open access status within time limit and no file attachment property', () => {
+            const publication = {
+                rek_pid: 'UQ:1234',
+                rek_date: '2019-01-01T00:00:00Z', // 1 year ago from mocked date 2020-01-01
+                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                fez_record_search_key_oa_status: {
+                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                },
+                // No fez_record_search_key_file_attachment_name property
+            };
+
+            const result = potentiallyOpenAccessible(publication);
+            expect(result).toBe(true);
+        });
+
+        it('should return false for a record with open access status', () => {
+            const publication = {
+                rek_pid: 'UQ:1234',
+                rek_date: '2018-06-15T00:00:00Z',
+                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                fez_record_search_key_oa_status: {
+                    rek_oa_status: 453693, // OPEN_ACCESS_ID_DOI (not NOT_OPEN_ACCESS)
+                },
+                fez_record_search_key_file_attachment_name: [],
+            };
+
+            const result = potentiallyOpenAccessible(publication);
+            expect(result).toBe(false);
+        });
+
+        it('should return false for a record that is too old (beyond time limit)', () => {
+            const publication = {
+                rek_pid: 'UQ:1234',
+                rek_date: '2017-06-15T00:00:00Z', // More than 2 years ago from mocked date 2020-01-01
+                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                fez_record_search_key_oa_status: {
+                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                },
+                fez_record_search_key_file_attachment_name: [],
+            };
+
+            const result = potentiallyOpenAccessible(publication);
+            expect(result).toBe(false);
+        });
+
+        it('should return false for a non-journal article record', () => {
+            const publication = {
+                rek_pid: 'UQ:1234',
+                rek_date: '2018-06-15T00:00:00Z',
+                rek_display_type: 130, // Not PUBLICATION_TYPE_JOURNAL_ARTICLE
+                fez_record_search_key_oa_status: {
+                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                },
+                fez_record_search_key_file_attachment_name: [],
+            };
+
+            const result = potentiallyOpenAccessible(publication);
+            expect(result).toBe(false);
+        });
+
+        it('should return false for a record that has file attachments', () => {
+            const publication = {
+                rek_pid: 'UQ:1234',
+                rek_date: '2018-06-15T00:00:00Z',
+                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                fez_record_search_key_oa_status: {
+                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                },
+                fez_record_search_key_file_attachment_name: [{ rek_file_attachment_name: 'document.pdf' }],
+            };
+
+            const result = potentiallyOpenAccessible(publication);
+            expect(result).toBe(false);
+        });
+
+        it('should return false for a record with no oa_status', () => {
+            const publication = {
+                rek_pid: 'UQ:1234',
+                rek_date: '2018-06-15T00:00:00Z',
+                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                // No fez_record_search_key_oa_status property
+                fez_record_search_key_file_attachment_name: [],
+            };
+
+            const result = potentiallyOpenAccessible(publication);
+            expect(result).toBe(false);
+        });
+
+        it('should return false for a record with invalid oa_status', () => {
+            const publication = {
+                rek_pid: 'UQ:1234',
+                rek_date: '2018-06-15T00:00:00Z',
+                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                fez_record_search_key_oa_status: {
+                    rek_oa_status: 'invalid', // Not a finite number
+                },
+                fez_record_search_key_file_attachment_name: [],
+            };
+
+            const result = potentiallyOpenAccessible(publication);
+            expect(result).toBe(false);
+        });
+
+        it('should return true for a record on the exact boundary date (should be inclusive)', () => {
+            const publication = {
+                rek_pid: 'UQ:1234',
+                rek_date: '2018-01-01T00:00:00Z', // Exactly 2 years ago from mocked date 2020-01-01
+                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                fez_record_search_key_oa_status: {
+                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                },
+                fez_record_search_key_file_attachment_name: [],
+            };
+
+            const result = potentiallyOpenAccessible(publication);
+            expect(result).toBe(true);
+        });
+
+        it('should return true for a recent record within the current year', () => {
+            const publication = {
+                rek_pid: 'UQ:1234',
+                rek_date: '2019-12-31T00:00:00Z', // Very recent, same year as mocked date
+                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                fez_record_search_key_oa_status: {
+                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                },
+                fez_record_search_key_file_attachment_name: [],
+            };
+
+            const result = potentiallyOpenAccessible(publication);
+            expect(result).toBe(true);
+        });
     });
 });

@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { hydrateMockSearchList } from '../../../helpers/general';
 
 const myRecordsList = {
@@ -8,6 +9,345 @@ const myRecordsList = {
     "from": 1,
     "to": 20,
     "data": [{
+        "rek_pid": "UQ:256099",
+        "rek_title": "Open Accessible test record",
+        "rek_description": "Botulinum neurotoxin type A (BoNT\/A) is a highly potent neurotoxin that elicits flaccid paralysis by enzymatic cleavage of the exocytic machinery component SNAP25 in motor nerve terminals. However, recent evidence suggests that the neurotoxic activity of BoNT\/A is not restricted to the periphery, but also reaches the CNS after retrograde axonal transport. Because BoNT\/A is internalized in recycling synaptic vesicles, it is unclear which compartment facilitates this transport. Using live-cell confocal and single-molecule imaging of rat hippocampal neurons cultured in microfluidic devices, we show that the activity-dependent uptake of the binding domain of the BoNT\/A heavy chain (BoNT\/A-Hc) is followed by a delayed increase in retrograde axonal transport of BoNT\/A-Hc carriers. Consistent with a role of presynaptic activity in initiating transport of the active toxin, activity-dependent uptake of BoNT\/A in the terminal led to a significant increase in SNAP25 cleavage detected in the soma chamber compared with nonstimulated neurons. Surprisingly, most endocytosed BoNT\/A-Hc was incorporated into LC3-positive autophagosomes generated in the nerve terminals, which then underwent retrograde transport to the cell soma, where they fused with lysosomes both in vitro and in vivo. Blocking autophagosome formation or acidification with wortmannin or bafilomycin A1, respectively, inhibited the activity-dependent retrograde trafficking of BoNT\/A-Hc. Our data demonstrate that both the presynaptic formation of autophagosomes and the initiation of their retrograde trafficking are tightly regulated by presynaptic activity.",
+        "rek_display_type": 179,
+        "rek_status": 2,
+        "rek_date": `${moment().year()-1}-10-01T00:00:00Z`,
+        "rek_object_type": 3,
+        "rek_depositor": 5790,
+        "rek_created_date": "2011-10-14T17:39:07Z",
+        "rek_updated_date": "2018-01-19T10:35:42Z",
+        "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Harper, Callista B.\" href=\"\/list\/author_id\/80925\/\">Harper, Callista B.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Martin, Sally\" href=\"\/list\/author_id\/745\/\">Martin, Sally<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Nguyen, Tam H.\" href=\"\/list\/author_id\/72673\/\">Nguyen, Tam H.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Daniels, Shari J.\" href=\"\/list\/author_id\/90861\/\">Daniels, Shari J.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Lavidis, Nickolas A.\" href=\"\/list\/author_id\/894\/\">Lavidis, Nickolas A.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Popoff, Michel R.\" href=\"\/list\/author\/Popoff%2C+Michel+R.\/\">Popoff, Michel R.<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Hadzic, Gordana\" href=\"\/list\/author\/Hadzic%2C+Gordana\/\">Hadzic, Gordana<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Mariana, Anna\" href=\"\/list\/author\/Mariana%2C+Anna\/\">Mariana, Anna<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Chau, Ngoc\" href=\"\/list\/author\/Chau%2C+Ngoc\/\">Chau, Ngoc<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for McCluskey, Adam\" href=\"\/list\/author\/McCluskey%2C+Adam\/\">McCluskey, Adam<\/a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Robinson, Phillip J.\" href=\"\/list\/author\/Robinson%2C+Phillip+J.\/\">Robinson, Phillip J.<\/a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Meunier, Frederic A.\" href=\"\/list\/author_id\/2746\/\">Meunier, Frederic A.<\/a> (<span class=\"citation_date\">2011<\/span>) <a class=\"citation_title\" title=\"Click to view Journal Article: Dynamin inhibition blocks botulinum neurotoxin type A endocytosis in neurons and delays botulism\" href=\"\/view\/UQ:256099\">Dynamin inhibition blocks botulinum neurotoxin type A endocytosis in neurons and delays botulism<\/a>. <i><span class=\"citation_journal_name\">Journal of Biological Chemistry<\/span><\/i>, <i><span class=\"citation_volume_number\">286<\/span><\/i> <span class=\"citation_issue_number\">41<\/span>: <span class=\"citation_start_page\">35966<\/span>-<span class=\"citation_end_page\">35976<\/span>. doi:<span class=\"citation_doi\">10.1074\/jbc.M111.283879<\/span>",
+        "rek_genre": "Journal Article",
+        "rek_genre_type": "Article (original research)",
+        "rek_formatted_title": null,
+        "rek_formatted_abstract": "The botulinum neurotoxins (BoNTs) are di-chain bacterial proteins responsible for the paralytic disease botulism. Following binding to the plasma membrane of cholinergic motor nerve terminals, BoNTs are internalized into an endocytic compartment. Although several endocytic pathways have been characterized in neurons, the molecular mechanism underpinning the uptake of BoNTs at the presynaptic nerve terminal is still unclear. Here, a recombinant BoNT\/A heavy chain binding domain (Hc) was used to unravel the internalization pathway by fluorescence and electron microscopy. BoNT\/A-Hc initially enters cultured hippocampal neurons in an activity-dependent manner into synaptic vesicles and clathrin-coated vesicles before also entering endosomal structures and multivesicular bodies.Wefound that inhibiting dynamin with the novel potent Dynasore analog, Dyngo-4a<sup>TM<\/sup>, was sufficient to abolish BoNT\/A-Hc internalization and BoNT\/A-induced SNAP25 cleavage in hippocampal neurons. Dyngo-4a also interfered with BoNT\/A-Hc internalization into motor nerve terminals. Furthermore, Dyngo-4a afforded protection against BoNT\/A-induced paralysis at the rat hemidiaphragm. A significant delay of&gt;30% in the onset of botulism was observed in mice injected with Dyngo-4a. Dynamin inhibition therefore provides a therapeutic avenue for the treatment of botulism and other diseases caused by pathogens sharing dynamin-dependent uptake mechanisms. <br \/>",
+        "rek_depositor_affiliation": 1017,
+        "rek_thomson_citation_count": 76,
+        "rek_subtype": "Article (original research)",
+        "rek_scopus_citation_count": 82,
+        "rek_scopus_doc_type": "ar",
+        "rek_wok_doc_type": "@",
+        "rek_pubmed_doc_type": "Journal Article",
+        "rek_security_inherited": 1,
+        "rek_altmetric_score": 1,
+        "rek_altmetric_id": 390008,
+        "rek_copyright": "on",
+        "fez_record_search_key_author": [
+            "Researcher, Professor J.",
+            "Martin, Sally",
+            "Nguyen, Tam H.",
+            "Daniels, Shari J.",
+            "Lavidis, Nickolas A.",
+            "Popoff, Michel R.",
+            "Hadzic, Gordana",
+            "Mariana, Anna",
+            "Chau, Ngoc",
+            "McCluskey, Adam",
+            "Robinson, Phillip J.",
+            "Meunier, Frederic A.",
+        ],
+        "fez_record_search_key_author_affiliation_country": [
+            "Australia",
+            "Australia",
+            "Australia",
+            "Australia",
+            "Australia",
+            "France",
+            "Australia",
+            "Australia",
+            "Australia",
+            "Australia",
+            "Australia",
+            "Australia",
+        ],
+        "fez_record_search_key_author_affiliation_full_address": [
+            "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute.",
+            "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute.",
+            "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute.",
+            "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute.",
+            "University of Wisconsin Medical School, Madison, Wisconsin 53706.",
+            "Medical Research Council Laboratory of Molecular Biology, Cambridge CB2 0QH, United Kingdom.",
+            "Australian Institute for Bioengineering and Nanotechnology, and.",
+            "Australian Institute for Bioengineering and Nanotechnology, and School of Chemical Engineering, University of Queensland, Brisbane, Queensland 4072, Australia, Materials Science and Engineering Division, Commonwealth Scientific and Industrial Research Organization, Clayton, Victoria 3169, Australia.",
+            "University of Bordeaux, Interdisciplinary Institute for Neuroscience, Centre National de la Recherche Scientifique, Unit\u00e9 Mixte de Recherche 5297, Bordeaux, France.",
+            "University of Bordeaux, Interdisciplinary Institute for Neuroscience, Centre National de la Recherche Scientifique, Unit\u00e9 Mixte de Recherche 5297, Bordeaux, France, Bordeaux Imaging Center, Unit\u00e9 Mixte de Service 3420, Centre National de la Recherche Scientifique, US4 INSERM, University of Bordeaux, France, and.",
+            "Department of Biomedical Science, The University of Sheffield, Sheffield, S10 2TN, United Kingdom.",
+            "Clem Jones Centre for Ageing Dementia Research, Queensland Brain Institute, f.meunier@uq.edu.au.",
+        ],
+        "fez_record_search_key_author_affiliation_name": [
+            "University of Queensland",
+            "University of Queensland",
+            "University of Queensland",
+            "University of Queensland",
+            "University of Queensland",
+            "Institut Pasteur Paris",
+            "University of Newcastle",
+            "Children's Medical Research Institute - Australia",
+            "Children's Medical Research Institute - Australia",
+            "University of Newcastle",
+            "Children's Medical Research Institute - Australia",
+            "University of Queensland",
+        ],
+        "fez_record_search_key_author_id": [{
+            "rek_author_id": 410,
+            "rek_author_id_lookup": "Researcher, Professor J."
+        }, {
+            "rek_author_id": 745,
+            "rek_author_id_lookup": "Martin, Sally"
+        }, {
+            "rek_author_id": 72673,
+            "rek_author_id_lookup": "Tam Nguyen"
+        }, {
+            "rek_author_id": 90861,
+            "rek_author_id_lookup": "Daniels, Shari  J."
+        }, {
+            "rek_author_id": 894,
+            "rek_author_id_lookup": "Lavidis, Nickolas A."
+        }, {
+            "rek_author_id": 0,
+        }, {
+            "rek_author_id": 0,
+        }, {
+            "rek_author_id": 0,
+        }, {
+            "rek_author_id": 0,
+        }, {
+            "rek_author_id": 0,
+        }, {
+            "rek_author_id": 0,
+        }, {
+            "rek_author_id": 2746,
+            "rek_author_id_lookup": "Meunier, Frederic A."
+        }],
+        "fez_record_search_key_corresponding_country": [
+            "Australia",
+            "Australia",
+            "France",
+            "Australia",
+            "Australia",
+        ],
+        "fez_record_search_key_corresponding_email": ["f.meunier@uq.edu.au"],
+        "fez_record_search_key_corresponding_name": ["Meunier, Frederic A."],
+        "fez_record_search_key_corresponding_organisation": [
+            "University of Queensland",
+            "University of Queensland",
+            "Institut Pasteur Paris",
+            "University of Newcastle",
+            "Children's Medical Research Institute - Australia",
+        ],
+        "fez_record_search_key_date_available": "2011-10-14T00:00:00Z",
+        "fez_record_search_key_doi": "10.1074\/jbc.M111.283879",
+        "fez_record_search_key_end_page": "35976",
+        "fez_record_search_key_file_attachment_name": [],
+        "fez_record_search_key_grant_agency": ["Medical Research Council", "Medical Research Council"],
+        "fez_record_search_key_grant_id": ["MC_U105178791", "MR\/K022539\/1"],
+        "fez_record_search_key_herdc_code": {
+            "rek_herdc_code": 450009,
+            "rek_herdc_code_lookup": "C1"
+        },
+        "fez_record_search_key_herdc_status": {
+            "rek_herdc_status": 453221,
+            "rek_herdc_status_lookup": "Confirmed Code"
+        },
+        "fez_record_search_key_institutional_status": {
+            "rek_institutional_status": 453223,
+            "rek_institutional_status_lookup": "UQ"
+        },
+        "fez_record_search_key_isi_loc": "000295927100070",
+        "fez_record_search_key_ismemberof": [{
+            "rek_ismemberof": "UQ:23912",
+            "rek_ismemberof_lookup": "Queensland Brain Institute Publications"
+        }, {
+            "rek_ismemberof": "UQ:3823",
+            "rek_ismemberof_lookup": "School of Biomedical Sciences Publications"
+        }, {
+            "rek_ismemberof": "UQ:240423",
+            "rek_ismemberof_lookup": "Official 2012 Collection"
+        }],
+        "fez_record_search_key_issn": [{
+            "rek_issn": "0021-9258",
+            "fez_journal_issns": [{
+                "jni_id": 13048,
+                "jni_jnl_id": 7528,
+                "jni_issn": "0021-9258",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 7528,
+                    "jnl_journal_name": "Journal of Biological Chemistry",
+                    "jnl_era_id": 2230,
+                    "jnl_era_year": 2010,
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                    "jnl_rank": "A*",
+                    "jnl_foreign_name": null
+                }
+            }, {
+                "jni_id": 36823,
+                "jni_jnl_id": 22244,
+                "jni_issn": "0021-9258",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 22244,
+                    "jnl_journal_name": "Journal of Biological Chemistry",
+                    "jnl_era_id": 2230,
+                    "jnl_era_year": 2012,
+                    "jnl_created_date": "2011-10-28 00:00:00",
+                    "jnl_updated_date": "2011-10-28 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }, {
+                "jni_id": 88695,
+                "jni_jnl_id": 53861,
+                "jni_issn": "0021-9258",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 53861,
+                    "jnl_journal_name": "Journal of Biological Chemistry",
+                    "jnl_era_id": 2230,
+                    "jnl_era_year": 2015,
+                    "jnl_created_date": "2014-07-16 00:00:00",
+                    "jnl_updated_date": "2014-07-16 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }, {
+                "jni_id": 152385,
+                "jni_jnl_id": 92688,
+                "jni_issn": "0021-9258",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 92688,
+                    "jnl_journal_name": "Journal of Biological Chemistry",
+                    "jnl_era_id": 2230,
+                    "jnl_era_year": 2018,
+                    "jnl_created_date": "2017-09-06 00:00:00",
+                    "jnl_updated_date": "2017-09-06 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }],
+            "fez_sherpa_romeo": {
+                "srm_id": 13741,
+                "srm_issn": "0021-9258",
+                "srm_journal_name": "Journal of Biological Chemistry",
+                "srm_journal_link": "http://example.com"
+            },
+            "rek_issn_lookup": ""
+        }, {
+            "rek_issn": "1083-351X",
+            "fez_journal_issns": [{
+                "jni_id": 13049,
+                "jni_jnl_id": 7528,
+                "jni_issn": "1083-351X",
+                "jni_issn_order": 2,
+                "fez_journal": {
+                    "jnl_id": 7528,
+                    "jnl_journal_name": "Journal of Biological Chemistry",
+                    "jnl_era_id": 2230,
+                    "jnl_era_year": 2010,
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                    "jnl_rank": "A*",
+                    "jnl_foreign_name": null
+                }
+            }, {
+                "jni_id": 36824,
+                "jni_jnl_id": 22244,
+                "jni_issn": "1083-351X",
+                "jni_issn_order": 2,
+                "fez_journal": {
+                    "jnl_id": 22244,
+                    "jnl_journal_name": "Journal of Biological Chemistry",
+                    "jnl_era_id": 2230,
+                    "jnl_era_year": 2012,
+                    "jnl_created_date": "2011-10-28 00:00:00",
+                    "jnl_updated_date": "2011-10-28 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }, {
+                "jni_id": 88696,
+                "jni_jnl_id": 53861,
+                "jni_issn": "1083-351X",
+                "jni_issn_order": 2,
+                "fez_journal": {
+                    "jnl_id": 53861,
+                    "jnl_journal_name": "Journal of Biological Chemistry",
+                    "jnl_era_id": 2230,
+                    "jnl_era_year": 2015,
+                    "jnl_created_date": "2014-07-16 00:00:00",
+                    "jnl_updated_date": "2014-07-16 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }, {
+                "jni_id": 152386,
+                "jni_jnl_id": 92688,
+                "jni_issn": "1083-351X",
+                "jni_issn_order": 2,
+                "fez_journal": {
+                    "jnl_id": 92688,
+                    "jnl_journal_name": "Journal of Biological Chemistry",
+                    "jnl_era_id": 2230,
+                    "jnl_era_year": 2018,
+                    "jnl_created_date": "2017-09-06 00:00:00",
+                    "jnl_updated_date": "2017-09-06 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }],
+            "fez_sherpa_romeo": {
+                "srm_id": 13742,
+                "srm_issn": "1083-351X",
+                "srm_journal_name": "Journal of Biological Chemistry",
+                "srm_journal_link": "http://example.com"
+            },
+            "rek_issn_lookup": ""
+        }],
+        "fez_record_search_key_issue_number": "41",
+        "fez_record_search_key_journal_name": "Journal of Biological Chemistry",
+        "fez_record_search_key_keywords": [
+            "Botulinum neurotoxin",
+            "autophagosome",
+            "axon",
+            "presynaptic",
+            "retrograde transport",
+            "synaptic vesicle",
+        ],
+        "fez_record_search_key_language": ["eng"],
+        "fez_record_search_key_oa_status": {
+            "rek_oa_status": 453698,
+            "rek_oa_status_lookup": "Not Open Access"
+        },
+        "fez_record_search_key_place_of_publication": "Bethesda, MD, United States",
+        "fez_record_search_key_publisher": "American Society for Biochemistry and Molecular Biology",
+        "fez_record_search_key_pubmed_id": "21832053",
+        "fez_record_search_key_refereed_source": {
+            "rek_refereed_source": "453635",
+            "rek_refereed_source_lookup": "Ulrichs"
+        },
+        "fez_record_search_key_scopus_id": "2-s2.0-80053897195",
+        "fez_record_search_key_start_page": "35966",
+        "fez_record_search_key_subject": [{
+            "rek_subject": 453289,
+            "rek_subject_lookup": "1303 Biochemistry"
+        }, {
+            "rek_subject": 453298,
+            "rek_subject_lookup": "1312 Molecular Biology"
+        }, {
+            "rek_subject": 453293,
+            "rek_subject_lookup": "1307 Cell Biology"
+        }],
+        "fez_record_search_key_total_pages": "11",
+        "fez_record_search_key_volume_number": "286",
+        "fez_datastream_info": [],
+    
+        },
+        {
         "rek_pid": "UQ:678728",
         "rek_title": "ENA\/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network",
         "rek_description": "In neurosecretory cells, myosin VI associated with secretory granules (SGs) mediates their activity-dependent recruitment to the cortical actin network and is necessary to sustain exocytosis. The mechanism by which myosin VI interacts with SGs is unknown. Using a myosin VI pull-down assay and mass spectrometry we identified Mena, a member of the ENA\/VASP family, as a myosin VI binding partner in PC12 cells, and confirmed that Mena colocalized with myosin VI on SGs. Using a knock-sideways approach to inactivate the ENA\/VASP family members by mitochondrial relocation, we revealed a concomitant redistribution of myosin VI. This was ensued by a reduction in the association of myosin VI with SGs, a decreased SG mobility and density in proximity to the plasma membrane as well as decreased evoked exocytosis. These data demonstrate that ENA\/VASP proteins regulate SG exocytosis through modulating the activity of myosin VI.",

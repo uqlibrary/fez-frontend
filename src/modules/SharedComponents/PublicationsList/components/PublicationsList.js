@@ -36,11 +36,13 @@ export const PublicationsList = ({
     publicationsLoading,
     showImageThumbnails = false,
     security = { isAdmin: false, isAuthor: false },
+    forceUseCustomActions,
 }) => {
     const { shouldRenderRecordsSelectors, recordsSelected, allSelected, handleClick, handleSelectAll } =
         useRecordsSelector();
 
     const renderPublicationCitation = (index, publication) => {
+        const overrideUseCustomActions = forceUseCustomActions?.(publication) || false;
         return (
             <PublicationCitation
                 showImageThumbnails={showImageThumbnails}
@@ -48,13 +50,15 @@ export const PublicationsList = ({
                 key={index + publication.rek_title + publication.rek_date}
                 publication={publication}
                 customActions={
-                    !publication.rek_pid || publicationsListSubset.indexOf(publication.rek_pid) === -1
+                    !publication.rek_pid ||
+                    publicationsListSubset.indexOf(publication.rek_pid) === -1 ||
+                    overrideUseCustomActions
                         ? customActions
                         : subsetCustomActions
                 }
                 showSources={showSources}
                 showAdminActions={!!showAdminActions}
-                showDefaultActions={showDefaultActions}
+                showDefaultActions={showDefaultActions && !overrideUseCustomActions}
                 showMetrics={showMetrics}
                 showSourceCountIcon={showSourceCountIcon}
                 showUnpublishedBufferFields={showUnpublishedBufferFields}
@@ -171,6 +175,7 @@ PublicationsList.propTypes = {
     publicationsLoading: PropTypes.bool,
     showImageThumbnails: PropTypes.bool,
     security: PropTypes.object,
+    forceUseCustomActions: PropTypes.func,
 };
 
 export default React.memo(PublicationsList);

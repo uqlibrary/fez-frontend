@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 
 import Typography from '@mui/material/Typography';
@@ -422,6 +421,10 @@ export default {
         myLatestPublications: {
             loading: 'Loading your latest works',
             viewAllButtonLabel: 'View all',
+            openAccessible: {
+                openAccess: 'Make open access',
+                correction: 'Request correction',
+            },
         },
         topCitedPublications: {
             loading: 'Loading trending works',

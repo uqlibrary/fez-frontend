@@ -12,6 +12,32 @@ import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
 import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 
+export const openAccessibleProps = navigate => {
+    const txt = locale.components.myLatestPublications;
+
+    const _actions = [
+        {
+            label: txt.openAccessible.openAccess,
+            handleAction: record => {
+                navigate(pathConfig.records.openAccessComplianceFix(record.rek_pid));
+            },
+            primary: true,
+        },
+        {
+            label: txt.openAccessible.correction,
+            handleAction: record => {
+                navigate(pathConfig.records.fix(record.rek_pid));
+            },
+            primary: false,
+        },
+    ];
+
+    return {
+        forceUseCustomActions: record => record.potentiallyOpenAccessible(),
+        customActions: _actions,
+    };
+};
+
 export const MyLatestPublications = ({ isAdmin = false }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -44,7 +70,12 @@ export const MyLatestPublications = ({ isAdmin = false }) => {
 
     return (
         <React.Fragment>
-            <PublicationsList publicationsList={latestPublicationsList} showDefaultActions showAdminActions={isAdmin} />
+            <PublicationsList
+                publicationsList={latestPublicationsList}
+                showDefaultActions
+                showAdminActions={isAdmin}
+                {...openAccessibleProps(navigate)}
+            />
             <Grid container>
                 <Grid item xs />
                 <Grid item xs={12} sm="auto">
