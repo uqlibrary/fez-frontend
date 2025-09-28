@@ -22,6 +22,8 @@ function setup(testProps = {}) {
 }
 
 describe('HelpIcon snapshots tests', () => {
+    beforeEach(() => jest.clearAllMocks());
+
     it('renders help icon', () => {
         const { getByTestId } = setup();
         expect(getByTestId('help-icon')).toBeInTheDocument();
@@ -38,5 +40,13 @@ describe('HelpIcon snapshots tests', () => {
 
         fireEvent.click(getByTestId('help-icon'));
         expect(showFn).toHaveBeenCalledWith('This is the title', 'This is some text', 'This is a button');
+    });
+
+    it('should allow to be disabled', () => {
+        const showFn = jest.spyOn(actions, 'show');
+        const { getByTestId } = setup({ disabled: true });
+
+        fireEvent.click(getByTestId('help-icon'));
+        expect(showFn).not.toHaveBeenCalled();
     });
 });
