@@ -9,6 +9,329 @@ const myRecordsList = {
     "from": 1,
     "to": 20,
     "data": [{
+        "rek_pid": "UQ:678728",
+        "rek_title": "ENA\/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network",
+        "rek_description": "In neurosecretory cells, myosin VI associated with secretory granules (SGs) mediates their activity-dependent recruitment to the cortical actin network and is necessary to sustain exocytosis. The mechanism by which myosin VI interacts with SGs is unknown. Using a myosin VI pull-down assay and mass spectrometry we identified Mena, a member of the ENA\/VASP family, as a myosin VI binding partner in PC12 cells, and confirmed that Mena colocalized with myosin VI on SGs. Using a knock-sideways approach to inactivate the ENA\/VASP family members by mitochondrial relocation, we revealed a concomitant redistribution of myosin VI. This was ensued by a reduction in the association of myosin VI with SGs, a decreased SG mobility and density in proximity to the plasma membrane as well as decreased evoked exocytosis. These data demonstrate that ENA\/VASP proteins regulate SG exocytosis through modulating the activity of myosin VI.",
+        "rek_display_type": 179,
+        "rek_status": 2,
+        "rek_date": "2017-08-07T00:00:00Z",
+        "rek_object_type": 3,
+        "rek_depositor": 48432,
+        "rek_created_date": "2017-08-11T03:55:22Z",
+        "rek_updated_date": "2018-01-19T16:27:39Z",
+        "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Tomatis, Vanesa M.\" href=\"\/list\/author_id\/84876\/\">Tomatis, Vanesa M.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Josh, Peter\" href=\"\/list\/author_id\/91082\/\">Josh, Peter<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Papadopulos, Andreas\" href=\"\/list\/author_id\/89985\/\">Papadopulos, Andreas<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Gormal, Rachel S.\" href=\"\/list\/author_id\/10992\/\">Gormal, Rachel S.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Lanoue, Vanessa\" href=\"\/list\/author_id\/727162\/\">Lanoue, Vanessa<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Martin, Sally\" href=\"\/list\/author_id\/745\/\">Martin, Sally<\/a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Meunier, Fr\u00e9d\u00e9ric A.\" href=\"\/list\/author_id\/2746\/\">Meunier, Fr\u00e9d\u00e9ric A.<\/a> (<span class=\"citation_date\">2017<\/span>) <a class=\"citation_title\" title=\"Click to view Journal Article: ENA\/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network\" href=\"\/view\/UQ:678728\">ENA\/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network<\/a>. <i><span class=\"citation_journal_name\">Molecular and Cellular Neuroscience<\/span><\/i>, <i><\/i>  . doi:<span class=\"citation_doi\">10.1016\/j.mcn.2017.07.005<\/span>",
+        "rek_genre": "Journal Article",
+        "rek_genre_type": "Article (original research)",
+        "rek_thomson_citation_count": null,
+        "rek_depositor_affiliation": 1017,
+        "rek_subtype": "Article (original research)",
+        "rek_scopus_citation_count": 0,
+        "rek_security_inherited": 1,
+        "rek_altmetric_score": 1,
+        "rek_altmetric_id": 23535331,
+        "rek_copyright": "on",
+        "fez_record_search_key_assigned_group_id": [],
+        "fez_record_search_key_assigned_user_id": [],
+        "fez_record_search_key_author": [
+                "Tomatis, Vanesa M.",
+                "Josh, Peter",
+                "Papadopulos, Andreas",
+                "Gormal, Rachel S.",
+                "Lanoue, Vanessa",
+                "Martin, Sally",
+                "Meunier, Fr\u00e9d\u00e9ric A.",
+        ],
+        "fez_record_search_key_author_affiliation_country": [
+            "aus",
+            "aus",
+            "aus",
+            "aus",
+            "aus",
+            "aus",
+            "aus",
+        ],
+        "fez_record_search_key_author_affiliation_full_address": [
+            "Queensland",
+            "Brisbane,Queensland",
+            "Queensland",
+            "Queensland",
+            "Queensland",
+            "Queensland",
+            "Queensland",
+        ],
+        "fez_record_search_key_author_affiliation_name": [
+            "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
+            "Queensland Brain Institute,The University of Queensland",
+            "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
+            "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
+            "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
+            "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
+            "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
+        ],
+        "fez_record_search_key_author_id": [{
+            "rek_author_id": 410,
+            "rek_author_id_lookup": "Vanesa Tomatis"
+        }, {
+            "rek_author_id": 91082,
+            "rek_author_id_lookup": "Peter Josh"
+        }, {
+            "rek_author_id": 89985,
+            "rek_author_id_lookup": "Andreas Papadopulos"
+        }, {
+            "rek_author_id": 10992,
+            "rek_author_id_lookup": "Rachel Sarah Gormal"
+        }, {
+            "rek_author_id": 727162,
+            "rek_author_id_lookup": "Lanoue, Vanessa"
+        }, {
+            "rek_author_id": 745,
+            "rek_author_id_lookup": "Martin, Sally"
+        }, {
+            rek_author_id: 2746,
+            "rek_author_id_lookup": "Meunier, Frederic A."
+        }],
+        "fez_record_search_key_content_indicator": [{
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning"
+        }],
+        "fez_record_search_key_corresponding_country": ["aus"],
+        "fez_record_search_key_corresponding_email": ["f.meunier@uq.edu.au"],
+        "fez_record_search_key_corresponding_name": ["Meunier F.A."],
+        "fez_record_search_key_doi": "10.1016\/j.mcn.2017.07.005",
+        "fez_record_search_key_end_page": "111",
+        "fez_record_search_key_file_attachment_name": ["FezACML_UQ_678728.xml"],
+        "fez_record_search_key_grant_acronym": [
+            "NHMRC",
+            "ARC",
+        ],
+        "fez_record_search_key_grant_agency": [
+            "National Health and Medical Research Council",
+            "Australian Research Council"
+        ],
+        "fez_record_search_key_grant_id": ["APP1058769", "LE130100078"],
+        "fez_record_search_key_grant_text": [
+            "This work was supported by a project grant from the National Health and Medical Research Council (NHMRC) of Australia (APP1058769) to F.A.M. and an Australian Research Council LIEF grant (LE130100078). F.A.M. is a NHMRC Senior Research Fellow (APP569596). P.J. was supported by a National Health and Medical Research Council (NHMRC) of Australia (APP1062846)."
+        ],
+        "fez_record_search_key_herdc_code": {
+            "rek_herdc_code": 450009,
+            "rek_herdc_code_lookup": "C1"
+        },
+        "fez_record_search_key_herdc_status": {
+            "rek_herdc_status": 453220,
+            "rek_herdc_status_lookup": "Provisional Code"
+        },
+        "fez_record_search_key_institutional_status": {
+            "rek_institutional_status": 453223,
+            "rek_institutional_status_lookup": "UQ"
+        },
+        "fez_record_search_key_ismemberof": [{
+            "rek_ismemberof": "UQ:23912",
+            "rek_ismemberof_lookup": "Queensland Brain Institute Publications"
+        }, {
+            "rek_ismemberof": "UQ:218311",
+            "rek_ismemberof_lookup": "HERDC Pre-Audit"
+        }],
+        "fez_record_search_key_issn": [{
+            "rek_issn": "1044-7431",
+            "fez_journal_issns": [{
+                "jni_id": 4100,
+                "jni_jnl_id": 2528,
+                "jni_issn": "1044-7431",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 2528,
+                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                    "jnl_era_id": 14527,
+                    "jnl_era_year": 2010,
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                    "jnl_rank": "A",
+                    "jnl_foreign_name": null
+                }
+            }, {
+                "jni_id": 49388,
+                "jni_jnl_id": 29907,
+                "jni_issn": "1044-7431",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 29907,
+                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                    "jnl_era_id": 14527,
+                    "jnl_era_year": 2012,
+                    "jnl_created_date": "2011-10-28 00:00:00",
+                    "jnl_updated_date": "2011-10-28 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }, {
+                "jni_id": 77092,
+                "jni_jnl_id": 47227,
+                "jni_issn": "1044-7431",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 47227,
+                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                    "jnl_era_id": 14527,
+                    "jnl_era_year": 2015,
+                    "jnl_created_date": "2014-07-16 00:00:00",
+                    "jnl_updated_date": "2014-07-16 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }, {
+                "jni_id": 164788,
+                "jni_jnl_id": 100120,
+                "jni_issn": "1044-7431",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 100120,
+                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                    "jnl_era_id": 14527,
+                    "jnl_era_year": 2018,
+                    "jnl_created_date": "2017-09-06 00:00:00",
+                    "jnl_updated_date": "2017-09-06 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }],
+            "fez_sherpa_romeo": {
+                "srm_id": 4796,
+                "srm_issn": "1044-7431",
+                "srm_journal_name": "Molecular and Cellular Neuroscience",
+                "srm_journal_link": "http://example.com"
+            },
+            "rek_issn_lookup": ""
+        }, {
+            "rek_issn_id": 5384820,
+            "rek_issn_pid": "UQ:678728",
+            "rek_issn_xsdmf_id": null,
+            "rek_issn": "1095-9327",
+            "rek_issn_order": 2,
+            "fez_journal_issns": [{
+                "jni_id": 4101,
+                "jni_jnl_id": 2528,
+                "jni_issn": "1095-9327",
+                "jni_issn_order": 2,
+                "fez_journal": {
+                    "jnl_id": 2528,
+                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                    "jnl_era_id": 14527,
+                    "jnl_era_year": 2010,
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                    "jnl_rank": "A",
+                    "jnl_foreign_name": null
+                }
+            }, {
+                "jni_id": 49389,
+                "jni_jnl_id": 29907,
+                "jni_issn": "1095-9327",
+                "jni_issn_order": 2,
+                "fez_journal": {
+                    "jnl_id": 29907,
+                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                    "jnl_era_id": 14527,
+                    "jnl_era_year": 2012,
+                    "jnl_created_date": "2011-10-28 00:00:00",
+                    "jnl_updated_date": "2011-10-28 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }, {
+                "jni_id": 77093,
+                "jni_jnl_id": 47227,
+                "jni_issn": "1095-9327",
+                "jni_issn_order": 2,
+                "fez_journal": {
+                    "jnl_id": 47227,
+                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                    "jnl_era_id": 14527,
+                    "jnl_era_year": 2015,
+                    "jnl_created_date": "2014-07-16 00:00:00",
+                    "jnl_updated_date": "2014-07-16 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }, {
+                "jni_id": 164789,
+                "jni_jnl_id": 100120,
+                "jni_issn": "1095-9327",
+                "jni_issn_order": 2,
+                "fez_journal": {
+                    "jnl_id": 100120,
+                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
+                    "jnl_era_id": 14527,
+                    "jnl_era_year": 2018,
+                    "jnl_created_date": "2017-09-06 00:00:00",
+                    "jnl_updated_date": "2017-09-06 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }],
+            "fez_sherpa_romeo": {
+                "srm_id": 4797,
+                "srm_issn": "1095-9327",
+                "srm_journal_name": "Molecular and Cellular Neuroscience",
+                "srm_journal_link": "http://example.com"
+            },
+            "rek_issn_lookup": ""
+        }],
+        "fez_record_search_key_journal_name": "Molecular and Cellular Neuroscience",
+        "fez_record_search_key_keywords": [
+            "Myosin VI",
+            "ENA\/VASP proteins",
+            "Mena",
+            "Secretory granules",
+            "Tethering",
+            "Cortical actin network",
+        ],
+        "fez_record_search_key_language": ["eng"],
+        "fez_record_search_key_oa_status": {
+            "rek_oa_status": 453692,
+            "rek_oa_status_lookup": "Not yet assessed"
+        },
+        "fez_record_search_key_place_of_publication": "Maryland Heights, MO, United States",
+        "fez_record_search_key_publisher": "Academic Press",
+        "fez_record_search_key_refereed": 0,
+        "fez_record_search_key_refereed_source": {
+            "rek_refereed_source": "453635",
+            "rek_refereed_source_lookup": "Ulrichs"
+        },
+        "fez_record_search_key_retracted": 0,
+        "fez_record_search_key_scopus_id": "2-s2.0-85026774540",
+        "fez_record_search_key_start_page": "100",
+        "fez_record_search_key_subject": [{
+            "rek_subject": 453298,
+            "rek_subject_lookup": "1312 Molecular Biology"
+        }, {
+            "rek_subject": 453471,
+            "rek_subject_lookup": "2804 Cellular and Molecular Neuroscience"
+        }, {
+            "rek_subject": 453293,
+            "rek_subject_lookup": "1307 Cell Biology"
+        }],
+        "fez_record_search_key_total_pages": "12",
+        "fez_record_search_key_volume_number": "84",
+        "fez_datastream_info": [{
+            "dsi_pid": "UQ:678728",
+            "dsi_dsid": "FezACML_UQ_678728.xml",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "FezACML security for PID - UQ:678728",
+            "dsi_mimetype": "text\/xml",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 3660
+        }],
+        "fez_matched_journals": {
+            "mtj_pid": "UQ:678728",
+            "mtj_jnl_id": 2528,
+            "mtj_status": "A"
+        },
+        "rek_status_lookup": "Published",
+        "rek_object_type_lookup": "Record",
+        "rek_display_type_lookup": "Journal Article",
+    }, {
         "rek_pid": "UQ:256099",
         "rek_title": "Open Accessible test record",
         "rek_description": "Botulinum neurotoxin type A (BoNT\/A) is a highly potent neurotoxin that elicits flaccid paralysis by enzymatic cleavage of the exocytic machinery component SNAP25 in motor nerve terminals. However, recent evidence suggests that the neurotoxic activity of BoNT\/A is not restricted to the periphery, but also reaches the CNS after retrograde axonal transport. Because BoNT\/A is internalized in recycling synaptic vesicles, it is unclear which compartment facilitates this transport. Using live-cell confocal and single-molecule imaging of rat hippocampal neurons cultured in microfluidic devices, we show that the activity-dependent uptake of the binding domain of the BoNT\/A heavy chain (BoNT\/A-Hc) is followed by a delayed increase in retrograde axonal transport of BoNT\/A-Hc carriers. Consistent with a role of presynaptic activity in initiating transport of the active toxin, activity-dependent uptake of BoNT\/A in the terminal led to a significant increase in SNAP25 cleavage detected in the soma chamber compared with nonstimulated neurons. Surprisingly, most endocytosed BoNT\/A-Hc was incorporated into LC3-positive autophagosomes generated in the nerve terminals, which then underwent retrograde transport to the cell soma, where they fused with lysosomes both in vitro and in vivo. Blocking autophagosome formation or acidification with wortmannin or bafilomycin A1, respectively, inhibited the activity-dependent retrograde trafficking of BoNT\/A-Hc. Our data demonstrate that both the presynaptic formation of autophagosomes and the initiation of their retrograde trafficking are tightly regulated by presynaptic activity.",
@@ -346,330 +669,6 @@ const myRecordsList = {
         "fez_record_search_key_volume_number": "286",
         "fez_datastream_info": [],
     
-        },
-        {
-        "rek_pid": "UQ:678728",
-        "rek_title": "ENA\/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network",
-        "rek_description": "In neurosecretory cells, myosin VI associated with secretory granules (SGs) mediates their activity-dependent recruitment to the cortical actin network and is necessary to sustain exocytosis. The mechanism by which myosin VI interacts with SGs is unknown. Using a myosin VI pull-down assay and mass spectrometry we identified Mena, a member of the ENA\/VASP family, as a myosin VI binding partner in PC12 cells, and confirmed that Mena colocalized with myosin VI on SGs. Using a knock-sideways approach to inactivate the ENA\/VASP family members by mitochondrial relocation, we revealed a concomitant redistribution of myosin VI. This was ensued by a reduction in the association of myosin VI with SGs, a decreased SG mobility and density in proximity to the plasma membrane as well as decreased evoked exocytosis. These data demonstrate that ENA\/VASP proteins regulate SG exocytosis through modulating the activity of myosin VI.",
-        "rek_display_type": 179,
-        "rek_status": 2,
-        "rek_date": "2017-08-07T00:00:00Z",
-        "rek_object_type": 3,
-        "rek_depositor": 48432,
-        "rek_created_date": "2017-08-11T03:55:22Z",
-        "rek_updated_date": "2018-01-19T16:27:39Z",
-        "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Tomatis, Vanesa M.\" href=\"\/list\/author_id\/84876\/\">Tomatis, Vanesa M.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Josh, Peter\" href=\"\/list\/author_id\/91082\/\">Josh, Peter<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Papadopulos, Andreas\" href=\"\/list\/author_id\/89985\/\">Papadopulos, Andreas<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Gormal, Rachel S.\" href=\"\/list\/author_id\/10992\/\">Gormal, Rachel S.<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Lanoue, Vanessa\" href=\"\/list\/author_id\/727162\/\">Lanoue, Vanessa<\/a>, <a class=\"author_id_link\" title=\"Browse by Author ID for Martin, Sally\" href=\"\/list\/author_id\/745\/\">Martin, Sally<\/a> and <a class=\"author_id_link\" title=\"Browse by Author ID for Meunier, Fr\u00e9d\u00e9ric A.\" href=\"\/list\/author_id\/2746\/\">Meunier, Fr\u00e9d\u00e9ric A.<\/a> (<span class=\"citation_date\">2017<\/span>) <a class=\"citation_title\" title=\"Click to view Journal Article: ENA\/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network\" href=\"\/view\/UQ:678728\">ENA\/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network<\/a>. <i><span class=\"citation_journal_name\">Molecular and Cellular Neuroscience<\/span><\/i>, <i><\/i>  . doi:<span class=\"citation_doi\">10.1016\/j.mcn.2017.07.005<\/span>",
-        "rek_genre": "Journal Article",
-        "rek_genre_type": "Article (original research)",
-        "rek_thomson_citation_count": null,
-        "rek_depositor_affiliation": 1017,
-        "rek_subtype": "Article (original research)",
-        "rek_scopus_citation_count": 0,
-        "rek_security_inherited": 1,
-        "rek_altmetric_score": 1,
-        "rek_altmetric_id": 23535331,
-        "rek_copyright": "on",
-        "fez_record_search_key_assigned_group_id": [],
-        "fez_record_search_key_assigned_user_id": [],
-        "fez_record_search_key_author": [
-                "Tomatis, Vanesa M.",
-                "Josh, Peter",
-                "Papadopulos, Andreas",
-                "Gormal, Rachel S.",
-                "Lanoue, Vanessa",
-                "Martin, Sally",
-                "Meunier, Fr\u00e9d\u00e9ric A.",
-        ],
-        "fez_record_search_key_author_affiliation_country": [
-            "aus",
-            "aus",
-            "aus",
-            "aus",
-            "aus",
-            "aus",
-            "aus",
-        ],
-        "fez_record_search_key_author_affiliation_full_address": [
-            "Queensland",
-            "Brisbane,Queensland",
-            "Queensland",
-            "Queensland",
-            "Queensland",
-            "Queensland",
-            "Queensland",
-        ],
-        "fez_record_search_key_author_affiliation_name": [
-            "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
-            "Queensland Brain Institute,The University of Queensland",
-            "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
-            "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
-            "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
-            "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
-            "Clem Jones Centre for Ageing Dementia Research,Queensland Brain Institute,The University of Queensland",
-        ],
-        "fez_record_search_key_author_id": [{
-            "rek_author_id": 410,
-            "rek_author_id_lookup": "Vanesa Tomatis"
-        }, {
-            "rek_author_id": 91082,
-            "rek_author_id_lookup": "Peter Josh"
-        }, {
-            "rek_author_id": 89985,
-            "rek_author_id_lookup": "Andreas Papadopulos"
-        }, {
-            "rek_author_id": 10992,
-            "rek_author_id_lookup": "Rachel Sarah Gormal"
-        }, {
-            "rek_author_id": 727162,
-            "rek_author_id_lookup": "Lanoue, Vanessa"
-        }, {
-            "rek_author_id": 745,
-            "rek_author_id_lookup": "Martin, Sally"
-        }, {
-            rek_author_id: 2746,
-            "rek_author_id_lookup": "Meunier, Frederic A."
-        }],
-        "fez_record_search_key_content_indicator": [{
-            "rek_content_indicator": 454079,
-            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning"
-        }],
-        "fez_record_search_key_corresponding_country": ["aus"],
-        "fez_record_search_key_corresponding_email": ["f.meunier@uq.edu.au"],
-        "fez_record_search_key_corresponding_name": ["Meunier F.A."],
-        "fez_record_search_key_doi": "10.1016\/j.mcn.2017.07.005",
-        "fez_record_search_key_end_page": "111",
-        "fez_record_search_key_file_attachment_name": ["FezACML_UQ_678728.xml"],
-        "fez_record_search_key_grant_acronym": [
-            "NHMRC",
-            "ARC",
-        ],
-        "fez_record_search_key_grant_agency": [
-            "National Health and Medical Research Council",
-            "Australian Research Council"
-        ],
-        "fez_record_search_key_grant_id": ["APP1058769", "LE130100078"],
-        "fez_record_search_key_grant_text": [
-            "This work was supported by a project grant from the National Health and Medical Research Council (NHMRC) of Australia (APP1058769) to F.A.M. and an Australian Research Council LIEF grant (LE130100078). F.A.M. is a NHMRC Senior Research Fellow (APP569596). P.J. was supported by a National Health and Medical Research Council (NHMRC) of Australia (APP1062846)."
-        ],
-        "fez_record_search_key_herdc_code": {
-            "rek_herdc_code": 450009,
-            "rek_herdc_code_lookup": "C1"
-        },
-        "fez_record_search_key_herdc_status": {
-            "rek_herdc_status": 453220,
-            "rek_herdc_status_lookup": "Provisional Code"
-        },
-        "fez_record_search_key_institutional_status": {
-            "rek_institutional_status": 453223,
-            "rek_institutional_status_lookup": "UQ"
-        },
-        "fez_record_search_key_ismemberof": [{
-            "rek_ismemberof": "UQ:23912",
-            "rek_ismemberof_lookup": "Queensland Brain Institute Publications"
-        }, {
-            "rek_ismemberof": "UQ:218311",
-            "rek_ismemberof_lookup": "HERDC Pre-Audit"
-        }],
-        "fez_record_search_key_issn": [{
-            "rek_issn": "1044-7431",
-            "fez_journal_issns": [{
-                "jni_id": 4100,
-                "jni_jnl_id": 2528,
-                "jni_issn": "1044-7431",
-                "jni_issn_order": 1,
-                "fez_journal": {
-                    "jnl_id": 2528,
-                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
-                    "jnl_era_id": 14527,
-                    "jnl_era_year": 2010,
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
-                    "jnl_rank": "A",
-                    "jnl_foreign_name": null
-                }
-            }, {
-                "jni_id": 49388,
-                "jni_jnl_id": 29907,
-                "jni_issn": "1044-7431",
-                "jni_issn_order": 1,
-                "fez_journal": {
-                    "jnl_id": 29907,
-                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
-                    "jnl_era_id": 14527,
-                    "jnl_era_year": 2012,
-                    "jnl_created_date": "2011-10-28 00:00:00",
-                    "jnl_updated_date": "2011-10-28 00:00:00",
-                    "jnl_rank": null,
-                    "jnl_foreign_name": ""
-                }
-            }, {
-                "jni_id": 77092,
-                "jni_jnl_id": 47227,
-                "jni_issn": "1044-7431",
-                "jni_issn_order": 1,
-                "fez_journal": {
-                    "jnl_id": 47227,
-                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
-                    "jnl_era_id": 14527,
-                    "jnl_era_year": 2015,
-                    "jnl_created_date": "2014-07-16 00:00:00",
-                    "jnl_updated_date": "2014-07-16 00:00:00",
-                    "jnl_rank": null,
-                    "jnl_foreign_name": ""
-                }
-            }, {
-                "jni_id": 164788,
-                "jni_jnl_id": 100120,
-                "jni_issn": "1044-7431",
-                "jni_issn_order": 1,
-                "fez_journal": {
-                    "jnl_id": 100120,
-                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
-                    "jnl_era_id": 14527,
-                    "jnl_era_year": 2018,
-                    "jnl_created_date": "2017-09-06 00:00:00",
-                    "jnl_updated_date": "2017-09-06 00:00:00",
-                    "jnl_rank": null,
-                    "jnl_foreign_name": ""
-                }
-            }],
-            "fez_sherpa_romeo": {
-                "srm_id": 4796,
-                "srm_issn": "1044-7431",
-                "srm_journal_name": "Molecular and Cellular Neuroscience",
-                "srm_journal_link": "http://example.com"
-            },
-            "rek_issn_lookup": ""
-        }, {
-            "rek_issn_id": 5384820,
-            "rek_issn_pid": "UQ:678728",
-            "rek_issn_xsdmf_id": null,
-            "rek_issn": "1095-9327",
-            "rek_issn_order": 2,
-            "fez_journal_issns": [{
-                "jni_id": 4101,
-                "jni_jnl_id": 2528,
-                "jni_issn": "1095-9327",
-                "jni_issn_order": 2,
-                "fez_journal": {
-                    "jnl_id": 2528,
-                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
-                    "jnl_era_id": 14527,
-                    "jnl_era_year": 2010,
-                    "jnl_created_date": "2010-11-19 00:00:00",
-                    "jnl_updated_date": "2010-11-19 00:00:00",
-                    "jnl_rank": "A",
-                    "jnl_foreign_name": null
-                }
-            }, {
-                "jni_id": 49389,
-                "jni_jnl_id": 29907,
-                "jni_issn": "1095-9327",
-                "jni_issn_order": 2,
-                "fez_journal": {
-                    "jnl_id": 29907,
-                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
-                    "jnl_era_id": 14527,
-                    "jnl_era_year": 2012,
-                    "jnl_created_date": "2011-10-28 00:00:00",
-                    "jnl_updated_date": "2011-10-28 00:00:00",
-                    "jnl_rank": null,
-                    "jnl_foreign_name": ""
-                }
-            }, {
-                "jni_id": 77093,
-                "jni_jnl_id": 47227,
-                "jni_issn": "1095-9327",
-                "jni_issn_order": 2,
-                "fez_journal": {
-                    "jnl_id": 47227,
-                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
-                    "jnl_era_id": 14527,
-                    "jnl_era_year": 2015,
-                    "jnl_created_date": "2014-07-16 00:00:00",
-                    "jnl_updated_date": "2014-07-16 00:00:00",
-                    "jnl_rank": null,
-                    "jnl_foreign_name": ""
-                }
-            }, {
-                "jni_id": 164789,
-                "jni_jnl_id": 100120,
-                "jni_issn": "1095-9327",
-                "jni_issn_order": 2,
-                "fez_journal": {
-                    "jnl_id": 100120,
-                    "jnl_journal_name": "Molecular and Cellular Neuroscience",
-                    "jnl_era_id": 14527,
-                    "jnl_era_year": 2018,
-                    "jnl_created_date": "2017-09-06 00:00:00",
-                    "jnl_updated_date": "2017-09-06 00:00:00",
-                    "jnl_rank": null,
-                    "jnl_foreign_name": ""
-                }
-            }],
-            "fez_sherpa_romeo": {
-                "srm_id": 4797,
-                "srm_issn": "1095-9327",
-                "srm_journal_name": "Molecular and Cellular Neuroscience",
-                "srm_journal_link": "http://example.com"
-            },
-            "rek_issn_lookup": ""
-        }],
-        "fez_record_search_key_journal_name": "Molecular and Cellular Neuroscience",
-        "fez_record_search_key_keywords": [
-            "Myosin VI",
-            "ENA\/VASP proteins",
-            "Mena",
-            "Secretory granules",
-            "Tethering",
-            "Cortical actin network",
-        ],
-        "fez_record_search_key_language": ["eng"],
-        "fez_record_search_key_oa_status": {
-            "rek_oa_status": 453692,
-            "rek_oa_status_lookup": "Not yet assessed"
-        },
-        "fez_record_search_key_place_of_publication": "Maryland Heights, MO, United States",
-        "fez_record_search_key_publisher": "Academic Press",
-        "fez_record_search_key_refereed": 0,
-        "fez_record_search_key_refereed_source": {
-            "rek_refereed_source": "453635",
-            "rek_refereed_source_lookup": "Ulrichs"
-        },
-        "fez_record_search_key_retracted": 0,
-        "fez_record_search_key_scopus_id": "2-s2.0-85026774540",
-        "fez_record_search_key_start_page": "100",
-        "fez_record_search_key_subject": [{
-            "rek_subject": 453298,
-            "rek_subject_lookup": "1312 Molecular Biology"
-        }, {
-            "rek_subject": 453471,
-            "rek_subject_lookup": "2804 Cellular and Molecular Neuroscience"
-        }, {
-            "rek_subject": 453293,
-            "rek_subject_lookup": "1307 Cell Biology"
-        }],
-        "fez_record_search_key_total_pages": "12",
-        "fez_record_search_key_volume_number": "84",
-        "fez_datastream_info": [{
-            "dsi_pid": "UQ:678728",
-            "dsi_dsid": "FezACML_UQ_678728.xml",
-            "dsi_embargo_date": null,
-            "dsi_open_access": null,
-            "dsi_label": "FezACML security for PID - UQ:678728",
-            "dsi_mimetype": "text\/xml",
-            "dsi_copyright": null,
-            "dsi_state": "A",
-            "dsi_size": 3660
-        }],
-        "fez_matched_journals": {
-            "mtj_pid": "UQ:678728",
-            "mtj_jnl_id": 2528,
-            "mtj_status": "A"
-        },
-        "rek_status_lookup": "Published",
-        "rek_object_type_lookup": "Record",
-        "rek_display_type_lookup": "Journal Article",
     }, {
         "rek_pid": "UQ:410094",
         "rek_title": "Flux of signalling endosomes undergoing axonal retrograde transport is encoded by presynaptic activity and TrkB",
