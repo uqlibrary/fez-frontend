@@ -116,11 +116,32 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <a
+        aria-label="Full citation in Web of science will open in a new window"
+        class="wosCitationCount css-pi8u"
+        data-analyticsid="citation-count-link"
+        data-testid="citation-count-link"
+        href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000295927100070"
+        id="citation-count-link"
+        rel="noopener noreferrer"
+        tabindex="0"
+        target="_blank"
+        title="Full citation in Web of science will open in a new window"
+      >
+        <span
+          class="fez-icon wos large"
+        />
+        <span
+          class="MuiBox-root css-19k1sqg"
+        >
+          76
+        </span>
+      </a>
+      <a
         aria-label="Full citation in Scopus will open in a new window"
         class="scopusCitationCount css-pi8u"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
-        href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026774540%26origin%3Dinward"
+        href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-80053897195%26origin%3Dinward"
         id="citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
@@ -133,7 +154,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
         <span
           class="MuiBox-root css-19k1sqg"
         >
-          0
+          82
         </span>
       </a>
       <a
@@ -141,7 +162,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
         class="altmetricCitationCount css-pi8u"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
-        href="https://queensland.altmetric.com/details/23535331"
+        href="https://queensland.altmetric.com/details/390008"
         id="citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
@@ -162,7 +183,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
         class="googleCitationCount css-pi8u"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
-        href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
+        href="https://scholar.google.com/scholar?q=intitle:Open%20Accessible%20test%20record"
         id="citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
@@ -185,12 +206,12 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
         class="css-qsfl36"
         data-analyticsid="full-statistics-link"
         data-testid="full-statistics-link"
-        href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
+        href="https://app.library.uq.edu.au/#/authors/view/UQ:256099"
         id="full-statistics-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
+        title="Open Accessible test record"
       >
         <svg
           aria-hidden="true"
@@ -460,11 +481,32 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <a
+        aria-label="Full citation in Web of science will open in a new window"
+        class="wosCitationCount css-pi8u"
+        data-analyticsid="citation-count-link"
+        data-testid="citation-count-link"
+        href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000295927100070"
+        id="citation-count-link"
+        rel="noopener noreferrer"
+        tabindex="0"
+        target="_blank"
+        title="Full citation in Web of science will open in a new window"
+      >
+        <span
+          class="fez-icon wos large"
+        />
+        <span
+          class="MuiBox-root css-19k1sqg"
+        >
+          76
+        </span>
+      </a>
+      <a
         aria-label="Full citation in Scopus will open in a new window"
         class="scopusCitationCount css-pi8u"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
-        href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026774540%26origin%3Dinward"
+        href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-80053897195%26origin%3Dinward"
         id="citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
@@ -477,7 +519,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
         <span
           class="MuiBox-root css-19k1sqg"
         >
-          0
+          82
         </span>
       </a>
       <a
@@ -485,7 +527,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
         class="altmetricCitationCount css-pi8u"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
-        href="https://queensland.altmetric.com/details/23535331"
+        href="https://queensland.altmetric.com/details/390008"
         id="citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
@@ -506,7 +548,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
         class="googleCitationCount css-pi8u"
         data-analyticsid="citation-count-link"
         data-testid="citation-count-link"
-        href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
+        href="https://scholar.google.com/scholar?q=intitle:Open%20Accessible%20test%20record"
         id="citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
@@ -529,12 +571,12 @@ exports[`CitationCounts should render open access icon when required 1`] = `
         class="css-qsfl36"
         data-analyticsid="full-statistics-link"
         data-testid="full-statistics-link"
-        href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
+        href="https://app.library.uq.edu.au/#/authors/view/UQ:256099"
         id="full-statistics-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
+        title="Open Accessible test record"
       >
         <svg
           aria-hidden="true"

@@ -1,18 +1,13 @@
 import React from 'react';
 import { latestPubsPayload } from 'mock/data/testing/latestPublications';
-import { WithReduxStore, WithRouter } from 'test-utils';
-
-import { render } from '@testing-library/react';
-import { fireEvent } from '@testing-library/react';
+import MyLatestPublications from './MyLatestPublications';
+import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 import * as actions from 'actions';
 import { openAccessibleProps } from './MyLatestPublications';
-import { enhancePublication } from 'middleware/publicationEnhancer';
-
-import MyLatestPublications from './MyLatestPublications';
 
 jest.mock('actions', () => ({
     ...jest.requireActual('actions'),
-    searchLatestPublications: jest.fn(() => () => Promise.resolve()),
+    searchLatestPublications: jest.fn(),
 }));
 const mockUseNavigate = jest.fn();
 
@@ -26,12 +21,9 @@ function setup(testProps = {}, testState = {}) {
         ...testProps,
     };
 
-    // Enhance mock publications with potentiallyOpenAccessible method
-    const enhancedPublications = latestPubsPayload.data.map(publication => enhancePublication(publication));
-
     const state = {
         myLatestPublicationsReducer: {
-            latestPublicationsList: enhancedPublications,
+            latestPublicationsList: latestPubsPayload.data,
             totalPublicationsCount: latestPubsPayload.total,
         },
         accountReducer: {},
@@ -52,7 +44,6 @@ describe('Component MyLatestPublications', () => {
     });
     it('should render latest publications', async () => {
         const { container } = setup();
-
         expect(container).toMatchSnapshot();
     });
 

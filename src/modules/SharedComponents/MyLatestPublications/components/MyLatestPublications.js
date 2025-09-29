@@ -33,7 +33,7 @@ export const openAccessibleProps = navigate => {
     ];
 
     return {
-        forceUseCustomActions: record => record.potentiallyOpenAccessible(),
+        forceUseCustomActions: record => record.potentiallyOpenAccessible?.(),
         customActions: _actions,
     };
 };
