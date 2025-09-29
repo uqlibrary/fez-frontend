@@ -3,6 +3,8 @@ import Dashboard, { fibonacci, isWaitingForSync } from './Dashboard';
 import * as mock from 'mock/data';
 import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import * as DashboardAuthorProfileModule from './DashboardAuthorProfile';
+import { OrcidSyncContext } from '../../../context';
 
 const publicationTotalCount = {
     account: mock.accounts.uqresearcher,
@@ -677,6 +679,35 @@ describe('Dashboard test', () => {
             spy.mockReset();
             unmount();
             expect(spy).toHaveBeenCalledWith(expect.any(Number));
+        });
+    });
+
+    describe('OrcidSyncContext usage', () => {
+        it('should forward expected props', () => {
+            let actual;
+            jest.spyOn(DashboardAuthorProfileModule, 'default').mockImplementation(() => (
+                <OrcidSyncContext.Consumer>
+                    {value => {
+                        actual = value;
+                        return null;
+                    }}
+                </OrcidSyncContext.Consumer>
+            ));
+
+            const expected = {
+                author: { aut_id: 123 },
+                accountAuthorSaving: true,
+                accountAuthorError: true,
+                orcidSyncEnabled: true,
+                orcidSyncStatus: true,
+                requestingOrcidSync: true,
+            };
+
+            setup(expected);
+            expect(actual.orcidSyncProps).toMatchObject({
+                ...expected,
+                requestOrcidSync: expect.any(Function),
+            });
         });
     });
 });

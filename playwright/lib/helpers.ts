@@ -5,8 +5,8 @@ import moment from 'moment/moment';
 import path from 'path';
 
 /**
- * PW Clock management doesn't work with Axios Mock Adapter, so we have to rely on global vars.
- * See where window.__PW__TEST_API_MOCK_IS_PAUSED is used in /mock/index.js
+ * PW Clock management doesn't work with Axios Mock Adapter, so we have to rely on global vars
+ * for that same purpose. See where window.__PW__TEST_API_MOCK_IS_PAUSED is used in /mock/index.js
  */
 export const apiMockIsPaused = async (page: Page, value = true) =>
     await page.evaluate(value => (window.__PW__TEST_API_MOCK_IS_PAUSED = value), value);
