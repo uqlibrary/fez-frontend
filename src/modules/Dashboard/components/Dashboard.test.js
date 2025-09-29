@@ -6,13 +6,8 @@ import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 import { within } from '@testing-library/react';
 import { DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE } from '../../../config/general';
 import Cookies from 'js-cookie';
-
-const publicationTotalCount = {
-    account: mock.accounts.uqresearcher,
-    articleCount: mock.currentAuthorStats.total,
-    articleFirstYear: mock.currentAuthorStats.filters.facets.min_date_year_t.value_as_string,
-    articleLastYear: mock.currentAuthorStats.filters.facets.max_date_year_t.value_as_string,
-};
+import * as DashboardAuthorProfileModule from './DashboardAuthorProfile';
+import { OrcidSyncContext } from '../../../context';
 
 const mockActions = {
     countPossiblyYourPublications: jest.fn(),
@@ -22,7 +17,6 @@ const mockActions = {
 };
 
 const mockUseNavigate = jest.fn();
-
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,
@@ -138,183 +132,214 @@ describe('Dashboard test', () => {
         expect(isWaitingForSync()).toBe(false);
     });
 
-    describe('Load Orcid Sync Status', () => {
-        beforeEach(() => jest.useFakeTimers());
+    describe('ORCID', () => {
+        describe('Load Sync Status', () => {
+            beforeEach(() => jest.useFakeTimers());
 
-        it('should check sync status a few secs after mount', () => {
-            setup({
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
-            });
-
-            expect(mockActions.loadOrcidSyncStatus).not.toHaveBeenCalled();
-            jest.runAllTimers();
-            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalled();
-        });
-
-        it('should not make additional requests to check sync status when not requested', () => {
-            setup({
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
-            });
-
-            jest.runAllTimers();
-            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
-            // explicitly advance in time - it should be covered by the above jest.runAllTimers();
-            jest.advanceTimersByTime(loadOrcidSyncDelay * 10000);
-            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
-        });
-
-        it('should make additional sync status requests upon user requests', () => {
-            const { rerender } = setup({
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
-            });
-
-            jest.runAllTimers();
-            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
-
-            setup(
-                {
-                    orcidSyncEnabled: true,
-                    loadingOrcidSyncStatus: true,
-                },
-                rerender,
-            );
-
-            jest.runAllTimers();
-            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
-
-            setup(
-                {
+            it('should check sync status a few secs after mount', () => {
+                setup({
                     orcidSyncEnabled: true,
                     loadingOrcidSyncStatus: false,
-                    orcidSyncStatus: {
-                        orj_status: 'Pending',
+                });
+
+                expect(mockActions.loadOrcidSyncStatus).not.toHaveBeenCalled();
+                jest.runAllTimers();
+                expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalled();
+            });
+
+            it('should not make additional requests to check sync status when not requested', () => {
+                setup({
+                    orcidSyncEnabled: true,
+                    loadingOrcidSyncStatus: false,
+                });
+
+                jest.runAllTimers();
+                expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
+                // explicitly advance in time - it should be covered by the above jest.runAllTimers();
+                jest.advanceTimersByTime(loadOrcidSyncDelay * 10000);
+                expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
+            });
+
+            it('should make additional sync status requests upon user requests', () => {
+                const { rerender } = setup({
+                    orcidSyncEnabled: true,
+                    loadingOrcidSyncStatus: false,
+                });
+
+                jest.runAllTimers();
+                expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
+
+                setup(
+                    {
+                        orcidSyncEnabled: true,
+                        loadingOrcidSyncStatus: true,
                     },
-                },
-                rerender,
-            );
+                    rerender,
+                );
 
-            jest.runAllTimers();
-            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(2);
-        });
+                jest.runAllTimers();
+                expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
 
-        it('should cancel scheduled sync status request before making new ones', () => {
-            const spy = jest.spyOn(window, 'clearTimeout');
+                setup(
+                    {
+                        orcidSyncEnabled: true,
+                        loadingOrcidSyncStatus: false,
+                        orcidSyncStatus: {
+                            orj_status: 'Pending',
+                        },
+                    },
+                    rerender,
+                );
 
-            const { rerender } = setup({
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
+                jest.runAllTimers();
+                expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(2);
             });
 
-            jest.runAllTimers();
-            // first call
-            expect(spy).toHaveBeenNthCalledWith(1, null);
+            it('should cancel scheduled sync status request before making new ones', () => {
+                const spy = jest.spyOn(window, 'clearTimeout');
 
-            setup({ orcidSyncEnabled: true, loadingOrcidSyncStatus: true }, rerender);
-            jest.runAllTimers();
-
-            setup(
-                {
+                const { rerender } = setup({
                     orcidSyncEnabled: true,
                     loadingOrcidSyncStatus: false,
-                    orcidSyncStatus: { orj_status: 'Pending' },
-                },
-                rerender,
-            );
-            jest.runAllTimers();
+                });
 
-            // call before to unmount
-            expect(spy).toHaveBeenNthCalledWith(spy.mock.calls.length - 1, expect.any(Number));
-        });
+                jest.runAllTimers();
+                // first call
+                expect(spy).toHaveBeenNthCalledWith(1, null);
 
-        it('should cancel scheduled sync status request on unmount', () => {
-            const spy = jest.spyOn(window, 'clearTimeout');
-            const { unmount } = setup({
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
+                setup({ orcidSyncEnabled: true, loadingOrcidSyncStatus: true }, rerender);
+                jest.runAllTimers();
+
+                setup(
+                    {
+                        orcidSyncEnabled: true,
+                        loadingOrcidSyncStatus: false,
+                        orcidSyncStatus: { orj_status: 'Pending' },
+                    },
+                    rerender,
+                );
+                jest.runAllTimers();
+
+                // call before to unmount
+                expect(spy).toHaveBeenNthCalledWith(spy.mock.calls.length - 1, expect.any(Number));
             });
 
-            spy.mockReset();
-            unmount();
-            expect(spy).toHaveBeenCalledWith(expect.any(Number));
-        });
-    });
+            it('should cancel scheduled sync status request on unmount', () => {
+                const spy = jest.spyOn(window, 'clearTimeout');
+                const { unmount } = setup({
+                    orcidSyncEnabled: true,
+                    loadingOrcidSyncStatus: false,
+                });
 
-    describe('ORCID Linking dialog', () => {
-        it('should not display for authors without an ORCID', () => {
-            const { queryByTestId } = setup({
-                author: {
-                    ...mock.currentAuthor.uqresearcher.data,
-                    aut_orcid_id: null,
-                },
+                spy.mockReset();
+                unmount();
+                expect(spy).toHaveBeenCalledWith(expect.any(Number));
             });
-            expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
         });
 
-        it('should not display for authors with ORCID syncing enabled', () => {
-            const { queryByTestId } = setup({
-                author: {
-                    ...mock.currentAuthor.uqresearcher.data,
-                    aut_is_orcid_sync_enabled: 1,
-                },
+        describe('Linking confirmation dialog', () => {
+            it('should not display for authors without an ORCID', () => {
+                const { queryByTestId } = setup({
+                    author: {
+                        ...mock.currentAuthor.uqresearcher.data,
+                        aut_orcid_id: null,
+                    },
+                });
+                expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
             });
-            expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
+
+            it('should not display for authors with ORCID syncing enabled', () => {
+                const { queryByTestId } = setup({
+                    author: {
+                        ...mock.currentAuthor.uqresearcher.data,
+                        aut_is_orcid_sync_enabled: 1,
+                    },
+                });
+                expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
+            });
+
+            it('should display for authors with ORCID syncing disabled', () => {
+                const { getByTestId } = setup({
+                    author: {
+                        ...mock.currentAuthor.uqresearcher.data,
+                        aut_is_orcid_sync_enabled: 0,
+                    },
+                });
+                expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
+            });
+
+            it('should open ORCID Sync Settings Drawer on button click and hide itself', () => {
+                const { getByTestId, queryByTestId } = setup({
+                    author: {
+                        ...mock.currentAuthor.uqresearcher.data,
+                        aut_is_orcid_sync_enabled: 0,
+                    },
+                });
+                fireEvent.click(within(getByTestId('dashboard-orcid-linking-dashboard')).getByTestId('action-button'));
+                expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
+                expect(mockHelpIconOpenDrawer).toHaveBeenCalledTimes(1);
+            });
+
+            it('should allow dismissing it', () => {
+                expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBeUndefined();
+                const { getByTestId, queryByTestId } = setup({
+                    author: {
+                        ...mock.currentAuthor.uqresearcher.data,
+                        aut_is_orcid_sync_enabled: 0,
+                    },
+                });
+
+                expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
+
+                fireEvent.click(within(getByTestId('dashboard-orcid-linking-dashboard')).getByTestId('dismiss-mobile'));
+
+                expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
+                expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBe('true');
+            });
+
+            it('should not display if it has been dismissed before', () => {
+                expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBeUndefined();
+                const { getByTestId, queryByTestId, rerender } = setup({
+                    author: {
+                        ...mock.currentAuthor.uqresearcher.data,
+                        aut_is_orcid_sync_enabled: 0,
+                    },
+                });
+                expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
+
+                Cookies.set(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE, 'hide');
+                rerender();
+                expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
+            });
         });
 
-        it('should display for authors with ORCID syncing disabled', () => {
-            const { getByTestId } = setup({
-                author: {
-                    ...mock.currentAuthor.uqresearcher.data,
-                    aut_is_orcid_sync_enabled: 0,
-                },
+        describe('OrcidSyncContext usage', () => {
+            it('should forward expected props', () => {
+                let actual;
+                jest.spyOn(DashboardAuthorProfileModule, 'default').mockImplementation(() => (
+                    <OrcidSyncContext.Consumer>
+                        {value => {
+                            actual = value;
+                            return null;
+                        }}
+                    </OrcidSyncContext.Consumer>
+                ));
+
+                const expected = {
+                    author: { aut_id: 123 },
+                    accountAuthorSaving: true,
+                    accountAuthorError: true,
+                    orcidSyncEnabled: true,
+                    orcidSyncStatus: true,
+                    requestingOrcidSync: true,
+                };
+
+                setup(expected);
+                expect(actual.orcidSyncProps).toMatchObject({
+                    ...expected,
+                    requestOrcidSync: expect.any(Function),
+                });
             });
-            expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
-        });
-
-        it('should open ORCID Sync Settings Drawer on button click and hide itself', () => {
-            const { getByTestId, queryByTestId } = setup({
-                author: {
-                    ...mock.currentAuthor.uqresearcher.data,
-                    aut_is_orcid_sync_enabled: 0,
-                },
-            });
-            fireEvent.click(within(getByTestId('dashboard-orcid-linking-dashboard')).getByTestId('action-button'));
-            expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
-            expect(mockHelpIconOpenDrawer).toHaveBeenCalledTimes(1);
-        });
-
-        it('should allow dismissing it', () => {
-            expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBeUndefined();
-            const { getByTestId, queryByTestId } = setup({
-                author: {
-                    ...mock.currentAuthor.uqresearcher.data,
-                    aut_is_orcid_sync_enabled: 0,
-                },
-            });
-
-            expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
-
-            fireEvent.click(within(getByTestId('dashboard-orcid-linking-dashboard')).getByTestId('dismiss-mobile'));
-
-            expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
-            expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBe('true');
-        });
-
-        it('should not display if it has been dismissed before', () => {
-            expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBeUndefined();
-            const { getByTestId, queryByTestId, rerender } = setup({
-                author: {
-                    ...mock.currentAuthor.uqresearcher.data,
-                    aut_is_orcid_sync_enabled: 0,
-                },
-            });
-            expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
-
-            Cookies.set(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE, 'hide');
-            rerender();
-            expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
         });
     });
 });
