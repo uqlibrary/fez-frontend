@@ -42,6 +42,14 @@ describe('HelpIcon snapshots tests', () => {
         expect(showFn).toHaveBeenCalledWith('This is the title', 'This is some text', 'This is a button');
     });
 
+    it('should allow to be disabled', () => {
+        const showFn = jest.spyOn(actions, 'show');
+        const { getByTestId } = setup({ disabled: true });
+
+        fireEvent.click(getByTestId('help-icon'));
+        expect(showFn).not.toHaveBeenCalled();
+    });
+
     it('should expose openDrawer via ref', () => {
         const showFn = jest.spyOn(actions, 'show');
         const ref = createRef();
