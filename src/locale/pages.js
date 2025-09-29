@@ -921,7 +921,10 @@ export default {
                         <span style={{ display: 'block', marginTop: '1em' }}>
                             Works in your ORCID profile from Web of Science, Scopus, PubMed, and CrossRef will be synced
                             to your UQ eSpace profile within 7 days. Read more about{' '}
-                            <ExternalLink href="https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/orcid">
+                            <ExternalLink
+                                id="dashboard-orcid-linking-confirmation-dialog-link-to-docs"
+                                href="https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/orcid"
+                            >
                                 populating your ORCID.
                             </ExternalLink>
                         </span>
