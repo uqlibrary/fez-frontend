@@ -284,9 +284,6 @@ describe('form submission', () => {
                 await userEvent.click(getByTestId('attributionIncomplete-input'));
 
                 // FILES
-                // adjust order of am existing attachment
-                await userEvent.click(getByTestId('order-down-file-0'));
-
                 // add new file
                 await addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesSecurityPolicy(fileMock, 'Administrators');

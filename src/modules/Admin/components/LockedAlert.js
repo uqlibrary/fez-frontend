@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useRecordContext, useAccountContext } from 'context';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import pageLocale from 'locale/pages';
 import { unlockRecordToView } from 'actions';

@@ -3,22 +3,23 @@
 exports[`AttachedFilesField component should render default view when files provided 1`] = `
 <div>
   <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
       data-testid="standard-card"
       id="standard-card"
+      style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
       >
         <div
-          class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         />
       </div>
       <div
-        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
         data-analyticsid="standard-card-content"
         data-testid="standard-card-content"
         id="standard-card-content"
@@ -27,32 +28,32 @@ exports[`AttachedFilesField component should render default view when files prov
           class="MuiBox-root css-hpgf8j"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1rd0tpv-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-cyx3wm-MuiGrid-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1gjvs5g-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-11rz0ao-MuiGrid-root"
             >
                
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-3 MuiGrid2-grid-xs-6 css-120a3y3-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-1il8lwd-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
               />
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-5 MuiGrid2-grid-sm-7 css-17yboxz-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-dgnj0v-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
               />
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-3xfxpg-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
               />
             </div>
           </div>
@@ -62,43 +63,14 @@ exports[`AttachedFilesField component should render default view when files prov
           data-testid="fez-datastream-info-attached-list-row-3835508"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1111w80-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-o607lz-MuiGrid-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1u781dq-MuiGrid2-root"
-            >
-              <button
-                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-o72p4c-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="order-up-file-0"
-                data-testid="order-up-file-0"
-                disabled=""
-                id="order-up-file-0"
-                tabindex="-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="ExpandLessIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1111w80-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1ry1lx3-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -109,18 +81,18 @@ exports[`AttachedFilesField component should render default view when files prov
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-3 MuiGrid2-grid-xs-6 css-yul8qx-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-ygucae-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1e5ur9r-MuiGridLegacy-root"
                 data-testid="file-name-3835508"
                 id="file-name-3835508"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-12 css-6x3qim-MuiGridLegacy-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
                   >
                     <a
                       class="css-gkvags"
@@ -134,25 +106,25 @@ exports[`AttachedFilesField component should render default view when files prov
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-5 MuiGrid2-grid-sm-7 css-1gmcysx-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
               >
                 new file test description
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-t4jovg-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
               >
                 218.15 KB
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-3 MuiGrid2-grid-sm-4 css-4e875f-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-c5jf4z-MuiGrid-root"
             >
               <div
                 class="MuiBox-root css-epvm6"
@@ -163,7 +135,7 @@ exports[`AttachedFilesField component should render default view when files prov
                   <svg
                     aria-hidden="true"
                     aria-label="Not yet scanned for threats"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-mui-internal-clone-element="true"
                     data-testid="3835508-file-av-state-icon-default"
                     focusable="false"
@@ -184,35 +156,6 @@ exports[`AttachedFilesField component should render default view when files prov
                   />
                 </span>
               </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1111w80-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1u781dq-MuiGrid2-root"
-            >
-              <button
-                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-o72p4c-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="order-down-file-0"
-                data-testid="order-down-file-0"
-                disabled=""
-                id="order-down-file-0"
-                tabindex="-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="ExpandMoreIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                  />
-                </svg>
-              </button>
             </div>
           </div>
         </div>
@@ -227,22 +170,23 @@ exports[`AttachedFilesField component should render nothing when no files provid
 exports[`AttachedFilesField component should render with initial data 1`] = `
 <div>
   <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
       data-testid="standard-card"
       id="standard-card"
+      style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
       >
         <div
-          class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         />
       </div>
       <div
-        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
         data-analyticsid="standard-card-content"
         data-testid="standard-card-content"
         id="standard-card-content"
@@ -251,32 +195,32 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
           class="MuiBox-root css-hpgf8j"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1rd0tpv-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-cyx3wm-MuiGrid-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1gjvs5g-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-11rz0ao-MuiGrid-root"
             >
                
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-3 MuiGrid2-grid-xs-6 css-120a3y3-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-1il8lwd-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
               />
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-5 MuiGrid2-grid-sm-7 css-17yboxz-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-dgnj0v-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
               />
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-ukxn5j-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-3xfxpg-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
               />
             </div>
           </div>
@@ -286,43 +230,14 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
           data-testid="fez-datastream-info-attached-list-row-3835508"
         >
           <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1111w80-MuiGrid2-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-o607lz-MuiGrid-root"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1u781dq-MuiGrid2-root"
-            >
-              <button
-                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-o72p4c-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="order-up-file-0"
-                data-testid="order-up-file-0"
-                disabled=""
-                id="order-up-file-0"
-                tabindex="-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="ExpandLessIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1111w80-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1ry1lx3-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1l910iq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -333,18 +248,18 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-3 MuiGrid2-grid-xs-6 css-yul8qx-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-ygucae-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1e5ur9r-MuiGridLegacy-root"
                 data-testid="file-name-3835508"
                 id="file-name-3835508"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-12 css-1i92u79-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-12 css-6x3qim-MuiGridLegacy-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-v6yruo-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
                   >
                     <a
                       class="css-gkvags"
@@ -358,25 +273,25 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-5 MuiGrid2-grid-sm-7 css-1gmcysx-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
               >
                 new file test description
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-2 css-t4jovg-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
               >
                 218.15 KB
               </p>
             </div>
             <div
-              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-md-3 MuiGrid2-grid-sm-4 css-4e875f-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-c5jf4z-MuiGrid-root"
             >
               <div
                 class="MuiBox-root css-epvm6"
@@ -387,7 +302,7 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
                   <svg
                     aria-hidden="true"
                     aria-label="Not yet scanned for threats"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-mui-internal-clone-element="true"
                     data-testid="3835508-file-av-state-icon-default"
                     focusable="false"
@@ -408,35 +323,6 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
                   />
                 </span>
               </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-1111w80-MuiGrid2-root"
-          >
-            <div
-              class="MuiGrid2-root MuiGrid2-wrap-xs-nowrap MuiGrid2-direction-xs-row MuiGrid2-grid-xs-1 css-1u781dq-MuiGrid2-root"
-            >
-              <button
-                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-o72p4c-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="order-down-file-0"
-                data-testid="order-down-file-0"
-                disabled=""
-                id="order-down-file-0"
-                tabindex="-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="ExpandMoreIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                  />
-                </svg>
-              </button>
             </div>
           </div>
         </div>

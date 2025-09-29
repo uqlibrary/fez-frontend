@@ -8,7 +8,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
 import DeleteForever from '@mui/icons-material/DeleteForever';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { useWidth } from 'hooks';
 
 export const GrantListEditorHeader = ({
@@ -55,23 +55,29 @@ export const GrantListEditorHeader = ({
                             <Grid item xs={12} sm={5}>
                                 <ListItemText
                                     secondary={GrantAgencyName}
-                                    secondaryTypographyProps={{ variant: 'caption' }}
                                     style={{ padding: 0 }}
+                                    slotProps={{
+                                        secondary: { variant: 'caption' },
+                                    }}
                                 />
                             </Grid>
                             <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 <ListItemText
                                     secondary={GrantID}
-                                    secondaryTypographyProps={{ variant: 'caption' }}
                                     style={{ padding: 0 }}
+                                    slotProps={{
+                                        secondary: { variant: 'caption' },
+                                    }}
                                 />
                             </Grid>
                             {!hideType && (
                                 <Grid item sm={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
                                     <ListItemText
                                         secondary={GrantAgencyType}
-                                        secondaryTypographyProps={{ variant: 'caption' }}
                                         style={{ padding: 0 }}
+                                        slotProps={{
+                                            secondary: { variant: 'caption' },
+                                        }}
                                     />
                                 </Grid>
                             )}
@@ -83,9 +89,11 @@ export const GrantListEditorHeader = ({
                                 <Grid item xs={8} sx={{ display: { xs: 'none', md: 'block' } }}>
                                     <ListItemText
                                         secondary={reorderColumn}
-                                        secondaryTypographyProps={{ variant: 'caption' }}
                                         style={{ padding: 0 }}
                                         sx={{ textAlign: 'right' }}
+                                        slotProps={{
+                                            secondary: { variant: 'caption' },
+                                        }}
                                     />
                                 </Grid>
                                 <Grid

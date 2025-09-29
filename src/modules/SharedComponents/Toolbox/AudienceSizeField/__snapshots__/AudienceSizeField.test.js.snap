@@ -3,31 +3,31 @@
 exports[`AudienceSizeField component should render default view 1`] = `
 <div>
   <div
-    class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       id="rek-audience-size-label"
     >
       Audience size
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
-        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-audience-size-select"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-audience-size-select"
         id="rek-audience-size-select"
         role="combobox"
         tabindex="0"
       >
         <span
+          aria-hidden="true"
           class="notranslate"
         >
           ​
@@ -37,7 +37,7 @@ exports[`AudienceSizeField component should render default view 1`] = `
         aria-hidden="true"
         aria-invalid="false"
         aria-labelledby="rek-audience-size-label"
-        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
         data-analyticsid="rek-audience-size-input"
         data-testid="rek-audience-size-input"
         id="rek-audience-size-input"
@@ -47,7 +47,7 @@ exports[`AudienceSizeField component should render default view 1`] = `
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
         data-testid="ArrowDropDownIcon"
         focusable="false"
         viewBox="0 0 24 24"

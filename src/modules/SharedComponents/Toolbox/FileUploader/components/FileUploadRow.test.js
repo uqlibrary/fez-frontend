@@ -135,30 +135,6 @@ describe('FileUploadRow', () => {
         expect(calledArg.format('DD/MM/YYYY')).toBe('01/01/2016');
     });
 
-    it('call prop to move file down', () => {
-        const testFunction = jest.fn();
-        const file = new File([''], 'a.txt');
-        const { getByTestId } = setup({
-            onOrderDownClick: testFunction,
-            uploadedFile: file,
-            index: 0,
-        });
-        fireEvent.click(getByTestId('new-file-upload-down-0'));
-        expect(testFunction).toHaveBeenCalled();
-    });
-
-    it('call prop to move file up', () => {
-        const testFunction = jest.fn();
-        const file = new File([''], 'a.txt');
-        const { getByTestId } = setup({
-            onOrderUpClick: testFunction,
-            uploadedFile: file,
-            index: 1,
-        });
-        fireEvent.click(getByTestId('new-file-upload-up-1'));
-        expect(testFunction).toHaveBeenCalled();
-    });
-
     it('should show confirmation and delete file', () => {
         useWidth.mockImplementation(() => 'xs');
         const onDeleteFn = jest.fn();

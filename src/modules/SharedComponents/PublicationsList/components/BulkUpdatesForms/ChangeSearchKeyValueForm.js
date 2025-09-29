@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useValidatedForm } from 'hooks';
 import { Field } from '../../../Toolbox/ReactHookForm';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';

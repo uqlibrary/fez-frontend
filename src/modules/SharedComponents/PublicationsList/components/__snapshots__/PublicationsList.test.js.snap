@@ -16,20 +16,20 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
         id="publication-citation-parent-UQ:111111"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:111111"
@@ -37,26 +37,26 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <div>
                   Citation display not available for 
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
@@ -80,10 +80,10 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -93,15 +93,15 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
   </div>
@@ -124,20 +124,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:678728"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:678728"
@@ -147,7 +147,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -267,7 +267,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -283,19 +283,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
@@ -361,10 +361,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -373,10 +373,10 @@ exports[`PublicationsList renders component with items 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
               data-testid="rek-content-indicator"
               id="rek-content-indicator"
             >
@@ -390,15 +390,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -410,20 +410,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:410094"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:410094"
@@ -433,7 +433,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -584,7 +584,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -600,19 +600,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -699,10 +699,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -712,15 +712,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -732,20 +732,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:398497"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:398497"
@@ -755,7 +755,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -912,7 +912,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -928,19 +928,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -1027,10 +1027,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -1040,15 +1040,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -1060,20 +1060,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:379178"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:379178"
@@ -1083,7 +1083,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -1228,7 +1228,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -1244,19 +1244,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -1343,10 +1343,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -1356,15 +1356,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -1376,20 +1376,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:357538"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:357538"
@@ -1399,7 +1399,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -1549,7 +1549,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -1565,19 +1565,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -1664,10 +1664,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -1677,15 +1677,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -1697,20 +1697,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:360881"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:360881"
@@ -1720,7 +1720,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -1877,7 +1877,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -1893,19 +1893,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -1992,10 +1992,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -2005,15 +2005,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -2025,20 +2025,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:355233"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:355233"
@@ -2048,7 +2048,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -2179,7 +2179,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -2195,19 +2195,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -2294,10 +2294,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -2307,15 +2307,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -2327,20 +2327,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:350994"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:350994"
@@ -2350,7 +2350,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -2458,7 +2458,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -2474,19 +2474,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -2573,10 +2573,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -2586,15 +2586,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -2606,20 +2606,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:344420"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:344420"
@@ -2629,7 +2629,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -2786,7 +2786,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -2802,19 +2802,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -2901,10 +2901,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -2914,15 +2914,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -2934,20 +2934,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:306039"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:306039"
@@ -2957,7 +2957,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -3233,7 +3233,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -3249,19 +3249,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -3348,10 +3348,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -3361,15 +3361,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -3381,20 +3381,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:305893"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:305893"
@@ -3404,7 +3404,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -3547,7 +3547,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -3563,19 +3563,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -3641,10 +3641,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -3654,15 +3654,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -3674,20 +3674,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:302599"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:302599"
@@ -3697,7 +3697,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -3814,7 +3814,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -3830,19 +3830,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -3908,10 +3908,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -3921,15 +3921,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -3941,20 +3941,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:294055"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:294055"
@@ -3964,7 +3964,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -4100,7 +4100,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -4116,19 +4116,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -4215,10 +4215,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -4228,15 +4228,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -4248,20 +4248,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:319620"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:319620"
@@ -4271,7 +4271,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -4379,7 +4379,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -4395,19 +4395,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -4473,10 +4473,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -4486,15 +4486,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -4506,20 +4506,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:284237"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:284237"
@@ -4529,7 +4529,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -4657,7 +4657,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -4673,19 +4673,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -4751,10 +4751,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -4764,15 +4764,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -4784,20 +4784,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:279315"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:279315"
@@ -4807,7 +4807,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -4980,7 +4980,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -4996,19 +4996,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -5095,10 +5095,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -5108,15 +5108,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -5128,20 +5128,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:265967"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:265967"
@@ -5151,7 +5151,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -5329,7 +5329,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -5345,19 +5345,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -5444,10 +5444,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -5457,15 +5457,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -5477,20 +5477,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:278920"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:278920"
@@ -5500,7 +5500,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -5636,7 +5636,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -5652,19 +5652,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -5730,10 +5730,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -5743,15 +5743,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -5763,20 +5763,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:277856"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:277856"
@@ -5786,7 +5786,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationConferencePaper"
@@ -5869,7 +5869,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -5885,19 +5885,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -5942,10 +5942,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -5955,15 +5955,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -5975,20 +5975,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:256096"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:256096"
@@ -5998,7 +5998,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -6155,7 +6155,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -6171,19 +6171,19 @@ exports[`PublicationsList renders component with items 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
@@ -6270,10 +6270,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -6283,15 +6283,15 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
   </div>

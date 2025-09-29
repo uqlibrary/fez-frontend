@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 export default function TabContainer({ value, children, tabbed, currentTab }) {
     if ((tabbed && currentTab === value) || !tabbed) {
