@@ -279,7 +279,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   disabled="false"
                   is="mock"
                   name="authors"
-                  required="true"
                 />
               </div>
             </div>
