@@ -494,9 +494,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     showRoleInput
                                     showIdentifierLookup
                                     locale={txt.information.creator.field}
-                                    required
                                     disabled={isSubmitting}
-                                    validate={[validation.requiredList]}
                                 />
                             </StandardCard>
                         </Grid>
