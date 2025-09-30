@@ -6,9 +6,10 @@ import menuLocale from 'locale/menu';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
@@ -88,33 +89,32 @@ const renderMenuItem = (
             </ExternalLink>
         );
     }
-
     return (
-        <ListItem
-            button
-            onClick={() => navigateToLink(menuItem.linkTo, menuItem.target)}
-            id={`menu-item-${index}`}
-            className="menu-item-container"
-            key={`menu-item-${index}`}
-        >
-            <ListItemText
-                sx={theme => ({
-                    '& .MuiListItemText-primary': {
-                        ...theme.typography.body2,
-                        whiteSpace: 'nowrap',
-                        fontWeight: theme.typography.fontWeightMedium,
-                    },
-                    '& .MuiListItemText-secondary': {
-                        ...theme.typography.caption,
-                        textOverflow: 'ellipsis',
-                        overflowX: 'hidden',
-                        whiteSpace: 'nowrap',
-                    },
-                })}
-                primary={primaryText}
-                secondary={menuItem.secondaryText}
-                id={`menu-itemText-${menuItem.elementId ?? index}`}
-            />
+        <ListItem key={`menu-item-${index}`} sx={{ p: 0 }}>
+            <ListItemButton
+                onClick={() => navigateToLink(menuItem.linkTo, menuItem.target)}
+                id={`menu-item-${index}`}
+                className="menu-item-container"
+            >
+                <ListItemText
+                    sx={theme => ({
+                        '& .MuiListItemText-primary': {
+                            ...theme.typography.body2,
+                            whiteSpace: 'nowrap',
+                            fontWeight: theme.typography.fontWeightMedium,
+                        },
+                        '& .MuiListItemText-secondary': {
+                            ...theme.typography.caption,
+                            textOverflow: 'ellipsis',
+                            overflowX: 'hidden',
+                            whiteSpace: 'nowrap',
+                        },
+                    })}
+                    primary={primaryText}
+                    secondary={menuItem.secondaryText}
+                    id={`menu-itemText-${menuItem.elementId ?? index}`}
+                />
+            </ListItemButton>
         </ListItem>
     );
 };
@@ -180,7 +180,7 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                     WebkitBoxShadow: '5px 0 5px -2px rgba(0,0,0,0.15)',
                     boxShadow: '5px 0 5px -2px rgba(0,0,0,0.15)',
                 },
-                '& .MuiDrawer-paperAnchorDockedLeft': {
+                '&.MuiDrawer-docked.MuiDrawer-anchorLeft > .MuiDrawer-paper': {
                     border: 'none',
                 },
             }}
@@ -205,7 +205,7 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                             alignContent="center"
                             alignItems="center"
                             sx={{
-                                '&.MuiGrid-container': {
+                                '&.MuiGridLegacy-container': {
                                     backgroundColor: 'primary.main',
                                     height: '70px',
                                     boxShadow:

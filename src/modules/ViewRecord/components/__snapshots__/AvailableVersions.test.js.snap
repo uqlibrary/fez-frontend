@@ -3,21 +3,22 @@
 exports[`Available Versions Component  should render component 1`] = `
 <div>
   <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-available-versions"
       id="standard-card-available-versions"
+      style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
       >
         <div
-          class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
             data-testid="standard-card-available-versions-header"
             id="standard-card-available-versions-header"
           >
@@ -26,7 +27,7 @@ exports[`Available Versions Component  should render component 1`] = `
         </div>
       </div>
       <div
-        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
         data-analyticsid="standard-card-available-versions-content"
         data-testid="standard-card-available-versions-content"
         id="standard-card-available-versions-content"
@@ -36,7 +37,7 @@ exports[`Available Versions Component  should render component 1`] = `
         >
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
               data-testid="rek-isderivationof-current"
             >
               Data collection mock testing record
@@ -47,7 +48,7 @@ exports[`Available Versions Component  should render component 1`] = `
           </li>
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
               data-testid="rek-has-derivations-0"
             >
               <a

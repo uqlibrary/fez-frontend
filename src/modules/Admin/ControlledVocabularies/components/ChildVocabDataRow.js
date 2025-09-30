@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { useDispatch } from 'react-redux';
 import * as actions from 'actions/viewControlledVocab';
 
@@ -43,12 +43,12 @@ export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
             {state.cvo_id !== row.cvo_id && (
                 <Box
                     sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        width: '100%',
+                        paddingBlockEnd: '10px',
                         ...(row.cvo_hide === 1 ? { fontStyle: 'italic' } : {}),
                     }}
-                    display={'flex'}
-                    alignItems={'center'}
-                    width={'100%'}
-                    paddingBlockEnd={'10px'}
                 >
                     <Grid item xs={12} sm={1} data-testid={`child-row-id-${row.cvo_id}`}>
                         {row.cvo_id}

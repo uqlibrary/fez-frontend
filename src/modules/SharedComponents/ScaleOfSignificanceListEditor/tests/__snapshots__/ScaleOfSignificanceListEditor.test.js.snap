@@ -6,20 +6,20 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
     id="test-list-editor-list-editor"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1ervll6-MuiGridLegacy-root"
       data-testid="rek-significance-form"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
+              class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -28,7 +28,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -39,21 +39,21 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             </svg>
           </span>
           <div
-            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-p3i1lu-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
           />
         </label>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         style="flex-grow: 1;"
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-significance-label"
             id="rek-significance-label"
@@ -61,27 +61,29 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             NoLabel
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
+              aria-invalid="true"
               aria-labelledby="rek-significance-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
               id="rek-significance-select"
               role="combobox"
               tabindex="0"
             >
               <span
+                aria-hidden="true"
                 class="notranslate"
               >
                 ​
@@ -91,7 +93,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
               aria-hidden="true"
               aria-invalid="true"
               aria-labelledby="rek-significance-label"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               data-analyticsid="rek-significance-input"
               data-testid="rek-significance-input"
               id="rek-significance-input"
@@ -101,7 +103,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -112,37 +114,38 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             </svg>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
           />
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-17swcrx-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
               aria-label="contribution-statement"
-              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1whs34k-MuiNotchedOutlined-root"
+                class="css-1nf2c5d-MuiNotchedOutlined-root"
               >
                 <span
+                  aria-hidden="true"
                   class="notranslate"
                 >
                   ​
@@ -153,10 +156,10 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-9 css-18rjh1d-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-add"
           data-testid="rek-significance-add"
           disabled=""
@@ -168,10 +171,10 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-clear"
           data-testid="rek-significance-clear"
           id="clear-items"
@@ -184,19 +187,19 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-11 css-68fu20-MuiGridLegacy-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
           >
             Name
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
         >
           <span
             aria-label="Remove all items"
@@ -204,7 +207,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             data-mui-internal-clone-element="true"
           >
             <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test-list-editor"
               data-testid="delete-all-test-list-editor"
               id="delete-all-test-list-editor"
@@ -213,7 +216,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="DeleteForeverIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -232,7 +235,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
       id="test-list-editor-list"
     >
       <p
-        class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
         style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgba(224, 224, 224, 1);"
       >
         No records to display
@@ -248,20 +251,20 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
     id="test-list-editor-list-editor"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-hckusd-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
       data-testid="rek-significance-form"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
+              class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -270,7 +273,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -281,21 +284,21 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             </svg>
           </span>
           <div
-            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-p3i1lu-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
           />
         </label>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         style="flex-grow: 1;"
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-significance-label"
             id="rek-significance-label"
@@ -303,27 +306,29 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             NoLabel
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
+              aria-invalid="true"
               aria-labelledby="rek-significance-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
               id="rek-significance-select"
               role="combobox"
               tabindex="0"
             >
               <span
+                aria-hidden="true"
                 class="notranslate"
               >
                 ​
@@ -333,7 +338,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
               aria-hidden="true"
               aria-invalid="true"
               aria-labelledby="rek-significance-label"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               data-analyticsid="rek-significance-input"
               data-testid="rek-significance-input"
               id="rek-significance-input"
@@ -343,7 +348,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -354,37 +359,38 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             </svg>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
           />
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-17swcrx-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
               aria-label="contribution-statement"
-              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1whs34k-MuiNotchedOutlined-root"
+                class="css-1nf2c5d-MuiNotchedOutlined-root"
               >
                 <span
+                  aria-hidden="true"
                   class="notranslate"
                 >
                   ​
@@ -395,10 +401,10 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-9 css-18rjh1d-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-add"
           data-testid="rek-significance-add"
           disabled=""
@@ -410,10 +416,10 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-clear"
           data-testid="rek-significance-clear"
           id="clear-items"
@@ -426,19 +432,19 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-11 css-68fu20-MuiGridLegacy-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
           >
             Name
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
         >
           <span
             aria-label="Remove all items"
@@ -446,7 +452,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             data-mui-internal-clone-element="true"
           >
             <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test-list-editor"
               data-testid="delete-all-test-list-editor"
               id="delete-all-test-list-editor"
@@ -455,7 +461,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="DeleteForeverIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -479,19 +485,19 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
@@ -501,10 +507,10 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scale-item-0"
                   id="scale-item-0"
                 >
@@ -512,10 +518,10 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="statement-item-0"
                   id="statement-item-0"
                 >
@@ -525,10 +531,10 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
             >
               <span
                 aria-label="Edit this item"
@@ -537,7 +543,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
               >
                 <button
                   aria-label="Edit this item"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="test-list-editor-list-row-0-edit"
                   data-testid="test-list-editor-list-row-0-edit"
                   id="test-list-editor-list-row-0-edit"
@@ -546,13 +552,13 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-testid="EditIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -560,7 +566,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
           />
         </div>
       </div>
@@ -575,20 +581,20 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
     id="test-list-editor-list-editor"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1ervll6-MuiGridLegacy-root"
       data-testid="rek-significance-form"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
+              class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -597,7 +603,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -608,21 +614,21 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             </svg>
           </span>
           <div
-            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-p3i1lu-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
           />
         </label>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         style="flex-grow: 1;"
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-significance-label"
             id="rek-significance-label"
@@ -630,27 +636,29 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             NoLabel
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
+              aria-invalid="true"
               aria-labelledby="rek-significance-select"
-              class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
               id="rek-significance-select"
               role="combobox"
             >
               <span
+                aria-hidden="true"
                 class="notranslate"
               >
                 ​
@@ -660,7 +668,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
               aria-hidden="true"
               aria-invalid="true"
               aria-labelledby="rek-significance-label"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               data-analyticsid="rek-significance-input"
               data-testid="rek-significance-input"
               disabled=""
@@ -671,7 +679,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -682,37 +690,38 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             </svg>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
           />
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-17swcrx-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
               aria-label="contribution-statement"
-              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1whs34k-MuiNotchedOutlined-root"
+                class="css-1nf2c5d-MuiNotchedOutlined-root"
               >
                 <span
+                  aria-hidden="true"
                   class="notranslate"
                 >
                   ​
@@ -723,10 +732,10 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-9 css-18rjh1d-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-add"
           data-testid="rek-significance-add"
           disabled=""
@@ -738,10 +747,10 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-clear"
           data-testid="rek-significance-clear"
           disabled=""
@@ -755,19 +764,19 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-11 css-68fu20-MuiGridLegacy-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
           >
             Name
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
         >
           <span
             aria-label="Remove all items"
@@ -775,7 +784,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             data-mui-internal-clone-element="true"
           >
             <button
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test-list-editor"
               data-testid="delete-all-test-list-editor"
               disabled=""
@@ -785,7 +794,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="DeleteForeverIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -809,19 +818,19 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
@@ -831,10 +840,10 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scale-item-0"
                   id="scale-item-0"
                 >
@@ -842,10 +851,10 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="statement-item-0"
                   id="statement-item-0"
                 >
@@ -855,10 +864,10 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
             >
               <span
                 aria-label="Edit this item"
@@ -867,7 +876,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
               >
                 <button
                   aria-label="Edit this item"
-                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="test-list-editor-list-row-0-edit"
                   data-testid="test-list-editor-list-row-0-edit"
                   disabled=""
@@ -877,13 +886,13 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-testid="EditIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -891,7 +900,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
           />
         </div>
       </div>
@@ -906,20 +915,20 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
     id="test-list-editor-list-editor"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1ervll6-MuiGridLegacy-root"
       data-testid="rek-significance-form"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
+              class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -928,7 +937,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -939,21 +948,21 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             </svg>
           </span>
           <div
-            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-p3i1lu-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
           />
         </label>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         style="flex-grow: 1;"
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-significance-label"
             id="rek-significance-label"
@@ -961,27 +970,29 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             NoLabel
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
+              aria-invalid="true"
               aria-labelledby="rek-significance-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
               id="rek-significance-select"
               role="combobox"
               tabindex="0"
             >
               <span
+                aria-hidden="true"
                 class="notranslate"
               >
                 ​
@@ -991,7 +1002,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
               aria-hidden="true"
               aria-invalid="true"
               aria-labelledby="rek-significance-label"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               data-analyticsid="rek-significance-input"
               data-testid="rek-significance-input"
               id="rek-significance-input"
@@ -1001,7 +1012,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1012,37 +1023,38 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             </svg>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
           />
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-17swcrx-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
               aria-label="contribution-statement"
-              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1whs34k-MuiNotchedOutlined-root"
+                class="css-1nf2c5d-MuiNotchedOutlined-root"
               >
                 <span
+                  aria-hidden="true"
                   class="notranslate"
                 >
                   ​
@@ -1053,10 +1065,10 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-9 css-18rjh1d-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-add"
           data-testid="rek-significance-add"
           disabled=""
@@ -1068,10 +1080,10 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-clear"
           data-testid="rek-significance-clear"
           id="clear-items"
@@ -1084,19 +1096,19 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-11 css-68fu20-MuiGridLegacy-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
           >
             Name
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
         >
           <span
             aria-label="Remove all items"
@@ -1104,7 +1116,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             data-mui-internal-clone-element="true"
           >
             <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test-list-editor"
               data-testid="delete-all-test-list-editor"
               id="delete-all-test-list-editor"
@@ -1113,7 +1125,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="DeleteForeverIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1137,19 +1149,19 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
@@ -1159,10 +1171,10 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scale-item-0"
                   id="scale-item-0"
                 >
@@ -1170,10 +1182,10 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="statement-item-0"
                   id="statement-item-0"
                 >
@@ -1183,10 +1195,10 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
             >
               <span
                 aria-label="Edit this item"
@@ -1195,7 +1207,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
               >
                 <button
                   aria-label="Edit this item"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="test-list-editor-list-row-0-edit"
                   data-testid="test-list-editor-list-row-0-edit"
                   id="test-list-editor-list-row-0-edit"
@@ -1204,13 +1216,13 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-testid="EditIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -1218,7 +1230,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
           />
         </div>
       </div>
@@ -1233,20 +1245,20 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
     id="test-list-editor-list-editor"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1ervll6-MuiGridLegacy-root"
       data-testid="rek-significance-form"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
+              class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -1255,7 +1267,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1266,21 +1278,21 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </svg>
           </span>
           <div
-            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-p3i1lu-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
           />
         </label>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         style="flex-grow: 1;"
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-significance-label"
             id="rek-significance-label"
@@ -1288,27 +1300,29 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             NoLabel
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
+              aria-invalid="true"
               aria-labelledby="rek-significance-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
               id="rek-significance-select"
               role="combobox"
               tabindex="0"
             >
               <span
+                aria-hidden="true"
                 class="notranslate"
               >
                 ​
@@ -1318,7 +1332,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               aria-hidden="true"
               aria-invalid="true"
               aria-labelledby="rek-significance-label"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               data-analyticsid="rek-significance-input"
               data-testid="rek-significance-input"
               id="rek-significance-input"
@@ -1328,7 +1342,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1339,37 +1353,38 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </svg>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
           />
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-17swcrx-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
               aria-label="contribution-statement"
-              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1whs34k-MuiNotchedOutlined-root"
+                class="css-1nf2c5d-MuiNotchedOutlined-root"
               >
                 <span
+                  aria-hidden="true"
                   class="notranslate"
                 >
                   ​
@@ -1380,10 +1395,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-9 css-18rjh1d-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-add"
           data-testid="rek-significance-add"
           disabled=""
@@ -1395,10 +1410,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-clear"
           data-testid="rek-significance-clear"
           id="clear-items"
@@ -1411,28 +1426,28 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 css-28o34x-MuiGridLegacy-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
           >
             Name
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-1olnuyg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 css-vzojd3-MuiGridLegacy-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
           >
             Reorder items
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
         >
           <span
             aria-label="Remove all items"
@@ -1440,7 +1455,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             data-mui-internal-clone-element="true"
           >
             <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test-list-editor"
               data-testid="delete-all-test-list-editor"
               id="delete-all-test-list-editor"
@@ -1449,7 +1464,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="DeleteForeverIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1473,19 +1488,19 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
@@ -1494,10 +1509,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scale-item-0"
                   id="scale-item-0"
                 >
@@ -1505,10 +1520,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="statement-item-0"
                   id="statement-item-0"
                 />
@@ -1516,13 +1531,13 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -1530,7 +1545,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                   data-mui-internal-clone-element="true"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-editor-list-row-0-move-down"
                     data-testid="test-list-editor-list-row-0-move-down"
                     id="test-list-editor-list-row-0-move-down"
@@ -1539,7 +1554,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                       data-testid="KeyboardArrowDownIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -1558,7 +1573,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <button
                   aria-label="Edit this item"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="test-list-editor-list-row-0-edit"
                   data-testid="test-list-editor-list-row-0-edit"
                   id="test-list-editor-list-row-0-edit"
@@ -1567,13 +1582,13 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-testid="EditIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -1581,7 +1596,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
           />
         </div>
       </div>
@@ -1591,19 +1606,19 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scalesignif-author-1"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
@@ -1612,10 +1627,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scale-item-1"
                   id="scale-item-1"
                 >
@@ -1623,10 +1638,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="statement-item-1"
                   id="statement-item-1"
                 />
@@ -1634,13 +1649,13 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -1648,7 +1663,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                   data-mui-internal-clone-element="true"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-editor-list-row-1-move-up"
                     data-testid="test-list-editor-list-row-1-move-up"
                     id="test-list-editor-list-row-1-move-up"
@@ -1657,7 +1672,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                       data-testid="KeyboardArrowUpIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -1676,7 +1691,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <button
                   aria-label="Edit this item"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="test-list-editor-list-row-1-edit"
                   data-testid="test-list-editor-list-row-1-edit"
                   id="test-list-editor-list-row-1-edit"
@@ -1685,13 +1700,13 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-testid="EditIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -1699,7 +1714,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
           />
         </div>
       </div>
@@ -1714,20 +1729,20 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
     id="test-list-editor-list-editor"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1ervll6-MuiGridLegacy-root"
       data-testid="rek-significance-form"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
+              class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -1736,7 +1751,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1747,21 +1762,21 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </svg>
           </span>
           <div
-            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-p3i1lu-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
           />
         </label>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         style="flex-grow: 1;"
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-significance-label"
             id="rek-significance-label"
@@ -1769,27 +1784,29 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             NoLabel
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
+              aria-invalid="true"
               aria-labelledby="rek-significance-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
               id="rek-significance-select"
               role="combobox"
               tabindex="0"
             >
               <span
+                aria-hidden="true"
                 class="notranslate"
               >
                 ​
@@ -1799,7 +1816,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               aria-hidden="true"
               aria-invalid="true"
               aria-labelledby="rek-significance-label"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               data-analyticsid="rek-significance-input"
               data-testid="rek-significance-input"
               id="rek-significance-input"
@@ -1809,7 +1826,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1820,37 +1837,38 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </svg>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
           />
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-17swcrx-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
               aria-label="contribution-statement"
-              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1whs34k-MuiNotchedOutlined-root"
+                class="css-1nf2c5d-MuiNotchedOutlined-root"
               >
                 <span
+                  aria-hidden="true"
                   class="notranslate"
                 >
                   ​
@@ -1861,10 +1879,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-9 css-18rjh1d-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-add"
           data-testid="rek-significance-add"
           disabled=""
@@ -1876,10 +1894,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-clear"
           data-testid="rek-significance-clear"
           id="clear-items"
@@ -1892,28 +1910,28 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 css-28o34x-MuiGridLegacy-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
           >
             Name
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-1olnuyg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 css-vzojd3-MuiGridLegacy-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
           >
             Reorder items
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
         >
           <span
             aria-label="Remove all items"
@@ -1921,7 +1939,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             data-mui-internal-clone-element="true"
           >
             <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test-list-editor"
               data-testid="delete-all-test-list-editor"
               id="delete-all-test-list-editor"
@@ -1930,7 +1948,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="DeleteForeverIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1954,19 +1972,19 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
@@ -1975,10 +1993,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scale-item-0"
                   id="scale-item-0"
                 >
@@ -1986,10 +2004,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="statement-item-0"
                   id="statement-item-0"
                 />
@@ -1997,13 +2015,13 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -2011,7 +2029,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                   data-mui-internal-clone-element="true"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-editor-list-row-0-move-down"
                     data-testid="test-list-editor-list-row-0-move-down"
                     id="test-list-editor-list-row-0-move-down"
@@ -2020,7 +2038,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                       data-testid="KeyboardArrowDownIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -2039,7 +2057,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <button
                   aria-label="Edit this item"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="test-list-editor-list-row-0-edit"
                   data-testid="test-list-editor-list-row-0-edit"
                   id="test-list-editor-list-row-0-edit"
@@ -2048,13 +2066,13 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-testid="EditIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -2062,7 +2080,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
           />
         </div>
       </div>
@@ -2072,19 +2090,19 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scalesignif-author-1"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
@@ -2093,10 +2111,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scale-item-1"
                   id="scale-item-1"
                 >
@@ -2104,10 +2122,10 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="statement-item-1"
                   id="statement-item-1"
                 />
@@ -2115,13 +2133,13 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -2129,7 +2147,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                   data-mui-internal-clone-element="true"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-editor-list-row-1-move-up"
                     data-testid="test-list-editor-list-row-1-move-up"
                     id="test-list-editor-list-row-1-move-up"
@@ -2138,7 +2156,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                       data-testid="KeyboardArrowUpIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -2157,7 +2175,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <button
                   aria-label="Edit this item"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="test-list-editor-list-row-1-edit"
                   data-testid="test-list-editor-list-row-1-edit"
                   id="test-list-editor-list-row-1-edit"
@@ -2166,13 +2184,13 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-testid="EditIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -2180,7 +2198,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
           />
         </div>
       </div>
@@ -2195,20 +2213,20 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
     id="test-list-editor-list-editor"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1ervll6-MuiGridLegacy-root"
       data-testid="rek-significance-form"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1s2s92u-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
           >
             <input
-              class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
+              class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
               data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
               data-testid="empty-significance-statement-input"
@@ -2217,7 +2235,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -2228,21 +2246,21 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             </svg>
           </span>
           <div
-            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-p3i1lu-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
           />
         </label>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         style="flex-grow: 1;"
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             data-testid="rek-significance-label"
             id="rek-significance-label"
@@ -2250,27 +2268,29 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             NoLabel
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
+              aria-invalid="true"
               aria-labelledby="rek-significance-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
               id="rek-significance-select"
               role="combobox"
               tabindex="0"
             >
               <span
+                aria-hidden="true"
                 class="notranslate"
               >
                 ​
@@ -2280,7 +2300,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
               aria-hidden="true"
               aria-invalid="true"
               aria-labelledby="rek-significance-label"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               data-analyticsid="rek-significance-input"
               data-testid="rek-significance-input"
               id="rek-significance-input"
@@ -2290,7 +2310,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -2301,37 +2321,38 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             </svg>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-u90aml-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
           />
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-17swcrx-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
               aria-label="contribution-statement"
-              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1whs34k-MuiNotchedOutlined-root"
+                class="css-1nf2c5d-MuiNotchedOutlined-root"
               >
                 <span
+                  aria-hidden="true"
                   class="notranslate"
                 >
                   ​
@@ -2342,10 +2363,10 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-9 css-18rjh1d-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-add"
           data-testid="rek-significance-add"
           disabled=""
@@ -2357,10 +2378,10 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-significance-clear"
           data-testid="rek-significance-clear"
           id="clear-items"
@@ -2373,19 +2394,19 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-11 css-68fu20-MuiGridLegacy-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
           >
             Name
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
         >
           <span
             aria-label="Remove all items"
@@ -2393,7 +2414,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             data-mui-internal-clone-element="true"
           >
             <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test-list-editor"
               data-testid="delete-all-test-list-editor"
               id="delete-all-test-list-editor"
@@ -2402,7 +2423,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="DeleteForeverIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -2426,19 +2447,19 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
@@ -2448,10 +2469,10 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="scale-item-0"
                   id="scale-item-0"
                 >
@@ -2459,10 +2480,10 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
                 </p>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   data-testid="statement-item-0"
                   id="statement-item-0"
                 />
@@ -2470,10 +2491,10 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
             >
               <span
                 aria-label="Edit this item"
@@ -2482,7 +2503,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
               >
                 <button
                   aria-label="Edit this item"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="test-list-editor-list-row-0-edit"
                   data-testid="test-list-editor-list-row-0-edit"
                   id="test-list-editor-list-row-0-edit"
@@ -2491,13 +2512,13 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-testid="EditIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -2505,7 +2526,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
           >
             <span
               aria-label="Remove this item"
@@ -2513,7 +2534,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-editor-list-row-0-delete"
                 data-testid="test-list-editor-list-row-0-delete"
                 id="test-list-editor-list-row-0-delete"
@@ -2522,7 +2543,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                   data-testid="DeleteIcon"
                   focusable="false"
                   viewBox="0 0 24 24"

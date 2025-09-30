@@ -3,14 +3,14 @@
 exports[`Component CopyrightAgreement should render checked if deposit agreement accepted 1`] = `
 <div>
   <label
-    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-16v659t-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1p0vbhv-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-oretft-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
     >
       <input
         checked=""
-        class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
         data-analyticsid="test-input"
         data-indeterminate="false"
         data-testid="test-input"
@@ -19,7 +19,7 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
         data-testid="CheckBoxIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
       </svg>
     </span>
     <div
-      class="MuiTypography-root MuiTypography-body1 css-1wonu5w-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-xf048y-MuiTypography-root"
       data-testid="test-label"
       id="test-label"
     >
@@ -43,13 +43,13 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
 exports[`Component CopyrightAgreement should render default view 1`] = `
 <div>
   <label
-    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
+    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-16v659t-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1p0vbhv-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-oretft-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
     >
       <input
-        class="PrivateSwitchBase-input css-1p3z7et-MuiSwitchBase-root"
+        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
         data-analyticsid="test-input"
         data-indeterminate="false"
         data-testid="test-input"
@@ -58,7 +58,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
         data-testid="CheckBoxOutlineBlankIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -69,7 +69,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
       </svg>
     </span>
     <div
-      class="MuiTypography-root MuiTypography-body1 css-oaumxi-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-1pdno6g-MuiTypography-root"
       data-testid="test-label"
       id="test-label"
     >

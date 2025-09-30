@@ -38,7 +38,7 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
         data-testid="OpenInNewIcon"
         focusable="false"
         id="rek-journal-name-sherpa-link-new-window-icon"
@@ -84,7 +84,7 @@ exports[`Journal Name Component test  should render without era journal listed 1
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
         data-testid="OpenInNewIcon"
         focusable="false"
         id="rek-journal-name-sherpa-link-new-window-icon"
