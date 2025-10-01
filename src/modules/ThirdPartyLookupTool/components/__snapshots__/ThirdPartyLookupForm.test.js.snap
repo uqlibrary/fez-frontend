@@ -3,40 +3,41 @@
 exports[`Component ThirdPartyLookupForm should display form in minimised view 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card"
         id="standard-card"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-19cmg10-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-d6c1k5-MuiTypography-root"
               >
                 Test Form
               </h5>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
                 tooltip="Show form for Test Form"
@@ -44,7 +45,7 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                   data-testid="KeyboardArrowDownIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -66,40 +67,41 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
 exports[`Component ThirdPartyLookupForm should display form without a secondary field 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card"
         id="standard-card"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-19cmg10-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-d6c1k5-MuiTypography-root"
               >
                 Incites
               </h5>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
                 tooltip="Hide form for Incites"
@@ -107,7 +109,7 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                   data-testid="KeyboardArrowUpIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -129,16 +131,16 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
               </h4>
               <p />
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label=""
-                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                    id=":r2:"
+                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    id=":r9:"
                     name="primaryValue"
                     placeholder="Enter one or more UTs, separated by a comma"
                     required=""
@@ -151,7 +153,7 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
             <p />
             <button
               aria-label="Submit to Incites"
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -168,40 +170,41 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
 exports[`Component ThirdPartyLookupForm should show form with non-minimised form 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card"
         id="standard-card"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-19cmg10-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-d6c1k5-MuiTypography-root"
               >
                 Test Form
               </h5>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
                 tooltip="Hide form for Test Form"
@@ -209,7 +212,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                   data-testid="KeyboardArrowUpIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -229,16 +232,16 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
               </h4>
               <p />
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label=""
-                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                    id=":r0:"
+                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    id=":r4:"
                     name="primaryValue"
                     placeholder=""
                     required=""
@@ -254,16 +257,16 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
               </h4>
               <p />
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label=""
-                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                    id=":r1:"
+                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    id=":r5:"
                     name="secondaryValue"
                     placeholder=""
                     type="text"
@@ -275,7 +278,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
             <p />
             <button
               aria-label="Submit"
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -292,40 +295,41 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card"
         id="standard-card"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-19cmg10-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-d6c1k5-MuiTypography-root"
               >
                 Test Form
               </h5>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
                 tooltip="Show form for Test Form"
@@ -333,7 +337,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                   data-testid="KeyboardArrowDownIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -355,40 +359,41 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card"
         id="standard-card"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-19cmg10-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-d6c1k5-MuiTypography-root"
               >
                 Test Form
               </h5>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
                 tooltip="Hide form for Test Form"
@@ -396,7 +401,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                   data-testid="KeyboardArrowUpIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -416,16 +421,16 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
               </h4>
               <p />
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label=""
-                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                    id=":r6:"
+                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    id=":rm:"
                     name="primaryValue"
                     placeholder=""
                     required=""
@@ -441,16 +446,16 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
               </h4>
               <p />
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label=""
-                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                    id=":r7:"
+                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    id=":rn:"
                     name="secondaryValue"
                     placeholder=""
                     type="text"
@@ -462,7 +467,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
             <p />
             <button
               aria-label="Submit"
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -479,40 +484,41 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card"
         id="standard-card"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-19cmg10-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-d6c1k5-MuiTypography-root"
               >
                 Test Form
               </h5>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
                 tooltip="Show form for Test Form"
@@ -520,7 +526,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                   data-testid="KeyboardArrowDownIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -542,40 +548,41 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
 exports[`Component ThirdPartyLookupForm should use defaults when locale values are not provided 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card"
         id="standard-card"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-19cmg10-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-d6c1k5-MuiTypography-root"
               >
                 this form
               </h5>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
                 tooltip="Test hide this form"
@@ -583,7 +590,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                   data-testid="KeyboardArrowUpIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -603,16 +610,16 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
               </h4>
               <p />
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label=""
-                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                    id=":rd:"
+                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    id=":r19:"
                     name="primaryValue"
                     placeholder=""
                     required=""
@@ -628,16 +635,16 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
               </h4>
               <p />
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label=""
-                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                    id=":re:"
+                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    id=":r1a:"
                     name="secondaryValue"
                     placeholder=""
                     type="text"
@@ -651,7 +658,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
             </p>
             <button
               aria-label="Submit"
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -668,40 +675,41 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
 exports[`Component ThirdPartyLookupForm should use locale values when provided 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card"
         id="standard-card"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-content"
           data-testid="standard-card-content"
           id="standard-card-content"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-19cmg10-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-d6c1k5-MuiTypography-root"
               >
                 this form
               </h5>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
                 tooltip="Hide form for this form"
@@ -709,7 +717,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                   data-testid="KeyboardArrowUpIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -731,16 +739,16 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
                 Tip 2p
               </p>
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="aria pf2"
-                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                    id=":rb:"
+                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    id=":r14:"
                     name="primaryValue"
                     placeholder="placeholder 2p"
                     required=""
@@ -758,16 +766,16 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
                 tip 2S
               </p>
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="aria sf2"
-                    class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                    id=":rc:"
+                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    id=":r15:"
                     name="secondaryValue"
                     placeholder="placeholder 2s"
                     type="text"
@@ -779,7 +787,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
             <p />
             <button
               aria-label="Submit2"
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >

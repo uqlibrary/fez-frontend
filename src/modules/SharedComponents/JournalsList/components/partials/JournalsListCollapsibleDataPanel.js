@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import JournalFieldsMap from './JournalFieldsMap';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import Box from '@mui/material/Box';
@@ -31,7 +31,11 @@ const JournalsListCollapsibleDataPanel = ({ row, index, open }) => {
                     id={`journal-list-collapse-panel-${index}`}
                     data-testid={`journal-list-collapse-panel-${index}`}
                 >
-                    <Box padding={1}>
+                    <Box
+                        sx={{
+                            padding: 1,
+                        }}
+                    >
                         <Grid container>
                             {dataItems.map((item, itemIndex) => {
                                 const itemData = (row && item.translateFn(row)) || /* istanbul ignore next */ '';

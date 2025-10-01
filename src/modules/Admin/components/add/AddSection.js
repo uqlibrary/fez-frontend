@@ -5,7 +5,7 @@ import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useNavigate } from 'react-router-dom';
 import { useFormContext } from 'react-hook-form';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 

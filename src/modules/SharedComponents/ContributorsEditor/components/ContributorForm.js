@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
