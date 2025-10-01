@@ -1,3 +1,5 @@
+@use "sass:color";
+@use "sass:list";
 // Colors for dashboard graphs
 $graph-background-color-1 : #d72865;
 $graph-background-color-2 : #1e7d94;
@@ -5,8 +7,8 @@ $graph-background-color-2 : #1e7d94;
 $graph-color-1: #49075E;
 $graph-color-2: #468fcc;
 $graph-color-3: #f28620;
-$graph-color-4: lighten(#595959, 33%);
-$graph-color-5: darken(#595959, 10%);
+$graph-color-4: color.adjust(#595959, $lightness: 33%);
+$graph-color-5: color.adjust(#595959, $lightness: -10%);
 
 $font-family: 'Roboto', san-serif;
 
@@ -18,8 +20,8 @@ $chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $
     width: 95%;
     margin: 0 auto;
 
-    @for $i from 1 through length($chart-colors) {
-      $thisColor: nth($chart-colors, $i);
+    @for $i from 1 through list.length($chart-colors) {
+      $thisColor: list.nth($chart-colors, $i);
       .highcharts-color-#{$i - 1} {
         fill: $thisColor !important;
         stroke: $thisColor !important;
@@ -430,8 +432,8 @@ $chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $
       fill: transparent !important;
     }
 
-    @for $i from 1 through length($chart-colors) {
-      $thisColor: nth($chart-colors, $i);
+    @for $i from 1 through list.length($chart-colors) {
+      $thisColor: list.nth($chart-colors, $i);
 
       .highcharts-legend-item.highcharts-color-#{$i - 1} .highcharts-point,
       .highcharts-tooltip .highcharts-color-#{$i - 1},

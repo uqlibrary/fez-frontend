@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { OrcidSyncContext } from 'context';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import {
     AuthorsPublicationsPerYearChart,
@@ -70,8 +70,7 @@ export const fibonacci = (iteration, from = 0) => {
     return b;
 };
 
-export const isWaitingForSync = orcidSyncStatus =>
-    ['Pending', 'In Progress'].indexOf((orcidSyncStatus || /* istanbul ignore next */ {}).orj_status) > -1;
+export const isWaitingForSync = orcidSyncStatus => ['Pending', 'In Progress'].indexOf(orcidSyncStatus?.orj_status) > -1;
 
 const Dashboard = ({
     account,
@@ -114,22 +113,20 @@ const Dashboard = ({
     const isMobileView = useIsMobileView();
     const [dashboardPubsTabs, setDashboardPubsTabs] = useState(1);
     const [orcidSyncStatusRefreshCount, setOrcidSyncStatusRefreshCount] = useState(0);
-    const [lastOrcidSyncScheduledRequest, setLastOrcidSyncScheduledRequest] = useState();
+    const lastOrcidSyncStatusRequestRef = useRef(null);
 
     const _loadOrcidSync = (waitTime = 1) => {
-        // considering loadOrcidSyncDelay props, we have to clear any previously scheduled requests
-        !!lastOrcidSyncScheduledRequest && global.clearTimeout(lastOrcidSyncScheduledRequest);
-        const timeoutId = global.setTimeout(
-            () =>
-                !loadingOrcidSyncStatus &&
-                orcidSyncEnabled &&
-                (orcidSyncStatus === null || !!waitTime) &&
-                actions &&
-                actions.loadOrcidSyncStatus &&
-                actions.loadOrcidSyncStatus(),
+        if (!waitTime || !author?.aut_orcid_id || !orcidSyncEnabled || loadingOrcidSyncStatus) {
+            return;
+        }
+        clearTimeout(lastOrcidSyncStatusRequestRef?.current);
+        lastOrcidSyncStatusRequestRef.current = setTimeout(
+            () => {
+                lastOrcidSyncStatusRequestRef.current = null;
+                actions.loadOrcidSyncStatus();
+            },
             waitTime * loadOrcidSyncDelay * 1000,
         );
-        setLastOrcidSyncScheduledRequest(timeoutId);
     };
 
     // A repeating check for latest status that gets progressively longer
@@ -298,6 +295,9 @@ const Dashboard = ({
             _loadOrcidSync();
             setOrcidSyncStatusRefreshCount(1);
         }
+        return () => {
+            clearTimeout(lastOrcidSyncStatusRequestRef.current);
+        };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

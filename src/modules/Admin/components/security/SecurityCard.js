@@ -4,7 +4,7 @@ import { useFormContext } from 'react-hook-form';
 import { useSelector } from 'react-redux';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import OverrideSecurity from './OverrideSecurity';
@@ -50,24 +50,30 @@ export const SecurityCard = ({ disabled }) => {
 
     return (
         <Grid container spacing={2}>
-            <Grid xs={12}>
+            <Grid size={12}>
                 <StandardCard
                     standardCardId="record-security-card"
                     title={text.cardTitle(record.rek_pid)}
                     accentHeader
                     subCard
                 >
-                    <Grid container spacing={2} padding={0}>
+                    <Grid
+                        container
+                        spacing={2}
+                        sx={{
+                            padding: 0,
+                        }}
+                    >
                         {recordType === RECORD_TYPE_RECORD && (
                             <React.Fragment>
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <InheritedSecurityDetails
                                         title={text.inheritedPolicy.record.title}
                                         collections={record?.fez_record_search_key_ismemberof}
                                         parentKey="rek_security_policy"
                                     />
                                 </Grid>
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <Field
                                         control={form.control}
                                         component={OverrideSecurity}
@@ -82,7 +88,7 @@ export const SecurityCard = ({ disabled }) => {
                         {(recordType === RECORD_TYPE_COMMUNITY ||
                             recordType === RECORD_TYPE_COLLECTION ||
                             (recordType === RECORD_TYPE_RECORD && isOverrideSecurityChecked)) && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <SecuritySelector
                                     disabled={disabled || (recordType === RECORD_TYPE_COLLECTION && !isSuperAdmin)}
                                     text={text}
@@ -94,7 +100,7 @@ export const SecurityCard = ({ disabled }) => {
                             </Grid>
                         )}
                         {recordType === RECORD_TYPE_COLLECTION && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <SecuritySelector
                                     disabled={disabled || (recordType === RECORD_TYPE_COLLECTION && !isSuperAdmin)}
                                     text={{
@@ -114,7 +120,7 @@ export const SecurityCard = ({ disabled }) => {
             </Grid>
             {!!dataStreams && dataStreams.length > 0 && (
                 <React.Fragment>
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <StandardCard
                             standardCardId="datastream-security-card"
                             title={text.dataStream.cardTitle(record.rek_pid)}
@@ -122,15 +128,21 @@ export const SecurityCard = ({ disabled }) => {
                             subCard
                         >
                             {
-                                <Grid container spacing={1} padding={0}>
-                                    <Grid xs={12}>
+                                <Grid
+                                    container
+                                    spacing={1}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
+                                    <Grid size={12}>
                                         <InheritedSecurityDetails
                                             title={text.inheritedPolicy.dataStream.title}
                                             collections={record.fez_record_search_key_ismemberof}
                                             parentKey="rek_datastream_policy"
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={form.control}
                                             key={dataStreams.length}

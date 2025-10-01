@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -79,27 +79,32 @@ const LegacyReportInterface = ({ id, loading, disabled, items, onExportClick }) 
                                 variant="standard"
                                 label={txt.label.report}
                                 helperText={txt.label.helperText}
-                                inputProps={{
-                                    ...params.inputProps,
-                                    id: `${id}-input`,
-                                    'data-analyticsid': `${id}-input`,
-                                    'data-testid': `${id}-input`,
-                                    'aria-describedby': `${id}-label`,
-                                }}
-                                InputLabelProps={{
-                                    'data-testid': `${id}-label`,
-                                    htmlFor: `${id}-input`,
+                                slotProps={{
+                                    htmlInput: {
+                                        ...params.inputProps,
+                                        id: `${id}-input`,
+                                        'data-analyticsid': `${id}-input`,
+                                        'data-testid': `${id}-input`,
+                                        'aria-describedby': `${id}-label`,
+                                    },
+
+                                    inputLabel: {
+                                        'data-testid': `${id}-label`,
+                                        htmlFor: `${id}-input`,
+                                    },
                                 }}
                             />
                         )}
-                        ListboxProps={{
-                            id: `${id}-listbox`,
-                            'data-analyticsid': `${id}-listbox`,
-                            'data-testid': `${id}-listbox`,
-                        }}
                         value={exportReport}
                         onChange={handleExportReportChange}
                         disabled={loading || disabled}
+                        slotProps={{
+                            listbox: {
+                                id: `${id}-listbox`,
+                                'data-analyticsid': `${id}-listbox`,
+                                'data-testid': `${id}-listbox`,
+                            },
+                        }}
                     />
                 </Grid>
 

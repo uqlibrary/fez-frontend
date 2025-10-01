@@ -58,7 +58,6 @@ async function inputRequired(getByTestId) {
         ['rek-contact-details-email-input', 'test@t.au'],
         ['rek-date-day-input', '1'],
         ['rek-date-year-input', '2000'],
-        ['rek-author-input', 'test'],
         ['rek-project-name-input', 'test'],
         ['rek-project-description-input', 'test'],
     ]);
@@ -78,8 +77,6 @@ async function inputRequired(getByTestId) {
         ['rek-subject-input', '010101', /010101/i],
         // Contact Name ID
         ['rek-contributor-id-input', 'David Johnsen', 'David Johnsen'],
-        // Creator Role
-        ['rek-author-role-input', 'a', /Project Lead/i],
     ]);
 }
 

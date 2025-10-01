@@ -3,20 +3,20 @@
 exports[`Add record stepper tests should properly detect if component needs update 1`] = `
 <div>
   <div
-    class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
+    class="MuiStepper-root MuiStepper-horizontal css-x1tdhg-MuiStepper-root"
   >
     <div
-      class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal Mui-completed css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             data-testid="CheckCircleIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -27,10 +27,10 @@ exports[`Add record stepper tests should properly detect if component needs upda
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-completed css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -40,24 +40,24 @@ exports[`Add record stepper tests should properly detect if component needs upda
       </span>
     </div>
     <div
-      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-j5w0w9-MuiStepConnector-root"
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-9ydz1a-MuiStepConnector-root"
     >
       <span
-        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
       />
     </div>
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -67,7 +67,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -78,10 +78,10 @@ exports[`Add record stepper tests should properly detect if component needs upda
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -91,24 +91,24 @@ exports[`Add record stepper tests should properly detect if component needs upda
       </span>
     </div>
     <div
-      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
     >
       <span
-        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
       />
     </div>
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -118,7 +118,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -129,10 +129,10 @@ exports[`Add record stepper tests should properly detect if component needs upda
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 3
@@ -148,20 +148,20 @@ exports[`Add record stepper tests should properly detect if component needs upda
 exports[`Add record stepper tests should properly detect if component needs update 2`] = `
 <div>
   <div
-    class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
+    class="MuiStepper-root MuiStepper-horizontal css-x1tdhg-MuiStepper-root"
   >
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -171,7 +171,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -182,10 +182,10 @@ exports[`Add record stepper tests should properly detect if component needs upda
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -195,24 +195,24 @@ exports[`Add record stepper tests should properly detect if component needs upda
       </span>
     </div>
     <div
-      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
     >
       <span
-        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
       />
     </div>
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -222,7 +222,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -233,10 +233,10 @@ exports[`Add record stepper tests should properly detect if component needs upda
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -246,24 +246,24 @@ exports[`Add record stepper tests should properly detect if component needs upda
       </span>
     </div>
     <div
-      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
     >
       <span
-        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
       />
     </div>
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -273,7 +273,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -284,10 +284,10 @@ exports[`Add record stepper tests should properly detect if component needs upda
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 3
@@ -303,20 +303,20 @@ exports[`Add record stepper tests should properly detect if component needs upda
 exports[`Add record stepper tests should properly detect if component needs update 3`] = `
 <div>
   <div
-    class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
+    class="MuiStepper-root MuiStepper-horizontal css-x1tdhg-MuiStepper-root"
   >
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -326,7 +326,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -337,10 +337,10 @@ exports[`Add record stepper tests should properly detect if component needs upda
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -350,24 +350,24 @@ exports[`Add record stepper tests should properly detect if component needs upda
       </span>
     </div>
     <div
-      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
     >
       <span
-        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
       />
     </div>
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -377,7 +377,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -388,10 +388,10 @@ exports[`Add record stepper tests should properly detect if component needs upda
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -407,20 +407,20 @@ exports[`Add record stepper tests should properly detect if component needs upda
 exports[`Add record stepper tests should render steps with specific active step 1`] = `
 <div>
   <div
-    class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
+    class="MuiStepper-root MuiStepper-horizontal css-x1tdhg-MuiStepper-root"
   >
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -430,7 +430,7 @@ exports[`Add record stepper tests should render steps with specific active step 
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -441,10 +441,10 @@ exports[`Add record stepper tests should render steps with specific active step 
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -454,24 +454,24 @@ exports[`Add record stepper tests should render steps with specific active step 
       </span>
     </div>
     <div
-      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
     >
       <span
-        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
       />
     </div>
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -481,7 +481,7 @@ exports[`Add record stepper tests should render steps with specific active step 
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -492,10 +492,10 @@ exports[`Add record stepper tests should render steps with specific active step 
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -505,24 +505,24 @@ exports[`Add record stepper tests should render steps with specific active step 
       </span>
     </div>
     <div
-      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
     >
       <span
-        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
       />
     </div>
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -532,7 +532,7 @@ exports[`Add record stepper tests should render steps with specific active step 
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -543,10 +543,10 @@ exports[`Add record stepper tests should render steps with specific active step 
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 3
@@ -562,20 +562,20 @@ exports[`Add record stepper tests should render steps with specific active step 
 exports[`Add record stepper tests should render steps with specific active step 2`] = `
 <div>
   <div
-    class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
+    class="MuiStepper-root MuiStepper-horizontal css-x1tdhg-MuiStepper-root"
   >
     <div
-      class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal Mui-completed css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             data-testid="CheckCircleIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -586,10 +586,10 @@ exports[`Add record stepper tests should render steps with specific active step 
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-completed css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -599,24 +599,24 @@ exports[`Add record stepper tests should render steps with specific active step 
       </span>
     </div>
     <div
-      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-j5w0w9-MuiStepConnector-root"
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-9ydz1a-MuiStepConnector-root"
     >
       <span
-        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
       />
     </div>
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -626,7 +626,7 @@ exports[`Add record stepper tests should render steps with specific active step 
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -637,10 +637,10 @@ exports[`Add record stepper tests should render steps with specific active step 
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -650,24 +650,24 @@ exports[`Add record stepper tests should render steps with specific active step 
       </span>
     </div>
     <div
-      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-9ydz1a-MuiStepConnector-root"
     >
       <span
-        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
       />
     </div>
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-disabled css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-disabled css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -677,7 +677,7 @@ exports[`Add record stepper tests should render steps with specific active step 
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -688,10 +688,10 @@ exports[`Add record stepper tests should render steps with specific active step 
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 3
@@ -707,20 +707,20 @@ exports[`Add record stepper tests should render steps with specific active step 
 exports[`Add record stepper tests should render steps with specific active step 3`] = `
 <div>
   <div
-    class="MuiStepper-root MuiStepper-horizontal css-tdx4x3-MuiStepper-root"
+    class="MuiStepper-root MuiStepper-horizontal css-x1tdhg-MuiStepper-root"
   >
     <div
-      class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal Mui-completed css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             data-testid="CheckCircleIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -731,10 +731,10 @@ exports[`Add record stepper tests should render steps with specific active step 
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-completed css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -744,24 +744,24 @@ exports[`Add record stepper tests should render steps with specific active step 
       </span>
     </div>
     <div
-      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-completed css-j5w0w9-MuiStepConnector-root"
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-completed css-9ydz1a-MuiStepConnector-root"
     >
       <span
-        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
       />
     </div>
     <div
-      class="MuiStep-root MuiStep-horizontal Mui-completed css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal Mui-completed css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-completed css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             data-testid="CheckCircleIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -772,10 +772,10 @@ exports[`Add record stepper tests should render steps with specific active step 
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-completed css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -785,24 +785,24 @@ exports[`Add record stepper tests should render steps with specific active step 
       </span>
     </div>
     <div
-      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-j5w0w9-MuiStepConnector-root"
+      class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-9ydz1a-MuiStepConnector-root"
     >
       <span
-        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-14ncu80-MuiStepConnector-line"
       />
     </div>
     <div
-      class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      class="MuiStep-root MuiStep-horizontal css-mlh15c-MuiStep-root"
     >
       <span
-        class="MuiStepLabel-root MuiStepLabel-horizontal css-1ly150q-MuiStepLabel-root"
+        class="MuiStepLabel-root MuiStepLabel-horizontal css-1peinwa-MuiStepLabel-root"
       >
         <span
-          class="MuiStepLabel-iconContainer Mui-active css-vnkopk-MuiStepLabel-iconContainer"
+          class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-11ur1x-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -812,7 +812,7 @@ exports[`Add record stepper tests should render steps with specific active step 
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -823,10 +823,10 @@ exports[`Add record stepper tests should render steps with specific active step 
           </svg>
         </span>
         <span
-          class="MuiStepLabel-labelContainer css-1vyamtt-MuiStepLabel-labelContainer"
+          class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-17flbue-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
           >
             <span>
               Step 3
