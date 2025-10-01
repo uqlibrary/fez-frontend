@@ -57,7 +57,7 @@ test.describe('Dashboard with open accessible work', () => {
         await expect(
             page
                 .locator('[data-testid=alert]')
-                .getByText('We have found 3 work(s) that do not meet Open Access grant eligibility.'),
+                .getByText('We have found 3 work(s) that do not meet the funder(s) Open Access requirements.'),
         ).toBeVisible();
         await page.locator('[data-testid=alert]').getByRole('button', { name: 'View and Fix' }).click();
         await expect(page).toHaveURL(/records\/my-open-access/);
