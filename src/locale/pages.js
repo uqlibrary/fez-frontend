@@ -333,8 +333,8 @@ export default {
                 actionButtonLabel: 'View and Complete',
             },
             oacomplianceRecordLure: {
-                title: 'OA Compliance Required',
-                message: 'We have found [count] work(s) that do not meet Open Access grant eligibility.',
+                title: 'Open Access Compliance Required',
+                message: 'We have found [count] work(s) that do not meet the funder(s) Open Access requirements.',
                 type: 'warning',
                 actionButtonLabel: 'View and Fix',
                 icon: <LockOpenIcon id="unlock-outline-icon" className="icon" />,
@@ -1286,7 +1286,7 @@ export default {
                 ),
             },
             publicationsList: {
-                complete: 'Open access this work',
+                complete: 'Make open access',
             },
             facetsFilter: {
                 ...locale.components.facetsFilter,

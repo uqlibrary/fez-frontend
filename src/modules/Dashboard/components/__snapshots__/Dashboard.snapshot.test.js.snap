@@ -3153,12 +3153,12 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      OA Compliance Required - 
+                      Open Access Compliance Required - 
                     </b>
                     <span
                       data-testid="alert-message"
                     >
-                      We have found 2 work(s) that do not meet Open Access grant eligibility.
+                      We have found 2 work(s) that do not meet the funder(s) Open Access requirements.
                     </span>
                   </div>
                 </div>
