@@ -10,7 +10,7 @@ import { useJournalContext } from 'context';
 import { fieldConfig } from 'config/journalAdmin';
 
 export const FieldGridItem = ({ field, group, disabled }) => {
-    const { jnlDisplayType } = useJournalContext();
+    const { jnlDisplayType, journalDetails } = useJournalContext();
     const methods = useFormContext();
     const config = fieldConfig.default[field];
     if (!config) {
@@ -37,7 +37,9 @@ export const FieldGridItem = ({ field, group, disabled }) => {
 
     const componentProps = {
         ...config.componentProps,
-        ...(((fieldConfig.override[jnlDisplayType] || {})[field] || (() => {}))({}) || {}),
+        ...(((fieldConfig.override[jnlDisplayType] || {})[field] || (() => {}))({
+            journalDetails: journalDetails,
+        }) || {}),
     };
     const error = methods.getFieldState(componentProps.name).error;
     return (

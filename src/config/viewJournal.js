@@ -7,23 +7,24 @@ import { getIndicator, types } from 'modules/SharedComponents/JournalsList/compo
 import componentLocale from 'locale/components';
 import { pathConfig } from './pathConfig';
 
+export const getAbbrevTitle = journalDetails =>
+    journalDetails.jnl_abbrev_title ||
+    journalDetails.fez_journal_jcr_scie?.jnl_jcr_scie_abbrev_title ||
+    journalDetails.fez_journal_jcr_ssci?.jnl_jcr_ssci_abbrev_title ||
+    (journalDetails.fez_journal_issn &&
+        Array.isArray(journalDetails.fez_journal_issn) &&
+        journalDetails.fez_journal_issn.length > 0 &&
+        (journalDetails.fez_journal_issn[0]?.fez_ulrichs?.ulr_abbrev_title ||
+            journalDetails.fez_journal_issn[1]?.fez_ulrichs?.ulr_abbrev_title));
+
 export const viewJournalConfig = {
     basic: {
         rows: [
             [
                 {
                     heading: 'ISO abbreviated title',
-                    fieldId: 'ulr-abbrev-title',
-                    getData: journalDetails =>
-                        (journalDetails.fez_journal_jcr_scie &&
-                            journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title) ||
-                        (journalDetails.fez_journal_jcr_ssci &&
-                            journalDetails.fez_journal_jcr_ssci.jnl_jcr_ssci_abbrev_title) ||
-                        (journalDetails.fez_journal_issn &&
-                            Array.isArray(journalDetails.fez_journal_issn) &&
-                            journalDetails.fez_journal_issn.length > 0 &&
-                            journalDetails.fez_journal_issn[0].fez_ulrichs &&
-                            journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_abbrev_title),
+                    fieldId: 'jnl-abbrev-title',
+                    getData: journalDetails => getAbbrevTitle(journalDetails),
                     template: 'DefaultTemplate',
                 },
             ],
