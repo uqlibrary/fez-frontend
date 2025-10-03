@@ -27,10 +27,7 @@ test.describe('view Journal', () => {
         await tabVisibleInWindow(page, '3', false);
         await tabVisibleInWindow(page, '4', false);
         // Click the right scroll button
-        await ssciSection
-            .locator('div.MuiTabs-scrollButtons')
-            .nth(1)
-            .click();
+        await ssciSection.locator('div.MuiTabs-scrollButtons').nth(1).click();
         await tabVisibleInWindow(page, '0', false);
         await tabVisibleInWindow(page, '3', true);
         await tabVisibleInWindow(page, '4', true);
@@ -83,7 +80,7 @@ test.describe('view Journal', () => {
 
                 const fields = [
                     'jnl_title-input',
-                    'jnl_jcr_scie_abbrev_title-input',
+                    'jnl_abbrev_title-input',
                     'jnl_publisher-input',
                     'jnl_refereed-input',
                     'jnl_publication_year-input',
