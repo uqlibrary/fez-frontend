@@ -1,7 +1,6 @@
 export const helpersTypicalExpected = {
     initialValues: {
         adminSection: {
-            abbreviatedTitle: 'ADV NONLINEAR STUD',
             advisoryStatement: {
                 text: {
                     htmlText: 'This is an advisory statement',
@@ -11,6 +10,7 @@ export const helpersTypicalExpected = {
             },
             description:
                 'Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.',
+            jnl_abbrev_title: null,
             jnl_publisher: 'Walter de Gruyter GmbH',
             jnl_title: 'Advanced Nonlinear Studies',
             publicationFormats: 'Print',
@@ -443,6 +443,7 @@ export const helpersTypicalExpected = {
                 },
             ],
             is_favourite: false,
+            jnl_abbrev_title: null,
             jnl_advisory_statement: 'This is an advisory statement',
             jnl_advisory_statement_type: 1234,
             jnl_created_date: '2021-02-22 00:56:49',
@@ -473,7 +474,6 @@ export const helpersTypicalExpected = {
 export const helpersNonTypicalExpected = {
     initialValues: {
         adminSection: {
-            abbreviatedTitle: 'ADV NONLINEAR STUD',
             advisoryStatement: {
                 text: {
                     htmlText: 'This is an advisory statement',
@@ -483,6 +483,7 @@ export const helpersNonTypicalExpected = {
             },
             description:
                 'Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.',
+            jnl_abbrev_title: null,
             jnl_publisher: 'Walter de Gruyter GmbH',
             jnl_title: 'Advanced Nonlinear Studies',
             publicationFormats: 'Print',
@@ -871,6 +872,7 @@ export const helpersNonTypicalExpected = {
                 },
             ],
             is_favourite: false,
+            jnl_abbrev_title: null,
             jnl_advisory_statement: 'This is an advisory statement',
             jnl_advisory_statement_type: 1234,
             jnl_created_date: '2021-02-22 00:56:49',
