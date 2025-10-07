@@ -69,7 +69,6 @@ export const AdminContainer = ({ createMode = false }) => {
         shouldUnregister: false,
         criteriaMode: 'all',
         mode: 'onChange',
-        // errors // can we use this to handle tab errors?
     });
 
     const [customErrors, setCustomErrors] = React.useState({});
