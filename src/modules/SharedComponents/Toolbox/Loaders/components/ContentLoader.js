@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import InlineLoader from './InlineLoader';
 

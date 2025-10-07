@@ -61,7 +61,7 @@ describe('ViewJournal', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should display journal details basic section', async () => {
+    it('should display journal details', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
                 ...journalDetails.data,
@@ -74,6 +74,22 @@ describe('ViewJournal', () => {
                         },
                     ],
                 },
+                fez_editorial_appointment: [
+                    {
+                        fez_author: {
+                            aut_id: 1,
+                            aut_org_username: 'uqauthor1',
+                            aut_display_name: 'Author, Test',
+                        },
+                    },
+                    {
+                        fez_author: {
+                            aut_id: 2,
+                            aut_org_username: 'uqauthor2',
+                            aut_display_name: 'Author2, Test',
+                        },
+                    },
+                ],
             },
         });
 
@@ -134,6 +150,21 @@ describe('ViewJournal', () => {
             'href',
             'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41699',
         );
+
+        // **************************************************************
+        // Publisher Agreements Section
+        // **************************************************************
+        expect(getByTestId('journal-details-readAndPublish-header')).toHaveTextContent('Publisher agreements');
+
+        expect(getByTestId('jnl-read-and-publish-header')).toHaveTextContent('Read and publish agreement');
+        expect(getByTestId('jnl-read-and-publish-link-prefix')).toHaveTextContent('Yes, via Publisher');
+        expect(getByTestId('jnl-read-and-publish-lookup-link')).toHaveAttribute(
+            'href',
+            'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
+        );
+
+        expect(getByTestId('jnl-read-and-publish-source-date-header')).toHaveTextContent('Last updated');
+        expect(getByTestId('jnl-read-and-publish-source-date-value')).toHaveTextContent('28th January 2021');
 
         // **************************************************************
         // Open Access (Directory of Open Access Journals - DOAJ) Section
@@ -492,6 +523,31 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-nature-index-source-date-header')).toHaveTextContent('Nature Index');
         expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('Yes, 2019');
+
+        // ******************************************************************
+        // UQ Connections
+        // ******************************************************************
+        expect(getByTestId('jnl-uq-author-count-header')).toHaveTextContent('Number of UQ Authors');
+        expect(getByTestId('jnl-uq-author-count-value')).toHaveTextContent('200');
+
+        expect(getByTestId('jnl-uq-author-publications-header')).toHaveTextContent('UQ Authored Publications');
+        expect(getByTestId('jnl-uq-author-publications-value')).toHaveTextContent('View these articles in UQ eSpace');
+        expect(getByTestId('jnl-uq-author-publications-lookup-link')).toHaveAttribute(
+            'href',
+            'https://fez-staging.library.uq.edu.au/records/search?activeFacets[ranges][Year+published][from]=2020&activeFacets[ranges][Year+published][to]=2025&searchQueryParams[mtj_jnl_id][value]=8508&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
+        );
+
+        expect(getByTestId('jnl-editorial-staff-header')).toHaveTextContent('UQ Editorial Staff');
+        expect(getByTestId('jnl-editorial-staff-0-value')).toHaveTextContent('Author, Test');
+        expect(getByTestId('jnl-editorial-staff-0-lookup-link')).toHaveAttribute(
+            'href',
+            'https://app.library.uq.edu.au/#/authors/uqauthor1',
+        );
+        expect(getByTestId('jnl-editorial-staff-1-value')).toHaveTextContent('Author2, Test');
+        expect(getByTestId('jnl-editorial-staff-1-lookup-link')).toHaveAttribute(
+            'href',
+            'https://app.library.uq.edu.au/#/authors/uqauthor2',
+        );
     });
 
     it('should display ulr open access url from second issn', async () => {
@@ -630,6 +686,28 @@ describe('ViewJournal', () => {
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
         expect(queryByTestId('srm-journal-link-header')).not.toBeInTheDocument();
+    });
+
+    it('Should not show uq connection section when empty editorial appointment and 0 author count', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                jnl_title: 'test',
+                uq_author_id_count: 0,
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '1111-1111',
+                        jnl_issn_order: 1,
+                    },
+                ],
+                fez_editorial_appointment: [],
+            },
+        });
+
+        const { queryByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(queryByTestId('journal-details-uqConnections-header')).not.toBeInTheDocument();
     });
 
     it('should render correct creative licenses (BY-ND)', async () => {
@@ -786,7 +864,7 @@ describe('ViewJournal', () => {
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
         // Regex: Exact pattern Match (between start and end) - Must match exactly.
-        expect(getByTestId('journal-details-uqData-header')).toHaveTextContent(/^UQ eSpace$/);
+        expect(getByTestId('journal-details-uqConnections-header')).toHaveTextContent(/^UQ Connections$/);
     });
 
     it('should display journal details Tab width in tablet size when >1 tab shown', async () => {

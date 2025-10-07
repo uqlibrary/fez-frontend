@@ -22,7 +22,13 @@ export const OpenAccessIcon = ({
 
     if (!securityStatus) {
         return (
-            <Tooltip title={txt.securityLocked} placement="left" TransitionComponent={Fade}>
+            <Tooltip
+                title={txt.securityLocked}
+                placement="left"
+                slots={{
+                    transition: Fade,
+                }}
+            >
                 <Lock sx={{ ...style }} data-testid={getIconTestId('no-oa')} />
             </Tooltip>
         );
@@ -33,7 +39,13 @@ export const OpenAccessIcon = ({
                 : txt.labelOpenAccessNoStatus;
 
         return (
-            <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
+            <Tooltip
+                title={openAccessTitle}
+                placement="left"
+                slots={{
+                    transition: Fade,
+                }}
+            >
                 <LockOpen sx={{ ...style }} data-testid={getIconTestId('oa')} />
             </Tooltip>
         );
@@ -48,7 +60,13 @@ export const OpenAccessIcon = ({
                         {txt.embargoedUntil.replace('[embargo_date]', embargoDate)}
                     </span>
                 )}
-                <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
+                <Tooltip
+                    title={openAccessTitle}
+                    placement="left"
+                    slots={{
+                        transition: Fade,
+                    }}
+                >
                     <LockClockOutlined sx={{ ...style }} data-testid={getIconTestId('embargoed-oa')} />
                 </Tooltip>
             </Fragment>

@@ -3,13 +3,13 @@
 exports[`ScaleOfSignificanceTemplate component should render default view 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         data-testid="scalesignif-author-0"
         style="color: rgba(0, 0, 0, 0.5);"
       >
@@ -18,10 +18,10 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         data-testid="scale-item-0"
         id="scale-item-0"
       >
@@ -29,10 +29,10 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
     >
       <span
-        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         data-testid="statement-item-0"
         id="statement-item-0"
       />
@@ -44,13 +44,13 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
 exports[`ScaleOfSignificanceTemplate component should render with author name 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         data-testid="scalesignif-author-0"
         style="color: rgba(0, 0, 0, 0.5);"
       >
@@ -60,10 +60,10 @@ exports[`ScaleOfSignificanceTemplate component should render with author name 1`
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         data-testid="scale-item-0"
         id="scale-item-0"
       >
@@ -71,10 +71,10 @@ exports[`ScaleOfSignificanceTemplate component should render with author name 1`
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
     >
       <span
-        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         data-testid="statement-item-0"
         id="statement-item-0"
       >

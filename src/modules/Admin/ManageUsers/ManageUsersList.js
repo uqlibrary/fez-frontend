@@ -407,29 +407,32 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     title=""
                     placeholder="Search users"
                     variant="standard"
-                    inputProps={{
-                        inputMode: 'search',
-                        'data-testid': 'users-search-input',
-                        'aria-label': searchAriaLabel,
-                    }}
-                    InputProps={{
-                        startAdornment: (
-                            <InputAdornment position="start">
-                                <tableIcons.Search />
-                            </InputAdornment>
-                        ),
-                        endAdornment: (
-                            <InputAdornment position="end">
-                                <IconButton disabled={!!!searchTerm} onClick={() => handleSearch()}>
-                                    <tableIcons.Clear />
-                                </IconButton>
-                            </InputAdornment>
-                        ),
-                    }}
                     sx={{ width: { md: '300px' } }}
                     value={searchTerm}
                     onChange={handleSearch}
                     disabled={table.getState().creatingRow !== null}
+                    slotProps={{
+                        input: {
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                    <tableIcons.Search />
+                                </InputAdornment>
+                            ),
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <IconButton disabled={!!!searchTerm} onClick={() => handleSearch()}>
+                                        <tableIcons.Clear />
+                                    </IconButton>
+                                </InputAdornment>
+                            ),
+                        },
+
+                        htmlInput: {
+                            inputMode: 'search',
+                            'data-testid': 'users-search-input',
+                            'aria-label': searchAriaLabel,
+                        },
+                    }}
                 />
                 <Button
                     id={`users-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)

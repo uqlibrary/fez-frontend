@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { useWatch } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
@@ -142,10 +142,10 @@ const FeedbackRecord = () => {
             <ConfirmDiscardFormChanges dirty={isDirty} isSubmitSuccessful={isSubmitSuccessful}>
                 <form onSubmit={onSubmit}>
                     <Grid container spacing={3}>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard>{txtForm.introduction}</StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard>
                                 <PublicationCitation
                                     publication={recordToFeedback}
@@ -170,10 +170,10 @@ const FeedbackRecord = () => {
                                     : txtForm.successWorkflowConfirmation.guestConfirmationButtonLabel,
                             }}
                         />
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txtForm.details.title}>
                                 <Grid container spacing={3}>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={RadioGroupField}
@@ -185,7 +185,7 @@ const FeedbackRecord = () => {
                                             options={txtForm.details.shareDetails.options}
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -197,7 +197,7 @@ const FeedbackRecord = () => {
                                             fullWidth
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -210,7 +210,7 @@ const FeedbackRecord = () => {
                                             fullWidth
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -223,7 +223,7 @@ const FeedbackRecord = () => {
                                             fullWidth
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -235,7 +235,7 @@ const FeedbackRecord = () => {
                                             fullWidth
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Typography variant={'h6'}>{txtForm.indigenousIdentity.title}</Typography>
                                         <Field
                                             control={control}
@@ -247,7 +247,7 @@ const FeedbackRecord = () => {
                                             options={txtForm.indigenousIdentity.options}
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Typography variant={'h6'}>{txtForm.hasKinshipConnection.title}</Typography>
                                         <Field
                                             control={control}
@@ -259,7 +259,7 @@ const FeedbackRecord = () => {
                                             options={txtForm.hasKinshipConnection.options}
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Typography variant={'h6'}>
                                             {txtForm.isICIPHolder.title}
                                             <HelpIcon
@@ -279,7 +279,7 @@ const FeedbackRecord = () => {
                                         />
                                     </Grid>
                                     {data.isIcipHolder === '1' && (
-                                        <Grid xs={12}>
+                                        <Grid size={12}>
                                             <Typography variant={'h6'}>{txtForm.communityParticipant.title}</Typography>
                                             <Field
                                                 control={control}
@@ -295,7 +295,7 @@ const FeedbackRecord = () => {
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txtForm.feedbackTypes.title}>
                                 <Field
                                     control={control}
@@ -309,10 +309,10 @@ const FeedbackRecord = () => {
                             </StandardCard>
                         </Grid>
                         {feedbackTypes?.hasOwnProperty('feedback') && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard>
                                     <Grid container spacing={3}>
-                                        <Grid xs={12}>
+                                        <Grid size={12}>
                                             <Typography variant={'h6'}>{txtForm.communityInfo.title}</Typography>
                                             <Field
                                                 control={control}
@@ -328,7 +328,7 @@ const FeedbackRecord = () => {
                                                 fullWidth
                                             />
                                         </Grid>
-                                        <Grid xs={12}>
+                                        <Grid size={12}>
                                             <Typography variant={'h6'}>{txtForm.relatedPeople.title}</Typography>
                                             <Field
                                                 control={control}
@@ -349,7 +349,7 @@ const FeedbackRecord = () => {
                             </Grid>
                         )}
                         {feedbackTypes?.hasOwnProperty('story') && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard>
                                     <Typography variant={'h6'}>{txtForm.story.title}</Typography>
                                     <Field
@@ -368,10 +368,16 @@ const FeedbackRecord = () => {
                             </Grid>
                         )}
                         {feedbackTypes?.hasOwnProperty('takedown') && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard>
-                                    <Grid container spacing={3} padding={0}>
-                                        <Grid xs={12}>
+                                    <Grid
+                                        container
+                                        spacing={3}
+                                        sx={{
+                                            padding: 0,
+                                        }}
+                                    >
+                                        <Grid size={12}>
                                             <Typography variant={'h6'}>{txtForm.culturalInfo.title}</Typography>
                                             <Field
                                                 control={control}
@@ -383,7 +389,7 @@ const FeedbackRecord = () => {
                                                 options={txtForm.culturalInfo.options}
                                             />
                                         </Grid>
-                                        <Grid xs={12}>
+                                        <Grid size={12}>
                                             <Typography variant={'h6'}>{txtForm.specialCare.title}</Typography>
                                             <Field
                                                 control={control}
@@ -399,10 +405,10 @@ const FeedbackRecord = () => {
                                 </StandardCard>
                             </Grid>
                         )}
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard>
                                 <Grid container spacing={3}>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Typography variant={'h6'}>{txtForm.acknowledgement.title}</Typography>
                                         <Field
                                             control={control}
@@ -414,7 +420,7 @@ const FeedbackRecord = () => {
                                             options={txtForm.acknowledgement.options}
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Typography sx={{ fontStyle: 'italic' }} variant={'body1'}>
                                             {txtForm.acknowledgement.disclaimer}
                                         </Typography>
@@ -423,13 +429,13 @@ const FeedbackRecord = () => {
                             </StandardCard>
                         </Grid>
                         {alertProps && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <Alert pushToTop {...alertProps} />
                             </Grid>
                         )}
                     </Grid>
                     <Grid container spacing={3}>
-                        <Grid xs />
+                        <Grid size="grow" />
                         <Grid>
                             <Button
                                 variant={'contained'}

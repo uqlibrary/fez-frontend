@@ -66,7 +66,7 @@ describe('QuickLink', () => {
 
         expect(getByTestId('test-id')).toBeInTheDocument();
         expect(getByText('100')).toBeInTheDocument();
-        expect(queryByTestId('OpenInNewIcon')).not.toBeInTheDocument();
+        expect(queryByTestId('OpenInNewIcon-1')).not.toBeInTheDocument();
         expect(getByTestId('quick-link-1-link')).toHaveTextContent('Test internal title');
         expect(getByTestId('MoreVertIcon')).toBeInTheDocument();
     });
@@ -81,7 +81,7 @@ describe('QuickLink', () => {
 
         expect(getByTestId('test-id')).toBeInTheDocument();
         expect(queryByText('100')).not.toBeInTheDocument();
-        expect(queryByTestId('ScheduleIcon')).toBeInTheDocument();
+        expect(queryByTestId('ScheduleIcon-1')).toBeInTheDocument();
         expect(getByTestId('quick-link-1-link')).toHaveTextContent('Test internal title without amount');
         expect(getByTestId('MoreVertIcon')).toBeInTheDocument();
     });
@@ -96,7 +96,7 @@ describe('QuickLink', () => {
 
         expect(getByTestId('test-id')).toBeInTheDocument();
         expect(queryByText('100')).not.toBeInTheDocument();
-        expect(getByTestId('OpenInNewIcon')).toBeInTheDocument();
+        expect(getByTestId('OpenInNewIcon-1')).toBeInTheDocument();
         expect(getByTestId('quick-link-1-link')).toHaveTextContent('Test external title');
         expect(getByTestId('MoreVertIcon')).toBeInTheDocument();
     });

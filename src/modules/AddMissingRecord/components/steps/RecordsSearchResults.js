@@ -3,7 +3,7 @@ import React, { Suspense } from 'react';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 
 const PublicationsList = React.lazy(

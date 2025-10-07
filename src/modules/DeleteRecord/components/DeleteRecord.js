@@ -155,7 +155,7 @@ const DeleteRecord = () => {
             <ConfirmDiscardFormChanges dirty={isDirt} isSubmitSuccessful={isSubmitSuccessful}>
                 <form onSubmit={onSubmit}>
                     <Grid container spacing={3}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.subTitle(isDeleted)} help={txt.help}>
                                 <PublicationCitation
                                     publication={recordToDelete}
@@ -170,10 +170,10 @@ const DeleteRecord = () => {
                             onCancelAction={navigateToSearchPage}
                             locale={saveConfirmationLocale}
                         />
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={formTxt.reason.title(isDeleted)}>
                                 <Grid container spacing={2}>
-                                    <Grid item xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -192,10 +192,10 @@ const DeleteRecord = () => {
                             </StandardCard>
                         </Grid>
                         {hasCrossrefDoi && (
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <StandardCard title={formTxt.doiResolutionUrl.title}>
                                     <Grid container spacing={2}>
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Field
                                                 control={control}
                                                 component={TextField}
@@ -215,10 +215,10 @@ const DeleteRecord = () => {
                         )}
                         {hasDataCiteDoi && (
                             <>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <StandardCard title={formTxt.newDoi.title}>
                                         <Grid container spacing={2}>
-                                            <Grid item xs={12}>
+                                            <Grid size={12}>
                                                 <Field
                                                     control={control}
                                                     component={TextField}
@@ -238,10 +238,10 @@ const DeleteRecord = () => {
                                         </Grid>
                                     </StandardCard>
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <StandardCard title={formTxt.notes.title}>
                                         <Grid container spacing={2}>
-                                            <Grid item xs={12}>
+                                            <Grid size={12}>
                                                 <Field
                                                     control={control}
                                                     component={RichEditorField}
@@ -262,14 +262,18 @@ const DeleteRecord = () => {
                             </>
                         )}
                         {alertProps && (
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <Alert pushToTop {...alertProps} />
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={3} style={{ marginTop: 8 }}>
-                        <Grid item xs />
-                        <Grid item>
+                    <Grid
+                        container
+                        spacing={2}
+                        padding={2}
+                        sx={{ justifyContent: 'flex-end', pr: 0, pl: { xs: 0, sm: 'auto' } }}
+                    >
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 variant={'contained'}
                                 fullWidth
@@ -279,9 +283,10 @@ const DeleteRecord = () => {
                                 id="cancel-delete-record"
                                 data-testid="cancel-delete-record"
                                 data-analyticsid="cancel-delete-record"
+                                sx={{ sm: { width: 'auto' } }}
                             />
                         </Grid>
-                        <Grid item>
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 type="submit"
                                 variant={'contained'}
@@ -292,6 +297,7 @@ const DeleteRecord = () => {
                                 id="submit-delete-record"
                                 data-analyticsid="delete-admin"
                                 data-testid="submit-delete-record"
+                                sx={{ sm: { width: 'auto' } }}
                             />
                         </Grid>
                     </Grid>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import List from '@mui/material/List';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import { publicationTypes } from 'config';
 import { locale } from 'locale';
