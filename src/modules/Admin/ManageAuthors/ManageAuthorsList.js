@@ -274,6 +274,11 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         table.setCreatingRow(true);
     };
 
+    React.useEffect(() => {
+        onSearchTermChange('');
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const table = useMaterialReactTable({
         columns,
         data,
