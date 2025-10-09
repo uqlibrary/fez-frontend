@@ -5,10 +5,7 @@ import { readCKEditor, typeCKEditor } from '../../../lib/ckeditor';
 import { ULRICHS_URL_PREFIX } from 'config/general';
 
 const removeJournalLock = async (page: Page) => {
-    await page
-        .getByTestId('alert-error')
-        .getByTestId('action-button')
-        .click();
+    await page.getByTestId('alert-error').getByTestId('action-button').click();
 };
 
 const checkIssnLinks = async (container: Locator, issn: string) => {
@@ -225,7 +222,7 @@ test.describe('JournalAdmin', () => {
             await expect(tabbedCheckboxParent).toHaveAttribute('aria-label', 'Switch to full form mode');
 
             const tabs = page.getByRole('tab');
-            await expect(tabs).toHaveCount(5);
+            await expect(tabs).toHaveCount(6);
             await expect(tabs.nth(0)).toHaveAttribute('aria-selected', 'true');
 
             await page.getByTestId('jnl_title-input').clear();
