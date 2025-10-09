@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, waitFor, act, cleanup, userEvent } from 'test-utils';
 import '@testing-library/jest-dom';
-import AlmetricWidget from './AlmetricWidget';
+import AlmetricWidget, { externalDependenciesUrl } from './AlmetricWidget';
 import { fireEvent } from '@testing-library/react';
 
 // jest.mock('throttle-debounce', () => ({
@@ -111,7 +111,7 @@ describe('AlmetricWidget', () => {
         setup();
 
         await waitFor(() => {
-            const script = document.querySelector('script[src="https://embed.altmetric.com/assets/embed.js"]');
+            const script = document.querySelector(`script[src="${externalDependenciesUrl}"]`);
             expect(script).toBeInTheDocument();
             expect(script.async).toBe(true);
         });
@@ -119,12 +119,12 @@ describe('AlmetricWidget', () => {
 
     it('should reuse existing create widget function', async () => {
         window._altmetric_embed_init = jest.fn();
-        const existingScript = createFakeScript('https://embed.altmetric.com/assets/embed.js');
+        const existingScript = createFakeScript(externalDependenciesUrl);
 
         setup();
 
         await waitFor(() => {
-            const scripts = document.querySelectorAll('script[src="https://embed.altmetric.com/assets/embed.js"]');
+            const scripts = document.querySelectorAll(`script[src="${externalDependenciesUrl}"]`);
             expect(scripts.length).toBe(1);
             expect(scripts[0]).toBe(existingScript);
         });
