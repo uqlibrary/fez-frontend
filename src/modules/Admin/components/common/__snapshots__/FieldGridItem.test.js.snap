@@ -201,10 +201,11 @@ exports[`FieldGridItem should render with correct props 1`] = `
               >
                 <th
                   aria-sort="none"
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1iusclh-MuiTableCell-root"
+                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-zf0lkp-MuiTableCell-root"
                   colspan="1"
                   data-index="0"
                   scope="col"
+                  tabindex="0"
                 >
                   <div
                     class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -223,11 +224,12 @@ exports[`FieldGridItem should render with correct props 1`] = `
                 </th>
                 <th
                   aria-sort="none"
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1op3qx2-MuiTableCell-root"
+                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1o6eu5g-MuiTableCell-root"
                   colspan="1"
                   data-can-sort="true"
                   data-index="1"
                   scope="col"
+                  tabindex="0"
                 >
                   <div
                     class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -305,11 +307,12 @@ exports[`FieldGridItem should render with correct props 1`] = `
                 </th>
                 <th
                   aria-sort="none"
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1oggxsy-MuiTableCell-root"
+                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nhjb21-MuiTableCell-root"
                   colspan="1"
                   data-can-sort="true"
                   data-index="2"
                   scope="col"
+                  tabindex="0"
                 >
                   <div
                     class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -364,10 +367,11 @@ exports[`FieldGridItem should render with correct props 1`] = `
                 </th>
                 <th
                   aria-sort="none"
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-149hbzy-MuiTableCell-root"
+                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-163o9rt-MuiTableCell-root"
                   colspan="1"
                   data-index="3"
                   scope="col"
+                  tabindex="0"
                 >
                   <div
                     class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -406,9 +410,6 @@ exports[`FieldGridItem should render with correct props 1`] = `
                 </td>
               </tr>
             </tbody>
-            <tfoot
-              class="MuiTableFooter-root css-13kpbyb-MuiTableFooter-root"
-            />
           </table>
         </div>
         <div
