@@ -13,6 +13,7 @@ const cleanUpWidgetCreationDeps = () =>
     tryCatch(() =>
         document.querySelectorAll<HTMLScriptElement>('script[src*="altmetric.com/"]').forEach(script => {
             // keep imported main deps, as we want to reuse it
+            // istanbul ignore next
             if (script.src?.startsWith?.(externalDependenciesUrl)) return;
             // remove additional deps injected during widget creation
             script.parentNode?.removeChild(script);
