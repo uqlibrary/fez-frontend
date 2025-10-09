@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Grid from '@mui/material/Grid';
@@ -123,6 +124,13 @@ const localContent = {
         nextAction: pathConfig.records.openAccessCompliance,
         saveConfirmationLocale: { ...formsLocale.forms.openAccessComplianceForm.successWorkflowConfirmation },
     },
+};
+
+const ConditionalWrapper = ({ condition, children, ...rest }) =>
+    condition ? <Box {...rest}>{children}</Box> : children;
+ConditionalWrapper.propTypes = {
+    condition: PropTypes.bool,
+    children: PropTypes.node,
 };
 
 const FixRecord = ({ openAccess = false }) => {
@@ -271,91 +279,101 @@ const FixRecord = ({ openAccess = false }) => {
                                     onCancelAction={navigateToDashboard}
                                     locale={saveConfirmationLocale}
                                 />
-                                <Grid size={12}>
-                                    <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
-                                        <Grid
-                                            container
-                                            spacing={2}
-                                            sx={{
-                                                padding: 0,
-                                            }}
-                                        >
-                                            <Grid size={12}>
-                                                <Field
-                                                    control={control}
-                                                    component={TextField}
-                                                    disabled={isSubmitting}
-                                                    name="comments"
-                                                    textFieldId="comments"
-                                                    type="text"
-                                                    fullWidth
-                                                    multiline
-                                                    rows={3}
-                                                    label={txtFixForm.comments.fieldLabels.comments}
-                                                />
-                                            </Grid>
-                                            <Grid size={12}>
-                                                <Field
-                                                    control={control}
-                                                    component={TextField}
-                                                    disabled={isSubmitting}
-                                                    name="rek_link"
-                                                    textFieldId="rek_link"
-                                                    type="text"
-                                                    fullWidth
-                                                    label={txtFixForm.comments.fieldLabels.url}
-                                                    validate={[validation.url]}
-                                                />
-                                            </Grid>
-                                        </Grid>
-                                    </StandardCard>
-                                </Grid>
-                                {!openAccess && showContentIndicatorsField(recordToFix) && (
+                                <ConditionalWrapper
+                                    condition={openAccess}
+                                    sx={{ display: 'flex', flexDirection: 'column-reverse', rowGap: 3 }}
+                                >
                                     <Grid size={12}>
-                                        <StandardCard
-                                            title={txtFixForm.contentIndicators.title}
-                                            help={txtFixForm.contentIndicators.help}
-                                        >
+                                        <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
                                             <Grid
                                                 container
-                                                spacing={3}
+                                                spacing={2}
                                                 sx={{
                                                     padding: 0,
                                                 }}
                                             >
                                                 <Grid size={12}>
-                                                    <Typography>{txtFixForm.contentIndicators.description}</Typography>
+                                                    <Field
+                                                        control={control}
+                                                        component={TextField}
+                                                        disabled={isSubmitting}
+                                                        name="comments"
+                                                        textFieldId="comments"
+                                                        type="text"
+                                                        fullWidth
+                                                        multiline
+                                                        rows={3}
+                                                        label={txtFixForm.comments.fieldLabels.comments}
+                                                    />
                                                 </Grid>
                                                 <Grid size={12}>
                                                     <Field
                                                         control={control}
-                                                        component={ContentIndicatorsField}
-                                                        displayType={recordToFix.rek_display_type}
+                                                        component={TextField}
                                                         disabled={isSubmitting}
-                                                        id="content-indicators"
-                                                        name="contentIndicators"
-                                                        label={txtFixForm.contentIndicators.label}
-                                                        multiple
+                                                        name="rek_link"
+                                                        textFieldId="rek_link"
+                                                        type="text"
                                                         fullWidth
+                                                        label={txtFixForm.comments.fieldLabels.url}
+                                                        validate={[validation.url]}
                                                     />
                                                 </Grid>
                                             </Grid>
                                         </StandardCard>
                                     </Grid>
-                                )}
-                                <Grid size={12}>
-                                    <StandardCard title={txtFixForm.fileUpload.title} help={txtFixForm.fileUpload.help}>
-                                        {txtFixForm.fileUpload.description}
-                                        <Field
-                                            control={control}
-                                            name="files"
-                                            component={FileUploadField}
-                                            disabled={isSubmitting}
-                                            requireOpenAccessStatus
-                                            validate={[validation.validFileUpload]}
-                                        />
-                                    </StandardCard>
-                                </Grid>
+                                    {!openAccess && showContentIndicatorsField(recordToFix) && (
+                                        <Grid size={12}>
+                                            <StandardCard
+                                                title={txtFixForm.contentIndicators.title}
+                                                help={txtFixForm.contentIndicators.help}
+                                            >
+                                                <Grid
+                                                    container
+                                                    spacing={3}
+                                                    sx={{
+                                                        padding: 0,
+                                                    }}
+                                                >
+                                                    <Grid size={12}>
+                                                        <Typography>
+                                                            {txtFixForm.contentIndicators.description}
+                                                        </Typography>
+                                                    </Grid>
+                                                    <Grid size={12}>
+                                                        <Field
+                                                            control={control}
+                                                            component={ContentIndicatorsField}
+                                                            displayType={recordToFix.rek_display_type}
+                                                            disabled={isSubmitting}
+                                                            id="content-indicators"
+                                                            name="contentIndicators"
+                                                            label={txtFixForm.contentIndicators.label}
+                                                            multiple
+                                                            fullWidth
+                                                        />
+                                                    </Grid>
+                                                </Grid>
+                                            </StandardCard>
+                                        </Grid>
+                                    )}
+                                    <Grid size={12}>
+                                        <StandardCard
+                                            title={txtFixForm.fileUpload.title}
+                                            help={txtFixForm.fileUpload.help}
+                                        >
+                                            {txtFixForm.fileUpload.description}
+                                            <Field
+                                                control={control}
+                                                name="files"
+                                                component={FileUploadField}
+                                                disabled={isSubmitting}
+                                                requireOpenAccessStatus
+                                                validate={[validation.validFileUpload]}
+                                            />
+                                        </StandardCard>
+                                    </Grid>
+                                </ConditionalWrapper>
                             </React.Fragment>
                         )}
                         {fixAction === RECORD_ACTION_UNCLAIM && (

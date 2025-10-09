@@ -16,6 +16,9 @@ import {
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
+
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { Box } from '@mui/material';
 /*
 
 NOTE:
@@ -333,8 +336,8 @@ export default {
                 actionButtonLabel: 'View and Complete',
             },
             oacomplianceRecordLure: {
-                title: 'Open Access Compliance Required',
-                message: 'We have found [count] work(s) that do not meet the funder(s) Open Access requirements.',
+                title: 'Open Access Required',
+                message: 'We have found [count] work(s) that may not meet the funder(s) Open Access requirements.',
                 type: 'warning',
                 actionButtonLabel: 'View and Fix',
                 icon: <LockOpenIcon id="unlock-outline-icon" className="icon" />,
@@ -584,8 +587,29 @@ export default {
         },
         openAccessComplianceRecord: {
             loadingMessage: 'Loading work',
-            title: 'Upload a suitable publication file to open access your work',
-            subTitle: 'Work to make open access',
+            title: 'Upload an Author Accepted Manuscript for green open access',
+            subTitle: (
+                <div>
+                    Work to make open access
+                    <Box sx={{ typography: 'body1' }}>
+                        <p>
+                            Upload this work’s Author Accepted Manuscript (AAM) below and click submit to make this
+                            research more visible. If a work has been identified in error, please suggest a correction.
+                        </p>
+                    </Box>
+                </div>
+            ),
+            help: {
+                title: 'Author Accepted Manuscript',
+                text: (
+                    <p>
+                        An Author Accepted Manuscript is the version of an article that has been peer-reviewed and
+                        accepted for publication but before the publisher has applied formatting, typesetting and
+                        branding.
+                    </p>
+                ),
+                buttonLabel: 'Close',
+            },
             fieldLabels: {
                 action: 'Select an action',
             },
@@ -1278,6 +1302,42 @@ export default {
         },
         openAccessPublications: {
             pageTitle: 'My open access',
+            text: (
+                <div>
+                    <p>
+                        Upload this work’s Author Accepted Manuscript (AAM) in the box below and click submit to make
+                        this research more visible and comply with{' '}
+                        <ExternalLink
+                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/policies-and-mandates"
+                            target="_blank"
+                        >
+                            funder's open access policies
+                        </ExternalLink>
+                        . If a work has been identified in error, please request a correction.
+                    </p>
+                    <p>
+                        Visit{' '}
+                        <ExternalLink
+                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/make-research-open-access-uq-espace"
+                            target="_blank"
+                        >
+                            Make research open access in UQ eSpace
+                        </ExternalLink>{' '}
+                        for information.
+                    </p>
+                </div>
+            ), // HERE - NEED TO GET THIS HELP SECTION APPEARING IN THE MR RECORDS PAGE
+            help: {
+                title: 'Author Accepted Manuscript',
+                text: (
+                    <p>
+                        An Author Accepted Manuscript is the version of an article that has been peer-reviewed and
+                        accepted for publication but before the publisher has applied formatting, typesetting and
+                        branding.
+                    </p>
+                ),
+                buttonLabel: 'Close',
+            },
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             loadingMessage: 'Searching for open access non-compliant works',
             noResultsFound: {
