@@ -7,7 +7,7 @@ import { debounce } from 'throttle-debounce';
 import { tryCatch } from 'helpers/general';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
-const externalDependenciesUrl = 'https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js';
+export const externalDependenciesUrl = 'https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js';
 
 const cleanUpWidgetCreationDeps = () =>
     tryCatch(() =>
