@@ -297,6 +297,8 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         return field.indexOf(keyPrefix) === 0 ? subkeyPrefix + field.substring(keyPrefix.length) : null;
     };
 
+    const isDatePlaceholder = value => moment(value).isSame(moment(PLACEHOLDER_ISO8601_ZULU_DATE));
+
     const getCINoticeValue = publication => {
         return !!publication.rek_ci_notice_attribution_incomplete &&
             publication.rek_ci_notice_attribution_incomplete === 1
@@ -514,20 +516,29 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                 let data = '';
                 const field = item.field;
                 let value;
+                let subkey;
                 switch (field) {
                     case 'rek_description':
                         value = getAbstract(publication);
                         break;
                     case 'rek_date':
-                        value = moment(publication[field]).isSame(moment(PLACEHOLDER_ISO8601_ZULU_DATE))
-                            ? null
-                            : publication[field];
+                        value = isDatePlaceholder(publication[field]) ? null : publication[field];
+                        break;
+                    case 'fez_record_search_key_start_date':
+                    case 'fez_record_search_key_end_date':
+                        subkey = transformFieldNameToSubkey(field);
+                        value =
+                            publication[field] &&
+                            publication[field][subkey] &&
+                            isDatePlaceholder(publication[field][subkey])
+                                ? null
+                                : publication[field];
                         break;
                     case 'rek_ci_notice_attribution_incomplete':
                         value = getCINoticeValue(publication);
                         break;
                     case 'fez_record_search_key_herdc_code':
-                        const subkey = transformFieldNameToSubkey(field);
+                        subkey = transformFieldNameToSubkey(field);
                         value = publication[field] && publication[field][subkey] !== 0 ? publication[field] : null;
                         break;
                     default:
