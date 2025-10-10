@@ -872,10 +872,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Open%20Accessible%20test%20Book%20Chapter%20record"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
