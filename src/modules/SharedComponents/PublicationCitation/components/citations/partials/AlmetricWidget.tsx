@@ -7,6 +7,7 @@ import { debounce } from 'throttle-debounce';
 import { tryCatch } from 'helpers/general';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
+export const hidePopoverDelayInMs = 300;
 export const externalDependenciesUrl = 'https://embed.altmetric.com/assets/embed.js';
 
 const cleanUpWidgetCreationDeps = () =>
@@ -30,7 +31,7 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
     const createWidgetFunction = (window as any)?._altmetric_embed_init as (id: string) => void;
     const isInjectingExternalDependencies = useRef<boolean>(false);
     const isCreatingWidget = useRef<boolean>(false);
-    const widgetContainerId = `altmetric-badge-${id}`;
+    const widgetContainerId = `altmetric-widget-${id}`;
 
     /**
      * Handles importing external deps required for creating widget on the fly.
@@ -64,7 +65,7 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
     };
     // add a small delay before hiding the popover to allow it to remain open while the user moves the cursor over to
     // its contents
-    const scheduleHidePopover = debounce(300, () => tryCatch(hidePopover));
+    const scheduleHidePopover = debounce(hidePopoverDelayInMs, () => tryCatch(hidePopover));
     const cancelScheduledHidePopoverCall = () => scheduleHidePopover.cancel({ upcomingOnly: true });
     const showPopover = (event: React.MouseEvent<HTMLElement>) => {
         cancelScheduledHidePopoverCall();
@@ -76,6 +77,7 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
     return (
         <>
             <Popover
+                data-testid="altmetric-widget-popover"
                 open={isOpen}
                 anchorEl={anchorEl}
                 anchorOrigin={{
@@ -98,6 +100,7 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
             >
                 <Box
                     id={widgetContainerId}
+                    data-testid={widgetContainerId}
                     sx={{
                         m: 2,
                         // allows mouse events on popover content
