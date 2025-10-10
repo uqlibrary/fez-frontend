@@ -5,6 +5,7 @@ import { prefixByUrlResolver } from 'config/general';
 import { default as viewJournalLocale } from 'locale/viewJournal';
 import { getIndicator, types } from 'modules/SharedComponents/JournalsList/components/partials/utils';
 import componentLocale from 'locale/components';
+import { pathConfig } from './pathConfig';
 
 export const viewJournalConfig = {
     basic: {
@@ -228,6 +229,85 @@ export const viewJournalConfig = {
                         href: item => item.srm_journal_link,
                         title: 'View SHERPA/RoMEO details in a new tab',
                         text: item => item.srm_issn,
+                    },
+                },
+            ],
+        ],
+    },
+    readAndPublish: {
+        key: 'fez_journal_read_and_publish',
+        title: viewJournalLocale.viewJournal.readAndPublish.title,
+        rows: [
+            [
+                {
+                    heading: viewJournalLocale.viewJournal.readAndPublish.heading,
+                    fieldId: 'jnl-read-and-publish',
+                    getData: journalDetails => {
+                        return {
+                            publisher:
+                                journalDetails.fez_journal_read_and_publish &&
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_publisher,
+                            discount:
+                                journalDetails.fez_journal_read_and_publish &&
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted,
+                            capped:
+                                journalDetails.fez_journal_read_and_publish &&
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped,
+                        };
+                    },
+                    template: 'EnclosedLinkTemplate',
+                    templateProps: {
+                        href: data =>
+                            !!data.publisher ? viewJournalLocale.viewJournal.readAndPublish.externalUrl : '',
+                        prefix: data => {
+                            const { publisher, discount } = data;
+                            const { prefixText } = viewJournalLocale.viewJournal.readAndPublish;
+
+                            let returnData = publisher ? prefixText.replace('<publisher>', publisher) : 'No';
+                            if (publisher && discount) {
+                                returnData = returnData.replace('<discount>', ' discount available');
+                            } else {
+                                returnData = returnData.replace('<discount>', '');
+                            }
+
+                            return returnData;
+                        },
+
+                        title: viewJournalLocale.viewJournal.readAndPublish.ariaLabel,
+                        text: () => viewJournalLocale.viewJournal.readAndPublish.linkText,
+                    },
+                },
+            ],
+            [
+                {
+                    heading: viewJournalLocale.viewJournal.readAndPublish.caulLink.heading,
+                    fieldId: 'jnl-read-and-publish-caul-link',
+                    getData: journalDetails => {
+                        return (
+                            journalDetails.fez_journal_read_and_publish &&
+                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped
+                        );
+                    },
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: () => viewJournalLocale.viewJournal.readAndPublish.caulLink.externalUrl,
+                        title: viewJournalLocale.viewJournal.readAndPublish.caulLink.ariaLabel,
+                        text: () => viewJournalLocale.viewJournal.readAndPublish.caulLink.linkText,
+                    },
+                },
+            ],
+            [
+                {
+                    heading: viewJournalLocale.viewJournal.readAndPublish.lastUpdatedHeading,
+                    fieldId: 'jnl-read-and-publish-source-date',
+                    data: [
+                        {
+                            path: ['fez_journal_read_and_publish', 'jnl_read_and_publish_source_date'],
+                        },
+                    ],
+                    template: 'DateTimeTemplate',
+                    templateProps: {
+                        format: 'Do MMMM YYYY',
                     },
                 },
             ],
@@ -1184,101 +1264,61 @@ export const viewJournalConfig = {
             ],
         ],
     },
-    uqData: {
-        title: 'UQ eSpace',
+    uqConnections: {
+        key: ['uq_author_id_count', 'fez_editorial_appointment'],
+        title: viewJournalLocale.viewJournal.uqConnections.title,
         rows: [
             [
                 {
-                    heading: viewJournalLocale.viewJournal.readAndPublish.heading,
-                    fieldId: 'jnl-read-and-publish',
-                    getData: journalDetails => {
-                        return {
-                            publisher:
-                                journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_publisher,
-                            discount:
-                                journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted,
-                            capped:
-                                journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped,
-                        };
-                    },
-                    template: 'EnclosedLinkTemplate',
-                    templateProps: {
-                        href: data =>
-                            !!data.publisher ? viewJournalLocale.viewJournal.readAndPublish.externalUrl : '',
-                        prefix: data => {
-                            const { publisher, discount } = data;
-                            const { prefixText } = viewJournalLocale.viewJournal.readAndPublish;
-
-                            let returnData = publisher ? prefixText.replace('<publisher>', publisher) : 'No';
-                            if (publisher && discount) {
-                                returnData = returnData.replace('<discount>', ' discount available');
-                            } else {
-                                returnData = returnData.replace('<discount>', '');
-                            }
-
-                            return returnData;
-                        },
-
-                        title: viewJournalLocale.viewJournal.readAndPublish.ariaLabel,
-                        text: () => viewJournalLocale.viewJournal.readAndPublish.linkText,
-                    },
+                    heading: viewJournalLocale.viewJournal.uqConnections.authorCount.heading,
+                    fieldId: 'jnl-uq-author-count',
+                    getData: journalDetails => journalDetails.uq_author_id_count || '0',
+                    template: 'DefaultTemplate',
                 },
             ],
             [
                 {
-                    heading: viewJournalLocale.viewJournal.readAndPublish.caulLink.heading,
-                    fieldId: 'jnl-read-and-publish-caul-link',
+                    heading: viewJournalLocale.viewJournal.uqConnections.authorPublications.heading,
+                    fieldId: 'jnl-uq-author-publications',
                     getData: journalDetails => {
-                        return (
-                            journalDetails.fez_journal_read_and_publish &&
-                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped
-                        );
+                        return journalDetails.uq_author_id_count
+                            ? { id: journalDetails.jnl_jid, count: journalDetails.uq_author_id_count }
+                            : null;
                     },
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => viewJournalLocale.viewJournal.readAndPublish.caulLink.externalUrl,
-                        title: viewJournalLocale.viewJournal.readAndPublish.caulLink.ariaLabel,
-                        text: () => viewJournalLocale.viewJournal.readAndPublish.caulLink.linkText,
-                    },
-                },
-            ],
-            [
-                {
-                    heading: viewJournalLocale.viewJournal.authorCountWorks.heading,
-                    fieldId: 'jnl-uq-author-count',
-                    getData: journalDetails => {
-                        return {
-                            count: journalDetails.uq_author_id_count,
-                            id: journalDetails.jnl_jid,
-                        };
-                    },
-                    template: 'EnclosedLinkTemplate',
-                    templateProps: {
                         href: item =>
                             item.count > 0
-                                ? viewJournalLocale.viewJournal.authorCountWorks.externalUrl.replace('[id]', item.id)
+                                ? viewJournalLocale.viewJournal.uqConnections.authorPublications.externalUrl.replace(
+                                      '[id]',
+                                      item.id,
+                                  )
                                 : '',
-                        prefix: item => `${item.count} `,
-                        title: viewJournalLocale.viewJournal.authorCountWorks.ariaLabel,
-                        text: item => (item.count > 0 ? 'View these articles in UQ eSpace' : ''),
+                        title: viewJournalLocale.viewJournal.uqConnections.authorPublications.ariaLabel,
+                        text: item =>
+                            item.count > 0
+                                ? viewJournalLocale.viewJournal.uqConnections.authorPublications.linkText
+                                : '',
                     },
                 },
             ],
             [
                 {
-                    heading: 'Last updated',
-                    fieldId: 'jnl-read-and-publish-source-date',
+                    heading: viewJournalLocale.viewJournal.uqConnections.editorialStaff.heading,
+                    fieldId: 'jnl-editorial-staff',
                     data: [
                         {
-                            path: ['fez_journal_read_and_publish', 'jnl_read_and_publish_source_date'],
+                            isArray: true,
+                            primaryKey: 'fez_editorial_appointment',
+                            path: ['fez_author'],
+                            filterFn: item => !!item.fez_author && !!item.fez_author.aut_display_name,
                         },
                     ],
-                    template: 'DateTimeTemplate',
+                    template: 'MultiLinkTemplate',
                     templateProps: {
-                        format: 'Do MMMM YYYY',
+                        href: author => pathConfig.authorStatistics.url(author.aut_org_username),
+                        text: author => author.aut_display_name,
+                        title: viewJournalLocale.viewJournal.uqConnections.editorialStaff.ariaLabel,
                     },
                 },
             ],

@@ -168,7 +168,17 @@ export default {
             componentProps: {
                 sectionKey: 'uqData',
                 name: 'uqDataSection',
-                sectionConfig: viewJournalConfig.uqData,
+                sectionConfig: viewJournalConfig.uqConnections,
+                wrapped: false,
+                noRef: true,
+            },
+        },
+        readAndPublish: {
+            component: InfoSection,
+            componentProps: {
+                sectionKey: 'readAndPublish',
+                name: 'readAndPublishSection',
+                sectionConfig: viewJournalConfig.readAndPublish,
                 wrapped: false,
                 noRef: true,
             },

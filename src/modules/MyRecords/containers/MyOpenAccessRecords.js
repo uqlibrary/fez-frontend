@@ -15,8 +15,13 @@ const mapStateToProps = (state, ownProps) => {
         thisUrl: pathConfig.records.openAccessCompliance,
         publicationsListCustomActions: [
             {
+                label: locale.pages.openAccessPublications.publicationsList.fix,
+                handleAction: item => ownProps.navigate(pathConfig.records.fix(item.rek_pid)),
+            },
+            {
                 label: locale.pages.openAccessPublications.publicationsList.complete,
                 handleAction: item => ownProps.navigate(pathConfig.records.openAccessComplianceFix(item.rek_pid)),
+                primary: true,
             },
         ],
     };

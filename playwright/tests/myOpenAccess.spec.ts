@@ -4,16 +4,21 @@ import formsLocale from 'locale/forms';
 import pagesLocale from 'locale/pages';
 import fileUploaderLocale from 'modules/SharedComponents/Toolbox/FileUploader/locale';
 import { navToHomeFromMenu, setFileInput } from '../lib/helpers';
-
+import { oaNonComplianceList } from 'mock/data';
 test.describe('My Open Access', () => {
     const oaFormLocale = formsLocale.forms.openAccessComplianceForm;
     const oaPagesLocale = pagesLocale.pages.openAccessComplianceRecord;
 
     const navToFirstWork = async (page: Page) => {
         await page.goto('/records/my-open-access');
-        await expect(page.locator('[data-testid*="publication-action"]')).toHaveCount(3);
-        await page.getByTestId('publication-action-UQ678728-secondary').click();
+        await page.getByTestId('publication-action-UQ678728-primary').click();
         await expect(page).toHaveURL('/records/UQ:678728/make-open-access');
+        await expect(page.getByTestId('page-title')).toBeVisible();
+    };
+    const navToFixFirstWork = async (page: Page) => {
+        await page.goto('/records/my-open-access');
+        await page.getByTestId('publication-action-UQ678728-secondary').click();
+        await expect(page).toHaveURL('/records/UQ:678728/fix');
         await expect(page.getByTestId('page-title')).toBeVisible();
     };
     test.describe('My Open Access Form', () => {
@@ -31,20 +36,40 @@ test.describe('My Open Access', () => {
             await expect(page.locator('.facetsFilter [class*="MuiListItem-root"]')).toHaveCount(8);
         });
 
-        test('can navigate to a works page with specific elements', async ({ page }) => {
+        test('can navigate to an OA works page with specific elements', async ({ page }) => {
             await navToFirstWork(page);
             await expect(page.locator('h2')).toHaveCount(1);
             await expect(page.locator('h2')).toHaveText(oaPagesLocale.title);
-            await expect(page.getByText(oaFormLocale.comments.title)).toBeEnabled();
-            await expect(page.getByText(oaFormLocale.fileUpload.title)).toBeEnabled();
+            await expect(page.getByText(oaFormLocale.comments.title, { exact: true })).toBeVisible();
+            await expect(page.getByText(oaFormLocale.fileUpload.title)).toBeVisible();
             await expect(page.getByTestId('alert').getByText(oaFormLocale.validationAlert.title)).toBeVisible();
             await expect(page.getByRole('button', { name: oaPagesLocale.cancel })).not.toBeDisabled();
             await expect(page.getByRole('button', { name: oaPagesLocale.submit })).toBeDisabled();
         });
 
+        test('can navigate to a Fix works page with specific elements', async ({ page }) => {
+            const record = oaNonComplianceList.data.find((rec: { rek_pid: string }) => rec.rek_pid === 'UQ:678728');
+            await navToFixFirstWork(page);
+            await expect(
+                page.locator('h2', { hasText: /Request a correction, add more information or upload files/ }).first(),
+            ).toBeVisible();
+            await expect(page.locator('.StandardCard')).toHaveCount(1);
+            await expect(
+                page
+                    .locator('.StandardCard')
+                    .locator('h3', { hasText: /Work to be amended/ })
+                    .first(),
+            ).toBeVisible();
+            await expect(
+                page.locator('.StandardCard .publicationCitation h6 a', { hasText: record.rek_title }).first(),
+            ).toBeVisible();
+        });
+
         test('can cancel a claim after filling the form', async ({ page }) => {
             await navToFirstWork(page);
-            await expect(page.locator('.StandardCard', { hasText: oaFormLocale.comments.title })).toBeVisible();
+            await expect(
+                page.locator('.StandardCard').getByText(oaFormLocale.comments.title, { exact: true }),
+            ).toBeVisible();
             await page.getByTestId('comments-input').fill('Test comment');
             await page.locator('button', { hasText: oaPagesLocale.cancel }).click();
             await expect(
