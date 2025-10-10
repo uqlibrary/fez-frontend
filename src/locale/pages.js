@@ -1305,9 +1305,9 @@ export default {
             text: (
                 <div>
                     <p>
-                        Upload this work’s Author Accepted Manuscript (AAM) in the box below and click submit to make
-                        this research more visible and comply with{' '}
+                        Each work below requires you to submit its Author Accepted Manuscript (AAM) to meet its{' '}
                         <ExternalLink
+                            id="open-access-policies-link"
                             href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/policies-and-mandates"
                             target="_blank"
                         >
@@ -1318,6 +1318,7 @@ export default {
                     <p>
                         Visit{' '}
                         <ExternalLink
+                            id="make-research-open-access-link"
                             href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/make-research-open-access-uq-espace"
                             target="_blank"
                         >
@@ -1326,7 +1327,7 @@ export default {
                         for information.
                     </p>
                 </div>
-            ), // HERE - NEED TO GET THIS HELP SECTION APPEARING IN THE MR RECORDS PAGE
+            ),
             help: {
                 title: 'Author Accepted Manuscript',
                 text: (
@@ -1350,6 +1351,7 @@ export default {
             },
             publicationsList: {
                 complete: 'Make open access',
+                fix: 'Request Correction',
             },
             facetsFilter: {
                 ...locale.components.facetsFilter,

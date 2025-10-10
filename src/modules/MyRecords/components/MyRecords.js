@@ -240,8 +240,9 @@ export default class MyRecords extends PureComponent {
                         this.state.hasPublications &&
                             (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) && (
                                 <Grid item xs={12} md={9}>
-                                    {/* HELP ISNT APPEARING WITH BELOW */}
-                                    <StandardCard noHeader {...(txt?.help ? { help: { ...txt.help } } : {})}>
+                                    <StandardCard
+                                        {...(txt?.help ? { title: txt.pageTitle, help: txt.help } : { noHeader: true })}
+                                    >
                                         {pagingData && pagingData.to && pagingData.from && pagingData.total && (
                                             <span>
                                                 {txt.recordCount

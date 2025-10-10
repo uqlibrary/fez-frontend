@@ -287,7 +287,7 @@ const FixRecord = ({ openAccess = false }) => {
                                         <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
                                             <Grid
                                                 container
-                                                spacing={2}
+                                                spacing={3}
                                                 sx={{
                                                     padding: 0,
                                                 }}

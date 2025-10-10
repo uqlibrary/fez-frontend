@@ -26,7 +26,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
         data-testid="page-title"
         id="page-title"
       >
-        Upload a suitable publication file to open access your work
+        Upload an Author Accepted Manuscript for green open access
       </h2>
     </div>
     <div
@@ -44,8 +44,8 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-work-to-make-open-access"
-              id="standard-card-work-to-make-open-access"
+              data-testid="standard-card"
+              id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
@@ -56,18 +56,56 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                 >
                   <h3
                     class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-                    data-testid="standard-card-work-to-make-open-access-header"
-                    id="standard-card-work-to-make-open-access-header"
+                    data-testid="standard-card-header"
+                    id="standard-card-header"
                   >
-                    Work to make open access
+                    <div>
+                      Work to make open access
+                      <div
+                        class="MuiBox-root css-1295ay4"
+                      >
+                        <p>
+                          Upload this work’s Author Accepted Manuscript (AAM) below and click submit to make this research more visible. If a work has been identified in error, please suggest a correction.
+                        </p>
+                      </div>
+                    </div>
                   </h3>
+                </div>
+                <div
+                  class="MuiCardHeader-action css-116l9hl-MuiCardHeader-action"
+                >
+                  <button
+                    aria-label="Click for more information"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="help-icon"
+                    data-mui-internal-clone-element="true"
+                    data-testid="help-icon"
+                    id="help-icon"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+                      data-testid="HelpOutlineIcon"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                      />
+                      <title>
+                        Click for more information
+                      </title>
+                    </svg>
+                  </button>
                 </div>
               </div>
               <div
                 class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-                data-analyticsid="standard-card-work-to-make-open-access-content"
-                data-testid="standard-card-work-to-make-open-access-content"
-                id="standard-card-work-to-make-open-access-content"
+                data-analyticsid="standard-card-content"
+                data-testid="standard-card-content"
+                id="standard-card-content"
               >
                 <div
                   class="publicationCitation"
@@ -304,255 +342,259 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
             data-testid="confirmDialogBox"
           />
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiBox-root css-1730fl9"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-suggest-a-correction"
-              id="standard-card-suggest-a-correction"
-              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                data-testid="standard-card-suggest-a-correction"
+                id="standard-card-suggest-a-correction"
+                style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-                    data-testid="standard-card-suggest-a-correction-header"
-                    id="standard-card-suggest-a-correction-header"
-                  >
-                    Suggest a correction
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-                data-analyticsid="standard-card-suggest-a-correction-content"
-                data-testid="standard-card-suggest-a-correction-content"
-                id="standard-card-suggest-a-correction-content"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1eg9cx8-MuiGrid-root"
+                  class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  >
+                    <h3
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                      data-testid="standard-card-suggest-a-correction-header"
+                      id="standard-card-suggest-a-correction-header"
+                    >
+                      Suggest a correction
+                    </h3>
+                  </div>
+                </div>
+                <div
+                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                  data-analyticsid="standard-card-suggest-a-correction-content"
+                  data-testid="standard-card-suggest-a-correction-content"
+                  id="standard-card-suggest-a-correction-content"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-g79o35-MuiGrid-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-                      data-testid="comments"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        data-testid="comments-label"
-                        for="comments-input"
-                        id="comments-label"
-                      >
-                        Type changes or comments here
-                      </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-glkc0l-MuiInputBase-root-MuiInput-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                        data-testid="comments"
                       >
-                        <textarea
-                          aria-invalid="false"
-                          aria-label="Type changes or comments here"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
-                          data-analyticsid="comments-input"
-                          data-testid="comments-input"
-                          id="comments-input"
-                          label="Type changes or comments here"
-                          name="comments"
-                          rows="3"
-                          style="height: 0px; overflow: hidden;"
-                        />
-                        <textarea
-                          aria-hidden="true"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
-                          readonly=""
-                          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
-                          tabindex="-1"
-                        />
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="false"
+                          data-testid="comments-label"
+                          for="comments-input"
+                          id="comments-label"
+                        >
+                          Type changes or comments here
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-glkc0l-MuiInputBase-root-MuiInput-root"
+                        >
+                          <textarea
+                            aria-invalid="false"
+                            aria-label="Type changes or comments here"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                            data-analyticsid="comments-input"
+                            data-testid="comments-input"
+                            id="comments-input"
+                            label="Type changes or comments here"
+                            name="comments"
+                            rows="3"
+                            style="height: 0px; overflow: hidden;"
+                          />
+                          <textarea
+                            aria-hidden="true"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                            readonly=""
+                            style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+                            tabindex="-1"
+                          />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
-                  >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-                      data-testid="rek_link"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        data-testid="rek_link-label"
-                        for="rek_link-input"
-                        id="rek_link-label"
-                      >
-                        Link (URL)
-                      </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                        data-testid="rek_link"
                       >
-                        <input
-                          aria-invalid="false"
-                          aria-label="Link (URL)"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                          data-analyticsid="rek_link-input"
-                          data-testid="rek_link-input"
-                          id="rek_link-input"
-                          label="Link (URL)"
-                          name="rek_link"
-                          type="text"
-                          value=""
-                        />
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="false"
+                          data-testid="rek_link-label"
+                          for="rek_link-input"
+                          id="rek_link-label"
+                        >
+                          Link (URL)
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        >
+                          <input
+                            aria-invalid="false"
+                            aria-label="Link (URL)"
+                            class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            data-analyticsid="rek_link-input"
+                            data-testid="rek_link-input"
+                            id="rek_link-input"
+                            label="Link (URL)"
+                            name="rek_link"
+                            type="text"
+                            value=""
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
-          >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-upload-files"
-              id="standard-card-upload-files"
-              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                data-testid="standard-card-upload-files"
+                id="standard-card-upload-files"
+                style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-                    data-testid="standard-card-upload-files-header"
-                    id="standard-card-upload-files-header"
-                  >
-                    Upload files
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-                data-analyticsid="standard-card-upload-files-content"
-                data-testid="standard-card-upload-files-content"
-                id="standard-card-upload-files-content"
-              >
-                <div>
-                  Upload an Open Access file.
-                </div>
-                <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                  class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
-                    <p
-                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
+                    <h3
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                      data-testid="standard-card-upload-files-header"
+                      id="standard-card-upload-files-header"
                     >
-                      You may add up to 10 files (max 5GB each)
-                    </p>
+                      Upload files
+                    </h3>
+                  </div>
+                </div>
+                <div
+                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                  data-analyticsid="standard-card-upload-files-content"
+                  data-testid="standard-card-upload-files-content"
+                  id="standard-card-upload-files-content"
+                >
+                  <div>
+                    Upload an Open Access file.
+                  </div>
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                  >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                     >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
+                      >
+                        You may add up to 10 files (max 5GB each)
+                      </p>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                       >
                         <div
-                          id="FileUploadDropZone"
-                          role="presentation"
-                          style="padding: 0px;"
-                          tabindex="0"
+                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                         >
-                          <input
-                            aria-label="Upload files"
-                            data-analyticsid="fez-datastream-info-input"
-                            data-testid="fez-datastream-info-input"
-                            id="Uploader"
-                            multiple=""
-                            style="display: none;"
-                            tabindex="-1"
-                            type="file"
-                          />
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-container FileUploadTermsAndConditions-root css-cid41t-MuiGridLegacy-root"
+                            id="FileUploadDropZone"
+                            role="presentation"
+                            style="padding: 0px;"
+                            tabindex="0"
                           >
+                            <input
+                              aria-label="Upload files"
+                              data-analyticsid="fez-datastream-info-input"
+                              data-testid="fez-datastream-info-input"
+                              id="Uploader"
+                              multiple=""
+                              style="display: none;"
+                              tabindex="-1"
+                              type="file"
+                            />
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
-                            >
-                              <p
-                                class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
-                              >
-                                File upload restrictions
-                              </p>
-                              <div>
-                                Please ensure:
-                                <ul>
-                                  <li>
-                                    files are under 5GB in size
-                                  </li>
-                                  <li>
-                                    file names begin with a letter and are less than 45 characters long
-                                  </li>
-                                  <li>
-                                    file names contain only upper and lowercase alphanumeric characters, and underscores
-                                  </li>
-                                  <li>
-                                    file names must not contain any spaces
-                                  </li>
-                                  <li>
-                                    file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-                                    <br />
-                                    (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                                  </li>
-                                  <li>
-                                    file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
-                                  </li>
-                                  <li>
-                                    file names, regardless of extension, must be unique
-                                  </li>
-                                  <li>
-                                    files are uploaded individually and not inside a folder
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-container FileUploadTermsAndConditions-root css-cid41t-MuiGridLegacy-root"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-v3yw6j-MuiGridLegacy-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
+                              >
+                                <p
+                                  class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
+                                >
+                                  File upload restrictions
+                                </p>
+                                <div>
+                                  Please ensure:
+                                  <ul>
+                                    <li>
+                                      files are under 5GB in size
+                                    </li>
+                                    <li>
+                                      file names begin with a letter and are less than 45 characters long
+                                    </li>
+                                    <li>
+                                      file names contain only upper and lowercase alphanumeric characters, and underscores
+                                    </li>
+                                    <li>
+                                      file names must not contain any spaces
+                                    </li>
+                                    <li>
+                                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                      <br />
+                                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+                                    </li>
+                                    <li>
+                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                    </li>
+                                    <li>
+                                      file names, regardless of extension, must be unique
+                                    </li>
+                                    <li>
+                                      files are uploaded individually and not inside a folder
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-v3yw6j-MuiGridLegacy-root"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
-                                    data-testid="CloudUploadIcon"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
+                                  <div
+                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                                   >
-                                    <path
-                                      d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
-                                    />
-                                  </svg>
-                                </div>
-                                <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                >
-                                  <p>
-                                    Click here to select files,
-                                    <br />
-                                    or drag files into this area to upload
-                                  </p>
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
+                                      data-testid="CloudUploadIcon"
+                                      focusable="false"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
+                                      />
+                                    </svg>
+                                  </div>
+                                  <div
+                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                                  >
+                                    <p>
+                                      Click here to select files,
+                                      <br />
+                                      or drag files into this area to upload
+                                    </p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -784,7 +826,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
         data-testid="page-title"
         id="page-title"
       >
-        Upload a suitable publication file to open access your work
+        Upload an Author Accepted Manuscript for green open access
       </h2>
     </div>
     <div
@@ -802,8 +844,8 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-work-to-make-open-access"
-              id="standard-card-work-to-make-open-access"
+              data-testid="standard-card"
+              id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
@@ -814,18 +856,56 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                 >
                   <h3
                     class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-                    data-testid="standard-card-work-to-make-open-access-header"
-                    id="standard-card-work-to-make-open-access-header"
+                    data-testid="standard-card-header"
+                    id="standard-card-header"
                   >
-                    Work to make open access
+                    <div>
+                      Work to make open access
+                      <div
+                        class="MuiBox-root css-1295ay4"
+                      >
+                        <p>
+                          Upload this work’s Author Accepted Manuscript (AAM) below and click submit to make this research more visible. If a work has been identified in error, please suggest a correction.
+                        </p>
+                      </div>
+                    </div>
                   </h3>
+                </div>
+                <div
+                  class="MuiCardHeader-action css-116l9hl-MuiCardHeader-action"
+                >
+                  <button
+                    aria-label="Click for more information"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="help-icon"
+                    data-mui-internal-clone-element="true"
+                    data-testid="help-icon"
+                    id="help-icon"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+                      data-testid="HelpOutlineIcon"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                      />
+                      <title>
+                        Click for more information
+                      </title>
+                    </svg>
+                  </button>
                 </div>
               </div>
               <div
                 class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-                data-analyticsid="standard-card-work-to-make-open-access-content"
-                data-testid="standard-card-work-to-make-open-access-content"
-                id="standard-card-work-to-make-open-access-content"
+                data-analyticsid="standard-card-content"
+                data-testid="standard-card-content"
+                id="standard-card-content"
               >
                 <div
                   class="publicationCitation"
@@ -1062,255 +1142,259 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
             data-testid="confirmDialogBox"
           />
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiBox-root css-1730fl9"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-suggest-a-correction"
-              id="standard-card-suggest-a-correction"
-              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                data-testid="standard-card-suggest-a-correction"
+                id="standard-card-suggest-a-correction"
+                style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-                    data-testid="standard-card-suggest-a-correction-header"
-                    id="standard-card-suggest-a-correction-header"
-                  >
-                    Suggest a correction
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-                data-analyticsid="standard-card-suggest-a-correction-content"
-                data-testid="standard-card-suggest-a-correction-content"
-                id="standard-card-suggest-a-correction-content"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1eg9cx8-MuiGrid-root"
+                  class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  >
+                    <h3
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                      data-testid="standard-card-suggest-a-correction-header"
+                      id="standard-card-suggest-a-correction-header"
+                    >
+                      Suggest a correction
+                    </h3>
+                  </div>
+                </div>
+                <div
+                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                  data-analyticsid="standard-card-suggest-a-correction-content"
+                  data-testid="standard-card-suggest-a-correction-content"
+                  id="standard-card-suggest-a-correction-content"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-g79o35-MuiGrid-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-                      data-testid="comments"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        data-testid="comments-label"
-                        for="comments-input"
-                        id="comments-label"
-                      >
-                        Type changes or comments here
-                      </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-glkc0l-MuiInputBase-root-MuiInput-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                        data-testid="comments"
                       >
-                        <textarea
-                          aria-invalid="false"
-                          aria-label="Type changes or comments here"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
-                          data-analyticsid="comments-input"
-                          data-testid="comments-input"
-                          id="comments-input"
-                          label="Type changes or comments here"
-                          name="comments"
-                          rows="3"
-                          style="height: 0px; overflow: hidden;"
-                        />
-                        <textarea
-                          aria-hidden="true"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
-                          readonly=""
-                          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
-                          tabindex="-1"
-                        />
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="false"
+                          data-testid="comments-label"
+                          for="comments-input"
+                          id="comments-label"
+                        >
+                          Type changes or comments here
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-glkc0l-MuiInputBase-root-MuiInput-root"
+                        >
+                          <textarea
+                            aria-invalid="false"
+                            aria-label="Type changes or comments here"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                            data-analyticsid="comments-input"
+                            data-testid="comments-input"
+                            id="comments-input"
+                            label="Type changes or comments here"
+                            name="comments"
+                            rows="3"
+                            style="height: 0px; overflow: hidden;"
+                          />
+                          <textarea
+                            aria-hidden="true"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                            readonly=""
+                            style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+                            tabindex="-1"
+                          />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
-                  >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-                      data-testid="rek_link"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        data-testid="rek_link-label"
-                        for="rek_link-input"
-                        id="rek_link-label"
-                      >
-                        Link (URL)
-                      </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                        data-testid="rek_link"
                       >
-                        <input
-                          aria-invalid="false"
-                          aria-label="Link (URL)"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                          data-analyticsid="rek_link-input"
-                          data-testid="rek_link-input"
-                          id="rek_link-input"
-                          label="Link (URL)"
-                          name="rek_link"
-                          type="text"
-                          value=""
-                        />
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="false"
+                          data-testid="rek_link-label"
+                          for="rek_link-input"
+                          id="rek_link-label"
+                        >
+                          Link (URL)
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        >
+                          <input
+                            aria-invalid="false"
+                            aria-label="Link (URL)"
+                            class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            data-analyticsid="rek_link-input"
+                            data-testid="rek_link-input"
+                            id="rek_link-input"
+                            label="Link (URL)"
+                            name="rek_link"
+                            type="text"
+                            value=""
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
-          >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-upload-files"
-              id="standard-card-upload-files"
-              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                data-testid="standard-card-upload-files"
+                id="standard-card-upload-files"
+                style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-                    data-testid="standard-card-upload-files-header"
-                    id="standard-card-upload-files-header"
-                  >
-                    Upload files
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-                data-analyticsid="standard-card-upload-files-content"
-                data-testid="standard-card-upload-files-content"
-                id="standard-card-upload-files-content"
-              >
-                <div>
-                  Upload an Open Access file.
-                </div>
-                <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                  class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
-                    <p
-                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
+                    <h3
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                      data-testid="standard-card-upload-files-header"
+                      id="standard-card-upload-files-header"
                     >
-                      You may add up to 10 files (max 5GB each)
-                    </p>
+                      Upload files
+                    </h3>
+                  </div>
+                </div>
+                <div
+                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                  data-analyticsid="standard-card-upload-files-content"
+                  data-testid="standard-card-upload-files-content"
+                  id="standard-card-upload-files-content"
+                >
+                  <div>
+                    Upload an Open Access file.
+                  </div>
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                  >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                     >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
+                      >
+                        You may add up to 10 files (max 5GB each)
+                      </p>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                       >
                         <div
-                          id="FileUploadDropZone"
-                          role="presentation"
-                          style="padding: 0px;"
-                          tabindex="0"
+                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                         >
-                          <input
-                            aria-label="Upload files"
-                            data-analyticsid="fez-datastream-info-input"
-                            data-testid="fez-datastream-info-input"
-                            id="Uploader"
-                            multiple=""
-                            style="display: none;"
-                            tabindex="-1"
-                            type="file"
-                          />
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-container FileUploadTermsAndConditions-root css-cid41t-MuiGridLegacy-root"
+                            id="FileUploadDropZone"
+                            role="presentation"
+                            style="padding: 0px;"
+                            tabindex="0"
                           >
+                            <input
+                              aria-label="Upload files"
+                              data-analyticsid="fez-datastream-info-input"
+                              data-testid="fez-datastream-info-input"
+                              id="Uploader"
+                              multiple=""
+                              style="display: none;"
+                              tabindex="-1"
+                              type="file"
+                            />
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
-                            >
-                              <p
-                                class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
-                              >
-                                File upload restrictions
-                              </p>
-                              <div>
-                                Please ensure:
-                                <ul>
-                                  <li>
-                                    files are under 5GB in size
-                                  </li>
-                                  <li>
-                                    file names begin with a letter and are less than 45 characters long
-                                  </li>
-                                  <li>
-                                    file names contain only upper and lowercase alphanumeric characters, and underscores
-                                  </li>
-                                  <li>
-                                    file names must not contain any spaces
-                                  </li>
-                                  <li>
-                                    file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-                                    <br />
-                                    (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                                  </li>
-                                  <li>
-                                    file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
-                                  </li>
-                                  <li>
-                                    file names, regardless of extension, must be unique
-                                  </li>
-                                  <li>
-                                    files are uploaded individually and not inside a folder
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-container FileUploadTermsAndConditions-root css-cid41t-MuiGridLegacy-root"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-v3yw6j-MuiGridLegacy-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
+                              >
+                                <p
+                                  class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
+                                >
+                                  File upload restrictions
+                                </p>
+                                <div>
+                                  Please ensure:
+                                  <ul>
+                                    <li>
+                                      files are under 5GB in size
+                                    </li>
+                                    <li>
+                                      file names begin with a letter and are less than 45 characters long
+                                    </li>
+                                    <li>
+                                      file names contain only upper and lowercase alphanumeric characters, and underscores
+                                    </li>
+                                    <li>
+                                      file names must not contain any spaces
+                                    </li>
+                                    <li>
+                                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                      <br />
+                                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+                                    </li>
+                                    <li>
+                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                    </li>
+                                    <li>
+                                      file names, regardless of extension, must be unique
+                                    </li>
+                                    <li>
+                                      files are uploaded individually and not inside a folder
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-v3yw6j-MuiGridLegacy-root"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
-                                    data-testid="CloudUploadIcon"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
+                                  <div
+                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                                   >
-                                    <path
-                                      d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
-                                    />
-                                  </svg>
-                                </div>
-                                <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                >
-                                  <p>
-                                    Click here to select files,
-                                    <br />
-                                    or drag files into this area to upload
-                                  </p>
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
+                                      data-testid="CloudUploadIcon"
+                                      focusable="false"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
+                                      />
+                                    </svg>
+                                  </div>
+                                  <div
+                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                                  >
+                                    <p>
+                                      Click here to select files,
+                                      <br />
+                                      or drag files into this area to upload
+                                    </p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
