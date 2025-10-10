@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useRef } from 'react';
+import React, { ReactElement, useEffect, useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Popover from '@mui/material/Popover';
@@ -26,7 +26,7 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
     children,
 }) => {
     const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null);
-    const isOpen = Boolean(anchorEl);
+    const [isOpen, setIsOpen] = useState<boolean>(!!anchorEl);
     const createWidgetFunction = (window as any)?._altmetric_embed_init as (id: string) => void;
     const isInjectingExternalDependencies = useRef<boolean>(false);
     const isCreatingWidget = useRef<boolean>(false);
@@ -58,12 +58,19 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
         return cleanUpWidgetCreationDeps; // onunmount
     }, []);
 
-    // add a small delay before hiding the popover to provide a better UX
-    const hidePopover = debounce(600, /* istanbul ignore next */ () => setAnchorEl(null));
-    const cancelScheduleHidePopover = () => hidePopover.cancel({ upcomingOnly: true });
+    const hidePopover = () => {
+        setAnchorEl(null);
+        setIsOpen(false);
+    };
+    // add a small delay before hiding the popover to allow it to remain open while the user moves the cursor over to
+    // its contents
+    const scheduleHidePopover = debounce(300, () => tryCatch(hidePopover));
+    const cancelScheduledHidePopoverCall = () => scheduleHidePopover.cancel({ upcomingOnly: true });
     const showPopover = (event: React.MouseEvent<HTMLElement>) => {
-        cancelScheduleHidePopover();
+        cancelScheduledHidePopoverCall();
+        // required "anchoring" the popover to its trigger
         setAnchorEl(event.currentTarget);
+        setIsOpen(true);
     };
 
     return (
@@ -79,20 +86,30 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
                     vertical: 'top',
                     horizontal: 'left',
                 }}
-                sx={{ marginTop: 1 }}
                 onClose={hidePopover}
-                onMouseLeave={hidePopover}
+                sx={{
+                    marginTop: 1,
+                    // prevents hiding the popover while the user moves the cursor over its trigger
+                    pointerEvents: 'none',
+                }}
+                onMouseEnter={cancelScheduledHidePopoverCall}
+                onMouseLeave={scheduleHidePopover}
                 keepMounted
             >
-                <Box id={widgetContainerId} sx={{ m: 2 }}>
+                <Box
+                    id={widgetContainerId}
+                    sx={{
+                        m: 2,
+                        // allows mouse events on popover content
+                        pointerEvents: 'auto',
+                    }}
+                >
                     <div
                         data-id={id}
                         data-badge-type="medium-donut"
                         data-badge-details="right"
                         data-link-target="_blank"
                         className="altmetric-embed"
-                        onMouseLeave={hidePopover}
-                        onMouseEnter={cancelScheduleHidePopover}
                     >
                         {/* deps & widget loading/fall-back strategy */}
                         {/* the elements below will be automatically removed when the widget gets created */}
@@ -120,7 +137,14 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
                     </div>
                 </Box>
             </Popover>
-            <span onMouseEnter={showPopover}>{children}</span>
+            <span
+                aria-owns={isOpen ? 'mouse-over-popover' : undefined}
+                aria-haspopup="true"
+                onMouseEnter={showPopover}
+                onMouseLeave={scheduleHidePopover}
+            >
+                {children}
+            </span>
         </>
     );
 };
