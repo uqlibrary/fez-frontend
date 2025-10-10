@@ -1,4 +1,10 @@
 import publicationEnhancer, { calculateOpenAccess, potentiallyOpenAccessible } from './publicationEnhancer';
+import { OPEN_ACCESS_ID_NOT_OPEN_ACCESS } from 'config/openAccess';
+import {
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+    PUBLICATION_TYPE_BOOK_CHAPTER,
+    PUBLICATION_TYPE_AUDIO_DOCUMENT,
+} from 'config/general';
 
 describe('publication enhancer', () => {
     const MockDate = require('mockdate');
@@ -750,13 +756,12 @@ describe('publication enhancer', () => {
     });
 
     describe('potentiallyOpenAccessible', () => {
-        it('should return true for a journal article with not open access status within time limit and no files', () => {
+        it('should return true for a journal article with not open access status and no files', () => {
             const publication = {
                 rek_pid: 'UQ:1234',
-                rek_date: '2018-06-15T00:00:00Z', // 2 years ago from mocked date 2020-01-01
-                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                rek_display_type: PUBLICATION_TYPE_JOURNAL_ARTICLE,
                 fez_record_search_key_oa_status: {
-                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                    rek_oa_status: OPEN_ACCESS_ID_NOT_OPEN_ACCESS,
                 },
                 fez_record_search_key_file_attachment_name: [],
             };
@@ -765,13 +770,12 @@ describe('publication enhancer', () => {
             expect(result).toBe(true);
         });
 
-        it('should return true for a journal article with not open access status within time limit and no file attachment property', () => {
+        it('should return true for a book chapter with not open access status and no file attachment property', () => {
             const publication = {
                 rek_pid: 'UQ:1234',
-                rek_date: '2019-01-01T00:00:00Z', // 1 year ago from mocked date 2020-01-01
-                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                rek_display_type: PUBLICATION_TYPE_BOOK_CHAPTER,
                 fez_record_search_key_oa_status: {
-                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                    rek_oa_status: OPEN_ACCESS_ID_NOT_OPEN_ACCESS,
                 },
                 // No fez_record_search_key_file_attachment_name property
             };
@@ -783,10 +787,9 @@ describe('publication enhancer', () => {
         it('should return false for a record with open access status', () => {
             const publication = {
                 rek_pid: 'UQ:1234',
-                rek_date: '2018-06-15T00:00:00Z',
-                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                rek_display_type: PUBLICATION_TYPE_JOURNAL_ARTICLE,
                 fez_record_search_key_oa_status: {
-                    rek_oa_status: 453693, // OPEN_ACCESS_ID_DOI (not NOT_OPEN_ACCESS)
+                    rek_oa_status: OPEN_ACCESS_ID_NOT_OPEN_ACCESS - 1,
                 },
                 fez_record_search_key_file_attachment_name: [],
             };
@@ -795,28 +798,12 @@ describe('publication enhancer', () => {
             expect(result).toBe(false);
         });
 
-        it('should return false for a record that is too old (beyond time limit)', () => {
+        it('should return false for a non-journal article or non-book chapter record', () => {
             const publication = {
                 rek_pid: 'UQ:1234',
-                rek_date: '2017-06-15T00:00:00Z', // More than 2 years ago from mocked date 2020-01-01
-                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                rek_display_type: PUBLICATION_TYPE_AUDIO_DOCUMENT, // Not PUBLICATION_TYPE_JOURNAL_ARTICLE or PUBLICATION_TYPE_BOOK_CHAPTER
                 fez_record_search_key_oa_status: {
-                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
-                },
-                fez_record_search_key_file_attachment_name: [],
-            };
-
-            const result = potentiallyOpenAccessible(publication);
-            expect(result).toBe(false);
-        });
-
-        it('should return false for a non-journal article record', () => {
-            const publication = {
-                rek_pid: 'UQ:1234',
-                rek_date: '2018-06-15T00:00:00Z',
-                rek_display_type: 130, // Not PUBLICATION_TYPE_JOURNAL_ARTICLE
-                fez_record_search_key_oa_status: {
-                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                    rek_oa_status: OPEN_ACCESS_ID_NOT_OPEN_ACCESS,
                 },
                 fez_record_search_key_file_attachment_name: [],
             };
@@ -828,10 +815,9 @@ describe('publication enhancer', () => {
         it('should return false for a record that has file attachments', () => {
             const publication = {
                 rek_pid: 'UQ:1234',
-                rek_date: '2018-06-15T00:00:00Z',
-                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                rek_display_type: PUBLICATION_TYPE_JOURNAL_ARTICLE,
                 fez_record_search_key_oa_status: {
-                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                    rek_oa_status: OPEN_ACCESS_ID_NOT_OPEN_ACCESS,
                 },
                 fez_record_search_key_file_attachment_name: [{ rek_file_attachment_name: 'document.pdf' }],
             };
@@ -843,8 +829,7 @@ describe('publication enhancer', () => {
         it('should return false for a record with no oa_status', () => {
             const publication = {
                 rek_pid: 'UQ:1234',
-                rek_date: '2018-06-15T00:00:00Z',
-                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                rek_display_type: PUBLICATION_TYPE_JOURNAL_ARTICLE,
                 // No fez_record_search_key_oa_status property
                 fez_record_search_key_file_attachment_name: [],
             };
@@ -856,8 +841,7 @@ describe('publication enhancer', () => {
         it('should return false for a record with invalid oa_status', () => {
             const publication = {
                 rek_pid: 'UQ:1234',
-                rek_date: '2018-06-15T00:00:00Z',
-                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                rek_display_type: PUBLICATION_TYPE_JOURNAL_ARTICLE,
                 fez_record_search_key_oa_status: {
                     rek_oa_status: 'invalid', // Not a finite number
                 },
@@ -868,28 +852,26 @@ describe('publication enhancer', () => {
             expect(result).toBe(false);
         });
 
-        it('should return true for a record on the exact boundary date (should be inclusive)', () => {
+        it('should return true for a journal article with not open access status and undefined file attachment name', () => {
             const publication = {
                 rek_pid: 'UQ:1234',
-                rek_date: '2018-01-01T00:00:00Z', // Exactly 2 years ago from mocked date 2020-01-01
-                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                rek_display_type: PUBLICATION_TYPE_JOURNAL_ARTICLE,
                 fez_record_search_key_oa_status: {
-                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                    rek_oa_status: OPEN_ACCESS_ID_NOT_OPEN_ACCESS,
                 },
-                fez_record_search_key_file_attachment_name: [],
+                fez_record_search_key_file_attachment_name: undefined,
             };
 
             const result = potentiallyOpenAccessible(publication);
             expect(result).toBe(true);
         });
 
-        it('should return true for a recent record within the current year', () => {
+        it('should return true for a book chapter with not open access status and empty file attachments', () => {
             const publication = {
                 rek_pid: 'UQ:1234',
-                rek_date: '2019-12-31T00:00:00Z', // Very recent, same year as mocked date
-                rek_display_type: 179, // PUBLICATION_TYPE_JOURNAL_ARTICLE
+                rek_display_type: PUBLICATION_TYPE_BOOK_CHAPTER, // PUBLICATION_TYPE_BOOK_CHAPTER
                 fez_record_search_key_oa_status: {
-                    rek_oa_status: 453698, // OPEN_ACCESS_ID_NOT_OPEN_ACCESS
+                    rek_oa_status: OPEN_ACCESS_ID_NOT_OPEN_ACCESS,
                 },
                 fez_record_search_key_file_attachment_name: [],
             };

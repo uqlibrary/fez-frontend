@@ -2,7 +2,7 @@ import { loadPublicationsListActions, loadPublicationActions } from 'actions/act
 import { openAccessConfig, viewRecordsConfig } from 'config';
 import moment from 'moment';
 import { isAdded } from 'helpers/datastreams';
-import { PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
+import { PUBLICATION_TYPE_JOURNAL_ARTICLE, PUBLICATION_TYPE_BOOK_CHAPTER } from 'config/general';
 
 export const calculateOpenAccess = record => {
     const openAccessStatusId =
@@ -93,16 +93,10 @@ export const potentiallyOpenAccessible = record => {
         Number.isFinite(record.fez_record_search_key_oa_status.rek_oa_status)
             ? record.fez_record_search_key_oa_status.rek_oa_status
             : null;
-
     if (
         openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_NOT_OPEN_ACCESS &&
-        moment()
-            .subtract(
-                openAccessConfig.openAccessibilityStatus.maxUnitsPast,
-                openAccessConfig.openAccessibilityStatus.unit,
-            )
-            .isSameOrBefore(moment(record.rek_date), openAccessConfig.openAccessibilityStatus.unit) &&
-        record.rek_display_type === PUBLICATION_TYPE_JOURNAL_ARTICLE &&
+        (record.rek_display_type === PUBLICATION_TYPE_JOURNAL_ARTICLE ||
+            record.rek_display_type === PUBLICATION_TYPE_BOOK_CHAPTER) &&
         (!record.fez_record_search_key_file_attachment_name ||
             (Array.isArray(record.fez_record_search_key_file_attachment_name) &&
                 record.fez_record_search_key_file_attachment_name.length === 0))

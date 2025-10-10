@@ -732,6 +732,194 @@ exports[`PublicationsList renders component with items 1`] = `
     >
       <div
         class="css-0"
+        data-testid="publication-citation-parent-UQ:173575"
+        id="publication-citation-parent-UQ:173575"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                style="min-width: 1px;"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                >
+                  <a
+                    href="/view/UQ:173575"
+                  >
+                    Open Accessible test Book Chapter record
+                  </a>
+                </h6>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
+              >
+                <div
+                  class="citationContent citationBookChapter"
+                >
+                  <span
+                    class="citationAuthors"
+                  >
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-0"
+                    >
+                      Iwashita, N.
+                    </span>
+                     and 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-1"
+                    >
+                      Harrington, M. W.
+                    </span>
+                     
+                  </span>
+                  <span
+                    class="citationDate"
+                  >
+                    (2008).
+                  </span>
+                  <span
+                    class="citationTitle"
+                  >
+                     Open Accessible test Book Chapter record.
+                  </span>
+                  <span
+                    class="citationBookTitle"
+                  >
+                     多様化する言語習得環境とこれからの日本語教育.
+                  </span>
+                  <span
+                    class="citationEditors"
+                  >
+                     Edited by 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-contributor-0"
+                    >
+                      Sakamoto Akira
+                    </span>
+                    , 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-contributor-1"
+                    >
+                      Nagatomo Kazuhiko
+                    </span>
+                    ,  and 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-contributor-2"
+                    >
+                      Koyanagi Kaoru
+                    </span>
+                    . 
+                  </span>
+                  <span
+                    class="citationPlaceOfPublication"
+                  >
+                     Tokyo, Japan:
+                  </span>
+                  <span
+                    class="citationPublisher"
+                  >
+                     3A Corporation.
+                  </span>
+                  <span
+                    class="citationPageRange"
+                  >
+                    <span
+                      class="citationStartPage"
+                    >
+                      79
+                    </span>
+                    -
+                    <span
+                      class="citationEndPage"
+                    >
+                      96
+                    </span>
+                    .
+                  </span>
+                  <span
+                    class="citationDOI empty"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              >
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
+                  >
+                    <div
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                    >
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                      >
+                        <a
+                          aria-label="Full citation in Google scholar will open in a new window"
+                          class="googleCitationCount css-si3g8d"
+                          data-analyticsid="citation-count-link"
+                          data-testid="citation-count-link"
+                          href="https://scholar.google.com/scholar?q=intitle:Open%20Accessible%20test%20Book%20Chapter%20record"
+                          id="citation-count-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                          title="Full citation in Google scholar will open in a new window"
+                        >
+                          <span
+                            class="fez-icon google large"
+                          />
+                        </a>
+                        <span
+                          class="noOaIcon"
+                          data-testid="oa-n/a-icon"
+                        />
+                      </div>
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      />
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+          />
+        </div>
+      </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
+      />
+    </div>
+    <div
+      class="publicationCitation"
+    >
+      <div
+        class="css-0"
         data-testid="publication-citation-parent-UQ:410094"
         id="publication-citation-parent-UQ:410094"
       >

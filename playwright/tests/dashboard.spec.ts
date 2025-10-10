@@ -57,15 +57,31 @@ test.describe('Dashboard with open accessible work', () => {
         await expect(
             page
                 .locator('[data-testid=alert]')
-                .getByText('We have found 3 work(s) that do not meet the funder(s) Open Access requirements.'),
+                .getByText('We have found 3 work(s) that may not meet the funder(s) Open Access requirements.'),
         ).toBeVisible();
         await page.locator('[data-testid=alert]').getByRole('button', { name: 'View and Fix' }).click();
         await expect(page).toHaveURL(/records\/my-open-access/);
     });
     test('should show a "make open access" button that navs to the open-access work route', async ({ page }) => {
         await expect(page.locator('text=Professor J Researcher')).toBeVisible();
+
+        // test journal should have OA button
+        await expect(
+            page.getByTestId('publication-citation-parent-UQ:256099').getByRole('button', { name: 'Make open access' }),
+        ).toBeVisible();
+
+        // test book chapter should have OA button
+        await expect(
+            page.getByTestId('publication-citation-parent-UQ:173575').getByRole('button', { name: 'Make open access' }),
+        ).toBeVisible();
+
+        // first in list should not have OA button
+        await expect(
+            page.getByTestId('publication-citation-parent-UQ:678728').getByRole('button', { name: 'Make open access' }),
+        ).not.toBeVisible();
+
         await expect(page.getByRole('link', { name: 'Open Accessible test record' })).toBeVisible();
-        await page.getByRole('button', { name: 'Make open access' }).click();
+        await page.getByRole('button', { name: 'Make open access' }).first().click();
         await expect(page).toHaveURL(/records\/UQ:256099\/make-open-access/);
     });
 
@@ -81,7 +97,33 @@ test.describe('Dashboard with open accessible work', () => {
 
             await expect(page).toHaveURL('/records/mine');
             await expect(page.getByRole('link', { name: 'Open Accessible test record' })).toBeVisible();
-            await page.locator('.publicationCitation').getByRole('button', { name: 'Make open access' }).click();
+
+            // test journal should have OA button
+            await expect(
+                page
+                    .getByTestId('publication-citation-parent-UQ:256099')
+                    .getByRole('button', { name: 'Make open access' }),
+            ).toBeVisible();
+
+            // test book chapter should have OA button
+            await expect(
+                page
+                    .getByTestId('publication-citation-parent-UQ:173575')
+                    .getByRole('button', { name: 'Make open access' }),
+            ).toBeVisible();
+
+            // first in list should not have OA button
+            await expect(
+                page
+                    .getByTestId('publication-citation-parent-UQ:678728')
+                    .getByRole('button', { name: 'Make open access' }),
+            ).not.toBeVisible();
+
+            await page
+                .locator('.publicationCitation')
+                .getByRole('button', { name: 'Make open access' })
+                .first()
+                .click();
             await expect(page).toHaveURL(/records\/UQ:256099\/make-open-access/);
         });
     });
