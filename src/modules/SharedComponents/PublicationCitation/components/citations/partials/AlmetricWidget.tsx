@@ -13,7 +13,6 @@ const cleanUpWidgetCreationDeps = () =>
     tryCatch(() =>
         document.querySelectorAll<HTMLScriptElement>('script[src*="altmetric.com/"]').forEach(script => {
             // keep imported main deps, as we want to reuse it
-            // istanbul ignore next
             if (script.src?.startsWith?.(externalDependenciesUrl)) return;
             // remove additional deps injected during widget creation
             script.parentNode?.removeChild(script);
@@ -85,7 +84,7 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
                 onMouseLeave={hidePopover}
                 keepMounted
             >
-                <Box id={widgetContainerId} sx={{ m: 2, mt: 3, mb: 0 }}>
+                <Box id={widgetContainerId} sx={{ m: 2 }}>
                     <div
                         data-id={id}
                         data-badge-type="medium-donut"
