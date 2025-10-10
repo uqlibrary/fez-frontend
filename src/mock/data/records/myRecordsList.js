@@ -670,6 +670,161 @@ const myRecordsList = {
         "fez_datastream_info": [],
     
     }, {
+        "rek_pid": "UQ:173575",
+        "rek_title": "Open Accessible test Book Chapter record",
+        "rek_description": null,
+        "rek_display_type": 177,
+        "rek_status": 2,
+        "rek_date": "2008-01-01T00:00:00Z",
+        "rek_object_type": 3,
+        "rek_depositor": 1639,
+        "rek_created_date": "2009-04-02T15:47:51Z",
+        "rek_updated_date": "2019-02-24T04:21:14Z",
+        "rek_file_downloads": 0,
+        "rek_citation": "",
+        "rek_genre": "Book Chapter",
+        "rek_genre_type": null,
+        "rek_formatted_title": null,
+        "rek_formatted_abstract": null,
+        "rek_depositor_affiliation": 923,
+        "rek_thomson_citation_count": null,
+        "rek_subtype": "Research book chapter (original research)",
+        "rek_security_inherited": 1,
+        "rek_copyright": "on",
+        "rek_security_policy": 1,
+        "fez_record_search_key_author": ["Iwashita, N.", "Harrington, M. W."],
+        "fez_record_search_key_author_id": [
+            {
+                "rek_author_id": 3191,
+                "rek_author_id_lookup": "Iwashita, Noriko"
+            },
+            {
+                "rek_author_id": 782,
+                "rek_author_id_lookup": "Harrington, Michael W."
+            }
+        ],
+        "fez_record_search_key_book_title": "多様化する言語習得環境とこれからの日本語教育",
+        "fez_record_search_key_chapter_number": "4",
+        "fez_record_search_key_contributor": ["Sakamoto Akira", "Nagatomo Kazuhiko", "Koyanagi Kaoru"],
+        "fez_record_search_key_contributor_id": [0, 0, 0],
+        "fez_record_search_key_date_available": "2009-04-02T15:47:51Z",
+        "fez_record_search_key_end_page": "96",
+        "fez_record_search_key_herdc_code": {
+            "rek_herdc_code": 450006,
+            "rek_herdc_code_lookup": "B1"
+        },
+        "fez_record_search_key_herdc_status": {
+            "rek_herdc_status": 453221,
+            "rek_herdc_status_lookup": "Confirmed Code"
+        },
+        "fez_record_search_key_institutional_status": {
+            "rek_institutional_status": 453225,
+            "rek_institutional_status_lookup": "Unknown"
+        },
+        "fez_record_search_key_isbn": ["9784883194636"],
+        "fez_record_search_key_ismemberof": [
+            {
+                "rek_ismemberof": "UQ:138536",
+                "parent": {
+                    "rek_pid": "UQ:138536",
+                    "rek_security_policy": 5,
+                    "rek_datastream_policy": 5
+                },
+                "rek_ismemberof_lookup": "2009 Higher Education Research Data Collection"
+            },
+            {
+                "rek_ismemberof": "UQ:3838",
+                "parent": {
+                    "rek_pid": "UQ:3838",
+                    "rek_security_policy": 5,
+                    "rek_datastream_policy": 5
+                },
+                "rek_ismemberof_lookup": "School of Languages and Cultures Publications"
+            },
+            {
+                "rek_ismemberof": "UQ:3803",
+                "parent": {
+                    "rek_pid": "UQ:3803",
+                    "rek_security_policy": 5,
+                    "rek_datastream_policy": 5
+                },
+                "rek_ismemberof_lookup": "School of Communication and Arts Publications"
+            },
+            {
+                "rek_ismemberof": "UQ:152266",
+                "parent": {
+                    "rek_pid": "UQ:152266",
+                    "rek_security_policy": 5,
+                    "rek_datastream_policy": 5
+                },
+                "rek_ismemberof_lookup": "Excellence in Research Australia (ERA) - Collection"
+            }
+        ],
+        "fez_record_search_key_keywords": ["Japanese language", "Second language acquisition"],
+        "fez_record_search_key_language": ["jpn", "eng"],
+        "fez_record_search_key_language_of_book_title": ["jpn"],
+        "fez_record_search_key_license": {
+            "rek_license": 453609,
+            "rek_license_lookup": "Creative Commons Attribution-NoDerivatives 3.0 International (CC BY-ND 3.0)"
+        },
+        "fez_record_search_key_native_script_book_title": "多様化する言語習得環境とこれからの日本語教育",
+        "fez_record_search_key_notes":
+            "Translated Book title: 'Japanese Language Education in Diverse Learning Environments'.",
+        "fez_record_search_key_oa_status": {
+            "rek_oa_status": 453698,
+            "rek_oa_status_lookup": "Not Open Access"
+        },
+        "fez_record_search_key_place_of_publication": "Tokyo, Japan",
+        "fez_record_search_key_publisher": "3A Corporation",
+        "fez_record_search_key_refereed_source": {
+            "rek_refereed_source": "453638",
+            "rek_refereed_source_lookup": "Not yet assessed"
+        },
+        "fez_record_search_key_roman_script_book_title":
+            "Tayō-ka suru gengo shūtoku kankyō to korekara no nihongo kyōiku",
+        "fez_record_search_key_start_page": "79",
+        "fez_record_search_key_subject": [
+            {
+                "rek_subject": 450006,
+                "rek_subject_lookup": "B1"
+            },
+            {
+                "rek_subject": 453090,
+                "rek_subject_lookup": "200401 Applied Linguistics and Educational Linguistics"
+            },
+            {
+                "rek_subject": 453076,
+                "rek_subject_lookup": "200312 Japanese Language"
+            },
+            {
+                "rek_subject": 451553,
+                "rek_subject_lookup": "950201 Communication Across Languages and Culture"
+            }
+        ],
+        "fez_record_search_key_total_chapters": "16",
+        "fez_record_search_key_total_pages": "18",
+        "fez_record_search_key_translated_book_title":
+            "Japanese language education in diverse learning environments",
+        "fez_datastream_info": [
+            {
+                "dsi_pid": "UQ:173575",
+                "dsi_dsid": "FezACML_UQ_173575.xml",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "FezACML security for PID - UQ:173575",
+                "dsi_mimetype": "text/xml",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 3639,
+                "dsi_security_policy": 1,
+                "dsi_security_inherited": 0
+            }
+        ],
+        "rek_display_type_lookup": "Book Chapter",
+        "rek_object_type_lookup": "Record",
+        "rek_status_lookup": "Published",
+        "fez_record_search_key_security_policy": [5]
+    }, {
         "rek_pid": "UQ:410094",
         "rek_title": "Flux of signalling endosomes undergoing axonal retrograde transport is encoded by presynaptic activity and TrkB",
         "rek_description": "Axonal retrograde transport of signalling endosomes from the nerve terminal to the soma underpins survival. As each signalling endosome carries a quantal amount of activated receptors, we hypothesized that it is the frequency of endosomes reaching the soma that determines the scale of the trophic signal. Here we show that upregulating synaptic activity markedly increased the flux of plasma membrane-derived retrograde endosomes (labelled using cholera toxin subunit-B: CTB) in hippocampal neurons cultured in microfluidic devices, and live Drosophila larval motor neurons. Electron and super-resolution microscopy analyses revealed that the fast-moving sub-diffraction-limited CTB carriers contained the TrkB neurotrophin receptor, transiently activated by synaptic activity in a BDNF-independent manner. Pharmacological and genetic inhibition of TrkB activation selectively prevented the coupling between synaptic activity and the retrograde flux of signalling endosomes. TrkB activity therefore controls the encoding of synaptic activity experienced by nerve terminals, digitalized as the flux of retrogradely transported signalling endosomes.",
