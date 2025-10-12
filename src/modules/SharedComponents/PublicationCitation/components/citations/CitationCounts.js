@@ -67,6 +67,7 @@ export const CitationCounts = ({ publication, hideViewFullStatisticsLink, showAl
                         <Partials.AlmetricWidget
                             id={publication.rek_altmetric_id}
                             link={txt.altmetric.externalUrl.replace('[id]', publication.rek_altmetric_id)}
+                            title={getTitle(txt.altmetric.title)}
                         >
                             <Partials.CitationCountView source="altmetric" count={'?'} />
                         </Partials.AlmetricWidget>

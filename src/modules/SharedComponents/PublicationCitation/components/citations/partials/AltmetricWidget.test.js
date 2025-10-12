@@ -54,7 +54,7 @@ describe('AlmetricWidget', () => {
 
         await waitFor(() => {
             expect(getByRole('progressbar')).toBeInTheDocument();
-            expect(getByText(/publication’s Altmetric score/i)).toBeInTheDocument();
+            expect(getByText(/publication's Altmetric score/i)).toBeInTheDocument();
         });
     });
 
