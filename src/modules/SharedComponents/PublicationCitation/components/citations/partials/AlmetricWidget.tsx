@@ -116,7 +116,7 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
                     >
                         {/* deps & widget loading/fall-back strategy */}
                         {/* the elements below will be automatically removed when the widget gets created */}
-                        <Grid sx={{ mx: 1, mb: 3 }}>
+                        <Grid sx={{ m: 3 }}>
                             <CircularProgress
                                 id="altmetric-widget-loading"
                                 size={14}
@@ -124,7 +124,7 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
                                 variant={'indeterminate'}
                             />
                             <span style={{ marginLeft: 10 }}>
-                                loading breakdown of the{' '}
+                                loading{' '}
                                 <ExternalLink
                                     id={'altmetric-widget-open-details'}
                                     href={link}
@@ -132,9 +132,9 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
                                     title={title}
                                     openInNewIcon={false}
                                 >
-                                    publication’s Altmetric score
-                                </ExternalLink>
-                                .
+                                    publication's Altmetric score
+                                </ExternalLink>{' '}
+                                breakdown.
                             </span>
                         </Grid>
                     </div>
