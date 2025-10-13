@@ -83,7 +83,6 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         actions,
         pageSize: tablePageSizeDefault,
     });
-
     const {
         data,
         isBusy,
@@ -299,6 +298,11 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         table.setEditingRow(null);
         table.setCreatingRow(true);
     };
+
+    React.useEffect(() => {
+        onSearchTermChange('');
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const table = useMaterialReactTable({
         columns,
