@@ -90,7 +90,6 @@ test.describe('Search', () => {
         await expect(page.getByTestId('advanced-search')).toBeDisabled();
         await expect(page.getByTestId('advanced-search')).toHaveText('Search');
         await page.getByTestId('rek-author-input').fill('Ky Lane');
-        await page.getByTestId('rek-author-input').press('Enter'); // Pressing Enter on an input might not trigger a search automatically
         await expect(page.getByTestId('advanced-search')).not.toBeDisabled();
         // Add a set of collections to search from
         await addAnotherFieldButton.click();

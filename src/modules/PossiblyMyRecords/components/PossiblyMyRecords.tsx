@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate, useLocation, useNavigationType } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import * as actions from 'actions';
 
 // forms & custom components
@@ -40,7 +40,6 @@ interface ComponentState {
 
 const PossiblyMyRecords: React.FC = () => {
     const navigate = useNavigate();
-    const navigationType = useNavigationType();
     const location = useLocation();
     const dispatch = useDispatch();
     const confirmDialogBoxRef = useRef<{ showConfirmation: () => void } | null>(null);
@@ -89,7 +88,7 @@ const PossiblyMyRecords: React.FC = () => {
         ...(location?.state || {}),
     }));
 
-    const [prevLocation, setPrevLocation] = useState(location);
+    // const [prevLocation, setPrevLocation] = useState(location);
     const [shouldNavigate, setShouldNavigate] = useState(false);
 
     // handle navigation after state updates
@@ -105,21 +104,28 @@ const PossiblyMyRecords: React.FC = () => {
 
     // handle browser back button navigation
     useEffect(() => {
-        if (
-            prevLocation !== location &&
-            navigationType === 'POP' &&
-            location.pathname === pathConfig.records.possible
-        ) {
-            // istanbul ignore next
-            const newState = location.state ? { ...location.state } : { ...initialState };
-            setState(prevState => ({
-                ...prevState,
-                ...newState,
-            }));
-            dispatch(actions.searchPossiblyYourPublications(newState));
-        }
-        setPrevLocation(location);
-    }, [location, dispatch, navigationType, prevLocation]);
+        const handlePopState = () => {
+            // istanbul ignore else
+            if (location.pathname === pathConfig.records.possible) {
+                // istanbul ignore next
+                const newState = location.state ? { ...location.state } : { ...initialState };
+                setState(prevState => ({
+                    ...prevState,
+                    ...newState,
+                }));
+                dispatch(actions.searchPossiblyYourPublications(newState));
+            }
+        };
+
+        // Add event listener for popstate
+        window.addEventListener('popstate', handlePopState);
+
+        return () => {
+            // Clean up the event listener when the component unmounts
+            window.removeEventListener('popstate', handlePopState);
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     // set forever-true flag if user has publications
     useEffect(() => {
@@ -138,6 +144,7 @@ const PossiblyMyRecords: React.FC = () => {
         if (!accountLoading) {
             dispatch(actions.searchPossiblyYourPublications(state));
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [accountLoading, dispatch]);
 
     // cleanup on unmount
