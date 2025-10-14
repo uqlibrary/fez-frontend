@@ -7136,28 +7136,32 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
         <div
           class="MuiBox-root css-wsew38"
         >
-          <button
+          <span
             aria-label="Add contributor"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+            class=""
             data-mui-internal-clone-element="true"
-            data-testid="test-add-contributor"
-            id="test-add-contributor"
-            tabindex="0"
-            type="button"
           >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-              data-testid="test-add"
-              focusable="false"
-              id="test-add"
-              viewBox="0 0 24 24"
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+              data-testid="test-add-contributor"
+              id="test-add-contributor"
+              tabindex="0"
+              type="button"
             >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-              />
-            </svg>
-          </button>
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                data-testid="test-add"
+                focusable="false"
+                id="test-add"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                />
+              </svg>
+            </button>
+          </span>
           <div
             class="MuiBox-root css-1p0wbhh"
           >
@@ -7468,28 +7472,32 @@ exports[`ContributorsEditor renders full component for admin user with record af
         <div
           class="MuiBox-root css-wsew38"
         >
-          <button
+          <span
             aria-label="Add contributor"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+            class=""
             data-mui-internal-clone-element="true"
-            data-testid="test-add-contributor"
-            id="test-add-contributor"
-            tabindex="0"
-            type="button"
           >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-              data-testid="test-add"
-              focusable="false"
-              id="test-add"
-              viewBox="0 0 24 24"
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+              data-testid="test-add-contributor"
+              id="test-add-contributor"
+              tabindex="0"
+              type="button"
             >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-              />
-            </svg>
-          </button>
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                data-testid="test-add"
+                focusable="false"
+                id="test-add"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                />
+              </svg>
+            </button>
+          </span>
           <div
             class="MuiBox-root css-1p0wbhh"
           >
@@ -7800,13 +7808,89 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 />
               </td>
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-wh1y5d-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1lrdck-MuiTableCell-root"
                 data-index="3"
                 tabindex="0"
               >
                 <div
                   class="MuiBox-root css-4knjz3"
                 >
+                  <span
+                    aria-label="Remove this item"
+                    class=""
+                    data-mui-internal-clone-element="true"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                      data-testid="test-list-row-0-delete"
+                      id="test-list-row-0-delete"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="DeleteIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                        />
+                      </svg>
+                    </button>
+                  </span>
+                  <span
+                    aria-label="Edit this item"
+                    class=""
+                    data-mui-internal-clone-element="true"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                      data-testid="test-list-row-0-edit"
+                      id="test-list-row-0-edit"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="EditIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                        />
+                      </svg>
+                    </button>
+                  </span>
+                  <span
+                    aria-label="Move item down the order"
+                    class=""
+                    data-mui-internal-clone-element="true"
+                  >
+                    <button
+                      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                      data-testid="test-list-row-0-move-down"
+                      disabled=""
+                      id="test-list-row-0-move-down"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="KeyboardArrowDownIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
+                        />
+                      </svg>
+                    </button>
+                  </span>
                   <span
                     aria-label="Move item up the order"
                     class=""
@@ -7832,72 +7916,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                         />
                       </svg>
                     </button>
-                     
                   </span>
-                  <button
-                    aria-label="Move item down the order"
-                    class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
-                    data-mui-internal-clone-element="true"
-                    data-testid="test-list-row-0-move-down"
-                    disabled=""
-                    id="test-list-row-0-move-down"
-                    tabindex="-1"
-                    type="button"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                      data-testid="KeyboardArrowDownIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    aria-label="Edit this item"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
-                    data-mui-internal-clone-element="true"
-                    data-testid="test-list-row-0-edit"
-                    id="test-list-row-0-edit"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                      data-testid="EditIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    aria-label="Remove this item"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
-                    data-mui-internal-clone-element="true"
-                    data-testid="test-list-row-0-delete"
-                    id="test-list-row-0-delete"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                      data-testid="DeleteIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                      />
-                    </svg>
-                  </button>
                 </div>
               </td>
             </tr>

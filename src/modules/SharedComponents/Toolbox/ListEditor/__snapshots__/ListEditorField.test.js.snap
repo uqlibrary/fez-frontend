@@ -1,25 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ListEditorField function should return <FreeTextListEditor> with specified props 1`] = `
-<FreeTextListEditor
-  error={true}
-  errorText="test1"
-  maxInputLength={100}
-  onChange={[MockFunction]}
-  remindToAdd="test2"
-  state={
-    {
+{
+  "$$typeof": Symbol(react.transitional.element),
+  "_owner": null,
+  "_store": {},
+  "key": null,
+  "props": {
+    "error": true,
+    "errorText": "test1",
+    "maxInputLength": 100,
+    "onChange": [MockFunction],
+    "remindToAdd": "test2",
+    "state": {
       "error": "test1",
-    }
-  }
-/>
+    },
+  },
+  "type": [Function],
+}
 `;
 
 exports[`ListEditorField function should return <FreeTextListEditor> with specified props 2`] = `
-<FreeTextListEditor
-  error={false}
-  maxInputLength={100}
-  onChange={[MockFunction]}
-  remindToAdd="test2"
-/>
+{
+  "$$typeof": Symbol(react.transitional.element),
+  "_owner": null,
+  "_store": {},
+  "key": null,
+  "props": {
+    "error": false,
+    "errorText": undefined,
+    "maxInputLength": 100,
+    "onChange": [MockFunction],
+    "remindToAdd": "test2",
+  },
+  "type": [Function],
+}
 `;

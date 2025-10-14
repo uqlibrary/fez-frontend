@@ -31,7 +31,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -326,7 +326,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -406,7 +405,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -478,7 +476,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -773,7 +771,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -853,7 +850,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -933,7 +929,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -1005,7 +1000,7 @@ exports[`Component FileUploader should delete all files 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -1124,7 +1119,7 @@ exports[`Component FileUploader should delete first file 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -1419,7 +1414,6 @@ exports[`Component FileUploader should delete first file 1`] = `
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -1491,7 +1485,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -1786,7 +1780,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -1866,7 +1859,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -1952,7 +1944,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -2073,7 +2065,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -2192,7 +2184,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -2487,7 +2479,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -2567,7 +2558,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -2639,7 +2629,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -2758,7 +2748,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -3071,7 +3061,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -3139,7 +3128,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   aria-invalid="false"
                   autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                  id=":r4m:"
+                  id="_r_4m_"
                   inputmode="text"
                   placeholder="dd/mm/yyyy"
                   type="text"
@@ -3245,7 +3234,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -3309,12 +3297,12 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-1"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -3419,7 +3407,7 @@ exports[`Component FileUploader should render default component 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -3538,7 +3526,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -3657,7 +3645,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -3776,7 +3764,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -3895,7 +3883,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -4208,7 +4196,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -4272,12 +4259,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -4354,7 +4341,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -4418,12 +4404,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-1"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -4492,7 +4478,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -4805,7 +4791,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -4861,12 +4846,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -4943,7 +4928,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -5007,12 +4991,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-1"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -5081,7 +5065,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -5394,7 +5378,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -5450,12 +5433,12 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -5532,7 +5515,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -5600,7 +5582,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   aria-invalid="false"
                   autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                  id=":r2b:"
+                  id="_r_2b_"
                   inputmode="text"
                   placeholder="dd/mm/yyyy"
                   type="text"
@@ -5734,7 +5716,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -5853,7 +5835,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -6148,7 +6130,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -6228,7 +6209,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -6300,7 +6280,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -6419,7 +6399,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -6732,7 +6712,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -6800,12 +6779,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -6882,7 +6861,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -6950,12 +6928,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-1"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -7024,7 +7002,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -7337,7 +7315,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -7399,12 +7376,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -7481,7 +7458,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -7549,12 +7525,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-1"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -7623,7 +7599,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -7936,7 +7912,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -7998,12 +7973,12 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -8080,7 +8055,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -8154,7 +8128,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   aria-invalid="false"
                   autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                  id=":r35:"
+                  id="_r_35_"
                   inputmode="text"
                   placeholder="dd/mm/yyyy"
                   type="text"
@@ -8288,7 +8262,7 @@ exports[`Component FileUploader should render security policy selector if admin 
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -8407,7 +8381,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -8751,7 +8725,6 @@ exports[`Component FileUploader should set max files error message 1`] = `
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -8823,7 +8796,7 @@ exports[`Component FileUploader should update file description 1`] = `
               data-testid="fez-datastream-info-input"
               id="Uploader"
               multiple=""
-              style="display: none;"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               tabindex="-1"
               type="file"
             />
@@ -9136,7 +9109,6 @@ exports[`Component FileUploader should update file description 1`] = `
                   name="fileDescription"
                   placeholder="Description"
                   type="text"
-                  value=""
                 />
               </div>
             </div>
@@ -9200,12 +9172,12 @@ exports[`Component FileUploader should update file description 1`] = `
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
           >
-            <p
+            <div
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </div>
           </div>
           <div
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"

@@ -178,7 +178,8 @@ exports[`Add new record should show and navigate to fix record on button click a
 
 exports[`Add new record should show and navigate to fix record on button click and display file upload error 2`] = `
 File {
-  "path": "myTestImage.png",
+  "path": "./myTestImage.png",
+  "relativePath": "./myTestImage.png",
 }
 `;
 

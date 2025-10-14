@@ -32,6 +32,7 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:111111"
                   />
                 </h6>
@@ -140,6 +141,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:678728"
                   >
                     ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network
@@ -425,6 +427,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:256099"
                   >
                     Open Accessible test record
@@ -752,6 +755,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:173575"
                   >
                     Open Accessible test Book Chapter record
@@ -940,6 +944,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:410094"
                   >
                     Flux of signalling endosomes undergoing axonal retrograde transport is encoded by presynaptic activity and TrkB
@@ -1261,6 +1266,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:398497"
                   >
                     Extracellular vesicles secreted by highly metastatic clonal variants of osteosarcoma preferentially localize to the lungs and induce metastatic behaviour in poorly metastatic clones
@@ -1588,6 +1594,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:379178"
                   >
                     Botulinum neurotoxin type-A enters a non-recycling pool of synaptic vesicles
@@ -1903,6 +1910,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:357538"
                   >
                     A mutant tat protein inhibits HIV-1 reverse transcription by targeting the reverse transcription complex
@@ -2223,6 +2231,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:360881"
                   >
                     Control of autophagosome axonal retrograde flux by presynaptic activity unveiled using botulinum neurotoxin type A
@@ -2550,6 +2559,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:355233"
                   >
                     Activity-driven relaxation of the cortical actomyosin II network synchronizes Munc18-1-dependent neurosecretory vesicle docking
@@ -2851,6 +2861,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:350994"
                   >
                     An acto-myosin II constricting ring initiates the fission of activity-dependent bulk endosomes in neurosecretory cells
@@ -3129,6 +3140,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:344420"
                   >
                     Increased polyubiquitination and proteasomal degradation of a Munc18-1 disease-linked mutant causes temperature-sensitive defect in exocytosis
@@ -3456,6 +3468,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:306039"
                   >
                     Caveolin-1 is necessary for hepatic oxidative lipid metabolism: evidence for crosstalk between caveolin-1 and bile acid signaling
@@ -3902,6 +3915,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:305893"
                   >
                     The Munc18-1 domain 3a loop is essential for neuroexocytosis but not for syntaxin-1A transport to the plasma membrane
@@ -4194,6 +4208,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:302599"
                   >
                     Inhibition of PIKfyve by YM-201636 Dysregulates Autophagy and Leads to Apoptosis-Independent Neuronal Cell Death
@@ -4460,6 +4475,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:294055"
                   >
                     Myosin VI small insert isoform maintains exocytosis by tethering secretory granules to the cortical actin
@@ -4766,6 +4782,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:319620"
                   >
                     Secretagogue stimulation of neurosecretory cells elicits filopodial extensions uncovering new functional release sites
@@ -5023,6 +5040,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:284237"
                   >
                     Caveolin-1 deficiency leads to increased susceptibility to cell death and fibrosis in white adipose tissue: characterization of a lipodystrophic model
@@ -5300,6 +5318,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:279315"
                   >
                     Co-regulation of cell polarization and migration by caveolar proteins PTRF/cavin-1 and caveolin-1
@@ -5643,6 +5662,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:265967"
                   >
                     Caveolin-1 orchestrates the balance between glucose and lipid-dependent energy metabolism: Implications for liver regeneration
@@ -5991,6 +6011,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:278920"
                   >
                     Postlipolytic insulin-dependent remodeling of micro lipid droplets in adipocytes
@@ -6276,6 +6297,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:277856"
                   >
                     Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins
@@ -6487,6 +6509,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:256096"
                   >
                     Dynamin inhibition blocks botulinum neurotoxin type A endocytosis in neurons and delays botulism

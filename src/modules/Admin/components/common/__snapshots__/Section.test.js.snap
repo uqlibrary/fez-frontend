@@ -1,66 +1,169 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GroupsWithinCard component should render default view 1`] = `
-<ForwardRef(GridLegacy)
-  item={true}
-  xs={12}
->
-  <AdminCard
-    accentHeader={true}
-    title="Title"
+<div>
+  <div
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
   >
-    <ForwardRef(GridLegacy)
-      container={true}
-      spacing={1}
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
-      <Memo
-        groups={
-          [
-            [
-              "test",
-            ],
-          ]
-        }
-      />
-    </ForwardRef(GridLegacy)>
-  </AdminCard>
-</ForwardRef(GridLegacy)>
+      <div
+        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              >
+                <hr
+                  class="MuiBox-root css-1a7sacs"
+                />
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+              >
+                <h4
+                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                >
+                   
+                  Title
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+            >
+              <div
+                data-analyticsid="rek-title"
+                data-testid="rek-title"
+                id="rek-title"
+              >
+                <span>
+                  <span
+                    class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                    style="opacity: 0.666;"
+                  >
+                    Formatted title
+                    <span>
+                       *
+                    </span>
+                  </span>
+                </span>
+                <div />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`GroupsWithoutCard component should render default view 1`] = `
-[
-  [
-    <FieldGridItem
-      field="test"
-      group={
-        [
-          "test",
-        ]
-      }
-    />,
-  ],
-]
+<div>
+  <div
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+  >
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+    >
+      <div
+        data-analyticsid="rek-title"
+        data-testid="rek-title"
+        id="rek-title"
+      >
+        <span>
+          <span
+            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            style="opacity: 0.666;"
+          >
+            Formatted title
+            <span>
+               *
+            </span>
+          </span>
+        </span>
+        <div />
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Section component should render default view 1`] = `
-<ForwardRef(GridLegacy)
-  container={true}
-  spacing={1}
->
-  <Memo
-    disabled={false}
-    title="Title"
-  />
-</ForwardRef(GridLegacy)>
+<div>
+  <div
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+  >
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+    >
+      <div
+        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              >
+                <hr
+                  class="MuiBox-root css-1a7sacs"
+                />
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+              >
+                <h4
+                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                >
+                   
+                  Title
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Section component should render default view 2`] = `
-<ForwardRef(GridLegacy)
-  container={true}
-  spacing={1}
->
-  <Memo
-    disabled={false}
+<div>
+  <div
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
   />
-</ForwardRef(GridLegacy)>
+</div>
 `;

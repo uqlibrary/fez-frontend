@@ -6,6 +6,7 @@ exports[`MyIncompleteRecord form submission payload all fields data 2`] = `"{"is
 
 exports[`MyIncompleteRecord form submission payload all fields data 3`] = `
 File {
-  "path": "myTestImage.png",
+  "path": "./myTestImage.png",
+  "relativePath": "./myTestImage.png",
 }
 `;
