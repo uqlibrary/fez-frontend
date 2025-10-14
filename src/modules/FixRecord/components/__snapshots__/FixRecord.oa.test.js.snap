@@ -8,7 +8,8 @@ exports[`Component FixRecord for non-compliant Open Access form submission paylo
 
 exports[`Component FixRecord for non-compliant Open Access form submission payload should submit fix record data with new file 3`] = `
 File {
-  "path": "test.png",
+  "path": "./test.png",
+  "relativePath": "./test.png",
 }
 `;
 
@@ -132,6 +133,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -518,7 +520,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                               data-testid="fez-datastream-info-input"
                               id="Uploader"
                               multiple=""
-                              style="display: none;"
+                              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                               tabindex="-1"
                               type="file"
                             />
@@ -932,6 +934,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1318,7 +1321,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                               data-testid="fez-datastream-info-input"
                               id="Uploader"
                               multiple=""
-                              style="display: none;"
+                              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                               tabindex="-1"
                               type="file"
                             />

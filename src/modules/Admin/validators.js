@@ -1,16 +1,11 @@
-import { validate } from 'config/admin';
-import { useWatch } from 'react-hook-form';
+import { useMemo } from 'react';
 import { merge } from 'lodash';
 
-export const useFormValidator = form => {
-    const data = {
-        ...useWatch({
-            control: form.control,
-        }),
-        ...form.getValues(),
-    };
-    const formErrors = form.formState.errors;
-    const validationErrors = validate(data);
-    const errors = { errors: merge(validationErrors, formErrors) };
+// This hook is now extremely cheap. Its only job is to merge two different error objects.
+export const useFormValidator = (formErrors, customErrors) => {
+    const errors = useMemo(() => {
+        return { errors: merge({}, formErrors, customErrors) };
+    }, [customErrors, formErrors]);
+
     return errors;
 };
