@@ -11,7 +11,7 @@ exports[`LookupForm tests  should render lookup form 1`] = `
       <input
         aria-invalid="false"
         class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
-        id="«r2»"
+        id="_r_2_"
         type="text"
       />
       <fieldset

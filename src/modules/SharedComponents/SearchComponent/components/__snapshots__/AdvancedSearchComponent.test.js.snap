@@ -292,7 +292,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r6»"
+                        id="_r_6_"
                         type="text"
                         value=" to "
                       />

@@ -670,7 +670,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«rq»"
+                        id="_r_q_"
                         type="text"
                         value=" to "
                       />
@@ -1120,7 +1120,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«ra»"
+                        id="_r_a_"
                         type="text"
                         value=" to "
                       />
@@ -1717,7 +1717,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r8e»"
+                        id="_r_8e_"
                         type="text"
                         value=" to "
                       />
@@ -2239,7 +2239,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r6l»"
+                        id="_r_6l_"
                         type="text"
                         value=" to "
                       />
@@ -2787,7 +2787,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r1d»"
+                        id="_r_1d_"
                         type="text"
                         value=" to "
                       />
@@ -3262,7 +3262,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r69»"
+                        id="_r_69_"
                         type="text"
                         value=" to "
                       />
@@ -3787,7 +3787,7 @@ exports[`SearchComponent should update advanced search row on search text change
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r7v»"
+                        id="_r_7v_"
                         type="text"
                         value=" to "
                       />
@@ -4262,7 +4262,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r9k»"
+                        id="_r_9k_"
                         type="text"
                         value=" to "
                       />
@@ -4373,7 +4373,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r9p»"
+                        id="_r_9p_"
                         type="text"
                         value=" to "
                       />
@@ -4505,7 +4505,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«ra0»"
+                        id="_r_a0_"
                         type="text"
                         value=" to "
                       />
@@ -5001,7 +5001,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r9k»"
+                        id="_r_9k_"
                         type="text"
                         value=" to "
                       />
@@ -5112,7 +5112,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«r9p»"
+                        id="_r_9p_"
                         type="text"
                         value=" to "
                       />
@@ -5244,7 +5244,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id="«ra0»"
+                        id="_r_a0_"
                         type="text"
                         value=" to "
                       />

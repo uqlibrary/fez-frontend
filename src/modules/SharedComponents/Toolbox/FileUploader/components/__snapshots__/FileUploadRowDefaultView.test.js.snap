@@ -618,7 +618,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
               aria-invalid="true"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              id="«ri»"
+              id="_r_i_"
               inputmode="text"
               placeholder="dd/mm/yyyy"
               type="text"
