@@ -241,7 +241,7 @@ export default class MyRecords extends PureComponent {
                             (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) && (
                                 <Grid item xs={12} md={9}>
                                     <StandardCard
-                                        {...(txt?.help ? { title: txt.pageTitle, help: txt.help } : { noHeader: true })}
+                                        {...(txt?.help ? { title: txt.cardTitle, help: txt.help } : { noHeader: true })}
                                     >
                                         {pagingData && pagingData.to && pagingData.from && pagingData.total && (
                                             <span>
