@@ -144,6 +144,7 @@ export default {
                         updating: 'Updating...',
                         alertId: 'Alert ID',
                         received: 'Received',
+                        creator: 'Requester ID',
                         status: 'Status',
                         statusHelpText: 'Assign a staff member to this issue',
                     },
