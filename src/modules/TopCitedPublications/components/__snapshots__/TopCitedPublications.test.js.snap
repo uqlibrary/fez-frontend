@@ -257,8 +257,9 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                       >
-                        <div
+                        <span
                           class="citationContent citationJournalArticle"
+                          id="citation-content-UQ:330391"
                         >
                           <span
                             class="citationAuthors"
@@ -357,7 +358,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                               https://doi.org/10.4049/jimmunol.1490012
                             </a>
                           </span>
-                        </div>
+                        </span>
                       </div>
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -719,8 +720,9 @@ exports[`Component TopCitedPublications should render top cited publications wit
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                       >
-                        <div
+                        <span
                           class="citationContent citationJournalArticle"
+                          id="citation-content-UQ:330391"
                         >
                           <span
                             class="citationAuthors"
@@ -819,7 +821,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                               https://doi.org/10.4049/jimmunol.1490012
                             </a>
                           </span>
-                        </div>
+                        </span>
                       </div>
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"

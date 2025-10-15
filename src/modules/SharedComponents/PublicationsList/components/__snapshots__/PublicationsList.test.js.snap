@@ -151,8 +151,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:678728"
                 >
                   <span
                     class="citationAuthors"
@@ -281,7 +282,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1016/j.mcn.2017.07.005
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -437,8 +438,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:256099"
                 >
                   <span
                     class="citationAuthors"
@@ -604,7 +606,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1074/jbc.M111.283879
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -765,8 +767,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationBookChapter"
+                  id="citation-content-UQ:173575"
                 >
                   <span
                     class="citationAuthors"
@@ -856,7 +859,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -954,8 +957,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:410094"
                 >
                   <span
                     class="citationAuthors"
@@ -1115,7 +1119,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1038/ncomms12976
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1276,8 +1280,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:398497"
                 >
                   <span
                     class="citationAuthors"
@@ -1443,7 +1448,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.18632/oncotarget.9781
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1604,8 +1609,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:379178"
                 >
                   <span
                     class="citationAuthors"
@@ -1759,7 +1765,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1038/srep19654
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1920,8 +1926,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:357538"
                 >
                   <span
                     class="citationAuthors"
@@ -2080,7 +2087,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1128/JVI.03440-14
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -2241,8 +2248,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:360881"
                 >
                   <span
                     class="citationAuthors"
@@ -2408,7 +2416,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1523/JNEUROSCI.3757-14.2015
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -2569,8 +2577,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:355233"
                 >
                   <span
                     class="citationAuthors"
@@ -2710,7 +2719,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1038/ncomms7297
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -2871,8 +2880,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:350994"
                 >
                   <span
                     class="citationAuthors"
@@ -2989,7 +2999,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1523/JNEUROSCI.3228-14.2015
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -3150,8 +3160,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:344420"
                 >
                   <span
                     class="citationAuthors"
@@ -3317,7 +3328,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1016/j.celrep.2014.08.059
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -3478,8 +3489,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:306039"
                 >
                   <span
                     class="citationAuthors"
@@ -3764,7 +3776,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1016/j.celrep.2013.06.017
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -3925,8 +3937,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:305893"
                 >
                   <span
                     class="citationAuthors"
@@ -4078,7 +4091,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1242/jcs.126813
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -4218,8 +4231,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:302599"
                 >
                   <span
                     class="citationAuthors"
@@ -4345,7 +4359,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1371/journal.pone.0060152
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -4485,8 +4499,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:294055"
                 >
                   <span
                     class="citationAuthors"
@@ -4631,7 +4646,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1083/jcb.201204092
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -4792,8 +4807,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:319620"
                 >
                   <span
                     class="citationAuthors"
@@ -4910,7 +4926,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1523/JNEUROSCI.2634-13.2013
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5050,8 +5066,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:284237"
                 >
                   <span
                     class="citationAuthors"
@@ -5188,7 +5205,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1371/journal.pone.0046242
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5328,8 +5345,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:279315"
                 >
                   <span
                     class="citationAuthors"
@@ -5511,7 +5529,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1371/journal.pone.0043041
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5672,8 +5690,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:265967"
                 >
                   <span
                     class="citationAuthors"
@@ -5860,7 +5879,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1002/hep.24810
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -6021,8 +6040,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:278920"
                 >
                   <span
                     class="citationAuthors"
@@ -6167,7 +6187,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1091/mbc.E11-10-0847
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -6307,8 +6327,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationConferencePaper"
+                  id="citation-content-UQ:277856"
                 >
                   <span
                     class="citationAuthors"
@@ -6400,7 +6421,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1016/j.toxicon.2012.04.130
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -6519,8 +6540,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:256096"
                 >
                   <span
                     class="citationAuthors"
@@ -6686,7 +6708,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1074/jbc.M111.283879
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"

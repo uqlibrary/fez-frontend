@@ -32,8 +32,9 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-undefined"
               >
                 <span
                   class="citationAuthors empty"
@@ -124,7 +125,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
                     https://doi.org/10.1111/1440-1630.12585
                   </a>
                 </span>
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -309,8 +310,9 @@ exports[`PublicationCitation  should render button disabled with spinners on act
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -407,7 +409,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1047,8 +1049,9 @@ exports[`PublicationCitation  should render component with content indicators 1`
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -1145,7 +1148,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1305,8 +1308,9 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -1403,7 +1407,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1582,8 +1586,9 @@ exports[`PublicationCitation  should render component with default item 1`] = `
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -1680,7 +1685,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1865,8 +1870,9 @@ exports[`PublicationCitation  should render component with default item with ima
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:676287"
               >
                 <span
                   class="citationAuthors"
@@ -2026,7 +2032,7 @@ exports[`PublicationCitation  should render component with default item with ima
                     https://doi.org/10.1242/jcs.196659
                   </a>
                 </span>
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -2249,8 +2255,9 @@ exports[`PublicationCitation  should render component with default item with ima
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:676287"
               >
                 <span
                   class="citationAuthors"
@@ -2410,7 +2417,7 @@ exports[`PublicationCitation  should render component with default item with ima
                     https://doi.org/10.1242/jcs.196659
                   </a>
                 </span>
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -2595,8 +2602,9 @@ exports[`PublicationCitation  should render component with default item without 
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:676287"
               >
                 <span
                   class="citationAuthors"
@@ -2756,7 +2764,7 @@ exports[`PublicationCitation  should render component with default item without 
                     https://doi.org/10.1242/jcs.196659
                   </a>
                 </span>
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -2936,8 +2944,9 @@ exports[`PublicationCitation  should render component with default item without 
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -3034,7 +3043,7 @@ exports[`PublicationCitation  should render component with default item without 
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -3349,8 +3358,9 @@ exports[`PublicationCitation  should render component with default list hiding t
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -3447,7 +3457,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -3607,8 +3617,9 @@ exports[`PublicationCitation  should render component with default list hiding t
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -3705,7 +3716,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -3865,8 +3876,9 @@ exports[`PublicationCitation  should render component with empty custom actions 
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -3963,7 +3975,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -4130,8 +4142,9 @@ exports[`PublicationCitation  should render component with publication from mult
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -4228,7 +4241,7 @@ exports[`PublicationCitation  should render component with publication from mult
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -4411,8 +4424,9 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -4509,7 +4523,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -4743,8 +4757,9 @@ exports[`PublicationCitation  should render component without image if whitelist
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:676287"
               >
                 <span
                   class="citationAuthors"
@@ -4904,7 +4919,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                     https://doi.org/10.1242/jcs.196659
                   </a>
                 </span>
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5089,8 +5104,9 @@ exports[`PublicationCitation  should render primary action button 1`] = `
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -5187,7 +5203,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5411,8 +5427,9 @@ exports[`PublicationCitation  should render publication citation metric with cou
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -5509,7 +5526,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5710,8 +5727,9 @@ exports[`PublicationCitation  should render publication citation metric without 
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -5808,7 +5826,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5968,8 +5986,9 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
             >
-              <div
+              <span
                 class="citationContent citationJournalArticle"
+                id="citation-content-UQ:41878"
               >
                 <span
                   class="citationAuthors"
@@ -6066,7 +6085,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 <span
                   class="citationDOI empty"
                 />
-              </div>
+              </span>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"

@@ -213,8 +213,9 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                       >
-                        <div
+                        <span
                           class="citationContent citationJournalArticle"
+                          id="citation-content-UQ:330391"
                         >
                           <span
                             class="citationAuthors"
@@ -313,7 +314,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               https://doi.org/10.4049/jimmunol.1490012
                             </a>
                           </span>
-                        </div>
+                        </span>
                       </div>
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -568,8 +569,9 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                       >
-                        <div
+                        <span
                           class="citationContent citationJournalArticle"
+                          id="citation-content-UQ:103860"
                         >
                           <span
                             class="citationAuthors"
@@ -683,7 +685,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               https://doi.org/10.1016/j.vaccine.2006.05.110
                             </a>
                           </span>
-                        </div>
+                        </span>
                       </div>
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -938,8 +940,9 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                       >
-                        <div
+                        <span
                           class="citationContent citationJournalArticle"
+                          id="citation-content-UQ:330391"
                         >
                           <span
                             class="citationAuthors"
@@ -1038,7 +1041,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               https://doi.org/10.4049/jimmunol.1490012
                             </a>
                           </span>
-                        </div>
+                        </span>
                       </div>
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"

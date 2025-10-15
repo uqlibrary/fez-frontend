@@ -332,8 +332,9 @@ exports[`Search record results should render a single claimable item with no aut
                             <div
                               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                             >
-                              <div
+                              <span
                                 class="citationContent citationBook"
+                                id="citation-content-UQ:795469"
                               >
                                 <span
                                   class="citationAuthors empty"
@@ -399,7 +400,7 @@ exports[`Search record results should render a single claimable item with no aut
                                     https://doi.org/10.1007/978-3-319-71580-3
                                   </a>
                                 </span>
-                              </div>
+                              </span>
                             </div>
                             <div
                               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
