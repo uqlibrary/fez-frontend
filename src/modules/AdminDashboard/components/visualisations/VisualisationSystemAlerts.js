@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
-import { ResponsiveChartContainer, BarPlot } from '@mui/x-charts';
+import { ChartDataProvider, ChartsSurface, BarPlot } from '@mui/x-charts';
 
 const VisualisationSystemAlerts = ({
     assigned,
@@ -12,8 +12,8 @@ const VisualisationSystemAlerts = ({
     colours = { assigned: '#338CFA', remaining: '#B60DCE' },
 }) => {
     return (
-        <Box data-testid={`chart-container-${id}`}>
-            <ResponsiveChartContainer
+        <Box data-testid={`chart-container-${id}`} sx={{ width: 200, height: 40 }}>
+            <ChartDataProvider
                 series={[
                     { data: [assigned], type: 'bar', stack: 'SystemAlerts', layout: 'horizontal' },
                     {
@@ -27,7 +27,7 @@ const VisualisationSystemAlerts = ({
                 colors={[colours.assigned, colours.remaining]}
                 yAxis={[
                     {
-                        data: ['A', 'B', 'C'],
+                        data: ['A', 'B'],
                         scaleType: 'band',
                         id: 'y-axis-id',
                     },
@@ -35,14 +35,16 @@ const VisualisationSystemAlerts = ({
                 margin={{
                     left: 0,
                     right: 0,
-                    top: 10,
-                    bottom: 10,
+                    top: 0,
+                    bottom: 0,
                 }}
                 disableAxisListener
                 sx={{ '> rect': { height: '20px !important' } }}
             >
-                <BarPlot />
-            </ResponsiveChartContainer>
+                <ChartsSurface>
+                    <BarPlot />
+                </ChartsSurface>
+            </ChartDataProvider>
         </Box>
     );
 };
