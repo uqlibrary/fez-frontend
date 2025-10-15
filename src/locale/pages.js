@@ -587,15 +587,16 @@ export default {
         },
         openAccessComplianceRecord: {
             loadingMessage: 'Loading work',
-            title: 'Upload an Author Accepted Manuscript for green open access',
+            title: 'Work to make open access',
             subTitle: (
                 <div>
-                    Work to make open access
+                    Upload an Author Accepted Manuscript for green open access
                     <Box sx={{ typography: 'body1' }}>
                         <p>
-                            Upload this work’s Author Accepted Manuscript (AAM) below and click submit to make this
-                            research more visible. If a work has been identified in error, please suggest a correction.
+                            Upload this work's Author Accepted Manuscript (AAM) below and click submit to make this
+                            research more visible.
                         </p>
+                        <p>If a work has been identified in error, please suggest a correction.</p>
                     </Box>
                 </div>
             ),
