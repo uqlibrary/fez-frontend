@@ -28,7 +28,7 @@ export const ConferenceProceedingsCitation = ({ citationStyle, hideDoiLink, publ
     // {Editor/s || ed.}{Publication Year| (|).}<i>{Title of proceedings| |.}</i>{Conference Name| |,}{Conference Location| |,}{Conference Date| |.}{Place of Publication| |:}{Publisher| |.} {doi| https://doi.org/||}
 
     return (
-        <div className="citationContent citationDesign">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationDesign">
             {/* {Editor/s || ed.} */}
             <Partials.EditorsCitationView
                 citationStyle={citationStyle}
@@ -68,7 +68,7 @@ export const ConferenceProceedingsCitation = ({ citationStyle, hideDoiLink, publ
 
             {/* {doi| https://doi.org/||} */}
             <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
-        </div>
+        </span>
     );
 };
 ConferenceProceedingsCitation.propTypes = {
