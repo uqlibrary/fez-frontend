@@ -14,7 +14,7 @@ export const DesignCitation = ({ publication, citationStyle }) => {
     // {Creator}{Publication Year| (|).}<i>{Title| |.}</i>{Source| |.}
 
     return (
-        <div className="citationContent citationDesign">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationDesign">
             {/* {Creator} */}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -29,7 +29,7 @@ export const DesignCitation = ({ publication, citationStyle }) => {
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} />
-        </div>
+        </span>
     );
 };
 DesignCitation.propTypes = {

@@ -16,7 +16,7 @@ export const AudioDocumentCitation = ({ publication, citationStyle }) => {
     // eSpace citation view for Audio
     // {Creator}{Publication Year| (|).} <i>{Title| |.}</i> {Publisher| |.}{Series| |.} {doi| doi:|}
     return (
-        <div className="citationContent citationAudio">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationAudio">
             {/* {Creator}*/}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -34,7 +34,7 @@ export const AudioDocumentCitation = ({ publication, citationStyle }) => {
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} />
-        </div>
+        </span>
     );
 };
 
