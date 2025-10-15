@@ -27,7 +27,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
         data-testid="page-title"
         id="page-title"
       >
-        Upload an Author Accepted Manuscript for green open access
+        Work to make open access
       </h2>
     </div>
     <div
@@ -61,12 +61,15 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                     id="standard-card-header"
                   >
                     <div>
-                      Work to make open access
+                      Upload an Author Accepted Manuscript for green open access
                       <div
                         class="MuiBox-root css-1295ay4"
                       >
                         <p>
-                          Upload this work’s Author Accepted Manuscript (AAM) below and click submit to make this research more visible. If a work has been identified in error, please suggest a correction.
+                          Upload this work's Author Accepted Manuscript (AAM) below and click submit to make this research more visible.
+                        </p>
+                        <p>
+                          If a work has been identified in error, please suggest a correction.
                         </p>
                       </div>
                     </div>
@@ -828,7 +831,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
         data-testid="page-title"
         id="page-title"
       >
-        Upload an Author Accepted Manuscript for green open access
+        Work to make open access
       </h2>
     </div>
     <div
@@ -862,12 +865,15 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                     id="standard-card-header"
                   >
                     <div>
-                      Work to make open access
+                      Upload an Author Accepted Manuscript for green open access
                       <div
                         class="MuiBox-root css-1295ay4"
                       >
                         <p>
-                          Upload this work’s Author Accepted Manuscript (AAM) below and click submit to make this research more visible. If a work has been identified in error, please suggest a correction.
+                          Upload this work's Author Accepted Manuscript (AAM) below and click submit to make this research more visible.
+                        </p>
+                        <p>
+                          If a work has been identified in error, please suggest a correction.
                         </p>
                       </div>
                     </div>
