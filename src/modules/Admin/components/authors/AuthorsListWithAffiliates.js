@@ -509,6 +509,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         enableHiding: false,
         enableColumnFilters: false,
         autoResetPageIndex: false,
+        enableKeyboardShortcuts: false,
         positionActionsColumn: 'last',
         initialState: {
             density: 'compact',
