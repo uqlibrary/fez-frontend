@@ -249,7 +249,7 @@ export const setup = () => {
         .reply(200, { ...mockData.bulkUpdatesList })
         // Detailed history API check (path /view/<PID>/history)
         .onGet(routes.EXISTING_RECORD_HISTORY_API({ pid: 'UQ:a62a760' }).apiUrl)
-        .reply(200, ...mockData.detailedHistory)
+        .reply(200, { ...mockData.detailedHistory })
         // This tests the "Record not found" message on viewRecord and adminEdit
         .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:abc123' }).apiUrl)))
         .reply(404, { message: 'File not found' })
@@ -562,11 +562,6 @@ export const setup = () => {
         .reply(200, { ...mockData.rorLookup })
         .onGet(new RegExp(escapeRegExp(routes.JOURNAL_KEYWORDS_LOOKUP_API({ query: '.*' }).apiUrl)))
         .reply(config => {
-            console.log(
-                'Returning lookup data for:',
-                config.url.replace('https://api.library.uq.edu.au/staging/journals/search?rule=keywords&query=', '') ||
-                    'NA',
-            );
             if (config.url.indexOf('query=null') > -1) {
                 return [200, { data: {} }];
             } else if (config.url.indexOf('query=adv') > -1) {
@@ -607,7 +602,6 @@ export const setup = () => {
         .reply(200)
         .onGet(new RegExp(escapeRegExp(routes.JOURNAL_SEARCH_API({}).apiUrl)))
         .reply(config => {
-            console.log('Returning lookup data for config:', config);
             if (config.params.export_to && config.params.export_to === 'excel') {
                 return [
                     200,
@@ -653,10 +647,7 @@ export const setup = () => {
 
         .onGet(new RegExp(routes.CHILD_VOCAB_LIST_API('\\d+.*', false).apiUrl))
         .reply(config => {
-            const id = config.url
-                .split('/')
-                .pop()
-                .split('?')[0];
+            const id = config.url.split('/').pop().split('?')[0];
             return [200, { ...mockData.childVocabList[id] }];
         })
         .onGet(new RegExp(escapeRegExp(routes.VOCAB_LIST_API(false).apiUrl + '.*')))
@@ -807,8 +798,8 @@ export const setup = () => {
         .onPost('fez-users/delete-list')
         .reply(200, {
             data: {
-                '1000000293': 'User deleted',
-                '9999999999': 'User not found',
+                1000000293: 'User deleted',
+                9999999999: 'User not found',
             },
         })
         .onPost('fez-users')
@@ -871,8 +862,8 @@ export const setup = () => {
         .onPost('fez-authors/delete-list')
         .reply(200, {
             data: {
-                '410': 'Author deleted',
-                '9999999999': 'Author not found',
+                410: 'Author deleted',
+                9999999999: 'Author not found',
             },
         })
         .onPost(new RegExp(escapeRegExp(routes.AUTHOR_API().apiUrl)))

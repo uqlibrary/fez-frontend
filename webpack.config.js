@@ -25,7 +25,7 @@ const orcidClientId = 'APP-OXX6M6MBQ77GUVWX';
 module.exports = {
     mode: 'development',
     context: resolve(__dirname),
-    devtool: 'source-map',
+    devtool: 'eval-source-map',
     entry: {
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         index: join(__dirname, 'src', 'index.js'),
@@ -57,22 +57,34 @@ module.exports = {
     },
     module: {
         rules: [
+            // TODO remove babel-loader once issues with files under src/mock/ are fixed
             {
-                test: /\.(j|t)sx?$/,
-                include: [resolve(__dirname, 'src')],
-                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
+                test: /\.js$/,
+                include: [/src\/mock/],
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+                        presets: ['@babel/preset-env'],
                         plugins: [
                             '@babel/plugin-proposal-export-default-from',
                             ['@babel/plugin-transform-spread', { loose: true }],
                             enableFastRefresh && 'react-refresh/babel',
-                            'babel-plugin-istanbul',
                         ].filter(Boolean),
-                        sourceMaps: true,
-                        inputSourceMap: true,
+                    },
+                },
+            },
+            {
+                test: /\.(j|t)sx?$/,
+                include: [resolve(__dirname, 'src')],
+                exclude: [/node_modules/, /custom_modules/, /src\/mock/],
+                use: {
+                    loader: 'esbuild-loader',
+                    options: {
+                        loader: 'tsx',
+                        target: 'es2020',
+                        jsx: 'automatic',
+                        jsxDev: true,
+                        sourcemap: true,
                     },
                 },
             },
