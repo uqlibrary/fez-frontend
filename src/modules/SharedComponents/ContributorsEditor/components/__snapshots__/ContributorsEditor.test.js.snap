@@ -2710,7 +2710,6 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                 colspan="1"
                 data-index="0"
                 scope="col"
-                tabindex="0"
               >
                 <div
                   class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2734,7 +2733,6 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                 data-can-sort="true"
                 data-index="1"
                 scope="col"
-                tabindex="0"
               >
                 <div
                   class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2817,7 +2815,6 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                 data-can-sort="true"
                 data-index="2"
                 scope="col"
-                tabindex="0"
               >
                 <div
                   class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2876,7 +2873,6 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                 colspan="1"
                 data-index="3"
                 scope="col"
-                tabindex="0"
               >
                 <div
                   class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -7191,7 +7187,6 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                 colspan="1"
                 data-index="0"
                 scope="col"
-                tabindex="0"
               >
                 <div
                   class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -7215,7 +7210,6 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                 data-can-sort="true"
                 data-index="1"
                 scope="col"
-                tabindex="0"
               >
                 <div
                   class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -7298,7 +7292,6 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                 data-can-sort="true"
                 data-index="2"
                 scope="col"
-                tabindex="0"
               >
                 <div
                   class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -7357,7 +7350,6 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                 colspan="1"
                 data-index="3"
                 scope="col"
-                tabindex="0"
               >
                 <div
                   class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -7527,7 +7519,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 colspan="1"
                 data-index="0"
                 scope="col"
-                tabindex="0"
               >
                 <div
                   class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -7551,7 +7542,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 data-can-sort="true"
                 data-index="1"
                 scope="col"
-                tabindex="0"
               >
                 <div
                   class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -7634,7 +7624,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 data-can-sort="true"
                 data-index="2"
                 scope="col"
-                tabindex="0"
               >
                 <div
                   class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -7693,7 +7682,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 colspan="1"
                 data-index="3"
                 scope="col"
-                tabindex="0"
               >
                 <div
                   class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -7726,7 +7714,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1weeygr-MuiTableCell-root"
                 data-index="0"
-                tabindex="0"
               >
                 <span
                   aria-label="Expand"
@@ -7759,7 +7746,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1mm2626-MuiTableCell-root"
                 data-index="1"
-                tabindex="0"
               >
                 <div
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
@@ -7799,7 +7785,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1996tex-MuiTableCell-root"
                 data-index="2"
-                tabindex="0"
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -7808,9 +7793,8 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 />
               </td>
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1lrdck-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-h60ie-MuiTableCell-root"
                 data-index="3"
-                tabindex="0"
               >
                 <div
                   class="MuiBox-root css-4knjz3"
