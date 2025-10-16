@@ -596,6 +596,17 @@ export default {
                             Upload this work's Author Accepted Manuscript (AAM) below and click submit to make this
                             research more visible.
                         </p>
+                        <p>
+                            Visit{' '}
+                            <ExternalLink
+                                id="make-research-open-access-link"
+                                href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/make-research-open-access-uq-espace"
+                                target="_blank"
+                            >
+                                Make research open access in UQ eSpace
+                            </ExternalLink>{' '}
+                            for information.
+                        </p>
                         <p>If a work has been identified in error, please suggest a correction.</p>
                     </Box>
                 </div>
