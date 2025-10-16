@@ -534,6 +534,8 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                             [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: {
                                 flexDirection: 'row-reverse',
                                 justifyContent: 'center',
+                                '& button[aria-label=Save]': { order: 1 },
+                                '& button[aria-label=Cancel]': { order: 2 },
                             },
                         },
                     },
