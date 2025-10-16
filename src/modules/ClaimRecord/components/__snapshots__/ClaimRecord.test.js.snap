@@ -99,8 +99,9 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-null"
                             >
                               <span
                                 class="citationAuthors"
@@ -210,7 +211,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -837,8 +838,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationDataCollection"
+                              id="citation-content-null"
                             >
                               <span
                                 class="citationAuthors"
@@ -908,7 +910,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                   https://doi.org/10.14264/uql.2016.841
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1536,8 +1538,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-null"
                             >
                               <span
                                 class="citationAuthors"
@@ -1640,7 +1643,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -2366,8 +2369,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationDataCollection"
+                              id="citation-content-null"
                             >
                               <span
                                 class="citationAuthors empty"
@@ -2430,7 +2434,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                   https://doi.org/10.14264/uql.2016.841
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -2963,8 +2967,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:676287"
                             >
                               <span
                                 class="citationAuthors"
@@ -3124,7 +3129,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -4269,8 +4274,9 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:676287"
                             >
                               <span
                                 class="citationAuthors"
@@ -4430,7 +4436,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5589,8 +5595,9 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:676287"
                             >
                               <span
                                 class="citationAuthors"
@@ -5700,7 +5707,7 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5991,8 +5998,9 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:676287"
                             >
                               <span
                                 class="citationAuthors"
@@ -6152,7 +6160,7 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"

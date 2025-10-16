@@ -2,8 +2,9 @@
 
 exports[`PatentCitation renders  component with a doi view 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationPatent"
+    id="citation-content-UQ:288545"
   >
     <span
       class="citationAuthors"
@@ -89,14 +90,15 @@ exports[`PatentCitation renders  component with a doi view 1`] = `
         https://doi.org/10.1111/1111
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`PatentCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationPatent"
+    id="citation-content-UQ:288545"
   >
     <span
       class="citationAuthors"
@@ -155,14 +157,15 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`PatentCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationPatent"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -179,6 +182,6 @@ exports[`PatentCitation renders  component with empty publication 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
