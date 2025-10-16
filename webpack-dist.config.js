@@ -117,6 +117,7 @@ const webpackConfig = {
                 use: {
                     loader: 'esbuild-loader',
                     options: {
+                        tsconfig: './tsconfig.webpack-dist.json',
                         loader: 'tsx',
                         target: 'es2020',
                         jsx: 'automatic',

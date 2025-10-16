@@ -80,6 +80,7 @@ module.exports = {
                 use: {
                     loader: 'esbuild-loader',
                     options: {
+                        tsconfig: './tsconfig.webpack.json',
                         loader: 'tsx',
                         target: 'es2020',
                         jsx: 'automatic',
