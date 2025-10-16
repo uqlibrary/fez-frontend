@@ -38,7 +38,7 @@ test.describe('Admin Dashboard - Today tab', () => {
 
         // Charts
         const systemAlertsChart = page.getByTestId('chart-container-system-alerts');
-        await expect(systemAlertsChart.locator('svg > rect')).toHaveCount(2);
+        await expect(systemAlertsChart.locator('svg rect')).toHaveCount(2);
 
         const systemAlertsTable = page.getByTestId('system-alerts-table');
         await expect(systemAlertsTable.locator('td').nth(1)).toContainText('150');
@@ -57,10 +57,7 @@ test.describe('Admin Dashboard - Today tab', () => {
         await expect(page.getByTestId('processed-works-title')).toContainText('Processed Works');
         await expect(page.getByTestId('processed-works-subtitle')).toContainText('this iteration');
         await expect(page.getByRole('tooltip')).not.toBeVisible();
-        await page
-            .getByTestId('processed-works-subtitle')
-            .getByTestId('HelpIcon')
-            .hover();
+        await page.getByTestId('processed-works-subtitle').getByTestId('HelpIcon').hover();
         await expect(page.getByRole('tooltip')).toContainText(
             '23rd September 2024 00:00:00 to 25th September 2024 23:59:59',
         );
@@ -112,9 +109,7 @@ test.describe('Admin Dashboard - Today tab', () => {
             );
 
             await page.getByTestId('admin-actions-button-1').click();
-            await testIdStartsWith(page, 'admin-actions-menu-option-')
-                .getByText('Move up')
-                .click();
+            await testIdStartsWith(page, 'admin-actions-menu-option-').getByText('Move up').click();
             await expect(listItems.nth(1)).toContainText(
                 '2021+ Imported Records with an Author ID and Research Subtypes Only',
             );
@@ -123,25 +118,19 @@ test.describe('Admin Dashboard - Today tab', () => {
             );
 
             await page.getByTestId('admin-actions-button-0').click();
-            await testIdStartsWith(page, 'admin-actions-menu-option-')
-                .getByText('Move down')
-                .click();
+            await testIdStartsWith(page, 'admin-actions-menu-option-').getByText('Move down').click();
             await expect(listItems.nth(1)).toContainText(
                 '2020 - 2023 Imported Records with an Author ID and Research Subtypes Only',
             );
 
             await page.getByTestId('admin-actions-button-1').click();
-            await testIdStartsWith(page, 'admin-actions-menu-option-')
-                .getByText('Move to bottom')
-                .click();
+            await testIdStartsWith(page, 'admin-actions-menu-option-').getByText('Move to bottom').click();
             await expect(listItems.last()).toContainText(
                 '2020 - 2023 Imported Records with an Author ID and Research Subtypes Only',
             );
 
             await page.getByTestId('admin-actions-button-6').click();
-            await testIdStartsWith(page, 'admin-actions-menu-option-')
-                .getByText('Move to top')
-                .click();
+            await testIdStartsWith(page, 'admin-actions-menu-option-').getByText('Move to top').click();
             await expect(listItems.nth(0)).toContainText(
                 '2020 - 2023 Imported Records with an Author ID and Research Subtypes Only',
             );
@@ -154,9 +143,7 @@ test.describe('Admin Dashboard - Today tab', () => {
             );
 
             await page.getByTestId('admin-actions-button-1').click();
-            await testIdStartsWith(page, 'admin-actions-menu-option-')
-                .getByText('Delete')
-                .click();
+            await testIdStartsWith(page, 'admin-actions-menu-option-').getByText('Delete').click();
             await expect(page.getByTestId('standard-card-content')).toContainText(
                 'DELETE 2020 - 2023 Imported Records with an Author ID and Research Subtypes Only',
             );
@@ -172,10 +159,7 @@ test.describe('Admin Dashboard - Today tab', () => {
             await expect(qlkLinkInput).toContainText('https://espace.library.uq.edu.au/records/search?');
             await expect(qlkLinkInput).toBeDisabled();
 
-            await page
-                .locator('button')
-                .getByText('Delete')
-                .click();
+            await page.locator('button').getByText('Delete').click();
             await expect(page.getByTestId('standard-card-content')).not.toContainText(
                 'DELETE 2020 - 2023 Imported Records with an Author ID and Research Subtypes Only',
             );
@@ -188,9 +172,7 @@ test.describe('Admin Dashboard - Today tab', () => {
             );
 
             await page.getByTestId('admin-actions-button-1').click();
-            await testIdStartsWith(page, 'admin-actions-menu-option-')
-                .getByText('Edit')
-                .click();
+            await testIdStartsWith(page, 'admin-actions-menu-option-').getByText('Edit').click();
 
             await expect(page.getByTestId('standard-card-content')).toContainText(
                 'Edit 2020 - 2023 Imported Records with an Author ID and Research Subtypes Only',
