@@ -102,8 +102,9 @@ exports[`Component DeleteRecord should render delete record form with data colle
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationDataCollection"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -202,7 +203,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                   https://doi.org/10.2364312345
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -658,8 +659,9 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationDataCollection"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -758,7 +760,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                   https://doi.org/10.2364312345
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1214,8 +1216,9 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -1312,7 +1315,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                               <span
                                 class="citationDOI empty"
                               />
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"

@@ -2,8 +2,9 @@
 
 exports[`GenericDocumentCitation renders  component when no title 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationGenericDocument"
+    id="citation-content-UQ:239427"
   >
     <span
       class="citationAuthors"
@@ -32,14 +33,15 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`GenericDocumentCitation renders  component with a doi view 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationGenericDocument"
+    id="citation-content-UQ:239427"
   >
     <span
       class="citationAuthors"
@@ -95,14 +97,15 @@ exports[`GenericDocumentCitation renders  component with a doi view 1`] = `
         https://doi.org/10.1111/1111
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`GenericDocumentCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationGenericDocument"
+    id="citation-content-UQ:239427"
   >
     <span
       class="citationAuthors"
@@ -135,14 +138,15 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`GenericDocumentCitation renders  component with an empty publisher and title 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationGenericDocument"
+    id="citation-content-UQ:239427"
   >
     <span
       class="citationAuthors"
@@ -171,14 +175,15 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`GenericDocumentCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationGenericDocument"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -195,6 +200,6 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
