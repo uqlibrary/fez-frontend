@@ -17,6 +17,7 @@ import {
     COLLECTION_VIEW_TYPE,
     AUTHOR_EXTERNAL_IDENTIFIER_TYPE,
     SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID,
+    CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST,
 } from 'config/general';
 import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
@@ -1852,6 +1853,7 @@ export default {
                 locale: locale.components.authorsList('supervisor').field,
                 isAdmin: true,
                 contributorEditorId: 'rek-supervisor',
+                namesFormFieldOrdering: CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST,
             },
         },
     },

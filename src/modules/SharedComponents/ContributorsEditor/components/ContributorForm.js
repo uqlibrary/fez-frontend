@@ -64,6 +64,7 @@ export const ContributorForm = ({
     showContributorAssignment,
     showIdentifierLookup: initialShowIdentifierLookup,
     showRoleInput = false,
+    namesFormFieldOrdering = undefined,
 }) => {
     const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
     const [clearRoleInput, setClearRoleInput] = useState(true);
@@ -245,11 +246,6 @@ export const ContributorForm = ({
     return (
         <React.Fragment>
             {description}
-            <NamesForm
-                ref={namesFormRef}
-                onClose={value => setContributor({ ...contributor, nameAsPublished: value })}
-                isEditing={contributor?.selected}
-            />
             <Grid container spacing={1} style={{ marginTop: 8 }} id="contributorForm">
                 {isNtro && (
                     <Grid item xs={12} sm={2}>
@@ -262,6 +258,13 @@ export const ContributorForm = ({
                     </Grid>
                 )}
                 <Grid item xs={12} sm>
+                    <NamesForm
+                        id={contributorFormId}
+                        ref={namesFormRef}
+                        onClose={value => setContributor({ ...contributor, nameAsPublished: value })}
+                        isEditing={contributor?.selected}
+                        fieldOrder={namesFormFieldOrdering}
+                    />
                     <TextField
                         InputProps={{ readOnly: true }}
                         onClick={openNamesForm}
@@ -401,6 +404,7 @@ ContributorForm.propTypes = {
     showContributorAssignment: PropTypes.bool,
     showIdentifierLookup: PropTypes.bool,
     showRoleInput: PropTypes.bool,
+    namesFormFieldOrdering: PropTypes.number,
 };
 
 export default ContributorForm;

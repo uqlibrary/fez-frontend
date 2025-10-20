@@ -3,14 +3,29 @@ import Grid from '@mui/material/Grid';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Button from '@mui/material/Button';
 import { Popover } from '@mui/material';
-import { useForm } from '../../../../hooks';
-import { Field } from '../../Toolbox/ReactHookForm';
+import { useForm } from 'hooks';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { validation } from 'config';
+import { CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST, CONTRIBUTOR_NAMES_FORM_LAST_NAME_FIRST } from 'config/general';
 import PropTypes from 'prop-types';
+
+const defaultValueSeparator = ', ';
+
+const defaultFormFields = [
+    { name: 'last-name', label: 'Last Name' },
+    { name: 'given-name', label: 'Given Name' },
+];
 
 const validateNames = value => (value?.match?.(/,/) && 'Commas are not allowed') || undefined;
 
-const NamesForm = (props, ref) => {
+const NamesForm = ({ id, onClose, fieldOrder, valueSeparator }, ref) => {
+    const formFields = [...defaultFormFields];
+    let separator = valueSeparator;
+    if (fieldOrder === CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST) {
+        formFields.reverse();
+        if (!separator) separator = ' ';
+    }
+
     const [anchor, setAnchor] = useState();
     const isOpen = Boolean(anchor);
     const {
@@ -21,7 +36,7 @@ const NamesForm = (props, ref) => {
         setFocus,
         trigger,
         formState: { hasValidationError },
-    } = useForm({ defaultValues: { surname: '', name: '' } });
+    } = useForm({ defaultValues: formFields.reduce((all, { name }) => ({ ...all, [name]: '' }), {}) });
 
     const open = event => {
         setAnchor(event.currentTarget);
@@ -30,7 +45,7 @@ const NamesForm = (props, ref) => {
     const close = () => setAnchor(null);
 
     const onSubmit = handleSubmit(data => {
-        props.onClose(`${data.surname?.trim()}, ${data.name?.trim()}`);
+        onClose(formFields.map(field => data[field.name].trim()).join(separator || defaultValueSeparator));
         reset();
         close();
     });
@@ -38,9 +53,11 @@ const NamesForm = (props, ref) => {
     useImperativeHandle(ref, () => {
         return {
             open(event, value) {
-                const names = value?.split?.(',');
-                setValue('name', names.pop());
-                setValue('surname', names.pop());
+                const values = value?.split?.(separator || defaultValueSeparator);
+                if (fieldOrder === CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST) {
+                    values.reverse();
+                }
+                formFields.forEach(field => setValue(field.name, values.pop()));
                 open(event);
             },
         };
@@ -67,24 +84,18 @@ const NamesForm = (props, ref) => {
         >
             <form>
                 <Grid container spacing={1} style={{ padding: 10 }}>
-                    <Grid item sm={12} md={12}>
-                        <Field
-                            control={control}
-                            component={TextField}
-                            placeholder="Surname"
-                            name="surname"
-                            validate={[validation.minLengthValidator(2), validateNames]}
-                        />
-                    </Grid>
-                    <Grid item sm={12} md={12}>
-                        <Field
-                            control={control}
-                            component={TextField}
-                            placeholder="Name"
-                            name="name"
-                            validate={[validation.minLengthValidator(2), validateNames]}
-                        />
-                    </Grid>
+                    {formFields.map(field => (
+                        <Grid item sm={12} md={12} key={field.name}>
+                            <Field
+                                control={control}
+                                component={TextField}
+                                placeholder={field.label}
+                                name={field.name}
+                                validate={[validation.minLengthValidator(2), validateNames]}
+                                textFieldId={`${id}-names-form-${field.name}`}
+                            />
+                        </Grid>
+                    ))}
                     <Grid item sm={12} md={12}>
                         <Button
                             type="submit"
@@ -92,6 +103,7 @@ const NamesForm = (props, ref) => {
                             variant="contained"
                             color="primary"
                             disabled={hasValidationError}
+                            data-testid={`${id}-names-form-submit-button`}
                         >
                             SET
                         </Button>
@@ -103,7 +115,10 @@ const NamesForm = (props, ref) => {
 };
 
 NamesForm.propTypes = {
+    id: PropTypes.string,
     onClose: PropTypes.func,
+    fieldOrder: [undefined, CONTRIBUTOR_NAMES_FORM_LAST_NAME_FIRST, CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST],
+    valueSeparator: PropTypes.string,
 };
 
 export default forwardRef(NamesForm);

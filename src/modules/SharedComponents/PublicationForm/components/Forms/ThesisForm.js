@@ -18,6 +18,7 @@ import { default as formLocale } from 'locale/publicationForm';
 import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import { numbersOnly } from 'helpers/general';
+import { CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST } from '../../../../../config/general';
 
 export const ThesisForm = ({ isSubmitting, control }) => {
     const txt = formLocale.thesis;
@@ -124,6 +125,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 disabled={isSubmitting}
                                 validate={[validation.authorRequired]}
                                 required
+                                namesFormFieldOrdering={CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST}
                             />
                         </Grid>
                     </Grid>

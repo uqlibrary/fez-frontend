@@ -48,6 +48,7 @@ export class ContributorsEditor extends PureComponent {
         actions: PropTypes.any,
         useFormReducer: PropTypes.bool,
         scaleOfSignificance: PropTypes.array,
+        namesFormFieldOrdering: PropTypes.number,
     };
 
     static defaultProps = {
@@ -69,6 +70,7 @@ export class ContributorsEditor extends PureComponent {
         showExternalIdentifierInput: false,
         useFormReducer: false,
         scaleOfSignificance: [],
+        namesFormFieldOrdering: undefined,
     };
 
     constructor(props) {
@@ -393,6 +395,7 @@ export class ContributorsEditor extends PureComponent {
             contributor,
             displayCancel: this.props.canEdit, // admin can cancel and clear the edit form
             canEdit: this.props.canEdit,
+            namesFormFieldOrdering: this.props.namesFormFieldOrdering,
         };
         return (
             <ContributorForm

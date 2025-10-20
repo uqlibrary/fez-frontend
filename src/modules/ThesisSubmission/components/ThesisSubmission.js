@@ -22,7 +22,11 @@ import { validation, TRANSITION_COHORT, general } from 'config';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
-import { THESIS_SUBMISSION_SUBTYPES, THESIS_UPLOAD_RETRIES } from 'config/general';
+import {
+    CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST,
+    THESIS_SUBMISSION_SUBTYPES,
+    THESIS_UPLOAD_RETRIES,
+} from 'config/general';
 
 import { useAccountContext } from 'context';
 
@@ -411,6 +415,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                     validate={[validation.supervisorRequired]}
                                     locale={txtSupervisors.field}
                                     disabled={isSubmitting}
+                                    namesFormFieldOrdering={CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST}
                                 />
                             </StandardCard>
                         </Grid>

@@ -34,7 +34,7 @@ export const spacelessMaxLength2000Validator = spacelessMaxLengthValidator(2000)
 
 // Min Length
 export const minLengthValidator = min => value =>
-    (value !== null || value !== undefined) && value.trim().length < min
+    (value !== null || value !== undefined) && value?.trim?.().length < min
         ? locale.validationErrors.minLength.replace('[min]', min)
         : undefined;
 export const minLength10Validator = minLengthValidator(10);
