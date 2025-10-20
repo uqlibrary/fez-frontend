@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@mui/material/GridLegacy';
@@ -9,6 +9,7 @@ import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
+import NamesForm from './NamesForm';
 import { default as globalLocale } from 'locale/global';
 import { validation } from 'config';
 
@@ -69,6 +70,7 @@ export const ContributorForm = ({
     const [showIdentifierLookup, setShowIdentifierLookup] = useState(initialShowIdentifierLookup);
     const [uqIdentifierUpdatedFlag, setUqIdentifierUpdatedFlag] = useState(false);
     const [isEditFormClean, setIsEditFormClean] = useState(!!initialContributor.nameAsPublished);
+    const namesFormRef = useRef(null);
 
     const resetInternalState = useCallback(() => {
         setContributor(initialContributor);
@@ -238,10 +240,16 @@ export const ContributorForm = ({
     };
 
     const isValid = value => !validation.isEmpty(value.trim()) && !validation.maxLength255Validator(value.trim());
+    const openNamesForm = event => namesFormRef.current.open(event, contributor?.nameAsPublished);
 
     return (
         <React.Fragment>
             {description}
+            <NamesForm
+                ref={namesFormRef}
+                onClose={value => setContributor({ ...contributor, nameAsPublished: value })}
+                isEditing={contributor?.selected}
+            />
             <Grid container spacing={1} style={{ marginTop: 8 }} id="contributorForm">
                 {isNtro && (
                     <Grid item xs={12} sm={2}>
@@ -255,6 +263,8 @@ export const ContributorForm = ({
                 )}
                 <Grid item xs={12} sm>
                     <TextField
+                        InputProps={{ readOnly: true }}
+                        onClick={openNamesForm}
                         fullWidth
                         id={locale.nameAsPublishedFieldId || 'name-as-published'}
                         textFieldId={contributorFormId}
