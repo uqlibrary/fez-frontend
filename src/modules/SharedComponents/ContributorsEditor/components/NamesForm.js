@@ -6,6 +6,7 @@ import { Popover } from '@mui/material';
 import { useForm } from '../../../../hooks';
 import { Field } from '../../Toolbox/ReactHookForm';
 import { validation } from 'config';
+import PropTypes from 'prop-types';
 
 const validateNames = value => (value?.match?.(/,/) && 'Commas are not allowed') || undefined;
 
@@ -99,6 +100,10 @@ const NamesForm = (props, ref) => {
             </form>
         </Popover>
     );
+};
+
+NamesForm.propTypes = {
+    onClose: PropTypes.func,
 };
 
 export default forwardRef(NamesForm);
