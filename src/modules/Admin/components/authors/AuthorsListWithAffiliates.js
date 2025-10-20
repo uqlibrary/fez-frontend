@@ -36,6 +36,8 @@ import { useMrtTable } from 'hooks';
 import { default as validationRules } from './validationRules';
 import { commitRowChanges } from './utils';
 
+const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
+
 const classes = {
     linked: {
         fontWeight: 500,
@@ -493,6 +495,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         enableHiding: false,
         enableColumnFilters: false,
         autoResetPageIndex: false,
+        enableKeyboardShortcuts: false,
         positionActionsColumn: 'last',
         initialState: {
             density: 'compact',
@@ -515,8 +518,12 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                         justifyContent: 'flex-end',
                         '& > div': {
                             gap: 0,
-                            flexDirection: 'row-reverse',
-                            justifyContent: 'center',
+                            [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: {
+                                flexDirection: 'row-reverse',
+                                justifyContent: 'center',
+                                '& button[aria-label=Save]': { order: 1 },
+                                '& button[aria-label=Cancel]': { order: 2 },
+                            },
                         },
                     },
                 },
