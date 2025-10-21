@@ -18,12 +18,12 @@ const defaultFormFields = [
 
 const validateNames = value => (value?.match?.(/,/) && 'Commas are not allowed') || undefined;
 
-const NamesForm = ({ id, onClose, fieldOrder, valueSeparator }, ref) => {
+const NamesForm = forwardRef(({ id, onClose, fieldOrder = CONTRIBUTOR_NAMES_FORM_LAST_NAME_FIRST }, ref) => {
     const formFields = [...defaultFormFields];
-    let separator = valueSeparator;
+    let separator = defaultValueSeparator;
     if (fieldOrder === CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST) {
         formFields.reverse();
-        if (!separator) separator = ' ';
+        separator = ' ';
     }
 
     const [anchor, setAnchor] = useState();
@@ -37,7 +37,6 @@ const NamesForm = ({ id, onClose, fieldOrder, valueSeparator }, ref) => {
         trigger,
         formState: { hasValidationError },
     } = useForm({ defaultValues: formFields.reduce((all, { name }) => ({ ...all, [name]: '' }), {}) });
-
     const open = event => {
         setAnchor(event.currentTarget);
     };
@@ -45,7 +44,7 @@ const NamesForm = ({ id, onClose, fieldOrder, valueSeparator }, ref) => {
     const close = () => setAnchor(null);
 
     const onSubmit = handleSubmit(data => {
-        onClose(formFields.map(field => data[field.name].trim()).join(separator || defaultValueSeparator));
+        onClose(formFields.map(field => data[field.name].trim()).join(separator));
         reset();
         close();
     });
@@ -53,10 +52,7 @@ const NamesForm = ({ id, onClose, fieldOrder, valueSeparator }, ref) => {
     useImperativeHandle(ref, () => {
         return {
             open(event, value) {
-                const values = value?.split?.(separator || defaultValueSeparator);
-                if (fieldOrder === CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST) {
-                    values.reverse();
-                }
+                const values = value?.trim?.().split?.(separator).reverse();
                 formFields.forEach(field => setValue(field.name, values.pop()));
                 open(event);
             },
@@ -112,13 +108,12 @@ const NamesForm = ({ id, onClose, fieldOrder, valueSeparator }, ref) => {
             </form>
         </Popover>
     );
-};
+});
 
 NamesForm.propTypes = {
     id: PropTypes.string,
     onClose: PropTypes.func,
-    fieldOrder: [undefined, CONTRIBUTOR_NAMES_FORM_LAST_NAME_FIRST, CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST],
-    valueSeparator: PropTypes.string,
+    fieldOrder: PropTypes.oneOf([CONTRIBUTOR_NAMES_FORM_LAST_NAME_FIRST, CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST]),
 };
 
-export default forwardRef(NamesForm);
+export default NamesForm;
