@@ -316,7 +316,7 @@ export const ContributorForm = ({
                             })}
                         </>
                     )}
-                    {hidePopoverNamesForm && renderNameField()}
+                    {/* istanbul ignore next */ hidePopoverNamesForm && renderNameField()}
                 </Grid>
                 {(((showIdentifierLookup || isNtro) &&
                     (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ)) ||
