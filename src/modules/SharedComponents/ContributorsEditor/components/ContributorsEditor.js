@@ -49,6 +49,7 @@ export class ContributorsEditor extends PureComponent {
         actions: PropTypes.any,
         useFormReducer: PropTypes.bool,
         scaleOfSignificance: PropTypes.array,
+        hidePopoverNamesForm: PropTypes.bool,
         popoverNamesFormMode: PropTypes.oneOf([MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST]),
     };
 
@@ -71,6 +72,7 @@ export class ContributorsEditor extends PureComponent {
         showExternalIdentifierInput: false,
         useFormReducer: false,
         scaleOfSignificance: [],
+        hidePopoverNamesForm: false,
         popoverNamesFormMode: MODE_FAMILY_NAME_FIRST,
     };
 
