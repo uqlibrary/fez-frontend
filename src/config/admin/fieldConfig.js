@@ -62,7 +62,7 @@ import {
 } from 'modules/SharedComponents/LookupFields';
 import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
-import { ContributorsEditorField, MODE_GIVEN_NAME_FIRST } from 'modules/SharedComponents/ContributorsEditor';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
@@ -903,6 +903,7 @@ export default {
                 contributorEditorId: 'rek-author',
                 isAdmin: true,
                 useFormReducer: true,
+                hidePopoverNamesForm: true,
             },
         },
         editors: {
@@ -913,6 +914,7 @@ export default {
                 locale: locale.components.authorsList('editor').field,
                 isAdmin: true,
                 contributorEditorId: 'rek-contributor',
+                hidePopoverNamesForm: true,
             },
         },
         files: {
@@ -1832,6 +1834,7 @@ export default {
                 locale: locale.components.authorsList('architect').field,
                 isAdmin: true,
                 contributorEditorId: 'rek-architect-name',
+                hidePopoverNamesForm: true,
             },
         },
         creators: {
@@ -1842,6 +1845,7 @@ export default {
                 locale: locale.components.authorsList('creator').field,
                 isAdmin: true,
                 contributorEditorId: 'rek-creator-name',
+                hidePopoverNamesForm: true,
             },
         },
         supervisors: {
@@ -1852,7 +1856,7 @@ export default {
                 locale: locale.components.authorsList('supervisor').field,
                 isAdmin: true,
                 contributorEditorId: 'rek-supervisor',
-                popoverNamesFormMode: MODE_GIVEN_NAME_FIRST,
+                hidePopoverNamesForm: true,
             },
         },
     },
