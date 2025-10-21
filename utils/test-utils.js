@@ -463,9 +463,9 @@ const selectDropDownOptionByElement = async (el, option, index = 0) => {
  */
 const addContributorsEditorItem = async (fieldName, ...names) => {
     await userEvent.click(screen.getByTestId(`${fieldName}-input`));
-    await waitFor(() => expect(screen.getByTestId(`${fieldName}-names-form-last-name`)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTestId(`${fieldName}-names-form-family-name`)).toBeInTheDocument());
     await userEvent.type(screen.getByTestId(`${fieldName}-names-form-given-name-input`), names[0]);
-    await userEvent.type(screen.getByTestId(`${fieldName}-names-form-last-name-input`), names[1]);
+    await userEvent.type(screen.getByTestId(`${fieldName}-names-form-family-name-input`), names[1]);
     await waitToBeEnabled(`${fieldName}-names-form-submit-button`);
     await userEvent.click(screen.getByTestId(`${fieldName}-names-form-submit-button`));
     await userEvent.click(screen.getByTestId(`${fieldName}-add`));

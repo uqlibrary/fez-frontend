@@ -9,7 +9,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { OrgNameField, OrgUnitNameField, FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
-import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { ContributorsEditorField, MODE_GIVEN_NAME_FIRST } from 'modules/SharedComponents/ContributorsEditor';
 
 import { validation } from 'config';
 import { locale } from 'locale';
@@ -18,7 +18,6 @@ import { default as formLocale } from 'locale/publicationForm';
 import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import { numbersOnly } from 'helpers/general';
-import { CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST } from '../../../../../config/general';
 
 export const ThesisForm = ({ isSubmitting, control }) => {
     const txt = formLocale.thesis;
@@ -125,7 +124,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 disabled={isSubmitting}
                                 validate={[validation.authorRequired]}
                                 required
-                                namesFormFieldOrdering={CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST}
+                                namesFormMode={MODE_GIVEN_NAME_FIRST}
                             />
                         </Grid>
                     </Grid>

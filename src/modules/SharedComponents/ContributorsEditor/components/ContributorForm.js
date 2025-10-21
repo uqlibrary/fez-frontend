@@ -9,7 +9,7 @@ import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
-import NamesForm from './NamesForm';
+import PopoverNamesForm, { MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST } from './PopoverNamesForm';
 import { default as globalLocale } from 'locale/global';
 import { validation } from 'config';
 
@@ -64,7 +64,7 @@ export const ContributorForm = ({
     showContributorAssignment,
     showIdentifierLookup: initialShowIdentifierLookup,
     showRoleInput = false,
-    namesFormFieldOrdering = undefined,
+    namesFormMode = MODE_FAMILY_NAME_FIRST,
 }) => {
     const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
     const [clearRoleInput, setClearRoleInput] = useState(true);
@@ -258,12 +258,12 @@ export const ContributorForm = ({
                     </Grid>
                 )}
                 <Grid item xs={12} sm>
-                    <NamesForm
+                    <PopoverNamesForm
                         id={contributorFormId}
                         ref={namesFormRef}
                         onClose={value => setContributor({ ...contributor, nameAsPublished: value })}
                         isEditing={contributor?.selected}
-                        fieldOrder={namesFormFieldOrdering}
+                        mode={namesFormMode}
                     />
                     <TextField
                         InputProps={{ readOnly: true }}
@@ -404,7 +404,7 @@ ContributorForm.propTypes = {
     showContributorAssignment: PropTypes.bool,
     showIdentifierLookup: PropTypes.bool,
     showRoleInput: PropTypes.bool,
-    namesFormFieldOrdering: PropTypes.number,
+    namesFormMode: PropTypes.oneOf([MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST]),
 };
 
 export default ContributorForm;

@@ -6,24 +6,27 @@ import { Popover } from '@mui/material';
 import { useForm } from 'hooks';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { validation } from 'config';
-import { CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST, CONTRIBUTOR_NAMES_FORM_LAST_NAME_FIRST } from 'config/general';
 import PropTypes from 'prop-types';
 
-const defaultValueSeparator = ', ';
+export const MODE_FAMILY_NAME_FIRST = 1;
+export const MODE_GIVEN_NAME_FIRST = 2;
+
+const LAST_NAME_FIRST_SEPARATOR = ', ';
+const FAMILY_NAME_FIRST_SEPARATOR = ' ';
 
 const defaultFormFields = [
-    { name: 'last-name', label: 'Last Name' },
+    { name: 'family-name', label: 'Family Name' },
     { name: 'given-name', label: 'Given Name' },
 ];
 
 const validateNames = value => (value?.match?.(/,/) && 'Commas are not allowed') || undefined;
 
-const NamesForm = forwardRef(({ id, onClose, fieldOrder = CONTRIBUTOR_NAMES_FORM_LAST_NAME_FIRST }, ref) => {
+const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRST }, ref) => {
     const formFields = [...defaultFormFields];
-    let separator = defaultValueSeparator;
-    if (fieldOrder === CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST) {
+    let separator = LAST_NAME_FIRST_SEPARATOR;
+    if (mode === MODE_GIVEN_NAME_FIRST) {
         formFields.reverse();
-        separator = ' ';
+        separator = FAMILY_NAME_FIRST_SEPARATOR;
     }
 
     const [anchor, setAnchor] = useState();
@@ -110,10 +113,10 @@ const NamesForm = forwardRef(({ id, onClose, fieldOrder = CONTRIBUTOR_NAMES_FORM
     );
 });
 
-NamesForm.propTypes = {
+PopoverNamesForm.propTypes = {
     id: PropTypes.string,
     onClose: PropTypes.func,
-    fieldOrder: PropTypes.oneOf([CONTRIBUTOR_NAMES_FORM_LAST_NAME_FIRST, CONTRIBUTOR_NAMES_FORM_GIVEN_NAME_FIRST]),
+    mode: PropTypes.oneOf([MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST]),
 };
 
-export default NamesForm;
+export default PopoverNamesForm;
