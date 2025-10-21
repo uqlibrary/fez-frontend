@@ -49,7 +49,7 @@ export class ContributorsEditor extends PureComponent {
         actions: PropTypes.any,
         useFormReducer: PropTypes.bool,
         scaleOfSignificance: PropTypes.array,
-        namesFormMode: PropTypes.oneOf([MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST]),
+        popoverNamesFormMode: PropTypes.oneOf([MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST]),
     };
 
     static defaultProps = {
@@ -71,7 +71,7 @@ export class ContributorsEditor extends PureComponent {
         showExternalIdentifierInput: false,
         useFormReducer: false,
         scaleOfSignificance: [],
-        namesFormMode: MODE_FAMILY_NAME_FIRST,
+        popoverNamesFormMode: MODE_FAMILY_NAME_FIRST,
     };
 
     constructor(props) {
@@ -396,7 +396,7 @@ export class ContributorsEditor extends PureComponent {
             contributor,
             displayCancel: this.props.canEdit, // admin can cancel and clear the edit form
             canEdit: this.props.canEdit,
-            namesFormMode: this.props.namesFormMode,
+            popoverNamesFormMode: this.props.popoverNamesFormMode,
         };
         return (
             <ContributorForm

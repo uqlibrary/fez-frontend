@@ -1852,7 +1852,7 @@ export default {
                 locale: locale.components.authorsList('supervisor').field,
                 isAdmin: true,
                 contributorEditorId: 'rek-supervisor',
-                namesFormMode: MODE_GIVEN_NAME_FIRST,
+                popoverNamesFormMode: MODE_GIVEN_NAME_FIRST,
             },
         },
     },

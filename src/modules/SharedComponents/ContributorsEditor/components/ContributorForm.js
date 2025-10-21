@@ -64,7 +64,7 @@ export const ContributorForm = ({
     showContributorAssignment,
     showIdentifierLookup: initialShowIdentifierLookup,
     showRoleInput = false,
-    namesFormMode = MODE_FAMILY_NAME_FIRST,
+    popoverNamesFormMode = MODE_FAMILY_NAME_FIRST,
 }) => {
     const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
     const [clearRoleInput, setClearRoleInput] = useState(true);
@@ -263,7 +263,7 @@ export const ContributorForm = ({
                         ref={namesFormRef}
                         onClose={value => setContributor({ ...contributor, nameAsPublished: value })}
                         isEditing={contributor?.selected}
-                        mode={namesFormMode}
+                        mode={popoverNamesFormMode}
                     />
                     <TextField
                         InputProps={{ readOnly: true }}
@@ -404,7 +404,7 @@ ContributorForm.propTypes = {
     showContributorAssignment: PropTypes.bool,
     showIdentifierLookup: PropTypes.bool,
     showRoleInput: PropTypes.bool,
-    namesFormMode: PropTypes.oneOf([MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST]),
+    popoverNamesFormMode: PropTypes.oneOf([MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST]),
 };
 
 export default ContributorForm;
