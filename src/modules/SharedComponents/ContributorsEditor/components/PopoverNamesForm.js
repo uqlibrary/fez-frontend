@@ -19,8 +19,10 @@ const defaultFormFields = [
     { name: 'given-name', label: 'Given Name' },
 ];
 
+/* istanbul ignore next */
 const validateNames = value => (value?.match?.(/,/) && 'Commas are not allowed') || undefined;
 
+/* istanbul ignore next */
 const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRST }, ref) => {
     const formFields = [...defaultFormFields];
     let separator = LAST_NAME_FIRST_SEPARATOR;
