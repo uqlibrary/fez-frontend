@@ -20,6 +20,7 @@ exports[`Component ContributorForm should render with default props 1`] = `
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         data-testid="name-as-published"
+        style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -31,19 +32,20 @@ exports[`Component ContributorForm should render with default props 1`] = `
           Name as published
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
             aria-label="Name as published"
             autocomplete="off"
-            class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+            class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
             data-analyticsid="name-as-published-input"
             data-testid="name-as-published-input"
             id="name-as-published-input"
             label="Name as published"
-            placeholder="Please type the name exactly as published"
+            placeholder="Please click to enter the name exactly as published"
             readonly=""
+            style="cursor: pointer;"
             type="text"
             value=""
           />

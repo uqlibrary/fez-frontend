@@ -448,6 +448,7 @@ exports[`CreativeWorkForm component 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="authors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -466,13 +467,13 @@ exports[`CreativeWorkForm component 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           id="authors-input"
@@ -480,6 +481,7 @@ exports[`CreativeWorkForm component 1`] = `
                           placeholder="Type the name exactly as published"
                           readonly=""
                           required=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
@@ -1203,6 +1205,7 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="authors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -1221,13 +1224,13 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input Mui-disabled Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           disabled=""
@@ -1236,6 +1239,7 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
                           placeholder="Type the name exactly as published"
                           readonly=""
                           required=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
@@ -2147,6 +2151,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="authors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -2165,13 +2170,13 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           id="authors-input"
@@ -2179,6 +2184,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                           placeholder="Type the name exactly as published"
                           readonly=""
                           required=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
@@ -3643,6 +3649,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="authors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -3661,13 +3668,13 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           id="authors-input"
@@ -3675,6 +3682,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                           placeholder="Type the name exactly as published"
                           readonly=""
                           required=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
