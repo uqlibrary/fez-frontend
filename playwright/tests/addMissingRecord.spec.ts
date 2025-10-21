@@ -1,4 +1,5 @@
 import { test, expect } from '../test';
+import { addContributorsEditorItem } from '../lib/helpers';
 
 test.describe('Add missing record', () => {
     test.describe('add new', () => {
@@ -60,14 +61,13 @@ test.describe('Add missing record', () => {
                 .click();
 
             await expect(page.locator('#submit-work')).toBeDisabled();
-            await page.getByTestId('authors-input').fill('New Author');
-            await page.getByTestId('authors-add').click();
+            await addContributorsEditorItem(page, 'authors', 'New', 'Author');
             await expect(page.getByTestId('authors-error')).toContainText(
                 'Please provide a list as described and select one as you',
             );
-            await page.getByText('New Author').click();
+            await page.getByText('Author, New').click();
             await expect(page.getByTestId('authors-error')).not.toBeVisible();
-            await page.getByText('New Author').click();
+            await page.getByText('Author, New').click();
             await expect(page.getByTestId('authors-error')).toContainText(
                 'Please provide a list as described and select one as you',
             );
@@ -103,12 +103,7 @@ test.describe('Add missing record', () => {
             ];
 
             for (const [index, cardHeading] of cards.entries()) {
-                await expect(
-                    page
-                        .locator('h3')
-                        .nth(index)
-                        .getByText(cardHeading),
-                ).toBeVisible();
+                await expect(page.locator('h3').nth(index).getByText(cardHeading)).toBeVisible();
             }
 
             // Submit button
@@ -133,20 +128,15 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-publisher-input').fill('test publisher');
             await page.getByTestId('rek-date-year-input').fill('2020');
             await expect(validationErrors).toHaveCount(2);
-            await page.getByTestId('rek-author-input').fill('New Author');
-            await page.getByTestId('rek-author-add').click();
-            await page.getByText(/New Author/).click();
+            await addContributorsEditorItem(page, 'rek-author', 'New', 'Author');
+            await page.getByText(/Author, New/).click();
             await expect(page.locator('#submit-work')).toBeEnabled();
             await page.locator('#rek-author-list-row-delete-0').click();
-            await page
-                .locator('button')
-                .getByText(/Yes/)
-                .click();
+            await page.locator('button').getByText(/Yes/).click();
             await expect(page.locator('#submit-work')).toBeDisabled();
             await expect(validationErrors).toHaveCount(2);
-            await page.locator('#rek-contributor-input').fill('New Editor');
-            await page.getByTestId('rek-contributor-add').click();
-            await page.getByText(/New Editor/).click();
+            await addContributorsEditorItem(page, 'rek-contributor', 'New', 'Editor');
+            await page.getByText(/Editor, New/).click();
             await expect(page.locator('#submit-work')).toBeEnabled();
         });
 
@@ -188,9 +178,8 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-publisher-input').fill('test publisher');
             await page.getByTestId('rek-date-year-input').fill('2020');
             await expect(validationErrors).toHaveCount(2);
-            await page.getByTestId('rek-author-input').fill('New Author');
-            await page.getByTestId('rek-author-add').click();
-            await page.getByText(/New Author/).click();
+            await addContributorsEditorItem(page, 'rek-author', 'New', 'Author');
+            await page.getByText(/Author, New/).click();
             await page.getByTestId('rek-doi-input').fill('10.1426/12345');
             await expect(page.locator('#submit-work')).toBeEnabled();
             await page.locator('#submit-work').click();
@@ -262,10 +251,8 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-publisher-input').fill('test publisher');
             await page.getByTestId('rek-date-year-input').fill('2020');
             await expect(validationErrors).toHaveCount(2);
-            await page.getByTestId('rek-author-input').fill('First');
-            await page.getByTestId('rek-author-add').click();
-            await page.getByTestId('rek-author-input').fill('Second');
-            await page.getByTestId('rek-author-add').click();
+            await addContributorsEditorItem(page, 'rek-author', 'First', 'Author');
+            await addContributorsEditorItem(page, 'rek-author', 'Second', 'Author');
             // Check the movement arrows
             await expect(page.getByTestId('rek-author-list-row-0-move-down')).toBeVisible();
             await expect(page.getByTestId('rek-author-list-row-0-move-up')).not.toBeVisible();
@@ -280,12 +267,11 @@ test.describe('Add missing record', () => {
             await expect(page.getByTestId('rek-author-list-row-0-name-as-published')).toHaveText(/Second/);
             // Edit the data.
             await page.getByTestId('rek-author-list-row-0-edit').click();
-            await expect(page.getByTestId('rek-author-input')).toHaveValue('Second');
-            await page.getByTestId('rek-author-input').clear();
-            await page.getByTestId('rek-author-input').fill('Second Edited');
-            await page.getByTestId('rek-author-add').click();
+            await expect(page.getByTestId('rek-author-input')).toHaveValue('Author, Second');
+            await addContributorsEditorItem(page, 'rek-author', 'Second (edit1)', 'Author (edit2)');
             // Change reflected in the list.
-            await expect(page.getByTestId('rek-author-list-row-0-name-as-published')).toHaveText(/Second Edited/);
+            await expect(page.getByTestId('rek-author-list-row-0-name-as-published')).toHaveText(/Second \(edit1\)/);
+            await expect(page.getByTestId('rek-author-list-row-0-name-as-published')).toHaveText(/Author \(edit2\)/);
             // Select "First" as yourself.
             await page.getByTestId('rek-author-list-row-1-name-as-published').click();
             // is selected.
@@ -329,20 +315,12 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-grant-agency-input').fill('First Grant');
             await page.getByTestId('rek-grant-id-input').fill('12345');
             await page.getByTestId('rek-grant-type-select').click();
-            await page
-                .getByTestId('rek-grant-type-options')
-                .locator('li[role=option]')
-                .getByText(/NGO/)
-                .click();
+            await page.getByTestId('rek-grant-type-options').locator('li[role=option]').getByText(/NGO/).click();
             await page.getByTestId('rek-grant-add').click();
             await page.getByTestId('rek-grant-agency-input').fill('Second Grant');
             await page.getByTestId('rek-grant-id-input').fill('23456');
             await page.getByTestId('rek-grant-type-select').click();
-            await page
-                .getByTestId('rek-grant-type-options')
-                .locator('li[role=option]')
-                .getByText(/NGO/)
-                .click();
+            await page.getByTestId('rek-grant-type-options').locator('li[role=option]').getByText(/NGO/).click();
             await page.getByTestId('rek-grant-add').click();
             await expect(page.getByTestId('grant-list-move-up=0')).toHaveAttribute('disabled', /.*/);
             await expect(page.getByTestId('grant-list-move-down=1')).toHaveAttribute('disabled', /.*/);
