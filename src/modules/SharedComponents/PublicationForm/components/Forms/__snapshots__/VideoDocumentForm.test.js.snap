@@ -492,18 +492,19 @@ exports[`VideoDocumentForm component 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
                           aria-label="Creator's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="creators-input"
                           data-testid="creators-input"
                           id="creators-input"
                           label="Creator's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           required=""
                           type="text"
                           value=""
@@ -678,18 +679,19 @@ exports[`VideoDocumentForm component 1`] = `
                         Contributor's name as published
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Contributor's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="contributors-input"
                           data-testid="contributors-input"
                           id="contributors-input"
                           label="Contributor's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           type="text"
                           value=""
                         />
@@ -1343,18 +1345,19 @@ exports[`VideoDocumentForm component should render contributor assignment 1`] = 
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
                           aria-label="Creator's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="creators-input"
                           data-testid="creators-input"
                           id="creators-input"
                           label="Creator's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           required=""
                           type="text"
                           value=""
@@ -1523,18 +1526,19 @@ exports[`VideoDocumentForm component should render contributor assignment 1`] = 
                         Contributor's name as published
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Contributor's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="contributors-input"
                           data-testid="contributors-input"
                           id="contributors-input"
                           label="Contributor's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           type="text"
                           value=""
                         />
@@ -2202,19 +2206,20 @@ exports[`VideoDocumentForm component with all fields disabled 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
                           aria-label="Creator's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-disabled Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="creators-input"
                           data-testid="creators-input"
                           disabled=""
                           id="creators-input"
                           label="Creator's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           required=""
                           type="text"
                           value=""
@@ -2389,19 +2394,20 @@ exports[`VideoDocumentForm component with all fields disabled 1`] = `
                         Contributor's name as published
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Contributor's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-disabled Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="contributors-input"
                           data-testid="contributors-input"
                           disabled=""
                           id="contributors-input"
                           label="Contributor's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           type="text"
                           value=""
                         />

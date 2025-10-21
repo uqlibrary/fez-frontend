@@ -617,18 +617,19 @@ exports[`WorkingPaperForm component 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           id="authors-input"
                           label="Author's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           required=""
                           type="text"
                           value=""
@@ -1446,19 +1447,20 @@ exports[`WorkingPaperForm component with all fields disabled 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-disabled Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           disabled=""
                           id="authors-input"
                           label="Author's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           required=""
                           type="text"
                           value=""

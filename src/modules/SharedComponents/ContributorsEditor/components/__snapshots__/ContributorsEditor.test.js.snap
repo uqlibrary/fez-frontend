@@ -41,18 +41,19 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Contributor's name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
                   placeholder="Type the name exactly as published"
+                  readonly=""
                   type="text"
                   value="Researcher, J"
                 />
@@ -826,18 +827,19 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 Name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   id="test-input"
                   label="Name as published"
                   placeholder="Please type the name exactly as published"
+                  readonly=""
                   type="text"
                   value=""
                 />
@@ -2975,18 +2977,19 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Contributor's name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
                   placeholder="Type the name exactly as published"
+                  readonly=""
                   type="text"
                   value=""
                 />
@@ -6809,18 +6812,19 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
                 Name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   id="test-input"
                   label="Name as published"
                   placeholder="Please type the name exactly as published"
+                  readonly=""
                   type="text"
                   value=""
                 />
@@ -6963,18 +6967,19 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Contributor's name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
                   placeholder="Type the name exactly as published"
+                  readonly=""
                   type="text"
                   value=""
                 />
@@ -8032,19 +8037,20 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Contributor's name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-disabled Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   disabled=""
                   id="test-input"
                   label="Contributor's name as published"
                   placeholder="Type the name exactly as published"
+                  readonly=""
                   type="text"
                   value=""
                 />
@@ -8173,18 +8179,19 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Contributor's name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
                   placeholder="Type the name exactly as published"
+                  readonly=""
                   type="text"
                   value=""
                 />
@@ -8260,18 +8267,19 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Contributor's name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
                   placeholder="Type the name exactly as published"
+                  readonly=""
                   type="text"
                   value=""
                 />
@@ -8400,18 +8408,19 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Contributor's name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
                   placeholder="Type the name exactly as published"
+                  readonly=""
                   type="text"
                   value=""
                 />
@@ -8519,18 +8528,19 @@ exports[`ContributorsEditor should get contributors from props and input value s
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Contributor's name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
                   placeholder="Type the name exactly as published"
+                  readonly=""
                   type="text"
                   value=""
                 />
@@ -8920,18 +8930,19 @@ exports[`ContributorsEditor should render error as html 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Contributor's name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
                   placeholder="Type the name exactly as published"
+                  readonly=""
                   type="text"
                   value=""
                 />
@@ -9015,18 +9026,19 @@ exports[`ContributorsEditor should render error as one child 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Contributor's name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
                   placeholder="Type the name exactly as published"
+                  readonly=""
                   type="text"
                   value=""
                 />
@@ -9108,18 +9120,19 @@ exports[`ContributorsEditor should show given validation error 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Contributor's name as published"
                   autocomplete="off"
-                  class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                  class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                   data-analyticsid="test-input"
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
                   placeholder="Type the name exactly as published"
+                  readonly=""
                   type="text"
                   value=""
                 />

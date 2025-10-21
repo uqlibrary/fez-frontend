@@ -507,18 +507,19 @@ exports[`BookChapterForm component 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           id="authors-input"
                           label="Author's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           required=""
                           type="text"
                           value=""
@@ -655,18 +656,19 @@ exports[`BookChapterForm component 1`] = `
                         Editor's name as published
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Editor's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="editors-input"
                           data-testid="editors-input"
                           id="editors-input"
                           label="Editor's name as published"
                           placeholder="e.g. "John Smith""
+                          readonly=""
                           type="text"
                           value=""
                         />
@@ -1727,18 +1729,19 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           id="authors-input"
                           label="Author's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           required=""
                           type="text"
                           value=""
@@ -1926,18 +1929,19 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                         Editor's name as published
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Editor's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="editors-input"
                           data-testid="editors-input"
                           id="editors-input"
                           label="Editor's name as published"
                           placeholder="e.g. "John Smith""
+                          readonly=""
                           type="text"
                           value=""
                         />
@@ -3443,18 +3447,19 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           id="authors-input"
                           label="Author's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           required=""
                           type="text"
                           value=""
@@ -3642,18 +3647,19 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                         Editor's name as published
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Editor's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="editors-input"
                           data-testid="editors-input"
                           id="editors-input"
                           label="Editor's name as published"
                           placeholder="e.g. "John Smith""
+                          readonly=""
                           type="text"
                           value=""
                         />
@@ -5176,19 +5182,20 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-disabled Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           disabled=""
                           id="authors-input"
                           label="Author's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           required=""
                           type="text"
                           value=""
@@ -5325,19 +5332,20 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
                         Editor's name as published
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Editor's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-disabled Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="editors-input"
                           data-testid="editors-input"
                           disabled=""
                           id="editors-input"
                           label="Editor's name as published"
                           placeholder="e.g. "John Smith""
+                          readonly=""
                           type="text"
                           value=""
                         />
@@ -6345,18 +6353,19 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           id="authors-input"
                           label="Author's name as published"
                           placeholder="Type the name exactly as published"
+                          readonly=""
                           required=""
                           type="text"
                           value=""
@@ -6493,18 +6502,19 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                         Editor's name as published
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Editor's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-readOnly MuiInputBase-readOnly css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="editors-input"
                           data-testid="editors-input"
                           id="editors-input"
                           label="Editor's name as published"
                           placeholder="e.g. "John Smith""
+                          readonly=""
                           type="text"
                           value=""
                         />

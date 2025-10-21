@@ -17,6 +17,7 @@ import {
     expectApiRequestToMatchSnapshot,
     api,
     assertInstanceOfFile,
+    addContributorsEditorItem,
 } from 'test-utils';
 import { useAccountContext } from 'context';
 import { waitFor } from '@testing-library/dom';
@@ -83,6 +84,9 @@ describe('ThesisSubmission', () => {
 
     const mockRichEditorFieldValues = values => {
         mockUseForm((props, original) => {
+            if (!props.values) {
+                return original(props);
+            }
             props.values.thesisTitle = values?.hasOwnProperty('thesisTitle') ? values.thesisTitle : 'thesis title';
             props.values.thesisAbstract = values?.hasOwnProperty('thesisAbstract')
                 ? values.thesisAbstract
@@ -109,8 +113,7 @@ describe('ThesisSubmission', () => {
         await userEvent.click(screen.getByTestId('rek-genre-type-select'));
         await userEvent.click(screen.getByText('PhD Thesis'));
         await userEvent.type(screen.getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
-        await userEvent.type(screen.getByTestId('rek-supervisor-input'), 'J.Smith');
-        await userEvent.click(screen.getByRole('button', { name: 'Add supervisor' }));
+        await addContributorsEditorItem('rek-supervisor', 'James', 'Smith');
         await userEvent.type(screen.getByTestId('rek-subject-input'), '01');
         await waitForText('0101 Pure Mathematics');
         await userEvent.click(screen.getByText('0101 Pure Mathematics'));
@@ -184,8 +187,7 @@ describe('ThesisSubmission', () => {
                 await userEvent.type(getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
                 await waitForTextToBeRemoved('Enrolling unit is required');
 
-                await userEvent.type(getByTestId('rek-supervisor-input'), 'J.Smith');
-                await userEvent.click(getByRole('button', { name: 'Add supervisor' }));
+                await addContributorsEditorItem('rek-supervisor', 'James', 'Smith');
                 await waitForTextToBeRemoved('Supervisor names are required');
 
                 await userEvent.type(getByTestId('rek-subject-input'), '01');
@@ -354,8 +356,7 @@ describe('ThesisSubmission', () => {
                 await userEvent.type(getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
                 await waitForTextToBeRemoved('Enrolling unit is required');
 
-                await userEvent.type(getByTestId('rek-supervisor-input'), 'J.Smith');
-                await userEvent.click(getByRole('button', { name: 'Add supervisor' }));
+                await addContributorsEditorItem('rek-supervisor', 'James', 'Smith');
                 await waitForTextToBeRemoved('Supervisor names are required');
 
                 await userEvent.type(getByTestId('rek-subject-input'), '01');

@@ -76,6 +76,9 @@ describe('MyIncompleteRecord', () => {
 
     const mockRichEditorFieldValues = impactStatement =>
         mockUseForm((props, original) => {
+            if (!props.values) {
+                return original(props);
+            }
             props.values.impactStatement = impactStatement !== undefined ? impactStatement : 'impact statement';
             return original(props);
         });

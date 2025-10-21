@@ -1607,11 +1607,6 @@ export default {
             description: 'Please provide a list of editors and then select your name from the list.',
             descriptionAuthorOrEditor:
                 'Please provide a list of editors and then select your name once from the list of authors or editors.',
-            // help: {
-            //     title: 'Editors',
-            //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
-            // },
             field: {
                 form: {
                     locale: {
@@ -2003,11 +1998,6 @@ export default {
         },
         thesisSubmissionSupervisors: {
             title: 'Supervisors',
-            // help: {
-            //     title: 'Supervisors help',
-            //     text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
-            //     buttonLabel: 'CLOSE'
-            // },
             field: {
                 form: {
                     locale: {
