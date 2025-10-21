@@ -42,7 +42,7 @@ export const ContributorForm = ({
     isNtro,
     locale = {
         nameAsPublishedLabel: 'Name as published',
-        nameAsPublishedHint: 'Please type the name exactly as published',
+        nameAsPublishedHint: 'Please click to enter the name exactly as published',
         creatorRoleLabel: 'Creator role',
         creatorRoleHint: 'Role of the creator in relation to the dataset',
         identifierLabel: 'UQ identifier (if available)',
@@ -266,7 +266,17 @@ export const ContributorForm = ({
                         mode={popoverNamesFormMode}
                     />
                     <TextField
-                        InputProps={{ readOnly: true }}
+                        inputProps={{
+                            readOnly: true,
+                            style: { cursor: 'pointer' },
+                        }}
+                        style={{
+                            borderStyle: 'solid',
+                            borderWidth: 2,
+                            borderColor: '#e5e5e5',
+                            borderRadius: 4,
+                            backgroundColor: '#efefef',
+                        }}
                         onClick={openNamesForm}
                         fullWidth
                         id={locale.nameAsPublishedFieldId || 'name-as-published'}
