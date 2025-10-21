@@ -443,7 +443,7 @@ describe('ContributorsEditor', () => {
         await user.click(getByTestId('test-list-row-0-edit'));
         await addContributorsEditorItem('test', ' (edit 1)', ' (edit 2)');
         // assert that the assigned and edited contributor has the expected authorId
-        expect(contributors[0].nameAsPublished).toEqual('Surname1 (edit 1), Name1 (edit 2)');
+        expect(contributors[0].nameAsPublished).toEqual('Surname1 (edit 2), Name1 (edit 1)');
         expect(contributors[0].authorId).toEqual(authorsSearch.data[0].aut_id);
     });
 
