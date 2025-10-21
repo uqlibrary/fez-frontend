@@ -36,23 +36,44 @@ export const fillInput = async (page: Page, selector: string, value: any, times:
     await page.fill(selector, String(value).repeat(times));
 };
 
-export async function assertIsVisible(element: Locator): Promise<void> {
+export const enterContributorEditorItem = async (page: Page, fieldName: string, ...names: string[]) => {
+    await page.getByTestId(`${fieldName}-input`).click();
+    await page.waitForSelector(`[data-testid="${fieldName}-names-form-family-name"]`);
+    await page.getByTestId(`${fieldName}-names-form-given-name-input`).fill(names[0]);
+    await page.getByTestId(`${fieldName}-names-form-family-name-input`).fill(names[1]);
+    const submitButton = page.getByTestId(`${fieldName}-names-form-submit-button`);
+    await expect(submitButton).toBeEnabled();
+    await submitButton.click();
+};
+
+export const addContributorsEditorItem = async (page: Page, fieldName: string, ...names: string[]) => {
+    await enterContributorEditorItem(page, fieldName, ...names);
+    await page.getByTestId(`${fieldName}-add`).click();
+};
+
+export const addAndSelectContributorsEditorItem = async (page: Page, fieldName: string, ...names: string[]) => {
+    const effectiveNames = names.length ? names : ['Brown', 'James'];
+    await addContributorsEditorItem(page, fieldName, ...effectiveNames);
+    await page.getByTestId(`${fieldName}-list-row-0-name-as-published`).click();
+};
+
+export const assertIsVisible = async (element: Locator): Promise<void> => {
     await expect(element).toBeVisible();
-}
+};
 
-export async function assertIsNotVisible(element: Locator): Promise<void> {
+export const assertIsNotVisible = async (element: Locator): Promise<void> => {
     await expect(element).not.toBeInViewport();
-}
+};
 
-export async function clickAutoSuggestion(page: Page, fieldName: string, ordinal: string | number): Promise<void> {
+export const clickAutoSuggestion = async (page: Page, fieldName: string, ordinal: string | number): Promise<void> => {
     await page.locator(`#${fieldName}-option-${ordinal}`).click();
-}
+};
 
-export async function loadAdminDashboard(page: Page, user: string = 'uqstaff') {
+export const loadAdminDashboard = async (page: Page, user: string = 'uqstaff') => {
     await page.setViewportSize({ width: 1200, height: 1000 });
     await page.goto(`/admin/dashboard?user=${user}`);
     await expect(page.locator('h2').getByText('Admin dashboard')).toBeVisible();
-}
+};
 
 export const testIdStartsWith = (page: Page | Locator, id: string) => page.locator(`[data-testid^=${id}]`);
 
@@ -61,11 +82,11 @@ export const getOpenedLink = async (context: BrowserContext, locator: Locator) =
     return newPage;
 };
 
-export async function setPartialDate(
+export const setPartialDate = async (
     page: Page,
     id: string,
     { day, month, year }: { day?: string | number; month?: number; year?: string | number },
-) {
+) => {
     if (day !== undefined) {
         const dayInput = page.getByTestId(`${id}-day-input`);
         await dayInput.fill(String(day));
@@ -83,13 +104,13 @@ export async function setPartialDate(
         const yearInput = page.getByTestId(`${id}-year-input`);
         await yearInput.fill(String(year));
     }
-}
+};
 
-export async function checkPartialDate(
+export const checkPartialDate = async (
     page: Page,
     id: string,
     { day, monthName, year }: { day?: string; monthName?: string; year?: string },
-) {
+) => {
     if (day !== undefined) {
         const dayInput = page.getByTestId(`${id}-day-input`);
         await expect(dayInput).toHaveValue(day);
@@ -104,16 +125,16 @@ export async function checkPartialDate(
         const yearInput = page.getByTestId(`${id}-year-input`);
         await expect(yearInput).toHaveValue(year);
     }
-}
+};
 
-export async function checkPartialDateFromRecordValue(page: Page, id: string, dateString: string) {
+export const checkPartialDateFromRecordValue = async (page: Page, id: string, dateString: string) => {
     const date = moment(dateString);
     await checkPartialDate(page, id, {
         day: date.format('D'),
         monthName: date.format('MMMM'),
         year: date.format('YYYY'),
     });
-}
+};
 
 export const setFileInput = async (container: Page | Locator, fileName: string) =>
     await container.setInputFiles(path.join(__dirname, `../tests/fixtures/${fileName}`));
