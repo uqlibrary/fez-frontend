@@ -6820,6 +6820,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
                   data-testid="test-input"
                   id="test-input"
                   label="Name as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value=""
                 />
