@@ -9,7 +9,6 @@ import {
     screen,
     assertEnabled,
     userEvent,
-    mockUseForm,
     waitForTextToBeRemoved,
     waitForText,
     waitToBeDisabled,
@@ -20,6 +19,7 @@ import {
     api,
     expectApiRequestToMatchSnapshot,
     assertInstanceOfFile,
+    setRichTextEditorValue,
 } from 'test-utils';
 import { waitFor } from '@testing-library/dom';
 
@@ -74,15 +74,6 @@ describe('MyIncompleteRecord', () => {
     const cancelButtonId = 'incomplete-record-button-cancel';
     const submitButtonId = 'incomplete-record-button-submit';
 
-    const mockRichEditorFieldValues = impactStatement =>
-        mockUseForm((props, original) => {
-            if (!props.values) {
-                return original(props);
-            }
-            props.values.impactStatement = impactStatement !== undefined ? impactStatement : 'impact statement';
-            return original(props);
-        });
-
     const assertValidationErrorSummary = async () => {
         await waitForText(/Form cannot be submitted until all fields are valid/, waitForOptions);
         assertEnabled(cancelButtonId);
@@ -99,6 +90,9 @@ describe('MyIncompleteRecord', () => {
         await userEvent.click(screen.getByTestId('rek-significance-select'));
         await userEvent.click(screen.queryByText('Major'));
         waitForFieldErrorToBeCleared && (await waitForTextToBeRemoved('Scale/Significance of work is required'));
+
+        await setRichTextEditorValue('rek-creator-contribution-statement', 'statement');
+        waitForFieldErrorToBeCleared && (await waitForTextToBeRemoved('Creator research statement is required'));
 
         await userEvent.click(screen.getByTestId('rek-audience-size-select'));
         await userEvent.click(screen.queryByText('100 - 500'));
@@ -218,19 +212,12 @@ describe('MyIncompleteRecord', () => {
 
             await waitForText('Scale/Significance of work is required');
             await waitForText('Creator research statement is required');
+            await waitForText('Creator research statement is required');
             await waitForText('Audience size is required');
             await waitForText('Quality indicator is required');
             await waitForText('Author affiliation rows marked with red are required');
 
             await fillUpForm({ waitForFieldErrorToBeCleared: true });
-        });
-
-        it('should display error summary according to invalid rich editor fields', async () => {
-            mockRichEditorFieldValues();
-            const { queryByText } = setup({ publication: mockRecordToFix });
-            await assertValidationErrorSummary();
-
-            expect(queryByText('Creator research statement is required')).not.toBeInTheDocument();
         });
 
         it('should display grant editor field error in error summary', async () => {
@@ -312,7 +299,6 @@ describe('MyIncompleteRecord', () => {
                 const pid = mockRecordToFix.rek_pid;
                 api.mock.records.update({ pid }).issues({ pid }).files.upload();
 
-                mockRichEditorFieldValues();
                 const { getByTestId } = setup({ publication: mockRecordToFix });
                 await assertValidationErrorSummary();
                 await fillUpForm({ waitForValidationSummaryRemoval: true });
@@ -332,7 +318,6 @@ describe('MyIncompleteRecord', () => {
                 const pid = mockRecordToFix.rek_pid;
                 api.mock.records.update({ pid }).issues({ pid }).files.upload();
 
-                mockRichEditorFieldValues();
                 const { getByTestId } = setup({ publication: mockRecordToFix });
                 await fillUpForm({ waitForValidationSummaryRemoval: true });
                 await submitForm();
@@ -349,7 +334,6 @@ describe('MyIncompleteRecord', () => {
                 const pid = mockRecordToFix.rek_pid;
                 api.mock.records.update({ pid, status: 500 });
 
-                mockRichEditorFieldValues();
                 setup({ publication: mockRecordToFix });
                 await assertValidationErrorSummary();
                 await fillUpForm({ waitForValidationSummaryRemoval: true });
@@ -364,7 +348,6 @@ describe('MyIncompleteRecord', () => {
                 const pid = mockRecordToFix.rek_pid;
                 api.mock.records.update({ pid }).issues({ pid }).files.presignedUrl({ status: 500, once: false });
 
-                mockRichEditorFieldValues();
                 setup({ publication: mockRecordToFix });
                 await assertValidationErrorSummary();
                 await fillUpForm({ waitForValidationSummaryRemoval: true });

@@ -286,13 +286,6 @@ const setFileUploaderFilesSecurityPolicy = async (files, optionName, timeout = 5
     }
 };
 
-const originalUseForm = useForm.useForm;
-const mockUseForm = implementation => {
-    return jest.spyOn(useForm, 'useForm').mockImplementation(props => {
-        return implementation(props, originalUseForm);
-    });
-};
-
 const enableJestPreviewOnTestFailure = (options = {}) =>
     jestPreviewConfigure({
         autoPreview: true,
@@ -575,7 +568,6 @@ module.exports = {
     waitForTextToBeRemoved,
     expectRequiredFieldError,
     expectMissingRequiredFieldError,
-    mockUseForm,
     getFilenameExtension,
     getFilenameBasename,
     addFilesToFileUploader,
