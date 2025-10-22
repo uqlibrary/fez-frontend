@@ -1,6 +1,6 @@
 import React from 'react';
 import ContributorForm from './ContributorForm';
-import { render, WithReduxStore, fireEvent, waitFor, act } from 'test-utils';
+import { render, WithReduxStore, fireEvent, waitFor, act, userEvent, addContributorsEditorItem } from 'test-utils';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data';
 
@@ -25,6 +25,7 @@ function setup(testProps = {}) {
             nameAsPublishedLabel: 'Please enter author name',
         },
         contributorFormId: 'rek-contributor',
+        hidePopoverNamesForm: true,
         ...testProps,
     };
     return renderComponent(props);
@@ -99,6 +100,44 @@ describe('Component ContributorForm', () => {
             uqIdentifier: '',
             uqUsername: '',
             required: false,
+        });
+    });
+
+    describe('should add contributor if nameAsPublished is not empty', () => {
+        it('hidePopoverNamesForm=true', async () => {
+            const testFn = jest.fn();
+            const { getByTestId } = setup({
+                onSubmit: testFn,
+            });
+            await userEvent.type(getByTestId('rek-contributor-input'), 'Test Author{enter}');
+            expect(testFn).toHaveBeenCalledWith({
+                affiliation: '',
+                nameAsPublished: 'Test Author',
+                creatorRole: '',
+                orgaff: '',
+                orgtype: '',
+                uqIdentifier: '',
+                uqUsername: '',
+                required: false,
+            });
+        });
+        it('hidePopoverNamesForm=false', async () => {
+            const testFn = jest.fn();
+            setup({
+                onSubmit: testFn,
+                hidePopoverNamesForm: false,
+            });
+            await addContributorsEditorItem('rek-contributor', 'Test', 'Author');
+            expect(testFn).toHaveBeenCalledWith({
+                affiliation: '',
+                nameAsPublished: 'Author, Test',
+                creatorRole: '',
+                orgaff: '',
+                orgtype: '',
+                uqIdentifier: '',
+                uqUsername: '',
+                required: false,
+            });
         });
     });
 

@@ -34,7 +34,6 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
     const isOpen = Boolean(anchor);
     const {
         handleSubmit,
-        reset,
         setValue,
         control,
         setFocus,

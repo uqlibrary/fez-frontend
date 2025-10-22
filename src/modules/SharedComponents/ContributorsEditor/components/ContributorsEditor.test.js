@@ -2,7 +2,7 @@ import { ContributorsEditor, mapStateToProps } from './ContributorsEditor';
 import { authorsSearch } from 'mock/data';
 import React from 'react';
 import { locale } from 'locale';
-import { render, WithReduxStore, fireEvent, waitFor, within, userEvent, addContributorsEditorItem } from 'test-utils';
+import { render, WithReduxStore, fireEvent, waitFor, within, userEvent } from 'test-utils';
 import * as repositories from 'repositories';
 
 function setup(testProps = {}, renderMethod = render) {
@@ -10,6 +10,7 @@ function setup(testProps = {}, renderMethod = render) {
         author: { aut_id: 1 },
         contributorEditorId: 'test',
         locale: testProps.locale || locale.components.contributors.field,
+        hidePopoverNamesForm: true,
         ...testProps,
     };
     return renderMethod(
@@ -429,21 +430,20 @@ describe('ContributorsEditor', () => {
             name: 'test',
             value: [],
         });
-        const user = await userEvent.setup();
 
         // add a couple of contributors
-        expect(contributors.length).toBe(0);
-        await addContributorsEditorItem('test', 'Name1', 'Surname1');
-        expect(contributors[0].nameAsPublished).toEqual('Surname1, Name1');
-        await addContributorsEditorItem('test', 'Name2', 'Surname2');
-        expect(contributors[1].nameAsPublished).toEqual('Surname2, Name2');
+        await userEvent.type(getByTestId('test-input'), 'Author 1');
+        await userEvent.click(getByTestId('test-add'));
+        await userEvent.type(getByTestId('test-input'), 'Author 2');
+        await userEvent.click(getByTestId('test-add'));
         // assign the first contributor as the pub author
-        await user.click(getByTestId('test-list-row-0'));
+        await userEvent.click(getByTestId('test-list-row-0'));
         // update the first contributor's name
-        await user.click(getByTestId('test-list-row-0-edit'));
-        await addContributorsEditorItem('test', ' (edit 1)', ' (edit 2)');
+        await userEvent.click(getByTestId('test-list-row-0-edit'));
+        await userEvent.type(getByTestId('test-input'), ' (edited)');
+        await userEvent.click(getByTestId('test-add'));
         // assert that the assigned and edited contributor has the expected authorId
-        expect(contributors[0].nameAsPublished).toEqual('Surname1 (edit 2), Name1 (edit 1)');
+        expect(contributors[0].nameAsPublished).toEqual('Author 1 (edited)');
         expect(contributors[0].authorId).toEqual(authorsSearch.data[0].aut_id);
     });
 
