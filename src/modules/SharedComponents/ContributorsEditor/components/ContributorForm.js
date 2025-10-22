@@ -42,7 +42,7 @@ export const ContributorForm = ({
     isNtro,
     locale = {
         nameAsPublishedLabel: 'Name as published',
-        nameAsPublishedHint: 'Please click to enter the name exactly as published',
+        nameAsPublishedHint: 'Enter the name exactly as published',
         creatorRoleLabel: 'Creator role',
         creatorRoleHint: 'Role of the creator in relation to the dataset',
         identifierLabel: 'UQ identifier (if available)',

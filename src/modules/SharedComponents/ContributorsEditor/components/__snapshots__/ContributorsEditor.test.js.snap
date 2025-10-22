@@ -52,7 +52,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
-                  placeholder="Type the name exactly as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value="Researcher, J"
                 />
@@ -837,7 +837,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   data-testid="test-input"
                   id="test-input"
                   label="Name as published"
-                  placeholder="Please click to enter the name exactly as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value=""
                 />
@@ -2986,7 +2986,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
-                  placeholder="Type the name exactly as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value=""
                 />
@@ -6820,7 +6820,6 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
                   data-testid="test-input"
                   id="test-input"
                   label="Name as published"
-                  placeholder="Please click to enter the name exactly as published"
                   type="text"
                   value=""
                 />
@@ -6974,7 +6973,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
-                  placeholder="Type the name exactly as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value=""
                 />
@@ -8044,7 +8043,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                   disabled=""
                   id="test-input"
                   label="Contributor's name as published"
-                  placeholder="Type the name exactly as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value=""
                 />
@@ -8184,7 +8183,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
-                  placeholder="Type the name exactly as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value=""
                 />
@@ -8271,7 +8270,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
-                  placeholder="Type the name exactly as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value=""
                 />
@@ -8411,7 +8410,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
-                  placeholder="Type the name exactly as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value=""
                 />
@@ -8530,7 +8529,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
-                  placeholder="Type the name exactly as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value=""
                 />
@@ -8931,7 +8930,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
-                  placeholder="Type the name exactly as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value=""
                 />
@@ -9026,7 +9025,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
-                  placeholder="Type the name exactly as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value=""
                 />
@@ -9119,7 +9118,7 @@ exports[`ContributorsEditor should show given validation error 1`] = `
                   data-testid="test-input"
                   id="test-input"
                   label="Contributor's name as published"
-                  placeholder="Type the name exactly as published"
+                  placeholder="Enter the name exactly as published"
                   type="text"
                   value=""
                 />
