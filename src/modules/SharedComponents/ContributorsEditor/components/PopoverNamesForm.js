@@ -15,7 +15,7 @@ export const MODE_GIVEN_NAME_FIRST = 2;
 const LAST_NAME_FIRST_SEPARATOR = ', ';
 const FAMILY_NAME_FIRST_SEPARATOR = ' ';
 
-const defaultFormFields = [
+export const defaultFormFields = [
     { name: 'family-name', label: 'Family Name' },
     { name: 'given-name', label: 'Given Name' },
 ];
@@ -50,7 +50,6 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
 
     const onSubmit = handleSubmit(data => {
         onClose(tryCatch(() => formFields.map(field => data[field.name].trim()).join(separator), ''));
-        reset();
         close();
     });
 
