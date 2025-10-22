@@ -1,6 +1,14 @@
 import React from 'react';
 import ContributorForm from './ContributorForm';
-import { render, WithReduxStore, fireEvent, waitFor, act, userEvent, addContributorsEditorItem } from 'test-utils';
+import {
+    render,
+    WithReduxStore,
+    fireEvent,
+    waitFor,
+    act,
+    userEvent,
+    addContributorUsingPopoverNamesForm,
+} from 'test-utils';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data';
 
@@ -127,7 +135,7 @@ describe('Component ContributorForm', () => {
                 onSubmit: testFn,
                 hidePopoverNamesForm: false,
             });
-            await addContributorsEditorItem('rek-contributor', 'Test', 'Author');
+            await addContributorUsingPopoverNamesForm('rek-contributor', 'Test', 'Author');
             expect(testFn).toHaveBeenCalledWith({
                 affiliation: '',
                 nameAsPublished: 'Author, Test',

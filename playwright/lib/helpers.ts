@@ -36,25 +36,19 @@ export const fillInput = async (page: Page, selector: string, value: any, times:
     await page.fill(selector, String(value).repeat(times));
 };
 
-export const enterContributorEditorItem = async (page: Page, fieldName: string, ...names: string[]) => {
+export const enterContributorUsingPopoverNamesForm = async (page: Page, fieldName: string, ...names: string[]) => {
     await page.getByTestId(`${fieldName}-input`).click();
-    await page.waitForSelector(`[data-testid="${fieldName}-names-form-family-name"]`);
-    await page.getByTestId(`${fieldName}-names-form-given-name-input`).fill(names[0]);
-    await page.getByTestId(`${fieldName}-names-form-family-name-input`).fill(names[1]);
-    const submitButton = page.getByTestId(`${fieldName}-names-form-submit-button`);
+    await page.waitForSelector(`[data-testid="${fieldName}-popover-names-form-family-name"]`);
+    await page.getByTestId(`${fieldName}-popover-names-form-given-name-input`).fill(names[0]);
+    await page.getByTestId(`${fieldName}-popover-names-form-family-name-input`).fill(names[1]);
+    const submitButton = page.getByTestId(`${fieldName}-popover-names-form-submit-button`);
     await expect(submitButton).toBeEnabled();
     await submitButton.click();
 };
 
-export const addContributorsEditorItem = async (page: Page, fieldName: string, ...names: string[]) => {
-    await enterContributorEditorItem(page, fieldName, ...names);
+export const addContributorUsingPopoverNamesForm = async (page: Page, fieldName: string, ...names: string[]) => {
+    await enterContributorUsingPopoverNamesForm(page, fieldName, ...names);
     await page.getByTestId(`${fieldName}-add`).click();
-};
-
-export const addAndSelectContributorsEditorItem = async (page: Page, fieldName: string, ...names: string[]) => {
-    const effectiveNames = names.length ? names : ['Brown', 'James'];
-    await addContributorsEditorItem(page, fieldName, ...effectiveNames);
-    await page.getByTestId(`${fieldName}-list-row-0-name-as-published`).click();
 };
 
 export const assertIsVisible = async (element: Locator): Promise<void> => {

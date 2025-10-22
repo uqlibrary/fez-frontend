@@ -89,7 +89,7 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
                 },
             }}
         >
-            <form>
+            <form data-testid={`${id}-popover-names-form`}>
                 <Grid container spacing={1} columns={10} sx={{ p: 2 }}>
                     {formFields.map(field => (
                         <Grid key={field.name} size={{ xs: 10, md: 4 }}>
@@ -99,7 +99,7 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
                                 placeholder={field.label}
                                 name={field.name}
                                 validate={[validation.required, validation.minLengthValidator(2), validateNames]}
-                                textFieldId={`${id}-names-form-${field.name}`}
+                                textFieldId={`${id}-popover-names-form-${field.name}`}
                                 fullWidth
                             />
                         </Grid>
@@ -117,7 +117,7 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
                             variant="contained"
                             color="primary"
                             disabled={hasValidationError}
-                            data-testid={`${id}-names-form-submit-button`}
+                            data-testid={`${id}-popover-names-form-submit-button`}
                         >
                             SET
                         </Button>

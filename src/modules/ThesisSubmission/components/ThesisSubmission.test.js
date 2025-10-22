@@ -17,7 +17,7 @@ import {
     expectApiRequestToMatchSnapshot,
     api,
     assertInstanceOfFile,
-    addContributorsEditorItem,
+    addContributorUsingPopoverNamesForm,
 } from 'test-utils';
 import { useAccountContext } from 'context';
 import { waitFor } from '@testing-library/dom';
@@ -113,7 +113,7 @@ describe('ThesisSubmission', () => {
         await userEvent.click(screen.getByTestId('rek-genre-type-select'));
         await userEvent.click(screen.getByText('PhD Thesis'));
         await userEvent.type(screen.getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
-        await addContributorsEditorItem('rek-supervisor', 'James', 'Smith');
+        await addContributorUsingPopoverNamesForm('rek-supervisor', 'James', 'Smith');
         await userEvent.type(screen.getByTestId('rek-subject-input'), '01');
         await waitForText('0101 Pure Mathematics');
         await userEvent.click(screen.getByText('0101 Pure Mathematics'));
@@ -187,7 +187,7 @@ describe('ThesisSubmission', () => {
                 await userEvent.type(getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
                 await waitForTextToBeRemoved('Enrolling unit is required');
 
-                await addContributorsEditorItem('rek-supervisor', 'James', 'Smith');
+                await addContributorUsingPopoverNamesForm('rek-supervisor', 'James', 'Smith');
                 await waitForTextToBeRemoved('Supervisor names are required');
 
                 await userEvent.type(getByTestId('rek-subject-input'), '01');
@@ -356,7 +356,7 @@ describe('ThesisSubmission', () => {
                 await userEvent.type(getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
                 await waitForTextToBeRemoved('Enrolling unit is required');
 
-                await addContributorsEditorItem('rek-supervisor', 'James', 'Smith');
+                await addContributorUsingPopoverNamesForm('rek-supervisor', 'James', 'Smith');
                 await waitForTextToBeRemoved('Supervisor names are required');
 
                 await userEvent.type(getByTestId('rek-subject-input'), '01');
