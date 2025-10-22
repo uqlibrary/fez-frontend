@@ -7,6 +7,7 @@ import { useForm } from 'hooks';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { validation } from 'config';
 import PropTypes from 'prop-types';
+import { tryCatch } from 'helpers/general';
 
 export const MODE_FAMILY_NAME_FIRST = 1;
 export const MODE_GIVEN_NAME_FIRST = 2;
@@ -40,6 +41,7 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
         trigger,
         formState: { hasValidationError },
     } = useForm({ defaultValues: formFields.reduce((all, { name }) => ({ ...all, [name]: '' }), {}) });
+
     const open = event => {
         setAnchor(event.currentTarget);
     };
@@ -47,7 +49,7 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
     const close = () => setAnchor(null);
 
     const onSubmit = handleSubmit(data => {
-        onClose(formFields.map(field => data[field.name].trim()).join(separator));
+        onClose(tryCatch(() => formFields.map(field => data[field.name].trim()).join(separator), ''));
         reset();
         close();
     });
@@ -55,8 +57,15 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
     useImperativeHandle(ref, () => {
         return {
             open(event, value) {
-                const values = value?.trim?.().split?.(separator).reverse();
-                formFields.forEach(field => setValue(field.name, values.pop()));
+                tryCatch(() => {
+                    const values = value
+                        .trim?.()
+                        .replace?.(/\s+/, ' ')
+                        .split?.(separator)
+                        .map?.(value => value?.trim?.())
+                        .reverse?.();
+                    formFields.forEach(field => setValue(field.name, values.pop()));
+                });
                 open(event);
             },
         };
@@ -75,27 +84,35 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
             slotProps={{
                 transition: {
                     onEntered: () => {
-                        trigger(['surname', 'name']);
-                        setFocus('surname');
+                        const fields = formFields.reduce((all, { name }) => [...all, name], []);
+                        trigger(fields);
+                        setFocus(fields[0]);
                     },
                 },
             }}
         >
             <form>
-                <Grid container spacing={1} style={{ padding: 10 }}>
+                <Grid container spacing={1} columns={10} sx={{ p: 2 }}>
                     {formFields.map(field => (
-                        <Grid item sm={12} md={12} key={field.name}>
+                        <Grid key={field.name} size={{ xs: 10, md: 4 }}>
                             <Field
                                 control={control}
                                 component={TextField}
                                 placeholder={field.label}
                                 name={field.name}
-                                validate={[validation.minLengthValidator(2), validateNames]}
+                                validate={[validation.required, validation.minLengthValidator(2), validateNames]}
                                 textFieldId={`${id}-names-form-${field.name}`}
+                                fullWidth
                             />
                         </Grid>
                     ))}
-                    <Grid item sm={12} md={12}>
+                    <Grid
+                        size={{ xs: 10, md: 1 }}
+                        sx={{
+                            ml: { xs: 0, md: 1 },
+                            mt: { xs: 1, md: 0 },
+                        }}
+                    >
                         <Button
                             type="submit"
                             onClick={onSubmit}
