@@ -136,7 +136,7 @@ test.describe('Add missing record', () => {
             await expect(page.locator('#submit-work')).toBeDisabled();
             await expect(validationErrors).toHaveCount(2);
             await addContributorUsingPopoverNamesForm(page, 'rek-contributor', 'New', 'Editor');
-            await page.getByText(/Editor, New/).click();
+            await page.getByText(/New Editor/).click();
             await expect(page.locator('#submit-work')).toBeEnabled();
         });
 
