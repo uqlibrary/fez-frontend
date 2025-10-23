@@ -124,7 +124,6 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 disabled={isSubmitting}
                                 validate={[validation.authorRequired]}
                                 required
-                                popoverNamesFormMode={MODE_GIVEN_NAME_FIRST}
                             />
                         </Grid>
                     </Grid>
