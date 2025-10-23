@@ -9,7 +9,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { OrgNameField, OrgUnitNameField, FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
-import { ContributorsEditorField, MODE_GIVEN_NAME_FIRST } from 'modules/SharedComponents/ContributorsEditor';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 
 import { validation } from 'config';
 import { locale } from 'locale';
