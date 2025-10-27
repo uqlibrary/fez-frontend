@@ -40,8 +40,8 @@ export const setup = () => {
     }
 
     // default user is researcher if user is not defined
-    user = user || 'uqresearcher';
-    // user = user || 'uqstaff'; //remember to change it back when testing other menu item as fixRecord.spec.js will fail
+    // user = user || 'uqresearcher';
+    user = user || 'uqstaff'; //remember to change it back when testing other menu item as fixRecord.spec.js will fail
 
     /*
      * Mocking CURRENT_ACCOUNT_API endpoint to check session with different instance of API
@@ -56,7 +56,7 @@ export const setup = () => {
         }
         return [404, {}];
     });
-    
+
     mock.onGet(routes.SEARCH_INTERNAL_RECORDS_API({}, 'export').apiUrl).reply(config => {
         const headers = {
             excel: {
@@ -655,10 +655,7 @@ export const setup = () => {
 
         .onGet(new RegExp(routes.CHILD_VOCAB_LIST_API('\\d+.*', false).apiUrl))
         .reply(config => {
-            const id = config.url
-                .split('/')
-                .pop()
-                .split('?')[0];
+            const id = config.url.split('/').pop().split('?')[0];
             return [200, { ...mockData.childVocabList[id] }];
         })
         .onGet(new RegExp(escapeRegExp(routes.VOCAB_LIST_API(false).apiUrl + '.*')))
@@ -811,8 +808,8 @@ export const setup = () => {
         .onPost('fez-users/delete-list')
         .reply(200, {
             data: {
-                '1000000293': 'User deleted',
-                '9999999999': 'User not found',
+                1000000293: 'User deleted',
+                9999999999: 'User not found',
             },
         })
         .onPost('fez-users')
@@ -875,8 +872,8 @@ export const setup = () => {
         .onPost('fez-authors/delete-list')
         .reply(200, {
             data: {
-                '410': 'Author deleted',
-                '9999999999': 'Author not found',
+                410: 'Author deleted',
+                9999999999: 'Author not found',
             },
         })
         .onPost(new RegExp(escapeRegExp(routes.AUTHOR_API().apiUrl)))
