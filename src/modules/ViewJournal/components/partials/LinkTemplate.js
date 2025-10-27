@@ -21,7 +21,7 @@ const classes = {
 };
 
 export const LinkTemplate = ({ data, templateProps, fieldId }) => {
-    const { href, title, text, format = false } = templateProps;
+    const { href, title, ariaLabel, text, format = false } = templateProps;
     const derivedText = text(data);
     const finalLinkText = format ? formatUrlText(derivedText) : derivedText;
     return (
@@ -31,6 +31,7 @@ export const LinkTemplate = ({ data, templateProps, fieldId }) => {
                 <ExternalLink
                     href={href(data)}
                     title={title}
+                    aria-label={ariaLabel && ariaLabel(data)}
                     id={`${fieldId}-lookup`}
                     sx={{ ...classes.wrappableExternalLink }}
                 >
