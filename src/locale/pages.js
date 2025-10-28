@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 import LockIcon from '@mui/icons-material/Lock';
 import Typography from '@mui/material/Typography';
@@ -6,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import OpenInNew from '@mui/icons-material/OpenInNew';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 import locale from 'locale/components';
 import globalLocale from './global';
@@ -17,7 +17,9 @@ import {
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
+
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { Box } from '@mui/material';
 
 /*
 
@@ -343,6 +345,13 @@ export default {
                 type: 'warning',
                 actionButtonLabel: 'View and Complete',
             },
+            oacomplianceRecordLure: {
+                title: 'Open Access Required',
+                message: 'We have found [count] work(s) that may not meet the funder(s) Open Access requirements.',
+                type: 'warning',
+                actionButtonLabel: 'View and Fix',
+                icon: <LockOpenIcon id="unlock-outline-icon" className="icon" />,
+            },
         },
         myResearch: {
             pageTitle: 'My works',
@@ -570,6 +579,65 @@ export default {
             loadingMessage: 'Loading work',
             title: 'Request a correction, add more information or upload files',
             subTitle: 'Work to be amended',
+            fieldLabels: {
+                action: 'Select an action',
+            },
+            actionsOptions: [
+                {
+                    action: 'fix',
+                    title: 'I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files',
+                },
+                {
+                    action: 'unclaim',
+                    title: 'I am not the author/editor/contributor of this work - I would like this work removed from my profile',
+                },
+            ],
+            cancel: 'Cancel',
+            submit: 'Submit',
+        },
+        openAccessComplianceRecord: {
+            loadingMessage: 'Loading work',
+            title: 'Work to make open access',
+            subTitle: (
+                <div>
+                    Upload an Author Accepted Manuscript for green open access
+                    <Box sx={{ typography: 'body1' }}>
+                        <p>
+                            Upload this work's Author Accepted Manuscript (AAM) below and click submit to make this
+                            research more visible.
+                        </p>
+                        <p>
+                            Visit{' '}
+                            <ExternalLink
+                                id="make-research-open-access-link"
+                                href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/make-research-open-access-uq-espace"
+                                target="_blank"
+                            >
+                                Make research open access in UQ eSpace
+                            </ExternalLink>{' '}
+                            for information.
+                        </p>
+                        <p>If a work has been identified in error, please suggest a correction.</p>
+                    </Box>
+                </div>
+            ),
+            help: {
+                title: 'Author Accepted Manuscript',
+                text: (
+                    <>
+                        <p>
+                            You can make your work openly accessible by depositing the Author Accepted Manuscript
+                            (post-print) of your article.
+                        </p>
+                        <p>
+                            An Author Accepted Manuscript is the version of an article that has been peer-reviewed and
+                            accepted for publication but before the publisher has applied formatting, typesetting and
+                            branding.
+                        </p>
+                    </>
+                ),
+                buttonLabel: 'Close',
+            },
             fieldLabels: {
                 action: 'Select an action',
             },
@@ -1063,6 +1131,9 @@ export default {
                 indexed: {
                     title: 'Indexed in',
                 },
+                readAndPublish: {
+                    title: 'Publisher Agreements',
+                },
             },
             help: {
                 tooltip: 'Learn about keyboard shortcuts',
@@ -1273,6 +1344,75 @@ export default {
         },
         controlledVocabularies: {
             title: 'Controlled Vocabularies',
+        },
+        openAccessPublications: {
+            pageTitle: 'My open access',
+            cardTitle: 'Work(s) to make open access',
+            text: (
+                <div>
+                    <p>
+                        Work(s) below may require an Author Accepted Manuscript (AAM) to meet{' '}
+                        <ExternalLink
+                            id="open-access-policies-link"
+                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/policies-and-mandates"
+                            target="_blank"
+                        >
+                            funder open access policies
+                        </ExternalLink>
+                        .
+                    </p>
+                    <p>If a work has been identified in error, please request a correction.</p>
+                    <p>
+                        Visit{' '}
+                        <ExternalLink
+                            id="make-research-open-access-link"
+                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/make-research-open-access-uq-espace"
+                            target="_blank"
+                        >
+                            Make research open access in UQ eSpace
+                        </ExternalLink>{' '}
+                        for information.
+                    </p>
+                </div>
+            ),
+            help: {
+                title: 'Author Accepted Manuscript',
+                text: (
+                    <>
+                        <p>
+                            You can make your work openly accessible by depositing the Author Accepted Manuscript
+                            (post-print) of your article.
+                        </p>
+                        <p>
+                            An Author Accepted Manuscript is the version of an article that has been peer-reviewed and
+                            accepted for publication but before the publisher has applied formatting, typesetting and
+                            branding.
+                        </p>
+                    </>
+                ),
+                buttonLabel: 'Close',
+            },
+            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
+            loadingMessage: 'Searching for open access non-compliant works',
+            noResultsFound: {
+                title: 'No open access works found',
+                text: (
+                    <div>
+                        <p>No open access works were found for you to rectify.</p>
+                    </div>
+                ),
+            },
+            publicationsList: {
+                complete: 'Make open access',
+                fix: 'Request Correction',
+            },
+            facetsFilter: {
+                ...locale.components.facetsFilter,
+                excludeFacetsList: [...locale.components.facetsFilter.excludeFacetsList, 'Author'],
+            },
+        },
+        openAccessPublication: {
+            title: 'Complete my open access work',
         },
     },
 };

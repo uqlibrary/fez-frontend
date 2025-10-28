@@ -222,7 +222,7 @@ test.describe('JournalAdmin', () => {
             await expect(tabbedCheckboxParent).toHaveAttribute('aria-label', 'Switch to full form mode');
 
             const tabs = page.getByRole('tab');
-            await expect(tabs).toHaveCount(5);
+            await expect(tabs).toHaveCount(6);
             await expect(tabs.nth(0)).toHaveAttribute('aria-selected', 'true');
 
             await page.getByTestId('jnl_title-input').clear();

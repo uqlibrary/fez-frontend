@@ -22,7 +22,7 @@ export const NewspaperArticleCitation = ({ publication, citationStyle }) => {
     // {Author}{Publication Date| (|).|y, m d}{Title| |.}<i>{Newspaper| |}</i>{Start page| , |}{End page|-|}
 
     return (
-        <div className="citationContent citationNewspaperArticle">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationNewspaperArticle">
             {/* {Author} */}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -43,7 +43,7 @@ export const NewspaperArticleCitation = ({ publication, citationStyle }) => {
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} />
-        </div>
+        </span>
     );
 };
 NewspaperArticleCitation.propTypes = {

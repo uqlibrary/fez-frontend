@@ -5,18 +5,30 @@ const caulLink = 'https://caul.libguides.com/read-and-publish/home';
 
 export default {
     viewJournal: {
-        authorCountWorks: {
-            heading: 'Recently published UQ authors',
-            ariaLabel: 'Click to explore articles in UQ eSpace',
-            externalUrl:
-                APP_URL +
-                'records/search?activeFacets[ranges][Year+published][from]=' +
-                (new Date().getFullYear() - 5) +
-                '&activeFacets[ranges][Year+published][to]=' +
-                new Date().getFullYear() +
-                '&searchQueryParams[mtj_jnl_id][value]=[id]&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
+        uqConnections: {
+            title: 'UQ Connections',
+            authorCount: {
+                heading: 'Number of UQ Authors',
+            },
+            authorPublications: {
+                heading: 'UQ Authored Publications',
+                ariaLabel: 'Click to explore articles published in the past 5 years in UQ eSpace',
+                linkText: 'View these articles in UQ eSpace',
+                externalUrl:
+                    APP_URL +
+                    'records/search?activeFacets[ranges][Year+published][from]=' +
+                    (new Date().getFullYear() - 5) +
+                    '&activeFacets[ranges][Year+published][to]=' +
+                    new Date().getFullYear() +
+                    '&searchQueryParams[mtj_jnl_id][value]=[id]&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
+            },
+            editorialStaff: {
+                heading: 'UQ Editorial Staff',
+                ariaLabel: 'View authors statistic page',
+            },
         },
         readAndPublish: {
+            title: 'Publisher agreements',
             heading: 'Read and publish agreement',
             ariaLabel: 'Click to view read and publish agreement',
             prefixText: 'Yes<discount>, via <publisher> ',
@@ -29,6 +41,7 @@ export default {
                 linkText: 'Check current status',
                 externalUrl: caulLink,
             },
+            lastUpdatedHeading: 'Last updated',
             alert: {
                 title: 'Read and Publish Agreement',
                 approaching: (

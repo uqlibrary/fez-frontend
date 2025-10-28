@@ -2441,7 +2441,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       >
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-h2p0ik-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1521edc-MuiTableCell-root"
                                           colspan="1"
                                           data-index="0"
                                           scope="col"
@@ -2463,7 +2463,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                         </th>
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jpcqbt-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1d8pwoj-MuiTableCell-root"
                                           colspan="1"
                                           data-can-sort="true"
                                           data-index="1"
@@ -2545,7 +2545,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                         </th>
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1ytzqwo-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-urduyp-MuiTableCell-root"
                                           colspan="1"
                                           data-can-sort="true"
                                           data-index="2"
@@ -2604,7 +2604,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                         </th>
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-1djtp5t-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-1npntti-MuiTableCell-root"
                                           colspan="1"
                                           data-index="3"
                                           scope="col"
@@ -2638,7 +2638,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                         id="rek-author-list-row-0"
                                       >
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jigodb-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-s6azes-MuiTableCell-root"
                                           data-index="0"
                                         >
                                           <span
@@ -2670,7 +2670,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                           </span>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-6kcoeg-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1xn8ghv-MuiTableCell-root"
                                           data-index="1"
                                         >
                                           <div
@@ -2712,7 +2712,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                           </div>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1aqwuhv-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-yn547q-MuiTableCell-root"
                                           data-index="2"
                                         >
                                           <p
@@ -2724,7 +2724,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                           </p>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-drpxcm-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1012vkg-MuiTableCell-root"
                                           data-index="3"
                                         >
                                           <div
@@ -2836,7 +2836,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                         id="rek-author-list-row-1"
                                       >
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jigodb-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-s6azes-MuiTableCell-root"
                                           data-index="0"
                                         >
                                           <span
@@ -2868,7 +2868,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                           </span>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-6kcoeg-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1xn8ghv-MuiTableCell-root"
                                           data-index="1"
                                         >
                                           <div
@@ -2910,7 +2910,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                           </div>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1aqwuhv-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-yn547q-MuiTableCell-root"
                                           data-index="2"
                                         >
                                           <p
@@ -2922,7 +2922,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                           </p>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-drpxcm-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1012vkg-MuiTableCell-root"
                                           data-index="3"
                                         >
                                           <div
@@ -3028,9 +3028,6 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                         />
                                       </tr>
                                     </tbody>
-                                    <tfoot
-                                      class="MuiTableFooter-root css-13kpbyb-MuiTableFooter-root"
-                                    />
                                   </table>
                                 </div>
                                 <div
@@ -3201,7 +3198,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       >
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-h2p0ik-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1521edc-MuiTableCell-root"
                                           colspan="1"
                                           data-index="0"
                                           scope="col"
@@ -3223,7 +3220,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                         </th>
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jpcqbt-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1d8pwoj-MuiTableCell-root"
                                           colspan="1"
                                           data-can-sort="true"
                                           data-index="1"
@@ -3305,7 +3302,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                         </th>
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1ytzqwo-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-urduyp-MuiTableCell-root"
                                           colspan="1"
                                           data-can-sort="true"
                                           data-index="2"
@@ -3364,7 +3361,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                         </th>
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-1djtp5t-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-1npntti-MuiTableCell-root"
                                           colspan="1"
                                           data-index="3"
                                           scope="col"
@@ -3406,9 +3403,6 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                         </td>
                                       </tr>
                                     </tbody>
-                                    <tfoot
-                                      class="MuiTableFooter-root css-13kpbyb-MuiTableFooter-root"
-                                    />
                                   </table>
                                 </div>
                                 <div
