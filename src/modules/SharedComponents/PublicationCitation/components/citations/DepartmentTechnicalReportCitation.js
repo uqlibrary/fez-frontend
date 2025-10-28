@@ -21,7 +21,10 @@ export const DepartmentTechnicalReportCitation = ({ publication, hideDoiLink, ci
 
     // eSpace citation view for Department Technical Report
     return (
-        <div className="citationContent citationDepartmentTechnicalReport">
+        <span
+            id={`citation-content-${publication.rek_pid}`}
+            className="citationContent citationDepartmentTechnicalReport"
+        >
             {/* {Author}*/}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -45,7 +48,7 @@ export const DepartmentTechnicalReportCitation = ({ publication, hideDoiLink, ci
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
-        </div>
+        </span>
     );
 };
 DepartmentTechnicalReportCitation.propTypes = {

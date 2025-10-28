@@ -2706,7 +2706,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
             >
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1iusclh-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-zf0lkp-MuiTableCell-root"
                 colspan="1"
                 data-index="0"
                 scope="col"
@@ -2728,7 +2728,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1op3qx2-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1o6eu5g-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="1"
@@ -2810,7 +2810,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1oggxsy-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nhjb21-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="2"
@@ -2869,7 +2869,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-149hbzy-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-163o9rt-MuiTableCell-root"
                 colspan="1"
                 data-index="3"
                 scope="col"
@@ -2911,9 +2911,6 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
               </td>
             </tr>
           </tbody>
-          <tfoot
-            class="MuiTableFooter-root css-13kpbyb-MuiTableFooter-root"
-          />
         </table>
       </div>
       <div
@@ -7182,7 +7179,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
             >
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1ga6kf-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-lsstzm-MuiTableCell-root"
                 colspan="1"
                 data-index="0"
                 scope="col"
@@ -7204,7 +7201,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1u74xje-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-aez360-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="1"
@@ -7286,7 +7283,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-11hiqst-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-rnckva-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="2"
@@ -7345,7 +7342,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-1k2fxrt-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-1mz8gjm-MuiTableCell-root"
                 colspan="1"
                 data-index="3"
                 scope="col"
@@ -7384,9 +7381,6 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               </td>
             </tr>
           </tbody>
-          <tfoot
-            class="MuiTableFooter-root css-1pwfv5b-MuiTableFooter-root"
-          />
         </table>
       </div>
       <div
@@ -7513,7 +7507,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
             >
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1ga6kf-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-lsstzm-MuiTableCell-root"
                 colspan="1"
                 data-index="0"
                 scope="col"
@@ -7535,7 +7529,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1u74xje-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-aez360-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="1"
@@ -7617,7 +7611,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-11hiqst-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-rnckva-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="2"
@@ -7676,7 +7670,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-1k2fxrt-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-1mz8gjm-MuiTableCell-root"
                 colspan="1"
                 data-index="3"
                 scope="col"
@@ -7710,7 +7704,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               id="test-list-row-0"
             >
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1vh4w5f-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1weeygr-MuiTableCell-root"
                 data-index="0"
               >
                 <span
@@ -7742,7 +7736,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 </span>
               </td>
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1qqugcb-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1mm2626-MuiTableCell-root"
                 data-index="1"
               >
                 <div
@@ -7781,7 +7775,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 </div>
               </td>
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-15if2ly-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1996tex-MuiTableCell-root"
                 data-index="2"
               >
                 <p
@@ -7791,7 +7785,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 />
               </td>
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1or8m7a-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-17pf2nr-MuiTableCell-root"
                 data-index="3"
               >
                 <div
@@ -7903,9 +7897,6 @@ exports[`ContributorsEditor renders full component for admin user with record af
               />
             </tr>
           </tbody>
-          <tfoot
-            class="MuiTableFooter-root css-1pwfv5b-MuiTableFooter-root"
-          />
         </table>
       </div>
       <div

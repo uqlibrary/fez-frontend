@@ -274,6 +274,11 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         table.setCreatingRow(true);
     };
 
+    React.useEffect(() => {
+        onSearchTermChange('');
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const table = useMaterialReactTable({
         columns,
         data,
@@ -293,6 +298,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         manualPagination: true,
         rowCount: pagination.resultCount,
         autoResetPageIndex: false,
+        enableKeyboardShortcuts: false,
         displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
         initialState: {
             expanded: true,

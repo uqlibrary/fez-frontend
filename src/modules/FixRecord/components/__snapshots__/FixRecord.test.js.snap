@@ -107,8 +107,9 @@ exports[`Component FixRecord should render fix record form 1`] = `
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -205,7 +206,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                               <span
                                 class="citationDOI empty"
                               />
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -592,8 +593,9 @@ exports[`Component FixRecord should render record citation, two actions in selec
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -690,7 +692,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                               <span
                                 class="citationDOI empty"
                               />
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -967,8 +969,9 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -1065,7 +1068,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                               <span
                                 class="citationDOI empty"
                               />
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
