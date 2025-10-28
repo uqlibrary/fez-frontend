@@ -150,6 +150,16 @@ export const createDefaultDrawerDescriptorObject = (
         parseKey(fields.pubMedDocTypeLookup, content) ?? undefined,
     );
 
+    // OpenAlex
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.openalex][0].value =
+        locale.openalexId;
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.openalex][1].value =
+        formattedString(parseKey(fields.openalexId, content) ?? undefined);
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.openalex][2].value =
+        locale.openalexDocType;
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.openalex][3].value =
+        formattedString(parseKey(fields.openalexDocType, content) ?? undefined);
+
     return adminViewRecordDefaultContentObject;
 };
 createDefaultDrawerDescriptorObject.propTypes = {
