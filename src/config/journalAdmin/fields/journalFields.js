@@ -36,9 +36,9 @@ export default {
             groups: [['doaj']],
         },
     ],
-    indexed: () => [
+    listed: () => [
         {
-            groups: [['indexed']],
+            groups: [['listed']],
         },
     ],
 };
