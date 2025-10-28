@@ -57,7 +57,7 @@ SECONDS=0
 
 printf "${C_YELLOW}$FILE_COUNT${C_RESET} staged file(s) will be checked for code styles.\n\n\e[31m"
 
-"$FORMATTER" $FILES_ONE_LINE --list-different -l silent
+"$FORMATTER" $FILES_ONE_LINE --list-different -l silent 2>&1 | grep -v '@stylistic/eslint-plugin'
 if [[ "$?" != 0 ]]; then
   PASS=false
   printf "\nFile(s) above failed code style checks!"
