@@ -1134,8 +1134,8 @@ export default {
                 doaj: {
                     title: 'Open Access (Directory of Open Access Journals - DOAJ)',
                 },
-                indexed: {
-                    title: 'Indexed in',
+                listed: {
+                    title: 'Listed in',
                 },
                 readAndPublish: {
                     title: 'Publisher Agreements',
