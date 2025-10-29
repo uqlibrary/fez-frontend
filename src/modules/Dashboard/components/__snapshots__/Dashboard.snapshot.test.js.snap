@@ -3641,6 +3641,383 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
 </div>
 `;
 
+exports[`Dashboard test displays a lure when the user has non-compliant open access submissions 2`] = `
+<div>
+  <div
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+  >
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+    />
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+    >
+      <div
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          style="margin-top: -27px;"
+        >
+          <div
+            data-testid="alert"
+            style="margin-top: 5px;"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container css-xsukhl-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-j1d1nm-MuiGridLegacy-root"
+              >
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-1hyd9k4-MuiGridLegacy-root"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+                      data-testid="LockOpenIcon"
+                      focusable="false"
+                      id="unlock-outline-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m0 12H6V10h12z"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                  >
+                    <b>
+                      Open Access Required - 
+                    </b>
+                    <span
+                      data-testid="alert-message"
+                    >
+                      We have found 2 work(s) that may not meet the funder(s) Open Access requirements.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-auto css-m0iw5t-MuiGridLegacy-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="action-button"
+                  data-testid="action-button"
+                  id="action-button"
+                  tabindex="0"
+                  type="button"
+                >
+                  View and Fix
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-b2vqdl-MuiPaper-root-MuiCard-root"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-bc7sky-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+              >
+                <div
+                  aria-label="Photograph of  Professor J Researcher"
+                  class="MuiAvatar-root MuiAvatar-circular css-1sguapy-MuiAvatar-root"
+                  title="Professor J Researcher"
+                >
+                  <img
+                    class="MuiAvatar-img css-1su80sj-MuiAvatar-img"
+                    src="https://its-ss-academicportal.s3.amazonaws.com/prod/uqresearchers/photo/thumbnail_14.jpg"
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              >
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  >
+                    <div
+                      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                    >
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                      >
+                        <h6
+                          class="MuiTypography-root MuiTypography-h6 css-1s8t1s1-MuiTypography-root"
+                        >
+                          Professor
+                           
+                          J
+                           
+                          Researcher
+                        </h6>
+                      </div>
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                      >
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
+                        >
+                          <b>
+                            Affiliate Professor
+                          </b>
+                          , Institute for Molecular Bioscience
+                        </span>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
+                        >
+                          <b>
+                            Affiliate Professorial Res Fellow
+                          </b>
+                          , School of Chemistry and Molecular Biosciences
+                        </span>
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
+                        >
+                          <b>
+                            ARC Australian Laureate Fellow
+                          </b>
+                          , The University of Queensland Diamantina Institute
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  >
+                    <div
+                      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
+                      style="margin-top: 12px;"
+                    >
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      >
+                        <a
+                          class="css-ztx283"
+                          data-analyticsid="researcher-link"
+                          data-testid="researcher-link"
+                          href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
+                          id="researcher-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                        >
+                          <div
+                            aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                            class="fez-icon researcher ok"
+                            data-mui-internal-clone-element="true"
+                            style="width: 32px; height: 32px; border-radius: 32px;"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      >
+                        <a
+                          class="css-ztx283"
+                          data-analyticsid="scopus-link"
+                          data-testid="scopus-link"
+                          href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
+                          id="scopus-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                        >
+                          <div
+                            aria-label="Your Scopus ID is 35478294000 - Click to review"
+                            class="fez-icon scopus ok"
+                            data-mui-internal-clone-element="true"
+                            style="width: 32px; height: 32px; border-radius: 32px;"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      >
+                        <a
+                          class="css-ztx283"
+                          data-analyticsid="google_scholar-link"
+                          data-testid="google_scholar-link"
+                          href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
+                          id="google_scholar-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                        >
+                          <div
+                            aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+                            class="fez-icon google_scholar ok"
+                            data-mui-internal-clone-element="true"
+                            style="width: 32px; height: 32px; border-radius: 32px;"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      >
+                        <a
+                          class="css-ztx283"
+                          data-analyticsid="orcid-link"
+                          data-testid="orcid-link"
+                          href="https://orcid.org/0000-0001-1111-1111"
+                          id="orcid-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                        >
+                          <div
+                            aria-label="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
+                            class="fez-icon orcid ok"
+                            data-mui-internal-clone-element="true"
+                            style="width: 32px; height: 32px; border-radius: 32px;"
+                          />
+                        </a>
+                        <span
+                          class="css-1o7ot5c"
+                        >
+                          <button
+                            aria-label="Information about uploading your eSpace works to ORCID"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
+                            data-analyticsid="help-icon-orcid"
+                            data-mui-internal-clone-element="true"
+                            data-testid="help-icon-orcid"
+                            id="help-icon-orcid"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                              data-testid="SettingsIcon"
+                              focusable="false"
+                              size="20"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"
+                              />
+                            </svg>
+                          </button>
+                        </span>
+                      </div>
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      >
+                        <a
+                          aria-label="Click to visit your ORCID profile"
+                          href="https://orcid.org/0000-0001-1111-1111"
+                          id="orcid"
+                          tabindex="0"
+                          target="_blank"
+                          title="Click to visit your ORCID profile"
+                        >
+                          <span
+                            class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
+                          >
+                             orcid.org/0000-0001-1111-1111
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-clagcp-MuiGridLegacy-root"
+              >
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-ylnelu-MuiGridLegacy-root"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          style="margin-top: -27px;"
+        >
+          <div
+            data-testid="alert"
+            style="margin-top: 5px;"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-j1d1nm-MuiGridLegacy-root"
+              >
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+                      data-testid="InfoOutlinedIcon"
+                      focusable="false"
+                      id="info-outline-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                  >
+                    <b>
+                      Add your work to eSpace - 
+                    </b>
+                    <span
+                      data-testid="alert-message"
+                    >
+                      We found nothing new for you to claim, but you may add a work any time.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-auto css-m0iw5t-MuiGridLegacy-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="action-button"
+                  data-testid="action-button"
+                  id="action-button"
+                  tabindex="0"
+                  type="button"
+                >
+                  Add a missing work
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Dashboard test does render latest and trending publications tabs correctly 1`] = `
 <div>
   <div
