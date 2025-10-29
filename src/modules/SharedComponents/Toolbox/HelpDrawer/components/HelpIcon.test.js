@@ -22,7 +22,7 @@ function setup(testProps = {}) {
 }
 
 describe('HelpIcon snapshots tests', () => {
-    beforeEach(() => jest.clearAllMocks());
+    afterEach(() => jest.clearAllMocks());
 
     it('renders help icon', () => {
         const { getByTestId } = setup();
@@ -48,5 +48,16 @@ describe('HelpIcon snapshots tests', () => {
 
         fireEvent.click(getByTestId('help-icon'));
         expect(showFn).not.toHaveBeenCalled();
+    });
+
+    it('should expose openDrawer via ref', () => {
+        const showFn = jest.spyOn(actions, 'show');
+        const ref = createRef();
+
+        expect(showFn).not.toHaveBeenCalled();
+        setup({ ref });
+
+        ref.current?.openDrawer();
+        expect(showFn).toHaveBeenCalledWith('This is the title', 'This is some text', 'This is a button');
     });
 });

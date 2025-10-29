@@ -417,10 +417,10 @@ const Dashboard = ({
                     !hideTurnOnOrcidSyncReminder && (
                         <Grid item xs={12} style={{ marginTop: -27 }}>
                             <Alert
-                                title={txt.enableOrcidSyncingLure.title}
-                                message={txt.enableOrcidSyncingLure.message}
-                                type={txt.enableOrcidSyncingLure.type}
-                                actionButtonLabel={txt.enableOrcidSyncingLure.actionButtonLabel}
+                                title={txt.enableOrcidSyncLure.title}
+                                message={txt.enableOrcidSyncLure.message}
+                                type={txt.enableOrcidSyncLure.type}
+                                actionButtonLabel={txt.enableOrcidSyncLure.actionButtonLabel}
                                 alertId="dashboard-orcid-linking-dashboard"
                                 action={openOrcidSyncSettings}
                                 dismissAction={dismissEnableOrcidSyncDialog}

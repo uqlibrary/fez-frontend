@@ -6,13 +6,8 @@ import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 import { within } from '@testing-library/react';
 import { DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE } from '../../../config/general';
 import Cookies from 'js-cookie';
-
-const publicationTotalCount = {
-    account: mock.accounts.uqresearcher,
-    articleCount: mock.currentAuthorStats.total,
-    articleFirstYear: mock.currentAuthorStats.filters.facets.min_date_year_t.value_as_string,
-    articleLastYear: mock.currentAuthorStats.filters.facets.max_date_year_t.value_as_string,
-};
+import * as DashboardAuthorProfileModule from './DashboardAuthorProfile';
+import { OrcidSyncContext } from '../../../context';
 
 const mockActions = {
     countPossiblyYourPublications: jest.fn(),
@@ -22,7 +17,6 @@ const mockActions = {
 };
 
 const mockUseNavigate = jest.fn();
-
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,
@@ -89,7 +83,19 @@ describe('Dashboard test', () => {
         jest.clearAllMocks();
     });
 
-    it('redirectToMissingRecordslist method', () => {
+    it('does navigate to records add find page when clicked addPublicationLure', () => {
+        const { getByTestId } = setup({});
+        fireEvent.click(getByTestId('action-button'));
+        expect(mockUseNavigate).toHaveBeenCalledWith('/records/add/find');
+    });
+
+    it('_claimYourPublications method', () => {
+        const { getByTestId } = setup({ possiblyYourPublicationsCount: 5 });
+        fireEvent.click(getByTestId('action-button'));
+        expect(mockUseNavigate).toBeCalledWith('/records/possible');
+    });
+
+    it('redirectToMissingRecordsList method', () => {
         const { getByText } = setup({
             incomplete: {
                 publicationsList: [],
@@ -147,651 +153,214 @@ describe('Dashboard test', () => {
         expect(isWaitingForSync()).toBe(false);
     });
 
-    describe('Load Orcid Sync Status', () => {
-        beforeEach(() => jest.useFakeTimers());
+    describe('ORCID', () => {
+        describe('Load Sync Status', () => {
+            beforeEach(() => jest.useFakeTimers());
 
-        it('should check sync status a few secs after mount', () => {
-            setup({
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
-            });
-
-            expect(mockActions.loadOrcidSyncStatus).not.toHaveBeenCalled();
-            jest.runAllTimers();
-            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalled();
-        });
-
-        it('should not make additional requests to check sync status when not requested', () => {
-            setup({
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
-            });
-
-            jest.runAllTimers();
-            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
-            // explicitly advance in time - it should be covered by the above jest.runAllTimers();
-            jest.advanceTimersByTime(loadOrcidSyncDelay * 10000);
-            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
-        });
-
-        it('should make additional sync status requests upon user requests', () => {
-            const { rerender } = setup({
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
-            });
-
-            jest.runAllTimers();
-            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
-
-            setup(
-                {
-                    orcidSyncEnabled: true,
-                    loadingOrcidSyncStatus: true,
-                },
-                rerender,
-            );
-
-            jest.runAllTimers();
-            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
-
-            setup(
-                {
+            it('should check sync status a few secs after mount', () => {
+                setup({
                     orcidSyncEnabled: true,
                     loadingOrcidSyncStatus: false,
-                    orcidSyncStatus: {
-                        orj_status: 'Pending',
-                    },
-                },
-                rerender,
-            );
-
-            jest.runAllTimers();
-            expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(2);
-        });
-
-        it('should cancel scheduled sync status request before making new ones', () => {
-            const spy = jest.spyOn(window, 'clearTimeout');
-
-            const { rerender } = setup({
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
-            });
-
-            jest.runAllTimers();
-            // first call
-            expect(spy).toHaveBeenNthCalledWith(1, null);
-
-            setup({ orcidSyncEnabled: true, loadingOrcidSyncStatus: true }, rerender);
-            jest.runAllTimers();
-
-            setup(
-                {
-                    orcidSyncEnabled: true,
-                    loadingOrcidSyncStatus: false,
-                    orcidSyncStatus: { orj_status: 'Pending' },
-                },
-                rerender,
-            );
-            jest.runAllTimers();
-
-            // call before to unmount
-            expect(spy).toHaveBeenNthCalledWith(spy.mock.calls.length - 1, expect.any(Number));
-        });
-
-        it('should cancel scheduled sync status request on unmount', () => {
-            const spy = jest.spyOn(window, 'clearTimeout');
-            const { unmount } = setup({
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
-            });
-
-            spy.mockReset();
-            unmount();
-            expect(spy).toHaveBeenCalledWith(expect.any(Number));
-        });
-    });
-
-    describe('ORCID Linking dialog', () => {
-        it('should not display for authors without an ORCID', () => {
-            const { queryByTestId } = setup({
-                author: {
-                    ...mock.currentAuthor.uqresearcher.data,
-                    aut_orcid_id: null,
-                },
-            });
-            expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
-        });
-
-        it('should not display for authors with ORCID syncing enabled', () => {
-            const { queryByTestId } = setup({
-                author: {
-                    ...mock.currentAuthor.uqresearcher.data,
-                    aut_is_orcid_sync_enabled: 1,
-                },
-            });
-            expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
-        });
-
-        it('should display for authors with ORCID syncing disabled', () => {
-            const { getByTestId } = setup({
-                author: {
-                    ...mock.currentAuthor.uqresearcher.data,
-                    aut_is_orcid_sync_enabled: 0,
-                },
-            });
-            expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
-        });
-
-        it('should open ORCID Sync Settings Drawer on button click and hide itself', () => {
-            const { getByTestId, queryByTestId } = setup({
-                author: {
-                    ...mock.currentAuthor.uqresearcher.data,
-                    aut_is_orcid_sync_enabled: 0,
-                },
-            });
-            fireEvent.click(within(getByTestId('dashboard-orcid-linking-dashboard')).getByTestId('action-button'));
-            expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
-            expect(mockHelpIconOpenDrawer).toHaveBeenCalledTimes(1);
-        });
-
-        it('should allow dismissing it', () => {
-            expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBeUndefined();
-            const { getByTestId, queryByTestId } = setup({
-                author: {
-                    ...mock.currentAuthor.uqresearcher.data,
-                    aut_is_orcid_sync_enabled: 0,
-                },
-            });
-
-            expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
-
-            fireEvent.click(within(getByTestId('dashboard-orcid-linking-dashboard')).getByTestId('dismiss-mobile'));
-
-            expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
-            expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBe('true');
-        });
-
-        it('should not display if it has been dismissed before', () => {
-            expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBeUndefined();
-            const { getByTestId, queryByTestId, rerender } = setup({
-                author: {
-                    ...mock.currentAuthor.uqresearcher.data,
-                    aut_is_orcid_sync_enabled: 0,
-                },
-            });
-            expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
-
-            Cookies.set(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE, 'hide');
-            rerender();
-            expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
-        });
-    });
-
-    describe('Snapshots', () => {
-        it('renders alert for non-authors', () => {
-            const { container } = setup({ account: mock.accounts.uqstaff });
-            expect(container).toMatchSnapshot();
-        });
-
-        it('renders loading for authors', () => {
-            const { container } = setup({
-                account: mock.accounts.uqstaff,
-                author: { aut_id: 1 },
-                loadingPublicationsByYear: true,
-            });
-            expect(container).toMatchSnapshot();
-        });
-
-        it('renders dashboard header only', () => {
-            const { container } = setup({
-                authorDetails: mock.authorDetails.uqresearcher,
-                publicationTotalCount: publicationTotalCount,
-            });
-            expect(container).toMatchSnapshot();
-        });
-
-        it('renders possibly your publications lure but not the add a record lure', () => {
-            const { container } = setup({
-                authorDetails: mock.authorDetails.uqresearcher,
-                publicationTotalCount: publicationTotalCount,
-                possiblyYourPublicationsCount: 5,
-                hidePossiblyYourPublicationsLure: false,
-                possiblyYourPublicationsCountLoading: false,
-            });
-            expect(container).toMatchSnapshot();
-        });
-
-        it("doesn't render possibly your publications lure or the add a record lure", () => {
-            const { container } = setup({
-                authorDetails: mock.authorDetails.uqresearcher,
-                possiblyYourPublicationsCount: 5,
-                hidePossiblyYourPublicationsLure: true,
-                possiblyYourPublicationsCountLoading: false,
-            });
-            expect(container).toMatchSnapshot();
-        });
-
-        it("doesn't render possibly your publications lure and shows the add a record lure", () => {
-            const { container } = setup({
-                authorDetails: mock.authorDetails.uqresearcher,
-                possiblyYourPublicationsCount: 0,
-                hidePossiblyYourPublicationsLure: false,
-                possiblyYourPublicationsCountLoading: false,
-            });
-            expect(container).toMatchSnapshot();
-        });
-
-        it(
-            "doesn't render either the publications lure or the add a " +
-                'record lure while the pub count is still loading',
-            () => {
-                const { container } = setup({
-                    authorDetails: mock.authorDetails.uqresearcher,
-                    possiblyYourPublicationsCount: null,
-                    hidePossiblyYourPublicationsLure: false,
-                    possiblyYourPublicationsCountLoading: true,
                 });
-                expect(container).toMatchSnapshot();
-            },
-        );
 
-        it("doesn't render the bar/donut graph cards when no data is available", () => {
-            const { container } = setup({
-                authorDetails: mock.authorDetails.uqresearcher,
-                publicationsByYear: { series: {} },
-                publicationTypesCount: [],
-            });
-            expect(container).toMatchSnapshot();
-        });
-
-        it('does render the donut/bar graph cards when data is available', () => {
-            const { container } = setup({
-                authorDetails: mock.authorDetails.uqresearcher,
-
-                // prettier-ignore
-                publicationsByYear: {
-                    'series': [
-                        { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
-                        { 'name': 'Conference Paper', 'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0] },
-                        { 'name': 'Book Chapter', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0] },
-                        { 'name': 'Book', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                        { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                    ],
-                    'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-                },
-
-                publicationTypesCount: [
-                    ['Journal Article', 278],
-                    ['Conference Paper', 42],
-                    ['Book Chapter', 12],
-                    ['Book', 1],
-                    ['Other', 1],
-                ],
-            });
-            expect(container).toMatchSnapshot();
-        });
-
-        it('does navigate to records add find page when clicked addPublicationLure', () => {
-            const { getByTestId } = setup({});
-            fireEvent.click(getByTestId('action-button'));
-            expect(mockUseNavigate).toHaveBeenCalledWith('/records/add/find');
-        });
-
-        it('does render latest and trending publications tabs correctly', () => {
-            const { container } = setup({
-                authorDetails: mock.authorDetails.uqresearcher,
-                showLatestPublicationsTab: true,
-                showTrendingPublicationsTab: true,
-            });
-            expect(container).toMatchSnapshot();
-        });
-
-        it('does render latest publications tab correctly', () => {
-            const { container } = setup({
-                authorDetails: mock.authorDetails.uqresearcher,
-                showLatestPublicationsTab: true,
-                showTrendingPublicationsTab: false,
-            });
-            expect(container).toMatchSnapshot();
-        });
-
-        it('does render trending publications tab correctly', () => {
-            const { container } = setup({
-                authorDetails: mock.authorDetails.uqresearcher,
-                showLatestPublicationsTab: false,
-                showTrendingPublicationsTab: true,
-            });
-            expect(container).toMatchSnapshot();
-        });
-
-        it('_claimYourPublications method', () => {
-            const { getByTestId } = setup({ possiblyYourPublicationsCount: 5 });
-            fireEvent.click(getByTestId('action-button'));
-            expect(mockUseNavigate).toBeCalledWith('/records/possible');
-        });
-
-        it('handleTabChange method', () => {
-            const { getByRole } = setup({
-                authorDetails: mock.authorDetails.uqresearcher,
-                showLatestPublicationsTab: true,
-                showTrendingPublicationsTab: true,
+                expect(mockActions.loadOrcidSyncStatus).not.toHaveBeenCalled();
+                jest.runAllTimers();
+                expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalled();
             });
 
-            expect(getByRole('tab', { selected: true })).toHaveTextContent('My works');
-            fireEvent.click(getByRole('tab', { selected: false }));
-            expect(getByRole('tab', { selected: true })).toHaveTextContent('My trending works');
-        });
+            it('should not make additional requests to check sync status when not requested', () => {
+                setup({
+                    orcidSyncEnabled: true,
+                    loadingOrcidSyncStatus: false,
+                });
 
-        it('should get styles for full render', () => {
-            const { container } = setup({ publicationTotalCount });
-            expect(container).toMatchSnapshot();
-        });
-
-        it('publicationStats should render stats', () => {
-            const { container } = setup({
-                publicationTotalCount,
-                // loading
-                loadingPublicationsByYear: false,
-                accountAuthorDetailsLoading: false,
-                loadingPublicationsStats: false,
-                publicationsStats: {
-                    thomson_citation_count_i: { count: 10 },
-                    scopus_citation_count_i: { count: 10 },
-                },
-
-                // prettier-ignore
-                publicationsByYear: {
-                    'series': [
-                        { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
-                        { 'name': 'Conference Paper', 'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0] },
-                        { 'name': 'Book Chapter', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0] },
-                        { 'name': 'Book', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                        { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                    ],
-                    'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-                },
-
-                publicationTypesCount: [
-                    ['Journal Article', 278],
-                    ['Conference Paper', 42],
-                    ['Book Chapter', 12],
-                    ['Book', 1],
-                    ['Other', 1],
-                ],
+                jest.runAllTimers();
+                expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
+                // explicitly advance in time - it should be covered by the above jest.runAllTimers();
+                jest.advanceTimersByTime(loadOrcidSyncDelay * 10000);
+                expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
             });
 
-            expect(container).toMatchSnapshot();
-        });
+            it('should make additional sync status requests upon user requests', () => {
+                const { rerender } = setup({
+                    orcidSyncEnabled: true,
+                    loadingOrcidSyncStatus: false,
+                });
 
-        it('publicationStats should render stats with ancient date', () => {
-            const { container } = setup({
-                publicationTotalCount,
-                // loading
-                loadingPublicationsByYear: false,
-                accountAuthorDetailsLoading: false,
-                loadingPublicationsStats: false,
-                publicationsStats: {
-                    thomson_citation_count_i: { count: 10, years: '1000 - 2019' },
-                    scopus_citation_count_i: { count: 10, years: '1000 - 2019' },
-                },
+                jest.runAllTimers();
+                expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
 
-                // prettier-ignore
-                publicationsByYear: {
-                    'series': [
-                        { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
-                        { 'name': 'Conference Paper', 'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0] },
-                        { 'name': 'Book Chapter', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0] },
-                        { 'name': 'Book', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                        { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                    ],
-                    'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-                },
-
-                publicationTypesCount: [
-                    ['Journal Article', 278],
-                    ['Conference Paper', 42],
-                    ['Book Chapter', 12],
-                    ['Book', 1],
-                    ['Other', 1],
-                ],
-            });
-            // wrapper.update();
-            expect(container).toMatchSnapshot();
-        });
-
-        it('publicationStats should render stats with ancient date without author data', () => {
-            const { container } = setup({
-                publicationTotalCount,
-                // loading
-                loadingPublicationsByYear: false,
-                accountAuthorDetailsLoading: false,
-                loadingPublicationsStats: false,
-                publicationsStats: {
-                    thomson_citation_count_i: { count: 10, years: '1000 - 2019' },
-                    scopus_citation_count_i: { count: 10, years: '1000 - 2019' },
-                },
-
-                // prettier-ignore
-                publicationsByYear: {
-                    'series': [
-                        { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
-                        { 'name': 'Conference Paper', 'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0] },
-                        { 'name': 'Book Chapter', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0] },
-                        { 'name': 'Book', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                        { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                    ],
-                    'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-                },
-
-                publicationTypesCount: [
-                    ['Journal Article', 278],
-                    ['Conference Paper', 42],
-                    ['Book Chapter', 12],
-                    ['Book', 1],
-                    ['Other', 1],
-                ],
-                authorDetails: null,
-            });
-
-            expect(container).toMatchSnapshot();
-        });
-
-        it('publicationStats should render stats 1', () => {
-            const { container } = setup({
-                publicationTotalCount,
-                // loading
-                loadingPublicationsByYear: false,
-                accountAuthorDetailsLoading: false,
-                loadingPublicationsStats: false,
-                publicationsStats: {
-                    thomson_citation_count_i: { count: 10 },
-                    scopus_citation_count_i: { count: 0 },
-                },
-            });
-
-            expect(container).toMatchSnapshot();
-        });
-
-        it('publicationStats should render stats 2', () => {
-            const { container } = setup({
-                publicationTotalCount,
-                // loading
-                loadingPublicationsByYear: false,
-                accountAuthorDetailsLoading: false,
-                loadingPublicationsStats: false,
-                publicationsStats: {
-                    thomson_citation_count_i: { count: 0 },
-                    scopus_citation_count_i: { count: 10 },
-                },
-            });
-
-            expect(container).toMatchSnapshot();
-        });
-
-        it('publicationStats should not render stats 2', () => {
-            const { container } = setup({
-                publicationTotalCount,
-                // loading
-                loadingPublicationsByYear: true,
-                accountAuthorDetailsLoading: false,
-                loadingPublicationsStats: false,
-                publicationsStats: {
-                    thomson_citation_count_i: { count: 0 },
-                    scopus_citation_count_i: { count: 0 },
-                },
-            });
-
-            expect(container).toMatchSnapshot();
-        });
-
-        it('Should only render barChart', () => {
-            const { container } = setup({
-                publicationTotalCount,
-                // loading
-                loadingPublicationsByYear: false,
-                accountAuthorDetailsLoading: false,
-                loadingPublicationsStats: false,
-                publicationsStats: undefined,
-
-                // prettier-ignore
-                publicationsByYear: {
-                    'series': [
-                        { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
-                        { 'name': 'Conference Paper', 'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0] },
-                        { 'name': 'Book Chapter', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0] },
-                        { 'name': 'Book', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                        { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                    ],
-                    'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-                     
-                },
-            });
-
-            expect(container).toMatchSnapshot();
-        });
-
-        it('Rendering MyTrendingPublications tab', () => {
-            const { container, getByRole } = setup({
-                authorDetails: mock.authorDetails.uqresearcher,
-                publicationTotalCount: publicationTotalCount,
-                loadingPublicationsByYear: false,
-                accountAuthorDetailsLoading: false,
-                loadingPublicationsStats: false,
-                publicationsStats: {
-                    thomson_citation_count_i: { count: 10 },
-                    scopus_citation_count_i: { count: 10 },
-                },
-
-                // prettier-ignore
-                publicationsByYear: {
-                    'series': [
-                        { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
-                        { 'name': 'Conference Paper', 'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0] },
-                        { 'name': 'Book Chapter', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0] },
-                        { 'name': 'Book', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                        { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                    ],
-                    'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-                },
-
-                publicationTypesCount: [
-                    ['Journal Article', 278],
-                    ['Conference Paper', 42],
-                    ['Book Chapter', 12],
-                    ['Book', 1],
-                    ['Other', 1],
-                ],
-                showLatestPublicationsTab: true,
-                showTrendingPublicationsTab: true,
-            });
-            expect(getByRole('tab', { selected: false })).toHaveTextContent('My trending works');
-            fireEvent.click(getByRole('tab', { selected: false }));
-            expect(container).toMatchSnapshot();
-        });
-
-        it('Rendering MyLatestPublications tab', () => {
-            const { container } = setup({
-                // loading
-                loadingPublicationsByYear: false,
-                accountAuthorDetailsLoading: false,
-                loadingPublicationsStats: false,
-                authorDetails: mock.authorDetails.uqresearcher,
-                publicationTotalCount: publicationTotalCount,
-                publicationsStats: {
-                    thomson_citation_count_i: { count: 10 },
-                    scopus_citation_count_i: { count: 10 },
-                },
-                showLatestPublicationsTab: true,
-                showTrendingPublicationsTab: true,
-                actions: mockActions,
-            });
-            expect(container).toMatchSnapshot();
-        });
-
-        it('componentDidMount without account id', () => {
-            const { container } = setup({
-                loadingPublicationsByYear: false,
-                accountAuthorDetailsLoading: false,
-                loadingPublicationsStats: false,
-                account: { id: null },
-                authorDetails: mock.authorDetails.uqresearcher,
-                publicationTotalCount: publicationTotalCount,
-                publicationsStats: {
-                    thomson_citation_count_i: { count: 10 },
-                    scopus_citation_count_i: { count: 10 },
-                },
-                showLatestPublicationsTab: true,
-                showTrendingPublicationsTab: true,
-            });
-            expect(container).toMatchSnapshot();
-        });
-
-        it('displays a lure when the user has incomplete NTRO submissions', () => {
-            const { container } = setup({
-                incomplete: {
-                    publicationsList: [],
-                    publicationsListPagingData: {
-                        total: 2,
-                        took: 30,
-                        per_page: 20,
-                        current_page: 1,
-                        from: 1,
-                        to: 3,
-                        data: [1, 2],
-                        filters: {},
+                setup(
+                    {
+                        orcidSyncEnabled: true,
+                        loadingOrcidSyncStatus: true,
                     },
-                },
-                authorDetails: mock.authorDetails.uqresearcher,
-            });
-            expect(container).toMatchSnapshot();
-        });
+                    rerender,
+                );
 
-        it('displays a lure to a single work when the user has incomplete NTRO submissions', () => {
-            const { container } = setup({
-                incomplete: {
-                    publicationsList: [],
-                    publicationsListPagingData: {
-                        total: 1,
-                        took: 30,
-                        per_page: 20,
-                        current_page: 1,
-                        from: 1,
-                        to: 1,
-                        data: [1],
-                        filters: {},
+                jest.runAllTimers();
+                expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
+
+                setup(
+                    {
+                        orcidSyncEnabled: true,
+                        loadingOrcidSyncStatus: false,
+                        orcidSyncStatus: {
+                            orj_status: 'Pending',
+                        },
                     },
-                },
-                authorDetails: mock.authorDetails.uqresearcher,
+                    rerender,
+                );
+
+                jest.runAllTimers();
+                expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(2);
             });
-            expect(container).toMatchSnapshot();
+
+            it('should cancel scheduled sync status request before making new ones', () => {
+                const spy = jest.spyOn(window, 'clearTimeout');
+
+                const { rerender } = setup({
+                    orcidSyncEnabled: true,
+                    loadingOrcidSyncStatus: false,
+                });
+
+                jest.runAllTimers();
+                // first call
+                expect(spy).toHaveBeenNthCalledWith(1, null);
+
+                setup({ orcidSyncEnabled: true, loadingOrcidSyncStatus: true }, rerender);
+                jest.runAllTimers();
+
+                setup(
+                    {
+                        orcidSyncEnabled: true,
+                        loadingOrcidSyncStatus: false,
+                        orcidSyncStatus: { orj_status: 'Pending' },
+                    },
+                    rerender,
+                );
+                jest.runAllTimers();
+
+                // call before to unmount
+                expect(spy).toHaveBeenNthCalledWith(spy.mock.calls.length - 1, expect.any(Number));
+            });
+
+            it('should cancel scheduled sync status request on unmount', () => {
+                const spy = jest.spyOn(window, 'clearTimeout');
+                const { unmount } = setup({
+                    orcidSyncEnabled: true,
+                    loadingOrcidSyncStatus: false,
+                });
+
+                spy.mockReset();
+                unmount();
+                expect(spy).toHaveBeenCalledWith(expect.any(Number));
+            });
         });
 
-        it('sets context for showing ORCID sync UI', () => {
-            const { container } = setup({
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
+        describe('Linking confirmation dialog', () => {
+            it('should not display for authors without an ORCID', () => {
+                const { queryByTestId } = setup({
+                    author: {
+                        ...mock.currentAuthor.uqresearcher.data,
+                        aut_orcid_id: null,
+                    },
+                });
+                expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
             });
-            expect(container).toMatchSnapshot();
+
+            it('should not display for authors with ORCID syncing enabled', () => {
+                const { queryByTestId } = setup({
+                    author: {
+                        ...mock.currentAuthor.uqresearcher.data,
+                        aut_is_orcid_sync_enabled: 1,
+                    },
+                });
+                expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
+            });
+
+            it('should display for authors with ORCID syncing disabled', () => {
+                const { getByTestId } = setup({
+                    author: {
+                        ...mock.currentAuthor.uqresearcher.data,
+                        aut_is_orcid_sync_enabled: 0,
+                    },
+                });
+                expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
+            });
+
+            it('should open ORCID Sync Settings Drawer on button click and hide itself', () => {
+                const { getByTestId, queryByTestId } = setup({
+                    author: {
+                        ...mock.currentAuthor.uqresearcher.data,
+                        aut_is_orcid_sync_enabled: 0,
+                    },
+                });
+                fireEvent.click(within(getByTestId('dashboard-orcid-linking-dashboard')).getByTestId('action-button'));
+                expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
+                expect(mockHelpIconOpenDrawer).toHaveBeenCalledTimes(1);
+            });
+
+            it('should allow dismissing it', () => {
+                expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBeUndefined();
+                const { getByTestId, queryByTestId } = setup({
+                    author: {
+                        ...mock.currentAuthor.uqresearcher.data,
+                        aut_is_orcid_sync_enabled: 0,
+                    },
+                });
+
+                expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
+
+                fireEvent.click(within(getByTestId('dashboard-orcid-linking-dashboard')).getByTestId('dismiss-mobile'));
+
+                expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
+                expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBe('true');
+            });
+
+            it('should not display if it has been dismissed before', () => {
+                expect(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)).toBeUndefined();
+                const { getByTestId, queryByTestId, rerender } = setup({
+                    author: {
+                        ...mock.currentAuthor.uqresearcher.data,
+                        aut_is_orcid_sync_enabled: 0,
+                    },
+                });
+                expect(getByTestId('dashboard-orcid-linking-dashboard')).toBeInTheDocument();
+
+                Cookies.set(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE, 'hide');
+                rerender();
+                expect(queryByTestId('dashboard-orcid-linking-dashboard')).not.toBeInTheDocument();
+            });
+        });
+
+        describe('OrcidSyncContext usage', () => {
+            it('should forward expected props', () => {
+                let actual;
+                jest.spyOn(DashboardAuthorProfileModule, 'default').mockImplementation(() => (
+                    <OrcidSyncContext.Consumer>
+                        {value => {
+                            actual = value;
+                            return null;
+                        }}
+                    </OrcidSyncContext.Consumer>
+                ));
+
+                const expected = {
+                    author: { aut_id: 123 },
+                    accountAuthorSaving: true,
+                    accountAuthorError: true,
+                    orcidSyncEnabled: true,
+                    orcidSyncStatus: {},
+                    requestingOrcidSync: true,
+                };
+
+                setup(expected);
+                expect(actual.orcidSyncProps).toMatchObject({
+                    ...expected,
+                    requestOrcidSync: expect.any(Function),
+                });
+            });
         });
     });
 });
