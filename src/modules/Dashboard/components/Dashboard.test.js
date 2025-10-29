@@ -116,6 +116,27 @@ describe('Dashboard test', () => {
         expect(mockUseNavigate).toBeCalledWith('/records/incomplete');
     });
 
+    it('redirectToOaComplianceRecordlist method', () => {
+        const { getByText } = setup({
+            noncompliantoa: {
+                publicationsList: [],
+                publicationsListPagingData: {
+                    total: 1,
+                    took: 30,
+                    per_page: 20,
+                    current_page: 1,
+                    from: 1,
+                    to: 1,
+                    data: [1],
+                    filters: {},
+                },
+            },
+            authorDetails: mock.authorDetails.uqresearcher,
+        });
+        fireEvent.click(getByText(/View and Fix/i));
+        expect(mockUseNavigate).toBeCalledWith('/records/my-open-access');
+    });
+
     it('should have helper to generate fibonacci numbers', () => {
         const fibonacciSeries = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
         fibonacciSeries.forEach((num, index) => {
@@ -330,7 +351,7 @@ describe('Dashboard test', () => {
                     accountAuthorSaving: true,
                     accountAuthorError: true,
                     orcidSyncEnabled: true,
-                    orcidSyncStatus: true,
+                    orcidSyncStatus: {},
                     requestingOrcidSync: true,
                 };
 

@@ -19,9 +19,6 @@ const mockActions = {
 };
 
 const loadOrcidSyncDelay = 1;
-
-const mockUseNavigate = jest.fn();
-
 function setup(testProps = {}, renderMethod = render) {
     const props = {
         theme: {},
@@ -619,48 +616,6 @@ describe('Dashboard test', () => {
             authorDetails: mock.authorDetails.uqresearcher,
         });
         expect(container).toMatchSnapshot();
-    });
-
-    it.skip('redirectToMissingRecordslist method', () => {
-        const { getByText } = setup({
-            incomplete: {
-                publicationsList: [],
-                publicationsListPagingData: {
-                    total: 1,
-                    took: 30,
-                    per_page: 20,
-                    current_page: 1,
-                    from: 1,
-                    to: 1,
-                    data: [1],
-                    filters: {},
-                },
-            },
-            authorDetails: mock.authorDetails.uqresearcher,
-        });
-        fireEvent.click(getByText(/View and Complete/i));
-        expect(mockUseNavigate).toBeCalledWith('/records/incomplete');
-    });
-
-    it.skip('redirectToOaComplianceRecordlist method', () => {
-        const { getByText } = setup({
-            noncompliantoa: {
-                publicationsList: [],
-                publicationsListPagingData: {
-                    total: 1,
-                    took: 30,
-                    per_page: 20,
-                    current_page: 1,
-                    from: 1,
-                    to: 1,
-                    data: [1],
-                    filters: {},
-                },
-            },
-            authorDetails: mock.authorDetails.uqresearcher,
-        });
-        fireEvent.click(getByText(/View and Fix/i));
-        expect(mockUseNavigate).toBeCalledWith('/records/my-open-access');
     });
 
     it('sets context for showing ORCID sync UI', () => {
