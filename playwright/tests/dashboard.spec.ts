@@ -46,3 +46,85 @@ test.describe('Dashboard with no OrcID', () => {
         await expect(page.getByTestId('standard-card-work-types-overview-content')).toHaveCount(0);
     });
 });
+
+test.describe('Dashboard with open accessible work', () => {
+    test.beforeEach(async ({ page }) => {
+        await page.goto('/dashboard');
+    });
+
+    test('should show alert at top of page', async ({ page }) => {
+        await expect(page.locator('text=Professor J Researcher')).toBeVisible();
+        await expect(
+            page
+                .locator('[data-testid=alert]')
+                .getByText('We have found 3 work(s) that may not meet the funder(s) Open Access requirements.'),
+        ).toBeVisible();
+        await page.locator('[data-testid=alert]').getByRole('button', { name: 'View and Fix' }).click();
+        await expect(page).toHaveURL(/records\/my-open-access/);
+    });
+    test('should show a "make open access" button that navs to the open-access work route', async ({ page }) => {
+        await expect(page.locator('text=Professor J Researcher')).toBeVisible();
+
+        // test journal should have OA button
+        await expect(
+            page.getByTestId('publication-citation-parent-UQ:256099').getByRole('button', { name: 'Make open access' }),
+        ).toBeVisible();
+
+        // test book chapter should have OA button
+        await expect(
+            page.getByTestId('publication-citation-parent-UQ:173575').getByRole('button', { name: 'Make open access' }),
+        ).toBeVisible();
+
+        // first in list should not have OA button
+        await expect(
+            page.getByTestId('publication-citation-parent-UQ:678728').getByRole('button', { name: 'Make open access' }),
+        ).not.toBeVisible();
+
+        await expect(page.getByRole('link', { name: 'Open Accessible test record' })).toBeVisible();
+        await page.getByRole('button', { name: 'Make open access' }).first().click();
+        await expect(page).toHaveURL(/records\/UQ:256099\/make-open-access/);
+    });
+
+    test.describe('has make open access button on the My Works page', () => {
+        test('should be clickable', async ({ page }) => {
+            await expect(page.locator('text=Professor J Researcher')).toBeVisible();
+
+            await page.locator('button[aria-label="Click to open the main navigation"]').click();
+            await page
+                .locator('.menu-item-container')
+                .getByText(/My works/)
+                .click();
+
+            await expect(page).toHaveURL('/records/mine');
+            await expect(page.getByRole('link', { name: 'Open Accessible test record' })).toBeVisible();
+
+            // test journal should have OA button
+            await expect(
+                page
+                    .getByTestId('publication-citation-parent-UQ:256099')
+                    .getByRole('button', { name: 'Make open access' }),
+            ).toBeVisible();
+
+            // test book chapter should have OA button
+            await expect(
+                page
+                    .getByTestId('publication-citation-parent-UQ:173575')
+                    .getByRole('button', { name: 'Make open access' }),
+            ).toBeVisible();
+
+            // first in list should not have OA button
+            await expect(
+                page
+                    .getByTestId('publication-citation-parent-UQ:678728')
+                    .getByRole('button', { name: 'Make open access' }),
+            ).not.toBeVisible();
+
+            await page
+                .locator('.publicationCitation')
+                .getByRole('button', { name: 'Make open access' })
+                .first()
+                .click();
+            await expect(page).toHaveURL(/records\/UQ:256099\/make-open-access/);
+        });
+    });
+});

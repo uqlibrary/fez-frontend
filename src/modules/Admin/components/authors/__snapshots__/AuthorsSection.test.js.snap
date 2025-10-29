@@ -159,7 +159,6 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                             data-can-sort="true"
                             data-index="0"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -242,7 +241,6 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                             data-can-sort="true"
                             data-index="1"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -302,7 +300,6 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                             data-can-sort="true"
                             data-index="2"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -361,7 +358,6 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                             colspan="1"
                             data-index="3"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -575,7 +571,6 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                             data-can-sort="true"
                             data-index="0"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -658,7 +653,6 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                             data-can-sort="true"
                             data-index="1"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -718,7 +712,6 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                             data-can-sort="true"
                             data-index="2"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -777,7 +770,6 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                             colspan="1"
                             data-index="3"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -999,7 +991,6 @@ exports[`AuthorsSection component should render default view 1`] = `
                             colspan="1"
                             data-index="0"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -1023,7 +1014,6 @@ exports[`AuthorsSection component should render default view 1`] = `
                             data-can-sort="true"
                             data-index="1"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -1106,7 +1096,6 @@ exports[`AuthorsSection component should render default view 1`] = `
                             data-can-sort="true"
                             data-index="2"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -1165,7 +1154,6 @@ exports[`AuthorsSection component should render default view 1`] = `
                             colspan="1"
                             data-index="3"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -1388,7 +1376,6 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                             colspan="1"
                             data-index="0"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -1412,7 +1399,6 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                             data-can-sort="true"
                             data-index="1"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -1495,7 +1481,6 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                             data-can-sort="true"
                             data-index="2"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -1554,7 +1539,6 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                             colspan="1"
                             data-index="3"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -1776,7 +1760,6 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                             colspan="1"
                             data-index="0"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -1800,7 +1783,6 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                             data-can-sort="true"
                             data-index="1"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -1883,7 +1865,6 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                             data-can-sort="true"
                             data-index="2"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -1942,7 +1923,6 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                             colspan="1"
                             data-index="3"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -2155,7 +2135,6 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                             colspan="1"
                             data-index="0"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2179,7 +2158,6 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                             data-can-sort="true"
                             data-index="1"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2262,7 +2240,6 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                             data-can-sort="true"
                             data-index="2"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2321,7 +2298,6 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                             colspan="1"
                             data-index="3"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -2543,7 +2519,6 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                             colspan="1"
                             data-index="0"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2567,7 +2542,6 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                             data-can-sort="true"
                             data-index="1"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2650,7 +2624,6 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                             data-can-sort="true"
                             data-index="2"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2709,7 +2682,6 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                             colspan="1"
                             data-index="3"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -2922,7 +2894,6 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                             colspan="1"
                             data-index="0"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2946,7 +2917,6 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                             data-can-sort="true"
                             data-index="1"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -3029,7 +2999,6 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                             data-can-sort="true"
                             data-index="2"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -3088,7 +3057,6 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                             colspan="1"
                             data-index="3"
                             scope="col"
-                            tabindex="0"
                           >
                             <div
                               class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"

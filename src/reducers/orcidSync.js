@@ -1,7 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    orcidSyncStatus: null,
+    orcidSyncStatus: {},
     loadingOrcidSyncStatus: false,
     orcidSyncResponse: {},
     requestingOrcidSync: false,

@@ -767,6 +767,7 @@ export const AuthorsList = ({
         enableHiding: false,
         enableColumnFilters: false,
         autoResetPageIndex: false,
+        enableKeyboardShortcuts: false,
         positionActionsColumn: 'last',
         initialState: {
             density: 'compact',
@@ -800,6 +801,8 @@ export const AuthorsList = ({
                             [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: {
                                 flexDirection: 'row-reverse',
                                 justifyContent: 'center',
+                                '& button[aria-label=Save]': { order: 1 },
+                                '& button[aria-label=Cancel]': { order: 2 },
                             },
                         },
                     },

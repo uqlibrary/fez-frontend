@@ -3,7 +3,10 @@ import { addContributorUsingPopoverNamesForm } from '../lib/helpers';
 
 test.describe('Add missing record', () => {
     test.describe('add new', () => {
-        test.beforeEach(async ({ page }) => await page.goto('/records/add/new'));
+        test.beforeEach(async ({ page }) => {
+            await page.goto('/records/add/new');
+            await expect(page.getByText('Add a missing work to eSpace')).toBeVisible();
+        });
 
         test('should enable the submit button on form render only', async ({ page }) => {
             // Journal article requires subtype selection
@@ -215,6 +218,7 @@ test.describe('Add missing record', () => {
     test.describe('Reorder and edit Contributor(s)', () => {
         test.beforeEach(async ({ page }) => {
             await page.goto('/records/add/new');
+            await expect(page.getByText('Add a missing work to eSpace')).toBeVisible();
         });
 
         test('contributors can be reordered and edited', async ({ page }) => {

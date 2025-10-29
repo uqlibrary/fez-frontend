@@ -77,13 +77,13 @@ export const renderButton = args => {
         <Grid item key={index}>
             {/* external URLs */}
             <OrcidSyncContext.Consumer>
-                {({ showSyncUI, orcidSyncProps }) =>
+                {({ orcidSyncProps }) =>
                     (isLinkedExternal || isUnlinkedExternal) && (
                         <React.Fragment>
                             <StyledResearchedLink as={ExternalLink} id={item} openInNewIcon={false} href={url}>
                                 {renderIcon(title, externalIconClassName)}
                             </StyledResearchedLink>
-                            {item === 'orcid' && showSyncUI && (
+                            {item === 'orcid' && orcidSyncProps?.author && (
                                 <StyledOrcidBadge>
                                     <DashboardOrcidSync {...orcidSyncProps} />
                                 </StyledOrcidBadge>
