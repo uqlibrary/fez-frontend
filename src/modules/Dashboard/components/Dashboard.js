@@ -95,6 +95,9 @@ const Dashboard = ({
     // incomplete Record lure
     incomplete,
 
+    // Open Access Compliance Record lure
+    noncompliantoa,
+
     // wos/scopus data
     loadingPublicationsStats,
     publicationsStats,
@@ -182,6 +185,10 @@ const Dashboard = ({
 
     const redirectToIncompleteRecordList = () => {
         navigate(pathConfig.records.incomplete);
+    };
+
+    const redirectToOaComplianceRecordlist = () => {
+        navigate(pathConfig.records.openAccessCompliance);
     };
 
     const requestOrcidSync = () => {
@@ -336,6 +343,27 @@ const Dashboard = ({
                 )}
                 {!loading && authorDetails && (
                     <React.Fragment>
+                        {!!txt.oacomplianceRecordLure &&
+                            !!noncompliantoa &&
+                            !noncompliantoa.loadingPublicationsList &&
+                            noncompliantoa.publicationsListPagingData &&
+                            noncompliantoa.publicationsListPagingData.total > 0 && (
+                                <Grid item xs={12} style={{ marginTop: -27 }}>
+                                    <Alert
+                                        title={txt.oacomplianceRecordLure.title}
+                                        message={txt.oacomplianceRecordLure.message
+                                            .replace('[count]', noncompliantoa.publicationsListPagingData.total)
+                                            .replace('[plural]', pluralTextReplacement)
+                                            .replace('[verbEnding]', verbEndingTextReplacement)}
+                                        actionButtonLabel={txt.oacomplianceRecordLure.actionButtonLabel}
+                                        action={redirectToOaComplianceRecordlist}
+                                        type="custom"
+                                        customType={txt.oacomplianceRecordLure.type}
+                                        customIcon={txt.oacomplianceRecordLure.icon}
+                                        wiggle
+                                    />
+                                </Grid>
+                            )}
                         {!!txt.incompleteRecordLure &&
                             !!incomplete &&
                             !incomplete.loadingPublicationsList &&
@@ -493,6 +521,9 @@ Dashboard.propTypes = {
 
     // incomplete Record lure
     incomplete: PropTypes.object,
+
+    // Open Access Compliance Record lure
+    noncompliantoa: PropTypes.object,
 
     // wos/scopus data
     loadingPublicationsStats: PropTypes.bool,

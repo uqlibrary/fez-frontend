@@ -29690,3 +29690,40 @@ exports[`Additional Information Component  should skip render of date if it has 
   </div>
 </div>
 `;
+
+exports[`Additional Information Component  should skip render of end date if it has a placeholder value 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      data-testid="standard-card-additional-information"
+      id="standard-card-additional-information"
+      style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+    >
+      <div
+        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+      >
+        <div
+          class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            data-testid="standard-card-additional-information-header"
+            id="standard-card-additional-information-header"
+          >
+            Additional information
+          </h3>
+        </div>
+      </div>
+      <div
+        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
+        data-testid="standard-card-additional-information-content"
+        id="standard-card-additional-information-content"
+      />
+    </div>
+  </div>
+</div>
+`;
