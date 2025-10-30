@@ -23,6 +23,11 @@ const recordWithDataCiteDoi = recordWithRDM;
 const mockUseNavigate = jest.fn();
 let mockParams = { pid: mockRecordToDelete.rek_pid };
 
+// Mock the RichEditorField to avoid lazy loading in tests
+jest.mock('modules/SharedComponents/RichEditor', () => ({
+    RichEditorField: require('modules/SharedComponents/RichEditor/components/RichEditor').default,
+}));
+
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,

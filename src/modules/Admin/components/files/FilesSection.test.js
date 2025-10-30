@@ -3,6 +3,11 @@ import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
 import FilesSection, { onRenameAttachedFile, onDeleteAttachedFile } from './FilesSection';
 import { PUBLICATION_TYPE_DATA_COLLECTION, PUBLICATION_TYPE_AUDIO_DOCUMENT } from 'config/general';
 
+// Mock the RichEditorField to avoid lazy loading in tests
+jest.mock('modules/SharedComponents/RichEditor', () => ({
+    RichEditorField: require('modules/SharedComponents/RichEditor/components/RichEditor').default,
+}));
+
 jest.mock('../../../../context');
 import { useRecordContext } from 'context';
 

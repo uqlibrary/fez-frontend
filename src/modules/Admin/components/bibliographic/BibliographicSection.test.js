@@ -2,6 +2,11 @@ import React from 'react';
 import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
 import BibliographicSection from './BibliographicSection';
 
+// Mock the RichEditorField to avoid lazy loading in tests
+jest.mock('modules/SharedComponents/RichEditor', () => ({
+    RichEditorField: require('modules/SharedComponents/RichEditor/components/RichEditor').default,
+}));
+
 jest.mock('../../../../context');
 import { useRecordContext } from 'context';
 

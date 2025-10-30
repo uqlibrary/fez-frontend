@@ -16,6 +16,11 @@ class ResizeObserver {
 
 window.ResizeObserver = ResizeObserver;
 
+// Mock the RichEditorField to avoid lazy loading in tests
+jest.mock('modules/SharedComponents/RichEditor', () => ({
+    RichEditorField: require('modules/SharedComponents/RichEditor/components/RichEditor').default,
+}));
+
 jest.mock('../../../hooks', () => ({
     ...jest.requireActual('../../../hooks'),
     useIsMobileView: jest.fn(() => false),

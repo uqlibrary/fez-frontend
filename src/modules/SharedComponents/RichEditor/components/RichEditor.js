@@ -94,13 +94,13 @@ const RichEditor = ({
         <div id={richEditorId} data-testid={richEditorId} data-analyticsid={richEditorId}>
             <span>
                 {title && (
-                    <Typography color={error && 'error'} {...titleProps}>
+                    <Typography color={error ? 'error' : undefined} {...titleProps}>
                         {title}
                         {required && <span> *</span>}
                     </Typography>
                 )}
                 {description && (
-                    <Typography color={error && 'error'} variant={'caption'}>
+                    <Typography color={error ? 'error' : undefined} variant={'caption'}>
                         {description}
                     </Typography>
                 )}
@@ -143,7 +143,7 @@ const RichEditor = ({
                         display: 'inline-block',
                     }}
                     variant="caption"
-                    color={error && 'error'}
+                    color={error ? 'error' : undefined}
                 >
                     {inputLength > 0 ? inputLength : 0} characters of {maxValue}
                     {instructions || ''}

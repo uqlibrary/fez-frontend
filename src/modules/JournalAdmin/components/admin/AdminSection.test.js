@@ -6,6 +6,11 @@ import { fieldConfig } from 'config/journalAdmin';
 
 import { ADMIN_JOURNAL } from 'config/general';
 
+// Mock the RichEditorField to avoid lazy loading in tests
+jest.mock('modules/SharedComponents/RichEditor', () => ({
+    RichEditorField: require('modules/SharedComponents/RichEditor/components/RichEditor').default,
+}));
+
 jest.mock('../../../../context');
 import { useJournalContext } from 'context';
 

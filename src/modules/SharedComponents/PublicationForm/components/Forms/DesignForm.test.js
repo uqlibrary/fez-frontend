@@ -1,6 +1,12 @@
 import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from 'config/general';
 import DesignForm from './DesignForm';
 import { ControlledFieldWithReduxStore } from './test-utils';
+
+// Mock the RichEditorField to avoid lazy loading in tests
+jest.mock('modules/SharedComponents/RichEditor', () => ({
+    RichEditorField: require('modules/SharedComponents/RichEditor/components/RichEditor').default,
+}));
+
 const setup = props => ControlledFieldWithReduxStore(DesignForm, props);
 
 describe('DesignForm', () => {

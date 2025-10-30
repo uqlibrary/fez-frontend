@@ -6,6 +6,11 @@ import {
     saveCallbackFactory,
 } from '../ScaleOfSignificanceForm';
 
+// Mock the RichEditorField to avoid lazy loading in tests
+jest.mock('modules/SharedComponents/RichEditor', () => ({
+    RichEditorField: require('modules/SharedComponents/RichEditor/components/RichEditor').default,
+}));
+
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         locale: {},
