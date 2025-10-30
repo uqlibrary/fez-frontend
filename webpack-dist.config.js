@@ -113,7 +113,13 @@ const webpackConfig = {
             {
                 test: /\.(j|t)sx?$/,
                 include: [resolve(__dirname, 'src')],
-                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
+                exclude: [
+                    /node_modules/,
+                    /custom_modules/,
+                    /\.test\.(j|t)sx?$/, // Exclude all test files
+                    /\.spec\.(j|t)sx?$/, // Exclude all spec files
+                    /[\\/]mock[\\/]/, // Exclude mock folder
+                ],
                 use: {
                     loader: 'babel-loader',
                     options: {
@@ -247,6 +253,9 @@ const webpackConfig = {
         enforceExtension: false,
         extensions: ['.jsx', '.js', '.ts', '.tsx', '.json'],
         modules: ['src', 'node_modules', 'custom_modules'],
+        alias: {
+            'bn.js': resolve(__dirname, 'node_modules/bn.js'), // Dedupe bn.js
+        },
         fallback: {
             assert: require.resolve('assert'),
             buffer: require.resolve('buffer'),
