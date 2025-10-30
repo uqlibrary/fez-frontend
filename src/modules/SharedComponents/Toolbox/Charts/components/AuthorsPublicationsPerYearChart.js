@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import Chart from './Chart';
+import Chart from './LazyChart';
 
 export function labelFormatter() {
     if (!this?.userOptions) {
