@@ -3,6 +3,12 @@ import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
 import NotesSection from './NotesSection';
 
 jest.mock('../../../../context');
+
+// Mock the RichEditorField to avoid lazy loading in tests
+jest.mock('modules/SharedComponents/RichEditor', () => ({
+    RichEditorField: require('modules/SharedComponents/RichEditor/components/RichEditor').default,
+}));
+
 import { useRecordContext } from 'context';
 
 function setup(testProps = {}) {

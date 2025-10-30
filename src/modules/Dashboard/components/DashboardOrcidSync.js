@@ -16,7 +16,7 @@ import * as actions from 'actions/actionTypes';
 import DashboardOrcidSyncMessage from './DashboardOrcidSyncMessage';
 import DashboardOrcidSyncPreferences from './DashboardOrcidSyncPreferences';
 import { debounce } from 'throttle-debounce';
-import { Settings } from '@mui/icons-material';
+import Settings from '@mui/icons-material/Settings';
 
 const updateSyncPreferences = debounce(3000, (dispatch, author, value) => {
     dispatch(

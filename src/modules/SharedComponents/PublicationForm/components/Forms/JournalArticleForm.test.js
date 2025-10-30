@@ -1,6 +1,12 @@
 import { ControlledFieldWithReduxStore } from './test-utils';
 import JournalArticleForm from './JournalArticleForm';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION } from 'config/general';
+
+// Mock the RichEditorField to avoid lazy loading in tests
+jest.mock('modules/SharedComponents/RichEditor', () => ({
+    RichEditorField: require('modules/SharedComponents/RichEditor/components/RichEditor').default,
+}));
+
 const setup = props => ControlledFieldWithReduxStore(JournalArticleForm, props);
 
 describe('JournalArticleForm', () => {

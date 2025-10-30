@@ -41,7 +41,6 @@ if (!isDevEnv() && !isTest()) {
                 request.url.includes('?') ||
                 nonCachedRoutes.find(route => request.url.includes(route)))
         ) {
-            /* eslint-disable max-len */
             // dc(`disabling cache for: ${request.url}${queryStringParams.length ? `?${JSON.stringify(request.params)}` : ''}`);
             // disabled cache
             request.cache = false;
@@ -50,7 +49,7 @@ if (!isDevEnv() && !isTest()) {
         if (!!request.cache) {
             request.cache.cacheTakeover = false;
         }
-        /* eslint-disable max-len */
+
         // dc(`the following request will be cached: ${request.url}${queryStringParams.length ? `?${JSON.stringify(request.params)}` : ''}`);
         return request;
     });

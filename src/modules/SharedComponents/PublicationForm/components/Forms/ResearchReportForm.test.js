@@ -1,6 +1,12 @@
 import ResearchReportForm from './ResearchReportForm';
 import { ControlledFieldWithReduxStore } from './test-utils';
 import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR } from '../../../../../config/general';
+
+// Mock the RichEditorField to avoid lazy loading in tests
+jest.mock('modules/SharedComponents/RichEditor', () => ({
+    RichEditorField: require('modules/SharedComponents/RichEditor/components/RichEditor').default,
+}));
+
 const setup = props => ControlledFieldWithReduxStore(ResearchReportForm, props);
 
 describe('ResearchReportForm', () => {

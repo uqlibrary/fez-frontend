@@ -3,6 +3,11 @@ import NtroFields, { normalizeIsrc, transformIsmn, transformIsrc } from './NtroF
 import { render, WithReduxStore } from 'test-utils';
 import { useForm } from 'react-hook-form';
 
+// Mock the RichEditorField to avoid lazy loading in tests
+jest.mock('modules/SharedComponents/RichEditor', () => ({
+    RichEditorField: require('modules/SharedComponents/RichEditor/components/RichEditor').default,
+}));
+
 const ControlledFieldWithReduxStore = props => {
     const {
         control,

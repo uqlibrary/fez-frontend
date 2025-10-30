@@ -11,6 +11,7 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const MomentTimezoneDataPlugin = require('moment-timezone-data-webpack-plugin');
 
 const options = {
     policy: [
@@ -176,6 +177,11 @@ const webpackConfig = {
         new MiniCssExtractPlugin({
             filename: `frontend-css/${currentCommitHash}/[name]-[contenthash].min.css`,
         }),
+        new MomentTimezoneDataPlugin({
+            startYear: 2015,
+            endYear: 2030,
+            matchZones: ['Australia/Brisbane'],
+        }),
 
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
@@ -226,12 +232,55 @@ const webpackConfig = {
         moduleIds: 'deterministic',
         removeAvailableModules: true,
         splitChunks: {
-            automaticNameDelimiter: '-',
-            minChunks: 5,
             chunks: 'all',
+            maxInitialRequests: 25,
+            minSize: 20000,
             cacheGroups: {
+                // Split CKEditor into its own chunk
+                ckeditor: {
+                    test: /[\\/]custom_modules[\\/]ckeditor5/,
+                    name: 'ckeditor',
+                    priority: 45,
+                },
+                // Split highcharts into its own chunk
+                highcharts: {
+                    test: /[\\/]node_modules[\\/]highcharts[\\/]/,
+                    name: 'highcharts',
+                    priority: 40,
+                },
+                // Split moment-timezone
+                momentTimezone: {
+                    test: /[\\/]node_modules[\\/]moment-timezone[\\/]/,
+                    name: 'moment-tz',
+                    priority: 35,
+                },
+                // Split MUI components
+                mui: {
+                    test: /[\\/]node_modules[\\/]@mui[\\/]/,
+                    name: 'mui',
+                    priority: 30,
+                },
+                // Large libraries
+                materialReactTable: {
+                    test: /[\\/]node_modules[\\/]material-react-table[\\/]/,
+                    name: 'material-react-table',
+                    priority: 25,
+                },
+                reactGoogleMaps: {
+                    test: /[\\/]node_modules[\\/]@react-google-maps[\\/]/,
+                    name: 'google-maps',
+                    priority: 25,
+                },
+                // Default vendor chunk
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    priority: 20,
+                },
                 commons: {
-                    chunks: 'all',
+                    minChunks: 2,
+                    priority: 10,
+                    reuseExistingChunk: true,
                 },
             },
         },
