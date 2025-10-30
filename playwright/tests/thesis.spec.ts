@@ -53,11 +53,7 @@ test.describe('Thesis', () => {
             await ensureErrorCount(page, 3);
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
             await page.locator('button[aria-label="Remove this item"]').click();
-            await page
-                .locator('button')
-                .getByText(/Yes/)
-                .first()
-                .click();
+            await page.locator('button').getByText(/Yes/).first().click();
             await ensureErrorCount(page, 4);
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
             await page.getByTestId('rek-supervisor-input').fill('Vishal Asai');
@@ -67,37 +63,13 @@ test.describe('Thesis', () => {
             await page.getByTestId('rek-supervisor-input').fill('Ky Lane');
             await page.getByTestId('rek-supervisor-input').press('Enter');
             await expect(page.locator('ul.ContributorList').locator(':scope > *')).toHaveCount(2);
-            await expect(
-                page
-                    .locator('ul.ContributorList')
-                    .locator(':scope > *')
-                    .first(),
-            ).toHaveText(/Vishal Asai/);
-            await expect(
-                page
-                    .locator('ul.ContributorList')
-                    .locator(':scope > *')
-                    .last(),
-            ).toHaveText(/Ky Lane/);
+            await expect(page.locator('ul.ContributorList').locator(':scope > *').first()).toHaveText(/Vishal Asai/);
+            await expect(page.locator('ul.ContributorList').locator(':scope > *').last()).toHaveText(/Ky Lane/);
             await page.locator('button[aria-label="Move item up the order"]').click();
-            await expect(
-                page
-                    .locator('ul.ContributorList')
-                    .locator(':scope > *')
-                    .last(),
-            ).toHaveText(/Vishal Asai/);
-            await expect(
-                page
-                    .locator('ul.ContributorList')
-                    .locator(':scope > *')
-                    .first(),
-            ).toHaveText(/Ky Lane/);
+            await expect(page.locator('ul.ContributorList').locator(':scope > *').last()).toHaveText(/Vishal Asai/);
+            await expect(page.locator('ul.ContributorList').locator(':scope > *').first()).toHaveText(/Ky Lane/);
             await page.locator('button[aria-label="Remove all items"]').click();
-            await page
-                .locator('button')
-                .getByText(/Yes/)
-                .first()
-                .click();
+            await page.locator('button').getByText(/Yes/).first().click();
 
             await ensureErrorCount(page, 4);
             await page.getByTestId('rek-supervisor-input').fill('Ky Lane');
@@ -111,22 +83,14 @@ test.describe('Thesis', () => {
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
             await expect(page.locator('#rek-subject-list-row-0')).toContainText('0101 Pure Mathematics');
             await page.locator('#rek-subject-list-row-0-delete').click();
-            await page
-                .locator('button')
-                .getByText(/Yes/)
-                .first()
-                .click();
+            await page.locator('button').getByText(/Yes/).first().click();
 
             await ensureErrorCount(page, 3);
             await page.getByTestId('rek-subject-input').fill('b');
             await clickAutoSuggestion(page, 'rek-subject', 0);
             await ensureErrorCount(page, 2);
             await page.locator('#delete-all-rek-subject').click();
-            await page
-                .locator('button')
-                .getByText(/Yes/)
-                .first()
-                .click();
+            await page.locator('button').getByText(/Yes/).first().click();
 
             await ensureErrorCount(page, 3);
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
@@ -141,21 +105,13 @@ test.describe('Thesis', () => {
             await ensureErrorCount(page, 1);
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
             await page.locator('#rek-keywords-list-row-0-delete').click();
-            await page
-                .locator('button')
-                .getByText(/Yes/)
-                .first()
-                .click();
+            await page.locator('button').getByText(/Yes/).first().click();
             await ensureErrorCount(page, 2);
             await page.getByTestId('rek-keywords-input').fill('Second Keyword');
             await page.getByTestId('rek-keywords-input').press('Enter');
             await ensureErrorCount(page, 1);
             await page.locator('#delete-all-rek-keywords').click();
-            await page
-                .locator('button')
-                .getByText(/Yes/)
-                .first()
-                .click();
+            await page.locator('button').getByText(/Yes/).first().click();
             await ensureErrorCount(page, 2);
             await page.getByTestId('rek-keywords-input').fill('Third Keyword');
             await page.getByTestId('rek-keywords-input').press('Enter');
@@ -168,20 +124,12 @@ test.describe('Thesis', () => {
             // Files?
             await uploadFile(page, 'test.jpg');
             await page.getByTestId('dsi-dsid-0-delete').click();
-            await page
-                .locator('button')
-                .getByText(/Yes/)
-                .first()
-                .click();
+            await page.locator('button').getByText(/Yes/).first().click();
             await ensureErrorCount(page, 1);
 
             await uploadFile(page, 'test_two.jpg');
             await page.locator('[id="delete-all-files"]').click();
-            await page
-                .locator('button')
-                .getByText(/Yes/)
-                .first()
-                .click();
+            await page.locator('button').getByText(/Yes/).first().click();
             await ensureErrorCount(page, 1);
 
             await uploadFile(page, 'test three.jpg');

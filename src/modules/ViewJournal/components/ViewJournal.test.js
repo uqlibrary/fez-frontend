@@ -198,16 +198,9 @@ describe('ViewJournal', () => {
             'https://doaj.org/toc/0090-0036',
         );
 
-        expect(getByTestId('srm-journal-link-header')).toHaveTextContent(
-            'Sherpa Romeo open access and archiving policies',
-        );
-        expect(getByTestId('srm-journal-link-0-value')).toHaveTextContent('0090-0036');
-        expect(getByTestId('srm-journal-link-0-lookup-link')).toHaveAttribute(
-            'href',
-            'https://v2.sherpa.ac.uk/id/publication/10303',
-        );
-        expect(getByTestId('srm-journal-link-1-value')).toHaveTextContent('1541-0048');
-        expect(getByTestId('srm-journal-link-1-lookup-link')).toHaveAttribute(
+        expect(getByTestId('srm-journal-link-header')).toHaveTextContent('Open Policy Finder');
+        expect(getByTestId('srm-journal-link-value')).toHaveTextContent("View journal's open access policy");
+        expect(getByTestId('srm-journal-link-lookup-link')).toHaveAttribute(
             'href',
             'https://v2.sherpa.ac.uk/id/publication/10303',
         );
@@ -625,7 +618,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-homepage-url-lookup-link')).toHaveAttribute('href', homepageUrl);
     });
 
-    it('Should not show sherpa romeo links when journal links is not available', async () => {
+    it('Should show sherpa romeo links from second issn', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
                 jnl_title: 'test',
@@ -654,8 +647,7 @@ describe('ViewJournal', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
-        expect(queryByTestId('srm-journal-link-0-value')).toHaveTextContent('2222-2222');
-        expect(queryByTestId('srm-journal-link-1-value')).not.toBeInTheDocument();
+        expect(queryByTestId('srm-journal-link-value')).toBeInTheDocument();
     });
 
     it('Should not show sherpa romeo section when non of journal links are not available', async () => {

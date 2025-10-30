@@ -146,6 +146,62 @@ export default {
                 message: 'You are about to remove this work from your eSpace profile.',
             },
         },
+        openAccessComplianceForm: {
+            comments: {
+                title: 'Suggest a correction',
+                fieldLabels: {
+                    comments: 'Type changes or comments here',
+                    url: 'Link (URL)',
+                },
+            },
+            fileUpload: {
+                title: 'Upload files',
+                description: <div>Upload an Open Access file.</div>,
+            },
+            cancelWorkflowConfirmation: {
+                confirmationTitle: 'Cancel request',
+                confirmationMessage: 'Are you sure you want to cancel this request?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes',
+            },
+            successWorkflowConfirmation: {
+                confirmationTitle: 'Your request has been submitted',
+                confirmationMessage: (
+                    <span style={{ display: 'block', margin: '1em 0' }}>
+                        Your request will be referred to a UQ eSpace staff member for review/action.
+                    </span>
+                ),
+                fileFailConfirmationAlert: {
+                    title: 'File upload failed',
+                    message: 'Retry via "My open access" screen or contact eSpace administrators.',
+                    type: 'info',
+                },
+                cancelButtonLabel: 'Go to my dashboard',
+                confirmButtonLabel: 'Go to my open access',
+            },
+            validationAlert: {
+                type: 'warning',
+                title: 'Validation',
+                message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
+            },
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: message =>
+                    `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
+            },
+            progressAlert: {
+                type: 'info_outline',
+                title: 'Saving',
+                message: 'Request is being processed.',
+                showLoader: true,
+            },
+            successAlert: {
+                type: 'done',
+                title: 'Success',
+                message: 'Open access request has been submitted successfully.',
+            },
+        },
         fixPublicationForm: {
             contentIndicators: {
                 help: {
