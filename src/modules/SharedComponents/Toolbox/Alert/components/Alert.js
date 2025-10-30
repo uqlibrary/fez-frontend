@@ -156,7 +156,7 @@ export const Alert = ({
     type = 'error',
     wiggle = null,
 }) => {
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const convertedType = type === 'success' ? 'done' : type;
     const renderedIcon = convertedType !== 'custom' ? renderIcon(convertedType) : customIcon;
     return (

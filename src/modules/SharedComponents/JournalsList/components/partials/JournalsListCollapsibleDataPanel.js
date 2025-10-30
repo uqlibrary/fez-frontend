@@ -38,7 +38,7 @@ const JournalsListCollapsibleDataPanel = ({ row, index, open }) => {
                     >
                         <Grid container>
                             {dataItems.map((item, itemIndex) => {
-                                const itemData = (row && item.translateFn(row)) || /* istanbul ignore next */ '';
+                                const itemData = (row && item.translateFn(row)) || /* c8 ignore next */ '';
                                 return (
                                     <React.Fragment key={`${item.key}-${row.jnl_jid}`}>
                                         <JournalsListCollapsibleDataPanelContent
@@ -47,11 +47,11 @@ const JournalsListCollapsibleDataPanel = ({ row, index, open }) => {
                                             data={itemData}
                                             {...((isXsDown && itemIndex === 0) || (!isXsDown && itemIndex <= 1)
                                                 ? { isFirstRow: true }
-                                                : /* istanbul ignore next */ {})}
+                                                : /* c8 ignore next */ {})}
                                             {...((isXsDown && itemIndex === dataItems.length - 1) ||
                                             (!isXsDown && itemIndex >= dataItems.length - 2)
                                                 ? { isLastRow: true }
-                                                : /* istanbul ignore next */ {})}
+                                                : /* c8 ignore next */ {})}
                                         />
                                     </React.Fragment>
                                 );

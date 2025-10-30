@@ -61,8 +61,7 @@ const Field = ({ name, control, rules, component: Component, validate, normalize
             control={control}
             rules={{
                 ...rules,
-                validate: /* istanbul ignore next */ (value, formValues) =>
-                    validateHandler(value, formValues, validate),
+                validate: /* c8 ignore next */ (value, formValues) => validateHandler(value, formValues, validate),
             }}
             render={({ field }) => {
                 if (typeof field.onChange === 'function' && typeof normalize === 'function') {

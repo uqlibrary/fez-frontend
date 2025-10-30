@@ -76,7 +76,7 @@ export function adminControlledVocabulary(request, action) {
             .then(response => {
                 dispatch({
                     type: actions.VOCAB_ADMIN_SUCCESS,
-                    payload: response?.data ?? /* istanbul ignore next */ {},
+                    payload: response?.data ?? /* c8 ignore next */ {},
                 });
                 return Promise.resolve(response);
             })

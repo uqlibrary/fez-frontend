@@ -2,7 +2,7 @@ import { adminInterfaceConfig, valueExtractor } from 'config/journalAdmin';
 import { ADMIN_JOURNAL } from 'config/general';
 
 const getInitialValues = (config, journal, tab, tabParams = () => {}) => {
-    return (config[ADMIN_JOURNAL] || /* istanbul ignore next */ {})
+    return (config[ADMIN_JOURNAL] || /* c8 ignore next */ {})
         [tab]?.(tabParams(journal))
         .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])

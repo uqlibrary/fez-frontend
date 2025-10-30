@@ -26,7 +26,7 @@ export const onSubmit = (record, dispatch) => {
     });
 };
 
-/* istanbul ignore next */
+/* c8 ignore next */
 const mapStateToProps = state => {
     const { recordToView: record, loadingRecordToView } = state.get('viewRecordReducer') || {};
     return {
@@ -36,7 +36,7 @@ const mapStateToProps = state => {
     };
 };
 
-/* istanbul ignore next */
+/* c8 ignore next */
 const mapDispatchToProps = dispatch => {
     const { loadRecordToView, resetDoi } = bindActionCreators(actions, dispatch);
     return { handleSubmit: record => onSubmit(record, dispatch), loadRecordToView, resetDoi };

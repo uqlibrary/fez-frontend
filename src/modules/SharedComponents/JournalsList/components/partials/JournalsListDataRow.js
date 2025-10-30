@@ -46,9 +46,8 @@ const StyledTableCell = styled(TableCell, {
     shouldForwardProp: prop => !['isSelectable'].includes(prop),
 })(({ theme, isSelectable }) => ({
     ...(isSelectable
-        ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {})
-        : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
-          /* istanbul ignore next */ {})),
+        ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* c8 ignore next */ {})
+        : /* c8 ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ?? /* c8 ignore next */ {})),
     [theme.breakpoints.down('xs')]: { padding: 'none' },
     [theme.breakpoints.down('sm')]: {
         verticalAlign: 'top',
@@ -58,27 +57,27 @@ const StyledTableCell = styled(TableCell, {
     },
     [theme.breakpoints.up('sm')]: {
         ...(isSelectable
-            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {})
-            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
-              /* istanbul ignore next */ {})),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* c8 ignore next */ {})
+            : /* c8 ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
+              /* c8 ignore next */ {})),
     },
     [theme.breakpoints.up('md')]: {
         ...(isSelectable
-            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {})
-            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
-              /* istanbul ignore next */ {})),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* c8 ignore next */ {})
+            : /* c8 ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
+              /* c8 ignore next */ {})),
     },
     [theme.breakpoints.up('lg')]: {
         ...(isSelectable
-            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {})
-            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
-              /* istanbul ignore next */ {})),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* c8 ignore next */ {})
+            : /* c8 ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
+              /* c8 ignore next */ {})),
     },
     [theme.breakpoints.up('xl')]: {
         ...(isSelectable
-            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {})
-            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
-              /* istanbul ignore next */ {})),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* c8 ignore next */ {})
+            : /* c8 ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
+              /* c8 ignore next */ {})),
     },
 }));
 
@@ -155,8 +154,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                         </Grid>
                         {compactViewFields.map((field, fieldIndex) => {
                             const itemData =
-                                (row && field.translateFn(row, classesInternal, index)) ||
-                                /* istanbul ignore next */ '';
+                                (row && field.translateFn(row, classesInternal, index)) || /* c8 ignore next */ '';
                             return (
                                 <React.Fragment key={`${field.key}_${index}`}>
                                     <Grid
@@ -165,7 +163,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                                         sx={theme => ({
                                             ...(!!field.collapsibleComponent?.hiddenData
                                                 ? field.collapsibleComponent?.hiddenData
-                                                : /* istanbul ignore next */ {}),
+                                                : /* c8 ignore next */ {}),
                                             [theme.breakpoints.down('sm')]: {
                                                 paddingBottom: theme.spacing(1),
                                             },
@@ -188,7 +186,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                                                     field.showTooltip &&
                                                     field.toolTipLabel &&
                                                     field.toolTipLabel(row)) ||
-                                                (field.showTooltip && /* istanbul ignore next */ itemData) ||
+                                                (field.showTooltip && /* c8 ignore next */ itemData) ||
                                                 ''
                                             }
                                             describeChild
@@ -204,7 +202,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                                                 component={'div'}
                                             >
                                                 {(itemData && field.prefix) || ''}
-                                                {itemData || /* istanbul ignore next */ ''}
+                                                {itemData || /* c8 ignore next */ ''}
                                                 {(itemData && field.suffix) || ''}
                                             </Typography>
                                         </Tooltip>

@@ -16,7 +16,7 @@ export const MyTrendingPublications = () => {
         state.get('myTrendingPublicationsReducer'),
     );
 
-    const { author } = useSelector(state => state.get('accountReducer')) || /* istanbul ignore next */ false;
+    const { author } = useSelector(state => state.get('accountReducer')) || /* c8 ignore next */ false;
 
     React.useEffect(() => {
         if (!!author) {

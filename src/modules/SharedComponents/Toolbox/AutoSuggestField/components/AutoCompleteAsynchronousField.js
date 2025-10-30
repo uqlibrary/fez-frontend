@@ -51,7 +51,7 @@ export const AutoCompleteAsynchronousField = ({
             let spreadValue;
             if (defaultValue?.value?.hasOwnProperty?.('value')) spreadValue = defaultValue.value.value;
             else {
-                /* istanbul ignore else */
+                /* c8 ignore else */
                 if (defaultValue?.hasOwnProperty?.('value')) {
                     spreadValue = defaultValue.value;
                 }
@@ -79,7 +79,7 @@ export const AutoCompleteAsynchronousField = ({
 
     const handleInputChange = useCallback(
         (event, newInputValue, reason) => {
-            /* istanbul ignore next */
+            /* c8 ignore next */
             if (reason === 'reset' && prefilledSearch && !!newInputValue) {
                 // TBD if this block is still required
                 setInputValue(newInputValue);
@@ -207,8 +207,8 @@ export const AutoCompleteAsynchronousField = ({
                                     // eslint-disable-next-line react/prop-types
                                     props.id ??
                                     // eslint-disable-next-line react/prop-types
-                                    /* istanbul ignore next */ props.key ??
-                                    /* istanbul ignore next */ ''
+                                    /* c8 ignore next */ props.key ??
+                                    /* c8 ignore next */ ''
                                 }
                             >
                                 <OptionTemplate option={option} />

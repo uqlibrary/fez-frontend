@@ -1,2 +1,2 @@
-/* istanbul ignore file */
+/* c8 ignore file */
 export const FORM_NAME = 'AdminWorkForm';

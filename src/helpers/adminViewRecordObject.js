@@ -67,7 +67,7 @@ export const getDefaultDrawerDescriptorObject = () => {
         (config?.viewRecord?.adminViewRecordDefaultContent?.object && {
             ...config.viewRecord.adminViewRecordDefaultContent.object,
         }) ||
-        /* istanbul ignore next */
+        /* c8 ignore next */
         undefined
     );
 };
@@ -76,12 +76,12 @@ export const getDefaultDrawerDescriptorIndex = () => {
         (config?.viewRecord?.adminViewRecordDefaultContent?.index && {
             ...config.viewRecord.adminViewRecordDefaultContent.index,
         }) ||
-        /* istanbul ignore next */
+        /* c8 ignore next */
         undefined
     );
 };
 
-/* istanbul ignore next */
+/* c8 ignore next */
 export const createDefaultDrawerDescriptorObject = (
     locale = {},
     content = [],

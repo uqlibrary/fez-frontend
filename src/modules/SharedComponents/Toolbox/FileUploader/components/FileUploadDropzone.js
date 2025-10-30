@@ -35,7 +35,7 @@ export const FileUploadDropzone = ({
     const form = useFormContext();
     const formValues = form?.getValues('filesSection.fez_datastream_info');
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const onReadFileError = (file, errors, resolve) => () => {
         errors.push(file.name);
         return resolve(false);

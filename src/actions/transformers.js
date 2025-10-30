@@ -1664,7 +1664,7 @@ export const getDatastreamInfo = (
                 ...(dataStreamsLabelMap.hasOwnProperty(dataStream.dsi_dsid)
                     ? { ...dataStreamsLabelMap[dataStream.dsi_dsid] }
                     : {
-                          ...(!isDerivative(dataStream) ? { dsi_state: STATE_DELETED } : /* istanbul ignore next */ {}),
+                          ...(!isDerivative(dataStream) ? { dsi_state: STATE_DELETED } : /* c8 ignore next */ {}),
                       }), // only set delete status on non-derivatives
                 ...(dataStreamsSecurityMap.hasOwnProperty(dataStream.dsi_dsid)
                     ? { ...dataStreamsSecurityMap[dataStream.dsi_dsid] }

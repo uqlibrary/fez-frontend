@@ -61,10 +61,10 @@ const RichEditor = ({
         if (typeof value === 'string' && value.length > 0) {
             dataForEditor = value;
         } else if (!!value?.htmlText || !!value?.plainText) {
-            dataForEditor = value.htmlText || value.plainText || /* istanbul ignore next */ '';
+            dataForEditor = value.htmlText || value.plainText || /* c8 ignore next */ '';
         }
 
-        return typeof dataForEditor === 'string' ? dataForEditor : /* istanbul ignore next */ '';
+        return typeof dataForEditor === 'string' ? dataForEditor : /* c8 ignore next */ '';
     }
 
     let error = null;
@@ -113,7 +113,7 @@ const RichEditor = ({
                 onReady={editor => {
                     if (textOnlyOnPaste) {
                         const documentView = editor.editing.view.document;
-                        /* istanbul ignore next */
+                        /* c8 ignore next */
                         documentView.on('clipboardInput', (event, data) => {
                             data.content = editor.data.htmlProcessor.toView(data.dataTransfer.getData('text/plain'));
                         });

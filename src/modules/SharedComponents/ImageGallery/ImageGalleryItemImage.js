@@ -31,9 +31,9 @@ const ImageGalleryItemImage = ({
 
     const fileData = getThumbnail(item, security);
 
-    const thumbnailBlacklisted = !fileData?.isWhiteListed ?? /* istanbul ignore next */ true;
+    const thumbnailBlacklisted = !fileData?.isWhiteListed ?? /* c8 ignore next */ true;
     const thumbnailRestricted =
-        (!!fileData?.thumbnailFileName && !fileData?.securityStatus) ?? /* istanbul ignore next */ false;
+        (!!fileData?.thumbnailFileName && !fileData?.securityStatus) ?? /* c8 ignore next */ false;
     const thumbnailAdvisory = item.fez_record_search_key_advisory_statement?.rek_advisory_statement ?? false;
 
     // at this stage fileData could still be null, which is fine as below will fall back to default image

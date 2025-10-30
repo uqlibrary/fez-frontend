@@ -82,7 +82,7 @@ export const DataStreamSecuritySelector = ({ attachedDataStreams, collections, d
                             />
                         ))}
                     {dataStreamSecurity.length === 0 && (
-                        /* istanbul ignore next */
+                        /* c8 ignore next */
                         <Typography variant="body2">{text.noDataStreams}</Typography>
                     )}
                 </Grid>

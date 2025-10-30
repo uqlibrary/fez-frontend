@@ -664,7 +664,7 @@ Note also that there are some elements that can not have `aria-label` as an attr
 1. `MyEditorialAppointments` component adds a custom `DatePicker` bar with a 'Current year' button. In MUI4 clicking this button would automatically clause the calendar popup, however in MUI5 this is no longer the case.
 
 ### Tests that could not be fixed
-Two tests have been Istanbul ignored in order to get the build passing. These are:
+Two tests have been c8 ignored in order to get the build passing. These are:
 
 1. AdminContainer
 1. MyIncompleteRecord

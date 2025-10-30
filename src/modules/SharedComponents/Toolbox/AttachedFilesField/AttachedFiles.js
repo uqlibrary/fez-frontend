@@ -61,13 +61,13 @@ const initialPreviewState = {
 const usePreview = initialPreviewState => {
     const [preview, setPreview] = useState(initialPreviewState);
 
-    const showPreview = /* istanbul ignore next */ ({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl }) => {
-        /* istanbul ignore next */
+    const showPreview = /* c8 ignore next */ ({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl }) => {
+        /* c8 ignore next */
         setPreview({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl });
     };
 
-    const hidePreview = /* istanbul ignore next */ () => {
-        /* istanbul ignore next */
+    const hidePreview = /* c8 ignore next */ () => {
+        /* c8 ignore next */
         setPreview(initialPreviewState);
     };
 
@@ -133,7 +133,7 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                   const id = dataStream.dsi_id;
                   const pid = dataStream.dsi_pid;
                   const fileName = dataStream.dsi_dsid;
-                  const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : /* istanbul ignore next */ '';
+                  const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : /* c8 ignore next */ '';
 
                   const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
                   const previewFileName = checkForPreview(fileName, dataStreams);
@@ -141,7 +141,7 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
 
                   const openAccessStatus = getFileOpenAccessStatus(openAccessStatusId, dataStream);
                   const previewUrl = previewFileName
-                      ? /* istanbul ignore next */ getUrl(pid, previewFileName)
+                      ? /* c8 ignore next */ getUrl(pid, previewFileName)
                       : getUrl(pid, fileName);
                   const isInfected = dataStream.dsi_av_check_state === AV_CHECK_STATE_INFECTED;
 
@@ -166,8 +166,8 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                           securityAccess: true,
                       },
                       openAccessStatus,
-                      previewMediaUrl: isInfected ? /* istanbul ignore next */ null : previewUrl,
-                      webMediaUrl: webFileName ? /* istanbul ignore next */ getUrl(pid, webFileName) : null,
+                      previewMediaUrl: isInfected ? /* c8 ignore next */ null : previewUrl,
+                      webMediaUrl: webFileName ? /* c8 ignore next */ getUrl(pid, webFileName) : null,
                       mediaUrl: getUrl(pid, fileName),
                       securityStatus: true,
                       securityPolicyStatus: getSecurityPolicyFileEmbargoStatus(dataStream),
@@ -187,7 +187,7 @@ export const checkFileNamesForDupes =
         const filesToCheck = [
             ...dataStreams.filter((_, index) => index !== excludeIndex),
             ...(formValuesFromContext?.files?.queue?.map(
-                /* istanbul ignore next */ file => /* istanbul ignore next */ ({ dsi_dsid: file.name }),
+                /* c8 ignore next */ file => /* c8 ignore next */ ({ dsi_dsid: file.name }),
             ) ?? []),
         ];
         const newFilenamePart = getFilenamePart(newFilename);
@@ -247,12 +247,12 @@ export const AttachedFiles = ({
     if (fileData.length === 0) return null;
 
     const isValidEmbargoDate = date =>
-        isValidDate(date) && /* istanbul ignore next */ isDateInBetween(date, moment(), '2099');
+        isValidDate(date) && /* c8 ignore next */ isDateInBetween(date, moment(), '2099');
 
     const onEmbargoDateKeyUp = e => {
         // bail if it's not backspace
-        /* istanbul ignore else */
-        if (e.key !== 'Backspace' || /* istanbul ignore next */ !embargoDateErrorMessage.length) {
+        /* c8 ignore else */
+        if (e.key !== 'Backspace' || /* c8 ignore next */ !embargoDateErrorMessage.length) {
             return;
         }
         /**
@@ -263,11 +263,11 @@ export const AttachedFiles = ({
          * onChange event might be triggered only once, upon the deletion of a single character and not the removal
          * of the whole date.
          */
-        /* istanbul ignore next */
+        /* c8 ignore next */
         setEmbargoDateErrorMessage('');
     };
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const onEmbargoDateChange = id => value => {
         const indexToChange = dataStreams.findIndex(item => item.dsi_id === id);
         const isEmpty = value === null;
@@ -297,10 +297,10 @@ export const AttachedFiles = ({
     const hasVideo = fileData.some(item => item.mimeType.indexOf('video') > -1 || item.mimeType === 'application/mxf');
     const getDsIndex = id => dataStreams.findIndex(item => item.dsi_id === id);
 
-    const onFileDelete = file => /* istanbul ignore next */ () => /* istanbul ignore next */ onDelete(file);
-    const onFileDescriptionChange = id => /* istanbul ignore next */ event => {
-        const indexToChange = /* istanbul ignore next */ getDsIndex(id);
-        /* istanbul ignore next */
+    const onFileDelete = file => /* c8 ignore next */ () => /* c8 ignore next */ onDelete(file);
+    const onFileDescriptionChange = id => /* c8 ignore next */ event => {
+        const indexToChange = /* c8 ignore next */ getDsIndex(id);
+        /* c8 ignore next */
         onDescriptionChange('dsi_label', event.target.value, indexToChange);
     };
 
@@ -340,7 +340,7 @@ export const AttachedFiles = ({
         return fileNameErrorMessage === '';
     };
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const onFileCancelEdit = () => {
         checkFileNamesForErrors();
     };
@@ -371,14 +371,10 @@ export const AttachedFiles = ({
         <Grid size={12}>
             <StandardCard title={locale.title} subCard>
                 {!!record.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
-                    /* istanbul ignore next */ <Alert
-                        allowDismiss
-                        type="info"
-                        message={getSensitiveHandlingNote(record)}
-                    />
+                    /* c8 ignore next */ <Alert allowDismiss type="info" message={getSensitiveHandlingNote(record)} />
                 )}
-                {isFireFox && /* istanbul ignore next */ hasVideo && (
-                    /* istanbul ignore next */ <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />
+                {isFireFox && /* c8 ignore next */ hasVideo && (
+                    /* c8 ignore next */ <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />
                 )}
                 {isAdminEditing && <Alert type="warning" message={locale.renamingFilesInstructions.text} />}
                 <Box sx={{ padding: 1 }}>
@@ -637,7 +633,7 @@ export const AttachedFiles = ({
                                 )}
                             </Grid>
                             {!!hasClearedEmbargoDate[getDsIndex(item.id)] && (
-                                /* istanbul ignore next */
+                                /* c8 ignore next */
                                 <React.Fragment>
                                     <Grid
                                         container
@@ -669,11 +665,11 @@ export const AttachedFiles = ({
                         </Box>
                     </React.Fragment>
                 ))}
-                {preview.mediaUrl && /* istanbul ignore next */ preview.mimeType && (
-                    /* istanbul ignore next */ <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
+                {preview.mediaUrl && /* c8 ignore next */ preview.mimeType && (
+                    /* c8 ignore next */ <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
                 )}
                 {
-                    /* istanbul ignore next*/
+                    /* c8 ignore next*/
                     (fileNameErrorMessage.length > 0 || embargoDateErrorMessage.length > 0) && (
                         <Grid size={12}>
                             <Alert

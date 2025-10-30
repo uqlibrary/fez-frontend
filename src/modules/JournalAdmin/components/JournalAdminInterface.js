@@ -86,8 +86,8 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
         formErrors,
         alertLocale: txt.current.alerts,
         // prioritise form errors
-        error: translateFormErrorsToText(formErrors?.server || /* istanbul ignore next */ {})
-            ? /* istanbul ignore next */ null
+        error: translateFormErrorsToText(formErrors?.server || /* c8 ignore next */ {})
+            ? /* c8 ignore next */ null
             : errorMessage,
     });
 
@@ -105,7 +105,7 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
 
     const keyHandler = React.useCallback(
         event => {
-            /* istanbul ignore else */
+            /* c8 ignore else */
             if (!!event && event.ctrlKey && event.key !== 'Control') {
                 ((event.key === 'ArrowUp' && !tabbed) || (event.key === 'ArrowDown' && tabbed)) && toggleTabbed();
                 const activeTabIndex = activeTabNames.current.indexOf(currentTabValue);
@@ -130,14 +130,13 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
         const navigateTo = () => navigate(pathConfig.journal.view(journal.jnl_jid));
 
         const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (
             authorDetails &&
-            (authorDetails.is_administrator === 1 ||
-                /* istanbul ignore next */ authorDetails.is_super_administrator === 1) &&
+            (authorDetails.is_administrator === 1 || /* c8 ignore next */ authorDetails.is_super_administrator === 1) &&
             !!navigatedFrom
         ) {
-            /* istanbul ignore next */
+            /* c8 ignore next */
             navigate(decodeURIComponent(navigatedFrom));
         } else {
             navigateTo();

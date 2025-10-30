@@ -104,10 +104,10 @@ export const displayErrors = ({
         case STATUS_INVALID:
             date =
                 // initial load of 'required' message for required date fields
-                /* istanbul ignore next */
+                /* c8 ignore next */
                 (allowPartial && isRequiredHere && !year && !isNaN(year) && locale.validationMessage.yearRequired) ||
                 // initial load of 'required' message for required date fields
-                /* istanbul ignore next */
+                /* c8 ignore next */
                 (isNaN(year) && locale.validationMessage.year) ||
                 // they've just typed in a nonsense number
                 // dont wait for date complete for the moment validation to kick in
@@ -115,13 +115,13 @@ export const displayErrors = ({
                 // // date fields initially blank // remove
                 // (year === null && isUnselected(month) && day === null && '') || // remove
                 // they've entered a day
-                /* istanbul ignore next */
+                /* c8 ignore next */
                 (year === null && isUnselected(month) && !!day && allowPartial && ' ') ||
                 // they've entered a day and a month
-                /* istanbul ignore next */
+                /* c8 ignore next */
                 (year === null && validMonthIndices.includes(month) && !!day && !allowPartial && ' ') ||
                 // encourage them to select a month if the year and day are selected
-                /* istanbul ignore next */
+                /* c8 ignore next */
                 (!!year && isUnselected(month) && !!day && locale.validationMessage.month) ||
                 (!!year && isUnselected(month) && !day && !allowPartial && ' ') ||
                 locale.validationMessage.date;
@@ -142,9 +142,9 @@ export const displayErrors = ({
         case STATUS_FUTURE_DATE:
             date = locale.validationMessage.future;
             break;
-        /* istanbul ignore next */
+        /* c8 ignore next */
         default:
-            /* istanbul ignore next */
+            /* c8 ignore next */
             date = (!!year && isNaN(year) && locale.validationMessage.year) || '';
             break;
     }
@@ -241,7 +241,7 @@ const PartialDateForm = props => {
                 newState[key] = '';
             } else {
                 newState[key] = parseInt(
-                    event.target.value === undefined ? /* istanbul ignore next */ value : event.target.value,
+                    event.target.value === undefined ? /* c8 ignore next */ value : event.target.value,
                     10,
                 );
             }
@@ -340,7 +340,7 @@ const PartialDateForm = props => {
                             fullWidth
                             error={!!isError}
                             disabled={disabled}
-                            value={!!!state || state?.month === null ? /* istanbul ignore next */ -1 : state?.month}
+                            value={!!!state || state?.month === null ? /* c8 ignore next */ -1 : state?.month}
                             placeholder={locale.monthLabel}
                             onChange={_onDateChanged('month')}
                             inputProps={{

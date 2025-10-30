@@ -77,7 +77,7 @@ export default class ListEditor extends Component {
             prevValuesAsJson: valuesAsJson,
             itemList: valuesAsJson
                 ? this.mapValueToList(props.searchKey?.value, valuesAsJson)
-                : /* istanbul ignore next */ [],
+                : /* c8 ignore next */ [],
             itemIndexSelectedToEdit: null,
             value: JSON.stringify(''),
             transformedState: JSON.stringify(''),
@@ -97,7 +97,7 @@ export default class ListEditor extends Component {
         if (propsValueJsonString !== state.value && propsValueJsonString !== state.transformedState) {
             const newList = props.value
                 ? props.value.map(item => item[props.searchKey?.value])
-                : /* istanbul ignore next */ [];
+                : /* c8 ignore next */ [];
             return {
                 value: propsValueJsonString,
                 itemList: newList,
@@ -114,8 +114,7 @@ export default class ListEditor extends Component {
         }
     }
 
-    mapValueToList = (key, valueAsJson) =>
-        valueAsJson ? valueAsJson.map(item => item[key]) : /* istanbul ignore next */ [];
+    mapValueToList = (key, valueAsJson) => (valueAsJson ? valueAsJson.map(item => item[key]) : /* c8 ignore next */ []);
     getPropValueAsJson = props => (props?.name && props?.value ? props?.value : []);
 
     transformOutput = items => {
@@ -229,7 +228,7 @@ export default class ListEditor extends Component {
     };
 
     moveUpList = (item, index) => {
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (index === 0) return;
         const nextList = this.state.itemList[index - 1];
         this.setState({
@@ -243,7 +242,7 @@ export default class ListEditor extends Component {
     };
 
     moveDownList = (item, index) => {
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (index === this.state.itemList.length - 1) return;
         const nextList = this.state.itemList[index + 1];
         this.setState({

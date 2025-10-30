@@ -1,7 +1,7 @@
 import { checkForExistingUser, clearUserAlerts } from 'actions';
 import { default as locale } from 'locale/components';
 
-/* istanbul ignore next */
+/* c8 ignore next */
 export const checkForExisting = (values, dispatch, props, field) =>
     dispatch(
         checkForExistingUser(
@@ -13,5 +13,5 @@ export const checkForExisting = (values, dispatch, props, field) =>
         ),
     );
 
-/* istanbul ignore next */
+/* c8 ignore next */
 export const clearAlerts = dispatch => dispatch(clearUserAlerts());

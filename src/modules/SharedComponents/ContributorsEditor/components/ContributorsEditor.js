@@ -127,7 +127,7 @@ export class ContributorsEditor extends PureComponent {
             props.record?.fez_record_search_key_significance.length > 0 &&
             props.record?.fez_record_search_key_significance.map((item, index) => {
                 // check here for the length of the significance vs the authors.
-                /* istanbul ignore else */
+                /* c8 ignore else */
                 if (props.record?.fez_record_search_key_author.length >= index + 1) {
                     scaleOfSignificance[index] = {};
                     scaleOfSignificance[index].id = item.rek_significance_id;
@@ -135,21 +135,19 @@ export class ContributorsEditor extends PureComponent {
                     scaleOfSignificance[index].value = {
                         plainText:
                             props.record?.fez_record_search_key_creator_contribution_statement[index]
-                                ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
+                                ?.rek_creator_contribution_statement || /* c8 ignore next */ 'Missing',
                         htmlText:
                             props.record?.fez_record_search_key_creator_contribution_statement[index]
-                                ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
+                                ?.rek_creator_contribution_statement || /* c8 ignore next */ 'Missing',
                     };
                     scaleOfSignificance[index].author = {
                         rek_author_id:
-                            props.record?.fez_record_search_key_author[index]?.rek_author_id ||
-                            /* istanbul ignore next */ 0,
+                            props.record?.fez_record_search_key_author[index]?.rek_author_id || /* c8 ignore next */ 0,
                         rek_author_pid:
                             props.record?.fez_record_search_key_author[index]?.rek_author_pid ||
-                            /* istanbul ignore next */ null,
+                            /* c8 ignore next */ null,
                         rek_author:
-                            props.record?.fez_record_search_key_author[index]?.rek_author ||
-                            /* istanbul ignore next */ null,
+                            props.record?.fez_record_search_key_author[index]?.rek_author || /* c8 ignore next */ null,
                         rek_author_order: index + 1,
                     };
                 }
@@ -167,14 +165,11 @@ export class ContributorsEditor extends PureComponent {
                 };
                 scaleOfSignificance[index].author = {
                     rek_author_id:
-                        props.record?.fez_record_search_key_author[index]?.rek_author_id ||
-                        /* istanbul ignore next */ 0,
+                        props.record?.fez_record_search_key_author[index]?.rek_author_id || /* c8 ignore next */ 0,
                     rek_author_pid:
-                        props.record?.fez_record_search_key_author[index]?.rek_author_pid ||
-                        /* istanbul ignore next */ null,
+                        props.record?.fez_record_search_key_author[index]?.rek_author_pid || /* c8 ignore next */ null,
                     rek_author:
-                        props.record?.fez_record_search_key_author[index]?.rek_author ||
-                        /* istanbul ignore next */ null,
+                        props.record?.fez_record_search_key_author[index]?.rek_author || /* c8 ignore next */ null,
                     rek_author_order: index + 1,
                 };
             });
@@ -201,7 +196,7 @@ export class ContributorsEditor extends PureComponent {
             this.state.contributorIndexSelectedToEdit !== null
                 ? this.state.contributorIndexSelectedToEdit
                 : this.state.contributors.length;
-        /* istanbul ignore else */
+        /* c8 ignore else */
         if (index < this.state.contributors.length && this.props.canEdit) {
             const isEditedContributorAuthorIdInTheList =
                 this.state.contributors.filter(
@@ -231,7 +226,7 @@ export class ContributorsEditor extends PureComponent {
             contributor.selected &&
             parseInt(contributor.authorId, 10) === parseInt(this.props.author?.aut_id, 10);
 
-        /* istanbul ignore next */
+        /* c8 ignore next */
         this.setState({
             contributors: [
                 ...this.state.contributors.slice(0, index).map(contrib => ({
@@ -270,7 +265,7 @@ export class ContributorsEditor extends PureComponent {
     };
 
     moveUpContributor = (contributor, index) => {
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (index === 0) return;
         const nextContributor = this.state.contributors[index - 1];
         this.setState({
@@ -284,7 +279,7 @@ export class ContributorsEditor extends PureComponent {
     };
 
     moveDownContributor = (contributor, index) => {
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (index === this.state.contributors.length - 1) return;
         const nextContributor = this.state.contributors[index + 1];
         this.setState({
@@ -322,7 +317,7 @@ export class ContributorsEditor extends PureComponent {
                     selected: !item.selected && index === itemIndex,
                     authorId: (!item.selected && index === itemIndex && this.props.author?.aut_id) || null,
                 }))) ||
-            /* istanbul ignore next */ this.state.contributors;
+            /* c8 ignore next */ this.state.contributors;
 
         this.setState({
             contributors: newContributors,

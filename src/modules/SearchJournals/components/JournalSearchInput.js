@@ -34,7 +34,7 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
      * @param {object} event keypress event object
      */
     const handleJournalSearchInput = React.useCallback(event => setJournalSearchInput(event.target.value), []);
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const handleJournalVoiceSearchInput = React.useCallback(value => !!value && setJournalSearchInput(value), []);
     const handleClearSearchInput = React.useCallback(() => {
         onReset();
@@ -56,7 +56,7 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
             }, 1000);
         } else {
             // dispatch fires when component remounts i.e. from results page back to search input
-            /* istanbul ignore next */
+            /* c8 ignore next */
             !isInit && dispatch(clearJournalSearchKeywords());
             isInit.current = false;
         }

@@ -38,7 +38,7 @@ export const getIndicatorProps = ({ type, data }) => {
             } else if (!!entry.jnl_read_and_publish_is_discounted) indicatorProps.status = status.fee;
             else indicatorProps.status = status.open;
         } else {
-            /* istanbul ignore else */
+            /* c8 ignore else */
             if (!!data.fez_journal_doaj?.jnl_doaj_apc_currency) indicatorProps.status = status.fee;
         }
     }

@@ -80,7 +80,7 @@ const Orcid = () => {
         try {
             queryParams = parse(location.search.substr(1));
         } catch (e) {
-            /* istanbul ignore next */
+            /* c8 ignore next */
             queryParams = {
                 code: null,
                 state: null,
@@ -143,7 +143,7 @@ const Orcid = () => {
         return `${ORCID_AUTHORIZATION_URL}?${stringifiedParams}`;
     };
 
-    const _showAuthoriseConfirmation = (/* istanbul ignore next */ isNew = true) => {
+    const _showAuthoriseConfirmation = (/* c8 ignore next */ isNew = true) => {
         const url = getOrcidUrl(isNew);
         authoriseConfirmationBox._onAction = () => window.location.assign(url);
         authoriseConfirmationBox.showConfirmation();

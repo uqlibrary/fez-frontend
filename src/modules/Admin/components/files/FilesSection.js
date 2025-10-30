@@ -13,7 +13,7 @@ export const onRenameAttachedFile = form => (prev, next) => {
     const originalFileAttachmentIndex = attachments.findIndex(file => {
         return file.rek_file_attachment_name === prev;
     });
-    /* istanbul ignore else */
+    /* c8 ignore else */
     if (originalFileAttachmentIndex > -1) {
         // will be -1 if we've already done this operation before
         attachments[originalFileAttachmentIndex].rek_file_attachment_name = next;
@@ -28,7 +28,7 @@ export const onDeleteAttachedFile = form => file => {
         .filter(file => file.rek_file_attachment_name === fileName)
         .shift();
 
-    /* istanbul ignore else */
+    /* c8 ignore else */
     if (!!fileAttachmentName) {
         // update datastreams
         const ds = form.getValues('securitySection.dataStreams').filter(file => file.dsi_dsid !== fileName);

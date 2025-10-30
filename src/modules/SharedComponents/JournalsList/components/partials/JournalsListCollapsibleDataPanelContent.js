@@ -76,7 +76,7 @@ const JournalsListCollapsibleDataPanelContent = ({ item, index, data, isFirstRow
                 data-testid={`journal-list-data-${id}-${index}`}
             >
                 {(data && item.prefix) || ''}
-                {data || /* istanbul ignore next */ ''}
+                {data || /* c8 ignore next */ ''}
                 {(data && item.suffix) || ''}
             </Typography>
         </Grid>

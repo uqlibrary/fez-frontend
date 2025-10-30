@@ -16,7 +16,7 @@ export const HelpDrawer = ({ buttonLabel = 'CLOSE' }) => {
         open = false,
         title = '',
         text = '',
-    } = helpDrawerState?.toJS?.() || helpDrawerState || /* istanbul ignore next */ {};
+    } = helpDrawerState?.toJS?.() || helpDrawerState || /* c8 ignore next */ {};
 
     let indexedText = null;
     const _hide = () => {

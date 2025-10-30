@@ -54,8 +54,8 @@ const AdminDashboard = () => {
                 dispatch(actions.loadAdminDashboardToday());
             })
             .catch(
-                /* istanbul ignore next */ error => {
-                    /* istanbul ignore next */ console.error(error);
+                /* c8 ignore next */ error => {
+                    /* c8 ignore next */ console.error(error);
                 },
             );
     }

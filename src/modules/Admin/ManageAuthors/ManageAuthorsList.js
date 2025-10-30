@@ -320,7 +320,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             fullWidth: true,
             fullScreen: isMobileView,
             onClose: (e, reason) => {
-                /* istanbul ignore else */
+                /* c8 ignore else */
                 if (reason !== 'backdropClick') {
                     handleCancel(table)();
                 }

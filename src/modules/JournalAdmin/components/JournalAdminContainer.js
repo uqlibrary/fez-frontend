@@ -58,20 +58,20 @@ export const JournalAdminContainer = () => {
         try {
             await onSubmit(data, dispatch, { setServerError: attributes.formState.setServerError });
         } catch (e) {
-            /* istanbul ignore next */
+            /* c8 ignore next */
             console.log(e);
-            /* istanbul ignore next */
+            /* c8 ignore next */
             attributes.setServerError(e);
         }
     };
 
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
-    tabErrors.current = Object.entries(attributes.formState || /* istanbul ignore next */ {}).reduce(
+    tabErrors.current = Object.entries(attributes.formState || /* c8 ignore next */ {}).reduce(
         (numberOfErrors, [key, errorObject]) => {
             return {
                 ...numberOfErrors,
-                ...(!!errorObject ? { [key]: Object.values(errorObject).length } : /* istanbul ignore next */ {}),
+                ...(!!errorObject ? { [key]: Object.values(errorObject).length } : /* c8 ignore next */ {}),
             };
         },
         {},

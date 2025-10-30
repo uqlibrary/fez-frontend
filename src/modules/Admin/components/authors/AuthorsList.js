@@ -78,7 +78,7 @@ NameAsPublished.propTypes = {
     linked: PropTypes.bool,
 };
 
-/* istanbul ignore next */
+/* c8 ignore next */
 export const AuthorDetail = rowData => {
     return (
         <Grid container item xs={12} style={{ padding: 16 }}>
@@ -224,7 +224,7 @@ export const AuthorsList = ({
                     };
 
                     const handleKeyPress = event => {
-                        /* istanbul ignore else */
+                        /* c8 ignore else */
                         if (event.key === 'Enter') {
                             commitRowChanges(table);
                         }
@@ -388,9 +388,9 @@ export const AuthorsList = ({
                     const handleChange = e => {
                         row._valuesCache = {
                             ...row._valuesCache,
-                            [column.id]: e.target.value || /* istanbul ignore next */ null,
+                            [column.id]: e.target.value || /* c8 ignore next */ null,
                         };
-                        handleValidation(row, column.id, e.target.value || /* istanbul ignore next */ null);
+                        handleValidation(row, column.id, e.target.value || /* c8 ignore next */ null);
                     };
                     return (
                         <Grid container spacing={2}>
@@ -439,9 +439,9 @@ export const AuthorsList = ({
                     const handleChange = value => {
                         row._valuesCache = {
                             ...row._valuesCache,
-                            [column.id]: value || /* istanbul ignore next */ null,
+                            [column.id]: value || /* c8 ignore next */ null,
                         };
-                        handleValidation(row, column.id, value || /* istanbul ignore next */ null);
+                        handleValidation(row, column.id, value || /* c8 ignore next */ null);
                     };
                     return (
                         <Grid container spacing={2}>
@@ -562,7 +562,7 @@ export const AuthorsList = ({
                     const [stateOrgAff, setStateOrgAff] = React.useState(contributor.orgaff || '');
 
                     const handleOrgAffliationChange = event => {
-                        const orgaff = event.target.value || /* istanbul ignore next */ '';
+                        const orgaff = event.target.value || /* c8 ignore next */ '';
                         row._valuesCache = {
                             ...row._valuesCache,
                             orgaff,
@@ -663,7 +663,7 @@ export const AuthorsList = ({
 
         const errors = validate(newAuthor);
 
-        /* istanbul ignore if  */
+        /* c8 ignore if  */
         if (!!errors) {
             return;
         }
@@ -690,7 +690,7 @@ export const AuthorsList = ({
     const handleEdit = ({ values, table, row }) => {
         const updatedAuthor = { ...row.original, ...row._valuesCache, ...values };
         const errors = validate(updatedAuthor);
-        /* istanbul ignore if  */
+        /* c8 ignore if  */
         if (!!errors) {
             return;
         }
@@ -727,7 +727,7 @@ export const AuthorsList = ({
             setData(dataDelete);
             onChange(dataDelete);
         } catch (error) {
-            /* istanbul ignore next */
+            /* c8 ignore next */
             console.error('Error deleting row:', error);
         } finally {
             setBusy(false);
@@ -921,7 +921,7 @@ export const AuthorsList = ({
                         <IconButton
                             onClick={() => {
                                 const index = row.index;
-                                /* istanbul ignore else */
+                                /* c8 ignore else */
                                 if (index > 0) {
                                     const newData = [...data];
                                     const temp = newData[index - 1];
@@ -950,7 +950,7 @@ export const AuthorsList = ({
                         <IconButton
                             onClick={() => {
                                 const index = row.index;
-                                /* istanbul ignore else */
+                                /* c8 ignore else */
                                 if (index < data.length - 1) {
                                     const newData = [...data];
                                     const temp = newData[index + 1];

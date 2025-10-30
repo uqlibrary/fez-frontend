@@ -57,7 +57,7 @@ export class ScaleOfSignificanceListEditor extends Component {
             [searchKey.value]: item,
             [searchKey.order]: index + 1,
         }),
-        inputNormalizer: /* istanbul ignore next */ value => /* istanbul ignore next */ value,
+        inputNormalizer: /* c8 ignore next */ value => /* c8 ignore next */ value,
         locale: {
             form: {
                 locale: {
@@ -95,10 +95,10 @@ export class ScaleOfSignificanceListEditor extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        /* istanbul ignore else */
+        /* c8 ignore else */
         if (
             this.props.onChange &&
-            JSON.stringify(prevState?.itemList || /* istanbul ignore next */ []) !== JSON.stringify(this.state.itemList)
+            JSON.stringify(prevState?.itemList || /* c8 ignore next */ []) !== JSON.stringify(this.state.itemList)
         ) {
             this.props.onChange(this.transformOutput(this.state.itemList));
         }
@@ -118,11 +118,11 @@ export class ScaleOfSignificanceListEditor extends Component {
     getItemSelectedToEdit = (mode, list, index) => {
         // Edit likely never to be used in new editor.
         // kept for backward compatibility
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (mode === 'add') {
             return null;
         }
-        return list[index] || /* istanbul ignore next */ null;
+        return list[index] || /* c8 ignore next */ null;
     };
 
     /**
@@ -135,7 +135,7 @@ export class ScaleOfSignificanceListEditor extends Component {
      * @param list array
      * @returns bool
      */
-    /* istanbul ignore next */
+    /* c8 ignore next */
     isItemInTheList = (item, list) => {
         if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
             if (this.state.itemIndexSelectedToEdit === null) {
@@ -168,12 +168,11 @@ export class ScaleOfSignificanceListEditor extends Component {
     };
 
     saveChangeToItem = item => {
-        /* istanbul ignore else */
+        /* c8 ignore else */
         if (
             !!item &&
-            (this.props.maxCount === 0 ||
-                /* istanbul ignore next */ this.state.itemList.length < this.props.maxCount) &&
-            ((this.props.distinctOnly && /* istanbul ignore next */ !this.isItemInTheList(item, this.state.itemList)) ||
+            (this.props.maxCount === 0 || /* c8 ignore next */ this.state.itemList.length < this.props.maxCount) &&
+            ((this.props.distinctOnly && /* c8 ignore next */ !this.isItemInTheList(item, this.state.itemList)) ||
                 (!this.props.distinctOnly && this.state.itemList.indexOf(item) === -1))
         ) {
             const editedItem = {
@@ -182,15 +181,14 @@ export class ScaleOfSignificanceListEditor extends Component {
             };
             // If when the item is submitted, there is no maxCount,
             // its not exceeding the maxCount, is distinct and isnt already in the list...
-            /* istanbul ignore else */
+            /* c8 ignore else */
             if (
                 this.state.formMode === 'edit' &&
-                (((!!item.key || item.key === 0) && !!item.value) ||
-                    /* istanbul ignore next */ (!!item.id && !!item.value))
+                (((!!item.key || item.key === 0) && !!item.value) || /* c8 ignore next */ (!!item.id && !!item.value))
             ) {
                 // Item is an object with {key: 'something', value: 'something'} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
-                /* istanbul ignore else */
+                /* c8 ignore else */
                 if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
                     this.setState({
                         itemList: [
@@ -206,7 +204,7 @@ export class ScaleOfSignificanceListEditor extends Component {
                     });
                 }
             } else {
-                /* istanbul ignore next */
+                /* c8 ignore next */
                 if (
                     this.state.formMode === 'edit' &&
                     this.state.itemIndexSelectedToEdit !== null &&
@@ -238,7 +236,7 @@ export class ScaleOfSignificanceListEditor extends Component {
     };
 
     moveUpList = (item, index) => {
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (index === 0) return;
 
         const itemList = [...this.state.itemList];
@@ -255,7 +253,7 @@ export class ScaleOfSignificanceListEditor extends Component {
     };
 
     moveDownList = (item, index) => {
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (index === this.state.itemList.length - 1) return;
         const itemList = [...this.state.itemList];
         itemList[index] = this.state.itemList[index + 1];
@@ -270,7 +268,7 @@ export class ScaleOfSignificanceListEditor extends Component {
         });
     };
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     deleteItem = (item, index) => {
         const updatedState = [...this.state.itemList];
         const itemToDelete = item;
@@ -285,7 +283,7 @@ export class ScaleOfSignificanceListEditor extends Component {
         });
     };
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     deleteAllItems = () => {
         const newList = [...this.state.itemList];
         this.state.itemList.map((item, index) => {
@@ -309,7 +307,7 @@ export class ScaleOfSignificanceListEditor extends Component {
 
         // if its a long list we need the form to scroll into view
         // scrollIntoView function is not attached to the form
-        /* istanbul ignore next */
+        /* c8 ignore next */
         const form = document.getElementById('rek-significance-list-editor');
         form &&
             form.scrollIntoView({
@@ -339,7 +337,7 @@ export class ScaleOfSignificanceListEditor extends Component {
                     key: item.id,
                     scaleValue: item.key,
                     signifValue: {
-                        htmlText: item.value?.htmlText || /* istanbul ignore next */ null,
+                        htmlText: item.value?.htmlText || /* c8 ignore next */ null,
                     },
                 };
                 return (
@@ -354,7 +352,7 @@ export class ScaleOfSignificanceListEditor extends Component {
                         onMoveDown={this.moveDownList}
                         onDelete={this.deleteItem}
                         onEdit={this.loadEditForm}
-                        {...((this.props.locale && this.props.locale.row) || /* istanbul ignore next */ {})}
+                        {...((this.props.locale && this.props.locale.row) || /* c8 ignore next */ {})}
                         hideReorder={this.props.hideReorder}
                         disabled={this.props.disabled}
                         itemTemplate={ScaleOfSignificanceTemplate}
@@ -378,13 +376,13 @@ export class ScaleOfSignificanceListEditor extends Component {
                     }
                     saveChangeToItem={this.saveChangeToItem}
                     remindToAdd={this.props.remindToAdd}
-                    {...((this.props.locale && this.props.locale.form) || /* istanbul ignore next */ {})}
+                    {...((this.props.locale && this.props.locale.form) || /* c8 ignore next */ {})}
                     isValid={this.props.isValid}
                     error={this.props.error}
                     disabled={
                         this.props.disabled ||
                         (this.props.maxCount > 0 &&
-                            /* istanbul ignore next */ this.state.itemList.length >= this.props.maxCount)
+                            /* c8 ignore next */ this.state.itemList.length >= this.props.maxCount)
                     }
                     maxInputLength={this.props.maxInputLength}
                     normalize={this.props.inputNormalizer}
@@ -407,7 +405,7 @@ export class ScaleOfSignificanceListEditor extends Component {
                     hideReorder={this.props.hideReorder || this.state.itemList.length < 2}
                     disabled={this.props.disabled}
                     listEditorId={this.props.listEditorId}
-                    {...((this.props.locale && this.props.locale.header) || /* istanbul ignore next */ {})}
+                    {...((this.props.locale && this.props.locale.header) || /* c8 ignore next */ {})}
                 />
                 {this.state.itemList.length > 0 ? (
                     <div id={`${this.props.listEditorId}-list`} data-testid={`${this.props.listEditorId}-list`}>
@@ -418,9 +416,7 @@ export class ScaleOfSignificanceListEditor extends Component {
                         <Typography style={noRecordsStyle}>No records to display</Typography>
                     </div>
                 )}
-                {this.props.error && (
-                    /* istanbul ignore next */ <FormHelperText error>{this.props.error}</FormHelperText>
-                )}
+                {this.props.error && /* c8 ignore next */ <FormHelperText error>{this.props.error}</FormHelperText>}
             </div>
         );
     }
@@ -434,7 +430,7 @@ function mapDispatchToProps(dispatch) {
 export const mapStateToProps = state => ({
     ...(state && state.get('adminScaleOfSignificanceReducer')
         ? state.get('adminScaleOfSignificanceReducer')
-        : /* istanbul ignore next */ null),
+        : /* c8 ignore next */ null),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ScaleOfSignificanceListEditor);

@@ -41,7 +41,7 @@ export const FileUploadRow = ({
     const confirmationBox = React.useRef();
 
     const _showConfirmation = () => {
-        /* istanbul ignore else */
+        /* c8 ignore else */
         confirmationBox.current?.showConfirmation();
     };
 

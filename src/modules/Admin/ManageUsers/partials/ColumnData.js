@@ -17,7 +17,7 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
         navigator.clipboard.writeText(data).then(() => setCopied(true));
     };
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const handleClose = () => setCopied(false);
 
     return (

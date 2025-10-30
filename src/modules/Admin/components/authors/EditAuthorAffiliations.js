@@ -185,11 +185,11 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                         value={
                                             uniqueOrgs?.find(
                                                 org => org.org_id === item.af_org_id,
-                                            ) ?? /* istanbul ignore next */ {
+                                            ) ?? /* c8 ignore next */ {
                                                 org_title: organisationMissingLabel,
                                             }
                                         }
-                                        options={uniqueOrgs ?? /* istanbul ignore next */ []}
+                                        options={uniqueOrgs ?? /* c8 ignore next */ []}
                                         getOptionLabel={option => option.org_title}
                                         getOptionDisabled={option => currentAffiliationOrgIds.includes(option.org_id)}
                                         renderOption={(props, option) => (
@@ -239,7 +239,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                     uniqueOrgs[
                                                         suggestedOrganisationUnits.length > 0
                                                             ? 0
-                                                            : /* istanbul ignore next */ 1
+                                                            : /* c8 ignore next */ 1
                                                     ],
                                                 );
                                             } else {
@@ -305,7 +305,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                     disableClearable
                                     options={
                                         uniqueOrgs?.filter(org => !currentAffiliationOrgIds.includes(org.org_id)) ??
-                                        /* istanbul ignore next */ []
+                                        /* c8 ignore next */ []
                                     }
                                     getOptionLabel={option => option.org_title}
                                     renderOption={(props, option) => (
@@ -344,9 +344,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                 rowData,
                                                 newValue,
                                                 uniqueOrgs[
-                                                    suggestedOrganisationUnits.length > 0
-                                                        ? 0
-                                                        : /* istanbul ignore next */ 1
+                                                    suggestedOrganisationUnits.length > 0 ? 0 : /* c8 ignore next */ 1
                                                 ],
                                             );
                                         } else actionHandler[ACTIONS.ADD](actionDispatch, rowData, newValue);

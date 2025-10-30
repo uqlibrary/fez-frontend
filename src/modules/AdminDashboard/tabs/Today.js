@@ -68,14 +68,14 @@ const Today = () => {
                                             adminDashboardTodayData.systemalerts.assigned +
                                                 adminDashboardTodayData.systemalerts.unassigned ===
                                             0
-                                                ? /* istanbul ignore next */ 1
+                                                ? /* c8 ignore next */ 1
                                                 : adminDashboardTodayData.systemalerts.assigned
                                         }
                                         remaining={adminDashboardTodayData.systemalerts.unassigned}
                                         {...(adminDashboardTodayData.systemalerts.assigned +
                                             adminDashboardTodayData.systemalerts.unassigned ===
                                         0
-                                            ? /* istanbul ignore next */ { colours: { assigned: '#e0e0e0' } }
+                                            ? /* c8 ignore next */ { colours: { assigned: '#e0e0e0' } }
                                             : {})}
                                     />
                                 </RibbonChartContainer>
@@ -119,7 +119,7 @@ const Today = () => {
                                         text={`${adminDashboardTodayData.works.unprocessed}`}
                                         amount={
                                             adminDashboardTodayData.works.unprocessed === 0
-                                                ? /* istanbul ignore next */ 100
+                                                ? /* c8 ignore next */ 100
                                                 : adminDashboardTodayData.works.unprocessed
                                         }
                                     />
@@ -160,7 +160,7 @@ const Today = () => {
                                         text={`${adminDashboardTodayData.works.processed}`}
                                         amount={
                                             adminDashboardTodayData.works.processed === 0
-                                                ? /* istanbul ignore next */ 100
+                                                ? /* c8 ignore next */ 100
                                                 : adminDashboardTodayData.works.processed
                                         }
                                         colour="#35A9A5"

@@ -18,7 +18,7 @@ import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/
 import { OA_STATUS, SCOPUS_DOC_TYPES, WOS_DOC_TYPES } from 'config/general';
 import { selectFields } from 'locale/selectFields';
 
-// istanbul ignore next
+// c8 ignore next
 const normalizeFn = value => value.htmlText || value;
 
 export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {

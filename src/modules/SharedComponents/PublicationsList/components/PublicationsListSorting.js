@@ -39,8 +39,8 @@ const PublicationsListSorting = ({
 
     const txt = locale.components.sorting;
 
-    /* istanbul ignore next */
-    const pageLength = txt.recordsPerPage /* istanbul ignore next */ ?? [10, 20, 50, 100];
+    /* c8 ignore next */
+    const pageLength = txt.recordsPerPage /* c8 ignore next */ ?? [10, 20, 50, 100];
 
     // Allow cust page length if defined in props
     if (initPageLength && pageLength.indexOf(initPageLength) === -1) {
@@ -71,7 +71,7 @@ const PublicationsListSorting = ({
 
     const propDisplayRecordsAs = doesListContainItem(selectableCollectionViewType, initPropDisplayRecordsAs)
         ? initPropDisplayRecordsAs
-        : (selectableCollectionViewType[0].value ?? /* istanbul ignore next */ '');
+        : (selectableCollectionViewType[0].value ?? /* c8 ignore next */ '');
 
     const [sortByState, setSortByState] = React.useState(propSortBy);
     const [sortDirectionState, setSortDirectionState] = React.useState(propSortDirection);
