@@ -170,7 +170,7 @@ describe('ControlledVocabularies', () => {
         });
         describe('child vocab', () => {
             it('should render and save when button clicked', async () => {
-                const { getByTestId } = setup();
+                const { getByTestId, queryByTestId } = setup();
                 await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
 
                 await userEvent.click(getByTestId('expand-row-453669'));
@@ -189,7 +189,8 @@ describe('ControlledVocabularies', () => {
                 await userEvent.type(getByTestId('cvo-title-input'), ' Updated');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
 
-                await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
+                queryByTestId('update_dialog-controlledVocabulary') &&
+                    (await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary')));
                 await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
                 expect(getByTestId('admin-edit-button-453670')).toBeInTheDocument();
             });

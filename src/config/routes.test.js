@@ -159,7 +159,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqresearcher,
             authorDetails: authorDetails.uqresearcher,
         });
-        expect(testRoutes.length).toEqual(29);
+        expect(testRoutes.length).toEqual(31);
     });
 
     it('should return a list of routes for user who can masquerade (uqmasquerade)', () => {
@@ -168,7 +168,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqmasquerade,
             authorDetails: authorDetails.uqmasquerade,
         });
-        expect(testRoutes.length).toEqual(30);
+        expect(testRoutes.length).toEqual(32);
     });
 
     it('should return a list of routes for user who has admin (uqstaff)', () => {
@@ -177,7 +177,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqstaff,
             authorDetails: authorDetails.uqstaff,
         });
-        expect(testRoutes.length).toEqual(53);
+        expect(testRoutes.length).toEqual(55);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
@@ -198,7 +198,7 @@ describe('Routes getRoutesConfig method', () => {
             isHdrStudent: true,
             authorDetails: authorDetails.uqresearcher,
         });
-        expect(testRoutes.length).toEqual(29);
+        expect(testRoutes.length).toEqual(31);
     });
 });
 

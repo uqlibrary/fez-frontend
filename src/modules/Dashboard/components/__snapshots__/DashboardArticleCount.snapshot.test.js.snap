@@ -3,20 +3,20 @@
 exports[`Dashboard Article Count test Render the authors article counts as expected for a UQ researcher) 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-ylnelu-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-1bckzb6-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-7fdskf-MuiGridLegacy-root"
     >
       313
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-184x3de-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-1p1doxb-MuiGridLegacy-root"
     >
       eSpace works from
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-1lr4ka9-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-5oo9gd-MuiGridLegacy-root"
     >
       1975
       <span>
@@ -31,7 +31,7 @@ exports[`Dashboard Article Count test Render the authors article counts as expec
 exports[`Dashboard Article Count test should not render anything if any data is missing 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1vpwcmr-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-ylnelu-MuiGridLegacy-root"
   />
 </div>
 `;

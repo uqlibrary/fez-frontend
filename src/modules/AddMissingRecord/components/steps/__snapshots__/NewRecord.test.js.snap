@@ -14,25 +14,26 @@ exports[`Add new record should render stepper and a publication form 1`] = `
   />
   <form>
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
     >
       <span />
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
           data-testid="standard-card-work-type"
           id="standard-card-work-type"
+          style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
         >
           <div
-            class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+            class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
           >
             <div
-              class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+              class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                 data-testid="standard-card-work-type-header"
                 id="standard-card-work-type-header"
               >
@@ -40,11 +41,11 @@ exports[`Add new record should render stepper and a publication form 1`] = `
               </h3>
             </div>
             <div
-              class="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+              class="MuiCardHeader-action css-116l9hl-MuiCardHeader-action"
             >
               <button
                 aria-label="Click for more information"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="help-icon"
                 data-mui-internal-clone-element="true"
                 data-testid="help-icon"
@@ -53,7 +54,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
                 type="button"
               >
                 <svg
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
                   data-testid="HelpOutlineIcon"
                   focusable="false"
                   role="img"
@@ -70,51 +71,52 @@ exports[`Add new record should render stepper and a publication form 1`] = `
             </div>
           </div>
           <div
-            class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
             data-analyticsid="standard-card-work-type-content"
             data-testid="standard-card-work-type-content"
             id="standard-card-work-type-content"
           >
             <div
-              class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-8bk111-MuiGrid2-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1ulsxlp-MuiGrid-root"
             >
               <div
-                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 <div
-                  class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+                  class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
                   style="width: 100%;"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     id="rek-display-type-label"
                   >
                     Work type
                     <span
                       aria-hidden="true"
-                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
                     >
                        
                       *
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     required=""
                   >
                     <div
-                      aria-controls="<dynamic>"
                       aria-expanded="false"
                       aria-haspopup="listbox"
                       aria-labelledby="rek-display-type-select"
-                      class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                      aria-required="true"
+                      class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                       data-testid="rek-display-type-select"
                       id="rek-display-type-select"
                       role="combobox"
                       tabindex="0"
                     >
                       <span
+                        aria-hidden="true"
                         class="notranslate"
                       >
                         ​
@@ -124,7 +126,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
                       aria-hidden="true"
                       aria-invalid="false"
                       aria-labelledby="rek-display-type-label"
-                      class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                      class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                       data-analyticsid="rek-display-type-input"
                       data-testid="rek-display-type-input"
                       id="rek-display-type-input"
@@ -136,7 +138,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
                     />
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                       data-testid="ArrowDropDownIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -154,16 +156,13 @@ exports[`Add new record should render stepper and a publication form 1`] = `
       </div>
     </div>
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1peu8cu-MuiGrid-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-1gtgtdn-MuiGrid2-root"
-      />
-      <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-fsuil5-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >

@@ -28,7 +28,13 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
                     <Typography variant="body2" component="span" color="secondary">
                         {`${keyword.type}: `}
                     </Typography>
-                    <Typography variant="body2" component="span" fontWeight={400}>
+                    <Typography
+                        variant="body2"
+                        component="span"
+                        sx={{
+                            fontWeight: 400,
+                        }}
+                    >
                         {keyword.text}
                     </Typography>
                 </React.Fragment>

@@ -13,7 +13,7 @@ export const VideoDocumentCitation = ({ publication, citationStyle }) => {
     // eSpace citation view for Video
     // {Creator}{Year| (|).}<i>{Title| |.}</i>{Series| |.}
     return (
-        <div className="citationContent citationVideo">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationVideo">
             {/* {Creator}*/}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -28,7 +28,7 @@ export const VideoDocumentCitation = ({ publication, citationStyle }) => {
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} />
-        </div>
+        </span>
     );
 };
 VideoDocumentCitation.propTypes = {

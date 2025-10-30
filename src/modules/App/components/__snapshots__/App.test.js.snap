@@ -3,30 +3,31 @@
 exports[`Application component Should display mobile correctly 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
             style="padding-left: 284px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1vccgkh-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1smtakq-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -41,20 +42,20 @@ exports[`Application component Should display mobile correctly 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-i45qf8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -65,20 +66,20 @@ exports[`Application component Should display mobile correctly 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
                         aria-label=""
                         autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-v8l2vu-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
                         id="simple-search-input"
@@ -96,14 +97,14 @@ exports[`Application component Should display mobile correctly 1`] = `
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ixlo85-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -117,21 +118,21 @@ exports[`Application component Should display mobile correctly 1`] = `
             </form>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <div
               class="auth-button-wrapper"
             >
               <button
                 aria-label="Log in"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q9efh0-MuiSvgIcon-root"
                   data-testid="PersonOutlineIcon"
                   focusable="false"
                   id="logged-out-icon"
@@ -148,22 +149,23 @@ exports[`Application component Should display mobile correctly 1`] = `
       </div>
     </header>
     <div
-      class="MuiDrawer-root MuiDrawer-docked css-wg9x4s-MuiDrawer-docked"
+      class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-docked css-ihupkb-MuiDrawer-docked"
       id="menudrawer"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-12i7wg6-MuiPaper-root-MuiDrawer-paper"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-1lwhjos-MuiPaper-root-MuiDrawer-paper"
+        style="--Paper-shadow: none;"
       >
         <nav
-          class="MuiList-root MuiList-padding css-fv1two-MuiList-root"
+          class="MuiList-root MuiList-padding css-slfd0z-MuiList-root"
           id="mainMenu"
           tabindex="-1"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap css-1rv48rz-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1qnqg4l-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1soofh4-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-12 css-gc29ga-MuiGridLegacy-root"
             >
               <a
                 class="noHover css-1oqhn84"
@@ -185,17 +187,17 @@ exports[`Application component Should display mobile correctly 1`] = `
               </a>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 css-bt3e8x-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 css-123wywt-MuiGridLegacy-root"
             >
               <button
                 aria-label="Close menu"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                 tabindex="0"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q9efh0-MuiSvgIcon-root"
                   data-testid="KeyboardArrowLeftIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -214,144 +216,168 @@ exports[`Application component Should display mobile correctly 1`] = `
             tabindex="1"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary skipNavButton css-argx73-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary skipNavButton css-1k7sra0-MuiButtonBase-root-MuiButton-root"
               tabindex="-1"
               type="button"
             >
               Skip Navigation
             </button>
           </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-155c4xx-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-0"
-            role="button"
-            tabindex="0"
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
           >
             <div
-              class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
-              id="menu-itemText-0"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-99gdkh-MuiButtonBase-root-MuiListItemButton-root"
+              id="menu-item-0"
+              role="button"
+              tabindex="0"
             >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
+              <div
+                class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+                id="menu-itemText-0"
               >
-                Home
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-155c4xx-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-1"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
-              id="menu-itemText-1"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
-              >
-                Search eSpace
-              </span>
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-yw73va-MuiTypography-root"
-              />
-            </div>
-          </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-155c4xx-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-2"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
-              id="menu-itemText-2"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
-              >
-                Browse
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-155c4xx-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-3"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
-              id="menu-itemText-3"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
-              >
-                Help
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-155c4xx-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-4"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
-              id="menu-itemText-4"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
-              >
-                About
-              </span>
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-yw73va-MuiTypography-root"
-              />
-            </div>
-          </div>
-          <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-155c4xx-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-5"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="MuiListItemText-root css-qaf9fy-MuiListItemText-root"
-              id="menu-itemText-5"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-17xnwrf-MuiTypography-root"
-              >
-                <a
-                  class="noHover css-1maagub"
-                  data-analyticsid="5-copyright-information-link"
-                  data-testid="5-copyright-information-link"
-                  id="5-copyright-information-link"
-                  rel="noopener noreferrer"
-                  tabindex="0"
-                  target="_blank"
-                  title="Copyright Information"
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
-                    data-testid="OpenInNewIcon"
-                    focusable="false"
-                    id="5-copyright-information-link-new-window-icon"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
-                    />
-                  </svg>
-                  Copyright Information
-                </a>
-              </span>
+                  Home
+                </span>
+              </div>
             </div>
-          </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-99gdkh-MuiButtonBase-root-MuiListItemButton-root"
+              id="menu-item-1"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+                id="menu-itemText-1"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                >
+                  Search eSpace
+                </span>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-1jei0z3-MuiTypography-root"
+                />
+              </div>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-99gdkh-MuiButtonBase-root-MuiListItemButton-root"
+              id="menu-item-2"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+                id="menu-itemText-2"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                >
+                  Browse
+                </span>
+              </div>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-99gdkh-MuiButtonBase-root-MuiListItemButton-root"
+              id="menu-item-3"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+                id="menu-itemText-3"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                >
+                  Help
+                </span>
+              </div>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-99gdkh-MuiButtonBase-root-MuiListItemButton-root"
+              id="menu-item-4"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+                id="menu-itemText-4"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                >
+                  About
+                </span>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-1jei0z3-MuiTypography-root"
+                />
+              </div>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-99gdkh-MuiButtonBase-root-MuiListItemButton-root"
+              id="menu-item-5"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+                id="menu-itemText-5"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                >
+                  <a
+                    class="noHover css-1maagub"
+                    data-analyticsid="5-copyright-information-link"
+                    data-testid="5-copyright-information-link"
+                    id="5-copyright-information-link"
+                    rel="noopener noreferrer"
+                    tabindex="0"
+                    target="_blank"
+                    title="Copyright Information"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                      data-testid="OpenInNewIcon"
+                      focusable="false"
+                      id="5-copyright-information-link-new-window-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                      />
+                    </svg>
+                    Copyright Information
+                  </a>
+                </span>
+              </div>
+            </div>
+          </li>
         </nav>
         <div
           data-testid="after-menu-drawer"
@@ -385,7 +411,7 @@ exports[`Application component Should display mobile correctly 1`] = `
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -393,7 +419,7 @@ exports[`Application component Should display mobile correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="ArrowUpwardIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -417,34 +443,34 @@ exports[`Application component Should display mobile correctly 1`] = `
         data-testid="confirmDialogBox"
       />
       <div
-        class="MuiGrid-root MuiGrid-container css-m97fgx-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container css-1qimuh2-MuiGridLegacy-root"
         style="margin-bottom: 12px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-item css-1wzz5s-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-fflnia-MuiGridLegacy-root"
         >
           <div
             data-testid="alert"
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
               data-analyticsid="login"
               data-testid="login"
               id="login"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-yrmeox-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-j1d1nm-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
                       data-testid="InfoOutlinedIcon"
                       focusable="false"
                       id="info-outline-icon"
@@ -456,7 +482,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
                       You are not logged in - 
@@ -470,10 +496,10 @@ exports[`Application component Should display mobile correctly 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-auto css-m0iw5t-MuiGridLegacy-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -488,54 +514,54 @@ exports[`Application component Should display mobile correctly 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 />
                 <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                 >
                   <div
                     style="padding: 8px;"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                         style="text-align: center;"
                       >
                         <span
                           aria-label="Loading"
-                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
                           role="progressbar"
                           style="width: 18px; height: 18px;"
                         >
                           <svg
-                            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                             viewBox="22 22 44 44"
                           >
                             <circle
-                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                               cx="44"
                               cy="44"
                               fill="none"
@@ -546,49 +572,50 @@ exports[`Application component Should display mobile correctly 1`] = `
                         </span>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                         style="text-align: center;"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
                           style="font-size: 1.33rem;"
                         >
                           Loading trending works
                         </span>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 />
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -597,13 +624,13 @@ exports[`Application component Should display mobile correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-acknowledgement-of-country-content"
                       data-testid="standard-card-acknowledgement-of-country-content"
                       id="standard-card-acknowledgement-of-country-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
@@ -613,21 +640,22 @@ exports[`Application component Should display mobile correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -636,13 +664,13 @@ exports[`Application component Should display mobile correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-cultural-advice-content"
                       data-testid="standard-card-cultural-advice-content"
                       id="standard-card-cultural-advice-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
@@ -655,21 +683,22 @@ exports[`Application component Should display mobile correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-restrictions-on-use"
                     id="standard-card-restrictions-on-use"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -678,13 +707,13 @@ exports[`Application component Should display mobile correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-restrictions-on-use-content"
                       data-testid="standard-card-restrictions-on-use-content"
                       id="standard-card-restrictions-on-use-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
@@ -694,21 +723,22 @@ exports[`Application component Should display mobile correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -717,7 +747,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-open-to-collaborate-content"
                       data-testid="standard-card-open-to-collaborate-content"
                       id="standard-card-open-to-collaborate-content"
@@ -731,7 +761,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                         >
                           <span>
                             The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
@@ -763,23 +793,24 @@ exports[`Application component redirects user to login if going to a secure file
 exports[`Application component should render alert if user is not fez author 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <button
               aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="main-menu-button"
               data-mui-internal-clone-element="true"
               id="main-menu-button"
@@ -789,7 +820,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="MenuIcon"
                 focusable="false"
                 style="color: white;"
@@ -802,14 +833,14 @@ exports[`Application component should render alert if user is not fez author 1`]
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
             style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item css-1c6hw6e-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item css-dr85pc-MuiGridLegacy-root"
               >
                 <div
                   class="smallLogo"
@@ -820,11 +851,11 @@ exports[`Application component should render alert if user is not fez author 1`]
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-16qo8ib-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -839,20 +870,20 @@ exports[`Application component should render alert if user is not fez author 1`]
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-i45qf8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -863,20 +894,20 @@ exports[`Application component should render alert if user is not fez author 1`]
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
                         aria-label=""
                         autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-v8l2vu-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
                         id="simple-search-input"
@@ -894,14 +925,14 @@ exports[`Application component should render alert if user is not fez author 1`]
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ixlo85-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -915,21 +946,21 @@ exports[`Application component should render alert if user is not fez author 1`]
             </form>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <div
               class="auth-button-wrapper"
             >
               <button
                 aria-label="Log out - undefined"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q9efh0-MuiSvgIcon-root"
                   data-testid="PersonIcon"
                   focusable="false"
                   id="logged-in-icon"
@@ -951,7 +982,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -959,7 +990,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="ArrowUpwardIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -983,34 +1014,34 @@ exports[`Application component should render alert if user is not fez author 1`]
         data-testid="confirmDialogBox"
       />
       <div
-        class="MuiGrid-root MuiGrid-container css-m97fgx-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container css-1qimuh2-MuiGridLegacy-root"
         style="margin-bottom: 12px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-item css-1wzz5s-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-fflnia-MuiGridLegacy-root"
         >
           <div
             data-testid="alert"
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
               data-analyticsid="not-registered-author"
               data-testid="not-registered-author"
               id="not-registered-author"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
                       data-testid="InfoOutlinedIcon"
                       focusable="false"
                       id="info-outline-icon"
@@ -1022,7 +1053,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
                       You are not registered in UQ eSpace as an author - 
@@ -1040,54 +1071,54 @@ exports[`Application component should render alert if user is not fez author 1`]
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 />
                 <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                 >
                   <div
                     style="padding: 8px;"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                         style="text-align: center;"
                       >
                         <span
                           aria-label="Loading"
-                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
                           role="progressbar"
                           style="width: 18px; height: 18px;"
                         >
                           <svg
-                            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                             viewBox="22 22 44 44"
                           >
                             <circle
-                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                               cx="44"
                               cy="44"
                               fill="none"
@@ -1098,49 +1129,50 @@ exports[`Application component should render alert if user is not fez author 1`]
                         </span>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                         style="text-align: center;"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
                           style="font-size: 1.33rem;"
                         >
                           Loading trending works
                         </span>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 />
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -1149,13 +1181,13 @@ exports[`Application component should render alert if user is not fez author 1`]
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-acknowledgement-of-country-content"
                       data-testid="standard-card-acknowledgement-of-country-content"
                       id="standard-card-acknowledgement-of-country-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
@@ -1165,21 +1197,22 @@ exports[`Application component should render alert if user is not fez author 1`]
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -1188,13 +1221,13 @@ exports[`Application component should render alert if user is not fez author 1`]
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-cultural-advice-content"
                       data-testid="standard-card-cultural-advice-content"
                       id="standard-card-cultural-advice-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
@@ -1207,21 +1240,22 @@ exports[`Application component should render alert if user is not fez author 1`]
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-restrictions-on-use"
                     id="standard-card-restrictions-on-use"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -1230,13 +1264,13 @@ exports[`Application component should render alert if user is not fez author 1`]
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-restrictions-on-use-content"
                       data-testid="standard-card-restrictions-on-use-content"
                       id="standard-card-restrictions-on-use-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
@@ -1246,21 +1280,22 @@ exports[`Application component should render alert if user is not fez author 1`]
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -1269,7 +1304,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-open-to-collaborate-content"
                       data-testid="standard-card-open-to-collaborate-content"
                       id="standard-card-open-to-collaborate-content"
@@ -1283,7 +1318,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                         >
                           <span>
                             The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
@@ -1309,23 +1344,24 @@ exports[`Application component should render alert if user is not fez author 1`]
 exports[`Application component should render app for HDR with ORCID ID 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <button
               aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="main-menu-button"
               data-mui-internal-clone-element="true"
               id="main-menu-button"
@@ -1335,7 +1371,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="MenuIcon"
                 focusable="false"
                 style="color: white;"
@@ -1348,14 +1384,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
             style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item css-1c6hw6e-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item css-dr85pc-MuiGridLegacy-root"
               >
                 <div
                   class="smallLogo"
@@ -1366,11 +1402,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-16qo8ib-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -1385,20 +1421,20 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-i45qf8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1409,20 +1445,20 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
                         aria-label=""
                         autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-v8l2vu-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
                         id="simple-search-input"
@@ -1440,14 +1476,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ixlo85-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1461,21 +1497,21 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             </form>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <div
               class="auth-button-wrapper"
             >
               <button
                 aria-label="Log out - J RHD Student"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q9efh0-MuiSvgIcon-root"
                   data-testid="PersonIcon"
                   focusable="false"
                   id="logged-in-icon"
@@ -1497,7 +1533,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -1505,7 +1541,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="ArrowUpwardIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1529,54 +1565,54 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         data-testid="confirmDialogBox"
       />
       <div
-        class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 />
                 <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                 >
                   <div
                     style="padding: 8px;"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                         style="text-align: center;"
                       >
                         <span
                           aria-label="Loading"
-                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
                           role="progressbar"
                           style="width: 18px; height: 18px;"
                         >
                           <svg
-                            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                             viewBox="22 22 44 44"
                           >
                             <circle
-                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                               cx="44"
                               cy="44"
                               fill="none"
@@ -1587,49 +1623,50 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                         </span>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                         style="text-align: center;"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
                           style="font-size: 1.33rem;"
                         >
                           Loading trending works
                         </span>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 />
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -1638,13 +1675,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-acknowledgement-of-country-content"
                       data-testid="standard-card-acknowledgement-of-country-content"
                       id="standard-card-acknowledgement-of-country-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
@@ -1654,21 +1691,22 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -1677,13 +1715,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-cultural-advice-content"
                       data-testid="standard-card-cultural-advice-content"
                       id="standard-card-cultural-advice-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
@@ -1696,21 +1734,22 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-restrictions-on-use"
                     id="standard-card-restrictions-on-use"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -1719,13 +1758,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-restrictions-on-use-content"
                       data-testid="standard-card-restrictions-on-use-content"
                       id="standard-card-restrictions-on-use-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
@@ -1735,21 +1774,22 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -1758,7 +1798,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-open-to-collaborate-content"
                       data-testid="standard-card-open-to-collaborate-content"
                       id="standard-card-open-to-collaborate-content"
@@ -1772,7 +1812,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                         >
                           <span>
                             The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
@@ -1798,23 +1838,24 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
 exports[`Application component should render app for account with fez author with ORCID ID 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <button
               aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="main-menu-button"
               data-mui-internal-clone-element="true"
               id="main-menu-button"
@@ -1824,7 +1865,7 @@ exports[`Application component should render app for account with fez author wit
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="MenuIcon"
                 focusable="false"
                 style="color: white;"
@@ -1837,14 +1878,14 @@ exports[`Application component should render app for account with fez author wit
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
             style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item css-1c6hw6e-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item css-dr85pc-MuiGridLegacy-root"
               >
                 <div
                   class="smallLogo"
@@ -1855,11 +1896,11 @@ exports[`Application component should render app for account with fez author wit
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-16qo8ib-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -1874,20 +1915,20 @@ exports[`Application component should render app for account with fez author wit
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-i45qf8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1898,20 +1939,20 @@ exports[`Application component should render app for account with fez author wit
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
                         aria-label=""
                         autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-v8l2vu-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
                         id="simple-search-input"
@@ -1929,14 +1970,14 @@ exports[`Application component should render app for account with fez author wit
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ixlo85-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1950,21 +1991,21 @@ exports[`Application component should render app for account with fez author wit
             </form>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <div
               class="auth-button-wrapper"
             >
               <button
                 aria-label="Log out - undefined"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q9efh0-MuiSvgIcon-root"
                   data-testid="PersonIcon"
                   focusable="false"
                   id="logged-in-icon"
@@ -1986,7 +2027,7 @@ exports[`Application component should render app for account with fez author wit
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -1994,7 +2035,7 @@ exports[`Application component should render app for account with fez author wit
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="ArrowUpwardIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -2018,54 +2059,54 @@ exports[`Application component should render app for account with fez author wit
         data-testid="confirmDialogBox"
       />
       <div
-        class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 />
                 <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                 >
                   <div
                     style="padding: 8px;"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                         style="text-align: center;"
                       >
                         <span
                           aria-label="Loading"
-                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
                           role="progressbar"
                           style="width: 18px; height: 18px;"
                         >
                           <svg
-                            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                             viewBox="22 22 44 44"
                           >
                             <circle
-                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                               cx="44"
                               cy="44"
                               fill="none"
@@ -2076,49 +2117,50 @@ exports[`Application component should render app for account with fez author wit
                         </span>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                         style="text-align: center;"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
                           style="font-size: 1.33rem;"
                         >
                           Loading trending works
                         </span>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 />
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -2127,13 +2169,13 @@ exports[`Application component should render app for account with fez author wit
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-acknowledgement-of-country-content"
                       data-testid="standard-card-acknowledgement-of-country-content"
                       id="standard-card-acknowledgement-of-country-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
@@ -2143,21 +2185,22 @@ exports[`Application component should render app for account with fez author wit
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -2166,13 +2209,13 @@ exports[`Application component should render app for account with fez author wit
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-cultural-advice-content"
                       data-testid="standard-card-cultural-advice-content"
                       id="standard-card-cultural-advice-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
@@ -2185,21 +2228,22 @@ exports[`Application component should render app for account with fez author wit
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-restrictions-on-use"
                     id="standard-card-restrictions-on-use"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -2208,13 +2252,13 @@ exports[`Application component should render app for account with fez author wit
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-restrictions-on-use-content"
                       data-testid="standard-card-restrictions-on-use-content"
                       id="standard-card-restrictions-on-use-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
@@ -2224,21 +2268,22 @@ exports[`Application component should render app for account with fez author wit
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -2247,7 +2292,7 @@ exports[`Application component should render app for account with fez author wit
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-open-to-collaborate-content"
                       data-testid="standard-card-open-to-collaborate-content"
                       id="standard-card-open-to-collaborate-content"
@@ -2261,7 +2306,7 @@ exports[`Application component should render app for account with fez author wit
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                         >
                           <span>
                             The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
@@ -2287,23 +2332,24 @@ exports[`Application component should render app for account with fez author wit
 exports[`Application component should render application with routing for the user and display loading screen while loading author 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <button
               aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="main-menu-button"
               data-mui-internal-clone-element="true"
               id="main-menu-button"
@@ -2313,7 +2359,7 @@ exports[`Application component should render application with routing for the us
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="MenuIcon"
                 focusable="false"
                 style="color: white;"
@@ -2326,14 +2372,14 @@ exports[`Application component should render application with routing for the us
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
             style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item css-1c6hw6e-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item css-dr85pc-MuiGridLegacy-root"
               >
                 <div
                   class="smallLogo"
@@ -2344,11 +2390,11 @@ exports[`Application component should render application with routing for the us
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-16qo8ib-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -2363,20 +2409,20 @@ exports[`Application component should render application with routing for the us
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-i45qf8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2387,20 +2433,20 @@ exports[`Application component should render application with routing for the us
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
                         aria-label=""
                         autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-v8l2vu-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
                         id="simple-search-input"
@@ -2418,14 +2464,14 @@ exports[`Application component should render application with routing for the us
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ixlo85-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2439,21 +2485,21 @@ exports[`Application component should render application with routing for the us
             </form>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <div
               class="auth-button-wrapper"
             >
               <button
                 aria-label="Log out - undefined"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q9efh0-MuiSvgIcon-root"
                   data-testid="PersonIcon"
                   focusable="false"
                   id="logged-in-icon"
@@ -2475,7 +2521,7 @@ exports[`Application component should render application with routing for the us
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -2483,7 +2529,7 @@ exports[`Application component should render application with routing for the us
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="ArrowUpwardIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -2510,27 +2556,27 @@ exports[`Application component should render application with routing for the us
         style="padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
             style="text-align: center;"
           >
             <span
               aria-label="Loading"
-              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
               role="progressbar"
               style="width: 18px; height: 18px;"
             >
               <svg
-                class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                 viewBox="22 22 44 44"
               >
                 <circle
-                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                   cx="44"
                   cy="44"
                   fill="none"
@@ -2541,18 +2587,18 @@ exports[`Application component should render application with routing for the us
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading account
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
           />
         </div>
       </div>
@@ -2567,23 +2613,24 @@ exports[`Application component should render application with routing for the us
 exports[`Application component should render for anon user 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1g2wbaa-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ukn69j-MuiToolbar-root"
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <button
               aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="main-menu-button"
               data-mui-internal-clone-element="true"
               id="main-menu-button"
@@ -2593,7 +2640,7 @@ exports[`Application component should render for anon user 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                 data-testid="MenuIcon"
                 focusable="false"
                 style="color: white;"
@@ -2606,14 +2653,14 @@ exports[`Application component should render for anon user 1`] = `
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
             style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item css-1c6hw6e-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item css-dr85pc-MuiGridLegacy-root"
               >
                 <div
                   class="smallLogo"
@@ -2624,11 +2671,11 @@ exports[`Application component should render for anon user 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-16qo8ib-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -2643,20 +2690,20 @@ exports[`Application component should render for anon user 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-i45qf8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-44sczy-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1g2tota-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-iu4k2w-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2667,20 +2714,20 @@ exports[`Application component should render for anon user 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-8moi20-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-b1iuur-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
                         aria-label=""
                         autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-c63i49-MuiInputBase-input-MuiInput-input"
+                        class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-v8l2vu-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
                         id="simple-search-input"
@@ -2698,14 +2745,14 @@ exports[`Application component should render for anon user 1`] = `
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gmqj7h-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ixlo85-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2719,21 +2766,21 @@ exports[`Application component should render for anon user 1`] = `
             </form>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
           >
             <div
               class="auth-button-wrapper"
             >
               <button
                 aria-label="Log in"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1pg8mhl-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q9efh0-MuiSvgIcon-root"
                   data-testid="PersonOutlineIcon"
                   focusable="false"
                   id="logged-out-icon"
@@ -2755,7 +2802,7 @@ exports[`Application component should render for anon user 1`] = `
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-s71mt9-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -2763,7 +2810,7 @@ exports[`Application component should render for anon user 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
           data-testid="ArrowUpwardIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -2787,54 +2834,54 @@ exports[`Application component should render for anon user 1`] = `
         data-testid="confirmDialogBox"
       />
       <div
-        class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 />
                 <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                 >
                   <div
                     style="padding: 8px;"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                         style="text-align: center;"
                       >
                         <span
                           aria-label="Loading"
-                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
                           role="progressbar"
                           style="width: 18px; height: 18px;"
                         >
                           <svg
-                            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                             viewBox="22 22 44 44"
                           >
                             <circle
-                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                               cx="44"
                               cy="44"
                               fill="none"
@@ -2845,49 +2892,50 @@ exports[`Application component should render for anon user 1`] = `
                         </span>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                         style="text-align: center;"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
                           style="font-size: 1.33rem;"
                         >
                           Loading trending works
                         </span>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 />
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -2896,13 +2944,13 @@ exports[`Application component should render for anon user 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-acknowledgement-of-country-content"
                       data-testid="standard-card-acknowledgement-of-country-content"
                       id="standard-card-acknowledgement-of-country-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
@@ -2912,21 +2960,22 @@ exports[`Application component should render for anon user 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -2935,13 +2984,13 @@ exports[`Application component should render for anon user 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-cultural-advice-content"
                       data-testid="standard-card-cultural-advice-content"
                       id="standard-card-cultural-advice-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
@@ -2954,21 +3003,22 @@ exports[`Application component should render for anon user 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-restrictions-on-use"
                     id="standard-card-restrictions-on-use"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -2977,13 +3027,13 @@ exports[`Application component should render for anon user 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-restrictions-on-use-content"
                       data-testid="standard-card-restrictions-on-use-content"
                       id="standard-card-restrictions-on-use-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                       >
                         <span>
                           You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
@@ -2993,21 +3043,22 @@ exports[`Application component should render for anon user 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
+                    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                     >
                       <div
-                        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -3016,7 +3067,7 @@ exports[`Application component should render for anon user 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                       data-analyticsid="standard-card-open-to-collaborate-content"
                       data-testid="standard-card-open-to-collaborate-content"
                       id="standard-card-open-to-collaborate-content"
@@ -3030,7 +3081,7 @@ exports[`Application component should render for anon user 1`] = `
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                         >
                           <span>
                             The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
@@ -3056,28 +3107,28 @@ exports[`Application component should render for anon user 1`] = `
 exports[`Application component should render loading screen while account is loading 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-1u0so7o-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth MuiGrid-grid-xs-12 css-12pd4t8-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth MuiGridLegacy-grid-xs-12 css-81rso6-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container css-asygwg-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container css-1tn8p30-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item css-m47mkr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
         >
           <span
-            class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jvygfr-MuiCircularProgress-root"
+            class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jb97hd-MuiCircularProgress-root"
             role="progressbar"
             style="width: 80px; height: 80px;"
           >
             <svg
-              class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+              class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
               viewBox="22 22 44 44"
             >
               <circle
-                class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                 cx="44"
                 cy="44"
                 fill="none"
@@ -3088,7 +3139,7 @@ exports[`Application component should render loading screen while account is loa
           </span>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item css-m47mkr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
         >
           <div
             alt="The University of Queensland"
@@ -3096,10 +3147,10 @@ exports[`Application component should render loading screen while account is loa
           />
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item css-m47mkr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-1cgw6ig-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-12tzrfb-MuiTypography-root"
           >
             UQ eSpace 
           </h6>

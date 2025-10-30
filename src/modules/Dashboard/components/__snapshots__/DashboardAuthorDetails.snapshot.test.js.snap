@@ -3,23 +3,23 @@
 exports[`Dashboard Author Details test Render the authors details as expected for a UQ researcher) 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <h6
-        class="MuiTypography-root MuiTypography-h6 css-s0bjcf-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h6 css-1s8t1s1-MuiTypography-root"
       >
          
          
       </h6>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <span
-        class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
       >
         <b>
           Affiliate Professor
@@ -27,7 +27,7 @@ exports[`Dashboard Author Details test Render the authors details as expected fo
         , Institute for Molecular Bioscience
       </span>
       <span
-        class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
       >
         <b>
           Affiliate Professorial Res Fellow
@@ -35,7 +35,7 @@ exports[`Dashboard Author Details test Render the authors details as expected fo
         , School of Chemistry and Molecular Biosciences
       </span>
       <span
-        class="MuiTypography-root MuiTypography-caption css-is0946-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
       >
         <b>
           ARC Australian Laureate Fellow

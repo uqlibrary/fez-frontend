@@ -5,7 +5,7 @@ import { hide } from '../actions';
 
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 export const HelpDrawer = ({ buttonLabel = 'CLOSE' }) => {
@@ -25,7 +25,7 @@ export const HelpDrawer = ({ buttonLabel = 'CLOSE' }) => {
 
     if (text && text.props && text.props.children) {
         indexedText = React.Children.map(text.props.children, (child, index) => {
-            if (child.type) {
+            if (child?.type) {
                 return React.cloneElement(child, { key: index });
             } else {
                 return child;
@@ -50,12 +50,14 @@ export const HelpDrawer = ({ buttonLabel = 'CLOSE' }) => {
             <Grid container spacing={5} id="help-drawer">
                 <Grid item xs={12}>
                     <Typography
-                        color={'primary.main'}
                         component={'h3'}
                         data-testid="help-drawer-title"
                         id="help-drawer-title"
                         key={'title'}
                         variant={'h6'}
+                        sx={{
+                            color: 'primary.main',
+                        }}
                     >
                         {title}
                     </Typography>

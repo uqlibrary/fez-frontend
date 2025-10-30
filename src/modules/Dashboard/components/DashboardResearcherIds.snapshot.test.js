@@ -99,7 +99,6 @@ describe('Dashboard Researcher IDs test', () => {
 
     it('should show orcid sync UI', () => {
         const context = {
-            showSyncUI: true,
             orcidSyncProps: {
                 author: {
                     aut_orcid_id: 'test',

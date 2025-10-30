@@ -76,7 +76,7 @@ export const ThirdPartyLookupTool = lazy(() =>
 export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from 'modules/AddMissingRecord';
 export { Index } from 'modules/Index';
 export { Masquerade } from 'modules/Masquerade';
-export { MyRecords, MyDataCollections, MyIncompleteRecords } from 'modules/MyRecords';
+export { MyRecords, MyDataCollections, MyIncompleteRecords, MyOpenAccessRecords } from 'modules/MyRecords';
 export { ViewRecord } from 'modules/ViewRecord/components/ViewRecord';
 export { PageNotFound } from 'modules/NotFound/components/PageNotFound';
 export { SearchRecords } from 'modules/SearchRecords';

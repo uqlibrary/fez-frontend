@@ -4,6 +4,7 @@ test.describe('Manage User List', () => {
     test.beforeEach(async ({ page }) => {
         await page.setViewportSize({ width: 1200, height: 1000 });
         await page.goto('/admin/users?user=uqstaff');
+        await expect(page.getByTestId('usr-full-name-0')).toBeVisible();
     });
 
     test('Allows number of records per page to be changed', async ({ page }) => {

@@ -402,7 +402,6 @@ export class ScaleOfSignificanceListEditor extends Component {
                     formMode={this.state.formMode}
                     hidden={!this.state.showAddForm}
                 />
-
                 <ListRowHeader
                     onDeleteAll={this.deleteAllItems}
                     hideReorder={this.props.hideReorder || this.state.itemList.length < 2}

@@ -13,10 +13,7 @@ test.describe('Scroll to top module', () => {
         await assertIsVisible(page.locator('.StandardPage'));
         const scrollBtn = page.locator('#scrolltopbtn');
         await expect(scrollBtn).toHaveCSS('opacity', '0');
-        await page
-            .getByText('Genome-wide association')
-            .first()
-            .scrollIntoViewIfNeeded();
+        await page.getByText('Genome-wide association').first().scrollIntoViewIfNeeded();
         await expect(scrollBtn).toHaveCSS('opacity', '0.5');
         await scrollBtn.click();
         await expect(scrollBtn).toHaveCSS('opacity', '0');

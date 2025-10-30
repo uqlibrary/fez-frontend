@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import JournalSearchInterface from './JournalSearchInterface';

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import { JournalsListLegacy } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';

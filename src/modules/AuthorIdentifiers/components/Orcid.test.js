@@ -1,29 +1,29 @@
 import React from 'react';
 import Orcid from './Orcid';
 import { accounts, currentAuthor } from 'mock/data/account';
-import { rtlRender, WithReduxStore, fireEvent } from 'test-utils';
-import { MemoryRouter, Routes, Route } from 'react-router-dom';
+import { rtlRender, WithReduxStore, fireEvent, WithRouter } from 'test-utils';
+import { useNavigate } from 'react-router-dom';
 import * as AuthorAction from 'actions/authors';
-import * as AppAction from 'actions/app';
-let mockUseLocation = { pathname: '/' };
 
+let mockUseLocation = { pathname: '/' };
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useLocation: () => mockUseLocation,
+    useNavigate: jest.fn(() => jest.fn()),
 }));
 
 function setup({ state = {} } = {}, renderMethod = rtlRender) {
     return renderMethod(
         <WithReduxStore initialState={state}>
-            <MemoryRouter>
-                <Routes>
-                    <Route path="/dashboard" element={<div>Dashboard</div>} />
-                    <Route path="/" exact element={<Orcid />} />
-                </Routes>
-            </MemoryRouter>
+            <WithRouter>
+                <Orcid />
+            </WithRouter>
         </WithReduxStore>,
     );
 }
+
+const navigateMock = jest.fn();
+useNavigate.mockImplementation(() => navigateMock);
 
 describe('Component Orcid ', () => {
     const saveLocation = window.location;
@@ -34,6 +34,7 @@ describe('Component Orcid ', () => {
 
     afterEach(() => {
         window.location = saveLocation;
+        jest.clearAllMocks();
     });
 
     it('should render nothing if account/author is not loaded', () => {
@@ -48,7 +49,7 @@ describe('Component Orcid ', () => {
     });
 
     it('should render nothing if account is set, but author is null', () => {
-        const { container } = setup({
+        setup({
             state: {
                 accountReducer: {
                     accountAuthorLoading: false,
@@ -56,7 +57,7 @@ describe('Component Orcid ', () => {
                 },
             },
         });
-        expect(container).toMatchSnapshot();
+        expect(navigateMock).toHaveBeenCalledWith('/dashboard', { state: { showOrcidLinkingConfirmation: false } });
     });
 
     it('should render if account doesnt have first name and last name', () => {
@@ -77,9 +78,9 @@ describe('Component Orcid ', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should redirect to the dashbaord', () => {
-        const { getByText } = setup({ state: { accountReducer: { author: { aut_orcid_id: '11111' } } } });
-        expect(getByText('Dashboard')).toBeInTheDocument();
+    it('should redirect to the dashboard', () => {
+        setup({ state: { accountReducer: { author: { aut_orcid_id: '11111' } } } });
+        expect(navigateMock).toHaveBeenCalledWith('/dashboard', { state: { showOrcidLinkingConfirmation: false } });
     });
 
     it('should construct ORCID url for linking existing orcid', () => {
@@ -174,7 +175,7 @@ describe('Component Orcid ', () => {
     });
 
     it('should navigate back to dashboard if author already has orcid', () => {
-        const { getByText, rerender } = setup({
+        const { rerender } = setup({
             state: {
                 accountReducer: { accountAuthorLoading: true },
             },
@@ -194,15 +195,14 @@ describe('Component Orcid ', () => {
             rerender,
         );
 
-        expect(getByText('Dashboard')).toBeInTheDocument();
+        expect(navigateMock).toHaveBeenCalledWith('/dashboard', { state: { showOrcidLinkingConfirmation: false } });
     });
 
     it("should navigate back to dashboard if author's orcid id was updated successfully", () => {
         const author = { ...currentAuthor.uqnoauthid.data, aut_orcid_id: null };
-        const showAppAlertFn = jest.spyOn(AppAction, 'showAppAlert');
 
         mockUseLocation = { ...mockUseLocation, search: '?code=123&state=5ea13ef0dad88453242fcc8f65a0f90a' };
-        const { getByText, rerender } = setup({
+        const { rerender } = setup({
             state: {
                 accountReducer: {
                     account: accounts.uqresearcher,
@@ -224,8 +224,7 @@ describe('Component Orcid ', () => {
             rerender,
         );
 
-        expect(showAppAlertFn).toHaveBeenCalled();
-        expect(getByText('Dashboard')).toBeInTheDocument();
+        expect(navigateMock).toHaveBeenCalledWith('/dashboard', { state: { showOrcidLinkingConfirmation: true } });
     });
 
     it('should start author update when author is loaded on mount and orcid response received', () => {

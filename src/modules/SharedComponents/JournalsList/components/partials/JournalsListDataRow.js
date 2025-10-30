@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 
 import JournalFieldsMap from './JournalFieldsMap';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import Checkbox from '@mui/material/Checkbox';

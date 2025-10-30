@@ -3,11 +3,11 @@
 exports[`Component SocialShare should fire print method on click 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
     id="social-share"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       style="margin-right: 4px;"
     >
       <a
@@ -22,11 +22,11 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         title="Share this record via Email"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-147y8it-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-p0ecn4-MuiAvatar-root"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-zd4hxu-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ohe4pu-MuiSvgIcon-root"
             data-testid="EmailOutlinedIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -39,7 +39,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       style="margin-right: 4px;"
     >
       <a
@@ -54,11 +54,11 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         title="Print this record"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-147y8it-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-p0ecn4-MuiAvatar-root"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-zd4hxu-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ohe4pu-MuiSvgIcon-root"
             data-testid="PrintIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -77,11 +77,11 @@ exports[`Component SocialShare should fire print method on click 1`] = `
 exports[`Component SocialShare should render component 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
     id="social-share"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       style="margin-right: 4px;"
     >
       <a
@@ -96,11 +96,11 @@ exports[`Component SocialShare should render component 1`] = `
         title="Share this record via Email"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-147y8it-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-p0ecn4-MuiAvatar-root"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-zd4hxu-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ohe4pu-MuiSvgIcon-root"
             data-testid="EmailOutlinedIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -113,7 +113,7 @@ exports[`Component SocialShare should render component 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
       style="margin-right: 4px;"
     >
       <a
@@ -128,11 +128,11 @@ exports[`Component SocialShare should render component 1`] = `
         title="Print this record"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-147y8it-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-p0ecn4-MuiAvatar-root"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-zd4hxu-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ohe4pu-MuiSvgIcon-root"
             data-testid="PrintIcon"
             focusable="false"
             viewBox="0 0 24 24"

@@ -6,20 +6,19 @@ import { rtlRender, WithRouter } from 'test-utils';
 import { initialize } from '@googlemaps/jest-mocks';
 import { useJsApiLoader } from '@react-google-maps/api';
 
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 jest.mock('@react-google-maps/api', () => ({
     useJsApiLoader: jest.fn(),
-    Polygon: props => <div id="mock-polygon" />,
-    Marker: props => <div id="mock-marker" />,
+    Polygon: () => <div id="mock-polygon" />,
+    Marker: () => <div id="mock-marker" />,
     GoogleMap: props => (
         <div>
             <div id="mock-google-maps" />
             {props.children}
         </div>
     ),
-    StandaloneSearchBox: props => <div id="mock-search-box" />,
-    DrawingManager: props => <div id="mock-drawing-manager" />,
+    StandaloneSearchBox: () => <div id="mock-search-box" />,
+    DrawingManager: () => <div id="mock-drawing-manager" />,
 }));
 
 function setup(testProps = {}) {
@@ -336,7 +335,15 @@ describe('Additional Information Component ', () => {
             rek_display_type_lookup: 'Journal Article',
         };
         const { container } = setup({ publication });
-        // check date clumn has no value only placeholder
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should skip render of end date if it has a placeholder value', () => {
+        const publication = {
+            fez_record_search_key_end_date: { rek_end_date: PLACEHOLDER_ISO8601_ZULU_DATE },
+            rek_display_type_lookup: 'Instrument',
+        };
+        const { container } = setup({ publication });
         expect(container).toMatchSnapshot();
     });
 

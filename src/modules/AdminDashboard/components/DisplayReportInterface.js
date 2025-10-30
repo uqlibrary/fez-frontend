@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import moment from 'moment';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
@@ -111,26 +111,31 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                 {...params}
                                 label={txt.label.report}
                                 variant="standard"
-                                inputProps={{
-                                    ...params.inputProps,
-                                    id: `${id}-input`,
-                                    'data-analyticsid': `${id}-input`,
-                                    'data-testid': `${id}-input`,
-                                }}
-                                InputLabelProps={{
-                                    'data-testid': `${id}-label`,
-                                    htmlFor: `${id}-input`,
+                                slotProps={{
+                                    htmlInput: {
+                                        ...params.inputProps,
+                                        id: `${id}-input`,
+                                        'data-analyticsid': `${id}-input`,
+                                        'data-testid': `${id}-input`,
+                                    },
+
+                                    inputLabel: {
+                                        'data-testid': `${id}-label`,
+                                        htmlFor: `${id}-input`,
+                                    },
                                 }}
                             />
                         )}
-                        ListboxProps={{
-                            id: `${id}-listbox`,
-                            'data-analyticsid': `${id}-listbox`,
-                            'data-testid': `${id}-listbox`,
-                        }}
                         value={actionState.report}
                         onChange={(_, value) => {
                             handleDisplayReportChange({ type: 'displayReport', value });
+                        }}
+                        slotProps={{
+                            listbox: {
+                                id: `${id}-listbox`,
+                                'data-analyticsid': `${id}-listbox`,
+                                'data-testid': `${id}-listbox`,
+                            },
                         }}
                     />
                 </Grid>
@@ -226,15 +231,6 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                 label={txt.label.systemId}
                                 variant="standard"
                                 fullWidth
-                                inputProps={{
-                                    id: `${id}-system-alert-id-input`,
-                                    'data-analyticsid': `${id}-system-alert-id-input`,
-                                    'data-testid': `${id}-system-alert-id-input`,
-                                }}
-                                InputLabelProps={{
-                                    'data-testid': `${id}-system-alert-id-label`,
-                                    htmlFor: `${id}-system-alert-id-input`,
-                                }}
                                 sx={{ mt: 1 }}
                                 onChange={props =>
                                     // eslint-disable-next-line react/prop-types
@@ -243,6 +239,18 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                 value={actionState.filters.record_id}
                                 helperText={reportIdError}
                                 error={!!reportIdError}
+                                slotProps={{
+                                    htmlInput: {
+                                        id: `${id}-system-alert-id-input`,
+                                        'data-analyticsid': `${id}-system-alert-id-input`,
+                                        'data-testid': `${id}-system-alert-id-input`,
+                                    },
+
+                                    inputLabel: {
+                                        'data-testid': `${id}-system-alert-id-label`,
+                                        htmlFor: `${id}-system-alert-id-input`,
+                                    },
+                                }}
                             />
                         </Box>
                     </Grid>

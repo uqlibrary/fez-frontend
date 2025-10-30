@@ -26,6 +26,7 @@ import UqDataSection from './uqData/UqDataSection';
 import DoajSection from './doaj/DoajSection';
 import IndexedSection from './indexed/IndexedSection';
 import { useJournal } from '../hooks';
+import ReadAndPublishSection from './readAndPublish/ReadAndPublishSection';
 
 export const JournalAdminContainer = () => {
     const dispatch = useDispatch();
@@ -129,6 +130,10 @@ export const JournalAdminContainer = () => {
                                     uqData: {
                                         component: UqDataSection,
                                         numberOfErrors: tabErrors.current.uqDataSection || null,
+                                    },
+                                    readAndPublish: {
+                                        component: ReadAndPublishSection,
+                                        numberOfErrors: tabErrors.current.readAndPublishSection || null,
                                     },
                                     doaj: {
                                         component: DoajSection,

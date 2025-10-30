@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import PropTypes from 'prop-types';
 import { APP_URL } from 'config';
 import Avatar from '@mui/material/Avatar';

@@ -3,54 +3,54 @@
 exports[`Index page should render placeholders 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
             />
             <div
-              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
             >
               <div
                 style="padding: 8px;"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                   />
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                     style="text-align: center;"
                   >
                     <span
                       aria-label="Loading"
-                      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
                       role="progressbar"
                       style="width: 18px; height: 18px;"
                     >
                       <svg
-                        class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                        class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                         viewBox="22 22 44 44"
                       >
                         <circle
-                          class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                          class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                           cx="44"
                           cy="44"
                           fill="none"
@@ -61,49 +61,50 @@ exports[`Index page should render placeholders 1`] = `
                     </span>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                     style="text-align: center;"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
                       style="font-size: 1.33rem;"
                     >
                       Loading trending works
                     </span>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
             />
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-acknowledgement-of-country"
                 id="standard-card-acknowledgement-of-country"
+                style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                       data-testid="standard-card-acknowledgement-of-country-header"
                       id="standard-card-acknowledgement-of-country-header"
                     >
@@ -112,13 +113,13 @@ exports[`Index page should render placeholders 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                   data-analyticsid="standard-card-acknowledgement-of-country-content"
                   data-testid="standard-card-acknowledgement-of-country-content"
                   id="standard-card-acknowledgement-of-country-content"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   >
                     <span>
                       The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
@@ -128,21 +129,22 @@ exports[`Index page should render placeholders 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-cultural-advice"
                 id="standard-card-cultural-advice"
+                style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                       data-testid="standard-card-cultural-advice-header"
                       id="standard-card-cultural-advice-header"
                     >
@@ -151,13 +153,13 @@ exports[`Index page should render placeholders 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                   data-analyticsid="standard-card-cultural-advice-content"
                   data-testid="standard-card-cultural-advice-content"
                   id="standard-card-cultural-advice-content"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   >
                     <span>
                       Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
@@ -170,21 +172,22 @@ exports[`Index page should render placeholders 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-restrictions-on-use"
                 id="standard-card-restrictions-on-use"
+                style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                       data-testid="standard-card-restrictions-on-use-header"
                       id="standard-card-restrictions-on-use-header"
                     >
@@ -193,13 +196,13 @@ exports[`Index page should render placeholders 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                   data-analyticsid="standard-card-restrictions-on-use-content"
                   data-testid="standard-card-restrictions-on-use-content"
                   id="standard-card-restrictions-on-use-content"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                   >
                     <span>
                       You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
@@ -209,21 +212,22 @@ exports[`Index page should render placeholders 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-open-to-collaborate"
                 id="standard-card-open-to-collaborate"
+                style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                       data-testid="standard-card-open-to-collaborate-header"
                       id="standard-card-open-to-collaborate-header"
                     >
@@ -232,7 +236,7 @@ exports[`Index page should render placeholders 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                   data-analyticsid="standard-card-open-to-collaborate-content"
                   data-testid="standard-card-open-to-collaborate-content"
                   id="standard-card-open-to-collaborate-content"
@@ -246,7 +250,7 @@ exports[`Index page should render placeholders 1`] = `
                       src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                     />
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
                     >
                       <span>
                         The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.

@@ -18,7 +18,7 @@ export const ResearchReportCitation = ({ publication, hideDoiLink, citationStyle
 
     // eSpace citation view for ResearchReport
     return (
-        <div className="citationContent citationResearchReport">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationResearchReport">
             {/* authors list */}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -43,7 +43,7 @@ export const ResearchReportCitation = ({ publication, hideDoiLink, citationStyle
 
             {/* doi */}
             <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
-        </div>
+        </span>
     );
 };
 ResearchReportCitation.propTypes = {

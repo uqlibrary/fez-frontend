@@ -26,6 +26,11 @@ export default {
             groups: [['uqData']],
         },
     ],
+    readAndPublish: () => [
+        {
+            groups: [['readAndPublish']],
+        },
+    ],
     doaj: () => [
         {
             groups: [['doaj']],
