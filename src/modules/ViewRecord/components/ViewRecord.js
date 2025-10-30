@@ -325,7 +325,7 @@ export const ViewRecord = () => {
                         <Alert {...txt.version.alert.warning} />
                     </Grid>
                 )}
-                {/* eslint-disable-next-line camelcase */}
+                {}
                 {!!recordToView.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
                     <Grid xs={12} style={{ marginBottom: 24 }}>
                         <Alert
