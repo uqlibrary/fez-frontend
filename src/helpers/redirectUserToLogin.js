@@ -1,10 +1,10 @@
 import { AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL } from 'config';
 
-/* istanbul ignore next */
+/* c8 ignore next */
 export const redirectUserToLogin =
     (isAuthorizedUser = false, redirectToCurrentLocation = false, additionalParams = null) =>
     () => {
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (process.env.USE_MOCK) {
             return;
         }

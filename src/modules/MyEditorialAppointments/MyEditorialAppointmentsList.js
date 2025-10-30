@@ -430,7 +430,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                         hidden: false,
                                     },
                                     textField: ownerState => {
-                                        const displayValue = ownerState.value ?? /* istanbul ignore next */ null;
+                                        const displayValue = ownerState.value ?? /* c8 ignore next */ null;
 
                                         return {
                                             inputProps: {
@@ -472,7 +472,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
     const handleCreate = ({ values, table, row }) => {
         const newValues = { ...row.original, ...row._valuesCache, ...values };
         const errors = validate(newValues);
-        /* istanbul ignore if  */
+        /* c8 ignore if  */
         if (!!errors) {
             return;
         }
@@ -495,7 +495,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
     const handleEdit = ({ values, table, row }) => {
         const newValues = { ...row.original, ...row._valuesCache, ...values };
         const errors = validate(newValues);
-        /* istanbul ignore if  */
+        /* c8 ignore if  */
         if (!!errors) {
             return;
         }

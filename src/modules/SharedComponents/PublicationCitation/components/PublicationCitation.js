@@ -239,7 +239,7 @@ export const PublicationCitation = ({
     const theme = useTheme();
     const navigate = useNavigate();
     const location = useLocation();
-    const { account } = useSelector(state => state.get('accountReducer') || /* istanbul ignore next */ {});
+    const { account } = useSelector(state => state.get('accountReducer') || /* c8 ignore next */ {});
 
     const hideViewFullStatisticsLink = !account;
     const txt = locale.components.publicationCitation;
@@ -249,7 +249,7 @@ export const PublicationCitation = ({
     const publicationType = publicationTypes(citationComponents)?.[publication.rek_display_type];
 
     const _handleDefaultActions = action => {
-        /* istanbul ignore else  */
+        /* c8 ignore else  */
         if (action === 'fixRecord') {
             navigate(pathConfig.records.fix(publication.rek_pid));
         }

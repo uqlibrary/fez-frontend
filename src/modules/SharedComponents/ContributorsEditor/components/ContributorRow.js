@@ -125,7 +125,7 @@ export const ContributorRow = ({
 
     const _onDelete = React.useCallback(
         () => {
-            /* istanbul ignore else */
+            /* c8 ignore else */
             if (!disabled && onDelete) {
                 onDelete(contributor, index);
             }
@@ -139,7 +139,7 @@ export const ContributorRow = ({
             e.preventDefault();
             e.stopPropagation();
 
-            /* istanbul ignore else */
+            /* c8 ignore else */
             if (!disabled && onMoveUp) {
                 onMoveUp(contributor, index);
             }
@@ -152,7 +152,7 @@ export const ContributorRow = ({
         e => {
             e.preventDefault();
             e.stopPropagation();
-            /* istanbul ignore else */
+            /* c8 ignore else */
             if (!disabled && onMoveDown) {
                 onMoveDown(contributor, index);
             }
@@ -381,7 +381,7 @@ ContributorRow.propTypes = {
     showRoleInput: PropTypes.bool,
 };
 
-/* istanbul ignore next */
+/* c8 ignore next */
 export default React.memo(ContributorRow, (pp, np) => {
     return (
         pp.disabled === np.disabled &&

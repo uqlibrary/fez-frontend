@@ -64,7 +64,7 @@ export const AddSection = ({ onCreate, disabled = false }) => {
             );
         }),
     ];
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const handleCancel = event => {
         event.preventDefault();
         navigate(pathConfig.index);

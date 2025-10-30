@@ -67,7 +67,7 @@ const SystemAlerts = () => {
 
         dispatch(actions.adminDashboardSystemAlerts(wrappedRequest))
             .then(() => {
-                /* istanbul ignore else */
+                /* c8 ignore else */
                 if (action === SYSTEM_ALERT_ACTION.RESOLVE) {
                     closeDrawer();
                 }
@@ -75,8 +75,8 @@ const SystemAlerts = () => {
                 dispatch(actions.loadAdminDashboardToday());
             })
             .catch(
-                /* istanbul ignore next */ error => {
-                    /* istanbul ignore next */
+                /* c8 ignore next */ error => {
+                    /* c8 ignore next */
                     console.error(error);
                 },
             );
@@ -91,7 +91,7 @@ const SystemAlerts = () => {
                     fontWeight: '300',
                 }}
             >
-                {txt.title(adminDashboardSystemAlertsData?.length ?? /* istanbul ignore next */ '')}
+                {txt.title(adminDashboardSystemAlertsData?.length ?? /* c8 ignore next */ '')}
                 {!!adminDashboardSystemAlertsData && !!adminDashboardSystemAlertsLoading && (
                     <CircularProgress color="inherit" size={20} sx={{ marginInlineStart: 1 }} />
                 )}
@@ -127,7 +127,7 @@ const SystemAlerts = () => {
                     {!!adminDashboardSystemAlertsData && (
                         <>
                             <DataGrid
-                                rows={adminDashboardSystemAlertsData ?? /* istanbul ignore next */ []}
+                                rows={adminDashboardSystemAlertsData ?? /* c8 ignore next */ []}
                                 columns={columns}
                                 sortingOrder={['asc', 'desc']}
                                 initialState={{

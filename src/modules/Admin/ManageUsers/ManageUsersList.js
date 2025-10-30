@@ -344,7 +344,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             fullWidth: true,
             fullScreen: isMobileView,
             onClose: (e, reason) => {
-                /* istanbul ignore else */
+                /* c8 ignore else */
                 if (reason !== 'backdropClick') {
                     handleCancel(table)();
                 }

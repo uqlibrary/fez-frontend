@@ -55,7 +55,7 @@ const DeleteRecord = () => {
     const onSubmit = safelyHandleSubmit(async () => {
         const payload = mergeWithFormValues({ publication: { ...recordToDelete } });
         // unfortunately, RTL doesn't render the editor as the browser does
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (payload.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText) {
             payload.publication.fez_record_search_key_deletion_notes.rek_deletion_notes =
                 payload.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText;
@@ -80,7 +80,7 @@ const DeleteRecord = () => {
         const errorObject = formsLocale.forms.deleteRecordForm.errorCustom[key]?.find(customError => {
             return customError.httpStatus === statusCode;
         });
-        /* istanbul ignore next */
+        /* c8 ignore next */
         return errorObject ? errorObject.message : formsLocale.forms.deleteRecordForm.errorAlert.message;
     };
 

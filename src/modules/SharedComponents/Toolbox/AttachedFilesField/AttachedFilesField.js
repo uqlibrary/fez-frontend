@@ -41,14 +41,14 @@ export const AttachedFilesField = ({ onRenameAttachedFile, onDeleteAttachedFile,
     const getState = () =>
         !!formValues.fez_datastream_info
             ? formValues.fez_datastream_info
-            : props?.state?.defaultValue || /* istanbul ignore next */ [];
+            : props?.state?.defaultValue || /* c8 ignore next */ [];
 
     const [dataStreams, setDataStreams] = useState(getState);
     const newPropsDataStreams = getState();
     const newPropsDataStreamsString = JSON.stringify(newPropsDataStreams);
 
     React.useEffect(() => {
-        /* istanbul ignore else */
+        /* c8 ignore else */
         if (newPropsDataStreamsString !== prevPropsDatastream.current) {
             prevPropsDatastream.current = newPropsDataStreamsString;
             setDataStreams(newPropsDataStreams);

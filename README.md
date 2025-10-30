@@ -522,7 +522,9 @@ where all sorts of detailed inspections are possible - network, DOM elements, et
 
 The above also applies to tests that fail on CI. In this case, the trace files need to be downloaded locally first. They
 are part of the artifacts uploaded to S3 as output of each test stage - please refer to the "Artifacts" section on
-the "Build Details" tab.
+the "Build Details" tab. 
+
+Instructions on how to download and use the trace files from failed tests on AWS can be found [in our Sharepoint developer docs](https://uq.sharepoint.com/:w:/r/teams/lbf4g4a1/LTSDevelopers%20Documents/How-to/Review%20failed%20AWS%20FE%20test.docx?d=wf59cd41009c94efd8492a59bd4a68df7&csf=1&web=1&e=aYBJlm)
 
 #### Standardised selectors to target elements
 
@@ -662,7 +664,7 @@ Note also that there are some elements that can not have `aria-label` as an attr
 1. `MyEditorialAppointments` component adds a custom `DatePicker` bar with a 'Current year' button. In MUI4 clicking this button would automatically clause the calendar popup, however in MUI5 this is no longer the case.
 
 ### Tests that could not be fixed
-Two tests have been Istanbul ignored in order to get the build passing. These are:
+Two tests have been c8 ignored in order to get the build passing. These are:
 
 1. AdminContainer
 1. MyIncompleteRecord

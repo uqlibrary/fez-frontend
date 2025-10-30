@@ -74,7 +74,7 @@ export const ChangeDisplayType = () => {
 
     // handles loading record on mount
     useEffect(() => {
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (!pid || record?.rek_pid) return;
         dispatch(loadRecordToView(pid));
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -170,7 +170,7 @@ export const ChangeDisplayType = () => {
                                         </Field>
                                     </Grid>
                                     {!!subitems && subitems.length > 0 && (
-                                        /* istanbul ignore next */
+                                        /* c8 ignore next */
                                         <Grid item xs={12}>
                                             <Field
                                                 control={control}
@@ -191,7 +191,7 @@ export const ChangeDisplayType = () => {
                             </StandardCard>
                         </Grid>
                         {alertProps && (
-                            /* istanbul ignore next */
+                            /* c8 ignore next */
                             <Grid item xs={12}>
                                 <Alert
                                     testId="change-display-type-submit-status"

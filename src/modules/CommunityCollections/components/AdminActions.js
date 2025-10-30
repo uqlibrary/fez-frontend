@@ -42,13 +42,13 @@ export const AdminActions = ({
         setAnchorEl(event.currentTarget);
     };
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const handleClose = () => {
         setAnchorEl(null);
     };
 
     const menuOptions = adminActions.map(action => {
-        /* istanbul ignore next */
+        /* c8 ignore next */
         const linkTarget = action.inApp ? '_self' : '_blank';
         const options = action.options || null;
         const url = action.url(pid);
@@ -58,7 +58,7 @@ export const AdminActions = ({
                 event => {
                     navigateToUrl(
                         url,
-                        /* istanbul ignore next */
+                        /* c8 ignore next */
                         event.ctrlKey || forceNewTab ? '_blank' : linkTarget,
                         !!action.isRecordEdit,
                         options,

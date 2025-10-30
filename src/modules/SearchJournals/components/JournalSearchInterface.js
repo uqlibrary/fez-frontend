@@ -33,7 +33,7 @@ export const JournalSearchInterface = ({
         setSnackbarNotify(true);
     };
     const handleSnackbarClose = (event, reason) => {
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (reason === 'clickaway') {
             return;
         }

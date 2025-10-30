@@ -250,7 +250,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         if (isValidOrcid(id)) {
             link = `${ORCID_BASE_URL}/${id}`;
         } else {
-            /* istanbul ignore else */
+            /* c8 ignore else */
             if (isValidROR(id)) {
                 link = `${ROR_BASE_URL}/${id}`;
             }
@@ -322,7 +322,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
 
     const renderSDG = publication => {
         const { fez_record_search_key_sdg: sdg, fez_record_search_key_sdg_source: sdgSource } = publication;
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (!sdg?.length || !sdgSource?.length) {
             return null;
         }
@@ -334,7 +334,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                     {sdg
                         .sort((a, b) => a.rek_sdg - b.rek_sdg)
                         .map((item, index) => {
-                            /* istanbul ignore next */
+                            /* c8 ignore next */
                             if (!item?.rek_sdg || !item?.rek_sdg_lookup) return null;
                             return (
                                 <li
@@ -353,7 +353,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                                     {sdgSource
                                         .sort((a, b) => a.rek_sdg_source - b.rek_sdg_source)
                                         .map((source, index) => {
-                                            /* istanbul ignore next */
+                                            /* c8 ignore next */
                                             if (
                                                 !source?.rek_sdg_source ||
                                                 !source?.rek_sdg_source_lookup ||
@@ -362,7 +362,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                                                 return null;
                                             }
                                             const icon = source.rek_sdg_source_lookup.toLowerCase?.().trim();
-                                            /* istanbul ignore next */
+                                            /* c8 ignore next */
                                             if (!icon) return null;
                                             return (
                                                 <Tooltip title={source.rek_sdg_source_lookup}>

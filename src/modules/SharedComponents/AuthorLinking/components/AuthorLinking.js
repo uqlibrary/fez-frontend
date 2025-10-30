@@ -127,7 +127,7 @@ export const AuthorLinking = ({
             itemsPerRow = 3;
         }
 
-        /* istanbul ignore else  */
+        /* c8 ignore else  */
         if (authors.length > 0) {
             let j = 0;
             for (let i = 0; i < authors.length; i += itemsPerRow) {

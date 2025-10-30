@@ -94,7 +94,7 @@ export const getValidPageSize = (defaultSize, pageSize) => {
     if (doesListContainItem(defaultSize, +pageSize)) {
         validPageSize = +pageSize;
     } else {
-        /* istanbul ignore else */
+        /* c8 ignore else */
         if (!!locale.components?.favouriteJournals?.sortingDefaults?.pageSize) {
             validPageSize = locale.components.favouriteJournals.sortingDefaults.pageSize;
         } else {
@@ -498,7 +498,7 @@ export const FAVOURITE_SEARCH_LIST_API = ({ id } = { id: undefined }) => ({
     apiUrl: `favourite_search${!!id ? `/${id}` : ''}`,
 });
 
-/* istanbul ignore next */
+/* c8 ignore next */
 export const JOURNAL_API = ({ id, isEdit = false }) => ({
     apiUrl: `journals/${id}${isEdit ? '?from=admin-form' : ''}`,
 });

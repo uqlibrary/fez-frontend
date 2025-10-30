@@ -3,11 +3,12 @@ import diff from 'microdiff';
 
 // note: dd usage is stripped by WebpackStrip for dist builds
 global.dd = (...args) => args.forEach(arg => console.dir.bind(console)(arg, { depth: null }));
-/* istanbul ignore next */
+/* c8 ignore next */
 global.dc = console.log;
 global.dj = (...args) => args.forEach(arg => console.log.bind(console)(JSON.stringify(arg)));
 
-export const tryCatch = (callback, _default = undefined) => {
+/* c8 ignore next */
+const tryCatch = (callback, _default = undefined) => {
     try {
         return callback();
     } catch (e) {
@@ -17,9 +18,9 @@ export const tryCatch = (callback, _default = undefined) => {
 
 export const isDevEnv = () => tryCatch(() => process.env.BRANCH === 'development', false);
 export const isJestTest = () => tryCatch(() => !!process.env.JEST_WORKER_ID, false);
-/* istanbul ignore next */
+/* c8 ignore next */
 export const isPlaywrightTest = () => tryCatch(() => !!process?.env?.PW_IS_RUNNING, false);
-/* istanbul ignore next */
+/* c8 ignore next */
 export const isTest = () => isJestTest() || isPlaywrightTest();
 
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
@@ -40,7 +41,7 @@ export const stripHtml = html => {
     }
     const temporalDivElement = document.createElement('div');
     temporalDivElement.innerHTML = html.replace(/<(?:br|p)[^>]*>/gim, ' ').replace(/\s+/, ' ');
-    /* istanbul ignore next */
+    /* c8 ignore next */
     return temporalDivElement.textContent || temporalDivElement.innerText || '';
 };
 

@@ -79,7 +79,7 @@ const RelatedServiceListEditor = ({
     }, []);
 
     const moveUpRelatedService = useCallback((relatedService, index) => {
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (index === 0) return;
 
         setRelatedServices(prevRelatedServices => {
@@ -99,7 +99,7 @@ const RelatedServiceListEditor = ({
 
     const moveDownRelatedService = useCallback((relatedService, index) => {
         setRelatedServices(prevRelatedServices => {
-            /* istanbul ignore next */
+            /* c8 ignore next */
             if (index === prevRelatedServices.length - 1) return prevRelatedServices;
             const nextRelatedService = prevRelatedServices[index + 1];
             return [
@@ -155,7 +155,7 @@ const RelatedServiceListEditor = ({
     return (
         <div>
             {errorMessage && (
-                /* istanbul ignore next */ <Alert
+                /* c8 ignore next */ <Alert
                     title={this.props.locale.errorTitle}
                     message={errorMessage}
                     type="warning"

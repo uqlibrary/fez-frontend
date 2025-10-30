@@ -185,7 +185,7 @@ export const AdminInterface = ({
         event.preventDefault();
         const navigateToViewPage = () => navigate(pathConfig.records.view(record.rek_pid));
         if (!!record.rek_pid) {
-            /* istanbul ignore next */
+            /* c8 ignore next */
             record.rek_editing_user === authorDetails.username
                 ? dispatch(actions.unlockRecord(record.rek_pid, navigateToViewPage))
                 : navigateToViewPage();
@@ -250,8 +250,7 @@ export const AdminInterface = ({
                         <TabSubComponent
                             disabled={
                                 isSubmitting ||
-                                (locked &&
-                                    /* istanbul ignore  next */ record.rek_editing_user !== authorDetails.username)
+                                (locked && /* c8 ignore  next */ record.rek_editing_user !== authorDetails.username)
                             }
                             name={`${tab}Section`}
                         />
@@ -376,7 +375,7 @@ export const AdminInterface = ({
                         {...alertProps.current}
                         {...(hasServerError
                             ? {
-                                  action: /* istanbul ignore next */ () => {
+                                  action: /* c8 ignore next */ () => {
                                       resetServerErrors();
                                   },
                                   actionButtonLabel: txt.current.alerts.errorAlert.clear,

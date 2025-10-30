@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import Popper from '@mui/material/Popper';
 
-/* istanbul ignore next */
+/* c8 ignore next */
 const styles = theme => ({
     popper: {
         [theme.breakpoints.down('sm')]: {

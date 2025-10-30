@@ -42,7 +42,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
     const [sortDirection, setSortDirection] = React.useState('Asc');
     const [sortBy, setSortBy] = React.useState('title');
     React.useEffect(() => {
-        /* istanbul ignore else */
+        /* c8 ignore else */
         if (open) {
             dispatch(
                 actions.loadCCCollectionsList({

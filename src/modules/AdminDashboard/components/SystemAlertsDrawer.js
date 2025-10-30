@@ -44,7 +44,7 @@ const handleCopyCreatorUsername = data => navigator?.clipboard?.writeText?.(data
  */
 const renderCopyCreatorUsernameButton = row => {
     const data = row?.creator?.usr_username;
-    /* istanbul ignore next */
+    /* c8 ignore next */
     if (!data) return null;
 
     const id = row?.sat_id;
@@ -88,16 +88,16 @@ const renderCreatorsUsername = row => {
 
 const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpdate }) => {
     const config = useSelector(
-        state => state.get('adminDashboardConfigReducer')?.adminDashboardConfigData || /* istanbul ignore next */ {},
+        state => state.get('adminDashboardConfigReducer')?.adminDashboardConfigData || /* c8 ignore next */ {},
     );
-    const users = React.useMemo(() => config.admin_users ?? /* istanbul ignore next */ [], [config.admin_users]);
+    const users = React.useMemo(() => config.admin_users ?? /* c8 ignore next */ [], [config.admin_users]);
 
     const getAdminUserList = () => {
         const unassignedOptionLabel = locale.alertStatus.UNASSIGNED;
-        const currentUser = config.logged_in_user || /* istanbul ignore next */ {};
+        const currentUser = config.logged_in_user || /* c8 ignore next */ {};
         const defaultOption = { id: 0, preferred_name: unassignedOptionLabel };
         // Sort user's names alphabetically
-        /* istanbul ignore next */
+        /* c8 ignore next */
         users.sort((a, b) => {
             const nameA = a.preferred_name.toUpperCase(); // ignore upper and lowercase
             const nameB = b.preferred_name.toUpperCase(); // ignore upper and lowercase
@@ -125,14 +125,14 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
     let buttonLabel;
     if (!!!row?.sat_assigned_to || !!row?.sat_resolved_by) buttonLabel = null;
     else {
-        /* istanbul ignore else */
+        /* c8 ignore else */
         if (!!row?.sat_assigned_to && !row?.sat_resolved_by) {
             buttonLabel = !adminDashboardSystemAlertsUpdating ? txt.markResolved : txt.updating;
         }
     }
 
     const handleCloseDrawer = props => {
-        /* istanbul ignore else */
+        /* c8 ignore else */
         if (!adminDashboardSystemAlertsUpdating) onCloseDrawer(props);
     };
 

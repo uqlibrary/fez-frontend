@@ -44,7 +44,7 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
      * @returns void
      */
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const handleKeywordClick = React.useCallback(
         (isSelected, type, keyword, cvoId) => {
             if (!!!isSelected) {
@@ -64,7 +64,7 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
      * @param {string} keyword Keyword string
      * @returns void
      */
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const handleSubjectKeywordClick = React.useCallback(
         (isSelected, keyword, cvoId) => {
             handleKeywordClick(isSelected, txt.forCodeMatch.chipTitle, keyword, cvoId);
@@ -79,7 +79,7 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
      * @param {string} keyword Keyword string
      * @returns void
      */
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const handleTitleKeywordClick = React.useCallback(
         (isSelected, keyword) => {
             return handleKeywordClick(isSelected, txt.titleMatch.chipTitle, keyword);
@@ -94,7 +94,7 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
      * @param {string} keyword Keyword string
      * @returns void
      */
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const handleKeywordsKeywordClick = React.useCallback(
         (isSelected, keyword) => {
             return handleKeywordClick(isSelected, txt.keywordMatch.chipTitle, keyword);

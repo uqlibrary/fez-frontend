@@ -136,7 +136,7 @@ export const ViewRecord = () => {
             (recordToView &&
                 shouldHandleAuthorAffiliations(recordToView.rek_display_type, recordToView.rek_subtype) &&
                 composeAuthorAffiliationProblems(recordToView)) ||
-            /* istanbul ignore next */ [];
+            /* c8 ignore next */ [];
         if (recordToView?.fez_internal_notes?.ain_detail) {
             Component =
                 Problems.length > 0 ? (

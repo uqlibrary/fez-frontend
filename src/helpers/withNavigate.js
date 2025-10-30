@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation, useNavigate, useNavigationType, useParams } from 'react-router-dom';
 
-/* istanbul ignore next */
+/* c8 ignore next */
 export const withNavigate = () => Component => props => {
     const navigate = useNavigate();
     const navigationType = useNavigationType();

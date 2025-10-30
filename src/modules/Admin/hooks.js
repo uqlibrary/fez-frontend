@@ -22,11 +22,11 @@ export const getInitialValuesForForm = (recordToView, createMode) => {
     };
     if (createMode || !!!recordToView?.rek_object_type_lookup) return initialFormValues;
     const recordType = (
-        (recordToView || /* istanbul ignore next */ {}).rek_object_type_lookup || /* istanbul ignore next */ ''
+        (recordToView || /* c8 ignore next */ {}).rek_object_type_lookup || /* c8 ignore next */ ''
     ).toLowerCase();
     return (
         (!!recordToView && recordToView.rek_pid && getInitialFormValues(recordToView, recordType)) ||
-        /* istanbul ignore next */ {}
+        /* c8 ignore next */ {}
     );
 };
 export const useRecord = createMode => {
@@ -41,7 +41,7 @@ export const useRecord = createMode => {
 
     return {
         loadingRecordToView,
-        authorDetails: authorDetails ?? /* istanbul ignore next */ null,
+        authorDetails: authorDetails ?? /* c8 ignore next */ null,
         author,
         isDeleted,
         isJobCreated,
@@ -85,7 +85,7 @@ export const useFormOnChangeHook = (form, createMode) => {
             'bibliographicSection.fez_matched_journals',
         ],
     });
-    /* istanbul ignore next */
+    /* c8 ignore next */
     if (rekDisplayType === PUBLICATION_TYPE_THESIS && !!adminSectionRekSubtype && !!!bibliographicSectionRekGenreType) {
         form.setValue('bibliographicSection.rek_genre_type', adminSectionRekSubtype);
     }
@@ -93,7 +93,7 @@ export const useFormOnChangeHook = (form, createMode) => {
     // AD-290 Remove the subtype key if the selected display type does not have subtypes
     const selectedPublicationType = !!rekDisplayType && publicationTypes({ ...recordForms }, true)[rekDisplayType];
     const hasSubtypes = !!(selectedPublicationType || {}).subtypes;
-    /* istanbul ignore next */
+    /* c8 ignore next */
     if (createMode && !hasSubtypes && Object.hasOwn(form.getValues()?.adminSection ?? {}, 'rek_subtype')) {
         form.unregister('adminSection.rek_subtype');
     }
@@ -109,7 +109,7 @@ export const useFormOnChangeHook = (form, createMode) => {
         prevBibliographicSectionFezMatchedJournals.current = bibliographicSectionFezMatchedJournals.id;
         const issns =
             bibliographicSectionFezMatchedJournals?.fez_journal_issn?.map(
-                /* istanbul ignore next */ issn => ({
+                /* c8 ignore next */ issn => ({
                     rek_value: {
                         key: issn.jnl_issn,
                         value: {
@@ -119,7 +119,7 @@ export const useFormOnChangeHook = (form, createMode) => {
                     },
                 }),
             ) || [];
-        /* istanbul ignore next */
+        /* c8 ignore next */
         if (bibliographicSectionFezMatchedJournals.value) {
             form.setValue(
                 'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',
@@ -127,7 +127,7 @@ export const useFormOnChangeHook = (form, createMode) => {
                 { shouldValidate: true, shouldDirty: true },
             );
         }
-        const bibliographicSectionIssns = form.getValues('bibliographicSection.issns') || /* istanbul ignore next */ [];
+        const bibliographicSectionIssns = form.getValues('bibliographicSection.issns') || /* c8 ignore next */ [];
         // create new array, filter out any dupes
         const updatedBibliographicSectionIssns = unionBy(bibliographicSectionIssns, issns, 'rek_value.key');
         form.setValue('bibliographicSection.issns', updatedBibliographicSectionIssns);

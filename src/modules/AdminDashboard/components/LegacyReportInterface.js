@@ -26,7 +26,7 @@ export const validator = ({ locale, actionState }) => {
                     ...(exportReportFilters[key]?.validator({
                         state: actionState,
                         locale,
-                    }) || /* istanbul ignore next */ {}),
+                    }) || /* c8 ignore next */ {}),
                 }),
                 {},
             );

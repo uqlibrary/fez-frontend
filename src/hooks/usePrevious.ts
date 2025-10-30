@@ -6,7 +6,7 @@ export function usePrevious<T>(value: T): T | undefined {
     // sync prev upon value changes
     useEffect(() => {
         // fix to make it work with strict mode on dev env
-        if (value === prev.current) /* istanbul ignore next */ return;
+        if (value === prev.current) /* c8 ignore next */ return;
         prev.current = value;
     }, [value]);
 

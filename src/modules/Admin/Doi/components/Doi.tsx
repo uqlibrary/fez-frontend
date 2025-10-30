@@ -117,7 +117,7 @@ export const getInvalidPreviewFields = (record: FezRecord) => {
     const previewFields = !!displayType && !!doiFields[displayType] && doiFields[displayType].fields;
     const invalidPreviewFields: string[] = [];
 
-    // istanbul ignore next
+    // c8 ignore next
     if (!previewFields) {
         return invalidPreviewFields;
     }
@@ -328,7 +328,7 @@ export const Doi: React.FC<Doi> = ({
     }, [loadRecordToView, pidParam, record, resetDoi]);
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
-    /* istanbul ignore next */
+    /* c8 ignore next */
     React.useEffect(() => {
         if (doiUpdated) {
             showConfirmation();

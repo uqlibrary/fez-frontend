@@ -28,10 +28,10 @@ const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
 export const getDefaultCenter = geoCoords => {
     if (geoCoords.length > 0) {
         const minLngPoint = geoCoords.reduce((min, point) => (point.lng < min ? point.lng : min), geoCoords[0].lng);
-        /* istanbul ignore next */
+        /* c8 ignore next */
         const maxLngPoint = geoCoords.reduce((max, point) => (point.lng > max ? point.lng : max), geoCoords[0].lng);
         const minLatPoint = geoCoords.reduce((min, point) => (point.lat < min ? point.lat : min), geoCoords[0].lat);
-        /* istanbul ignore next */
+        /* c8 ignore next */
         const maxLatPoint = geoCoords.reduce((max, point) => (point.lat > max ? point.lat : max), geoCoords[0].lat);
         return {
             lng: (maxLngPoint + minLngPoint) / 2,
@@ -87,7 +87,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
             geoCoords.map(coord => {
                 bounds.current.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
             });
-            /* istanbul ignore next */
+            /* c8 ignore next */
             !!map && map.fitBounds(bounds.current);
         }
     }, [geoCoords, map]);
@@ -102,7 +102,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [geoCoords]);
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const updateState = (geoCoords, overlay) => {
         !!currentOverlay && currentOverlay.setMap(null);
         setCurrentOverlay(overlay);
@@ -110,17 +110,17 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         setIsSearch(false);
     };
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const onSearchBoxLoad = ref => {
         searchBox.current = ref;
     };
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const onDrawingManagerMounted = ref => {
         drawingManagerRef.current = ref;
     };
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const handleRectangleComplete = rectangle => {
         const ne = rectangle.getBounds().getNorthEast();
         const sw = rectangle.getBounds().getSouthWest();
@@ -136,7 +136,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         );
     };
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const handlePolygonComplete = polygon => {
         const points = polygon
             .getPath()
@@ -145,24 +145,24 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         updateState([...points, points[0]], polygon);
     };
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const handleMarkerComplete = marker => {
         updateState([{ lat: marker.getPosition().lat(), lng: marker.getPosition().lng() }], marker);
     };
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const onGoogleMapLoad = React.useCallback(map => {
         setMap(map);
         document.getElementById('rek-geographic-area').setAttribute('data-analyticsid', 'rek-geographic-area');
         document.getElementById('rek-geographic-area').setAttribute('data-testid', 'rek-geographic-area');
     }, []);
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const onUnmount = React.useCallback(function callback() {
         setMap(null);
     }, []);
 
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const onPlacesChanged = () => {
         const places = searchBox.current.getPlaces();
         const bounds = new window.google.maps.LatLngBounds();

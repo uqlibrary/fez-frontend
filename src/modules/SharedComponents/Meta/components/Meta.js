@@ -20,8 +20,7 @@ const sanitiseAndReplaceHtmlChars = (object, key, alternateKey) => {
     const text =
         (!!object[key] && object[key].length > 0 && object[key]) || (sanitisedFormattedText && object[alternateKey]);
     return (
-        text.length > 0 &&
-        text.replace(/[&<>]/g, replace => replaceHtmlChars[replace] || /* istanbul ignore next */ replace)
+        text.length > 0 && text.replace(/[&<>]/g, replace => replaceHtmlChars[replace] || /* c8 ignore next */ replace)
     );
 };
 

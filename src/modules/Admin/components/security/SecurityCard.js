@@ -31,10 +31,8 @@ export const SecurityCard = ({ disabled }) => {
     const formValues = form.getValues('securitySection');
     const isSuperAdmin = useSelector(state =>
         Boolean(
-            (
-                (state.get('accountReducer') || /* istanbul ignore next */ {}).authorDetails ||
-                /* istanbul ignore next */ {}
-            ).is_super_administrator,
+            ((state.get('accountReducer') || /* c8 ignore next */ {}).authorDetails || /* c8 ignore next */ {})
+                .is_super_administrator,
         ),
     );
 
@@ -155,8 +153,7 @@ export const SecurityCard = ({ disabled }) => {
                                             }}
                                             collections={record.fez_record_search_key_ismemberof}
                                             value={
-                                                form.getValues('securitySection.dataStreams') ??
-                                                /* istanbul ignore next */ ''
+                                                form.getValues('securitySection.dataStreams') ?? /* c8 ignore next */ ''
                                             }
                                         />
                                     </Grid>

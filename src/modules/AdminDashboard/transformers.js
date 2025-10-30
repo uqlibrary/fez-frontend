@@ -19,7 +19,7 @@ export const transformSystemAlertRequest = ({ user, action, row }) => {
 
     const request = filterObjectProps(row, keys);
     if (action === SYSTEM_ALERT_ACTION.ASSIGN) {
-        /* istanbul ignore else */
+        /* c8 ignore else */
         if (request.sat_assigned_to === 0) request.sat_assigned_to = null;
         request.sat_assigned_date = dateToUtc({ date: moment() });
     }

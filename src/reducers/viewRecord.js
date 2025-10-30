@@ -75,7 +75,7 @@ const handlers = {
         isLoadingDetailedHistory: false,
         recordDetailedHistory: action.payload,
     }),
-    [actions.DETAILED_HISTORY_LOADING_FAILED]: /* istanbul ignore next */ state => /* istanbul ignore next */ ({
+    [actions.DETAILED_HISTORY_LOADING_FAILED]: /* c8 ignore next */ state => /* c8 ignore next */ ({
         ...state,
         isLoadingDetailedHistory: false,
     }),

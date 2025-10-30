@@ -94,7 +94,7 @@ const JournalFieldsMap = [
                             >
                                 {data.label}
                                 {
-                                    /* istanbul ignore next */ !!data.subLabel && (
+                                    /* c8 ignore next */ !!data.subLabel && (
                                         <Box component={'span'} sx={{ ...classes?.subLabel }}>
                                             {data.subLabel}
                                         </Box>
@@ -192,18 +192,18 @@ const JournalFieldsMap = [
                 data,
                 tooltipLocale: tooltipLocale,
             });
-            /* istanbul ignore else */
+            /* c8 ignore else */
             if (published) {
                 output.push(published);
             }
-            /* istanbul ignore else */
+            /* c8 ignore else */
             if (publishedProps.status !== status.open) {
                 const { element: accepted, ...acceptedProps } = getIndicator({
                     type: types.accepted,
                     data,
                     tooltipLocale: tooltipLocale,
                 });
-                /* istanbul ignore else */
+                /* c8 ignore else */
                 if (acceptedProps.status) output.push(accepted);
             }
             return <>{output.map(item => item)}</>;

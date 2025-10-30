@@ -132,7 +132,7 @@ const AppClass = ({
     useEffect(() => {
         customRedirect &&
             location.pathname !== customRedirect.url &&
-            navigate(customRedirect.url, customRedirect.options ?? /* istanbul ignore next */ {});
+            navigate(customRedirect.url, customRedirect.options ?? /* c8 ignore next */ {});
     }, [customRedirect, location.pathname, navigate]);
 
     const toggleDrawer = () => {

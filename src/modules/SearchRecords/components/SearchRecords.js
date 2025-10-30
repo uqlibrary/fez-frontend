@@ -102,7 +102,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
      * @param {string} displayAs - the string value of the selected option
      */
     const onDisplayRecordsAsChanged = displayAs => {
-        setUserSelectedDisplayAs(displayAs === 'auto' ? /* istanbul ignore next */ null : displayAs);
+        setUserSelectedDisplayAs(displayAs === 'auto' ? /* c8 ignore next */ null : displayAs);
         displayRecordsAsChanged(displayAs);
     };
 
@@ -122,7 +122,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
     React.useEffect(() => {
         // Don't mess with location if the user is clicking a link to view record details.
         // PT #182603156
-        /* istanbul ignore else */
+        /* c8 ignore else */
         if (!location.pathname.startsWith('/view/')) {
             // we can't use location.state to send state around,
             // as state changes are async and might not be up-to-date

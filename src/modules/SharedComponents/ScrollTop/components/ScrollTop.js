@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import Fab from '@mui/material/Fab';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
-/* istanbul ignore next */
+/* c8 ignore next */
 const scrollWindowToTop = event => {
     event.preventDefault();
     document.getElementById('content-container').scrollTop = 0;
 };
 
 export const ScrollTop = ({ show = false, showAfter = 100 }) => {
-    /* istanbul ignore next */
+    /* c8 ignore next */
     const scrollableContainer = document.getElementById('content-container');
-    /* istanbul ignore next */
+    /* c8 ignore next */
     if (
         !!show &&
         !!scrollableContainer &&
