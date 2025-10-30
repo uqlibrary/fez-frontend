@@ -7,6 +7,10 @@ function setup(testProps = {}) {
     return rtlRender(<AuthorsPublicationTypesCountChart {...props} />);
 }
 
+jest.mock('./LazyChart', () => {
+    return require('./Chart').default;
+});
+
 describe('AuthorsPublicationTypesCountChart ', () => {
     it('should render with default props chart component', () => {
         const { container } = setup();

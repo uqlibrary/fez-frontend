@@ -3,6 +3,10 @@ import AuthorsPublicationsPerYearChart, { labelFormatter } from './AuthorsPublic
 import { rtlRender } from 'test-utils';
 // import currentAuthorStats from 'mock';
 
+jest.mock('./LazyChart', () => {
+    return require('./Chart').default;
+});
+
 const defaultProps = {
     className: 'barChart',
     /* prettier-ignore */
