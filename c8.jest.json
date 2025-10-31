@@ -1,0 +1,29 @@
+{
+    "$schema": "https://json.schemastore.org/c8.json",
+    "reporter": ["cobertura", "html", "json"],
+    "temp-directory": "coverage/jest-temp",
+    "report-dir": "coverage/jest",
+    "include": [
+        "src/modules/**/*.{js,jsx,ts,tsx}",
+        "src/modules/Index/*.{js,jsx,ts,tsx}",
+        "src/actions/*.{js,jsx,ts,tsx}",
+        "src/helpers/*.{js,jsx,ts,tsx}",
+        "src/middleware/*.{js,jsx,ts,tsx}",
+        "src/reducers/*.{js,jsx,ts,tsx}",
+        "src/repositories/routes.js",
+        "src/hooks/useForm.js",
+        "src/hooks/useValidatedForm.js",
+        "src/hooks/useDispatchOnce.ts",
+        "src/hooks/usePrevious.ts",
+        "src/hooks/useControlledVocabs.ts"
+    ],
+    "exclude": [
+        "playwright/**",
+        "src/**/*.test.{js,jsx,ts,tsx}",
+        "src/**/{index,locale,config}.js",
+        "src/**/containers/*.{js,jsx,ts,tsx}",
+        "src/**/test-utils.{ts,js}",
+        "src/modules/App/components/pages.js"
+    ],
+    "all": true
+}
