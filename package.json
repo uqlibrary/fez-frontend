@@ -348,6 +348,7 @@
       "react"
     ],
     "collectCoverage": true,
+    "coverageProvider": "v8",
     "coveragePathIgnorePatterns": [
       "<rootDir>/playwright/"
     ],
