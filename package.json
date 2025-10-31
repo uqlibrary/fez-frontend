@@ -32,7 +32,7 @@
     "test:e2e:debug": "playwright show-trace",
     "test:e2e:cc": "cross-env NODE_ENV=cc npm run test:e2e",
     "posttest:e2e:cc": "rm -rf .nyc_output",
-    "test:unit": "npx c8 --config=./c8.jest.json cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
+    "test:unit": "npm run c8:jest cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
     "test:unit:serial": "npm run test:unit -- --runInBand --coverageDirectory=coverage/jest-serial",
     "test:unit:ci": "npm run test:unit -- --ci --silent --no-warnings --testPathIgnorePatterns=\"$(jq -r '.jest.testPathIgnorePatterns | join(\"|\")' package.json)|$(paste -sd'|' jest-serial.txt | sed 's/[.[\\\\]*^$/\\\\\\\\&/g')\"",
     "test:unit:ci:nocoverage": "npm run test:unit:ci -- --no-coverage",
@@ -42,7 +42,7 @@
     "test:unit:watch": "npm run test:unit -- --watch --onlyChanged",
     "tsc": "./node_modules/typescript/bin/tsc",
     "tsc:watch": "./node_modules/typescript/bin/tsc --watch",
-    "c8:jest": "npx c8 --config=./c8.jest.json",
+    "c8:jest": "NODE_OPTIONS='--max-old-space-size=8192' npx c8 --config=./c8.jest.json",
     "c8:playwright": "npx c8 --config=./c8.playwright.json"
   },
   "devDependencies": {

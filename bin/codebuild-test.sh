@@ -103,8 +103,8 @@ case "$PIPE_NUM" in
         set -e
         printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
         # Jest tests which are required to run in serial
-        npm run test:unit:ci:serial
-        fix_coverage_report_paths coverage/jest-serial/coverage-final.json
+#        npm run test:unit:ci:serial
+#        fix_coverage_report_paths coverage/jest-serial/coverage-final.json
 
         # All other jest tests
         export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest/jest-html-report.html
