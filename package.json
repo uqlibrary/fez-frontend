@@ -412,30 +412,5 @@
     "snapshotSerializers": [
       "<rootDir>/utils/jest-serializer.ts"
     ]
-  },
-  "nyc": {
-    "reporter": [
-      "html",
-      "text-summary",
-      "json"
-    ],
-    "temp-dir": "coverage/temp",
-    "include": [
-      "src/modules/**/*.{js,jsx,ts,tsx}",
-      "src/modules/Index/*.{js,jsx,ts,tsx}",
-      "src/actions/*.{js,jsx,ts,tsx}",
-      "src/helpers/*.{js,jsx,ts,tsx}",
-      "src/middleware/*.{js,jsx,ts,tsx}",
-      "src/reducers/*.{js,jsx,ts,tsx}",
-      "src/repositories/routes.js"
-    ],
-    "exclude": [
-      "src/**/{index,locale,config,pages}.js",
-      "src/**/containers/*.{js,jsx,ts,tsx}",
-      "src/**/*.test.{js,jsx,ts,tsx}",
-      "src/modules/Admin/hooks.js",
-      "src/modules/SharedComponents/Toolbox/MenuDrawer/components/MenuDrawer.tsx"
-    ],
-    "all": true
   }
 }
