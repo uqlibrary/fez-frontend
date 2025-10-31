@@ -28,7 +28,7 @@ const AudioPlayer = ({ fileName }) => {
         setIsPlaying(false);
     };
 
-    /* c8 ignore next */
+    /* istanbul ignore next */
     const onAudioStreamEnd = () => {
         setIsPlaying(false);
     };

@@ -2,15 +2,15 @@
 
 const { resolve, join } = require('path');
 const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const RobotsTxtPlugin = require('robotstxt-webpack-plugin');
+const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const { EsbuildPlugin } = require('esbuild-loader');
 
 const options = {
     policy: [
@@ -113,14 +113,15 @@ const webpackConfig = {
             {
                 test: /\.(j|t)sx?$/,
                 include: [resolve(__dirname, 'src')],
-                exclude: [/node_modules/, /custom_modules/, /src\/mock/],
+                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
                 use: {
-                    loader: 'esbuild-loader',
+                    loader: 'babel-loader',
                     options: {
-                        tsconfig: './tsconfig.webpack-dist.json',
-                        loader: 'tsx',
-                        target: 'es2020',
-                        jsx: 'automatic',
+                        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+                        plugins: [
+                            '@babel/plugin-proposal-export-default-from',
+                            ['@babel/plugin-transform-spread', { loose: true }],
+                        ].filter(Boolean),
                     },
                 },
             },
@@ -199,7 +200,7 @@ const webpackConfig = {
             openAnalyzer: !process.env.CI_BRANCH,
         }),
         new ESLintPlugin({ exclude: ['node_modules', 'custom_modules'] }),
-        new RobotsTxtPlugin(options),
+        new RobotstxtPlugin(options),
         {
             // custom plugin that fires at the end of the build process, and outputs
             // a list of the last 20 git hashes to a file. Note that the function is
@@ -228,7 +229,18 @@ const webpackConfig = {
                 },
             },
         },
-        minimizer: [new EsbuildPlugin()],
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    sourceMap: false,
+                    compress: {
+                        drop_console: true,
+                    },
+                },
+                parallel: true,
+                extractComments: true,
+            }),
+        ],
     },
     resolve: {
         descriptionFiles: ['package.json'],

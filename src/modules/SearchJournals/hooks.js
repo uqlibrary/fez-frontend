@@ -87,7 +87,7 @@ export const useSelectedJournals = ({ state = {}, available = {} }) => {
                 });
                 // countSelectedJournals() + 1 because selectedJournals is not instantly updated
                 // upon setSelectedJournals is called
-                /* c8 ignore else */
+                /* istanbul ignore else */
                 if (available.length > 0 && available.length === countSelectedJournals() + 1) {
                     setIsAllSelected(true);
                 }

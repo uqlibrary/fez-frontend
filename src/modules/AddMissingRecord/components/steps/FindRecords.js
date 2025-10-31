@@ -42,7 +42,7 @@ export const FindRecords = () => {
             dispatch(searchPublications(sanitizeDoi(data.searchQuery)));
             navigate(pathConfig.records.add.results);
         } catch {
-            /* c8 ignore next */
+            /* istanbul ignore next */
             window.location.reload();
         }
     });

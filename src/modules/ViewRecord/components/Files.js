@@ -35,7 +35,7 @@ export const getSecurityAccess = (dataStream, props) => {
         isAuthor ||
         (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 5) ||
         (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 4) ||
-        /* c8 ignore next */
+        /* istanbul ignore next */
         (author && author.pol_id && dataStream.dsi_security_policy >= author.pol_id)
     );
 };
@@ -377,8 +377,9 @@ const Files = props => {
                     <Alert allowDismiss type={'info'} message={getSensitiveHandlingNote(publication)} />
                 )}
                 {
-                    /* c8 ignore next */ !!fileData.filter(({ requiresLoginToDownload }) => requiresLoginToDownload)
-                        .length > 0 && (
+                    /* istanbul ignore next */ !!fileData.filter(
+                        ({ requiresLoginToDownload }) => requiresLoginToDownload,
+                    ).length > 0 && (
                         <Alert {...{ ...globalLocale.global.loginAlertForFiles, action: redirectUserToLogin() }} />
                     )
                 }

@@ -126,7 +126,7 @@ export class SearchComponent extends PureComponent {
                 simpleSearch: {
                     ...newState.simpleSearch,
                     searchText:
-                        /* c8 ignore next */
+                        /* istanbul ignore next */
                         props.searchQueryParams?.all?.value ||
                         (typeof props.searchQueryParams?.all === 'string' && props.searchQueryParams?.all) ||
                         '',
@@ -159,7 +159,7 @@ export class SearchComponent extends PureComponent {
                 Object.keys(searchQueryParams).filter(item => {
                     return item !== 'rek_display_type';
                 })) ||
-            /* c8 ignore next */ [];
+            /* istanbul ignore next */ [];
 
         if (fieldRows.length === 0) {
             return [defaultFieldRow];
@@ -225,7 +225,7 @@ export class SearchComponent extends PureComponent {
     };
 
     parseDateRange = range => {
-        /* c8 ignore next */
+        /* istanbul ignore next */
         if (range.indexOf(' to ') < 1) {
             return {};
         }
@@ -260,7 +260,7 @@ export class SearchComponent extends PureComponent {
     };
 
     handleSearch = searchQuery => {
-        /* c8 ignore next */
+        /* istanbul ignore next */
         if (!searchQuery) {
             return;
         }

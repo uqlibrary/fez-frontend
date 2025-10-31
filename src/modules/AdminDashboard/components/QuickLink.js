@@ -58,7 +58,7 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
         setAnchorEl(event.currentTarget);
     };
 
-    /* c8 ignore next */
+    /* istanbul ignore next */
     const handleClose = () => {
         setAnchorEl(null);
     };

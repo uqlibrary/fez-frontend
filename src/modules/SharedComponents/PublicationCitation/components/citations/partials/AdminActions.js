@@ -38,7 +38,7 @@ export const AdminActions = ({
         setAnchorEl(event.currentTarget);
     };
 
-    /* c8 ignore next */
+    /* istanbul ignore next */
     const handleClose = () => {
         setAnchorEl(null);
     };

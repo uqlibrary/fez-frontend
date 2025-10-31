@@ -61,7 +61,7 @@ export const CommunityList = () => {
     const dispatch = useDispatch();
 
     const queryStringObject = queryString.parse(
-        /* c8 ignore next*/
+        /* istanbul ignore next*/
         location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
         { ignoreQueryPrefix: true },
     );

@@ -45,9 +45,9 @@ const PossiblyMyRecords: React.FC = () => {
     const dispatch = useDispatch();
     const confirmDialogBoxRef = useRef<{ showConfirmation: () => void } | null>(null);
 
-    // c8 ignore next
+    // istanbul ignore next
     const accountLoading = useSelector((state: AppState) => state?.get('accountReducer').accountLoading || false);
-    // c8 ignore next
+    // istanbul ignore next
     const {
         possibleCounts = 0,
         hidePublicationFailed = false,
@@ -102,7 +102,7 @@ const PossiblyMyRecords: React.FC = () => {
             navigationType === 'POP' &&
             location.pathname === pathConfig.records.possible
         ) {
-            // c8 ignore next
+            // istanbul ignore next
             const newState = location.state ? { ...location.state } : { ...initialState };
             setState(prevState => ({
                 ...prevState,
@@ -142,7 +142,7 @@ const PossiblyMyRecords: React.FC = () => {
     if (accountLoading) return null;
 
     const hidePublication = (): void => {
-        // c8 ignore next
+        // istanbul ignore next
         if (!state.publicationToHide) {
             return;
         }

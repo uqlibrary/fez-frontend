@@ -35,13 +35,13 @@ export const PageNotFound = () => {
         return <StandardPage standardPageId="permission-denied" {...locale.pages.permissionDenied} />;
     }
     if ((isValidRoute || isValidFileRoute) && !account) {
-        // c8 ignore next
+        // istanbul ignore next
         if (
             process.env.NODE_ENV !== 'test' &&
             process.env.NODE_ENV !== 'cc' &&
             process.env.NODE_ENV !== 'development'
         ) {
-            // c8 ignore next
+            // istanbul ignore next
             window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
         }
         return <StandardPage standardPageId="authentication-required" {...locale.pages.authenticationRequired} />;

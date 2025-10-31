@@ -116,11 +116,11 @@ export const filesParams = record => ({
 });
 
 const getInitialValues = (record, tab, tabParams = () => {}) => {
-    /* c8 ignore next */
+    /* istanbul ignore next */
     if (!adminInterfaceConfig || typeof adminInterfaceConfig[record.rek_display_type] === 'undefined') {
         return false;
     }
-    return (adminInterfaceConfig[record.rek_display_type] || /* c8 ignore next */ {})
+    return (adminInterfaceConfig[record.rek_display_type] || /* istanbul ignore next */ {})
         [tab](tabParams(record))
         ?.map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
@@ -135,7 +135,7 @@ const getInitialValues = (record, tab, tabParams = () => {}) => {
 export const getInitialFormValues = (recordToView, recordType) => {
     const _recordToView = { ...recordToView };
     const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(_recordToView, 'files', filesParams);
-    const validDataStreams = (dataStreams || /* c8 ignore next */ []).filter(
+    const validDataStreams = (dataStreams || /* istanbul ignore next */ []).filter(
         isFileValid(viewRecordsConfig, true, true),
     );
     return {
@@ -168,7 +168,7 @@ export const getInitialFormValues = (recordToView, recordType) => {
                     recordType === RECORD_TYPE_COMMUNITY ||
                     recordType === RECORD_TYPE_COLLECTION) &&
                     getInitialValues(_recordToView, 'bibliographic', bibliographicParams)) ||
-                /* c8 ignore next */ {},
+                /* istanbul ignore next */ {},
             authorsSection:
                 (recordType === RECORD_TYPE_RECORD && getInitialValues(_recordToView, 'authors', authorsParams)) || {},
             adminSection:
@@ -188,7 +188,7 @@ export const getInitialFormValues = (recordToView, recordType) => {
                     recordType === RECORD_TYPE_COMMUNITY ||
                     recordType === RECORD_TYPE_COLLECTION) &&
                     getInitialValues(_recordToView, 'notes')) ||
-                /* c8 ignore next */ {},
+                /* istanbul ignore next */ {},
             reasonSection:
                 ((recordType === RECORD_TYPE_COMMUNITY || recordType === RECORD_TYPE_COLLECTION) &&
                     getInitialValues(_recordToView, 'reason')) ||

@@ -79,9 +79,9 @@ export const AdminContainer = ({ createMode = false }) => {
         try {
             await onSubmit(data, dispatch, { setServerError: form.setServerError, params: { pid } });
         } catch (e) {
-            /* c8 ignore next */
+            /* istanbul ignore next */
             console.log(e);
-            /* c8 ignore next */
+            /* istanbul ignore next */
             form.setServerError(form.setError, e);
         }
     };
@@ -94,11 +94,11 @@ export const AdminContainer = ({ createMode = false }) => {
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
 
-    tabErrors.current = Object.entries(formErrors || /* c8 ignore next */ {}).reduce(
+    tabErrors.current = Object.entries(formErrors || /* istanbul ignore next */ {}).reduce(
         (numberOfErrors, [key, errorObject]) => {
             return {
                 ...numberOfErrors,
-                ...(!!errorObject ? { [key]: Object.values(errorObject).length } : /* c8 ignore next */ {}),
+                ...(!!errorObject ? { [key]: Object.values(errorObject).length } : /* istanbul ignore next */ {}),
             };
         },
         {},

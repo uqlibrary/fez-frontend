@@ -19,8 +19,9 @@ const StyledTableCell = styled(TableCell, {
 })(({ theme, isSelectable }) => ({
     borderBottomWidth: '2px',
     ...(isSelectable
-        ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* c8 ignore next */ {})
-        : /* c8 ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ?? /* c8 ignore next */ {})),
+        ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {})
+        : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
+          /* istanbul ignore next */ {})),
     [theme.breakpoints.down('sm')]: {
         verticalAlign: 'top',
         paddingLeft: 0,
@@ -29,27 +30,27 @@ const StyledTableCell = styled(TableCell, {
     },
     [theme.breakpoints.up('sm')]: {
         ...(isSelectable
-            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* c8 ignore next */ {})
-            : /* c8 ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
-              /* c8 ignore next */ {})),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
+              /* istanbul ignore next */ {})),
     },
     [theme.breakpoints.up('md')]: {
         ...(isSelectable
-            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* c8 ignore next */ {})
-            : /* c8 ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
-              /* c8 ignore next */ {})),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
+              /* istanbul ignore next */ {})),
     },
     [theme.breakpoints.up('lg')]: {
         ...(isSelectable
-            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* c8 ignore next */ {})
-            : /* c8 ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
-              /* c8 ignore next */ {})),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
+              /* istanbul ignore next */ {})),
     },
     [theme.breakpoints.up('xl')]: {
         ...(isSelectable
-            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* c8 ignore next */ {})
-            : /* c8 ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
-              /* c8 ignore next */ {})),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
+              /* istanbul ignore next */ {})),
     },
 }));
 const classes = {
@@ -110,7 +111,7 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
                                     sx={{
                                         ...(!!header.collapsibleComponent?.hiddenHeader
                                             ? header.collapsibleComponent?.hiddenHeader
-                                            : /* c8 ignore next */ {}),
+                                            : /* istanbul ignore next */ {}),
                                         ...classes.inputLabel,
                                     }}
                                 >

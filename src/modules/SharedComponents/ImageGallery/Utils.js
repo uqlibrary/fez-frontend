@@ -31,7 +31,7 @@ export const getWhiteListed = (publication, config) => {
             type =>
                 type.viewType === publication.rek_display_type_lookup &&
                 (!!!type.subTypes || type.subTypes.some(subType => subType === publication.rek_subtype)),
-        ) ?? /* c8 ignore next */ false;
+        ) ?? /* istanbul ignore next */ false;
 
     return isAllowed;
 };
@@ -87,7 +87,7 @@ export const getUrl = (pid, fileName, checksum = '') => {
     const fullUrl = pid && fileName && pathConfig.file.url(pid, fileName, checksum);
     const url =
         fullUrl && process.env.USE_MOCK
-            ? /* c8 ignore next*/ `${process.env.GALLERY_IMAGE_PATH_PREPEND}${fullUrl.substr(
+            ? /* istanbul ignore next*/ `${process.env.GALLERY_IMAGE_PATH_PREPEND}${fullUrl.substr(
                   fullUrl.indexOf(fileName),
               )}`
             : (fullUrl ?? '');

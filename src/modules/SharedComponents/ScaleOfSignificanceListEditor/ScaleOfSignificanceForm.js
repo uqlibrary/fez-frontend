@@ -43,12 +43,12 @@ export const saveCallbackFactory = (
             return;
         }
         // add item if user hits 'enter' key on input field
-        /* c8 ignore next */
+        /* istanbul ignore next */
         if (
             !emptySignificance &&
             (disabled || !significance || !contributionStatement || (event && event.key && event.key !== 'Enter'))
         ) {
-            /* c8 ignore next */
+            /* istanbul ignore next */
             return;
         }
         // pass on the selected item
@@ -76,7 +76,7 @@ export const ScaleOfSignificanceForm = ({
     const [contributionStatement, setContributionStatement] = useState(null);
 
     React.useEffect(() => {
-        /* c8 ignore else */
+        /* istanbul ignore else */
         if (itemIndexSelectedToEdit !== null && formMode === 'edit') {
             setSignificance(itemSelectedToEdit.key);
             setContributionStatement(itemSelectedToEdit.value);
@@ -87,7 +87,7 @@ export const ScaleOfSignificanceForm = ({
     }, [itemIndexSelectedToEdit, itemSelectedToEdit, formMode]);
 
     React.useEffect(() => {
-        /* c8 ignore else */
+        /* istanbul ignore else */
         if (showForm) {
             setEmptySignificance(false);
         }
@@ -183,7 +183,7 @@ export const ScaleOfSignificanceForm = ({
                 <RichEditorField
                     richEditorId="rek-creator-contribution-statement"
                     name="value"
-                    id={(!!id && /* c8 ignore next */ id) || ''}
+                    id={(!!id && /* istanbul ignore next */ id) || ''}
                     onChange={handleContributionStatement}
                     onKeyPress={saveChanges}
                     error={!!errorText}

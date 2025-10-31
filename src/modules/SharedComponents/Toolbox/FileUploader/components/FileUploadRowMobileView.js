@@ -91,7 +91,7 @@ export const FileUploadRowMobileView = ({
                                         disableUnderline: true,
                                         autoFocus: index === focusOnIndex,
                                         onChange: onSecurityPolicyChange,
-                                        onBlur: /* c8 ignore next */ () => {},
+                                        onBlur: /* istanbul ignore next */ () => {},
                                     }}
                                     value={securityPolicy ?? ''}
                                     errorText={!securityPolicy && selectFields.securityPolicy.errorMessage}

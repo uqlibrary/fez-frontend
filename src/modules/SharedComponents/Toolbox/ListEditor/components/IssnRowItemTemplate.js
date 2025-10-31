@@ -52,7 +52,7 @@ export const IssnRowItemTemplate = React.memo(
         );
     },
     (prevProps, nextProps) =>
-        /* c8 ignore next */
+        /* istanbul ignore next */
         prevProps.item.key === nextProps.item.key &&
         prevProps.item.value.sherpaRomeo.link === nextProps.item.value.sherpaRomeo.link &&
         prevProps.item.value.ulrichs.link === nextProps.item.value.ulrichs.link,
@@ -133,7 +133,7 @@ export const mapStateToProps = (state, props) => {
     };
 };
 
-/* c8 ignore next */
+/* istanbul ignore next */
 export const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators(actions, dispatch),
 });
