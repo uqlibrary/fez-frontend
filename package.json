@@ -92,7 +92,6 @@
     "babel-jest": "^29.7.0",
     "babel-loader": "^9.1.2",
     "babel-plugin-dynamic-import-node": "^2.3.3",
-    "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "browser-update": "^3.3.28",
     "browserify": "^17.0.0",
@@ -226,11 +225,6 @@
   "optionalDependencies": {
     "fsevents": "^2.3.0"
   },
-  "overrides": {
-    "istanbul-lib-instrument": "6.0.1",
-    "@istanbuljs/schema": "0.1.3",
-    "istanbul-lib-coverage": "3.2.2"
-  },
   "engines": {
     "npm": ">=10.8.2",
     "node": ">=20.11.0"
@@ -318,8 +312,7 @@
               "corejs": false
             }
           ],
-          "@babel/plugin-proposal-export-default-from",
-          "istanbul"
+          "@babel/plugin-proposal-export-default-from"
         ]
       }
     }
@@ -419,30 +412,5 @@
     "snapshotSerializers": [
       "<rootDir>/utils/jest-serializer.ts"
     ]
-  },
-  "nyc": {
-    "reporter": [
-      "html",
-      "text-summary",
-      "json"
-    ],
-    "temp-dir": "coverage/temp",
-    "include": [
-      "src/modules/**/*.{js,jsx,ts,tsx}",
-      "src/modules/Index/*.{js,jsx,ts,tsx}",
-      "src/actions/*.{js,jsx,ts,tsx}",
-      "src/helpers/*.{js,jsx,ts,tsx}",
-      "src/middleware/*.{js,jsx,ts,tsx}",
-      "src/reducers/*.{js,jsx,ts,tsx}",
-      "src/repositories/routes.js"
-    ],
-    "exclude": [
-      "src/**/{index,locale,config,pages}.js",
-      "src/**/containers/*.{js,jsx,ts,tsx}",
-      "src/**/*.test.{js,jsx,ts,tsx}",
-      "src/modules/Admin/hooks.js",
-      "src/modules/SharedComponents/Toolbox/MenuDrawer/components/MenuDrawer.tsx"
-    ],
-    "all": true
   }
 }
