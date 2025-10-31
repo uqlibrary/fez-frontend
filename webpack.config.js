@@ -69,7 +69,6 @@ module.exports = {
                             '@babel/plugin-proposal-export-default-from',
                             ['@babel/plugin-transform-spread', { loose: true }],
                             enableFastRefresh && 'react-refresh/babel',
-                            'babel-plugin-istanbul',
                         ].filter(Boolean),
                         sourceMaps: true,
                         inputSourceMap: true,
