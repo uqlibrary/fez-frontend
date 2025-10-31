@@ -1,4 +1,4 @@
-/* c8 ignore file */
+/* istanbul ignore file */
 import React from 'react';
 import PropTypes from 'prop-types';
 

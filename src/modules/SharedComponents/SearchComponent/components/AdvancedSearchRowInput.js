@@ -130,12 +130,12 @@ const getInputProps = (inputField, value, onChange, label) => {
                 ...(value === '' || value.length === 0
                     ? {
                           selectProps: {
-                              renderValue /* c8 ignore next */: () => inputField.selectPrompt,
+                              renderValue /* istanbul ignore next */: () => inputField.selectPrompt,
                           },
                       }
                     : {
                           selectProps: {
-                              renderValue /* c8 ignore next */: () => value.join(', '),
+                              renderValue /* istanbul ignore next */: () => value.join(', '),
                           },
                       }),
             };

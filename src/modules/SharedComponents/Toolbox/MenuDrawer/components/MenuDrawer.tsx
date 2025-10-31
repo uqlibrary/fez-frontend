@@ -151,17 +151,17 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
     };
 
     const navigateToLink = (url: string, target: string = '_blank'): void => {
-        /* c8 ignore else */
+        /* istanbul ignore else */
         if (url) {
             if (url.indexOf('http') === -1) {
                 // internal link
                 navigate(url);
-            } /* c8 ignore else */ else {
+            } /* istanbul ignore else */ else {
                 // external link
                 window.open(url, target);
             }
         }
-        /* c8 ignore else */
+        /* istanbul ignore else */
         if (!docked) {
             onToggleDrawer();
         }

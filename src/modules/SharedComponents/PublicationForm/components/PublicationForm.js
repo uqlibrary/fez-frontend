@@ -150,7 +150,7 @@ const publicationTypeItems = [
             </MenuItem>
         )),
     ...NEW_DOCTYPES_OPTIONS.map((item, index) => {
-        /* c8 ignore next */
+        /* istanbul ignore next */
         return (
             <MenuItem value={item} key={`ntro-${index}`}>
                 {!!DOCTYPE_SUBTYPE_MAPPING[item] ? DOCTYPE_SUBTYPE_MAPPING[item].name : item}
@@ -265,7 +265,7 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isSubmitSuccessful]);
 
-    /* c8 ignore next */
+    /* istanbul ignore next */
     const handleDefaultSubmit = e => {
         e.preventDefault();
     };

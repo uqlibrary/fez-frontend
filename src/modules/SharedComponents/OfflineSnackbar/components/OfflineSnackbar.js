@@ -64,8 +64,8 @@ export const OfflineSnackbar = () => {
                 autoHideDuration={snackbarProps.autoHideDuration}
                 slotProps={{
                     clickAwayListener: {
-                        onClickAway: /* c8 ignore next */ () => {
-                            /* c8 ignore next */
+                        onClickAway: /* istanbul ignore next */ () => {
+                            /* istanbul ignore next */
                             return false;
                         },
                     },

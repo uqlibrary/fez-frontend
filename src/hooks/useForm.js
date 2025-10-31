@@ -143,7 +143,7 @@ const getPropsForAlert =
             if (isDevEnv()) {
                 const validationErrorsKeys = Object.keys(validationErrors);
                 const orderedErrorsKeys = Object.keys(orderedErrors);
-                /* c8 ignore next */
+                /* istanbul ignore next */
                 if (validationErrorsKeys.length !== orderedErrorsKeys.length) {
                     const result = Object.values(arrayDiff(validationErrorsKeys, orderedErrorsKeys));
                     console.error(getPropsForAlertInconsistencyWarning(result));

@@ -66,21 +66,21 @@ export const RelatedServiceListEditorRow = ({
     };
 
     const deleteRecord = () => {
-        /* c8 ignore else */
+        /* istanbul ignore else */
         if (!disabled && onDelete) {
             onDelete(relatedService, index);
         }
     };
 
     const moveUp = () => {
-        /* c8 ignore else */
+        /* istanbul ignore else */
         if (!disabled && onMoveUp) {
             onMoveUp(relatedService, index);
         }
     };
 
     const moveDown = () => {
-        /* c8 ignore else */
+        /* istanbul ignore else */
         if (!disabled && onMoveDown) {
             onMoveDown(relatedService, index);
         }

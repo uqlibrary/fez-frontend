@@ -60,9 +60,9 @@ const getIcon = ({ index, rowData, disabled, inProblemState }) => {
     } else if (parseInt(rowData.uqIdentifier, 10)) {
         return <HowToRegIcon color="primary" id={`contributor-linked-${index}`} />;
     }
-    /* c8 ignore next */
+    /* istanbul ignore next */
     if (disabled) {
-        /* c8 ignore next */
+        /* istanbul ignore next */
         return <Lock color="secondary" id={`contributor-locked-${index}`} />;
     }
     return (
@@ -239,7 +239,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     };
 
                     const handleKeyPress = event => {
-                        /* c8 ignore else */
+                        /* istanbul ignore else */
                         if (event.key === 'Enter') {
                             commitRowChanges(table);
                         }
@@ -319,7 +319,8 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                             affiliations:
                                 contributor.aut_id !== selectedItem.aut_id
                                     ? []
-                                    : /* c8 ignore next */ contributor.affiliations || /* c8 ignore next */ [],
+                                    : /* istanbul ignore next */ contributor.affiliations ||
+                                      /* istanbul ignore next */ [],
                         };
                         const updatedValues = {
                             ...row._valuesCache,
@@ -377,7 +378,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
 
     React.useEffect(() => {
         const listStr = JSON.stringify(list);
-        /* c8 ignore else */
+        /* istanbul ignore else */
         if (prevList.current !== listStr) {
             prevList.current = listStr;
             const result = [];
@@ -399,7 +400,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         const newAuthor = { ...row.original, ...row._valuesCache, ...values };
 
         const errors = validate(newAuthor);
-        /* c8 ignore if  */
+        /* istanbul ignore if  */
         if (!!errors) {
             return;
         }
@@ -425,7 +426,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
     const handleEdit = ({ values, table, row }) => {
         const updatedAuthor = { ...row.original, ...row._valuesCache, ...values };
         const errors = validate(updatedAuthor);
-        /* c8 ignore if  */
+        /* istanbul ignore if  */
         if (!!errors) {
             return;
         }
@@ -462,7 +463,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
             setData(dataDelete);
             onChange(dataDelete);
         } catch (error) {
-            /* c8 ignore next */
+            /* istanbul ignore next */
             console.error('Error deleting row:', error);
         } finally {
             setBusy(false);
@@ -607,7 +608,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
             disabled: !!pendingDeleteRowId || !!isBusy || !!editingRow || table.getState().creatingRow !== null,
         }),
         renderDetailPanel: ({ row }) => {
-            return !!!row.original.uqUsername || row.original.uqUsername === '' ? /* c8 ignore next */ null : (
+            return !!!row.original.uqUsername || row.original.uqUsername === '' ? /* istanbul ignore next */ null : (
                 <AuthorDetailPanel
                     rowData={row.original}
                     locale={locale}
@@ -650,7 +651,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                         <IconButton
                             onClick={() => {
                                 const index = row.index;
-                                /* c8 ignore else */
+                                /* istanbul ignore else */
                                 if (index > 0) {
                                     const newData = [...data];
                                     const temp = newData[index - 1];
@@ -679,7 +680,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                         <IconButton
                             onClick={() => {
                                 const index = row.index;
-                                /* c8 ignore else */
+                                /* istanbul ignore else */
                                 if (index < data.length - 1) {
                                     const newData = [...data];
                                     const temp = newData[index + 1];

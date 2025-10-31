@@ -80,7 +80,7 @@ const GrantListEditor = ({
     }, []);
 
     const moveUpGrant = useCallback((grant, index) => {
-        /* c8 ignore next */
+        /* istanbul ignore next */
         if (index === 0) return;
 
         setGrants(prevGrants => {
@@ -93,7 +93,7 @@ const GrantListEditor = ({
 
     const moveDownGrant = useCallback((grant, index) => {
         setGrants(prevGrants => {
-            /* c8 ignore next */
+            /* istanbul ignore next */
             if (index === prevGrants.length - 1) return prevGrants;
             const nextGrant = prevGrants[index + 1];
             return [...prevGrants.slice(0, index), nextGrant, grant, ...prevGrants.slice(index + 2)];
@@ -144,7 +144,7 @@ const GrantListEditor = ({
     return (
         <div>
             {errorMessage && (
-                /* c8 ignore next */ <Alert
+                /* istanbul ignore next */ <Alert
                     title={this.props.locale.errorTitle}
                     message={errorMessage}
                     type="warning"

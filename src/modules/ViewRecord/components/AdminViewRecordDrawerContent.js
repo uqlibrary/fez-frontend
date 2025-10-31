@@ -45,7 +45,7 @@ const AdminViewRecordDrawerContent = ({
                         size="large"
                     >
                         {
-                            /* c8 ignore next */
+                            /* istanbul ignore next */
                             themeDirection === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />
                         }
                     </IconButton>

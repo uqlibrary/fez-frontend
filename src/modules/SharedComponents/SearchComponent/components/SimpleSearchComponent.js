@@ -30,7 +30,7 @@ export const SimpleSearchComponent = ({
 }) => {
     const [state, _setState] = React.useState({
         showMobile: false,
-        /* c8 ignore next */
+        /* istanbul ignore next */
         searchTerm: searchText,
     });
 

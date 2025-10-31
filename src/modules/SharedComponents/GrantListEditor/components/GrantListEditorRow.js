@@ -67,21 +67,21 @@ export const GrantListEditorRow = ({
     };
 
     const deleteRecord = () => {
-        /* c8 ignore else */
+        /* istanbul ignore else */
         if (!disabled && onDelete) {
             onDelete(grant, index);
         }
     };
 
     const moveUp = () => {
-        /* c8 ignore else */
+        /* istanbul ignore else */
         if (!disabled && onMoveUp) {
             onMoveUp(grant, index);
         }
     };
 
     const moveDown = () => {
-        /* c8 ignore else */
+        /* istanbul ignore else */
         if (!disabled && onMoveDown) {
             onMoveDown(grant, index);
         }

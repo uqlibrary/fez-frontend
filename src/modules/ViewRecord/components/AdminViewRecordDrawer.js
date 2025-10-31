@@ -36,7 +36,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
     const [copied, setCopied] = React.useState(false);
     const [error, setError] = React.useState(null);
 
-    /* c8 ignore next */
+    /* istanbul ignore next */
     const handleSnackbarClose = () => {
         setCopied(false);
         setError(null);
@@ -67,7 +67,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 open={open}
                 variant="persistent"
                 anchor={
-                    /* c8 ignore next */
+                    /* istanbul ignore next */
                     theme.direction === 'rtl' ? 'left' : 'right'
                 }
                 id="adminViewRecordDrawerDesktop"
@@ -84,7 +84,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
             <StyledMobileDrawer
                 variant="temporary"
                 anchor={
-                    /* c8 ignore next */
+                    /* istanbul ignore next */
                     theme.direction === 'rtl' ? 'left' : 'right'
                 }
                 open={mobileOpen}

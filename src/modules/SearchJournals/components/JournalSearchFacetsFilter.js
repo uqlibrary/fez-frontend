@@ -102,11 +102,11 @@ const isFacetFilterActive = (activeFacetsFilters, category, value) => {
 export const filterOutNonActiveFacets = facets =>
     Object.keys(facets)
         .filter(key => {
-            /* c8 ignore else */
+            /* istanbul ignore else */
             if (Array.isArray(facets[key])) {
                 return facets[key].length;
             }
-            /* c8 ignore next */
+            /* istanbul ignore next */
             return facets[key];
         })
         .reduce((filtered, key) => {

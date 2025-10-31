@@ -46,7 +46,7 @@ export const ActionFeedback = () => {
     } = locale.components.manageUsers;
 
     React.useEffect(() => {
-        /* c8 ignore next */
+        /* istanbul ignore next */
         const alert =
             (!!userAddSuccess && addUserSuccessAlert) ||
             (!!userAddError && addUserErrorAlert) ||
@@ -65,7 +65,7 @@ export const ActionFeedback = () => {
             dispatch(
                 showAppAlert({
                     ...alert,
-                    dismissAction: /* c8 ignore next */ () => dispatch(dismissAppAlert()),
+                    dismissAction: /* istanbul ignore next */ () => dispatch(dismissAppAlert()),
                 }),
             );
 

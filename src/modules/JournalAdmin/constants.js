@@ -1,2 +1,2 @@
-/* c8 ignore file */
+/* istanbul ignore file */
 export const FORM_NAME = 'AdminJournalForm';

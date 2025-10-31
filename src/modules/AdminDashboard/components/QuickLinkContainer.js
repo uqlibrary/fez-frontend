@@ -94,7 +94,7 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                 setData(dataDown);
                 handleReordering(dataDown);
                 break;
-            /* c8 ignore next */ default:
+            /* istanbul ignore next */ default:
                 console.log('action not handled', action);
         }
     };
@@ -107,8 +107,8 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                 dispatch(actions.loadAdminDashboardQuickLinks());
             })
             .catch(
-                /* c8 ignore next */ error => {
-                    /* c8 ignore next */
+                /* istanbul ignore next */ error => {
+                    /* istanbul ignore next */
                     console.error(error);
                 },
             );
@@ -174,7 +174,7 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                 <>
                     {actionState.action === VIEWMODES.VIEW && (
                         <>
-                            {(!!!data || (data?.length ?? /* c8 ignore next */ 0) === 0) &&
+                            {(!!!data || (data?.length ?? /* istanbul ignore next */ 0) === 0) &&
                                 adminDashboardQuickLinksSuccess && (
                                     <Typography
                                         sx={{

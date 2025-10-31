@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 const PublicationsList = React.lazy(
     () => import('modules/SharedComponents/PublicationsList/components/PublicationsList'),
 );
-/* c8 ignore next */
+/* istanbul ignore next */
 const PublicationListLoadingProgress = React.lazy(
     () => import('modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress'),
 );

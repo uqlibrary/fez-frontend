@@ -97,8 +97,8 @@ const Reports = () => {
                     }
                 })
                 .catch(
-                    /* c8 ignore next */ error => {
-                        /* c8 ignore next */
+                    /* istanbul ignore next */ error => {
+                        /* istanbul ignore next */
                         console.error(error);
                     },
                 );
@@ -160,7 +160,7 @@ const Reports = () => {
                     id={reportLegacyId}
                     loading={adminDashboardExportReportLoading}
                     disabled={adminDashboardExportReportLoading || adminDashboardDisplayReportLoading}
-                    items={exportReports || /* c8 ignore next */ []}
+                    items={exportReports || /* istanbul ignore next */ []}
                     onExportClick={handleExportReportClick}
                 />
             </StandardCard>
@@ -200,12 +200,12 @@ const Reports = () => {
                         <Grid container mt={2}>
                             <Grid item xs={12}>
                                 <DataGrid
-                                    getRowId={row => row.pre_id || row.sat_id || /* c8 ignore next */ ''}
+                                    getRowId={row => row.pre_id || row.sat_id || /* istanbul ignore next */ ''}
                                     rows={adminDashboardDisplayReportData}
                                     columns={
                                         columns
                                             .filter(column => !!!column.exportOnly)
-                                            .sort((a, b) => a.order > b.order) ?? /* c8 ignore next */ []
+                                            .sort((a, b) => a.order > b.order) ?? /* istanbul ignore next */ []
                                     }
                                     sortingOrder={['asc', 'desc']}
                                     initialState={{

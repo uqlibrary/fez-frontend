@@ -18,7 +18,7 @@ export const AdminActions = ({ adminActions = [...defaultActions], navigatedFrom
         setAnchorEl(event.currentTarget);
     };
 
-    /* c8 ignore next */
+    /* istanbul ignore next */
     const handleClose = () => {
         setAnchorEl(null);
     };

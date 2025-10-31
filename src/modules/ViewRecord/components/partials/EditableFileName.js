@@ -43,7 +43,7 @@ const EditableFileName = ({
         // set edit flag whenever the filename changes
         !!originalFilenameRef.current && setIsEdited(props.fileName !== originalFilenameRef.current);
 
-        /* c8 ignore next */
+        /* istanbul ignore next */
         if (!!originalFilenameRef.current && !isEditing) {
             onFileCancelEdit?.();
         }

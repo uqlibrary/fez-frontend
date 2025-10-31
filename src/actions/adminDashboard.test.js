@@ -1,4 +1,4 @@
-/* c8 ignore file */
+/* istanbul ignore file */
 
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';

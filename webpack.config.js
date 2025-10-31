@@ -25,7 +25,7 @@ const orcidClientId = 'APP-OXX6M6MBQ77GUVWX';
 module.exports = {
     mode: 'development',
     context: resolve(__dirname),
-    devtool: 'eval-source-map',
+    devtool: 'source-map',
     entry: {
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         index: join(__dirname, 'src', 'index.js'),
@@ -57,35 +57,22 @@ module.exports = {
     },
     module: {
         rules: [
-            // TODO remove babel-loader once issues with files under src/mock/ are fixed
             {
-                test: /\.js$/,
-                include: [/src\/mock/],
+                test: /\.(j|t)sx?$/,
+                include: [resolve(__dirname, 'src')],
+                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env'],
+                        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
                         plugins: [
                             '@babel/plugin-proposal-export-default-from',
                             ['@babel/plugin-transform-spread', { loose: true }],
                             enableFastRefresh && 'react-refresh/babel',
+                            'babel-plugin-istanbul',
                         ].filter(Boolean),
-                    },
-                },
-            },
-            {
-                test: /\.(j|t)sx?$/,
-                include: [resolve(__dirname, 'src')],
-                exclude: [/node_modules/, /custom_modules/, /src\/mock/],
-                use: {
-                    loader: 'esbuild-loader',
-                    options: {
-                        tsconfig: './tsconfig.webpack.json',
-                        loader: 'tsx',
-                        target: 'es2020',
-                        jsx: 'automatic',
-                        jsxDev: true,
-                        sourcemap: true,
+                        sourceMaps: true,
+                        inputSourceMap: true,
                     },
                 },
             },

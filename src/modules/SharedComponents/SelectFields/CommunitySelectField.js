@@ -10,7 +10,7 @@ export default function CommunitySelectField(fieldProps) {
     const dompurify = require('dompurify');
 
     // Selector to fetch the itemsList from the state
-    // c8 ignore next
+    // istanbul ignore next
     const getItemsList = state => state?.get('communitiesReducer')?.itemsList || [];
 
     // Memoized selector to transform the itemsList
