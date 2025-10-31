@@ -16,9 +16,7 @@ export const getIndicatorProps = ({ type, data }) => {
             !!!data.fez_journal_issn &&
             !!!data.fez_journal_issn?.[0].srm_open_access &&
             !!!data.fez_journal_issn?.[0].fez_sherpa_romeo) ||
-        (type === types.published &&
-            !!!data.fez_journal_read_and_publish &&
-            (!!!data.fez_journal_doaj || !!!data.fez_journal_doaj?.jnl_doaj_apc_currency))
+        (type === types.published && !!!data.fez_journal_read_and_publish && !!!data.fez_journal_doaj)
     ) {
         return null;
     }
@@ -27,19 +25,40 @@ export const getIndicatorProps = ({ type, data }) => {
         const entry = data.fez_journal_issn?.[0]?.fez_sherpa_romeo;
         if (entry?.srm_max_embargo_amount) indicatorProps.status = status.embargo;
         else indicatorProps.status = status.open;
-    } else {
-        if (data.fez_journal_read_and_publish) {
-            const entry = data.fez_journal_read_and_publish;
-            if (
-                entry.jnl_read_and_publish_is_capped === 'Y' ||
-                entry.jnl_read_and_publish_is_capped === 'Approaching'
-            ) {
-                indicatorProps.status = status.cap;
-            } else if (!!entry.jnl_read_and_publish_is_discounted) indicatorProps.status = status.fee;
-            else indicatorProps.status = status.open;
+    } else if (data.fez_journal_read_and_publish) {
+        const entry = data.fez_journal_read_and_publish;
+        if (entry.jnl_read_and_publish_is_s2o === 'S2O') {
+            indicatorProps.showS2O = true;
+            indicatorProps.status = status.open;
+        } else if (
+            entry.jnl_read_and_publish_is_capped === 'Y' ||
+            entry.jnl_read_and_publish_is_capped === 'Approaching'
+        ) {
+            indicatorProps.status = status.cap;
+        } else if (!!entry.jnl_read_and_publish_is_discounted) {
+            indicatorProps.status = status.fee;
         } else {
-            /* istanbul ignore else */
-            if (!!data.fez_journal_doaj?.jnl_doaj_apc_currency) indicatorProps.status = status.fee;
+            indicatorProps.status = status.open;
+            if (entry.jnl_read_and_publish_is_s2o === 'Y') {
+                indicatorProps.showS2O = true;
+            }
+        }
+    } else {
+        /* istanbul ignore else */
+        if (data.fez_journal_doaj) {
+            const doaj = data.fez_journal_doaj;
+            if (!!doaj.jnl_doaj_apc_currency) {
+                indicatorProps.status = status.fee;
+            } else {
+                indicatorProps.status = status.open;
+                if (doaj.jnl_doaj_has_other_fees === false) {
+                    indicatorProps.showDiamond = true;
+                }
+            }
+
+            if (!!doaj.jnl_doaj_is_s2o) {
+                indicatorProps.showS2O = true;
+            }
         }
     }
 

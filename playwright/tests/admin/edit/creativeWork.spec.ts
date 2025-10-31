@@ -123,11 +123,9 @@ test.describe('Creative Work admin edit, general', () => {
             const NTROSectionContent = page.getByTestId('ntro-section-content');
             await expect(NTROSectionContent).toBeVisible();
 
-            await expect(
-                NTROSectionContent.locator('.AdminCard')
-                    .first()
-                    .locator('h4'),
-            ).toHaveText(/Scale\/Significance of work & Creator research statement/);
+            await expect(NTROSectionContent.locator('.AdminCard').first().locator('h4')).toHaveText(
+                /Scale\/Significance of work & Creator research statement/,
+            );
 
             for (const [index, author] of record.fez_record_search_key_author.map(item => item.rek_author).entries()) {
                 await rowAuthorDisplaysAs(page, index, author);

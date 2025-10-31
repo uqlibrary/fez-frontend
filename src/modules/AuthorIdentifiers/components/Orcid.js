@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createHash } from 'crypto';
 import { parse } from 'querystring';
 
@@ -14,7 +14,7 @@ import locale from 'locale/pages';
 import { ORCID_AUTHORIZATION_URL, ORCID_CLIENT_ID, pathConfig } from 'config';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { linkAuthorOrcidId, showAppAlert, resetSavingAuthorState, dismissAppAlert } from 'actions';
+import { linkAuthorOrcidId, resetSavingAuthorState } from 'actions';
 
 const Orcid = () => {
     const dispatch = useDispatch();
@@ -46,9 +46,9 @@ const Orcid = () => {
 
     const [authoriseConfirmationBox, setAuthoriseConfirmationBox] = useState(null);
 
-    const _navigateToDashboard = useCallback(() => {
-        navigate(pathConfig.dashboard);
-    }, [navigate]);
+    const navigateToDashboard = showOrcidLinkingConfirmation => {
+        navigate(pathConfig.dashboard, { state: { showOrcidLinkingConfirmation: !!showOrcidLinkingConfirmation } });
+    };
 
     const createOrcidStateId = account => {
         return createHash('md5')
@@ -65,18 +65,8 @@ const Orcid = () => {
     }, []);
 
     useEffect(() => {
-        // author's orcid id has been updated successfully
-        if (orcidResponse.code && orcidResponse.state && author?.aut_orcid_id) {
-            dispatch(
-                showAppAlert({
-                    ...locale.pages.orcidLink.successAlert,
-                    dismissAction: /* istanbul ignore next */ () => dispatch(dismissAppAlert()),
-                }),
-            );
-        }
-
         if (!accountAuthorLoading && (!author?.aut_id || author.aut_orcid_id)) {
-            _navigateToDashboard();
+            navigateToDashboard(orcidResponse.code && orcidResponse.state && author?.aut_orcid_id);
             return;
         }
 
