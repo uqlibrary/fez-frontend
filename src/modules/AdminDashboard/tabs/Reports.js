@@ -116,7 +116,14 @@ const Reports = () => {
         const sheetLabel = actionState.report.label;
 
         const data = transformDisplayReportExportData(sortedHeaders, adminDashboardDisplayReportData);
-        exportReportToExcel({ filename: fname, sheetLabel, colHeaders, data });
+
+        exportReportToExcel({ filename: fname, sheetLabel, colHeaders, data })
+            .then(() => {
+                console.log('Export completed successfully');
+            })
+            .catch(error => {
+                console.error('Export failed:', error);
+            });
     };
 
     const handleDisplayReportClick = actionState => {

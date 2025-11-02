@@ -1,4 +1,3 @@
-import * as XLSX from 'xlsx';
 import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
 
 export const stringToColour = string => {
@@ -72,7 +71,8 @@ export const filterObjectPropsByKey = (key, data, propsToKeep) => {
     return obj;
 };
 
-export const exportReportToExcel = ({ filename, sheetLabel, colHeaders, data }) => {
+export const exportReportToExcel = async ({ filename, sheetLabel, colHeaders, data }) => {
+    const XLSX = await import('xlsx');
     const worksheet = XLSX.utils.json_to_sheet(data);
     const workbook = XLSX.utils.book_new();
     !!colHeaders &&
@@ -80,9 +80,7 @@ export const exportReportToExcel = ({ filename, sheetLabel, colHeaders, data }) 
             origin: 'A1',
         });
     XLSX.utils.book_append_sheet(workbook, worksheet, sheetLabel);
-
     XLSX.writeFileXLSX(workbook, filename);
-
     return true;
 };
 

@@ -7,8 +7,8 @@
   "scripts": {
     "jest-preview": "jest-preview",
     "analyse": "webpack --config=./webpack-dist.config --stats=detailed --json=stats.json",
-    "build": "NODE_OPTIONS='--max-old-space-size=8192' webpack --config=./webpack-dist.config",
-    "build:dev": "NODE_OPTIONS='--max-old-space-size=8192' webpack --config=./webpack.config",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=8192' webpack --config=./webpack-dist.config",
+    "build:dev": "cross-env NODE_OPTIONS='--max-old-space-size=8192' webpack --config=./webpack.config",
     "cc:reportAll": "scripts/code-coverage.sh",
     "clean": "rm -rf assets coverage **/coverage dist node_modules **/node_modules stats.json .nyc_output",
     "codestyles:files": "cross-env prettier-eslint './*.js' --list-different -l silent",

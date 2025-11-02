@@ -2,7 +2,13 @@ import React from 'react';
 import { render, WithReduxStore, within, waitFor, userEvent } from 'test-utils';
 import * as DashboardActions from 'actions/adminDashboard';
 import * as repositories from 'repositories';
-import * as Utils from '../utils';
+
+const mockExportReportToExcel = jest.fn(async () => true);
+
+jest.mock('../utils', () => ({
+    ...jest.requireActual('../utils'),
+    exportReportToExcel: (...args) => mockExportReportToExcel(...args),
+}));
 
 import {
     adminDashboardConfig,
@@ -146,6 +152,7 @@ describe('Reports tab', () => {
     });
 
     it('should build full works history report request', async () => {
+        mockExportReportToExcel.mockClear();
         const expectedRequest = {
             date_from: '2024-04-01 14:00:00',
             date_to: '2024-05-03 13:59:59',
@@ -157,9 +164,6 @@ describe('Reports tab', () => {
             .reply(200, { data: [...adminDashboardReportWorksData] });
 
         const loadAdminDashboardDisplayReportFn = jest.spyOn(DashboardActions, 'loadAdminDashboardDisplayReport');
-        const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockImplementation(() => {
-            return true;
-        });
 
         const { getAllByRole, getByRole, getByTestId, getByText } = setup();
 
@@ -195,11 +199,12 @@ describe('Reports tab', () => {
         expect(getByRole('button', { name: 'Export' })).not.toHaveAttribute('disabled');
 
         await userEvent.click(getByRole('button', { name: 'Export' }));
-        expect(exportReportToExcelFn).toHaveBeenCalledWith(
+        expect(mockExportReportToExcel).toHaveBeenCalledWith(
             expect.objectContaining({ filename: 'espace_export_20170630000000.xlsx', sheetLabel: 'Works history' }),
         );
     });
     it('should build system alerts report without date request', async () => {
+        mockExportReportToExcel.mockClear();
         const expectedRequest = {
             record_id: '123',
             report_type: 1,
@@ -213,9 +218,7 @@ describe('Reports tab', () => {
             .reply(200, { data: [...adminDashboardReportSystemAlertsData] });
 
         const loadAdminDashboardDisplayReportFn = jest.spyOn(DashboardActions, 'loadAdminDashboardDisplayReport');
-        const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockImplementation(() => {
-            return true;
-        });
+
         const { getAllByRole, getByRole, getByTestId, getByText } = setup();
 
         await userEvent.click(getByTestId('report-display-export-input'));
@@ -253,11 +256,12 @@ describe('Reports tab', () => {
         expect(getByRole('button', { name: 'Export' })).not.toHaveAttribute('disabled');
 
         await userEvent.click(getByRole('button', { name: 'Export' }));
-        expect(exportReportToExcelFn).toHaveBeenCalledWith(
+        expect(mockExportReportToExcel).toHaveBeenCalledWith(
             expect.objectContaining({ filename: 'espace_export_20170630000000.xlsx', sheetLabel: 'System alert log' }),
         );
     });
     it('should build system alerts report with only date request', async () => {
+        mockExportReportToExcel.mockClear();
         const expectedRequest = {
             date_from: '2024-04-01 14:00:00',
             date_to: '2024-05-03 13:59:59',
@@ -269,9 +273,7 @@ describe('Reports tab', () => {
             .reply(200, { data: [...adminDashboardReportSystemAlertsData] });
 
         const loadAdminDashboardDisplayReportFn = jest.spyOn(DashboardActions, 'loadAdminDashboardDisplayReport');
-        const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockImplementation(() => {
-            return true;
-        });
+
         const { getAllByRole, getByRole, getByTestId, getByText } = setup();
 
         await userEvent.click(getByTestId('report-display-export-input'));
@@ -307,7 +309,8 @@ describe('Reports tab', () => {
         expect(getByRole('button', { name: 'Export' })).not.toHaveAttribute('disabled');
 
         await userEvent.click(getByRole('button', { name: 'Export' }));
-        expect(exportReportToExcelFn).toHaveBeenCalledWith(
+
+        expect(mockExportReportToExcel).toHaveBeenCalledWith(
             expect.objectContaining({ filename: 'espace_export_20170630000000.xlsx', sheetLabel: 'System alert log' }),
         );
     });
