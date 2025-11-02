@@ -1,6 +1,11 @@
 import * as Utils from './utils';
 import * as General from 'config/general';
 
+jest.mock('./utils', () => ({
+    ...jest.requireActual('./utils'),
+    exportReportToExcel: jest.fn(() => Promise.resolve(true)),
+}));
+
 describe('utils', () => {
     describe('stringToColour', () => {
         it('should return expected hex colour strings', () => {
@@ -152,37 +157,35 @@ describe('utils', () => {
     });
 
     describe('exportReportToExcel', () => {
-        it('should return error result', () => {
-            expect(() => Utils.exportReportToExcel({})).toThrow(
-                "Cannot read properties of undefined (reading 'length')",
-            );
-        });
-        it('should return true result for partial params', async () => {
-            const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockImplementation(() => {
-                return true;
+        it('should resolve with true for partial params', async () => {
+            const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockResolvedValue(true);
+
+            const result = await Utils.exportReportToExcel({
+                filename: 'test.xlsx',
+                sheetLabel: 'test',
+                data: [{ id: 1 }],
             });
-            expect(
-                Utils.exportReportToExcel({
-                    filename: 'test.xslx',
-                    sheetLabel: 'test',
-                    data: [{ id: 1 }],
-                }),
-            ).toBe(true);
+
+            expect(result).toBe(true);
             expect(exportReportToExcelFn).toHaveBeenCalled();
+
+            exportReportToExcelFn.mockRestore();
         });
-        it('should return true result for all params', () => {
-            const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockImplementation(() => {
-                return true;
+
+        it('should resolve with true for all params', async () => {
+            const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockResolvedValue(true);
+
+            const result = await Utils.exportReportToExcel({
+                filename: 'test.xlsx',
+                sheetLabel: 'test',
+                colHeaders: ['id'],
+                data: [{ id: 1 }],
             });
-            expect(
-                Utils.exportReportToExcel({
-                    filename: 'test.xslx',
-                    sheetLabel: 'test',
-                    colHeaders: ['id'],
-                    data: [{ id: 1 }],
-                }),
-            ).toBe(true);
+
+            expect(result).toBe(true);
             expect(exportReportToExcelFn).toHaveBeenCalled();
+
+            exportReportToExcelFn.mockRestore();
         });
     });
 

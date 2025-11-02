@@ -240,19 +240,26 @@ const webpackConfig = {
                 ckeditor: {
                     test: /[\\/]custom_modules[\\/]ckeditor5/,
                     name: 'ckeditor',
-                    priority: 45,
+                    priority: 50,
                 },
                 // Split highcharts into its own chunk
                 highcharts: {
                     test: /[\\/]node_modules[\\/]highcharts[\\/]/,
                     name: 'highcharts',
-                    priority: 40,
+                    priority: 45,
                 },
                 // Split moment-timezone
                 momentTimezone: {
                     test: /[\\/]node_modules[\\/]moment-timezone[\\/]/,
                     name: 'moment-tz',
+                    priority: 40,
+                },
+
+                xlsx: {
+                    test: /[\\/]node_modules[\\/]xlsx[\\/]/,
+                    name: 'xlsx',
                     priority: 35,
+                    chunks: 'async',
                 },
                 // Split MUI components
                 mui: {
