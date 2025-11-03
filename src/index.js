@@ -18,6 +18,7 @@ import AppErrorBoundary from './AppErrorBoundary';
 import 'sass/index.scss';
 import { store, reducers } from 'config/store';
 import { isTest } from './helpers/general';
+import './fonts/roboto/roboto.css';
 
 // Increase default (10) event listeners to 30
 require('events').EventEmitter.prototype._maxListeners = 30;
