@@ -321,10 +321,11 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     };
 
     const renderRelatedServices = (objects, subkey, publication) => {
-        const descriptions = publication['fez_record_search_key_related_service_description'];
+        const descriptions = publication?.['fez_record_search_key_related_service_description'];
         const enhanced = objects.map(item => {
-            const order = item['rek_related_service_order'];
-            if (!order) return item;
+            const order = item?.['rek_related_service_order'];
+            /* istanbul ignore next */
+            if (!order || !descriptions) return item;
             const description = descriptions
                 .find(item => parseInt(item['rek_related_service_description_order'], 10) === parseInt(order, 10))
                 ?.['rek_related_service_description']?.trim?.();
