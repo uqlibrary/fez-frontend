@@ -82,7 +82,7 @@ module.exports = {
                 use: ['json-loader'],
             },
             {
-                test: /\.css/,
+                test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
             {
@@ -99,6 +99,20 @@ module.exports = {
                             esModule: false,
                             outputPath: '/assets/',
                             publicPath: '/assets/',
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            esModule: false,
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/',
+                            publicPath: '/fonts/',
                         },
                     },
                 ],

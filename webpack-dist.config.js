@@ -133,6 +133,10 @@ const webpackConfig = {
                 },
             },
             {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
+            },
+            {
                 test: /\.scss/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
@@ -143,6 +147,15 @@ const webpackConfig = {
                     publicPath: '/assets/',
                     outputPath: 'assets/',
                     filename: '[hash][ext]',
+                },
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    publicPath: '/fonts/',
+                    outputPath: 'fonts/',
+                    filename: '[name]-[hash][ext]',
                 },
             },
         ],
