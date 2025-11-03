@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@mui/material/GridLegacy';
@@ -9,6 +9,7 @@ import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
+import PopoverNamesForm, { MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST } from './PopoverNamesForm';
 import { default as globalLocale } from 'locale/global';
 import { validation } from 'config';
 
@@ -41,7 +42,7 @@ export const ContributorForm = ({
     isNtro,
     locale = {
         nameAsPublishedLabel: 'Name as published',
-        nameAsPublishedHint: 'Please type the name exactly as published',
+        nameAsPublishedHint: 'Enter the name exactly as published',
         creatorRoleLabel: 'Creator role',
         creatorRoleHint: 'Role of the creator in relation to the dataset',
         identifierLabel: 'UQ identifier (if available)',
@@ -63,12 +64,15 @@ export const ContributorForm = ({
     showContributorAssignment,
     showIdentifierLookup: initialShowIdentifierLookup,
     showRoleInput = false,
+    hidePopoverNamesForm = false,
+    popoverNamesFormMode = MODE_FAMILY_NAME_FIRST,
 }) => {
     const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
     const [clearRoleInput, setClearRoleInput] = useState(true);
     const [showIdentifierLookup, setShowIdentifierLookup] = useState(initialShowIdentifierLookup);
     const [uqIdentifierUpdatedFlag, setUqIdentifierUpdatedFlag] = useState(false);
     const [isEditFormClean, setIsEditFormClean] = useState(!!initialContributor.nameAsPublished);
+    const namesFormRef = useRef(null);
 
     const resetInternalState = useCallback(() => {
         setContributor(initialContributor);
@@ -217,6 +221,41 @@ export const ContributorForm = ({
         }
     }, [_onSubmit, contributor.creatorRole, contributor.nameAsPublished, isEditFormClean]);
 
+    const isValid = value => !validation.isEmpty(value.trim()) && !validation.maxLength255Validator(value.trim());
+
+    const openNamesForm = event => namesFormRef.current.open(event, contributor?.nameAsPublished);
+
+    const renderNameField = props => {
+        return (
+            <TextField
+                {...props}
+                fullWidth
+                id={locale.nameAsPublishedFieldId || 'name-as-published'}
+                textFieldId={contributorFormId}
+                label={locale.nameAsPublishedLabel}
+                placeholder={locale.nameAsPublishedHint}
+                value={contributor.nameAsPublished}
+                onChange={_onNameChanged}
+                onKeyDown={_onSubmit}
+                disabled={disabled || disableNameAsPublished || (!canEdit && isNtro && contributor.affiliation === '')}
+                required={required}
+                autoComplete="off"
+                error={
+                    !isContributorAssigned &&
+                    (isNtro ? contributor.affiliation !== '' : !!required) &&
+                    !isValid(contributor.nameAsPublished)
+                }
+                errorText={
+                    !isContributorAssigned &&
+                    (isNtro ? contributor.affiliation !== '' : !!required) &&
+                    !isValid(contributor.nameAsPublished)
+                        ? validation.maxLength255Validator(contributor.nameAsPublished)
+                        : undefined
+                }
+            />
+        );
+    };
+
     const renderUqIdField = () => {
         const prefilledSearch = !!contributor && contributor.uqIdentifier === '0';
         if (prefilledSearch) {
@@ -237,8 +276,6 @@ export const ContributorForm = ({
         );
     };
 
-    const isValid = value => !validation.isEmpty(value.trim()) && !validation.maxLength255Validator(value.trim());
-
     return (
         <React.Fragment>
             {description}
@@ -254,33 +291,32 @@ export const ContributorForm = ({
                     </Grid>
                 )}
                 <Grid item xs={12} sm>
-                    <TextField
-                        fullWidth
-                        id={locale.nameAsPublishedFieldId || 'name-as-published'}
-                        textFieldId={contributorFormId}
-                        label={locale.nameAsPublishedLabel}
-                        placeholder={locale.nameAsPublishedHint}
-                        value={contributor.nameAsPublished}
-                        onChange={_onNameChanged}
-                        onKeyDown={_onSubmit}
-                        disabled={
-                            disabled || disableNameAsPublished || (!canEdit && isNtro && contributor.affiliation === '')
-                        }
-                        required={required}
-                        autoComplete="off"
-                        error={
-                            !isContributorAssigned &&
-                            (isNtro ? contributor.affiliation !== '' : !!required) &&
-                            !isValid(contributor.nameAsPublished)
-                        }
-                        errorText={
-                            !isContributorAssigned &&
-                            (isNtro ? contributor.affiliation !== '' : !!required) &&
-                            !isValid(contributor.nameAsPublished)
-                                ? validation.maxLength255Validator(contributor.nameAsPublished)
-                                : undefined
-                        }
-                    />
+                    {!hidePopoverNamesForm && (
+                        <>
+                            <PopoverNamesForm
+                                id={contributorFormId}
+                                ref={namesFormRef}
+                                onClose={value => setContributor({ ...contributor, nameAsPublished: value })}
+                                isEditing={contributor?.selected}
+                                mode={popoverNamesFormMode}
+                            />
+                            {renderNameField({
+                                inputProps: {
+                                    readOnly: true,
+                                    style: { cursor: 'pointer' },
+                                },
+                                style: {
+                                    borderStyle: 'solid',
+                                    borderWidth: 2,
+                                    borderColor: '#e5e5e5',
+                                    borderRadius: 4,
+                                    backgroundColor: '#efefef',
+                                },
+                                onClick: openNamesForm,
+                            })}
+                        </>
+                    )}
+                    {hidePopoverNamesForm && renderNameField()}
                 </Grid>
                 {(((showIdentifierLookup || isNtro) &&
                     (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ)) ||
@@ -391,6 +427,8 @@ ContributorForm.propTypes = {
     showContributorAssignment: PropTypes.bool,
     showIdentifierLookup: PropTypes.bool,
     showRoleInput: PropTypes.bool,
+    hidePopoverNamesForm: PropTypes.bool,
+    popoverNamesFormMode: PropTypes.oneOf([MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST]),
 };
 
 export default ContributorForm;
