@@ -214,21 +214,18 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'Sherpa Romeo open access and archiving policies',
+                    heading: 'View Open Policy Finder',
                     fieldId: 'srm-journal-link',
-                    data: [
-                        {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            path: ['fez_sherpa_romeo'],
-                            filterFn: item => !!item.fez_sherpa_romeo && !!item.fez_sherpa_romeo.srm_journal_link,
-                        },
-                    ],
-                    template: 'MultiLinkTemplate',
+                    getData: journalDetails =>
+                        journalDetails.fez_journal_issn &&
+                        Array.isArray(journalDetails.fez_journal_issn) &&
+                        journalDetails.fez_journal_issn.find(issn => issn?.fez_sherpa_romeo?.srm_journal_link),
+                    template: 'LinkTemplate',
                     templateProps: {
-                        href: item => item.srm_journal_link,
-                        title: 'View SHERPA/RoMEO details in a new tab',
-                        text: item => item.srm_issn,
+                        href: item => item.fez_sherpa_romeo.srm_journal_link,
+                        title: "View journal's open access policy in a new tab",
+                        ariaLabel: () => "Click to view journal's open access policy details in a new tab",
+                        text: () => "View journal's open access policy",
                     },
                 },
             ],

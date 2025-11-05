@@ -323,6 +323,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         manualPagination: true,
         rowCount: pagination.resultCount,
         autoResetPageIndex: false,
+        enableKeyboardShortcuts: false,
         displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
         initialState: {
             expanded: true,

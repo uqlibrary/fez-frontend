@@ -248,6 +248,7 @@ export const ViewRecord = () => {
                             citationStyle={'header'}
                             hideCitationText={hideCitationText}
                             showAltmetricWidget
+                            showCopyTextButton
                         />
                     </Grid>
 

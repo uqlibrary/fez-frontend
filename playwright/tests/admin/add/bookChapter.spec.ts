@@ -11,10 +11,7 @@ test.describe('As an admin, I can', () => {
 
         // Choose display type
         await page.getByTestId('rek-display-type-select').click();
-        await page
-            .getByTestId('rek-display-type-options')
-            .locator('li', { hasText: 'Book Chapter' })
-            .click();
+        await page.getByTestId('rek-display-type-options').locator('li', { hasText: 'Book Chapter' }).click();
 
         // Choose sub type
         await page.getByTestId('rek-subtype-select').click();
@@ -34,10 +31,7 @@ test.describe('As an admin, I can', () => {
 
         // Select German
         await page.getByTestId('rek-language-select').click();
-        await page
-            .getByTestId('rek-language-options')
-            .getByText('German', { exact: true })
-            .click();
+        await page.getByTestId('rek-language-options').getByText('German', { exact: true }).click();
 
         await expect(page.getByTestId('rek-language-of-title-select')).toBeVisible();
         await expect(page.getByTestId('rek-native-script-title-input')).toBeVisible();

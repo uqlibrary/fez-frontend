@@ -41,8 +41,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:678947"
                 >
                   <span
                     class="citationAuthors"
@@ -338,7 +339,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       https://doi.org/10.1016/j.ajhg.2017.07.007
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -510,8 +511,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationDesign"
+                  id="citation-content-UQ:792104"
                 >
                   <span
                     class="citationEditors"
@@ -591,7 +593,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -700,8 +702,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationBook"
+                  id="citation-content-UQ:792110"
                 >
                   <span
                     class="citationAuthors"
@@ -755,7 +758,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -864,8 +867,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationConferencePaper"
+                  id="citation-content-UQ:792111"
                 >
                   <span
                     class="citationAuthors"
@@ -922,7 +926,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1031,8 +1035,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:396321"
                 >
                   <span
                     class="citationAuthors"
@@ -1251,7 +1256,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       https://doi.org/10.1093/hmg/ddw177
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"

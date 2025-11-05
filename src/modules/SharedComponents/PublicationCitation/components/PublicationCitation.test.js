@@ -1,7 +1,7 @@
 import React from 'react';
 import { PublicationCitation } from './PublicationCitation';
 import { mockRecordToFix, journalArticle } from 'mock/data/testing/records';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, userEvent } from 'test-utils';
 const mockUseNavigate = jest.fn();
 import { useLocation } from 'react-router-dom';
 
@@ -32,13 +32,10 @@ function setup(testProps = {}, testState = {}) {
 }
 
 describe('PublicationCitation ', () => {
-    beforeEach(() => {
-        // useLocation.mockClear();
-        // useLocation.mockImplementation(() => ({ pathname: '/', search: '', state: {} }));
-    });
     afterEach(() => {
         jest.clearAllMocks();
     });
+
     it('should render component with default item', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
@@ -125,11 +122,13 @@ describe('PublicationCitation ', () => {
             customActions: customActions,
         });
 
-        getAllByRole('button').forEach((button, index) => {
-            expect(button).toHaveTextContent(customActions[index].label);
-            fireEvent.click(button);
-            expect(customActions[index].handleAction).toBeCalled();
-        });
+        getAllByRole('button')
+            .filter(button => !button.getAttribute('data-testid')?.startsWith('publication-citation-copy-button-'))
+            .forEach((button, index) => {
+                expect(button).toHaveTextContent(customActions[index].label);
+                fireEvent.click(button);
+                expect(customActions[index].handleAction).toBeCalled();
+            });
     });
 
     it('should render button disabled with spinners on action buttons while loading', () => {
@@ -366,5 +365,29 @@ describe('PublicationCitation ', () => {
     it('should render component with citation unavailable message when theres no publication type id', () => {
         const { container } = setup({ publication: { ...journalArticle, rek_display_type: null } });
         expect(container).toMatchSnapshot();
+    });
+
+    it('should allow users to copy citation text', async () => {
+        Object.assign(navigator, {
+            clipboard: {
+                writeText: () => Promise.resolve(),
+            },
+        });
+        jest.spyOn(navigator.clipboard, 'writeText');
+
+        const { getByTestId } = setup({ showCopyTextButton: true });
+        await userEvent.click(getByTestId(`publication-citation-copy-button-${mockRecordToFix.rek_pid}`));
+
+        expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
+            'Brown, M. A., He, Y., Rothnagel, J. A., Saunders, N. A.,  and Smith, R. (2004). Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth. Molecular Biology of The Cell  15 252A-253A.',
+        );
+    });
+
+    it('should disable copy citation button when clipboard is not available', async () => {
+        Object.assign(navigator, {
+            clipboard: undefined,
+        });
+        const { getByTestId } = setup({ showCopyTextButton: true });
+        expect(getByTestId(`publication-citation-copy-button-${mockRecordToFix.rek_pid}`)).toHaveAttribute('disabled');
     });
 });

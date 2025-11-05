@@ -19,7 +19,7 @@ export const SeminarPaperCitation = ({ publication, citationStyle }) => {
     // eSpace citation view for Seminar Paper
     // {Author}{Year| (|).}<i>{Title| |.}</i>{Seminar series| |.}{School, Centre or Institute| |,}{Institution| |.}
     return (
-        <div className="citationContent citationSeminarPaper">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationSeminarPaper">
             {/* {Author}*/}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -40,7 +40,7 @@ export const SeminarPaperCitation = ({ publication, citationStyle }) => {
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} />
-        </div>
+        </span>
     );
 };
 SeminarPaperCitation.propTypes = {
