@@ -133,7 +133,7 @@ const webpackConfig = {
                 test: /\.(png|jp(e*)g|svg|gif)$/,
                 type: 'asset/resource',
                 generator: {
-                    publicPath: `/${config.basePath}/assets/`,
+                    publicPath: `/${config.basePath}assets/`,
                     outputPath: 'assets/',
                     filename: '[hash][ext]',
                 },
