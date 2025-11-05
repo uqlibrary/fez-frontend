@@ -1,3 +1,4 @@
+export { default as AlmetricWidget } from './AlmetricWidget';
 export { default as AuthorsCitationView } from './AuthorsCitationView';
 export { default as EditorsCitationView } from './EditorsCitationView';
 export { default as CitationView } from './CitationView';

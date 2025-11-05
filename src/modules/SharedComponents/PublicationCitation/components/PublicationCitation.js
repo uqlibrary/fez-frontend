@@ -233,6 +233,7 @@ export const PublicationCitation = ({
     showSources = false,
     showUnpublishedBufferFields = false,
     showImageThumbnails = false,
+    showAltmetricWidget = false,
     showCopyTextButton = false,
     security = { isAdmin: false, isAuthor: false },
 }) => {
@@ -521,6 +522,7 @@ export const PublicationCitation = ({
                                                 <CitationCounts
                                                     publication={publication}
                                                     hideViewFullStatisticsLink={hideViewFullStatisticsLink}
+                                                    showAltmetricWidget={showAltmetricWidget}
                                                 />
                                             </Grid>
                                         )}
@@ -602,6 +604,7 @@ PublicationCitation.propTypes = {
     showUnpublishedBufferFields: PropTypes.bool,
     showImageThumbnails: PropTypes.bool,
     showCopyTextButton: PropTypes.bool,
+    showAltmetricWidget: PropTypes.bool,
     security: PropTypes.object,
 };
 

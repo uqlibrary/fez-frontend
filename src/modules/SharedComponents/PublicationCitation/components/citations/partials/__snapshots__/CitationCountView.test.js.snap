@@ -5,10 +5,10 @@ exports[`CitationCountView test  should render component with given count 1`] = 
   <a
     aria-label="Google"
     class="wosCitationCount css-pi8u"
-    data-analyticsid="citation-count-link"
-    data-testid="citation-count-link"
+    data-analyticsid="wos-citation-count-link"
+    data-testid="wos-citation-count-link"
     href="www.google.com"
-    id="citation-count-link"
+    id="wos-citation-count-link"
     rel="noopener noreferrer"
     tabindex="0"
     target="_blank"

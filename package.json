@@ -83,6 +83,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/redux-immutable": "^4.0.6",
+    "@types/throttle-debounce": "^5.0.2",
     "@types/webpack": "^4.41.38",
     "ajv": "^8.12.0",
     "assets-webpack-plugin": "^6.1.2",
@@ -165,7 +166,7 @@
     "@mui/material": "7.3.2",
     "@mui/styled-engine": "7.3.2",
     "@mui/system": "7.3.2",
-    "@mui/x-charts": "7.29.1",
+    "@mui/x-charts": "^7.29.1",
     "@mui/x-data-grid": "7.29.5",
     "@mui/x-date-pickers": "7.29.4",
     "@react-google-maps/api": "^2.19.2",
@@ -412,7 +413,8 @@
     ],
     "testEnvironment": "jsdom",
     "testEnvironmentOptions": {
-      "url": "http://fez-staging.library.uq.edu.au"
+      "url": "http://fez-staging.library.uq.edu.au",
+      "runScripts": "outside-only"
     },
     "testTimeout": 30000,
     "snapshotSerializers": [
