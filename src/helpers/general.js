@@ -7,7 +7,7 @@ global.dd = (...args) => args.forEach(arg => console.dir.bind(console)(arg, { de
 global.dc = console.log;
 global.dj = (...args) => args.forEach(arg => console.log.bind(console)(JSON.stringify(arg)));
 
-const tryCatch = (callback, _default = undefined) => {
+export const tryCatch = (callback, _default = undefined) => {
     try {
         return callback();
     } catch (e) {
