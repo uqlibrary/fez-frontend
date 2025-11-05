@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, waitFor, act, cleanup, userEvent } from 'test-utils';
 import '@testing-library/jest-dom';
-import AlmetricWidget, { externalDependenciesUrl, hidePopoverDelayInMs } from './AlmetricWidget';
+import AltmetricWidget, { externalDependenciesUrl, hidePopoverDelayInMs } from './AltmetricWidget';
 
 const createFakeScript = src => {
     const script = document.createElement('script');
@@ -20,13 +20,13 @@ const setup = (...props) =>
     render(
         <>
             <div data-testid="another-component">test</div>
-            <AlmetricWidget {...defaultProps} {...props}>
+            <AltmetricWidget {...defaultProps} {...props}>
                 <div data-testid="trigger">Hover me</div>
-            </AlmetricWidget>
+            </AltmetricWidget>
         </>,
     );
 
-describe('AlmetricWidget', () => {
+describe('AltmetricWidget', () => {
     let user;
 
     beforeEach(() => {

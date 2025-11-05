@@ -20,7 +20,7 @@ const cleanUpWidgetCreationDeps = () =>
         }),
     );
 
-const AlmetricWidget: React.FC<{ id: number; link: string; title: string; children: ReactElement }> = ({
+const AltmetricWidget: React.FC<{ id: number; link: string; title: string; children: ReactElement }> = ({
     id,
     link,
     title,
@@ -152,4 +152,4 @@ const AlmetricWidget: React.FC<{ id: number; link: string; title: string; childr
     );
 };
 
-export default React.memo(AlmetricWidget);
+export default React.memo(AltmetricWidget);
