@@ -11,6 +11,7 @@ export const tryCatch = (callback, _default = undefined) => {
     try {
         return callback();
     } catch (e) {
+        /* istanbul ignore next */
         return _default;
     }
 };
