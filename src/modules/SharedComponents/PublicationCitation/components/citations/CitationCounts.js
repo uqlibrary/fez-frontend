@@ -67,13 +67,13 @@ export const CitationCounts = ({ publication, hideViewFullStatisticsLink, showAl
                             title={getTitle(txt.altmetric.title)}
                         />
                     ) : (
-                        <Partials.AlmetricWidget
+                        <Partials.AltmetricWidget
                             id={publication.rek_altmetric_id}
                             link={txt.altmetric.externalUrl.replace('[id]', publication.rek_altmetric_id)}
                             title={getTitle(txt.altmetric.title)}
                         >
                             <Partials.CitationCountView source="altmetric" count={'?'} />
-                        </Partials.AlmetricWidget>
+                        </Partials.AltmetricWidget>
                     ))}
                 {!!publication.fez_record_search_key_dimensions_id &&
                     !!publication.fez_record_search_key_dimensions_id.rek_dimensions_id && (

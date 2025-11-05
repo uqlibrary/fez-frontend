@@ -605,6 +605,7 @@ PublicationCitation.propTypes = {
     showImageThumbnails: PropTypes.bool,
     showAltmetricWidget: PropTypes.bool,
     showCopyTextButton: PropTypes.bool,
+    showAltmetricWidget: PropTypes.bool,
     security: PropTypes.object,
 };
 
