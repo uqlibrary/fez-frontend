@@ -291,7 +291,7 @@ describe('PublicationCitation ', () => {
         }));
 
         const expectedRefUrl =
-            'https://fez-staging.library.uq.edu.au/admin/edit/UQ:41878?navigatedFrom=%2Frecords%2Fsearch%3FsearchQueryParams%255Ball%255D%3D%26page%3D1%26pageSize%3D20%26sortBy%3Dscore%26sortDirection%3DDesc';
+            'http://localhost/admin/edit/UQ:41878?navigatedFrom=%2Frecords%2Fsearch%3FsearchQueryParams%255Ball%255D%3D%26page%3D1%26pageSize%3D20%26sortBy%3Dscore%26sortDirection%3DDesc';
         const { getByTestId, getByRole } = setup({
             showAdminActions: true,
             hideCitationCounts: true,
@@ -309,8 +309,7 @@ describe('PublicationCitation ', () => {
 
         useLocation.mockImplementation(() => ({ pathname: '/espace/feature-example/', search: '' }));
 
-        const expectedRefUrl =
-            'https://fez-staging.library.uq.edu.au/admin/edit/UQ:41878?navigatedFrom=%2Fespace%2Ffeature-example%2F';
+        const expectedRefUrl = 'http://localhost/admin/edit/UQ:41878?navigatedFrom=%2Fespace%2Ffeature-example%2F';
 
         const { getByTestId, getByRole } = setup({
             showAdminActions: true,

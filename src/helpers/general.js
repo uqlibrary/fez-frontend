@@ -16,13 +16,6 @@ export const tryCatch = (callback, _default = undefined) => {
     }
 };
 
-export const isDevEnv = () => tryCatch(() => process.env.BRANCH === 'development', false);
-export const isJestTest = () => tryCatch(() => !!process.env.JEST_WORKER_ID, false);
-/* istanbul ignore next */
-export const isPlaywrightTest = () => tryCatch(() => !!process?.env?.PW_IS_RUNNING, false);
-/* istanbul ignore next */
-export const isTest = () => isJestTest() || isPlaywrightTest();
-
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
     if (!objArr2) {
         return objArr1;
