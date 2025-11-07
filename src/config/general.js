@@ -30,7 +30,7 @@ export const IS_TEST = IS_JEST_TEST || IS_PLAYWRIGHT_TEST;
 // URLS
 export const LOCALHOST_DOMAIN = 'localhost';
 export const LOCALHOST_ALIAS_DOMAIN = 'dev-espace.library.uq.edu.au';
-export const LOCALHOST_URL = `http://${LOCALHOST_DOMAIN}`;
+export const LOCALHOST_URL = `http://${LOCALHOST_DOMAIN}/`;
 export const PRODUCTION_URL = 'https://espace.library.uq.edu.au/';
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
 export const DEVELOPMENT_BRANCH_URL = 'https://development.library.uq.edu.au/';
