@@ -366,8 +366,15 @@ export default {
             bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
             text: (
                 <span>
-                    Add to this list by <Link to={pathConfig.records.possible}>claiming a work</Link> or{' '}
-                    <Link to={pathConfig.records.add.find}>adding a missing work</Link>.
+                    Add to this list by{' '}
+                    <Link discover="none" to={pathConfig.records.possible}>
+                        claiming a work
+                    </Link>{' '}
+                    or{' '}
+                    <Link discover="none" to={pathConfig.records.add.find}>
+                        adding a missing work
+                    </Link>
+                    .
                 </span>
             ),
             loadingMessage: 'Searching for your works',
@@ -378,8 +385,13 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. You may be able to{' '}
-                        <Link to={pathConfig.records.possible}>claim works we think may be yours</Link> or{' '}
-                        <Link to={pathConfig.records.add.find}>add a missing publication</Link>
+                        <Link discover="none" to={pathConfig.records.possible}>
+                            claim works we think may be yours
+                        </Link>{' '}
+                        or{' '}
+                        <Link discover="none" to={pathConfig.records.add.find}>
+                            add a missing publication
+                        </Link>
                     </div>
                 ),
             },
@@ -390,7 +402,11 @@ export default {
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             text: (
                 <span>
-                    Add to this list by <Link to={`${pathConfig.dataset.add}`}>adding a missing dataset</Link>.
+                    Add to this list by{' '}
+                    <Link discover="none" to={`${pathConfig.dataset.add}`}>
+                        adding a missing dataset
+                    </Link>
+                    .
                 </span>
             ),
             loadingMessage: 'Searching for your datasets',
@@ -400,7 +416,10 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. You may be able to{' '}
-                        <Link to={pathConfig.dataset.add}>add a missing dataset</Link>.
+                        <Link discover="none" to={pathConfig.dataset.add}>
+                            add a missing dataset
+                        </Link>
+                        .
                     </div>
                 ),
             },
