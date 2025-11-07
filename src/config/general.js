@@ -38,7 +38,7 @@ export const PRODUCTION_API_URL = 'https://api.library.uq.edu.au/v1/';
 export const STAGING_API_URL = 'https://api.library.uq.edu.au/staging/';
 export const API_URL = process.env.API_URL || STAGING_API_URL;
 export const APP_URL = process.env.APP_URL || LOCALHOST_URL;
-export const IS_PRODUCTION = APP_URL.includes(PRODUCTION_API_URL);
+export const IS_PRODUCTION = APP_URL.includes(PRODUCTION_URL);
 export const IS_LOCAL_DEV = APP_URL.includes(LOCALHOST_DOMAIN) || APP_URL.includes(LOCALHOST_ALIAS_DOMAIN);
 export const IS_DEVELOPMENT_BRANCH = APP_URL.includes(DEVELOPMENT_BRANCH_URL);
 
