@@ -29,7 +29,6 @@ export default {
         title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
         appTitle: (
             <Link
-                discover="none"
                 to={pathConfig.index}
                 className="appTitle"
                 title="Click to return to the eSpace home page"
