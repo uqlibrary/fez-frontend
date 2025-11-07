@@ -1,5 +1,5 @@
 import param from 'can-param';
-import { APP_PATH, APP_URL, DEFAULT_QUERY_PARAMS, IS_DEVELOPMENT_BRANCH, IS_TEST, STAGING_URL } from 'config/general';
+import { APP_URL, DEFAULT_QUERY_PARAMS, IS_DEVELOPMENT_BRANCH, IS_TEST, STAGING_URL } from 'config/general';
 import { createHash } from 'crypto';
 
 export const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUrl = '/records/search') => {

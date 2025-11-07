@@ -33,7 +33,6 @@ export const PRODUCTION_API_URL = 'https://api.library.uq.edu.au/v1/';
 export const STAGING_API_URL = 'https://api.library.uq.edu.au/staging/';
 export const API_URL = process.env.API_URL || STAGING_API_URL;
 export const APP_URL = process.env.APP_URL || (IS_TEST ? LOCALHOST_URL : STAGING_URL);
-export const APP_PATH = tryCatch(() => new URL(APP_URL).pathname, '/');
 export const IS_PRODUCTION = APP_URL.includes(PRODUCTION_API_URL);
 // webpack-dev-server runs on a specific port, so we can't compare APP_URL with LOCALHOST_URL
 export const IS_LOCAL_DEV = APP_URL.includes('localhost');
