@@ -1,5 +1,4 @@
 import moment from 'moment';
-import { tryCatch } from '../helpers/general';
 
 const converter = require('number-to-words');
 
