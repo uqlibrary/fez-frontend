@@ -16,25 +16,29 @@ export const numberToWords = value => {
     return ordinal.charAt(0).toUpperCase() + ordinal.slice(1);
 };
 
+// Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
 export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
 export const TOKEN_NAME = 'X-Uql-Token';
 export const GENERIC_DATE_FORMAT = 'DD/MM/YYYY';
 export const UQ_FULL_NAME = 'The University of Queensland';
+
 export const IS_JEST_TEST = !!process.env.JEST_WORKER_ID;
 export const IS_PLAYWRIGHT_TEST = !!process.env.PW_IS_RUNNING;
 export const IS_TEST = IS_JEST_TEST || IS_PLAYWRIGHT_TEST;
+
+// URLS
+export const LOCALHOST_DOMAIN = 'localhost';
+export const LOCALHOST_ALIAS_DOMAIN = 'dev-espace.library.uq.edu.au';
 export const PRODUCTION_URL = 'https://espace.library.uq.edu.au/';
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
-export const LOCALHOST_URL = 'http://localhost/';
 export const DEVELOPMENT_BRANCH_URL = 'https://development.library.uq.edu.au/';
 export const PRODUCTION_API_URL = 'https://api.library.uq.edu.au/v1/';
 export const STAGING_API_URL = 'https://api.library.uq.edu.au/staging/';
 export const API_URL = process.env.API_URL || STAGING_API_URL;
-export const APP_URL = process.env.APP_URL || (IS_TEST ? LOCALHOST_URL : STAGING_URL);
+export const APP_URL = process.env.APP_URL || (IS_TEST ? LOCALHOST_DOMAIN : STAGING_URL);
 export const IS_PRODUCTION = APP_URL.includes(PRODUCTION_API_URL);
-// webpack-dev-server runs on a specific port, so we can't compare APP_URL with LOCALHOST_URL
-export const IS_LOCAL_DEV = APP_URL.includes('localhost');
+export const IS_LOCAL_DEV = APP_URL.includes(LOCALHOST_DOMAIN) || APP_URL.includes(LOCALHOST_ALIAS_DOMAIN);
 export const IS_DEVELOPMENT_BRANCH = APP_URL.includes(DEVELOPMENT_BRANCH_URL);
 
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || `${APP_URL}login`;
