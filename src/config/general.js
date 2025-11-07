@@ -27,16 +27,16 @@ export const IS_PLAYWRIGHT_TEST = !!process.env.PW_IS_RUNNING;
 export const IS_TEST = IS_JEST_TEST || IS_PLAYWRIGHT_TEST;
 export const PRODUCTION_URL = 'https://espace.library.uq.edu.au/';
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
-export const DEVELOPMENT_URL = 'http://localhost/';
+export const LOCALHOST_URL = 'http://localhost/';
 export const DEVELOPMENT_BRANCH_URL = 'https://development.library.uq.edu.au/';
 export const PRODUCTION_API_URL = 'https://api.library.uq.edu.au/v1/';
 export const STAGING_API_URL = 'https://api.library.uq.edu.au/staging/';
 export const API_URL = process.env.API_URL || STAGING_API_URL;
-export const APP_URL = process.env.APP_URL || (IS_TEST ? DEVELOPMENT_URL : STAGING_URL);
+export const APP_URL = process.env.APP_URL || (IS_TEST ? LOCALHOST_URL : STAGING_URL);
 export const APP_PATH = tryCatch(() => new URL(APP_URL).pathname, '/');
 export const IS_PRODUCTION = APP_URL.includes(PRODUCTION_API_URL);
-// webpack-dev-server runs on a specific port, so we can't compare APP_URL with DEVELOPMENT_URL
-export const IS_DEVELOPMENT = APP_URL.includes('localhost');
+// webpack-dev-server runs on a specific port, so we can't compare APP_URL with LOCALHOST_URL
+export const IS_LOCAL_DEV = APP_URL.includes('localhost');
 export const IS_DEVELOPMENT_BRANCH = APP_URL.includes(DEVELOPMENT_BRANCH_URL);
 
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || `${APP_URL}login`;
@@ -61,7 +61,7 @@ export const GOOGLE_MAPS_API_CHINA_URL = `http://maps.google.cn/maps/api/js${get
 )}v=3.exp&libraries=geometry,drawing,places`;
 
 // convenience method to return an image via require() with a leading / where necessary
-export const getRequiredImagePath = imagePath => `${!IS_DEVELOPMENT && !IS_DEVELOPMENT_BRANCH ? '/' : ''}${imagePath}`;
+export const getRequiredImagePath = imagePath => `${!IS_LOCAL_DEV && !IS_DEVELOPMENT_BRANCH ? '/' : ''}${imagePath}`;
 
 // these values must match what is in api at fez_core/src/config/fez_core.php
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
