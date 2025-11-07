@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 import { setupCache } from 'axios-cache-interceptor';
 import {
     API_URL,
-    IS_DEVELOPMENT,
+    IS_LOCAL_DEV,
     IS_TEST,
     SESSION_COOKIE_NAME,
     SESSION_USER_GROUP_COOKIE_NAME,
@@ -23,7 +23,7 @@ let apiClient = axios.create({
     crossdomain: true,
 });
 
-if (!IS_DEVELOPMENT && !IS_TEST) {
+if (!IS_LOCAL_DEV && !IS_TEST) {
     // note: axios-cache-interceptor is not compatible with axios response mocks & tests
     // upon updating it or changing config settings, make sure to test it using prodtest env
     apiClient = setupCache(apiClient, {

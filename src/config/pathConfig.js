@@ -32,7 +32,7 @@ export const getDatastreamVersionQueryString = (fileName, checksum) => {
 };
 
 export const pathConfig = {
-    index: IS_DEVELOPMENT_BRANCH ? APP_PATH : '/',
+    index: '/',
     communityCollections: {
         communityListUrl: '/communities',
         collectionsListUrl: '/collections',
