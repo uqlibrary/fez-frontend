@@ -46,16 +46,12 @@ export function updateCurrentAuthor(authorId, data) {
                     type: actions.CURRENT_AUTHOR_SAVED,
                     payload: response.data,
                 });
-
-                return Promise.resolve(response.data);
             })
             .catch(error => {
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVE_FAILED,
                     payload: error.message,
                 });
-
-                return Promise.reject(error);
             });
     };
 }

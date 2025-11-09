@@ -29,7 +29,7 @@ import Fade from '@mui/material/Fade';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/icons-material/Menu';
 
@@ -122,6 +122,7 @@ const AppClass = ({
         // don't call the api for non author users since the api call requires an author
         if (!accountAuthorLoading && author?.aut_id) {
             actions.searchAuthorPublications({}, 'incomplete');
+            actions.searchAuthorPublications({}, 'noncompliantoa');
         }
     }, [accountAuthorLoading, actions, author?.aut_id]);
 
@@ -190,12 +191,18 @@ const AppClass = ({
         incompleteRecordList.incomplete.publicationsListPagingData &&
         incompleteRecordList.incomplete.publicationsListPagingData.total > 0
     );
+    const hasOaComplianceWorks = !!(
+        incompleteRecordList &&
+        incompleteRecordList.noncompliantoa?.publicationsListPagingData &&
+        incompleteRecordList.noncompliantoa?.publicationsListPagingData.total > 0
+    );
     const menuItems = routes.getMenuConfig(
         account,
         author,
         authorDetails,
         isHdrStudent && !isAuthor,
         hasIncompleteWorks,
+        hasOaComplianceWorks,
     );
 
     const isPublicPage = isPublic(menuItems);
@@ -275,7 +282,9 @@ const AppClass = ({
                                 <Tooltip
                                     title={locale.global.mainNavButton.tooltip}
                                     placement="bottom-end"
-                                    TransitionComponent={Fade}
+                                    slots={{
+                                        transition: Fade,
+                                    }}
                                 >
                                     <IconButton
                                         aria-label={locale.global.mainNavButton.aria}

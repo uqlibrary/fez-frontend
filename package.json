@@ -1,447 +1,449 @@
 {
-    "name": "espace-frontend",
-    "version": "0.1.0",
-    "main": "src/index.js",
-    "license": "MIT",
-    "repository": "github:uqlibrary/fez-frontend",
-    "scripts": {
-        "jest-preview": "jest-preview",
-        "analyse": "webpack --config=./webpack-dist.config --stats=detailed --json=stats.json",
-        "build": "NODE_OPTIONS='--max-old-space-size=8192' webpack --config=./webpack-dist.config",
-        "build:dev": "NODE_OPTIONS='--max-old-space-size=8192' webpack --config=./webpack.config",
-        "cc:reportAll": "scripts/code-coverage.sh",
-        "clean": "rm -rf assets coverage **/coverage dist node_modules **/node_modules stats.json .nyc_output",
-        "codestyles:files": "cross-env prettier-eslint './*.js' --list-different -l silent",
-        "codestyles:fix": "cross-env prettier-eslint --write",
-        "codestyles:fix:all": "cross-env prettier-eslint '**/*.{js,jsx,ts,tsx}' --write",
-        "codestyles:fix:staged": "cross-env FILES=$(git diff --cached --name-only --diff-filter=ACM | grep \".jsx\\{0,1\\}$\"); npx prettier-eslint $FILES --write",
-        "eslint": "eslint '**/*.{js,jsx,ts,tsx}' --quiet",
-        "eslint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --quiet --fix",
-        "start": "webpack-dev-server",
-        "start:build": "cross-env NODE_ENV=production URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=8192' webpack-dev-server --config=./webpack-dist.config --allowed-hosts=all",
-        "start:build:e2e": "cross-env NODE_ENV=production URL=localhost USE_MOCK=true NODE_OPTIONS='--max-old-space-size=8192' webpack-dev-server --config=./webpack-dist.config",
-        "start:mock": "cross-env USE_MOCK=true FULL_PATH=http://localhost:3000 NODE_OPTIONS='--max-old-space-size=4096' webpack-dev-server",
-        "start:url": "cross-env URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=4096' webpack-dev-server",
-        "test": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest --maxWorkers=8",
-        "test:all": "npm run test:unit && npm run test:e2e && npm run test:cs -s",
-        "pretest:cc": "rm -rf coverage .nyc_output",
-        "test:cc": "npm run test:unit:ci && npm run test:unit:ci:serial && npm run test:e2e:cc && npm run cc:reportAll",
-        "test:cs": "echo \"Running code style checks...\" && FILES=$(npm run codestyles:files -s) && echo \"No code style issues found.\" || echo \"File(s) failed code style checks!:\" && echo $FILES",
-        "test:e2e": "cross-env PW_IS_RUNNING=true playwright test",
-        "test:e2e:show": "cross-env PW_HEADED=true npm run test:e2e -- --workers=1",
-        "test:e2e:debug": "playwright show-trace",
-        "test:e2e:cc": "cross-env NODE_ENV=cc npm run test:e2e",
-        "posttest:e2e:cc": "rm -rf .nyc_output",
-        "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
-        "test:unit:serial": "npm run test:unit -- --runInBand --coverageDirectory=coverage/jest-serial",
-        "test:unit:ci": "npm run test:unit -- --ci --silent --no-warnings --testPathIgnorePatterns=\"$(jq -r '.jest.testPathIgnorePatterns | join(\"|\")' package.json)|$(paste -sd'|' jest-serial.txt | sed 's/[.[\\\\]*^$/\\\\\\\\&/g')\"",
-        "test:unit:ci:nocoverage": "npm run test:unit:ci -- --no-coverage",
-        "test:unit:ci:serial": "npm run test:unit:serial -- --ci --silent --no-warnings $(paste -sd' ', jest-serial.txt)",
-        "test:unit:ci:serial:nocoverage": "npm run test:unit:ci:serial -- --no-coverage",
-        "test:unit:update": "npm run test:unit -- --updateSnapshot",
-        "test:unit:watch": "npm run test:unit -- --watch --onlyChanged",
-        "tsc": "./node_modules/typescript/bin/tsc",
-        "tsc:watch": "./node_modules/typescript/bin/tsc --watch"
-    },
-    "devDependencies": {
-        "@babel/cli": "^7.28.0",
-        "@babel/core": "^7.28.0",
-        "@babel/eslint-parser": "^7.28.0",
-        "@babel/plugin-proposal-decorators": "^7.28.0",
-        "@babel/plugin-proposal-do-expressions": "^7.28.0",
-        "@babel/plugin-proposal-export-default-from": "^7.27.1",
-        "@babel/plugin-proposal-function-bind": "^7.27.1",
-        "@babel/plugin-proposal-function-sent": "^7.27.1",
-        "@babel/plugin-proposal-pipeline-operator": "^7.27.1",
-        "@babel/plugin-proposal-throw-expressions": "^7.27.1",
-        "@babel/plugin-syntax-export-namespace-from": "^7.8.3",
-        "@babel/plugin-transform-react-constant-elements": "^7.27.1",
-        "@babel/plugin-transform-runtime": "^7.28.0",
-        "@babel/plugin-transform-spread": "^7.27.1",
-        "@babel/preset-env": "^7.28.0",
-        "@babel/preset-react": "^7.27.1",
-        "@babel/preset-typescript": "^7.27.1",
-        "@babel/register": "^7.27.1",
-        "@eslint/compat": "^1.3.2",
-        "@eslint/eslintrc": "^3.3.1",
-        "@eslint/js": "^9.33.0",
-        "@googlemaps/jest-mocks": "^2.21.4",
-        "@playwright/test": "^1.52.0",
-        "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
-        "@sentry/webpack-plugin": "^4.0.2",
-        "@stylistic/eslint-plugin": "^5.2.3",
-        "@testing-library/jest-dom": "^6.1.5",
-        "@testing-library/react": "^16.0.0",
-        "@testing-library/user-event": "^14.5.1",
-        "@types/file-saver": "^2.0.7",
-        "@types/jest": "^29.5.11",
-        "@types/js-cookie": "^3.0.6",
-        "@types/material-ui": "^0.21.15",
-        "@types/node": "^14.18.63",
-        "@types/number-to-words": "^1.2.3",
-        "@types/prop-types": "^15.7.11",
-        "@types/react": "^18.3.3",
-        "@types/react-dom": "^18.3.0",
-        "@types/redux-immutable": "^4.0.6",
-        "@types/webpack": "^4.41.38",
-        "ajv": "^8.12.0",
-        "assets-webpack-plugin": "^6.1.2",
-        "autoprefixer": "^10.4.16",
-        "axe-core": "^4.8.3",
-        "axios-mock-adapter": "^2.1.0",
-        "babel-jest": "^29.7.0",
-        "babel-loader": "^9.1.2",
-        "babel-plugin-dynamic-import-node": "^2.3.3",
-        "babel-plugin-istanbul": "^6.1.1",
-        "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-        "browser-update": "^3.3.28",
-        "browserify": "^17.0.0",
-        "buffer": "^6.0.3",
-        "chalk": "^4.1.2",
-        "chromedriver": "^121.0.0",
-        "cross-env": "^10.0.0",
-        "css-loader": "^5.2.7",
-        "css-mediaquery": "^0.1.2",
-        "dotenv-webpack": "^8.0.1",
-        "eslint": "^9.33.0",
-        "eslint-config-prettier": "^10.1.8",
-        "eslint-plugin-jsx-a11y": "^6.10.2",
-        "eslint-plugin-prettier": "^5.5.4",
-        "eslint-plugin-react": "^7.37.5",
-        "eslint-plugin-react-hooks": "^5.2.0",
-        "eslint-plugin-uqlibrary": "file:eslint-plugin-uqlibrary",
-        "eslint-webpack-plugin": "^5.0.2",
-        "file-loader": "^6.2.0",
-        "fork-ts-checker-webpack-plugin": "^9.1.0",
-        "globals": "^16.3.0",
-        "html-react-parser": "^4.0.0",
-        "html-webpack-plugin": "^5.5.0",
-        "jest": "^29.7.0",
-        "jest-cli": "^29.7.0",
-        "jest-environment-jsdom": "^29.7.0",
-        "jest-html-reporter": "^3.10.2",
-        "jest-localstorage-mock": "^2.4.26",
-        "jest-preview": "^0.3.1",
-        "jsdom": "^20.0.3",
-        "mini-css-extract-plugin": "^2.7.2",
-        "mockdate": "^3.0.5",
-        "postcss-loader": "^4.2.0",
-        "prettier": "^3.6.2",
-        "prettier-eslint": "^17.0.0-alpha.1",
-        "prettier-eslint-cli": "^9.0.0-alpha.2",
-        "progress-bar-webpack-plugin": "^2.1.0",
-        "query-string": "^6.5.0",
-        "react-refresh": "^0.14.0",
-        "react-test-renderer": "^18.3.1",
-        "redux-mock-store": "^1.5.1",
-        "resize-observer-polyfill": "^1.5.1",
-        "robotstxt-webpack-plugin": "^8.0.0",
-        "sass": "^1.70.0",
-        "sass-loader": "^10.2.1",
-        "snapshot-diff": "^0.10.0",
-        "start-server-and-test": "^2.0.3",
-        "string-to-arraybuffer": "^1.0.0",
-        "style-loader": "^2.0.0",
-        "terser-webpack-plugin": "^5.3.6",
-        "typescript": "5.5",
-        "typescript-eslint": "^8.40.0",
-        "webpack": "^5.75.0",
-        "webpack-bundle-analyzer": "^4.8.0",
-        "webpack-cli": "^5.0.1",
-        "webpack-dev-server": "^4.15.2",
-        "whatwg-fetch": "^3.6.20"
-    },
-    "dependencies": {
-        "@axe-core/playwright": "^4.10.2",
-        "@babel/runtime": "^7.23.6",
-        "@babel/runtime-corejs3": "^7.28.0",
-        "@ckeditor/ckeditor5-react": "^9.3.1",
-        "@date-io/date-fns": "^2.17.0",
-        "@date-io/moment": "^1.3.13",
-        "@emotion/react": "^11.11.1",
-        "@emotion/styled": "^11.11.0",
-        "@mui/icons-material": "^5.10.3",
-        "@mui/lab": "^5.0.0-alpha.98",
-        "@mui/material": "^5.15.7",
-        "@mui/styled-engine": "^5.15.7",
-        "@mui/system": "^5.15.7",
-        "@mui/x-charts": "^7.6.2",
-        "@mui/x-data-grid": "^7.29.5",
-        "@mui/x-date-pickers": "^7.0.0",
-        "@react-google-maps/api": "^2.19.2",
-        "@sentry/react": "^10.2.0",
-        "@types/lodash": "^4.17.16",
-        "axios": "^1.11.0",
-        "axios-cache-interceptor": "^1.8.0",
-        "can-deparam": "^1.1.1",
-        "can-param": "^1.0.4",
-        "classnames": "^2.5.1",
-        "core-js": "^3.35.0",
-        "debounce-promise": "^3.1.2",
-        "deep-object-diff": "^1.1.0",
-        "dompurify": "^3.2.6",
-        "file-saver": "^2.0.2",
-        "fuse.js": "^6.4.0",
-        "hash-sum": "^2.0.0",
-        "highcharts": "^9.3.2",
-        "immutable": "^3.8.2",
-        "jest-summary-reporter": "^0.0.2",
-        "js-cookie": "^3.0.5",
-        "jss": "^9.8.7",
-        "jss-global": "^3.0.0",
-        "jss-nested": "^6.0.1",
-        "keycode": "^2.2.0",
-        "locutus": "^2.0.32",
-        "lodash": "^4.17.21",
-        "match-sorter": "^6.3.1",
-        "material-react-table": "^2.13.3",
-        "microdiff": "^1.4.0",
-        "moment": "^2.22.1",
-        "moment-timezone": "^0.5.43",
-        "number-to-words": "^1.2.4",
-        "prop-types": "^15.7.2",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "react-dropzone": "^14.2.3",
-        "react-helmet-async": "^1.2.3",
-        "react-hook-form": "^7.54.2",
-        "react-image": "^4.1.0",
-        "react-jss": "^8.6.1",
-        "react-lazy-load-image-component": "^1.5.4",
-        "react-player": "^2.16.0",
-        "react-redux": "^8.0.7",
-        "react-router-dom": "^6.22.0",
-        "react-scroll-up": "^1.3.7",
-        "react-speech-recognition": "^3.8.2",
-        "redux": "4.2.1",
-        "redux-immutable": "^4.0.0",
-        "redux-thunk": "^2.2.0",
-        "regenerator-runtime": "^0.13.9",
-        "reselect": "^5.1.1",
-        "save": "^2.9.0",
-        "throttle-debounce": "^5.0.0",
-        "timezones.json": "^1.2.1",
-        "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
-    },
-    "optionalDependencies": {
-        "fsevents": "^2.3.0"
-    },
-    "overrides": {
-        "istanbul-lib-instrument": "6.0.1",
-        "@istanbuljs/schema": "0.1.3",
-        "istanbul-lib-coverage": "3.2.2"
-    },
-    "engines": {
-        "npm": ">=10.8.2",
-        "node": ">=20.11.0"
-    },
-    "babel": {
+  "name": "espace-frontend",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "repository": "github:uqlibrary/fez-frontend",
+  "scripts": {
+    "jest-preview": "jest-preview",
+    "analyse": "webpack --config=./webpack-dist.config --stats=detailed --json=stats.json",
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' webpack --config=./webpack-dist.config",
+    "build:dev": "NODE_OPTIONS='--max-old-space-size=8192' webpack --config=./webpack.config",
+    "cc:reportAll": "scripts/code-coverage.sh",
+    "clean": "rm -rf assets coverage **/coverage dist node_modules **/node_modules stats.json .nyc_output",
+    "codestyles:files": "cross-env prettier-eslint './*.js' --list-different -l silent",
+    "codestyles:fix": "cross-env prettier-eslint --write",
+    "codestyles:fix:all": "cross-env prettier-eslint '**/*.{js,jsx,ts,tsx}' --write",
+    "codestyles:fix:staged": "cross-env FILES=$(git diff --cached --name-only --diff-filter=ACM | grep \".jsx\\{0,1\\}$\"); npx prettier-eslint $FILES --write",
+    "eslint": "eslint '**/*.{js,jsx,ts,tsx}' --quiet",
+    "eslint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --quiet --fix",
+    "start": "webpack-dev-server",
+    "start:build": "cross-env NODE_ENV=production URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=8192' webpack-dev-server --config=./webpack-dist.config --allowed-hosts=all",
+    "start:build:e2e": "cross-env NODE_ENV=production URL=localhost USE_MOCK=true NODE_OPTIONS='--max-old-space-size=8192' webpack-dev-server --config=./webpack-dist.config",
+    "start:mock": "cross-env USE_MOCK=true FULL_PATH=http://localhost:3000 NODE_OPTIONS='--max-old-space-size=4096' webpack-dev-server",
+    "start:url": "cross-env URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=4096' webpack-dev-server",
+    "test": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest --maxWorkers=8",
+    "test:all": "npm run test:unit && npm run test:e2e && npm run test:cs -s",
+    "pretest:cc": "rm -rf coverage .nyc_output",
+    "test:cc": "npm run test:unit:ci && npm run test:unit:ci:serial && npm run test:e2e:cc && npm run cc:reportAll",
+    "test:cs": "echo \"Running code style checks...\" && FILES=$(npm run codestyles:files -s) && echo \"No code style issues found.\" || echo \"File(s) failed code style checks!:\" && echo $FILES",
+    "test:e2e": "cross-env PW_IS_RUNNING=true playwright test",
+    "test:e2e:show": "cross-env PW_HEADED=true npm run test:e2e -- --workers=1",
+    "test:e2e:debug": "playwright show-trace",
+    "test:e2e:cc": "cross-env NODE_ENV=cc npm run test:e2e",
+    "posttest:e2e:cc": "rm -rf .nyc_output",
+    "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
+    "test:unit:serial": "npm run test:unit -- --runInBand --coverageDirectory=coverage/jest-serial",
+    "test:unit:ci": "npm run test:unit -- --ci --silent --no-warnings --testPathIgnorePatterns=\"$(jq -r '.jest.testPathIgnorePatterns | join(\"|\")' package.json)|$(paste -sd'|' jest-serial.txt | sed 's/[.[\\\\]*^$/\\\\\\\\&/g')\"",
+    "test:unit:ci:nocoverage": "npm run test:unit:ci -- --no-coverage",
+    "test:unit:ci:serial": "npm run test:unit:serial -- --ci --silent --no-warnings $(paste -sd' ', jest-serial.txt)",
+    "test:unit:ci:serial:nocoverage": "npm run test:unit:ci:serial -- --no-coverage",
+    "test:unit:update": "npm run test:unit -- --updateSnapshot",
+    "test:unit:watch": "npm run test:unit -- --watch --onlyChanged",
+    "tsc": "./node_modules/typescript/bin/tsc",
+    "tsc:watch": "./node_modules/typescript/bin/tsc --watch"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.0",
+    "@babel/core": "^7.28.0",
+    "@babel/eslint-parser": "^7.28.0",
+    "@babel/plugin-proposal-decorators": "^7.28.0",
+    "@babel/plugin-proposal-do-expressions": "^7.28.0",
+    "@babel/plugin-proposal-export-default-from": "^7.27.1",
+    "@babel/plugin-proposal-function-bind": "^7.27.1",
+    "@babel/plugin-proposal-function-sent": "^7.27.1",
+    "@babel/plugin-proposal-pipeline-operator": "^7.27.1",
+    "@babel/plugin-proposal-throw-expressions": "^7.27.1",
+    "@babel/plugin-syntax-export-namespace-from": "^7.8.3",
+    "@babel/plugin-transform-react-constant-elements": "^7.27.1",
+    "@babel/plugin-transform-runtime": "^7.28.0",
+    "@babel/plugin-transform-spread": "^7.27.1",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@babel/register": "^7.27.1",
+    "@eslint/compat": "^1.3.2",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.33.0",
+    "@googlemaps/jest-mocks": "^2.21.4",
+    "@playwright/test": "^1.52.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
+    "@sentry/webpack-plugin": "^4.0.2",
+    "@stylistic/eslint-plugin": "^5.2.3",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/file-saver": "^2.0.7",
+    "@types/jest": "^29.5.11",
+    "@types/js-cookie": "^3.0.6",
+    "@types/material-ui": "^0.21.15",
+    "@types/node": "^14.18.63",
+    "@types/number-to-words": "^1.2.3",
+    "@types/prop-types": "^15.7.11",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/redux-immutable": "^4.0.6",
+    "@types/throttle-debounce": "^5.0.2",
+    "@types/webpack": "^4.41.38",
+    "ajv": "^8.12.0",
+    "assets-webpack-plugin": "^6.1.2",
+    "autoprefixer": "^10.4.16",
+    "axe-core": "^4.8.3",
+    "axios-mock-adapter": "^2.1.0",
+    "babel-jest": "^29.7.0",
+    "babel-loader": "^9.1.2",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "babel-plugin-istanbul": "^6.1.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "browser-update": "^3.3.28",
+    "browserify": "^17.0.0",
+    "buffer": "^6.0.3",
+    "chalk": "^4.1.2",
+    "chromedriver": "^121.0.0",
+    "cross-env": "^10.0.0",
+    "css-loader": "^5.2.7",
+    "css-mediaquery": "^0.1.2",
+    "dotenv-webpack": "^8.0.1",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-uqlibrary": "file:eslint-plugin-uqlibrary",
+    "eslint-webpack-plugin": "^5.0.2",
+    "file-loader": "^6.2.0",
+    "fork-ts-checker-webpack-plugin": "^9.1.0",
+    "globals": "^16.3.0",
+    "html-react-parser": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.7.0",
+    "jest-cli": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
+    "jest-localstorage-mock": "^2.4.26",
+    "jest-preview": "^0.3.2",
+    "jsdom": "^20.0.3",
+    "mini-css-extract-plugin": "^2.7.2",
+    "mockdate": "^3.0.5",
+    "postcss-loader": "^4.2.0",
+    "prettier": "^3.6.2",
+    "prettier-eslint": "^17.0.0-alpha.1",
+    "prettier-eslint-cli": "^9.0.0-alpha.2",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "query-string": "^6.5.0",
+    "react-refresh": "^0.14.0",
+    "react-test-renderer": "^18.3.1",
+    "redux-mock-store": "^1.5.1",
+    "resize-observer-polyfill": "^1.5.1",
+    "robotstxt-webpack-plugin": "^8.0.0",
+    "sass": "^1.70.0",
+    "sass-loader": "^10.2.1",
+    "snapshot-diff": "^0.10.0",
+    "start-server-and-test": "^2.0.3",
+    "string-to-arraybuffer": "^1.0.0",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.3.6",
+    "typescript": "5.5",
+    "typescript-eslint": "^8.40.0",
+    "webpack": "^5.75.0",
+    "webpack-bundle-analyzer": "^4.8.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.15.2",
+    "whatwg-fetch": "^3.6.20"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@babel/runtime": "^7.23.6",
+    "@babel/runtime-corejs3": "^7.28.0",
+    "@ckeditor/ckeditor5-react": "^9.3.1",
+    "@date-io/date-fns": "^2.17.0",
+    "@date-io/moment": "^1.3.13",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@mui/icons-material": "7.3.2",
+    "@mui/lab": "7.0.0-beta.17",
+    "@mui/material": "7.3.2",
+    "@mui/styled-engine": "7.3.2",
+    "@mui/system": "7.3.2",
+    "@mui/x-charts": "^7.29.1",
+    "@mui/x-data-grid": "7.29.5",
+    "@mui/x-date-pickers": "7.29.4",
+    "@react-google-maps/api": "^2.19.2",
+    "@sentry/react": "^10.2.0",
+    "@types/lodash": "^4.17.16",
+    "axios": "^1.11.0",
+    "axios-cache-interceptor": "^1.8.0",
+    "can-deparam": "^1.1.1",
+    "can-param": "^1.0.4",
+    "classnames": "^2.5.1",
+    "core-js": "^3.35.0",
+    "debounce-promise": "^3.1.2",
+    "deep-object-diff": "^1.1.0",
+    "dompurify": "^3.2.6",
+    "file-saver": "^2.0.2",
+    "fuse.js": "^6.4.0",
+    "hash-sum": "^2.0.0",
+    "highcharts": "^9.3.2",
+    "immutable": "^3.8.2",
+    "jest-summary-reporter": "^0.0.2",
+    "js-cookie": "^3.0.5",
+    "jss": "^9.8.7",
+    "jss-global": "^3.0.0",
+    "jss-nested": "^6.0.1",
+    "keycode": "^2.2.0",
+    "locutus": "^2.0.32",
+    "lodash": "^4.17.21",
+    "match-sorter": "^6.3.1",
+    "material-react-table": "3.2.1",
+    "microdiff": "^1.4.0",
+    "moment": "^2.22.1",
+    "moment-timezone": "^0.5.43",
+    "number-to-words": "^1.2.4",
+    "prop-types": "^15.7.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-dropzone": "^14.2.3",
+    "react-helmet-async": "^1.2.3",
+    "react-hook-form": "^7.54.2",
+    "react-image": "^4.1.0",
+    "react-jss": "^8.6.1",
+    "react-lazy-load-image-component": "^1.5.4",
+    "react-player": "^2.16.0",
+    "react-redux": "^8.0.7",
+    "react-router-dom": "^6.22.0",
+    "react-scroll-up": "^1.3.7",
+    "react-speech-recognition": "^3.8.2",
+    "redux": "4.2.1",
+    "redux-immutable": "^4.0.0",
+    "redux-thunk": "^2.2.0",
+    "regenerator-runtime": "^0.13.9",
+    "reselect": "^5.1.1",
+    "save": "^2.9.0",
+    "throttle-debounce": "^5.0.0",
+    "timezones.json": "^1.2.1",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.0"
+  },
+  "overrides": {
+    "istanbul-lib-instrument": "6.0.1",
+    "@istanbuljs/schema": "0.1.3",
+    "istanbul-lib-coverage": "3.2.2"
+  },
+  "engines": {
+    "npm": ">=10.8.2",
+    "node": ">=20.11.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react",
+      "@babel/preset-typescript"
+    ],
+    "env": {
+      "development": {
         "presets": [
-            "@babel/env",
-            "@babel/react",
-            "@babel/preset-typescript"
-        ],
-        "env": {
-            "development": {
-                "presets": [
-                    "@babel/env",
-                    "@babel/react",
-                    "@babel/preset-typescript"
-                ]
-            },
-            "production": {
-                "presets": [
-                    [
-                        "@babel/env",
-                        {
-                            "modules": false,
-                            "targets": {
-                                "ie": 11
-                            }
-                        }
-                    ]
-                ],
-                "plugins": [
-                    "@babel/plugin-transform-react-constant-elements",
-                    "transform-react-remove-prop-types",
-                    "@babel/plugin-proposal-export-default-from",
-                    [
-                        "@babel/plugin-transform-spread",
-                        {
-                            "loose": true
-                        }
-                    ]
-                ]
-            },
-            "test": {
-                "presets": [
-                    "@babel/env",
-                    "@babel/react",
-                    "@babel/preset-typescript"
-                ],
-                "plugins": [
-                    [
-                        "dynamic-import-node",
-                        {
-                            "noInterop": true
-                        }
-                    ],
-                    [
-                        "@babel/plugin-transform-runtime",
-                        {
-                            "helpers": false,
-                            "regenerator": true,
-                            "corejs": false
-                        }
-                    ],
-                    "@babel/plugin-proposal-export-default-from"
-                ]
-            },
-            "cc": {
-                "presets": [
-                    "@babel/env",
-                    "@babel/react",
-                    "@babel/preset-typescript"
-                ],
-                "plugins": [
-                    [
-                        "dynamic-import-node",
-                        {
-                            "noInterop": true
-                        }
-                    ],
-                    [
-                        "@babel/plugin-transform-runtime",
-                        {
-                            "helpers": false,
-                            "regenerator": true,
-                            "corejs": false
-                        }
-                    ],
-                    "@babel/plugin-proposal-export-default-from",
-                    "istanbul"
-                ]
-            }
-        }
-    },
-    "jest": {
-        "transform": {
-            ".*": "<rootDir>/node_modules/babel-jest"
-        },
-        "testMatch": [
-            "**/__tests__/**/*.[jt]s?(x)",
-            "**/?(*.)+(test).[jt]s?(x)",
-            "**/?(*.)+(integration).[jt]s?(x)"
-        ],
-        "testPathIgnorePatterns": [
-            "<rootDir>/playwright/"
-        ],
-        "moduleFileExtensions": [
-            "js",
-            "jsx",
-            "tsx",
-            "ts",
-            "json",
-            "es6"
-        ],
-        "unmockedModulePathPatterns": [
-            "react"
-        ],
-        "collectCoverage": true,
-        "coveragePathIgnorePatterns": [
-            "<rootDir>/playwright/"
-        ],
-        "collectCoverageFrom": [
-            "src/modules/**/*.{js,jsx,ts,tsx}",
-            "!src/**/*.test.{js,jsx,ts,tsx}",
-            "!src/modules/App/components/pages.js",
-            "!src/**/{index,locale,config}.js",
-            "!src/**/containers/*.{js,jsx,ts,tsx}",
-            "!src/**/test-utils.{ts,js}",
-            "src/modules/Index/*.{js,jsx,ts,tsx}",
-            "src/actions/*.{js,jsx,ts,tsx}",
-            "src/helpers/*.{js,jsx,ts,tsx}",
-            "src/middleware/*.{js,jsx,ts,tsx}",
-            "src/reducers/*.{js,jsx,ts,tsx}",
-            "src/repositories/routes.js",
-            "src/hooks/useForm.js",
-            "src/hooks/useValidatedForm.js",
-            "src/hooks/useDispatchOnce.ts",
-            "src/hooks/usePrevious.ts",
-            "src/hooks/useControlledVocabs.ts"
-        ],
-        "coverageDirectory": "coverage/jest",
-        "coverageReporters": [
-            "cobertura",
-            "html",
-            "json"
-        ],
-        "modulePaths": [
-            "<rootDir>/src",
-            "<rootDir>/eslint-plugin-uqlibrary",
-            "<rootDir>/utils"
-        ],
-        "moduleNameMapper": {
-            "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
-            "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js"
-        },
-        "transformIgnorePatterns": [
-            "<rootDir>/node_modules/"
-        ],
-        "reporters": [
-            "default",
-            "jest-summary-reporter",
-            [
-                "./node_modules/jest-html-reporter",
-                {
-                    "pageTitle": "Test Report",
-                    "outputPath": "coverage/jest-html-report.html",
-                    "includeFailureMsg": true,
-                    "includeConsoleLog": true,
-                    "executionTimeWarningThreshold": 30,
-                    "statusIgnoreFilter": "passed"
-                }
-            ]
-        ],
-        "setupFiles": [
-            "./src/test.setup.js",
-            "jest-localstorage-mock"
-        ],
-        "setupFilesAfterEnv": [
-            "<rootDir>/src/jest.setup.js"
-        ],
-        "testEnvironment": "jsdom",
-        "testEnvironmentOptions": {
-            "url": "http://fez-staging.library.uq.edu.au"
-        },
-        "testTimeout": 30000,
-        "snapshotSerializers": [
-            "<rootDir>/utils/jest-serializer.ts"
+          "@babel/env",
+          "@babel/react",
+          "@babel/preset-typescript"
         ]
-    },
-    "nyc": {
-        "reporter": [
-            "html",
-            "text-summary",
-            "json"
+      },
+      "production": {
+        "presets": [
+          [
+            "@babel/env",
+            {
+              "modules": false,
+              "targets": {
+                "ie": 11
+              }
+            }
+          ]
         ],
-        "temp-dir": "coverage/temp",
-        "include": [
-            "src/modules/**/*.{js,jsx,ts,tsx}",
-            "src/modules/Index/*.{js,jsx,ts,tsx}",
-            "src/actions/*.{js,jsx,ts,tsx}",
-            "src/helpers/*.{js,jsx,ts,tsx}",
-            "src/middleware/*.{js,jsx,ts,tsx}",
-            "src/reducers/*.{js,jsx,ts,tsx}",
-            "src/repositories/routes.js"
+        "plugins": [
+          "@babel/plugin-transform-react-constant-elements",
+          "transform-react-remove-prop-types",
+          "@babel/plugin-proposal-export-default-from",
+          [
+            "@babel/plugin-transform-spread",
+            {
+              "loose": true
+            }
+          ]
+        ]
+      },
+      "test": {
+        "presets": [
+          "@babel/env",
+          "@babel/react",
+          "@babel/preset-typescript"
         ],
-        "exclude": [
-            "src/**/{index,locale,config,pages}.js",
-            "src/**/containers/*.{js,jsx,ts,tsx}",
-            "src/**/*.test.{js,jsx,ts,tsx}",
-            "src/modules/Admin/hooks.js",
-            "src/modules/SharedComponents/Toolbox/MenuDrawer/components/MenuDrawer.tsx"
+        "plugins": [
+          [
+            "dynamic-import-node",
+            {
+              "noInterop": true
+            }
+          ],
+          [
+            "@babel/plugin-transform-runtime",
+            {
+              "helpers": false,
+              "regenerator": true,
+              "corejs": false
+            }
+          ],
+          "@babel/plugin-proposal-export-default-from"
+        ]
+      },
+      "cc": {
+        "presets": [
+          "@babel/env",
+          "@babel/react",
+          "@babel/preset-typescript"
         ],
-        "all": true
+        "plugins": [
+          [
+            "dynamic-import-node",
+            {
+              "noInterop": true
+            }
+          ],
+          [
+            "@babel/plugin-transform-runtime",
+            {
+              "helpers": false,
+              "regenerator": true,
+              "corejs": false
+            }
+          ],
+          "@babel/plugin-proposal-export-default-from",
+          "istanbul"
+        ]
+      }
     }
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(test).[jt]s?(x)",
+      "**/?(*.)+(integration).[jt]s?(x)"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/playwright/"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "tsx",
+      "ts",
+      "json",
+      "es6"
+    ],
+    "unmockedModulePathPatterns": [
+      "react"
+    ],
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/playwright/"
+    ],
+    "collectCoverageFrom": [
+      "src/modules/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.test.{js,jsx,ts,tsx}",
+      "!src/modules/App/components/pages.js",
+      "!src/**/{index,locale,config}.js",
+      "!src/**/containers/*.{js,jsx,ts,tsx}",
+      "!src/**/test-utils.{ts,js}",
+      "src/modules/Index/*.{js,jsx,ts,tsx}",
+      "src/actions/*.{js,jsx,ts,tsx}",
+      "src/helpers/*.{js,jsx,ts,tsx}",
+      "src/middleware/*.{js,jsx,ts,tsx}",
+      "src/reducers/*.{js,jsx,ts,tsx}",
+      "src/repositories/routes.js",
+      "src/hooks/useForm.js",
+      "src/hooks/useValidatedForm.js",
+      "src/hooks/useDispatchOnce.ts",
+      "src/hooks/usePrevious.ts",
+      "src/hooks/useControlledVocabs.ts"
+    ],
+    "coverageDirectory": "coverage/jest",
+    "coverageReporters": [
+      "cobertura",
+      "html",
+      "json"
+    ],
+    "modulePaths": [
+      "<rootDir>/src",
+      "<rootDir>/eslint-plugin-uqlibrary",
+      "<rootDir>/utils"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
+      "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js"
+    },
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "reporters": [
+      "default",
+      "jest-summary-reporter",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Test Report",
+          "outputPath": "coverage/jest-html-report.html",
+          "includeFailureMsg": true,
+          "includeConsoleLog": true,
+          "executionTimeWarningThreshold": 30,
+          "statusIgnoreFilter": "passed"
+        }
+      ]
+    ],
+    "setupFiles": [
+      "./src/test.setup.js",
+      "jest-localstorage-mock"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/jest.setup.js"
+    ],
+    "testEnvironment": "jsdom",
+    "testEnvironmentOptions": {
+      "url": "http://fez-staging.library.uq.edu.au",
+      "runScripts": "outside-only"
+    },
+    "testTimeout": 30000,
+    "snapshotSerializers": [
+      "<rootDir>/utils/jest-serializer.ts"
+    ]
+  },
+  "nyc": {
+    "reporter": [
+      "html",
+      "text-summary",
+      "json"
+    ],
+    "temp-dir": "coverage/temp",
+    "include": [
+      "src/modules/**/*.{js,jsx,ts,tsx}",
+      "src/modules/Index/*.{js,jsx,ts,tsx}",
+      "src/actions/*.{js,jsx,ts,tsx}",
+      "src/helpers/*.{js,jsx,ts,tsx}",
+      "src/middleware/*.{js,jsx,ts,tsx}",
+      "src/reducers/*.{js,jsx,ts,tsx}",
+      "src/repositories/routes.js"
+    ],
+    "exclude": [
+      "src/**/{index,locale,config,pages}.js",
+      "src/**/containers/*.{js,jsx,ts,tsx}",
+      "src/**/*.test.{js,jsx,ts,tsx}",
+      "src/modules/Admin/hooks.js",
+      "src/modules/SharedComponents/Toolbox/MenuDrawer/components/MenuDrawer.tsx"
+    ],
+    "all": true
+  }
 }

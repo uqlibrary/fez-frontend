@@ -15,18 +15,10 @@ test.describe('As an admin,', () => {
         await typeCKEditor(page, 'rek-description', 'Test community description UPDATED');
         await page.getByTestId('rek-keywords-list-row-1-delete').click();
         await expect(page.locator('h2').getByText(/Delete keyword/)).toBeVisible();
-        await page
-            .locator('button')
-            .getByText(/Yes/)
-            .first()
-            .click();
+        await page.locator('button').getByText(/Yes/).first().click();
         await typeCKEditor(page, 'ain-notes', 'Test internal notes UPDATED');
         await page.getByTestId('reason-input').fill('Automated Update test for Community');
-        await page
-            .locator('button')
-            .getByText(/Save/)
-            .first()
-            .click();
+        await page.locator('button').getByText(/Save/).first().click();
         await expect(page.locator('h2').getByText(/Work has been updated/)).toBeVisible();
     });
 });

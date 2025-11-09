@@ -2,8 +2,9 @@
 
 exports[`BookCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationBook"
+    id="citation-content-UQ:295866"
   >
     <span
       class="citationAuthors"
@@ -76,14 +77,15 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`BookCitation renders  component with an empty doi view  1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationBook"
+    id="citation-content-UQ:295866"
   >
     <span
       class="citationEditors"
@@ -156,14 +158,15 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`BookCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationBook"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -186,14 +189,15 @@ exports[`BookCitation renders  component with empty publication 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`BookCitation renders  should render citation for edited book record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationBook"
+    id="citation-content-UQ:295866"
   >
     <span
       class="citationEditors"
@@ -266,6 +270,6 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { styled } from '@mui/material/styles';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -101,7 +101,11 @@ const ControlledVocabularies = () => {
                     state.portalId ?? 'portal-root',
                 )}
                 {!!!loadingVocabError && (
-                    <Box marginBlockStart={2}>
+                    <Box
+                        sx={{
+                            marginBlockStart: 2,
+                        }}
+                    >
                         <Box sx={{ overflow: 'auto', marginBottom: '10px' }}>
                             <StyledAddButtonWrapper data-testid="admin-add-vocabulary">
                                 <Button

@@ -16,7 +16,7 @@ export const DigilibImageCitation = ({ publication, citationStyle }) => {
     // {Photographer}{Date photo taken| (|).}<i>{Title| |.}</i>
 
     return (
-        <div className="citationContent citationDesign">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationDesign">
             {/* {Photographer} */}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -28,7 +28,7 @@ export const DigilibImageCitation = ({ publication, citationStyle }) => {
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} />
-        </div>
+        </span>
     );
 };
 DigilibImageCitation.propTypes = {

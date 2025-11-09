@@ -28,7 +28,7 @@ test.describe('Claim possible work', () => {
             );
             await expect(page.locator('[class*="StandardRighthandCard-title"]')).toHaveText(/Refine results/);
             await expect(
-                page.locator('[class*="MuiGrid-grid-sm-3"] .facetsFilter [class*="MuiListItem-root"]'),
+                page.locator('[class*="MuiGridLegacy-grid-sm-3"] .facetsFilter [class*="MuiListItem-root"]'),
             ).toHaveCount(6);
         });
 
@@ -224,10 +224,7 @@ test.describe('Claim possible work', () => {
             await page.getByText(/I confirm and understand/).click();
 
             await page.locator('button[aria-label="Click to open the main navigation"]').click();
-            await page
-                .locator('.menu-item-container')
-                .getByText('My works')
-                .click();
+            await page.locator('.menu-item-container').getByText('My works').click();
 
             await expect(
                 page
@@ -240,10 +237,7 @@ test.describe('Claim possible work', () => {
             // should remain on the same page
             await expect(page).toHaveURL('/records/claim');
             await page.locator('button[aria-label="Click to open the main navigation"]').click();
-            await page
-                .locator('.menu-item-container')
-                .getByText('My works')
-                .click();
+            await page.locator('.menu-item-container').getByText('My works').click();
 
             // confirm
             await page.getByTestId('confirm-dialog-box').click();

@@ -4,7 +4,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MicIcon from '@mui/icons-material/Mic';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { PropTypes } from 'prop-types';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 export const id = 'journal-search-keywords-voice-record';
 export const VoiceToText = ({ sendHandler }) => {

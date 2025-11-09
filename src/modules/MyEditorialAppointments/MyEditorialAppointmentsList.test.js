@@ -14,6 +14,20 @@ import {
 
 import { default as locale } from 'locale/components';
 
+jest.mock('@mui/material/Popper', () => ({
+    __esModule: true,
+    default: ({ children }) => <div data-testid="popper-mock">{children}</div>,
+}));
+
+jest.mock('@mui/material/Tooltip', () => ({
+    __esModule: true,
+    default: ({ children, title }) => (
+        <div title={title} data-testid="tooltip-mock">
+            {children}
+        </div>
+    ),
+}));
+
 function setup(testProps = {}) {
     const props = {
         list: [],

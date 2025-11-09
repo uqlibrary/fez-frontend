@@ -1,4 +1,4 @@
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -24,7 +24,6 @@ const DashboardOrcidSyncMessage = ({
                     />
                 </Grid>
                 <Grid item xs>
-                    {locale.messages.activated}
                     {lastSyncMessage}
                 </Grid>
             </Grid>

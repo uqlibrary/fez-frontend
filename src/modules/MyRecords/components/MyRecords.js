@@ -14,7 +14,7 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import locale from 'locale/components';
 import { MY_RECORDS_BULK_EXPORT_SIZE } from 'config/general';
 import { pathConfig } from 'config';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 export default class MyRecords extends PureComponent {
     static propTypes = {
@@ -36,6 +36,7 @@ export default class MyRecords extends PureComponent {
         navigate: PropTypes.func.isRequired,
         navigationType: PropTypes.string,
         actions: PropTypes.object,
+        publicationsListOtherProps: PropTypes.object,
     };
 
     constructor(props) {
@@ -240,7 +241,9 @@ export default class MyRecords extends PureComponent {
                         this.state.hasPublications &&
                             (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) && (
                                 <Grid item xs={12} md={9}>
-                                    <StandardCard noHeader>
+                                    <StandardCard
+                                        {...(txt?.help ? { title: txt.cardTitle, help: txt.help } : { noHeader: true })}
+                                    >
                                         {pagingData && pagingData.to && pagingData.from && pagingData.total && (
                                             <span>
                                                 {txt.recordCount
@@ -312,6 +315,7 @@ export default class MyRecords extends PureComponent {
                                                             publicationsList={this.props.publicationsList}
                                                             {...actionProps}
                                                             showAdminActions={isAdmin}
+                                                            {...this.props.publicationsListOtherProps}
                                                         />
                                                     )}
                                             </Grid>

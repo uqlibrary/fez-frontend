@@ -1,7 +1,7 @@
 import React, { useReducer, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import TextField from '@mui/material/TextField';
@@ -148,14 +148,20 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
     } = locale;
 
     return (
-        <Grid container xs={12} alignItems={'center'} spacing={2}>
-            <Grid xs={7} sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }}>
+        <Grid
+            container
+            spacing={2}
+            size={12}
+            sx={{
+                alignItems: 'center',
+            }}
+        >
+            <Grid sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }} size={7}>
                 <Typography variant="caption">{organisationalUnitsTitle}</Typography>
             </Grid>
-            <Grid xs={5} sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }}>
+            <Grid sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }} size={5}>
                 <Typography variant="caption">{affiliationTitle}</Typography>
             </Grid>
-
             {(organisationUnitsLoading || suggestedOrganisationUnitsLoading) &&
                 !organisationUnitsFailed &&
                 !suggestedOrganisationUnitsFailed && <ContentLoader message={loadingOrganisationalUnitsText} />}
@@ -166,7 +172,12 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                     <React.Fragment>
                         {currentAffiliations.map((item, index) => (
                             <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
-                                <Grid xs={7} padding={1}>
+                                <Grid
+                                    size={7}
+                                    sx={{
+                                        padding: 1,
+                                    }}
+                                >
                                     <Autocomplete
                                         id={`orgSelect-${item.af_org_id}`}
                                         clearOnBlur
@@ -202,15 +213,20 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                 {...params}
                                                 size={'small'}
                                                 variant={'standard'}
-                                                inputProps={{
-                                                    ...params.inputProps,
-                                                    id: `orgSelect-${item.af_org_id}-input`,
-                                                    'data-testid': `orgSelect-${item.af_org_id}-input`,
-                                                    placeholder: organisationPlaceholderText,
-                                                }}
-                                                InputProps={{
-                                                    ...params.InputProps,
-                                                    error: !!!uniqueOrgs?.find(org => org.org_id === item.af_org_id),
+                                                slotProps={{
+                                                    input: {
+                                                        ...params.InputProps,
+                                                        error: !!!uniqueOrgs?.find(
+                                                            org => org.org_id === item.af_org_id,
+                                                        ),
+                                                    },
+
+                                                    htmlInput: {
+                                                        ...params.inputProps,
+                                                        id: `orgSelect-${item.af_org_id}-input`,
+                                                        'data-testid': `orgSelect-${item.af_org_id}-input`,
+                                                        placeholder: organisationPlaceholderText,
+                                                    },
                                                 }}
                                             />
                                         )}
@@ -230,13 +246,20 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                 actionHandler[ACTIONS.CHANGE](actionDispatch, item, newValue);
                                             }
                                         }}
-                                        ListboxProps={{
-                                            id: `orgSelect-${item.af_org_id}-options`,
-                                            'data-testid': `orgSelect-${item.af_org_id}-options`,
+                                        slotProps={{
+                                            listbox: {
+                                                id: `orgSelect-${item.af_org_id}-options`,
+                                                'data-testid': `orgSelect-${item.af_org_id}-options`,
+                                            },
                                         }}
                                     />
                                 </Grid>
-                                <Grid xs={4} padding={1}>
+                                <Grid
+                                    size={4}
+                                    sx={{
+                                        padding: 1,
+                                    }}
+                                >
                                     <Chip
                                         id={`orgChip-${item.af_org_id}`}
                                         data-testid={`orgChip-${item.af_org_id}`}
@@ -247,7 +270,13 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                     />
                                 </Grid>
 
-                                <Grid xs={1} justifyContent={'flex-end'} padding={1}>
+                                <Grid
+                                    size={1}
+                                    sx={{
+                                        justifyContent: 'flex-end',
+                                        padding: 1,
+                                    }}
+                                >
                                     {(hasNonHerdc(currentAffiliations) === false || isNonHerdc(item)) && (
                                         <IconButton
                                             aria-label="delete"
@@ -262,7 +291,12 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                             </React.Fragment>
                         ))}
                         {!hasNonHerdc(currentAffiliations) && (
-                            <Grid xs={7} padding={1}>
+                            <Grid
+                                size={7}
+                                sx={{
+                                    padding: 1,
+                                }}
+                            >
                                 <Autocomplete
                                     id={'orgSelect-add'}
                                     data-testid={'orgSelect-add'}
@@ -294,10 +328,12 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                             size={'small'}
                                             variant={'standard'}
                                             placeholder={organisationPlaceholderText}
-                                            inputProps={{
-                                                ...params.inputProps,
-                                                id: 'orgSelect-add-input',
-                                                'data-testid': 'orgSelect-add-input',
+                                            slotProps={{
+                                                htmlInput: {
+                                                    ...params.inputProps,
+                                                    id: 'orgSelect-add-input',
+                                                    'data-testid': 'orgSelect-add-input',
+                                                },
                                             }}
                                         />
                                     )}
@@ -315,16 +351,24 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                             );
                                         } else actionHandler[ACTIONS.ADD](actionDispatch, rowData, newValue);
                                     }}
-                                    ListboxProps={{
-                                        id: 'orgSelect-add-options',
-                                        'data-testid': 'orgSelect-add-options',
+                                    slotProps={{
+                                        listbox: {
+                                            id: 'orgSelect-add-options',
+                                            'data-testid': 'orgSelect-add-options',
+                                        },
                                     }}
                                 />
                             </Grid>
                         )}
                     </React.Fragment>
                 )}
-            <Grid container xs={12} justifyContent={'flex-end'}>
+            <Grid
+                container
+                size={12}
+                sx={{
+                    justifyContent: 'flex-end',
+                }}
+            >
                 <Button
                     id="affiliationCancelBtn"
                     data-testid="affiliationCancelBtn"

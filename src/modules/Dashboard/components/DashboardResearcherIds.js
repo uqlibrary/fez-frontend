@@ -8,7 +8,7 @@ import DashboardOrcidSync from '../containers/DashboardOrcidSync';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import locale from 'locale/pages';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
 
@@ -77,13 +77,13 @@ export const renderButton = args => {
         <Grid item key={index}>
             {/* external URLs */}
             <OrcidSyncContext.Consumer>
-                {({ showSyncUI, orcidSyncProps }) =>
+                {({ orcidSyncProps }) =>
                     (isLinkedExternal || isUnlinkedExternal) && (
                         <React.Fragment>
                             <StyledResearchedLink as={ExternalLink} id={item} openInNewIcon={false} href={url}>
                                 {renderIcon(title, externalIconClassName)}
                             </StyledResearchedLink>
-                            {item === 'orcid' && showSyncUI && (
+                            {item === 'orcid' && orcidSyncProps?.author && (
                                 <StyledOrcidBadge>
                                     <DashboardOrcidSync {...orcidSyncProps} />
                                 </StyledOrcidBadge>

@@ -7,7 +7,7 @@ import { MaterialReactTable, useMaterialReactTable } from 'material-react-table'
 import { useTheme } from '@mui/material/styles';
 import { numberToWords } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import People from '@mui/icons-material/People';
 import PersonOutlined from '@mui/icons-material/PersonOutlined';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
@@ -767,6 +767,7 @@ export const AuthorsList = ({
         enableHiding: false,
         enableColumnFilters: false,
         autoResetPageIndex: false,
+        enableKeyboardShortcuts: false,
         positionActionsColumn: 'last',
         initialState: {
             density: 'compact',
@@ -800,6 +801,8 @@ export const AuthorsList = ({
                             [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: {
                                 flexDirection: 'row-reverse',
                                 justifyContent: 'center',
+                                '& button[aria-label=Save]': { order: 1 },
+                                '& button[aria-label=Cancel]': { order: 2 },
                             },
                         },
                     },

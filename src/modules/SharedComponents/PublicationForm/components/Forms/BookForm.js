@@ -11,7 +11,7 @@ import { validation } from 'config';
 import { locale } from 'locale';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, SUBTYPE_EDITED_BOOK } from 'config/general';
 import { default as formLocale } from 'locale/publicationForm';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import { hasAtLeastOneItemSelected } from 'helpers/general';
 

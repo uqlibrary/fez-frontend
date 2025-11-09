@@ -21,7 +21,7 @@ export const WorkingPaperCitation = ({ publication, hideDoiLink, citationStyle }
 
     // eSpace citation view for Working Paper
     return (
-        <div className="citationContent citationWorkingPaper">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationWorkingPaper">
             {/* {Creator} */}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -45,7 +45,7 @@ export const WorkingPaperCitation = ({ publication, hideDoiLink, citationStyle }
 
             {/* {doi| doi:|} */}
             <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
-        </div>
+        </span>
     );
 };
 WorkingPaperCitation.propTypes = {

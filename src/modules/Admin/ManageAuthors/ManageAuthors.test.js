@@ -4,7 +4,6 @@ import {
     render,
     WithReduxStore,
     waitFor,
-    waitForElementToBeRemoved,
     within,
     selectDropDownOptionByElement,
     fireEvent,
@@ -41,11 +40,14 @@ describe('ManageAuthors', () => {
             data: [],
             total: 0,
         });
+
+        const loadAuthorListFn = jest.spyOn(ManageAuthorsActions, 'loadAuthorList');
+
         const { getByText } = setup();
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
 
-        expect(getByText('No records to display')).toBeInTheDocument();
+        await waitFor(() => expect(getByText('No records to display')).toBeInTheDocument());
     });
 
     it('should render default view', async () => {
@@ -133,11 +135,9 @@ describe('ManageAuthors', () => {
 
         const { getByText, getByTestId } = setup({});
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
 
-        expect(loadAuthorListFn).toHaveBeenCalled();
-
-        await waitFor(() => expect(getByTestId('authors-list')).toBeInTheDocument());
+        await waitFor(() => expect(getByTestId('aut-org-username-0')).toBeInTheDocument());
 
         // Expect table column titles
         expect(getByText('ID')).toBeInTheDocument();
@@ -274,8 +274,7 @@ describe('ManageAuthors', () => {
 
         const { container } = setup({});
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-        expect(loadAuthorListFn).toHaveBeenCalledTimes(1);
+        await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalledTimes(1));
         await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(20));
 
         mockApi.reset();
@@ -404,7 +403,7 @@ describe('ManageAuthors', () => {
                 pageSize: 20,
                 current_page: 1,
             });
-        const el = within(container.querySelector('#mrt-rows-per-page').closest('.MuiInput-root')).getByRole(
+        const el = within(container.querySelector('[id^=mrt-rows-per-page]').closest('.MuiInput-root')).getByRole(
             'combobox',
         );
         await selectDropDownOptionByElement(el, '50');
@@ -449,8 +448,6 @@ describe('ManageAuthors', () => {
 
         const { container, getAllByLabelText, getByTestId, findByText } = setup({});
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
         await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(3));
 
         fireEvent.click(getAllByLabelText('Toggle select all')[1]);
@@ -492,8 +489,6 @@ describe('ManageAuthors', () => {
             .replyOnce(500);
 
         const { container, getAllByLabelText, getByTestId, findByText, getByText } = setup({});
-
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(3));
 
@@ -553,9 +548,7 @@ describe('ManageAuthors', () => {
         });
         const { container, getByTestId, queryByTestId, queryByText, findByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
-        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(1);
+        await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(1));
 
         mockApi.onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl)).reply(200, { data: [], total: 0 });
         await userEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
@@ -649,9 +642,7 @@ describe('ManageAuthors', () => {
         });
         const { container, getByTestId, queryByTestId, queryByText, findByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
-        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
+        await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2));
 
         fireEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
         await findByTestId('standard-card-author-information');
@@ -686,8 +677,11 @@ describe('ManageAuthors', () => {
             .reply(200, { data: { aut_id: 1, aut_display_name: 'Test, Name' } });
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
+        const loadAuthorListFn = jest.spyOn(ManageAuthorsActions, 'loadAuthorList');
 
         const { getByTestId } = setup();
+
+        await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
 
         fireEvent.click(getByTestId('authors-add-new-author'));
         await waitFor(() => expect(getByTestId('aut-fname-input')).toBeInTheDocument());
@@ -729,7 +723,10 @@ describe('ManageAuthors', () => {
             .onPut(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
             .replyOnce(500);
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
+        const loadAuthorListFn = jest.spyOn(ManageAuthorsActions, 'loadAuthorList');
+
         const { getByTestId, queryByTestId } = setup({});
+        await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
@@ -802,7 +799,7 @@ describe('ManageAuthors', () => {
 
         const { getByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        await waitFor(() => expect(getByTestId('authors-list-row-0-edit-this-author')).toBeInTheDocument());
 
         await userEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
 
@@ -893,8 +890,7 @@ describe('ManageAuthors', () => {
 
         const { container, getByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
+        await waitFor(() => expect(getByTestId('authors-list-row-0-edit-this-author')).toBeInTheDocument());
         await userEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('value', 'Vishal');
@@ -1006,8 +1002,6 @@ describe('ManageAuthors', () => {
 
         const { container, getByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
         await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2));
 
         fireEvent.click(getByTestId('authors-list-row-0-delete-this-author'));
@@ -1110,8 +1104,6 @@ describe('ManageAuthors', () => {
 
         const { container, getByTestId } = setup({});
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
         await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2));
 
         fireEvent.click(getByTestId('authors-list-row-0-delete-this-author'));
@@ -1178,7 +1170,7 @@ describe('ManageAuthors', () => {
 
         const { getByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        await waitFor(() => expect(getByTestId('aut-id-0-copy-text')).toBeInTheDocument());
 
         fireEvent.click(getByTestId('aut-id-0-copy-text'));
 
@@ -1315,7 +1307,7 @@ describe('ManageAuthors', () => {
 
         const { getByTestId } = setup({});
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        await waitFor(() => expect(getByTestId('authors-list-row-0-ingest-from-scopus')).toBeInTheDocument());
 
         expect(getByTestId('authors-list-row-0-ingest-from-scopus').closest('button')).not.toHaveAttribute('disabled');
         expect(getByTestId('authors-list-row-1-ingest-from-scopus').closest('button')).not.toHaveAttribute('disabled');
@@ -1385,7 +1377,7 @@ describe('ManageAuthors', () => {
 
         const { getByTestId } = setup({});
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        await waitFor(() => expect(getByTestId('authors-list-row-0-ingest-from-scopus')).toBeInTheDocument());
 
         expect(getByTestId('authors-list-row-0-ingest-from-scopus').closest('button')).not.toHaveAttribute('disabled');
 
@@ -1402,7 +1394,7 @@ describe('ManageAuthors', () => {
         const loadAuthorListFn = jest.spyOn(ManageAuthorsActions, 'loadAuthorList');
         const { getByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
 
         await userEvent.type(getByTestId('authors-search-input'), 'test search');
 

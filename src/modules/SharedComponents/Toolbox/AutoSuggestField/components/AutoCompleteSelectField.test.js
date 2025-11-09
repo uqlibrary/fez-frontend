@@ -128,4 +128,64 @@ describe('AutoCompleteSelectField component', () => {
 
         expect(onClearFn).toBeCalled();
     });
+
+    it('correctly matches options with the same value but different object references', async () => {
+        // Setup with options that have the same values but are different object references
+        const itemsList = [
+            { id: 1, value: 'apple', label: 'Apple' },
+            { id: 2, value: 'banana', label: 'Banana' },
+            { id: 3, value: 'orange', label: 'Orange' },
+        ];
+
+        // Create a different object reference with the same value
+        const defaultValue = { id: 99, value: 'apple', label: 'Selected Apple' };
+
+        // Mock the change handler to verify value equality
+        const onChangeMock = jest.fn();
+
+        // Render the component
+        const { getByTestId, getByText } = setup({
+            autoCompleteSelectFieldId: 'test-select',
+            getOptionLabel: option => option.label || '',
+            itemsList,
+            defaultValue,
+            onChange: onChangeMock,
+        });
+
+        // Open the dropdown
+        const inputElement = getByTestId('test-select-input');
+        fireEvent.mouseDown(inputElement);
+
+        // Wait for dropdown to appear
+        await waitFor(() => {
+            expect(getByTestId('test-select-options')).toBeInTheDocument();
+        });
+
+        // Verify the apple option is highlighted/selected in the dropdown
+        // despite being a different object reference
+        const appleOption = getByText('Apple');
+        expect(appleOption.closest('li')).toHaveAttribute('aria-selected', 'true');
+
+        // Select the orange option
+        const orangeOption = getByText('Orange');
+        fireEvent.click(orangeOption);
+
+        // Verify onChange was called with the orange option
+        expect(onChangeMock).toHaveBeenCalledWith(expect.objectContaining({ value: 'orange' }));
+
+        // Reset and try with the original apple option
+        onChangeMock.mockClear();
+
+        // Reopen dropdown
+        fireEvent.mouseDown(inputElement);
+
+        // Select the apple option again
+        await waitFor(() => {
+            expect(getByText('Apple')).toBeInTheDocument();
+        });
+        fireEvent.click(getByText('Apple'));
+
+        // Verify onChange was called with apple option
+        expect(onChangeMock).toHaveBeenCalledWith(expect.objectContaining({ value: 'apple' }));
+    });
 });
