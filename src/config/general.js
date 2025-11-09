@@ -32,6 +32,7 @@ export const IS_TEST = IS_JEST_TEST || IS_PLAYWRIGHT_TEST;
 export const LOCALHOST_DOMAIN = 'localhost';
 export const LOCALHOST_ALIAS_DOMAIN = 'dev-espace.library.uq.edu.au';
 export const LOCALHOST_URL = `http://${LOCALHOST_DOMAIN}/`;
+export const PRODTEST_URL = 'https://fez-testing.library.uq.edu.au/';
 export const PRODUCTION_URL = 'https://espace.library.uq.edu.au/';
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
 export const DEVELOPMENT_BRANCH_URL = 'https://development.library.uq.edu.au/';
@@ -39,7 +40,7 @@ export const PRODUCTION_API_URL = 'https://api.library.uq.edu.au/v1/';
 export const STAGING_API_URL = 'https://api.library.uq.edu.au/staging/';
 export const API_URL = process.env.API_URL || STAGING_API_URL;
 export const APP_URL = process.env.APP_URL || LOCALHOST_URL;
-export const IS_PRODUCTION = APP_URL.includes(PRODUCTION_API_URL);
+export const IS_PRODUCTION = APP_URL.includes(PRODUCTION_URL) || APP_URL.includes(PRODTEST_URL);
 export const IS_LOCAL_DEV = APP_URL.includes(LOCALHOST_DOMAIN) || APP_URL.includes(LOCALHOST_ALIAS_DOMAIN);
 export const IS_DEVELOPMENT_BRANCH = APP_URL.includes(DEVELOPMENT_BRANCH_URL);
 
