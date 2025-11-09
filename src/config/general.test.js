@@ -41,6 +41,7 @@ describe('general', () => {
             LOCALHOST_DOMAIN,
             LOCALHOST_ALIAS_DOMAIN,
             LOCALHOST_URL,
+            PRODTEST_URL,
             PRODUCTION_URL,
             STAGING_URL,
             DEVELOPMENT_BRANCH_URL,
@@ -51,6 +52,7 @@ describe('general', () => {
         expect(LOCALHOST_DOMAIN).toBe('localhost');
         expect(LOCALHOST_ALIAS_DOMAIN).toBe('dev-espace.library.uq.edu.au');
         expect(LOCALHOST_URL).toBe('http://localhost/');
+        expect(PRODTEST_URL).toBe('https://fez-testing.library.uq.edu.au/');
         expect(PRODUCTION_URL).toBe('https://espace.library.uq.edu.au/');
         expect(STAGING_URL).toBe('https://fez-staging.library.uq.edu.au/');
         expect(DEVELOPMENT_BRANCH_URL).toBe('https://development.library.uq.edu.au/');
@@ -100,6 +102,14 @@ describe('general', () => {
 
     test('should correctly detect IS_PRODUCTION', () => {
         process.env.APP_URL = 'https://espace.library.uq.edu.au/';
+        const { IS_LOCAL_DEV, IS_DEVELOPMENT_BRANCH, IS_PRODUCTION } = require('./general');
+        expect(IS_LOCAL_DEV).toBe(false);
+        expect(IS_DEVELOPMENT_BRANCH).toBe(false);
+        expect(IS_PRODUCTION).toBe(true);
+    });
+
+    test('should correctly detect IS_PRODUCTION when on prodtest (fez-testing)', () => {
+        process.env.APP_URL = 'https://fez-testing.library.uq.edu.au/';
         const { IS_LOCAL_DEV, IS_DEVELOPMENT_BRANCH, IS_PRODUCTION } = require('./general');
         expect(IS_LOCAL_DEV).toBe(false);
         expect(IS_DEVELOPMENT_BRANCH).toBe(false);
