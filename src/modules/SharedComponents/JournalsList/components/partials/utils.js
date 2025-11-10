@@ -52,7 +52,7 @@ export const getIndicatorProps = ({ type, data }) => {
         } else {
             indicatorProps.status = status.open;
         }
-    } else if (!maxEmbargo) {
+    } else if (!maxEmbargo && !openAccess) {
         indicatorProps.status = status.fee;
     } else {
         return null;
