@@ -66,7 +66,7 @@ export const getIndicatorProps = ({ type, data }) => {
         if (!!doajData.jnl_doaj_is_s2o) {
             indicatorProps.showS2O = true;
         }
-    } else if (!maxEmbargo) {
+    } else if (!maxEmbargo && !openAccess) {
         indicatorProps.status = status.fee;
     } else {
         return null;

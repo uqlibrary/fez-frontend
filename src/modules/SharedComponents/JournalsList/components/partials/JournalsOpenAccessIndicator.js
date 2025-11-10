@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { green, orange, blue, grey } from '@mui/material/colors';
+import { green, orange, blue, grey, deepOrange } from '@mui/material/colors';
 import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 
@@ -68,7 +68,7 @@ const JournalsOpenAccessIndicator = ({ type, status, showDiamond, showS2O, label
             },
             '& .labelColumn': {
                 backgroundColor: orange[50],
-                color: orange[800],
+                color: deepOrange[900],
             },
         },
     };
