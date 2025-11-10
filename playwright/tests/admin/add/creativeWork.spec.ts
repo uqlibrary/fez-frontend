@@ -18,11 +18,7 @@ test.describe('As an admin, I can', () => {
 
         // Choose subtype
         await page.getByTestId('rek-subtype-select').click();
-        await page
-            .getByTestId('rek-subtype-options')
-            .locator('li', { hasText: subtypeName })
-            .first()
-            .click();
+        await page.getByTestId('rek-subtype-options').locator('li', { hasText: subtypeName }).first().click();
 
         // Apply selections
         await page

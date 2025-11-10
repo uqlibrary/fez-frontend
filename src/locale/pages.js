@@ -3,6 +3,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import Typography from '@mui/material/Typography';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import OpenInNew from '@mui/icons-material/OpenInNew';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 
@@ -19,6 +20,7 @@ import {
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { Box } from '@mui/material';
+
 /*
 
 NOTE:
@@ -287,7 +289,6 @@ export default {
                     badgeTooltip: 'Information about uploading your eSpace works to ORCID',
                     helpDrawer: {
                         messages: {
-                            // Persistent help message
                             activated: 'Weekly automatic upload of your works to ORCID is activated.',
                             // Statuses
                             done: 'There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.',
@@ -296,11 +297,20 @@ export default {
                             // Date of last upload
                             lastUpload: 'The last upload was on [syncTime].',
                             noPrevious: 'There are no previous uploads of your eSpace works to ORCID.',
+                            syncPreference: {
+                                saving: 'Saving ORCID sync preferences.',
+                                error: 'Error while saving ORCID sync preferences.',
+                            },
                         },
                         title: 'ORCID Upload',
                         type: 'info',
                         actionButtonLabel: 'Upload works to ORCID',
                         alternateActionButtonLabel: 'View works in ORCID',
+                    },
+                },
+                dashboardOrcidSyncPreferences: {
+                    labels: {
+                        switch: 'Enable weekly automatic upload of your works to ORCID.',
                     },
                 },
             },
@@ -321,6 +331,12 @@ export default {
                 message: 'We found nothing new for you to claim, but you may add a work any time.',
                 type: 'info_outline',
                 actionButtonLabel: 'Add a missing work',
+            },
+            enableOrcidSyncLure: {
+                title: 'Enable now!',
+                message: 'You can authorise UQ eSpace to update ORCID on your behalf.',
+                type: 'info_outline',
+                actionButtonLabel: 'Enable ORCID sync now',
             },
             publicationsByYearChart: {
                 title: 'eSpace works per year',
@@ -965,8 +981,25 @@ export default {
                 type: 'done',
                 alertId: 'alert-done',
                 title: 'ORCID linked',
-                message:
-                    'Your ORCID has been linked to your eSpace profile. Works from Web of Science, Scopus PubMed and Crossref will be synced to your eSpace profile within the next 7 days.',
+                message: (
+                    <>
+                        <Alert
+                            alertId="orcid-sync-confirmation-message"
+                            message="You have successfully linked your ORCID to your UQ eSpace profile."
+                            type="done"
+                        />
+                        <span style={{ display: 'block', marginTop: '1em' }}>
+                            Works in your ORCID profile from Web of Science, Scopus, PubMed, and CrossRef will be synced
+                            to your UQ eSpace profile within 7 days. Read more about{' '}
+                            <ExternalLink
+                                id="dashboard-orcid-linking-confirmation-dialog-link-to-docs"
+                                href="https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/orcid"
+                            >
+                                populating your ORCID.
+                            </ExternalLink>
+                        </span>
+                    </>
+                ),
                 allowDismiss: true,
             },
             progressAlert: {

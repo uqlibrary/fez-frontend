@@ -28,6 +28,8 @@ import locale from 'locale/pages';
 
 import { mui1theme as theme } from 'config';
 import { useIsMobileView } from 'hooks';
+import Cookies from 'js-cookie';
+import { DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE } from '../../../config/general';
 
 const StyledTabs = styled(Tabs)(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
@@ -77,6 +79,8 @@ const Dashboard = ({
     authorDetails,
     author,
     accountAuthorDetailsLoading,
+    accountAuthorSaving,
+    accountAuthorError,
 
     // graph data
     loadingPublicationsByYear,
@@ -116,7 +120,11 @@ const Dashboard = ({
     const isMobileView = useIsMobileView();
     const [dashboardPubsTabs, setDashboardPubsTabs] = useState(1);
     const [orcidSyncStatusRefreshCount, setOrcidSyncStatusRefreshCount] = useState(0);
+    const [hideTurnOnOrcidSyncReminder, setHideTurnOnOrcidSyncReminder] = useState(
+        String(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)) === 'true',
+    );
     const lastOrcidSyncStatusRequestRef = useRef(null);
+    const orcidSyncSettingsButtonRef = useRef(null);
 
     const _loadOrcidSync = (waitTime = 1) => {
         if (!waitTime || !author?.aut_orcid_id || !orcidSyncEnabled || loadingOrcidSyncStatus) {
@@ -153,6 +161,16 @@ const Dashboard = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [loadingOrcidSyncStatus]);
 
+    const openOrcidSyncSettings = () => {
+        orcidSyncSettingsButtonRef.current?.openDrawer?.();
+        setHideTurnOnOrcidSyncReminder(true);
+    };
+
+    const dismissEnableOrcidSyncDialog = () => {
+        Cookies.set(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE, 'true');
+        setHideTurnOnOrcidSyncReminder(true);
+    };
+
     const _claimYourPublications = () => {
         navigate(pathConfig.records.possible);
     };
@@ -165,7 +183,7 @@ const Dashboard = ({
         setDashboardPubsTabs(value);
     };
 
-    const redirectToIncompleteRecordlist = () => {
+    const redirectToIncompleteRecordList = () => {
         navigate(pathConfig.records.incomplete);
     };
 
@@ -181,12 +199,15 @@ const Dashboard = ({
         <Grid item xs={12}>
             <OrcidSyncContext.Provider
                 value={{
-                    showSyncUI: orcidSyncEnabled && !loadingOrcidSyncStatus,
                     orcidSyncProps: {
-                        author: author,
-                        orcidSyncStatus: orcidSyncStatus,
-                        requestingOrcidSync: requestingOrcidSync,
-                        requestOrcidSync: requestOrcidSync,
+                        author,
+                        accountAuthorSaving,
+                        accountAuthorError,
+                        orcidSyncEnabled,
+                        orcidSyncStatus,
+                        requestingOrcidSync,
+                        requestOrcidSync,
+                        settingsButtonRef: orcidSyncSettingsButtonRef,
                     },
                 }}
             >
@@ -357,7 +378,7 @@ const Dashboard = ({
                                             .replace('[verbEnding]', verbEndingTextReplacement)}
                                         type={txt.incompleteRecordLure.type}
                                         actionButtonLabel={txt.incompleteRecordLure.actionButtonLabel}
-                                        action={redirectToIncompleteRecordlist}
+                                        action={redirectToIncompleteRecordList}
                                     />
                                 </Grid>
                             )}
@@ -390,6 +411,23 @@ const Dashboard = ({
                         )}
                     </React.Fragment>
                 )}
+                {/* render orcid sync lure */}
+                {author?.aut_orcid_id &&
+                    String(author?.aut_is_orcid_sync_enabled) !== '1' &&
+                    !hideTurnOnOrcidSyncReminder && (
+                        <Grid item xs={12} style={{ marginTop: -27 }}>
+                            <Alert
+                                title={txt.enableOrcidSyncLure.title}
+                                message={txt.enableOrcidSyncLure.message}
+                                type={txt.enableOrcidSyncLure.type}
+                                actionButtonLabel={txt.enableOrcidSyncLure.actionButtonLabel}
+                                alertId="dashboard-orcid-linking-dashboard"
+                                action={openOrcidSyncSettings}
+                                dismissAction={dismissEnableOrcidSyncDialog}
+                                allowDismiss
+                            />
+                        </Grid>
+                    )}
                 {/* render charts/stats depending on availability of data */}
                 {barChart && (publicationStats || (!donutChart && !publicationStats)) && (
                     <Grid item xs={12}>
@@ -413,7 +451,7 @@ const Dashboard = ({
                         </Grid>
                     </React.Fragment>
                 )}
-                {/* render donut chart chart next to publication stats if both available */}
+                {/* render donut chart next to publication stats if both available */}
                 {donutChart && publicationStats && (
                     <React.Fragment>
                         <Grid item xs={12} sm={4}>
@@ -468,6 +506,8 @@ Dashboard.propTypes = {
     authorDetails: PropTypes.object,
     author: PropTypes.object,
     accountAuthorDetailsLoading: PropTypes.bool,
+    accountAuthorSaving: PropTypes.bool,
+    accountAuthorError: PropTypes.bool,
 
     // graph data
     loadingPublicationsByYear: PropTypes.bool,
