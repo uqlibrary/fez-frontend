@@ -1538,6 +1538,34 @@ export const SCOPUS_DOC_TYPES = [
     { value: 're', text: 're - Review' },
     { value: 'sh', text: 'sh - Short Survey' },
 ];
+
+export const OPENALEX_DOC_TYPES = [
+    { value: 'None', text: 'None' },
+    { value: 'article', text: 'article' },
+    { value: 'book-chapter', text: 'book-chapter' },
+    { value: 'dataset', text: 'dataset' },
+    { value: 'preprint', text: 'preprint' },
+    { value: 'dissertation', text: 'dissertation' },
+    { value: 'book', text: 'book' },
+    { value: 'review', text: 'review' },
+    { value: 'paratext', text: 'paratext' },
+    { value: 'other', text: 'other' },
+    { value: 'libguides', text: 'libguides' },
+    { value: 'reference-entry', text: 'reference-entry' },
+    { value: 'report', text: 'report' },
+    { value: 'peer-review', text: 'peer-review' },
+    { value: 'editorial', text: 'editorial' },
+    { value: 'erratum', text: 'erratum' },
+    { value: 'standard', text: 'standard' },
+    { value: 'grant', text: 'grant' },
+    { value: 'supplementary-materials', text: 'supplementary-materials' },
+    { value: 'retraction', text: 'retraction' },
+    { value: 'book-section', text: 'book-section' },
+    { value: 'software', text: 'software' },
+    { value: 'database', text: 'database' },
+    { value: 'report-component', text: 'report-component' },
+];
+
 export const PUBMED_DOC_TYPES = [
     { value: 'None', text: 'None' },
     { value: 'Addresses', text: 'Addresses' },
