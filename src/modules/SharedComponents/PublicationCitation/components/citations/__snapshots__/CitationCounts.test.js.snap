@@ -330,10 +330,10 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       <a
         aria-label="Full citation in OpenAlex will open in a new window"
         class="openalexCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="openalex-citation-count-link"
+        data-testid="openalex-citation-count-link"
         href="https://openalex.org/works?page=1&filter=cites:12345"
-        id="citation-count-link"
+        id="openalex-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
