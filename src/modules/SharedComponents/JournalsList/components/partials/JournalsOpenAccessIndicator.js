@@ -12,7 +12,7 @@ import { status as oaStatus, types } from './utils';
 
 const icons = { accepted: AcceptedIcon, published: PublishedIcon };
 
-const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest }) => {
+const JournalsOpenAccessIndicator = ({ type, status, label, embargoPeriod, tooltip, id, ...rest }) => {
     const Icon = icons[type];
 
     const classes = {
@@ -46,6 +46,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest
         [oaStatus.embargo]: {
             '& .iconColumn': {
                 backgroundColor: 'rgba(0,0,0,0.8)',
+                color: 'rgba(255,255,255)',
             },
             '& .labelColumn': {
                 backgroundColor: 'rgba(0,0,0,0.05)',
@@ -61,6 +62,17 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest
                 color: deepOrange[900],
             },
         },
+    };
+
+    const columnStyle = {
+        fontSize: '12px',
+        fontWeight: 400,
+        padding: '4px 8px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textTransform: 'uppercase',
+        lineHeight: 1.5,
     };
 
     return (
@@ -93,7 +105,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest
                 <Box
                     sx={{
                         display: 'grid',
-                        gridTemplateColumns: '26px auto',
+                        gridTemplateColumns: '28px auto',
                         gridTemplateRows: 'auto',
                         gridTemplateAreas: '"icon label"',
                     }}
@@ -102,9 +114,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest
                     <Box
                         sx={{
                             gridArea: 'icon',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
+                            ...columnStyle,
                         }}
                         className="iconColumn"
                     >
@@ -113,14 +123,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest
                     <Box
                         sx={{
                             gridArea: 'label',
-                            fontSize: '12px',
-                            fontWeight: 400,
-                            padding: '4px 8px',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            textTransform: 'uppercase',
-                            lineHeight: 1.5,
+                            ...columnStyle,
                         }}
                         className="labelColumn"
                     >
@@ -136,6 +139,7 @@ JournalsOpenAccessIndicator.propTypes = {
     id: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['accepted', 'published']).isRequired,
     status: PropTypes.oneOf(['open', 'cap', 'embargo', 'fee']).isRequired,
+    embargoPeriod: PropTypes.number,
     tooltip: PropTypes.string,
     label: PropTypes.string,
 };
