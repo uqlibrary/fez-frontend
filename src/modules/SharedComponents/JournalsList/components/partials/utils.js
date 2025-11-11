@@ -32,6 +32,7 @@ export const getIndicatorProps = ({ type, data }) => {
     if (type === types.accepted) {
         if (!!maxEmbargo) {
             indicatorProps.status = status.embargo;
+            indicatorProps.embargoPeriod = maxEmbargo;
             // should not display Published Fee and Accepted Open Icons at the same time
         } else if (openAccess && !hasApc && !isDiscounted) {
             indicatorProps.status = status.open;
@@ -63,6 +64,7 @@ export const getIndicatorProps = ({ type, data }) => {
                 indicatorProps.showDiamond = true;
             }
         }
+
         if (!!doajData.jnl_doaj_is_s2o) {
             indicatorProps.showS2O = true;
         }
@@ -77,6 +79,11 @@ export const getIndicatorProps = ({ type, data }) => {
 export const getIndicator = ({ type, data, tooltipLocale }) => {
     const indicatorProps = getIndicatorProps({ type, data });
     if (indicatorProps === null) return { element: null };
+    const tooltip =
+        tooltipLocale && tooltipLocale.hasOwnProperty(indicatorProps.type)
+            ? tooltipLocale[indicatorProps.type][indicatorProps.status]
+            : null;
+
     return {
         ...indicatorProps,
         element: (
@@ -85,9 +92,7 @@ export const getIndicator = ({ type, data, tooltipLocale }) => {
                 data-testid={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
                 key={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
                 tooltip={
-                    tooltipLocale && tooltipLocale.hasOwnProperty(indicatorProps.type)
-                        ? tooltipLocale[indicatorProps.type][indicatorProps.status]
-                        : null
+                    (tooltip && indicatorProps.status === 'embargo' && tooltip(indicatorProps.embargoPeriod)) || tooltip
                 }
                 {...indicatorProps}
             />

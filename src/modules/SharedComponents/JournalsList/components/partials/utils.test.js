@@ -14,7 +14,7 @@ describe('utils', () => {
 
         const tooltipLocale = {
             accepted: {
-                embargo: 'Test embargo',
+                embargo: months => `${months} months Test embargo`,
             },
         };
         // returns node
@@ -22,10 +22,7 @@ describe('utils', () => {
         const { getByTestId } = render(<>{element}</>);
 
         expect(getByTestId('journal-indicator-accepted-13251')).toBeInTheDocument();
-        expect(getByTestId('journal-indicator-accepted-13251')).toHaveAttribute(
-            'aria-label',
-            tooltipLocale.accepted.embargo,
-        );
+        expect(getByTestId('journal-indicator-accepted-13251')).toHaveAttribute('aria-label', '6 months Test embargo');
         expect(getByTestId('journal-indicator-accepted-13251')).toHaveTextContent('embargo');
     });
 
@@ -53,19 +50,19 @@ describe('utils', () => {
 
         // accepted embargo
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem1 });
-        expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.embargo });
+        expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.embargo, embargoPeriod: 6 });
 
         // accepted embargo - from second issn
         delete dataItem1.fez_journal_issn[0].fez_sherpa_romeo;
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem1 });
-        expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.embargo });
+        expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.embargo, embargoPeriod: 6 });
 
         // accepted embargo - from second issn
         const dataItem2 = { ...mockData.data[0] };
 
         dataItem2.fez_journal_issn[0].fez_sherpa_romeo.srm_max_embargo_amount = null;
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
-        expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.embargo });
+        expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.embargo, embargoPeriod: 6 });
 
         // accepted open
         dataItem2.fez_journal_issn[1].fez_sherpa_romeo.srm_max_embargo_amount = null;
