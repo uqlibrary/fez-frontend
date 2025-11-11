@@ -2,8 +2,9 @@
 
 exports[`JournalArticleCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationJournalArticle"
+    id="citation-content-UQ:676287"
   >
     <span
       class="citationAuthors"
@@ -150,7 +151,7 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="citation-doi-link-new-window-icon"
@@ -163,14 +164,15 @@ exports[`JournalArticleCitation renders  component with a mock espace record 1`]
         https://doi.org/10.1242/jcs.196659
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`JournalArticleCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationJournalArticle"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -205,6 +207,6 @@ exports[`JournalArticleCitation renders  component with empty publication 1`] = 
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

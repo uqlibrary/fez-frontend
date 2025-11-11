@@ -126,9 +126,9 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
 
     return (
         <Box
-            paddingInlineStart={2}
-            borderLeft={'1px solid rgba(224, 224, 224, 1)'}
             sx={{
+                paddingInlineStart: 2,
+                borderLeft: '1px solid rgba(224, 224, 224, 1)',
                 height: '100%',
                 minHeight: '100%',
                 maxHeight: '800px',
@@ -159,7 +159,6 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                     </Button>
                 )}
             </SectionTitle>
-
             {!!!adminDashboardQuickLinksData &&
                 !!adminDashboardQuickLinksLoading &&
                 [0, 0, 0, 0, 0, 0, 0, 0].map((_, index) => (
@@ -171,7 +170,6 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                         data-testid={'admin-dashboard-quicklinks-skeleton'}
                     />
                 ))}
-
             {!adminDashboardQuickLinksLoading && (
                 <>
                     {actionState.action === VIEWMODES.VIEW && (
@@ -179,20 +177,34 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                             {(!!!data || (data?.length ?? /* istanbul ignore next */ 0) === 0) &&
                                 adminDashboardQuickLinksSuccess && (
                                     <Typography
-                                        fontSize={'0.8rem'}
-                                        fontWeight={300}
-                                        textAlign={'center'}
-                                        mt={1}
-                                        flex={1}
-                                        alignContent={'center'}
+                                        sx={{
+                                            fontSize: '0.8rem',
+                                            fontWeight: 300,
+                                            textAlign: 'center',
+                                            mt: 1,
+                                            flex: 1,
+                                            alignContent: 'center',
+                                        }}
                                     >
                                         {locale.loading.nodata}
                                     </Typography>
                                 )}
 
                             {!!data && adminDashboardQuickLinksSuccess && (
-                                <Box paddingInlineEnd={2} maxHeight={500} overflow={'auto'}>
-                                    <Stack spacing={2} marginBlockStart={2} role="list">
+                                <Box
+                                    sx={{
+                                        paddingInlineEnd: 2,
+                                        maxHeight: 500,
+                                        overflow: 'auto',
+                                    }}
+                                >
+                                    <Stack
+                                        spacing={2}
+                                        role="list"
+                                        sx={{
+                                            marginBlockStart: 2,
+                                        }}
+                                    >
                                         {data
                                             .sort((a, b) => a.qlk_order - b.qlk_order)
                                             .map((link, index) => (
@@ -218,8 +230,11 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
 
                     {VIEWADMINPANELMODES.includes(actionState.action) && (
                         <Box
-                            paddingBlockStart={2}
-                            sx={{ ...initialViewProps, animation: animationTemplate(1, 200, 100) }}
+                            sx={{
+                                paddingBlockStart: 2,
+                                ...initialViewProps,
+                                animation: animationTemplate(1, 200, 100),
+                            }}
                         >
                             {actionState.action === VIEWMODES.ADD && locale.admin.add.title}
                             {(actionState.action === VIEWMODES.EDIT || actionState.action === VIEWMODES.DELETE) && (
@@ -227,7 +242,12 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                                     {actionState.action === VIEWMODES.EDIT
                                         ? locale.admin.edit.title
                                         : locale.admin.delete.title}
-                                    <Typography fontWeight={500} variant="span">
+                                    <Typography
+                                        variant="span"
+                                        sx={{
+                                            fontWeight: 500,
+                                        }}
+                                    >
                                         {actionState.item.qlk_title}
                                     </Typography>
                                 </>

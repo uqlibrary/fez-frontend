@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -151,7 +151,13 @@ export const ViewJournal = () => {
                         // eslint-disable-next-line no-unused-vars
                         .filter(([_, sectionConfig]) => {
                             if (!!sectionConfig.key) {
-                                return !!journalDetails[sectionConfig.key];
+                                return Array.isArray(sectionConfig.key)
+                                    ? sectionConfig.key.some(key =>
+                                          Array.isArray(journalDetails[key])
+                                              ? journalDetails[key].length > 0
+                                              : !!journalDetails[key],
+                                      )
+                                    : !!journalDetails[sectionConfig.key];
                             }
                             return true;
                         })

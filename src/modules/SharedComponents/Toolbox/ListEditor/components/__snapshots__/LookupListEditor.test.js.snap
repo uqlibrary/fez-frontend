@@ -12,7 +12,7 @@ exports[`LookupListEditor error message handling should forward empty string if 
       id="lookup-list-editor-list"
     />
     <p
-      class="MuiFormHelperText-root css-1d7hrfi-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -30,7 +30,7 @@ exports[`LookupListEditor error message handling should render object error 1`] 
       id="lookup-list-editor-list"
     />
     <p
-      class="MuiFormHelperText-root css-1d7hrfi-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
     >
       An error from an object
     </p>
@@ -50,7 +50,7 @@ exports[`LookupListEditor error message handling should render string error 1`] 
       id="lookup-list-editor-list"
     />
     <p
-      class="MuiFormHelperText-root css-1d7hrfi-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
     >
       A string error
     </p>
@@ -70,7 +70,7 @@ exports[`LookupListEditor should render default component 1`] = `
       id="lookup-list-editor-list"
     />
     <p
-      class="MuiFormHelperText-root css-1d7hrfi-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
     />
   </div>
 </div>

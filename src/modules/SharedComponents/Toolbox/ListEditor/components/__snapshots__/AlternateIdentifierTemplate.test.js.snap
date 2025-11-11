@@ -3,14 +3,14 @@
 exports[`AlternateIdentifierTemplate component should render default view 1`] = `
 <div>
   <p
-    class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
   >
     <strong>
       Identifier: 
     </strong>
   </p>
   <span
-    class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
   >
     <strong>
       Identifier Type: 

@@ -12,7 +12,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 import { locale } from 'locale';
@@ -54,6 +54,9 @@ import ImageGalleryItem from 'modules/SharedComponents/ImageGallery/ImageGallery
 import { default as imageConfig } from 'config/imageGalleryConfig';
 
 import { getWhiteListed } from 'modules/SharedComponents/ImageGallery/Utils';
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import Copy from '@mui/icons-material/FileCopyOutlined';
 
 const StyledGridActionButtons = styled(Grid)(({ theme }) => ({
     [theme.breakpoints.down('md')]: {
@@ -152,6 +155,64 @@ const classes = {
     }),
 };
 
+// keep a list of all available citations
+const citationComponents = {
+    AudioDocumentCitation,
+    BookChapterCitation,
+    BookCitation,
+    ConferencePaperCitation,
+    ConferenceProceedingsCitation,
+    CreativeWorkCitation,
+    DataCollectionCitation,
+    DepartmentTechnicalReportCitation,
+    DesignCitation,
+    DigilibImageCitation,
+    GenericDocumentCitation,
+    ImageDocumentCitation,
+    InstrumentCitation,
+    JournalArticleCitation,
+    JournalCitation,
+    ManuscriptCitation,
+    NewspaperArticleCitation,
+    PatentCitation,
+    PreprintCitation,
+    ResearchReportCitation,
+    SeminarPaperCitation,
+    ThesisCitation,
+    VideoDocumentCitation,
+    WorkingPaperCitation,
+};
+
+const handleCopy = pid => event => {
+    event.stopPropagation();
+    navigator?.clipboard?.writeText?.(document.getElementById(`citation-content-${pid}`)?.textContent?.trim?.());
+};
+
+const renderCopyCitationTextButton = pid => {
+    const isEnabled = !!navigator.clipboard;
+    return (
+        <Tooltip title={isEnabled ? 'Copy citation text' : 'Feature unavailable'}>
+            <span>
+                <IconButton
+                    aria-label={isEnabled ? `Copy ${pid}'s citation text` : 'Unavailable feature'}
+                    onClick={handleCopy(pid)}
+                    id={`publication-citation-copy-button-${pid}`}
+                    data-analyticsid={`publication-citation-copy-button-${pid}`}
+                    data-testid={`publication-citation-copy-button-${pid}`}
+                    style={{ padding: '0px' }}
+                    disabled={!isEnabled}
+                >
+                    <Copy
+                        color={isEnabled ? 'secondary' : 'disabled'}
+                        style={{ width: 14, marginLeft: 6, marginTop: -6 }}
+                        sx={{ display: { xs: 'none', sm: 'inline' } }}
+                    />
+                </IconButton>
+            </span>
+        </Tooltip>
+    );
+};
+
 export const PublicationCitation = ({
     citationStyle = 'notset',
     customActions,
@@ -172,6 +233,8 @@ export const PublicationCitation = ({
     showSources = false,
     showUnpublishedBufferFields = false,
     showImageThumbnails = false,
+    showAltmetricWidget = false,
+    showCopyTextButton = false,
     security = { isAdmin: false, isAuthor: false },
 }) => {
     const theme = useTheme();
@@ -180,40 +243,11 @@ export const PublicationCitation = ({
     const { account } = useSelector(state => state.get('accountReducer') || /* istanbul ignore next */ {});
 
     const hideViewFullStatisticsLink = !account;
-
     const txt = locale.components.publicationCitation;
     const recordValue = showMetrics && publication.metricData;
-
-    // keep a list of all available citations
-    const citationComponents = {
-        AudioDocumentCitation,
-        BookChapterCitation,
-        BookCitation,
-        ConferencePaperCitation,
-        ConferenceProceedingsCitation,
-        CreativeWorkCitation,
-        DataCollectionCitation,
-        DepartmentTechnicalReportCitation,
-        DesignCitation,
-        DigilibImageCitation,
-        GenericDocumentCitation,
-        ImageDocumentCitation,
-        InstrumentCitation,
-        JournalArticleCitation,
-        JournalCitation,
-        ManuscriptCitation,
-        NewspaperArticleCitation,
-        PatentCitation,
-        PreprintCitation,
-        ResearchReportCitation,
-        SeminarPaperCitation,
-        ThesisCitation,
-        VideoDocumentCitation,
-        WorkingPaperCitation,
-    };
-
     // get default actions from locale
     const defaultActions = locale.components.publicationCitation.defaultActions;
+    const publicationType = publicationTypes(citationComponents)?.[publication.rek_display_type];
 
     const _handleDefaultActions = action => {
         /* istanbul ignore else  */
@@ -267,13 +301,9 @@ export const PublicationCitation = ({
         );
     };
 
-    const renderCitation = publicationTypeId => {
-        const filteredPublicationType = publicationTypeId
-            ? publicationTypes(citationComponents)[publicationTypeId]
-            : null;
-
-        return (filteredPublicationType || {}).citationComponent ? (
-            React.createElement(filteredPublicationType.citationComponent, {
+    const renderCitation = (publicationType, publicationTypeId) => {
+        return publicationType?.citationComponent ? (
+            React.createElement(publicationType.citationComponent, {
                 publication: publication,
                 hideDoiLink: hideLinks,
                 citationStyle: citationStyle,
@@ -395,14 +425,14 @@ export const PublicationCitation = ({
                                     <Typography
                                         variant="h6"
                                         component="h6"
-                                        lineHeight={1}
-                                        letterSpacing={0}
-                                        mb={'6px'}
-                                        mr={'12px'}
+                                        className={'PublicationCitation-citationTitle'}
                                         sx={{
+                                            lineHeight: 1,
+                                            letterSpacing: 0,
+                                            mb: '6px',
+                                            mr: '12px',
                                             overflowWrap: 'break-word !important',
                                         }}
-                                        className={'PublicationCitation-citationTitle'}
                                     >
                                         {renderTitle()}
                                     </Typography>
@@ -469,7 +499,10 @@ export const PublicationCitation = ({
                                         marginBottom: '6px',
                                     })}
                                 >
-                                    {renderCitation(publication.rek_display_type)}
+                                    {renderCitation(publicationType, publication.rek_display_type)}
+                                    {showCopyTextButton &&
+                                        publicationType &&
+                                        renderCopyCitationTextButton(publication.rek_pid)}
                                 </Grid>
                             )}
                             {showUnpublishedBufferFields && (
@@ -484,11 +517,12 @@ export const PublicationCitation = ({
                                             <Grid
                                                 item
                                                 xs="auto"
-                                                sx={{ '&.MuiGrid-root': { flexGrow: 1, whiteSpace: 'nowrap' } }}
+                                                sx={{ '&.MuiGridLegacy-root': { flexGrow: 1, whiteSpace: 'nowrap' } }}
                                             >
                                                 <CitationCounts
                                                     publication={publication}
                                                     hideViewFullStatisticsLink={hideViewFullStatisticsLink}
+                                                    showAltmetricWidget={showAltmetricWidget}
                                                 />
                                             </Grid>
                                         )}
@@ -569,6 +603,8 @@ PublicationCitation.propTypes = {
     showSources: PropTypes.bool,
     showUnpublishedBufferFields: PropTypes.bool,
     showImageThumbnails: PropTypes.bool,
+    showCopyTextButton: PropTypes.bool,
+    showAltmetricWidget: PropTypes.bool,
     security: PropTypes.object,
 };
 

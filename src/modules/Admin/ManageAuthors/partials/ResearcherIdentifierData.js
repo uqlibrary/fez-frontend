@@ -3,7 +3,7 @@ import React from 'react';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useWatch } from 'react-hook-form';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';

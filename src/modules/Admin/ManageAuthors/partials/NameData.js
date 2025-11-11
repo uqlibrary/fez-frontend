@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import AuthorFieldData from './AuthorFieldData';

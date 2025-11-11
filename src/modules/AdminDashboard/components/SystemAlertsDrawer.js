@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 import { DEFAULT_DATE_FORMAT_WITH_TIME_24H, SYSTEM_ALERT_ACTION, getFormattedServerDate, isUrl } from '../config';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -16,12 +16,75 @@ import TextField from '@mui/material/TextField';
 import CircularProgress from '@mui/material/CircularProgress';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import IconButton from '@mui/material/IconButton';
+import Copy from '@mui/icons-material/FileCopyOutlined';
+import Tooltip from '@mui/material/Tooltip';
+import { FEZ_USER_SYSTEM_ID, FEZ_USER_SYSTEM_LABEL } from '../../../config/general';
 
 const rootId = 'system-alert-detail';
 const StyledDivider = styled(Divider)(({ theme }) => ({
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
 }));
+
+/**
+ * @return {boolean}
+ */
+const isClipboardAvailable = () => !!navigator.clipboard;
+
+/**
+ * @param data
+ * @return {Promise<void>}
+ */
+const handleCopyCreatorUsername = data => navigator?.clipboard?.writeText?.(data);
+
+/**
+ * @param {object} row
+ * @return {React.JSX.Element|null}
+ */
+const renderCopyCreatorUsernameButton = row => {
+    const data = row?.creator?.usr_username;
+    /* istanbul ignore next */
+    if (!data) return null;
+
+    const id = row?.sat_id;
+    const disabled = !isClipboardAvailable();
+    return (
+        <Tooltip title={!disabled && 'Copy to clipboard'}>
+            <span>
+                <IconButton
+                    aria-label={!disabled && `Copy requester's username (${data}) to clipboard`}
+                    onClick={() => handleCopyCreatorUsername(data)}
+                    data-analyticsid={`${rootId}-${id}-copy-username`}
+                    data-testid={`${rootId}-${id}-copy-username`}
+                    id={`${rootId}-${id}-copy-username`}
+                    sx={{ p: 0, mt: -1.25, ml: 0.5 }}
+                    disabled={disabled}
+                    size="small"
+                >
+                    <Copy color={disabled ? 'disabled' : 'secondary'} fontSize="small" sx={{ width: 14 }} />
+                </IconButton>
+            </span>
+        </Tooltip>
+    );
+};
+
+/**
+ * @param row
+ * @return {Element}
+ */
+const renderCreatorsUsername = row => {
+    return (
+        (row?.creator?.usr_id === FEZ_USER_SYSTEM_ID && (
+            <Typography color={'disabled'}>{FEZ_USER_SYSTEM_LABEL}</Typography>
+        )) || (
+            <span>
+                {row?.creator?.usr_username}
+                {renderCopyCreatorUsernameButton(row)}
+            </span>
+        )
+    );
+};
 
 const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpdate }) => {
     const config = useSelector(
@@ -87,15 +150,24 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
         !!row && (
             <Drawer anchor="right" open={open} onClose={handleCloseDrawer} id={rootId} data-testid={rootId}>
                 <Box
-                    sx={{ width: [320, 500] }}
                     role="presentation"
-                    padding={2}
-                    boxSizing={'border-box'}
-                    display={'flex'}
-                    flex={1}
-                    flexDirection={'column'}
+                    sx={{
+                        padding: 2,
+                        boxSizing: 'border-box',
+                        display: 'flex',
+                        flex: 1,
+                        flexDirection: 'column',
+                        width: [320, 500],
+                    }}
                 >
-                    <Typography component={'h2'} fontSize={'1.45rem'} fontWeight={500} data-testid={`${rootId}-title`}>
+                    <Typography
+                        component={'h2'}
+                        data-testid={`${rootId}-title`}
+                        sx={{
+                            fontSize: '1.45rem',
+                            fontWeight: 500,
+                        }}
+                    >
                         {row.sat_title}
                     </Typography>
                     {isUrl(row.sat_link) && (
@@ -106,23 +178,53 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                     <StyledDivider />
                     <Grid container spacing={1}>
                         <Grid item xs={4}>
-                            <Typography fontWeight={400} data-testid={`${rootId}-id-label`}>
+                            <Typography
+                                data-testid={`${rootId}-id-label`}
+                                sx={{
+                                    fontWeight: 400,
+                                }}
+                            >
                                 {txt.alertId}
                             </Typography>
                         </Grid>
                         <Grid item xs={8}>
-                            <Typography fontWeight={'normal'} data-testid={`${rootId}-id`}>
+                            <Typography
+                                data-testid={`${rootId}-id`}
+                                sx={{
+                                    fontWeight: 'normal',
+                                }}
+                            >
                                 {row.sat_id}
                             </Typography>
                         </Grid>
                         <Grid item xs={4}>
-                            <Typography fontWeight={400} data-testid={`${rootId}-date-created-label`}>
+                            <Typography
+                                data-testid={`${rootId}-date-created-label`}
+                                sx={{
+                                    fontWeight: 400,
+                                }}
+                            >
                                 {txt.received}
                             </Typography>
                         </Grid>
                         <Grid item xs={8}>
-                            <Typography fontWeight={'normal'} data-testid={`${rootId}-date-created`}>
+                            <Typography
+                                data-testid={`${rootId}-date-created`}
+                                sx={{
+                                    fontWeight: 'normal',
+                                }}
+                            >
                                 {getFormattedServerDate(row.sat_created_date, DEFAULT_DATE_FORMAT_WITH_TIME_24H)}
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Typography fontWeight={400} data-testid={`${rootId}-creator-label`}>
+                                {txt.creator}
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={8}>
+                            <Typography fontWeight={'normal'} data-testid={`${rootId}-creator`}>
+                                {renderCreatorsUsername(row)}
                             </Typography>
                         </Grid>
                     </Grid>
@@ -151,33 +253,32 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                     label={txt.status}
                                     helperText={txt.statusHelpText}
                                     variant="standard"
-                                    InputProps={{
-                                        ...params.InputProps,
-                                        endAdornment: (
-                                            <React.Fragment>
-                                                {adminDashboardSystemAlertsUpdating ? (
-                                                    <CircularProgress color="inherit" size={20} />
-                                                ) : null}
-                                                {params.InputProps.endAdornment}
-                                            </React.Fragment>
-                                        ),
-                                    }}
-                                    inputProps={{
-                                        ...params.inputProps,
-                                        id: `${rootId}-assignee-input`,
-                                        'data-analyticsid': `${rootId}-assignee-input`,
-                                        'data-testid': `${rootId}-assignee-input`,
-                                    }}
-                                    InputLabelProps={{
-                                        'data-testid': `${rootId}-assignee-label`,
+                                    slotProps={{
+                                        input: {
+                                            ...params.InputProps,
+                                            endAdornment: (
+                                                <React.Fragment>
+                                                    {adminDashboardSystemAlertsUpdating ? (
+                                                        <CircularProgress color="inherit" size={20} />
+                                                    ) : null}
+                                                    {params.InputProps.endAdornment}
+                                                </React.Fragment>
+                                            ),
+                                        },
+
+                                        htmlInput: {
+                                            ...params.inputProps,
+                                            id: `${rootId}-assignee-input`,
+                                            'data-analyticsid': `${rootId}-assignee-input`,
+                                            'data-testid': `${rootId}-assignee-input`,
+                                        },
+
+                                        inputLabel: {
+                                            'data-testid': `${rootId}-assignee-label`,
+                                        },
                                     }}
                                 />
                             )}
-                            ListboxProps={{
-                                id: `${rootId}-options`,
-                                'data-analyticsid': `${rootId}-options`,
-                                'data-testid': `${rootId}-options`,
-                            }}
                             options={adminUsers}
                             getOptionLabel={option => option.preferred_name}
                             value={
@@ -187,10 +288,24 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                             }
                             onChange={handleAssignedChange}
                             disabled={adminDashboardSystemAlertsUpdating || !!row.sat_resolved_by}
+                            slotProps={{
+                                listbox: {
+                                    id: `${rootId}-options`,
+                                    'data-analyticsid': `${rootId}-options`,
+                                    'data-testid': `${rootId}-options`,
+                                },
+                            }}
                         />
                     </Box>
                     {!!buttonLabel && (
-                        <Box display={'flex'} flex={1} flexDirection={'column'} justifyContent={'flex-end'}>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flex: 1,
+                                flexDirection: 'column',
+                                justifyContent: 'flex-end',
+                            }}
+                        >
                             <Button
                                 fullWidth
                                 color="primary"

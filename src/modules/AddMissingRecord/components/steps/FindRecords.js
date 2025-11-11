@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import { locale } from 'locale';
 import { validation } from 'config';

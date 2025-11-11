@@ -39,9 +39,14 @@ export const IS_DEVELOPMENT_SERVER =
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
 
+export const FEZ_USER_SYSTEM_ID = 41783;
+export const FEZ_USER_SYSTEM_USERNAME = 'webcron';
+export const FEZ_USER_SYSTEM_LABEL = 'System';
+
 export const ORCID_BASE_URL = process.env.ORCID_URL || 'https://orcid.org';
 export const ORCID_CLIENT_ID = process.env.ORCID_CLIENT_ID || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
+export const DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE = 'dashboard-hide-orcid-sync-dialog';
 
 export const ROR_BASE_URL = 'https://ror.org';
 
@@ -1534,6 +1539,34 @@ export const SCOPUS_DOC_TYPES = [
     { value: 're', text: 're - Review' },
     { value: 'sh', text: 'sh - Short Survey' },
 ];
+
+export const OPENALEX_DOC_TYPES = [
+    { value: 'None', text: 'None' },
+    { value: 'article', text: 'article' },
+    { value: 'book-chapter', text: 'book-chapter' },
+    { value: 'dataset', text: 'dataset' },
+    { value: 'preprint', text: 'preprint' },
+    { value: 'dissertation', text: 'dissertation' },
+    { value: 'book', text: 'book' },
+    { value: 'review', text: 'review' },
+    { value: 'paratext', text: 'paratext' },
+    { value: 'other', text: 'other' },
+    { value: 'libguides', text: 'libguides' },
+    { value: 'reference-entry', text: 'reference-entry' },
+    { value: 'report', text: 'report' },
+    { value: 'peer-review', text: 'peer-review' },
+    { value: 'editorial', text: 'editorial' },
+    { value: 'erratum', text: 'erratum' },
+    { value: 'standard', text: 'standard' },
+    { value: 'grant', text: 'grant' },
+    { value: 'supplementary-materials', text: 'supplementary-materials' },
+    { value: 'retraction', text: 'retraction' },
+    { value: 'book-section', text: 'book-section' },
+    { value: 'software', text: 'software' },
+    { value: 'database', text: 'database' },
+    { value: 'report-component', text: 'report-component' },
+];
+
 export const PUBMED_DOC_TYPES = [
     { value: 'None', text: 'None' },
     { value: 'Addresses', text: 'Addresses' },

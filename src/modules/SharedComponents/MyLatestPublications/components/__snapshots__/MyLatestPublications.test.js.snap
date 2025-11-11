@@ -16,20 +16,20 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         id="publication-citation-parent-UQ:678947"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:678947"
@@ -39,10 +39,11 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:678947"
                 >
                   <span
                     class="citationAuthors"
@@ -325,7 +326,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -338,30 +339,30 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       https://doi.org/10.1016/j.ajhg.2017.07.007
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000406854800009"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -379,10 +380,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026769370%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -400,10 +401,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/23460021"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -421,10 +422,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Long%20noncoding%20RNAs%20CUPID1%20and%20CUPID2%20mediate%20breast%20cancer%20risk%20at%2011q13%20by%20modulating%20the%20response%20to%20DNA%20damage"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -440,10 +441,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -453,16 +454,16 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ678947 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ678947 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ678947 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ678947 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ678947-secondary"
               tabindex="0"
               type="button"
@@ -473,7 +474,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -485,20 +486,20 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         id="publication-citation-parent-UQ:792104"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:792104"
@@ -508,10 +509,11 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationDesign"
+                  id="citation-content-UQ:792104"
                 >
                   <span
                     class="citationEditors"
@@ -591,30 +593,30 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Conf%20A%20proceedings"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -630,10 +632,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -643,16 +645,16 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ792104 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792104 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ792104 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792104 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ792104-secondary"
               tabindex="0"
               type="button"
@@ -663,7 +665,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -675,20 +677,20 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         id="publication-citation-parent-UQ:792110"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:792110"
@@ -698,10 +700,11 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationBook"
+                  id="citation-content-UQ:792110"
                 >
                   <span
                     class="citationAuthors"
@@ -755,30 +758,30 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Testing%20book%20with%20cache"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -794,10 +797,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -807,16 +810,16 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ792110 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792110 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ792110 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792110 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ792110-secondary"
               tabindex="0"
               type="button"
@@ -827,7 +830,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -839,20 +842,20 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         id="publication-citation-parent-UQ:792111"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:792111"
@@ -862,10 +865,11 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationConferencePaper"
+                  id="citation-content-UQ:792111"
                 >
                   <span
                     class="citationAuthors"
@@ -922,30 +926,30 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Conference%20paper%20with%20caching"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -961,10 +965,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -974,16 +978,16 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ792111 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792111 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ792111 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792111 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ792111-secondary"
               tabindex="0"
               type="button"
@@ -994,7 +998,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
     <div
@@ -1006,20 +1010,20 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         id="publication-citation-parent-UQ:396321"
       >
         <div
-          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
                     href="/view/UQ:396321"
@@ -1029,10 +1033,11 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:396321"
                 >
                   <span
                     class="citationAuthors"
@@ -1238,7 +1243,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
@@ -1251,30 +1256,30 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       https://doi.org/10.1093/hmg/ddw177
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000393077300011"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1292,10 +1297,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85014391875%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1313,10 +1318,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/9271343"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1334,10 +1339,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Long-range%20regulators%20of%20the%20lncRNA%20HOTAIR%20enhance%20its%20prognostic%20potential%20in%20breast%20cancer"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1353,10 +1358,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         />
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
                   </div>
@@ -1365,10 +1370,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
               data-testid="rek-content-indicator"
               id="rek-content-indicator"
             >
@@ -1383,16 +1388,16 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ396321 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ396321 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ396321 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ396321 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ396321-secondary"
               tabindex="0"
               type="button"
@@ -1403,21 +1408,21 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         </div>
       </div>
       <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
       />
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary css-3x0jif-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary css-cu9fqp-MuiButtonBase-root-MuiButton-root"
         tabindex="0"
         type="button"
       >
@@ -1440,27 +1445,27 @@ exports[`Component MyLatestPublications should render loading indicator 1`] = `
           style="padding: 8px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
             />
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
               style="text-align: center;"
             >
               <span
                 aria-label="Loading"
-                class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
                 role="progressbar"
                 style="width: 18px; height: 18px;"
               >
                 <svg
-                  class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                  class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                   viewBox="22 22 44 44"
                 >
                   <circle
-                    class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                    class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                     cx="44"
                     cy="44"
                     fill="none"
@@ -1471,18 +1476,18 @@ exports[`Component MyLatestPublications should render loading indicator 1`] = `
               </span>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
               style="text-align: center;"
             >
               <span
-                class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
                 style="font-size: 1.33rem;"
               >
                 Loading your latest works
               </span>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
             />
           </div>
         </div>
@@ -1497,27 +1502,27 @@ exports[`Component MyLatestPublications should render loading indicator 1`] = `
         style="padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
             style="text-align: center;"
           >
             <span
               aria-label="Loading"
-              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
               role="progressbar"
               style="width: 18px; height: 18px;"
             >
               <svg
-                class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                 viewBox="22 22 44 44"
               >
                 <circle
-                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                   cx="44"
                   cy="44"
                   fill="none"
@@ -1528,18 +1533,18 @@ exports[`Component MyLatestPublications should render loading indicator 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading your latest works
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
           />
         </div>
       </div>

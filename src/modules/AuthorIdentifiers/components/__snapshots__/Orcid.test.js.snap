@@ -3,13 +3,13 @@
 exports[`Component Orcid  should render if account doesnt have first name and last name 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -18,37 +18,38 @@ exports[`Component Orcid  should render if account doesnt have first name and la
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <span
         class="MuiBox-root css-0"
         data-testid="confirmDialogBox"
       />
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-i-already-have-an-orcid-id"
             id="standard-card-i-already-have-an-orcid-id"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-i-already-have-an-orcid-id-header"
                   id="standard-card-i-already-have-an-orcid-id-header"
                 >
@@ -57,28 +58,28 @@ exports[`Component Orcid  should render if account doesnt have first name and la
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-i-already-have-an-orcid-id-content"
               data-testid="standard-card-i-already-have-an-orcid-id-content"
               id="standard-card-i-already-have-an-orcid-id-content"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-i0iyry-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-r78nty-MuiTypography-root"
               >
                 This option enables you to link your existing ORCID iD to UQ.
               </span>
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                 />
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                 >
                   <button
                     aria-label="Link your existing ORCID iD"
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
                     tabindex="0"
                     type="button"
                   >
@@ -90,21 +91,22 @@ exports[`Component Orcid  should render if account doesnt have first name and la
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-i-need-an-orcid-id"
             id="standard-card-i-need-an-orcid-id"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-i-need-an-orcid-id-header"
                   id="standard-card-i-need-an-orcid-id-header"
                 >
@@ -113,13 +115,13 @@ exports[`Component Orcid  should render if account doesnt have first name and la
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-i-need-an-orcid-id-content"
               data-testid="standard-card-i-need-an-orcid-id-content"
               id="standard-card-i-need-an-orcid-id-content"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-i0iyry-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-r78nty-MuiTypography-root"
               >
                 <p>
                   This option enables you to create a new ORCID iD and link it with UQ.
@@ -129,17 +131,17 @@ exports[`Component Orcid  should render if account doesnt have first name and la
                 </p>
               </span>
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                 />
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                 >
                   <button
                     aria-label="Create a new ORCID iD"
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
                     tabindex="0"
                     type="button"
                   >
@@ -152,14 +154,6 @@ exports[`Component Orcid  should render if account doesnt have first name and la
         </div>
       </div>
     </div>
-  </div>
-</div>
-`;
-
-exports[`Component Orcid  should render nothing if account is set, but author is null 1`] = `
-<div>
-  <div>
-    Dashboard
   </div>
 </div>
 `;

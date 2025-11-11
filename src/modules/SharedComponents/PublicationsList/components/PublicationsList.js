@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
@@ -36,11 +36,13 @@ export const PublicationsList = ({
     publicationsLoading,
     showImageThumbnails = false,
     security = { isAdmin: false, isAuthor: false },
+    forceUseCustomActions,
 }) => {
     const { shouldRenderRecordsSelectors, recordsSelected, allSelected, handleClick, handleSelectAll } =
         useRecordsSelector();
 
     const renderPublicationCitation = (index, publication) => {
+        const overrideUseCustomActions = forceUseCustomActions?.(publication) || false;
         return (
             <PublicationCitation
                 showImageThumbnails={showImageThumbnails}
@@ -48,13 +50,15 @@ export const PublicationsList = ({
                 key={index + publication.rek_title + publication.rek_date}
                 publication={publication}
                 customActions={
-                    !publication.rek_pid || publicationsListSubset.indexOf(publication.rek_pid) === -1
+                    !publication.rek_pid ||
+                    publicationsListSubset.indexOf(publication.rek_pid) === -1 ||
+                    overrideUseCustomActions
                         ? customActions
                         : subsetCustomActions
                 }
                 showSources={showSources}
                 showAdminActions={!!showAdminActions}
-                showDefaultActions={showDefaultActions}
+                showDefaultActions={showDefaultActions && !overrideUseCustomActions}
                 showMetrics={showMetrics}
                 showSourceCountIcon={showSourceCountIcon}
                 showUnpublishedBufferFields={showUnpublishedBufferFields}
@@ -82,7 +86,13 @@ export const PublicationsList = ({
     return (
         <Grid container spacing={1}>
             <Grid item xs={12} sm>
-                <Box display="flex" alignItems="center" height="100%">
+                <Box
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        height: '100%',
+                    }}
+                >
                     <FormControlLabel
                         sx={{ alignItems: 'center', margin: 0 }}
                         control={
@@ -111,7 +121,13 @@ export const PublicationsList = ({
                 sm
                 sx={{ display: Object.keys(recordsSelected).length > 0 ? '' : 'none' }}
             >
-                <Box display="flex" alignItems="center" height="100%">
+                <Box
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        height: '100%',
+                    }}
+                >
                     <BulkUpdatesActions
                         shouldDisplay={Object.keys(recordsSelected).length > 0}
                         recordsSelected={recordsSelected}
@@ -159,6 +175,7 @@ PublicationsList.propTypes = {
     publicationsLoading: PropTypes.bool,
     showImageThumbnails: PropTypes.bool,
     security: PropTypes.object,
+    forceUseCustomActions: PropTypes.func,
 };
 
 export default React.memo(PublicationsList);

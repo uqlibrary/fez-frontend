@@ -62,7 +62,7 @@ test.describe('Strategic Publishing - Search', () => {
         );
         await expect(
             page.locator('div[data-testid="journal-search-keyword-list-subjects-field-of-research"] span'),
-        ).toHaveCount(31);
+        ).toHaveCount(30);
 
         await assertAccessibility(page, 'div.StandardPage');
 
@@ -87,17 +87,14 @@ test.describe('Strategic Publishing - Search', () => {
         );
         await expect(
             page.locator('div[data-testid="journal-search-keyword-list-subjects-field-of-research"] span'),
-        ).toHaveCount(33);
+        ).toHaveCount(32);
 
         await expect(page.getByTestId('journal-search-button')).toBeDisabled();
         await page.getByTestId('journal-search-item-addable-title-microbiology-0').click();
         await expect(page.getByTestId('journal-search-chip-title-microbiology')).toBeVisible();
         await expect(page.getByTestId('journal-search-button')).toBeEnabled();
 
-        await page
-            .getByTestId('journal-search-chip-title-microbiology')
-            .getByTestId('CancelIcon')
-            .click();
+        await page.getByTestId('journal-search-chip-title-microbiology').getByTestId('CancelIcon').click();
         await expect(page.getByTestId('journal-search-button')).toBeDisabled();
 
         await assertAccessibility(page, 'div.StandardPage');
@@ -113,10 +110,7 @@ test.describe('Strategic Publishing - Search', () => {
 
             await expect(ResultTitles).toHaveCount(resultsLengthWithTwoKeywords);
             // Click the SVG inside the chip to remove it
-            await page
-                .getByTestId('journal-search-chip-title-glycobiology')
-                .locator('svg')
-                .click();
+            await page.getByTestId('journal-search-chip-title-glycobiology').locator('svg').click();
 
             await expect(page.getByTestId('journal-search-chip-title-glycobiology')).not.toBeVisible();
             await expect(page).not.toHaveURL(/keywords%5BTitle-glycobiology/); // Negative URL assertion
@@ -164,10 +158,7 @@ test.describe('Strategic Publishing - Search', () => {
             await expect(ResultTitles).toHaveCount(resultsLengthWithKeywordAndFacets);
 
             // Remove a keyword - this should unselect the active facets and update the URL
-            await page
-                .getByTestId('journal-search-chip-title-glycobiology')
-                .locator('svg')
-                .click();
+            await page.getByTestId('journal-search-chip-title-glycobiology').locator('svg').click();
 
             await expect(page).not.toHaveURL(/CWTS/);
             await expect(page).not.toHaveURL(/Scopus/);

@@ -3,18 +3,18 @@
 exports[`CitationCounts should not render View full statistics link on public pages for anonymous user 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <a
         aria-label="Full citation in Web of science will open in a new window"
         class="wosCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="wos-citation-count-link"
+        data-testid="wos-citation-count-link"
         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D12345"
-        id="citation-count-link"
+        id="wos-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -32,10 +32,10 @@ exports[`CitationCounts should not render View full statistics link on public pa
       <a
         aria-label="Full citation in Scopus will open in a new window"
         class="scopusCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="scopus-citation-count-link"
+        data-testid="scopus-citation-count-link"
         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D12345%26origin%3Dinward"
-        id="citation-count-link"
+        id="scopus-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -53,10 +53,10 @@ exports[`CitationCounts should not render View full statistics link on public pa
       <a
         aria-label="Full citation in Altmetric will open in a new window"
         class="altmetricCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="altmetric-citation-count-link"
+        data-testid="altmetric-citation-count-link"
         href="https://queensland.altmetric.com/details/12345"
-        id="citation-count-link"
+        id="altmetric-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -74,10 +74,10 @@ exports[`CitationCounts should not render View full statistics link on public pa
       <a
         aria-label="Full citation in Google scholar will open in a new window"
         class="googleCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="google-citation-count-link"
+        data-testid="google-citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
-        id="citation-count-link"
+        id="google-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -98,10 +98,10 @@ exports[`CitationCounts should not render View full statistics link on public pa
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
     />
   </div>
 </div>
@@ -110,18 +110,18 @@ exports[`CitationCounts should not render View full statistics link on public pa
 exports[`CitationCounts should render component with a mock record metrics 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <a
         aria-label="Full citation in Scopus will open in a new window"
         class="scopusCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="scopus-citation-count-link"
+        data-testid="scopus-citation-count-link"
         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026774540%26origin%3Dinward"
-        id="citation-count-link"
+        id="scopus-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -139,10 +139,10 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       <a
         aria-label="Full citation in Altmetric will open in a new window"
         class="altmetricCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="altmetric-citation-count-link"
+        data-testid="altmetric-citation-count-link"
         href="https://queensland.altmetric.com/details/23535331"
-        id="citation-count-link"
+        id="altmetric-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -160,10 +160,10 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       <a
         aria-label="Full citation in Google scholar will open in a new window"
         class="googleCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="google-citation-count-link"
+        data-testid="google-citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
-        id="citation-count-link"
+        id="google-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -179,7 +179,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
         class="css-qsfl36"
@@ -194,7 +194,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="full-statistics-link-new-window-icon"
@@ -208,7 +208,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
     />
   </div>
 </div>
@@ -217,18 +217,18 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
 exports[`CitationCounts should render component with all metrics 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <a
         aria-label="Full citation in Web of science will open in a new window"
         class="wosCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="wos-citation-count-link"
+        data-testid="wos-citation-count-link"
         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D12345"
-        id="citation-count-link"
+        id="wos-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -246,10 +246,10 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       <a
         aria-label="Full citation in Scopus will open in a new window"
         class="scopusCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="scopus-citation-count-link"
+        data-testid="scopus-citation-count-link"
         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D12345%26origin%3Dinward"
-        id="citation-count-link"
+        id="scopus-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -267,10 +267,10 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       <a
         aria-label="Full citation in Altmetric will open in a new window"
         class="altmetricCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="altmetric-citation-count-link"
+        data-testid="altmetric-citation-count-link"
         href="https://queensland.altmetric.com/details/12345"
-        id="citation-count-link"
+        id="altmetric-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -288,10 +288,10 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       <a
         aria-label="Full citation in Dimensions will open in a new window"
         class="dimensionsCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="dimensions-citation-count-link"
+        data-testid="dimensions-citation-count-link"
         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fapp.dimensions.ai%2Fdetails%2Fpublication%2F12345"
-        id="citation-count-link"
+        id="dimensions-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -309,10 +309,10 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       <a
         aria-label="Full citation in Google scholar will open in a new window"
         class="googleCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="google-citation-count-link"
+        data-testid="google-citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
-        id="citation-count-link"
+        id="google-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -354,7 +354,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
         class="css-qsfl36"
@@ -369,7 +369,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="full-statistics-link-new-window-icon"
@@ -383,7 +383,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
     />
   </div>
 </div>
@@ -392,10 +392,10 @@ exports[`CitationCounts should render component with all metrics 1`] = `
 exports[`CitationCounts should render component with no metrics 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <span
         class="noOaIcon"
@@ -403,10 +403,10 @@ exports[`CitationCounts should render component with no metrics 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
     />
   </div>
 </div>
@@ -415,18 +415,18 @@ exports[`CitationCounts should render component with no metrics 1`] = `
 exports[`CitationCounts should render null as 0 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <a
         aria-label="Full citation in Dimensions will open in a new window"
         class="dimensionsCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="dimensions-citation-count-link"
+        data-testid="dimensions-citation-count-link"
         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fapp.dimensions.ai%2Fdetails%2Fpublication%2F12345"
-        id="citation-count-link"
+        id="dimensions-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -444,10 +444,10 @@ exports[`CitationCounts should render null as 0 1`] = `
       <a
         aria-label="Full citation in Google scholar will open in a new window"
         class="googleCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="google-citation-count-link"
+        data-testid="google-citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
-        id="citation-count-link"
+        id="google-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -463,10 +463,10 @@ exports[`CitationCounts should render null as 0 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
     />
   </div>
 </div>
@@ -475,18 +475,18 @@ exports[`CitationCounts should render null as 0 1`] = `
 exports[`CitationCounts should render open access icon when required 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
     >
       <a
         aria-label="Full citation in Scopus will open in a new window"
         class="scopusCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="scopus-citation-count-link"
+        data-testid="scopus-citation-count-link"
         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026774540%26origin%3Dinward"
-        id="citation-count-link"
+        id="scopus-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -504,10 +504,10 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       <a
         aria-label="Full citation in Altmetric will open in a new window"
         class="altmetricCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="altmetric-citation-count-link"
+        data-testid="altmetric-citation-count-link"
         href="https://queensland.altmetric.com/details/23535331"
-        id="citation-count-link"
+        id="altmetric-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -525,10 +525,10 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       <a
         aria-label="Full citation in Google scholar will open in a new window"
         class="googleCitationCount css-pi8u"
-        data-analyticsid="citation-count-link"
-        data-testid="citation-count-link"
+        data-analyticsid="google-citation-count-link"
+        data-testid="google-citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
-        id="citation-count-link"
+        id="google-citation-count-link"
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
@@ -544,7 +544,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
     >
       <a
         class="css-qsfl36"
@@ -559,7 +559,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="full-statistics-link-new-window-icon"
@@ -573,7 +573,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       </a>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
     />
   </div>
 </div>

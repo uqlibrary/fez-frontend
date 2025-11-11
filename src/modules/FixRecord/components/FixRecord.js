@@ -1,8 +1,9 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
@@ -34,6 +35,7 @@ import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { useWatch } from 'react-hook-form';
 import validationErrors from '../../../locale/validationErrors';
 import { isEmptyObject } from '../../../helpers/general';
+import PropTypes from 'prop-types';
 
 // constants
 const RECORD_ACTION_FIX = 'fix';
@@ -107,18 +109,43 @@ const fixOptions = pagesLocale.pages.fixRecord.actionsOptions.map((item, index) 
     <MenuItem value={item.action} children={item.title} key={`fix_record_action_${index}`} />
 ));
 
-const saveConfirmationLocale = { ...formsLocale.forms.fixPublicationForm.successWorkflowConfirmation };
+const localContent = {
+    fix: {
+        txt: pagesLocale.pages.fixRecord,
+        txtFixForm: formsLocale.forms.fixPublicationForm,
+        defaultFixAction: '',
+        nextAction: pathConfig.records.mine,
+        saveConfirmationLocale: { ...formsLocale.forms.fixPublicationForm.successWorkflowConfirmation },
+    },
+    openAccess: {
+        txt: pagesLocale.pages.openAccessComplianceRecord,
+        txtFixForm: formsLocale.forms.openAccessComplianceForm,
+        defaultFixAction: RECORD_ACTION_FIX,
+        nextAction: pathConfig.records.openAccessCompliance,
+        saveConfirmationLocale: { ...formsLocale.forms.openAccessComplianceForm.successWorkflowConfirmation },
+    },
+};
 
-const FixRecord = () => {
+const ConditionalWrapper = ({ condition, children, ...rest }) =>
+    condition ? <Box {...rest}>{children}</Box> : children;
+ConditionalWrapper.propTypes = {
+    condition: PropTypes.bool,
+    children: PropTypes.node,
+};
+
+const FixRecord = ({ openAccess = false }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     // route params
     const { pid } = useParams();
+
+    const { txt, txtFixForm, defaultFixAction, nextAction, saveConfirmationLocale } = openAccess
+        ? localContent.openAccess
+        : localContent.fix;
+
     // to allow confirmDialogBox control
     const confirmDialogBoxRef = useRef();
     // constants
-    const txt = pagesLocale.pages.fixRecord;
-    const txtFixForm = formsLocale.forms.fixPublicationForm;
     const txtUnclaimForm = formsLocale.forms.unclaimPublicationForm;
     // app's global state
     const { author, accountAuthorLoading } = useSelector(state => state.get('accountReducer'));
@@ -140,7 +167,7 @@ const FixRecord = () => {
     } = useValidatedForm({
         // use values instead of defaultValues, as the first triggers a re-render upon updates
         values: {
-            fixAction: '',
+            fixAction: defaultFixAction,
             comments: '',
             rek_link: '',
             contentIndicators,
@@ -187,15 +214,14 @@ const FixRecord = () => {
         return <div />;
     }
 
-    // navigation
-    const navigateToMyResearch = () => {
-        navigate(pathConfig.records.mine);
+    const navigateToNext = () => {
+        navigate(nextAction);
     };
     const navigateToDashboard = () => {
         navigate(pathConfig.dashboard);
     };
     const cancelFix = () => {
-        navigateToMyResearch();
+        navigateToNext();
     };
 
     // dialog & alert
@@ -210,7 +236,9 @@ const FixRecord = () => {
     const onSubmit = safelyHandleSubmit(async () => {
         const data = mergeWithFormValues({ author, publication });
         await dispatch(
-            data.fixAction === RECORD_ACTION_UNCLAIM ? actions.unclaimRecord(data) : actions.fixRecord(data),
+            data.fixAction === RECORD_ACTION_UNCLAIM
+                ? actions.unclaimRecord(data)
+                : actions.fixRecord(data, openAccess),
         );
     });
 
@@ -219,25 +247,27 @@ const FixRecord = () => {
             <ConfirmDiscardFormChanges dirty={isDirty} isSubmitSuccessful={isSubmitSuccessful}>
                 <form onSubmit={onSubmit}>
                     <Grid container spacing={3}>
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.subTitle} help={txt.help}>
                                 <PublicationCitation publication={recordToFix} citationStyle={'header'} />
-                                <Field
-                                    control={control}
-                                    component={SelectField}
-                                    disabled={isSubmitting}
-                                    name="fixAction"
-                                    label={txt.fieldLabels.action}
-                                    validate={[validation.required]}
-                                    required
-                                    selectFieldId="fix-action"
-                                    data-testid="fix-action"
-                                >
-                                    {fixOptions}
-                                </Field>
+                                {!openAccess && (
+                                    <Field
+                                        control={control}
+                                        component={SelectField}
+                                        disabled={isSubmitting}
+                                        name="fixAction"
+                                        label={txt.fieldLabels.action}
+                                        validate={[validation.required]}
+                                        required
+                                        selectFieldId="fix-action"
+                                        data-testid="fix-action"
+                                    >
+                                        {fixOptions}
+                                    </Field>
+                                )}
                             </StandardCard>
                         </Grid>
-                        {fixAction === RECORD_ACTION_FIX && (
+                        {(fixAction === RECORD_ACTION_FIX || openAccess) && (
                             <React.Fragment>
                                 <NavigationDialogBox
                                     when={isDirty && !isSubmitSuccessful}
@@ -245,93 +275,115 @@ const FixRecord = () => {
                                 />
                                 <ConfirmDialogBox
                                     onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}
-                                    onAction={navigateToMyResearch}
+                                    onAction={navigateToNext}
                                     onCancelAction={navigateToDashboard}
                                     locale={saveConfirmationLocale}
                                 />
-                                <Grid xs={12}>
-                                    <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
-                                        <Grid container spacing={2} padding={0}>
-                                            <Grid xs={12}>
-                                                <Field
-                                                    control={control}
-                                                    component={TextField}
-                                                    disabled={isSubmitting}
-                                                    name="comments"
-                                                    textFieldId="comments"
-                                                    type="text"
-                                                    fullWidth
-                                                    multiline
-                                                    rows={3}
-                                                    label={txtFixForm.comments.fieldLabels.comments}
-                                                />
-                                            </Grid>
-                                            <Grid xs={12}>
-                                                <Field
-                                                    control={control}
-                                                    component={TextField}
-                                                    disabled={isSubmitting}
-                                                    name="rek_link"
-                                                    textFieldId="rek_link"
-                                                    type="text"
-                                                    fullWidth
-                                                    label={txtFixForm.comments.fieldLabels.url}
-                                                    validate={[validation.url]}
-                                                />
-                                            </Grid>
-                                        </Grid>
-                                    </StandardCard>
-                                </Grid>
-                                {showContentIndicatorsField(recordToFix) && (
-                                    <Grid xs={12}>
-                                        <StandardCard
-                                            title={txtFixForm.contentIndicators.title}
-                                            help={txtFixForm.contentIndicators.help}
-                                        >
-                                            <Grid container spacing={3} padding={0}>
-                                                <Grid xs={12}>
-                                                    <Typography>{txtFixForm.contentIndicators.description}</Typography>
-                                                </Grid>
-                                                <Grid xs={12}>
+                                <ConditionalWrapper
+                                    condition={openAccess}
+                                    sx={{ display: 'flex', flexDirection: 'column-reverse', rowGap: 3 }}
+                                >
+                                    <Grid size={12}>
+                                        <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
+                                            <Grid
+                                                container
+                                                spacing={3}
+                                                sx={{
+                                                    padding: 0,
+                                                }}
+                                            >
+                                                <Grid size={12}>
                                                     <Field
                                                         control={control}
-                                                        component={ContentIndicatorsField}
-                                                        displayType={recordToFix.rek_display_type}
+                                                        component={TextField}
                                                         disabled={isSubmitting}
-                                                        id="content-indicators"
-                                                        name="contentIndicators"
-                                                        label={txtFixForm.contentIndicators.label}
-                                                        multiple
+                                                        name="comments"
+                                                        textFieldId="comments"
+                                                        type="text"
                                                         fullWidth
+                                                        multiline
+                                                        rows={3}
+                                                        label={txtFixForm.comments.fieldLabels.comments}
+                                                    />
+                                                </Grid>
+                                                <Grid size={12}>
+                                                    <Field
+                                                        control={control}
+                                                        component={TextField}
+                                                        disabled={isSubmitting}
+                                                        name="rek_link"
+                                                        textFieldId="rek_link"
+                                                        type="text"
+                                                        fullWidth
+                                                        label={txtFixForm.comments.fieldLabels.url}
+                                                        validate={[validation.url]}
                                                     />
                                                 </Grid>
                                             </Grid>
                                         </StandardCard>
                                     </Grid>
-                                )}
-                                <Grid xs={12}>
-                                    <StandardCard title={txtFixForm.fileUpload.title} help={txtFixForm.fileUpload.help}>
-                                        {txtFixForm.fileUpload.description}
-                                        <Field
-                                            control={control}
-                                            name="files"
-                                            component={FileUploadField}
-                                            disabled={isSubmitting}
-                                            requireOpenAccessStatus
-                                            validate={[validation.validFileUpload]}
-                                        />
-                                    </StandardCard>
-                                </Grid>
+                                    {!openAccess && showContentIndicatorsField(recordToFix) && (
+                                        <Grid size={12}>
+                                            <StandardCard
+                                                title={txtFixForm.contentIndicators.title}
+                                                help={txtFixForm.contentIndicators.help}
+                                            >
+                                                <Grid
+                                                    container
+                                                    spacing={3}
+                                                    sx={{
+                                                        padding: 0,
+                                                    }}
+                                                >
+                                                    <Grid size={12}>
+                                                        <Typography>
+                                                            {txtFixForm.contentIndicators.description}
+                                                        </Typography>
+                                                    </Grid>
+                                                    <Grid size={12}>
+                                                        <Field
+                                                            control={control}
+                                                            component={ContentIndicatorsField}
+                                                            displayType={recordToFix.rek_display_type}
+                                                            disabled={isSubmitting}
+                                                            id="content-indicators"
+                                                            name="contentIndicators"
+                                                            label={txtFixForm.contentIndicators.label}
+                                                            multiple
+                                                            fullWidth
+                                                        />
+                                                    </Grid>
+                                                </Grid>
+                                            </StandardCard>
+                                        </Grid>
+                                    )}
+                                    <Grid size={12}>
+                                        <StandardCard
+                                            title={txtFixForm.fileUpload.title}
+                                            help={txtFixForm.fileUpload.help}
+                                        >
+                                            {txtFixForm.fileUpload.description}
+                                            <Field
+                                                control={control}
+                                                name="files"
+                                                component={FileUploadField}
+                                                disabled={isSubmitting}
+                                                requireOpenAccessStatus
+                                                validate={[validation.validFileUpload]}
+                                            />
+                                        </StandardCard>
+                                    </Grid>
+                                </ConditionalWrapper>
                             </React.Fragment>
                         )}
                         {fixAction === RECORD_ACTION_UNCLAIM && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <StandardCard title={txtUnclaimForm.title} help={txtUnclaimForm.help}>
                                     <Alert {...txtUnclaimForm.alert} />
                                     {txtUnclaimForm.description}
                                     <ConfirmDialogBox
                                         onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}
-                                        onAction={navigateToMyResearch}
+                                        onAction={navigateToNext}
                                         onCancelAction={cancelFix}
                                         locale={txtUnclaimForm.successWorkflowConfirmation}
                                     />
@@ -340,35 +392,42 @@ const FixRecord = () => {
                         )}
 
                         {alertProps && (
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <Alert pushToTop {...alertProps} />
                             </Grid>
                         )}
                     </Grid>
-                    <Grid container spacing={3}>
-                        <Grid xs />
-                        <Grid>
+                    <Grid
+                        container
+                        spacing={2}
+                        padding={2}
+                        sx={{ justifyContent: 'flex-end', pr: 0, pl: { xs: 0, sm: 'auto' } }}
+                    >
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 variant={'contained'}
-                                fullWidth
                                 children={txt.cancel}
                                 disabled={isSubmitting}
                                 onClick={cancelFix}
                                 color={'default'}
+                                fullWidth
+                                sx={{ sm: { width: 'auto' } }}
                             />
                         </Grid>
+
                         {fixAction && (
-                            <Grid>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     type="submit"
                                     variant={'contained'}
                                     color={'primary'}
-                                    fullWidth
                                     children={txt.submit}
                                     disabled={isSubmitting || !isEmptyObject(formLevelError) || hasValidationError}
                                     id="fixSubmit"
                                     data-testid="fix-submit"
                                     data-analyticsid="fixSubmit"
+                                    fullWidth
+                                    sx={{ sm: { width: 'auto' } }}
                                 />
                             </Grid>
                         )}
@@ -378,5 +437,7 @@ const FixRecord = () => {
         </StandardPage>
     );
 };
-
+FixRecord.propTypes = {
+    openAccess: PropTypes.bool,
+};
 export default FixRecord;

@@ -277,6 +277,20 @@ export const getRoutesConfig = ({
                       exact: true,
                       pageTitle: locale.pages.addRecord.title,
                   },
+                  {
+                      path: pathConfig.records.openAccessCompliance,
+                      element: <components.MyOpenAccessRecords />,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.openAccessPublications.title,
+                  },
+                  {
+                      path: pathConfig.records.openAccessComplianceFix(pid),
+                      element: <components.FixRecord openAccess />,
+                      access: [roles.researcher, roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.openAccessComplianceRecord.title,
+                  },
                   ...(authorDetails
                       ? [
                             {
@@ -511,7 +525,14 @@ export const getRoutesConfig = ({
     ];
 };
 
-export const getMenuConfig = (account, author, authorDetails, disabled, hasIncompleteWorks = false) => {
+export const getMenuConfig = (
+    account,
+    author,
+    authorDetails,
+    disabled,
+    hasIncompleteWorks = false,
+    hasOaComplianceWorks = false,
+) => {
     const homePage = [
         {
             linkTo: pathConfig.index,
@@ -561,6 +582,14 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             {
                 linkTo: pathConfig.records.incomplete,
                 ...locale.menu.incompleteRecords,
+            },
+        ]) ||
+        [];
+    const oaCompliancePage =
+        (hasOaComplianceWorks && [
+            {
+                linkTo: pathConfig.records.openAccessCompliance,
+                ...locale.menu.myOpenAccess,
             },
         ]) ||
         [];
@@ -616,6 +645,8 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       linkTo: pathConfig.records.add.find,
                       ...locale.menu.addMissingRecord,
                   },
+
+                  ...oaCompliancePage,
                   {
                       linkTo: pathConfig.dataset.mine,
                       ...locale.menu.myDatasets,
@@ -632,11 +663,6 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       linkTo: pathConfig.authorStatistics.url(account.id),
                       ...locale.menu.authorStatistics,
                   },
-                  //   {
-                  //       linkTo: pathConfig.communityList,
-                  //       ...locale.menu.communityList,
-                  //       public: true,
-                  //   },
                   {
                       divider: true,
                       path: '/234234234242',
@@ -646,10 +672,6 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
         ...userPages,
         ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
-                  //   {
-                  //       linkTo: pathConfig.admin.community,
-                  //       ...locale.menu.communityForm,
-                  //   },
                   {
                       linkTo: pathConfig.admin.collection,
                       ...locale.menu.collectionForm,

@@ -83,7 +83,6 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         actions,
         pageSize: tablePageSizeDefault,
     });
-
     const {
         data,
         isBusy,
@@ -300,6 +299,11 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         table.setCreatingRow(true);
     };
 
+    React.useEffect(() => {
+        onSearchTermChange('');
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const table = useMaterialReactTable({
         columns,
         data,
@@ -319,6 +323,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         manualPagination: true,
         rowCount: pagination.resultCount,
         autoResetPageIndex: false,
+        enableKeyboardShortcuts: false,
         displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
         initialState: {
             expanded: true,
@@ -407,29 +412,32 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     title=""
                     placeholder="Search users"
                     variant="standard"
-                    inputProps={{
-                        inputMode: 'search',
-                        'data-testid': 'users-search-input',
-                        'aria-label': searchAriaLabel,
-                    }}
-                    InputProps={{
-                        startAdornment: (
-                            <InputAdornment position="start">
-                                <tableIcons.Search />
-                            </InputAdornment>
-                        ),
-                        endAdornment: (
-                            <InputAdornment position="end">
-                                <IconButton disabled={!!!searchTerm} onClick={() => handleSearch()}>
-                                    <tableIcons.Clear />
-                                </IconButton>
-                            </InputAdornment>
-                        ),
-                    }}
                     sx={{ width: { md: '300px' } }}
                     value={searchTerm}
                     onChange={handleSearch}
                     disabled={table.getState().creatingRow !== null}
+                    slotProps={{
+                        input: {
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                    <tableIcons.Search />
+                                </InputAdornment>
+                            ),
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <IconButton disabled={!!!searchTerm} onClick={() => handleSearch()}>
+                                        <tableIcons.Clear />
+                                    </IconButton>
+                                </InputAdornment>
+                            ),
+                        },
+
+                        htmlInput: {
+                            inputMode: 'search',
+                            'data-testid': 'users-search-input',
+                            'aria-label': searchAriaLabel,
+                        },
+                    }}
                 />
                 <Button
                     id={`users-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)

@@ -6,9 +6,9 @@ import { locale } from 'locale';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
-export const CitationCounts = ({ publication, hideViewFullStatisticsLink }) => {
+export const CitationCounts = ({ publication, hideViewFullStatisticsLink, showAltmetricWidget }) => {
     const theme = useTheme();
     const getTitle = title =>
         locale.components.publicationCitation.linkWillOpenInNewWindow.replace('[destination]', title);
@@ -56,14 +56,25 @@ export const CitationCounts = ({ publication, hideViewFullStatisticsLink }) => {
                             title={getTitle(sources.scopus.title)}
                         />
                     )}
-                {!!counts.altmetric && counts.altmetric > 0 && !!publication.rek_altmetric_id && (
-                    <Partials.CitationCountView
-                        source="altmetric"
-                        count={counts.altmetric}
-                        link={txt.altmetric.externalUrl.replace('[id]', publication.rek_altmetric_id)}
-                        title={getTitle(txt.altmetric.title)}
-                    />
-                )}
+                {!!counts.altmetric &&
+                    counts.altmetric > 0 &&
+                    !!publication.rek_altmetric_id &&
+                    (!showAltmetricWidget ? (
+                        <Partials.CitationCountView
+                            source="altmetric"
+                            count={counts.altmetric}
+                            link={txt.altmetric.externalUrl.replace('[id]', publication.rek_altmetric_id)}
+                            title={getTitle(txt.altmetric.title)}
+                        />
+                    ) : (
+                        <Partials.AltmetricWidget
+                            id={publication.rek_altmetric_id}
+                            link={txt.altmetric.externalUrl.replace('[id]', publication.rek_altmetric_id)}
+                            title={getTitle(txt.altmetric.title)}
+                        >
+                            <Partials.CitationCountView source="altmetric" count={'?'} />
+                        </Partials.AltmetricWidget>
+                    ))}
                 {!!publication.fez_record_search_key_dimensions_id &&
                     !!publication.fez_record_search_key_dimensions_id.rek_dimensions_id && (
                         <Partials.CitationCountView
@@ -122,6 +133,7 @@ export const CitationCounts = ({ publication, hideViewFullStatisticsLink }) => {
 CitationCounts.propTypes = {
     publication: PropTypes.object.isRequired,
     hideViewFullStatisticsLink: PropTypes.bool,
+    showAltmetricWidget: PropTypes.bool,
     theme: PropTypes.any,
 };
 

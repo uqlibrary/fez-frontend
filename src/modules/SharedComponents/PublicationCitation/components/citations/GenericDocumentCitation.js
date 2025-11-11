@@ -15,7 +15,7 @@ export const GenericDocumentCitation = ({ publication, citationStyle }) => {
     // eSpace citation view for Generic article
     // {Author}{Publication Year| (|).}<i>{Title| |.}</i>{Publisher| |.}
     return (
-        <div className="citationContent citationGenericDocument">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationGenericDocument">
             {/* {Author}*/}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -30,7 +30,7 @@ export const GenericDocumentCitation = ({ publication, citationStyle }) => {
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} />
-        </div>
+        </span>
     );
 };
 GenericDocumentCitation.propTypes = {

@@ -3,13 +3,13 @@
 exports[`myDatasets test gets publications when user clicks back and state is not set 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -18,30 +18,31 @@ exports[`myDatasets test gets publications when user clicks back and state is no
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-no-datasets-found"
             id="standard-card-no-datasets-found"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-no-datasets-found-header"
                   id="standard-card-no-datasets-found-header"
                 >
@@ -50,7 +51,7 @@ exports[`myDatasets test gets publications when user clicks back and state is no
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-no-datasets-found-content"
               data-testid="standard-card-no-datasets-found-content"
               id="standard-card-no-datasets-found-content"
@@ -77,13 +78,13 @@ exports[`myDatasets test gets publications when user clicks back and state is no
 exports[`myDatasets test gets publications when user clicks back and state is set 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -92,30 +93,31 @@ exports[`myDatasets test gets publications when user clicks back and state is se
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-no-datasets-found"
             id="standard-card-no-datasets-found"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-no-datasets-found-header"
                   id="standard-card-no-datasets-found-header"
                 >
@@ -124,7 +126,7 @@ exports[`myDatasets test gets publications when user clicks back and state is se
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-no-datasets-found-content"
               data-testid="standard-card-no-datasets-found-content"
               id="standard-card-no-datasets-found-content"
@@ -151,13 +153,13 @@ exports[`myDatasets test gets publications when user clicks back and state is se
 exports[`myDatasets test renders active filters 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -166,30 +168,31 @@ exports[`myDatasets test renders active filters 1`] = `
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-no-datasets-found"
             id="standard-card-no-datasets-found"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-no-datasets-found-header"
                   id="standard-card-no-datasets-found-header"
                 >
@@ -198,7 +201,7 @@ exports[`myDatasets test renders active filters 1`] = `
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-no-datasets-found-content"
               data-testid="standard-card-no-datasets-found-content"
               id="standard-card-no-datasets-found-content"
@@ -225,13 +228,13 @@ exports[`myDatasets test renders active filters 1`] = `
 exports[`myDatasets test renders list of publications no facets 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -240,24 +243,25 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card"
             id="standard-card"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-content"
               data-testid="standard-card-content"
               id="standard-card-content"
@@ -266,10 +270,10 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                 Displaying works 1 to 2 of 2 total works. 
               </span>
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <span>
                     Add to this list by 
@@ -282,34 +286,33 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                   </span>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-3 css-h1hp2v-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
                           id="sort-by-label"
                         >
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
-                            aria-controls="<dynamic>"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="sort-by-label"
-                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                             role="combobox"
                             tabindex="0"
                           >
@@ -318,13 +321,13 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                           <input
                             aria-hidden="true"
                             aria-invalid="false"
-                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                             tabindex="-1"
                             value="published_date"
                           />
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                             data-testid="ArrowDropDownIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -337,28 +340,27 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
                           id="sort-order-label"
                         >
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
-                            aria-controls="<dynamic>"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="sort-order-label"
-                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                             role="combobox"
                             tabindex="0"
                           >
@@ -367,13 +369,13 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                           <input
                             aria-hidden="true"
                             aria-invalid="false"
-                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                             tabindex="-1"
                             value="Desc"
                           />
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                             data-testid="ArrowDropDownIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -386,28 +388,27 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
                           id="page-size-label"
                         >
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
-                            aria-controls="<dynamic>"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="page-size-label"
-                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                             role="combobox"
                             tabindex="0"
                           >
@@ -416,13 +417,13 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                           <input
                             aria-hidden="true"
                             aria-invalid="false"
-                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                             tabindex="-1"
                             value="20"
                           />
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                             data-testid="ArrowDropDownIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -437,7 +438,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
                     data-testid="my-records-paging-top"
@@ -445,7 +446,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                   />
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <span
                     class="MuiBox-root css-0"
@@ -453,7 +454,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                   />
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
                     class="MuiBox-root css-0"
@@ -469,20 +470,20 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                         id="publication-citation-parent-UQ:1"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                                 style="min-width: 1px;"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                                 >
                                   <a
                                     href="/view/UQ:1"
@@ -492,34 +493,34 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                                 </h6>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                               >
                                 <div>
                                   Citation display not available for 
                                 </div>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                                   >
                                     <div
-                                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                                     >
                                       <div
-                                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                                       >
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
                                           class="googleCitationCount css-si3g8d"
-                                          data-analyticsid="citation-count-link"
-                                          data-testid="citation-count-link"
+                                          data-analyticsid="google-citation-count-link"
+                                          data-testid="google-citation-count-link"
                                           href="https://scholar.google.com/scholar?q=intitle:1"
-                                          id="citation-count-link"
+                                          id="google-citation-count-link"
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
@@ -535,10 +536,10 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                                         />
                                       </div>
                                       <div
-                                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                                       />
                                       <div
-                                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                       />
                                     </div>
                                   </div>
@@ -548,16 +549,16 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+                          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                           />
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
                               data-testid="publication-action-UQ1-secondary"
                               tabindex="0"
                               type="button"
@@ -568,13 +569,13 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                         </div>
                       </div>
                       <hr
-                        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+                        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
                     data-testid="my-records-paging-bottom"
@@ -594,13 +595,13 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
 exports[`myDatasets test renders list of publications with facets 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -609,24 +610,25 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card"
             id="standard-card"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-content"
               data-testid="standard-card-content"
               id="standard-card-content"
@@ -635,10 +637,10 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                 Displaying works 1 to 2 of 2 total works. 
               </span>
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <span>
                     Add to this list by 
@@ -651,34 +653,33 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   </span>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-10voxkt-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-3 css-h1hp2v-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
                           id="sort-by-label"
                         >
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
-                            aria-controls="<dynamic>"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="sort-by-label"
-                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                             role="combobox"
                             tabindex="0"
                           >
@@ -687,13 +688,13 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                           <input
                             aria-hidden="true"
                             aria-invalid="false"
-                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                             tabindex="-1"
                             value="published_date"
                           />
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                             data-testid="ArrowDropDownIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -706,28 +707,27 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
                           id="sort-order-label"
                         >
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
-                            aria-controls="<dynamic>"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="sort-order-label"
-                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                             role="combobox"
                             tabindex="0"
                           >
@@ -736,13 +736,13 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                           <input
                             aria-hidden="true"
                             aria-invalid="false"
-                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                             tabindex="-1"
                             value="Desc"
                           />
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                             data-testid="ArrowDropDownIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -755,28 +755,27 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
                     >
                       <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
                           id="page-size-label"
                         >
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
-                            aria-controls="<dynamic>"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="page-size-label"
-                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                             role="combobox"
                             tabindex="0"
                           >
@@ -785,13 +784,13 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                           <input
                             aria-hidden="true"
                             aria-invalid="false"
-                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
                             tabindex="-1"
                             value="20"
                           />
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                             data-testid="ArrowDropDownIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -806,7 +805,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
                     data-testid="my-records-paging-top"
@@ -814,7 +813,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   />
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <span
                     class="MuiBox-root css-0"
@@ -822,7 +821,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   />
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
                     class="MuiBox-root css-0"
@@ -838,20 +837,20 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                         id="publication-citation-parent-UQ:1"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
                                 style="min-width: 1px;"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                                 >
                                   <a
                                     href="/view/UQ:1"
@@ -861,34 +860,34 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                                 </h6>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1ixyqi5-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                               >
                                 <div>
                                   Citation display not available for 
                                 </div>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+                                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1lugyxr-MuiGrid-root"
+                                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
                                   >
                                     <div
-                                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                                     >
                                       <div
-                                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                                       >
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
                                           class="googleCitationCount css-si3g8d"
-                                          data-analyticsid="citation-count-link"
-                                          data-testid="citation-count-link"
+                                          data-analyticsid="google-citation-count-link"
+                                          data-testid="google-citation-count-link"
                                           href="https://scholar.google.com/scholar?q=intitle:1"
-                                          id="citation-count-link"
+                                          id="google-citation-count-link"
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
@@ -904,10 +903,10 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                                         />
                                       </div>
                                       <div
-                                        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
                                       />
                                       <div
-                                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                       />
                                     </div>
                                   </div>
@@ -917,16 +916,16 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-fnjnnr-MuiGrid-root"
+                          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                           />
                           <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
                               data-testid="publication-action-UQ1-secondary"
                               tabindex="0"
                               type="button"
@@ -937,13 +936,13 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                         </div>
                       </div>
                       <hr
-                        class="MuiDivider-root MuiDivider-fullWidth css-imddhh-MuiDivider-root"
+                        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
                 >
                   <div
                     data-testid="my-records-paging-bottom"
@@ -955,29 +954,29 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-ykeh67-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
             >
               <div
-                class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1fjevb6-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
               >
                 Refine results
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <hr
-                class="MuiDivider-root MuiDivider-fullWidth css-2yguox-MuiDivider-root"
+                class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
               />
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <div
                 class="facetsFilter"
@@ -985,103 +984,115 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                 id="facets-filter"
               >
                 <nav
-                  class="MuiList-root MuiList-padding MuiList-dense css-h4y409-MuiList-root"
+                  class="MuiList-root MuiList-padding MuiList-dense css-b7dj7n-MuiList-root"
                 >
                   <div
-                    aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-1dskgw9-MuiButtonBase-root-MuiListItem-root"
-                    data-testid="clickable-facet-category-keywords"
-                    id="clickable-facet-category-keywords"
-                    role="button"
-                    tabindex="0"
+                    class="MuiListItem-root MuiListItem-dense MuiListItem-gutters css-19f6boz-MuiListItem-root"
                   >
                     <div
-                      class="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
+                      aria-expanded="false"
+                      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-jscz35-MuiButtonBase-root-MuiListItemButton-root"
+                      data-testid="clickable-facet-category-keywords"
+                      id="clickable-facet-category-keywords"
+                      role="button"
+                      tabindex="0"
                     >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-bjxqyt-MuiTypography-root"
-                        data-testid="facet-category-keywords"
-                        id="facet-category-keywords"
+                      <div
+                        class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
                       >
-                        Keywords
-                      </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-yezk6h-MuiTypography-root"
+                          data-testid="facet-category-keywords"
+                          id="facet-category-keywords"
+                        >
+                          Keywords
+                        </p>
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="expand-more-facet-category-keywords"
+                        focusable="false"
+                        id="expand-more-facet-category-keywords"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        />
+                      </svg>
                     </div>
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="expand-more-facet-category-keywords"
-                      focusable="false"
-                      id="expand-more-facet-category-keywords"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                      />
-                    </svg>
                   </div>
                   <div
-                    aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-1dskgw9-MuiButtonBase-root-MuiListItem-root"
-                    data-testid="clickable-facet-category-date-range"
-                    id="clickable-facet-category-date-range"
-                    role="button"
-                    tabindex="0"
+                    class="MuiListItem-root MuiListItem-dense MuiListItem-gutters css-19f6boz-MuiListItem-root"
                   >
                     <div
-                      class="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
+                      aria-expanded="false"
+                      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-jscz35-MuiButtonBase-root-MuiListItemButton-root"
+                      data-testid="clickable-facet-category-date-range"
+                      id="clickable-facet-category-date-range"
+                      role="button"
+                      tabindex="0"
                     >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-bjxqyt-MuiTypography-root"
-                        data-testid="facet-category-date-range"
-                        id="facet-category-date-range"
+                      <div
+                        class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
                       >
-                        Published year range
-                      </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-yezk6h-MuiTypography-root"
+                          data-testid="facet-category-date-range"
+                          id="facet-category-date-range"
+                        >
+                          Published year range
+                        </p>
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="expand-more-facet-category-date-range"
+                        focusable="false"
+                        id="expand-more-facet-category-date-range"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        />
+                      </svg>
                     </div>
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="expand-more-facet-category-date-range"
-                      focusable="false"
-                      id="expand-more-facet-category-date-range"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                      />
-                    </svg>
                   </div>
                   <div
-                    aria-expanded="false"
-                    class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-padding MuiListItem-button css-1dskgw9-MuiButtonBase-root-MuiListItem-root"
-                    data-testid="clickable-facet-category-open-access"
-                    id="clickable-facet-category-open-access"
-                    role="button"
-                    tabindex="0"
+                    class="MuiListItem-root MuiListItem-dense MuiListItem-gutters css-19f6boz-MuiListItem-root"
                   >
                     <div
-                      class="MuiListItemText-root MuiListItemText-dense css-tlelie-MuiListItemText-root"
+                      aria-expanded="false"
+                      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-jscz35-MuiButtonBase-root-MuiListItemButton-root"
+                      data-testid="clickable-facet-category-open-access"
+                      id="clickable-facet-category-open-access"
+                      role="button"
+                      tabindex="0"
                     >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 css-bjxqyt-MuiTypography-root"
-                        data-testid="facet-category-open-access"
-                        id="facet-category-open-access"
+                      <div
+                        class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
                       >
-                        Open access status
-                      </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body2 css-yezk6h-MuiTypography-root"
+                          data-testid="facet-category-open-access"
+                          id="facet-category-open-access"
+                        >
+                          Open access status
+                        </p>
+                      </div>
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                        data-testid="expand-more-facet-category-open-access"
+                        focusable="false"
+                        id="expand-more-facet-category-open-access"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        />
+                      </svg>
                     </div>
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="expand-more-facet-category-open-access"
-                      focusable="false"
-                      id="expand-more-facet-category-open-access"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                      />
-                    </svg>
                   </div>
                 </nav>
               </div>
@@ -1102,13 +1113,13 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
   "baseElement": <body>
     <div>
       <div
-        class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
         >
           <h2
-            class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
             data-analyticsid="page-title"
             data-testid="page-title"
             id="page-title"
@@ -1117,42 +1128,42 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
           </h2>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
             >
               <div
                 style="padding: 8px;"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                   />
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                     style="text-align: center;"
                   >
                     <span
                       aria-label="Loading"
-                      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
                       role="progressbar"
                       style="width: 18px; height: 18px;"
                     >
                       <svg
-                        class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                        class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                         viewBox="22 22 44 44"
                       >
                         <circle
-                          class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                          class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                           cx="44"
                           cy="44"
                           fill="none"
@@ -1163,18 +1174,18 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
                     </span>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                     style="text-align: center;"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
                       style="font-size: 1.33rem;"
                     >
                       Searching for your datasets
                     </span>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                   />
                 </div>
               </div>
@@ -1186,13 +1197,13 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
   </body>,
   "container": <div>
     <div
-      class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
       >
         <h2
-          class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
           data-analyticsid="page-title"
           data-testid="page-title"
           id="page-title"
@@ -1201,42 +1212,42 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
         </h2>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
       />
       <div
-        class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
           >
             <div
               style="padding: 8px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                 />
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                   style="text-align: center;"
                 >
                   <span
                     aria-label="Loading"
-                    class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                    class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
                     role="progressbar"
                     style="width: 18px; height: 18px;"
                   >
                     <svg
-                      class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                      class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                       viewBox="22 22 44 44"
                     >
                       <circle
-                        class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                        class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                         cx="44"
                         cy="44"
                         fill="none"
@@ -1247,18 +1258,18 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
                   </span>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                   style="text-align: center;"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
                     style="font-size: 1.33rem;"
                   >
                     Searching for your datasets
                   </span>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
                 />
               </div>
             </div>
@@ -1324,13 +1335,13 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
 exports[`myDatasets test renders loading screen while loading publications while filtering 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1339,42 +1350,42 @@ exports[`myDatasets test renders loading screen while loading publications while
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
         >
           <div
             style="padding: 8px;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-qiawb8-MuiGrid-root"
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
               />
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                 style="text-align: center;"
               >
                 <span
                   aria-label="Loading"
-                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-u4ps4u-MuiCircularProgress-root"
+                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
                   role="progressbar"
                   style="width: 18px; height: 18px;"
                 >
                   <svg
-                    class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                    class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
                     viewBox="22 22 44 44"
                   >
                     <circle
-                      class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                      class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                       cx="44"
                       cy="44"
                       fill="none"
@@ -1385,18 +1396,18 @@ exports[`myDatasets test renders loading screen while loading publications while
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
                 style="text-align: center;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
                   style="font-size: 1.33rem;"
                 >
                   Searching for your datasets
                 </span>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-5os2wf-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
               />
             </div>
           </div>
@@ -1410,13 +1421,13 @@ exports[`myDatasets test renders loading screen while loading publications while
 exports[`myDatasets test renders no results 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1425,30 +1436,31 @@ exports[`myDatasets test renders no results 1`] = `
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
+          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-no-datasets-found"
             id="standard-card-no-datasets-found"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-no-datasets-found-header"
                   id="standard-card-no-datasets-found-header"
                 >
@@ -1457,7 +1469,7 @@ exports[`myDatasets test renders no results 1`] = `
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-no-datasets-found-content"
               data-testid="standard-card-no-datasets-found-content"
               id="standard-card-no-datasets-found-content"

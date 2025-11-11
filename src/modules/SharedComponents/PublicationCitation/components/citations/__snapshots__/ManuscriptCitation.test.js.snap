@@ -2,8 +2,9 @@
 
 exports[`ManuscriptCitation renders  component with a doi view 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationManuscript"
+    id="citation-content-UQ:677394"
   >
     <span
       class="citationAuthors"
@@ -54,7 +55,7 @@ exports[`ManuscriptCitation renders  component with a doi view 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
           data-testid="OpenInNewIcon"
           focusable="false"
           id="citation-doi-link-new-window-icon"
@@ -67,14 +68,15 @@ exports[`ManuscriptCitation renders  component with a doi view 1`] = `
         https://doi.org/10.1111/1111
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationManuscript"
+    id="citation-content-UQ:677394"
   >
     <span
       class="citationAuthors"
@@ -111,14 +113,15 @@ exports[`ManuscriptCitation renders  component with a mock espace record 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`ManuscriptCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationManuscript"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -135,6 +138,6 @@ exports[`ManuscriptCitation renders  component with empty publication 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

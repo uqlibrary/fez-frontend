@@ -6,7 +6,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogContent from '@mui/material/DialogContent';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
 
 export const createConfirmDialogBoxRefAssigner = refObject => ref => {
@@ -54,11 +54,11 @@ export class ConfirmDialogBox extends Component {
     }
 
     componentDidMount() {
-        this.props.onRef(this);
+        this.props.onRef?.(this);
     }
 
     componentWillUnmount() {
-        this.props.onRef(undefined);
+        this.props.onRef?.(undefined);
     }
 
     showConfirmation() {

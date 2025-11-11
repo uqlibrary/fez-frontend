@@ -117,6 +117,11 @@ export const selectFields = {
         ariaLabel: 'Select a scopus doc type',
         selectPrompt: 'Please select a scopus doc type',
     },
+    openalexDocType: {
+        label: 'OpenAlex doc type(s)',
+        ariaLabel: 'Select a OpenAlex doc type',
+        selectPrompt: 'Please select a OpenAlex doc type',
+    },
     thesisSubtype: {
         label: 'Thesis type',
         ariaLabel: 'Select a thesis type',

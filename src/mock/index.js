@@ -10,6 +10,21 @@ import * as journalsSearch from './data/journals/search';
 
 export const escapeRegExp = input => input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, '\\$&');
 
+const playwrightWaitIfRequired = async () => {
+    if (window.__PW__TEST_API_MOCK_IS_PAUSED) {
+        await new Promise(resolve => {
+            const wait = () => {
+                if (!window.__PW__TEST_API_MOCK_IS_PAUSED) {
+                    resolve();
+                } else {
+                    setTimeout(wait, 200);
+                }
+            };
+            wait();
+        });
+    }
+};
+
 export const setup = () => {
     const queryString = require('query-string');
     const mock = new MockAdapter(api, { delayResponse: 200 });
@@ -56,7 +71,7 @@ export const setup = () => {
         }
         return [404, {}];
     });
-
+    
     mock.onGet(routes.SEARCH_INTERNAL_RECORDS_API({}, 'export').apiUrl).reply(config => {
         const headers = {
             excel: {
@@ -128,6 +143,8 @@ export const setup = () => {
             // AUTHOR_PUBLICATIONS_STATS_ONLY_API
             else if (config.params.rule === 'incomplete') {
                 return [200, mockData.incompleteNTROlist];
+            } else if (config.params.rule === 'noncompliantoa') {
+                return [200, mockData.oaNonComplianceList];
             } else if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
                 return [200, mockData.currentAuthorStats];
             } else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
@@ -780,6 +797,8 @@ export const setup = () => {
         // .reply(500, { message: ['error - failed FILE_UPLOAD_API'] })
         .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
         .reply(200, { data: '' })
+        .onPost(new RegExp(escapeRegExp(routes.MAKE_OPEN_ACCESS_API({ pid: '.*' }).apiUrl)))
+        .reply(200, { data: '' })
         // .reply(500, { message: ['error - failed POST RECORDS_ISSUES_API'] })
         .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API().apiUrl)))
         .reply(200, { data: {} })
@@ -925,8 +944,17 @@ export const setup = () => {
         // .reply(500, { message: ['error - failed PUT EXISTING_COMMUNITY_API'] })
 
         .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
-        .reply(200, { ...mockData.currentAuthor.uqresearcher })
-        // .reply(500, { message: ['error - failed PATCH AUTHOR_API'] })
+        .reply(async config => {
+            await playwrightWaitIfRequired();
+            const payload = JSON.parse(config.data);
+            return [
+                (window.__PW__TEST_API_MOCK_RESPONSE_SHOULD_FAIL && 500) || 200,
+                {
+                    ...mockData.currentAuthor[user],
+                    aut_is_orcid_sync_enabled: payload.aut_is_orcid_sync_enabled,
+                },
+            ];
+        })
 
         .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
         .reply(200, mockData.currentAuthor.uqstaff)

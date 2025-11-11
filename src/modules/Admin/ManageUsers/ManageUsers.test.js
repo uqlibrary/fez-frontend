@@ -4,7 +4,6 @@ import {
     render,
     WithReduxStore,
     waitFor,
-    waitForElementToBeRemoved,
     within,
     selectDropDownOptionByElement,
     fireEvent,
@@ -74,9 +73,7 @@ describe('ManageUsers', () => {
 
         const { getByText, getByTestId } = setup({});
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
-        expect(loadUserListFn).toHaveBeenCalled();
+        await waitFor(() => expect(loadUserListFn).toHaveBeenCalled());
 
         await waitFor(() => getByText('Manage users'));
         expect(getByTestId('users-list')).toBeInTheDocument();
@@ -96,8 +93,6 @@ describe('ManageUsers', () => {
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
         const { getByText } = setup({});
-
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
@@ -239,12 +234,11 @@ describe('ManageUsers', () => {
             });
 
         const { container } = setup({});
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
-        expect(loadUserListFn).toHaveBeenCalledTimes(1);
+        await waitFor(() => expect(loadUserListFn).toHaveBeenCalledTimes(1));
         await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(20));
 
-        const el = within(container.querySelector('#mrt-rows-per-page').closest('.MuiInput-root')).getByRole(
+        const el = within(container.querySelector('[id^=mrt-rows-per-page]').closest('.MuiInput-root')).getByRole(
             'combobox',
         );
         await selectDropDownOptionByElement(el, '50');
@@ -276,8 +270,9 @@ describe('ManageUsers', () => {
                     usr_last_login_date: '2017-02-16T23:11:38Z',
                 },
             });
+        const loadUserListFn = jest.spyOn(ManageUsersActions, 'loadUserList');
         const { container, getByTestId } = setup();
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        await waitFor(() => expect(loadUserListFn).toHaveBeenCalledTimes(1));
 
         fireEvent.click(getByTestId('users-add-new-user'));
 
@@ -312,8 +307,9 @@ describe('ManageUsers', () => {
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
+        const loadUserListFn = jest.spyOn(ManageUsersActions, 'loadUserList');
         const { getByTestId, queryByTestId } = setup({});
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        await waitFor(() => expect(loadUserListFn).toHaveBeenCalledTimes(1));
 
         fireEvent.click(getByTestId('users-add-new-user'));
 
@@ -370,9 +366,9 @@ describe('ManageUsers', () => {
                     usr_username: 'uqtname',
                 },
             });
-        const { queryByTestId, getByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        const { queryByTestId, getByTestId } = setup();
+        await waitFor(() => expect(getByTestId('users-list-row-0-edit-this-user')).toBeInTheDocument());
 
         fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
 
@@ -438,9 +434,9 @@ describe('ManageUsers', () => {
             })
             .onPut(new RegExp(repository.routes.USER_API().apiUrl))
             .replyOnce(500);
-        const { queryByTestId, getByTestId } = setup({});
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        const { queryByTestId, getByTestId } = setup({});
+        await waitFor(() => expect(getByTestId('users-list-row-0-edit-this-user')).toBeInTheDocument());
 
         fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
         fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test, Name' } });
@@ -516,8 +512,6 @@ describe('ManageUsers', () => {
 
         const { container, getByTestId } = setup({});
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
         await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2));
 
         fireEvent.click(getByTestId('users-list-row-0-delete-this-user'));
@@ -592,8 +586,6 @@ describe('ManageUsers', () => {
 
         const { container, getByTestId } = setup({});
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
         await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2));
 
         fireEvent.click(getByTestId('users-list-row-0-delete-this-user'));
@@ -642,8 +634,6 @@ describe('ManageUsers', () => {
 
         const { container, getAllByLabelText, getByTestId, findByText } = setup({});
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
         await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(3));
 
         fireEvent.click(getAllByLabelText('Toggle select all')[1]);
@@ -683,8 +673,6 @@ describe('ManageUsers', () => {
             .replyOnce(500);
 
         const { container, getAllByLabelText, getByTestId, findByText, getByText } = setup({});
-
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
 
         await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(3));
 
@@ -753,9 +741,7 @@ describe('ManageUsers', () => {
         });
         const { container, getByTestId, queryByTestId, queryByText, findByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
-        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
+        await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2));
 
         fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
         await findByTestId('standard-card-user-information');
@@ -831,9 +817,9 @@ describe('ManageUsers', () => {
         });
         const { container, getByTestId, queryByTestId, queryByText, findByTestId } = setup();
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
-        expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
+        await waitFor(() => {
+            expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(2);
+        });
 
         fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
         await findByTestId('standard-card-user-information');
@@ -846,9 +832,7 @@ describe('ManageUsers', () => {
 
         fireEvent.click(getByTestId('users-update-this-user-cancel'));
 
-        await waitFor(() => {
-            expect(queryByTestId('standard-card-user-information')).not.toBeInTheDocument();
-        });
+        await waitFor(() => expect(queryByTestId('standard-card-user-information')).not.toBeInTheDocument());
         expect(queryByText('User information')).not.toBeInTheDocument();
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
@@ -894,8 +878,7 @@ describe('ManageUsers', () => {
         jest.spyOn(navigator.clipboard, 'writeText');
 
         const { getByTestId } = setup();
-
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        await waitFor(() => expect(getByTestId('usr-username-0-copy-text')).toBeInTheDocument());
 
         fireEvent.click(getByTestId('usr-username-0-copy-text'));
 
@@ -907,9 +890,7 @@ describe('ManageUsers', () => {
     it('should handle text searching and clearing', async () => {
         const loadUserListFn = jest.spyOn(ManageUsersActions, 'loadUserList');
         const { getByTestId } = setup();
-
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
-
+        await waitFor(() => expect(loadUserListFn).toHaveBeenCalledTimes(1));
         await userEvent.type(getByTestId('users-search-input'), 'test search');
 
         await waitFor(() =>
