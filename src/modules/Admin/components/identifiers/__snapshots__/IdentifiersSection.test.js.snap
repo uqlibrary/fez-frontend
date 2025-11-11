@@ -21,6 +21,10 @@ exports[`IdentifiersSection component should render correct identifiers fields f
             "rek_scopus_doc_type",
           ],
           [
+            "fez_record_search_key_openalex_id",
+            "rek_openalex_doc_type",
+          ],
+          [
             "fez_record_search_key_pubmed_id",
             "rek_pubmed_doc_type",
           ],
@@ -88,6 +92,10 @@ exports[`IdentifiersSection component should render default view 1`] = `
             "rek_scopus_doc_type",
           ],
           [
+            "fez_record_search_key_openalex_id",
+            "rek_openalex_doc_type",
+          ],
+          [
             "fez_record_search_key_pubmed_id",
             "rek_pubmed_doc_type",
           ],
@@ -127,6 +135,10 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
           [
             "fez_record_search_key_scopus_id",
             "rek_scopus_doc_type",
+          ],
+          [
+            "fez_record_search_key_openalex_id",
+            "rek_openalex_doc_type",
           ],
           [
             "fez_record_search_key_pubmed_id",
