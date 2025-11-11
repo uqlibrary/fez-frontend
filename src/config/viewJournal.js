@@ -97,9 +97,13 @@ export const viewJournalConfig = {
                                 <span>{item.element}</span>
                                 <span>
                                     {`${
-                                        componentLocale.components.searchJournals.openAccessIndicators.tooltips[
-                                            item.type
-                                        ][item.status]
+                                        item.status === 'embargo' && !!item.embargoPeriod
+                                            ? componentLocale.components.searchJournals.openAccessIndicators.tooltips[
+                                                  item.type
+                                              ][item.status](item.embargoPeriod)
+                                            : componentLocale.components.searchJournals.openAccessIndicators.tooltips[
+                                                  item.type
+                                              ][item.status]
                                     } (${item.type.charAt(0).toUpperCase() + item.type.slice(1)} Version)`}
                                 </span>
                             </>
