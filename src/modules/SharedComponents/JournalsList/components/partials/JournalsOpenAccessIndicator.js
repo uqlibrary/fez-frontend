@@ -111,22 +111,14 @@ const JournalsOpenAccessIndicator = ({ type, status, label, embargoPeriod, toolt
                     }}
                     className="wrapper"
                 >
-                    <Box
-                        sx={{
-                            gridArea: 'icon',
-                            ...columnStyle,
-                        }}
-                        className="iconColumn"
-                    >
-                        <Icon color="white" sx={{ width: 'auto', height: '18px' }} />
+                    <Box sx={{ gridArea: 'icon', ...columnStyle }} className="iconColumn">
+                        {!!embargoPeriod ? (
+                            `${embargoPeriod}M`
+                        ) : (
+                            <Icon color="white" sx={{ width: 'auto', height: '18px' }} />
+                        )}
                     </Box>
-                    <Box
-                        sx={{
-                            gridArea: 'label',
-                            ...columnStyle,
-                        }}
-                        className="labelColumn"
-                    >
+                    <Box sx={{ gridArea: 'label', ...columnStyle }} className="labelColumn">
                         {label ?? status}
                     </Box>
                 </Box>
