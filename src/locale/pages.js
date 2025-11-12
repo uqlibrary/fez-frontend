@@ -731,6 +731,8 @@ export default {
                         authorAffiliations: 'Author Affiliations',
                         wosId: 'WoS ID',
                         wosDocType: 'WoS Doc Type',
+                        openalexId: 'OpenAlex ID',
+                        openalexDocType: 'OpenAlex Doc Type',
                         scopusId: 'Scopus ID',
                         scopusDocType: 'Scopus Doc Type',
                         pubmedId: 'Pubmed ID',

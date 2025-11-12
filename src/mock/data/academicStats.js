@@ -2415,6 +2415,7 @@ export const trendingPublications = {
         "rek_scopus_citation_count": 0,
         "rek_scopus_doc_type_xsdmf_id": null,
         "rek_scopus_doc_type": "ar",
+        "rek_openalex_doc_type": "article",
         "rek_wok_doc_type_xsdmf_id": null,
         "rek_wok_doc_type": null,
         "rek_pubmed_doc_type_xsdmf_id": null,
@@ -3609,6 +3610,26 @@ export const trendingPublications = {
                 "sc_6m": 0,
                 "sc_1y": 0,
                 "sc_citation_url": "https:\/\/go.openathens.net\/redirector\/uq.edu.au?url=http%3A%5C%2F%5C%2Fezproxy.library.uq.edu.au%5C%2Flogin%3Furl%3Dhttp%3A%5C%2F%5C%2Fwww.scopus.com%5C%2Fresults%5C%2Fcitedbyresults.url%3Fsort%3Dplf-f%26src%3Ds%26sot%3Dcite%26sdt%3Da%26cite%3D2-s2.0-85045052493"
+            }
+        },
+        "fez_record_search_key_openalex_id": {
+            "rek_openalex_id_id": 223,
+            "rek_openalex_id_pid": "UQ:a62a760",
+            "rek_openalex_id": "https://openalex.org/W2090803592",
+            "fez_openalex_citations": {
+                "oax_created": "1755475332",
+                "oax_last_checked": "1758492084",
+                "oax_count": 88,
+                "oax_last_0y": 1,
+                "oax_last_1y": 3,
+                "oax_last_2y": 4,
+                "oax_last_3y": 7,
+                "oax_last_4y": 7,
+                "oax_last_5y": 8,
+                "oax_last_6y": 8,
+                "oax_last_7y": 7,
+                "oax_last_8y": 6,
+                "oax_last_9y": 9
             }
         },
         "fez_record_search_key_start_page": {

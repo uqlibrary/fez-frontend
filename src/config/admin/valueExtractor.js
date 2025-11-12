@@ -477,6 +477,9 @@ export default {
     fez_record_search_key_scopus_id: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_scopus_id'),
     },
+    fez_record_search_key_openalex_id: {
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_openalex_id'),
+    },
     fez_record_search_key_pubmed_id: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_pubmed_id'),
     },
@@ -488,6 +491,9 @@ export default {
     },
     rek_scopus_doc_type: {
         getValue: record => getValueFromRekKey(record, 'rek_scopus_doc_type'),
+    },
+    rek_openalex_doc_type: {
+        getValue: record => getValueFromRekKey(record, 'rek_openalex_doc_type'),
     },
     rek_pubmed_doc_type: {
         getValue: record => getValueFromRekKey(record, 'rek_pubmed_doc_type'),

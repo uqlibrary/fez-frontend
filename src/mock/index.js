@@ -71,7 +71,7 @@ export const setup = () => {
         }
         return [404, {}];
     });
-    
+
     mock.onGet(routes.SEARCH_INTERNAL_RECORDS_API({}, 'export').apiUrl).reply(config => {
         const headers = {
             excel: {
