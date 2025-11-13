@@ -1001,6 +1001,22 @@ describe('ViewJournal', () => {
         expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
     });
 
+    it('Should show read and publish section when theres no read and publish agreement', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                jnl_title: 'test',
+                fez_journal_read_and_publish: null,
+            },
+        });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('journal-details-readAndPublish-header')).toBeInTheDocument();
+        expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
+    });
+
     describe('getAdvisoryStatement', () => {
         it('should render html', () => {
             const { getByTestId } = render(getAdvisoryStatement('<p data-testid="test">Tester</p>'));
