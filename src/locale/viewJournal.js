@@ -59,6 +59,15 @@ export default {
                         publishing in this title will no longer be fully covered through the agreement.
                     </p>
                 ),
+                nodeal: (
+                    <p>
+                        This title does not currently have a Read and Publish agreement.{' '}
+                        <a href={caulLink} target="_blank">
+                            Learn more about current agreements
+                        </a>
+                        .
+                    </p>
+                ),
             },
         },
         notFound: {

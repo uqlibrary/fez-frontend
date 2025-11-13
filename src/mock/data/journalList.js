@@ -36,7 +36,7 @@ export const journalList = {
         'fez_journal_wos_category': [],
         'jnl_title': 'Rivista di Biologia: biology forum',
         'fez_journal_read_and_publish':{
-            'jnl_read_and_publish_is_capped': true
+            'jnl_read_and_publish_is_capped': 'Y'
         },
         'fez_journal_issn': [{
             'jnl_issn_type': null,
