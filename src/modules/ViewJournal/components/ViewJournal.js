@@ -78,6 +78,8 @@ export const ViewJournal = () => {
         return <StandardPage />;
     }
 
+    const capped = journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped.toLowerCase();
+
     return (
         <StandardPage
             standarPageId="journal-view"
@@ -126,29 +128,35 @@ export const ViewJournal = () => {
                             />
                         </Grid>
                     )}
-                    {journalDetails.fez_journal_read_and_publish &&
-                        (journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped === 'Approaching' ||
-                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped ===
-                                'Exceeded') && (
-                            <Grid item xs={12}>
-                                <Alert
-                                    type={'warning'}
-                                    title={viewJournalTxt.readAndPublish.alert.title}
-                                    message={
-                                        <Box sx={{ wordWrap: { xs: 'break-word', sm: 'normal' } }}>
-                                            {(journalDetails.fez_journal_read_and_publish
-                                                .jnl_read_and_publish_is_capped === 'Approaching' &&
-                                                viewJournalTxt.readAndPublish.alert.approaching) ||
-                                                (journalDetails.fez_journal_read_and_publish
-                                                    .jnl_read_and_publish_is_capped === 'Exceeded' &&
-                                                    viewJournalTxt.readAndPublish.alert.exceeded)}
-                                        </Box>
-                                    }
-                                />
-                            </Grid>
-                        )}
+                    {(capped === 'approaching' || capped === 'exceeded') && (
+                        <Grid item xs={12}>
+                            <Alert
+                                type={'warning'}
+                                title={viewJournalTxt.readAndPublish.alert.title}
+                                message={
+                                    <Box sx={{ wordWrap: { xs: 'break-word', sm: 'normal' } }}>
+                                        {(capped === 'approaching' &&
+                                            viewJournalTxt.readAndPublish.alert.approaching) ||
+                                            (capped === 'exceeded' && viewJournalTxt.readAndPublish.alert.exceeded)}
+                                    </Box>
+                                }
+                            />
+                        </Grid>
+                    )}
+                    {capped === 'nodeal' && (
+                        <Grid item xs={12}>
+                            <Alert
+                                type={'info'}
+                                title={viewJournalTxt.readAndPublish.alert.title}
+                                message={
+                                    <Box sx={{ wordWrap: { xs: 'break-word', sm: 'normal' } }}>
+                                        {viewJournalTxt.readAndPublish.alert.nodeal}
+                                    </Box>
+                                }
+                            />
+                        </Grid>
+                    )}
                     {Object.entries(viewJournalConfig)
-                        // eslint-disable-next-line no-unused-vars
                         .filter(([_, sectionConfig]) => {
                             if (!!sectionConfig.key) {
                                 return Array.isArray(sectionConfig.key)
