@@ -232,7 +232,6 @@ export const viewJournalConfig = {
         ],
     },
     readAndPublish: {
-        key: 'fez_journal_read_and_publish',
         title: viewJournalLocale.viewJournal.readAndPublish.title,
         rows: [
             [
