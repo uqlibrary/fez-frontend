@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
@@ -14,7 +14,7 @@ import * as actions from 'actions';
 
 import { JournalContext } from 'context';
 import Section from './Section';
-import { parseHtmlToJSX } from 'helpers/general';
+import { parseHtmlToJSX, tryCatch } from 'helpers/general';
 
 import { userIsAdmin } from 'hooks';
 import { default as globalLocale } from 'locale/global';
@@ -23,15 +23,62 @@ import { default as viewJournalLocale } from 'locale/viewJournal';
 import { viewJournalConfig } from 'config/viewJournal';
 
 import TitleWithFavouriteButton from './partials/TitleWithFavouriteButton';
+import Button from '@mui/material/Button';
+import { getIndicatorProps, status, types } from '../../SharedComponents/JournalsList/components/partials/utils';
+import moment from 'moment';
+import { pathConfig } from '../../../config';
 
 export const getAdvisoryStatement = html => {
     return !!html ? parseHtmlToJSX(html) : '';
+};
+
+/**
+ * @param {object} data
+ * @return {boolean}
+ */
+export const isEmbargoDateMoreThanOnYearAway = data => {
+    const units = data?.fez_journal_issn?.[0]?.fez_sherpa_romeo?.srm_max_embargo_units;
+    const amount = Number(data?.fez_journal_issn?.[0]?.fez_sherpa_romeo?.srm_max_embargo_amount);
+    if (!['days', 'weeks', 'months', 'years'].includes(units) || !Number.isFinite(amount)) return false;
+
+    const now = moment().utc();
+    const embargoDate = tryCatch(() => now.clone().add(amount, units), now.clone());
+    return embargoDate.isSameOrAfter(now.add(12, 'months'));
+};
+
+/**
+ * @param {object} location
+ * @param {object} data
+ * @return {boolean}
+ */
+export const shouldShowPublishAsOAButton = (location, data) => {
+    const qsParams = Object.fromEntries(new URLSearchParams(location?.search));
+    if (qsParams?.fromSearch !== 'true') return false;
+
+    const publishedStatus = getIndicatorProps({ type: types.published, data });
+    const acceptedStatus = getIndicatorProps({ type: types.accepted, data });
+    return (
+        publishedStatus.status === status.fee &&
+        (acceptedStatus.status !== status.embargo || isEmbargoDateMoreThanOnYearAway(data))
+    );
+};
+
+/**
+ * @param navigate
+ * @param {number} id
+ */
+const openPublishAsOASearchResult = (navigate, id) => {
+    console.log(`/journals/search/${id}`);
+    // TODO fix link
+    navigate(pathConfig.journals.search);
 };
 
 export const ViewJournal = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
     const isAdmin = userIsAdmin();
+    const location = useLocation();
+    const navigate = useNavigate();
     const txt = pagesLocale.pages.journal.view;
     const viewJournalTxt = viewJournalLocale.viewJournal;
 
@@ -78,21 +125,37 @@ export const ViewJournal = () => {
         return <StandardPage />;
     }
 
+    const showPublishAsOAButton = shouldShowPublishAsOAButton(location, journalDetails);
     return (
         <StandardPage
             standarPageId="journal-view"
             title={
-                <TitleWithFavouriteButton
-                    journal={journalDetails}
-                    actions={{ addFavourite: actions.addToFavourites, removeFavourite: actions.removeFromFavourites }}
-                    handlers={{ errorUpdatingFavourite: setUpdateFavouriteError }}
-                    tooltips={{
-                        favourite: txt.favouriteTooltip.isFavourite,
-                        notFavourite: txt.favouriteTooltip.isNotFavourite,
-                    }}
-                    showAdminActions={isAdmin}
-                    sx={{ display: 'flex' }}
-                />
+                <>
+                    <TitleWithFavouriteButton
+                        journal={journalDetails}
+                        actions={{
+                            addFavourite: actions.addToFavourites,
+                            removeFavourite: actions.removeFromFavourites,
+                        }}
+                        handlers={{ errorUpdatingFavourite: setUpdateFavouriteError }}
+                        tooltips={{
+                            favourite: txt.favouriteTooltip.isFavourite,
+                            notFavourite: txt.favouriteTooltip.isNotFavourite,
+                        }}
+                        showAdminActions={isAdmin}
+                        sx={{ display: 'flex' }}
+                    />
+                    {showPublishAsOAButton && (
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={() => openPublishAsOASearchResult(navigate, journalDetails.jni_id)}
+                            title={'Avoid fees and meet mandates by viewing similar journals with open access.'}
+                        >
+                            I would like to publish open access
+                        </Button>
+                    )}
+                </>
             }
         >
             <JournalContext.Provider
