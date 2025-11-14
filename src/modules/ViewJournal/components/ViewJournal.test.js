@@ -1010,12 +1010,14 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText } = setup();
+        const { queryByTestId, getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
         expect(getByTestId('journal-details-readAndPublish-header')).toBeInTheDocument();
         expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
+        expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
     });
 
     it('Should show read and publish section when read and publish agreement is ceased', async () => {
