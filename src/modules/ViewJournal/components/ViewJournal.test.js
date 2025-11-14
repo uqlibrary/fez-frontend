@@ -983,6 +983,63 @@ describe('ViewJournal', () => {
         expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
     });
 
+    it('should display read and publish ceased info banner', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_read_and_publish: {
+                    jnl_read_and_publish_is_capped: 'NoDeal',
+                    jnl_read_and_publish_is_discounted: false,
+                },
+            },
+        });
+
+        const { getAllByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        const alerts = getAllByTestId('alert');
+        expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
+    });
+
+    it('Should show read and publish section when theres no read and publish agreement', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                jnl_title: 'test',
+                fez_journal_read_and_publish: null,
+            },
+        });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('journal-details-readAndPublish-header')).toBeInTheDocument();
+        expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
+    });
+
+    it('Should show read and publish section when read and publish agreement is ceased', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                jnl_title: 'test',
+                fez_journal_read_and_publish: {
+                    jnl_read_and_publish_is_capped: 'NoDeal',
+                    jnl_read_and_publish_publisher: 'publisher',
+                    jnl_read_and_publish_source_date: '2025-01-01',
+                },
+            },
+        });
+
+        const { queryByTestId, getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('journal-details-readAndPublish-header')).toBeInTheDocument();
+        expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
+        expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
+    });
+
     describe('getAdvisoryStatement', () => {
         it('should render html', () => {
             const { getByTestId } = render(getAdvisoryStatement('<p data-testid="test">Tester</p>'));
