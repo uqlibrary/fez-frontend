@@ -157,6 +157,7 @@ export const ViewJournal = () => {
                         </Grid>
                     )}
                     {Object.entries(viewJournalConfig)
+                        // eslint-disable-next-line no-unused-vars
                         .filter(([_, sectionConfig]) => {
                             if (!!sectionConfig.key) {
                                 return Array.isArray(sectionConfig.key)
