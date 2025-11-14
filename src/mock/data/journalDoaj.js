@@ -283,7 +283,7 @@ export const journalDoaj = {
             "jnl_read_and_publish_issn": "2169-0375",
             "jnl_read_and_publish_title": "Advanced Nonlinear Studies",
             "jnl_read_and_publish_publisher": "De Gruyter",
-            "jnl_read_and_publish_is_capped": false,
+            "jnl_read_and_publish_is_capped": 'N',
             "jnl_read_and_publish_is_discounted": true,
             "jnl_read_and_publish_source_date": "2023-07-19"
         },
