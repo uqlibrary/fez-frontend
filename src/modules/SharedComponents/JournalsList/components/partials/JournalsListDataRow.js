@@ -17,6 +17,7 @@ import Tooltip from '@mui/material/Tooltip';
 
 import JournalsListCollapsibleDataPanel from './JournalsListCollapsibleDataPanel';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { Link, useHref } from 'react-router-dom';
 
 const classesInternal = {
     iconClosed: {
@@ -84,6 +85,7 @@ const StyledTableCell = styled(TableCell, {
 
 const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, checked = false }) => {
     const [open, setOpen] = React.useState(false);
+    const href = useHref((<Link to={`/journal/view/${row.jnl_jid}`} />).props.to);
 
     if (!!!row || (!!row && Object.keys(row).length <= 0)) return <></>;
 
@@ -139,7 +141,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                         >
                             <Typography variant="body1" component="span">
                                 <ExternalLink
-                                    href={`/journal/view/${row.jnl_jid}`}
+                                    href={href}
                                     title={row.jnl_title}
                                     id={sanitiseId(`${row.jnl_jid}-${row.jnl_title}`)}
                                     sx={{
