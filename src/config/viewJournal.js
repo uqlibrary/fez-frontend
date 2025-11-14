@@ -283,8 +283,9 @@ export const viewJournalConfig = {
                     fieldId: 'jnl-read-and-publish-caul-link',
                     getData: journalDetails => {
                         return (
-                            journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped.toLowerCase() !==
-                            'nodeal'
+                            journalDetails.fez_journal_read_and_publish &&
+                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped.toLowerCase() !==
+                                'nodeal'
                         );
                     },
                     template: 'LinkTemplate',
