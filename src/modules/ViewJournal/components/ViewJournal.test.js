@@ -22,12 +22,10 @@ import { screen } from '@testing-library/react';
 import { pathConfig } from '../../../config';
 
 let mockUseLocation = {};
-const mockUseNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useParams: jest.fn(() => ({ id: 1 })),
     useLocation: () => mockUseLocation,
-    useNavigate: () => mockUseNavigate,
 }));
 
 const setup = () => {
@@ -1102,7 +1100,7 @@ describe('ViewJournal', () => {
 
                 await waitElementToBeInDocument('publish-as-oa-button');
                 await userEvent.click(getByTestId('publish-as-oa-button'));
-                expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.journals.search);
+                expect(getByTestId('publish-as-oa-link')).toHaveAttribute('href', pathConfig.journals.search);
             });
 
             describe('embargoed', () => {
@@ -1126,6 +1124,10 @@ describe('ViewJournal', () => {
                     setup();
 
                     await waitElementToBeInDocument('publish-as-oa-button');
+                    expect(screen.getByTestId('publish-as-oa-link')).toHaveAttribute(
+                        'href',
+                        pathConfig.journals.search,
+                    );
                 });
 
                 it('should not display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', () => {

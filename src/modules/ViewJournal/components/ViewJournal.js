@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useParams, Link } from 'react-router-dom';
 
 import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
@@ -64,18 +64,11 @@ export const shouldShowPublishAsOAButton = (location, data) => {
     );
 };
 
-/**
- * @param navigate
- *  TODO fix link
- */
-const openPublishAsOASearchResult = navigate => navigate(pathConfig.journals.search);
-
 export const ViewJournal = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
     const location = useLocation();
     const isAdmin = userIsAdmin();
-    const navigate = useNavigate();
     const txt = pagesLocale.pages.journal.view;
     const viewJournalTxt = viewJournalLocale.viewJournal;
 
@@ -144,15 +137,22 @@ export const ViewJournal = () => {
                         sx={{ display: 'flex' }}
                     />
                     {showPublishAsOAButton && (
-                        <Button
-                            data-testid="publish-as-oa-button"
-                            color="primary"
-                            variant="contained"
-                            title={txt.publishAsOAButton.tooltip}
-                            onClick={() => openPublishAsOASearchResult(navigate, journalDetails.jni_id)}
+                        <Link
+                            target="_blank"
+                            component="button"
+                            rel="noopener noreferrer"
+                            data-testid="publish-as-oa-link"
+                            to={pathConfig.journals.search}
                         >
-                            {txt.publishAsOAButton.text}
-                        </Button>
+                            <Button
+                                color="primary"
+                                variant="contained"
+                                data-testid="publish-as-oa-button"
+                                title={txt.publishAsOAButton.tooltip}
+                            >
+                                {txt.publishAsOAButton.text}
+                            </Button>
+                        </Link>
                     )}
                 </>
             }
