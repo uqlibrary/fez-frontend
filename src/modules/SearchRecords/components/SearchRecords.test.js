@@ -467,8 +467,13 @@ describe('SearchRecords page', () => {
         setup({ ...testProps }, { ...testState }, rerender);
 
         fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('combobox'));
-        expect(getAllByRole('option').length).toBe(3);
-        fireEvent.click(getAllByRole('option')[1]);
+        expect(getAllByRole('option').map(el => el.textContent)).toStrictEqual([
+            'Please select',
+            'BibTex File',
+            'Excel File',
+            'Endnote File',
+        ]);
+        fireEvent.click(getAllByRole('option')[2]);
 
         expect(actions.exportEspacePublications).toHaveBeenCalledWith({
             ...searchQuery,
