@@ -1064,7 +1064,7 @@ describe('ViewJournal', () => {
         });
     });
 
-    describe.only('`Publish as OA` button', () => {
+    describe('`Publish as OA` button', () => {
         const data = {
             ...journalDetails.data,
             fez_journal_read_and_publish: null,
