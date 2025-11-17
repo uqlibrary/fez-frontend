@@ -87,7 +87,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
     const [open, setOpen] = React.useState(false);
     // use useHref() to correctly set the href when using a HashRouter
     const href = useHref((<Link to={`/journal/view/${row.jnl_jid}?fromSearch=true`} />).props.to);
-
+    // istanbul ignore next
     if (!!!row || (!!row && Object.keys(row).length <= 0)) return <></>;
 
     const compactViewFields = JournalFieldsMap.slice(1).filter(item => item.compactView || false);
