@@ -1105,7 +1105,7 @@ describe('ViewJournal', () => {
                 expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.journals.search);
             });
 
-            describe.only('embargoed', () => {
+            describe('embargoed', () => {
                 const data = {
                     ...journalDetails.data,
                     fez_journal_read_and_publish: null,
