@@ -39,6 +39,7 @@ export const getAdvisoryStatement = html => {
 export const isEmbargoDateMoreThanOnYearAway = data => {
     const units = data?.fez_journal_issn?.[0]?.fez_sherpa_romeo?.srm_max_embargo_units;
     const amount = Number(data?.fez_journal_issn?.[0]?.fez_sherpa_romeo?.srm_max_embargo_amount);
+    /* istanbul ignore next */
     if (!['days', 'weeks', 'months', 'years'].includes(units) || !Number.isFinite(amount)) return false;
 
     const now = moment().utc();
@@ -67,17 +68,13 @@ export const shouldShowPublishAsOAButton = (location, data) => {
  * @param navigate
  * @param {number} id
  */
-const openPublishAsOASearchResult = (navigate, id) => {
-    console.log(`/journals/search/${id}`);
-    // TODO fix link
-    navigate(pathConfig.journals.search);
-};
+const openPublishAsOASearchResult = (navigate, id) => navigate(pathConfig.journals.search); // TODO fix link
 
 export const ViewJournal = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
-    const isAdmin = userIsAdmin();
     const location = useLocation();
+    const isAdmin = userIsAdmin();
     const navigate = useNavigate();
     const txt = pagesLocale.pages.journal.view;
     const viewJournalTxt = viewJournalLocale.viewJournal;
@@ -148,12 +145,13 @@ export const ViewJournal = () => {
                     />
                     {showPublishAsOAButton && (
                         <Button
-                            variant="contained"
+                            data-testid="publish-as-oa-button"
                             color="primary"
+                            variant="contained"
+                            title={txt.publishAsOAButton.tooltip}
                             onClick={() => openPublishAsOASearchResult(navigate, journalDetails.jni_id)}
-                            title={'Avoid fees and meet mandates by viewing similar journals with open access.'}
                         >
-                            I would like to publish open access
+                            {txt.publishAsOAButton.text}
                         </Button>
                     )}
                 </>

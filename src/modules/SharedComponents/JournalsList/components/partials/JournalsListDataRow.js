@@ -85,6 +85,7 @@ const StyledTableCell = styled(TableCell, {
 
 const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, checked = false }) => {
     const [open, setOpen] = React.useState(false);
+    // use useHref() to correctly set the href when using a HashRouter
     const href = useHref((<Link to={`/journal/view/${row.jnl_jid}?fromSearch=true`} />).props.to);
 
     if (!!!row || (!!row && Object.keys(row).length <= 0)) return <></>;
