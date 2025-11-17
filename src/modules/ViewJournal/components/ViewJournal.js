@@ -66,9 +66,9 @@ export const shouldShowPublishAsOAButton = (location, data) => {
 
 /**
  * @param navigate
- * @param {number} id
+ *  TODO fix link
  */
-const openPublishAsOASearchResult = (navigate, id) => navigate(pathConfig.journals.search); // TODO fix link
+const openPublishAsOASearchResult = navigate => navigate(pathConfig.journals.search);
 
 export const ViewJournal = () => {
     const dispatch = useDispatch();
