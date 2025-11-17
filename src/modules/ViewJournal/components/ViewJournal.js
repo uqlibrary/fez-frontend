@@ -59,8 +59,8 @@ export const shouldShowPublishAsOAButton = (location, data) => {
     const publishedStatus = getIndicatorProps({ type: types.published, data });
     const acceptedStatus = getIndicatorProps({ type: types.accepted, data });
     return (
-        publishedStatus.status === status.fee &&
-        (acceptedStatus.status !== status.embargo || isEmbargoDateMoreThanOnYearAway(data))
+        publishedStatus?.status === status.fee &&
+        (acceptedStatus?.status !== status.embargo || isEmbargoDateMoreThanOnYearAway(data))
     );
 };
 
