@@ -451,7 +451,7 @@ describe('ViewRecord', () => {
 
         fireEvent.click(getByTestId('action-button'));
 
-        expect(assignFn).toHaveBeenCalledWith('https://fez-staging.library.uq.edu.au/login?url=dW5kZWZpbmVk');
+        expect(assignFn).toHaveBeenCalledWith('http://localhost/login?url=dW5kZWZpbmVk');
 
         window.location = location;
     });
