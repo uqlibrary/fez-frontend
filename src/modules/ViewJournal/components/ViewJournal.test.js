@@ -16,10 +16,11 @@ import {
     waitElementToBeInDocument,
     userEvent,
 } from 'test-utils';
-import ViewJournal, { getAdvisoryStatement } from './ViewJournal';
+import ViewJournal, { getAdvisoryStatement, publishAsOASearchFacetDefaults } from './ViewJournal';
 import { default as viewJournalLocale } from 'locale/viewJournal';
 import { screen } from '@testing-library/react';
 import { pathConfig } from '../../../config';
+import param from 'can-param';
 
 let mockUseLocation = {};
 jest.mock('react-router-dom', () => ({
@@ -39,6 +40,9 @@ const setup = () => {
 };
 
 describe('ViewJournal', () => {
+    beforeEach(() => jest.clearAllMocks());
+    afterEach(() => api.reset());
+
     it('should display journal not found page error on 404', async () => {
         mockApi
             .onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl))
@@ -581,7 +585,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -619,7 +623,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -917,14 +921,6 @@ describe('ViewJournal', () => {
     });
 
     describe('Favouriting', () => {
-        // beforeEach(() => {
-        //     mockApi = setupMockAdapter();
-        // });
-
-        // afterEach(() => {
-        //     mockApi.reset();
-        // });
-
         it('should display an error message if the journal "favourite" action fails', async () => {
             window.matchMedia = createMatchMedia(1600);
             mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
@@ -1068,10 +1064,9 @@ describe('ViewJournal', () => {
             fez_journal_read_and_publish: null,
         };
 
-        afterEach(() => {
-            expect(screen.queryByText(viewJournalLocale.viewJournal.notFound.title)).not.toBeInTheDocument();
-            api.reset();
-        });
+        afterEach(() =>
+            expect(screen.queryByText(viewJournalLocale.viewJournal.notFound.title)).not.toBeInTheDocument(),
+        );
 
         it('should not display button for non-search workflows', async () => {
             api.mock.journals.get({ id: '.*', data: { ...data } });
@@ -1095,12 +1090,46 @@ describe('ViewJournal', () => {
             });
 
             it("should display button for search workflows when OA status = `fee` and it's not embargoed", async () => {
+                window.open = jest.fn();
                 api.mock.journals.get({ id: '.*', data: { ...data } });
                 const { getByTestId } = setup();
 
                 await waitElementToBeInDocument('publish-as-oa-button');
                 await userEvent.click(getByTestId('publish-as-oa-button'));
-                expect(getByTestId('publish-as-oa-link')).toHaveAttribute('href', pathConfig.journals.search);
+
+                const expectedSearchParams = {
+                    keywords: [
+                        {
+                            cvoId: '453458',
+                            text: '2739 Public Health, Environmental and Occupational Health',
+                            type: 'Subject',
+                            id: 'Subject-453458',
+                        },
+                        {
+                            cvoId: '456676',
+                            text: 'Public, Environmental & Occupational Health',
+                            type: 'Subject',
+                            id: 'Subject-456676',
+                        },
+                        {
+                            cvoId: '456497',
+                            text: 'Computer Science, Software Engineering',
+                            type: 'Subject',
+                            id: 'Subject-456497',
+                        },
+                    ],
+                    activeFacets: {
+                        filters: {
+                            ...publishAsOASearchFacetDefaults,
+                            'Highest quartile': ['1'],
+                        },
+                    },
+                };
+                expect(window.open).toHaveBeenCalledWith(
+                    `${pathConfig.journals.search}?${param(expectedSearchParams)}`,
+                    '_blank',
+                    'noopener,noreferrer',
+                );
             });
 
             describe('embargoed', () => {
@@ -1124,10 +1153,6 @@ describe('ViewJournal', () => {
                     setup();
 
                     await waitElementToBeInDocument('publish-as-oa-button');
-                    expect(screen.getByTestId('publish-as-oa-link')).toHaveAttribute(
-                        'href',
-                        pathConfig.journals.search,
-                    );
                 });
 
                 it('should not display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', () => {

@@ -75,7 +75,11 @@ const shouldShowPublishAsOAButton = (location, data) =>
  * @return {number}
  */
 const extractHighestQuartile = (data, prop) =>
-    Math.min(...(data.map?.(item => parseInt(String(item[prop]).toLowerCase().replace('q', ''), 10)) || []));
+    Math.min(
+        ...(data.map?.(item =>
+            parseInt(String(item[prop]).toLowerCase().replace('q', ''), 10),
+        ) || /* istanbul ignore next */ [0]),
+    );
 
 /**
  * @param data
@@ -92,7 +96,17 @@ const extractSubjects = (data, id, text) =>
         };
         keyword.id = getKeywordKey(keyword);
         return [...keywords, keyword];
-    }, []) || {};
+    }, []) || /* istanbul ignore next */ {};
+
+export const publishAsOASearchFacetDefaults = {
+    'Open access: accepted version': [
+        '12 month embargo via repository',
+        '6 month embargo via repository',
+        '3 month embargo via repository',
+        'Immediate access via repository',
+    ],
+    'Open access: published version': ['No fees or fees are prepaid', 'Fees are prepaid (until capped amount reached)'],
+};
 
 /**
  * @param data
@@ -102,25 +116,18 @@ const buildPublishAsOASearch = data =>
     tryCatch(() => {
         const scopusData = data?.fez_journal_cite_score?.fez_journal_cite_score_asjc_code;
         const wosData = data?.fez_journal_jcr_scie?.fez_journal_jcr_scie_category;
-
         const facets = {
-            'Highest quartile': [
-                Math.min(
-                    extractHighestQuartile(scopusData, 'jnl_cite_score_asjc_code_quartile'),
-                    extractHighestQuartile(wosData, 'jnl_jcr_scie_category_quartile'),
-                ),
-            ],
-            'Open access: accepted version': [
-                '12 month embargo via repository',
-                '6 month embargo via repository',
-                '3 month embargo via repository',
-                'Immediate access via repository',
-            ],
-            'Open access: published version': [
-                'No fees or fees are prepaid',
-                'Fees are prepaid (until capped amount reached)',
-            ],
+            ...publishAsOASearchFacetDefaults,
         };
+
+        const highestQuartile = Math.min(
+            extractHighestQuartile(scopusData, 'jnl_cite_score_asjc_code_quartile'),
+            extractHighestQuartile(wosData, 'jnl_jcr_scie_category_quartile'),
+        );
+        /* istanbul ignore else */
+        if (highestQuartile > 0) {
+            facets['Highest quartile'] = [highestQuartile];
+        }
 
         const scopusSubjects = extractSubjects(
             scopusData,
