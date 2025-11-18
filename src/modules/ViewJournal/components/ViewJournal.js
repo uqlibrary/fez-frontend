@@ -94,6 +94,16 @@ const extractSubjects = (data, id, text) =>
         return [...keywords, keyword];
     }, []) || {};
 
+export const publishAsOASearchFacetDefaults = {
+    'Open access: accepted version': [
+        '12 month embargo via repository',
+        '6 month embargo via repository',
+        '3 month embargo via repository',
+        'Immediate access via repository',
+    ],
+    'Open access: published version': ['No fees or fees are prepaid', 'Fees are prepaid (until capped amount reached)'],
+};
+
 /**
  * @param data
  * @return {object}
@@ -104,21 +114,12 @@ const buildPublishAsOASearch = data =>
         const wosData = data?.fez_journal_jcr_scie?.fez_journal_jcr_scie_category;
 
         const facets = {
+            ...publishAsOASearchFacetDefaults,
             'Highest quartile': [
                 Math.min(
                     extractHighestQuartile(scopusData, 'jnl_cite_score_asjc_code_quartile'),
                     extractHighestQuartile(wosData, 'jnl_jcr_scie_category_quartile'),
                 ),
-            ],
-            'Open access: accepted version': [
-                '12 month embargo via repository',
-                '6 month embargo via repository',
-                '3 month embargo via repository',
-                'Immediate access via repository',
-            ],
-            'Open access: published version': [
-                'No fees or fees are prepaid',
-                'Fees are prepaid (until capped amount reached)',
             ],
         };
 
