@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import List from '@mui/material/List';
 import FacetFilterListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterListItem';
@@ -9,6 +9,24 @@ import { useActiveFacetFilters, useJournalSearch } from '../hooks';
 import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import { sanitiseId } from 'helpers/general';
+
+/**
+ * ShowFavouritedOnly is the key recognised by API - case sensitive
+ */
+export const showFavouritedOnlyFacet = {
+    title: 'Favourite Journals',
+    facetTitle: 'ShowFavouritedOnly',
+    facets: [
+        {
+            title: 'Show journals favourited',
+            key: 'ShowFavouritedOnly',
+        },
+    ],
+};
+
+export const oaAcceptedVersionFacetTitle = 'Open access: accepted version';
+
+export const resetFacetFiltersButtonId = 'reset-facet-filters';
 
 export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({
     facetCategory,
@@ -39,20 +57,6 @@ JournalFacetFilterNestedListItemsList.propTypes = {
     activeFacets: PropTypes.object,
     handleFacetClick: PropTypes.func,
     isFacetFilterActive: PropTypes.func,
-};
-
-/**
- * ShowFavouritedOnly is the key recognised by API - case sensitive
- */
-export const showFavouritedOnlyFacet = {
-    title: 'Favourite Journals',
-    facetTitle: 'ShowFavouritedOnly',
-    facets: [
-        {
-            title: 'Show journals favourited',
-            key: 'ShowFavouritedOnly',
-        },
-    ],
 };
 
 export const getFacetsToDisplay = (rawFacets, renameFacetsList) => {
@@ -114,7 +118,31 @@ export const filterOutNonActiveFacets = facets =>
             return filtered;
         }, {});
 
-export const resetFacetFiltersButtonId = 'reset-facet-filters';
+/**
+ * @param facetsToDisplay
+ * @return {string[]}
+ */
+const getOAAcceptedVersionFacetOptions = facetsToDisplay =>
+    facetsToDisplay
+        .find(item => item?.facetTitle?.toLowerCase?.() === oaAcceptedVersionFacetTitle.toLowerCase())
+        ?.facets?.map?.(item => item?.title)
+        // desc sort by items numeric values
+        ?.sort?.((item, next) => next?.replace?.(/\D+/g, '') - item?.replace?.(/\D+/g, '')) || [];
+
+/**
+ * Notes: options are expected to be desc sorted
+ *
+ * @param {string[]} options
+ * @param {string} selected
+ * @param {boolean} exclusive
+ * @return {*[]}
+ */
+const getOAAcceptedVersionFacetRange = (options, selected, exclusive = true) => {
+    const index = options.findIndex(item => item === selected) + (exclusive ? 1 : 0);
+    if (index < 0) return [];
+
+    return [...options].slice(index);
+};
 
 export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, disabled, onFacetsChanged }) => {
     const { journalSearchQueryParams } = useJournalSearch();
@@ -167,23 +195,42 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
         return () => setIsFacetFilterClicked(false);
     }, [isFacetFilterClicked, activeFacetsFilters, activeFacetsRanges, onFacetsChanged]);
 
-    const facetsToDisplay = getFacetsToDisplay(facetsData, renameFacetsList);
+    const facetsToDisplay = useMemo(
+        () => getFacetsToDisplay(facetsData, renameFacetsList),
+        [facetsData, renameFacetsList],
+    );
+    const oaAcceptedVersionFacetOptions = useMemo(
+        () => getOAAcceptedVersionFacetOptions(facetsToDisplay),
+        [facetsToDisplay],
+    );
 
     const _handleFacetClick = (category, facet) => () => {
         let newActiveFacetsFilters = { ...activeFacetsFilters };
+        const isActivated = isFacetFilterActive(newActiveFacetsFilters, category, facet);
+
+        // handle OA Accepted Version facet changes separately
+        if (category.toLowerCase() === oaAcceptedVersionFacetTitle.toLowerCase()) {
+            newActiveFacetsFilters[category] = getOAAcceptedVersionFacetRange(
+                oaAcceptedVersionFacetOptions,
+                facet,
+                isActivated,
+            );
+            setIsFacetFilterClicked(true);
+            setActiveFacetsFilters(newActiveFacetsFilters);
+            return;
+        }
+
         // remove facet filter
-        if (isFacetFilterActive(newActiveFacetsFilters, category, facet)) {
+        if (isActivated) {
             if (category === showFavouritedOnlyFacet.facetTitle) {
                 delete newActiveFacetsFilters[category];
             } else {
                 newActiveFacetsFilters[category] = newActiveFacetsFilters[category].filter(item => item !== facet);
             }
             newActiveFacetsFilters = filterOutNonActiveFacets(newActiveFacetsFilters);
-
             // support multi select e.g. index in
         } else if (newActiveFacetsFilters.hasOwnProperty(category)) {
             newActiveFacetsFilters[category].push(facet);
-
             // add an active facet filter
         } else {
             newActiveFacetsFilters[category] = category === showFavouritedOnlyFacet.facetTitle ? true : [facet];
