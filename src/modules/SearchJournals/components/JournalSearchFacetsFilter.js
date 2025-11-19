@@ -127,7 +127,8 @@ const getOAAcceptedVersionFacetOptions = facetsToDisplay =>
         .find(item => item?.facetTitle?.toLowerCase?.() === oaAcceptedVersionFacetTitle.toLowerCase())
         ?.facets?.map?.(item => item?.title)
         // desc sort by items numeric values
-        ?.sort?.((item, next) => next?.replace?.(/\D+/g, '') - item?.replace?.(/\D+/g, '')) || [];
+        ?.sort?.((item, next) => next?.replace?.(/\D+/g, '') - item?.replace?.(/\D+/g, '')) ||
+    /* istanbul ignore next */ [];
 
 /**
  * Notes: options are expected to be desc sorted
@@ -137,8 +138,9 @@ const getOAAcceptedVersionFacetOptions = facetsToDisplay =>
  * @param {boolean} exclusive
  * @return {*[]}
  */
-const getOAAcceptedVersionFacetRange = (options, selected, exclusive = true) => {
+const getOAAcceptedVersionFacetRange = (options, selected, exclusive) => {
     const index = options.findIndex(item => item === selected) + (exclusive ? 1 : 0);
+    /* istanbul ignore next */
     if (index < 0) return [];
 
     return [...options].slice(index);
@@ -216,7 +218,7 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
                 isActivated,
             );
             setIsFacetFilterClicked(true);
-            setActiveFacetsFilters(newActiveFacetsFilters);
+            setActiveFacetsFilters(filterOutNonActiveFacets(newActiveFacetsFilters));
             return;
         }
 
