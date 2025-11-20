@@ -23,6 +23,7 @@ export const AutoCompleteAsynchronousField = ({
     loadSuggestions,
     name,
     onChange,
+    onKeyDown,
     onClear,
     OptionTemplate,
     placeholder,
@@ -143,6 +144,7 @@ export const AutoCompleteAsynchronousField = ({
                 }}
                 onInputChange={handleInputChange}
                 onChange={handleChange}
+                onKeyDown={onKeyDown}
                 filterOptions={filterOptions}
                 isOptionEqualToValue={(option, value) => option?.value === value?.value || option === value}
                 getOptionLabel={getOptionLabel}
@@ -248,6 +250,7 @@ AutoCompleteAsynchronousField.propTypes = {
     loadSuggestions: PropTypes.func,
     name: PropTypes.string,
     onChange: PropTypes.func,
+    onKeyDown: PropTypes.func,
     onClear: PropTypes.func,
     OptionTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
     placeholder: PropTypes.string,

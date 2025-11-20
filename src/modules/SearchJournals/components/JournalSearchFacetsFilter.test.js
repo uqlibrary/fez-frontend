@@ -7,11 +7,12 @@ import JournalSearchFacetsFilter, {
     showFavouritedOnlyFacet,
 } from './JournalSearchFacetsFilter';
 
-import { fireEvent, render, userEvent, WithReduxStore, WithRouter } from 'test-utils';
+import { screen, fireEvent, render, userEvent, WithReduxStore, WithRouter } from 'test-utils';
 
 import * as hooks from '../hooks';
 import { useLocation } from 'react-router-dom';
 import param from 'can-param';
+import kebabCase from 'lodash/kebabCase';
 
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
@@ -386,8 +387,17 @@ describe('Search Journals Facets component', () => {
                 },
             },
         };
+
         const onFacetsChangedHandler = jest.fn();
-        const assertSelectedOptions = (...expected) =>
+        const activate = async option =>
+            await userEvent.click(
+                screen.getByTestId(`facet-filter-nested-item-open-access-accepted-version-${kebabCase(option)}`),
+            );
+        const deactivate = async option =>
+            await userEvent.click(
+                screen.getByTestId(`clear-facet-filter-nested-item-open-access-accepted-version-${kebabCase(option)}`),
+            );
+        const assertActiveValues = (...expected) =>
             expect(onFacetsChangedHandler).toHaveBeenCalledWith({
                 filters: !!expected.length
                     ? {
@@ -398,30 +408,37 @@ describe('Search Journals Facets component', () => {
             });
 
         afterEach(() => onFacetsChangedHandler.mockReset());
-
         describe('when empty', () => {
-            it('should allow selecting single value', async () => {
-                const { getByTestId } = setup({ ...availableFacets, onFacetsChangedHandler });
+            const expandCategory = async () =>
+                await userEvent.click(screen.getByTestId('expand-more-facet-category-open-access-accepted-version'));
 
-                await userEvent.click(getByTestId('expand-more-facet-category-open-access-accepted-version'));
-                await userEvent.click(
-                    getByTestId(
-                        'facet-filter-nested-item-open-access-accepted-version-immediate-access-via-repository',
-                    ),
-                );
-                assertSelectedOptions('Immediate access via repository');
+            it('should allow selecting single value', async () => {
+                setup({ ...availableFacets, onFacetsChangedHandler });
+
+                await expandCategory();
+                await activate('Immediate access via repository');
+                assertActiveValues('Immediate access via repository');
             });
 
             it('should allow selecting range', async () => {
-                const { getByTestId } = setup({ ...availableFacets, onFacetsChangedHandler });
+                setup({ ...availableFacets, onFacetsChangedHandler });
 
-                await userEvent.click(getByTestId('expand-more-facet-category-open-access-accepted-version'));
-                await userEvent.click(
-                    getByTestId(
-                        'facet-filter-nested-item-open-access-accepted-version-12-month-embargo-via-repository',
-                    ),
+                await expandCategory();
+                await activate('12 month embargo via repository');
+                assertActiveValues(
+                    '12 month embargo via repository',
+                    '6 month embargo via repository',
+                    'Immediate access via repository',
                 );
-                assertSelectedOptions(
+            });
+
+            it('should select all when selecting range head', async () => {
+                setup({ ...availableFacets, onFacetsChangedHandler });
+
+                await expandCategory();
+                await activate('18 month embargo via repository');
+                assertActiveValues(
+                    '18 month embargo via repository',
                     '12 month embargo via repository',
                     '6 month embargo via repository',
                     'Immediate access via repository',
@@ -429,8 +446,8 @@ describe('Search Journals Facets component', () => {
             });
         });
 
-        describe('when pre-populated', () => {
-            const mockPreSelected = (...values) => {
+        describe('with active values', () => {
+            const mockActiveValues = (...values) => {
                 useLocation.mockImplementationOnce(() => ({
                     pathname: '/',
                     search: `?${param({
@@ -444,27 +461,32 @@ describe('Search Journals Facets component', () => {
             };
 
             it('should allow selecting single value', async () => {
-                mockPreSelected('Immediate access via repository');
+                mockActiveValues('Immediate access via repository');
+                setup({ ...availableFacets, onFacetsChangedHandler });
 
-                const { getByTestId } = setup({ ...availableFacets, onFacetsChangedHandler });
-
-                await userEvent.click(
-                    getByTestId('facet-filter-nested-item-open-access-accepted-version-6-month-embargo-via-repository'),
-                );
-                assertSelectedOptions('6 month embargo via repository', 'Immediate access via repository');
+                await activate('6 month embargo via repository');
+                assertActiveValues('6 month embargo via repository', 'Immediate access via repository');
             });
 
             it('should allow selecting range', async () => {
-                mockPreSelected('Immediate access via repository');
+                mockActiveValues('Immediate access via repository');
+                setup({ ...availableFacets, onFacetsChangedHandler });
 
-                const { getByTestId } = setup({ ...availableFacets, onFacetsChangedHandler });
-
-                await userEvent.click(
-                    getByTestId(
-                        'facet-filter-nested-item-open-access-accepted-version-12-month-embargo-via-repository',
-                    ),
+                await activate('12 month embargo via repository');
+                assertActiveValues(
+                    '12 month embargo via repository',
+                    '6 month embargo via repository',
+                    'Immediate access via repository',
                 );
-                assertSelectedOptions(
+            });
+
+            it('should select all when selecting range head', async () => {
+                mockActiveValues('Immediate access via repository');
+                setup({ ...availableFacets, onFacetsChangedHandler });
+
+                await activate('18 month embargo via repository');
+                assertActiveValues(
+                    '18 month embargo via repository',
                     '12 month embargo via repository',
                     '6 month embargo via repository',
                     'Immediate access via repository',
@@ -472,54 +494,39 @@ describe('Search Journals Facets component', () => {
             });
 
             it('should allow deselecting single value', async () => {
-                mockPreSelected(
+                mockActiveValues(
                     '12 month embargo via repository',
                     '6 month embargo via repository',
                     'Immediate access via repository',
                 );
+                setup({ ...availableFacets, onFacetsChangedHandler });
 
-                const { getByTestId } = setup({ ...availableFacets, onFacetsChangedHandler });
-
-                await userEvent.click(
-                    getByTestId(
-                        'clear-facet-filter-nested-item-open-access-accepted-version-12-month-embargo-via-repository',
-                    ),
-                );
-                assertSelectedOptions('6 month embargo via repository', 'Immediate access via repository');
+                await deactivate('12 month embargo via repository');
+                assertActiveValues('6 month embargo via repository', 'Immediate access via repository');
             });
 
             it('should allow deselecting range', async () => {
-                mockPreSelected(
+                mockActiveValues(
                     '12 month embargo via repository',
                     '6 month embargo via repository',
                     'Immediate access via repository',
                 );
+                setup({ ...availableFacets, onFacetsChangedHandler });
 
-                const { getByTestId } = setup({ ...availableFacets, onFacetsChangedHandler });
-
-                await userEvent.click(
-                    getByTestId(
-                        'clear-facet-filter-nested-item-open-access-accepted-version-6-month-embargo-via-repository',
-                    ),
-                );
-                assertSelectedOptions('Immediate access via repository');
+                await deactivate('6 month embargo via repository');
+                assertActiveValues('Immediate access via repository');
             });
 
             it('should deselect all when deselecting range tail', async () => {
-                mockPreSelected(
+                mockActiveValues(
                     '12 month embargo via repository',
                     '6 month embargo via repository',
                     'Immediate access via repository',
                 );
+                setup({ ...availableFacets, onFacetsChangedHandler });
 
-                const { getByTestId } = setup({ ...availableFacets, onFacetsChangedHandler });
-
-                await userEvent.click(
-                    getByTestId(
-                        'clear-facet-filter-nested-item-open-access-accepted-version-immediate-access-via-repository',
-                    ),
-                );
-                assertSelectedOptions();
+                await deactivate('Immediate access via repository');
+                assertActiveValues();
             });
         });
     });

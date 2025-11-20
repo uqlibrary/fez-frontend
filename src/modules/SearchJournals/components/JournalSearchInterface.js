@@ -12,6 +12,7 @@ import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Tooltip from '@mui/material/Tooltip';
+import { AddToSelectedSubjects } from './partials/AddToSelectedSubjects';
 
 export const id = 'journal-search-interface';
 
@@ -78,6 +79,7 @@ export const JournalSearchInterface = ({
                             onKeywordDelete={handleKeywordDelete}
                             keywords={Object.values(selectedKeywords)}
                         />
+                        <AddToSelectedSubjects onAdd={handleKeywordAdd} />
                     </Grid>
                 )}
                 {hasAnySelectedKeywords && !showInputControls && (
