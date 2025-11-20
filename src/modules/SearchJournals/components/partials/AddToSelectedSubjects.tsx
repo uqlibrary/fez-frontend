@@ -43,8 +43,12 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }
 
     if (!isOpen) {
         return (
-            <Tooltip title="Click to add a new subject">
-                <IconButton color="info" onClick={() => setIsOpen(true)}>
+            <Tooltip title="Add a subject to refine result">
+                <IconButton
+                    data-testid={'add-to-subject-selection-button'}
+                    color="info"
+                    onClick={() => setIsOpen(true)}
+                >
                     <NewLabelRounded />
                 </IconButton>
             </Tooltip>
@@ -60,7 +64,7 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }
     return (
         <BorderedChip
             sx={{
-                '& .MuiChip-label > .MuiAutocomplete-root': { width: 220 },
+                '& .MuiChip-label > .MuiAutocomplete-root': { minWidth: 220 },
             }}
             type={'Subject'}
             onDelete={close}
