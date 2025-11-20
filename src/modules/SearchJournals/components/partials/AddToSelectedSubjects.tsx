@@ -35,7 +35,7 @@ const BorderedChip = styled(SelectedSearchTermTypedItem)(() => ({
 }));
 
 type AddToSelectedSubjects = {
-    onAdd: (keyword: Record<string, string>) => void;
+    onAdd: (keyword: { type: string; cvoId: string; text: string }) => void;
 };
 
 export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }) => {
@@ -51,9 +51,10 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }
         );
     }
 
+    const close = () => setIsOpen(false);
     const handleOnAdd = (item: Record<string, string>) => {
         onAdd({ type: 'Subject', cvoId: item.key, text: item.value });
-        setIsOpen(false);
+        close();
     };
 
     return (
@@ -62,14 +63,14 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }
                 '& .MuiChip-label > .MuiAutocomplete-root': { width: 220 },
             }}
             type={'Subject'}
-            onDelete={() => setIsOpen(false)}
+            onDelete={close}
         >
             <ForCodeAutocompleteField
                 onChange={handleOnAdd}
                 onKeyDown={(e: React.KeyboardEvent) => {
                     if (e.key !== 'Escape') return;
                     e.stopPropagation();
-                    setIsOpen(false);
+                    close();
                 }}
             />
         </BorderedChip>
