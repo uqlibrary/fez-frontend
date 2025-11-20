@@ -127,6 +127,40 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         );
     };
 
+    const renderLinkWithIcon = (link, value, icon = '', iconHint = '', testId = '') => {
+        return (
+            <Link to={link} {...{ ['data-testid']: testId || undefined }}>
+                {value}
+                {icon && (
+                    <Tooltip title={iconHint}>
+                        <span className={`fez-icon ${icon} medium`} style={{ margin: '0 4px' }} />
+                    </Tooltip>
+                )}
+            </Link>
+        );
+    };
+
+    const renderSubject = (list, subkey, getLink) => {
+        const testId = subkey.replace(/_/g, '-');
+        console.log('list', list);
+        return (
+            <Box component={'ul'} key={subkey} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                {list.map((item, index) => (
+                    <li key={`${testId}-${index}`} data-testid={`${testId}-${index}`}>
+                        {(() => {
+                            const data = getData(item, subkey);
+                            if (getLink) {
+                                return renderLinkWithIcon(getLink(item[subkey], data), data, 'openalex', 'OpenAlex');
+                            } else {
+                                return data;
+                            }
+                        })()}
+                    </li>
+                ))}
+            </Box>
+        );
+    };
+
     const renderList = (list, subkey, getLink) => {
         const testId = subkey.replace(/_/g, '-');
         return (
@@ -410,7 +444,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             case 'rek_raid':
                 return renderList(objects, subkey, pathConfig.list.raid);
             case 'rek_subject':
-                return renderList(objects, subkey, pathConfig.list.subject);
+                return renderSubject(objects, subkey, pathConfig.list.subject);
             case 'rek_sdg_source':
                 return renderSDG(publication);
             default:
