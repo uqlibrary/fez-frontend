@@ -1,7 +1,12 @@
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
 import { get, patch, post } from 'repositories/generic';
-import { EXISTING_RECORD_API, RECORDS_ISSUES_API, HIDE_POSSIBLE_RECORD_API } from 'repositories/routes';
+import {
+    EXISTING_RECORD_API,
+    RECORDS_ISSUES_API,
+    HIDE_POSSIBLE_RECORD_API,
+    MAKE_OPEN_ACCESS_API,
+} from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 
 /**
@@ -64,9 +69,10 @@ export function clearFixRecord() {
  *      upload files,
  * If error occurs on any stage failed action is displayed
  * @param {object} data to be posted, refer to backend API data: {publication, author, files}
+ * @param {boolean} [myOpenAccess=false] indicates if the fix request is for "my open access" compliance
  * @returns {Promise}
  */
-export function fixRecord(data) {
+export function fixRecord(data, myOpenAccess = false) {
     if (!data.publication || !data.author) {
         return dispatch => {
             dispatch({
@@ -134,7 +140,14 @@ export function fixRecord(data) {
                     ? patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest)
                     : null,
             )
-            .then(() => post(RECORDS_ISSUES_API({ pid: data.publication.rek_pid }), createIssueRequest))
+            .then(() => {
+                return post(
+                    !myOpenAccess
+                        ? RECORDS_ISSUES_API({ pid: data.publication.rek_pid })
+                        : MAKE_OPEN_ACCESS_API({ pid: data.publication.rek_pid }),
+                    createIssueRequest,
+                );
+            })
             .then(responses => {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,

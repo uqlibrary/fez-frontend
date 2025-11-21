@@ -101,8 +101,9 @@ exports[`Component DeleteRecord should render delete record form with data colle
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationDataCollection"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -201,7 +202,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                   https://doi.org/10.2364312345
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -221,10 +222,10 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
                                       class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="wos-citation-count-link"
+                                      data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                                      id="citation-count-link"
+                                      id="wos-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -242,10 +243,10 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
                                       class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="google-citation-count-link"
+                                      data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                                      id="citation-count-link"
+                                      id="google-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -656,8 +657,9 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationDataCollection"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -756,7 +758,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                   https://doi.org/10.2364312345
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -776,10 +778,10 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
                                       class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="wos-citation-count-link"
+                                      data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                                      id="citation-count-link"
+                                      id="wos-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -797,10 +799,10 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
                                       class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="google-citation-count-link"
+                                      data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                                      id="citation-count-link"
+                                      id="google-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -1211,8 +1213,9 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -1309,7 +1312,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                               <span
                                 class="citationDOI empty"
                               />
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1329,10 +1332,10 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
                                       class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="wos-citation-count-link"
+                                      data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                                      id="citation-count-link"
+                                      id="wos-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -1350,10 +1353,10 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
                                       class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="google-citation-count-link"
+                                      data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                                      id="citation-count-link"
+                                      id="google-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"

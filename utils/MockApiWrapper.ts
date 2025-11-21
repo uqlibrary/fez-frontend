@@ -113,35 +113,35 @@ export const api: Api = {
     mock: {
         instance: mockApi,
         records: {
-            create: function({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
+            create: function ({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
                 this.instance.onPost(api.url.records.create)[replyMethod(once)](status, {
                     data: { rek_pid: pid, ...data },
                 });
                 return this;
             },
-            get: function({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
+            get: function ({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
                 this.instance.onGet(api.url.records.get(pid))[replyMethod(once)](status, {
                     data: { rek_pid: pid, ...data },
                 });
                 return this;
             },
-            update: function({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
+            update: function ({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
                 this.instance.onPatch(api.url.records.get(pid))[replyMethod(once)](status, {
                     data: { rek_pid: pid, ...data },
                 });
                 return this;
             },
-            bulkUpdate: function({ status = 200, data = {}, once = true }: Params = {}) {
+            bulkUpdate: function ({ status = 200, data = {}, once = true }: Params = {}) {
                 this.instance.onPatch(api.url.records.create)[replyMethod(once)](status, { data });
                 return this;
             },
-            delete: function({ status = 200, pid = '', once = true }: Params = {}) {
+            delete: function ({ status = 200, pid = '', once = true }: Params = {}) {
                 this.instance.onDelete(api.url.records.get(pid))[replyMethod(once)](status, {
                     data: 'Record deleted',
                 });
                 return this;
             },
-            issues: function({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
+            issues: function ({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
                 this.instance.onPost(api.url.records.issues(pid))[replyMethod(once)](status, { data });
                 return this;
             },
@@ -158,15 +158,15 @@ export const api: Api = {
             instance: {} as MockAdapter,
         },
         files: {
-            presignedUrl: function({ status = 200, once = true }: Params = {}) {
+            presignedUrl: function ({ status = 200, once = true }: Params = {}) {
                 this.instance.onPost(api.url.files.presignedUrl)[replyMethod(once)](status, api.url.files.put);
                 return this;
             },
-            put: function({ status = 200, once = true }: Params = {}) {
+            put: function ({ status = 200, once = true }: Params = {}) {
                 this.instance.onPut(api.url.files.put)[replyMethod(once)](status);
                 return this;
             },
-            upload: function({ status = 200, once = true }: Params = {}) {
+            upload: function ({ status = 200, once = true }: Params = {}) {
                 return this.presignedUrl({ status, once }).put({ status, once });
             },
             fail: {
@@ -177,7 +177,7 @@ export const api: Api = {
             instance: {} as MockAdapter,
         },
         cvo: {
-            get: function({ status = 200, cvoId = 0, data = {}, once = false }: CvoParams) {
+            get: function ({ status = 200, cvoId = 0, data = {}, once = false }: CvoParams) {
                 this.instance.onGet(api.url.cvo.get(cvoId))[replyMethod(once)](status, { data });
                 return this;
             },
@@ -185,7 +185,7 @@ export const api: Api = {
             files: {} as DatastreamApi,
             instance: {} as MockAdapter,
         },
-        reset: function() {
+        reset: function () {
             this.instance.resetHandlers();
         },
     },
@@ -194,7 +194,7 @@ export const api: Api = {
             reset: () => clearLastRequest(),
         },
     },
-    reset: function() {
+    reset: function () {
         this.mock.reset();
         this.request.history.reset();
     },

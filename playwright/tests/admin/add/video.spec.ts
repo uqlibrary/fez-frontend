@@ -14,11 +14,7 @@ test.describe('As an admin,', () => {
 
         // Choose display type
         await page.getByTestId('rek-display-type-select').click();
-        await page
-            .getByTestId('rek-display-type-options')
-            .locator('li', { hasText: /Video/ })
-            .first()
-            .click();
+        await page.getByTestId('rek-display-type-options').locator('li', { hasText: /Video/ }).first().click();
 
         // Apply selections
         await page
@@ -61,11 +57,7 @@ test.describe('Author affiliations', () => {
 
         // Choose display type
         await page.getByTestId('rek-display-type-select').click();
-        await page
-            .getByTestId('rek-display-type-options')
-            .locator('li', { hasText: /Video/ })
-            .first()
-            .click();
+        await page.getByTestId('rek-display-type-options').locator('li', { hasText: /Video/ }).first().click();
 
         // Apply selections
         await page

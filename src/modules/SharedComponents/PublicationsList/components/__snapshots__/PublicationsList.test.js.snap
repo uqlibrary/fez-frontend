@@ -61,10 +61,10 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:undefined"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -149,8 +149,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:678728"
                 >
                   <span
                     class="citationAuthors"
@@ -279,7 +280,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1016/j.mcn.2017.07.005
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -299,10 +300,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026774540%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -320,10 +321,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/23535331"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -341,10 +342,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -405,6 +406,523 @@ exports[`PublicationsList renders component with items 1`] = `
     >
       <div
         class="css-0"
+        data-testid="publication-citation-parent-UQ:256099"
+        id="publication-citation-parent-UQ:256099"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                style="min-width: 1px;"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                >
+                  <a
+                    href="/view/UQ:256099"
+                  >
+                    Open Accessible test record
+                  </a>
+                </h6>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
+              >
+                <span
+                  class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:256099"
+                >
+                  <span
+                    class="citationAuthors"
+                  >
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-0"
+                    >
+                      Researcher, Professor J.
+                    </span>
+                    , 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-1"
+                    >
+                      Martin, Sally
+                    </span>
+                    , 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-2"
+                    >
+                      Nguyen, Tam H.
+                    </span>
+                    , 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-3"
+                    >
+                      Daniels, Shari J.
+                    </span>
+                    , 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-4"
+                    >
+                      Lavidis, Nickolas A.
+                    </span>
+                    , 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-5"
+                    >
+                      Popoff, Michel R.
+                    </span>
+                    , 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-6"
+                    >
+                      Hadzic, Gordana
+                    </span>
+                    , 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-7"
+                    >
+                      Mariana, Anna
+                    </span>
+                    , 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-8"
+                    >
+                      Chau, Ngoc
+                    </span>
+                    , 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-9"
+                    >
+                      McCluskey, Adam
+                    </span>
+                    , 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-10"
+                    >
+                      Robinson, Phillip J.
+                    </span>
+                    ,  and 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-11"
+                    >
+                      Meunier, Frederic A.
+                    </span>
+                     
+                  </span>
+                  <span
+                    class="citationDate"
+                  >
+                    (2016).
+                  </span>
+                  <span
+                    class="citationTitle"
+                  >
+                     Open Accessible test record.
+                  </span>
+                  <span
+                    class="citationJournalName"
+                  >
+                     Journal of Biological Chemistry 
+                  </span>
+                  <span
+                    class="citationVolumeNumber"
+                  >
+                     286 
+                  </span>
+                  <span
+                    class="citationIssueNumber"
+                  >
+                    (41) 
+                  </span>
+                  <span
+                    class="citationArticleNumber empty"
+                  />
+                  <span
+                    class="citationPageRange"
+                  >
+                    <span
+                      class="citationStartPage"
+                    >
+                      35966
+                    </span>
+                    -
+                    <span
+                      class="citationEndPage"
+                    >
+                      35976
+                    </span>
+                  </span>
+                  <span>
+                    . 
+                  </span>
+                  <span
+                    data-testid="rek-doi"
+                  >
+                    <a
+                      aria-label="Open this DOI in an new window"
+                      class="citationDoiLink css-1oqhn84"
+                      data-analyticsid="citation-doi-link"
+                      data-testid="citation-doi-link"
+                      href="https://doi.org/10.1074/jbc.M111.283879"
+                      id="citation-doi-link"
+                      rel="noopener noreferrer"
+                      tabindex="0"
+                      target="_blank"
+                      title="Open this DOI in an new window"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                        data-testid="OpenInNewIcon"
+                        focusable="false"
+                        id="citation-doi-link-new-window-icon"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                        />
+                      </svg>
+                      https://doi.org/10.1074/jbc.M111.283879
+                    </a>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              >
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
+                  >
+                    <div
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                    >
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                      >
+                        <a
+                          aria-label="Full citation in Web of science will open in a new window"
+                          class="wosCitationCount css-si3g8d"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
+                          href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000295927100070"
+                          id="wos-citation-count-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                          title="Full citation in Web of science will open in a new window"
+                        >
+                          <span
+                            class="fez-icon wos large"
+                          />
+                          <span
+                            class="MuiBox-root css-19k1sqg"
+                          >
+                            76
+                          </span>
+                        </a>
+                        <a
+                          aria-label="Full citation in Scopus will open in a new window"
+                          class="scopusCitationCount css-si3g8d"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
+                          href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-80053897195%26origin%3Dinward"
+                          id="scopus-citation-count-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                          title="Full citation in Scopus will open in a new window"
+                        >
+                          <span
+                            class="fez-icon scopus large"
+                          />
+                          <span
+                            class="MuiBox-root css-19k1sqg"
+                          >
+                            82
+                          </span>
+                        </a>
+                        <a
+                          aria-label="Full citation in Altmetric will open in a new window"
+                          class="altmetricCitationCount css-si3g8d"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
+                          href="https://queensland.altmetric.com/details/390008"
+                          id="altmetric-citation-count-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                          title="Full citation in Altmetric will open in a new window"
+                        >
+                          <span
+                            class="fez-icon altmetric large"
+                          />
+                          <span
+                            class="MuiBox-root css-19k1sqg"
+                          >
+                            1
+                          </span>
+                        </a>
+                        <a
+                          aria-label="Full citation in Google scholar will open in a new window"
+                          class="googleCitationCount css-si3g8d"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
+                          href="https://scholar.google.com/scholar?q=intitle:Open%20Accessible%20test%20record"
+                          id="google-citation-count-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                          title="Full citation in Google scholar will open in a new window"
+                        >
+                          <span
+                            class="fez-icon google large"
+                          />
+                        </a>
+                        <span
+                          class="noOaIcon"
+                          data-testid="oa-n/a-icon"
+                        />
+                      </div>
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      />
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+          />
+        </div>
+      </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
+      />
+    </div>
+    <div
+      class="publicationCitation"
+    >
+      <div
+        class="css-0"
+        data-testid="publication-citation-parent-UQ:173575"
+        id="publication-citation-parent-UQ:173575"
+      >
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                style="min-width: 1px;"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                >
+                  <a
+                    href="/view/UQ:173575"
+                  >
+                    Open Accessible test Book Chapter record
+                  </a>
+                </h6>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
+              >
+                <span
+                  class="citationContent citationBookChapter"
+                  id="citation-content-UQ:173575"
+                >
+                  <span
+                    class="citationAuthors"
+                  >
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-0"
+                    >
+                      Iwashita, N.
+                    </span>
+                     and 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-1"
+                    >
+                      Harrington, M. W.
+                    </span>
+                     
+                  </span>
+                  <span
+                    class="citationDate"
+                  >
+                    (2008).
+                  </span>
+                  <span
+                    class="citationTitle"
+                  >
+                     Open Accessible test Book Chapter record.
+                  </span>
+                  <span
+                    class="citationBookTitle"
+                  >
+                     多様化する言語習得環境とこれからの日本語教育.
+                  </span>
+                  <span
+                    class="citationEditors"
+                  >
+                     Edited by 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-contributor-0"
+                    >
+                      Sakamoto Akira
+                    </span>
+                    , 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-contributor-1"
+                    >
+                      Nagatomo Kazuhiko
+                    </span>
+                    ,  and 
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-contributor-2"
+                    >
+                      Koyanagi Kaoru
+                    </span>
+                    . 
+                  </span>
+                  <span
+                    class="citationPlaceOfPublication"
+                  >
+                     Tokyo, Japan:
+                  </span>
+                  <span
+                    class="citationPublisher"
+                  >
+                     3A Corporation.
+                  </span>
+                  <span
+                    class="citationPageRange"
+                  >
+                    <span
+                      class="citationStartPage"
+                    >
+                      79
+                    </span>
+                    -
+                    <span
+                      class="citationEndPage"
+                    >
+                      96
+                    </span>
+                    .
+                  </span>
+                  <span
+                    class="citationDOI empty"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              >
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
+                  >
+                    <div
+                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                    >
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                      >
+                        <a
+                          aria-label="Full citation in Google scholar will open in a new window"
+                          class="googleCitationCount css-si3g8d"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
+                          href="https://scholar.google.com/scholar?q=intitle:Open%20Accessible%20test%20Book%20Chapter%20record"
+                          id="google-citation-count-link"
+                          rel="noopener noreferrer"
+                          tabindex="0"
+                          target="_blank"
+                          title="Full citation in Google scholar will open in a new window"
+                        >
+                          <span
+                            class="fez-icon google large"
+                          />
+                        </a>
+                        <span
+                          class="noOaIcon"
+                          data-testid="oa-n/a-icon"
+                        />
+                      </div>
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      />
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+          />
+        </div>
+      </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
+      />
+    </div>
+    <div
+      class="publicationCitation"
+    >
+      <div
+        class="css-0"
         data-testid="publication-citation-parent-UQ:410094"
         id="publication-citation-parent-UQ:410094"
       >
@@ -434,8 +952,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:410094"
                 >
                   <span
                     class="citationAuthors"
@@ -595,7 +1114,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1038/ncomms12976
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -615,10 +1134,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000385388600003"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -636,10 +1155,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84989945657%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -657,10 +1176,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/12381138"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -678,10 +1197,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Flux%20of%20signalling%20endosomes%20undergoing%20axonal%20retrograde%20transport%20is%20encoded%20by%20presynaptic%20activity%20and%20TrkB"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -755,8 +1274,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:398497"
                 >
                   <span
                     class="citationAuthors"
@@ -922,7 +1442,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.18632/oncotarget.9781
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -942,10 +1462,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000385395700055"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -963,10 +1483,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84978646090%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -984,10 +1504,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/8476957"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1005,10 +1525,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Extracellular%20vesicles%20secreted%20by%20highly%20metastatic%20clonal%20variants%20of%20osteosarcoma%20preferentially%20localize%20to%20the%20lungs%20and%20induce%20metastatic%20behaviour%20in%20poorly%20metastatic%20clones"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1082,8 +1602,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:379178"
                 >
                   <span
                     class="citationAuthors"
@@ -1237,7 +1758,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1038/srep19654
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1257,10 +1778,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000368812400003"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1278,10 +1799,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84955446517%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1299,10 +1820,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/5042920"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1320,10 +1841,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Botulinum%20neurotoxin%20type-A%20enters%20a%20non-recycling%20pool%20of%20synaptic%20vesicles"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1397,8 +1918,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:357538"
                 >
                   <span
                     class="citationAuthors"
@@ -1557,7 +2079,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1128/JVI.03440-14
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1577,10 +2099,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000352219600012"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1598,10 +2120,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84928551972%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1619,10 +2141,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/3588125"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1640,10 +2162,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:A%20mutant%20tat%20protein%20inhibits%20HIV-1%20reverse%20transcription%20by%20targeting%20the%20reverse%20transcription%20complex"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1717,8 +2239,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:360881"
                 >
                   <span
                     class="citationAuthors"
@@ -1884,7 +2407,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1523/JNEUROSCI.3757-14.2015
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1904,10 +2427,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000353055600028"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1925,10 +2448,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84929251718%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1946,10 +2469,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/3913388"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1967,10 +2490,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Control%20of%20autophagosome%20axonal%20retrograde%20flux%20by%20presynaptic%20activity%20unveiled%20using%20botulinum%20neurotoxin%20type%20A"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2044,8 +2567,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:355233"
                 >
                   <span
                     class="citationAuthors"
@@ -2185,7 +2709,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1038/ncomms7297
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -2205,10 +2729,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000350289800005"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2226,10 +2750,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84923870078%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2247,10 +2771,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/3821356"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2268,10 +2792,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Activity-driven%20relaxation%20of%20the%20cortical%20actomyosin%20II%20network%20synchronizes%20Munc18-1-dependent%20neurosecretory%20vesicle%20docking"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2345,8 +2869,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:350994"
                 >
                   <span
                     class="citationAuthors"
@@ -2463,7 +2988,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1523/JNEUROSCI.3228-14.2015
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -2483,10 +3008,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000349669600006"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2504,10 +3029,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84921902987%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2525,10 +3050,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/3135958"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2546,10 +3071,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:An%20acto-myosin%20II%20constricting%20ring%20initiates%20the%20fission%20of%20activity-dependent%20bulk%20endosomes%20in%20neurosecretory%20cells"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2623,8 +3148,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:344420"
                 >
                   <span
                     class="citationAuthors"
@@ -2790,7 +3316,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1016/j.celrep.2014.08.059
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -2810,10 +3336,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000344468100019"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2831,10 +3357,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84907966407%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2852,10 +3378,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/2740279"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2873,10 +3399,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Increased%20polyubiquitination%20and%20proteasomal%20degradation%20of%20a%20Munc18-1%20disease-linked%20mutant%20causes%20temperature-sensitive%20defect%20in%20exocytosis"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -2950,8 +3476,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:306039"
                 >
                   <span
                     class="citationAuthors"
@@ -3236,7 +3763,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1016/j.celrep.2013.06.017
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -3256,10 +3783,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000322704400002"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -3277,10 +3804,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84880848107%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -3298,10 +3825,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/1621395"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -3319,10 +3846,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Caveolin-1%20is%20necessary%20for%20hepatic%20oxidative%20lipid%20metabolism:%20evidence%20for%20crosstalk%20between%20caveolin-1%20and%20bile%20acid%20signaling"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -3396,8 +3923,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:305893"
                 >
                   <span
                     class="citationAuthors"
@@ -3549,7 +4077,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1242/jcs.126813
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -3569,10 +4097,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000320236100004"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -3590,10 +4118,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84880018993%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -3611,10 +4139,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:The%20Munc18-1%20domain%203a%20loop%20is%20essential%20for%20neuroexocytosis%20but%20not%20for%20syntaxin-1A%20transport%20to%20the%20plasma%20membrane"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -3688,8 +4216,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:302599"
                 >
                   <span
                     class="citationAuthors"
@@ -3815,7 +4344,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1371/journal.pone.0060152
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -3835,10 +4364,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000317480700088"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -3856,10 +4385,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84875435923%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -3877,10 +4406,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Inhibition%20of%20PIKfyve%20by%20YM-201636%20Dysregulates%20Autophagy%20and%20Leads%20to%20Apoptosis-Independent%20Neuronal%20Cell%20Death"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -3954,8 +4483,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:294055"
                 >
                   <span
                     class="citationAuthors"
@@ -4100,7 +4630,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1083/jcb.201204092
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -4120,10 +4650,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000314562500008"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -4141,10 +4671,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84874366244%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -4162,10 +4692,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/1218318"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -4183,10 +4713,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Myosin%20VI%20small%20insert%20isoform%20maintains%20exocytosis%20by%20tethering%20secretory%20granules%20to%20the%20cortical%20actin"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -4260,8 +4790,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:319620"
                 >
                   <span
                     class="citationAuthors"
@@ -4378,7 +4909,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1523/JNEUROSCI.2634-13.2013
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -4398,10 +4929,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000328110100011"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -4419,10 +4950,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84889030400%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -4440,10 +4971,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Secretagogue%20stimulation%20of%20neurosecretory%20cells%20elicits%20filopodial%20extensions%20uncovering%20new%20functional%20release%20sites"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -4517,8 +5048,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:284237"
                 >
                   <span
                     class="citationAuthors"
@@ -4655,7 +5187,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1371/journal.pone.0046242
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -4675,10 +5207,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000309517300099"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -4696,10 +5228,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84866864613%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -4717,10 +5249,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Caveolin-1%20deficiency%20leads%20to%20increased%20susceptibility%20to%20cell%20death%20and%20fibrosis%20in%20white%20adipose%20tissue:%20characterization%20of%20a%20lipodystrophic%20model"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -4794,8 +5326,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:279315"
                 >
                   <span
                     class="citationAuthors"
@@ -4977,7 +5510,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1371/journal.pone.0043041
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -4997,10 +5530,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000307500100056"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5018,10 +5551,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84865055662%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5039,10 +5572,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/885842"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5060,10 +5593,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Co-regulation%20of%20cell%20polarization%20and%20migration%20by%20caveolar%20proteins%20PTRF/cavin-1%20and%20caveolin-1"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5137,8 +5670,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:265967"
                 >
                   <span
                     class="citationAuthors"
@@ -5325,7 +5859,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1002/hep.24810
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5345,10 +5879,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000303049400027"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5366,10 +5900,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84859980069%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5387,10 +5921,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/849563"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5408,10 +5942,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Caveolin-1%20orchestrates%20the%20balance%20between%20glucose%20and%20lipid-dependent%20energy%20metabolism:%20Implications%20for%20liver%20regeneration"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5485,8 +6019,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:278920"
                 >
                   <span
                     class="citationAuthors"
@@ -5631,7 +6166,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1091/mbc.E11-10-0847
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5651,10 +6186,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000306245500003"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5672,10 +6207,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84861152007%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5693,10 +6228,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Postlipolytic%20insulin-dependent%20remodeling%20of%20micro%20lipid%20droplets%20in%20adipocytes"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5770,8 +6305,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationConferencePaper"
+                  id="citation-content-UQ:277856"
                 >
                   <span
                     class="citationAuthors"
@@ -5863,7 +6399,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1016/j.toxicon.2012.04.130
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5883,10 +6419,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000305721800131"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5904,10 +6440,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Retrograde%20trafficking%20at%20the%20presynaptic%20nerve%20terminal%20using%20bacterial%20toxins"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -5981,8 +6517,9 @@ exports[`PublicationsList renders component with items 1`] = `
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:256096"
                 >
                   <span
                     class="citationAuthors"
@@ -6148,7 +6685,7 @@ exports[`PublicationsList renders component with items 1`] = `
                       https://doi.org/10.1074/jbc.M111.283879
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -6168,10 +6705,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000295927100070"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -6189,10 +6726,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-80053897195%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -6210,10 +6747,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/390008"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -6231,10 +6768,10 @@ exports[`PublicationsList renders component with items 1`] = `
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Dynamin%20inhibition%20blocks%20botulinum%20neurotoxin%20type%20A%20endocytosis%20in%20neurons%20and%20delays%20botulism"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"

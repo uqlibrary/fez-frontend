@@ -261,6 +261,11 @@ export const COLLECTION_LIST_API = (config, action = null) => {
 
 export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });
 
+export const MAKE_OPEN_ACCESS_API = ({ pid }) => ({
+    ...RECORDS_ISSUES_API({ pid }),
+    options: { params: { myOpenAccess: 1 } },
+});
+
 export const RECORDS_FEEDBACK_API = ({ pid }) => ({ apiUrl: `records/${pid}/feedback` });
 
 // search/list records apis
@@ -296,6 +301,16 @@ export const INCOMPLETE_RECORDS_API = values => ({
             rule: 'incomplete',
             ...getStandardSearchParams(values),
             ...getOpenAccessSearchParams(values),
+        },
+    },
+});
+
+export const OACOMPLIANCE_RECORDS_API = values => ({
+    apiUrl: 'records/search',
+    options: {
+        params: {
+            rule: 'noncompliantoa',
+            ...getStandardSearchParams(values),
         },
     },
 });

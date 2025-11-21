@@ -41,8 +41,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:678947"
                 >
                   <span
                     class="citationAuthors"
@@ -338,7 +339,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       https://doi.org/10.1016/j.ajhg.2017.07.007
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -358,10 +359,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000406854800009"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -379,10 +380,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026769370%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -400,10 +401,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/23460021"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -421,10 +422,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Long%20noncoding%20RNAs%20CUPID1%20and%20CUPID2%20mediate%20breast%20cancer%20risk%20at%2011q13%20by%20modulating%20the%20response%20to%20DNA%20damage"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -510,8 +511,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationDesign"
+                  id="citation-content-UQ:792104"
                 >
                   <span
                     class="citationEditors"
@@ -591,7 +593,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -611,10 +613,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Conf%20A%20proceedings"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -700,8 +702,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationBook"
+                  id="citation-content-UQ:792110"
                 >
                   <span
                     class="citationAuthors"
@@ -755,7 +758,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -775,10 +778,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Testing%20book%20with%20cache"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -864,8 +867,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationConferencePaper"
+                  id="citation-content-UQ:792111"
                 >
                   <span
                     class="citationAuthors"
@@ -922,7 +926,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   <span
                     class="citationDOI empty"
                   />
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -942,10 +946,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Conference%20paper%20with%20caching"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1031,8 +1035,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
               >
-                <div
+                <span
                   class="citationContent citationJournalArticle"
+                  id="citation-content-UQ:396321"
                 >
                   <span
                     class="citationAuthors"
@@ -1251,7 +1256,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       https://doi.org/10.1093/hmg/ddw177
                     </a>
                   </span>
-                </div>
+                </span>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1271,10 +1276,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
                           class="wosCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="wos-citation-count-link"
+                          data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000393077300011"
-                          id="citation-count-link"
+                          id="wos-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1292,10 +1297,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
                           class="scopusCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="scopus-citation-count-link"
+                          data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85014391875%26origin%3Dinward"
-                          id="citation-count-link"
+                          id="scopus-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1313,10 +1318,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
                           class="altmetricCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="altmetric-citation-count-link"
+                          data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/9271343"
-                          id="citation-count-link"
+                          id="altmetric-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -1334,10 +1339,10 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
                           class="googleCitationCount css-si3g8d"
-                          data-analyticsid="citation-count-link"
-                          data-testid="citation-count-link"
+                          data-analyticsid="google-citation-count-link"
+                          data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Long-range%20regulators%20of%20the%20lncRNA%20HOTAIR%20enhance%20its%20prognostic%20potential%20in%20breast%20cancer"
-                          id="citation-count-link"
+                          id="google-citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
