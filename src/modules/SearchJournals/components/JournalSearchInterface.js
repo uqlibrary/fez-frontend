@@ -86,7 +86,7 @@ export const JournalSearchInterface = ({
                     <Tooltip
                         id="strategic-publishing-clear-search"
                         data-testid="strategic-publishing-clear-search"
-                        title={'Click to clear search keywords'}
+                        title={'Click to start a new search'}
                     >
                         <IconButton
                             sx={{ position: 'absolute', top: 8, right: 0 }}
