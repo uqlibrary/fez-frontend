@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import { sanitiseId } from 'helpers/general';
 import { handleKeyboardPressActivate } from 'helpers/general';
-import { SelectedSearchTermTypedItem } from './SelectedSearchTermTypedItem';
+import { SelectedSearchCriteriaItem } from './SelectedSearchCriteriaItem';
 
 export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
     const handleDeleteKeyword = React.useCallback(() => {
@@ -12,7 +12,7 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
 
     const idValue = sanitiseId(`journal-search-chip-${keyword.type}-${keyword.text}`);
     return (
-        <SelectedSearchTermTypedItem
+        <SelectedSearchCriteriaItem
             id={idValue}
             data-testid={idValue}
             data-analyticsid={idValue}
@@ -33,7 +33,7 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
             >
                 {keyword.text}
             </Typography>
-        </SelectedSearchTermTypedItem>
+        </SelectedSearchCriteriaItem>
     );
 };
 
