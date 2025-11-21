@@ -4,10 +4,10 @@ import IconButton from '@mui/material/IconButton';
 import NewLabelRounded from '@mui/icons-material/NewLabelTwoTone';
 import { useState } from 'react';
 import { styled } from '@mui/material/styles';
-import { SelectedSearchTermTypedItem } from './SelectedSearchTermTypedItem';
+import { SelectedSearchCriteriaItem } from './SelectedSearchCriteriaItem';
 import { ForCodeAutocompleteField } from './ForCodeAutocompleteField';
 
-const BorderedChip = styled(SelectedSearchTermTypedItem)(() => ({
+const BorderedChip = styled(SelectedSearchCriteriaItem)(() => ({
     borderRadius: 999,
     border: '1px solid #999',
     paddingLeft: 12,

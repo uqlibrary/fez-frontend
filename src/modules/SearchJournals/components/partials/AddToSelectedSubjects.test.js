@@ -1,49 +1,62 @@
 import React from 'react';
-import { render, userEvent } from 'test-utils';
+import { render, userEvent, waitForText, WithRedux } from 'test-utils';
 import { AddToSelectedSubjects } from './AddToSelectedSubjects';
 
-jest.mock('./ForCodeAutocompleteField', () => ({
-    ForCodeAutocompleteField: jest.fn(props => (
-        <input
-            data-testid="for-code-autocomplete"
-            // trigger onChange with a fake item when we simulate a change
-            onChange={() => props.onChange && props.onChange({ key: '123', value: 'Test subject' })}
-            onKeyDown={props.onKeyDown}
-        />
-    )),
+jest.mock('hooks/useControlledVocabs', () => ({
+    __esModule: true,
+    useControlledVocabs: jest.fn().mockReturnValue({
+        items: [
+            {
+                key: 453236,
+                value: '1000 General',
+            },
+        ],
+        fetch: jest.fn(),
+        itemsLoading: false,
+    }),
 }));
 
-const setup = onAdd => render(<AddToSelectedSubjects onAdd={onAdd || jest.fn} />);
+import { useControlledVocabs } from 'hooks/useControlledVocabs';
+import { FOR_CODE_VOCAB_ID } from '../../../../config/general';
+
+const setup = onAdd =>
+    render(
+        <WithRedux>
+            <AddToSelectedSubjects onAdd={onAdd || jest.fn} />
+        </WithRedux>,
+    );
 describe('AddToSelectedSubjects', () => {
-    it('renders the add button (closed state) by default', () => {
+    it('should render the add button (closed state) by default', () => {
         const { getByTestId, queryByTestId } = setup();
         expect(getByTestId('add-to-subject-selection-button')).toBeInTheDocument();
-        expect(queryByTestId('for-code-autocomplete')).not.toBeInTheDocument();
+        expect(queryByTestId('for-code-autocomplete-field-input')).not.toBeInTheDocument();
     });
 
-    it('opens the bordered chip with autocomplete when the button is clicked', async () => {
+    it('should open the bordered chip with autocomplete when the button is clicked', async () => {
         const { getByTestId, queryByTestId } = setup();
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
         expect(queryByTestId('add-to-subject-selection-button')).not.toBeInTheDocument();
-        expect(getByTestId('for-code-autocomplete')).toBeInTheDocument();
+        expect(getByTestId('for-code-autocomplete-field-input')).toBeInTheDocument();
     });
 
-    it('calls onAdd with mapped subject and closes when a subject is selected', async () => {
+    it('should call given onAdd with mapped subject and closes when a subject is selected', async () => {
         const onAdd = jest.fn();
-        const { getByTestId, queryByTestId } = setup(onAdd);
+        const { getByTestId, queryByTestId, getByRole, getAllByRole } = setup(onAdd);
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
-        await userEvent.type(getByTestId('for-code-autocomplete'), 'subject');
+        await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '100');
+        await userEvent.click(await waitForText('1000 General'));
 
+        expect(useControlledVocabs).toHaveBeenCalledWith(FOR_CODE_VOCAB_ID);
         expect(onAdd).toHaveBeenCalledTimes(1);
         expect(onAdd).toHaveBeenCalledWith({
             type: 'Subject',
-            cvoId: '123',
-            text: 'Test subject',
+            cvoId: 453236,
+            text: '1000 General',
         });
         // should close after adding
-        expect(queryByTestId('for-code-autocomplete')).not.toBeInTheDocument();
+        expect(queryByTestId('for-code-autocomplete-field-input')).not.toBeInTheDocument();
         expect(getByTestId('add-to-subject-selection-button')).toBeInTheDocument();
     });
 
@@ -52,9 +65,9 @@ describe('AddToSelectedSubjects', () => {
         const { getByTestId, queryByTestId } = setup(onAdd);
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
-        await userEvent.type(getByTestId('for-code-autocomplete'), '{escape}');
+        await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '{escape}');
 
-        expect(queryByTestId('for-code-autocomplete')).not.toBeInTheDocument();
+        expect(queryByTestId('for-code-autocomplete-field-input')).not.toBeInTheDocument();
         expect(getByTestId('add-to-subject-selection-button')).toBeInTheDocument();
         // onAdd must not have been called
         expect(onAdd).not.toHaveBeenCalled();
