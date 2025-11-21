@@ -45,9 +45,9 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }
         return (
             <Tooltip title="Add a subject to refine result">
                 <IconButton
-                    data-testid={'add-to-subject-selection-button'}
                     color="info"
                     onClick={() => setIsOpen(true)}
+                    data-testid={'add-to-subject-selection-button'}
                 >
                     <NewLabelRounded />
                 </IconButton>
@@ -63,11 +63,11 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }
 
     return (
         <BorderedChip
+            type={'Subject'}
+            onDelete={close}
             sx={{
                 '& .MuiChip-label > .MuiAutocomplete-root': { minWidth: 220 },
             }}
-            type={'Subject'}
-            onDelete={close}
         >
             <ForCodeAutocompleteField
                 onChange={handleOnAdd}

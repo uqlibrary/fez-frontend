@@ -79,7 +79,7 @@ export const JournalSearchInterface = ({
                             onKeywordDelete={handleKeywordDelete}
                             keywords={Object.values(selectedKeywords)}
                         />
-                        <AddToSelectedSubjects onAdd={handleKeywordAdd} />
+                        {!showInputControls && <AddToSelectedSubjects onAdd={handleKeywordAdd} />}
                     </Grid>
                 )}
                 {hasAnySelectedKeywords && !showInputControls && (
