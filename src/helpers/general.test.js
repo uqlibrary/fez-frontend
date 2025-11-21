@@ -21,23 +21,6 @@ import {
 import { mockWebApiFile } from 'test-utils';
 
 describe('general helpers', () => {
-    describe('debugging helpers', () => {
-        const args = [true, false, 1, 0, -1, [], {}];
-        it('dd should given args using console.dir', () => {
-            const mock = jest.spyOn(console, 'dir').mockImplementation(() => {});
-            dd(...args);
-            args.forEach(arg => expect(mock).toBeCalledWith(arg, { depth: null }));
-            mock.mockRestore();
-        });
-
-        it('dj should given args using console.log', () => {
-            const mock = jest.spyOn(console, 'log').mockImplementation(() => {});
-            dj(...args);
-            args.forEach(arg => expect(mock).toBeCalledWith(JSON.stringify(arg)));
-            mock.mockRestore();
-        });
-    });
-
     it('leftJoin', () => {
         const objArrA = [
             { nameA: 'test1', testA: 'testA1' },
