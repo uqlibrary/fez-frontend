@@ -4813,7 +4813,7 @@ export default {
                     },
                     accepted: {
                         open: 'Immediate access via UQ eSpace',
-                        embargo: 'Delayed access via UQ eSpace',
+                        embargo: months => `${months} months delayed access via UQ eSpace`,
                     },
                 },
             },
