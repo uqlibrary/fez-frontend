@@ -72,7 +72,11 @@ describe('AdminActions component', () => {
 
         fireEvent.click(getByText(/edit selected journal/i, menu));
         expect(global.window.open).toHaveBeenCalledTimes(1);
-        expect(global.window.open).toHaveBeenCalledWith('http://localhost/admin/journal/edit/12', '_blank', null);
+        expect(global.window.open).toHaveBeenCalledWith(
+            'https://fez-staging.library.uq.edu.au/admin/journal/edit/12',
+            '_blank',
+            null,
+        );
     });
 
     it('should handle alternate click events', () => {
@@ -83,7 +87,11 @@ describe('AdminActions component', () => {
 
         fireEvent.contextMenu(getByText(/edit selected journal/i, menu));
         expect(global.window.open).toHaveBeenCalledTimes(1);
-        expect(global.window.open).toHaveBeenCalledWith('http://localhost/admin/journal/edit/12', '_blank', null);
+        expect(global.window.open).toHaveBeenCalledWith(
+            'https://fez-staging.library.uq.edu.au/admin/journal/edit/12',
+            '_blank',
+            null,
+        );
     });
 
     it('should open the new edit url if user is whitelisted', () => {
@@ -99,7 +107,7 @@ describe('AdminActions component', () => {
 
         expect(global.window.open).toHaveBeenCalledTimes(1);
         expect(global.window.open).toHaveBeenCalledWith(
-            'http://localhost/admin/journal/edit/12?navigatedFrom=test',
+            'https://fez-staging.library.uq.edu.au/admin/journal/edit/12?navigatedFrom=test',
             '_self',
             null,
         );

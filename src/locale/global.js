@@ -2,7 +2,6 @@ import React from 'react';
 import { APP_URL } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
 import { RESOLVER_URL_PREFIX } from 'config/general';
-import { Link } from 'react-router-dom';
 
 /*
 
@@ -28,14 +27,14 @@ export default {
     global: {
         title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
         appTitle: (
-            <Link
-                to={pathConfig.index}
+            <a
+                href={`${pathConfig.index}`}
                 className="appTitle"
                 title="Click to return to the eSpace home page"
                 style={{ color: '#FFFFFF' }}
             >
                 UQ eSpace {process.env.TITLE_SUFFIX || ''}
-            </Link>
+            </a>
         ),
         logo: {
             // image: 'https://static.uq.net.au/v2/logos/corporate/uq-logo-white.svg',
