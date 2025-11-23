@@ -1,8 +1,6 @@
 import param from 'can-param';
-import { DEFAULT_QUERY_PARAMS } from 'config/general';
+import { APP_URL, DEFAULT_QUERY_PARAMS, IS_DEVELOPMENT_BRANCH, IS_TEST, STAGING_URL } from 'config/general';
 import { createHash } from 'crypto';
-
-export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 
 export const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUrl = '/records/search') => {
     const params = {
@@ -64,27 +62,24 @@ export const pathConfig = {
         mine: '/records/mine',
         possible: '/records/possible',
         search: '/records/search',
-        view: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view/${pid}`,
+        view: (pid, includeFullPath = false) => `${includeFullPath ? APP_URL : '/'}view/${pid}`,
         version: (pid, version) => `/view/${pid}/${version}`,
     },
     dataset: {
         mine: '/data-collections/mine',
-        // legacy: `${fullPath}/workflow/new.php?xdis_id=371&pid=UQ:289097&cat=select_workflow&wft_id=315`,
         add: '/data-collections/add',
     },
     editorialAppointments: {
         list: '/editorial-appointments',
     },
-    // TODO: update how we get files after security is implemented in fez file api
-    // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
         url: (pid, fileName, checksum = '') => {
             let version = getDatastreamVersionQueryString(fileName, checksum);
             if (version) {
                 version = `?dsi_version=${version}`;
             }
-
-            return `${fullPath}/view/${pid}/${fileName}${version}`;
+            const appUrl = !IS_TEST && IS_DEVELOPMENT_BRANCH ? STAGING_URL : APP_URL;
+            return `${appUrl}view/${pid}/${fileName}${version}`;
         },
     },
     // TODO: review institutional status and herdc status links when we start administrative epic
