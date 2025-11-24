@@ -96,9 +96,13 @@ export const viewJournalConfig = {
                                 <span>{item.element}</span>
                                 <span>
                                     {`${
-                                        componentLocale.components.searchJournals.openAccessIndicators.tooltips[
-                                            item.type
-                                        ][item.status]
+                                        item.status === 'embargo' && !!item.embargoPeriod
+                                            ? componentLocale.components.searchJournals.openAccessIndicators.tooltips[
+                                                  item.type
+                                              ][item.status](item.embargoPeriod)
+                                            : componentLocale.components.searchJournals.openAccessIndicators.tooltips[
+                                                  item.type
+                                              ][item.status]
                                     } (${item.type.charAt(0).toUpperCase() + item.type.slice(1)} Version)`}
                                 </span>
                             </>
@@ -232,7 +236,6 @@ export const viewJournalConfig = {
         ],
     },
     readAndPublish: {
-        key: 'fez_journal_read_and_publish',
         title: viewJournalLocale.viewJournal.readAndPublish.title,
         rows: [
             [
@@ -241,27 +244,25 @@ export const viewJournalConfig = {
                     fieldId: 'jnl-read-and-publish',
                     getData: journalDetails => {
                         return {
-                            publisher:
-                                journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_publisher,
-                            discount:
-                                journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted,
-                            capped:
-                                journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped,
+                            publisher: journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_publisher,
+                            discount: journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_discounted,
+                            capped: journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped.toLowerCase(),
                         };
                     },
                     template: 'EnclosedLinkTemplate',
                     templateProps: {
                         href: data =>
-                            !!data.publisher ? viewJournalLocale.viewJournal.readAndPublish.externalUrl : '',
+                            !!data.publisher && data.capped !== 'nodeal'
+                                ? viewJournalLocale.viewJournal.readAndPublish.externalUrl
+                                : '',
                         prefix: data => {
-                            const { publisher, discount } = data;
+                            const { publisher, discount, capped } = data;
                             const { prefixText } = viewJournalLocale.viewJournal.readAndPublish;
+                            const isNoDeal = capped === 'nodeal';
 
-                            let returnData = publisher ? prefixText.replace('<publisher>', publisher) : 'No';
-                            if (publisher && discount) {
+                            let returnData =
+                                publisher && !isNoDeal ? prefixText.replace('<publisher>', publisher) : 'No';
+                            if (!isNoDeal && publisher && discount) {
                                 returnData = returnData.replace('<discount>', ' discount available');
                             } else {
                                 returnData = returnData.replace('<discount>', '');
@@ -282,7 +283,8 @@ export const viewJournalConfig = {
                     getData: journalDetails => {
                         return (
                             journalDetails.fez_journal_read_and_publish &&
-                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped
+                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped.toLowerCase() !==
+                                'nodeal'
                         );
                     },
                     template: 'LinkTemplate',
@@ -297,11 +299,9 @@ export const viewJournalConfig = {
                 {
                     heading: viewJournalLocale.viewJournal.readAndPublish.lastUpdatedHeading,
                     fieldId: 'jnl-read-and-publish-source-date',
-                    data: [
-                        {
-                            path: ['fez_journal_read_and_publish', 'jnl_read_and_publish_source_date'],
-                        },
-                    ],
+                    getData: journalDetails =>
+                        journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped.toLowerCase() !==
+                            'nodeal' && journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_source_date,
                     template: 'DateTimeTemplate',
                     templateProps: {
                         format: 'Do MMMM YYYY',
