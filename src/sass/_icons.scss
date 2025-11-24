@@ -11,6 +11,12 @@
   &.openalex::before {
     content: url(~/src/images/openalex_icon.svg);
   }
+  &.for2008::before {
+    content: url(~/src/images/for2008_icon.svg);
+  }
+  &.for2020::before {
+    content: url(~/src/images/for2020_icon.svg);
+  }
   &.pubmed::before {
     content: url(~/src/images/pubmed_icon.svg);
   }

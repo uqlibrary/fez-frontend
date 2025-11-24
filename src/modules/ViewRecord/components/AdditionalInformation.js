@@ -153,11 +153,10 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                                 let iconHint = '';
                                 const subject = String(data).replace(/\|(for2020|for2008|openalex)$/, match => {
                                     icon = match.slice(1);
-                                    iconHint =
-                                        icon === 'openalex' ? 'OpenAlex' : icon.charAt(0).toUpperCase() + icon.slice(1);
+                                    iconHint = icon === 'openalex' ? 'OpenAlex' : icon.toUpperCase();
                                     return '';
                                 });
-                                return renderLinkWithIcon(getLink(subject, data), data, 'openalex', 'OpenAlex');
+                                return renderLinkWithIcon(getLink(subject, subject), subject, icon, iconHint);
                             } else {
                                 return data;
                             }
