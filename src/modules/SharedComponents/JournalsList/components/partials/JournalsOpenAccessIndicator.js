@@ -44,11 +44,11 @@ const JournalsOpenAccessIndicator = ({
     const classes = {
         [oaStatus.open]: {
             '& .iconColumn': {
-                backgroundColor: green[800],
+                backgroundColor: 'rgba(0,0,0,0.8)',
             },
             '& .labelColumn': {
-                backgroundColor: green[50],
-                color: green[800],
+                backgroundColor: 'rgba(0,0,0,0.05)',
+                color: 'rgba(0,0,0,0.8)',
             },
         },
         [`${types.published}${oaStatus.open}`]: {
@@ -71,12 +71,12 @@ const JournalsOpenAccessIndicator = ({
         },
         [oaStatus.embargo]: {
             '& .iconColumn': {
-                backgroundColor: 'rgba(0,0,0,0.8)',
+                backgroundColor: green[800],
                 color: 'rgba(255,255,255)',
             },
             '& .labelColumn': {
-                backgroundColor: 'rgba(0,0,0,0.05)',
-                color: 'rgba(0,0,0,0.8)',
+                backgroundColor: green[50],
+                color: green[800],
             },
         },
         [oaStatus.fee]: {
