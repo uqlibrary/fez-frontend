@@ -142,7 +142,6 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
 
     const renderSubject = (list, subkey, getLink) => {
         const testId = subkey.replace(/_/g, '-');
-        console.log('list', list);
         return (
             <Box component={'ul'} key={subkey} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
                 {list.map((item, index) => (
@@ -150,7 +149,15 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                         {(() => {
                             const data = getData(item, subkey);
                             if (getLink) {
-                                return renderLinkWithIcon(getLink(item[subkey], data), data, 'openalex', 'OpenAlex');
+                                let icon = '';
+                                let iconHint = '';
+                                const subject = String(data).replace(/\|(for2020|for2008|openalex)$/, match => {
+                                    icon = match.slice(1);
+                                    iconHint =
+                                        icon === 'openalex' ? 'OpenAlex' : icon.charAt(0).toUpperCase() + icon.slice(1);
+                                    return '';
+                                });
+                                return renderLinkWithIcon(getLink(subject, data), data, 'openalex', 'OpenAlex');
                             } else {
                                 return data;
                             }
