@@ -421,7 +421,7 @@ export const helpersTypicalExpected = {
             fez_journal_nature_index: null,
             fez_journal_pubmed: null,
             fez_journal_read_and_publish: {
-                jnl_read_and_publish_is_capped: false,
+                jnl_read_and_publish_is_capped: 'N',
                 jnl_read_and_publish_is_discounted: true,
                 jnl_read_and_publish_issn: '2169-0375',
                 jnl_read_and_publish_publisher: 'De Gruyter',
@@ -461,7 +461,7 @@ export const helpersTypicalExpected = {
                 count: 0,
                 id: 12,
             },
-            jnl_read_and_publish_is_capped: false,
+            jnl_read_and_publish_is_capped: 'N',
             jnl_read_and_publish_is_discounted: true,
             jnl_read_and_publish_issn: '2169-0375',
             jnl_read_and_publish_publisher: 'De Gruyter',
@@ -850,7 +850,7 @@ export const helpersNonTypicalExpected = {
             fez_journal_nature_index: null,
             fez_journal_pubmed: null,
             fez_journal_read_and_publish: {
-                jnl_read_and_publish_is_capped: false,
+                jnl_read_and_publish_is_capped: 'N',
                 jnl_read_and_publish_is_discounted: true,
                 jnl_read_and_publish_issn: '2169-0375',
                 jnl_read_and_publish_publisher: 'De Gruyter',

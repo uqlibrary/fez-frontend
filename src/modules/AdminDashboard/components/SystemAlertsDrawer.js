@@ -16,12 +16,75 @@ import TextField from '@mui/material/TextField';
 import CircularProgress from '@mui/material/CircularProgress';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import IconButton from '@mui/material/IconButton';
+import Copy from '@mui/icons-material/FileCopyOutlined';
+import Tooltip from '@mui/material/Tooltip';
+import { FEZ_USER_SYSTEM_ID, FEZ_USER_SYSTEM_LABEL } from '../../../config/general';
 
 const rootId = 'system-alert-detail';
 const StyledDivider = styled(Divider)(({ theme }) => ({
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
 }));
+
+/**
+ * @return {boolean}
+ */
+const isClipboardAvailable = () => !!navigator.clipboard;
+
+/**
+ * @param data
+ * @return {Promise<void>}
+ */
+const handleCopyCreatorUsername = data => navigator?.clipboard?.writeText?.(data);
+
+/**
+ * @param {object} row
+ * @return {React.JSX.Element|null}
+ */
+const renderCopyCreatorUsernameButton = row => {
+    const data = row?.creator?.usr_username;
+    /* istanbul ignore next */
+    if (!data) return null;
+
+    const id = row?.sat_id;
+    const disabled = !isClipboardAvailable();
+    return (
+        <Tooltip title={!disabled && 'Copy to clipboard'}>
+            <span>
+                <IconButton
+                    aria-label={!disabled && `Copy requester's username (${data}) to clipboard`}
+                    onClick={() => handleCopyCreatorUsername(data)}
+                    data-analyticsid={`${rootId}-${id}-copy-username`}
+                    data-testid={`${rootId}-${id}-copy-username`}
+                    id={`${rootId}-${id}-copy-username`}
+                    sx={{ p: 0, mt: -1.25, ml: 0.5 }}
+                    disabled={disabled}
+                    size="small"
+                >
+                    <Copy color={disabled ? 'disabled' : 'secondary'} fontSize="small" sx={{ width: 14 }} />
+                </IconButton>
+            </span>
+        </Tooltip>
+    );
+};
+
+/**
+ * @param row
+ * @return {Element}
+ */
+const renderCreatorsUsername = row => {
+    return (
+        (row?.creator?.usr_id === FEZ_USER_SYSTEM_ID && (
+            <Typography color={'disabled'}>{FEZ_USER_SYSTEM_LABEL}</Typography>
+        )) || (
+            <span>
+                {row?.creator?.usr_username}
+                {renderCopyCreatorUsernameButton(row)}
+            </span>
+        )
+    );
+};
 
 const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpdate }) => {
     const config = useSelector(
@@ -152,6 +215,16 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                 }}
                             >
                                 {getFormattedServerDate(row.sat_created_date, DEFAULT_DATE_FORMAT_WITH_TIME_24H)}
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Typography fontWeight={400} data-testid={`${rootId}-creator-label`}>
+                                {txt.creator}
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={8}>
+                            <Typography fontWeight={'normal'} data-testid={`${rootId}-creator`}>
+                                {renderCreatorsUsername(row)}
                             </Typography>
                         </Grid>
                     </Grid>

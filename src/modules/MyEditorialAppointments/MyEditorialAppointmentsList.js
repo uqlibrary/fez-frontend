@@ -563,6 +563,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
         enableColumnFilterModes: false,
         enablePagination: false,
         enableToolbarInternalActions: false,
+        enableKeyboardShortcuts: false,
         positionActionsColumn: 'last',
         state: {
             showAlertBanner: false,
@@ -703,7 +704,12 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             sx: {
                 '&:last-of-type > div': {
                     gap: 0,
-                    [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: { flexDirection: 'row-reverse', justifyContent: 'flex-end' },
+                    [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: {
+                        flexDirection: 'row-reverse',
+                        justifyContent: 'flex-end',
+                        '& button[aria-label=Save]': { order: 1 },
+                        '& button[aria-label=Cancel]': { order: 2 },
+                    },
                 },
                 '&:not(:last-child)': { alignContent: 'flex-start' },
             },

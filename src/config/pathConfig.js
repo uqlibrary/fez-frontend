@@ -59,6 +59,8 @@ export const pathConfig = {
         fix: pid => `/records/${pid}/fix`,
         incomplete: '/records/incomplete',
         incompleteFix: pid => `/records/${pid}/incomplete`,
+        openAccessCompliance: '/records/my-open-access',
+        openAccessComplianceFix: pid => `/records/${pid}/make-open-access`,
         mine: '/records/mine',
         possible: '/records/possible',
         search: '/records/search',
@@ -195,8 +197,8 @@ export const pathConfig = {
     authorIdentifiers: {
         orcid: {
             link: '/author-identifiers/orcid/link',
-            absoluteLink: `${window.location.origin}${
-                process.env.BRANCH === 'development' ? window.location.pathname : ''
+            absoluteLink: `${typeof window !== 'undefined' ? window.location.origin : ''}${
+                process.env.BRANCH === 'development' && typeof window !== 'undefined' ? window.location.pathname : ''
             }/author-identifiers/orcid/link`,
             // unlink: '/author-identifiers/orcid/link'
         },

@@ -99,8 +99,9 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-null"
                             >
                               <span
                                 class="citationAuthors"
@@ -210,7 +211,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -230,10 +231,10 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
                                       class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="wos-citation-count-link"
+                                      data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
-                                      id="citation-count-link"
+                                      id="wos-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -251,10 +252,10 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                     <a
                                       aria-label="Full citation in Scopus will open in a new window"
                                       class="scopusCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="scopus-citation-count-link"
+                                      data-testid="scopus-citation-count-link"
                                       href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
-                                      id="citation-count-link"
+                                      id="scopus-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -272,10 +273,10 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                     <a
                                       aria-label="Full citation in Altmetric will open in a new window"
                                       class="altmetricCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="altmetric-citation-count-link"
+                                      data-testid="altmetric-citation-count-link"
                                       href="https://queensland.altmetric.com/details/20711411"
-                                      id="citation-count-link"
+                                      id="altmetric-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -837,8 +838,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationDataCollection"
+                              id="citation-content-null"
                             >
                               <span
                                 class="citationAuthors"
@@ -908,7 +910,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                   https://doi.org/10.14264/uql.2016.841
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1536,8 +1538,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-null"
                             >
                               <span
                                 class="citationAuthors"
@@ -1640,7 +1643,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -1660,10 +1663,10 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
                                       class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="wos-citation-count-link"
+                                      data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
-                                      id="citation-count-link"
+                                      id="wos-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -1681,10 +1684,10 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                     <a
                                       aria-label="Full citation in Scopus will open in a new window"
                                       class="scopusCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="scopus-citation-count-link"
+                                      data-testid="scopus-citation-count-link"
                                       href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
-                                      id="citation-count-link"
+                                      id="scopus-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -1702,10 +1705,10 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                     <a
                                       aria-label="Full citation in Altmetric will open in a new window"
                                       class="altmetricCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="altmetric-citation-count-link"
+                                      data-testid="altmetric-citation-count-link"
                                       href="https://queensland.altmetric.com/details/20711411"
-                                      id="citation-count-link"
+                                      id="altmetric-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -2366,8 +2369,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationDataCollection"
+                              id="citation-content-null"
                             >
                               <span
                                 class="citationAuthors empty"
@@ -2430,7 +2434,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                   https://doi.org/10.14264/uql.2016.841
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -2963,8 +2967,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:676287"
                             >
                               <span
                                 class="citationAuthors"
@@ -3124,7 +3129,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -3144,10 +3149,10 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
                                       class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="wos-citation-count-link"
+                                      data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
-                                      id="citation-count-link"
+                                      id="wos-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -3165,10 +3170,10 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                     <a
                                       aria-label="Full citation in Scopus will open in a new window"
                                       class="scopusCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="scopus-citation-count-link"
+                                      data-testid="scopus-citation-count-link"
                                       href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
-                                      id="citation-count-link"
+                                      id="scopus-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -3186,10 +3191,10 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                     <a
                                       aria-label="Full citation in Altmetric will open in a new window"
                                       class="altmetricCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="altmetric-citation-count-link"
+                                      data-testid="altmetric-citation-count-link"
                                       href="https://queensland.altmetric.com/details/20711411"
-                                      id="citation-count-link"
+                                      id="altmetric-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -3207,10 +3212,10 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
                                       class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="google-citation-count-link"
+                                      data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
-                                      id="citation-count-link"
+                                      id="google-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -4269,8 +4274,9 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:676287"
                             >
                               <span
                                 class="citationAuthors"
@@ -4430,7 +4436,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -4450,10 +4456,10 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
                                       class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="wos-citation-count-link"
+                                      data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
-                                      id="citation-count-link"
+                                      id="wos-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -4471,10 +4477,10 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                     <a
                                       aria-label="Full citation in Scopus will open in a new window"
                                       class="scopusCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="scopus-citation-count-link"
+                                      data-testid="scopus-citation-count-link"
                                       href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
-                                      id="citation-count-link"
+                                      id="scopus-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -4492,10 +4498,10 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                     <a
                                       aria-label="Full citation in Altmetric will open in a new window"
                                       class="altmetricCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="altmetric-citation-count-link"
+                                      data-testid="altmetric-citation-count-link"
                                       href="https://queensland.altmetric.com/details/20711411"
-                                      id="citation-count-link"
+                                      id="altmetric-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -4513,10 +4519,10 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
                                       class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="google-citation-count-link"
+                                      data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
-                                      id="citation-count-link"
+                                      id="google-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -5589,8 +5595,9 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:676287"
                             >
                               <span
                                 class="citationAuthors"
@@ -5700,7 +5707,7 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -5720,10 +5727,10 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
                                       class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="wos-citation-count-link"
+                                      data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
-                                      id="citation-count-link"
+                                      id="wos-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -5741,10 +5748,10 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                     <a
                                       aria-label="Full citation in Scopus will open in a new window"
                                       class="scopusCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="scopus-citation-count-link"
+                                      data-testid="scopus-citation-count-link"
                                       href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
-                                      id="citation-count-link"
+                                      id="scopus-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -5762,10 +5769,10 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                     <a
                                       aria-label="Full citation in Altmetric will open in a new window"
                                       class="altmetricCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="altmetric-citation-count-link"
+                                      data-testid="altmetric-citation-count-link"
                                       href="https://queensland.altmetric.com/details/20711411"
-                                      id="citation-count-link"
+                                      id="altmetric-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -5783,10 +5790,10 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
                                       class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="google-citation-count-link"
+                                      data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
-                                      id="citation-count-link"
+                                      id="google-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -5991,8 +5998,9 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:676287"
                             >
                               <span
                                 class="citationAuthors"
@@ -6152,7 +6160,7 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                   https://doi.org/10.1242/jcs.196659
                                 </a>
                               </span>
-                            </div>
+                            </span>
                           </div>
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
@@ -6172,10 +6180,10 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
                                       class="wosCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="wos-citation-count-link"
+                                      data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
-                                      id="citation-count-link"
+                                      id="wos-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -6193,10 +6201,10 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                     <a
                                       aria-label="Full citation in Scopus will open in a new window"
                                       class="scopusCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="scopus-citation-count-link"
+                                      data-testid="scopus-citation-count-link"
                                       href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
-                                      id="citation-count-link"
+                                      id="scopus-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -6214,10 +6222,10 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                     <a
                                       aria-label="Full citation in Altmetric will open in a new window"
                                       class="altmetricCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="altmetric-citation-count-link"
+                                      data-testid="altmetric-citation-count-link"
                                       href="https://queensland.altmetric.com/details/20711411"
-                                      id="citation-count-link"
+                                      id="altmetric-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
@@ -6235,10 +6243,10 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
                                       class="googleCitationCount css-si3g8d"
-                                      data-analyticsid="citation-count-link"
-                                      data-testid="citation-count-link"
+                                      data-analyticsid="google-citation-count-link"
+                                      data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
-                                      id="citation-count-link"
+                                      id="google-citation-count-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"

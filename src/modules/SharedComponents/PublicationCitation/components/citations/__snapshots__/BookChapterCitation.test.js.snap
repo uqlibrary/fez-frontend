@@ -2,8 +2,9 @@
 
 exports[`BookChapterCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationBookChapter"
+    id="citation-content-UQ:376215"
   >
     <span
       class="citationAuthors"
@@ -153,14 +154,15 @@ exports[`BookChapterCitation renders  component with a mock espace record 1`] = 
         https://doi.org/10.1007/978-94-017-7417-8_7
       </a>
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`BookChapterCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationBookChapter"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -192,6 +194,6 @@ exports[`BookChapterCitation renders  component with empty publication 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

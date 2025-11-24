@@ -12,7 +12,7 @@ export const CitationCountView = ({ source, count, link, title }) => {
     return (
         <React.Fragment>
             <ExternalLink
-                id="citation-count"
+                id={`${source}-citation-count`}
                 className={`${source}CitationCount`}
                 sx={{ ...theme.typography.caption, marginRight: '8px' }}
                 href={link}

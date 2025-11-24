@@ -7,10 +7,12 @@ import JournalSearchFacetsFilter, {
     showFavouritedOnlyFacet,
 } from './JournalSearchFacetsFilter';
 
-import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { screen, fireEvent, render, userEvent, WithReduxStore, WithRouter } from 'test-utils';
 
 import * as hooks from '../hooks';
 import { useLocation } from 'react-router-dom';
+import param from 'can-param';
+import kebabCase from 'lodash/kebabCase';
 
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
@@ -353,5 +355,179 @@ describe('Search Journals Facets component', () => {
         expect(queryByTestId(clearScieFacetFilterTestId)).not.toBeInTheDocument();
         // make sure the reset facet filter button is NOT visible
         expect(queryByTestId(resetFacetFiltersButtonId)).not.toBeInTheDocument();
+    });
+
+    describe('`Open search: accepted version`', () => {
+        const availableFacets = {
+            filters: {
+                facets: {
+                    ...facets.filters.facets,
+                    'Open access: accepted version': {
+                        doc_count_error_upper_bound: 0,
+                        sum_other_doc_count: 0,
+                        buckets: [
+                            {
+                                key: '12 month embargo via repository',
+                                doc_count: 22,
+                            },
+                            {
+                                key: '18 month embargo via repository',
+                                doc_count: 2,
+                            },
+                            {
+                                key: '6 month embargo via repository',
+                                doc_count: 0,
+                            },
+                            {
+                                key: 'Immediate access via repository',
+                                doc_count: 8,
+                            },
+                        ],
+                    },
+                },
+            },
+        };
+
+        const onFacetsChangedHandler = jest.fn();
+        const activate = async option =>
+            await userEvent.click(
+                screen.getByTestId(`facet-filter-nested-item-open-access-accepted-version-${kebabCase(option)}`),
+            );
+        const deactivate = async option =>
+            await userEvent.click(
+                screen.getByTestId(`clear-facet-filter-nested-item-open-access-accepted-version-${kebabCase(option)}`),
+            );
+        const assertActiveValues = (...expected) =>
+            expect(onFacetsChangedHandler).toHaveBeenCalledWith({
+                filters: !!expected.length
+                    ? {
+                          'Open access: accepted version': [...expected],
+                      }
+                    : {},
+                ranges: {},
+            });
+
+        afterEach(() => onFacetsChangedHandler.mockReset());
+        describe('when empty', () => {
+            const expandCategory = async () =>
+                await userEvent.click(screen.getByTestId('expand-more-facet-category-open-access-accepted-version'));
+
+            it('should allow selecting single value', async () => {
+                setup({ ...availableFacets, onFacetsChangedHandler });
+
+                await expandCategory();
+                await activate('Immediate access via repository');
+                assertActiveValues('Immediate access via repository');
+            });
+
+            it('should allow selecting range', async () => {
+                setup({ ...availableFacets, onFacetsChangedHandler });
+
+                await expandCategory();
+                await activate('12 month embargo via repository');
+                assertActiveValues(
+                    '12 month embargo via repository',
+                    '6 month embargo via repository',
+                    'Immediate access via repository',
+                );
+            });
+
+            it('should select all when selecting range head', async () => {
+                setup({ ...availableFacets, onFacetsChangedHandler });
+
+                await expandCategory();
+                await activate('18 month embargo via repository');
+                assertActiveValues(
+                    '18 month embargo via repository',
+                    '12 month embargo via repository',
+                    '6 month embargo via repository',
+                    'Immediate access via repository',
+                );
+            });
+        });
+
+        describe('with active values', () => {
+            const mockActiveValues = (...values) => {
+                useLocation.mockImplementationOnce(() => ({
+                    pathname: '/',
+                    search: `?${param({
+                        activeFacets: {
+                            filters: {
+                                'Open access: accepted version': values,
+                            },
+                        },
+                    })}`,
+                }));
+            };
+
+            it('should allow selecting single value', async () => {
+                mockActiveValues('Immediate access via repository');
+                setup({ ...availableFacets, onFacetsChangedHandler });
+
+                await activate('6 month embargo via repository');
+                assertActiveValues('6 month embargo via repository', 'Immediate access via repository');
+            });
+
+            it('should allow selecting range', async () => {
+                mockActiveValues('Immediate access via repository');
+                setup({ ...availableFacets, onFacetsChangedHandler });
+
+                await activate('12 month embargo via repository');
+                assertActiveValues(
+                    '12 month embargo via repository',
+                    '6 month embargo via repository',
+                    'Immediate access via repository',
+                );
+            });
+
+            it('should select all when selecting range head', async () => {
+                mockActiveValues('Immediate access via repository');
+                setup({ ...availableFacets, onFacetsChangedHandler });
+
+                await activate('18 month embargo via repository');
+                assertActiveValues(
+                    '18 month embargo via repository',
+                    '12 month embargo via repository',
+                    '6 month embargo via repository',
+                    'Immediate access via repository',
+                );
+            });
+
+            it('should allow deselecting single value', async () => {
+                mockActiveValues(
+                    '12 month embargo via repository',
+                    '6 month embargo via repository',
+                    'Immediate access via repository',
+                );
+                setup({ ...availableFacets, onFacetsChangedHandler });
+
+                await deactivate('12 month embargo via repository');
+                assertActiveValues('6 month embargo via repository', 'Immediate access via repository');
+            });
+
+            it('should allow deselecting range', async () => {
+                mockActiveValues(
+                    '12 month embargo via repository',
+                    '6 month embargo via repository',
+                    'Immediate access via repository',
+                );
+                setup({ ...availableFacets, onFacetsChangedHandler });
+
+                await deactivate('6 month embargo via repository');
+                assertActiveValues('Immediate access via repository');
+            });
+
+            it('should deselect all when deselecting range tail', async () => {
+                mockActiveValues(
+                    '12 month embargo via repository',
+                    '6 month embargo via repository',
+                    'Immediate access via repository',
+                );
+                setup({ ...availableFacets, onFacetsChangedHandler });
+
+                await deactivate('Immediate access via repository');
+                assertActiveValues();
+            });
+        });
     });
 });

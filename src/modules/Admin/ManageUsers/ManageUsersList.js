@@ -83,7 +83,6 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         actions,
         pageSize: tablePageSizeDefault,
     });
-
     const {
         data,
         isBusy,
@@ -300,6 +299,11 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         table.setCreatingRow(true);
     };
 
+    React.useEffect(() => {
+        onSearchTermChange('');
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const table = useMaterialReactTable({
         columns,
         data,
@@ -319,6 +323,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         manualPagination: true,
         rowCount: pagination.resultCount,
         autoResetPageIndex: false,
+        enableKeyboardShortcuts: false,
         displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
         initialState: {
             expanded: true,

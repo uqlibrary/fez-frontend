@@ -39,9 +39,14 @@ export const IS_DEVELOPMENT_SERVER =
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
 
+export const FEZ_USER_SYSTEM_ID = 41783;
+export const FEZ_USER_SYSTEM_USERNAME = 'webcron';
+export const FEZ_USER_SYSTEM_LABEL = 'System';
+
 export const ORCID_BASE_URL = process.env.ORCID_URL || 'https://orcid.org';
 export const ORCID_CLIENT_ID = process.env.ORCID_CLIENT_ID || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
+export const DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE = 'dashboard-hide-orcid-sync-dialog';
 
 export const ROR_BASE_URL = 'https://ror.org';
 
@@ -629,6 +634,7 @@ export const THESIS_SUBMISSION_SUBTYPES = [
 export const EXPORT_FORMAT_TO_EXTENSION = {
     excel: 'xlsx',
     endnote: 'enw',
+    bibtex: 'bib',
     csv: 'csv',
 };
 

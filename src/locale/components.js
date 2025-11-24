@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 
 import Typography from '@mui/material/Typography';
@@ -145,6 +144,7 @@ export default {
                         updating: 'Updating...',
                         alertId: 'Alert ID',
                         received: 'Received',
+                        creator: 'Requester ID',
                         status: 'Status',
                         statusHelpText: 'Assign a staff member to this issue',
                     },
@@ -422,6 +422,10 @@ export default {
         myLatestPublications: {
             loading: 'Loading your latest works',
             viewAllButtonLabel: 'View all',
+            openAccessible: {
+                openAccess: 'Make open access',
+                correction: 'Request correction',
+            },
         },
         topCitedPublications: {
             loading: 'Loading trending works',
@@ -2414,6 +2418,7 @@ export default {
         export: {
             label: 'Export page results',
             format: [
+                { value: 'bibtex', label: 'BibTex File' },
                 { value: 'excel', label: 'Excel File' },
                 { value: 'endnote', label: 'Endnote File' },
             ],
@@ -4809,7 +4814,7 @@ export default {
                     },
                     accepted: {
                         open: 'Immediate access via UQ eSpace',
-                        embargo: 'Delayed access via UQ eSpace',
+                        embargo: months => `${months} months delayed access via UQ eSpace`,
                     },
                 },
             },

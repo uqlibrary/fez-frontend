@@ -124,8 +124,9 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -222,7 +223,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               <span
                                 class="citationDOI empty"
                               />
-                            </div>
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -1845,8 +1846,9 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -1943,7 +1945,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               <span
                                 class="citationDOI empty"
                               />
-                            </div>
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -3349,8 +3351,9 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -3447,7 +3450,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               <span
                                 class="citationDOI empty"
                               />
-                            </div>
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -4941,8 +4944,9 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           <div
                             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
                           >
-                            <div
+                            <span
                               class="citationContent citationJournalArticle"
+                              id="citation-content-UQ:41878"
                             >
                               <span
                                 class="citationAuthors"
@@ -5039,7 +5043,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               <span
                                 class="citationDOI empty"
                               />
-                            </div>
+                            </span>
                           </div>
                         </div>
                       </div>

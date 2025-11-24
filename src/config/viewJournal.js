@@ -97,9 +97,13 @@ export const viewJournalConfig = {
                                 <span>{item.element}</span>
                                 <span>
                                     {`${
-                                        componentLocale.components.searchJournals.openAccessIndicators.tooltips[
-                                            item.type
-                                        ][item.status]
+                                        item.status === 'embargo' && !!item.embargoPeriod
+                                            ? componentLocale.components.searchJournals.openAccessIndicators.tooltips[
+                                                  item.type
+                                              ][item.status](item.embargoPeriod)
+                                            : componentLocale.components.searchJournals.openAccessIndicators.tooltips[
+                                                  item.type
+                                              ][item.status]
                                     } (${item.type.charAt(0).toUpperCase() + item.type.slice(1)} Version)`}
                                 </span>
                             </>
@@ -215,28 +219,24 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'Sherpa Romeo open access and archiving policies',
+                    heading: 'View Open Policy Finder',
                     fieldId: 'srm-journal-link',
-                    data: [
-                        {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            path: ['fez_sherpa_romeo'],
-                            filterFn: item => !!item.fez_sherpa_romeo && !!item.fez_sherpa_romeo.srm_journal_link,
-                        },
-                    ],
-                    template: 'MultiLinkTemplate',
+                    getData: journalDetails =>
+                        journalDetails.fez_journal_issn &&
+                        Array.isArray(journalDetails.fez_journal_issn) &&
+                        journalDetails.fez_journal_issn.find(issn => issn?.fez_sherpa_romeo?.srm_journal_link),
+                    template: 'LinkTemplate',
                     templateProps: {
-                        href: item => item.srm_journal_link,
-                        title: 'View SHERPA/RoMEO details in a new tab',
-                        text: item => item.srm_issn,
+                        href: item => item.fez_sherpa_romeo.srm_journal_link,
+                        title: "View journal's open access policy in a new tab",
+                        ariaLabel: () => "Click to view journal's open access policy details in a new tab",
+                        text: () => "View journal's open access policy",
                     },
                 },
             ],
         ],
     },
     readAndPublish: {
-        key: 'fez_journal_read_and_publish',
         title: viewJournalLocale.viewJournal.readAndPublish.title,
         rows: [
             [
@@ -245,27 +245,25 @@ export const viewJournalConfig = {
                     fieldId: 'jnl-read-and-publish',
                     getData: journalDetails => {
                         return {
-                            publisher:
-                                journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_publisher,
-                            discount:
-                                journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted,
-                            capped:
-                                journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped,
+                            publisher: journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_publisher,
+                            discount: journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_discounted,
+                            capped: journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped.toLowerCase(),
                         };
                     },
                     template: 'EnclosedLinkTemplate',
                     templateProps: {
                         href: data =>
-                            !!data.publisher ? viewJournalLocale.viewJournal.readAndPublish.externalUrl : '',
+                            !!data.publisher && data.capped !== 'nodeal'
+                                ? viewJournalLocale.viewJournal.readAndPublish.externalUrl
+                                : '',
                         prefix: data => {
-                            const { publisher, discount } = data;
+                            const { publisher, discount, capped } = data;
                             const { prefixText } = viewJournalLocale.viewJournal.readAndPublish;
+                            const isNoDeal = capped === 'nodeal';
 
-                            let returnData = publisher ? prefixText.replace('<publisher>', publisher) : 'No';
-                            if (publisher && discount) {
+                            let returnData =
+                                publisher && !isNoDeal ? prefixText.replace('<publisher>', publisher) : 'No';
+                            if (!isNoDeal && publisher && discount) {
                                 returnData = returnData.replace('<discount>', ' discount available');
                             } else {
                                 returnData = returnData.replace('<discount>', '');
@@ -286,7 +284,8 @@ export const viewJournalConfig = {
                     getData: journalDetails => {
                         return (
                             journalDetails.fez_journal_read_and_publish &&
-                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped
+                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped.toLowerCase() !==
+                                'nodeal'
                         );
                     },
                     template: 'LinkTemplate',
@@ -301,11 +300,9 @@ export const viewJournalConfig = {
                 {
                     heading: viewJournalLocale.viewJournal.readAndPublish.lastUpdatedHeading,
                     fieldId: 'jnl-read-and-publish-source-date',
-                    data: [
-                        {
-                            path: ['fez_journal_read_and_publish', 'jnl_read_and_publish_source_date'],
-                        },
-                    ],
+                    getData: journalDetails =>
+                        journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped.toLowerCase() !==
+                            'nodeal' && journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_source_date,
                     template: 'DateTimeTemplate',
                     templateProps: {
                         format: 'Do MMMM YYYY',

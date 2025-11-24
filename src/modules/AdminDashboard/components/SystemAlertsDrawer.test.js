@@ -4,6 +4,7 @@ import SystemAlertsDrawer from './SystemAlertsDrawer';
 import userEvent from '@testing-library/user-event';
 
 import { DEFAULT_DATE_FORMAT_WITH_TIME_24H, SYSTEM_ALERT_ACTION, getFormattedServerDate } from '../config';
+import { FEZ_USER_SYSTEM_ID, FEZ_USER_SYSTEM_LABEL, FEZ_USER_SYSTEM_USERNAME } from '../../../config/general';
 
 const locale = {
     alertStatus: {
@@ -26,6 +27,7 @@ const testRowUnassigned = {
     sat_id: 1,
     sat_link: 'https://espace.library.uq.edu.au',
     sat_title: 'Test unassigned title',
+    creator: { usr_id: FEZ_USER_SYSTEM_ID, usr_username: FEZ_USER_SYSTEM_USERNAME },
 };
 const testRowAssigned = {
     sat_assigned_date: null,
@@ -35,6 +37,7 @@ const testRowAssigned = {
     sat_id: 12,
     sat_link: 'https://espace.library.uq.edu.au',
     sat_title: 'Test assigned title',
+    creator: { usr_id: 87054, usr_username: 'uqwtomas' },
 };
 const users = [
     { id: 13, preferred_name: 'Staff' },
@@ -101,6 +104,7 @@ describe('SystemAlertsDrawer', () => {
         expect(getByTestId('system-alert-detail-description')).toHaveTextContent(testRowUnassigned.sat_content);
         expect(getByTestId('system-alert-detail-assignee-input')).toHaveValue(locale.alertStatus.UNASSIGNED);
         expect(queryByTestId('system-alert-detail-action-button')).not.toBeInTheDocument();
+        expect(getByTestId('system-alert-detail-creator')).toHaveTextContent(FEZ_USER_SYSTEM_LABEL);
     });
 
     it('should call function when assignee is changed', async () => {
@@ -163,6 +167,7 @@ describe('SystemAlertsDrawer', () => {
         ).toHaveTextContent(testRowAssigned.sat_content);
         expect(getByTestId('system-alert-detail-assignee-input')).toHaveValue('Staff');
         expect(getByTestId('system-alert-detail-action-button')).toBeInTheDocument();
+        expect(getByTestId('system-alert-detail-creator')).toHaveTextContent(testRowAssigned.creator.usr_username);
     });
 
     it('should call function when alert is resolved', async () => {
@@ -189,5 +194,34 @@ describe('SystemAlertsDrawer', () => {
         // when updating, resolve button is relabelled to 'Updating'
         expect(queryByRole('button', { name: locale.drawer.markResolved })).not.toBeInTheDocument();
         expect(getByRole('button', { name: locale.drawer.updating })).toHaveAttribute('disabled');
+    });
+
+    it("should not allow copying requester's username when creator is system user", () => {
+        const { queryByTestId } = setup({
+            row: testRowUnassigned,
+            open: true,
+            onCloseDrawer: onCloseDrawerFn,
+            onSystemAlertUpdate: onSystemAlertUpdateFn,
+        });
+        expect(queryByTestId(`system-alert-detail-${testRowUnassigned.sat_id}-copy-username`)).not.toBeInTheDocument();
+    });
+
+    it("should allow copying requester's username to clipboard", async () => {
+        Object.assign(navigator, {
+            clipboard: {
+                writeText: () => Promise.resolve(),
+            },
+        });
+        jest.spyOn(navigator.clipboard, 'writeText');
+
+        const { getByTestId } = setup({
+            row: testRowAssigned,
+            open: true,
+            onCloseDrawer: onCloseDrawerFn,
+            onSystemAlertUpdate: onSystemAlertUpdateFn,
+        });
+
+        await userEvent.click(getByTestId(`system-alert-detail-${testRowAssigned.sat_id}-copy-username`));
+        expect(navigator.clipboard.writeText).toHaveBeenCalledWith(testRowAssigned.creator.usr_username);
     });
 });
