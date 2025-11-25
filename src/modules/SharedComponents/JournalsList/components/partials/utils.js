@@ -39,7 +39,10 @@ export const getIndicatorProps = ({ type, data }) => {
         } else {
             return null;
         }
-    } else if (data.fez_journal_read_and_publish) {
+    } else if (
+        data.fez_journal_read_and_publish &&
+        data.fez_journal_read_and_publish.jnl_read_and_publish_is_capped?.toLowerCase() !== 'nodeal'
+    ) {
         if (isCapped) {
             indicatorProps.status = status.cap;
         } else if (isDiscounted) {

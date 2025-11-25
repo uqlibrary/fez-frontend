@@ -47,7 +47,6 @@ describe('utils', () => {
 
         // accepted embargo - from second issn
         const dataItem2 = { ...mockData.data[0] };
-
         dataItem2.fez_journal_issn[0].fez_sherpa_romeo.srm_max_embargo_amount = null;
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
         expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.embargo, embargoPeriod: 6 });
@@ -83,6 +82,11 @@ describe('utils', () => {
         dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Exceeded';
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.fee });
+
+        // published fee - nodeal
+        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Nodeal';
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
+        expect(publishedIndicatorProps).toEqual(null);
 
         // published fee - apc
         const dataItem4 = { ...mockData.data[0] };
