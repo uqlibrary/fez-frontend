@@ -9658,6 +9658,12 @@ exports[`Additional Information Component  should render component with data col
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0602+Ecology&searchQueryParams%5Ball%5D="
                     >
                       0602 Ecology
+                      <span
+                        aria-label="FOR2008"
+                        class="fez-icon for2008 medium"
+                        data-mui-internal-clone-element="true"
+                        style="margin: 0px 4px;"
+                      />
                     </a>
                   </li>
                   <li
