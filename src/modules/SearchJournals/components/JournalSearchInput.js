@@ -101,7 +101,7 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
                                     <Tooltip
                                         id="strategic-publishing-voice-record"
                                         data-testid="strategic-publishing-voice-record"
-                                        title={'Click to start over'}
+                                        title={'Click to clear search keywords'}
                                     >
                                         <IconButton
                                             style={{ marginRight: -12 }}
