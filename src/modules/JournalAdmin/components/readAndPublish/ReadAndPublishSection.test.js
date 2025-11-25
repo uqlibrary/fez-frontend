@@ -30,16 +30,11 @@ describe('ReadAndPublishSection component', () => {
 
         const { getByTestId } = setup();
 
-        expect(getByTestId('jnl-read-and-publish-header')).toHaveTextContent('Read and publish agreement');
-        expect(getByTestId('jnl-read-and-publish-link-prefix')).toHaveTextContent(
-            'Yes discount available, via De Gruyter',
-        );
-        expect(getByTestId('jnl-read-and-publish-lookup-link')).toHaveAttribute(
-            'href',
-            'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
-        );
-
-        expect(getByTestId('jnl-read-and-publish-source-date-header')).toHaveTextContent('Last updated');
-        expect(getByTestId('jnl-read-and-publish-source-date-value')).toHaveTextContent('19th July 2023');
+        expect(getByTestId('jnl_read_and_publish_is_capped-select')).toBeInTheDocument();
+        expect(getByTestId('jnl_read_and_publish_is_discounted-select')).toBeInTheDocument();
+        expect(getByTestId('jnl_read_and_publish_is_s2o-select')).toBeInTheDocument();
+        expect(getByTestId('jnl_read_and_publish_publisher-input')).toBeInTheDocument();
+        expect(getByTestId('jnl_read_and_publish_source_date-input')).toBeInTheDocument();
+        expect(getByTestId('jnl_read_and_publish_source_date-input')).toHaveAttribute('disabled');
     });
 });
