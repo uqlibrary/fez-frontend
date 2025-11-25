@@ -2,7 +2,6 @@ import * as routes from './routes';
 import * as pages from 'modules/App/components/pages';
 import { accounts, authorDetails, currentAuthor } from 'mock/data/account';
 import { getDatastreamVersionQueryString, pathConfig } from './pathConfig';
-import { APP_URL } from './general';
 
 describe('Routes getMenuConfig method', () => {
     it('should return a list of menus for a non user', () => {
@@ -208,7 +207,7 @@ describe('Routes other methods', () => {
         const pid = 'UQ:12345';
         const filename = 'image.jpg';
         const url = pathConfig.file.url(pid, filename);
-        expect(url).toEqual(`${APP_URL}view/${pid}/${filename}`);
+        expect(url).toEqual(`${routes.fullPath}/view/${pid}/${filename}`);
     });
 
     it('file.url should with checksum', () => {
@@ -217,6 +216,6 @@ describe('Routes other methods', () => {
         const checksum = 'a5a5d5qwe5dq5f5qefqe';
         const versionHash = getDatastreamVersionQueryString(filename, checksum);
         const url = pathConfig.file.url(pid, filename, checksum);
-        expect(url).toEqual(`${APP_URL}view/${pid}/${filename}?dsi_version=${versionHash}`);
+        expect(url).toEqual(`${routes.fullPath}/view/${pid}/${filename}?dsi_version=${versionHash}`);
     });
 });

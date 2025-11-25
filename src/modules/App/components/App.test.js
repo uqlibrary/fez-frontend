@@ -154,7 +154,7 @@ describe('Application component', () => {
         window.location = { assign: assignFn };
         mockUseLocation.pathname = '/rhdsubmission';
         setup({ account: null });
-        expect(assignFn).toBeCalledWith('http://localhost/login?url=dW5kZWZpbmVk');
+        expect(assignFn).toBeCalledWith('https://fez-staging.library.uq.edu.au/login?url=dW5kZWZpbmVk');
     });
 
     // If the system is behind Lambda@Edge scripts then public users will go straight through to public files.
@@ -195,7 +195,9 @@ describe('Application component', () => {
         });
 
         fireEvent.click(getByRole('button', { name: /Log out/i }));
-        expect(assignFn).toBeCalledWith('https://auth.library.uq.edu.au/logout?url=aHR0cDovL2xvY2FsaG9zdC8=');
+        expect(assignFn).toBeCalledWith(
+            'https://auth.library.uq.edu.au/logout?url=aHR0cHM6Ly9mZXotc3RhZ2luZy5saWJyYXJ5LnVxLmVkdS5hdS8=',
+        );
     });
 
     it('should not render alert if user is not fez author and on the journal search page', () => {
