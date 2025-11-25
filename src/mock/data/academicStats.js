@@ -3644,7 +3644,7 @@ export const trendingPublications = {
             "rek_subject_xsdmf_id": null,
             "rek_subject": 453253,
             "rek_subject_order": 1,
-            "rek_subject_lookup": "2700 Medicine"
+            "rek_subject_lookup": "2700 Medicine|openalex"
         }],
         "fez_record_search_key_total_pages": {
             "rek_total_pages_id": 5783164,
