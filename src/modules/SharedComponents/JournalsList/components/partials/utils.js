@@ -20,16 +20,16 @@ export const getIndicatorProps = ({ type, data }) => {
         data.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped === 'Approaching';
     const isDiscounted = !!data.fez_journal_read_and_publish?.jnl_read_and_publish_is_discounted;
 
-    // Embargo period and open access from sherpa romeo
-    const maxEmbargo = data.fez_journal_issn?.reduce((max, issn) => {
-        return issn.fez_sherpa_romeo ? Math.max(max, issn.fez_sherpa_romeo.srm_max_embargo_amount) : max;
-    }, 0);
-    const openAccess = data.fez_journal_issn?.reduce(
-        (max, issn) => issn.fez_sherpa_romeo?.srm_open_access || max,
-        false,
-    );
-
     if (type === types.accepted) {
+        // Embargo period and open access from sherpa romeo
+        const maxEmbargo = data.fez_journal_issn?.reduce((max, issn) => {
+            return issn.fez_sherpa_romeo ? Math.max(max, issn.fez_sherpa_romeo.srm_max_embargo_amount) : max;
+        }, 0);
+        const openAccess = data.fez_journal_issn?.reduce(
+            (max, issn) => issn.fez_sherpa_romeo?.srm_open_access || max,
+            false,
+        );
+
         if (!!maxEmbargo) {
             indicatorProps.status = status.embargo;
             indicatorProps.embargoPeriod = maxEmbargo;
@@ -39,39 +39,37 @@ export const getIndicatorProps = ({ type, data }) => {
         } else {
             return null;
         }
-    } else if (data.fez_journal_read_and_publish) {
-        const isS2O = data.fez_journal_read_and_publish.jnl_read_and_publish_is_s2o;
-        if (isS2O === 'S2O') {
-            indicatorProps.showS2O = true;
-            indicatorProps.status = status.open;
-        } else if (isCapped) {
-            indicatorProps.status = status.cap;
-        } else if (isDiscounted) {
-            indicatorProps.status = status.fee;
-        } else {
-            indicatorProps.status = status.open;
-            if (isS2O === 'Y') {
+    } else {
+        indicatorProps.status = status.fee;
+        if (
+            data.fez_journal_read_and_publish &&
+            data.fez_journal_read_and_publish.jnl_read_and_publish_is_capped?.toLowerCase() !== 'nodeal'
+        ) {
+            const isS2O = data.fez_journal_read_and_publish.jnl_read_and_publish_is_s2o;
+            if (isS2O === 'S2O') {
+                indicatorProps.showS2O = true;
+                indicatorProps.status = status.open;
+            } else if (isCapped) {
+                indicatorProps.status = status.cap;
+            } else if (!isDiscounted) {
+                indicatorProps.status = status.open;
+                if (isS2O === 'Y') {
+                    indicatorProps.showS2O = true;
+                }
+            }
+        } else if (data.fez_journal_doaj) {
+            const doajData = data.fez_journal_doaj;
+            if (!hasApc) {
+                indicatorProps.status = status.open;
+                if (doajData.jnl_doaj_has_other_fees === false) {
+                    indicatorProps.showDiamond = true;
+                }
+            }
+
+            if (!!doajData.jnl_doaj_is_s2o) {
                 indicatorProps.showS2O = true;
             }
         }
-    } else if (data.fez_journal_doaj) {
-        const doajData = data.fez_journal_doaj;
-        if (hasApc) {
-            indicatorProps.status = status.fee;
-        } else {
-            indicatorProps.status = status.open;
-            if (doajData.jnl_doaj_has_other_fees === false) {
-                indicatorProps.showDiamond = true;
-            }
-        }
-
-        if (!!doajData.jnl_doaj_is_s2o) {
-            indicatorProps.showS2O = true;
-        }
-    } else if (!maxEmbargo && !openAccess) {
-        indicatorProps.status = status.fee;
-    } else {
-        return null;
     }
 
     return indicatorProps;
