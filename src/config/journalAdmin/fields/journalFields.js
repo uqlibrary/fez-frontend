@@ -5,9 +5,9 @@ export default {
                 ['jnl_title'],
                 ['abbreviatedTitle'],
                 ['jnl_publisher'],
-                ['refereed', 'publicationYear', 'publicationFrequency'],
-                ['publicationFormats'],
-                ['description'],
+                ['jnl_is_refereed', 'jnl_start_year', 'jnl_frequency'],
+                ['jnl_formats'],
+                ['jnl_description'],
             ],
         },
         {
@@ -21,14 +21,17 @@ export default {
             groups: [['issns']],
         },
     ],
+    readAndPublish: () => [
+        {
+            groups: [['readAndPublishPublisher'], ['capped', 'discounted', 's2o']],
+        },
+        {
+            groups: [['readAndPublishLastUpdated']],
+        },
+    ],
     uqData: () => [
         {
             groups: [['uqData']],
-        },
-    ],
-    readAndPublish: () => [
-        {
-            groups: [['readAndPublish']],
         },
     ],
     doaj: () => [

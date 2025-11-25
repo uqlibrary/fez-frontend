@@ -1757,6 +1757,25 @@ export const ANDS_COLLECTION_TYPE_OPTIONS = [
     },
 ];
 
+export const CAPPED_OPTIONS = [
+    { value: 'Y', text: 'Y' },
+    { value: 'Approaching', text: 'Approaching' },
+    { value: 'Exceeded', text: 'Exceeded' },
+    { value: 'Nodeal', text: 'No deal' },
+    { value: 'N', text: 'N' },
+];
+
+export const S2O_OPTIONS = [
+    { value: 'Y', text: 'Y' },
+    { value: 'S2O', text: 'S2O' },
+    { value: 'N', text: 'N' },
+];
+
+export const BOOLEAN_OPTIONS = [
+    { value: true, text: 'Y' },
+    { value: false, text: 'N' },
+];
+
 export const AFFILIATION_TYPE_NOT_UQ = 'NotUQ';
 export const AFFILIATION_TYPE_UQ = 'UQ';
 

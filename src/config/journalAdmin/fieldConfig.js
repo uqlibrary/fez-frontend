@@ -1,13 +1,15 @@
 import Immutable from 'immutable';
 import { validation } from 'config';
 import locale from 'locale/components';
+import { viewJournalConfig } from 'config/viewJournal';
+import { BOOLEAN_OPTIONS, CAPPED_OPTIONS, S2O_OPTIONS } from 'config/general';
+import { journalAdminFields } from 'locale/journalAdminFields';
 import { IssnForm, NewListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
-
 import { default as InfoSection } from 'modules/ViewJournal/components/Section';
-import { viewJournalConfig } from 'config/viewJournal';
-import AdvisoryStatementFields from '../../modules/JournalAdmin/components/AdvisoryStatementFields';
+import AdvisoryStatementFields from 'modules/JournalAdmin/components/AdvisoryStatementFields';
+import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
 export default {
     default: {
@@ -46,69 +48,58 @@ export default {
                 required: true,
             },
         },
-        refereed: {
-            component: GenericTextField,
+        jnl_is_refereed: {
+            component: NewGenericSelectField,
             componentProps: {
-                textFieldId: 'jnl_refereed',
-                name: 'adminSection.refereed',
+                name: 'adminSection.jnl_is_refereed',
+                genericSelectFieldId: 'jnl_is_refereed',
                 fullWidth: true,
-                label: 'Refereed',
-                placeholder: '',
-                disabled: true,
-                inputProps: { readOnly: true },
-                required: false,
+                itemsList: BOOLEAN_OPTIONS,
+                ...journalAdminFields.refereed,
             },
         },
-        publicationYear: {
+        jnl_start_year: {
             component: GenericTextField,
             componentProps: {
-                textFieldId: 'jnl_publication_year',
-                name: 'adminSection.publicationYear',
+                textFieldId: 'jnl_start_year',
+                name: 'adminSection.jnl_start_year',
                 fullWidth: true,
                 label: 'First year of publication',
                 placeholder: '',
-                disabled: true,
-                inputProps: { readOnly: true },
                 required: false,
             },
         },
-        publicationFrequency: {
+        jnl_frequency: {
             component: GenericTextField,
             componentProps: {
-                textFieldId: 'jnl_publication_frequency',
-                name: 'adminSection.publicationFrequency',
+                textFieldId: 'jnl_frequency',
+                name: 'adminSection.jnl_frequency',
                 fullWidth: true,
                 label: 'Frequency of publication',
                 placeholder: '',
-                disabled: true,
-                inputProps: { readOnly: true },
                 required: false,
             },
         },
-        publicationFormats: {
+        jnl_formats: {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'jnl_formats',
-                name: 'adminSection.publicationFormats',
+                name: 'adminSection.jnl_formats',
                 fullWidth: true,
                 label: 'Journal formats available',
                 placeholder: '',
-                disabled: true,
-                inputProps: { readOnly: true },
                 required: false,
             },
         },
-        description: {
+        jnl_description: {
             component: GenericTextField,
             componentProps: {
-                name: 'adminSection.description',
+                textFieldId: 'jnl_description',
+                name: 'adminSection.jnl_description',
                 label: 'Description',
                 fullWidth: true,
                 multiline: true,
                 rows: 3,
-                textFieldId: 'jnl_description',
-                disabled: true,
-                inputProps: { readOnly: true },
                 required: false,
             },
         },
@@ -163,22 +154,62 @@ export default {
                 noRef: true,
             },
         },
+        readAndPublishPublisher: {
+            component: GenericTextField,
+            componentProps: {
+                textFieldId: 'jnl_read_and_publish_publisher',
+                name: 'readAndPublishSection.readAndPublishPublisher',
+                fullWidth: true,
+                label: 'Publisher',
+                placeholder: '',
+                required: false,
+            },
+        },
+        capped: {
+            component: NewGenericSelectField,
+            componentProps: {
+                name: 'readAndPublishSection.capped',
+                genericSelectFieldId: 'jnl_read_and_publish_is_capped',
+                itemsList: CAPPED_OPTIONS,
+                ...journalAdminFields.capped,
+            },
+        },
+        discounted: {
+            component: NewGenericSelectField,
+            componentProps: {
+                name: 'readAndPublishSection.discounted',
+                genericSelectFieldId: 'jnl_read_and_publish_is_discounted',
+                itemsList: BOOLEAN_OPTIONS,
+                ...journalAdminFields.discounted,
+            },
+        },
+        s2o: {
+            component: NewGenericSelectField,
+            componentProps: {
+                name: 'readAndPublishSection.s2o',
+                genericSelectFieldId: 'jnl_read_and_publish_is_s2o',
+                itemsList: S2O_OPTIONS,
+                ...journalAdminFields.s2o,
+            },
+        },
+        readAndPublishLastUpdated: {
+            component: GenericTextField,
+            componentProps: {
+                textFieldId: 'jnl_read_and_publish_source_date',
+                name: 'readAndPublishSection.readAndPublishLastUpdated',
+                fullWidth: true,
+                label: 'Last updated date',
+                placeholder: '',
+                required: false,
+                disabled: true,
+            },
+        },
         uqData: {
             component: InfoSection,
             componentProps: {
                 sectionKey: 'uqData',
                 name: 'uqDataSection',
                 sectionConfig: viewJournalConfig.uqConnections,
-                wrapped: false,
-                noRef: true,
-            },
-        },
-        readAndPublish: {
-            component: InfoSection,
-            componentProps: {
-                sectionKey: 'readAndPublish',
-                name: 'readAndPublishSection',
-                sectionConfig: viewJournalConfig.readAndPublish,
                 wrapped: false,
                 noRef: true,
             },
