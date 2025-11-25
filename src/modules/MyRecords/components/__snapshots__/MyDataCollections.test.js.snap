@@ -60,7 +60,6 @@ exports[`myDatasets test gets publications when user clicks back and state is no
                 We were unable to find any results. You may be able to
                  
                 <a
-                  data-discover="true"
                   href="/data-collections/add"
                 >
                   add a missing dataset
@@ -136,7 +135,6 @@ exports[`myDatasets test gets publications when user clicks back and state is se
                 We were unable to find any results. You may be able to
                  
                 <a
-                  data-discover="true"
                   href="/data-collections/add"
                 >
                   add a missing dataset
@@ -212,7 +210,6 @@ exports[`myDatasets test renders active filters 1`] = `
                 We were unable to find any results. You may be able to
                  
                 <a
-                  data-discover="true"
                   href="/data-collections/add"
                 >
                   add a missing dataset
@@ -281,7 +278,6 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                   <span>
                     Add to this list by 
                     <a
-                      data-discover="true"
                       href="/data-collections/add"
                     >
                       adding a missing dataset
@@ -650,7 +646,6 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   <span>
                     Add to this list by 
                     <a
-                      data-discover="true"
                       href="/data-collections/add"
                     >
                       adding a missing dataset
@@ -1485,7 +1480,6 @@ exports[`myDatasets test renders no results 1`] = `
                 We were unable to find any results. You may be able to
                  
                 <a
-                  data-discover="true"
                   href="/data-collections/add"
                 >
                   add a missing dataset

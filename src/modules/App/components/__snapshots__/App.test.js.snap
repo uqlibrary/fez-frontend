@@ -31,7 +31,6 @@ exports[`Application component Should display mobile correctly 1`] = `
                 >
                   <a
                     class="appTitle"
-                    data-discover="true"
                     href="/"
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
@@ -860,7 +859,6 @@ exports[`Application component should render alert if user is not fez author 1`]
                 >
                   <a
                     class="appTitle"
-                    data-discover="true"
                     href="/"
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
@@ -1412,7 +1410,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 >
                   <a
                     class="appTitle"
-                    data-discover="true"
                     href="/"
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
@@ -1907,7 +1904,6 @@ exports[`Application component should render app for account with fez author wit
                 >
                   <a
                     class="appTitle"
-                    data-discover="true"
                     href="/"
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
@@ -2402,7 +2398,6 @@ exports[`Application component should render application with routing for the us
                 >
                   <a
                     class="appTitle"
-                    data-discover="true"
                     href="/"
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
@@ -2684,7 +2679,6 @@ exports[`Application component should render for anon user 1`] = `
                 >
                   <a
                     class="appTitle"
-                    data-discover="true"
                     href="/"
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
