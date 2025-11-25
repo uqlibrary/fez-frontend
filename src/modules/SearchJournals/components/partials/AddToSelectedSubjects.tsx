@@ -51,18 +51,23 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }
     useEffect(() => inputRef.current?.focus(), [isOpen]);
 
     if (!isOpen) {
+        // TODO move it to location
+        const title = 'Add a subject to refine result';
+        const button = (
+            <IconButton
+                color="info"
+                onClick={() => setIsOpen(true)}
+                data-testid="add-to-subject-selection-button"
+                disabled={journalsListLoading}
+                aria-label={title}
+            >
+                <NewLabelRounded />
+            </IconButton>
+        );
+
         return (
-            <Tooltip title="Add a subject to refine result">
-                <span>
-                    <IconButton
-                        color="info"
-                        onClick={() => setIsOpen(true)}
-                        data-testid={'add-to-subject-selection-button'}
-                        disabled={journalsListLoading}
-                    >
-                        <NewLabelRounded />
-                    </IconButton>
-                </span>
+            <Tooltip title={title} describeChild>
+                {journalsListLoading ? <span>{button}</span> : button}
             </Tooltip>
         );
     }
