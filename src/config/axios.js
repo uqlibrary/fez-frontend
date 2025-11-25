@@ -1,14 +1,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { setupCache } from 'axios-cache-interceptor';
-import {
-    API_URL,
-    IS_LOCAL_DEV,
-    IS_TEST,
-    SESSION_COOKIE_NAME,
-    SESSION_USER_GROUP_COOKIE_NAME,
-    TOKEN_NAME,
-} from './general';
+import { API_URL, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME, TOKEN_NAME } from './general';
 import { store } from 'config/store';
 import { logout } from 'actions/account';
 import { showAppAlert } from 'actions/app';
@@ -16,6 +9,7 @@ import locale from 'locale/global';
 import * as Sentry from '@sentry/react';
 import param from 'can-param';
 import { pathConfig } from 'config/pathConfig';
+import { isDevEnv, isTest } from '../helpers/general';
 import { FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID } from 'config/general';
 
 let apiClient = axios.create({
@@ -23,7 +17,7 @@ let apiClient = axios.create({
     crossdomain: true,
 });
 
-if (!IS_LOCAL_DEV && !IS_TEST) {
+if (!isDevEnv() && !isTest()) {
     // note: axios-cache-interceptor is not compatible with axios response mocks & tests
     // upon updating it or changing config settings, make sure to test it using prodtest env
     apiClient = setupCache(apiClient, {
@@ -99,7 +93,7 @@ api.interceptors.request.use(request => {
     }
     apiLastRequest = request;
     // keep track of last requests just for tests
-    if (IS_TEST) {
+    if (isTest()) {
         // keep only the last 10 requests in the queue
         apiRequestHistory.length > 10 && apiRequestHistory.shift();
         apiRequestHistory.push(request);

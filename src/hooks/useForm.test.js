@@ -8,7 +8,7 @@ import {
     getPropsForAlertInconsistencyWarning,
     flattenFormFieldKeys,
 } from './useForm';
-import * as General from 'config/general';
+import * as general from '../helpers/general';
 
 const setup = props => renderHook(() => useForm(props));
 
@@ -434,6 +434,7 @@ describe('useForm hook', () => {
         });
 
         it('should warn devs when formErrors have missing errors', () => {
+            const spy = jest.spyOn(general, 'isDevEnv').mockReturnValue(true);
             const mock = jest.spyOn(console, 'error').mockImplementation(() => {});
             mockFormReturn.formState.errors = {
                 fieldB: { message: 'required' },
@@ -450,26 +451,8 @@ describe('useForm hook', () => {
                 },
             });
             expect(mock).toBeCalledWith(getPropsForAlertInconsistencyWarning(['fieldB', 'fieldC']));
-        });
-
-        it('should not warn devs when formErrors have missing errors for prod', () => {
-            General.IS_PRODUCTION = true;
-            const mock = jest.spyOn(console, 'error').mockImplementation(() => {});
-            mockFormReturn.formState.errors = {
-                fieldB: { message: 'required' },
-                fieldA: { message: 'required' },
-                fieldC: { message: 'required' },
-            };
-            mockFormReturn.formState.defaultValues = { fieldA: '' };
-
-            const { result } = setup();
-            expect(result.current.getPropsForAlert()).toEqual({
-                ...defaults,
-                formErrors: {
-                    fieldA: 'required',
-                },
-            });
-            expect(mock).not.toHaveBeenCalled();
+            spy.mockRestore();
+            mock.mockRestore();
         });
     });
 

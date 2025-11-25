@@ -2,6 +2,7 @@
 const deployment = {
     development: {
         url: branch => `https://development.library.uq.edu.au/espace/${branch}/#/`,
+        fullPath: branch => `https://development.library.uq.edu.au/espace/${branch}/#`,
         api: 'https://api.library.uq.edu.au/staging/',
         auth_login: 'https://fez-staging.library.uq.edu.au/login',
         auth_logout: 'https://auth.library.uq.edu.au/logout',
@@ -19,6 +20,7 @@ const deployment = {
     },
     staging: {
         url: () => 'https://fez-staging.library.uq.edu.au/',
+        fullPath: () => 'https://fez-staging.library.uq.edu.au',
         api: 'https://api.library.uq.edu.au/staging/',
         auth_login: 'https://fez-staging.library.uq.edu.au/login',
         auth_logout: 'https://auth.library.uq.edu.au/logout',
@@ -35,6 +37,7 @@ const deployment = {
     },
     production: {
         url: () => 'https://espace.library.uq.edu.au/',
+        fullPath: () => 'https://espace.library.uq.edu.au',
         api: 'https://api.library.uq.edu.au/v1/',
         auth_login: 'https://espace.library.uq.edu.au/login',
         auth_logout: 'https://auth.library.uq.edu.au/logout',
@@ -51,6 +54,7 @@ const deployment = {
     },
     prodtest: {
         url: () => 'https://fez-testing.library.uq.edu.au/',
+        fullPath: () => 'https://fez-testing.library.uq.edu.au',
         api: 'https://api.library.uq.edu.au/v1/',
         auth_login: 'https://fez-testing.library.uq.edu.au/login',
         auth_logout: 'https://auth.library.uq.edu.au/logout',

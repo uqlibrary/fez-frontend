@@ -232,7 +232,11 @@ describe('AdminActions component', () => {
 
         fireEvent.click(getByText(/edit selected record/i, menu));
         expect(global.window.open).toHaveBeenCalledTimes(1);
-        expect(global.window.open).toHaveBeenCalledWith('http://localhost/admin/edit/UQ:111111', '_blank', null);
+        expect(global.window.open).toHaveBeenCalledWith(
+            'https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111',
+            '_blank',
+            null,
+        );
     });
 
     it('should handle alternate click events', () => {
@@ -243,7 +247,11 @@ describe('AdminActions component', () => {
 
         fireEvent.contextMenu(getByText(/edit selected record/i, menu));
         expect(global.window.open).toHaveBeenCalledTimes(1);
-        expect(global.window.open).toHaveBeenCalledWith('http://localhost/admin/edit/UQ:111111', '_blank', null);
+        expect(global.window.open).toHaveBeenCalledWith(
+            'https://fez-staging.library.uq.edu.au/admin/edit/UQ:111111',
+            '_blank',
+            null,
+        );
     });
 
     it('should have helper to append referral URL', () => {
