@@ -22,6 +22,7 @@ export const ForCodeAutocompleteField: React.FC<React.ComponentPropsWithRef<any>
             loadSuggestions={fetch}
             placeholder={'type new subject'}
             {...props}
+            // @ts-expect-error
             inputRef={ref}
         />
     );
