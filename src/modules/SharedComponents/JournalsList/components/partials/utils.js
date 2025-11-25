@@ -11,36 +11,52 @@ export const getIndicatorProps = ({ type, data }) => {
         status: null,
     };
 
-    if (
-        (type === types.accepted &&
-            !!!data.fez_journal_issn &&
-            !!!data.fez_journal_issn?.[0].srm_open_access &&
-            !!!data.fez_journal_issn?.[0].fez_sherpa_romeo) ||
-        (type === types.published &&
-            !!!data.fez_journal_read_and_publish &&
-            (!!!data.fez_journal_doaj || !!!data.fez_journal_doaj?.jnl_doaj_apc_currency))
-    ) {
-        return null;
-    }
+    // APC fee from DOAJ
+    const hasApc = !!Number(data.fez_journal_doaj?.jnl_doaj_apc_average_price);
+
+    // is capped and is discounted from Read and Publish Agreement
+    const isCapped =
+        data.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped === 'Y' ||
+        data.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped === 'Approaching';
+    const isDiscounted = !!data.fez_journal_read_and_publish?.jnl_read_and_publish_is_discounted;
+
+    // Embargo period and open access from sherpa romeo
+    const maxEmbargo = data.fez_journal_issn?.reduce((max, issn) => {
+        return issn.fez_sherpa_romeo ? Math.max(max, issn.fez_sherpa_romeo.srm_max_embargo_amount) : max;
+    }, 0);
+    const openAccess = data.fez_journal_issn?.reduce(
+        (max, issn) => issn.fez_sherpa_romeo?.srm_open_access || max,
+        false,
+    );
 
     if (type === types.accepted) {
-        const entry = data.fez_journal_issn?.[0]?.fez_sherpa_romeo;
-        if (entry?.srm_max_embargo_amount) indicatorProps.status = status.embargo;
-        else indicatorProps.status = status.open;
-    } else {
-        if (data.fez_journal_read_and_publish) {
-            const entry = data.fez_journal_read_and_publish;
-            if (
-                entry.jnl_read_and_publish_is_capped === 'Y' ||
-                entry.jnl_read_and_publish_is_capped === 'Approaching'
-            ) {
-                indicatorProps.status = status.cap;
-            } else if (!!entry.jnl_read_and_publish_is_discounted) indicatorProps.status = status.fee;
-            else indicatorProps.status = status.open;
+        if (!!maxEmbargo) {
+            indicatorProps.status = status.embargo;
+            indicatorProps.embargoPeriod = maxEmbargo;
+            // should not display Published Fee and Accepted Open Icons at the same time
+        } else if (openAccess && !hasApc && !isDiscounted) {
+            indicatorProps.status = status.open;
         } else {
-            /* istanbul ignore else */
-            if (!!data.fez_journal_doaj?.jnl_doaj_apc_currency) indicatorProps.status = status.fee;
+            return null;
         }
+    } else if (data.fez_journal_read_and_publish) {
+        if (isCapped) {
+            indicatorProps.status = status.cap;
+        } else if (isDiscounted) {
+            indicatorProps.status = status.fee;
+        } else {
+            indicatorProps.status = status.open;
+        }
+    } else if (data.fez_journal_doaj) {
+        if (hasApc) {
+            indicatorProps.status = status.fee;
+        } else {
+            indicatorProps.status = status.open;
+        }
+    } else if (!maxEmbargo && !openAccess) {
+        indicatorProps.status = status.fee;
+    } else {
+        return null;
     }
 
     return indicatorProps;
@@ -48,6 +64,11 @@ export const getIndicatorProps = ({ type, data }) => {
 export const getIndicator = ({ type, data, tooltipLocale }) => {
     const indicatorProps = getIndicatorProps({ type, data });
     if (indicatorProps === null) return { element: null };
+    const tooltip =
+        tooltipLocale && tooltipLocale.hasOwnProperty(indicatorProps.type)
+            ? tooltipLocale[indicatorProps.type][indicatorProps.status]
+            : null;
+
     return {
         ...indicatorProps,
         element: (
@@ -56,9 +77,7 @@ export const getIndicator = ({ type, data, tooltipLocale }) => {
                 data-testid={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
                 key={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
                 tooltip={
-                    tooltipLocale && tooltipLocale.hasOwnProperty(indicatorProps.type)
-                        ? tooltipLocale[indicatorProps.type][indicatorProps.status]
-                        : null
+                    (tooltip && indicatorProps.status === 'embargo' && tooltip(indicatorProps.embargoPeriod)) || tooltip
                 }
                 {...indicatorProps}
             />
