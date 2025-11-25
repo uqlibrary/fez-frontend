@@ -247,6 +247,7 @@ const getAdminJournalRequest = data => {
         'journal',
         'adminSection',
         'bibliographicSection',
+        'readAndPublishSection',
         'uqDataSection',
         'doajSection',
         'indexedSection',
@@ -258,6 +259,7 @@ const getAdminJournalRequest = data => {
             ...sanitiseJnlData(data, makeReplacer(keys)),
             ...transformers.getAdminSectionSearchKeys(data.adminSection),
             ...transformers.getBibliographicSectionSearchKeys(data.bibliographicSection),
+            ...transformers.getReadAndPublishSectionSearchKeys(data),
         },
     ];
 };
