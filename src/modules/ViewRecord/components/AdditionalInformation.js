@@ -140,7 +140,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         );
     };
 
-    const renderSubject = (list, subkey, getLink) => {
+    const renderList = (list, subkey, getLink) => {
         const testId = subkey.replace(/_/g, '-');
         return (
             <Box component={'ul'} key={subkey} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
@@ -156,26 +156,9 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                                     iconHint = icon === 'openalex' ? 'OpenAlex' : icon.toUpperCase();
                                     return '';
                                 });
-                                return renderLinkWithIcon(getLink(subject, subject), subject, icon, iconHint);
-                            } else {
-                                return data;
-                            }
-                        })()}
-                    </li>
-                ))}
-            </Box>
-        );
-    };
-
-    const renderList = (list, subkey, getLink) => {
-        const testId = subkey.replace(/_/g, '-');
-        return (
-            <Box component={'ul'} key={subkey} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                {list.map((item, index) => (
-                    <li key={`${testId}-${index}`} data-testid={`${testId}-${index}`}>
-                        {(() => {
-                            const data = getData(item, subkey);
-                            if (getLink) {
+                                if (icon) {
+                                    return renderLinkWithIcon(getLink(subject, subject), subject, icon, iconHint);
+                                }
                                 return renderLink(getLink(item[subkey], data), data);
                             } else {
                                 return data;
@@ -450,7 +433,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             case 'rek_raid':
                 return renderList(objects, subkey, pathConfig.list.raid);
             case 'rek_subject':
-                return renderSubject(objects, subkey, pathConfig.list.subject);
+                return renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_sdg_source':
                 return renderSDG(publication);
             default:
