@@ -119,15 +119,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         return parseHtmlToJSX(data);
     };
 
-    const renderLink = (link, value, testId = '') => {
-        return (
-            <Link to={link} {...{ ['data-testid']: testId || undefined }}>
-                {value}
-            </Link>
-        );
-    };
-
-    const renderLinkWithIcon = (link, value, icon, iconHint, testId = '') => {
+    const renderLink = (link, value, testId = '', icon = '', iconHint = '') => {
         return (
             <Link to={link} {...{ ['data-testid']: testId || undefined }}>
                 {value}
@@ -157,7 +149,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                                     return '';
                                 });
                                 if (icon) {
-                                    return renderLinkWithIcon(getLink(subject, subject), subject, icon, iconHint);
+                                    return renderLink(getLink(subject, subject), subject, icon, iconHint);
                                 }
                                 return renderLink(getLink(item[subkey], data), data);
                             } else {
