@@ -634,6 +634,7 @@ export const THESIS_SUBMISSION_SUBTYPES = [
 export const EXPORT_FORMAT_TO_EXTENSION = {
     excel: 'xlsx',
     endnote: 'enw',
+    bibtex: 'bib',
     csv: 'csv',
 };
 

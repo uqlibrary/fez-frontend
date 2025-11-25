@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { green, orange, blue } from '@mui/material/colors';
+import { green, orange, blue, deepOrange } from '@mui/material/colors';
 import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 
@@ -12,7 +12,7 @@ import { status as oaStatus, types } from './utils';
 
 const icons = { accepted: AcceptedIcon, published: PublishedIcon };
 
-const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest }) => {
+const JournalsOpenAccessIndicator = ({ type, status, label, embargoPeriod, tooltip, id, ...rest }) => {
     const Icon = icons[type];
 
     const classes = {
@@ -46,6 +46,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest
         [oaStatus.embargo]: {
             '& .iconColumn': {
                 backgroundColor: 'rgba(0,0,0,0.8)',
+                color: 'rgba(255,255,255)',
             },
             '& .labelColumn': {
                 backgroundColor: 'rgba(0,0,0,0.05)',
@@ -58,9 +59,20 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest
             },
             '& .labelColumn': {
                 backgroundColor: orange[50],
-                color: orange[800],
+                color: deepOrange[900],
             },
         },
+    };
+
+    const columnStyle = {
+        fontSize: '12px',
+        fontWeight: 400,
+        padding: '4px 8px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textTransform: 'uppercase',
+        lineHeight: 1.5,
     };
 
     return (
@@ -93,37 +105,20 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest
                 <Box
                     sx={{
                         display: 'grid',
-                        gridTemplateColumns: '26px auto',
+                        gridTemplateColumns: '28px auto',
                         gridTemplateRows: 'auto',
                         gridTemplateAreas: '"icon label"',
                     }}
                     className="wrapper"
                 >
-                    <Box
-                        sx={{
-                            gridArea: 'icon',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                        }}
-                        className="iconColumn"
-                    >
-                        <Icon color="white" sx={{ width: 'auto', height: '18px' }} />
+                    <Box sx={{ gridArea: 'icon', ...columnStyle }} className="iconColumn">
+                        {!!embargoPeriod ? (
+                            `${embargoPeriod}M`
+                        ) : (
+                            <Icon color="white" sx={{ width: 'auto', height: '18px' }} />
+                        )}
                     </Box>
-                    <Box
-                        sx={{
-                            gridArea: 'label',
-                            fontSize: '12px',
-                            fontWeight: 400,
-                            padding: '4px 8px',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            textTransform: 'uppercase',
-                            lineHeight: 1.5,
-                        }}
-                        className="labelColumn"
-                    >
+                    <Box sx={{ gridArea: 'label', ...columnStyle }} className="labelColumn">
                         {label ?? status}
                     </Box>
                 </Box>
@@ -136,6 +131,7 @@ JournalsOpenAccessIndicator.propTypes = {
     id: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['accepted', 'published']).isRequired,
     status: PropTypes.oneOf(['open', 'cap', 'embargo', 'fee']).isRequired,
+    embargoPeriod: PropTypes.number,
     tooltip: PropTypes.string,
     label: PropTypes.string,
 };
