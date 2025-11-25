@@ -127,7 +127,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         );
     };
 
-    const renderLinkWithIcon = (link, value, icon = '', iconHint = '', testId = '') => {
+    const renderLinkWithIcon = (link, value, icon, iconHint, testId = '') => {
         return (
             <Link to={link} {...{ ['data-testid']: testId || undefined }}>
                 {value}
