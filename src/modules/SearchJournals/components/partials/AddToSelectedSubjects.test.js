@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, userEvent, waitForText, WithRedux } from 'test-utils';
+import { assertDisabled, render, userEvent, waitForText, WithReduxStore } from 'test-utils';
 import { AddToSelectedSubjects } from './AddToSelectedSubjects';
 
 jest.mock('hooks/useControlledVocabs', () => ({
@@ -19,17 +19,22 @@ jest.mock('hooks/useControlledVocabs', () => ({
 import { useControlledVocabs } from 'hooks/useControlledVocabs';
 import { FOR_CODE_VOCAB_ID } from '../../../../config/general';
 
-const setup = onAdd =>
+const setup = ({ onAdd, state } = {}) =>
     render(
-        <WithRedux>
+        <WithReduxStore initialState={state}>
             <AddToSelectedSubjects onAdd={onAdd || jest.fn} />
-        </WithRedux>,
+        </WithReduxStore>,
     );
 describe('AddToSelectedSubjects', () => {
     it('should render the add button (closed state) by default', () => {
         const { getByTestId, queryByTestId } = setup();
         expect(getByTestId('add-to-subject-selection-button')).toBeInTheDocument();
         expect(queryByTestId('for-code-autocomplete-field-input')).not.toBeInTheDocument();
+    });
+
+    it('should render a disabled button when state `journalsListLoading=true`', () => {
+        setup({ state: { searchJournalsReducer: { journalsListLoading: true } } });
+        assertDisabled('add-to-subject-selection-button');
     });
 
     it('should open the bordered chip with autocomplete when the button is clicked', async () => {
@@ -42,7 +47,7 @@ describe('AddToSelectedSubjects', () => {
 
     it('should call given onAdd with mapped subject and closes when a subject is selected', async () => {
         const onAdd = jest.fn();
-        const { getByTestId, queryByTestId, getByRole, getAllByRole } = setup(onAdd);
+        const { getByTestId, queryByTestId } = setup({ onAdd });
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
         await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '100');
@@ -62,7 +67,7 @@ describe('AddToSelectedSubjects', () => {
 
     it('closes when Escape is pressed in the autocomplete input', async () => {
         const onAdd = jest.fn();
-        const { getByTestId, queryByTestId } = setup(onAdd);
+        const { getByTestId, queryByTestId } = setup({ onAdd });
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
         await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '{escape}');

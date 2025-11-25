@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { SelectedSearchCriteriaItem } from './SelectedSearchCriteriaItem';
 import { ForCodeAutocompleteField } from './ForCodeAutocompleteField';
+import { useSelector } from 'react-redux';
+import { AppState } from 'reducer';
 
 const BorderedChip = styled(SelectedSearchCriteriaItem)(() => ({
     borderRadius: 999,
@@ -40,17 +42,23 @@ type AddToSelectedSubjects = {
 
 export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }) => {
     const [isOpen, setIsOpen] = useState(false);
+    // unless it gets moved to its parent, we want to keep this hard dependency in here to avoid unnecessary rendering
+    // of other comps
+    const { journalsListLoading } = useSelector((state: AppState) => state?.get('searchJournalsReducer'));
 
     if (!isOpen) {
         return (
             <Tooltip title="Add a subject to refine result">
-                <IconButton
-                    color="info"
-                    onClick={() => setIsOpen(true)}
-                    data-testid={'add-to-subject-selection-button'}
-                >
-                    <NewLabelRounded />
-                </IconButton>
+                <span>
+                    <IconButton
+                        color="info"
+                        onClick={() => setIsOpen(true)}
+                        data-testid={'add-to-subject-selection-button'}
+                        disabled={journalsListLoading}
+                    >
+                        <NewLabelRounded />
+                    </IconButton>
+                </span>
             </Tooltip>
         );
     }
