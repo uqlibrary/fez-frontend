@@ -2403,6 +2403,7 @@ export default {
         export: {
             label: 'Export page results',
             format: [
+                { value: 'bibtex', label: 'BibTex File' },
                 { value: 'excel', label: 'Excel File' },
                 { value: 'endnote', label: 'Endnote File' },
             ],
