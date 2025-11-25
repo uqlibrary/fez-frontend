@@ -31,8 +31,7 @@ fi
 
 GIT_DIFF="git diff --cached --name-only --diff-filter=ACM"
 STAGED_FILES=$(eval "$GIT_DIFF" | grep ".jsx\{0,1\}$")
-PRETTIER="$(git rev-parse --show-toplevel)/node_modules/.bin/prettier"
-ESLINT="$(git rev-parse --show-toplevel)/node_modules/.bin/eslint"
+FORMATTER="$(git rev-parse --show-toplevel)/node_modules/.bin/prettier-eslint"
 
 if [[ "$STAGED_FILES" = "" ]]; then
   printf "\e[92mNo files to check.\e[0m\nProceeding with commit..."
@@ -46,15 +45,9 @@ if [ -f ~/.nvm/nvm.sh ]; then
   source ~/.nvm/nvm.sh
 fi
 
-# Check for prettier
-if [[ ! -x "$PRETTIER" ]]; then
-  printf "\e[31mPlease install dependencies first by running '\e[0m\e[1mnpm install\e[0m\e[31m'! (missing prettier)\e[0m\n"
-  exit 1
-fi
-
-# Check for eslint
-if [[ ! -x "$ESLINT" ]]; then
-  printf "\e[31mPlease install dependencies first by running '\e[0m\e[1mnpm install\e[0m\e[31m'! (missing eslint)\e[0m\n"
+# Check for prettier-eslint
+if [[ ! -x "$FORMATTER" ]]; then
+  printf "\e[31mPlease install dependencies first by running '\e[0m\e[1mnpm install\e[0m\e[31m'! \e[0m\n"
   exit 1
 fi
 
@@ -64,20 +57,13 @@ SECONDS=0
 
 printf "${C_YELLOW}$FILE_COUNT${C_RESET} staged file(s) will be checked for code styles.\n\n\e[31m"
 
-# Run Prettier in check mode
-"$PRETTIER" --check $FILES_ONE_LINE
+"$FORMATTER" $FILES_ONE_LINE --list-different -l silent
 if [[ "$?" != 0 ]]; then
   PASS=false
-  printf "\nFile(s) above failed Prettier checks!"
+  printf "\nFile(s) above failed code style checks!"
+else
+  printf "\033[3A"
 fi
-
-# Run ESLint using eslint.config.mjs
-"$ESLINT" $FILES_ONE_LINE
-if [[ "$?" != 0 ]]; then
-  PASS=false
-  printf "\nFile(s) above failed ESLint checks!"
-fi
-
 printf "\e[0m\n\n"
 
 echo "Code style checks completed in $SECONDS seconds."
@@ -90,7 +76,9 @@ if ! $PASS; then
 fi
 
 # printf "\n\e[32mRunning Jest...\e[0m\n"
+
 # npm test -- --ci --findRelatedTests $STAGED_FILES
+
 # if [[ "$?" != 0 ]]; then
 #   printf "\e[31mEither Jest tests failed, or code coverage is not complete. Please fix and try again.\e[0m\n"
 #   exit 2

@@ -4,7 +4,7 @@ import TableBody from '@mui/material/TableBody';
 import JournalsListDataRow from './JournalsListDataRow';
 import JournalFieldsMap from './JournalFieldsMap';
 import mockData from 'mock/data/testing/journals/journals';
-import { WithReduxStore, fireEvent, render, act, WithRouter } from 'test-utils';
+import { WithReduxStore, fireEvent, render, act } from 'test-utils';
 import { sanitiseId } from 'helpers/general';
 const defaultTestData = {
     row: mockData[0],
@@ -15,13 +15,11 @@ const setup = ({ testData = { ...defaultTestData }, ...state }) => {
     const onChange = state.onChange ?? jest.fn();
     return render(
         <WithReduxStore initialState={{ searchJournalsReducer: state }}>
-            <WithRouter>
-                <Table>
-                    <TableBody>
-                        <JournalsListDataRow {...testData} {...state} onChange={onChange} />
-                    </TableBody>
-                </Table>
-            </WithRouter>
+            <Table>
+                <TableBody>
+                    <JournalsListDataRow {...testData} {...state} onChange={onChange} />
+                </TableBody>
+            </Table>
         </WithReduxStore>,
     );
 };

@@ -10,23 +10,12 @@ import {
     act,
     fireEvent,
     createMatchMedia,
-    waitForTextToBeRemoved,
-    assertMissingElement,
-    api,
-    waitElementToBeInDocument,
-    userEvent,
 } from 'test-utils';
-import ViewJournal, { getAdvisoryStatement, publishAsOASearchFacetDefaults } from './ViewJournal';
-import { default as viewJournalLocale } from 'locale/viewJournal';
-import { screen } from '@testing-library/react';
-import { pathConfig } from '../../../config';
-import param from 'can-param';
+import ViewJournal, { getAdvisoryStatement } from './ViewJournal';
 
-let mockUseLocation = {};
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useParams: jest.fn(() => ({ id: 1 })),
-    useLocation: () => mockUseLocation,
 }));
 
 const setup = () => {
@@ -40,9 +29,6 @@ const setup = () => {
 };
 
 describe('ViewJournal', () => {
-    beforeEach(() => jest.clearAllMocks());
-    afterEach(() => api.reset());
-
     it('should display journal not found page error on 404', async () => {
         mockApi
             .onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl))
@@ -669,7 +655,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText } = setup();
+        const { getByTestId, getByText, queryByTestId } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -707,7 +693,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText } = setup();
+        const { getByTestId, getByText, queryByTestId } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -939,6 +925,14 @@ describe('ViewJournal', () => {
     });
 
     describe('Favouriting', () => {
+        // beforeEach(() => {
+        //     mockApi = setupMockAdapter();
+        // });
+
+        // afterEach(() => {
+        //     mockApi.reset();
+        // });
+
         it('should display an error message if the journal "favourite" action fails', async () => {
             window.matchMedia = createMatchMedia(1600);
             mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
@@ -1073,122 +1067,6 @@ describe('ViewJournal', () => {
         });
         it('should render nothing (coverage)', () => {
             expect(getAdvisoryStatement()).toEqual('');
-        });
-    });
-
-    describe('`Publish as OA` button', () => {
-        const data = {
-            ...journalDetails.data,
-            fez_journal_read_and_publish: null,
-        };
-
-        afterEach(() =>
-            expect(screen.queryByText(viewJournalLocale.viewJournal.notFound.title)).not.toBeInTheDocument(),
-        );
-
-        it('should not display button for non-search workflows', async () => {
-            api.mock.journals.get({ id: '.*', data: { ...data } });
-            setup();
-
-            await waitForTextToBeRemoved('Loading journal data');
-            assertMissingElement('publish-as-oa-button');
-        });
-
-        describe('search workflows', () => {
-            beforeEach(() => {
-                mockUseLocation = { search: '?fromSearch=true' };
-            });
-
-            it('should not display button when conditions are unmet', async () => {
-                api.mock.journals.get({ id: '.*', data: { ...journalDetails.data } });
-                setup();
-
-                await waitForTextToBeRemoved('Loading journal data');
-                assertMissingElement('publish-as-oa-button');
-            });
-
-            it("should display button for search workflows when OA status = `fee` and it's not embargoed", async () => {
-                window.open = jest.fn();
-                api.mock.journals.get({ id: '.*', data: { ...data } });
-                const { getByTestId } = setup();
-
-                await waitElementToBeInDocument('publish-as-oa-button');
-                await userEvent.click(getByTestId('publish-as-oa-button'));
-
-                const expectedSearchParams = {
-                    keywords: [
-                        {
-                            cvoId: '453458',
-                            text: '2739 Public Health, Environmental and Occupational Health',
-                            type: 'Subject',
-                            id: 'Subject-453458',
-                        },
-                        {
-                            cvoId: '456676',
-                            text: 'Public, Environmental & Occupational Health',
-                            type: 'Subject',
-                            id: 'Subject-456676',
-                        },
-                        {
-                            cvoId: '456497',
-                            text: 'Computer Science, Software Engineering',
-                            type: 'Subject',
-                            id: 'Subject-456497',
-                        },
-                    ],
-                    activeFacets: {
-                        filters: {
-                            ...publishAsOASearchFacetDefaults,
-                            'Highest quartile': ['1'],
-                        },
-                    },
-                };
-                expect(window.open).toHaveBeenCalledWith(
-                    `${pathConfig.journals.search}?${param(expectedSearchParams)}`,
-                    '_blank',
-                    'noopener,noreferrer',
-                );
-            });
-
-            describe('embargoed', () => {
-                const data = {
-                    ...journalDetails.data,
-                    fez_journal_read_and_publish: null,
-                    fez_journal_issn: [
-                        {
-                            ...journalDetails.data.fez_journal_issn[0],
-                            fez_sherpa_romeo: {
-                                ...journalDetails.data.fez_journal_issn[0].fez_sherpa_romeo,
-                                srm_max_embargo_amount: 12,
-                                srm_max_embargo_units: 'months',
-                            },
-                        },
-                    ],
-                };
-
-                it('should display button for search workflows when OA status equal to `fee` and embargoed for equal or greater than 12 months', async () => {
-                    api.mock.journals.get({ id: '.*', data: { ...data } });
-                    setup();
-
-                    await waitElementToBeInDocument('publish-as-oa-button');
-                });
-
-                it('should not display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', () => {
-                    api.mock.journals.get({
-                        id: '.*',
-                        data: {
-                            ...data,
-                            fez_sherpa_romeo: {
-                                ...data.fez_sherpa_romeo,
-                                srm_max_embargo_amount: 11,
-                            },
-                        },
-                    });
-                    setup();
-
-                    assertMissingElement('publish-as-oa-button');
-                });
-            });
         });
     });
 });
