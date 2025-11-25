@@ -96,6 +96,7 @@ describe('JournalSearchInterface', () => {
         expect(queryByTestId('journal-search-browse-all-button')).toBeInTheDocument();
         expect(queryByTestId('journal-search-button')).not.toBeDisabled();
         expect(queryByTestId('journal-search-snackbar')).not.toBeInTheDocument();
+        expect(queryByTestId('add-to-subject-selection-button')).not.toBeInTheDocument();
     });
     it('should not render clear button when there are no selected keywords', () => {
         const { queryByTestId } = setup({
