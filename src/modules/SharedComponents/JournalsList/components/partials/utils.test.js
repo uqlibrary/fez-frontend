@@ -5,13 +5,8 @@ import { mockData } from 'mock/data/testing/journals/journalSearchResults';
 import { types, status, getIndicator, getIndicatorProps } from './utils';
 
 describe('utils', () => {
-    it('getIndicator', () => {
+    it('getIndicator - accepted', () => {
         const data = { ...mockData.data[0] };
-
-        // returns empty
-        const output = getIndicator({ type: types.published, data });
-        expect(output).toEqual({ element: null });
-
         const tooltipLocale = {
             accepted: {
                 embargo: months => `${months} months Test embargo`,
@@ -24,6 +19,23 @@ describe('utils', () => {
         expect(getByTestId('journal-indicator-accepted-13251')).toBeInTheDocument();
         expect(getByTestId('journal-indicator-accepted-13251')).toHaveAttribute('aria-label', '6 months Test embargo');
         expect(getByTestId('journal-indicator-accepted-13251')).toHaveTextContent('embargo');
+    });
+
+    it('getIndicator - published', () => {
+        const data = { ...mockData.data[0] };
+
+        const tooltipLocale = {
+            published: {
+                fee: 'Test Fee',
+            },
+        };
+
+        // returns the Fee icon by default
+        const { element } = getIndicator({ type: types.published, data, tooltipLocale });
+        const { getByTestId } = render(<>{element}</>);
+        expect(getByTestId('journal-indicator-published-13251')).toBeInTheDocument();
+        expect(getByTestId('journal-indicator-published-13251')).toHaveAttribute('aria-label', 'Test Fee');
+        expect(getByTestId('journal-indicator-published-13251')).toHaveTextContent('fee');
     });
 
     it('getIndicatorProps', () => {
@@ -83,10 +95,10 @@ describe('utils', () => {
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.fee });
 
-        // published fee - nodeal
+        // published fee - nodeal, by default it should have the Fee icon
         dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Nodeal';
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
-        expect(publishedIndicatorProps).toEqual(null);
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.fee });
 
         // published fee - apc
         const dataItem4 = { ...mockData.data[0] };
