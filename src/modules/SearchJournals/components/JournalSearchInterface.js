@@ -12,7 +12,6 @@ import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Tooltip from '@mui/material/Tooltip';
-import { AddToSelectedSubjects } from './partials/AddToSelectedSubjects';
 
 export const id = 'journal-search-interface';
 
@@ -79,14 +78,13 @@ export const JournalSearchInterface = ({
                             onKeywordDelete={handleKeywordDelete}
                             keywords={Object.values(selectedKeywords)}
                         />
-                        {!showInputControls && <AddToSelectedSubjects onAdd={handleKeywordAdd} />}
                     </Grid>
                 )}
                 {hasAnySelectedKeywords && !showInputControls && (
                     <Tooltip
                         id="strategic-publishing-clear-search"
                         data-testid="strategic-publishing-clear-search"
-                        title={'Click to start a new search'}
+                        title={'Click to clear search keywords'}
                     >
                         <IconButton
                             sx={{ position: 'absolute', top: 8, right: 0 }}
