@@ -1,15 +1,13 @@
 import React from 'react';
 import mockData from 'mock/data/testing/journals/journals';
 import { FavouriteJournalsList } from './FavouriteJournalsList';
-import { render, WithReduxStore, WithRouter } from 'test-utils';
+import { render, WithReduxStore } from 'test-utils';
 import locale from 'locale/components';
 
 function setup(testProps = {}) {
     return render(
         <WithReduxStore>
-            <WithRouter>
-                <FavouriteJournalsList {...testProps} />
-            </WithRouter>
+            <FavouriteJournalsList {...testProps} />
         </WithReduxStore>,
     );
 }

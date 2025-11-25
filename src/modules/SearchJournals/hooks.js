@@ -21,15 +21,11 @@ export const filterNonValidKeywords = keywords => {
         }, {});
 };
 
-/**
- * @param keyword
- * @return {string}
- */
-export const getKeywordKey = keyword =>
-    keyword.cvoId ? `${keyword.type}-${keyword.cvoId}` : `${keyword.type}-${keyword.text.replace(/ /g, '-')}`;
-
 export const useSelectedKeywords = (initialKeywords = {}) => {
     const [selectedKeywords, setSelectedKeywords] = React.useState(filterNonValidKeywords(initialKeywords));
+
+    const getKeywordKey = keyword =>
+        keyword.cvoId ? `${keyword.type}-${keyword.cvoId}` : `${keyword.type}-${keyword.text.replace(/ /g, '-')}`;
 
     const handleKeywordAdd = React.useCallback(keyword => {
         setSelectedKeywords(prevSelectedKeywords => ({
@@ -119,20 +115,6 @@ export const useSelectedJournals = ({ state = {}, available = {} }) => {
 };
 
 /**
- * @param {object} search
- * @param {object} facetFilters
- * @param {object} rangeFilters
- * @return {* & {activeFacets: {ranges: [{}], filters: [{}]}}}
- */
-export const buildJournalSearchQueryParams = (search, facetFilters, rangeFilters) => ({
-    ...search,
-    activeFacets: {
-        filters: facetFilters || {},
-        ranges: rangeFilters || {},
-    },
-});
-
-/**
  * @typedef {{[p: string]: string, activeFacets: {ranges: (*|{}), filters: (*|{})}}} JournalSearchQueryParams
  * @param path
  * @return {{
@@ -146,11 +128,13 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
     const location = useLocation();
     const searchQueryParams = deparam(location.search.substr(1));
 
-    const journalSearchQueryParams = buildJournalSearchQueryParams(
-        searchQueryParams,
-        searchQueryParams?.activeFacets?.filters,
-        searchQueryParams?.activeFacets?.ranges,
-    );
+    const journalSearchQueryParams = {
+        ...searchQueryParams,
+        activeFacets: {
+            filters: (searchQueryParams.activeFacets && searchQueryParams.activeFacets.filters) || {},
+            ranges: (searchQueryParams.activeFacets && searchQueryParams.activeFacets.ranges) || {},
+        },
+    };
 
     const handleSearch = (searchQuery, state = {}) => {
         navigate({ pathname: path, search: param(searchQuery) }, { state: state });
