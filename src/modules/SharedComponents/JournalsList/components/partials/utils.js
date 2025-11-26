@@ -39,7 +39,10 @@ export const getIndicatorProps = ({ type, data }) => {
             indicatorProps.status = status.embargo;
             indicatorProps.embargoPeriod = maxEmbargo;
             // should not display Published Fee and Accepted Open Icons at the same time
-        } else if (openAccess && ((hasDOAJ && !hasApc) || (hasRNP && !isDiscounted))) {
+        } else if (
+            openAccess &&
+            ((hasDOAJ && !hasApc) || (hasRNP && (isCapped || (cappedValue === 'N' && !isDiscounted))))
+        ) {
             indicatorProps.status = status.open;
         } else {
             return null;
