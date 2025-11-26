@@ -67,3 +67,4 @@ export { default as recordWithRDM } from './recordWithRDM';
 export { default as recordWithRDMMediatedAccess } from './recordWithRDMMediatedAccess';
 export { default as recordThatFailsDeletion } from './recordThatFailsDeletion';
 export { default as deletedRecord } from './deletedRecord';
+export { default as oaNonComplianceList } from './oaNonComplianceList';

@@ -55,12 +55,9 @@ test.describe('Book admin edit', () => {
         // Clear and check required validation
         const placeOfPublicationInput = bibliographicTab.getByTestId('rek-place-of-publication-input');
         await placeOfPublicationInput.clear();
-        await expect(
-            placeOfPublicationInput
-                .locator('..')
-                .locator('..')
-                .locator('p'),
-        ).toHaveText('This field is required');
+        await expect(placeOfPublicationInput.locator('..').locator('..').locator('p')).toHaveText(
+            'This field is required',
+        );
 
         await adminEditVerifyAlerts(page, 1, ['Place of publication is required']);
     });

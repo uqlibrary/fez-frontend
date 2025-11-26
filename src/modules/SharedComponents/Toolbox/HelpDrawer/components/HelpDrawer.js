@@ -25,7 +25,7 @@ export const HelpDrawer = ({ buttonLabel = 'CLOSE' }) => {
 
     if (text && text.props && text.props.children) {
         indexedText = React.Children.map(text.props.children, (child, index) => {
-            if (child.type) {
+            if (child?.type) {
                 return React.cloneElement(child, { key: index });
             } else {
                 return child;
