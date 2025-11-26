@@ -7793,7 +7793,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 />
               </td>
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-17pf2nr-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-h60ie-MuiTableCell-root"
                 data-index="3"
               >
                 <div
