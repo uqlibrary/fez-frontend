@@ -23,7 +23,7 @@ export const ForCodeAutocompleteField: React.FC<React.ComponentPropsWithRef<any>
             placeholder={'type new subject'}
             {...props}
             // @ts-ignore
-            inputRef={ref}
+            ref={ref}
         />
     );
 });

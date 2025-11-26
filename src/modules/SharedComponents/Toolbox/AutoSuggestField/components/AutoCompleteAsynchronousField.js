@@ -36,7 +36,7 @@ export const AutoCompleteAsynchronousField = React.forwardRef(
             clearSuggestionsOnClose = true,
             fullWidth = false,
         },
-        inputRef,
+        ref,
     ) => {
         const [open, setOpen] = useState(false);
         const [options, setOptions] = useState([]);
@@ -158,7 +158,6 @@ export const AutoCompleteAsynchronousField = React.forwardRef(
                     value={value}
                     renderInput={params => (
                         <TextField
-                            inputRef={inputRef}
                             variant="standard"
                             {...params}
                             name={name || autoCompleteAsynchronousFieldId}
@@ -198,6 +197,7 @@ export const AutoCompleteAsynchronousField = React.forwardRef(
                                     'data-testid': `${autoCompleteAsynchronousFieldId}-helper-text`,
                                 },
                             }}
+                            inputRef={ref}
                         />
                     )}
                     {...(fullWidth && { fullWidth })}
