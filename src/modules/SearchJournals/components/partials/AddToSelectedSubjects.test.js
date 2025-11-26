@@ -57,7 +57,7 @@ describe('AddToSelectedSubjects', () => {
         expect(onAdd).toHaveBeenCalledTimes(1);
         expect(onAdd).toHaveBeenCalledWith({
             type: 'Subject',
-            cvoId: 453236,
+            id: 453236,
             text: '1000 General',
         });
         // should close after adding

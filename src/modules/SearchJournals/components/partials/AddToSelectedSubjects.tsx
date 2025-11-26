@@ -37,7 +37,7 @@ const BorderedChip = styled(SelectedSearchCriteriaItem)(() => ({
 }));
 
 type AddToSelectedSubjects = {
-    onAdd: (keyword: { type: string; cvoId: string; text: string }) => void;
+    onAdd: (keyword: { type: string; id: string; text: string }) => void;
 };
 
 export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }) => {
@@ -73,7 +73,7 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }
     }
     const close = () => setIsOpen(false);
     const handleOnAdd = (item: Record<string, string>) => {
-        onAdd({ type: 'Subject', cvoId: item.key, text: item.value });
+        onAdd({ type: 'Subject', id: item.key, text: item.value });
         close();
     };
 
