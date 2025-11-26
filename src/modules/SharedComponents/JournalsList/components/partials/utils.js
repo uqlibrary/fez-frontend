@@ -1,6 +1,7 @@
 import React from 'react';
 
 import JournalsOpenAccessIndicator from './JournalsOpenAccessIndicator';
+import { isEmptyObject } from 'helpers/general';
 
 export const types = { published: 'published', accepted: 'accepted' };
 export const status = { open: 'open', cap: 'cap', embargo: 'embargo', fee: 'fee' };
@@ -12,12 +13,16 @@ export const getIndicatorProps = ({ type, data }) => {
     };
 
     // APC fee from DOAJ
+    const hasDOAJ = data.fez_journal_doaj && !isEmptyObject(data.fez_journal_doaj);
     const hasApc = !!Number(data.fez_journal_doaj?.jnl_doaj_apc_average_price);
 
     // is capped and is discounted from Read and Publish Agreement
-    const isCapped =
-        data.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped === 'Y' ||
-        data.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped === 'Approaching';
+    const hasRNP =
+        data.fez_journal_read_and_publish &&
+        !isEmptyObject(data.fez_journal_read_and_publish) &&
+        data.fez_journal_read_and_publish.jnl_read_and_publish_is_capped?.toLowerCase() !== 'nodeal';
+    const cappedValue = data.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped;
+    const isCapped = cappedValue === 'Y' || cappedValue === 'Approaching';
     const isDiscounted = !!data.fez_journal_read_and_publish?.jnl_read_and_publish_is_discounted;
 
     if (type === types.accepted) {
@@ -34,24 +39,24 @@ export const getIndicatorProps = ({ type, data }) => {
             indicatorProps.status = status.embargo;
             indicatorProps.embargoPeriod = maxEmbargo;
             // should not display Published Fee and Accepted Open Icons at the same time
-        } else if (openAccess && !hasApc && !isDiscounted) {
+        } else if (
+            openAccess &&
+            ((hasDOAJ && !hasApc) || (hasRNP && (isCapped || (cappedValue === 'N' && !isDiscounted))))
+        ) {
             indicatorProps.status = status.open;
         } else {
             return null;
         }
     } else {
         indicatorProps.status = status.fee;
-        if (
-            data.fez_journal_read_and_publish &&
-            data.fez_journal_read_and_publish.jnl_read_and_publish_is_capped?.toLowerCase() !== 'nodeal'
-        ) {
+        if (hasRNP) {
             const entry = data.fez_journal_read_and_publish;
             if (entry.jnl_read_and_publish_is_s2o === 'S2O') {
                 indicatorProps.showS2O = true;
                 indicatorProps.status = status.open;
             } else if (isCapped) {
                 indicatorProps.status = status.cap;
-            } else if (!isDiscounted) {
+            } else if (cappedValue === 'N' && !isDiscounted) {
                 indicatorProps.status = status.open;
                 if (entry.jnl_read_and_publish_is_s2o === 'Y') {
                     indicatorProps.showS2O = true;
