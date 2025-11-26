@@ -134,6 +134,7 @@ test.describe('Strategic Publishing - Search', () => {
         test('resets the search functionality and clears results when the clear button is clicked', async ({
             page,
         }) => {
+            // Note, this can be flaky
             const resultsLengthWithKeywordAndFacets = 4;
             const resultsLengthFullDefaultPage = 10;
             const ResultTitles = page.locator('[id^="journal-list-data-col-1-title"]');
