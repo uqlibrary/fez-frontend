@@ -428,6 +428,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:256099"
                   >
                     Open Accessible test record
@@ -756,6 +757,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                 >
                   <a
+                    data-discover="true"
                     href="/view/UQ:173575"
                   >
                     Open Accessible test Book Chapter record
