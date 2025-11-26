@@ -4,6 +4,7 @@ import {
     AIATSIS_CODES_VOCAB_ID,
     SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID,
     JOURNAL_ADVISORY_STATEMENT_TYPE,
+    JOURNAL_SEARCH_SUBJECTS_VOCAB_ID,
 } from 'config/general';
 
 export const vocabulariesList = {
@@ -32601,5 +32602,22 @@ export const vocabulariesList = {
                 },
             },
         ],
-    }
+    },
+    [JOURNAL_SEARCH_SUBJECTS_VOCAB_ID]: {
+        total: 2,
+        data: [
+            {
+                controlled_vocab: {
+                    cvo_id: 41000,
+                    cvo_title: '1000 General',
+                },
+            },
+            {
+                controlled_vocab: {
+                    cvo_id: 41010,
+                    cvo_title: '1010 Math',
+                },
+            },
+        ],
+    },
 };

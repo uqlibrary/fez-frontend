@@ -4499,6 +4499,11 @@ export default {
                         title: 'Add a subject to refine result',
                     },
                 },
+                forCodeAutocompleteField: {
+                    input: {
+                        placeholder: 'type new subject',
+                    },
+                },
                 FAQ: {
                     title: 'Learn more',
                     items: [
