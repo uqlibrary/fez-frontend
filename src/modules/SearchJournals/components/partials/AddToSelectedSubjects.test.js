@@ -1,27 +1,28 @@
 import React from 'react';
-import { assertDisabled, render, userEvent, waitFor, waitForText, WithReduxStore } from 'test-utils';
+import { api, assertDisabled, render, userEvent, waitFor, waitForText, WithReduxStore } from 'test-utils';
 import { AddToSelectedSubjects } from './AddToSelectedSubjects';
+import { JOURNAL_SEARCH_SUBJECTS_VOCAB_ID } from 'config/general';
 
-jest.mock('hooks/useControlledVocabs', () => ({
-    __esModule: true,
-    useControlledVocabs: jest.fn().mockReturnValue({
-        items: [
-            {
-                key: 1000,
-                value: '1000 General',
-            },
-            {
-                key: 1010,
-                value: '1010 Math',
-            },
-        ],
-        fetch: jest.fn(),
-        itemsLoading: false,
-    }),
-}));
+jest.mock('hooks/useControlledVocabs', () => {
+    // require inside the factory to avoid hoisting issues
+    const { vocabulariesList } = require('mock/data');
+    const { JOURNAL_SEARCH_SUBJECTS_VOCAB_ID } = require('config/general');
+
+    return {
+        __esModule: true,
+        useControlledVocabs: jest.fn().mockReturnValue({
+            items: vocabulariesList[JOURNAL_SEARCH_SUBJECTS_VOCAB_ID].data.map(item => ({
+                key: item.controlled_vocab.cvo_id,
+                value: item.controlled_vocab.cvo_title,
+            })),
+            fetch: jest.fn(),
+            itemsLoading: false,
+        }),
+    };
+});
 
 import { useControlledVocabs } from 'hooks/useControlledVocabs';
-import { FOR_CODE_VOCAB_ID } from '../../../../config/general';
+import { vocabulariesList } from '../../../../mock/data';
 
 const setup = ({ onAdd, selected, state } = {}) =>
     render(
@@ -29,7 +30,13 @@ const setup = ({ onAdd, selected, state } = {}) =>
             <AddToSelectedSubjects onAdd={onAdd || jest.fn} selected={selected} />
         </WithReduxStore>,
     );
+
 describe('AddToSelectedSubjects', () => {
+    afterEach(() => {
+        jest.clearAllMocks();
+        api.mock.reset();
+    });
+
     it('should render the add button (closed state) by default', () => {
         const { getByTestId, queryByTestId } = setup();
         expect(getByTestId('add-to-subject-selection-button')).toBeInTheDocument();
@@ -59,11 +66,11 @@ describe('AddToSelectedSubjects', () => {
         await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
         await userEvent.click(await waitForText('1000 General'));
 
-        expect(useControlledVocabs).toHaveBeenCalledWith(FOR_CODE_VOCAB_ID, expect.any(Function));
+        expect(useControlledVocabs).toHaveBeenCalledWith(JOURNAL_SEARCH_SUBJECTS_VOCAB_ID, expect.any(Function));
         expect(onAdd).toHaveBeenCalledTimes(1);
         expect(onAdd).toHaveBeenCalledWith({
-            cvoId: 1000,
-            id: 'Subject-1000',
+            cvoId: 41000,
+            id: 'Subject-41000',
             text: '1000 General',
             type: 'Subject',
         });
@@ -73,38 +80,32 @@ describe('AddToSelectedSubjects', () => {
     });
 
     it('should hide selected subjects from dropdown list', async () => {
+        // user real hook to test filter func
+        useControlledVocabs.mockImplementation(jest.requireActual('hooks/useControlledVocabs').useControlledVocabs);
+
+        api.mock.cvo.get({
+            cvoId: JOURNAL_SEARCH_SUBJECTS_VOCAB_ID,
+            data: vocabulariesList[JOURNAL_SEARCH_SUBJECTS_VOCAB_ID].data,
+        });
+
         const onAdd = jest.fn();
-        const { getByTestId, queryByTestId, queryByText } = setup({
+        const { getByTestId, queryByText } = setup({
             onAdd,
-            selected: [
-                {
-                    'Subject-1000': {
-                        cvoId: 1000,
-                        id: 'Subject-1000',
-                        text: '1000 General',
-                        type: 'Subject',
-                    },
+            selected: {
+                'Subject-41000': {
+                    cvoId: 41000,
+                    id: 'Subject-41000',
+                    text: '1000 General',
+                    type: 'Subject',
                 },
-            ],
+            },
         });
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
         await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
-        await userEvent.click(await waitForText('1010 Math'));
+        await waitForText('1010 Math');
         // should not list already selected subjects
         expect(queryByText('1000 General')).not.toBeInTheDocument();
-
-        expect(useControlledVocabs).toHaveBeenCalledWith(FOR_CODE_VOCAB_ID, expect.any(Function));
-        expect(onAdd).toHaveBeenCalledTimes(1);
-        expect(onAdd).toHaveBeenCalledWith({
-            cvoId: 1010,
-            id: 'Subject-1010',
-            text: '1010 Math',
-            type: 'Subject',
-        });
-        // should close after adding
-        expect(queryByTestId('for-code-autocomplete-field-input')).not.toBeInTheDocument();
-        expect(getByTestId('add-to-subject-selection-button')).toBeInTheDocument();
     });
 
     it('closes when Escape is pressed in the autocomplete input', async () => {
