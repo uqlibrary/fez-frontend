@@ -2,10 +2,12 @@ import * as React from 'react';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import NewLabelRounded from '@mui/icons-material/NewLabelTwoTone';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { SelectedSearchCriteriaItem } from './SelectedSearchCriteriaItem';
 import { ForCodeAutocompleteField } from './ForCodeAutocompleteField';
+import { useSelector } from 'react-redux';
+import { AppState } from 'reducer';
 
 const BorderedChip = styled(SelectedSearchCriteriaItem)(() => ({
     borderRadius: 999,
@@ -35,29 +37,43 @@ const BorderedChip = styled(SelectedSearchCriteriaItem)(() => ({
 }));
 
 type AddToSelectedSubjects = {
-    onAdd: (keyword: { type: string; cvoId: string; text: string }) => void;
+    onAdd: (keyword: { type: string; id: string; text: string }) => void;
 };
 
 export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const inputRef = useRef<HTMLInputElement | null>(null);
+    // unless it gets moved to its parent, we want to keep this hard dependency in here to avoid unnecessary rendering
+    // of other comps
+    const { journalsListLoading } = useSelector((state: AppState) => state?.get('searchJournalsReducer'));
+
+    // set focus to dropdown upon displaying it
+    useEffect(() => inputRef.current?.focus(), [isOpen]);
 
     if (!isOpen) {
+        // TODO move it to location
+        const title = 'Add a subject to refine result';
+        const button = (
+            <IconButton
+                color="info"
+                onClick={() => setIsOpen(true)}
+                data-testid="add-to-subject-selection-button"
+                disabled={journalsListLoading}
+                aria-label={title}
+            >
+                <NewLabelRounded />
+            </IconButton>
+        );
+
         return (
-            <Tooltip title="Add a subject to refine result">
-                <IconButton
-                    color="info"
-                    onClick={() => setIsOpen(true)}
-                    data-testid={'add-to-subject-selection-button'}
-                >
-                    <NewLabelRounded />
-                </IconButton>
+            <Tooltip title={title} describeChild>
+                {journalsListLoading ? <span>{button}</span> : button}
             </Tooltip>
         );
     }
-
     const close = () => setIsOpen(false);
     const handleOnAdd = (item: Record<string, string>) => {
-        onAdd({ type: 'Subject', cvoId: item.key, text: item.value });
+        onAdd({ type: 'Subject', id: item.key, text: item.value });
         close();
     };
 
@@ -76,6 +92,7 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }
                     e.stopPropagation();
                     close();
                 }}
+                ref={inputRef}
             />
         </BorderedChip>
     );
