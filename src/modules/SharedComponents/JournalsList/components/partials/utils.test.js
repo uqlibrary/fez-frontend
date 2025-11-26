@@ -68,9 +68,31 @@ describe('utils', () => {
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
         expect(acceptedIndicatorProps).toEqual(null);
 
-        // accepted open
+        // accepted null
+        dataItem2.fez_journal_read_and_publish = {};
+        dataItem2.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Exceeded';
+        acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
+        expect(acceptedIndicatorProps).toEqual(null);
+
+        // accepted null
+        dataItem2.fez_journal_read_and_publish = {};
+        dataItem2.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'N';
+        dataItem2.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = true;
+        dataItem2.fez_journal_issn[1].fez_sherpa_romeo.srm_max_embargo_amount = null;
+        acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
+        expect(acceptedIndicatorProps).toEqual(null);
+
+        // accepted open - no APC
         dataItem2.fez_journal_doaj = {};
         dataItem2.fez_journal_doaj.jnl_doaj_apc_average_price = null;
+        dataItem2.fez_journal_issn[1].fez_sherpa_romeo.srm_max_embargo_amount = null;
+        acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
+        expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.open });
+
+        // accepted open
+        dataItem2.fez_journal_read_and_publish = {};
+        dataItem2.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'N';
+        dataItem2.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = false;
         dataItem2.fez_journal_issn[1].fez_sherpa_romeo.srm_max_embargo_amount = null;
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
         expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.open });
