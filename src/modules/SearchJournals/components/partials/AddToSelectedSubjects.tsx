@@ -2,12 +2,14 @@ import * as React from 'react';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import NewLabelRounded from '@mui/icons-material/NewLabelTwoTone';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { SelectedSearchCriteriaItem } from './SelectedSearchCriteriaItem';
 import { ForCodeAutocompleteField } from './ForCodeAutocompleteField';
 import { useSelector } from 'react-redux';
 import { AppState } from 'reducer';
+import { KeywordType } from '../../../../@types/controlledVocab';
+import { KeyValueItemType } from '../../../../hooks/useControlledVocabs';
 
 const BorderedChip = styled(SelectedSearchCriteriaItem)(() => ({
     borderRadius: 999,
@@ -37,12 +39,17 @@ const BorderedChip = styled(SelectedSearchCriteriaItem)(() => ({
 }));
 
 type AddToSelectedSubjects = {
-    onAdd: (keyword: { type: string; id: string; text: string }) => void;
+    onAdd: (item: KeywordType) => void;
+    selected: Record<string, KeywordType>;
 };
 
-export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }) => {
+export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd, selected }) => {
     const [isOpen, setIsOpen] = useState(false);
     const inputRef = useRef<HTMLInputElement | null>(null);
+    const selectedIds = useMemo(
+        () => Object.values(selected).map((item: KeywordType) => String(item.cvoId).toLowerCase()),
+        [selected],
+    );
     // unless it gets moved to its parent, we want to keep this hard dependency in here to avoid unnecessary rendering
     // of other comps
     const { journalsListLoading } = useSelector((state: AppState) => state?.get('searchJournalsReducer'));
@@ -72,8 +79,8 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }
         );
     }
     const close = () => setIsOpen(false);
-    const handleOnAdd = (item: Record<string, string>) => {
-        onAdd({ type: 'Subject', id: item.key, text: item.value });
+    const handleOnAdd = (item: KeyValueItemType) => {
+        onAdd({ type: 'Subject', cvoId: parseInt(item.key, 10), id: `Subject-${item.key}`, text: item.value });
         close();
     };
 
@@ -86,6 +93,10 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd }
             }}
         >
             <ForCodeAutocompleteField
+                filter={(_, keyValueList) =>
+                    keyValueList.filter(item => !selectedIds.includes(String(item?.key).toLowerCase()))
+                }
+                // @ts-ignore
                 onChange={handleOnAdd}
                 onKeyDown={(e: React.KeyboardEvent) => {
                     if (e.key !== 'Escape') return;
