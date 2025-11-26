@@ -50,7 +50,7 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd, 
     const [isOpen, setIsOpen] = useState(false);
     const inputRef = useRef<HTMLInputElement | null>(null);
     const selectedIds = useMemo(
-        () => Object.values(selected).map((item: KeywordType) => String(item.cvoId).toLowerCase()),
+        () => Object.values(selected || {}).map((item: KeywordType) => String(item.cvoId).toLowerCase()),
         [selected],
     );
     // unless it gets moved to its parent, we want to keep this hard dependency in here to avoid unnecessary rendering
