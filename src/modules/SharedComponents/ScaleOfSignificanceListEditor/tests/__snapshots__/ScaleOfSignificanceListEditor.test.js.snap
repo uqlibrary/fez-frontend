@@ -2306,7 +2306,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
               id="rek-significance-input"
               required=""
               tabindex="-1"
-              value=""
+              value="454026"
             />
             <svg
               aria-hidden="true"
