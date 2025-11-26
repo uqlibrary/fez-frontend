@@ -75,14 +75,27 @@ describe('utils', () => {
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
         expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.embargo, embargoPeriod: 6 });
 
+        // accepted null
+        dataItem2.fez_journal_issn[1].fez_sherpa_romeo.srm_max_embargo_amount = null;
+        acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
+        expect(acceptedIndicatorProps).toEqual(null);
+
         // accepted open
+        dataItem2.fez_journal_doaj = {};
+        dataItem2.fez_journal_doaj.jnl_doaj_apc_average_price = null;
         dataItem2.fez_journal_issn[1].fez_sherpa_romeo.srm_max_embargo_amount = null;
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
         expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.open });
 
-        // published open
+        // published fee by default
         const dataItem3 = { ...mockData.data[0] };
         dataItem3.fez_journal_read_and_publish = {};
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.fee });
+
+        // published open
+        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'N';
+        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = false;
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open });
 
@@ -96,7 +109,7 @@ describe('utils', () => {
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.cap });
 
-        // published fee - discounted
+        // published fee - discounted - only applicable when capped = N
         dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'N';
         dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = true;
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
@@ -104,10 +117,11 @@ describe('utils', () => {
 
         // published fee - cap exceeded
         dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Exceeded';
+        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = false;
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.fee });
 
-        // published fee - nodeal, by default it should have the Fee icon
+        // published fee - nodeal, treat it as no agreement
         dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Nodeal';
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.fee });
