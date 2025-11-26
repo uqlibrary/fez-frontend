@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 import { AppState } from 'reducer';
 import { KeywordType } from '../../../../@types/controlledVocab';
 import { KeyValueItemType } from '../../../../hooks/useControlledVocabs';
+import locale from 'locale/components';
 
 const BorderedChip = styled(SelectedSearchCriteriaItem)(() => ({
     borderRadius: 999,
@@ -44,10 +45,12 @@ type AddToSelectedSubjects = {
 };
 
 export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd, selected }) => {
+    // @ts-expect-error
+    const txt = locale.components.searchJournals.partials.addToSelectedSubjects;
     const [isOpen, setIsOpen] = useState(false);
     const inputRef = useRef<HTMLInputElement | null>(null);
     const selectedIds = useMemo(
-        () => Object.values(selected).map((item: KeywordType) => String(item.cvoId).toLowerCase()),
+        () => Object.values(selected || {}).map((item: KeywordType) => String(item.cvoId).toLowerCase()),
         [selected],
     );
     // unless it gets moved to its parent, we want to keep this hard dependency in here to avoid unnecessary rendering
@@ -58,22 +61,20 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd, 
     useEffect(() => inputRef.current?.focus(), [isOpen]);
 
     if (!isOpen) {
-        // TODO move it to location
-        const title = 'Add a subject to refine result';
         const button = (
             <IconButton
                 color="info"
                 onClick={() => setIsOpen(true)}
                 data-testid="add-to-subject-selection-button"
                 disabled={journalsListLoading}
-                aria-label={title}
+                aria-label={txt.button.title}
             >
                 <NewLabelRounded />
             </IconButton>
         );
 
         return (
-            <Tooltip title={title} describeChild>
+            <Tooltip title={txt.button.title} describeChild>
                 {journalsListLoading ? <span>{button}</span> : button}
             </Tooltip>
         );

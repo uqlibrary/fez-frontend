@@ -1,5 +1,5 @@
 import React from 'react';
-import { assertDisabled, render, userEvent, waitForText, WithReduxStore } from 'test-utils';
+import { assertDisabled, render, userEvent, waitFor, waitForText, WithReduxStore } from 'test-utils';
 import { AddToSelectedSubjects } from './AddToSelectedSubjects';
 
 jest.mock('hooks/useControlledVocabs', () => ({
@@ -7,8 +7,12 @@ jest.mock('hooks/useControlledVocabs', () => ({
     useControlledVocabs: jest.fn().mockReturnValue({
         items: [
             {
-                key: 453236,
+                key: 1000,
                 value: '1000 General',
+            },
+            {
+                key: 1010,
+                value: '1010 Math',
             },
         ],
         fetch: jest.fn(),
@@ -19,10 +23,10 @@ jest.mock('hooks/useControlledVocabs', () => ({
 import { useControlledVocabs } from 'hooks/useControlledVocabs';
 import { FOR_CODE_VOCAB_ID } from '../../../../config/general';
 
-const setup = ({ onAdd, state } = {}) =>
+const setup = ({ onAdd, selected, state } = {}) =>
     render(
         <WithReduxStore initialState={state}>
-            <AddToSelectedSubjects onAdd={onAdd || jest.fn} />
+            <AddToSelectedSubjects onAdd={onAdd || jest.fn} selected={selected} />
         </WithReduxStore>,
     );
 describe('AddToSelectedSubjects', () => {
@@ -42,7 +46,9 @@ describe('AddToSelectedSubjects', () => {
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
         expect(queryByTestId('add-to-subject-selection-button')).not.toBeInTheDocument();
-        expect(getByTestId('for-code-autocomplete-field-input')).toBeInTheDocument();
+        await waitFor(() => {
+            expect(getByTestId('for-code-autocomplete-field-input')).toHaveFocus();
+        });
     });
 
     it('should call given onAdd with mapped subject and closes when a subject is selected', async () => {
@@ -50,15 +56,51 @@ describe('AddToSelectedSubjects', () => {
         const { getByTestId, queryByTestId } = setup({ onAdd });
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
-        await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '100');
+        await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
         await userEvent.click(await waitForText('1000 General'));
 
-        expect(useControlledVocabs).toHaveBeenCalledWith(FOR_CODE_VOCAB_ID);
+        expect(useControlledVocabs).toHaveBeenCalledWith(FOR_CODE_VOCAB_ID, expect.any(Function));
         expect(onAdd).toHaveBeenCalledTimes(1);
         expect(onAdd).toHaveBeenCalledWith({
-            type: 'Subject',
-            id: 453236,
+            cvoId: 1000,
+            id: 'Subject-1000',
             text: '1000 General',
+            type: 'Subject',
+        });
+        // should close after adding
+        expect(queryByTestId('for-code-autocomplete-field-input')).not.toBeInTheDocument();
+        expect(getByTestId('add-to-subject-selection-button')).toBeInTheDocument();
+    });
+
+    it('should hide selected subjects from dropdown list', async () => {
+        const onAdd = jest.fn();
+        const { getByTestId, queryByTestId, queryByText } = setup({
+            onAdd,
+            selected: [
+                {
+                    'Subject-1000': {
+                        cvoId: 1000,
+                        id: 'Subject-1000',
+                        text: '1000 General',
+                        type: 'Subject',
+                    },
+                },
+            ],
+        });
+
+        await userEvent.click(getByTestId('add-to-subject-selection-button'));
+        await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
+        await userEvent.click(await waitForText('1010 Math'));
+        // should not list already selected subjects
+        expect(queryByText('1000 General')).not.toBeInTheDocument();
+
+        expect(useControlledVocabs).toHaveBeenCalledWith(FOR_CODE_VOCAB_ID, expect.any(Function));
+        expect(onAdd).toHaveBeenCalledTimes(1);
+        expect(onAdd).toHaveBeenCalledWith({
+            cvoId: 1010,
+            id: 'Subject-1010',
+            text: '1010 Math',
+            type: 'Subject',
         });
         // should close after adding
         expect(queryByTestId('for-code-autocomplete-field-input')).not.toBeInTheDocument();
