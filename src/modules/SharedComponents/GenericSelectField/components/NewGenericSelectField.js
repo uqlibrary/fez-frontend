@@ -64,7 +64,7 @@ export const NewGenericSelectField = ({
         if (multiple) {
             value.length > 0 ? setSelectValue(value) : setSelectValue([]);
         } else {
-            value !== undefined ? setSelectValue(value) : setSelectValue('');
+            value !== null ? setSelectValue(value) : setSelectValue('');
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value]);
