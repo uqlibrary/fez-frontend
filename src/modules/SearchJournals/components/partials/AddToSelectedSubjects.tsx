@@ -45,7 +45,6 @@ type AddToSelectedSubjects = {
 };
 
 export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd, selected }) => {
-    // @ts-expect-error
     const txt = locale.components.searchJournals.partials.addToSelectedSubjects;
     const [isOpen, setIsOpen] = useState(false);
     const inputRef = useRef<HTMLInputElement | null>(null);
