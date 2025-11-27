@@ -460,12 +460,12 @@ exports[`Search record results should render a single claimable item with no aut
                                   class="publicationSource css-1oqhn84"
                                   data-analyticsid="publication-source-espace-link"
                                   data-testid="publication-source-espace-link"
-                                  href="https://fez-staging.library.uq.edu.au/view/UQ:795469"
+                                  href="http://localhost/view/UQ:795469"
                                   id="publication-source-espace-link"
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Link to https://fez-staging.library.uq.edu.au/view/UQ:795469 will open in a new window."
+                                  title="Link to http://localhost/view/UQ:795469 will open in a new window."
                                 >
                                   <svg
                                     aria-hidden="true"
@@ -1240,12 +1240,12 @@ exports[`Search record results should render a single unclaimable item with no a
                                   class="publicationSource css-1oqhn84"
                                   data-analyticsid="publication-source-espace-link"
                                   data-testid="publication-source-espace-link"
-                                  href="https://fez-staging.library.uq.edu.au/view/UQ:795469"
+                                  href="http://localhost/view/UQ:795469"
                                   id="publication-source-espace-link"
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Link to https://fez-staging.library.uq.edu.au/view/UQ:795469 will open in a new window."
+                                  title="Link to http://localhost/view/UQ:795469 will open in a new window."
                                 >
                                   <svg
                                     aria-hidden="true"
@@ -2020,12 +2020,12 @@ exports[`Search record results should render a single unclaimable item with no a
                                   class="publicationSource css-1oqhn84"
                                   data-analyticsid="publication-source-espace-link"
                                   data-testid="publication-source-espace-link"
-                                  href="https://fez-staging.library.uq.edu.au/view/UQ:795469"
+                                  href="http://localhost/view/UQ:795469"
                                   id="publication-source-espace-link"
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Link to https://fez-staging.library.uq.edu.au/view/UQ:795469 will open in a new window."
+                                  title="Link to http://localhost/view/UQ:795469 will open in a new window."
                                 >
                                   <svg
                                     aria-hidden="true"
