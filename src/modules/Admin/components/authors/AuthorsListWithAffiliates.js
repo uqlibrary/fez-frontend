@@ -101,15 +101,17 @@ export const AuthorDetailPanel = ({ rowData, locale, isEditing, setEditing, onCh
                 {affiliationsLocale.title}
                 {!isEditing && (
                     <Tooltip title={affiliationsLocale.editButton.tooltip}>
-                        <IconButton
-                            aria-label="delete"
-                            onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
-                            size={'small'}
-                            id={`affiliationEditBtn-${rowData.aut_id}`}
-                            data-testid={`affiliationEditBtn-${rowData.aut_id}`}
-                        >
-                            <PlaylistAddCheckIcon />
-                        </IconButton>
+                        <span>
+                            <IconButton
+                                aria-label="delete"
+                                onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
+                                size={'small'}
+                                id={`affiliationEditBtn-${rowData.aut_id}`}
+                                data-testid={`affiliationEditBtn-${rowData.aut_id}`}
+                            >
+                                <PlaylistAddCheckIcon />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                 )}
             </Typography>
@@ -130,7 +132,6 @@ export const AuthorDetailPanel = ({ rowData, locale, isEditing, setEditing, onCh
 export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list, locale, onChange }) => {
     const theme = useTheme();
     const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
-    const prevList = React.useRef('');
 
     // eslint-disable-next-line camelcase
     const setEditing = ({ editing, aut_id }) => {
@@ -226,7 +227,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     );
                 },
                 Edit: ({ table, row, column }) => {
-                    const value = row._valuesCache.nameAsPublished;
+                    const value = row._valuesCache.nameAsPublished || '';
                     const errors = validationErrors[row.id] || [];
                     const error = getValidationError(errors, 'nameAsPublished');
 
@@ -375,21 +376,6 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [disabled, getValidationError, handleValidation, validationErrors],
     );
-
-    React.useEffect(() => {
-        const listStr = JSON.stringify(list);
-        /* istanbul ignore else */
-        if (prevList.current !== listStr) {
-            prevList.current = listStr;
-            const result = [];
-            list.forEach((item, index) => {
-                delete item.tableData;
-                item.id = index;
-                result.push({ ...item });
-            });
-            setData(result);
-        }
-    }, [list, setData]);
 
     const transformNewAuthorObject = newAuthor => {
         delete newAuthor['mrt-row-actions'];
@@ -623,128 +609,138 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         },
         renderTopToolbarCustomActions: ({ table }) => (
             <Tooltip title={addButton}>
-                <IconButton
-                    id={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
-                    data-testid={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
-                    disabled={disabled || table.getState().creatingRow !== null}
-                    onClick={() => {
-                        resetEditRow();
-                        table.setEditingRow(null);
-                        table.setCreatingRow(true);
-                        // immediately force validation of new row
-                        handleValidation({ id: 'mrt-row-create' }, columns[0].accessorKey, '');
-                    }}
-                >
-                    <AddCircle
-                        color="primary"
-                        fontSize="large"
-                        id={`${contributorEditorId}-add`}
-                        data-testid={`${contributorEditorId}-add`}
-                    />
-                </IconButton>
+                <span>
+                    <IconButton
+                        id={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
+                        data-testid={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
+                        disabled={disabled || table.getState().creatingRow !== null}
+                        onClick={() => {
+                            resetEditRow();
+                            table.setEditingRow(null);
+                            table.setCreatingRow(true);
+                            // immediately force validation of new row
+                            handleValidation({ id: 'mrt-row-create' }, columns[0].accessorKey, '');
+                        }}
+                    >
+                        <AddCircle
+                            color="primary"
+                            fontSize="large"
+                            id={`${contributorEditorId}-add`}
+                            data-testid={`${contributorEditorId}-add`}
+                        />
+                    </IconButton>
+                </span>
             </Tooltip>
         ),
         renderRowActions: ({ table, row }) => {
             return (
                 <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
-                    <Tooltip title={moveUpHint}>
-                        <IconButton
-                            onClick={() => {
-                                const index = row.index;
-                                /* istanbul ignore else */
-                                if (index > 0) {
-                                    const newData = [...data];
-                                    const temp = newData[index - 1];
-                                    newData[index - 1] = newData[index];
-                                    newData[index] = temp;
-                                    setData(newData);
-                                    onChange(newData);
+                    <Tooltip title={deleteHint}>
+                        <span>
+                            <IconButton
+                                onClick={openDeleteConfirmModal(row.index)}
+                                disabled={
+                                    disabled ||
+                                    !!pendingDeleteRowId ||
+                                    !!isBusy ||
+                                    !!editingRow ||
+                                    table.getState().creatingRow !== null
                                 }
-                            }}
-                            disabled={
-                                !!pendingDeleteRowId ||
-                                !!isBusy ||
-                                !!editingRow ||
-                                row.index === 0 ||
-                                table.getState().creatingRow !== null
-                            }
-                            id={`${contributorEditorId}-list-row-${row.index}-move-up`}
-                            data-testid={`${contributorEditorId}-list-row-${row.index}-move-up`}
-                            size="small"
-                            color="primary"
-                        >
-                            <KeyboardArrowUp />
-                        </IconButton>{' '}
+                                id={`${contributorEditorId}-list-row-${row.index}-delete`}
+                                data-testid={`${contributorEditorId}-list-row-${row.index}-delete`}
+                                size="small"
+                                color="primary"
+                            >
+                                <tableIcons.Delete />
+                            </IconButton>
+                        </span>
                     </Tooltip>
-                    <Tooltip title={moveDownHint}>
-                        <IconButton
-                            onClick={() => {
-                                const index = row.index;
-                                /* istanbul ignore else */
-                                if (index < data.length - 1) {
-                                    const newData = [...data];
-                                    const temp = newData[index + 1];
-                                    newData[index + 1] = newData[index];
-                                    newData[index] = temp;
-                                    setData(newData);
-                                    onChange(newData);
+                    <Tooltip title={editHint}>
+                        <span>
+                            <IconButton
+                                onClick={() => {
+                                    setEditRow(row);
+                                    table.setCreatingRow(null);
+                                    table.setEditingRow(row);
+                                }}
+                                disabled={
+                                    disabled ||
+                                    !!pendingDeleteRowId ||
+                                    !!isBusy ||
+                                    !!editingRow ||
+                                    table.getState().creatingRow !== null
                                 }
-                            }}
-                            disabled={
-                                !!pendingDeleteRowId ||
-                                !!isBusy ||
-                                !!editingRow ||
-                                row.index === data.length - 1 ||
-                                table.getState().creatingRow !== null
-                            }
-                            id={`${contributorEditorId}-list-row-${row.index}-move-down`}
-                            data-testid={`${contributorEditorId}-list-row-${row.index}-move-down`}
-                            size="small"
-                            color="primary"
-                        >
-                            <KeyboardArrowDown />
-                        </IconButton>
+                                id={`${contributorEditorId}-list-row-${row.index}-edit`}
+                                data-testid={`${contributorEditorId}-list-row-${row.index}-edit`}
+                                size="small"
+                                color="primary"
+                            >
+                                <tableIcons.Edit />
+                            </IconButton>
+                        </span>
                     </Tooltip>
 
-                    <Tooltip title={editHint}>
-                        <IconButton
-                            onClick={() => {
-                                setEditRow(row);
-                                table.setCreatingRow(null);
-                                table.setEditingRow(row);
-                            }}
-                            disabled={
-                                disabled ||
-                                !!pendingDeleteRowId ||
-                                !!isBusy ||
-                                !!editingRow ||
-                                table.getState().creatingRow !== null
-                            }
-                            id={`${contributorEditorId}-list-row-${row.index}-edit`}
-                            data-testid={`${contributorEditorId}-list-row-${row.index}-edit`}
-                            size="small"
-                            color="primary"
-                        >
-                            <tableIcons.Edit />
-                        </IconButton>
+                    <Tooltip title={moveDownHint}>
+                        <span>
+                            <IconButton
+                                onClick={() => {
+                                    const index = row.index;
+                                    /* istanbul ignore else */
+                                    if (index < data.length - 1) {
+                                        const newData = [...data];
+                                        const temp = newData[index + 1];
+                                        newData[index + 1] = newData[index];
+                                        newData[index] = temp;
+                                        setData(newData);
+                                        onChange(newData);
+                                    }
+                                }}
+                                disabled={
+                                    !!pendingDeleteRowId ||
+                                    !!isBusy ||
+                                    !!editingRow ||
+                                    row.index === data.length - 1 ||
+                                    table.getState().creatingRow !== null
+                                }
+                                id={`${contributorEditorId}-list-row-${row.index}-move-down`}
+                                data-testid={`${contributorEditorId}-list-row-${row.index}-move-down`}
+                                size="small"
+                                color="primary"
+                            >
+                                <KeyboardArrowDown />
+                            </IconButton>
+                        </span>
                     </Tooltip>
-                    <Tooltip title={deleteHint}>
-                        <IconButton
-                            onClick={openDeleteConfirmModal(row.index)}
-                            disabled={
-                                disabled ||
-                                !!pendingDeleteRowId ||
-                                !!isBusy ||
-                                !!editingRow ||
-                                table.getState().creatingRow !== null
-                            }
-                            id={`${contributorEditorId}-list-row-${row.index}-delete`}
-                            data-testid={`${contributorEditorId}-list-row-${row.index}-delete`}
-                            size="small"
-                            color="primary"
-                        >
-                            <tableIcons.Delete />
-                        </IconButton>
+                    <Tooltip title={moveUpHint}>
+                        <span>
+                            <IconButton
+                                onClick={() => {
+                                    const index = row.index;
+                                    /* istanbul ignore else */
+                                    if (index > 0) {
+                                        const newData = [...data];
+                                        const temp = newData[index - 1];
+                                        newData[index - 1] = newData[index];
+                                        newData[index] = temp;
+                                        setData(newData);
+                                        onChange(newData);
+                                    }
+                                }}
+                                disabled={
+                                    !!pendingDeleteRowId ||
+                                    !!isBusy ||
+                                    !!editingRow ||
+                                    row.index === 0 ||
+                                    table.getState().creatingRow !== null
+                                }
+                                id={`${contributorEditorId}-list-row-${row.index}-move-up`}
+                                data-testid={`${contributorEditorId}-list-row-${row.index}-move-up`}
+                                size="small"
+                                color="primary"
+                            >
+                                <KeyboardArrowUp />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                 </Box>
             );
