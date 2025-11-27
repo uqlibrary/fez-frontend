@@ -1098,26 +1098,26 @@ describe('ViewJournal', () => {
                 await userEvent.click(getByTestId('publish-as-oa-button'));
 
                 const expectedSearchParams = {
-                    keywords: [
-                        {
+                    keywords: {
+                        'Subject-453458': {
                             cvoId: '453458',
                             text: '2739 Public Health, Environmental and Occupational Health',
                             type: 'Subject',
                             id: 'Subject-453458',
                         },
-                        {
+                        'Subject-456676': {
                             cvoId: '456676',
                             text: 'Public, Environmental & Occupational Health',
                             type: 'Subject',
                             id: 'Subject-456676',
                         },
-                        {
+                        'Subject-456497': {
                             cvoId: '456497',
                             text: 'Computer Science, Software Engineering',
                             type: 'Subject',
                             id: 'Subject-456497',
                         },
-                    ],
+                    },
                     activeFacets: {
                         filters: {
                             ...publishAsOASearchFacetDefaults,
