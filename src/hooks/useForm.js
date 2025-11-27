@@ -4,12 +4,12 @@ import {
     filterObjectKeys,
     reorderObjectKeys,
     combineObjects,
-    isDevEnv,
     isFezRecordOneToOneRelation,
     isFezRecordOneToManyRelation,
 } from '../helpers/general';
 import arrayDiff from 'locutus/php/array/array_diff';
 import { merge } from 'lodash';
+import { IS_PRODUCTION } from '../config/general';
 
 export const SERVER_ERROR_NAMESPACE = 'root';
 export const SERVER_ERROR_KEY = 'serverError';
@@ -140,7 +140,7 @@ const getPropsForAlert =
             const orderedErrors = reorderObjectKeys(flattenErrors(validationErrors), formFields);
 
             // warn devs in case not all errors are present in the ordered errors object
-            if (isDevEnv()) {
+            if (!IS_PRODUCTION) {
                 const validationErrorsKeys = Object.keys(validationErrors);
                 const orderedErrorsKeys = Object.keys(orderedErrors);
                 /* istanbul ignore next */
