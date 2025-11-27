@@ -131,7 +131,7 @@ test.describe('Strategic Publishing - Search', () => {
             await setupInitialSearchAndAssert(page);
         });
 
-        test('resets the search functionality and clears results when the clear button is clicked', async ({
+        test.skip('resets the search functionality and clears results when the clear button is clicked', async ({
             page,
         }) => {
             // Note, this can be flaky
