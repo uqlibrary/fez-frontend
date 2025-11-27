@@ -4,12 +4,19 @@ exports[`Author Affiliations internal notes should remove invalid html 1`] = `
 [
   "To: UQ eSpace Manager 
 ",
-  <b>
-    test
-  </b>,
+  {
+    "$$typeof": Symbol(react.transitional.element),
+    "_owner": null,
+    "_store": {},
+    "key": "1",
+    "props": {
+      "children": "test",
+    },
+    "type": "b",
+  },
 ]
 `;
 
-exports[`Author Affiliations should calculate affiliations correctly for invalid affiliation percentile 1`] = `"[{"type":{"propTypes":{}},"key":"affil_error_7624839","ref":null,"props":{"variant":"body2","style":{"marginTop":10,"display":"block"},"component":"span","id":"affil_error_7624839","data-testid":"affil_error_7624839","aria-label":"Afffiliation error for undefined","children":[{"type":"b","key":null,"ref":null,"props":{},"_owner":null,"_store":{}}," "," has orphaned author information"]},"_owner":null,"_store":{}},{"type":{"propTypes":{}},"key":"affil_cal_error_btn","ref":null,"props":{"style":{"marginTop":10,"width":"100%"},"variant":"outlined","id":"admin-fix-affiliations-button","data-testid":"btnFixAffiliations","children":"Edit Affiliations"},"_owner":null,"_store":{}}]"`;
+exports[`Author Affiliations should calculate affiliations correctly for invalid affiliation percentile 1`] = `"[{"type":{"propTypes":{}},"key":"affil_error_7624839","props":{"variant":"body2","style":{"marginTop":10,"display":"block"},"component":"span","id":"affil_error_7624839","data-testid":"affil_error_7624839","aria-label":"Afffiliation error for undefined","children":[{"type":"b","key":null,"props":{},"_owner":null,"_store":{}}," "," has orphaned author information"]},"_owner":null,"_store":{}},{"type":{"propTypes":{}},"key":"affil_cal_error_btn","props":{"style":{"marginTop":10,"width":"100%"},"variant":"outlined","id":"admin-fix-affiliations-button","data-testid":"btnFixAffiliations","children":"Edit Affiliations"},"_owner":null,"_store":{}}]"`;
 
-exports[`Author Affiliations should calculate affiliations correctly for orphaned org affiliation 1`] = `"[{"type":{"propTypes":{}},"key":"affil_error_7624839","ref":null,"props":{"variant":"body2","style":{"marginTop":10,"display":"block"},"component":"span","id":"affil_error_7624839","data-testid":"affil_error_7624839","aria-label":"Afffiliation error for undefined","children":[{"type":"b","key":null,"ref":null,"props":{},"_owner":null,"_store":{}}," "," has orphaned author information"]},"_owner":null,"_store":{}},{"type":{"propTypes":{}},"key":"affil_cal_error_btn","ref":null,"props":{"style":{"marginTop":10,"width":"100%"},"variant":"outlined","id":"admin-fix-affiliations-button","data-testid":"btnFixAffiliations","children":"Edit Affiliations"},"_owner":null,"_store":{}}]"`;
+exports[`Author Affiliations should calculate affiliations correctly for orphaned org affiliation 1`] = `"[{"type":{"propTypes":{}},"key":"affil_error_7624839","props":{"variant":"body2","style":{"marginTop":10,"display":"block"},"component":"span","id":"affil_error_7624839","data-testid":"affil_error_7624839","aria-label":"Afffiliation error for undefined","children":[{"type":"b","key":null,"props":{},"_owner":null,"_store":{}}," "," has orphaned author information"]},"_owner":null,"_store":{}},{"type":{"propTypes":{}},"key":"affil_cal_error_btn","props":{"style":{"marginTop":10,"width":"100%"},"variant":"outlined","id":"admin-fix-affiliations-button","data-testid":"btnFixAffiliations","children":"Edit Affiliations"},"_owner":null,"_store":{}}]"`;

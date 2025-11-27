@@ -14,8 +14,8 @@ jest.mock('react-router-dom', () => ({
 
 const mockHelmet = jest.fn();
 
-jest.mock('react-helmet-async', () => ({
-    ...jest.requireActual('react-helmet-async'),
+jest.mock('@dr.pogodin/react-helmet', () => ({
+    ...jest.requireActual('@dr.pogodin/react-helmet'),
     Helmet: props => {
         mockHelmet(props);
     },

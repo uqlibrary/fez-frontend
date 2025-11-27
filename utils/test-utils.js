@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { render, within } from '@testing-library/react';
-import { createMemoryRouter, RouterProvider } from 'react-router-dom';
+import { createMemoryRouter, RouterProvider, MemoryRouter } from 'react-router-dom';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
 import { FormProvider } from 'react-hook-form';
@@ -50,8 +50,18 @@ export const rtlRender = (ui, options) => {
     };
 };
 
+export const WithMemoryRouter = ({ children, route = '/', initialEntries = [route] }) => {
+    return (
+        <MemoryRouter
+            initialEntries={initialEntries}
+            initialIndex={initialEntries.findIndex(entry => entry === route)}
+            children={children}
+        />
+    );
+};
 export const WithRouter = ({ children, route = '/', initialEntries = [route] }) => {
     const routes = [{ path: route, element: children }];
+    // Creates a data router, different to the MemoryRouter used in WithMemoryRouter
     const router = createMemoryRouter(routes, { initialEntries: initialEntries });
     return <RouterProvider router={router} />;
 };
@@ -555,6 +565,7 @@ module.exports = {
     WithReduxStore,
     assertTooltipText,
     WithRouter,
+    WithMemoryRouter,
     createFezDatastreamInfoArray,
     getDatastreamByFilename,
     withDatastreams,

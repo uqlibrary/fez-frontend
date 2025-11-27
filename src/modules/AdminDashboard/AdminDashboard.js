@@ -14,7 +14,7 @@ import { tabConfig, tabProps } from 'config/adminDashboard';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
-export const CustomTabPanel = ({ children, value, index, ...rest } = {}) => (
+export const CustomTabPanel = ({ children, value, index, ...rest }) => (
     <div
         role="tabpanel"
         hidden={value !== index}
