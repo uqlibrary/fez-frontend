@@ -10,12 +10,22 @@ import {
     act,
     fireEvent,
     createMatchMedia,
+    waitForTextToBeRemoved,
+    assertMissingElement,
+    api,
+    waitElementToBeInDocument,
+    userEvent,
 } from 'test-utils';
 import ViewJournal, { getAdvisoryStatement } from './ViewJournal';
+import { default as viewJournalLocale } from 'locale/viewJournal';
+import { screen } from '@testing-library/react';
+import { pathConfig } from '../../../config';
 
+let mockUseLocation = {};
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useParams: jest.fn(() => ({ id: 1 })),
+    useLocation: () => mockUseLocation,
 }));
 
 const setup = () => {
@@ -1049,6 +1059,93 @@ describe('ViewJournal', () => {
         });
         it('should render nothing (coverage)', () => {
             expect(getAdvisoryStatement()).toEqual('');
+        });
+    });
+
+    describe('`Publish as OA` button', () => {
+        const data = {
+            ...journalDetails.data,
+            fez_journal_read_and_publish: null,
+        };
+
+        afterEach(() => {
+            expect(screen.queryByText(viewJournalLocale.viewJournal.notFound.title)).not.toBeInTheDocument();
+            api.reset();
+        });
+
+        it('should not display button for non-search workflows', async () => {
+            api.mock.journals.get({ id: '.*', data: { ...data } });
+            setup();
+
+            await waitForTextToBeRemoved('Loading journal data');
+            assertMissingElement('publish-as-oa-button');
+        });
+
+        describe('search workflows', () => {
+            beforeEach(() => {
+                mockUseLocation = { search: '?fromSearch=true' };
+            });
+
+            it('should not display button when conditions are unmet', async () => {
+                api.mock.journals.get({ id: '.*', data: { ...journalDetails.data } });
+                setup();
+
+                await waitForTextToBeRemoved('Loading journal data');
+                assertMissingElement('publish-as-oa-button');
+            });
+
+            it("should display button for search workflows when OA status = `fee` and it's not embargoed", async () => {
+                api.mock.journals.get({ id: '.*', data: { ...data } });
+                const { getByTestId } = setup();
+
+                await waitElementToBeInDocument('publish-as-oa-button');
+                await userEvent.click(getByTestId('publish-as-oa-button'));
+                expect(getByTestId('publish-as-oa-link')).toHaveAttribute('href', pathConfig.journals.search);
+            });
+
+            describe('embargoed', () => {
+                const data = {
+                    ...journalDetails.data,
+                    fez_journal_read_and_publish: null,
+                    fez_journal_issn: [
+                        {
+                            ...journalDetails.data.fez_journal_issn[0],
+                            fez_sherpa_romeo: {
+                                ...journalDetails.data.fez_journal_issn[0].fez_sherpa_romeo,
+                                srm_max_embargo_amount: 12,
+                                srm_max_embargo_units: 'months',
+                            },
+                        },
+                    ],
+                };
+
+                it('should display button for search workflows when OA status equal to `fee` and embargoed for equal or greater than 12 months', async () => {
+                    api.mock.journals.get({ id: '.*', data: { ...data } });
+                    setup();
+
+                    await waitElementToBeInDocument('publish-as-oa-button');
+                    expect(screen.getByTestId('publish-as-oa-link')).toHaveAttribute(
+                        'href',
+                        pathConfig.journals.search,
+                    );
+                });
+
+                it('should not display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', () => {
+                    api.mock.journals.get({
+                        id: '.*',
+                        data: {
+                            ...data,
+                            fez_sherpa_romeo: {
+                                ...data.fez_sherpa_romeo,
+                                srm_max_embargo_amount: 11,
+                            },
+                        },
+                    });
+                    setup();
+
+                    assertMissingElement('publish-as-oa-button');
+                });
+            });
         });
     });
 });
