@@ -8,6 +8,7 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
     data-testid="rek-journal-name"
   >
     <a
+      data-discover="true"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
     >
       <span>
@@ -59,6 +60,7 @@ exports[`Journal Name Component test  should render without era journal listed 1
     data-testid="rek-journal-name"
   >
     <a
+      data-discover="true"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
     >
       <span>
@@ -104,6 +106,7 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
     data-testid="rek-journal-name"
   >
     <a
+      data-discover="true"
       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
     >
       <span>

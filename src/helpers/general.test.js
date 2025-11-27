@@ -232,7 +232,7 @@ describe('general helpers', () => {
 
     it('should insert WBR tags in to a URL', () => {
         const expectedStr =
-            '["http:",{"type":"wbr","key":"1","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"//",{"type":"wbr","key":"3","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"www",{"type":"wbr","key":"5","ref":null,"props":{"children":null},"_owner":null,"_store":{}},".test",{"type":"wbr","key":"7","ref":null,"props":{"children":null},"_owner":null,"_store":{}},".com",{"type":"wbr","key":"9","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"/"]';
+            '["http:",{"type":"wbr","key":"1","props":{},"_owner":null,"_store":{}},"//",{"type":"wbr","key":"3","props":{},"_owner":null,"_store":{}},"www",{"type":"wbr","key":"5","props":{},"_owner":null,"_store":{}},".test",{"type":"wbr","key":"7","props":{},"_owner":null,"_store":{}},".com",{"type":"wbr","key":"9","props":{},"_owner":null,"_store":{}},"/"]';
         const actualStr = JSON.stringify(formatUrlTextWithWbrTags('http://www.test.com/'));
         expect(expectedStr).toEqual(actualStr);
     });
