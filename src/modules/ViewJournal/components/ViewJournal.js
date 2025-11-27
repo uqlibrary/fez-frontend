@@ -95,8 +95,8 @@ const extractSubjects = (data, id, text) =>
             type: 'Subject',
         };
         keyword.id = getKeywordKey(keyword);
-        return [...keywords, keyword];
-    }, []) || /* istanbul ignore next */ {};
+        return { ...keywords, [keyword.id]: keyword };
+    }, {}) || /* istanbul ignore next */ {};
 
 export const publishAsOASearchFacetDefaults = {
     'Open access: accepted version': [
@@ -140,7 +140,7 @@ const buildPublishAsOASearch = data =>
             'jnl_jcr_scie_category_description_lookup',
         );
 
-        return buildJournalSearchQueryParams({ keywords: [...scopusSubjects, ...wosSubjects] }, facets);
+        return buildJournalSearchQueryParams({ keywords: { ...scopusSubjects, ...wosSubjects } }, facets);
     }, {});
 
 /**
