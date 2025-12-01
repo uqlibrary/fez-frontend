@@ -1,0 +1,27 @@
+<svg
+        version="1.1"
+        width="16"
+        height="16"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg">
+
+    <!-- Blue circle background -->
+    <circle
+            cx="16"
+            cy="16"
+            r="16"
+            fill="#1E90FF" />
+
+    <!-- F1 text -->
+    <text
+            x="50%"
+            y="50%"
+            font-family="Arial, sans-serif"
+            font-size="16"
+            fill="white"
+            dominant-baseline="middle"
+            text-anchor="middle">
+        F1
+    </text>
+
+</svg>

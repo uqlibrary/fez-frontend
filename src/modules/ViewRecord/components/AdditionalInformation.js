@@ -119,10 +119,15 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         return parseHtmlToJSX(data);
     };
 
-    const renderLink = (link, value, testId = '') => {
+    const renderLink = (link, value, testId = '', icon = '', iconHint = '') => {
         return (
             <Link to={link} {...{ ['data-testid']: testId || undefined }}>
                 {value}
+                {icon && (
+                    <Tooltip title={iconHint}>
+                        <span className={`fez-icon ${icon} medium`} style={{ margin: '0 4px' }} />
+                    </Tooltip>
+                )}
             </Link>
         );
     };
@@ -136,6 +141,16 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                         {(() => {
                             const data = getData(item, subkey);
                             if (getLink) {
+                                let icon = '';
+                                let iconHint = '';
+                                const subject = String(data).replace(/\|(for2020|for2008|openalex)$/, match => {
+                                    icon = match.slice(1);
+                                    iconHint = icon === 'openalex' ? 'OpenAlex' : icon.toUpperCase();
+                                    return '';
+                                });
+                                if (icon) {
+                                    return renderLink(getLink(subject, subject), subject, icon, iconHint);
+                                }
                                 return renderLink(getLink(item[subkey], data), data);
                             } else {
                                 return data;
