@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Box from '@mui/material/Box';
-
 import SectionTitle from './SectionTitle';
 
 const PieChartContainer = ({ label, subtext, children, id }) => {
@@ -16,7 +14,7 @@ const PieChartContainer = ({ label, subtext, children, id }) => {
                     {subtext}
                 </SectionTitle>
             )}
-            <Box>{children}</Box>
+            {children}
         </React.Fragment>
     );
 };
