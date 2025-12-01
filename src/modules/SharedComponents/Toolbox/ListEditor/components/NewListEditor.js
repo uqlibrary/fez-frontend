@@ -152,7 +152,7 @@ export const NewListEditor = ({
                     {...((locale && locale.header) || {})}
                 />
             )}
-            <div id={`${listEditorId}-list`} data-testid={`${listEditorId}-list`} {...scrollStyle.current}>
+            <div id={`${listEditorId}-list`} data-testid={`${listEditorId}-list`} {...scrollStyle}>
                 {itemsList.map((item, index) => (
                     <ListRow
                         key={JSON.stringify(item) + index}
