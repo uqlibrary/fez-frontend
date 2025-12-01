@@ -109,15 +109,14 @@ export const NewListEditor = ({
 
     const handleDeleteAll = React.useCallback(() => setItemsList(() => []), []);
 
-    const scrollStyle = React.useRef(
+    const scrollStyle =
         !!scrollList && itemsList.length >= scrollListHeight / 55
             ? {
                   style: { width: '100%', height: scrollListHeight, overflowX: 'hidden', overflowY: 'scroll' },
                   id: `${listEditorId}-scroll-list`,
                   'data-testid': `${listEditorId}-scroll-list`,
               }
-            : {},
-    );
+            : {};
 
     /**
      * Run this effect on itemsList changed from various actions (add/update/delete/moveUp/moveDown)
