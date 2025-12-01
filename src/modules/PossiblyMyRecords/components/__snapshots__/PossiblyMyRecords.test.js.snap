@@ -312,6 +312,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                                 >
                                   <a
+                                    data-discover="true"
                                     href="/view/UQ:1"
                                   >
                                     1
@@ -343,10 +344,10 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
                                           class="googleCitationCount css-si3g8d"
-                                          data-analyticsid="citation-count-link"
-                                          data-testid="citation-count-link"
+                                          data-analyticsid="google-citation-count-link"
+                                          data-testid="google-citation-count-link"
                                           href="https://scholar.google.com/scholar?q=intitle:1"
-                                          id="citation-count-link"
+                                          id="google-citation-count-link"
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
@@ -436,6 +437,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                                 >
                                   <a
+                                    data-discover="true"
                                     href="/view/UQ:2"
                                   >
                                     2
@@ -467,10 +469,10 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
                                           class="googleCitationCount css-si3g8d"
-                                          data-analyticsid="citation-count-link"
-                                          data-testid="citation-count-link"
+                                          data-analyticsid="google-citation-count-link"
+                                          data-testid="google-citation-count-link"
                                           href="https://scholar.google.com/scholar?q=intitle:2"
-                                          id="citation-count-link"
+                                          id="google-citation-count-link"
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
@@ -560,6 +562,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                                 >
                                   <a
+                                    data-discover="true"
                                     href="/view/UQ:3"
                                   >
                                     3
@@ -591,10 +594,10 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
                                           class="googleCitationCount css-si3g8d"
-                                          data-analyticsid="citation-count-link"
-                                          data-testid="citation-count-link"
+                                          data-analyticsid="google-citation-count-link"
+                                          data-testid="google-citation-count-link"
                                           href="https://scholar.google.com/scholar?q=intitle:3"
-                                          id="citation-count-link"
+                                          id="google-citation-count-link"
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"

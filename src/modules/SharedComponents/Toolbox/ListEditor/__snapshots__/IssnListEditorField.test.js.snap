@@ -1,79 +1,86 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IssnListEditorField function should return <ListEditor> 1`] = `
-<ListEditor
-  canEdit={false}
-  distinctOnly={false}
-  error={false}
-  formComponent={[Function]}
-  getItemSelectedToEdit={[Function]}
-  hideReorder={false}
-  inputNormalizer={[Function]}
-  listEditorId="issn-list-editor"
-  locale={
-    {
+{
+  "$$typeof": Symbol(react.transitional.element),
+  "_owner": null,
+  "_store": {},
+  "key": null,
+  "props": {
+    "canEdit": false,
+    "distinctOnly": false,
+    "error": false,
+    "errorText": undefined,
+    "formComponent": [Function],
+    "getItemSelectedToEdit": [Function],
+    "hideReorder": false,
+    "inputNormalizer": [Function],
+    "listEditorId": "issn-list-editor",
+    "locale": {
       "form": {
         "locale": {
           "inputFieldLabel": "NoLabel",
         },
       },
-    }
-  }
-  maxCount={0}
-  onAddItem={[Function]}
-  onChange={[MockFunction]}
-  required={false}
-  rowItemTemplate={[Function]}
-  scrollList={false}
-  scrollListHeight={250}
-  searchKey={
-    {
+    },
+    "maxCount": 0,
+    "onAddItem": [Function],
+    "onChange": [MockFunction],
+    "remindToAdd": undefined,
+    "required": false,
+    "rowItemTemplate": [Function],
+    "scrollList": false,
+    "scrollListHeight": 250,
+    "searchKey": {
       "order": "rek_order",
       "value": "rek_value",
-    }
-  }
-  transformFunction={[Function]}
-/>
+    },
+    "transformFunction": [Function],
+  },
+  "type": [Function],
+}
 `;
 
 exports[`IssnListEditorField function should return <ListEditor> with error attributes 1`] = `
-<ListEditor
-  canEdit={false}
-  distinctOnly={false}
-  error={true}
-  errorText="test"
-  formComponent={[Function]}
-  getItemSelectedToEdit={[Function]}
-  hideReorder={false}
-  inputNormalizer={[Function]}
-  listEditorId="issn-list-editor"
-  locale={
-    {
+{
+  "$$typeof": Symbol(react.transitional.element),
+  "_owner": null,
+  "_store": {},
+  "key": null,
+  "props": {
+    "canEdit": false,
+    "distinctOnly": false,
+    "error": true,
+    "errorText": "test",
+    "formComponent": [Function],
+    "getItemSelectedToEdit": [Function],
+    "hideReorder": false,
+    "inputNormalizer": [Function],
+    "listEditorId": "issn-list-editor",
+    "locale": {
       "form": {
         "locale": {
           "inputFieldLabel": "NoLabel",
         },
       },
-    }
-  }
-  maxCount={0}
-  onAddItem={[Function]}
-  onChange={[MockFunction]}
-  required={false}
-  rowItemTemplate={[Function]}
-  scrollList={false}
-  scrollListHeight={250}
-  searchKey={
-    {
+    },
+    "maxCount": 0,
+    "onAddItem": [Function],
+    "onChange": [MockFunction],
+    "remindToAdd": undefined,
+    "required": false,
+    "rowItemTemplate": [Function],
+    "scrollList": false,
+    "scrollListHeight": 250,
+    "searchKey": {
       "order": "rek_order",
       "value": "rek_value",
-    }
-  }
-  state={
-    {
+    },
+    "state": {
       "error": "test",
-    }
-  }
-  transformFunction={[Function]}
-/>
+    },
+    "transformFunction": [Function],
+  },
+  "type": [Function],
+}
 `;

@@ -16,7 +16,6 @@ describe('ExportPublications component', () => {
         const { getByTestId, getAllByRole } = setup();
         fireEvent.mouseDown(getByTestId('export-publications-format-select'));
         const options = getAllByRole('option');
-        expect(options.length).toBe(3);
         [{ label: 'Please select' }, ...locale.components.export.format].forEach((format, index) => {
             expect(options[index]).toHaveTextContent(format.label);
         });

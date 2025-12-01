@@ -136,7 +136,6 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
@@ -382,7 +381,6 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
@@ -714,7 +712,6 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
@@ -1048,7 +1045,6 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
@@ -1379,7 +1375,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
@@ -1864,7 +1859,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
@@ -2349,7 +2343,6 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
               data-testid="rek-creator-contribution-statement"
               id="rek-creator-contribution-statement"
               type="text"
-              value=""
             />
             <fieldset
               aria-hidden="true"
