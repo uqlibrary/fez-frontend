@@ -52,7 +52,7 @@ const Today = () => {
                 </Grid>
             )}
             <Grid container spacing={2} minHeight={300}>
-                <Grid item xs={12} md={7}>
+                <Grid item xs={12} lg={7}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} marginBlockEnd={4}>
                             {!!adminDashboardTodayData && adminDashboardTodaySuccess && (
@@ -221,7 +221,7 @@ const Today = () => {
                         </Typography>
                     )}
                 </Grid>
-                <Grid item xs={12} md={5}>
+                <Grid item xs={12} lg={5}>
                     <QuickLinkContainer locale={txt.quicklinks} />
                 </Grid>
             </Grid>

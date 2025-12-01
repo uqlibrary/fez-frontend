@@ -1,14 +1,20 @@
+import React from 'react';
+import { rtlRender, FormProviderWrapper } from 'test-utils';
 import IdentifiersSection from './IdentifiersSection';
 
 jest.mock('../../../../context');
 import { useRecordContext } from 'context';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         ...testProps,
     };
 
-    return renderComponent(IdentifiersSection, props, args);
+    return renderer(
+        <FormProviderWrapper values={{}}>
+            <IdentifiersSection {...props} />
+        </FormProviderWrapper>,
+    );
 }
 
 describe('IdentifiersSection component', () => {
@@ -31,8 +37,9 @@ describe('IdentifiersSection component', () => {
             },
         }));
 
-        const render = setup();
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup({});
+        expect(document.querySelectorAll('input[disabled=""]')).toHaveLength(0);
+        expect(container).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
@@ -54,8 +61,9 @@ describe('IdentifiersSection component', () => {
             },
         }));
 
-        const render = setup({ disabled: true });
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup({ disabled: true });
+        expect(document.querySelectorAll('input[disabled=""]')).toHaveLength(10);
+        expect(container).toMatchSnapshot();
     });
 
     it('should render correct identifiers fields for Creative Work - Creative Work - Musical Composition', () => {
@@ -78,8 +86,8 @@ describe('IdentifiersSection component', () => {
             },
         }));
 
-        const render = setup({ disabled: true });
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup({ disabled: true });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render correct identifiers fields for Book - Creative Work - Musical Composition', () => {
@@ -102,7 +110,7 @@ describe('IdentifiersSection component', () => {
             },
         }));
 
-        const render = setup({ disabled: true });
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup({ disabled: true });
+        expect(container).toMatchSnapshot();
     });
 });
