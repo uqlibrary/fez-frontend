@@ -7,8 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppState } from '../../../../reducer';
 import { loadJournalSearchKeywords } from '../../../../actions';
 import { keywordOnlySuffix } from '../../../../reducers/journals';
-import { SearchKeyword } from 'modules/SearchJournals/components/partials/SearchKeyword';
-import { Box } from '@mui/material';
+import { ForCodeAutocompleteOptionTemplate } from 'modules/SearchJournals/components/partials/ForCodeAutocompleteTemplate';
 
 export type ForCodeAutocompleteFieldProps = React.ComponentPropsWithoutRef<typeof AutoCompleteAsynchronousField> & {
     filter: (data: Array<Record<string, string | number>>) => Array<Record<string, string | number>>;
@@ -22,15 +21,17 @@ export const ForCodeAutocompleteField = React.forwardRef<ForCodeAutocompleteFiel
         const dispatch = useDispatch();
         const fetch = (newValue: string) => dispatch(loadJournalSearchKeywords(newValue, true));
         const state = useSelector((s: AppState) => s.get('journalReducer')[keywordOnlySuffix] || {});
-        const keyValueLists =
-            state.journalSearchKeywords?.subjectFuzzyMatch?.map?.((o: Record<string, string | number>) => ({
-                key: o.jnl_subject_cvo_id,
-                value: o.jnl_subject_title,
-                sources: String(o.jnl_subject_sources)
-                    .split(',')
-                    .map(name => ({ name })),
-            })) || [];
-        const items = filter(keyValueLists);
+        const keyValueLists = React.useMemo(
+            () =>
+                state.journalSearchKeywords?.subjectFuzzyMatch?.map?.((o: Record<string, string | number>) => ({
+                    key: o.jnl_subject_cvo_id,
+                    value: o.jnl_subject_title,
+                    sources: String(o.jnl_subject_sources)
+                        .split(',')
+                        .map(name => ({ name })),
+                })) || [],
+            [state.journalSearchKeywords?.subjectFuzzyMatch],
+        );
 
         return (
             <AutoCompleteAsynchronousField
@@ -41,32 +42,13 @@ export const ForCodeAutocompleteField = React.forwardRef<ForCodeAutocompleteFiel
                 filterOptions={(options: KeyValueItemType[], { inputValue }) =>
                     matchSorter(options, inputValue ?? /* istanbul ignore next */ '', { keys: ['value'] })
                 }
-                itemsList={items}
-                itemsLoading={state.journalsListLoading}
+                itemsList={filter(keyValueLists)}
+                itemsLoading={!!state.journalSearchKeywordsLoading}
                 error={!!state.journalSearchKeywordsError}
                 getOptionLabel={(option: Record<string, string | number>) =>
                     option?.value ?? /* istanbul ignore next */ ''
                 }
-                OptionTemplate={({ option, index }: { option: Record<string, string | number>; index: number }) => (
-                    <Box
-                        sx={{
-                            '& span[role=button]': {
-                                fontSize: '.90em',
-                                lineHeight: 0.6,
-                            },
-                        }}
-                    >
-                        <SearchKeyword
-                            type="subject"
-                            index={index}
-                            keyword={option.value}
-                            cvoId={option.value}
-                            sources={option.sources}
-                            selectedKeywords={{}}
-                            onKeywordClick={undefined}
-                        />
-                    </Box>
-                )}
+                OptionTemplate={ForCodeAutocompleteOptionTemplate}
                 allowFreeText={false}
                 clearSuggestionsOnClose={false}
                 loadSuggestions={fetch}
