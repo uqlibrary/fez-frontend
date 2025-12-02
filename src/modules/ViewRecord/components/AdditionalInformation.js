@@ -143,8 +143,6 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                             if (getLink) {
                                 const firstTwo = subkey.split('_').slice(0, 2).join('_');
                                 const icon = item[firstTwo + '_icon'] ?? '';
-                                console.log('item[subkey]', item[subkey], 'data', data);
-                                console.log('getLink(item[subkey], data)', getLink(item[subkey], data));
                                 const iconHint =
                                     icon === 'openalex'
                                         ? 'OpenAlex'
