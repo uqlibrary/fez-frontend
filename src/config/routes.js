@@ -3,7 +3,6 @@ import { locale } from 'locale';
 import { getSearchUrl, pathConfig } from './pathConfig';
 import { default as formLocale } from 'locale/publicationForm';
 
-export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 export const numericIdRegExp = '[0-9]+';
 export const versionRegExp = `${pidRegExp}\\s[0-9]{4}-[0-9]{2}-[0-9]{2}\\s[0-9]{2}:[0-9]{2}:[0-9]{2}|[a-z0-9-]+`;
