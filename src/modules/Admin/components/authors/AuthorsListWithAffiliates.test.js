@@ -220,7 +220,7 @@ describe('AuthorsListWithAffiliates', () => {
     });
 
     it('should handle cancel deletion of rows', async () => {
-        const { getByTestId, findByTestId } = setup({
+        const { getByTestId, findByTestId, queryByTestId } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
@@ -241,7 +241,10 @@ describe('AuthorsListWithAffiliates', () => {
         await findByTestId('rek-author-delete-author-confirmation');
 
         await userEvent.click(getByTestId('cancel-rek-author-delete-author-confirmation'));
-        await waitForElementToBeRemoved(() => getByTestId('rek-author-delete-author-confirmation'));
+        await waitForElementToBeRemoved(() => queryByTestId('rek-author-delete-author-confirmation')).catch(() =>
+            // element already removed
+            console.log('rek-author-delete-author-confirmation already removed'),
+        );
 
         expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test 1');
         expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('test 2');

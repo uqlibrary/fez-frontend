@@ -39,6 +39,7 @@ exports[`Related publications Component  should not render data with empty looku
               data-testid="rek-has-related-datasets-0"
             >
               <a
+                data-discover="true"
                 href="/view/UQ:313292"
               >
                 Toxicity characterization of urban stormwater with bioanalytical tools
@@ -51,6 +52,7 @@ exports[`Related publications Component  should not render data with empty looku
               data-testid="rek-has-related-datasets-1"
             >
               <a
+                data-discover="true"
                 href="/view/UQ:313292"
               >
                 dataset 2
@@ -105,6 +107,7 @@ exports[`Related publications Component  should render component 1`] = `
               data-testid="rek-has-related-datasets-0"
             >
               <a
+                data-discover="true"
                 href="/view/UQ:313292"
               >
                 Toxicity characterization of urban stormwater with bioanalytical tools
@@ -117,6 +120,7 @@ exports[`Related publications Component  should render component 1`] = `
               data-testid="rek-has-related-datasets-1"
             >
               <a
+                data-discover="true"
                 href="/view/UQ:313292"
               >
                 dataset 2
@@ -182,6 +186,7 @@ exports[`Related publications Component  should render with a publication title 
               data-testid="rek-has-related-datasets-0"
             >
               <a
+                data-discover="true"
                 href="/view/UQ:313292"
               >
                 Toxicity characterization of urban stormwater with bioanalytical tools
@@ -194,6 +199,7 @@ exports[`Related publications Component  should render with a publication title 
               data-testid="rek-has-related-datasets-1"
             >
               <a
+                data-discover="true"
                 href="/view/UQ:313292"
               >
                 dataset 2
@@ -248,6 +254,7 @@ exports[`Related publications Component  should render without a child search ke
               data-testid="rek-has-related-datasets-0"
             >
               <a
+                data-discover="true"
                 href="/view/UQ:313292"
               >
                 Toxicity characterization of urban stormwater with bioanalytical tools
@@ -260,6 +267,7 @@ exports[`Related publications Component  should render without a child search ke
               data-testid="rek-has-related-datasets-1"
             >
               <a
+                data-discover="true"
                 href="/view/UQ:313292"
               >
                 dataset 2
@@ -314,6 +322,7 @@ exports[`Related publications Component  should render without a parent search k
               data-testid="rek-isderivationof-0"
             >
               <a
+                data-discover="true"
                 href="/view/UQ:390658"
               >
                 Landscape of somatic mutations in 560 breast cancer whole-genome sequences

@@ -2,7 +2,7 @@ import MyDatasets from './MyRecords';
 import { pathConfig } from 'config';
 import { locale } from 'locale';
 import React from 'react';
-import { render, WithRouter, WithReduxStore } from 'test-utils';
+import { render, WithMemoryRouter, WithReduxStore } from 'test-utils';
 
 function setup(testProps = {}, renderMethod = render) {
     const props = {
@@ -30,9 +30,9 @@ function setup(testProps = {}, renderMethod = render) {
     };
     return renderMethod(
         <WithReduxStore>
-            <WithRouter>
+            <WithMemoryRouter>
                 <MyDatasets {...props} />
-            </WithRouter>
+            </WithMemoryRouter>
         </WithReduxStore>,
     );
 }

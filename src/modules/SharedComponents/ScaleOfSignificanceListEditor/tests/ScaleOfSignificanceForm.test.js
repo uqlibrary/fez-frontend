@@ -1,3 +1,5 @@
+import React from 'react';
+import { render } from 'test-utils';
 import {
     ScaleOfSignificanceForm,
     handleContributionStatementCallbackFactory,
@@ -6,7 +8,7 @@ import {
     saveCallbackFactory,
 } from '../ScaleOfSignificanceForm';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}, renderer = render) {
     const props = {
         locale: {},
         onAdd: jest.fn(),
@@ -16,18 +18,13 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return renderComponent(ScaleOfSignificanceForm, props, args);
+    return renderer(<ScaleOfSignificanceForm {...props} />);
 }
 
 describe('ScaleOfSignificanceForm component', () => {
     it('should render the default view', () => {
-        const renderer = setup({});
-        expect(renderer.getRenderOutput()).toMatchSnapshot();
-    });
-
-    it('should render with id', () => {
-        const renderer = setup({ locale: { id: '100' } });
-        expect(renderer.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
 });
 

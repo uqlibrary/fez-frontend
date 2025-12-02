@@ -1,14 +1,19 @@
+import React from 'react';
+import { rtlRender, FormProviderWrapper, assertDisabled, assertEnabled } from 'test-utils';
 import ReasonSection from './ReasonSection';
 
 jest.mock('../../../../context');
 import { useRecordContext } from 'context';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         ...testProps,
     };
-
-    return renderComponent(ReasonSection, props, args);
+    return renderer(
+        <FormProviderWrapper values={{}}>
+            <ReasonSection {...props} />
+        </FormProviderWrapper>,
+    );
 }
 
 describe('ReasonSection component', () => {
@@ -27,8 +32,9 @@ describe('ReasonSection component', () => {
             },
         }));
 
-        const render = setup();
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container, getByTestId } = setup({});
+        assertEnabled(getByTestId('reason-input'));
+        expect(container).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
@@ -46,7 +52,8 @@ describe('ReasonSection component', () => {
             },
         }));
 
-        const render = setup({ disabled: true });
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container, getByTestId } = setup({ disabled: true });
+        assertDisabled(getByTestId('reason-input'));
+        expect(container).toMatchSnapshot();
     });
 });

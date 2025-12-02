@@ -179,7 +179,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                         <ExternalLink
                             key={props.value}
                             id={`fvs-alias-${index}`}
-                            href={`${APP_URL}${PATH_PREFIX}${props.row.fvs_alias}`}
+                            href={`${APP_URL}${PATH_PREFIX}favourites/${props.row.fvs_alias}`}
                             aria-label={locale.global.linkWillOpenInNewWindow.replace(
                                 '[destination]',
                                 props.row.fvs_description,

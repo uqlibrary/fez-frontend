@@ -1,47 +1,52 @@
-import { Section, GroupsWithinCard, GroupsWithoutCard } from './Section';
+import React from 'react';
+import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
+import { Section } from './Section';
 
-const setup = (testProps = {}, args = { isShallow: true }) => {
+const setup = (testProps = {}, renderer = rtlRender) => {
     const props = {
         ...testProps,
     };
 
-    return renderComponent(Section, props, args);
+    return renderer(
+        <WithReduxStore>
+            <FormProviderWrapper values={{}}>
+                <Section {...props} />
+            </FormProviderWrapper>
+        </WithReduxStore>,
+    );
 };
 
 describe('Section component', () => {
     it('should render default view', () => {
-        const render = setup({
+        const { container } = setup({
             disabled: false,
-            cards: [{ title: 'Title' }],
+            cards: [{ title: 'Title', groups: [] }],
         });
-        expect(render.getRenderOutput()).toMatchSnapshot();
-        const render2 = setup({
+        expect(container).toMatchSnapshot();
+        const { container: container2 } = setup({
             disabled: false,
-            cards: [{}],
+            cards: [{ groups: [] }],
         });
-        expect(render2.getRenderOutput()).toMatchSnapshot();
+        expect(container2).toMatchSnapshot();
     });
 });
 
 describe('GroupsWithinCard component', () => {
     it('should render default view', () => {
-        const props = {
-            title: 'Title',
-            groups: [['test']],
-        };
-        const args = { isShallow: true };
-        const render = renderComponent(GroupsWithinCard, props, args);
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup({
+            disabled: false,
+            cards: [{ title: 'Title', groups: [['rek_title']] }],
+        });
+        expect(container).toMatchSnapshot();
     });
 });
 
 describe('GroupsWithoutCard component', () => {
     it('should render default view', () => {
-        const props = {
-            groups: [['test']],
-        };
-        const args = { isShallow: true };
-        const render = renderComponent(GroupsWithoutCard, props, args);
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup({
+            disabled: false,
+            cards: [{ groups: [['rek_title']] }],
+        });
+        expect(container).toMatchSnapshot();
     });
 });

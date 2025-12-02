@@ -5,6 +5,18 @@ import userEvent from '@testing-library/user-event';
 import * as repository from 'repositories';
 import { vocabsFieldResearch } from 'mock/data/vocabsFieldResearch.js';
 
+// insert a 'specialKey' and 'fieldsToUnset' to ensure coverage of empty string to array and 'unset' behaviour in component
+jest.mock('config/general', () => ({
+    ...jest.requireActual('config/general'),
+    NEW_DATASET_DEFAULT_VALUES: {
+        ...jest.requireActual('config/general').NEW_DATASET_DEFAULT_VALUES,
+        fez_record_search_key_grant_id: '', // specialKey
+        fez_record_search_key_notes: {
+            rek_notes: '', // fieldsToUnset
+        },
+    },
+}));
+
 let mockDoiExist = false;
 jest.mock('actions', () => ({
     ...jest.requireActual('actions'),

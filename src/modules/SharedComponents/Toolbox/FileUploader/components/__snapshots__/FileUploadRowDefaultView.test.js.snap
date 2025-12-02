@@ -41,7 +41,6 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
               name="fileDescription"
               placeholder="Description"
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -121,7 +120,6 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
               name="fileDescription"
               placeholder="Description"
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -177,12 +175,12 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
       >
-        <p
+        <div
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
           data-testid="dsi-embargo-date-0"
         >
           No date required
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -259,7 +257,6 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
               name="fileDescription"
               placeholder="Description"
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -323,12 +320,12 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
       >
-        <p
+        <div
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
           data-testid="dsi-embargo-date-0"
         >
           No date required
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -405,7 +402,6 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
               name="fileDescription"
               placeholder="Description"
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -473,12 +469,12 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
       >
-        <p
+        <div
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
           data-testid="dsi-embargo-date-0"
         >
           No date required
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -555,7 +551,6 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
               name="fileDescription"
               placeholder="Description"
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -623,7 +618,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
               aria-invalid="true"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              id=":ri:"
+              id="_r_i_"
               inputmode="text"
               placeholder="dd/mm/yyyy"
               type="text"

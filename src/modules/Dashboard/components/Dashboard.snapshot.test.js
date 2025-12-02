@@ -2,7 +2,7 @@ import React from 'react';
 import Dashboard from './Dashboard';
 import * as mock from 'mock/data';
 import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithMemoryRouter, fireEvent } from 'test-utils';
 
 const publicationTotalCount = {
     account: mock.accounts.uqresearcher,
@@ -54,9 +54,9 @@ function setup(testProps = {}, renderMethod = render) {
     };
     return renderMethod(
         <WithReduxStore>
-            <WithRouter>
+            <WithMemoryRouter>
                 <Dashboard {...props} />
-            </WithRouter>
+            </WithMemoryRouter>
         </WithReduxStore>,
     );
 }

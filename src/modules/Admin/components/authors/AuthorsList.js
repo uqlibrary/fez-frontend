@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
@@ -109,8 +109,6 @@ export const AuthorsList = ({
     showExternalIdentifierInput,
 }) => {
     const theme = useTheme();
-    const [triggerState, setTriggerState] = useState(true);
-    const prevList = React.useRef('[]');
 
     const validationRules = showExternalIdentifierInput
         ? [...defaultValidationRules, ...extendedValidationRules]
@@ -632,26 +630,6 @@ export const AuthorsList = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [disabled, getValidationError, handleValidation, validationErrors],
     );
-
-    React.useEffect(() => {
-        const listStr = JSON.stringify(list);
-        if (prevList.current !== listStr) {
-            prevList.current = listStr;
-            const result = [];
-            list.forEach((item, index) => {
-                delete item.tableData;
-                item.id = index;
-                result.push({ ...item });
-            });
-            setData(result);
-
-            if (triggerState) {
-                setTriggerState(false);
-                onChange(result);
-            }
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [list]);
 
     const transformNewAuthorObject = newAuthor => {
         delete newAuthor['mrt-row-actions'];

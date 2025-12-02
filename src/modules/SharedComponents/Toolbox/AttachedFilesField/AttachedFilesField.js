@@ -39,7 +39,7 @@ export const AttachedFilesField = ({ onRenameAttachedFile, onDeleteAttachedFile,
     const prevPropsDatastream = React.useRef('[]');
 
     const getState = () =>
-        !!formValues.fez_datastream_info
+        !!formValues?.fez_datastream_info
             ? formValues.fez_datastream_info
             : props?.state?.defaultValue || /* istanbul ignore next */ [];
 

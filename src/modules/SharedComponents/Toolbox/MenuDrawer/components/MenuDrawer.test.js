@@ -1,6 +1,6 @@
 import React from 'react';
 import { MenuDrawer } from './MenuDrawer';
-import { render, WithRouter, fireEvent } from 'test-utils';
+import { render, WithMemoryRouter, fireEvent } from 'test-utils';
 
 const defaultMenuItems = [
     {
@@ -44,9 +44,9 @@ function setup(testProps = {}, renderMethod = render) {
         docked: testProps.docked || false,
     };
     return renderMethod(
-        <WithRouter>
+        <WithMemoryRouter>
             <MenuDrawer {...props} />
-        </WithRouter>,
+        </WithMemoryRouter>,
     );
 }
 

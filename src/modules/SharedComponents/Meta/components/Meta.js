@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from '@dr.pogodin/react-helmet';
 import PropTypes from 'prop-types';
 import { viewRecordsConfig } from 'config/viewRecord';
 import { locale } from 'locale';

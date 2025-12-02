@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate, useLocation, useNavigationType } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import * as actions from 'actions';
 
 // forms & custom components
@@ -14,7 +14,7 @@ import {
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { Alert, type AlertType } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { pathConfig } from 'config/pathConfig';
@@ -40,10 +40,17 @@ interface ComponentState {
 
 const PossiblyMyRecords: React.FC = () => {
     const navigate = useNavigate();
-    const navigationType = useNavigationType();
     const location = useLocation();
     const dispatch = useDispatch();
     const confirmDialogBoxRef = useRef<{ showConfirmation: () => void } | null>(null);
+
+    type PagingInformation = {
+        from?: number;
+        to?: number;
+        total?: number;
+        per_page?: number;
+        current_page?: number;
+    };
 
     // istanbul ignore next
     const accountLoading = useSelector((state: AppState) => state?.get('accountReducer').accountLoading || false);
@@ -54,10 +61,10 @@ const PossiblyMyRecords: React.FC = () => {
         hidePublicationFailedErrorMessage = '',
         loadingPossibleCounts = false,
         loadingPossiblePublicationsList = false,
-        possiblePublicationsList = [],
-        possiblePublicationsFacets = {},
-        possiblePublicationsPagingData = {},
-        publicationsClaimedInProgress = [],
+        possiblePublicationsList = [] as FezRecord[],
+        possiblePublicationsFacets = {} as Record<string, unknown>,
+        possiblePublicationsPagingData = {} as PagingInformation,
+        publicationsClaimedInProgress = [] as FezRecord[],
     } = useSelector((state: AppState) => state?.get('claimPublicationReducer') || {});
 
     // initial state
@@ -81,7 +88,7 @@ const PossiblyMyRecords: React.FC = () => {
         ...(location?.state || {}),
     }));
 
-    const [prevLocation, setPrevLocation] = useState(location);
+    // const [prevLocation, setPrevLocation] = useState(location);
     const [shouldNavigate, setShouldNavigate] = useState(false);
 
     // handle navigation after state updates
@@ -97,21 +104,28 @@ const PossiblyMyRecords: React.FC = () => {
 
     // handle browser back button navigation
     useEffect(() => {
-        if (
-            prevLocation !== location &&
-            navigationType === 'POP' &&
-            location.pathname === pathConfig.records.possible
-        ) {
-            // istanbul ignore next
-            const newState = location.state ? { ...location.state } : { ...initialState };
-            setState(prevState => ({
-                ...prevState,
-                ...newState,
-            }));
-            dispatch(actions.searchPossiblyYourPublications(newState));
-        }
-        setPrevLocation(location);
-    }, [location, dispatch, navigationType]);
+        const handlePopState = () => {
+            // istanbul ignore else
+            if (location.pathname === pathConfig.records.possible) {
+                // istanbul ignore next
+                const newState = location.state ? { ...location.state } : { ...initialState };
+                setState(prevState => ({
+                    ...prevState,
+                    ...newState,
+                }));
+                dispatch(actions.searchPossiblyYourPublications(newState));
+            }
+        };
+
+        // Add event listener for popstate
+        window.addEventListener('popstate', handlePopState);
+
+        return () => {
+            // Clean up the event listener when the component unmounts
+            window.removeEventListener('popstate', handlePopState);
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     // set forever-true flag if user has publications
     useEffect(() => {
@@ -130,6 +144,7 @@ const PossiblyMyRecords: React.FC = () => {
         if (!accountLoading) {
             dispatch(actions.searchPossiblyYourPublications(state));
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [accountLoading, dispatch]);
 
     // cleanup on unmount
@@ -166,10 +181,21 @@ const PossiblyMyRecords: React.FC = () => {
         navigate(pathConfig.records.claim);
     };
 
-    const facetsChanged = (activeFacets: ComponentState['activeFacets']): void => {
+    const facetsChanged = (active: {
+        filters?: Record<string, string | number | boolean>;
+        ranges?: Record<string, string | number>;
+    }): void => {
+        const filters: Record<string, string> = {};
+        Object.entries(active.filters ?? /* istanbul ignore next */ {}).forEach(([k, v]) => {
+            filters[k] = String(v);
+        });
+        const ranges: Record<string, string> = {};
+        Object.entries(active.ranges ?? /* istanbul ignore next */ {}).forEach(([k, v]) => {
+            ranges[k] = String(v);
+        });
         setState(prevState => ({
             ...prevState,
-            activeFacets,
+            activeFacets: { filters, ranges },
             page: 1,
         }));
         setShouldNavigate(true);
@@ -201,8 +227,26 @@ const PossiblyMyRecords: React.FC = () => {
         setShouldNavigate(true);
     };
 
+    const toAlertType = (t: string): AlertType =>
+        (
+            [
+                'error',
+                'error_outline',
+                'warning',
+                'info',
+                'info_outline',
+                'help',
+                'help_outline',
+                'success',
+                'done',
+                'custom',
+            ] as const
+        ).includes(t as AlertType)
+            ? (t as AlertType)
+            : /* istanbul ignore next */ 'error';
+
     const getAlert = (
-        alertLocale: { alertId: string; title: string; message: (s: string) => string; type: string },
+        alertLocale: { alertId: string; title: string; message: (s: string) => string; type: AlertType },
         hasFailed: boolean,
         error: string,
     ): React.ReactNode => {
@@ -219,14 +263,27 @@ const PossiblyMyRecords: React.FC = () => {
     const totalPossiblePubs = possibleCounts;
     const pagingData = possiblePublicationsPagingData;
     const txt = locale.pages.claimPublications;
-    const inProgress = [
+    type PublicationSubsetAction = {
+        label: string;
+        primary?: boolean;
+        disabled?: boolean;
+    };
+
+    type PublicationAction = {
+        label: string;
+        primary?: boolean;
+        handleAction: (item: FezRecord) => void;
+    };
+
+    const inProgress: PublicationSubsetAction[] = [
         {
             label: txt.searchResults.inProgress,
             disabled: true,
             primary: false,
         },
     ];
-    const actionsList = [
+
+    const actionsList: PublicationAction[] = [
         {
             label: txt.searchResults.claim,
             handleAction: claimPublication,
@@ -240,7 +297,11 @@ const PossiblyMyRecords: React.FC = () => {
 
     return (
         <StandardPage title={txt.title}>
-            {getAlert(txt.hidePublicationFailedAlert, hidePublicationFailed, hidePublicationFailedErrorMessage)}
+            {getAlert(
+                { ...txt.hidePublicationFailedAlert, type: toAlertType(txt.hidePublicationFailedAlert.type) },
+                hidePublicationFailed,
+                hidePublicationFailedErrorMessage,
+            )}
 
             {
                 // first time loading my possible publications - account hasn't
@@ -314,7 +375,6 @@ const PossiblyMyRecords: React.FC = () => {
                                                         </Grid>
                                                         <Grid item xs>
                                                             <PublicationsListPaging
-                                                                loading={loadingPossiblePublicationsList}
                                                                 pagingData={pagingData}
                                                                 onPageChanged={pageChanged}
                                                                 disabled={loadingPossiblePublicationsList}

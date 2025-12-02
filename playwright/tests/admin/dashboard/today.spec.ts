@@ -38,7 +38,7 @@ test.describe('Admin Dashboard - Today tab', () => {
 
         // Charts
         const systemAlertsChart = page.getByTestId('chart-container-system-alerts');
-        await expect(systemAlertsChart.locator('svg > rect')).toHaveCount(2);
+        await expect(systemAlertsChart.locator('svg rect')).toHaveCount(2);
 
         const systemAlertsTable = page.getByTestId('system-alerts-table');
         await expect(systemAlertsTable.locator('td').nth(1)).toContainText('150');

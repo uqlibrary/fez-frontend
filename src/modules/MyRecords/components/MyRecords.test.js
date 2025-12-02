@@ -2,7 +2,7 @@ import React from 'react';
 import MyRecords from './MyRecords';
 import { pathConfig } from 'config';
 import { locale } from 'locale';
-import { render, WithRouter, WithReduxStore, fireEvent, within } from 'test-utils';
+import { render, WithMemoryRouter, WithReduxStore, fireEvent, within } from 'test-utils';
 import { userIsAdmin } from 'hooks';
 
 jest.mock('../../../hooks', () => ({
@@ -37,9 +37,9 @@ function setup(testProps = {}, renderMethod = render) {
     };
     return renderMethod(
         <WithReduxStore>
-            <WithRouter>
+            <WithMemoryRouter>
                 <MyRecords {...props} />
-            </WithRouter>
+            </WithMemoryRouter>
         </WithReduxStore>,
     );
 }
