@@ -9,27 +9,33 @@ import { loadJournalSearchKeywords } from '../../../../actions';
 import { keywordOnlySuffix } from '../../../../reducers/journals';
 import { ForCodeAutocompleteOptionTemplate } from 'modules/SearchJournals/components/partials/ForCodeAutocompleteOptionTemplate';
 
-export type ForCodeAutocompleteFieldProps = React.ComponentPropsWithoutRef<typeof AutoCompleteAsynchronousField> & {
-    filter: (data: Array<Record<string, string | number>>) => Array<Record<string, string | number>>;
+type SubjectItem = Record<string, string | number>;
+type OptionSource = { name: string };
+type Option = Record<string, string | number | OptionSource[]>;
+type ForCodeAutocompleteFieldProps = React.ComponentPropsWithoutRef<typeof AutoCompleteAsynchronousField> & {
+    filter: (data: Option[]) => Option[];
 };
-
 type ForCodeAutocompleteFieldRef = React.ComponentRef<typeof AutoCompleteAsynchronousField>;
+
+const toKeyValueList = (data: SubjectItem[]): Option[] =>
+    data?.map?.(
+        (item: SubjectItem): Option => ({
+            key: item.jnl_subject_cvo_id,
+            value: item.jnl_subject_title,
+            sources: String(item.jnl_subject_sources)
+                .split(',')
+                .map(name => ({ name })),
+        }),
+    ) || [];
 
 export const ForCodeAutocompleteField = React.forwardRef<ForCodeAutocompleteFieldRef, ForCodeAutocompleteFieldProps>(
     ({ filter, ...props }, ref) => {
         const txt = locale.components.searchJournals.partials.forCodeAutocompleteField;
         const dispatch = useDispatch();
         const fetch = (newValue: string) => dispatch(loadJournalSearchKeywords(newValue, true));
-        const state = useSelector((s: AppState) => s.get('journalReducer')[keywordOnlySuffix] || {});
+        const state = useSelector((s: AppState) => s.get('journalReducer')[keywordOnlySuffix]);
         const keyValueLists = React.useMemo(
-            () =>
-                state.journalSearchKeywords?.subjectFuzzyMatch?.map?.((o: Record<string, string | number>) => ({
-                    key: o.jnl_subject_cvo_id,
-                    value: o.jnl_subject_title,
-                    sources: String(o.jnl_subject_sources)
-                        .split(',')
-                        .map(name => ({ name })),
-                })) || [],
+            () => toKeyValueList(state.journalSearchKeywords?.subjectFuzzyMatch),
             [state.journalSearchKeywords?.subjectFuzzyMatch],
         );
 
