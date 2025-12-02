@@ -64,7 +64,7 @@ export const SearchKeyword = ({
                         cursor: 'pointer',
                     }) ||
                         {}),
-                    ...classes[variant || 'default'],
+                    ...classes[variant],
                     ...(isSelected ? classes.added : {}),
                 }}
                 onKeyPress={key => handleKeyboardPressActivate(key, handleKeywordClick)}
