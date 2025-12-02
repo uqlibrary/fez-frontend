@@ -9657,7 +9657,7 @@ exports[`Additional Information Component  should render component with data col
                     <a
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0602+Ecology%7Cfor2008&searchQueryParams%5Ball%5D="
                     >
-                      0602 Ecology|for2008
+                      0602 Ecology
                     </a>
                   </li>
                   <li
@@ -9666,7 +9666,7 @@ exports[`Additional Information Component  should render component with data col
                     <a
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified%7Copenalex&searchQueryParams%5Ball%5D="
                     >
-                      040699 Physical Geography and Environmental Geoscience not elsewhere classified|openalex
+                      040699 Physical Geography and Environmental Geoscience not elsewhere classified
                     </a>
                   </li>
                   <li
