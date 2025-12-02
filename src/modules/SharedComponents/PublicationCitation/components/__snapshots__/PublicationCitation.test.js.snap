@@ -300,6 +300,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -428,10 +429,10 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -449,10 +450,10 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -663,6 +664,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -695,10 +697,10 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -716,10 +718,10 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       <a
                         aria-label="Full citation in Scopus will open in a new window"
                         class="scopusCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="scopus-citation-count-link"
+                        data-testid="scopus-citation-count-link"
                         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
-                        id="citation-count-link"
+                        id="scopus-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -737,10 +739,10 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       <a
                         aria-label="Full citation in Altmetric will open in a new window"
                         class="altmetricCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="altmetric-citation-count-link"
+                        data-testid="altmetric-citation-count-link"
                         href="https://queensland.altmetric.com/details/20711411"
-                        id="citation-count-link"
+                        id="altmetric-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -758,10 +760,10 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -850,6 +852,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -881,10 +884,10 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -902,10 +905,10 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       <a
                         aria-label="Full citation in Scopus will open in a new window"
                         class="scopusCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="scopus-citation-count-link"
+                        data-testid="scopus-citation-count-link"
                         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
-                        id="citation-count-link"
+                        id="scopus-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -923,10 +926,10 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       <a
                         aria-label="Full citation in Altmetric will open in a new window"
                         class="altmetricCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="altmetric-citation-count-link"
+                        data-testid="altmetric-citation-count-link"
                         href="https://queensland.altmetric.com/details/20711411"
-                        id="citation-count-link"
+                        id="altmetric-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -944,10 +947,10 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -1036,6 +1039,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1164,10 +1168,10 @@ exports[`PublicationCitation  should render component with content indicators 1`
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -1185,10 +1189,10 @@ exports[`PublicationCitation  should render component with content indicators 1`
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -1294,6 +1298,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1422,10 +1427,10 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -1443,10 +1448,10 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -1571,6 +1576,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1699,10 +1705,10 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -1720,10 +1726,10 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -1854,6 +1860,7 @@ exports[`PublicationCitation  should render component with default item with ima
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -2045,10 +2052,10 @@ exports[`PublicationCitation  should render component with default item with ima
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -2066,10 +2073,10 @@ exports[`PublicationCitation  should render component with default item with ima
                       <a
                         aria-label="Full citation in Scopus will open in a new window"
                         class="scopusCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="scopus-citation-count-link"
+                        data-testid="scopus-citation-count-link"
                         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
-                        id="citation-count-link"
+                        id="scopus-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -2087,10 +2094,10 @@ exports[`PublicationCitation  should render component with default item with ima
                       <a
                         aria-label="Full citation in Altmetric will open in a new window"
                         class="altmetricCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="altmetric-citation-count-link"
+                        data-testid="altmetric-citation-count-link"
                         href="https://queensland.altmetric.com/details/20711411"
-                        id="citation-count-link"
+                        id="altmetric-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -2108,10 +2115,10 @@ exports[`PublicationCitation  should render component with default item with ima
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -2197,7 +2204,6 @@ exports[`PublicationCitation  should render component with default item with ima
           height="150"
           id="imageGalleryItemImage-UQ:676287"
           loading="lazy"
-          src=""
           width="150"
         />
         <div
@@ -2239,6 +2245,7 @@ exports[`PublicationCitation  should render component with default item with ima
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -2430,10 +2437,10 @@ exports[`PublicationCitation  should render component with default item with ima
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -2451,10 +2458,10 @@ exports[`PublicationCitation  should render component with default item with ima
                       <a
                         aria-label="Full citation in Scopus will open in a new window"
                         class="scopusCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="scopus-citation-count-link"
+                        data-testid="scopus-citation-count-link"
                         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
-                        id="citation-count-link"
+                        id="scopus-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -2472,10 +2479,10 @@ exports[`PublicationCitation  should render component with default item with ima
                       <a
                         aria-label="Full citation in Altmetric will open in a new window"
                         class="altmetricCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="altmetric-citation-count-link"
+                        data-testid="altmetric-citation-count-link"
                         href="https://queensland.altmetric.com/details/20711411"
-                        id="citation-count-link"
+                        id="altmetric-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -2493,10 +2500,10 @@ exports[`PublicationCitation  should render component with default item with ima
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -2585,6 +2592,7 @@ exports[`PublicationCitation  should render component with default item without 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -2776,10 +2784,10 @@ exports[`PublicationCitation  should render component with default item without 
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -2797,10 +2805,10 @@ exports[`PublicationCitation  should render component with default item without 
                       <a
                         aria-label="Full citation in Scopus will open in a new window"
                         class="scopusCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="scopus-citation-count-link"
+                        data-testid="scopus-citation-count-link"
                         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
-                        id="citation-count-link"
+                        id="scopus-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -2818,10 +2826,10 @@ exports[`PublicationCitation  should render component with default item without 
                       <a
                         aria-label="Full citation in Altmetric will open in a new window"
                         class="altmetricCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="altmetric-citation-count-link"
+                        data-testid="altmetric-citation-count-link"
                         href="https://queensland.altmetric.com/details/20711411"
-                        id="citation-count-link"
+                        id="altmetric-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -2839,10 +2847,10 @@ exports[`PublicationCitation  should render component with default item without 
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -3055,10 +3063,10 @@ exports[`PublicationCitation  should render component with default item without 
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -3076,10 +3084,10 @@ exports[`PublicationCitation  should render component with default item without 
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -3185,6 +3193,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3209,10 +3218,10 @@ exports[`PublicationCitation  should render component with default list hiding t
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -3230,10 +3239,10 @@ exports[`PublicationCitation  should render component with default list hiding t
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -3339,6 +3348,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3467,10 +3477,10 @@ exports[`PublicationCitation  should render component with default list hiding t
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -3488,10 +3498,10 @@ exports[`PublicationCitation  should render component with default list hiding t
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -3597,6 +3607,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3725,10 +3736,10 @@ exports[`PublicationCitation  should render component with default list hiding t
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -3746,10 +3757,10 @@ exports[`PublicationCitation  should render component with default list hiding t
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -3855,6 +3866,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3983,10 +3995,10 @@ exports[`PublicationCitation  should render component with empty custom actions 
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -4004,10 +4016,10 @@ exports[`PublicationCitation  should render component with empty custom actions 
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -4120,6 +4132,7 @@ exports[`PublicationCitation  should render component with publication from mult
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -4248,10 +4261,10 @@ exports[`PublicationCitation  should render component with publication from mult
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -4269,10 +4282,10 @@ exports[`PublicationCitation  should render component with publication from mult
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -4335,12 +4348,12 @@ exports[`PublicationCitation  should render component with publication from mult
                   class="publicationSource css-1oqhn84"
                   data-analyticsid="publication-source-espace-link"
                   data-testid="publication-source-espace-link"
-                  href="https://fez-staging.library.uq.edu.au/view/UQ:224457"
+                  href="http://localhost/view/UQ:224457"
                   id="publication-source-espace-link"
                   rel="noopener noreferrer"
                   tabindex="0"
                   target="_blank"
-                  title="Link to https://fez-staging.library.uq.edu.au/view/UQ:224457 will open in a new window."
+                  title="Link to http://localhost/view/UQ:224457 will open in a new window."
                 >
                   <svg
                     aria-hidden="true"
@@ -4530,10 +4543,10 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -4551,10 +4564,10 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -4617,12 +4630,12 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                   class="publicationSource css-1oqhn84"
                   data-analyticsid="publication-source-espace-link"
                   data-testid="publication-source-espace-link"
-                  href="https://fez-staging.library.uq.edu.au/view/UQ:224457"
+                  href="http://localhost/view/UQ:224457"
                   id="publication-source-espace-link"
                   rel="noopener noreferrer"
                   tabindex="0"
                   target="_blank"
-                  title="Link to https://fez-staging.library.uq.edu.au/view/UQ:224457 will open in a new window."
+                  title="Link to http://localhost/view/UQ:224457 will open in a new window."
                 >
                   <svg
                     aria-hidden="true"
@@ -4693,7 +4706,6 @@ exports[`PublicationCitation  should render component without image if whitelist
           height="150"
           id="imageGalleryItemImage-UQ:676287"
           loading="lazy"
-          src=""
           width="150"
         />
         <div
@@ -4735,6 +4747,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -4926,10 +4939,10 @@ exports[`PublicationCitation  should render component without image if whitelist
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -4947,10 +4960,10 @@ exports[`PublicationCitation  should render component without image if whitelist
                       <a
                         aria-label="Full citation in Scopus will open in a new window"
                         class="scopusCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="scopus-citation-count-link"
+                        data-testid="scopus-citation-count-link"
                         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
-                        id="citation-count-link"
+                        id="scopus-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -4968,10 +4981,10 @@ exports[`PublicationCitation  should render component without image if whitelist
                       <a
                         aria-label="Full citation in Altmetric will open in a new window"
                         class="altmetricCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="altmetric-citation-count-link"
+                        data-testid="altmetric-citation-count-link"
                         href="https://queensland.altmetric.com/details/20711411"
-                        id="citation-count-link"
+                        id="altmetric-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -4989,10 +5002,10 @@ exports[`PublicationCitation  should render component without image if whitelist
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -5081,6 +5094,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -5209,10 +5223,10 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -5230,10 +5244,10 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -5359,6 +5373,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -5531,10 +5546,10 @@ exports[`PublicationCitation  should render publication citation metric with cou
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -5552,10 +5567,10 @@ exports[`PublicationCitation  should render publication citation metric with cou
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -5661,6 +5676,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -5830,10 +5846,10 @@ exports[`PublicationCitation  should render publication citation metric without 
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -5851,10 +5867,10 @@ exports[`PublicationCitation  should render publication citation metric without 
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -5960,6 +5976,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -6124,10 +6141,10 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
                         class="wosCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="wos-citation-count-link"
+                        data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
-                        id="citation-count-link"
+                        id="wos-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
@@ -6145,10 +6162,10 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
                         class="googleCitationCount css-si3g8d"
-                        data-analyticsid="citation-count-link"
-                        data-testid="citation-count-link"
+                        data-analyticsid="google-citation-count-link"
+                        data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
-                        id="citation-count-link"
+                        id="google-citation-count-link"
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"

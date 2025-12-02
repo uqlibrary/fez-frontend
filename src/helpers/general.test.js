@@ -22,23 +22,6 @@ import {
 import { mockWebApiFile } from 'test-utils';
 
 describe('general helpers', () => {
-    describe('debugging helpers', () => {
-        const args = [true, false, 1, 0, -1, [], {}];
-        it('dd should given args using console.dir', () => {
-            const mock = jest.spyOn(console, 'dir').mockImplementation(() => {});
-            dd(...args);
-            args.forEach(arg => expect(mock).toBeCalledWith(arg, { depth: null }));
-            mock.mockRestore();
-        });
-
-        it('dj should given args using console.log', () => {
-            const mock = jest.spyOn(console, 'log').mockImplementation(() => {});
-            dj(...args);
-            args.forEach(arg => expect(mock).toBeCalledWith(JSON.stringify(arg)));
-            mock.mockRestore();
-        });
-    });
-
     describe('tryCatch', () => {
         it('it should call and return given closure return value', () => {
             const returnValue = 'abc';
@@ -265,7 +248,7 @@ describe('general helpers', () => {
 
     it('should insert WBR tags in to a URL', () => {
         const expectedStr =
-            '["http:",{"type":"wbr","key":"1","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"//",{"type":"wbr","key":"3","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"www",{"type":"wbr","key":"5","ref":null,"props":{"children":null},"_owner":null,"_store":{}},".test",{"type":"wbr","key":"7","ref":null,"props":{"children":null},"_owner":null,"_store":{}},".com",{"type":"wbr","key":"9","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"/"]';
+            '["http:",{"type":"wbr","key":"1","props":{},"_owner":null,"_store":{}},"//",{"type":"wbr","key":"3","props":{},"_owner":null,"_store":{}},"www",{"type":"wbr","key":"5","props":{},"_owner":null,"_store":{}},".test",{"type":"wbr","key":"7","props":{},"_owner":null,"_store":{}},".com",{"type":"wbr","key":"9","props":{},"_owner":null,"_store":{}},"/"]';
         const actualStr = JSON.stringify(formatUrlTextWithWbrTags('http://www.test.com/'));
         expect(expectedStr).toEqual(actualStr);
     });

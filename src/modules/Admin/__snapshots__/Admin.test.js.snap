@@ -1176,7 +1176,8 @@ exports[`form submission payload create a journal article 1`] = `
 
 exports[`form submission payload create a journal article 2`] = `
 File {
-  "path": "myTestImage.png",
+  "path": "./myTestImage.png",
+  "relativePath": "./myTestImage.png",
 }
 `;
 

@@ -423,10 +423,10 @@ backgroundImage: `url(${myImage})`
 
 Also be wary of the different environments your code will deploy to, e.g. dev branch, staging, production. Dev branches work slightly different to the other two when it comes to using absolute vs relative paths within IMG elements, due to how the dev server must host multiple branches each with their own build (note this is not an issue if using the image in a style, as shown above).
 Typically for localhost, staging and production you'll need to reference your image from the root, by adding a leading `\`. However, this **won't** work on the development server, which requires an image reference *without* the leading slash.
-To handle this, use the `IS_DEVELOPMENT_SERVER` constant in `src/config/general.js` to conditionally add a leading `\` when you output your image path, or leverage the convenience function `getRequiredImagePath`:
+To handle this, use the `IS_LOCAL_DEV` constant in `src/config/general.js` to conditionally add a leading `\` when you output your image path, or leverage the convenience function `getRequiredImagePath`:
 
 ```
-const myImagePath = `${!IS_DEVELOPMENT_SERVER ? '/' : ''}${myImage}`;
+const myImagePath = `${!IS_LOCAL_DEV && !IS_DEVELOPMENT_BRANCH ? '/' : ''}${myImage}`;
 
 //or
 
@@ -522,7 +522,9 @@ where all sorts of detailed inspections are possible - network, DOM elements, et
 
 The above also applies to tests that fail on CI. In this case, the trace files need to be downloaded locally first. They
 are part of the artifacts uploaded to S3 as output of each test stage - please refer to the "Artifacts" section on
-the "Build Details" tab.
+the "Build Details" tab. 
+
+Instructions on how to download and use the trace files from failed tests on AWS can be found [in our Sharepoint developer docs](https://uq.sharepoint.com/:w:/r/teams/lbf4g4a1/LTSDevelopers%20Documents/How-to/Review%20failed%20AWS%20FE%20test.docx?d=wf59cd41009c94efd8492a59bd4a68df7&csf=1&web=1&e=aYBJlm)
 
 #### Standardised selectors to target elements
 
@@ -541,7 +543,7 @@ When running ```npm test``` and related scripts natively in linux (without using
 One way to avoid this is to restrict the number of CPU cores through jest's [--maxWorkers](https://jestjs.io/docs/cli#--maxworkersnumstring) option.
 
 ```bash
-NODE_ENV=test FULL_PATH=http://localhost node --expose-gc ./node_modules/.bin/jest --logHeapUsage --maxWorkers=50%
+NODE_ENV=test APP_URL=http://localhost node --expose-gc ./node_modules/.bin/jest --logHeapUsage --maxWorkers=50%
 ```
 
 ##### E2E tests

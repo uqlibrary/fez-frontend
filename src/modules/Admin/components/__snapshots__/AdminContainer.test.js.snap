@@ -2445,7 +2445,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                           colspan="1"
                                           data-index="0"
                                           scope="col"
-                                          tabindex="0"
                                         >
                                           <div
                                             class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2469,7 +2468,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                           data-can-sort="true"
                                           data-index="1"
                                           scope="col"
-                                          tabindex="0"
                                         >
                                           <div
                                             class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2552,7 +2550,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                           data-can-sort="true"
                                           data-index="2"
                                           scope="col"
-                                          tabindex="0"
                                         >
                                           <div
                                             class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -2611,7 +2608,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                           colspan="1"
                                           data-index="3"
                                           scope="col"
-                                          tabindex="0"
                                         >
                                           <div
                                             class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -2644,7 +2640,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                         <td
                                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-s6azes-MuiTableCell-root"
                                           data-index="0"
-                                          tabindex="0"
                                         >
                                           <span
                                             aria-label="Expand"
@@ -2677,7 +2672,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                         <td
                                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1xn8ghv-MuiTableCell-root"
                                           data-index="1"
-                                          tabindex="0"
                                         >
                                           <div
                                             class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
@@ -2720,7 +2714,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                         <td
                                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-yn547q-MuiTableCell-root"
                                           data-index="2"
-                                          tabindex="0"
                                         >
                                           <p
                                             class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
@@ -2731,9 +2724,8 @@ exports[`AdminContainer component should render default view 1`] = `
                                           </p>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-nrdm9s-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1012vkg-MuiTableCell-root"
                                           data-index="3"
-                                          tabindex="0"
                                         >
                                           <div
                                             class="MuiBox-root css-4knjz3"
@@ -2846,7 +2838,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                         <td
                                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-s6azes-MuiTableCell-root"
                                           data-index="0"
-                                          tabindex="0"
                                         >
                                           <span
                                             aria-label="Expand"
@@ -2879,7 +2870,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                         <td
                                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1xn8ghv-MuiTableCell-root"
                                           data-index="1"
-                                          tabindex="0"
                                         >
                                           <div
                                             class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
@@ -2922,7 +2912,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                         <td
                                           class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-yn547q-MuiTableCell-root"
                                           data-index="2"
-                                          tabindex="0"
                                         >
                                           <p
                                             class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
@@ -2933,9 +2922,8 @@ exports[`AdminContainer component should render default view 1`] = `
                                           </p>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-nrdm9s-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1012vkg-MuiTableCell-root"
                                           data-index="3"
-                                          tabindex="0"
                                         >
                                           <div
                                             class="MuiBox-root css-4knjz3"
@@ -3214,7 +3202,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                           colspan="1"
                                           data-index="0"
                                           scope="col"
-                                          tabindex="0"
                                         >
                                           <div
                                             class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -3238,7 +3225,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                           data-can-sort="true"
                                           data-index="1"
                                           scope="col"
-                                          tabindex="0"
                                         >
                                           <div
                                             class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -3321,7 +3307,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                           data-can-sort="true"
                                           data-index="2"
                                           scope="col"
-                                          tabindex="0"
                                         >
                                           <div
                                             class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
@@ -3380,7 +3365,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                           colspan="1"
                                           data-index="3"
                                           scope="col"
-                                          tabindex="0"
                                         >
                                           <div
                                             class="Mui-TableHeadCell-Content MuiBox-root css-6yt068"
@@ -5370,7 +5354,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                         data-testid="fez-datastream-info-input"
                                         id="Uploader"
                                         multiple=""
-                                        style="display: none;"
+                                        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: 0px -1px -1px 0px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                                         tabindex="-1"
                                         type="file"
                                       />

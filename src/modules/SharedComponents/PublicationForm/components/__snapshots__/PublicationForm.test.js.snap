@@ -22,6 +22,7 @@ exports[`PublicationForm form submission should submit form with expected payloa
 
 exports[`PublicationForm form submission should submit form with expected payload 2`] = `
 File {
-  "path": "test.pdf",
+  "path": "./test.pdf",
+  "relativePath": "./test.pdf",
 }
 `;
