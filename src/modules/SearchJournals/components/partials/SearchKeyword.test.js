@@ -26,7 +26,6 @@ describe('SearchKeyword', () => {
     it('should render', () => {
         const { getByText } = setup({
             keyword,
-            onKeywordClick: () => {},
             variant,
             type,
             index,

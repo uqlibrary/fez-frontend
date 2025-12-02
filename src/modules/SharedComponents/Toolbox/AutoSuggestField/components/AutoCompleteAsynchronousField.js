@@ -204,7 +204,7 @@ export const AutoCompleteAsynchronousField = React.forwardRef(
                     {...((!!allowFreeText && { freeSolo: true }) || {})}
                     {...(groupBy && { groupBy })}
                     {...((!!OptionTemplate && {
-                        renderOption: (props, option) => {
+                        renderOption: (props, option, state) => {
                             return (
                                 <li
                                     {...props}
@@ -218,7 +218,7 @@ export const AutoCompleteAsynchronousField = React.forwardRef(
                                         /* istanbul ignore next */ ''
                                     }
                                 >
-                                    <OptionTemplate option={option} />
+                                    <OptionTemplate option={option} index={state.index} />
                                 </li>
                             );
                         },

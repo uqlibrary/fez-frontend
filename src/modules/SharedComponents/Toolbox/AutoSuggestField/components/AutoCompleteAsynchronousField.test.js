@@ -109,9 +109,9 @@ describe('AutoCompleteAsynchronousField component', () => {
 
     it('should render given option template for options', async () => {
         // eslint-disable-next-line react/prop-types
-        const OptionTemplate = ({ option }) => <div data-testid="option-template">{option}</div>;
+        const OptionTemplate = ({ option, index }) => <div data-testid={`option-template-${index}`}>{option}</div>;
 
-        const { getByTestId, getByRole, getAllByTestId, rerender } = setup({});
+        const { getByTestId, getByRole, rerender } = setup({});
 
         fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'ap' } });
 
@@ -119,10 +119,13 @@ describe('AutoCompleteAsynchronousField component', () => {
 
         expect(getByTestId('loading-suggestions')).toBeInTheDocument();
 
-        setup({ itemsList: ['apple', 'orange', 'banana', 'pineapple', 'pear'], OptionTemplate }, rerender);
+        const options = ['apple', 'orange', 'banana', 'pineapple', 'pear'];
+        setup({ itemsList: options, OptionTemplate }, rerender);
 
         const suggestions = await waitFor(() => getByRole('presentation'));
-        expect(getAllByTestId('option-template', suggestions).length).toBe(5);
+        options.map((option, index) =>
+            expect(getByTestId(`option-template-${index}`, suggestions)).toHaveTextContent(options[index]),
+        );
     });
 
     it('should display error text', () => {

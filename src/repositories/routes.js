@@ -541,8 +541,8 @@ export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: und
     return { apiUrl: 'fez-users' };
 };
 
-export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
-    apiUrl: `journals/search?query=${encodeURIComponent(query)}`,
+export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query, keywordsOnly = false }) => ({
+    apiUrl: `journals/search?query=${encodeURIComponent(query)}${keywordsOnly ? '&rule=subject' : ''}`,
 });
 
 /**

@@ -3,6 +3,7 @@ import * as repositories from 'repositories';
 import * as journalActions from './journals';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 import * as ExportPublicationsTransformers from './exportPublicationsDataTransformers';
+import { keywordOnlySuffix } from '../reducers/journals';
 
 describe('Search action creators', () => {
     beforeEach(() => {
@@ -133,6 +134,38 @@ describe('Search action creators', () => {
             const expectedActions = [actions.CLEAR_JOURNAL_SEARCH_KEYWORDS];
             await mockActionsStore.dispatch(journalActions.clearJournalSearchKeywords());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        describe('keywordsOnly', () => {
+            it('should dispatch action for successful journal search keywords', async () => {
+                const { apiUrl } = repositories.routes.JOURNAL_KEYWORDS_LOOKUP_API({ query: 'a', keywordsOnly: true });
+                mockApi.onGet(apiUrl).reply(200, { data: [] });
+
+                const expectedActions = [
+                    `${actions.JOURNAL_SEARCH_KEYWORDS_LOADING}${keywordOnlySuffix}`,
+                    `${actions.JOURNAL_SEARCH_KEYWORDS_LOADED}${keywordOnlySuffix}`,
+                ];
+
+                await mockActionsStore.dispatch(journalActions.loadJournalSearchKeywords('a', true));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            });
+
+            it('should dispatch action for failed journal search keywords', async () => {
+                const { apiUrl } = repositories.routes.JOURNAL_KEYWORDS_LOOKUP_API({ query: 'a', keywordsOnly: true });
+                mockApi.onGet(apiUrl).reply(500);
+
+                const expectedActions = [
+                    `${actions.JOURNAL_SEARCH_KEYWORDS_LOADING}${keywordOnlySuffix}`,
+                    actions.APP_ALERT_SHOW,
+                    `${actions.JOURNAL_SEARCH_KEYWORDS_FAILED}${keywordOnlySuffix}`,
+                ];
+
+                try {
+                    await mockActionsStore.dispatch(journalActions.loadJournalSearchKeywords('a', true));
+                } catch {
+                    expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+                }
+            });
         });
     });
 

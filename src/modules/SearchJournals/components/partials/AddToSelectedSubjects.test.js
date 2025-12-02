@@ -1,30 +1,35 @@
 import React from 'react';
-import { api, assertDisabled, render, userEvent, waitFor, waitForText, WithReduxStore } from 'test-utils';
+import { api, assertDisabled, render, userEvent, waitFor, waitForText, WithReduxStore, within } from 'test-utils';
 import { AddToSelectedSubjects } from './AddToSelectedSubjects';
-import { JOURNAL_SEARCH_SUBJECTS_VOCAB_ID } from 'config/general';
+import { initialState, keywordOnlySuffix } from '../../../../reducers/journals';
 
-jest.mock('hooks/useControlledVocabs', () => {
-    // require inside the factory to avoid hoisting issues
-    const { vocabulariesList } = require('mock/data');
-    const { JOURNAL_SEARCH_SUBJECTS_VOCAB_ID } = require('config/general');
+const stateMock = {
+    journalSearchKeywords: {
+        subjectFuzzyMatch: [
+            {
+                jnl_subject_cvo_id: 41000,
+                jnl_subject_sources: 'ERA',
+                jnl_subject_title: '1000 General',
+            },
+            {
+                jnl_subject_cvo_id: 41010,
+                jnl_subject_sources: 'WOS AHCI,WOS ESCI',
+                jnl_subject_title: '1010 Math',
+            },
+        ],
+    },
+};
 
-    return {
-        __esModule: true,
-        useControlledVocabs: jest.fn().mockReturnValue({
-            items: vocabulariesList[JOURNAL_SEARCH_SUBJECTS_VOCAB_ID].data.map(item => ({
-                key: item.controlled_vocab.cvo_id,
-                value: item.controlled_vocab.cvo_title,
-            })),
-            fetch: jest.fn(),
-            itemsLoading: false,
-        }),
-    };
-});
-
-import { useControlledVocabs } from 'hooks/useControlledVocabs';
-import { vocabulariesList } from '../../../../mock/data';
-
-const setup = ({ onAdd, selected, state } = {}) =>
+const setup = ({
+    onAdd,
+    selected,
+    state = {
+        journalReducer: {
+            ...initialState,
+            [keywordOnlySuffix]: { ...stateMock },
+        },
+    },
+} = {}) =>
     render(
         <WithReduxStore initialState={state}>
             <AddToSelectedSubjects onAdd={onAdd || jest.fn} selected={selected} />
@@ -64,9 +69,10 @@ describe('AddToSelectedSubjects', () => {
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
         await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
-        await userEvent.click(await waitForText('1000 General'));
+        const option = await waitForText('1000 General');
+        expect(within(option.parentElement).getByText('ERA')).toBeInTheDocument();
+        await userEvent.click(option);
 
-        expect(useControlledVocabs).toHaveBeenCalledWith(JOURNAL_SEARCH_SUBJECTS_VOCAB_ID, expect.any(Function));
         expect(onAdd).toHaveBeenCalledTimes(1);
         expect(onAdd).toHaveBeenCalledWith({
             cvoId: 41000,
@@ -80,14 +86,6 @@ describe('AddToSelectedSubjects', () => {
     });
 
     it('should hide selected subjects from dropdown list', async () => {
-        // user real hook to test filter func
-        useControlledVocabs.mockImplementation(jest.requireActual('hooks/useControlledVocabs').useControlledVocabs);
-
-        api.mock.cvo.get({
-            cvoId: JOURNAL_SEARCH_SUBJECTS_VOCAB_ID,
-            data: vocabulariesList[JOURNAL_SEARCH_SUBJECTS_VOCAB_ID].data,
-        });
-
         const onAdd = jest.fn();
         const { getByTestId, queryByText } = setup({
             onAdd,
@@ -103,7 +101,11 @@ describe('AddToSelectedSubjects', () => {
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
         await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
-        await waitForText('1010 Math');
+        const option = await waitForText('1010 Math');
+        'WOS AHCI,WOS ESCI'
+            .split(',')
+            .map(source => expect(within(option.parentElement).getByText(source)).toBeInTheDocument());
+
         // should not list already selected subjects
         expect(queryByText('1000 General')).not.toBeInTheDocument();
     });

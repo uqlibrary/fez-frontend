@@ -32603,21 +32603,4 @@ export const vocabulariesList = {
             },
         ],
     },
-    [JOURNAL_SEARCH_SUBJECTS_VOCAB_ID]: {
-        total: 2,
-        data: [
-            {
-                controlled_vocab: {
-                    cvo_id: 41000,
-                    cvo_title: '1000 General',
-                },
-            },
-            {
-                controlled_vocab: {
-                    cvo_id: 41010,
-                    cvo_title: '1010 Math',
-                },
-            },
-        ],
-    },
 };

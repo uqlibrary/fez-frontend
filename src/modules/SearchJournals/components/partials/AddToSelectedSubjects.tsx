@@ -93,9 +93,7 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd, 
             }}
         >
             <ForCodeAutocompleteField
-                filter={(_, keyValueList) =>
-                    keyValueList.filter(item => !selectedIds.includes(String(item?.key).toLowerCase()))
-                }
+                filter={data => data.filter(item => !selectedIds.includes(String(item?.key).toLowerCase()))}
                 // @ts-ignore
                 onChange={handleOnAdd}
                 onKeyDown={(e: React.KeyboardEvent) => {
