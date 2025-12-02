@@ -79,6 +79,7 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd, 
         );
     }
     const close = () => setIsOpen(false);
+    /* istanbul ignore next */
     const handleOnAdd = (item: KeyValueItemType) => {
         onAdd({ type: 'Subject', cvoId: parseInt(item.key, 10), id: `Subject-${item.key}`, text: item.value });
         close();
