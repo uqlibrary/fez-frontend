@@ -75,7 +75,7 @@ describe('AddToSelectedSubjects', () => {
             .map(source => expect(within(option.parentElement).getByText(source)).toBeInTheDocument());
     });
 
-    it.skip('should call given onAdd with mapped subject and closes when a subject is selected', async () => {
+    it('should call given onAdd with mapped subject and closes when a subject is selected', async () => {
         const onAdd = jest.fn();
         const { getByTestId, queryByTestId } = setup({ onAdd });
 
