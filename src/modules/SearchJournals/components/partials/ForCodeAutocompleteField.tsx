@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppState } from '../../../../reducer';
 import { loadJournalSearchKeywords } from '../../../../actions';
 import { keywordOnlySuffix } from '../../../../reducers/journals';
-import { ForCodeAutocompleteOptionTemplate } from 'modules/SearchJournals/components/partials/ForCodeAutocompleteTemplate';
+import { ForCodeAutocompleteOptionTemplate } from 'modules/SearchJournals/components/partials/ForCodeAutocompleteOptionTemplate';
 
 export type ForCodeAutocompleteFieldProps = React.ComponentPropsWithoutRef<typeof AutoCompleteAsynchronousField> & {
     filter: (data: Array<Record<string, string | number>>) => Array<Record<string, string | number>>;
