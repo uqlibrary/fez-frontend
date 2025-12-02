@@ -143,7 +143,10 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                             if (getLink) {
                                 const firstTwo = subkey.split('_').slice(0, 2).join('_');
                                 const icon = item[firstTwo + '_icon'] ?? '';
-                                const iconHint = icon === 'openalex' ? 'OpenAlex' : icon.toUpperCase();
+                                const iconHint =
+                                    icon === 'openalex'
+                                        ? 'OpenAlex'
+                                        : icon.charAt(0).toUpperCase() + icon.slice(1).toLowerCase();
                                 return renderLink(getLink(item[subkey], data), data, '', icon, iconHint);
                             } else {
                                 return data;

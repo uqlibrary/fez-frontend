@@ -1232,7 +1232,8 @@ export const trendingPublications = {
                     "rek_subject_xsdmf_id":null,
                     "rek_subject":453242,
                     "rek_subject_order":1,
-                    "rek_subject_lookup":"1600 Chemistry"
+                    "rek_subject_lookup":"1600 Chemistry",
+                    "rek_subject_icon":"for2008"
                 },
                 {
                     "rek_subject_id":9827530,
@@ -1240,7 +1241,8 @@ export const trendingPublications = {
                     "rek_subject_xsdmf_id":null,
                     "rek_subject":453239,
                     "rek_subject_order":2,
-                    "rek_subject_lookup":"1300 Biochemistry, Genetics and Molecular Biology"
+                    "rek_subject_lookup":"1300 Biochemistry, Genetics and Molecular Biology",
+                    "rek_subject_icon":"openalex"
                 },
                 {
                     "rek_subject_id":9827531,
@@ -1248,7 +1250,8 @@ export const trendingPublications = {
                     "rek_subject_xsdmf_id":null,
                     "rek_subject":453257,
                     "rek_subject_order":3,
-                    "rek_subject_lookup":"3100 Physics and Astronomy"
+                    "rek_subject_lookup":"3100 Physics and Astronomy",
+                    "rek_subject_icon":"for2020"
                 }
             ],
             "fez_record_search_key_total_chapters":null,
@@ -3644,8 +3647,7 @@ export const trendingPublications = {
             "rek_subject_xsdmf_id": null,
             "rek_subject": 453253,
             "rek_subject_order": 1,
-            "rek_subject_lookup": "2700 Medicine",
-            "rek_subject_icon": "openalex"
+            "rek_subject_lookup": "2700 Medicine"
         }],
         "fez_record_search_key_total_pages": {
             "rek_total_pages_id": 5783164,
