@@ -61,11 +61,8 @@ export default {
                 ),
                 nodeal: (
                     <p>
-                        From January 1, this title does not have a Read and Publish agreement.{' '}
-                        <a
-                            href="https://web.library.uq.edu.au/stories/changes-accessing-and-publishing-journals-2026"
-                            target="_blank"
-                        >
+                        This title does not currently have a Read and Publish agreement.{' '}
+                        <a href={caulLink} target="_blank">
                             Learn more about current agreements
                         </a>
                         .

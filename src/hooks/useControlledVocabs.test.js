@@ -77,7 +77,7 @@ describe('useControlledVocabs', () => {
         expect(mockGlobalState.get).toHaveBeenCalledWith('controlledVocabulariesReducer');
     });
 
-    it('should use given transformer', () => {
+    it('should use given transformer (raw)', () => {
         const state = {
             rawData: [1, 2, 3],
             itemsLoaded: true,
@@ -87,12 +87,36 @@ describe('useControlledVocabs', () => {
         mockUseSelector(cvoId, state);
         const mockFetch = jest.fn();
         useDispatchOnce.mockReturnValue(mockFetch);
-        const transformer = data => data.map(x => x * 2);
+        const transformer = raw => raw.map(x => x * 2);
 
         const { result } = renderHook(() => useControlledVocabs(cvoId, transformer));
 
         expect(result.current.raw).toEqual(state.rawData);
         expect(result.current.items).toEqual([2, 4, 6]);
+    });
+
+    it('should use given transformer (itemsKeyValueList)', () => {
+        const state = {
+            rawData: [1, 2, 3],
+            itemsLoaded: true,
+            itemsLoading: false,
+            itemsKeyValueList: [
+                { key: 1, value: 'a' },
+                { key: 2, value: 'b' },
+            ],
+        };
+        mockUseSelector(cvoId, state);
+        const mockFetch = jest.fn();
+        useDispatchOnce.mockReturnValue(mockFetch);
+        const transformer = (raw, itemsKeyValueList) => itemsKeyValueList.map(item => ({ ...item, key: item.key * 2 }));
+
+        const { result } = renderHook(() => useControlledVocabs(cvoId, transformer));
+
+        expect(result.current.raw).toEqual(state.rawData);
+        expect(result.current.items).toEqual([
+            { key: 2, value: 'a' },
+            { key: 4, value: 'b' },
+        ]);
     });
 
     it('should use given getDispatchable when fetch is invoked', () => {

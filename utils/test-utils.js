@@ -227,6 +227,13 @@ const waitElementToBeInDocument = async (dataTestId, options) =>
     }, options);
 
 /**
+ * @param {string|function} testId
+ * @return {Promise<HTMLElement>}
+ */
+const assertMissingElement = testId =>
+    expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).not.toBeInTheDocument();
+
+/**
  * note: it will match visible texts in DOM or input's values
  * @param {string|RegExp} text
  * @param {object?} options
@@ -577,6 +584,7 @@ module.exports = {
     waitToBeEnabled,
     waitToBeDisabled,
     waitElementToBeInDocument,
+    assertMissingElement,
     waitForText,
     waitForTextToBeRemoved,
     expectRequiredFieldError,

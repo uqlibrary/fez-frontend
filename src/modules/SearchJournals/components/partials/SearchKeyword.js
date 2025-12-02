@@ -38,7 +38,7 @@ export const getId = (keyword, variant, type, index) =>
 export const SearchKeyword = ({
     keyword,
     onKeywordClick,
-    variant,
+    variant = 'default',
     type,
     index,
     cvoId,
@@ -59,8 +59,11 @@ export const SearchKeyword = ({
             <Typography
                 component="span"
                 sx={{
-                    color: 'accent.main',
-                    cursor: 'pointer',
+                    ...((onKeywordClick && {
+                        color: 'accent.main',
+                        cursor: 'pointer',
+                    }) ||
+                        {}),
                     ...classes[variant || 'default'],
                     ...(isSelected ? classes.added : {}),
                 }}
