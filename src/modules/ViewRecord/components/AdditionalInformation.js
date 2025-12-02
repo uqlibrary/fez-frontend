@@ -141,17 +141,9 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                         {(() => {
                             const data = getData(item, subkey);
                             if (getLink) {
-                                let icon = '';
-                                let iconHint = '';
-                                const subject = String(data).replace(/\|(for2020|for2008|openalex)$/, match => {
-                                    icon = match.slice(1);
-                                    iconHint = icon === 'openalex' ? 'OpenAlex' : icon.toUpperCase();
-                                    return '';
-                                });
-                                if (icon) {
-                                    return renderLink(getLink(subject, subject), subject, icon, iconHint);
-                                }
-                                return renderLink(getLink(item[subkey], data), data);
+                                const icon = item[subkey + '_icon'] ?? '';
+                                const iconHint = icon === 'openalex' ? 'OpenAlex' : icon.toUpperCase();
+                                return renderLink(getLink(item[subkey], data), data, icon, iconHint);
                             } else {
                                 return data;
                             }
