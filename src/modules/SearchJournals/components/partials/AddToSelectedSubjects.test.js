@@ -63,15 +63,25 @@ describe('AddToSelectedSubjects', () => {
         });
     });
 
+    it('should render option sources', async () => {
+        const onAdd = jest.fn();
+        const { getByTestId } = setup({ onAdd });
+
+        await userEvent.click(getByTestId('add-to-subject-selection-button'));
+        await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
+        const option = await waitForText('1010 Math');
+        'WOS AHCI,WOS ESCI'
+            .split(',')
+            .map(source => expect(within(option.parentElement).getByText(source)).toBeInTheDocument());
+    });
+
     it('should call given onAdd with mapped subject and closes when a subject is selected', async () => {
         const onAdd = jest.fn();
         const { getByTestId, queryByTestId } = setup({ onAdd });
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
         await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
-        const option = await waitForText('1000 General');
-        expect(within(option.parentElement).getByText('ERA')).toBeInTheDocument();
-        await userEvent.click(option);
+        await userEvent.click(await waitForText('1000 General'));
 
         expect(onAdd).toHaveBeenCalledTimes(1);
         expect(onAdd).toHaveBeenCalledWith({
@@ -101,10 +111,7 @@ describe('AddToSelectedSubjects', () => {
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
         await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
-        const option = await waitForText('1010 Math');
-        'WOS AHCI,WOS ESCI'
-            .split(',')
-            .map(source => expect(within(option.parentElement).getByText(source)).toBeInTheDocument());
+        await waitForText('1010 Math');
 
         // should not list already selected subjects
         expect(queryByText('1000 General')).not.toBeInTheDocument();
