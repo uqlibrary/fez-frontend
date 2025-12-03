@@ -14039,7 +14039,8 @@ export const dataCollectionWithFoRCodes = {
             rek_subject_xsdmf_id: null,
             rek_subject: 452067,
             rek_subject_order: 1,
-            rek_subject_lookup: "0602 Ecology"
+            rek_subject_lookup: "0602 Ecology",
+            rek_subject_icon: "for2008"
         },
         {
             rek_subject_id: 7827,
@@ -14047,7 +14048,8 @@ export const dataCollectionWithFoRCodes = {
             rek_subject_xsdmf_id: null,
             rek_subject: 452018,
             rek_subject_order: 2,
-            rek_subject_lookup: "040699 Physical Geography and Environmental Geoscience not elsewhere classified"
+            rek_subject_lookup: "040699 Physical Geography and Environmental Geoscience not elsewhere classified",
+            rek_subject_icon: "openalex"
         },
         {
             rek_subject_id: 7828,
