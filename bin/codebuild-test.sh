@@ -11,7 +11,7 @@ export PW_CC_REPORT_FILENAME="coverage-final-${PIPE_NUM}.json"
 # Run CC only on these branches
 # NB: These branches will require 3 pipelines to run all tests, branches not in this list require only 2.
 CODE_COVERAGE_REQUIRED=false
-if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == "feature-react-18" || $CI_BRANCH == "feature-uqclien-1" || $CI_BRANCH == "feature-marcelopm-1" || $CI_BRANCH == *"coverage"*) ]]; then
+if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == "feature-uqlsibba-1" || $CI_BRANCH == "feature-uqclien-1" || $CI_BRANCH == "feature-marcelopm-1" || $CI_BRANCH == *"coverage"*) ]]; then
     CODE_COVERAGE_REQUIRED=true
 fi
 

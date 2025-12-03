@@ -285,6 +285,7 @@ exports[`Search record results should render a single claimable item with no aut
                                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                               >
                                 <a
+                                  data-discover="true"
                                   href="/view/UQ:795469"
                                 >
                                   Early Onset Scoliosis - this is an edited book with editors only
@@ -422,12 +423,12 @@ exports[`Search record results should render a single claimable item with no aut
                                   class="publicationSource css-1oqhn84"
                                   data-analyticsid="publication-source-espace-link"
                                   data-testid="publication-source-espace-link"
-                                  href="https://fez-staging.library.uq.edu.au/view/UQ:795469"
+                                  href="http://localhost/view/UQ:795469"
                                   id="publication-source-espace-link"
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Link to https://fez-staging.library.uq.edu.au/view/UQ:795469 will open in a new window."
+                                  title="Link to http://localhost/view/UQ:795469 will open in a new window."
                                 >
                                   <svg
                                     aria-hidden="true"
@@ -484,7 +485,7 @@ exports[`Search record results should render a single claimable item with no aut
                           class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root UQ795469 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ795469 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-alav1n-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root UQ795469 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-focusVisible MuiButton-root UQ795469 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-alav1n-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="publication-action-UQ795469-primary"
                             data-testid="publication-action-UQ795469-primary"
                             tabindex="0"
@@ -1058,6 +1059,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                               >
                                 <a
+                                  data-discover="true"
                                   href="/view/UQ:795469"
                                 />
                               </h6>
@@ -1127,12 +1129,12 @@ exports[`Search record results should render a single unclaimable item with no a
                                   class="publicationSource css-1oqhn84"
                                   data-analyticsid="publication-source-espace-link"
                                   data-testid="publication-source-espace-link"
-                                  href="https://fez-staging.library.uq.edu.au/view/UQ:795469"
+                                  href="http://localhost/view/UQ:795469"
                                   id="publication-source-espace-link"
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Link to https://fez-staging.library.uq.edu.au/view/UQ:795469 will open in a new window."
+                                  title="Link to http://localhost/view/UQ:795469 will open in a new window."
                                 >
                                   <svg
                                     aria-hidden="true"
@@ -1763,6 +1765,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                               >
                                 <a
+                                  data-discover="true"
                                   href="/view/UQ:795469"
                                 />
                               </h6>
@@ -1832,12 +1835,12 @@ exports[`Search record results should render a single unclaimable item with no a
                                   class="publicationSource css-1oqhn84"
                                   data-analyticsid="publication-source-espace-link"
                                   data-testid="publication-source-espace-link"
-                                  href="https://fez-staging.library.uq.edu.au/view/UQ:795469"
+                                  href="http://localhost/view/UQ:795469"
                                   id="publication-source-espace-link"
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Link to https://fez-staging.library.uq.edu.au/view/UQ:795469 will open in a new window."
+                                  title="Link to http://localhost/view/UQ:795469 will open in a new window."
                                 >
                                   <svg
                                     aria-hidden="true"
@@ -2468,6 +2471,7 @@ exports[`Search record results should render publications list with one publicat
                                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                               >
                                 <a
+                                  data-discover="true"
                                   href="/view/UQ:255472"
                                 />
                               </h6>
@@ -3398,7 +3402,7 @@ exports[`Search record results should render stepper and no results 1`] = `
             class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-auto css-1b8i5mh-MuiGridLegacy-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-focusVisible MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >

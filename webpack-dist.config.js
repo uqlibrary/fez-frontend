@@ -133,7 +133,7 @@ const webpackConfig = {
                 test: /\.(png|jp(e*)g|svg|gif)$/,
                 type: 'asset/resource',
                 generator: {
-                    publicPath: '/assets/',
+                    publicPath: `/${config.basePath}assets/`,
                     outputPath: 'assets/',
                     filename: '[hash][ext]',
                 },
@@ -180,7 +180,6 @@ const webpackConfig = {
             'process.env.AUTH_LOGIN_URL': JSON.stringify(config.auth_login),
             'process.env.AUTH_LOGOUT_URL': JSON.stringify(config.auth_logout),
             'process.env.APP_URL': JSON.stringify(config.url(process.env.CI_BRANCH)),
-            'process.env.FULL_PATH': JSON.stringify(config.fullPath(process.env.CI_BRANCH)),
             'process.env.BRANCH': JSON.stringify(config.environment),
             'process.env.ORCID_URL': JSON.stringify(config.orcidUrl),
             'process.env.ORCID_CLIENT_ID': JSON.stringify(config.orcidClientId),
