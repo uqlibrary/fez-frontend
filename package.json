@@ -32,7 +32,7 @@
     "test:e2e:debug": "playwright show-trace",
     "test:e2e:cc": "cross-env NODE_ENV=cc npm run test:e2e",
     "posttest:e2e:cc": "rm -rf .nyc_output",
-    "test:unit": "cross-env NODE_ENV=test APP_URL=http://localhost/ jest",
+    "test:unit": "cross-env NODE_ENV=test APP_URL=http://localhost/ jest AddToSelected",
     "test:unit:serial": "npm run test:unit -- --runInBand --coverageDirectory=coverage/jest-serial",
     "test:unit:ci": "npm run test:unit -- --ci --silent --no-warnings --testPathIgnorePatterns=\"$(jq -r '.jest.testPathIgnorePatterns | join(\"|\")' package.json)|$(paste -sd'|' jest-serial.txt | sed 's/[.[\\\\]*^$/\\\\\\\\&/g')\"",
     "test:unit:ci:nocoverage": "npm run test:unit:ci -- --no-coverage",
