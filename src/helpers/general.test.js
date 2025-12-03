@@ -17,10 +17,26 @@ import {
     filterObject,
     numbersOnly,
     hasAtLeastOneItemSelected,
+    tryCatch,
 } from './general';
 import { mockWebApiFile } from 'test-utils';
 
 describe('general helpers', () => {
+    describe('tryCatch', () => {
+        it('it should call and return given closure return value', () => {
+            const returnValue = 'abc';
+            const mock = jest.fn().mockReturnValue('abc');
+            expect(tryCatch(mock)).toEqual(returnValue);
+        });
+        it('it should call and return default value in case of failures', () => {
+            const defaultValue = 'abc';
+            const mock = jest.fn().mockImplementation(() => {
+                throw new Error('test');
+            });
+            expect(tryCatch(mock, defaultValue)).toEqual(defaultValue);
+        });
+    });
+
     it('leftJoin', () => {
         const objArrA = [
             { nameA: 'test1', testA: 'testA1' },

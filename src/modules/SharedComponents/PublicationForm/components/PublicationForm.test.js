@@ -1,7 +1,7 @@
 import PublicationForm from './PublicationForm';
 import React from 'react';
 import {
-    addAndSelectContributorsEditorItem,
+    addAndSelectContributorUsingPopoverNamesForm,
     addFilesToFileUploader,
     assertDisabled,
     assertInstanceOfFile,
@@ -165,7 +165,7 @@ describe('PublicationForm', () => {
 
             const editorValidationError = ['Editor/contributor names are required'];
             await assertValidationErrorSummary(editorValidationError);
-            await addAndSelectContributorsEditorItem('rek-contributor');
+            await addAndSelectContributorUsingPopoverNamesForm('rek-contributor');
             await assertMissingValidationErrorSummary(editorValidationError);
         });
 
@@ -220,7 +220,7 @@ describe('PublicationForm', () => {
 
             const expectedError = ['Scale/Significance of work is required', 'Creator research statement is required'];
             await assertMissingValidationErrorSummary(expectedError);
-            await addAndSelectContributorsEditorItem('authors');
+            await addAndSelectContributorUsingPopoverNamesForm('authors');
             await assertValidationErrorSummary(expectedError);
         });
     });
@@ -273,7 +273,7 @@ describe('PublicationForm', () => {
                 'place of publication',
             );
             await userEvent.type(screen.getByTestId('rek-project-start-date-year-input'), '1980');
-            await addAndSelectContributorsEditorItem('authors');
+            await addAndSelectContributorUsingPopoverNamesForm('authors');
             await userEvent.type(screen.getByTestId('rek-total-pages-input'), '123');
             await selectDropDownOption(
                 'rek-quality-indicator-select',
@@ -308,7 +308,7 @@ describe('PublicationForm', () => {
             // fill up form
             await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
             await userEvent.type(screen.getByTestId('rek-date-year-input'), '1980');
-            await addAndSelectContributorsEditorItem('creators');
+            await addAndSelectContributorUsingPopoverNamesForm('creators');
             // fill up DOI
             // invalid
             const doiValidationError = ['DOI is invalid'];
@@ -350,7 +350,7 @@ describe('PublicationForm', () => {
                 // fill up form
                 await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
                 await userEvent.type(screen.getByTestId('rek-date-year-input'), '1980');
-                await addAndSelectContributorsEditorItem('creators');
+                await addAndSelectContributorUsingPopoverNamesForm('creators');
 
                 await submitForm();
                 await waitForText(/Error has occurred during request and request cannot be processed/i);

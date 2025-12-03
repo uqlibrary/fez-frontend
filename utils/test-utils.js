@@ -303,13 +303,6 @@ const setFileUploaderFilesSecurityPolicy = async (files, optionName, timeout = 5
     }
 };
 
-const originalUseForm = useForm.useForm;
-const mockUseForm = implementation => {
-    return jest.spyOn(useForm, 'useForm').mockImplementation(props => {
-        return implementation(props, originalUseForm);
-    });
-};
-
 const enableJestPreviewOnTestFailure = (options = {}) =>
     jestPreviewConfigure({
         autoPreview: true,
@@ -475,21 +468,26 @@ const selectDropDownOptionByElement = async (el, option, index = 0) => {
 
 /**
  * @param {string} fieldName
- * @param {string} name
+ * @param {array} names
  * @return {Promise<void>}
  */
-const addContributorsEditorItem = async (fieldName, name = 'author') => {
-    await userEvent.type(screen.getByTestId(`${fieldName}-input`), name);
+const addContributorUsingPopoverNamesForm = async (fieldName, ...names) => {
+    await userEvent.click(screen.getByTestId(`${fieldName}-input`));
+    await waitFor(() => expect(screen.getByTestId(`${fieldName}-popover-names-form-family-name`)).toBeInTheDocument());
+    await userEvent.type(screen.getByTestId(`${fieldName}-popover-names-form-given-name-input`), names[0]);
+    await userEvent.type(screen.getByTestId(`${fieldName}-popover-names-form-family-name-input`), names[1]);
+    await waitToBeEnabled(`${fieldName}-popover-names-form-submit-button`);
+    await userEvent.click(screen.getByTestId(`${fieldName}-popover-names-form-submit-button`));
     await userEvent.click(screen.getByTestId(`${fieldName}-add`));
 };
 
 /**
  * @param {string} fieldName
- * @param {string} name
+ * @param {array} names
  * @return {Promise<void>}
  */
-const addAndSelectContributorsEditorItem = async (fieldName, name = 'author') => {
-    await addContributorsEditorItem(fieldName, name);
+const addAndSelectContributorUsingPopoverNamesForm = async (fieldName, ...names) => {
+    await addContributorUsingPopoverNamesForm(fieldName, ...(!!names.length ? names : ['Brown', 'James']));
     await userEvent.click(screen.getByTestId(`${fieldName}-list-row-0-name-as-published`));
 };
 
@@ -589,7 +587,6 @@ module.exports = {
     waitForTextToBeRemoved,
     expectRequiredFieldError,
     expectMissingRequiredFieldError,
-    mockUseForm,
     getFilenameExtension,
     getFilenameBasename,
     addFilesToFileUploader,
@@ -612,8 +609,8 @@ module.exports = {
     assertRichTextEditorValue,
     selectDropDownOption,
     selectDropDownOptionByElement,
-    addContributorsEditorItem,
-    addAndSelectContributorsEditorItem,
+    addContributorUsingPopoverNamesForm,
+    addAndSelectContributorUsingPopoverNamesForm,
     clearAndType,
     sortObjectProps,
     getTableBodyRows,
