@@ -29,6 +29,13 @@ const RelatedServiceListEditor = ({
     const [relatedServiceFormPopulated, setRelatedServiceFormPopulated] = useState(false);
     const form = useFormContext();
 
+    const handleRelatedServicesChange = useCallback(
+        list => {
+            form?.setValue?.(name, list, { shouldValidate: true });
+        },
+        [form, name],
+    );
+
     // propagate input changes to `related services`
     useEffect(() => {
         const updated = getRelatedServicesFromProps(name, value);
@@ -49,28 +56,28 @@ const RelatedServiceListEditor = ({
     }, [relatedServiceFormPopulated]);
 
     // propagate `related service` changes to input
-    useEffect(() => {
-        form?.setValue?.(name, relatedServices, { shouldValidate: true });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(relatedServices)]);
+    // useEffect(() => {
+    //     form?.setValue?.(name, relatedServices, { shouldValidate: true });
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [JSON.stringify(relatedServices)]);
 
     const addRelatedService = useCallback(
         relatedService => {
-            setRelatedServices(prevRelatedServices => {
-                if (relatedServiceIndexSelectedToEdit !== null && relatedServiceIndexSelectedToEdit > -1) {
-                    return [
-                        ...prevRelatedServices.slice(0, relatedServiceIndexSelectedToEdit),
-                        relatedService,
-                        ...prevRelatedServices.slice(relatedServiceIndexSelectedToEdit + 1),
-                    ];
-                }
-                return [...prevRelatedServices, relatedService];
-            });
+            const newList =
+                relatedServiceIndexSelectedToEdit !== null && relatedServiceIndexSelectedToEdit > -1
+                    ? [
+                          ...relatedServices.slice(0, relatedServiceIndexSelectedToEdit),
+                          relatedService,
+                          ...relatedServices.slice(relatedServiceIndexSelectedToEdit + 1),
+                      ]
+                    : [...relatedServices, relatedService];
+            setRelatedServices(newList);
+            handleRelatedServicesChange(newList);
             setRelatedServiceIndexSelectedToEdit(null);
             setRelatedServiceSelectedToEdit(null);
             setErrorMessage('');
         },
-        [relatedServiceIndexSelectedToEdit],
+        [relatedServiceIndexSelectedToEdit, relatedServices, handleRelatedServicesChange],
     );
 
     const editRelatedService = useCallback((relatedService, index) => {
@@ -78,47 +85,57 @@ const RelatedServiceListEditor = ({
         setRelatedServiceIndexSelectedToEdit(index);
     }, []);
 
-    const moveUpRelatedService = useCallback((relatedService, index) => {
-        /* istanbul ignore next */
-        if (index === 0) return;
-
-        setRelatedServices(prevRelatedServices => {
-            const previousRelatedService = prevRelatedServices[index - 1];
+    const moveUpRelatedService = useCallback(
+        (relatedService, index) => {
+            /* istanbul ignore next */
+            if (index === 0) return;
+            const previousRelatedService = relatedServices[index - 1];
             if (previousRelatedService.hasOwnProperty('disabled') && previousRelatedService.disabled) {
-                return prevRelatedServices;
+                return;
             }
-
-            return [
-                ...prevRelatedServices.slice(0, index - 1),
+            const newList = [
+                ...relatedServices.slice(0, index - 1),
                 relatedService,
                 previousRelatedService,
-                ...prevRelatedServices.slice(index + 1),
+                ...relatedServices.slice(index + 1),
             ];
-        });
-    }, []);
+            setRelatedServices(newList);
+            handleRelatedServicesChange(newList);
+        },
+        [handleRelatedServicesChange, relatedServices],
+    );
 
-    const moveDownRelatedService = useCallback((relatedService, index) => {
-        setRelatedServices(prevRelatedServices => {
+    const moveDownRelatedService = useCallback(
+        (relatedService, index) => {
             /* istanbul ignore next */
-            if (index === prevRelatedServices.length - 1) return prevRelatedServices;
-            const nextRelatedService = prevRelatedServices[index + 1];
-            return [
-                ...prevRelatedServices.slice(0, index),
+            if (index === relatedServices.length - 1) return;
+            const nextRelatedService = relatedServices[index + 1];
+            const newList = [
+                ...relatedServices.slice(0, index),
                 nextRelatedService,
                 relatedService,
-                ...prevRelatedServices.slice(index + 2),
+                ...relatedServices.slice(index + 2),
             ];
-        });
-    }, []);
+            setRelatedServices(newList);
+            handleRelatedServicesChange(newList);
+        },
+        [handleRelatedServicesChange, relatedServices],
+    );
 
-    const deleteRelatedService = useCallback((_, index) => {
-        setRelatedServices(prevRelatedServices => prevRelatedServices.filter((__, i) => i !== index));
-    }, []);
+    const deleteRelatedService = useCallback(
+        (_, index) => {
+            const newList = relatedServices.filter((__, i) => i !== index);
+            handleRelatedServicesChange(newList);
+            setRelatedServices(newList);
+        },
+        [handleRelatedServicesChange, relatedServices],
+    );
 
     const deleteAllRelatedServices = useCallback(() => {
         setRelatedServices([]);
+        handleRelatedServicesChange([]);
         setErrorMessage('');
-    }, []);
+    }, [handleRelatedServicesChange]);
 
     const isFormPopulated = useCallback(value => {
         setRelatedServiceFormPopulated(!!value);

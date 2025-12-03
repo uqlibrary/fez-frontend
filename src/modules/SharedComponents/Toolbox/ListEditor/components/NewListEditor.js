@@ -37,13 +37,25 @@ export const NewListEditor = ({
     const [itemToUpdate, setItemToUpdate] = React.useState(null);
     const [itemsList, setItemsList] = React.useState(list);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleAdd = React.useCallback(item =>
-        setItemsList(itemsList =>
-            uniqWith([...itemsList, ...(Array.isArray(item) ? item : [item])], isEqual).slice(0, maxCount),
-        ),
+    const handleOnChange = React.useCallback(
+        list => {
+            const val = transform(list, searchKey);
+            onChange(val);
+        },
+        [onChange, searchKey, transform],
     );
 
+    const handleAdd = React.useCallback(
+        item => {
+            const newList = uniqWith([...itemsList, ...(Array.isArray(item) ? item : [item])], isEqual).slice(
+                0,
+                maxCount,
+            );
+            setItemsList(newList);
+            handleOnChange(newList);
+        },
+        [itemsList, maxCount, handleOnChange],
+    );
     /**
      * @param {object} item
      * @param {function} indexFinder(list, item) {} specific implementation to find
@@ -53,22 +65,19 @@ export const NewListEditor = ({
      */
     const handleUpdate = React.useCallback(
         (item, indexFinder) => {
-            setItemsList(itemsList => {
-                const preIndexItems = itemsList.slice(0, indexToUpdate);
-                const postIndexItems = itemsList.slice(indexToUpdate + 1);
-
-                if (indexFinder([...preIndexItems, ...postIndexItems], item) < 0) {
-                    return [...preIndexItems, item, ...postIndexItems];
-                } else {
-                    return [...preIndexItems, itemToUpdate, ...postIndexItems];
-                }
-            });
-
+            const preIndexItems = itemsList.slice(0, indexToUpdate);
+            const postIndexItems = itemsList.slice(indexToUpdate + 1);
+            const newList =
+                indexFinder([...preIndexItems, ...postIndexItems], item) < 0
+                    ? [...preIndexItems, item, ...postIndexItems]
+                    : [...preIndexItems, itemToUpdate, ...postIndexItems];
+            setItemsList(newList);
+            handleOnChange(newList);
             setIndexToUpdate(null);
             setItemToUpdate(null);
             setMode('add');
         },
-        [indexToUpdate, itemToUpdate],
+        [itemsList, indexToUpdate, itemToUpdate, handleOnChange],
     );
 
     const handleEdit = React.useCallback(
@@ -79,35 +88,42 @@ export const NewListEditor = ({
         },
         [itemsList],
     );
-
     const handleMoveUp = React.useCallback(
-        (item, index) =>
-            setItemsList(itemsList => [
+        (item, index) => {
+            const newList = [
                 ...itemsList.slice(0, index - 1),
                 item,
                 itemsList[index - 1],
                 ...itemsList.slice(index + 1),
-            ]),
-        [],
+            ];
+            setItemsList(newList);
+            handleOnChange(newList);
+        },
+        [itemsList, handleOnChange],
     );
 
     const handleMoveDown = React.useCallback(
-        (item, index) =>
-            setItemsList(itemsList => [
-                ...itemsList.slice(0, index),
-                itemsList[index + 1],
-                item,
-                ...itemsList.slice(index + 2),
-            ]),
-        [],
+        (item, index) => {
+            const newList = [...itemsList.slice(0, index), itemsList[index + 1], item, ...itemsList.slice(index + 2)];
+            setItemsList(newList);
+            handleOnChange(newList);
+        },
+        [itemsList, handleOnChange],
     );
 
     const handleDelete = React.useCallback(
-        (item, index) => setItemsList(itemsList => itemsList.filter((_, i) => i !== index)),
-        [],
+        (item, index) => {
+            const newList = itemsList.filter((_, i) => i !== index);
+            setItemsList(newList);
+            handleOnChange(newList);
+        },
+        [itemsList, handleOnChange],
     );
 
-    const handleDeleteAll = React.useCallback(() => setItemsList(() => []), []);
+    const handleDeleteAll = React.useCallback(() => {
+        setItemsList(() => []);
+        handleOnChange([]);
+    }, [handleOnChange]);
 
     const scrollStyle =
         !!scrollList && itemsList.length >= scrollListHeight / 55
@@ -117,14 +133,6 @@ export const NewListEditor = ({
                   'data-testid': `${listEditorId}-scroll-list`,
               }
             : {};
-
-    /**
-     * Run this effect on itemsList changed from various actions (add/update/delete/moveUp/moveDown)
-     */
-    React.useEffect(() => {
-        onChange(transform(itemsList, searchKey));
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [itemsList]);
 
     return (
         <div id={`${listEditorId}-list-editor`}>
