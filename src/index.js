@@ -66,6 +66,25 @@ if (!IS_TEST && process.env.ENABLE_LOG) {
             }
             return breadcrumb;
         },
+        beforeSendTransaction(event) {
+            try {
+                const status = Number(
+                    event?.tags?.['http.status_code'] ||
+                        event?.tags?.status ||
+                        event?.contexts?.response?.status_code ||
+                        event?.contexts?.response?.status,
+                );
+                // since 10.13.x 300s and 304s are no longer dropped by default
+                // @link https://github.com/getsentry/sentry-javascript/releases/tag/10.13.0
+                if (status === 300 || status === 304) {
+                    // Drop these transactions
+                    return null;
+                }
+            } catch (e) {
+                console.error(e);
+            }
+            return event;
+        },
     });
 }
 
