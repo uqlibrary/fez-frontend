@@ -9655,7 +9655,7 @@ exports[`Additional Information Component  should render component with data col
                     data-testid="rek-subject-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0602+Ecology%7Cfor2008&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0602+Ecology&searchQueryParams%5Ball%5D="
                     >
                       0602 Ecology
                     </a>
@@ -9664,7 +9664,7 @@ exports[`Additional Information Component  should render component with data col
                     data-testid="rek-subject-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified%7Copenalex&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified&searchQueryParams%5Ball%5D="
                     >
                       040699 Physical Geography and Environmental Geoscience not elsewhere classified
                     </a>
