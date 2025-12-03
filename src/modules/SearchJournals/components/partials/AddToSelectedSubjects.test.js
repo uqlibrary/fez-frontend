@@ -1,5 +1,15 @@
 import React from 'react';
-import { api, assertDisabled, render, userEvent, waitFor, waitForText, WithReduxStore, within } from 'test-utils';
+import {
+    api,
+    assertDisabled,
+    render,
+    userEvent,
+    waitFor,
+    waitForText,
+    WithReduxStore,
+    within,
+    waitElementToBeInDocument,
+} from 'test-utils';
 import { AddToSelectedSubjects } from './AddToSelectedSubjects';
 import { initialState, keywordOnlySuffix } from '../../../../reducers/journals';
 
@@ -79,11 +89,16 @@ describe('AddToSelectedSubjects', () => {
         const onAdd = jest.fn();
         const { getByTestId, queryByTestId } = setup({ onAdd });
 
-        await userEvent.click(getByTestId('add-to-subject-selection-button'));
-        await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
-        await userEvent.click(await waitForText('1000 General'));
+        await waitFor(async () => {
+            if (!queryByTestId('for-code-autocomplete-field-input')) {
+                await userEvent.click(getByTestId('add-to-subject-selection-button'));
+            }
+            await userEvent.clear(getByTestId('for-code-autocomplete-field-input'));
+            await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
+            await userEvent.click(await waitElementToBeInDocument('journal-search-item-subject-source-era-0'));
+            expect(onAdd).toHaveBeenCalledTimes(1);
+        });
 
-        expect(onAdd).toHaveBeenCalledTimes(1);
         expect(onAdd).toHaveBeenCalledWith({
             cvoId: 41000,
             id: 'Subject-41000',
