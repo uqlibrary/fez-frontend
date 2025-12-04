@@ -141,17 +141,13 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                         {(() => {
                             const data = getData(item, subkey);
                             if (getLink) {
-                                let icon = '';
-                                let iconHint = '';
-                                const subject = String(data).replace(/\|(for2020|for2008|openalex)$/, match => {
-                                    icon = match.slice(1);
-                                    iconHint = icon === 'openalex' ? 'OpenAlex' : icon.toUpperCase();
-                                    return '';
-                                });
-                                if (icon) {
-                                    return renderLink(getLink(subject, subject), subject, icon, iconHint);
-                                }
-                                return renderLink(getLink(item[subkey], data), data);
+                                const firstTwo = subkey.split('_').slice(0, 2).join('_');
+                                const icon = item[firstTwo + '_icon'] ?? '';
+                                const iconHint =
+                                    icon === 'openalex'
+                                        ? 'OpenAlex'
+                                        : icon.charAt(0).toUpperCase() + icon.slice(1).toLowerCase();
+                                return renderLink(getLink(item[subkey], data), data, '', icon, iconHint);
                             } else {
                                 return data;
                             }

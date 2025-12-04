@@ -9878,13 +9878,12 @@ exports[`Additional Information Component  should render component with data col
                   >
                     <a
                       data-discover="true"
-                      data-testid="for2008"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=0602+Ecology&searchQueryParams%5Ball%5D="
                     >
                       0602 Ecology
                       <span
-                        aria-label=""
-                        class="fez-icon FOR2008 medium"
+                        aria-label="For2008"
+                        class="fez-icon for2008 medium"
                         data-mui-internal-clone-element="true"
                         style="margin: 0px 4px;"
                       />
@@ -9895,13 +9894,12 @@ exports[`Additional Information Component  should render component with data col
                   >
                     <a
                       data-discover="true"
-                      data-testid="openalex"
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=040699+Physical+Geography+and+Environmental+Geoscience+not+elsewhere+classified&searchQueryParams%5Ball%5D="
                     >
                       040699 Physical Geography and Environmental Geoscience not elsewhere classified
                       <span
-                        aria-label=""
-                        class="fez-icon OpenAlex medium"
+                        aria-label="OpenAlex"
+                        class="fez-icon openalex medium"
                         data-mui-internal-clone-element="true"
                         style="margin: 0px 4px;"
                       />
