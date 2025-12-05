@@ -9353,6 +9353,46 @@ exports[`Additional Information Component  should render component with data col
             </div>
           </div>
         </div>
+        <div
+          class="MuiBox-root css-fvwuew"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                data-testid="rek-related-service-label"
+              >
+                Related service(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-related-service-0"
+                  >
+                    related service 1 - related service desc 1
+                  </li>
+                  <li
+                    data-testid="rek-related-service-1"
+                  >
+                    related service 2
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -11700,6 +11740,46 @@ exports[`Additional Information Component  should render component with data col
             </div>
           </div>
         </div>
+        <div
+          class="MuiBox-root css-fvwuew"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                data-testid="rek-related-service-label"
+              >
+                Related service(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-related-service-0"
+                  >
+                    related service 1 - related service desc 1
+                  </li>
+                  <li
+                    data-testid="rek-related-service-1"
+                  >
+                    related service 2
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -13110,6 +13190,46 @@ exports[`Additional Information Component  should render component with data col
                     >
                       10.1234/xxx
                     </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-fvwuew"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                data-testid="rek-related-service-label"
+              >
+                Related service(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-related-service-0"
+                  >
+                    related service 1 - related service desc 1
+                  </li>
+                  <li
+                    data-testid="rek-related-service-1"
+                  >
+                    related service 2
                   </li>
                 </ul>
               </span>
