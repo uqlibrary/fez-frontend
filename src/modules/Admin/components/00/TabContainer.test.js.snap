@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabContainer component should render default view 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-13i4rnv-MuiGrid-root"
+  >
+    &lt;p&gt;Test containers&lt;/p&gt;
+  </div>
+</div>
+`;
+
+exports[`TabContainer component should render null 1`] = `<div />`;

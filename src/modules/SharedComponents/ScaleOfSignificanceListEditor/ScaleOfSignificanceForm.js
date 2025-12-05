@@ -117,7 +117,6 @@ export const ScaleOfSignificanceForm = ({
         significanceInputFieldLabel,
         contributionStatementInputFieldLabel,
         resetFormLabel,
-        id,
         emptySignificanceLabel,
     } = locale;
 
@@ -183,7 +182,6 @@ export const ScaleOfSignificanceForm = ({
                 <RichEditorField
                     richEditorId="rek-creator-contribution-statement"
                     name="value"
-                    id={(!!id && /* istanbul ignore next */ id) || ''}
                     onChange={handleContributionStatement}
                     onKeyPress={saveChanges}
                     error={!!errorText}

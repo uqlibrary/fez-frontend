@@ -2,7 +2,8 @@
     "compilerOptions": {
         "baseUrl": "src",
         "paths": {
-            "modules/*": ["modules/*"]
+            "modules/*": ["modules/*"],
+            "react": ["./node_modules/@types/react"]
         },
         "target": "esnext",
         "jsx": "react-jsxdev",

@@ -187,12 +187,12 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
           <p
             class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
           >
-            <p
+            <span
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </span>
           </p>
           <span
             class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
@@ -386,12 +386,12 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
           <p
             class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
           >
-            <p
+            <span
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </span>
           </p>
           <span
             class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
@@ -589,12 +589,12 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
           <p
             class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
           >
-            <p
+            <span
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </span>
           </p>
           <span
             class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
@@ -792,7 +792,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
                   aria-invalid="true"
                   autocomplete="off"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                  id=":re:"
+                  id="_r_e_"
                   inputmode="text"
                   placeholder="dd/mm/yyyy"
                   type="text"

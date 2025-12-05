@@ -46,6 +46,7 @@ import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 import AuthorsSection from './authors/AuthorsSection';
 import GrantInformationSection from './grantInformation/GrantInformationSection';
 import NtroSection from './ntro/NtroSection';
+import { FormValidator } from './FormValidator';
 
 export const AdminContainer = ({ createMode = false }) => {
     const dispatch = useDispatch();
@@ -68,12 +69,16 @@ export const AdminContainer = ({ createMode = false }) => {
         shouldUnregister: false,
         criteriaMode: 'all',
         mode: 'onChange',
-        // errors // can we use this to handle tab errors?
     });
+
+    const [customErrors, setCustomErrors] = React.useState({});
+
+    const errors = form.formState.errors;
+
+    const { errors: formErrors } = useFormValidator(errors, customErrors);
 
     const recordToView = useRecordToView(record, createMode, form);
     useFormOnChangeHook(form, createMode);
-    const { errors: formErrors } = useFormValidator(form);
 
     const handleSubmit = async data => {
         try {
@@ -103,7 +108,6 @@ export const AdminContainer = ({ createMode = false }) => {
         },
         {},
     );
-
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
     const toggleObject = React.useMemo(
         () => ({ tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle }),
@@ -145,6 +149,7 @@ export const AdminContainer = ({ createMode = false }) => {
 
     return (
         <FormProvider {...form}>
+            <FormValidator form={form} setCustomErrors={setCustomErrors} />
             {createMode && showAddForm && <AddSection onCreate={handleAddFormDisplay} createMode={createMode} />}
             {!showAddForm && (
                 <TabbedContext.Provider value={{ ...toggleObject }}>
