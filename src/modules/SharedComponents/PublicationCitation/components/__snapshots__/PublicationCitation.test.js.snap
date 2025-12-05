@@ -4348,12 +4348,12 @@ exports[`PublicationCitation  should render component with publication from mult
                   class="publicationSource css-1oqhn84"
                   data-analyticsid="publication-source-espace-link"
                   data-testid="publication-source-espace-link"
-                  href="https://fez-staging.library.uq.edu.au/view/UQ:224457"
+                  href="http://localhost/view/UQ:224457"
                   id="publication-source-espace-link"
                   rel="noopener noreferrer"
                   tabindex="0"
                   target="_blank"
-                  title="Link to https://fez-staging.library.uq.edu.au/view/UQ:224457 will open in a new window."
+                  title="Link to http://localhost/view/UQ:224457 will open in a new window."
                 >
                   <svg
                     aria-hidden="true"
@@ -4630,12 +4630,12 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                   class="publicationSource css-1oqhn84"
                   data-analyticsid="publication-source-espace-link"
                   data-testid="publication-source-espace-link"
-                  href="https://fez-staging.library.uq.edu.au/view/UQ:224457"
+                  href="http://localhost/view/UQ:224457"
                   id="publication-source-espace-link"
                   rel="noopener noreferrer"
                   tabindex="0"
                   target="_blank"
-                  title="Link to https://fez-staging.library.uq.edu.au/view/UQ:224457 will open in a new window."
+                  title="Link to http://localhost/view/UQ:224457 will open in a new window."
                 >
                   <svg
                     aria-hidden="true"
