@@ -87,7 +87,7 @@ describe('JournalAdminContainer component', () => {
             expect(getByTestId('jnl_issn_jid-list-row-2')).toHaveTextContent('1111-1111');
             expect(getByTestId('uq-espace-section-content')).toBeInTheDocument();
             expect(getByTestId('open-access-(directory-of-open-access-journals---doaj)-section')).toBeInTheDocument();
-            expect(getByTestId('indexed-in-section')).toBeInTheDocument();
+            expect(getByTestId('listed-in-section')).toBeInTheDocument();
 
             const switcher = document.querySelector('input.MuiSwitch-input');
             expect(switcher).not.toHaveAttribute('checked');
