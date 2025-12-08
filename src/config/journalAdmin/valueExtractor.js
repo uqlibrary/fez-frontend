@@ -134,26 +134,9 @@ export default {
             ...getValueSearchKeyObject(journal, 'fez_journal_doaj'),
         }),
     },
-    indexed: {
+    listed: {
         getValue: journal => ({
             esi: getValueSearchKeyArray(journal, 'fez_journal_esi'),
-            ahci:
-                getValueSearchKeyArray(journal, 'fez_journal_wos_category').find(
-                    item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'AHCI',
-                ) ?? {},
-            scie:
-                getValueSearchKeyArray(journal, 'fez_journal_wos_category').find(
-                    item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SCIE',
-                ) ?? {},
-            ssci:
-                getValueSearchKeyArray(journal, 'fez_journal_wos_category').find(
-                    item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SSCI',
-                ) ?? {},
-            esci:
-                getValueSearchKeyArray(journal, 'fez_journal_wos_category').find(
-                    item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'ESCI',
-                ) ?? {},
-            scopus: !!getValueFromKey(journal, 'fez_journal_cite_score'),
             pubmed: !!getValueFromKey(journal, 'fez_journal_pubmed'),
         }),
     },
