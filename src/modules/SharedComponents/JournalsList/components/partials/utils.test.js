@@ -144,10 +144,52 @@ describe('utils', () => {
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.fee });
 
         // published open - unexpected string on apc fee
-        const dataItem5 = { ...mockData.data[0] };
-        dataItem5.fez_journal_doaj = {};
-        dataItem5.fez_journal_doaj.jnl_doaj_apc_average_price = 'unlisted';
-        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem5 });
+        dataItem4.fez_journal_doaj = {};
+        dataItem4.fez_journal_doaj.jnl_doaj_apc_average_price = 'unlisted';
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem4 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open });
+
+        // diamond journal
+        dataItem4.fez_journal_doaj = {};
+        dataItem4.fez_journal_doaj.jnl_doaj_apc_currency = '';
+        dataItem4.fez_journal_doaj.jnl_doaj_has_other_fees = false;
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem4 });
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open, showDiamond: true });
+
+        // doaj s2o
+        dataItem4.fez_journal_doaj = {};
+        dataItem4.fez_journal_doaj.jnl_doaj_is_s2o = '1';
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem4 });
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open, showS2O: true });
+
+        // read and publish s2o, is_s2o = 'S2O
+        const dataItem5 = { ...mockData.data[0] };
+        dataItem5.fez_journal_read_and_publish = {};
+        dataItem5.fez_journal_read_and_publish.jnl_read_and_publish_is_s2o = 'S2O';
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem5 });
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open, showS2O: true });
+
+        // not s2o
+        dataItem5.fez_journal_read_and_publish = {};
+        dataItem5.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Y';
+        dataItem5.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = false;
+        dataItem5.fez_journal_read_and_publish.jnl_read_and_publish_is_s2o = 'Y';
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem5 });
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.cap });
+
+        // read and publish s2o, is_s2o = 'Y' and is_capped = 'N' and is_discounted = false
+        dataItem5.fez_journal_read_and_publish = {};
+        dataItem5.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'N';
+        dataItem5.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = false;
+        dataItem5.fez_journal_read_and_publish.jnl_read_and_publish_is_s2o = 'Y';
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem5 });
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open, showS2O: true });
+
+        // both diamond and s2o, s2o > diamond
+        dataItem5.fez_journal_doaj = {};
+        dataItem5.fez_journal_doaj.jnl_doaj_apc_currency = '';
+        dataItem5.fez_journal_doaj.jnl_doaj_has_other_fees = false;
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem5 });
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open, showS2O: true });
     });
 });
