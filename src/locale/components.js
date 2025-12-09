@@ -4496,7 +4496,7 @@ export default {
             partials: {
                 addToSelectedSubjects: {
                     button: {
-                        title: 'Add a subject to refine result',
+                        title: 'Add a subject to broaden results',
                     },
                 },
                 forCodeAutocompleteField: {
