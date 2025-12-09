@@ -180,7 +180,7 @@ export const createMatchMedia = width => {
 const getFilenameExtension = filename => filename.split('.').pop();
 const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
 const addFilesToFileUploader = async (files, timeout = 500) => {
-    const { screen, fireEvent } = reactTestingLib;
+    const { screen, fireEvent, act } = reactTestingLib;
     // create a list of Files
     const fileList = files.map(file => {
         // if file it's a string, treat it as a filename
@@ -190,12 +190,14 @@ const addFilesToFileUploader = async (files, timeout = 500) => {
         // otherwise expect it to be a object with filename and mimeType keys
         return new File([getFilenameBasename(file.filename)], file.filename, { type: file.mimeType });
     });
-    // drag and drop files
-    fireEvent.drop(screen.getByTestId('fez-datastream-info-input'), {
-        dataTransfer: {
-            files: fileList,
-            types: ['Files'],
-        },
+    await act(async () => {
+        // drag and drop files
+        fireEvent.drop(screen.getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: fileList,
+                types: ['Files'],
+            },
+        });
     });
     for (const file of files) {
         await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });

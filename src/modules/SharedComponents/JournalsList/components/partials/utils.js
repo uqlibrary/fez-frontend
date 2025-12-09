@@ -1,6 +1,7 @@
 import React from 'react';
 
 import JournalsOpenAccessIndicator from './JournalsOpenAccessIndicator';
+import { isEmptyObject } from 'helpers/general';
 
 export const types = { published: 'published', accepted: 'accepted' };
 export const status = { open: 'open', cap: 'cap', embargo: 'embargo', fee: 'fee' };
@@ -12,51 +13,51 @@ export const getIndicatorProps = ({ type, data }) => {
     };
 
     // APC fee from DOAJ
+    const hasDOAJ = data.fez_journal_doaj && !isEmptyObject(data.fez_journal_doaj);
     const hasApc = !!Number(data.fez_journal_doaj?.jnl_doaj_apc_average_price);
 
     // is capped and is discounted from Read and Publish Agreement
-    const isCapped =
-        data.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped === 'Y' ||
-        data.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped === 'Approaching';
+    const hasRNP =
+        data.fez_journal_read_and_publish &&
+        !isEmptyObject(data.fez_journal_read_and_publish) &&
+        data.fez_journal_read_and_publish.jnl_read_and_publish_is_capped?.toLowerCase() !== 'nodeal';
+    const cappedValue = data.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped;
+    const isCapped = cappedValue === 'Y' || cappedValue === 'Approaching';
     const isDiscounted = !!data.fez_journal_read_and_publish?.jnl_read_and_publish_is_discounted;
 
-    // Embargo period and open access from sherpa romeo
-    const maxEmbargo = data.fez_journal_issn?.reduce((max, issn) => {
-        return issn.fez_sherpa_romeo ? Math.max(max, issn.fez_sherpa_romeo.srm_max_embargo_amount) : max;
-    }, 0);
-    const openAccess = data.fez_journal_issn?.reduce(
-        (max, issn) => issn.fez_sherpa_romeo?.srm_open_access || max,
-        false,
-    );
-
     if (type === types.accepted) {
+        // Embargo period and open access from sherpa romeo
+        const maxEmbargo = data.fez_journal_issn?.reduce((max, issn) => {
+            return issn.fez_sherpa_romeo ? Math.max(max, issn.fez_sherpa_romeo.srm_max_embargo_amount) : max;
+        }, 0);
+        const openAccess = data.fez_journal_issn?.reduce(
+            (max, issn) => issn.fez_sherpa_romeo?.srm_open_access || max,
+            false,
+        );
+
         if (!!maxEmbargo) {
             indicatorProps.status = status.embargo;
             indicatorProps.embargoPeriod = maxEmbargo;
             // should not display Published Fee and Accepted Open Icons at the same time
-        } else if (openAccess && !hasApc && !isDiscounted) {
+        } else if (
+            openAccess &&
+            ((hasDOAJ && !hasApc) || (hasRNP && (isCapped || (cappedValue === 'N' && !isDiscounted))))
+        ) {
             indicatorProps.status = status.open;
         } else {
             return null;
         }
-    } else if (data.fez_journal_read_and_publish) {
-        if (isCapped) {
-            indicatorProps.status = status.cap;
-        } else if (isDiscounted) {
-            indicatorProps.status = status.fee;
-        } else {
-            indicatorProps.status = status.open;
-        }
-    } else if (data.fez_journal_doaj) {
-        if (hasApc) {
-            indicatorProps.status = status.fee;
-        } else {
-            indicatorProps.status = status.open;
-        }
-    } else if (!maxEmbargo && !openAccess) {
-        indicatorProps.status = status.fee;
     } else {
-        return null;
+        indicatorProps.status = status.fee;
+        if (hasRNP) {
+            if (isCapped) {
+                indicatorProps.status = status.cap;
+            } else if (cappedValue === 'N' && !isDiscounted) {
+                indicatorProps.status = status.open;
+            }
+        } else if (hasDOAJ && !hasApc) {
+            indicatorProps.status = status.open;
+        }
     }
 
     return indicatorProps;
