@@ -1469,7 +1469,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Author's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add author',
                         nameAsPublishedFieldId: 'authors-name-as-published-field',
@@ -1526,7 +1526,7 @@ export default {
                 form: {
                     locale: {
                         nameAsPublishedLabel: `${capitalizeFirstLetter(suffix)}'s name as published`,
-                        nameAsPublishedHint: 'Type the name exactly as published (eg. Smith, John)',
+                        nameAsPublishedHint: 'Enter the name exactly as published (eg. Smith, John)',
                         identifierLabel: 'UQ identifier (if available)',
                         externalIdentifierLabel: 'External identifier',
                         externalIdentifierHint: 'Enter an external identifier',
@@ -1599,11 +1599,6 @@ export default {
             description: 'Please provide a list of editors and then select your name from the list.',
             descriptionAuthorOrEditor:
                 'Please provide a list of editors and then select your name once from the list of authors or editors.',
-            // help: {
-            //     title: 'Editors',
-            //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
-            // },
             field: {
                 form: {
                     locale: {
@@ -1673,11 +1668,6 @@ export default {
         },
         creators: {
             title: 'Creators',
-            // help: {
-            //     title: 'Creators',
-            //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
-            // },
             description:
                 'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.',
             descriptionCreatorOrContributor:
@@ -1701,7 +1691,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Creator's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         creatorRoleLabel: "Enter creator's role",
                         creatorRoleHint:
                             'Select role from list or type the role of the creator in relation to the dataset',
@@ -1791,7 +1781,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Designer's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add designer',
                         nameAsPublishedFieldId: 'designers-name-as-published-field',
@@ -1995,11 +1985,6 @@ export default {
         },
         thesisSubmissionSupervisors: {
             title: 'Supervisors',
-            // help: {
-            //     title: 'Supervisors help',
-            //     text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
-            //     buttonLabel: 'CLOSE'
-            // },
             field: {
                 form: {
                     locale: {
@@ -2072,7 +2057,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Contributor's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add contributor',
                         nameAsPublishedFieldId: 'contributors-name-as-published-field',
@@ -3438,7 +3423,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Enter each architect's name as published (eg. Smith, John)",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add architect',
                         nameAsPublishedFieldId: 'architects-name-as-published-field',
@@ -3526,7 +3511,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Enter each photographer's name as published (eg. Smith, John)",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add photographer',
                         nameAsPublishedFieldId: 'photographers-name-as-published-field',

@@ -16,8 +16,9 @@ const getDecoratedField = (field, fieldState, formState) => {
         error: fieldState.error?.message,
         defaultValue: get(formState?.defaultValues, field.name),
     };
+    field.inputRef = field.ref;
     // to avoid `ref` & forwardRef() errors
-    field.ref = null;
+    delete field.ref;
 
     return field;
 };
