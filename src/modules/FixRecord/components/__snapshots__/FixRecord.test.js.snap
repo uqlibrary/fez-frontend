@@ -8,7 +8,8 @@ exports[`Component FixRecord form submission payload should submit fix record da
 
 exports[`Component FixRecord form submission payload should submit fix record data with new content indicator and file 3`] = `
 File {
-  "path": "test.png",
+  "path": "./test.png",
+  "relativePath": "./test.png",
 }
 `;
 
@@ -98,6 +99,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -584,6 +586,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -960,6 +963,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth

@@ -564,6 +564,26 @@ export const dataCollection = {
             "rek_has_related_datasets_lookup": "dataset 2"
         }
     ],
+    "fez_record_search_key_related_service": [
+        {
+            "rek_related_service": "related service 1",
+            "rek_related_service_order": 1,
+        },
+        {
+            "rek_related_service": "related service 2",
+            "rek_related_service_order": 2,
+        }
+    ],
+    "fez_record_search_key_related_service_description": [
+        {
+            "rek_related_service_description": "related service desc 1",
+            "rek_related_service_description_order": 1,
+        },
+        {
+            "rek_related_service_description": null,
+            "rek_related_service_description_order": 2,
+        }
+    ],
     "fez_record_search_key_has_derivations": [
         {
             "rek_has_derivations": "UQ:313292",

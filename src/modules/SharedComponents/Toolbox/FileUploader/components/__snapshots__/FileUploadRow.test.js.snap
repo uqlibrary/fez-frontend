@@ -45,7 +45,6 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
               name="fileDescription"
               placeholder="Description"
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -109,12 +108,12 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
       >
-        <p
+        <div
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
           data-testid="dsi-embargo-date-0"
         >
           No date required
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
@@ -305,12 +304,12 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
           <p
             class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
           >
-            <p
+            <span
               class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
               data-testid="dsi-embargo-date-0"
             >
               No date required
-            </p>
+            </span>
           </p>
           <span
             class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"

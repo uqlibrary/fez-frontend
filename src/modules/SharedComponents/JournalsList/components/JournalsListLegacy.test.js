@@ -27,16 +27,20 @@ const checkOaTooltips = (dataElement, dataItem) => {
 
     // expect tooltip to match supplied data.
     if (publishedIndicatorProps) {
-        expect(dataElement.querySelector('.openAccessIndicator')).toHaveAttribute(
+        expect(dataElement.querySelector('.openAccessIndicator.published')).toHaveAttribute(
             'aria-label',
             tooltipLocale[publishedIndicatorProps.type][publishedIndicatorProps.status],
         );
     }
-    if (publishedIndicatorProps && publishedIndicatorProps.status !== status.open && acceptedIndicatorProps) {
-        expect(dataElement.querySelector('.openAccessIndicator')).toHaveAttribute(
-            'aria-label',
-            tooltipLocale[acceptedIndicatorProps.type][acceptedIndicatorProps.status],
-        );
+    if (acceptedIndicatorProps) {
+        const maxEmbargo = dataItem.fez_journal_issn?.reduce((max, issn) => {
+            return issn.fez_sherpa_romeo ? Math.max(max, issn.fez_sherpa_romeo.srm_max_embargo_amount) : max;
+        }, 0);
+        const label =
+            acceptedIndicatorProps.status === 'embargo'
+                ? tooltipLocale[acceptedIndicatorProps.type].embargo(maxEmbargo)
+                : tooltipLocale[acceptedIndicatorProps.type][acceptedIndicatorProps.status];
+        expect(dataElement.querySelector('.openAccessIndicator.accepted')).toHaveAttribute('aria-label', label);
     }
     if (!!!publishedIndicatorProps && !!!acceptedIndicatorProps) {
         expect(dataElement.querySelector('.openAccessIndicator')).not.toHaveAttribute('aria-label');
