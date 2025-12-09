@@ -11,7 +11,6 @@ import LinkTemplate from './LinkTemplate';
 import EnclosedLinkTemplate from './EnclosedLinkTemplate';
 import MultiLinkTemplate from './MultiLinkTemplate';
 import MultiValueTemplate from './MultiValueTemplate';
-import WosCategoriesTemplate from './WosCategoriesTemplate';
 import { useJournalContext } from 'context';
 import CreativeCommonsLicenceTemplate from './CreativeCommonsLicenceTemplate';
 
@@ -71,8 +70,6 @@ export const useTemplate = (template, props) => {
             return [CreativeCommonsLicenceTemplate, {}];
         case 'DateTimeTemplate':
             return [DateTimeTemplate, props];
-        case 'WosCategoriesTemplate':
-            return [WosCategoriesTemplate, props];
         default:
             return [DefaultTemplate, props];
     }
