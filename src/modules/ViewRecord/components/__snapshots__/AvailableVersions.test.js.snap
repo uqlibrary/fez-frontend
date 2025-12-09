@@ -52,6 +52,7 @@ exports[`Available Versions Component  should render component 1`] = `
               data-testid="rek-has-derivations-0"
             >
               <a
+                data-discover="true"
                 href="/view/UQ:313292"
               >
                 Toxicity characterization of urban stormwater with bioanalytical tools

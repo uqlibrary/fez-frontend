@@ -1,7 +1,6 @@
-import React, { /* useCallback,*/ useRef } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
-// import { useDispatch } from 'react-redux';
 
 import { Section } from '../common/Section';
 import { useRecordContext } from 'context';

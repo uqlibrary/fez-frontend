@@ -16,7 +16,7 @@ import [COMPONENT_NAME] from './[COMPONENT_NAME]';
 
 /**
  * @params Object testProps
- * @params Object args Possible keys isShallow, context, store, requireStore
+ * @params Object args Possible keys store, renderer
  */
 function setup(testProps = {}, args = {}) {
     // build full props list required by the component

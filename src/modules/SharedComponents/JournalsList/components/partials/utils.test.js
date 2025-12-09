@@ -5,13 +5,8 @@ import { mockData } from 'mock/data/testing/journals/journalSearchResults';
 import { types, status, getIndicator, getIndicatorProps } from './utils';
 
 describe('utils', () => {
-    it('getIndicator', () => {
+    it('getIndicator - accepted', () => {
         const data = { ...mockData.data[0] };
-
-        // returns empty
-        const output = getIndicator({ type: types.published, data });
-        expect(output).toEqual({ element: null });
-
         const tooltipLocale = {
             accepted: {
                 embargo: months => `${months} months Test embargo`,
@@ -24,6 +19,23 @@ describe('utils', () => {
         expect(getByTestId('journal-indicator-accepted-13251')).toBeInTheDocument();
         expect(getByTestId('journal-indicator-accepted-13251')).toHaveAttribute('aria-label', '6 months Test embargo');
         expect(getByTestId('journal-indicator-accepted-13251')).toHaveTextContent('embargo');
+    });
+
+    it('getIndicator - published', () => {
+        const data = { ...mockData.data[0] };
+
+        const tooltipLocale = {
+            published: {
+                fee: 'Test Fee',
+            },
+        };
+
+        // returns the Fee icon by default
+        const { element } = getIndicator({ type: types.published, data, tooltipLocale });
+        const { getByTestId } = render(<>{element}</>);
+        expect(getByTestId('journal-indicator-published-13251')).toBeInTheDocument();
+        expect(getByTestId('journal-indicator-published-13251')).toHaveAttribute('aria-label', 'Test Fee');
+        expect(getByTestId('journal-indicator-published-13251')).toHaveTextContent('fee');
     });
 
     it('getIndicatorProps', () => {
@@ -47,19 +59,53 @@ describe('utils', () => {
 
         // accepted embargo - from second issn
         const dataItem2 = { ...mockData.data[0] };
-
         dataItem2.fez_journal_issn[0].fez_sherpa_romeo.srm_max_embargo_amount = null;
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
         expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.embargo, embargoPeriod: 6 });
 
-        // accepted open
+        // accepted null
+        dataItem2.fez_journal_issn[1].fez_sherpa_romeo.srm_max_embargo_amount = null;
+        acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
+        expect(acceptedIndicatorProps).toEqual(null);
+
+        // accepted null
+        dataItem2.fez_journal_read_and_publish = {};
+        dataItem2.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Exceeded';
+        acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
+        expect(acceptedIndicatorProps).toEqual(null);
+
+        // accepted null
+        dataItem2.fez_journal_read_and_publish = {};
+        dataItem2.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'N';
+        dataItem2.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = true;
+        dataItem2.fez_journal_issn[1].fez_sherpa_romeo.srm_max_embargo_amount = null;
+        acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
+        expect(acceptedIndicatorProps).toEqual(null);
+
+        // accepted open - no APC
+        dataItem2.fez_journal_doaj = {};
+        dataItem2.fez_journal_doaj.jnl_doaj_apc_average_price = null;
         dataItem2.fez_journal_issn[1].fez_sherpa_romeo.srm_max_embargo_amount = null;
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
         expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.open });
 
-        // published open
+        // accepted open
+        dataItem2.fez_journal_read_and_publish = {};
+        dataItem2.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'N';
+        dataItem2.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = false;
+        dataItem2.fez_journal_issn[1].fez_sherpa_romeo.srm_max_embargo_amount = null;
+        acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
+        expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.open });
+
+        // published fee by default
         const dataItem3 = { ...mockData.data[0] };
         dataItem3.fez_journal_read_and_publish = {};
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.fee });
+
+        // published open
+        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'N';
+        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = false;
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open });
 
@@ -73,7 +119,7 @@ describe('utils', () => {
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.cap });
 
-        // published fee - discounted
+        // published fee - discounted - only applicable when capped = N
         dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'N';
         dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = true;
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
@@ -81,6 +127,12 @@ describe('utils', () => {
 
         // published fee - cap exceeded
         dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Exceeded';
+        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = false;
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.fee });
+
+        // published fee - nodeal, treat it as no agreement
+        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Nodeal';
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.fee });
 
