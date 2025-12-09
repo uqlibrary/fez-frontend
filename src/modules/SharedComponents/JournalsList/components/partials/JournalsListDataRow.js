@@ -205,6 +205,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                                                 id={`journal-list-data-col-1-data-${index}-${fieldIndex}`}
                                                 data-testid={`journal-list-data-col-1-data-${index}-${fieldIndex}`}
                                                 component={'div'}
+                                                sx={{ display: 'inline-flex' }}
                                             >
                                                 {(itemData && field.prefix) || ''}
                                                 {itemData || /* istanbul ignore next */ ''}

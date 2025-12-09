@@ -24,7 +24,7 @@ import AdminSection from './admin/AdminSection';
 import BibliographicSection from './bibliographic/BibliographicSection';
 import UqDataSection from './uqData/UqDataSection';
 import DoajSection from './doaj/DoajSection';
-import IndexedSection from './indexed/IndexedSection';
+import ListedSection from './listed/ListedSection';
 import { useJournal } from '../hooks';
 import ReadAndPublishSection from './readAndPublish/ReadAndPublishSection';
 
@@ -139,9 +139,9 @@ export const JournalAdminContainer = () => {
                                         component: DoajSection,
                                         numberOfErrors: tabErrors.current.doajSection || null,
                                     },
-                                    indexed: {
-                                        component: IndexedSection,
-                                        numberOfErrors: tabErrors.current.indexedSection || null,
+                                    listed: {
+                                        component: ListedSection,
+                                        numberOfErrors: tabErrors.current.listedSection || null,
                                     },
                                 }}
                             />

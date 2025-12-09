@@ -1043,112 +1043,6 @@ export const viewJournalConfig = {
             },
         },
     },
-    index: {
-        title: 'Indexed in',
-        rows: [
-            [
-                {
-                    heading: 'Essential Science Indicators Research Fields',
-                    fieldId: 'jnl-esi-subject-lookup',
-                    data: [
-                        {
-                            isArray: true,
-                            primaryKey: 'fez_journal_esi',
-                            path: [],
-                        },
-                    ],
-                    template: 'MultiValueTemplate',
-                    templateProps: {
-                        getData: item => `${item.jnl_esi_subject_lookup} (${item.jnl_esi_issn})`,
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Art and Humanities Citation Index (AHCI) - WOS Subject Categories',
-                    fieldId: 'jnl-wos-category-ahci',
-                    getData: journalDetails =>
-                        !!journalDetails.fez_journal_wos_category &&
-                        journalDetails.fez_journal_wos_category.filter(
-                            item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'AHCI',
-                        ).length > 0 &&
-                        journalDetails.fez_journal_wos_category,
-                    template: 'WosCategoriesTemplate',
-                    templateProps: {
-                        filterFn: item => item.jnl_wos_category_index === 'AHCI',
-                        categoryId: 'ahci',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Science Citation Index Expanded - WOS Subject Categories',
-                    fieldId: 'jnl-wos-category-scie',
-                    getData: journalDetails =>
-                        !!journalDetails.fez_journal_wos_category &&
-                        journalDetails.fez_journal_wos_category.filter(
-                            item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SCIE',
-                        ).length > 0 &&
-                        journalDetails.fez_journal_wos_category,
-                    template: 'WosCategoriesTemplate',
-                    templateProps: {
-                        filterFn: item => item.jnl_wos_category_index === 'SCIE',
-                        categoryId: 'scie',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Social Science Citation Index - WOS Subject Categories',
-                    fieldId: 'jnl-wos-category-ssci',
-                    getData: journalDetails =>
-                        !!journalDetails.fez_journal_wos_category &&
-                        journalDetails.fez_journal_wos_category.filter(
-                            item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SSCI',
-                        ).length > 0 &&
-                        journalDetails.fez_journal_wos_category,
-                    template: 'WosCategoriesTemplate',
-                    templateProps: {
-                        filterFn: item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SSCI',
-                        categoryId: 'ssci',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Emerging Sources Citation Index - WOS Subject Categories',
-                    fieldId: 'jnl-wos-category-esci',
-                    getData: journalDetails =>
-                        !!journalDetails.fez_journal_wos_category &&
-                        journalDetails.fez_journal_wos_category.filter(
-                            item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'ESCI',
-                        ).length > 0 &&
-                        journalDetails.fez_journal_wos_category,
-                    template: 'WosCategoriesTemplate',
-                    templateProps: {
-                        filterFn: item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'ESCI',
-                        categoryId: 'esci',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Scopus',
-                    fieldId: 'has-scopus',
-                    getData: journalDetails => !!journalDetails.fez_journal_cite_score,
-                    template: 'BooleanTemplate',
-                },
-            ],
-            [
-                {
-                    heading: 'Pubmed',
-                    fieldId: 'has-pubmed',
-                    getData: journalDetails => !!journalDetails.fez_journal_pubmed,
-                    template: 'BooleanTemplate',
-                },
-            ],
-        ],
-    },
     listed: {
         title: 'Listed in',
         rows: [
@@ -1257,6 +1151,31 @@ export const viewJournalConfig = {
                                   ).format('YYYY')
                                 : ''
                         }`,
+                },
+            ],
+            [
+                {
+                    heading: 'Essential Science Indicators Research Fields',
+                    fieldId: 'jnl-esi-subject-lookup',
+                    data: [
+                        {
+                            isArray: true,
+                            primaryKey: 'fez_journal_esi',
+                            path: [],
+                        },
+                    ],
+                    template: 'MultiValueTemplate',
+                    templateProps: {
+                        getData: item => `${item.jnl_esi_subject_lookup} (${item.jnl_esi_issn})`,
+                    },
+                },
+            ],
+            [
+                {
+                    heading: 'Pubmed',
+                    fieldId: 'has-pubmed',
+                    getData: journalDetails => !!journalDetails.fez_journal_pubmed,
+                    template: 'BooleanTemplate',
                 },
             ],
         ],

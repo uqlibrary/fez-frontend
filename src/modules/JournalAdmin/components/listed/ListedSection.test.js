@@ -4,7 +4,7 @@ import { rtlRender, FormProviderWrapper } from 'test-utils';
 jest.mock('../../../../context');
 import { journalDoaj } from 'mock/data';
 import { useJournalContext } from 'context';
-import IndexedSection from './IndexedSection';
+import ListedSection from './ListedSection';
 import { ADMIN_JOURNAL } from 'config/general';
 
 function setup(testProps = {}, renderer = rtlRender) {
@@ -14,12 +14,12 @@ function setup(testProps = {}, renderer = rtlRender) {
 
     return renderer(
         <FormProviderWrapper>
-            <IndexedSection {...props} />
+            <ListedSection {...props} />
         </FormProviderWrapper>,
     );
 }
 
-describe('IndexedSection component', () => {
+describe('ListedSection component', () => {
     it('should render default view', () => {
         useJournalContext.mockImplementation(() => ({
             journalDetails: {
@@ -34,14 +34,6 @@ describe('IndexedSection component', () => {
             'Essential Science Indicators Research Fields',
         );
         expect(getByTestId('jnl-esi-subject-lookup-0-value')).toHaveTextContent('Mathematics (2169-0375)');
-
-        expect(getByTestId('jnl-wos-category-scie-header')).toHaveTextContent(
-            'Science Citation Index Expanded - WOS Subject Categories',
-        );
-        expect(getByTestId('jnl-wos-category-scie-0-1-value')).toHaveTextContent('Mathematics');
-
-        expect(getByTestId('has-scopus-header')).toHaveTextContent('Scopus');
-        expect(getByTestId('has-scopus-value')).toHaveTextContent('Yes');
 
         expect(getByTestId('has-pubmed-header')).toHaveTextContent('Pubmed');
         expect(getByTestId('has-pubmed-value')).toHaveTextContent('No');

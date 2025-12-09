@@ -23,7 +23,7 @@ export const getInitialFormValues = (journalToView, config = adminInterfaceConfi
             bibliographicSection: getInitialValues(config, journalToView, 'bibliographic'),
             uqDataSection: getInitialValues(config, journalToView, 'uqData')?.uqData || {},
             doajSection: getInitialValues(config, journalToView, 'doaj')?.doaj || {},
-            indexedSection: getInitialValues(config, journalToView, 'indexed')?.indexed || {},
+            listedSection: getInitialValues(config, journalToView, 'listed')?.listed || {},
         },
     };
 };

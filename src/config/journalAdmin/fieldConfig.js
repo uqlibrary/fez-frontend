@@ -193,12 +193,12 @@ export default {
                 noRef: true,
             },
         },
-        indexed: {
+        listed: {
             component: InfoSection,
             componentProps: {
-                sectionKey: 'indexed',
-                name: 'indexedSection',
-                sectionConfig: viewJournalConfig.index,
+                sectionKey: 'listed',
+                name: 'listedSection',
+                sectionConfig: viewJournalConfig.listed,
                 wrapped: false,
                 noRef: true,
             },

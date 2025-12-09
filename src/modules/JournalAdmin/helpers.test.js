@@ -12,10 +12,11 @@ describe('Helpers', () => {
             expect(getInitialFormValues(journalDoaj.data)).toEqual(helpersTypicalExpected);
         });
         it('expected non-typical output', () => {
+            const notUsed = 0;
             const fields = adminJournalFields;
             delete fields.uqData;
             delete fields.doaj;
-            delete fields.indexed;
+            delete fields.listed;
 
             const config = { [ADMIN_JOURNAL]: fields };
             expect(getInitialFormValues(journalDoaj.data, config)).toEqual(helpersNonTypicalExpected);

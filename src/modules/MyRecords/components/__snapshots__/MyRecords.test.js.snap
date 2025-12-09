@@ -60,6 +60,7 @@ exports[`MyRecords test gets publications when user clicks back and state is not
                 We were unable to find any results. You may be able to
                  
                 <a
+                  data-discover="true"
                   href="/records/possible"
                 >
                   claim works we think may be yours
@@ -67,6 +68,7 @@ exports[`MyRecords test gets publications when user clicks back and state is not
                  or
                  
                 <a
+                  data-discover="true"
                   href="/records/add/find"
                 >
                   add a missing publication
@@ -141,6 +143,7 @@ exports[`MyRecords test gets publications when user clicks back and state is set
                 We were unable to find any results. You may be able to
                  
                 <a
+                  data-discover="true"
                   href="/records/possible"
                 >
                   claim works we think may be yours
@@ -148,6 +151,7 @@ exports[`MyRecords test gets publications when user clicks back and state is set
                  or
                  
                 <a
+                  data-discover="true"
                   href="/records/add/find"
                 >
                   add a missing publication
@@ -222,6 +226,7 @@ exports[`MyRecords test renders active filters 1`] = `
                 We were unable to find any results. You may be able to
                  
                 <a
+                  data-discover="true"
                   href="/records/possible"
                 >
                   claim works we think may be yours
@@ -229,6 +234,7 @@ exports[`MyRecords test renders active filters 1`] = `
                  or
                  
                 <a
+                  data-discover="true"
                   href="/records/add/find"
                 >
                   add a missing publication
@@ -329,6 +335,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                   <span>
                     Add to this list by 
                     <a
+                      data-discover="true"
                       href="/records/possible"
                     >
                       claiming a work
@@ -336,6 +343,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                      or
                      
                     <a
+                      data-discover="true"
                       href="/records/add/find"
                     >
                       adding a missing work
@@ -988,6 +996,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                   <span>
                     Add to this list by 
                     <a
+                      data-discover="true"
                       href="/records/possible"
                     >
                       claiming a work
@@ -995,6 +1004,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                      or
                      
                     <a
+                      data-discover="true"
                       href="/records/add/find"
                     >
                       adding a missing work
@@ -1647,6 +1657,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                   <span>
                     Add to this list by 
                     <a
+                      data-discover="true"
                       href="/records/possible"
                     >
                       claiming a work
@@ -1654,6 +1665,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                      or
                      
                     <a
+                      data-discover="true"
                       href="/records/add/find"
                     >
                       adding a missing work
@@ -2485,6 +2497,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                   <span>
                     Add to this list by 
                     <a
+                      data-discover="true"
                       href="/records/possible"
                     >
                       claiming a work
@@ -2492,6 +2505,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                      or
                      
                     <a
+                      data-discover="true"
                       href="/records/add/find"
                     >
                       adding a missing work
@@ -2884,6 +2898,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                   <span>
                     Add to this list by 
                     <a
+                      data-discover="true"
                       href="/records/possible"
                     >
                       claiming a work
@@ -2891,6 +2906,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                      or
                      
                     <a
+                      data-discover="true"
                       href="/records/add/find"
                     >
                       adding a missing work
@@ -3291,6 +3307,7 @@ exports[`MyRecords test renders no results 1`] = `
                 We were unable to find any results. You may be able to
                  
                 <a
+                  data-discover="true"
                   href="/records/possible"
                 >
                   claim works we think may be yours
@@ -3298,6 +3315,7 @@ exports[`MyRecords test renders no results 1`] = `
                  or
                  
                 <a
+                  data-discover="true"
                   href="/records/add/find"
                 >
                   add a missing publication
