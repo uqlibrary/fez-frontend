@@ -133,7 +133,12 @@ export const FileUploadRowMobileView = ({
                         >
                             {((isAdmin && securityPolicy !== FILE_SECURITY_POLICY_PUBLIC) ||
                                 (!isAdmin && accessConditionId !== FILE_ACCESS_CONDITION_OPEN)) && (
-                                <Typography variant="body2" gutterBottom data-testid={`dsi-embargo-date-${index}`}>
+                                <Typography
+                                    variant="body2"
+                                    component={'span'}
+                                    gutterBottom
+                                    data-testid={`dsi-embargo-date-${index}`}
+                                >
                                     {embargoDateClosedAccess}
                                 </Typography>
                             )}

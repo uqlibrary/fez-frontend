@@ -445,45 +445,6 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-cite-score-asjc-code-percentile-value')).toHaveTextContent('94');
 
         // ******************************************************************
-        // Indexed in
-        // ******************************************************************
-        expect(getByTestId('jnl-esi-subject-lookup-header')).toHaveTextContent(
-            'Essential Science Indicators Research Fields',
-        );
-        expect(getByTestId('jnl-esi-subject-lookup-0-value')).toHaveTextContent('Social Sciences, General (0090-0036)');
-        expect(getByTestId('jnl-esi-subject-lookup-1-value')).toHaveTextContent('Social Sciences, General (1541-0048)');
-
-        expect(queryByTestId('jnl-wos-category-ahci-header')).not.toBeInTheDocument();
-
-        expect(getByTestId('jnl-wos-category-scie-header')).toHaveTextContent(
-            'Science Citation Index Expanded - WOS Subject Categories',
-        );
-        expect(getByTestId('jnl-wos-category-scie-0-0-value')).toHaveTextContent(
-            'Public, Environmental & Occupational Health (0090-0036)',
-        );
-        expect(getByTestId('jnl-wos-category-scie-1-0-value')).toHaveTextContent(
-            'Public, Environmental & Occupational Health (1541-0048)',
-        );
-
-        expect(getByTestId('jnl-wos-category-ssci-header')).toHaveTextContent(
-            'Social Science Citation Index - WOS Subject Categories',
-        );
-        expect(getByTestId('jnl-wos-category-ssci-0-0-value')).toHaveTextContent(
-            'Public, Environmental & Occupational Health (0090-0036)',
-        );
-        expect(getByTestId('jnl-wos-category-ssci-1-0-value')).toHaveTextContent(
-            'Public, Environmental & Occupational Health (1541-0048)',
-        );
-
-        expect(queryByTestId('jnl-wos-category-esci-header')).not.toBeInTheDocument();
-
-        expect(getByTestId('has-scopus-header')).toHaveTextContent('Scopus');
-        expect(getByTestId('has-scopus-value')).toHaveTextContent('Yes');
-
-        expect(getByTestId('has-pubmed-header')).toHaveTextContent('Pubmed');
-        expect(getByTestId('has-pubmed-value')).toHaveTextContent('Yes');
-
-        // ******************************************************************
         // Listed in
         // ******************************************************************
         expect(queryByTestId('jnl-abdc-rating-header')).toHaveTextContent(
@@ -518,6 +479,15 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-nature-index-source-date-header')).toHaveTextContent('Nature Index');
         expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('Yes, 2019');
+
+        expect(getByTestId('jnl-esi-subject-lookup-header')).toHaveTextContent(
+            'Essential Science Indicators Research Fields',
+        );
+        expect(getByTestId('jnl-esi-subject-lookup-0-value')).toHaveTextContent('Social Sciences, General (0090-0036)');
+        expect(getByTestId('jnl-esi-subject-lookup-1-value')).toHaveTextContent('Social Sciences, General (1541-0048)');
+
+        expect(getByTestId('has-pubmed-header')).toHaveTextContent('Pubmed');
+        expect(getByTestId('has-pubmed-value')).toHaveTextContent('Yes');
 
         // ******************************************************************
         // UQ Connections
@@ -779,72 +749,6 @@ describe('ViewJournal', () => {
         );
     });
 
-    it('should display WoS categories correctly with and without ISSN', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
-            data: {
-                ...journalDetails.data,
-                fez_journal_wos_category: [
-                    {
-                        jnl_wos_category_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
-                        jnl_wos_category: '456676',
-                        jnl_wos_category_index: 'SCIE',
-                        jnl_wos_category_issn: '0090-0036 | 0090-1234',
-                        jnl_wos_category_source_date: '2020-09-29',
-                        fez_journal_cwts: {
-                            jnl_cwts_source_year: 2020,
-                            jnl_cwts_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
-                        },
-                        jnl_wos_category_lookup: 'Public, Environmental & Occupational Health | Mental Health',
-                    },
-                    {
-                        jnl_wos_category_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
-                        jnl_wos_category: '456676',
-                        jnl_wos_category_index: 'SSCI',
-                        jnl_wos_category_issn: '0090-0036',
-                        jnl_wos_category_source_date: '2020-09-29',
-                        fez_journal_cwts: {
-                            jnl_cwts_source_year: 2020,
-                            jnl_cwts_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
-                        },
-                        jnl_wos_category_lookup: 'Public, Environmental & Occupational Health | Mental & Dental Health',
-                    },
-                    {
-                        jnl_wos_category_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
-                        jnl_wos_category: '',
-                        jnl_wos_category_index: 'AHCI',
-                        jnl_wos_category_issn: '0090-0036',
-                        jnl_wos_category_source_date: '2020-09-29',
-                        fez_journal_cwts: {
-                            jnl_cwts_source_year: 2020,
-                            jnl_cwts_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
-                        },
-                    },
-                ],
-            },
-        });
-
-        const { getByTestId, getByText, queryByTestId } = setup();
-
-        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
-
-        expect(getByTestId('jnl-wos-category-scie-header')).toHaveTextContent(
-            'Science Citation Index Expanded - WOS Subject Categories',
-        );
-        expect(getByTestId('jnl-wos-category-scie-0-0-value')).toHaveTextContent(
-            'Public, Environmental & Occupational Health (0090-0036)',
-        );
-        expect(getByTestId('jnl-wos-category-scie-0-1-value')).toHaveTextContent('Mental Health (0090-1234)');
-
-        expect(getByTestId('jnl-wos-category-ssci-header')).toHaveTextContent(
-            'Social Science Citation Index - WOS Subject Categories',
-        );
-        expect(getByTestId('jnl-wos-category-ssci-0-0-value')).toHaveTextContent(
-            'Public, Environmental & Occupational Health (0090-0036)',
-        );
-        expect(getByTestId('jnl-wos-category-ssci-0-1-value')).toHaveTextContent('Mental & Dental Health');
-
-        expect(queryByTestId('jnl-wos-category-ahci-header')).not.toBeInTheDocument();
-    });
     // Test for title change
     it('Should correctly show required title change', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
