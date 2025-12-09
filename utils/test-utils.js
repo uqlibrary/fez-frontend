@@ -230,7 +230,7 @@ const waitElementToBeInDocument = async (dataTestId, options) =>
 
 /**
  * @param {string|function} testId
- * @return {Promise<HTMLElement>}
+ * @return {HTMLElement}
  */
 const assertMissingElement = testId =>
     expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).not.toBeInTheDocument();

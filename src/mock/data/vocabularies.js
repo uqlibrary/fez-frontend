@@ -4,7 +4,6 @@ import {
     AIATSIS_CODES_VOCAB_ID,
     SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID,
     JOURNAL_ADVISORY_STATEMENT_TYPE,
-    JOURNAL_SEARCH_SUBJECTS_VOCAB_ID,
 } from 'config/general';
 
 export const vocabulariesList = {
@@ -32602,5 +32601,5 @@ export const vocabulariesList = {
                 },
             },
         ],
-    },
+    }
 };
