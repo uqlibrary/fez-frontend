@@ -44,10 +44,6 @@ export const ForCodeAutocompleteField = React.forwardRef<ForCodeAutocompleteFiel
                 // @ts-expect-error
                 id="for-code-autocomplete-field"
                 autoCompleteAsynchronousFieldId="for-code-autocomplete-field"
-                // @ts-expect-error
-                filterOptions={(options: KeyValueItemType[], { inputValue }) =>
-                    matchSorter(options, inputValue ?? /* istanbul ignore next */ '', { keys: ['value'] })
-                }
                 itemsList={filter(keyValueLists)}
                 itemsLoading={!!state.journalSearchKeywordsLoading}
                 error={!!state.journalSearchKeywordsError}
