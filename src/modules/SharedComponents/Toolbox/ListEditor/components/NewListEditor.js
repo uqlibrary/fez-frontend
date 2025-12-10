@@ -36,9 +36,11 @@ export const NewListEditor = ({
     const [indexToUpdate, setIndexToUpdate] = React.useState(null);
     const [itemToUpdate, setItemToUpdate] = React.useState(null);
     const [itemsList, setItemsList] = React.useState(list);
+    const prevList = React.useRef([]);
 
     const handleOnChange = React.useCallback(
         list => {
+            prevList.current = list;
             const val = transform(list, searchKey);
             onChange(val);
         },
@@ -121,9 +123,20 @@ export const NewListEditor = ({
     );
 
     const handleDeleteAll = React.useCallback(() => {
-        setItemsList(() => []);
+        setItemsList([]);
         handleOnChange([]);
     }, [handleOnChange]);
+
+    /**
+     * Run this effect if incoming list prop changes (e.g. via Journal Id auto population)
+     */
+    React.useEffect(() => {
+        if (!isEqual(list, prevList.current)) {
+            setItemsList(list);
+            handleOnChange(list);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [list]);
 
     const scrollStyle =
         !!scrollList && itemsList.length >= scrollListHeight / 55

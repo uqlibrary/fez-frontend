@@ -1,7 +1,6 @@
 export const helpersTypicalExpected = {
     initialValues: {
         adminSection: {
-            abbreviatedTitle: 'ADV NONLINEAR STUD',
             advisoryStatement: {
                 text: {
                     htmlText: 'This is an advisory statement',
@@ -11,6 +10,7 @@ export const helpersTypicalExpected = {
             },
             description:
                 'Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.',
+            jnl_abbrev_title: null,
             jnl_publisher: 'Walter de Gruyter GmbH',
             jnl_title: 'Advanced Nonlinear Studies',
             publicationFormats: 'Print',
@@ -123,9 +123,7 @@ export const helpersTypicalExpected = {
             openAccess: false,
         },
         id: 12,
-        indexedSection: {
-            ahci: {},
-            esci: {},
+        listedSection: {
             esi: [
                 {
                     jnl_esi_issn: '2169-0375',
@@ -136,20 +134,6 @@ export const helpersTypicalExpected = {
                 },
             ],
             pubmed: false,
-            scie: {
-                fez_journal_cwts: {
-                    jnl_cwts_source_year: 2023,
-                    jnl_cwts_title: 'ADVANCED NONLINEAR STUDIES',
-                },
-                jnl_wos_category: '456599|456598',
-                jnl_wos_category_index: 'SCIE',
-                jnl_wos_category_issn: '2169-0375',
-                jnl_wos_category_lookup: 'Mathematics, Applied | Mathematics',
-                jnl_wos_category_source_date: '2023-01-01',
-                jnl_wos_category_title: 'ADVANCED NONLINEAR STUDIES',
-            },
-            scopus: true,
-            ssci: {},
         },
         journal: {
             fez_journal_abdc: null,
@@ -443,6 +427,7 @@ export const helpersTypicalExpected = {
                 },
             ],
             is_favourite: false,
+            jnl_abbrev_title: null,
             jnl_advisory_statement: 'This is an advisory statement',
             jnl_advisory_statement_type: 1234,
             jnl_created_date: '2021-02-22 00:56:49',
@@ -473,7 +458,6 @@ export const helpersTypicalExpected = {
 export const helpersNonTypicalExpected = {
     initialValues: {
         adminSection: {
-            abbreviatedTitle: 'ADV NONLINEAR STUD',
             advisoryStatement: {
                 text: {
                     htmlText: 'This is an advisory statement',
@@ -483,6 +467,7 @@ export const helpersNonTypicalExpected = {
             },
             description:
                 'Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.',
+            jnl_abbrev_title: null,
             jnl_publisher: 'Walter de Gruyter GmbH',
             jnl_title: 'Advanced Nonlinear Studies',
             publicationFormats: 'Print',
@@ -871,6 +856,7 @@ export const helpersNonTypicalExpected = {
                 },
             ],
             is_favourite: false,
+            jnl_abbrev_title: null,
             jnl_advisory_statement: 'This is an advisory statement',
             jnl_advisory_statement_type: 1234,
             jnl_created_date: '2021-02-22 00:56:49',
@@ -884,7 +870,7 @@ export const helpersNonTypicalExpected = {
             uq_author_id_count: 0,
         },
         doajSection: {},
-        indexedSection: {},
+        listedSection: {},
         uqDataSection: {},
     },
 };

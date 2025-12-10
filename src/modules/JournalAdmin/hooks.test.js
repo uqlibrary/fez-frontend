@@ -40,7 +40,7 @@ describe('hooks', () => {
                         jnl_read_and_publish_title: 'Advanced Nonlinear Studies',
                     }),
                     doajSection: expect.objectContaining({ jnl_doaj_title: 'Advanced Nonlinear Studies' }),
-                    indexedSection: expect.objectContaining({ scopus: true, pubmed: false }),
+                    listedSection: expect.objectContaining({ pubmed: false }),
                 }),
                 locked: false,
             }),

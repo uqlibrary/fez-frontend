@@ -55,12 +55,6 @@ const GrantListEditor = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [grantFormPopulated]);
 
-    // propagate `grants` changes to input
-    // useEffect(() => {
-    //     form?.setValue?.(name, grants, { shouldValidate: true });
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [JSON.stringify(grants)]);
-
     const addGrant = useCallback(
         grant => {
             const newList =
