@@ -55,12 +55,6 @@ const RelatedServiceListEditor = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [relatedServiceFormPopulated]);
 
-    // propagate `related service` changes to input
-    // useEffect(() => {
-    //     form?.setValue?.(name, relatedServices, { shouldValidate: true });
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [JSON.stringify(relatedServices)]);
-
     const addRelatedService = useCallback(
         relatedService => {
             const newList =

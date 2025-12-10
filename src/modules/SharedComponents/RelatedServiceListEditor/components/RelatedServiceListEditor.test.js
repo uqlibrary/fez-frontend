@@ -80,36 +80,6 @@ describe('RelatedServiceListEditor', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should update on receiving new props', () => {
-        const value = {
-            relatedServiceId: '1234',
-            relatedServiceDesc: 'desc',
-        };
-        const props = {
-            name: 'TestField',
-            value: [value],
-        };
-        const { container /* , rerender */ } = setup(props);
-        expect(container).toMatchSnapshot();
-
-        //     props = {
-        //         classes: {},
-
-        //         name: 'TestField',
-        //         value: [
-        //             {
-        //                 relatedServiceId: '4567',
-        //                 relatedServiceDesc: 'desc',
-        //             },
-        //         ],
-        //     };
-
-        //     setup(props, rerender);
-
-        //     expect(mockSetValue).toHaveBeenCalledWith('TestField', [], { shouldValidate: true });
-        //     expect(mockSetValue).toHaveBeenCalledWith('TestField', [value], { shouldValidate: true });
-    });
-
     it('should add related service to the list', () => {
         const { getByRole, container } = setup();
 
