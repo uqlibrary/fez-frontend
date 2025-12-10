@@ -1,18 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { green, orange, blue, deepOrange } from '@mui/material/colors';
+import { green, orange, blue, grey, deepOrange } from '@mui/material/colors';
 import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 
 import AcceptedIcon from '@mui/icons-material/School';
 import PublishedIcon from '@mui/icons-material/AutoStoriesOutlined';
+import DiamondIcon from '@mui/icons-material/Diamond';
 
 import { status as oaStatus, types } from './utils';
 
-const icons = { accepted: AcceptedIcon, published: PublishedIcon };
+const getIconColumnStyle = (showDiamond, showS2O) => {
+    if (showS2O) return { backgroundColor: '#000000', color: orange[800] };
+    if (showDiamond) return { backgroundColor: grey[800] };
+    return { backgroundColor: '#51247A' };
+};
 
-const JournalsOpenAccessIndicator = ({ type, status, label, embargoPeriod, tooltip, id, ...rest }) => {
+const JournalsOpenAccessIndicator = ({
+    type,
+    status,
+    showDiamond,
+    showS2O,
+    label,
+    embargoPeriod,
+    tooltip,
+    id,
+    ...rest
+}) => {
+    const icons = {
+        accepted: AcceptedIcon,
+        published: showDiamond ? DiamondIcon : PublishedIcon,
+    };
+
     const Icon = icons[type];
 
     const classes = {
@@ -27,7 +47,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, embargoPeriod, toolt
         },
         [`${types.published}${oaStatus.open}`]: {
             '& .iconColumn': {
-                backgroundColor: '#51247A',
+                ...getIconColumnStyle(showDiamond, showS2O),
             },
             '& .labelColumn': {
                 backgroundColor: '#EDE4F7',
@@ -75,6 +95,12 @@ const JournalsOpenAccessIndicator = ({ type, status, label, embargoPeriod, toolt
         lineHeight: 1.5,
     };
 
+    const getIcon = () => {
+        if (showS2O) return 'S2O';
+        if (embargoPeriod) return `${embargoPeriod}M`;
+        return <Icon color="white" sx={{ width: 'auto', height: '18px' }} />;
+    };
+
     return (
         <Tooltip
             title={tooltip}
@@ -112,11 +138,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, embargoPeriod, toolt
                     className="wrapper"
                 >
                     <Box sx={{ gridArea: 'icon', ...columnStyle }} className="iconColumn">
-                        {!!embargoPeriod ? (
-                            `${embargoPeriod}M`
-                        ) : (
-                            <Icon color="white" sx={{ width: 'auto', height: '18px' }} />
-                        )}
+                        {getIcon()}
                     </Box>
                     <Box sx={{ gridArea: 'label', ...columnStyle }} className="labelColumn">
                         {label ?? status}
@@ -131,6 +153,8 @@ JournalsOpenAccessIndicator.propTypes = {
     id: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['accepted', 'published']).isRequired,
     status: PropTypes.oneOf(['open', 'cap', 'embargo', 'fee']).isRequired,
+    showDiamond: PropTypes.bool,
+    showS2O: PropTypes.bool,
     embargoPeriod: PropTypes.number,
     tooltip: PropTypes.string,
     label: PropTypes.string,
