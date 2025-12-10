@@ -17,19 +17,13 @@ const getIconColumnStyle = (showDiamond, showS2O) => {
     return { backgroundColor: '#51247A' };
 };
 
-const getIcon = (showS2O, embargoPeriod, Icon) => {
-    if (showS2O) return 'S2O';
-    else if (!!embargoPeriod) return `${embargoPeriod}M`;
-    else return <Icon color="white" sx={{ width: 'auto', height: '18px' }} />;
-};
-
 const JournalsOpenAccessIndicator = ({
     type,
     status,
     showDiamond,
     showS2O,
-    embargoPeriod,
     label,
+    embargoPeriod,
     tooltip,
     id,
     ...rest
@@ -101,6 +95,12 @@ const JournalsOpenAccessIndicator = ({
         lineHeight: 1.5,
     };
 
+    const getIcon = () => {
+        if (showS2O) return 'S2O';
+        if (embargoPeriod) return `${embargoPeriod}M`;
+        return <Icon color="white" sx={{ width: 'auto', height: '18px' }} />;
+    };
+
     return (
         <Tooltip
             title={tooltip}
@@ -138,7 +138,7 @@ const JournalsOpenAccessIndicator = ({
                     className="wrapper"
                 >
                     <Box sx={{ gridArea: 'icon', ...columnStyle }} className="iconColumn">
-                        {getIcon(showS2O, embargoPeriod, Icon)}
+                        {getIcon()}
                     </Box>
                     <Box sx={{ gridArea: 'label', ...columnStyle }} className="labelColumn">
                         {label ?? status}

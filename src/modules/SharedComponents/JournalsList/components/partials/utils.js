@@ -24,6 +24,7 @@ export const getIndicatorProps = ({ type, data }) => {
     const cappedValue = data.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped;
     const isCapped = cappedValue === 'Y' || cappedValue === 'Approaching';
     const isDiscounted = !!data.fez_journal_read_and_publish?.jnl_read_and_publish_is_discounted;
+    const s2oValue = data.fez_journal_read_and_publish?.jnl_read_and_publish_is_s2o;
 
     if (type === types.accepted) {
         // Embargo period and open access from sherpa romeo
@@ -50,28 +51,26 @@ export const getIndicatorProps = ({ type, data }) => {
     } else {
         indicatorProps.status = status.fee;
         if (hasRNP) {
-            const entry = data.fez_journal_read_and_publish;
-            if (entry.jnl_read_and_publish_is_s2o === 'S2O') {
+            if (s2oValue === 'S2O') {
                 indicatorProps.showS2O = true;
                 indicatorProps.status = status.open;
             } else if (isCapped) {
                 indicatorProps.status = status.cap;
             } else if (cappedValue === 'N' && !isDiscounted) {
                 indicatorProps.status = status.open;
-                if (entry.jnl_read_and_publish_is_s2o === 'Y') {
+                if (s2oValue === 'Y') {
                     indicatorProps.showS2O = true;
                 }
             }
-        } else if (data.fez_journal_doaj) {
-            const entry = data.fez_journal_doaj;
+        } else if (hasDOAJ) {
+            const doaj = data.fez_journal_doaj;
             if (!hasApc) {
                 indicatorProps.status = status.open;
-                if (entry.jnl_doaj_has_other_fees === false) {
+                if (doaj.jnl_doaj_has_other_fees === false) {
                     indicatorProps.showDiamond = true;
                 }
             }
-
-            if (!!entry.jnl_doaj_is_s2o) {
+            if (!!doaj.jnl_doaj_is_s2o) {
                 indicatorProps.showS2O = true;
             }
         }
