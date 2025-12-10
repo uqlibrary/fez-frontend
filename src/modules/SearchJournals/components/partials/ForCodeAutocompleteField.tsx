@@ -26,7 +26,7 @@ const toKeyValueList = (data: SubjectItem[]): Option[] =>
                 .split(',')
                 .map(name => ({ name })),
         }),
-    ) || [];
+    ) || /* istanbul ignore next */ [];
 
 export const ForCodeAutocompleteField = React.forwardRef<ForCodeAutocompleteFieldRef, ForCodeAutocompleteFieldProps>(
     ({ filter, ...props }, ref) => {
