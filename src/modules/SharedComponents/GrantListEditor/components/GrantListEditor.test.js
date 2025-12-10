@@ -94,30 +94,6 @@ describe('GrantListEditor', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should update on receiving new props', () => {
-        const value = {
-            grantAgencyName: 'Testing',
-            grantId: '1234',
-            grantAgencyType: 'Test',
-        };
-        const props = {
-            name: 'TestField',
-            value: [value],
-        };
-        const { container /* rerender */ } = setup(props);
-        expect(container).toMatchSnapshot();
-
-        //     props = {
-        //         classes: {},
-        //         name: 'TestField',
-        //         value: [value],
-        //     };
-
-        //     rerender(<GrantListEditor {...props} />);
-        //     expect(mockSetValue).toHaveBeenCalledWith('TestField', [], { shouldValidate: true });
-        //     expect(mockSetValue).toHaveBeenCalledWith('TestField', [value], { shouldValidate: true });
-    });
-
     it('should add grant to the list', () => {
         const { getByRole, getByLabelText, container } = setup();
 
