@@ -42,17 +42,6 @@ const Controller = ({ render, ...props }) => {
             /* eslint-disable-next-line react/prop-types */
             defaultValue={props.state?.defaultValue || ''}
             render={({ field, fieldState, formState }) => {
-                // Get the default value from formState.defaultValues using the field name path
-                const defaultValue = get(formState?.defaultValues, field.name);
-                // If field value is undefined/null/empty and we have a defaultValue, use it
-                // This handles the case where initial RHF form data changes after form has initialised
-                if (
-                    (field.value === undefined || (Array.isArray(field.value) && field.value.length === 0)) &&
-                    defaultValue !== undefined
-                ) {
-                    field.value = defaultValue;
-                }
-
                 return render({
                     field: getDecoratedField(field, fieldState, formState),
                     fieldState,
