@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
-import { KeyValueItemType } from 'hooks/useControlledVocabs';
-import { matchSorter } from 'match-sorter';
 import locale from 'locale/components';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppState } from '../../../../reducer';
@@ -16,6 +14,10 @@ type ForCodeAutocompleteFieldProps = React.ComponentPropsWithoutRef<typeof AutoC
     filter: (data: Option[]) => Option[];
 };
 type ForCodeAutocompleteFieldRef = React.ComponentRef<typeof AutoCompleteAsynchronousField>;
+
+const minQueryLength = 3;
+
+export const assertMinQueryLength = (value: string | undefined) => value && value?.trim?.()?.length >= minQueryLength;
 
 const toKeyValueList = (data: SubjectItem[]): Option[] =>
     data?.map?.(
@@ -32,7 +34,8 @@ export const ForCodeAutocompleteField = React.forwardRef<ForCodeAutocompleteFiel
     ({ filter, ...props }, ref) => {
         const txt = locale.components.searchJournals.partials.forCodeAutocompleteField;
         const dispatch = useDispatch();
-        const fetch = (newValue: string) => dispatch(loadJournalSearchKeywords(newValue, true));
+        const fetch = (query: string) =>
+            assertMinQueryLength(query) && dispatch(loadJournalSearchKeywords(query, true));
         const state = useSelector((s: AppState) => s.get('journalReducer')[keywordOnlySuffix]);
         const keyValueLists = React.useMemo(
             () => toKeyValueList(state.journalSearchKeywords?.subjectFuzzyMatch),
