@@ -28,7 +28,7 @@ const toKeyValueList = (data: SubjectItem[]): Option[] =>
                 .split(',')
                 .map(name => ({ name })),
         }),
-    ) || [];
+    ) || /* istanbul ignore next */ [];
 
 export const ForCodeAutocompleteField = React.forwardRef<ForCodeAutocompleteFieldRef, ForCodeAutocompleteFieldProps>(
     ({ filter, ...props }, ref) => {
@@ -50,9 +50,7 @@ export const ForCodeAutocompleteField = React.forwardRef<ForCodeAutocompleteFiel
                 itemsList={filter(keyValueLists)}
                 itemsLoading={!!state.journalSearchKeywordsLoading}
                 error={!!state.journalSearchKeywordsError}
-                getOptionLabel={(option: Record<string, string | number>) =>
-                    option?.value ?? /* istanbul ignore next */ ''
-                }
+                getOptionLabel={(option: Record<string, string | number>) => String(option?.value)}
                 OptionTemplate={ForCodeAutocompleteOptionTemplate}
                 allowFreeText={false}
                 clearSuggestionsOnClose={false}
