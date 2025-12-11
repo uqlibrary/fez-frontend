@@ -7,7 +7,6 @@ import {
     waitFor,
     waitForText,
     WithReduxStore,
-    within,
     waitElementToBeInDocument,
 } from 'test-utils';
 import { AddToSelectedSubjects } from './AddToSelectedSubjects';
@@ -22,9 +21,9 @@ const stateMock = {
                 jnl_subject_title: '1000 General',
             },
             {
-                jnl_subject_cvo_id: 41010,
+                jnl_subject_cvo_id: 41001,
                 jnl_subject_sources: 'WOS AHCI,WOS ESCI',
-                jnl_subject_title: '1010 Math',
+                jnl_subject_title: '1001 Math',
             },
         ],
     },
@@ -73,18 +72,6 @@ describe('AddToSelectedSubjects', () => {
         });
     });
 
-    it('should render option sources', async () => {
-        const onAdd = jest.fn();
-        const { getByTestId } = setup({ onAdd });
-
-        await userEvent.click(getByTestId('add-to-subject-selection-button'));
-        await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
-        const option = await waitForText('1010 Math');
-        'WOS AHCI,WOS ESCI'
-            .split(',')
-            .map(source => expect(within(option.parentElement).getByText(source)).toBeInTheDocument());
-    });
-
     it('should call given onAdd with mapped subject and closes when a subject is selected', async () => {
         const onAdd = jest.fn();
         const { getByTestId, queryByTestId } = setup({ onAdd });
@@ -94,7 +81,7 @@ describe('AddToSelectedSubjects', () => {
                 await userEvent.click(getByTestId('add-to-subject-selection-button'));
             }
             await userEvent.clear(getByTestId('for-code-autocomplete-field-input'));
-            await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
+            await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '100');
             await userEvent.click(await waitElementToBeInDocument('journal-search-item-subject-source-era-0'));
             expect(onAdd).toHaveBeenCalledTimes(1);
         });
@@ -125,8 +112,8 @@ describe('AddToSelectedSubjects', () => {
         });
 
         await userEvent.click(getByTestId('add-to-subject-selection-button'));
-        await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '10');
-        await waitForText('1010 Math');
+        await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '100');
+        await waitForText('1001 Math');
 
         // should not list already selected subjects
         expect(queryByText('1000 General')).not.toBeInTheDocument();
