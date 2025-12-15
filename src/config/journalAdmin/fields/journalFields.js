@@ -3,7 +3,7 @@ export default {
         {
             groups: [
                 ['jnl_title'],
-                ['abbreviatedTitle'],
+                ['jnl_abbrev_title'],
                 ['jnl_publisher'],
                 ['refereed', 'publicationYear', 'publicationFrequency'],
                 ['publicationFormats'],
@@ -36,9 +36,9 @@ export default {
             groups: [['doaj']],
         },
     ],
-    indexed: () => [
+    listed: () => [
         {
-            groups: [['indexed']],
+            groups: [['listed']],
         },
     ],
 };
