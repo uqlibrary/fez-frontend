@@ -3,7 +3,7 @@ export default {
         {
             groups: [
                 ['jnl_title'],
-                ['abbreviatedTitle'],
+                ['jnl_abbrev_title'],
                 ['jnl_publisher'],
                 ['refereed', 'publicationYear', 'publicationFrequency'],
                 ['publicationFormats'],

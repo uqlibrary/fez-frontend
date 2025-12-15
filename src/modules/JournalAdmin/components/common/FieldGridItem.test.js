@@ -156,4 +156,15 @@ describe('FieldGridItem without record', () => {
         });
         expect(getByTestId('jnl_title-input')).toBeInTheDocument();
     });
+
+    it('should render with unrecognised journal display type', () => {
+        useJournalContext.mockImplementation(() => ({
+            jnlDisplayType: 'unknown',
+        }));
+
+        const { getByTestId } = setup({
+            field: 'jnl_title',
+        });
+        expect(getByTestId('jnl_title-input')).toBeInTheDocument();
+    });
 });

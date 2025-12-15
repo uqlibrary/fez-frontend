@@ -71,8 +71,8 @@ export default {
     jnl_title: {
         getValue: journal => getValueFromKey(journal, 'jnl_title') ?? '',
     },
-    abbreviatedTitle: {
-        getValue: journal => getValueFromSubKey(journal, 'fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title'),
+    jnl_abbrev_title: {
+        getValue: journal => getValueFromKey(journal, 'jnl_abbrev_title'),
     },
     jnl_publisher: {
         getValue: journal => getValueFromKey(journal, 'jnl_publisher') ?? '',

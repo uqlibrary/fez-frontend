@@ -6,8 +6,8 @@ import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 
 import { default as InfoSection } from 'modules/ViewJournal/components/Section';
-import { viewJournalConfig } from 'config/viewJournal';
-import AdvisoryStatementFields from '../../modules/JournalAdmin/components/AdvisoryStatementFields';
+import { getAbbrevTitle, viewJournalConfig } from 'config/viewJournal';
+import AdvisoryStatementFields from 'modules/JournalAdmin/components/AdvisoryStatementFields';
 
 export default {
     default: {
@@ -22,16 +22,14 @@ export default {
                 required: true,
             },
         },
-        abbreviatedTitle: {
+        jnl_abbrev_title: {
             component: GenericTextField,
             componentProps: {
-                textFieldId: 'jnl_jcr_scie_abbrev_title',
-                name: 'adminSection.abbreviatedTitle',
+                textFieldId: 'jnl_abbrev_title',
+                name: 'adminSection.jnl_abbrev_title',
                 fullWidth: true,
                 label: 'ISO abbreviated title',
                 placeholder: '',
-                disabled: true,
-                inputProps: { readOnly: true },
                 required: false,
             },
         },
@@ -204,5 +202,11 @@ export default {
             },
         },
     },
-    override: {},
+    override: {
+        ['adminjournal']: {
+            jnl_abbrev_title: ({ journalDetails }) => ({
+                placeholder: journalDetails ? getAbbrevTitle(journalDetails) : '',
+            }),
+        },
+    },
 };

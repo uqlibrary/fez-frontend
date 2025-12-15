@@ -8,6 +8,8 @@ import { fieldConfig } from 'config/admin';
 import { NTRO_SUBTYPES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, SUBTYPE_NON_NTRO } from 'config/general';
 import { useRecordContext } from 'context';
 
+import { default as Controller } from './AdminController';
+
 export const FieldGridItem = ({ field, group, disabled, ...props }) => {
     const { record } = useRecordContext();
     const form = useFormContext();
@@ -45,6 +47,7 @@ export const FieldGridItem = ({ field, group, disabled, ...props }) => {
             <Field
                 name={componentProps.name}
                 control={form.control}
+                controller={Controller}
                 component={fieldConfig.default[field].component}
                 disabled={disabled}
                 {...componentProps}

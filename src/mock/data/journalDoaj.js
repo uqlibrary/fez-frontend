@@ -2,6 +2,7 @@ export const journalDoaj = {
     "data": {
         "jnl_jid": 12,
         "jnl_title": "Advanced Nonlinear Studies",
+        "jnl_abbrev_title": null,
         "jnl_publisher": "Walter de Gruyter GmbH",
         "jnl_source_id_era": "13",
         "jnl_created_date": "2021-02-22 00:56:49",
