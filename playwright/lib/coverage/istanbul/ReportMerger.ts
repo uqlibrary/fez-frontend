@@ -10,6 +10,7 @@ import {CoverageMap, createCoverageMap} from 'istanbul-lib-coverage';
 import {createContext} from 'istanbul-lib-report';
 import {create as createReporter} from 'istanbul-reports';
 import {ReporterDescription} from "@playwright/test";
+import * as process from "node:process";
 
 export type Config = {
     bailOnTestFailure: boolean | undefined
@@ -20,7 +21,7 @@ export type Config = {
     jsonPartialsDir: string | undefined
 } | undefined;
 
-export default class Reporter implements Base {
+export default class ReportMerger implements Base {
     public baseDir: string;
     public config: Config;
 
@@ -33,7 +34,11 @@ export default class Reporter implements Base {
     }
 
     async onEnd(testResult: FullResult) {
-        if (process?.env?.NODE_ENV !== 'cc' || testResult.status === 'interrupted') return;
+        if (process?.env?.NODE_ENV !== 'cc' || testResult.status === 'interrupted' ||
+            // when sharding tests, make sure to only merge cc report partials when all shards have been processed
+            (process?.env?.PW_SHARD_INDEX && !process?.env?.PW_IS_LAST_SHARD)) {
+            return;
+        }
         if (this.config === undefined || !this.config.outputDir) {
             console.log(`\nSkipping Istanbul Coverage Merger ... misconfigured, please check it's configuration\n`);
             return;
