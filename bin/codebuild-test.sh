@@ -7,7 +7,7 @@ export COMMIT_INFO_MESSAGE=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format
 export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend/executions/${CI_BUILD_NUMBER}"
 export TZ='Australia/Brisbane'
 export PW_CC_REPORT_FILENAME="coverage-final-${PIPE_NUM}.json"
-export PW_SHARD_COUNT=10
+export PW_SHARD_COUNT=20
 
 # Run CC only on these branches
 # NB: These branches will require 3 pipelines to run all tests, branches not in this list require only 2.
@@ -116,12 +116,12 @@ case "$PIPE_NUM" in
 "1")
     npm run start:mock &
     install_pw_deps
-    run_pw_tests 1 3
+    run_pw_tests 1 6
 ;;
 "2")
     npm run start:mock &
     install_pw_deps
-    run_pw_tests 4 10
+    run_pw_tests 7 20
 ;;
 "3")
     set -e
