@@ -116,12 +116,12 @@ case "$PIPE_NUM" in
 "1")
     npm run start:mock &
     install_pw_deps
-    run_pw_tests 1 6
+    run_pw_tests 1 7
 ;;
 "2")
     npm run start:mock &
     install_pw_deps
-    run_pw_tests 7 20
+    run_pw_tests 8 20
 ;;
 "3")
     set -e
