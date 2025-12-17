@@ -12,11 +12,9 @@ env:
 phases:
   install:
     runtime-versions:
-      java: corretto17
       nodejs: 20
     commands:
       - n 20
-      # - command
   pre_build:
     commands:
       sysctl fs.inotify.max_user_watches &&
@@ -30,22 +28,8 @@ phases:
       set &&
       npm run build &&
       ls dist
-  #post_build:
-    #commands:
-      #if [ -f ./scripts/releaseNotes.sh ]; then ./scripts/releaseNotes.sh; fi
-#reports:
-  #report-name-or-arn:
-    #files:
-      # - location
-      # - location
-    #base-directory: location
-    #discard-paths: yes
-    #file-format: JunitXml | CucumberJson
 artifacts:
   files:
     - '**/*'
   name: fez-frontend-build.zip
   base-directory: dist
-#cache:
-  #paths:
-    # - paths

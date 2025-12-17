@@ -1,9 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
-import { Config as IstanbulMergerConfig } from './playwright/lib/coverage/istanbul/Reporter';
+import { Config as IstanbulMergerConfig } from './playwright/lib/coverage/istanbul/ReportMerger';
 import { baseURL, istanbulReportPartialsDir } from './playwright/lib/constants';
+import * as process from 'node:process';
 
 export default defineConfig({
-    outputDir: 'playwright/.results',
+    outputDir: `playwright/.results/${process.env.PW_SHARD_INDEX || ''}`,
     testDir: 'playwright/tests',
     timeout: 120_000,
     expect: {
@@ -17,7 +18,7 @@ export default defineConfig({
     reporter: [
         ['list'],
         [
-            './playwright/lib/coverage/istanbul/Reporter.ts',
+            './playwright/lib/coverage/istanbul/ReportMerger.ts',
             {
                 outputDir: 'coverage/playwright',
                 jsonPartialsDir: istanbulReportPartialsDir,
@@ -30,8 +31,9 @@ export default defineConfig({
         trace: 'retain-on-failure',
         headless: process.env.PW_HEADED === 'true' ? false : true,
         ignoreHTTPSErrors: true,
+        bypassCSP: true,
         launchOptions: {
-            args: ['--disable-web-security'],
+            args: ['--disable-web-security', '--disable-ipv6'],
         },
     },
     projects: [
