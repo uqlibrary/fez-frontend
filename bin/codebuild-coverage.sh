@@ -9,11 +9,10 @@ fi
 
 # Copy output artifact test reports into common location
 mkdir -p coverage/all
-cp $CODEBUILD_SRC_DIR_TestArtifact1/coverage/playwright/coverage-final-1.json coverage/all/playwright-1.json
-cp $CODEBUILD_SRC_DIR_TestArtifact2/coverage/playwright/coverage-final-2.json coverage/all/playwright-2.json
-cp $CODEBUILD_SRC_DIR_TestArtifact3/coverage/jest/coverage-final.json coverage/all/jest.json
-cp $CODEBUILD_SRC_DIR_TestArtifact3/coverage/jest-serial/coverage-final.json coverage/all/jest-serial.json
-
+cp "${CODEBUILD_SRC_DIR_TestArtifact1}/coverage/playwright/coverage-final.json" coverage/all/playwright-1.json
+cp "${CODEBUILD_SRC_DIR_TestArtifact2}/coverage/playwright/coverage-final.json" coverage/all/playwright-2.json
+cp "${CODEBUILD_SRC_DIR_TestArtifact3}/coverage/jest/coverage-final.json" coverage/all/jest.json
+cp "${CODEBUILD_SRC_DIR_TestArtifact3}/coverage/jest-serial/coverage-final.json" coverage/all/jest-serial.json
 
 # Combine reports into single json file
 nyc merge coverage/all coverage/merged-coverage.json
