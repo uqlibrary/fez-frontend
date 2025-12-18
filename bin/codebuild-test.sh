@@ -102,7 +102,7 @@ function run_pw_tests() {
 
 function run_pw_test_shard() {
     local SHARD_INDEX="${1-PW_SHARD_INDEX}"
-    if [[ $CODE_COVERAGE_REQUIRED != 1 ]]; then
+    if [[ $CODE_COVERAGE_REQUIRED != true ]]; then
         npm run test:e2e -- --shard="${SHARD_INDEX}/${PW_SHARD_COUNT}"
         return 0
     fi
