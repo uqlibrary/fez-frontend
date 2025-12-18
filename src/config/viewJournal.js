@@ -482,33 +482,21 @@ export const viewJournalConfig = {
                         {
                             heading: 'Ranking',
                             fieldId: 'jnl-jcr-scie-category-ranking',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_scie_category_ranking'],
-                                },
-                            ],
+                            getData: jcrDetail => jcrDetail.jnl_jcr_scie_category_ranking ?? 'N/A',
                         },
                     ],
                     [
                         {
                             heading: 'Quartile',
                             fieldId: 'jnl-jcr-scie-category-quartile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_scie_category_quartile'],
-                                },
-                            ],
+                            getData: jcrDetail => jcrDetail.jnl_jcr_scie_category_quartile ?? 'N/A',
                         },
                     ],
                     [
                         {
                             heading: 'JIF Percentile',
                             fieldId: 'jnl-jcr-scie-category-jif-percentile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_scie_category_jif_percentile'],
-                                },
-                            ],
+                            getData: jcrDetail => jcrDetail.jnl_jcr_scie_category_jif_percentile ?? 'N/A',
                         },
                     ],
                 ],
@@ -605,33 +593,21 @@ export const viewJournalConfig = {
                         {
                             heading: 'Ranking',
                             fieldId: 'jnl-jcr-ssci-category-ranking',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_ssci_category_ranking'],
-                                },
-                            ],
+                            getData: jcrDetail => jcrDetail.jnl_jcr_ssci_category_ranking ?? 'N/A',
                         },
                     ],
                     [
                         {
                             heading: 'Quartile',
                             fieldId: 'jnl-jcr-ssci-category-quartile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_ssci_category_quartile'],
-                                },
-                            ],
+                            getData: jcrDetail => jcrDetail.jnl_jcr_ssci_category_quartile ?? 'N/A',
                         },
                     ],
                     [
                         {
                             heading: 'JIF Percentile',
                             fieldId: 'jnl-jcr-ssci-category-jif-percentile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_ssci_category_jif_percentile'],
-                                },
-                            ],
+                            getData: jcrDetail => jcrDetail.jnl_jcr_ssci_category_jif_percentile ?? 'N/A',
                         },
                     ],
                 ],
@@ -728,33 +704,21 @@ export const viewJournalConfig = {
                         {
                             heading: 'Ranking',
                             fieldId: 'jnl-jcr-ahci-category-ranking',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_ahci_category_ranking'],
-                                },
-                            ],
+                            getData: jcrDetail => jcrDetail.jnl_jcr_ahci_category_ranking ?? 'N/A',
                         },
                     ],
                     [
                         {
                             heading: 'Quartile',
                             fieldId: 'jnl-jcr-ahci-category-quartile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_ahci_category_quartile'],
-                                },
-                            ],
+                            getData: jcrDetail => jcrDetail.jnl_jcr_ahci_category_quartile ?? 'N/A',
                         },
                     ],
                     [
                         {
                             heading: 'JIF Percentile',
                             fieldId: 'jnl-jcr-ahci-category-jif-percentile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_ahci_category_jif_percentile'],
-                                },
-                            ],
+                            getData: jcrDetail => jcrDetail.jnl_jcr_ahci_category_jif_percentile ?? 'N/A',
                         },
                     ],
                 ],
@@ -851,33 +815,21 @@ export const viewJournalConfig = {
                         {
                             heading: 'Ranking',
                             fieldId: 'jnl-jcr-esci-category-ranking',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_esci_category_ranking'],
-                                },
-                            ],
+                            getData: jcrDetail => jcrDetail.jnl_jcr_esci_category_ranking ?? 'N/A',
                         },
                     ],
                     [
                         {
                             heading: 'Quartile',
                             fieldId: 'jnl-jcr-esci-category-quartile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_esci_category_quartile'],
-                                },
-                            ],
+                            getData: jcrDetail => jcrDetail.jnl_jcr_esci_category_quartile ?? 'N/A',
                         },
                     ],
                     [
                         {
                             heading: 'JIF Percentile',
                             fieldId: 'jnl-jcr-esci-category-jif-percentile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_esci_category_jif_percentile'],
-                                },
-                            ],
+                            getData: jcrDetail => jcrDetail.jnl_jcr_esci_category_jif_percentile ?? 'N/A',
                         },
                     ],
                 ],

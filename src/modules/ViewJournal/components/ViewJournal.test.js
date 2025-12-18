@@ -258,8 +258,8 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-jcr-scie-category-quartile-header')).toHaveTextContent('Quartile');
         expect(getByTestId('jnl-jcr-scie-category-quartile-value')).toHaveTextContent('Q2');
 
-        expect(queryByTestId('jnl-jcr-scie-category-jif-percentile-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-jcr-scie-category-jif-percentile-value')).not.toBeInTheDocument();
+        expect(getByTestId('jnl-jcr-scie-category-jif-percentile-header')).toHaveTextContent('JIF Percentile');
+        expect(getByTestId('jnl-jcr-scie-category-jif-percentile-value')).toHaveTextContent('N/A');
 
         // ******************************************************************
         // Clarivate Journal Citation Reports - Social Science Citation index
@@ -342,8 +342,8 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-jcr-ahci-category-quartile-header')).toHaveTextContent('Quartile');
         expect(getByTestId('jnl-jcr-ahci-category-quartile-value')).toHaveTextContent('N/A');
 
-        expect(queryByTestId('jnl-jcr-ahci-category-jif-percentile-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-jcr-ahci-category-jif-percentile-value')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-jcr-ahci-category-jif-percentile-header')).toHaveTextContent('JIF Percentile');
+        expect(queryByTestId('jnl-jcr-ahci-category-jif-percentile-value')).toHaveTextContent('N/A');
 
         // ***********************************************************
         // Clarivate Journal Citation Reports - Emerging Sources Citation Index
@@ -384,8 +384,8 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-jcr-esci-category-quartile-header')).toHaveTextContent('Quartile');
         expect(getByTestId('jnl-jcr-esci-category-quartile-value')).toHaveTextContent('Q4');
 
-        expect(queryByTestId('jnl-jcr-esci-category-jif-percentile-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-jcr-esci-category-jif-percentile-value')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-jcr-esci-category-jif-percentile-header')).toHaveTextContent('JIF Percentile');
+        expect(queryByTestId('jnl-jcr-esci-category-jif-percentile-value')).toHaveTextContent('N/A');
 
         // ******************************************************************
         // Elsevier CiteScore
