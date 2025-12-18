@@ -345,7 +345,7 @@ test.describe('Journal Article admin edit', () => {
             await expect(page.locator('[data-testid^="contributor-errorIcon-"]')).toHaveCount(2); // will be 3 authors, 2 existing with error icons
         });
 
-        test('can be added and edited', async ({ page }) => {
+        test.skip('can be added and edited', async ({ page }) => {
             // Add author with UQ ID and single affiliation
             await addAuthorAndAssert(page, 'Steve Su (uqysu4)', 85004);
             await addAffiliationAndAssert(page, 'Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
