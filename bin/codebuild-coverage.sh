@@ -14,6 +14,7 @@ cp "${CODEBUILD_SRC_DIR_TestArtifact2}/coverage/playwright/coverage-final.json" 
 cp "${CODEBUILD_SRC_DIR_TestArtifact3}/coverage/jest/coverage-final.json" coverage/all/jest.json
 cp "${CODEBUILD_SRC_DIR_TestArtifact3}/coverage/jest-serial/coverage-final.json" coverage/all/jest-serial.json
 
+npm install -g nyc
 # Combine reports into single json file
 nyc merge coverage/all coverage/merged-coverage.json
 

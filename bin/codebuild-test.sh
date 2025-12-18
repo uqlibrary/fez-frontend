@@ -102,7 +102,7 @@ function run_pw_tests() {
 
 function run_pw_test_shard() {
     local SHARD_INDEX="${1-PW_SHARD_INDEX}"
-    if [[ $CODE_COVERAGE_REQUIRED != 1 ]]; then
+    if [[ $CODE_COVERAGE_REQUIRED != true ]]; then
         npm run test:e2e -- --shard="${SHARD_INDEX}/${PW_SHARD_COUNT}"
         return 0
     fi
@@ -126,7 +126,7 @@ case "$PIPE_NUM" in
 "3")
     set -e
     printf "\n\n--- INSTALL JEST ---\n"
-    npm install -g jest nyc
+    npm install -g jest
     printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
         export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
