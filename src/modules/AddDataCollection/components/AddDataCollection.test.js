@@ -1,9 +1,10 @@
 import React from 'react';
-import AddDataCollection, { licenseText } from './AddDataCollection';
+import AddDataCollection, { licenseText, validateDOI } from './AddDataCollection';
 import { render, WithReduxStore, WithMemoryRouter, fireEvent, waitFor, screen } from 'test-utils';
 import { useValidatedForm } from 'hooks';
 import userEvent from '@testing-library/user-event';
 import { useWatch } from 'react-hook-form';
+import * as actions from 'actions/search';
 
 /* eslint-disable react/prop-types */
 jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
@@ -154,5 +155,25 @@ describe('AddDataCollection test', () => {
 
         // licence text lacks required internal structure
         expect(licenseText(['something'])).toMatchSnapshot();
+    });
+
+    describe('validateDOI', () => {
+        let spy;
+        beforeEach(() => {
+            spy = jest.spyOn(actions, 'doesDOIExist');
+        });
+        afterAll(() => jest.resetAllMocks());
+        it('should return null when doi data is not available ', async () => {
+            expect(await validateDOI()).toBe(null);
+            expect(await validateDOI({})).toBe(null);
+            expect(await validateDOI({ fez_record_search_key_doi: null })).toBe(null);
+            expect(await validateDOI({ fez_record_search_key_doi: {} })).toBe(null);
+            expect(spy).not.toHaveBeenCalled();
+        });
+
+        it('should return not return null when doi data is available', async () => {
+            await validateDOI({ fez_record_search_key_doi: { rek_doi: '10.100/abc.d' } });
+            expect(spy).toHaveBeenCalled();
+        });
     });
 });
