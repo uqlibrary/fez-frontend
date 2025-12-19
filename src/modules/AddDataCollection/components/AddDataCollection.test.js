@@ -68,9 +68,6 @@ describe('AddDataCollection test mocking hooks', () => {
         let counter = 0;
         useValidatedForm.mockImplementation(() => ({
             handleSubmit: jest.fn(),
-            // watch: () =>
-            //     // startDate, endDate, watchedDoiField
-            //     ['2025-01-01', '2025-02-01', '10.1037/arc0000014'],
             setError: jest.fn(),
             control: {
                 values: {
@@ -113,9 +110,6 @@ describe('AddDataCollection test', () => {
     beforeAll(() => {
         const { useValidatedForm: originalUseValidatedForm } = jest.requireActual('hooks');
         useValidatedForm.mockImplementation(originalUseValidatedForm);
-    });
-    afterAll(() => {
-        // mockUseNavigate.mockClear();
     });
 
     it('should render data set form', () => {

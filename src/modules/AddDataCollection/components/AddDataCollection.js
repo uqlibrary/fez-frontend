@@ -190,7 +190,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
 
     const dispatch = useDispatch();
     const onSubmit = async data => {
-        const errorDoi = await validateDOI(data.fez_record_search_key_doi.rek_doi);
+        const errorDoi = await validateDOI(data?.fez_record_search_key_doi?.rek_doi);
         if (errorDoi) {
             setApiError(errorDoi);
             return;
