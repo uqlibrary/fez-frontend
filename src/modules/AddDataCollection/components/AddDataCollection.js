@@ -76,7 +76,7 @@ export const licenseText = licenses => {
 export const validateDOI = async data => {
     if (!data?.fez_record_search_key_doi?.rek_doi) return null;
     try {
-        const response = await doesDOIExist(data);
+        const response = await doesDOIExist(data.fez_record_search_key_doi.rek_doi);
         return response?.total ? validationErrors.validationErrors.doiExists : null;
     } catch (error) {
         return locale.validationErrors.doi;

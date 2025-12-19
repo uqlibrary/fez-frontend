@@ -172,8 +172,9 @@ describe('AddDataCollection test', () => {
         });
 
         it('should return not return null when doi data is available', async () => {
-            await validateDOI({ fez_record_search_key_doi: { rek_doi: '10.100/abc.d' } });
-            expect(spy).toHaveBeenCalled();
+            const doi = '10.100/abc.d';
+            await validateDOI({ fez_record_search_key_doi: { rek_doi: doi } });
+            expect(spy).toHaveBeenCalledWith(doi);
         });
     });
 });
