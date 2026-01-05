@@ -1856,6 +1856,9 @@ export const COLLECTION_VIEW_TYPE = [
 /** journalAdmin  */
 export const ADMIN_JOURNAL = 'adminjournal';
 
+/** journalSearch  */
+export const JOURNAL_SEARCH_OPERANDS = ['OR', 'AND', 'NOT'];
+
 /** Links */
 export const dataTeamCollections = ['UQ:06510ce'];
 
