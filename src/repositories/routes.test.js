@@ -928,9 +928,9 @@ describe('Backend routes method', () => {
         expect(
             routes.JOURNAL_SEARCH_API({
                 keywords: [
-                    { type: 'Title', text: 'apple' },
-                    { type: 'Keyword', text: 'apple' },
-                    { type: 'Subject', text: 'apple', cvoId: 12345 },
+                    { type: 'Title', text: 'apple', operand: 'AND' },
+                    { type: 'Keyword', text: 'apple', operand: 'OR' },
+                    { type: 'Subject', text: 'apple', cvoId: 12345, operand: 'OR' },
                 ],
             }),
         ).toEqual({
@@ -938,28 +938,7 @@ describe('Backend routes method', () => {
             options: {
                 params: {
                     ...commonQueryParams,
-                    description: ['apple'],
-                    subject: [12345],
-                    title: ['apple'],
-                },
-            },
-        });
-
-        expect(
-            routes.JOURNAL_SEARCH_API({
-                keywords: [
-                    { type: 'unknown', text: 'apple' },
-                    { type: 'Title', text: 'apple' },
-                ],
-            }),
-        ).toEqual({
-            apiUrl: 'journals/search',
-            options: {
-                params: {
-                    ...commonQueryParams,
-                    description: [],
-                    subject: [],
-                    title: ['apple'],
+                    query: 'title:apple OR description:apple OR subject:12345',
                 },
             },
         });
@@ -972,7 +951,7 @@ describe('Backend routes method', () => {
         ).toEqual({
             apiUrl: 'journals/search',
             options: {
-                params: { ...commonQueryParams, description: [], subject: [], title: ['apple'], per_page: 20 }, // per_page should be 20, not 1
+                params: { ...commonQueryParams, query: 'title:apple', per_page: 20 }, // per_page should be 20, not 1
             },
         });
     });
@@ -1001,9 +980,9 @@ describe('Backend routes method', () => {
             routes.JOURNAL_FAVOURITES_API({
                 query: {
                     keywords: [
-                        { type: 'Title', text: 'apple' },
-                        { type: 'Keyword', text: 'apple' },
-                        { type: 'Subject', text: 'apple', cvoId: 12345 },
+                        { type: 'Title', text: 'apple', operand: 'AND' },
+                        { type: 'Keyword', text: 'apple', operand: 'OR' },
+                        { type: 'Subject', text: 'apple', cvoId: 12345, operand: 'OR' },
                     ],
                 },
             }),
@@ -1012,9 +991,7 @@ describe('Backend routes method', () => {
             options: {
                 params: {
                     ...commonQueryParams,
-                    description: ['apple'],
-                    subject: [12345],
-                    title: ['apple'],
+                    query: 'title:apple OR description:apple OR subject:12345',
                 },
             },
         });
