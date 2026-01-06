@@ -34,7 +34,7 @@ export const filterNonValidKeywords = keywords => {
 export const getKeywordKey = keyword =>
     keyword.cvoId ? `${keyword.type}-${keyword.cvoId}` : `${keyword.type}-${keyword.text.replace(/ /g, '-')}`;
 
-export const useSelectedKeywords = (initialKeywords = {}) => {
+export const useSelectedKeywords = initialKeywords => {
     const [selectedKeywords, setSelectedKeywords] = React.useState(filterNonValidKeywords(initialKeywords));
 
     const handleKeywordAdd = React.useCallback(keyword => {
@@ -168,7 +168,7 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
     const searchQueryParams = deparam(location.search.substr(1));
     searchQueryParams.keywords = filterNonValidKeywords(searchQueryParams.keywords);
 
-    Object.keys(searchQueryParams.keywords || {}).map(
+    Object.keys(searchQueryParams.keywords).map(
         key =>
             (searchQueryParams.keywords[key].operand =
                 searchQueryParams.keywords[key].operand ?? getDefaultOperand(searchQueryParams.keywords[key].type)),
