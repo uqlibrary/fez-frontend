@@ -30,7 +30,7 @@ export const SearchJournals = () => {
     const location = useLocation();
     const dispatch = useDispatch();
     const { journalSearchQueryParams, handleSearch } = useJournalSearch();
-    const initialKeywords = React.useRef(filterNonValidKeywords(journalSearchQueryParams?.keywords || {}));
+    const initialKeywords = React.useRef(filterNonValidKeywords(journalSearchQueryParams?.keywords));
     const {
         selectedKeywords,
         setSelectedKeywords,
