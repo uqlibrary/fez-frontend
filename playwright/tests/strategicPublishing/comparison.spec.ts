@@ -21,7 +21,7 @@ test.describe('Strategic Publishing - Comparison', () => {
         // steps required to get to the comparison page with journals
         const uri = '/journals/search/';
         const query =
-            '?keywords%5BTitle-Microbiology%5D%5Btype%5D=Title&keywords%5BTitle-Microbiology%5D%5Btext%5D=Microbiology&keywords%5BTitle-Microbiology%5D%5Bid%5D=Title-Microbiology';
+            '?keywords%5BTitle-Microbiology%5D%5Btype%5D=Title&keywords%5BTitle-Microbiology%5D%5Btext%5D=Microbiology&keywords%5BTitle-Microbiology%5D%5Bid%5D=Title-Microbiology&keywords%5BTitle-Microbiology%5D%5Boperand%5D=OR';
         await page.goto(`${uri}${query}`);
 
         // wait until the progress spinner is no longer in the document

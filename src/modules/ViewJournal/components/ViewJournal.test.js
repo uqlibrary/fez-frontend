@@ -499,7 +499,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-uq-author-publications-value')).toHaveTextContent('View these articles in UQ eSpace');
         expect(getByTestId('jnl-uq-author-publications-lookup-link')).toHaveAttribute(
             'href',
-            'http://localhost/records/search?activeFacets[ranges][Year+published][from]=2020&activeFacets[ranges][Year+published][to]=2025&searchQueryParams[mtj_jnl_id][value]=8508&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
+            'http://localhost/records/search?activeFacets[ranges][Year+published][from]=2021&activeFacets[ranges][Year+published][to]=2026&searchQueryParams[mtj_jnl_id][value]=8508&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
         );
 
         expect(getByTestId('jnl-editorial-staff-header')).toHaveTextContent('UQ Editorial Staff');

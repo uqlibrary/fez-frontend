@@ -5,8 +5,14 @@ import deparam from 'can-deparam';
 import param from 'can-param';
 import { exportJournals } from 'actions/journals';
 import { pathConfig } from 'config';
+import { getDefaultOperand } from 'helpers/journalSearch';
+import { JOURNAL_SEARCH_OPERANDS } from 'config/general';
 
-export const isValidKeyword = keyword => typeof keyword === 'object' && keyword.id && keyword.type && keyword.text;
+export const isValidKeyword = keyword =>
+    typeof keyword === 'object' && keyword.id && keyword.type && keyword.text && keyword.operand
+        ? JOURNAL_SEARCH_OPERANDS.includes(keyword.operand)
+        : true;
+
 export const filterNonValidKeywords = keywords => {
     if (typeof keywords !== 'object') {
         return {};
@@ -21,7 +27,7 @@ export const filterNonValidKeywords = keywords => {
         }, {});
 };
 
-export const useSelectedKeywords = (initialKeywords = {}) => {
+export const useSelectedKeywords = initialKeywords => {
     const [selectedKeywords, setSelectedKeywords] = React.useState(filterNonValidKeywords(initialKeywords));
 
     const getKeywordKey = keyword =>
@@ -30,7 +36,11 @@ export const useSelectedKeywords = (initialKeywords = {}) => {
     const handleKeywordAdd = React.useCallback(keyword => {
         setSelectedKeywords(prevSelectedKeywords => ({
             ...prevSelectedKeywords,
-            [getKeywordKey(keyword)]: { ...keyword, id: getKeywordKey(keyword) },
+            [getKeywordKey(keyword)]: {
+                ...keyword,
+                id: getKeywordKey(keyword),
+                operand: getDefaultOperand(keyword.type),
+            },
         }));
     }, []);
 
@@ -44,12 +54,23 @@ export const useSelectedKeywords = (initialKeywords = {}) => {
         [],
     );
 
+    const handleKeywordUpdate = React.useCallback(
+        keyword =>
+            setSelectedKeywords(prevSelectedKeywords => {
+                const newSelectedKeywords = { ...prevSelectedKeywords };
+                newSelectedKeywords[keyword.id] = { ...keyword };
+                return { ...newSelectedKeywords };
+            }),
+        [],
+    );
+
     const hasAnySelectedKeywords = selectedKeywords && Object.values(selectedKeywords).length > 0;
 
     return {
         selectedKeywords,
         setSelectedKeywords,
         handleKeywordAdd,
+        handleKeywordUpdate,
         handleKeywordDelete,
         hasAnySelectedKeywords,
     };
@@ -127,6 +148,13 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
     const navigate = useNavigate();
     const location = useLocation();
     const searchQueryParams = deparam(location.search.substr(1));
+    searchQueryParams.keywords = filterNonValidKeywords(searchQueryParams.keywords);
+
+    Object.keys(searchQueryParams.keywords).map(
+        key =>
+            (searchQueryParams.keywords[key].operand =
+                searchQueryParams.keywords[key].operand ?? getDefaultOperand(searchQueryParams.keywords[key].type)),
+    );
 
     const journalSearchQueryParams = {
         ...searchQueryParams,
