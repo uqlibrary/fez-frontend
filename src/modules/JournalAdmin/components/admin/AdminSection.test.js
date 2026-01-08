@@ -65,6 +65,21 @@ describe('AdminSection component', () => {
         });
     });
 
+    it('should render abbrev title placeholder', () => {
+        useJournalContext.mockImplementation(() => ({
+            jnlDisplayType: ADMIN_JOURNAL,
+            journalDetails: {
+                ...journalDoaj.data,
+            },
+        }));
+
+        const { getByTestId } = setup();
+
+        expect(getByTestId('jnl_abbrev_title-input').getAttribute('placeholder')).toBe(
+            journalDoaj.data.fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title,
+        );
+    });
+
     it('should render disabled view', () => {
         fieldIds = allFields
             .filter(props => props.name.includes('adminSection.'))

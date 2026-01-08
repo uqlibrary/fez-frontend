@@ -39,7 +39,7 @@ describe('hooks', () => {
                     readAndPublishSection: expect.objectContaining({ readAndPublishPublisher: 'De Gruyter' }),
                     uqDataSection: expect.objectContaining({ authors: { count: 0, id: 12 } }),
                     doajSection: expect.objectContaining({ jnl_doaj_title: 'Advanced Nonlinear Studies' }),
-                    indexedSection: expect.objectContaining({ scopus: true, pubmed: false }),
+                    listedSection: expect.objectContaining({ pubmed: false }),
                 }),
                 locked: false,
             }),

@@ -1,15 +1,14 @@
 import Immutable from 'immutable';
 import { validation } from 'config';
 import locale from 'locale/components';
-import { viewJournalConfig } from 'config/viewJournal';
 import { BOOLEAN_OPTIONS, CAPPED_OPTIONS, S2O_OPTIONS } from 'config/general';
 import { journalAdminFields } from 'locale/journalAdminFields';
-import { IssnForm, NewListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { IssnForm, NewListEditorField, IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { default as InfoSection } from 'modules/ViewJournal/components/Section';
 import AdvisoryStatementFields from 'modules/JournalAdmin/components/AdvisoryStatementFields';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { getAbbrevTitle, viewJournalConfig } from 'config/viewJournal';
 
 export default {
     default: {
@@ -24,16 +23,14 @@ export default {
                 required: true,
             },
         },
-        abbreviatedTitle: {
+        jnl_abbrev_title: {
             component: GenericTextField,
             componentProps: {
-                textFieldId: 'jnl_jcr_scie_abbrev_title',
-                name: 'adminSection.abbreviatedTitle',
+                textFieldId: 'jnl_abbrev_title',
+                name: 'adminSection.jnl_abbrev_title',
                 fullWidth: true,
                 label: 'ISO abbreviated title',
                 placeholder: '',
-                disabled: true,
-                inputProps: { readOnly: true },
                 required: false,
             },
         },
@@ -224,16 +221,22 @@ export default {
                 noRef: true,
             },
         },
-        indexed: {
+        listed: {
             component: InfoSection,
             componentProps: {
-                sectionKey: 'indexed',
-                name: 'indexedSection',
-                sectionConfig: viewJournalConfig.index,
+                sectionKey: 'listed',
+                name: 'listedSection',
+                sectionConfig: viewJournalConfig.listed,
                 wrapped: false,
                 noRef: true,
             },
         },
     },
-    override: {},
+    override: {
+        ['adminjournal']: {
+            jnl_abbrev_title: ({ journalDetails }) => ({
+                placeholder: journalDetails ? getAbbrevTitle(journalDetails) : '',
+            }),
+        },
+    },
 };
