@@ -5,8 +5,8 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  playwright-core: file:./deps/playwright/packages/playwright-core/playwright-core-1.58.0-next.tgz
-  playwright: file:./deps/playwright/packages/playwright/playwright-1.58.0-next.tgz
+  playwright-core: file:./deps/playwright-core-1.58.0-next.tgz
+  playwright: file:./deps/playwright-1.58.0-next.tgz
 
 importers:
 
@@ -14,7 +14,7 @@ importers:
     dependencies:
       '@axe-core/playwright':
         specifier: ^4.10.2
-        version: 4.11.0(playwright-core@file:deps/playwright/packages/playwright-core/playwright-core-1.58.0-next.tgz)
+        version: 4.11.0(playwright-core@file:deps/playwright-core-1.58.0-next.tgz)
       '@babel/runtime':
         specifier: ^7.23.6
         version: 7.28.4
@@ -287,8 +287,8 @@ importers:
         specifier: ^2.21.4
         version: 2.22.6
       '@playwright/test':
-        specifier: file:./deps/playwright/packages/playwright-test/playwright-test-1.58.0-next.tgz
-        version: file:deps/playwright/packages/playwright-test/playwright-test-1.58.0-next.tgz
+        specifier: file:./deps/playwright-test-1.58.0-next.tgz
+        version: file:deps/playwright-test-1.58.0-next.tgz
       '@pmmmwh/react-refresh-webpack-plugin':
         specifier: ^0.5.10
         version: 0.5.17(@types/webpack@4.41.40)(react-refresh@0.14.2)(type-fest@4.41.0)(webpack-dev-server@4.15.2)(webpack@5.104.1)
@@ -470,11 +470,11 @@ importers:
         specifier: ^3.0.5
         version: 3.0.5
       playwright:
-        specifier: file:deps/playwright/packages/playwright/playwright-1.58.0-next.tgz
-        version: file:deps/playwright/packages/playwright/playwright-1.58.0-next.tgz
+        specifier: file:deps/playwright-1.58.0-next.tgz
+        version: file:deps/playwright-1.58.0-next.tgz
       playwright-core:
-        specifier: file:deps/playwright/packages/playwright-core/playwright-core-1.58.0-next.tgz
-        version: file:deps/playwright/packages/playwright-core/playwright-core-1.58.0-next.tgz
+        specifier: file:deps/playwright-core-1.58.0-next.tgz
+        version: file:deps/playwright-core-1.58.0-next.tgz
       postcss-loader:
         specifier: ^4.2.0
         version: 4.3.0(postcss@8.5.6)(webpack@5.104.1)
@@ -2073,8 +2073,8 @@ packages:
     resolution: {integrity: sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@file:deps/playwright/packages/playwright-test/playwright-test-1.58.0-next.tgz':
-    resolution: {integrity: sha512-kcClNnc1OGqRmEn5ATMQnQbBfTMxahjNoImNEEpyV5CwMU3mNk8z6U4tlV9T9v2DEjo5UHhcvFzmawfpJsIA4w==, tarball: file:deps/playwright/packages/playwright-test/playwright-test-1.58.0-next.tgz}
+  '@playwright/test@file:deps/playwright-test-1.58.0-next.tgz':
+    resolution: {integrity: sha512-kcClNnc1OGqRmEn5ATMQnQbBfTMxahjNoImNEEpyV5CwMU3mNk8z6U4tlV9T9v2DEjo5UHhcvFzmawfpJsIA4w==, tarball: file:deps/playwright-test-1.58.0-next.tgz}
     version: 1.58.0-next
     engines: {node: '>=18'}
     hasBin: true
@@ -6158,14 +6158,14 @@ packages:
     resolution: {integrity: sha512-Ie9z/WINcxxLp27BKOCHGde4ITq9UklYKDzVo1nhk5sqGEXU3FpkwP5GM2voTGJkGd9B3Otl+Q4uwSOeSUtOBA==}
     engines: {node: '>=14.16'}
 
-  playwright-core@file:deps/playwright/packages/playwright-core/playwright-core-1.58.0-next.tgz:
-    resolution: {integrity: sha512-mAiZXe4uYHzE+r+pPIOjlP618BLhzTb23xcHXHHRBVzTFX+W0Y73Ze+PeoI2GBOUztoNRmnTS1RXCojkannypw==, tarball: file:deps/playwright/packages/playwright-core/playwright-core-1.58.0-next.tgz}
+  playwright-core@file:deps/playwright-core-1.58.0-next.tgz:
+    resolution: {integrity: sha512-mAiZXe4uYHzE+r+pPIOjlP618BLhzTb23xcHXHHRBVzTFX+W0Y73Ze+PeoI2GBOUztoNRmnTS1RXCojkannypw==, tarball: file:deps/playwright-core-1.58.0-next.tgz}
     version: 1.58.0-next
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@file:deps/playwright/packages/playwright/playwright-1.58.0-next.tgz:
-    resolution: {integrity: sha512-Og3OBTePZJlkrL33i2Vy/QaXWFqVjpSmZnE3g5bPjH2SXr1f/4w4Ov1Og3HOz/cqyWn+O1UdChz7VqHYf7KZAQ==, tarball: file:deps/playwright/packages/playwright/playwright-1.58.0-next.tgz}
+  playwright@file:deps/playwright-1.58.0-next.tgz:
+    resolution: {integrity: sha512-Og3OBTePZJlkrL33i2Vy/QaXWFqVjpSmZnE3g5bPjH2SXr1f/4w4Ov1Og3HOz/cqyWn+O1UdChz7VqHYf7KZAQ==, tarball: file:deps/playwright-1.58.0-next.tgz}
     version: 1.58.0-next
     engines: {node: '>=18'}
     hasBin: true
@@ -7735,10 +7735,10 @@ snapshots:
 
   '@adobe/css-tools@4.4.4': {}
 
-  '@axe-core/playwright@4.11.0(playwright-core@file:deps/playwright/packages/playwright-core/playwright-core-1.58.0-next.tgz)':
+  '@axe-core/playwright@4.11.0(playwright-core@file:deps/playwright-core-1.58.0-next.tgz)':
     dependencies:
       axe-core: 4.11.1
-      playwright-core: file:deps/playwright/packages/playwright-core/playwright-core-1.58.0-next.tgz
+      playwright-core: file:deps/playwright-core-1.58.0-next.tgz
 
   '@babel/cli@7.28.3(@babel/core@7.28.5)':
     dependencies:
@@ -8693,6 +8693,8 @@ snapshots:
       '@ckeditor/ckeditor5-ui': 47.3.0
       '@ckeditor/ckeditor5-utils': 47.3.0
       ckeditor5: 47.3.0
+    transitivePeerDependencies:
+      - supports-color
 
   '@ckeditor/ckeditor5-block-quote@47.3.0':
     dependencies:
@@ -8703,6 +8705,8 @@ snapshots:
       '@ckeditor/ckeditor5-ui': 47.3.0
       '@ckeditor/ckeditor5-utils': 47.3.0
       ckeditor5: 47.3.0
+    transitivePeerDependencies:
+      - supports-color
 
   '@ckeditor/ckeditor5-bookmark@47.3.0':
     dependencies:
@@ -8729,6 +8733,8 @@ snapshots:
       blurhash: 2.0.5
       ckeditor5: 47.3.0
       es-toolkit: 1.39.5
+    transitivePeerDependencies:
+      - supports-color
 
   '@ckeditor/ckeditor5-ckfinder@47.3.0':
     dependencies:
@@ -8749,14 +8755,14 @@ snapshots:
       '@ckeditor/ckeditor5-utils': 47.3.0
       '@ckeditor/ckeditor5-widget': 47.3.0
       es-toolkit: 1.39.5
-    transitivePeerDependencies:
-      - supports-color
 
   '@ckeditor/ckeditor5-cloud-services@47.3.0':
     dependencies:
       '@ckeditor/ckeditor5-core': 47.3.0
       '@ckeditor/ckeditor5-utils': 47.3.0
       ckeditor5: 47.3.0
+    transitivePeerDependencies:
+      - supports-color
 
   '@ckeditor/ckeditor5-code-block@47.3.0':
     dependencies:
@@ -8808,6 +8814,8 @@ snapshots:
       '@ckeditor/ckeditor5-utils': 47.3.0
       ckeditor5: 47.3.0
       es-toolkit: 1.39.5
+    transitivePeerDependencies:
+      - supports-color
 
   '@ckeditor/ckeditor5-editor-decoupled@47.3.0':
     dependencies:
@@ -8817,8 +8825,6 @@ snapshots:
       '@ckeditor/ckeditor5-utils': 47.3.0
       ckeditor5: 47.3.0
       es-toolkit: 1.39.5
-    transitivePeerDependencies:
-      - supports-color
 
   '@ckeditor/ckeditor5-editor-inline@47.3.0':
     dependencies:
@@ -8828,6 +8834,8 @@ snapshots:
       '@ckeditor/ckeditor5-utils': 47.3.0
       ckeditor5: 47.3.0
       es-toolkit: 1.39.5
+    transitivePeerDependencies:
+      - supports-color
 
   '@ckeditor/ckeditor5-editor-multi-root@47.3.0':
     dependencies:
@@ -8919,6 +8927,8 @@ snapshots:
       '@ckeditor/ckeditor5-ui': 47.3.0
       '@ckeditor/ckeditor5-utils': 47.3.0
       ckeditor5: 47.3.0
+    transitivePeerDependencies:
+      - supports-color
 
   '@ckeditor/ckeditor5-highlight@47.3.0':
     dependencies:
@@ -9009,6 +9019,8 @@ snapshots:
       '@ckeditor/ckeditor5-ui': 47.3.0
       '@ckeditor/ckeditor5-utils': 47.3.0
       ckeditor5: 47.3.0
+    transitivePeerDependencies:
+      - supports-color
 
   '@ckeditor/ckeditor5-link@47.3.0':
     dependencies:
@@ -9119,8 +9131,6 @@ snapshots:
       '@ckeditor/ckeditor5-icons': 47.3.0
       '@ckeditor/ckeditor5-ui': 47.3.0
       '@ckeditor/ckeditor5-utils': 47.3.0
-    transitivePeerDependencies:
-      - supports-color
 
   '@ckeditor/ckeditor5-paste-from-office@47.3.0':
     dependencies:
@@ -9142,6 +9152,8 @@ snapshots:
       '@ckeditor/ckeditor5-ui': 47.3.0
       '@ckeditor/ckeditor5-utils': 47.3.0
       ckeditor5: 47.3.0
+    transitivePeerDependencies:
+      - supports-color
 
   '@ckeditor/ckeditor5-restricted-editing@47.3.0':
     dependencies:
@@ -9167,6 +9179,8 @@ snapshots:
       '@ckeditor/ckeditor5-ui': 47.3.0
       '@ckeditor/ckeditor5-utils': 47.3.0
       ckeditor5: 47.3.0
+    transitivePeerDependencies:
+      - supports-color
 
   '@ckeditor/ckeditor5-source-editing@47.3.0':
     dependencies:
@@ -9247,8 +9261,6 @@ snapshots:
       '@ckeditor/ckeditor5-icons': 47.3.0
       '@ckeditor/ckeditor5-ui': 47.3.0
       '@ckeditor/ckeditor5-utils': 47.3.0
-    transitivePeerDependencies:
-      - supports-color
 
   '@ckeditor/ckeditor5-upload@47.3.0':
     dependencies:
@@ -9994,9 +10006,9 @@ snapshots:
 
   '@pkgr/core@0.2.9': {}
 
-  '@playwright/test@file:deps/playwright/packages/playwright-test/playwright-test-1.58.0-next.tgz':
+  '@playwright/test@file:deps/playwright-test-1.58.0-next.tgz':
     dependencies:
-      playwright: file:deps/playwright/packages/playwright/playwright-1.58.0-next.tgz
+      playwright: file:deps/playwright-1.58.0-next.tgz
 
   '@pmmmwh/react-refresh-webpack-plugin@0.5.17(@types/webpack@4.41.40)(react-refresh@0.14.2)(type-fest@4.41.0)(webpack-dev-server@4.15.2)(webpack@5.104.1)':
     dependencies:
@@ -14995,11 +15007,11 @@ snapshots:
     dependencies:
       find-up: 6.3.0
 
-  playwright-core@file:deps/playwright/packages/playwright-core/playwright-core-1.58.0-next.tgz: {}
+  playwright-core@file:deps/playwright-core-1.58.0-next.tgz: {}
 
-  playwright@file:deps/playwright/packages/playwright/playwright-1.58.0-next.tgz:
+  playwright@file:deps/playwright-1.58.0-next.tgz:
     dependencies:
-      playwright-core: file:deps/playwright/packages/playwright-core/playwright-core-1.58.0-next.tgz
+      playwright-core: file:deps/playwright-core-1.58.0-next.tgz
     optionalDependencies:
       fsevents: 2.3.2
 
