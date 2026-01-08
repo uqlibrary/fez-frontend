@@ -84,10 +84,10 @@ function run_pw_test_shard() {
 
     printf "\n--- \e[1mRUNNING E2E TESTS GROUP #$PW_SHARD_INDEX [STARTING AT $(date)] 2\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        npm run test:e2e:cc -- -- --shard="$PW_SHARD_INDEX/2" --shard-weights=40:60
+        npm run test:e2e:cc -- -- --shard="$PW_SHARD_INDEX/2" --shard-weights=35:65
         fix_coverage_report_paths "coverage/playwright/${PW_CC_REPORT_FILENAME}"
     else
-        npm run test:e2e -- --shard="$PW_SHARD_INDEX/2" --shard-weights=40:60
+        npm run test:e2e -- --shard="$PW_SHARD_INDEX/2" --shard-weights=35:65
     fi
     printf "\n--- [ENDED RUNNING E2E TESTS GROUP #$PW_SHARD_INDEX AT $(date)] \n"
 }
