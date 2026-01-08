@@ -13,5 +13,5 @@ npm install -g pnpm
 printf "\nNow running pnpm v"; pnpm -v
 
 printf "\n\n--- INSTALL DEPENDENCIES ---\n"
-echo "$ pnpm ci"
-pnpm ci
+echo "$ pnpm i"
+pnpm i
