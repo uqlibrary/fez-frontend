@@ -60,7 +60,7 @@ test.describe('Strategic Publishing - Favourite Journals', () => {
     test('Should remove a favourite journal and navigate back to search results', async ({ page }) => {
         const uri = '/journals/search/';
         const query =
-            '?keywords%5BTitle-Microbiology%5D%5Btype%5D=Title&keywords%5BTitle-Microbiology%5D%5Btext%5D=Microbiology&keywords%5BTitle-Microbiology%5D%5Bid%5D=Title-Microbiology';
+            '?keywords%5BTitle-Microbiology%5D%5Btype%5D=Title&keywords%5BTitle-Microbiology%5D%5Btext%5D=Microbiology&keywords%5BTitle-Microbiology%5D%5Bid%5D=Title-Microbiology&keywords%5BTitle-Microbiology%5D%5Boperand%5D=OR';
         await page.goto(`${uri}${query}`);
         await page.getByTestId('journal-search-favourite-journals-button').click();
         await expect(page).toHaveURL(/.*\/journals\/favourites\//);

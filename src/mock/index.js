@@ -71,7 +71,7 @@ export const setup = () => {
         }
         return [404, {}];
     });
-    
+
     mock.onGet(routes.SEARCH_INTERNAL_RECORDS_API({}, 'export').apiUrl).reply(config => {
         const headers = {
             excel: {
@@ -631,8 +631,8 @@ export const setup = () => {
                     'Exported',
                     { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' },
                 ];
-            } else if (config.params.title?.includes('biological')) {
-                let maxCount = config.params.title?.includes('glycobiology') ? 4 : 8;
+            } else if (config.params.query?.includes('biological')) {
+                let maxCount = config.params.query?.includes('glycobiology') ? 4 : 8;
                 if (config.params.filters && config.params.filters[facets].length > 0) maxCount /= 2;
                 const data = mockData.journalList.data.filter((element, index) => index < maxCount);
                 return [200, { ...mockData.journalList, ...{ data }, ...{ total: maxCount } }];

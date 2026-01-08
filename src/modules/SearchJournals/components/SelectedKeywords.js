@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import SelectedKeywordItem from './partials/SelectedKeywordItem';
 import locale from 'locale/components';
+import { OperandChip } from './partials/OperandChip';
 
-export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
+export const SelectedKeywords = ({ onKeywordDelete, onKeywordUpdate, keywords }) => {
     const txt = locale.components.searchJournals;
     return (
         <React.Fragment>
@@ -23,19 +23,7 @@ export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
                                 onKeywordDelete={onKeywordDelete}
                             />
                             {addSeparator && (
-                                <Box
-                                    component={'span'}
-                                    sx={theme => ({
-                                        [theme.breakpoints.down('sm')]: {
-                                            margin: '0 8px',
-                                        },
-                                    })}
-                                    id={`separator-${index}`}
-                                    data-testid={`separator-${index}`}
-                                    key={`separator-${index}`}
-                                >
-                                    {keywords[index + 1].type.toLowerCase() === 'keyword' ? 'AND' : 'OR'}
-                                </Box>
+                                <OperandChip keyword={keywords[index + 1]} onMenuItemClick={onKeywordUpdate} />
                             )}
                         </React.Fragment>
                     );
@@ -48,6 +36,7 @@ export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
 SelectedKeywords.propTypes = {
     keywords: PropTypes.array.isRequired,
     onKeywordDelete: PropTypes.func.isRequired,
+    onKeywordUpdate: PropTypes.func.isRequired,
 };
 
 export default React.memo(SelectedKeywords);
