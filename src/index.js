@@ -42,6 +42,8 @@ if (!IS_TEST && process.env.ENABLE_LOG) {
         ],
         environment: process.env.BRANCH,
         release: process.env.GIT_SHA,
+        sendDefaultPii: false,
+        enableMetrics: false,
         allowUrls: [/library\.uq\.edu\.au/],
         ignoreErrors: [
             // Ignore browser extension errors

@@ -116,8 +116,8 @@ describe('ViewJournal', () => {
         // ***********************************************
         // Basic section
         // ***********************************************
-        expect(getByTestId('ulr-abbrev-title-header')).toHaveTextContent('ISO abbreviated title');
-        expect(getByTestId('ulr-abbrev-title-value')).toHaveTextContent('Am. J. Public Health');
+        expect(getByTestId('jnl-abbrev-title-header')).toHaveTextContent('ISO abbreviated title');
+        expect(getByTestId('jnl-abbrev-title-value')).toHaveTextContent('Am. J. Public Health');
 
         expect(getByTestId('jnl-issn-header')).toHaveTextContent('ISSN(s)');
         expect(getByTestId('jnl-issn-0-value')).toHaveTextContent('0090-0036');
@@ -513,7 +513,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-uq-author-publications-value')).toHaveTextContent('View these articles in UQ eSpace');
         expect(getByTestId('jnl-uq-author-publications-lookup-link')).toHaveAttribute(
             'href',
-            'http://localhost/records/search?activeFacets[ranges][Year+published][from]=2020&activeFacets[ranges][Year+published][to]=2025&searchQueryParams[mtj_jnl_id][value]=8508&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
+            'http://localhost/records/search?activeFacets[ranges][Year+published][from]=2021&activeFacets[ranges][Year+published][to]=2026&searchQueryParams[mtj_jnl_id][value]=8508&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
         );
 
         expect(getByTestId('jnl-editorial-staff-header')).toHaveTextContent('UQ Editorial Staff');
@@ -527,6 +527,120 @@ describe('ViewJournal', () => {
             'href',
             'https://app.library.uq.edu.au/#/authors/uqauthor2',
         );
+    });
+
+    it('should display ulr abbrev title', async () => {
+        const title = 'abbrev title 1';
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_jcr_scie: null,
+                fez_journal_jcr_ssci: null,
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '0090-0036',
+                        jnl_issn_order: 1,
+                        fez_ulrichs: {
+                            ulr_abbrev_title: title,
+                        },
+                    },
+                ],
+            },
+        });
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-abbrev-title-value')).toHaveTextContent(title);
+    });
+
+    it('should display ulr abbrev title from second issn', async () => {
+        const title = 'abbrev title 2';
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_jcr_scie: null,
+                fez_journal_jcr_ssci: null,
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '0090-0036',
+                        jnl_issn_order: 1,
+                        fez_ulrichs: {
+                            ulr_abbrev_title: null,
+                        },
+                    },
+                    {
+                        jnl_issn: '0090-0037',
+                        jnl_issn_order: 2,
+                        fez_ulrichs: {
+                            ulr_abbrev_title: title,
+                        },
+                    },
+                ],
+            },
+        });
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-abbrev-title-value')).toHaveTextContent(title);
+    });
+
+    it('should display scie abbrev title', async () => {
+        const title = 'abbrev title';
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '0090-0036',
+                        jnl_issn_order: 1,
+                        fez_ulrichs: {
+                            ulr_abbrev_title: null,
+                        },
+                    },
+                ],
+                fez_journal_jcr_scie: {
+                    jnl_jcr_scie_abbrev_title: title,
+                },
+            },
+        });
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-abbrev-title-value')).toHaveTextContent(title);
+    });
+
+    it('should display ssci abbrev title', async () => {
+        const title = 'abbrev title';
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_jcr_scie: null,
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '0090-0036',
+                        jnl_issn_order: 1,
+                        fez_ulrichs: {
+                            ulr_abbrev_title: null,
+                        },
+                    },
+                ],
+                fez_journal_jcr_ssci: {
+                    jnl_jcr_ssci_abbrev_title: title,
+                },
+            },
+        });
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-abbrev-title-value')).toHaveTextContent(title);
     });
 
     it('should display ulr open access url from second issn', async () => {
