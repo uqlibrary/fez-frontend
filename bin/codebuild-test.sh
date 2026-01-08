@@ -7,7 +7,6 @@ export COMMIT_INFO_MESSAGE=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format
 export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend/executions/${CI_BUILD_NUMBER}"
 export TZ='Australia/Brisbane'
 export PW_CC_REPORT_FILENAME="coverage-final-${PIPE_NUM}.json"
-export PW_SHARD_COUNT=20
 
 # Run CC only on these branches
 # NB: These branches will require 3 pipelines to run all tests, branches not in this list require only 2.
@@ -78,50 +77,29 @@ function install_pw_deps() {
     printf "\n--- \e[ENDED INSTALLING PW DEPS AT $(date)] 1\e[0m ---\n"
 }
 
-function run_pw_tests() {
-    set -e
-    export PW_SHARD_INDEX="$1"
-    local LIMIT="$2"
-
-    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #$PIPE_NUM [STARTING AT $(date)] 2\e[0m ---\n"
-
-    while (( PW_SHARD_INDEX <= LIMIT ))
-    do
-        if (( PW_SHARD_INDEX == LIMIT )); then
-            export PW_IS_LAST_SHARD=true
-        fi
-
-        run_pw_test_shard "${PW_SHARD_INDEX}"
-        fix_coverage_report_paths "coverage/playwright/coverage-final.json"
-
-        ((PW_SHARD_INDEX++))
-    done
-
-    printf "\n--- [ENDED RUNNING E2E TESTS GROUP #$PIPE_NUM AT $(date)] \n"
-}
-
 function run_pw_test_shard() {
-    local SHARD_INDEX="${1-PW_SHARD_INDEX}"
-    if [[ $CODE_COVERAGE_REQUIRED != true ]]; then
-        npm run test:e2e -- --shard="${SHARD_INDEX}/${PW_SHARD_COUNT}"
-        return 0
-    fi
+    set -e
+    install_pw_deps
+    export PW_SHARD_INDEX="$1"
 
-    npm run test:e2e:cc -- -- --shard="${SHARD_INDEX}/${PW_SHARD_COUNT}"
+    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #$PW_SHARD_INDEX [STARTING AT $(date)] 2\e[0m ---\n"
+    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+        npm run test:e2e:cc -- -- --shard="$PW_SHARD_INDEX/2" --shard-weights=40:60
+        fix_coverage_report_paths "coverage/playwright/${PW_CC_REPORT_FILENAME}"
+    else
+        npm run test:e2e -- --shard="$PW_SHARD_INDEX/2" --shard-weights=40:60
+    fi
+    printf "\n--- [ENDED RUNNING E2E TESTS GROUP #$PW_SHARD_INDEX AT $(date)] \n"
 }
 
 check_code_style
 
 case "$PIPE_NUM" in
 "1")
-    npm run start:mock &
-    install_pw_deps
-    run_pw_tests 1 7
+    run_pw_test_shard "$PIPE_NUM"
 ;;
 "2")
-    npm run start:mock &
-    install_pw_deps
-    run_pw_tests 8 20
+    run_pw_test_shard "$PIPE_NUM"
 ;;
 "3")
     set -e

@@ -7,15 +7,15 @@ printf "Node "; node -v;
 printf "(Codeship default) npm v"; npm -v
 
 printf "\n\n--- GET LATEST VERSION OF NPM 10.8.2 ---\n"
-echo "$ npm install -g npm@10.8.2"
-npm install -g npm@10.8.2
+echo "$ npm install -g pnpm"
+npm install -g pnpm
 
-printf "\nNow running npm v"; npm -v
+printf "\nNow running pnpm v"; pnpm -v
 
-printf "\n$ npm cache clear\n"
+printf "\n$ pnpm cache clear\n"
 # npm cache verify
-npm cache clear -f
+pnpm cache clear -f
 
 printf "\n\n--- INSTALL DEPENDENCIES ---\n"
-echo "$ npm ci"
-npm ci
+echo "$ pnpm ci"
+pnpm ci
