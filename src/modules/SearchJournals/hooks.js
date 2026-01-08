@@ -34,7 +34,7 @@ export const filterNonValidKeywords = keywords => {
 export const getKeywordKey = keyword =>
     keyword.cvoId ? `${keyword.type}-${keyword.cvoId}` : `${keyword.type}-${keyword.text.replace(/ /g, '-')}`;
 
-export const useSelectedKeywords = initialKeywords => {
+export const useSelectedKeywords = (initialKeywords = {}) => {
     const [selectedKeywords, setSelectedKeywords] = React.useState(filterNonValidKeywords(initialKeywords));
 
     const handleKeywordAdd = React.useCallback(keyword => {
