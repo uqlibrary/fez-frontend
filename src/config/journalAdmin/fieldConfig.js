@@ -3,13 +3,12 @@ import { validation } from 'config';
 import locale from 'locale/components';
 import { BOOLEAN_OPTIONS, CAPPED_OPTIONS, S2O_OPTIONS } from 'config/general';
 import { journalAdminFields } from 'locale/journalAdminFields';
-import { IssnForm, NewListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { IssnForm, NewListEditorField, IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { default as InfoSection } from 'modules/ViewJournal/components/Section';
-import { getAbbrevTitle, viewJournalConfig } from 'config/viewJournal';
 import AdvisoryStatementFields from 'modules/JournalAdmin/components/AdvisoryStatementFields';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { getAbbrevTitle, viewJournalConfig } from 'config/viewJournal';
 
 export default {
     default: {
