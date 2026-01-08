@@ -12,10 +12,6 @@ npm install -g pnpm
 
 printf "\nNow running pnpm v"; pnpm -v
 
-printf "\n$ pnpm cache clear\n"
-# npm cache verify
-pnpm cache clear -f
-
 printf "\n\n--- INSTALL DEPENDENCIES ---\n"
 echo "$ pnpm ci"
 pnpm ci
