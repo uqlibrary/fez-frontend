@@ -165,6 +165,33 @@ describe('NewGenericSelectField', () => {
         expect(onChange).toHaveBeenCalledWith(1);
     });
 
+    it('should be able to select boolean options', () => {
+        const onChange = jest.fn();
+        const { getByTestId, getByText } = setup({
+            itemsList: [
+                {
+                    text: 'Option 1',
+                    value: true,
+                },
+                {
+                    text: 'Option 2',
+                    value: false,
+                },
+            ],
+            onChange,
+        });
+
+        fireEvent.mouseDown(getByTestId('rek-test-select'));
+        expect(getByTestId('rek-test-options')).toBeInTheDocument();
+
+        fireEvent.click(getByText('Option 1'));
+        expect(onChange).toHaveBeenCalledWith(true);
+
+        expect(getByText('Option 2')).not.toHaveAttribute('aria-disabled', 'true');
+        fireEvent.click(getByText('Option 2'));
+        expect(onChange).toHaveBeenCalledWith(false);
+    });
+
     it('should not be able to select options in disabled mode', () => {
         const onChange = jest.fn();
         const { getByTestId, queryByTestId } = setup({
