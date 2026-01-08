@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, fireEvent, render, waitForElementToBeRemoved, WithReduxStore, WithRouter } from 'test-utils';
+import { act, fireEvent, within, render, waitForElementToBeRemoved, WithReduxStore, WithRouter } from 'test-utils';
 import { id, JournalSearchInterface } from './JournalSearchInterface';
 
 const setup = state => {
@@ -7,7 +7,12 @@ const setup = state => {
         <WithRouter>
             <WithReduxStore>
                 <JournalSearchInterface
-                    {...{ handleKeywordDelete: jest.fn(), handleKeywordAdd: jest.fn(), ...state }}
+                    {...{
+                        handleKeywordDelete: jest.fn(),
+                        handleKeywordAdd: jest.fn(),
+                        handleKeywordUpdate: jest.fn(),
+                        ...state,
+                    }}
                 />
             </WithReduxStore>
         </WithRouter>,
@@ -132,6 +137,28 @@ describe('JournalSearchInterface', () => {
         expect(queryByTestId('journal-search-button')).not.toBeInTheDocument();
         expect(queryByTestId('journal-search-snackbar')).not.toBeInTheDocument();
         expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
+    });
+
+    it('should call handleKeywordUpdate when changing operand', () => {
+        const mockHandleKeywordUpdateFn = jest.fn();
+        const keyword = { type: 'Title', text: 'Testing', id: 'Title-Testing' };
+        const { getByRole, getByTestId } = setup({
+            hasAnySelectedKeywords: true,
+            showInputControls: false,
+            selectedKeywords: {
+                'Keyword-testing': {
+                    type: 'Keyword',
+                    text: 'testing',
+                    id: 'Keyword-testing',
+                },
+                'Title-Testing': { ...keyword },
+            },
+            handleKeywordUpdate: mockHandleKeywordUpdateFn,
+        });
+
+        fireEvent.click(getByTestId('operand-chip-title-testing'));
+        fireEvent.click(within(getByRole('menu')).getByText('AND'));
+        expect(mockHandleKeywordUpdateFn).toHaveBeenCalledWith({ ...keyword, operand: 'AND' });
     });
 
     it('should call setSelectedKeywords function with empty object when clear button clicked', () => {

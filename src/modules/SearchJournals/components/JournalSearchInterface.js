@@ -21,6 +21,7 @@ export const JournalSearchInterface = ({
     onSearchAll,
     selectedKeywords,
     handleKeywordAdd,
+    handleKeywordUpdate,
     handleKeywordDelete,
     handleKeywordReset,
     hasAnySelectedKeywords = false,
@@ -77,6 +78,7 @@ export const JournalSearchInterface = ({
                     >
                         <SelectedKeywords
                             onKeywordDelete={handleKeywordDelete}
+                            onKeywordUpdate={handleKeywordUpdate}
                             keywords={Object.values(selectedKeywords)}
                         />
                         {!showInputControls && (
@@ -147,6 +149,7 @@ JournalSearchInterface.propTypes = {
     onFavourite: PropTypes.func,
     selectedKeywords: PropTypes.object,
     handleKeywordAdd: PropTypes.func,
+    handleKeywordUpdate: PropTypes.func,
     handleKeywordDelete: PropTypes.func,
     handleKeywordReset: PropTypes.func,
     hasAnySelectedKeywords: PropTypes.bool,

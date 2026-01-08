@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, within } from 'test-utils';
+import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, within, act } from 'test-utils';
 import { pathConfig } from 'config';
 import * as actions from 'actions/journals.js';
 
@@ -97,7 +97,7 @@ describe('SearchJournals', () => {
 
     it('should show all journals if appropriate keyword detected in URL on page load', () => {
         const initialEntries = [
-            '/?keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals',
+            '/?keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals&keywords%5BKeyword-all-journals%5D%5Boperand%5D=AND',
         ];
 
         const journalsList = mockData;
@@ -114,7 +114,7 @@ describe('SearchJournals', () => {
 
     it('should correctly update the URL with "all journals" keywords and show "all journals" keyword button on screen', () => {
         const testQuerySearchAllJournals =
-            'keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals';
+            'keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals&keywords%5BKeyword-all-journals%5D%5Boperand%5D=AND';
 
         const { queryByTestId } = setup({});
 
@@ -163,7 +163,7 @@ describe('SearchJournals', () => {
         window.matchMedia = createMatchMedia(1024);
 
         const queryString =
-            'keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals';
+            'keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals&keywords%5BKeyword-all-journals%5D%5Boperand%5D=AND';
 
         const initialEntries = [`/?${queryString}`];
         const path = pathConfig.journals.search;
@@ -191,12 +191,37 @@ describe('SearchJournals', () => {
         );
     });
 
+    it('should update querystring when operands are changed', () => {
+        const queryStringPartial =
+            'keywords%5BTitle-microbiology%5D%5Btype%5D=Title&keywords%5BTitle-microbiology%5D%5Btext%5D=microbiology&keywords%5BTitle-microbiology%5D%5Bid%5D=Title-microbiology&keywords%5BTitle-microbiology%5D%5Boperand%5D=OR&keywords%5BKeyword-biochemistry%5D%5Btype%5D=Keyword&keywords%5BKeyword-biochemistry%5D%5Btext%5D=biochemistry&keywords%5BKeyword-biochemistry%5D%5Bid%5D=Keyword-biochemistry&keywords%5BKeyword-biochemistry%5D%5Boperand%5D=';
+        const initialEntries = [`/?${queryStringPartial}AND`];
+        const path = pathConfig.journals.search;
+
+        const { getByRole, getByTestId } = setup({
+            state: { journalsListLoaded: true, journalsList: mockDataWithFilterFacetsAndPagination },
+            initialEntries,
+        });
+
+        expect(getByTestId('operand-chip-keyword-biochemistry')).toHaveTextContent('AND');
+        fireEvent.click(getByTestId('operand-chip-keyword-biochemistry'));
+        fireEvent.click(within(getByRole('menu')).getByText('OR'));
+        expect(getByTestId('operand-chip-keyword-biochemistry')).toHaveTextContent('OR');
+
+        expect(mockUseNavigate).toHaveBeenCalledWith(
+            {
+                pathname: path,
+                search: `${queryStringPartial}OR`,
+            },
+            { state: { scrollToTop: false } },
+        );
+    });
+
     it('should update querystring when filters are changed', () => {
         // Note: test here to gain 100% coverage in src/modules/SearchJournals/hooks.js
         window.matchMedia = createMatchMedia(1024);
 
         const queryString =
-            'keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals';
+            'keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals&keywords%5BKeyword-all-journals%5D%5Boperand%5D=AND';
         const initialEntries = [`/?${queryString}`];
         const path = pathConfig.journals.search;
 
