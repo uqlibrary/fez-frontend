@@ -1,0 +1,68 @@
+import * as React from 'react';
+import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import locale from 'locale/components';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppState } from '../../../../reducer';
+import { loadJournalSearchKeywords } from '../../../../actions';
+import { keywordOnlySuffix } from '../../../../reducers/journals';
+import { ForCodeAutocompleteOptionTemplate } from 'modules/SearchJournals/components/partials/ForCodeAutocompleteOptionTemplate';
+
+type SubjectItem = Record<string, string | number>;
+type OptionSource = { name: string };
+type Option = Record<string, string | number | OptionSource[]>;
+type ForCodeAutocompleteFieldProps = React.ComponentPropsWithoutRef<typeof AutoCompleteAsynchronousField> & {
+    filter: (data: Option[]) => Option[];
+};
+type ForCodeAutocompleteFieldRef = React.ComponentRef<typeof AutoCompleteAsynchronousField>;
+
+const minQueryLength = 3;
+
+export const assertMinQueryLength = (value: string | undefined) => value && value?.trim?.()?.length >= minQueryLength;
+
+const toKeyValueList = (data: SubjectItem[]): Option[] =>
+    data?.map?.(
+        (item: SubjectItem): Option => ({
+            key: item.jnl_subject_cvo_id,
+            value: item.jnl_subject_title,
+            sources: String(item.jnl_subject_sources)
+                .split(',')
+                .map(name => ({ name })),
+        }),
+    ) || /* istanbul ignore next */ [];
+
+export const ForCodeAutocompleteField = React.forwardRef<ForCodeAutocompleteFieldRef, ForCodeAutocompleteFieldProps>(
+    ({ filter, ...props }, ref) => {
+        const txt = locale.components.searchJournals.partials.forCodeAutocompleteField;
+        const dispatch = useDispatch();
+        const fetch = (query: string) =>
+            assertMinQueryLength(query) && dispatch(loadJournalSearchKeywords(query, true));
+        const state = useSelector((s: AppState) => s.get('journalReducer')[keywordOnlySuffix]);
+        const keyValueLists = React.useMemo(
+            () => toKeyValueList(state.journalSearchKeywords?.subjectFuzzyMatch),
+            [state.journalSearchKeywords?.subjectFuzzyMatch],
+        );
+
+        return (
+            <AutoCompleteAsynchronousField
+                // @ts-expect-error
+                id="for-code-autocomplete-field"
+                autoCompleteAsynchronousFieldId="for-code-autocomplete-field"
+                itemsList={filter(keyValueLists)}
+                itemsLoading={!!state.journalSearchKeywordsLoading}
+                error={!!state.journalSearchKeywordsError}
+                getOptionLabel={(option: Record<string, string | number>) => String(option?.value)}
+                OptionTemplate={ForCodeAutocompleteOptionTemplate}
+                allowFreeText={false}
+                clearSuggestionsOnClose={false}
+                loadSuggestions={fetch}
+                placeholder={txt.input.placeholder}
+                {...props}
+                ref={ref}
+            />
+        );
+    },
+);
+
+ForCodeAutocompleteField.displayName = 'ForCodeAutocompleteField';
+
+export default React.memo(ForCodeAutocompleteField);

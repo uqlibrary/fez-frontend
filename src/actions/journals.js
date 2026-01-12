@@ -13,6 +13,7 @@ import { store } from '../config/store';
 import { dismissAppAlert } from './app';
 import { apiLastRequest, api } from '../config/axios';
 import * as transformers from './journalTransformers';
+import { keywordOnlySuffix } from '../reducers/journals';
 
 /**
  * @param data
@@ -155,15 +156,27 @@ export const loadJournal =
         );
     };
 
-export const loadJournalSearchKeywords = searchQuery => async dispatch => {
-    dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADING });
-    try {
-        const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query: searchQuery }));
-        dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADED, payload: keywordsResponse.data, query: searchQuery });
-    } catch (e) {
-        dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_FAILED, payload: e });
-    }
-};
+/**
+ * @param query
+ * @param keywordsOnly
+ * @return {(function(*): Promise<AnyAction>)|*}
+ */
+export const loadJournalSearchKeywords =
+    (query, keywordsOnly = false) =>
+    async dispatch => {
+        const actionSuffix = (keywordsOnly && `${keywordOnlySuffix}`) || '';
+        dispatch({ type: `${actions.JOURNAL_SEARCH_KEYWORDS_LOADING}${actionSuffix}` });
+        try {
+            const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query, keywordsOnly }));
+            dispatch({
+                type: `${actions.JOURNAL_SEARCH_KEYWORDS_LOADED}${actionSuffix}`,
+                payload: keywordsResponse.data,
+                query,
+            });
+        } catch (e) {
+            dispatch({ type: `${actions.JOURNAL_SEARCH_KEYWORDS_FAILED}${actionSuffix}`, payload: e });
+        }
+    };
 
 export const clearJournalSearchKeywords = () => ({
     type: actions.CLEAR_JOURNAL_SEARCH_KEYWORDS,
