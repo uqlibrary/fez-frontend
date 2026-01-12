@@ -1,6 +1,6 @@
 import React from 'react';
 import { rtlRender, FormProviderWrapper } from 'test-utils';
-import DoajSection from './DoajSection';
+import OpenAccessSection from './OpenAccessSection';
 
 jest.mock('../../../../context');
 import { useJournalContext } from 'context';
@@ -14,12 +14,12 @@ function setup(testProps = {}, renderer = rtlRender) {
 
     return renderer(
         <FormProviderWrapper>
-            <DoajSection {...props} />
+            <OpenAccessSection {...props} />
         </FormProviderWrapper>,
     );
 }
 
-describe('DoajSection component', () => {
+describe('OpenAccessSection component', () => {
     it('should render default view', () => {
         useJournalContext.mockImplementation(() => ({
             jnlDisplayType: ADMIN_JOURNAL,
@@ -30,8 +30,8 @@ describe('DoajSection component', () => {
 
         const { getByTestId } = setup();
 
-        expect(getByTestId('ulr-open-access-header')).toHaveTextContent('Open access');
-        expect(getByTestId('ulr-open-access-value')).toHaveTextContent('No');
+        expect(getByTestId('jnl-read-and-publish-header')).toHaveTextContent('UQ publisher agreement');
+        expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('Discount');
         expect(getByTestId('jnl-doaj-apc-average-price-header')).toHaveTextContent('Article processing charges');
         expect(getByTestId('jnl-doaj-apc-average-price-value')).toHaveTextContent('1000 EUR');
         expect(getByTestId('jnl-doaj-by-sa-nd-nc-header')).toHaveTextContent('Journal licence');
@@ -39,7 +39,5 @@ describe('DoajSection component', () => {
             'href',
             'https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en',
         );
-        expect(getByTestId('jnl-doaj-last-updated-header')).toHaveTextContent('Last updated');
-        expect(getByTestId('jnl-doaj-last-updated-value')).toHaveTextContent('22nd August 2022 at 9:57am');
     });
 });

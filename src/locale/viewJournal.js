@@ -1,7 +1,7 @@
 import { APP_URL } from 'config/general';
 import React from 'react';
 
-const caulLink = 'https://caul.libguides.com/read-and-publish/home';
+const caulLink = 'https://caul.libguides.com/read-and-publish/reports';
 
 export default {
     viewJournal: {
@@ -29,19 +29,20 @@ export default {
         },
         readAndPublish: {
             title: 'Publisher agreements',
-            heading: 'Read and publish agreement',
+            heading: 'UQ publisher agreement',
             ariaLabel: 'Click to view read and publish agreement',
-            prefixText: 'Yes<discount>, via <publisher> ',
-            postfixText: '',
-            linkText: 'Read and Publish Agreement',
-            externalUrl: 'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
+            status: {
+                noAgreement: 'No',
+                exceeded: 'No (exhausted)',
+                discounted: 'Discount',
+                capped: 'Article Processing Charge covered',
+            },
             caulLink: {
                 heading: 'Limited amount available',
                 ariaLabel: 'Click to view CAUL information on number of remaining pre-paid APCs',
                 linkText: 'Check current status',
                 externalUrl: caulLink,
             },
-            lastUpdatedHeading: 'Last updated',
             alert: {
                 title: 'Read and Publish Agreement',
                 approaching: (
