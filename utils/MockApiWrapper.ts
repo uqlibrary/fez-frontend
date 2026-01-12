@@ -6,16 +6,21 @@ import MockAdapter from 'axios-mock-adapter';
 
 interface Params {
     status?: number;
-    pid?: string;
-    data?: Record<string, unknown>;
+    data?: Record<string | number, unknown>;
     once?: boolean;
 }
 
-interface CvoParams {
-    status?: number;
+interface RecordParams extends Params {
+    pid?: string;
+}
+
+interface JournalParams extends Params {
+    id?: string;
+    search?: string;
+}
+
+interface CvoParams extends Params {
     cvoId?: number;
-    data?: Record<string, unknown>;
-    once?: boolean;
 }
 
 interface ApiUrls {
@@ -24,6 +29,10 @@ interface ApiUrls {
         update: (pid: string, isEdit?: boolean) => string;
         get: (pid: string, isEdit?: boolean) => string;
         issues: (pid: string) => string;
+    };
+    journals: {
+        get: (id: string, isEdit?: boolean) => RegExp;
+        search: (query: string) => RegExp;
     };
     files: {
         presignedUrl: string;
@@ -47,20 +56,26 @@ interface DatastreamApi {
 }
 
 interface RecordApi {
-    create: (params?: Params) => RecordApi;
-    get: (params?: Params) => RecordApi;
-    update: (params?: Params) => RecordApi;
-    bulkUpdate: (params?: Params) => RecordApi;
-    delete: (params?: Params) => RecordApi;
-    issues: (params?: Params) => RecordApi;
+    create: (params?: RecordParams) => RecordApi;
+    get: (params?: RecordParams) => RecordApi;
+    update: (params?: RecordParams) => RecordApi;
+    bulkUpdate: (params?: RecordParams) => RecordApi;
+    delete: (params?: RecordParams) => RecordApi;
+    issues: (params?: RecordParams) => RecordApi;
     fail: {
         create: () => RecordApi;
-        get: (params?: Params) => RecordApi;
-        update: (params?: Params) => RecordApi;
-        bulkUpdate: (params?: Params) => RecordApi;
+        get: (params?: RecordParams) => RecordApi;
+        update: (params?: RecordParams) => RecordApi;
+        bulkUpdate: (params?: RecordParams) => RecordApi;
     };
     files: DatastreamApi;
     cvo: ControlledVocabApi;
+    instance: MockAdapter;
+}
+
+interface JournalApi {
+    get: (params?: JournalParams) => JournalApi;
+    search: (params?: JournalParams) => JournalApi;
     instance: MockAdapter;
 }
 
@@ -76,6 +91,7 @@ interface Api {
     mock: {
         instance: MockAdapter;
         records: RecordApi;
+        journals: JournalApi;
         files: DatastreamApi;
         cvo: ControlledVocabApi;
         reset: () => void;
@@ -102,6 +118,11 @@ export const api: Api = {
                 repositories.routes.EXISTING_RECORD_API({ pid, isEdit }).apiUrl,
             issues: (pid: string) => repositories.routes.RECORDS_ISSUES_API({ pid }).apiUrl,
         },
+        journals: {
+            get: (id: string, isEdit: boolean = false) =>
+                new RegExp(repositories.routes.JOURNAL_API({ id, isEdit }).apiUrl),
+            search: (query: string) => new RegExp(repositories.routes.JOURNAL_SEARCH_API(query).apiUrl),
+        },
         files: {
             presignedUrl: repositories.routes.FILE_UPLOAD_API().apiUrl,
             put: 's3-ap-southeast-2.amazonaws.com',
@@ -113,44 +134,44 @@ export const api: Api = {
     mock: {
         instance: mockApi,
         records: {
-            create: function ({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
+            create: function ({ status = 200, pid = '', data = {}, once = true }: RecordParams = {}) {
                 this.instance.onPost(api.url.records.create)[replyMethod(once)](status, {
                     data: { rek_pid: pid, ...data },
                 });
                 return this;
             },
-            get: function ({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
+            get: function ({ status = 200, pid = '', data = {}, once = true }: RecordParams = {}) {
                 this.instance.onGet(api.url.records.get(pid))[replyMethod(once)](status, {
                     data: { rek_pid: pid, ...data },
                 });
                 return this;
             },
-            update: function ({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
+            update: function ({ status = 200, pid = '', data = {}, once = true }: RecordParams = {}) {
                 this.instance.onPatch(api.url.records.get(pid))[replyMethod(once)](status, {
                     data: { rek_pid: pid, ...data },
                 });
                 return this;
             },
-            bulkUpdate: function ({ status = 200, data = {}, once = true }: Params = {}) {
+            bulkUpdate: function ({ status = 200, data = {}, once = true }: RecordParams = {}) {
                 this.instance.onPatch(api.url.records.create)[replyMethod(once)](status, { data });
                 return this;
             },
-            delete: function ({ status = 200, pid = '', once = true }: Params = {}) {
+            delete: function ({ status = 200, pid = '', once = true }: RecordParams = {}) {
                 this.instance.onDelete(api.url.records.get(pid))[replyMethod(once)](status, {
                     data: 'Record deleted',
                 });
                 return this;
             },
-            issues: function ({ status = 200, pid = '', data = {}, once = true }: Params = {}) {
+            issues: function ({ status = 200, pid = '', data = {}, once = true }: RecordParams = {}) {
                 this.instance.onPost(api.url.records.issues(pid))[replyMethod(once)](status, { data });
                 return this;
             },
             fail: {
                 create: () => api.mock.records.create({ status: 500 }),
-                get: ({ pid = '', once = true }: Params = {}) => api.mock.records.get({ pid, status: 500, once }),
-                update: ({ pid = '', data = {}, once = true }: Params = {}) =>
+                get: ({ pid = '', once = true }: RecordParams = {}) => api.mock.records.get({ pid, status: 500, once }),
+                update: ({ pid = '', data = {}, once = true }: RecordParams = {}) =>
                     api.mock.records.update({ status: 500, pid, data, once }),
-                bulkUpdate: ({ data = {}, once = true }: Params = {}) =>
+                bulkUpdate: ({ data = {}, once = true }: RecordParams = {}) =>
                     api.mock.records.bulkUpdate({ status: 500, data, once }),
             },
             files: {} as DatastreamApi,
@@ -185,6 +206,21 @@ export const api: Api = {
             files: {} as DatastreamApi,
             instance: {} as MockAdapter,
         },
+        journals: {
+            get: function ({ status = 200, id = '', data = {}, once = true }: JournalParams = {}) {
+                this.instance.onGet(api.url.journals.get(id))[replyMethod(once)](status, {
+                    data: { jnl_jid: id, ...data },
+                });
+                return this;
+            },
+            search: function ({ status = 200, search = '', data = {}, once = true }: JournalParams = {}) {
+                this.instance.onGet(api.url.journals.search(search))[replyMethod(once)](status, {
+                    data: { data: { ...data } },
+                });
+                return this;
+            },
+            instance: {} as MockAdapter,
+        },
         reset: function () {
             this.instance.resetHandlers();
         },
@@ -206,7 +242,8 @@ api.mock.records.cvo = api.mock.cvo as ControlledVocabApi;
 api.mock.records.instance = api.mock.instance as MockAdapter;
 api.mock.files.records = api.mock.records as RecordApi;
 api.mock.files.cvo = api.mock.cvo as ControlledVocabApi;
+api.mock.files.instance = api.mock.instance as MockAdapter;
 api.mock.cvo.records = api.mock.records as RecordApi;
 api.mock.cvo.files = api.mock.files as DatastreamApi;
 api.mock.cvo.instance = api.mock.instance as MockAdapter;
-api.mock.files.instance = api.mock.instance as MockAdapter;
+api.mock.journals.instance = api.mock.instance as MockAdapter;

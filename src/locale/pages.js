@@ -1339,6 +1339,10 @@ export default {
                 advisoryStatement: {
                     title: 'Advisory statement',
                 },
+                publishAsOAButton: {
+                    tooltip: 'Avoid fees and meet mandates by viewing similar journals with open access.',
+                    text: "I'd like to publish open access",
+                },
             },
         },
         authors: {
