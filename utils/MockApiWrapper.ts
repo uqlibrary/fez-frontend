@@ -16,6 +16,7 @@ interface RecordParams extends Params {
 
 interface JournalParams extends Params {
     id?: string;
+    search?: string;
 }
 
 interface CvoParams extends Params {
@@ -31,6 +32,7 @@ interface ApiUrls {
     };
     journals: {
         get: (id: string, isEdit?: boolean) => RegExp;
+        search: (query: string) => RegExp;
     };
     files: {
         presignedUrl: string;
@@ -73,6 +75,7 @@ interface RecordApi {
 
 interface JournalApi {
     get: (params?: JournalParams) => JournalApi;
+    search: (params?: JournalParams) => JournalApi;
     instance: MockAdapter;
 }
 
@@ -118,6 +121,7 @@ export const api: Api = {
         journals: {
             get: (id: string, isEdit: boolean = false) =>
                 new RegExp(repositories.routes.JOURNAL_API({ id, isEdit }).apiUrl),
+            search: (query: string) => new RegExp(repositories.routes.JOURNAL_SEARCH_API(query).apiUrl),
         },
         files: {
             presignedUrl: repositories.routes.FILE_UPLOAD_API().apiUrl,
@@ -206,6 +210,12 @@ export const api: Api = {
             get: function ({ status = 200, id = '', data = {}, once = true }: JournalParams = {}) {
                 this.instance.onGet(api.url.journals.get(id))[replyMethod(once)](status, {
                     data: { jnl_jid: id, ...data },
+                });
+                return this;
+            },
+            search: function ({ status = 200, search = '', data = {}, once = true }: JournalParams = {}) {
+                this.instance.onGet(api.url.journals.search(search))[replyMethod(once)](status, {
+                    data: { data: { ...data } },
                 });
                 return this;
             },

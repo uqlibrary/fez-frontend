@@ -1100,7 +1100,15 @@ describe('ViewJournal', () => {
             });
 
             it('should not display button when conditions are unmet', async () => {
-                api.mock.journals.get({ id: '.*', data: { ...journalDetails.data } });
+                api.mock.journals.get({
+                    id: '.*',
+                    data: {
+                        ...journalDetails.data,
+                        fez_journal_read_and_publish: {
+                            jnl_read_and_publish_is_capped: 'Y',
+                        },
+                    },
+                });
                 setup();
 
                 await waitForTextToBeRemoved('Loading journal data');
