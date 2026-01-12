@@ -11,6 +11,8 @@ export const ULRICHS_URL_PREFIX =
 
 export const prefixByUrlResolver = url => RESOLVER_URL_PREFIX + encodeURIComponent(url);
 
+export const getDoajUrl = issn => prefixByUrlResolver(`https://doaj.org/toc/${issn}`);
+
 export const numberToWords = value => {
     const ordinal = converter.toWordsOrdinal(value);
     return ordinal.charAt(0).toUpperCase() + ordinal.slice(1);

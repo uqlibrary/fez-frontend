@@ -28,15 +28,19 @@ export const LinkTemplate = ({ data, templateProps, fieldId }) => {
         <DefaultTemplate
             fieldId={fieldId}
             data={
-                <ExternalLink
-                    href={href(data)}
-                    title={title}
-                    aria-label={ariaLabel && ariaLabel(data)}
-                    id={`${fieldId}-lookup`}
-                    sx={{ ...classes.wrappableExternalLink }}
-                >
-                    {finalLinkText}
-                </ExternalLink>
+                !!href(data) ? (
+                    <ExternalLink
+                        href={href(data)}
+                        title={title}
+                        aria-label={ariaLabel && ariaLabel(data)}
+                        id={`${fieldId}-lookup`}
+                        sx={{ ...classes.wrappableExternalLink }}
+                    >
+                        {finalLinkText}
+                    </ExternalLink>
+                ) : (
+                    derivedText
+                )
             }
         />
     );
