@@ -10,7 +10,15 @@ import TabbedFields from './partials/TabbedFields';
 export const Section = ({ sectionKey, sectionConfig, wrapped = true }) => {
     const { journalDetails } = useJournalContext();
     const viewRows = sectionConfig.rows.map((field, index) => {
-        return (
+        const isTabbedFields = !!field.tabs && !!journalDetails[field.tabs.key][field.tabs.tabKey];
+        return isTabbedFields ? (
+            <TabbedFields
+                {...field.tabs}
+                tabId={`journal-details-tab-${field.tabs.tabId}`}
+                data={journalDetails[field.tabs.key][field.tabs.tabKey]}
+                title={field.tabs.heading}
+            />
+        ) : (
             <ViewRow
                 key={`journal-details-${sectionKey}-view-row-${index}`}
                 viewRowId={`journal-details-${sectionKey}-view-row-${index}`}
@@ -18,14 +26,7 @@ export const Section = ({ sectionKey, sectionConfig, wrapped = true }) => {
             />
         );
     });
-    const tabbedFields = !!sectionConfig.tabs && !!journalDetails[sectionConfig.key][sectionConfig.tabs.tabKey] && (
-        <TabbedFields
-            {...sectionConfig.tabs}
-            tabId={`journal-details-tab-${sectionConfig.tabs.tabId}`}
-            data={journalDetails[sectionConfig.key][sectionConfig.tabs.tabKey]}
-            title={sectionConfig.title}
-        />
-    );
+
     return (
         <Grid item xs={12}>
             {wrapped && (
@@ -35,16 +36,10 @@ export const Section = ({ sectionKey, sectionConfig, wrapped = true }) => {
                     title={sectionConfig.title}
                     smallTitle
                 >
-                    {tabbedFields}
                     {viewRows}
                 </StandardCard>
             )}
-            {!wrapped && (
-                <>
-                    {tabbedFields}
-                    {viewRows}
-                </>
-            )}
+            {!wrapped && <>{viewRows}</>}
         </Grid>
     );
 };

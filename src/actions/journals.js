@@ -27,6 +27,48 @@ export const sanitiseJnlData = (data, replacer) => JSON.parse(JSON.stringify(dat
  */
 const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
 
+export const mergeJcrData = journalData => {
+    if (typeof journalData !== 'object' || journalData === null) return journalData;
+
+    const indexes = ['ahci', 'esci', 'scie', 'ssci'];
+    const data = { impact_factor: null, category_map: new Map() };
+
+    const result = indexes.reduce((data, index) => {
+        const jcr = journalData[`fez_journal_jcr_${index}`];
+        if (!jcr) return data;
+
+        // Capture impact factor once (prefer first found)
+        if (!data.impact_factor) {
+            data.impact_factor = jcr[`jnl_jcr_${index}_impact_factor`];
+        }
+
+        const categories = jcr[`fez_journal_jcr_${index}_category`];
+        Array.isArray(categories) &&
+            categories.forEach(category => {
+                const subject = category[`jnl_jcr_${index}_category_description_lookup`];
+                if (!data.category_map.has(subject)) {
+                    data.category_map.set(subject, {
+                        category: category[`jnl_jcr_${index}_category_description_lookup`],
+                        ranking: category[`jnl_jcr_${index}_category_ranking`]?.replace('\\/', '/'),
+                        quartile: category[`jnl_jcr_${index}_category_quartile`],
+                    });
+                }
+            });
+
+        return data;
+    }, data);
+
+    return {
+        fez_journal_jcr_merged:
+            data.category_map.size > 0
+                ? {
+                      impact_factor: result.impact_factor,
+                      categories: Array.from(result.category_map.values()),
+                  }
+                : null,
+    };
+};
+
 // The below could potentially be applied on a broader scope
 // However, judging on how dismissAppAlert is used across the app,
 // it's hard to predict if that would suit all scenarios
@@ -96,11 +138,12 @@ export const loadJournal =
             !isNaN(id) &&
             get(JOURNAL_API({ id, isEdit })).then(
                 response => {
+                    const data = { ...response.data, ...mergeJcrData(response.data) };
                     dispatch({
                         type: actions.VIEW_JOURNAL_LOADED,
-                        payload: response.data,
+                        payload: data,
                     });
-                    return Promise.resolve(response.data);
+                    return Promise.resolve(data);
                 },
                 error => {
                     dispatch({

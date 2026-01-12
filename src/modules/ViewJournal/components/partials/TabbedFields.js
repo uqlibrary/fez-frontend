@@ -12,6 +12,7 @@ import { JournalContext } from 'context';
 import ViewRow from './ViewRow';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Typography from '@mui/material/Typography';
 
 const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data, title }) => {
     const theme = useTheme();
@@ -27,6 +28,18 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data, title 
     };
     return (
         <Grid container style={{ marginBottom: 20 }}>
+            {title && (
+                <Grid item xs={12} style={{ marginTop: 20 }}>
+                    <Typography
+                        variant="subtitle1"
+                        id={`${tabId}-header`}
+                        data-testid={`${tabId}-header`}
+                        sx={{ fontWeight: 400 }}
+                    >
+                        {title}
+                    </Typography>
+                </Grid>
+            )}
             <Grid item xs={12}>
                 <Tabs
                     indicatorColor="primary"
@@ -35,7 +48,7 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data, title 
                     value={currentTabValue}
                     scrollButtons={data.length > 1 ? 'auto' : false}
                     variant={data.length > 1 ? 'scrollable' : 'standard'}
-                    aria-label={`Navigate details for ${title.replace('Clarivate Journal Citation Reports - ', '')}`}
+                    aria-label={`Navigate details for ${title}`}
                 >
                     {data.map((tab, index) => (
                         <Tab
