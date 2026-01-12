@@ -41,14 +41,10 @@ export const viewJournalConfig = {
                     heading: 'Journal home page',
                     fieldId: 'jnl-homepage-url',
                     getData: journalDetails =>
-                        (journalDetails.fez_journal_issn &&
-                            Array.isArray(journalDetails.fez_journal_issn) &&
-                            journalDetails.fez_journal_issn.length > 0 &&
-                            ((journalDetails.fez_journal_issn[0].fez_ulrichs &&
-                                journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url) ||
-                                (journalDetails.fez_journal_issn.length > 1 &&
-                                    journalDetails.fez_journal_issn[1].fez_ulrichs &&
-                                    journalDetails.fez_journal_issn[1].fez_ulrichs.ulr_open_access_url))) ||
+                        findNestedValueInIssnArray(
+                            journalDetails.fez_journal_issn,
+                            'fez_ulrichs.ulr_open_access_url',
+                        ) ||
                         (journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_homepage_url),
                     template: 'LinkTemplate',
                     templateProps: {
@@ -165,11 +161,14 @@ export const viewJournalConfig = {
                 {
                     heading: 'Type of journal',
                     fieldId: 'jnl-type',
-                    getData: journalDetails => journalDetails.fez_journal_doaj,
+                    getData: journalDetails => journalDetails,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: doaj => !!doaj && getDoajUrl(doaj.jnl_doaj_issn),
-                        text: doaj => (!!doaj ? 'Fully Open Access' : 'Hybrid or Subscription'),
+                        href: journalDetails =>
+                            !!journalDetails.fez_journal_doaj &&
+                            getDoajUrl(journalDetails.fez_journal_doaj.jnl_doaj_issn),
+                        text: journalDetails =>
+                            !!journalDetails.fez_journal_doaj ? 'Fully Open Access' : 'Hybrid or Subscription',
                     },
                 },
             ],
