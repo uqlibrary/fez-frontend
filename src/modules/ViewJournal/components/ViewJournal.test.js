@@ -520,6 +520,22 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-homepage-url-lookup-link')).toHaveAttribute('href', homepageUrl);
     });
 
+    it('should display correct type of journal', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_doaj: null,
+            },
+        });
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-type-header')).toBeInTheDocument();
+        expect(getByTestId('jnl-type-value')).toHaveTextContent('Hybrid or Subscription');
+    });
+
     it('Should show embargo details with sherpa romeo links', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
