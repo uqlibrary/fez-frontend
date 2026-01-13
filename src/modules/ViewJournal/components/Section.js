@@ -34,6 +34,7 @@ export const Section = ({ sectionKey, sectionConfig, wrapped = true }) => {
                     noHeader={!sectionConfig.title}
                     standardCardId={`journal-details-${sectionKey}`}
                     title={sectionConfig.title}
+                    help={sectionConfig.help}
                     smallTitle
                 >
                     {viewRows}

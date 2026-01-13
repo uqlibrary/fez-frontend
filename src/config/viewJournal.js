@@ -35,6 +35,8 @@ export const getAbbrevTitle = journalDetails =>
 
 export const viewJournalConfig = {
     basic: {
+        title: viewJournalLocale.viewJournal.basic.title,
+        help: viewJournalLocale.viewJournal.basic.help,
         rows: [
             [
                 {
@@ -175,7 +177,8 @@ export const viewJournalConfig = {
         ],
     },
     openAccess: {
-        title: 'Open Access Options',
+        title: viewJournalLocale.viewJournal.openAccess.title,
+        help: viewJournalLocale.viewJournal.openAccess.help,
         rows: [
             [
                 {
@@ -301,7 +304,8 @@ export const viewJournalConfig = {
         ],
     },
     discoverability: {
-        title: 'Journal Discoverability',
+        title: viewJournalLocale.viewJournal.discoverability.title,
+        help: viewJournalLocale.viewJournal.discoverability.help,
         rows: [
             [
                 {
@@ -344,7 +348,8 @@ export const viewJournalConfig = {
     },
     qualityByRanking: {
         key: ['fez_journal_jcr_merged', 'fez_journal_cite_score'],
-        title: 'Journal Quality By Ranking',
+        title: viewJournalLocale.viewJournal.qualityByRanking.title,
+        help: viewJournalLocale.viewJournal.qualityByRanking.help,
         rows: [
             {
                 tabs: {
@@ -477,7 +482,8 @@ export const viewJournalConfig = {
         ],
     },
     listed: {
-        title: 'Journal Quality By Recognised Listings',
+        title: viewJournalLocale.viewJournal.listed.title,
+        help: viewJournalLocale.viewJournal.listed.help,
         rows: [
             [
                 {
