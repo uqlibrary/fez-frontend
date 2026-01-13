@@ -15,7 +15,7 @@ test = test.extend({
                 body: '',
             });
         });
-        await page.route(' https://api.library.uq.edu.au/**', route => {
+        await page.route('https://api.library.uq.edu.au/**', route => {
             route.fulfill({
                 status: 200,
                 body: '{}',
