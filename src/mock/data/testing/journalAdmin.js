@@ -8,15 +8,15 @@ export const helpersTypicalExpected = {
                 },
                 type: 1234
             },
-            description:
+            jnl_description:
                 'Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.',
             jnl_abbrev_title: null,
             jnl_publisher: 'Walter de Gruyter GmbH',
             jnl_title: 'Advanced Nonlinear Studies',
-            publicationFormats: 'Print',
-            publicationFrequency: 'Bi-monthly',
-            publicationYear: '1968',
-            refereed: '1',
+            jnl_formats: 'Print',
+            jnl_frequency: 'Bi-monthly',
+            jnl_start_year: '1968',
+            jnl_is_refereed: true,
         },
         bibliographicSection: {
             issns: [
@@ -105,6 +105,13 @@ export const helpersTypicalExpected = {
                     },
                 },
             ],
+        },
+        readAndPublishSection: {
+            capped: 'N',
+            discounted: true,
+            readAndPublishLastUpdated: '2023-07-19',
+            readAndPublishPublisher: 'De Gruyter',
+            s2o: undefined,
         },
         doajSection: {
             jnl_doaj_apc_average_price: '1000',
@@ -445,12 +452,6 @@ export const helpersTypicalExpected = {
                 count: 0,
                 id: 12,
             },
-            jnl_read_and_publish_is_capped: 'N',
-            jnl_read_and_publish_is_discounted: true,
-            jnl_read_and_publish_issn: '2169-0375',
-            jnl_read_and_publish_publisher: 'De Gruyter',
-            jnl_read_and_publish_source_date: '2023-07-19',
-            jnl_read_and_publish_title: 'Advanced Nonlinear Studies',
         },
     },
 };
@@ -465,15 +466,15 @@ export const helpersNonTypicalExpected = {
                 },
                 type: 1234,
             },
-            description:
+            jnl_description:
                 'Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.',
             jnl_abbrev_title: null,
             jnl_publisher: 'Walter de Gruyter GmbH',
             jnl_title: 'Advanced Nonlinear Studies',
-            publicationFormats: 'Print',
-            publicationFrequency: 'Bi-monthly',
-            publicationYear: '1968',
-            refereed: '1',
+            jnl_formats: 'Print',
+            jnl_frequency: 'Bi-monthly',
+            jnl_start_year: '1968',
+            jnl_is_refereed: true,
         },
         bibliographicSection: {
             issns: [
@@ -562,6 +563,13 @@ export const helpersNonTypicalExpected = {
                     },
                 },
             ],
+        },
+        readAndPublishSection: {
+            capped: 'N',
+            discounted: true,
+            readAndPublishLastUpdated: '2023-07-19',
+            readAndPublishPublisher: 'De Gruyter',
+            s2o: undefined,
         },
         id: 12,
         journal: {

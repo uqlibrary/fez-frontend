@@ -36,9 +36,8 @@ describe('hooks', () => {
                     id: 12,
                     adminSection: expect.objectContaining({ jnl_title: 'Advanced Nonlinear Studies' }),
                     bibliographicSection: expect.objectContaining({ issns: expect.any(Array) }),
-                    uqDataSection: expect.objectContaining({
-                        jnl_read_and_publish_title: 'Advanced Nonlinear Studies',
-                    }),
+                    readAndPublishSection: expect.objectContaining({ readAndPublishPublisher: 'De Gruyter' }),
+                    uqDataSection: expect.objectContaining({ authors: { count: 0, id: 12 } }),
                     doajSection: expect.objectContaining({ jnl_doaj_title: 'Advanced Nonlinear Studies' }),
                     listedSection: expect.objectContaining({ pubmed: false }),
                 }),

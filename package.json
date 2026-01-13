@@ -101,6 +101,7 @@
     "babel-plugin-dynamic-import-node": "^2.3.3",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "baseline-browser-mapping": "^2.8.32",
     "browser-update": "^3.3.28",
     "browserify": "^17.0.0",
     "buffer": "^6.0.3",

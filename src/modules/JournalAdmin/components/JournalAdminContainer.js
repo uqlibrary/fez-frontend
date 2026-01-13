@@ -122,18 +122,17 @@ export const JournalAdminContainer = () => {
                                         component: AdminSection,
                                         numberOfErrors: tabErrors.current.adminSection || null,
                                     },
-
                                     bibliographic: {
                                         component: BibliographicSection,
                                         numberOfErrors: tabErrors.current.bibliographicSection || null,
                                     },
-                                    uqData: {
-                                        component: UqDataSection,
-                                        numberOfErrors: tabErrors.current.uqDataSection || null,
-                                    },
                                     readAndPublish: {
                                         component: ReadAndPublishSection,
                                         numberOfErrors: tabErrors.current.readAndPublishSection || null,
+                                    },
+                                    uqData: {
+                                        component: UqDataSection,
+                                        numberOfErrors: tabErrors.current.uqDataSection || null,
                                     },
                                     doaj: {
                                         component: DoajSection,
