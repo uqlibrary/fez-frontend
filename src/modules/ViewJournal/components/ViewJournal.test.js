@@ -15,11 +15,12 @@ import {
     api,
     waitElementToBeInDocument,
     userEvent,
+    within,
 } from 'test-utils';
 import ViewJournal, { getAdvisoryStatement, publishAsOASearchFacetDefaults } from './ViewJournal';
 import { default as viewJournalLocale } from 'locale/viewJournal';
 import { screen } from '@testing-library/react';
-import { pathConfig } from '../../../config';
+import { pathConfig } from 'config';
 import param from 'can-param';
 
 let mockUseLocation = {};
@@ -116,6 +117,8 @@ describe('ViewJournal', () => {
         // ***********************************************
         // Basic section
         // ***********************************************
+        expect(getByTestId('journal-details-basic')).toHaveTextContent('Journal Information');
+        expect(within(getByTestId('journal-details-basic')).getByTestId('help-icon')).toBeInTheDocument();
         expect(getByTestId('jnl-homepage-url-header')).toHaveTextContent('Journal home page');
         expect(getByTestId('jnl-homepage-url-value')).toHaveTextContent('https://www.hindawi.com/journals/aaa');
         expect(getByTestId('jnl-homepage-url-lookup-link')).toHaveAttribute(
@@ -173,6 +176,7 @@ describe('ViewJournal', () => {
         // Open Access Options Section
         // **************************************************************
         expect(getByTestId('journal-details-openAccess-header')).toHaveTextContent('Open Access Options');
+        expect(within(getByTestId('journal-details-openAccess')).getByTestId('help-icon')).toBeInTheDocument();
 
         expect(getByTestId('jnl-read-and-publish-header')).toHaveTextContent('UQ publisher agreement');
         expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No (exhausted)');
@@ -198,6 +202,7 @@ describe('ViewJournal', () => {
         // **************************************************************
 
         expect(getByTestId('journal-details-discoverability-header')).toHaveTextContent('Journal Discoverability');
+        expect(within(getByTestId('journal-details-discoverability')).getByTestId('help-icon')).toBeInTheDocument();
 
         expect(getByTestId('wos-indexes-header')).toHaveTextContent('Web of Science');
         expect(getByTestId('wos-indexes-0-value')).toHaveTextContent('Arts & Humanities Citation Index (AHCI)');
@@ -220,6 +225,7 @@ describe('ViewJournal', () => {
         // ******************************************************************
 
         expect(getByTestId('journal-details-qualityByRanking-header')).toHaveTextContent('Journal Quality By Ranking');
+        expect(within(getByTestId('journal-details-qualityByRanking')).getByTestId('help-icon')).toBeInTheDocument();
 
         expect(getByTestId('journal-details-tab-categories-header')).toHaveTextContent(
             'Journal Citations Report (Clarivate)',
@@ -292,6 +298,11 @@ describe('ViewJournal', () => {
         // ******************************************************************
         // Listed in
         // ******************************************************************
+        expect(getByTestId('journal-details-listed-header')).toHaveTextContent(
+            'Journal Quality By Recognised Listings',
+        );
+        expect(within(getByTestId('journal-details-listed')).getByTestId('help-icon')).toBeInTheDocument();
+
         expect(queryByTestId('jnl-abdc-rating-header')).toHaveTextContent(
             'Australian Business Deans Council (ABDC) Quality Rating',
         );
@@ -324,6 +335,9 @@ describe('ViewJournal', () => {
         // ******************************************************************
         // UQ Connections
         // ******************************************************************
+        expect(getByTestId('journal-details-uqConnections-header')).toHaveTextContent('UQ Connections');
+        expect(within(getByTestId('journal-details-uqConnections')).queryByTestId('help-icon')).not.toBeInTheDocument();
+
         expect(getByTestId('jnl-uq-author-count-header')).toHaveTextContent('Number of UQ Authors');
         expect(getByTestId('jnl-uq-author-count-value')).toHaveTextContent('200');
 
@@ -366,7 +380,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -399,7 +413,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -426,7 +440,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -454,7 +468,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -542,7 +556,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
