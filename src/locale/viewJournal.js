@@ -60,6 +60,21 @@ export default {
                             accepted for publication but before the publisher has applied formatting, typesetting and
                             branding.
                         </p>
+                        <p>UQ eSpace will manage the required embargo period.</p>
+                        <h3>UQ Publisher agreement</h3>
+
+                        <p>
+                            UQ Library may have{' '}
+                            <a
+                                href={
+                                    'https://web.library.uq.edu.au/research-and-publish/open-research/open-access-publishing-agreements'
+                                }
+                                target={'blank'}
+                            >
+                                an agreement
+                            </a>{' '}
+                            with the publisher that covers the APC or provides a discount on the APC.
+                        </p>
                     </>
                 ),
             },
@@ -74,7 +89,11 @@ export default {
                             enhancing the work’s credibility.
                         </p>
                         <p>Major databases that index journals are:</p>
-                        <p>Web of Science Citation indexes, Scopus; and PubMed.</p>
+                        <ul>
+                            <li>Web of Science citation indexes</li>
+                            <li>Scopus</li>
+                            <li>PubMed</li>
+                        </ul>
                     </>
                 ),
             },
@@ -93,19 +112,21 @@ export default {
 
                         <p>The main ranking journal quality schemas are based on citations and include:</p>
 
-                        <p>Journal Citation Reports which includes journals from the Web of Science Core Collection.</p>
-
-                        <p>CiteScore which calculates rankings using data from Scopus.</p>
-
-                        <p>
-                            SJR (SCImago Journal Rank) is based on Scopus data and measures the prestige of the journal
-                            based on the reputation of citing journals.
-                        </p>
-
-                        <p>
-                            SNIP (Source Normalized Impact per Paper) is based on Scopus data and citation potential
-                            according to its specific subject field.
-                        </p>
+                        <ul>
+                            <li>
+                                Journal Citation Reports which includes journals from the Web of Science Core
+                                Collection.
+                            </li>
+                            <li>CiteScore which calculates rankings using data from Scopus.</li>
+                            <li>
+                                SJR (SCImago Journal Rank) is based on Scopus data and measures the prestige of the
+                                journal based on the reputation of citing journals.
+                            </li>
+                            <li>
+                                SNIP (Source Normalized Impact per Paper) is based on Scopus data and citation potential
+                                according to its specific subject field.
+                            </li>
+                        </ul>
                     </>
                 ),
             },
@@ -122,8 +143,6 @@ export default {
                         </p>
 
                         <p>Well known listings include:</p>
-
-                        <p>Lists may be</p>
                         <ul>
                             <li>ABDC (Australian Business Deans Council)</li>
                             <li>CWTS (Centre of Science and Technology Studies at Leiden University)</li>
