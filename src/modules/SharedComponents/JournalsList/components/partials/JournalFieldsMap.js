@@ -133,6 +133,17 @@ const JournalFieldsMap = [
                             directly from the publisher. The article is available immediately after publication. No fees
                             are payable by the author.
                         </li>
+                        <li key="published-open-diamond">
+                            <JournalsOpenAccessIndicator type={types.published} status={status.open} showDiamond />
+                            The final, published version of the article is openly available for everyone to read
+                            directly from the community driven or institutional publisher, immediately after
+                            publication. No fees are payable by the author.
+                        </li>
+                        <li key="published-open-s2o">
+                            <JournalsOpenAccessIndicator type={types.published} status={status.open} showS2O />
+                            The final, published version of the article is open access with no fees payable by the
+                            author. Open access is enabled when enough institutions subscribe to the journal.
+                        </li>
                         <li key="published-cap">
                             <JournalsOpenAccessIndicator type={types.published} status={status.cap} />
                             The final, published version of the article is openly available for everyone to read
