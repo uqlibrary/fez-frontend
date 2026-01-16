@@ -80,11 +80,11 @@ test.describe('view Journal', () => {
 
                 const fields = [
                     'jnl_title-input',
-                    'jnl_jcr_scie_abbrev_title-input',
+                    'jnl_abbrev_title-input',
                     'jnl_publisher-input',
-                    'jnl_refereed-input',
-                    'jnl_publication_year-input',
-                    'jnl_publication_frequency-input',
+                    'jnl_is_refereed-input',
+                    'jnl_start_year-input',
+                    'jnl_frequency-input',
                 ];
 
                 const fieldValues: Record<string, string> = {};

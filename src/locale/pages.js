@@ -19,6 +19,7 @@ import {
 } from 'config/general';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { Link } from 'react-router-dom';
 import { Box } from '@mui/material';
 
 /*
@@ -365,8 +366,8 @@ export default {
             bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
             text: (
                 <span>
-                    Add to this list by <a href={pathConfig.records.possible}>claiming a work</a> or{' '}
-                    <a href={pathConfig.records.add.find}>adding a missing work</a>.
+                    Add to this list by <Link to={pathConfig.records.possible}>claiming a work</Link> or{' '}
+                    <Link to={pathConfig.records.add.find}>adding a missing work</Link>.
                 </span>
             ),
             loadingMessage: 'Searching for your works',
@@ -377,8 +378,8 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. You may be able to{' '}
-                        <a href={pathConfig.records.possible}>claim works we think may be yours</a> or{' '}
-                        <a href={pathConfig.records.add.find}>add a missing publication</a>
+                        <Link to={pathConfig.records.possible}>claim works we think may be yours</Link> or{' '}
+                        <Link to={pathConfig.records.add.find}>add a missing publication</Link>
                     </div>
                 ),
             },
@@ -389,7 +390,7 @@ export default {
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             text: (
                 <span>
-                    Add to this list by <a href={`${pathConfig.dataset.add}`}>adding a missing dataset</a>.
+                    Add to this list by <Link to={`${pathConfig.dataset.add}`}>adding a missing dataset</Link>.
                 </span>
             ),
             loadingMessage: 'Searching for your datasets',
@@ -399,7 +400,7 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. You may be able to{' '}
-                        <a href={pathConfig.dataset.add}>add a missing dataset</a>.
+                        <Link to={pathConfig.dataset.add}>add a missing dataset</Link>.
                     </div>
                 ),
             },
@@ -1140,8 +1141,8 @@ export default {
                 doaj: {
                     title: 'Open Access (Directory of Open Access Journals - DOAJ)',
                 },
-                indexed: {
-                    title: 'Indexed in',
+                listed: {
+                    title: 'Listed in',
                 },
                 readAndPublish: {
                     title: 'Publisher Agreements',
@@ -1343,6 +1344,10 @@ export default {
                 },
                 advisoryStatement: {
                     title: 'Advisory statement',
+                },
+                publishAsOAButton: {
+                    tooltip: 'Avoid fees and meet mandates by viewing similar journals with open access.',
+                    text: "I'd like to publish open access",
                 },
             },
         },

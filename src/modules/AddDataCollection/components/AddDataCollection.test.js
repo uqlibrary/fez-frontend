@@ -1,9 +1,10 @@
 import React from 'react';
-import AddDataCollection, { licenseText } from './AddDataCollection';
-import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen } from 'test-utils';
+import AddDataCollection, { licenseText, validateDOI } from './AddDataCollection';
+import { render, WithReduxStore, WithMemoryRouter, fireEvent, waitFor, screen } from 'test-utils';
 import { useValidatedForm } from 'hooks';
 import userEvent from '@testing-library/user-event';
 import { useWatch } from 'react-hook-form';
+import * as actions from 'actions/search';
 
 /* eslint-disable react/prop-types */
 jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
@@ -38,9 +39,9 @@ function setup(testProps = {}, renderMethod = render) {
     return renderMethod(
         <React.StrictMode>
             <WithReduxStore>
-                <WithRouter>
+                <WithMemoryRouter>
                     <AddDataCollection {...props} />
-                </WithRouter>
+                </WithMemoryRouter>
             </WithReduxStore>
         </React.StrictMode>,
     );
@@ -68,9 +69,6 @@ describe('AddDataCollection test mocking hooks', () => {
         let counter = 0;
         useValidatedForm.mockImplementation(() => ({
             handleSubmit: jest.fn(),
-            // watch: () =>
-            //     // startDate, endDate, watchedDoiField
-            //     ['2025-01-01', '2025-02-01', '10.1037/arc0000014'],
             setError: jest.fn(),
             control: {
                 values: {
@@ -114,9 +112,6 @@ describe('AddDataCollection test', () => {
         const { useValidatedForm: originalUseValidatedForm } = jest.requireActual('hooks');
         useValidatedForm.mockImplementation(originalUseValidatedForm);
     });
-    afterAll(() => {
-        // mockUseNavigate.mockClear();
-    });
 
     it('should render data set form', () => {
         const { container, getByRole } = setup();
@@ -148,6 +143,7 @@ describe('AddDataCollection test', () => {
     });
 
     it('should get save confirmation locale correctly', () => {
+        useWatch.mockImplementation(() => ['2025-01-01', '2025-02-01']);
         const { container, rerender } = setup();
         setup({ newRecordFileUploadingOrIssueError: true, submitSucceeded: true }, rerender);
         expect(container).toMatchSnapshot();
@@ -159,5 +155,26 @@ describe('AddDataCollection test', () => {
 
         // licence text lacks required internal structure
         expect(licenseText(['something'])).toMatchSnapshot();
+    });
+
+    describe('validateDOI', () => {
+        let spy;
+        beforeEach(() => {
+            spy = jest.spyOn(actions, 'doesDOIExist');
+        });
+        afterAll(() => jest.resetAllMocks());
+        it('should return null when doi data is not available ', async () => {
+            expect(await validateDOI()).toBe(null);
+            expect(await validateDOI({})).toBe(null);
+            expect(await validateDOI({ fez_record_search_key_doi: null })).toBe(null);
+            expect(await validateDOI({ fez_record_search_key_doi: {} })).toBe(null);
+            expect(spy).not.toHaveBeenCalled();
+        });
+
+        it('should return not return null when doi data is available', async () => {
+            const doi = '10.100/abc.d';
+            await validateDOI({ fez_record_search_key_doi: { rek_doi: doi } });
+            expect(spy).toHaveBeenCalledWith(doi);
+        });
     });
 });

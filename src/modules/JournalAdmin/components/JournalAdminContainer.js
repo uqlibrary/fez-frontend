@@ -24,7 +24,7 @@ import AdminSection from './admin/AdminSection';
 import BibliographicSection from './bibliographic/BibliographicSection';
 import UqDataSection from './uqData/UqDataSection';
 import DoajSection from './doaj/DoajSection';
-import IndexedSection from './indexed/IndexedSection';
+import ListedSection from './listed/ListedSection';
 import { useJournal } from '../hooks';
 import ReadAndPublishSection from './readAndPublish/ReadAndPublishSection';
 
@@ -122,26 +122,25 @@ export const JournalAdminContainer = () => {
                                         component: AdminSection,
                                         numberOfErrors: tabErrors.current.adminSection || null,
                                     },
-
                                     bibliographic: {
                                         component: BibliographicSection,
                                         numberOfErrors: tabErrors.current.bibliographicSection || null,
-                                    },
-                                    uqData: {
-                                        component: UqDataSection,
-                                        numberOfErrors: tabErrors.current.uqDataSection || null,
                                     },
                                     readAndPublish: {
                                         component: ReadAndPublishSection,
                                         numberOfErrors: tabErrors.current.readAndPublishSection || null,
                                     },
+                                    uqData: {
+                                        component: UqDataSection,
+                                        numberOfErrors: tabErrors.current.uqDataSection || null,
+                                    },
                                     doaj: {
                                         component: DoajSection,
                                         numberOfErrors: tabErrors.current.doajSection || null,
                                     },
-                                    indexed: {
-                                        component: IndexedSection,
-                                        numberOfErrors: tabErrors.current.indexedSection || null,
+                                    listed: {
+                                        component: ListedSection,
+                                        numberOfErrors: tabErrors.current.listedSection || null,
                                     },
                                 }}
                             />

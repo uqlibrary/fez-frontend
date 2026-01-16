@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { render, within } from '@testing-library/react';
-import { createMemoryRouter, RouterProvider } from 'react-router-dom';
+import { createMemoryRouter, RouterProvider, MemoryRouter } from 'react-router-dom';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
 import { FormProvider } from 'react-hook-form';
@@ -50,8 +50,18 @@ export const rtlRender = (ui, options) => {
     };
 };
 
+export const WithMemoryRouter = ({ children, route = '/', initialEntries = [route] }) => {
+    return (
+        <MemoryRouter
+            initialEntries={initialEntries}
+            initialIndex={initialEntries.findIndex(entry => entry === route)}
+            children={children}
+        />
+    );
+};
 export const WithRouter = ({ children, route = '/', initialEntries = [route] }) => {
     const routes = [{ path: route, element: children }];
+    // Creates a data router, different to the MemoryRouter used in WithMemoryRouter
     const router = createMemoryRouter(routes, { initialEntries: initialEntries });
     return <RouterProvider router={router} />;
 };
@@ -170,7 +180,7 @@ export const createMatchMedia = width => {
 const getFilenameExtension = filename => filename.split('.').pop();
 const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
 const addFilesToFileUploader = async (files, timeout = 500) => {
-    const { screen, fireEvent } = reactTestingLib;
+    const { screen, fireEvent, act } = reactTestingLib;
     // create a list of Files
     const fileList = files.map(file => {
         // if file it's a string, treat it as a filename
@@ -180,12 +190,14 @@ const addFilesToFileUploader = async (files, timeout = 500) => {
         // otherwise expect it to be a object with filename and mimeType keys
         return new File([getFilenameBasename(file.filename)], file.filename, { type: file.mimeType });
     });
-    // drag and drop files
-    fireEvent.drop(screen.getByTestId('fez-datastream-info-input'), {
-        dataTransfer: {
-            files: fileList,
-            types: ['Files'],
-        },
+    await act(async () => {
+        // drag and drop files
+        fireEvent.drop(screen.getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: fileList,
+                types: ['Files'],
+            },
+        });
     });
     for (const file of files) {
         await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
@@ -215,6 +227,13 @@ const waitElementToBeInDocument = async (dataTestId, options) =>
         expect(element).toBeInTheDocument();
         return element;
     }, options);
+
+/**
+ * @param {string|function} testId
+ * @return {HTMLElement}
+ */
+const assertMissingElement = testId =>
+    expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).not.toBeInTheDocument();
 
 /**
  * note: it will match visible texts in DOM or input's values
@@ -555,6 +574,7 @@ module.exports = {
     WithReduxStore,
     assertTooltipText,
     WithRouter,
+    WithMemoryRouter,
     createFezDatastreamInfoArray,
     getDatastreamByFilename,
     withDatastreams,
@@ -566,6 +586,7 @@ module.exports = {
     waitToBeEnabled,
     waitToBeDisabled,
     waitElementToBeInDocument,
+    assertMissingElement,
     waitForText,
     waitForTextToBeRemoved,
     expectRequiredFieldError,

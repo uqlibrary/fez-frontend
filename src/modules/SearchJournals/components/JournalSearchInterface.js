@@ -12,6 +12,7 @@ import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Tooltip from '@mui/material/Tooltip';
+import { AddToSelectedSubjects } from './partials/AddToSelectedSubjects';
 
 export const id = 'journal-search-interface';
 
@@ -20,6 +21,7 @@ export const JournalSearchInterface = ({
     onSearchAll,
     selectedKeywords,
     handleKeywordAdd,
+    handleKeywordUpdate,
     handleKeywordDelete,
     handleKeywordReset,
     hasAnySelectedKeywords = false,
@@ -76,15 +78,19 @@ export const JournalSearchInterface = ({
                     >
                         <SelectedKeywords
                             onKeywordDelete={handleKeywordDelete}
+                            onKeywordUpdate={handleKeywordUpdate}
                             keywords={Object.values(selectedKeywords)}
                         />
+                        {!showInputControls && (
+                            <AddToSelectedSubjects onAdd={handleKeywordAdd} selected={selectedKeywords} />
+                        )}
                     </Grid>
                 )}
                 {hasAnySelectedKeywords && !showInputControls && (
                     <Tooltip
                         id="strategic-publishing-clear-search"
                         data-testid="strategic-publishing-clear-search"
-                        title={'Click to clear search keywords'}
+                        title={'Click to start a new search'}
                     >
                         <IconButton
                             sx={{ position: 'absolute', top: 8, right: 0 }}
@@ -143,6 +149,7 @@ JournalSearchInterface.propTypes = {
     onFavourite: PropTypes.func,
     selectedKeywords: PropTypes.object,
     handleKeywordAdd: PropTypes.func,
+    handleKeywordUpdate: PropTypes.func,
     handleKeywordDelete: PropTypes.func,
     handleKeywordReset: PropTypes.func,
     hasAnySelectedKeywords: PropTypes.bool,

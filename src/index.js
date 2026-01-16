@@ -18,7 +18,7 @@ import Root from './Root';
 import AppErrorBoundary from './AppErrorBoundary';
 import 'sass/index.scss';
 import { store, reducers } from 'config/store';
-import { isTest } from './helpers/general';
+import { IS_TEST } from './config/general';
 
 // Increase default (10) event listeners to 30
 require('events').EventEmitter.prototype._maxListeners = 30;
@@ -28,7 +28,7 @@ if (process.env.BRANCH !== 'production' && process.env.USE_MOCK) {
     setup();
 }
 
-if (!isTest() && process.env.ENABLE_LOG) {
+if (!IS_TEST && process.env.ENABLE_LOG) {
     Sentry.init({
         dsn: 'https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681',
         integrations: [
@@ -42,6 +42,8 @@ if (!isTest() && process.env.ENABLE_LOG) {
         ],
         environment: process.env.BRANCH,
         release: process.env.GIT_SHA,
+        sendDefaultPii: false,
+        enableMetrics: false,
         allowUrls: [/library\.uq\.edu\.au/],
         ignoreErrors: [
             // Ignore browser extension errors

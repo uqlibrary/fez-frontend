@@ -331,6 +331,24 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         }
     };
 
+    const renderRelatedServices = (objects, subkey, publication) => {
+        const descriptions = publication?.fez_record_search_key_related_service_description;
+        const enhanced = objects.map(item => {
+            const order = item?.rek_related_service_order;
+            /* istanbul ignore next */
+            if (!order || !descriptions) return item;
+            const description = descriptions
+                .find(item => parseInt(item.rek_related_service_description_order, 10) === parseInt(order, 10))
+                ?.rek_related_service_description?.trim?.();
+            if (!description?.length) return item;
+            return {
+                ...item,
+                rek_related_service: `${item.rek_related_service} - ${description}`,
+            };
+        });
+        return renderList(enhanced, subkey);
+    };
+
     const renderSDG = publication => {
         const { fez_record_search_key_sdg: sdg, fez_record_search_key_sdg_source: sdgSource } = publication;
         /* istanbul ignore next */
@@ -422,6 +440,8 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                 return renderList(objects, subkey, pathConfig.list.raid);
             case 'rek_subject':
                 return renderList(objects, subkey, pathConfig.list.subject);
+            case 'rek_related_service':
+                return renderRelatedServices(objects, subkey, publication);
             case 'rek_sdg_source':
                 return renderSDG(publication);
             default:

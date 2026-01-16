@@ -57,6 +57,7 @@ export default defineConfig([
                 dd: true,
                 dc: true,
                 dj: true,
+                dr: true,
             },
 
             parser: babelParser,

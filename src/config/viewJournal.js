@@ -7,23 +7,24 @@ import { getIndicator, types } from 'modules/SharedComponents/JournalsList/compo
 import componentLocale from 'locale/components';
 import { pathConfig } from './pathConfig';
 
+export const getAbbrevTitle = journalDetails =>
+    journalDetails.jnl_abbrev_title ||
+    journalDetails.fez_journal_jcr_scie?.jnl_jcr_scie_abbrev_title ||
+    journalDetails.fez_journal_jcr_ssci?.jnl_jcr_ssci_abbrev_title ||
+    (journalDetails.fez_journal_issn &&
+        Array.isArray(journalDetails.fez_journal_issn) &&
+        journalDetails.fez_journal_issn.length > 0 &&
+        (journalDetails.fez_journal_issn[0]?.fez_ulrichs?.ulr_abbrev_title ||
+            journalDetails.fez_journal_issn[1]?.fez_ulrichs?.ulr_abbrev_title));
+
 export const viewJournalConfig = {
     basic: {
         rows: [
             [
                 {
                     heading: 'ISO abbreviated title',
-                    fieldId: 'ulr-abbrev-title',
-                    getData: journalDetails =>
-                        (journalDetails.fez_journal_jcr_scie &&
-                            journalDetails.fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title) ||
-                        (journalDetails.fez_journal_jcr_ssci &&
-                            journalDetails.fez_journal_jcr_ssci.jnl_jcr_ssci_abbrev_title) ||
-                        (journalDetails.fez_journal_issn &&
-                            Array.isArray(journalDetails.fez_journal_issn) &&
-                            journalDetails.fez_journal_issn.length > 0 &&
-                            journalDetails.fez_journal_issn[0].fez_ulrichs &&
-                            journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_abbrev_title),
+                    fieldId: 'jnl-abbrev-title',
+                    getData: journalDetails => getAbbrevTitle(journalDetails),
                     template: 'DefaultTemplate',
                 },
             ],
@@ -96,9 +97,13 @@ export const viewJournalConfig = {
                                 <span>{item.element}</span>
                                 <span>
                                     {`${
-                                        componentLocale.components.searchJournals.openAccessIndicators.tooltips[
-                                            item.type
-                                        ][item.status]
+                                        item.status === 'embargo' && !!item.embargoPeriod
+                                            ? componentLocale.components.searchJournals.openAccessIndicators.tooltips[
+                                                  item.type
+                                              ][item.status](item.embargoPeriod)
+                                            : componentLocale.components.searchJournals.openAccessIndicators.tooltips[
+                                                  item.type
+                                              ][item.status]
                                     } (${item.type.charAt(0).toUpperCase() + item.type.slice(1)} Version)`}
                                 </span>
                             </>
@@ -232,7 +237,6 @@ export const viewJournalConfig = {
         ],
     },
     readAndPublish: {
-        key: 'fez_journal_read_and_publish',
         title: viewJournalLocale.viewJournal.readAndPublish.title,
         rows: [
             [
@@ -241,27 +245,25 @@ export const viewJournalConfig = {
                     fieldId: 'jnl-read-and-publish',
                     getData: journalDetails => {
                         return {
-                            publisher:
-                                journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_publisher,
-                            discount:
-                                journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted,
-                            capped:
-                                journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped,
+                            publisher: journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_publisher,
+                            discount: journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_discounted,
+                            capped: journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped.toLowerCase(),
                         };
                     },
                     template: 'EnclosedLinkTemplate',
                     templateProps: {
                         href: data =>
-                            !!data.publisher ? viewJournalLocale.viewJournal.readAndPublish.externalUrl : '',
+                            !!data.publisher && data.capped !== 'nodeal'
+                                ? viewJournalLocale.viewJournal.readAndPublish.externalUrl
+                                : '',
                         prefix: data => {
-                            const { publisher, discount } = data;
+                            const { publisher, discount, capped } = data;
                             const { prefixText } = viewJournalLocale.viewJournal.readAndPublish;
+                            const isNoDeal = capped === 'nodeal';
 
-                            let returnData = publisher ? prefixText.replace('<publisher>', publisher) : 'No';
-                            if (publisher && discount) {
+                            let returnData =
+                                publisher && !isNoDeal ? prefixText.replace('<publisher>', publisher) : 'No';
+                            if (!isNoDeal && publisher && discount) {
                                 returnData = returnData.replace('<discount>', ' discount available');
                             } else {
                                 returnData = returnData.replace('<discount>', '');
@@ -282,7 +284,8 @@ export const viewJournalConfig = {
                     getData: journalDetails => {
                         return (
                             journalDetails.fez_journal_read_and_publish &&
-                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped
+                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped.toLowerCase() !==
+                                'nodeal'
                         );
                     },
                     template: 'LinkTemplate',
@@ -297,11 +300,9 @@ export const viewJournalConfig = {
                 {
                     heading: viewJournalLocale.viewJournal.readAndPublish.lastUpdatedHeading,
                     fieldId: 'jnl-read-and-publish-source-date',
-                    data: [
-                        {
-                            path: ['fez_journal_read_and_publish', 'jnl_read_and_publish_source_date'],
-                        },
-                    ],
+                    getData: journalDetails =>
+                        journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped.toLowerCase() !==
+                            'nodeal' && journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_source_date,
                     template: 'DateTimeTemplate',
                     templateProps: {
                         format: 'Do MMMM YYYY',
@@ -1043,112 +1044,6 @@ export const viewJournalConfig = {
             },
         },
     },
-    index: {
-        title: 'Indexed in',
-        rows: [
-            [
-                {
-                    heading: 'Essential Science Indicators Research Fields',
-                    fieldId: 'jnl-esi-subject-lookup',
-                    data: [
-                        {
-                            isArray: true,
-                            primaryKey: 'fez_journal_esi',
-                            path: [],
-                        },
-                    ],
-                    template: 'MultiValueTemplate',
-                    templateProps: {
-                        getData: item => `${item.jnl_esi_subject_lookup} (${item.jnl_esi_issn})`,
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Art and Humanities Citation Index (AHCI) - WOS Subject Categories',
-                    fieldId: 'jnl-wos-category-ahci',
-                    getData: journalDetails =>
-                        !!journalDetails.fez_journal_wos_category &&
-                        journalDetails.fez_journal_wos_category.filter(
-                            item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'AHCI',
-                        ).length > 0 &&
-                        journalDetails.fez_journal_wos_category,
-                    template: 'WosCategoriesTemplate',
-                    templateProps: {
-                        filterFn: item => item.jnl_wos_category_index === 'AHCI',
-                        categoryId: 'ahci',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Science Citation Index Expanded - WOS Subject Categories',
-                    fieldId: 'jnl-wos-category-scie',
-                    getData: journalDetails =>
-                        !!journalDetails.fez_journal_wos_category &&
-                        journalDetails.fez_journal_wos_category.filter(
-                            item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SCIE',
-                        ).length > 0 &&
-                        journalDetails.fez_journal_wos_category,
-                    template: 'WosCategoriesTemplate',
-                    templateProps: {
-                        filterFn: item => item.jnl_wos_category_index === 'SCIE',
-                        categoryId: 'scie',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Social Science Citation Index - WOS Subject Categories',
-                    fieldId: 'jnl-wos-category-ssci',
-                    getData: journalDetails =>
-                        !!journalDetails.fez_journal_wos_category &&
-                        journalDetails.fez_journal_wos_category.filter(
-                            item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SSCI',
-                        ).length > 0 &&
-                        journalDetails.fez_journal_wos_category,
-                    template: 'WosCategoriesTemplate',
-                    templateProps: {
-                        filterFn: item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SSCI',
-                        categoryId: 'ssci',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Emerging Sources Citation Index - WOS Subject Categories',
-                    fieldId: 'jnl-wos-category-esci',
-                    getData: journalDetails =>
-                        !!journalDetails.fez_journal_wos_category &&
-                        journalDetails.fez_journal_wos_category.filter(
-                            item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'ESCI',
-                        ).length > 0 &&
-                        journalDetails.fez_journal_wos_category,
-                    template: 'WosCategoriesTemplate',
-                    templateProps: {
-                        filterFn: item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'ESCI',
-                        categoryId: 'esci',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Scopus',
-                    fieldId: 'has-scopus',
-                    getData: journalDetails => !!journalDetails.fez_journal_cite_score,
-                    template: 'BooleanTemplate',
-                },
-            ],
-            [
-                {
-                    heading: 'Pubmed',
-                    fieldId: 'has-pubmed',
-                    getData: journalDetails => !!journalDetails.fez_journal_pubmed,
-                    template: 'BooleanTemplate',
-                },
-            ],
-        ],
-    },
     listed: {
         title: 'Listed in',
         rows: [
@@ -1257,6 +1152,31 @@ export const viewJournalConfig = {
                                   ).format('YYYY')
                                 : ''
                         }`,
+                },
+            ],
+            [
+                {
+                    heading: 'Essential Science Indicators Research Fields',
+                    fieldId: 'jnl-esi-subject-lookup',
+                    data: [
+                        {
+                            isArray: true,
+                            primaryKey: 'fez_journal_esi',
+                            path: [],
+                        },
+                    ],
+                    template: 'MultiValueTemplate',
+                    templateProps: {
+                        getData: item => `${item.jnl_esi_subject_lookup} (${item.jnl_esi_issn})`,
+                    },
+                },
+            ],
+            [
+                {
+                    heading: 'Pubmed',
+                    fieldId: 'has-pubmed',
+                    getData: journalDetails => !!journalDetails.fez_journal_pubmed,
+                    template: 'BooleanTemplate',
                 },
             ],
         ],

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import JournalsOpenAccessIndicator from './JournalsOpenAccessIndicator';
+import { isEmptyObject } from 'helpers/general';
 
 export const types = { published: 'published', accepted: 'accepted' };
 export const status = { open: 'open', cap: 'cap', embargo: 'embargo', fee: 'fee' };
@@ -11,35 +12,67 @@ export const getIndicatorProps = ({ type, data }) => {
         status: null,
     };
 
-    if (
-        (type === types.accepted &&
-            !!!data.fez_journal_issn &&
-            !!!data.fez_journal_issn?.[0].srm_open_access &&
-            !!!data.fez_journal_issn?.[0].fez_sherpa_romeo) ||
-        (type === types.published &&
-            !!!data.fez_journal_read_and_publish &&
-            (!!!data.fez_journal_doaj || !!!data.fez_journal_doaj?.jnl_doaj_apc_currency))
-    ) {
-        return null;
-    }
+    // APC fee from DOAJ
+    const hasDOAJ = data.fez_journal_doaj && !isEmptyObject(data.fez_journal_doaj);
+    const hasApc = !!Number(data.fez_journal_doaj?.jnl_doaj_apc_average_price);
+
+    // is capped and is discounted from Read and Publish Agreement
+    const hasRNP =
+        data.fez_journal_read_and_publish &&
+        !isEmptyObject(data.fez_journal_read_and_publish) &&
+        data.fez_journal_read_and_publish.jnl_read_and_publish_is_capped?.toLowerCase() !== 'nodeal';
+    const cappedValue = data.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped;
+    const isCapped = cappedValue === 'Y' || cappedValue === 'Approaching';
+    const isDiscounted = !!data.fez_journal_read_and_publish?.jnl_read_and_publish_is_discounted;
+    const s2oValue = data.fez_journal_read_and_publish?.jnl_read_and_publish_is_s2o;
 
     if (type === types.accepted) {
-        const entry = data.fez_journal_issn?.[0]?.fez_sherpa_romeo;
-        if (entry?.srm_max_embargo_amount) indicatorProps.status = status.embargo;
-        else indicatorProps.status = status.open;
-    } else {
-        if (data.fez_journal_read_and_publish) {
-            const entry = data.fez_journal_read_and_publish;
-            if (
-                entry.jnl_read_and_publish_is_capped === 'Y' ||
-                entry.jnl_read_and_publish_is_capped === 'Approaching'
-            ) {
-                indicatorProps.status = status.cap;
-            } else if (!!entry.jnl_read_and_publish_is_discounted) indicatorProps.status = status.fee;
-            else indicatorProps.status = status.open;
+        // Embargo period and open access from sherpa romeo
+        const maxEmbargo = data.fez_journal_issn?.reduce((max, issn) => {
+            return issn.fez_sherpa_romeo ? Math.max(max, issn.fez_sherpa_romeo.srm_max_embargo_amount) : max;
+        }, 0);
+        const openAccess = data.fez_journal_issn?.reduce(
+            (max, issn) => issn.fez_sherpa_romeo?.srm_open_access || max,
+            false,
+        );
+
+        if (!!maxEmbargo) {
+            indicatorProps.status = status.embargo;
+            indicatorProps.embargoPeriod = maxEmbargo;
+            // should not display Published Fee and Accepted Open Icons at the same time
+        } else if (
+            openAccess &&
+            ((hasDOAJ && !hasApc) || (hasRNP && (isCapped || (cappedValue === 'N' && !isDiscounted))))
+        ) {
+            indicatorProps.status = status.open;
         } else {
-            /* istanbul ignore else */
-            if (!!data.fez_journal_doaj?.jnl_doaj_apc_currency) indicatorProps.status = status.fee;
+            return null;
+        }
+    } else {
+        indicatorProps.status = status.fee;
+        if (hasRNP) {
+            if (s2oValue === 'S2O') {
+                indicatorProps.showS2O = true;
+                indicatorProps.status = status.open;
+            } else if (isCapped) {
+                indicatorProps.status = status.cap;
+            } else if (cappedValue === 'N' && !isDiscounted) {
+                indicatorProps.status = status.open;
+                if (s2oValue === 'Y') {
+                    indicatorProps.showS2O = true;
+                }
+            }
+        } else if (hasDOAJ) {
+            const doaj = data.fez_journal_doaj;
+            if (!hasApc) {
+                indicatorProps.status = status.open;
+                if (doaj.jnl_doaj_has_other_fees === false) {
+                    indicatorProps.showDiamond = true;
+                }
+            }
+            if (!!doaj.jnl_doaj_is_s2o) {
+                indicatorProps.showS2O = true;
+            }
         }
     }
 
@@ -48,6 +81,11 @@ export const getIndicatorProps = ({ type, data }) => {
 export const getIndicator = ({ type, data, tooltipLocale }) => {
     const indicatorProps = getIndicatorProps({ type, data });
     if (indicatorProps === null) return { element: null };
+    const tooltip =
+        tooltipLocale && tooltipLocale.hasOwnProperty(indicatorProps.type)
+            ? tooltipLocale[indicatorProps.type][indicatorProps.status]
+            : null;
+
     return {
         ...indicatorProps,
         element: (
@@ -56,9 +94,7 @@ export const getIndicator = ({ type, data, tooltipLocale }) => {
                 data-testid={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
                 key={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
                 tooltip={
-                    tooltipLocale && tooltipLocale.hasOwnProperty(indicatorProps.type)
-                        ? tooltipLocale[indicatorProps.type][indicatorProps.status]
-                        : null
+                    (tooltip && indicatorProps.status === 'embargo' && tooltip(indicatorProps.embargoPeriod)) || tooltip
                 }
                 {...indicatorProps}
             />

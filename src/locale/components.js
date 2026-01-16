@@ -12,17 +12,6 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export const loremIpsum =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
-    'Duis turpis risus, mollis in sem id, auctor tempus tellus. ' +
-    'Praesent maximus tempor tellus pellentesque tincidunt. ' +
-    'Integer maximus accumsan tellus ac aliquet. Nam sollicitudin ' +
-    'odio a leo euismod, quis pharetra arcu laoreet. Mauris malesuada ' +
-    'id diam dignissim aliquet. Aliquam rhoncus non urna in hendrerit. ' +
-    'Pellentesque leo nibh, ornare non metus consequat, tincidunt ' +
-    'scelerisque massa. Curabitur at pellentesque quam. Nulla facilisi. ' +
-    'Nullam sit amet mattis est, ut finibus orci.';
-
 export default {
     components: {
         adminDashboard: {
@@ -2418,6 +2407,7 @@ export default {
         export: {
             label: 'Export page results',
             format: [
+                { value: 'bibtex', label: 'BibTex File' },
                 { value: 'excel', label: 'Excel File' },
                 { value: 'endnote', label: 'Endnote File' },
             ],
@@ -4504,6 +4494,16 @@ export default {
                 message: 'Search results updated',
             },
             partials: {
+                addToSelectedSubjects: {
+                    button: {
+                        title: 'Add a subject to broaden results',
+                    },
+                },
+                forCodeAutocompleteField: {
+                    input: {
+                        placeholder: 'type new subject',
+                    },
+                },
                 FAQ: {
                     title: 'Learn more',
                     items: [
@@ -4763,7 +4763,6 @@ export default {
                         </ul>
                     </React.Fragment>
                 ),
-                instructions: loremIpsum,
                 buttons: {
                     myFavouriteJournals: {
                         title: 'My favourite journals',
@@ -4813,7 +4812,7 @@ export default {
                     },
                     accepted: {
                         open: 'Immediate access via UQ eSpace',
-                        embargo: 'Delayed access via UQ eSpace',
+                        embargo: months => `${months} months delayed access via UQ eSpace`,
                     },
                 },
             },

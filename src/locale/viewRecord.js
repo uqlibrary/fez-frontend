@@ -318,6 +318,7 @@ export default {
                 fez_record_search_key_type_of_data: 'Type of data',
                 fez_record_search_key_grant_id: 'Grant ID',
                 fez_record_search_key_subject: 'ANZSRC Field of Research (FoR) Code',
+                fez_record_search_key_related_service: 'Related service(s)',
                 fez_record_search_key_related_publications: 'Additional related publication(s)',
                 fez_record_search_key_related_datasets: 'Additional related dataset(s)',
             },
@@ -1481,6 +1482,10 @@ export default {
                 {
                     field: 'fez_record_search_key_related_datasets',
                     order: 34,
+                },
+                {
+                    field: 'fez_record_search_key_related_service',
+                    order: 35,
                 },
             ],
             'Department Technical Report': [

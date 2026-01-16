@@ -64,7 +64,7 @@ export const NewGenericSelectField = ({
         if (multiple) {
             value.length > 0 ? setSelectValue(value) : setSelectValue([]);
         } else {
-            !!value ? setSelectValue(value) : setSelectValue('');
+            value !== null ? setSelectValue(value) : setSelectValue('');
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value]);
@@ -113,7 +113,7 @@ export const NewGenericSelectField = ({
                         selected={(multiple && selectValue.includes(item.value)) || undefined}
                         value={item.value}
                         key={index + 1}
-                        disabled={item && ((!canUnselect && !item.value) || !!item.disabled)}
+                        disabled={item && ((!canUnselect && item.value === undefined) || !!item.disabled)}
                         aria-label={item.text}
                         data-analyticsid={`${genericSelectFieldId}-option-${index}`}
                         data-testid={`${genericSelectFieldId}-option-${index}`}

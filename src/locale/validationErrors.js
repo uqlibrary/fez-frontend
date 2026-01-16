@@ -145,5 +145,6 @@ export default {
         rek_security_policy: 'Security policy is required',
         jnl_title: 'Journal title is required',
         jnl_publisher: 'Journal publisher is required',
+        issns: 'ISSN is required',
     },
 };

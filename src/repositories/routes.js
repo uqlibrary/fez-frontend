@@ -541,8 +541,8 @@ export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: und
     return { apiUrl: 'fez-users' };
 };
 
-export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
-    apiUrl: `journals/search?query=${encodeURIComponent(query)}`,
+export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query, keywordsOnly = false }) => ({
+    apiUrl: `journals/search?query=${encodeURIComponent(query)}${keywordsOnly ? '&rule=subject' : ''}`,
 });
 
 /**
@@ -553,28 +553,19 @@ export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
  */
 export const getKeywordsParams = keywords => {
     if (!!keywords && Object.values(keywords).length > 0) {
-        const title = [];
-        const description = [];
-        const subject = [];
-        Object.keys(keywords).map(item => {
-            switch (keywords[item].type) {
-                case 'Title':
-                    title.push(keywords[item].text);
-                    break;
-                case 'Keyword':
-                    description.push(keywords[item].text);
-                    break;
-                case 'Subject':
-                    subject.push(keywords[item].cvoId);
-                    break;
-                default:
-                    break;
-            }
+        let query = '';
+        const keys = Object.keys(keywords);
+        keys.map((item, index) => {
+            const addOperand = index + 1 !== keys.length;
+            const type = keywords[item].type.toLowerCase();
+
+            const field = type === 'keyword' ? 'description' : type;
+            const value = type === 'subject' ? keywords[item].cvoId : keywords[item].text;
+            const operand = addOperand ? ` ${keywords[keys[index + 1]].operand} ` : '';
+            query += `${field}:${value}${operand}`;
         });
         return {
-            title: [...title],
-            description: [...description],
-            subject: [...subject],
+            query: query,
         };
     } else {
         return {};

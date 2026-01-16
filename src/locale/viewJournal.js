@@ -59,6 +59,18 @@ export default {
                         publishing in this title will no longer be fully covered through the agreement.
                     </p>
                 ),
+                nodeal: (
+                    <p>
+                        From January 1 2026, this title does not have a Read and Publish agreement.{' '}
+                        <a
+                            href="https://web.library.uq.edu.au/stories/changes-accessing-and-publishing-journals-2026"
+                            target="_blank"
+                        >
+                            Learn more about current agreements
+                        </a>
+                        .
+                    </p>
+                ),
             },
         },
         notFound: {

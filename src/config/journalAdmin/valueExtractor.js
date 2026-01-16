@@ -67,32 +67,69 @@ export const getValueSearchKeyValueList = (journal, searchKey) => {
     return returnValue;
 };
 
+const toBoolean = value => {
+    if (value === 1 || value === '1') return true;
+    else if (value === 0 || value === '0') return false;
+    else return value;
+};
+
 export default {
     jnl_title: {
         getValue: journal => getValueFromKey(journal, 'jnl_title') ?? '',
     },
-    abbreviatedTitle: {
-        getValue: journal => getValueFromSubKey(journal, 'fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title'),
+    jnl_abbrev_title: {
+        getValue: journal => getValueFromKey(journal, 'jnl_abbrev_title'),
     },
     jnl_publisher: {
         getValue: journal => getValueFromKey(journal, 'jnl_publisher') ?? '',
     },
-    refereed: {
-        getValue: journal => getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_refereed ?? '',
-    },
-    publicationYear: {
+    jnl_is_refereed: {
         getValue: journal =>
-            getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_start_year ?? '',
+            toBoolean(
+                getValueFromKey(journal, 'jnl_is_refereed') ??
+                    getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_refereed,
+            ),
     },
-    publicationFrequency: {
-        getValue: journal => getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_frequency ?? '',
-    },
-    publicationFormats: {
-        getValue: journal => getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_formats ?? '',
-    },
-    description: {
+    jnl_start_year: {
         getValue: journal =>
-            getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_description ?? '',
+            getValueFromKey(journal, 'jnl_start_year') ??
+            getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_start_year ??
+            '',
+    },
+    jnl_frequency: {
+        getValue: journal =>
+            getValueFromKey(journal, 'jnl_frequency') ??
+            getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_frequency ??
+            '',
+    },
+    jnl_formats: {
+        getValue: journal =>
+            getValueFromKey(journal, 'jnl_formats') ??
+            getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_formats ??
+            '',
+    },
+    jnl_description: {
+        getValue: journal =>
+            getValueFromKey(journal, 'jnl_description') ??
+            getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_description ??
+            '',
+    },
+    capped: {
+        getValue: journal => getValueFromSubKey(journal, 'fez_journal_read_and_publish.jnl_read_and_publish_is_capped'),
+    },
+    discounted: {
+        getValue: journal =>
+            toBoolean(getValueFromSubKey(journal, 'fez_journal_read_and_publish.jnl_read_and_publish_is_discounted')),
+    },
+    s2o: {
+        getValue: journal => getValueFromSubKey(journal, 'fez_journal_read_and_publish.jnl_read_and_publish_is_s2o'),
+    },
+    readAndPublishPublisher: {
+        getValue: journal => getValueFromSubKey(journal, 'fez_journal_read_and_publish.jnl_read_and_publish_publisher'),
+    },
+    readAndPublishLastUpdated: {
+        getValue: journal =>
+            getValueFromSubKey(journal, 'fez_journal_read_and_publish.jnl_read_and_publish_source_date'),
     },
     advisoryStatement: {
         getValue: journal => ({
@@ -118,7 +155,6 @@ export default {
     },
     uqData: {
         getValue: journal => ({
-            ...getValueSearchKeyObject(journal, 'fez_journal_read_and_publish'),
             authors: {
                 count: getValueFromKey(journal, 'uq_author_id_count'),
                 id: getValueFromKey(journal, 'jnl_jid'),
@@ -134,26 +170,9 @@ export default {
             ...getValueSearchKeyObject(journal, 'fez_journal_doaj'),
         }),
     },
-    indexed: {
+    listed: {
         getValue: journal => ({
             esi: getValueSearchKeyArray(journal, 'fez_journal_esi'),
-            ahci:
-                getValueSearchKeyArray(journal, 'fez_journal_wos_category').find(
-                    item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'AHCI',
-                ) ?? {},
-            scie:
-                getValueSearchKeyArray(journal, 'fez_journal_wos_category').find(
-                    item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SCIE',
-                ) ?? {},
-            ssci:
-                getValueSearchKeyArray(journal, 'fez_journal_wos_category').find(
-                    item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SSCI',
-                ) ?? {},
-            esci:
-                getValueSearchKeyArray(journal, 'fez_journal_wos_category').find(
-                    item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'ESCI',
-                ) ?? {},
-            scopus: !!getValueFromKey(journal, 'fez_journal_cite_score'),
             pubmed: !!getValueFromKey(journal, 'fez_journal_pubmed'),
         }),
     },

@@ -10,12 +10,23 @@ import {
     act,
     fireEvent,
     createMatchMedia,
+    waitForTextToBeRemoved,
+    assertMissingElement,
+    api,
+    waitElementToBeInDocument,
+    userEvent,
 } from 'test-utils';
-import ViewJournal, { getAdvisoryStatement } from './ViewJournal';
+import ViewJournal, { getAdvisoryStatement, publishAsOASearchFacetDefaults } from './ViewJournal';
+import { default as viewJournalLocale } from 'locale/viewJournal';
+import { screen } from '@testing-library/react';
+import { pathConfig } from '../../../config';
+import param from 'can-param';
 
+let mockUseLocation = {};
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useParams: jest.fn(() => ({ id: 1 })),
+    useLocation: () => mockUseLocation,
 }));
 
 const setup = () => {
@@ -29,6 +40,9 @@ const setup = () => {
 };
 
 describe('ViewJournal', () => {
+    beforeEach(() => jest.clearAllMocks());
+    afterEach(() => api.reset());
+
     it('should display journal not found page error on 404', async () => {
         mockApi
             .onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl))
@@ -102,8 +116,8 @@ describe('ViewJournal', () => {
         // ***********************************************
         // Basic section
         // ***********************************************
-        expect(getByTestId('ulr-abbrev-title-header')).toHaveTextContent('ISO abbreviated title');
-        expect(getByTestId('ulr-abbrev-title-value')).toHaveTextContent('Am. J. Public Health');
+        expect(getByTestId('jnl-abbrev-title-header')).toHaveTextContent('ISO abbreviated title');
+        expect(getByTestId('jnl-abbrev-title-value')).toHaveTextContent('Am. J. Public Health');
 
         expect(getByTestId('jnl-issn-header')).toHaveTextContent('ISSN(s)');
         expect(getByTestId('jnl-issn-0-value')).toHaveTextContent('0090-0036');
@@ -445,45 +459,6 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-cite-score-asjc-code-percentile-value')).toHaveTextContent('94');
 
         // ******************************************************************
-        // Indexed in
-        // ******************************************************************
-        expect(getByTestId('jnl-esi-subject-lookup-header')).toHaveTextContent(
-            'Essential Science Indicators Research Fields',
-        );
-        expect(getByTestId('jnl-esi-subject-lookup-0-value')).toHaveTextContent('Social Sciences, General (0090-0036)');
-        expect(getByTestId('jnl-esi-subject-lookup-1-value')).toHaveTextContent('Social Sciences, General (1541-0048)');
-
-        expect(queryByTestId('jnl-wos-category-ahci-header')).not.toBeInTheDocument();
-
-        expect(getByTestId('jnl-wos-category-scie-header')).toHaveTextContent(
-            'Science Citation Index Expanded - WOS Subject Categories',
-        );
-        expect(getByTestId('jnl-wos-category-scie-0-0-value')).toHaveTextContent(
-            'Public, Environmental & Occupational Health (0090-0036)',
-        );
-        expect(getByTestId('jnl-wos-category-scie-1-0-value')).toHaveTextContent(
-            'Public, Environmental & Occupational Health (1541-0048)',
-        );
-
-        expect(getByTestId('jnl-wos-category-ssci-header')).toHaveTextContent(
-            'Social Science Citation Index - WOS Subject Categories',
-        );
-        expect(getByTestId('jnl-wos-category-ssci-0-0-value')).toHaveTextContent(
-            'Public, Environmental & Occupational Health (0090-0036)',
-        );
-        expect(getByTestId('jnl-wos-category-ssci-1-0-value')).toHaveTextContent(
-            'Public, Environmental & Occupational Health (1541-0048)',
-        );
-
-        expect(queryByTestId('jnl-wos-category-esci-header')).not.toBeInTheDocument();
-
-        expect(getByTestId('has-scopus-header')).toHaveTextContent('Scopus');
-        expect(getByTestId('has-scopus-value')).toHaveTextContent('Yes');
-
-        expect(getByTestId('has-pubmed-header')).toHaveTextContent('Pubmed');
-        expect(getByTestId('has-pubmed-value')).toHaveTextContent('Yes');
-
-        // ******************************************************************
         // Listed in
         // ******************************************************************
         expect(queryByTestId('jnl-abdc-rating-header')).toHaveTextContent(
@@ -519,6 +494,15 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-nature-index-source-date-header')).toHaveTextContent('Nature Index');
         expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('Yes, 2019');
 
+        expect(getByTestId('jnl-esi-subject-lookup-header')).toHaveTextContent(
+            'Essential Science Indicators Research Fields',
+        );
+        expect(getByTestId('jnl-esi-subject-lookup-0-value')).toHaveTextContent('Social Sciences, General (0090-0036)');
+        expect(getByTestId('jnl-esi-subject-lookup-1-value')).toHaveTextContent('Social Sciences, General (1541-0048)');
+
+        expect(getByTestId('has-pubmed-header')).toHaveTextContent('Pubmed');
+        expect(getByTestId('has-pubmed-value')).toHaveTextContent('Yes');
+
         // ******************************************************************
         // UQ Connections
         // ******************************************************************
@@ -529,7 +513,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-uq-author-publications-value')).toHaveTextContent('View these articles in UQ eSpace');
         expect(getByTestId('jnl-uq-author-publications-lookup-link')).toHaveAttribute(
             'href',
-            'https://fez-staging.library.uq.edu.au/records/search?activeFacets[ranges][Year+published][from]=2020&activeFacets[ranges][Year+published][to]=2025&searchQueryParams[mtj_jnl_id][value]=8508&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
+            'http://localhost/records/search?activeFacets[ranges][Year+published][from]=2021&activeFacets[ranges][Year+published][to]=2026&searchQueryParams[mtj_jnl_id][value]=8508&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
         );
 
         expect(getByTestId('jnl-editorial-staff-header')).toHaveTextContent('UQ Editorial Staff');
@@ -543,6 +527,120 @@ describe('ViewJournal', () => {
             'href',
             'https://app.library.uq.edu.au/#/authors/uqauthor2',
         );
+    });
+
+    it('should display ulr abbrev title', async () => {
+        const title = 'abbrev title 1';
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_jcr_scie: null,
+                fez_journal_jcr_ssci: null,
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '0090-0036',
+                        jnl_issn_order: 1,
+                        fez_ulrichs: {
+                            ulr_abbrev_title: title,
+                        },
+                    },
+                ],
+            },
+        });
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-abbrev-title-value')).toHaveTextContent(title);
+    });
+
+    it('should display ulr abbrev title from second issn', async () => {
+        const title = 'abbrev title 2';
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_jcr_scie: null,
+                fez_journal_jcr_ssci: null,
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '0090-0036',
+                        jnl_issn_order: 1,
+                        fez_ulrichs: {
+                            ulr_abbrev_title: null,
+                        },
+                    },
+                    {
+                        jnl_issn: '0090-0037',
+                        jnl_issn_order: 2,
+                        fez_ulrichs: {
+                            ulr_abbrev_title: title,
+                        },
+                    },
+                ],
+            },
+        });
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-abbrev-title-value')).toHaveTextContent(title);
+    });
+
+    it('should display scie abbrev title', async () => {
+        const title = 'abbrev title';
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '0090-0036',
+                        jnl_issn_order: 1,
+                        fez_ulrichs: {
+                            ulr_abbrev_title: null,
+                        },
+                    },
+                ],
+                fez_journal_jcr_scie: {
+                    jnl_jcr_scie_abbrev_title: title,
+                },
+            },
+        });
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-abbrev-title-value')).toHaveTextContent(title);
+    });
+
+    it('should display ssci abbrev title', async () => {
+        const title = 'abbrev title';
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_jcr_scie: null,
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '0090-0036',
+                        jnl_issn_order: 1,
+                        fez_ulrichs: {
+                            ulr_abbrev_title: null,
+                        },
+                    },
+                ],
+                fez_journal_jcr_ssci: {
+                    jnl_jcr_ssci_abbrev_title: title,
+                },
+            },
+        });
+
+        const { getByTestId, getByText, queryByTestId } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('jnl-abbrev-title-value')).toHaveTextContent(title);
     });
 
     it('should display ulr open access url from second issn', async () => {
@@ -571,7 +669,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -609,7 +707,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -779,72 +877,6 @@ describe('ViewJournal', () => {
         );
     });
 
-    it('should display WoS categories correctly with and without ISSN', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
-            data: {
-                ...journalDetails.data,
-                fez_journal_wos_category: [
-                    {
-                        jnl_wos_category_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
-                        jnl_wos_category: '456676',
-                        jnl_wos_category_index: 'SCIE',
-                        jnl_wos_category_issn: '0090-0036 | 0090-1234',
-                        jnl_wos_category_source_date: '2020-09-29',
-                        fez_journal_cwts: {
-                            jnl_cwts_source_year: 2020,
-                            jnl_cwts_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
-                        },
-                        jnl_wos_category_lookup: 'Public, Environmental & Occupational Health | Mental Health',
-                    },
-                    {
-                        jnl_wos_category_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
-                        jnl_wos_category: '456676',
-                        jnl_wos_category_index: 'SSCI',
-                        jnl_wos_category_issn: '0090-0036',
-                        jnl_wos_category_source_date: '2020-09-29',
-                        fez_journal_cwts: {
-                            jnl_cwts_source_year: 2020,
-                            jnl_cwts_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
-                        },
-                        jnl_wos_category_lookup: 'Public, Environmental & Occupational Health | Mental & Dental Health',
-                    },
-                    {
-                        jnl_wos_category_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
-                        jnl_wos_category: '',
-                        jnl_wos_category_index: 'AHCI',
-                        jnl_wos_category_issn: '0090-0036',
-                        jnl_wos_category_source_date: '2020-09-29',
-                        fez_journal_cwts: {
-                            jnl_cwts_source_year: 2020,
-                            jnl_cwts_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
-                        },
-                    },
-                ],
-            },
-        });
-
-        const { getByTestId, getByText, queryByTestId } = setup();
-
-        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
-
-        expect(getByTestId('jnl-wos-category-scie-header')).toHaveTextContent(
-            'Science Citation Index Expanded - WOS Subject Categories',
-        );
-        expect(getByTestId('jnl-wos-category-scie-0-0-value')).toHaveTextContent(
-            'Public, Environmental & Occupational Health (0090-0036)',
-        );
-        expect(getByTestId('jnl-wos-category-scie-0-1-value')).toHaveTextContent('Mental Health (0090-1234)');
-
-        expect(getByTestId('jnl-wos-category-ssci-header')).toHaveTextContent(
-            'Social Science Citation Index - WOS Subject Categories',
-        );
-        expect(getByTestId('jnl-wos-category-ssci-0-0-value')).toHaveTextContent(
-            'Public, Environmental & Occupational Health (0090-0036)',
-        );
-        expect(getByTestId('jnl-wos-category-ssci-0-1-value')).toHaveTextContent('Mental & Dental Health');
-
-        expect(queryByTestId('jnl-wos-category-ahci-header')).not.toBeInTheDocument();
-    });
     // Test for title change
     it('Should correctly show required title change', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
@@ -907,14 +939,6 @@ describe('ViewJournal', () => {
     });
 
     describe('Favouriting', () => {
-        // beforeEach(() => {
-        //     mockApi = setupMockAdapter();
-        // });
-
-        // afterEach(() => {
-        //     mockApi.reset();
-        // });
-
         it('should display an error message if the journal "favourite" action fails', async () => {
             window.matchMedia = createMatchMedia(1600);
             mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
@@ -983,6 +1007,65 @@ describe('ViewJournal', () => {
         expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
     });
 
+    it('should display read and publish ceased info banner', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_read_and_publish: {
+                    jnl_read_and_publish_is_capped: 'NoDeal',
+                    jnl_read_and_publish_is_discounted: false,
+                },
+            },
+        });
+
+        const { getAllByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        const alerts = getAllByTestId('alert');
+        expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
+    });
+
+    it('Should show read and publish section when theres no read and publish agreement', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                jnl_title: 'test',
+                fez_journal_read_and_publish: null,
+            },
+        });
+
+        const { queryByTestId, getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('journal-details-readAndPublish-header')).toBeInTheDocument();
+        expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
+        expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
+    });
+
+    it('Should show read and publish section when read and publish agreement is ceased', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                jnl_title: 'test',
+                fez_journal_read_and_publish: {
+                    jnl_read_and_publish_is_capped: 'NoDeal',
+                    jnl_read_and_publish_publisher: 'publisher',
+                    jnl_read_and_publish_source_date: '2025-01-01',
+                },
+            },
+        });
+
+        const { queryByTestId, getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('journal-details-readAndPublish-header')).toBeInTheDocument();
+        expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
+        expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
+    });
+
     describe('getAdvisoryStatement', () => {
         it('should render html', () => {
             const { getByTestId } = render(getAdvisoryStatement('<p data-testid="test">Tester</p>'));
@@ -990,6 +1073,130 @@ describe('ViewJournal', () => {
         });
         it('should render nothing (coverage)', () => {
             expect(getAdvisoryStatement()).toEqual('');
+        });
+    });
+
+    describe('`Publish as OA` button', () => {
+        const data = {
+            ...journalDetails.data,
+            fez_journal_read_and_publish: null,
+        };
+
+        afterEach(() =>
+            expect(screen.queryByText(viewJournalLocale.viewJournal.notFound.title)).not.toBeInTheDocument(),
+        );
+
+        it('should not display button for non-search workflows', async () => {
+            api.mock.journals.get({ id: '.*', data: { ...data } });
+            setup();
+
+            await waitForTextToBeRemoved('Loading journal data');
+            assertMissingElement('publish-as-oa-button');
+        });
+
+        describe('search workflows', () => {
+            beforeEach(() => {
+                mockUseLocation = { search: '?fromSearch=true' };
+            });
+
+            it('should not display button when conditions are unmet', async () => {
+                api.mock.journals.get({
+                    id: '.*',
+                    data: {
+                        ...journalDetails.data,
+                        fez_journal_read_and_publish: {
+                            jnl_read_and_publish_is_capped: 'Y',
+                        },
+                    },
+                });
+                setup();
+
+                await waitForTextToBeRemoved('Loading journal data');
+                assertMissingElement('publish-as-oa-button');
+            });
+
+            it("should display button for search workflows when OA status = `fee` and it's not embargoed", async () => {
+                window.open = jest.fn();
+                api.mock.journals.get({ id: '.*', data: { ...data } });
+                const { getByTestId } = setup();
+
+                await waitElementToBeInDocument('publish-as-oa-button');
+                await userEvent.click(getByTestId('publish-as-oa-button'));
+
+                const expectedSearchParams = {
+                    keywords: {
+                        'Subject-453458': {
+                            cvoId: '453458',
+                            text: '2739 Public Health, Environmental and Occupational Health',
+                            type: 'Subject',
+                            id: 'Subject-453458',
+                        },
+                        'Subject-456676': {
+                            cvoId: '456676',
+                            text: 'Public, Environmental & Occupational Health',
+                            type: 'Subject',
+                            id: 'Subject-456676',
+                        },
+                        'Subject-456497': {
+                            cvoId: '456497',
+                            text: 'Computer Science, Software Engineering',
+                            type: 'Subject',
+                            id: 'Subject-456497',
+                        },
+                    },
+                    activeFacets: {
+                        filters: {
+                            ...publishAsOASearchFacetDefaults,
+                            'Highest quartile': ['1'],
+                        },
+                    },
+                };
+                expect(window.open).toHaveBeenCalledWith(
+                    `${pathConfig.journals.search}?${param(expectedSearchParams)}`,
+                    '_blank',
+                    'noopener,noreferrer',
+                );
+            });
+
+            describe('embargoed', () => {
+                const data = {
+                    ...journalDetails.data,
+                    fez_journal_read_and_publish: null,
+                    fez_journal_issn: [
+                        {
+                            ...journalDetails.data.fez_journal_issn[0],
+                            fez_sherpa_romeo: {
+                                ...journalDetails.data.fez_journal_issn[0].fez_sherpa_romeo,
+                                srm_max_embargo_amount: 12,
+                                srm_max_embargo_units: 'months',
+                            },
+                        },
+                    ],
+                };
+
+                it('should display button for search workflows when OA status equal to `fee` and embargoed for equal or greater than 12 months', async () => {
+                    api.mock.journals.get({ id: '.*', data: { ...data } });
+                    setup();
+
+                    await waitElementToBeInDocument('publish-as-oa-button');
+                });
+
+                it('should not display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', () => {
+                    api.mock.journals.get({
+                        id: '.*',
+                        data: {
+                            ...data,
+                            fez_sherpa_romeo: {
+                                ...data.fez_sherpa_romeo,
+                                srm_max_embargo_amount: 11,
+                            },
+                        },
+                    });
+                    setup();
+
+                    assertMissingElement('publish-as-oa-button');
+                });
+            });
         });
     });
 });

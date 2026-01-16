@@ -1,16 +1,25 @@
 import React from 'react';
-import { fireEvent, render, WithReduxStore, WithRouter, act } from 'test-utils';
+import {
+    fireEvent,
+    userEvent,
+    render,
+    WithReduxStore,
+    WithMemoryRouter,
+    act,
+    assertDisabled,
+    assertEnabled,
+} from 'test-utils';
 import { FavouriteJournals } from '../index';
 import mockData from '../../../mock/data/testing/journals/journals';
 import * as redux from 'react-redux';
 
 const setup = ({ state = {} } = {}) => {
     return render(
-        <WithRouter>
+        <WithMemoryRouter>
             <WithReduxStore initialState={{ favouriteJournalsReducer: state }}>
                 <FavouriteJournals />
             </WithReduxStore>
-        </WithRouter>,
+        </WithMemoryRouter>,
     );
 };
 
@@ -81,18 +90,23 @@ describe('FavouriteJournals', () => {
         expect(container.querySelectorAll(selectAllFavouritesCheckedCheckboxSelectorString).length).toBe(0);
     });
 
-    it('should remove journal ', () => {
-        mocks.useState = jest.spyOn(React, 'useState');
-        mocks.useState
-            .mockImplementationOnce(() => [{ [mockData[0].jnl_jid]: true }, jest.fn()])
-            .mockImplementationOnce(() => [false, jest.fn()]);
+    it('should remove journal ', async () => {
         mocks.useDispatch = redux.useDispatch;
         mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
-        const { getByTestId, queryByTestId } = setup({
+        const { getByTestId } = setup({
             state: { loading: false, response: { total: 1, data: mockData } },
         });
-        expect(queryByTestId('remove-from-favourites-button')).toBeInTheDocument();
-        fireEvent.click(getByTestId('remove-from-favourites-button'));
+
+        expect(getByTestId('remove-from-favourites-button')).toBeInTheDocument();
+        assertDisabled(getByTestId('remove-from-favourites-button'));
+        await userEvent.click(document.querySelector('#journal-list-data-col-1-checkbox-0'));
+
+        assertEnabled(getByTestId('remove-from-favourites-button'));
+
+        expect(redux.useDispatch).toHaveBeenCalledTimes(4);
+        await userEvent.click(getByTestId('remove-from-favourites-button'));
+        // basic check that the button was clicked
+        expect(redux.useDispatch).toHaveBeenCalledTimes(6);
     });
 
     it('should render when there are no favs', () => {

@@ -52,8 +52,8 @@ describe('AdminSection component', () => {
         allFields = simpleFields.concat(composedFields);
         fieldIds = allFields
             .filter(props => props.name.includes('adminSection.'))
-            .map(props => props.id || props.textFieldId || props.richEditorId)
-            .map(id => (id === 'jnl_advisory_statement_type' ? 'jnl_advisory_statement_type-input' : id));
+            .map(props => props.id || props.textFieldId || props.richEditorId || props.genericSelectFieldId)
+            .map(id => (id === 'jnl_advisory_statement_type' || id === 'jnl_is_refereed' ? `${id}-input` : id));
     });
 
     it('should render default view', () => {
@@ -65,8 +65,26 @@ describe('AdminSection component', () => {
         });
     });
 
+    it('should render abbrev title placeholder', () => {
+        useJournalContext.mockImplementation(() => ({
+            jnlDisplayType: ADMIN_JOURNAL,
+            journalDetails: {
+                ...journalDoaj.data,
+            },
+        }));
+
+        const { getByTestId } = setup();
+
+        expect(getByTestId('jnl_abbrev_title-input').getAttribute('placeholder')).toBe(
+            journalDoaj.data.fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title,
+        );
+    });
+
     it('should render disabled view', () => {
-        fieldIds = allFields.filter(props => props.id || props.textFieldId).map(props => props.id || props.textFieldId);
+        fieldIds = allFields
+            .filter(props => props.name.includes('adminSection.'))
+            .filter(props => props.id || props.textFieldId || props.genericSelectFieldId)
+            .map(props => props.id || props.textFieldId || props.genericSelectFieldId);
         // only test actual input fields
         const { getByTestId } = setup({ values: { journal: { ...journalDoaj.data } }, disabled: true });
         fieldIds.forEach(id => {
