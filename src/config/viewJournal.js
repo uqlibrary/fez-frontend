@@ -52,7 +52,8 @@ export const viewJournalConfig = {
                     templateProps: {
                         href: item => item,
                         text: item => item,
-                        title: 'View journal home page in a new tab',
+                        ariaLabel: () => 'Open journal home page in a new tab',
+                        title: 'Open journal home page in a new tab',
                     },
                 },
             ],
@@ -84,6 +85,7 @@ export const viewJournalConfig = {
                                 encodeURIComponent(data.fez_ulrichs?.ulr_title_id),
                             ),
                         text: data => data.jnl_issn,
+                        ariaLabel: data => `ISSN ${data.jnl_issn} – view Ulrichs details in a new tab`,
                         title: 'View Ulrichs details in a new tab',
                     },
                 },
@@ -171,6 +173,8 @@ export const viewJournalConfig = {
                             getDoajUrl(journalDetails.fez_journal_doaj.jnl_doaj_issn),
                         text: journalDetails =>
                             !!journalDetails.fez_journal_doaj ? 'Fully Open Access' : 'Hybrid or Subscription',
+                        ariaLabel: journalDetails =>
+                            !!journalDetails.fez_journal_doaj ? 'Fully open access - open DOAJ page in a new tab' : '',
                     },
                 },
             ],
@@ -254,6 +258,7 @@ export const viewJournalConfig = {
                         prefix: () => viewJournalLocale.viewJournal.readAndPublish.caulLink.prefix,
                         title: viewJournalLocale.viewJournal.readAndPublish.caulLink.ariaLabel,
                         text: () => viewJournalLocale.viewJournal.readAndPublish.caulLink.linkText,
+                        ariaLabel: () => 'Open CAUl page to check current status of CAUL pre-paid APC in a new tab',
                     },
                 },
             ],
@@ -266,6 +271,8 @@ export const viewJournalConfig = {
                     templateProps: {
                         href: doaj => getDoajUrl(doaj.jnl_doaj_issn),
                         text: doaj => `${doaj.jnl_doaj_apc_average_price} ${doaj.jnl_doaj_apc_currency}`,
+                        ariaLabel: doaj =>
+                            `APC ${doaj.jnl_doaj_apc_average_price} ${doaj.jnl_doaj_apc_currency} - Open DOAJ page for APC details in a new tab`,
                     },
                 },
             ],
@@ -281,8 +288,9 @@ export const viewJournalConfig = {
                     template: 'LinkTemplate',
                     templateProps: {
                         href: item => item.fez_sherpa_romeo.srm_journal_link,
-                        title: "View journal's open access policy in a new tab",
-                        ariaLabel: () => "Click to view journal's open access policy details in a new tab",
+                        title: "Open journal's open access policy in a new tab",
+                        ariaLabel: item =>
+                            `${item.fez_sherpa_romeo.srm_max_embargo_amount} months embargo - Open journal's open access policy details in a new tab`,
                         text: item => `${item.fez_sherpa_romeo.srm_max_embargo_amount} months`,
                     },
                 },
@@ -452,8 +460,9 @@ export const viewJournalConfig = {
                     templateProps: {
                         href: item =>
                             prefixByUrlResolver(`https://www.scopus.com/sourceid/${item.jnl_cite_score_source_id}`),
-                        title: 'Open CiteScore record in a new tab',
                         text: item => item.jnl_cite_score,
+                        ariaLabel: item => `CiteScore ${item.jnl_cite_score} - Open record page in Scopus in a new tab`,
+                        title: 'Open Scopus record page in a new tab',
                     },
                 },
             ],
@@ -581,11 +590,12 @@ export const viewJournalConfig = {
                                       item.id,
                                   )
                                 : '',
-                        title: viewJournalLocale.viewJournal.uqConnections.authorPublications.ariaLabel,
                         text: item =>
                             item.count > 0
                                 ? viewJournalLocale.viewJournal.uqConnections.authorPublications.linkText
                                 : '',
+                        ariaLabel: () => viewJournalLocale.viewJournal.uqConnections.authorPublications.ariaLabel,
+                        title: viewJournalLocale.viewJournal.uqConnections.authorPublications.ariaLabel,
                     },
                 },
             ],
@@ -605,7 +615,9 @@ export const viewJournalConfig = {
                     templateProps: {
                         href: author => pathConfig.authorStatistics.url(author.aut_org_username),
                         text: author => author.aut_display_name,
-                        title: viewJournalLocale.viewJournal.uqConnections.editorialStaff.ariaLabel,
+                        title: viewJournalLocale.viewJournal.uqConnections.editorialStaff.tooltip,
+                        ariaLabel: author =>
+                            viewJournalLocale.viewJournal.uqConnections.editorialStaff.ariaLabel(author),
                     },
                 },
             ],

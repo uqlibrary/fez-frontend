@@ -31,6 +31,7 @@ export default {
                         <p>Sources: Ulrichs and DOAJ</p>
                     </>
                 ),
+                tooltip: 'Open help panel for journal information',
             },
         },
         openAccess: {
@@ -77,6 +78,7 @@ export default {
                         </p>
                     </>
                 ),
+                tooltip: 'Open help panel for journal open access options',
             },
         },
         discoverability: {
@@ -96,6 +98,7 @@ export default {
                         </ul>
                     </>
                 ),
+                tooltip: 'Open help panel for journal discoverability',
             },
         },
         qualityByRanking: {
@@ -129,6 +132,7 @@ export default {
                         </ul>
                     </>
                 ),
+                tooltip: 'Open help panel for journal quality by ranking',
             },
         },
         listed: {
@@ -151,6 +155,7 @@ export default {
                         </ul>
                     </>
                 ),
+                tooltip: 'Open help panel for journal quality by recognised listings',
             },
         },
         uqConnections: {
@@ -160,7 +165,7 @@ export default {
             },
             authorPublications: {
                 heading: 'UQ Authored Publications',
-                ariaLabel: 'Click to explore articles published in the past 5 years in UQ eSpace',
+                ariaLabel: 'View articles published in the past 5 years in UQ eSpace in a new tab',
                 linkText: 'View these articles in UQ eSpace',
                 externalUrl:
                     APP_URL +
@@ -172,7 +177,8 @@ export default {
             },
             editorialStaff: {
                 heading: 'UQ Editorial Staff',
-                ariaLabel: 'View authors statistic page',
+                tooltip: 'Open authors statistic page in a new tab',
+                ariaLabel: author => `Open authors statistic page for ${author.aut_display_name} in a new tab`,
             },
         },
         readAndPublish: {
