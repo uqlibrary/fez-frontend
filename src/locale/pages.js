@@ -1132,8 +1132,8 @@ export default {
                 uqData: {
                     title: 'UQ eSpace',
                 },
-                doaj: {
-                    title: 'Open Access (Directory of Open Access Journals - DOAJ)',
+                openAccess: {
+                    title: 'Open Access Options',
                 },
                 listed: {
                     title: 'Listed in',
