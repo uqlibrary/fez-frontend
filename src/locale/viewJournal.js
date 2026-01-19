@@ -67,10 +67,9 @@ export default {
                         <p>
                             UQ Library may have{' '}
                             <a
-                                href={
-                                    'https://web.library.uq.edu.au/research-and-publish/open-research/open-access-publishing-agreements'
-                                }
-                                target={'blank'}
+                                href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access-publishing-agreements"
+                                target="_blank"
+                                rel="noopener"
                             >
                                 an agreement
                             </a>{' '}
@@ -202,7 +201,7 @@ export default {
                 approaching: (
                     <p>
                         The available cap for this title is projected to run out shortly. Please{' '}
-                        <a href={caulLink} target="_blank">
+                        <a href={caulLink} target="_blank" rel="noopener">
                             check the current status
                         </a>
                         .
@@ -220,6 +219,7 @@ export default {
                         <a
                             href="https://web.library.uq.edu.au/stories/changes-accessing-and-publishing-journals-2026"
                             target="_blank"
+                            rel="noopener"
                         >
                             Learn more about current agreements
                         </a>
