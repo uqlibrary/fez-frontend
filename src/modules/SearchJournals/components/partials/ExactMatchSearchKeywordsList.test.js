@@ -38,7 +38,7 @@ describe('ExactMatchSearchKeywordsList', () => {
             keywordsList,
         });
         keywordsList.forEach(keyword => {
-            expect(getByText(keyword.keyword)).toBeInTheDocument();
+            expect(getByText(keyword.keyword)).toHaveAttribute('href', `${keyword.href}?fromSearch=true`);
         });
     });
 });
