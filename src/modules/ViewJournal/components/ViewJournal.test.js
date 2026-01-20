@@ -15,11 +15,12 @@ import {
     api,
     waitElementToBeInDocument,
     userEvent,
+    within,
 } from 'test-utils';
 import ViewJournal, { getAdvisoryStatement, publishAsOASearchFacetDefaults } from './ViewJournal';
 import { default as viewJournalLocale } from 'locale/viewJournal';
 import { screen } from '@testing-library/react';
-import { pathConfig } from '../../../config';
+import { pathConfig } from 'config';
 import param from 'can-param';
 
 let mockUseLocation = {};
@@ -116,12 +117,29 @@ describe('ViewJournal', () => {
         // ***********************************************
         // Basic section
         // ***********************************************
+        expect(getByTestId('journal-details-basic')).toHaveTextContent('Journal Information');
+        expect(within(getByTestId('journal-details-basic')).getByTestId('help-icon')).toBeInTheDocument();
+        expect(getByTestId('jnl-homepage-url-header')).toHaveTextContent('Journal home page');
+        expect(getByTestId('jnl-homepage-url-value')).toHaveTextContent('https://www.hindawi.com/journals/aaa');
+        expect(getByTestId('jnl-homepage-url-lookup-link')).toHaveAttribute(
+            'href',
+            'https://www.hindawi.com/journals/aaa',
+        );
+
         expect(getByTestId('jnl-abbrev-title-header')).toHaveTextContent('ISO abbreviated title');
         expect(getByTestId('jnl-abbrev-title-value')).toHaveTextContent('Am. J. Public Health');
 
         expect(getByTestId('jnl-issn-header')).toHaveTextContent('ISSN(s)');
         expect(getByTestId('jnl-issn-0-value')).toHaveTextContent('0090-0036');
         expect(getByTestId('jnl-issn-1-value')).toHaveTextContent('1541-0048');
+        expect(getByTestId('jnl-issn-0-lookup-link')).toHaveAttribute(
+            'href',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41698',
+        );
+        expect(getByTestId('jnl-issn-1-lookup-link')).toHaveAttribute(
+            'href',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41699',
+        );
 
         expect(queryByTestId('jnl-issn-454151-header')).not.toBeInTheDocument();
 
@@ -130,68 +148,45 @@ describe('ViewJournal', () => {
             'American Public Health Association, United States',
         );
 
-        expect(getByTestId('ulr-refereed-header')).toHaveTextContent('Refereed');
-        expect(getByTestId('ulr-refereed-value')).toHaveTextContent('Yes');
+        expect(getByTestId('jnl-is-refereed-header')).toHaveTextContent('Refereed');
+        expect(getByTestId('jnl-is-refereed-value')).toHaveTextContent('Yes');
 
-        expect(getByTestId('ulr-start-year-header')).toHaveTextContent('First year of publication');
-        expect(getByTestId('ulr-start-year-value')).toHaveTextContent('1911');
+        expect(getByTestId('jnl-start-year-header')).toHaveTextContent('First year of publication');
+        expect(getByTestId('jnl-start-year-value')).toHaveTextContent('1911');
 
-        expect(getByTestId('ulr-frequency-header')).toHaveTextContent('Frequency of publication');
-        expect(getByTestId('ulr-frequency-value')).toHaveTextContent('Monthly');
+        expect(getByTestId('jnl-frequency-header')).toHaveTextContent('Frequency of publication');
+        expect(getByTestId('jnl-frequency-value')).toHaveTextContent('Monthly');
 
-        expect(getByTestId('ulr-formats-header')).toHaveTextContent('Journal formats available');
-        expect(getByTestId('ulr-formats-value')).toHaveTextContent('Print');
+        expect(getByTestId('jnl-formats-header')).toHaveTextContent('Journal formats available');
+        expect(getByTestId('jnl-formats-value')).toHaveTextContent('Print, Online');
 
-        expect(getByTestId('jnl-homepage-url-header')).toHaveTextContent('Journal home page');
-        expect(getByTestId('jnl-homepage-url-value')).toHaveTextContent('https://www.hindawi.com/journals/aaa');
-        expect(getByTestId('jnl-homepage-url-lookup-link')).toHaveAttribute(
-            'href',
-            'https://www.hindawi.com/journals/aaa',
-        );
-
-        expect(getByTestId('ulr-description-header')).toHaveTextContent('Description');
-        expect(getByTestId('ulr-description-value')).toHaveTextContent(
+        expect(getByTestId('jnl-description-header')).toHaveTextContent('Description');
+        expect(getByTestId('jnl-description-value')).toHaveTextContent(
             'Contains reports of original research, demonstrations, evaluations, and other articles covering current aspects of public health.',
         );
 
-        expect(getByTestId('ulr-title-header')).toHaveTextContent('View journal in Ulrichs');
-        expect(getByTestId('ulr-title-0-value')).toHaveTextContent('American Journal of Public Health');
-        expect(getByTestId('ulr-title-0-lookup-link')).toHaveAttribute(
+        expect(getByTestId('jnl-type-header')).toHaveTextContent('Type of journal');
+        expect(getByTestId('jnl-type-value')).toHaveTextContent('Fully Open Access');
+        expect(getByTestId('jnl-type-lookup-link')).toHaveAttribute(
             'href',
-            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41698',
-        );
-        expect(getByTestId('ulr-title-1-lookup-link')).toHaveAttribute(
-            'href',
-            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41699',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fdoaj.org%2Ftoc%2F1085-3375',
         );
 
         // **************************************************************
-        // Publisher Agreements Section
+        // Open Access Options Section
         // **************************************************************
-        expect(getByTestId('journal-details-readAndPublish-header')).toHaveTextContent('Publisher agreements');
+        expect(getByTestId('journal-details-openAccess-header')).toHaveTextContent('Open Access Options');
+        expect(within(getByTestId('journal-details-openAccess')).getByTestId('help-icon')).toBeInTheDocument();
 
-        expect(getByTestId('jnl-read-and-publish-header')).toHaveTextContent('Read and publish agreement');
-        expect(getByTestId('jnl-read-and-publish-link-prefix')).toHaveTextContent('Yes, via Publisher');
-        expect(getByTestId('jnl-read-and-publish-lookup-link')).toHaveAttribute(
-            'href',
-            'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
-        );
-
-        expect(getByTestId('jnl-read-and-publish-source-date-header')).toHaveTextContent('Last updated');
-        expect(getByTestId('jnl-read-and-publish-source-date-value')).toHaveTextContent('28th January 2021');
-
-        // **************************************************************
-        // Open Access (Directory of Open Access Journals - DOAJ) Section
-        // **************************************************************
-        expect(getByTestId('journal-details-doaj-header')).toHaveTextContent(
-            'Open Access (Directory of Open Access Journals - DOAJ',
-        );
-
-        expect(getByTestId('ulr-open-access-header')).toHaveTextContent('Open access');
-        expect(getByTestId('ulr-open-access-value')).toHaveTextContent('Yes');
+        expect(getByTestId('jnl-read-and-publish-header')).toHaveTextContent('UQ publisher agreement');
+        expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No (exhausted)');
 
         expect(getByTestId('jnl-doaj-apc-average-price-header')).toHaveTextContent('Article processing charges');
         expect(getByTestId('jnl-doaj-apc-average-price-value')).toHaveTextContent('975 USD');
+        expect(getByTestId('jnl-doaj-apc-average-price-lookup-link')).toHaveAttribute(
+            'href',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fdoaj.org%2Ftoc%2F1085-3375',
+        );
 
         expect(getByTestId('jnl-doaj-by-sa-nd-nc-header')).toHaveTextContent('Journal licence');
         expect(getByTestId('jnl-doaj-by-sa-nd-nc-value')).toHaveTextContent(
@@ -202,217 +197,84 @@ describe('ViewJournal', () => {
             'https://creativecommons.org/licenses/by/4.0/deed.en',
         );
 
-        expect(getByTestId('jnl-doaj-last-updated-header')).toHaveTextContent('Last updated');
-        expect(getByTestId('jnl-doaj-last-updated-value')).toHaveTextContent('3rd February 2020 at 2:17pm');
+        // **************************************************************
+        // Journal Discoverability Section
+        // **************************************************************
 
-        expect(getByTestId('ulr-open-access-jnl-issn-header')).toHaveTextContent('View in DOAJ');
-        expect(getByTestId('ulr-open-access-jnl-issn-value')).toHaveTextContent('0090-0036');
-        expect(getByTestId('ulr-open-access-jnl-issn-lookup-link')).toHaveAttribute(
-            'href',
-            'https://doaj.org/toc/0090-0036',
-        );
+        expect(getByTestId('journal-details-discoverability-header')).toHaveTextContent('Journal Discoverability');
+        expect(within(getByTestId('journal-details-discoverability')).getByTestId('help-icon')).toBeInTheDocument();
 
-        expect(getByTestId('srm-journal-link-header')).toHaveTextContent('Open Policy Finder');
-        expect(getByTestId('srm-journal-link-value')).toHaveTextContent("View journal's open access policy");
-        expect(getByTestId('srm-journal-link-lookup-link')).toHaveAttribute(
-            'href',
-            'https://v2.sherpa.ac.uk/id/publication/10303',
-        );
+        expect(getByTestId('wos-indexes-header')).toHaveTextContent('Web of Science');
+        expect(getByTestId('wos-indexes-0-value')).toHaveTextContent('Arts & Humanities Citation Index (AHCI)');
+        expect(getByTestId('wos-indexes-1-value')).toHaveTextContent('Emerging Sources Citation Index (ESCI)');
+        expect(getByTestId('wos-indexes-2-value')).toHaveTextContent('Science Citation Index Expanded (SCIE)');
+        expect(getByTestId('wos-indexes-3-value')).toHaveTextContent('Social Sciences Citation Index (SSCI)');
+
+        expect(getByTestId('has-scopus-header')).toHaveTextContent('Scopus');
+        expect(getByTestId('has-scopus-value')).toHaveTextContent('Yes');
+
+        expect(getByTestId('has-pubmed-header')).toHaveTextContent('Pubmed');
+        expect(getByTestId('has-pubmed-value')).toHaveTextContent('Yes');
 
         // ***********************************************************
-        // Clarivate Journal Citation Reports - Science Citation Index
+        // Journal Quality By Ranking
         // ***********************************************************
-        expect(getByTestId('jnl-jcr-scie-abbrev-title-header')).toHaveTextContent('Abbreviated title');
-        expect(getByTestId('jnl-jcr-scie-abbrev-title-value')).toHaveTextContent('Am. J. Public Health');
 
-        expect(getByTestId('jnl-jcr-scie-impact-factor-header')).toHaveTextContent('Impact factor');
-        expect(getByTestId('jnl-jcr-scie-impact-factor-value')).toHaveTextContent('5.381');
+        // ******************************************************************
+        // Journal Citations Report (Clarivate)
+        // ******************************************************************
 
-        expect(getByTestId('jnl-jcr-scie-5yr-impact-factor-header')).toHaveTextContent('5 year impact factor');
-        expect(getByTestId('jnl-jcr-scie-5yr-impact-factor-value')).toHaveTextContent('5.600');
+        expect(getByTestId('journal-details-qualityByRanking-header')).toHaveTextContent('Journal Quality By Ranking');
+        expect(within(getByTestId('journal-details-qualityByRanking')).getByTestId('help-icon')).toBeInTheDocument();
 
-        expect(getByTestId('jnl-jcr-scie-source-date-header')).toHaveTextContent('JCR version');
-        expect(getByTestId('jnl-jcr-scie-source-date-value')).toHaveTextContent('2018');
-
-        expect(getByTestId('jcr-home-page-scie-header')).toHaveTextContent('JCR home page');
-        expect(getByTestId('jcr-home-page-scie-value')).toHaveTextContent('Go to JCR website');
-        expect(getByTestId('jcr-home-page-scie-lookup-link')).toHaveAttribute(
-            'href',
-            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fjcr.clarivate.com',
+        expect(getByTestId('journal-details-tab-categories-header')).toHaveTextContent(
+            'Journal Citations Report (Clarivate)',
         );
 
-        expect(getByTestId('jcr-more-info-scie-header')).toHaveTextContent('JCR more info');
-        expect(getByTestId('jcr-more-info-scie-value')).toHaveTextContent('More info about JCR SCIE');
-        expect(getByTestId('jcr-more-info-scie-lookup-link')).toHaveAttribute(
-            'href',
-            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
-        );
+        expect(getByTestId('impact-factor-header')).toHaveTextContent('Impact factor');
+        expect(getByTestId('impact-factor-value')).toHaveTextContent('4.20');
 
-        expect(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-0-heading')).toHaveTextContent(
+        expect(getByTestId('journal-details-tab-categories-2-heading')).toHaveTextContent(
             'Public, Environmental & Occupational Health',
         );
-        expect(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-1-heading')).toHaveTextContent(
+        expect(getByTestId('journal-details-tab-categories-3-heading')).toHaveTextContent(
             'Computer Science, Software Engineering',
         );
+        expect(getByTestId('journal-details-tab-categories-0-heading')).toHaveTextContent('ARCHAEOLOGY');
+        expect(getByTestId('journal-details-tab-categories-1-heading')).toHaveTextContent('ACOUSTICS');
 
-        expect(getByTestId('jnl-jcr-scie-category-ranking-header')).toHaveTextContent('Ranking');
-        expect(getByTestId('jnl-jcr-scie-category-ranking-value')).toHaveTextContent('12/185');
+        expect(getByTestId('ranking-header')).toHaveTextContent('Ranking');
+        expect(getByTestId('ranking-value')).toHaveTextContent('N/A');
 
-        expect(getByTestId('jnl-jcr-scie-category-quartile-header')).toHaveTextContent('Quartile');
-        expect(getByTestId('jnl-jcr-scie-category-quartile-value')).toHaveTextContent('Q1');
+        expect(getByTestId('quartile-header')).toHaveTextContent('Quartile');
+        expect(getByTestId('quartile-value')).toHaveTextContent('N/A');
 
-        expect(getByTestId('jnl-jcr-scie-category-jif-percentile-header')).toHaveTextContent('JIF Percentile');
-        expect(getByTestId('jnl-jcr-scie-category-jif-percentile-value')).toHaveTextContent('89.99');
+        fireEvent.click(getByTestId('journal-details-tab-categories-2-heading'));
 
-        fireEvent.click(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-1-heading'));
+        expect(getByTestId('ranking-header')).toHaveTextContent('Ranking');
+        expect(getByTestId('ranking-value')).toHaveTextContent('12/185');
 
-        expect(getByTestId('jnl-jcr-scie-category-ranking-header')).toHaveTextContent('Ranking');
-        expect(getByTestId('jnl-jcr-scie-category-ranking-value')).toHaveTextContent('35/107');
+        expect(getByTestId('quartile-header')).toHaveTextContent('Quartile');
+        expect(getByTestId('quartile-value')).toHaveTextContent('Q1');
 
-        expect(getByTestId('jnl-jcr-scie-category-quartile-header')).toHaveTextContent('Quartile');
-        expect(getByTestId('jnl-jcr-scie-category-quartile-value')).toHaveTextContent('Q2');
+        fireEvent.click(getByTestId('journal-details-tab-categories-3-heading'));
 
-        expect(queryByTestId('jnl-jcr-scie-category-jif-percentile-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-jcr-scie-category-jif-percentile-value')).not.toBeInTheDocument();
+        expect(getByTestId('ranking-header')).toHaveTextContent('Ranking');
+        expect(getByTestId('ranking-value')).toHaveTextContent('35/107');
 
-        // ******************************************************************
-        // Clarivate Journal Citation Reports - Social Science Citation index
-        // ******************************************************************
-        expect(getByTestId('jnl-jcr-ssci-abbrev-title-header')).toHaveTextContent('Abbreviated title');
-        expect(getByTestId('jnl-jcr-ssci-abbrev-title-value')).toHaveTextContent('Am. J. Public Health');
-
-        expect(getByTestId('jnl-jcr-ssci-impact-factor-header')).toHaveTextContent('Impact factor');
-        expect(getByTestId('jnl-jcr-ssci-impact-factor-value')).toHaveTextContent('5.381');
-
-        expect(getByTestId('jnl-jcr-ssci-5yr-impact-factor-header')).toHaveTextContent('5 year impact factor');
-        expect(getByTestId('jnl-jcr-ssci-5yr-impact-factor-value')).toHaveTextContent('5.600');
-
-        expect(getByTestId('jnl-jcr-ssci-source-date-header')).toHaveTextContent('JCR version');
-        expect(getByTestId('jnl-jcr-ssci-source-date-value')).toHaveTextContent('2018');
-
-        expect(getByTestId('jcr-home-page-ssci-header')).toHaveTextContent('JCR home page');
-        expect(getByTestId('jcr-home-page-ssci-value')).toHaveTextContent('Go to JCR website');
-        expect(getByTestId('jcr-home-page-ssci-lookup-link')).toHaveAttribute(
-            'href',
-            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fjcr.clarivate.com',
-        );
-
-        expect(getByTestId('jcr-more-info-ssci-header')).toHaveTextContent('JCR more info');
-        expect(getByTestId('jcr-more-info-ssci-value')).toHaveTextContent('More info about JCR SSCI');
-        expect(getByTestId('jcr-more-info-ssci-lookup-link')).toHaveAttribute(
-            'href',
-            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
-        );
-
-        expect(getByTestId('journal-details-tab-fez-journal-jcr-ssci-category-0-heading')).toHaveTextContent(
-            'Public, Environmental & Occupational Health',
-        );
-
-        expect(getByTestId('jnl-jcr-ssci-category-ranking-header')).toHaveTextContent('Ranking');
-        expect(getByTestId('jnl-jcr-ssci-category-ranking-value')).toHaveTextContent('6/162');
-
-        expect(getByTestId('jnl-jcr-ssci-category-quartile-header')).toHaveTextContent('Quartile');
-        expect(getByTestId('jnl-jcr-ssci-category-quartile-value')).toHaveTextContent('Q1');
-
-        expect(getByTestId('jnl-jcr-ssci-category-jif-percentile-header')).toHaveTextContent('JIF Percentile');
-        expect(getByTestId('jnl-jcr-ssci-category-jif-percentile-value')).toHaveTextContent('99.00');
-
-        // ***********************************************************
-        // Clarivate Journal Citation Reports - Arts & Humanities Citation Index
-        // ***********************************************************
-        expect(getByTestId('jnl-jcr-ahci-abbrev-title-header')).toHaveTextContent('Abbreviated title');
-        expect(getByTestId('jnl-jcr-ahci-abbrev-title-value')).toHaveTextContent('J ARCHAEOL RES');
-
-        expect(getByTestId('jnl-jcr-ahci-impact-factor-header')).toHaveTextContent('Impact factor');
-        expect(getByTestId('jnl-jcr-ahci-impact-factor-value')).toHaveTextContent('4.20');
-
-        expect(getByTestId('jnl-jcr-ahci-5yr-impact-factor-header')).toHaveTextContent('5 year impact factor');
-        expect(getByTestId('jnl-jcr-ahci-5yr-impact-factor-value')).toHaveTextContent('4.40');
-
-        expect(getByTestId('jnl-jcr-ahci-source-date-header')).toHaveTextContent('JCR version');
-        expect(getByTestId('jnl-jcr-ahci-source-date-value')).toHaveTextContent('2018');
-
-        expect(getByTestId('jcr-home-page-ahci-header')).toHaveTextContent('JCR home page');
-        expect(getByTestId('jcr-home-page-ahci-value')).toHaveTextContent('Go to JCR website');
-        expect(getByTestId('jcr-home-page-ahci-lookup-link')).toHaveAttribute(
-            'href',
-            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fjcr.clarivate.com',
-        );
-
-        expect(getByTestId('jcr-more-info-ahci-header')).toHaveTextContent('JCR more info');
-        expect(getByTestId('jcr-more-info-ahci-value')).toHaveTextContent('More info about JCR AHCI');
-        expect(getByTestId('jcr-more-info-ahci-lookup-link')).toHaveAttribute(
-            'href',
-            'https://clarivate.com/products/scientific-and-academic-research/research-discovery-and-workflow-solutions/webofscience-platform/web-of-science-core-collection/arts-humanities-citation-index/',
-        );
-
-        expect(getByTestId('journal-details-tab-fez-journal-jcr-ahci-category-0-heading')).toHaveTextContent(
-            'ARCHAEOLOGY',
-        );
-
-        expect(getByTestId('jnl-jcr-ahci-category-ranking-header')).toHaveTextContent('Ranking');
-        expect(getByTestId('jnl-jcr-ahci-category-ranking-value')).toHaveTextContent('N/A');
-
-        expect(getByTestId('jnl-jcr-ahci-category-quartile-header')).toHaveTextContent('Quartile');
-        expect(getByTestId('jnl-jcr-ahci-category-quartile-value')).toHaveTextContent('N/A');
-
-        expect(queryByTestId('jnl-jcr-ahci-category-jif-percentile-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-jcr-ahci-category-jif-percentile-value')).not.toBeInTheDocument();
-
-        // ***********************************************************
-        // Clarivate Journal Citation Reports - Emerging Sources Citation Index
-        // ***********************************************************
-        expect(getByTestId('jnl-jcr-esci-abbrev-title-header')).toHaveTextContent('Abbreviated title');
-        expect(getByTestId('jnl-jcr-esci-abbrev-title-value')).toHaveTextContent('J ACOUST SOC KOREA');
-
-        expect(getByTestId('jnl-jcr-esci-impact-factor-header')).toHaveTextContent('Impact factor');
-        expect(getByTestId('jnl-jcr-esci-impact-factor-value')).toHaveTextContent('0.20');
-
-        expect(getByTestId('jnl-jcr-esci-5yr-impact-factor-header')).toHaveTextContent('5 year impact factor');
-        expect(getByTestId('jnl-jcr-esci-5yr-impact-factor-value')).toHaveTextContent('0.20');
-
-        expect(getByTestId('jnl-jcr-esci-source-date-header')).toHaveTextContent('JCR version');
-        expect(getByTestId('jnl-jcr-esci-source-date-value')).toHaveTextContent('2018');
-
-        expect(getByTestId('jcr-home-page-esci-header')).toHaveTextContent('JCR home page');
-        expect(getByTestId('jcr-home-page-esci-value')).toHaveTextContent('Go to JCR website');
-        expect(getByTestId('jcr-home-page-esci-lookup-link')).toHaveAttribute(
-            'href',
-            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fjcr.clarivate.com',
-        );
-
-        expect(getByTestId('jcr-more-info-esci-header')).toHaveTextContent('JCR more info');
-        expect(getByTestId('jcr-more-info-esci-value')).toHaveTextContent('More info about JCR ESCI');
-        expect(getByTestId('jcr-more-info-esci-lookup-link')).toHaveAttribute(
-            'href',
-            'https://clarivate.com/products/scientific-and-academic-research/research-discovery-and-workflow-solutions/webofscience-platform/web-of-science-core-collection/emerging-sources-citation-index/',
-        );
-
-        expect(getByTestId('journal-details-tab-fez-journal-jcr-esci-category-0-heading')).toHaveTextContent(
-            'ACOUSTICS',
-        );
-
-        expect(getByTestId('jnl-jcr-esci-category-ranking-header')).toHaveTextContent('Ranking');
-        expect(getByTestId('jnl-jcr-esci-category-ranking-value')).toHaveTextContent('39/40');
-
-        expect(getByTestId('jnl-jcr-esci-category-quartile-header')).toHaveTextContent('Quartile');
-        expect(getByTestId('jnl-jcr-esci-category-quartile-value')).toHaveTextContent('Q4');
-
-        expect(queryByTestId('jnl-jcr-esci-category-jif-percentile-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-jcr-esci-category-jif-percentile-value')).not.toBeInTheDocument();
+        expect(getByTestId('quartile-header')).toHaveTextContent('Quartile');
+        expect(getByTestId('quartile-value')).toHaveTextContent('Q2');
 
         // ******************************************************************
         // Elsevier CiteScore
         // ******************************************************************
-        expect(getByTestId('jnl-cite-score-source-year-header')).toHaveTextContent('CiteScore version');
-        expect(getByTestId('jnl-cite-score-source-year-value')).toHaveTextContent('2019');
+        expect(getByTestId('journal-details-tab-fez-journal-cite-score-asjc-code-header')).toHaveTextContent(
+            'CiteScore (Elsevier)',
+        );
 
         expect(getByTestId('jnl-cite-score-header')).toHaveTextContent('CiteScore');
         expect(getByTestId('jnl-cite-score-value')).toHaveTextContent('3.7');
-
-        expect(getByTestId('jnl-cite-score-source-id-header')).toHaveTextContent('CiteScore score');
-        expect(getByTestId('jnl-cite-score-source-id-value')).toHaveTextContent('Go to record in CiteScore');
-        expect(getByTestId('jnl-cite-score-source-id-lookup-link')).toHaveAttribute(
+        expect(getByTestId('jnl-cite-score-lookup-link')).toHaveAttribute(
             'href',
             'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Fsourceid%2F19561',
         );
@@ -420,34 +282,12 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-cite-score-snip-header')).toHaveTextContent('SNIP');
         expect(getByTestId('jnl-cite-score-snip-value')).toHaveTextContent('1.64');
 
-        expect(getByTestId('jnl-cite-score-more-info-header')).toHaveTextContent('CiteScore more info');
-        expect(getByTestId('jnl-cite-score-more-info-value')).toHaveTextContent('More info about CiteScore');
-        expect(getByTestId('jnl-cite-score-more-info-lookup-link')).toHaveAttribute(
-            'href',
-            'https://service.elsevier.com/app/answers/detail/a_id/14880/supporthub/scopus/',
-        );
-
         expect(getByTestId('jnl-cite-score-sjr-header')).toHaveTextContent('SJR');
         expect(getByTestId('jnl-cite-score-sjr-value')).toHaveTextContent('0.767');
-
-        expect(getByTestId('jnl-cite-score-percent-cited-header')).toHaveTextContent('Percent Cited');
-        expect(getByTestId('jnl-cite-score-percent-cited-value')).toHaveTextContent('58');
 
         expect(getByTestId('journal-details-tab-fez-journal-cite-score-asjc-code-0-heading')).toHaveTextContent(
             '2739 Public Health, Environmental and Occupational Health',
         );
-
-        expect(getByTestId('jnl-cite-score-asjc-code-lookup-header')).toHaveTextContent(
-            'Scopus ASJC Code and sub-subject area',
-        );
-        expect(getByTestId('jnl-cite-score-asjc-code-lookup-value')).toHaveTextContent(
-            '2739 Public Health, Environmental and Occupational Health',
-        );
-
-        expect(getByTestId('jnl-cite-score-asjc-code-top-10-percent-header')).toHaveTextContent(
-            'Top 10% (CiteScore Percentile)',
-        );
-        expect(getByTestId('jnl-cite-score-asjc-code-top-10-percent-value')).toHaveTextContent('No');
 
         expect(getByTestId('jnl-cite-score-asjc-code-rank-header')).toHaveTextContent('Ranked');
         expect(getByTestId('jnl-cite-score-asjc-code-rank-value')).toHaveTextContent('29 out of 516');
@@ -455,28 +295,26 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-cite-score-asjc-code-quartile-header')).toHaveTextContent('Quartile');
         expect(getByTestId('jnl-cite-score-asjc-code-quartile-value')).toHaveTextContent('1');
 
-        expect(getByTestId('jnl-cite-score-asjc-code-percentile-header')).toHaveTextContent('Percentile');
-        expect(getByTestId('jnl-cite-score-asjc-code-percentile-value')).toHaveTextContent('94');
-
         // ******************************************************************
         // Listed in
         // ******************************************************************
+        expect(getByTestId('journal-details-listed-header')).toHaveTextContent(
+            'Journal Quality By Recognised Listings',
+        );
+        expect(within(getByTestId('journal-details-listed')).getByTestId('help-icon')).toBeInTheDocument();
+
         expect(queryByTestId('jnl-abdc-rating-header')).toHaveTextContent(
             'Australian Business Deans Council (ABDC) Quality Rating',
         );
         expect(queryByTestId('jnl-abdc-rating-value')).toHaveTextContent('A*');
         expect(queryByTestId('jnl-abdc-for-code-lookup-header')).toHaveTextContent('ABDC Field of Research');
         expect(queryByTestId('jnl-abdc-for-code-lookup-value')).toHaveTextContent('1503 Business and Management');
-        expect(queryByTestId('jnl-abdc-source-date-header')).toHaveTextContent('ABDC Listed Year');
-        expect(queryByTestId('jnl-abdc-source-date-value')).toHaveTextContent('2019');
 
-        expect(getByTestId('jnl-cwts-source-year-header')).toHaveTextContent('CWTS Leiden Ranking');
-        expect(getByTestId('jnl-cwts-source-year-value')).toHaveTextContent('Yes, 2020');
+        expect(getByTestId('has-nature-index-header')).toHaveTextContent('Nature Index');
+        expect(getByTestId('has-nature-index-value')).toHaveTextContent('Yes');
 
-        expect(getByTestId('fez-journal-era-header')).toHaveTextContent('Excellence in Research for Australia (ERA)');
-        expect(getByTestId('fez-journal-era-value')).toHaveTextContent('Yes');
         expect(getByTestId('jnl-era-for-code-lookup-header')).toHaveTextContent(
-            'ERA Years with Field of Research codes',
+            'Excellence in Research for Australia (ERA)',
         );
         expect(getByTestId('jnl-era-for-code-lookup-0-value')).toHaveTextContent(
             '2010 - 1117 Public Health and Health Services',
@@ -491,21 +329,15 @@ describe('ViewJournal', () => {
             '2018 - 11 Medical and Health Sciences',
         );
 
-        expect(getByTestId('jnl-nature-index-source-date-header')).toHaveTextContent('Nature Index');
-        expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('Yes, 2019');
-
-        expect(getByTestId('jnl-esi-subject-lookup-header')).toHaveTextContent(
-            'Essential Science Indicators Research Fields',
-        );
-        expect(getByTestId('jnl-esi-subject-lookup-0-value')).toHaveTextContent('Social Sciences, General (0090-0036)');
-        expect(getByTestId('jnl-esi-subject-lookup-1-value')).toHaveTextContent('Social Sciences, General (1541-0048)');
-
-        expect(getByTestId('has-pubmed-header')).toHaveTextContent('Pubmed');
-        expect(getByTestId('has-pubmed-value')).toHaveTextContent('Yes');
+        expect(getByTestId('has-cwts-header')).toHaveTextContent('CWTS Leiden Ranking');
+        expect(getByTestId('has-cwts-value')).toHaveTextContent('Yes');
 
         // ******************************************************************
         // UQ Connections
         // ******************************************************************
+        expect(getByTestId('journal-details-uqConnections-header')).toHaveTextContent('UQ Connections');
+        expect(within(getByTestId('journal-details-uqConnections')).queryByTestId('help-icon')).not.toBeInTheDocument();
+
         expect(getByTestId('jnl-uq-author-count-header')).toHaveTextContent('Number of UQ Authors');
         expect(getByTestId('jnl-uq-author-count-value')).toHaveTextContent('200');
 
@@ -548,7 +380,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -581,7 +413,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -608,7 +440,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -636,7 +468,7 @@ describe('ViewJournal', () => {
             },
         });
 
-        const { getByTestId, getByText, queryByTestId } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -716,39 +548,50 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-homepage-url-lookup-link')).toHaveAttribute('href', homepageUrl);
     });
 
-    it('Should show sherpa romeo links from second issn', async () => {
+    it('should display correct type of journal', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
-                jnl_title: 'test',
-                fez_journal_issn: [
-                    {
-                        jnl_issn: '1111-1111',
-                        jnl_issn_order: 1,
-                        fez_sherpa_romeo: {
-                            srm_issn: '1111-1111',
-                            srm_journal_link: null,
-                        },
-                    },
-                    {
-                        jnl_issn: '2222-2222',
-                        jnl_issn_order: 2,
-                        fez_sherpa_romeo: {
-                            srm_issn: '2222-2222',
-                            srm_journal_link: '12345',
-                        },
-                    },
-                ],
+                ...journalDetails.data,
+                fez_journal_doaj: null,
             },
         });
 
-        const { queryByTestId, getByText } = setup();
+        const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
-        expect(queryByTestId('srm-journal-link-value')).toBeInTheDocument();
+        expect(getByTestId('jnl-type-header')).toBeInTheDocument();
+        expect(getByTestId('jnl-type-value')).toHaveTextContent('Hybrid or Subscription');
     });
 
-    it('Should not show sherpa romeo section when non of journal links are not available', async () => {
+    it('Should show embargo details with sherpa romeo links', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                jnl_title: 'test',
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '1111-1111',
+                        jnl_issn_order: 1,
+                        fez_sherpa_romeo: {
+                            srm_issn: '1111-1111',
+                            srm_max_embargo_amount: 6,
+                            srm_journal_link: 'http://test',
+                        },
+                    },
+                ],
+            },
+        });
+
+        const { queryByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(queryByTestId('srm-journal-link-header')).toHaveTextContent('Open access with Accepted manuscript');
+        expect(queryByTestId('srm-journal-link-value')).toHaveTextContent('6 months');
+        expect(queryByTestId('srm-journal-link-lookup-link')).toHaveAttribute('href', 'http://test');
+    });
+
+    it('Should show embargo details from second issn even when journal link is not available', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
                 jnl_title: 'test',
@@ -765,6 +608,7 @@ describe('ViewJournal', () => {
                         jnl_issn: '2222-2222',
                         jnl_issn_order: 2,
                         fez_sherpa_romeo: {
+                            srm_max_embargo_amount: 6,
                             srm_issn: '2222-2222',
                             srm_journal_link: null,
                         },
@@ -777,7 +621,9 @@ describe('ViewJournal', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
-        expect(queryByTestId('srm-journal-link-header')).not.toBeInTheDocument();
+        expect(queryByTestId('srm-journal-link-header')).toHaveTextContent('Open access with Accepted manuscript');
+        expect(queryByTestId('srm-journal-link-value')).toHaveTextContent('6 months');
+        expect(queryByTestId('srm-journal-link-lookup-link')).not.toBeInTheDocument();
     });
 
     it('Should not show uq connection section when empty editorial appointment and 0 author count', async () => {
@@ -906,7 +752,7 @@ describe('ViewJournal', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
-        expect(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-0-heading')).toHaveAttribute(
+        expect(getByTestId('journal-details-tab-categories-0-heading')).toHaveAttribute(
             'style',
             'max-width: calc((100vw - 68px) * 0.67); width: 100%;',
         );
@@ -918,6 +764,9 @@ describe('ViewJournal', () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
                 ...journalDetails.data,
+                fez_journal_jcr_ahci: null,
+                fez_journal_jcr_esci: null,
+                fez_journal_jcr_ssci: null,
                 fez_journal_jcr_scie: {
                     fez_journal_jcr_scie_category: [
                         {
@@ -932,7 +781,7 @@ describe('ViewJournal', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
-        expect(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-0-heading')).toHaveAttribute(
+        expect(getByTestId('journal-details-tab-categories-0-heading')).toHaveAttribute(
             'style',
             'max-width: 100%; width: 100%;',
         );
@@ -1038,7 +887,7 @@ describe('ViewJournal', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
-        expect(getByTestId('journal-details-readAndPublish-header')).toBeInTheDocument();
+        expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
         expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
         expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
         expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
@@ -1060,7 +909,7 @@ describe('ViewJournal', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
-        expect(getByTestId('journal-details-readAndPublish-header')).toBeInTheDocument();
+        expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
         expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
         expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
         expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();

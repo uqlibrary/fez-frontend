@@ -1,25 +1,61 @@
 import React from 'react';
 import globalLocale from 'locale/global';
-import moment from 'moment';
-import { prefixByUrlResolver } from 'config/general';
+import { getDoajUrl, prefixByUrlResolver } from 'config/general';
 import { default as viewJournalLocale } from 'locale/viewJournal';
 import { getIndicator, types } from 'modules/SharedComponents/JournalsList/components/partials/utils';
 import componentLocale from 'locale/components';
 import { pathConfig } from './pathConfig';
 
+export const findNestedValueInIssnArray = (data, subKey) => {
+    if (!data) return undefined;
+
+    const keys = subKey.split('.');
+    const firstKey = keys[0];
+    const restKeys = keys.slice(1).join('.');
+
+    if (Array.isArray(data)) {
+        // Loop through each element and return first found
+        for (const item of data) {
+            const result = findNestedValueInIssnArray(item, subKey);
+            if (result !== undefined && result !== null) return result;
+        }
+        return undefined;
+    }
+
+    // If no more keys, return current value
+    if (!firstKey) return data;
+    return findNestedValueInIssnArray(data[firstKey], restKeys);
+};
+
 export const getAbbrevTitle = journalDetails =>
     journalDetails.jnl_abbrev_title ||
     journalDetails.fez_journal_jcr_scie?.jnl_jcr_scie_abbrev_title ||
     journalDetails.fez_journal_jcr_ssci?.jnl_jcr_ssci_abbrev_title ||
-    (journalDetails.fez_journal_issn &&
-        Array.isArray(journalDetails.fez_journal_issn) &&
-        journalDetails.fez_journal_issn.length > 0 &&
-        (journalDetails.fez_journal_issn[0]?.fez_ulrichs?.ulr_abbrev_title ||
-            journalDetails.fez_journal_issn[1]?.fez_ulrichs?.ulr_abbrev_title));
+    findNestedValueInIssnArray(journalDetails.fez_journal_issn, 'fez_ulrichs.ulr_abbrev_title');
 
 export const viewJournalConfig = {
     basic: {
+        title: viewJournalLocale.viewJournal.basic.title,
+        help: viewJournalLocale.viewJournal.basic.help,
         rows: [
+            [
+                {
+                    heading: 'Journal home page',
+                    fieldId: 'jnl-homepage-url',
+                    getData: journalDetails =>
+                        findNestedValueInIssnArray(
+                            journalDetails.fez_journal_issn,
+                            'fez_ulrichs.ulr_open_access_url',
+                        ) ||
+                        (journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_homepage_url),
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: item => item,
+                        text: item => item,
+                        title: 'View journal home page in a new tab',
+                    },
+                },
+            ],
             [
                 {
                     heading: 'ISO abbreviated title',
@@ -36,31 +72,19 @@ export const viewJournalConfig = {
                         {
                             isArray: true,
                             primaryKey: 'fez_journal_issn',
-                            path: ['jnl_issn'],
-                            filterFn: issn => issn.jnl_issn_type !== 454151,
+                            path: [],
                         },
                     ],
-                    template: 'MultiValueTemplate',
+                    template: 'MultiLinkTemplate',
                     templateProps: {
-                        getData: item => item,
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'eISSN(s)',
-                    fieldId: 'jnl-issn-454151',
-                    data: [
-                        {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            path: ['jnl_issn'],
-                            filterFn: issn => issn.jnl_issn_type === 454151,
-                        },
-                    ],
-                    template: 'MultiValueTemplate',
-                    templateProps: {
-                        getData: item => item,
+                        href: data =>
+                            data.fez_ulrichs?.ulr_title_id &&
+                            globalLocale.global.ulrichsLink.externalUrl.replace(
+                                '[id]',
+                                encodeURIComponent(data.fez_ulrichs?.ulr_title_id),
+                            ),
+                        text: data => data.jnl_issn,
+                        title: 'View Ulrichs details in a new tab',
                     },
                 },
             ],
@@ -83,7 +107,82 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'Open Access',
+                    heading: 'Refereed',
+                    fieldId: 'jnl-is-refereed',
+                    getData: journalDetails =>
+                        journalDetails.jnl_is_refereed ||
+                        findNestedValueInIssnArray(journalDetails.fez_journal_issn, 'fez_ulrichs.ulr_refereed'),
+                    template: 'BooleanTemplate',
+                },
+            ],
+            [
+                {
+                    heading: 'First year of publication',
+                    fieldId: 'jnl-start-year',
+                    getData: journalDetails =>
+                        journalDetails.jnl_start_year ||
+                        findNestedValueInIssnArray(journalDetails.fez_journal_issn, 'fez_ulrichs.ulr_start_year'),
+                    template: 'DefaultTemplate',
+                },
+            ],
+            [
+                {
+                    heading: 'Frequency of publication',
+                    fieldId: 'jnl-frequency',
+                    getData: journalDetails =>
+                        journalDetails.jnl_frequency ||
+                        findNestedValueInIssnArray(journalDetails.fez_journal_issn, 'fez_ulrichs.ulr_frequency'),
+                    template: 'DefaultTemplate',
+                },
+            ],
+            [
+                {
+                    heading: 'Journal formats available',
+                    fieldId: 'jnl-formats',
+                    getData: journalDetails =>
+                        journalDetails.jnl_formats ||
+                        (Array.isArray(journalDetails.fez_journal_issn) &&
+                            journalDetails.fez_journal_issn
+                                .map(issn => issn.fez_ulrichs?.ulr_formats)
+                                .filter(format => !!format)
+                                .join(', ')),
+                    template: 'DefaultTemplate',
+                },
+            ],
+            [
+                {
+                    heading: 'Description',
+                    fieldId: 'jnl-description',
+                    getData: journalDetails =>
+                        journalDetails.jnl_description ||
+                        findNestedValueInIssnArray(journalDetails.fez_journal_issn, 'fez_ulrichs.ulr_description'),
+                    template: 'DefaultTemplate',
+                },
+            ],
+            [
+                {
+                    heading: 'Type of journal',
+                    fieldId: 'jnl-type',
+                    getData: journalDetails => journalDetails,
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: journalDetails =>
+                            !!journalDetails.fez_journal_doaj &&
+                            getDoajUrl(journalDetails.fez_journal_doaj.jnl_doaj_issn),
+                        text: journalDetails =>
+                            !!journalDetails.fez_journal_doaj ? 'Fully Open Access' : 'Hybrid or Subscription',
+                    },
+                },
+            ],
+        ],
+    },
+    openAccess: {
+        title: viewJournalLocale.viewJournal.openAccess.title,
+        help: viewJournalLocale.viewJournal.openAccess.help,
+        rows: [
+            [
+                {
+                    heading: 'Options',
                     fieldId: 'jnl-open-access',
                     getData: journalDetails =>
                         [
@@ -113,168 +212,27 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'Refereed',
-                    fieldId: 'ulr-refereed',
-                    data: [
-                        {
-                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_refereed'],
-                        },
-                    ],
-                    template: 'BooleanTemplate',
-                },
-            ],
-            [
-                {
-                    heading: 'First year of publication',
-                    fieldId: 'ulr-start-year',
-                    data: [
-                        {
-                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_start_year'],
-                        },
-                    ],
-                    template: 'DefaultTemplate',
-                },
-            ],
-            [
-                {
-                    heading: 'Frequency of publication',
-                    fieldId: 'ulr-frequency',
-                    data: [
-                        {
-                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_frequency'],
-                        },
-                    ],
-                    template: 'DefaultTemplate',
-                },
-            ],
-            [
-                {
-                    heading: 'Journal formats available',
-                    fieldId: 'ulr-formats',
-                    data: [
-                        {
-                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_formats'],
-                        },
-                    ],
-                    template: 'DefaultTemplate',
-                },
-            ],
-            [
-                {
-                    heading: 'Journal home page',
-                    fieldId: 'jnl-homepage-url',
-                    getData: journalDetails =>
-                        (journalDetails.fez_journal_issn &&
-                            Array.isArray(journalDetails.fez_journal_issn) &&
-                            journalDetails.fez_journal_issn.length > 0 &&
-                            ((journalDetails.fez_journal_issn[0].fez_ulrichs &&
-                                journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access_url) ||
-                                (journalDetails.fez_journal_issn.length > 1 &&
-                                    journalDetails.fez_journal_issn[1].fez_ulrichs &&
-                                    journalDetails.fez_journal_issn[1].fez_ulrichs.ulr_open_access_url))) ||
-                        (journalDetails.fez_journal_doaj && journalDetails.fez_journal_doaj.jnl_doaj_homepage_url),
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: item => item,
-                        text: item => item,
-                        title: 'View journal home page in a new tab',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Description',
-                    fieldId: 'ulr-description',
-                    data: [
-                        {
-                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_description'],
-                        },
-                    ],
-                    template: 'DefaultTemplate',
-                },
-            ],
-            [
-                {
-                    heading: 'View journal in Ulrichs',
-                    fieldId: 'ulr-title',
-                    data: [
-                        {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            filterFn: issn => !!issn.fez_ulrichs && !!issn.fez_ulrichs.ulr_title_id,
-                            path: ['fez_ulrichs'],
-                        },
-                    ],
-                    template: 'MultiLinkTemplate',
-                    templateProps: {
-                        href: item =>
-                            globalLocale.global.ulrichsLink.externalUrl.replace(
-                                '[id]',
-                                encodeURIComponent(item.ulr_title_id),
-                            ),
-                        text: item => item.ulr_title,
-                        title: 'View Ulrichs details in a new tab',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'View Open Policy Finder',
-                    fieldId: 'srm-journal-link',
-                    getData: journalDetails =>
-                        journalDetails.fez_journal_issn &&
-                        Array.isArray(journalDetails.fez_journal_issn) &&
-                        journalDetails.fez_journal_issn.find(issn => issn?.fez_sherpa_romeo?.srm_journal_link),
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: item => item.fez_sherpa_romeo.srm_journal_link,
-                        title: "View journal's open access policy in a new tab",
-                        ariaLabel: () => "Click to view journal's open access policy details in a new tab",
-                        text: () => "View journal's open access policy",
-                    },
-                },
-            ],
-        ],
-    },
-    readAndPublish: {
-        title: viewJournalLocale.viewJournal.readAndPublish.title,
-        rows: [
-            [
-                {
                     heading: viewJournalLocale.viewJournal.readAndPublish.heading,
                     fieldId: 'jnl-read-and-publish',
                     getData: journalDetails => {
-                        return {
-                            publisher: journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_publisher,
-                            discount: journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_discounted,
-                            capped: journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped.toLowerCase(),
-                        };
+                        if (
+                            !journalDetails.fez_journal_read_and_publish ||
+                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped?.toLowerCase() ===
+                                'nodeal'
+                        ) {
+                            return viewJournalLocale.viewJournal.readAndPublish.status.noAgreement;
+                        } else if (
+                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped?.toLowerCase() ===
+                            'exceeded'
+                        ) {
+                            return viewJournalLocale.viewJournal.readAndPublish.status.exceeded;
+                        } else if (journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted) {
+                            return viewJournalLocale.viewJournal.readAndPublish.status.discounted;
+                        } else {
+                            return viewJournalLocale.viewJournal.readAndPublish.status.capped;
+                        }
                     },
-                    template: 'EnclosedLinkTemplate',
-                    templateProps: {
-                        href: data =>
-                            !!data.publisher && data.capped !== 'nodeal'
-                                ? viewJournalLocale.viewJournal.readAndPublish.externalUrl
-                                : '',
-                        prefix: data => {
-                            const { publisher, discount, capped } = data;
-                            const { prefixText } = viewJournalLocale.viewJournal.readAndPublish;
-                            const isNoDeal = capped === 'nodeal';
-
-                            let returnData =
-                                publisher && !isNoDeal ? prefixText.replace('<publisher>', publisher) : 'No';
-                            if (!isNoDeal && publisher && discount) {
-                                returnData = returnData.replace('<discount>', ' discount available');
-                            } else {
-                                returnData = returnData.replace('<discount>', '');
-                            }
-
-                            return returnData;
-                        },
-
-                        title: viewJournalLocale.viewJournal.readAndPublish.ariaLabel,
-                        text: () => viewJournalLocale.viewJournal.readAndPublish.linkText,
-                    },
+                    template: 'DefaultTemplate',
                 },
             ],
             [
@@ -284,13 +242,16 @@ export const viewJournalConfig = {
                     getData: journalDetails => {
                         return (
                             journalDetails.fez_journal_read_and_publish &&
-                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped.toLowerCase() !==
-                                'nodeal'
+                            (journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped.toLowerCase() ===
+                                'y' ||
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped.toLowerCase() ===
+                                    'approaching')
                         );
                     },
-                    template: 'LinkTemplate',
+                    template: 'EnclosedLinkTemplate',
                     templateProps: {
                         href: () => viewJournalLocale.viewJournal.readAndPublish.caulLink.externalUrl,
+                        prefix: () => viewJournalLocale.viewJournal.readAndPublish.caulLink.prefix,
                         title: viewJournalLocale.viewJournal.readAndPublish.caulLink.ariaLabel,
                         text: () => viewJournalLocale.viewJournal.readAndPublish.caulLink.linkText,
                     },
@@ -298,49 +259,32 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: viewJournalLocale.viewJournal.readAndPublish.lastUpdatedHeading,
-                    fieldId: 'jnl-read-and-publish-source-date',
-                    getData: journalDetails =>
-                        journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_is_capped.toLowerCase() !==
-                            'nodeal' && journalDetails.fez_journal_read_and_publish?.jnl_read_and_publish_source_date,
-                    template: 'DateTimeTemplate',
+                    heading: 'Article processing charges',
+                    fieldId: 'jnl-doaj-apc-average-price',
+                    getData: journalDetails => journalDetails.fez_journal_doaj,
+                    template: 'LinkTemplate',
                     templateProps: {
-                        format: 'Do MMMM YYYY',
+                        href: doaj => getDoajUrl(doaj.jnl_doaj_issn),
+                        text: doaj => `${doaj.jnl_doaj_apc_average_price} ${doaj.jnl_doaj_apc_currency}`,
                     },
                 },
             ],
-        ],
-    },
-    doaj: {
-        key: 'fez_journal_doaj',
-        title: 'Open Access (Directory of Open Access Journals - DOAJ)',
-        rows: [
             [
                 {
-                    heading: 'Open access',
-                    fieldId: 'ulr-open-access',
-                    data: [
-                        {
-                            path: ['fez_journal_issn', 0, 'fez_ulrichs', 'ulr_open_access'],
-                        },
-                    ],
-                    template: 'BooleanTemplate',
-                },
-            ],
-            [
-                {
-                    heading: 'Article processing charges',
-                    fieldId: 'jnl-doaj-apc-average-price',
-                    mergeData: true,
-                    separator: ' ',
-                    data: [
-                        {
-                            path: ['fez_journal_doaj', 'jnl_doaj_apc_average_price'],
-                        },
-                        {
-                            path: ['fez_journal_doaj', 'jnl_doaj_apc_currency'],
-                        },
-                    ],
+                    heading: 'Open access with Accepted manuscript',
+                    fieldId: 'srm-journal-link',
+                    getData: journalDetails =>
+                        !journalDetails.fez_journal_doaj &&
+                        journalDetails.fez_journal_issn &&
+                        Array.isArray(journalDetails.fez_journal_issn) &&
+                        journalDetails.fez_journal_issn.find(issn => issn?.fez_sherpa_romeo?.srm_max_embargo_amount),
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: item => item.fez_sherpa_romeo.srm_journal_link,
+                        title: "View journal's open access policy in a new tab",
+                        ariaLabel: () => "Click to view journal's open access policy details in a new tab",
+                        text: item => `${item.fez_sherpa_romeo.srm_max_embargo_amount} months`,
+                    },
                 },
             ],
             [
@@ -357,578 +301,163 @@ export const viewJournalConfig = {
                     template: 'CreativeCommonsLicenceTemplate',
                 },
             ],
+        ],
+    },
+    discoverability: {
+        title: viewJournalLocale.viewJournal.discoverability.title,
+        help: viewJournalLocale.viewJournal.discoverability.help,
+        rows: [
             [
                 {
-                    heading: 'Last updated',
-                    fieldId: 'jnl-doaj-last-updated',
-                    data: [
-                        {
-                            path: ['fez_journal_doaj', 'jnl_doaj_last_updated'],
-                        },
+                    heading: 'Web of Science',
+                    fieldId: 'wos-indexes',
+                    getData: journalDetails => [
+                        (!!journalDetails.fez_journal_jcr_ahci && 'Arts & Humanities Citation Index (AHCI)') ||
+                            (!journalDetails.fez_journal_jcr_ahci &&
+                                !journalDetails.fez_journal_jcr_esci &&
+                                !journalDetails.fez_journal_jcr_scie &&
+                                !journalDetails.fez_journal_jcr_ssci &&
+                                'No'),
+                        !!journalDetails.fez_journal_jcr_esci && 'Emerging Sources Citation Index (ESCI)',
+                        !!journalDetails.fez_journal_jcr_scie && 'Science Citation Index Expanded (SCIE)',
+                        !!journalDetails.fez_journal_jcr_ssci && 'Social Sciences Citation Index (SSCI)',
                     ],
-                    template: 'DateTimeTemplate',
+                    template: 'MultiValueTemplate',
                     templateProps: {
-                        format: 'Do MMMM YYYY [at] h:mma',
+                        getData: item => item,
                     },
                 },
             ],
             [
                 {
-                    heading: 'View in DOAJ',
-                    fieldId: 'ulr-open-access-jnl-issn',
-                    getData: journalDetails =>
-                        Array.isArray(journalDetails.fez_journal_issn) &&
-                        journalDetails.fez_journal_issn.length &&
-                        journalDetails.fez_journal_issn[0].fez_ulrichs &&
-                        journalDetails.fez_journal_issn[0].fez_ulrichs.ulr_open_access === '1' &&
-                        journalDetails.fez_journal_issn[0].jnl_issn,
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: item => `https://doaj.org/toc/${item}`,
-                        title: 'View journal details in DOAJ',
-                        text: item => item,
-                    },
+                    heading: 'Scopus',
+                    fieldId: 'has-scopus',
+                    getData: journalDetails => !!journalDetails.fez_journal_cite_score,
+                    template: 'BooleanTemplate',
+                },
+            ],
+            [
+                {
+                    heading: 'Pubmed',
+                    fieldId: 'has-pubmed',
+                    getData: journalDetails => !!journalDetails.fez_journal_pubmed,
+                    template: 'BooleanTemplate',
                 },
             ],
         ],
     },
-    jscie: {
-        key: 'fez_journal_jcr_scie',
-        title: 'Clarivate Journal Citation Reports - Science Citation Index',
+    qualityByRanking: {
+        key: ['fez_journal_jcr_merged', 'fez_journal_cite_score'],
+        title: viewJournalLocale.viewJournal.qualityByRanking.title,
+        help: viewJournalLocale.viewJournal.qualityByRanking.help,
         rows: [
-            [
-                {
-                    heading: 'Abbreviated title',
-                    fieldId: 'jnl-jcr-scie-abbrev-title',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_scie', 'jnl_jcr_scie_abbrev_title'],
-                        },
-                    ],
+            {
+                tabs: {
+                    key: 'fez_journal_jcr_merged',
+                    heading: 'Journal Citations Report (Clarivate)',
+                    fieldId: 'jnl-jcr-merged',
+                    tabId: 'categories',
+                    tabKey: 'categories',
+                    tabTitle: 'category',
+                    tabContent: {
+                        rows: [
+                            [
+                                {
+                                    heading: 'Quartile',
+                                    fieldId: 'quartile',
+                                    data: [
+                                        {
+                                            path: ['quartile'],
+                                        },
+                                    ],
+                                },
+                            ],
+                            [
+                                {
+                                    heading: 'Ranking',
+                                    fieldId: 'ranking',
+                                    data: [
+                                        {
+                                            path: ['ranking'],
+                                        },
+                                    ],
+                                },
+                            ],
+                        ],
+                    },
                 },
-            ],
+            },
             [
                 {
                     heading: 'Impact factor',
-                    fieldId: 'jnl-jcr-scie-impact-factor',
+                    fieldId: 'impact-factor',
                     data: [
                         {
-                            path: ['fez_journal_jcr_scie', 'jnl_jcr_scie_impact_factor'],
+                            path: ['fez_journal_jcr_merged', 'impact_factor'],
                         },
                     ],
                 },
             ],
-            [
-                {
-                    heading: '5 year impact factor',
-                    fieldId: 'jnl-jcr-scie-5yr-impact-factor',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_scie', 'jnl_jcr_scie_5yr_impact_factor'],
-                        },
-                    ],
-                },
-            ],
-            [
-                {
-                    heading: 'JCR version',
-                    fieldId: 'jnl-jcr-scie-source-date',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_scie', 'jnl_jcr_scie_source_year'],
-                        },
-                    ],
-                    template: 'DateTimeTemplate',
-                    templateProps: {
-                        format: 'YYYY',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'JCR home page',
-                    fieldId: 'jcr-home-page-scie',
-                    staticData: true,
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: () => prefixByUrlResolver('https://jcr.clarivate.com'),
-                        text: () => 'Go to JCR website',
-                        title: 'Open JCR website in a new tab',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'JCR more info',
-                    fieldId: 'jcr-more-info-scie',
-                    staticData: true,
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: () =>
-                            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
-                        text: () => 'More info about JCR SCIE',
-                        title: 'Open more info in a new tab',
-                    },
-                },
-            ],
-        ],
-        tabs: {
-            tabId: 'fez-journal-jcr-scie-category',
-            tabKey: 'fez_journal_jcr_scie_category',
-            tabTitle: 'jnl_jcr_scie_category_description_lookup',
-            tabContent: {
-                rows: [
-                    [
-                        {
-                            heading: 'Ranking',
-                            fieldId: 'jnl-jcr-scie-category-ranking',
-                            data: [
+            {
+                tabs: {
+                    key: 'fez_journal_cite_score',
+                    heading: 'CiteScore (Elsevier)',
+                    fieldId: 'jnl-cite-score',
+                    tabId: 'fez-journal-cite-score-asjc-code',
+                    tabKey: 'fez_journal_cite_score_asjc_code',
+                    tabTitle: 'jnl_cite_score_asjc_code_lookup',
+                    tabContent: {
+                        rows: [
+                            [
                                 {
-                                    path: ['jnl_jcr_scie_category_ranking'],
+                                    heading: 'Quartile',
+                                    fieldId: 'jnl-cite-score-asjc-code-quartile',
+                                    data: [
+                                        {
+                                            path: ['jnl_cite_score_asjc_code_quartile'],
+                                        },
+                                    ],
                                 },
                             ],
-                        },
-                    ],
-                    [
-                        {
-                            heading: 'Quartile',
-                            fieldId: 'jnl-jcr-scie-category-quartile',
-                            data: [
+                            [
                                 {
-                                    path: ['jnl_jcr_scie_category_quartile'],
+                                    heading: 'Ranked',
+                                    fieldId: 'jnl-cite-score-asjc-code-rank',
+                                    mergeData: true,
+                                    separator: ' out of ',
+                                    data: [
+                                        {
+                                            path: ['jnl_cite_score_asjc_code_rank'],
+                                        },
+                                        {
+                                            path: ['jnl_cite_score_asjc_code_rank_out_of'],
+                                        },
+                                    ],
                                 },
                             ],
-                        },
-                    ],
-                    [
-                        {
-                            heading: 'JIF Percentile',
-                            fieldId: 'jnl-jcr-scie-category-jif-percentile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_scie_category_jif_percentile'],
-                                },
-                            ],
-                        },
-                    ],
-                ],
+                        ],
+                    },
+                },
             },
-        },
-    },
-    jssci: {
-        key: 'fez_journal_jcr_ssci',
-        title: 'Clarivate Journal Citation Reports - Social Science Citation Index',
-        rows: [
             [
-                {
-                    heading: 'Abbreviated title',
-                    fieldId: 'jnl-jcr-ssci-abbrev-title',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_ssci', 'jnl_jcr_ssci_abbrev_title'],
-                        },
-                    ],
-                },
-            ],
-            [
-                {
-                    heading: 'Impact factor',
-                    fieldId: 'jnl-jcr-ssci-impact-factor',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_ssci', 'jnl_jcr_ssci_impact_factor'],
-                        },
-                    ],
-                },
-            ],
-            [
-                {
-                    heading: '5 year impact factor',
-                    fieldId: 'jnl-jcr-ssci-5yr-impact-factor',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_ssci', 'jnl_jcr_ssci_5yr_impact_factor'],
-                        },
-                    ],
-                },
-            ],
-            [
-                {
-                    heading: 'JCR version',
-                    fieldId: 'jnl-jcr-ssci-source-date',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_ssci', 'jnl_jcr_ssci_source_year'],
-                        },
-                    ],
-                    template: 'DateTimeTemplate',
-                    templateProps: {
-                        format: 'YYYY',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'JCR home page',
-                    fieldId: 'jcr-home-page-ssci',
-                    staticData: true,
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: () => prefixByUrlResolver('https://jcr.clarivate.com'),
-                        text: () => 'Go to JCR website',
-                        title: 'Open JCR website in a new tab',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'JCR more info',
-                    fieldId: 'jcr-more-info-ssci',
-                    staticData: true,
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: () =>
-                            'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/',
-                        text: () => 'More info about JCR SSCI',
-                        title: 'Open more info in a new tab',
-                    },
-                },
-            ],
-        ],
-        tabs: {
-            tabId: 'fez-journal-jcr-ssci-category',
-            tabKey: 'fez_journal_jcr_ssci_category',
-            tabTitle: 'jnl_jcr_ssci_category_description_lookup',
-            tabContent: {
-                rows: [
-                    [
-                        {
-                            heading: 'Ranking',
-                            fieldId: 'jnl-jcr-ssci-category-ranking',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_ssci_category_ranking'],
-                                },
-                            ],
-                        },
-                    ],
-                    [
-                        {
-                            heading: 'Quartile',
-                            fieldId: 'jnl-jcr-ssci-category-quartile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_ssci_category_quartile'],
-                                },
-                            ],
-                        },
-                    ],
-                    [
-                        {
-                            heading: 'JIF Percentile',
-                            fieldId: 'jnl-jcr-ssci-category-jif-percentile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_ssci_category_jif_percentile'],
-                                },
-                            ],
-                        },
-                    ],
-                ],
-            },
-        },
-    },
-    jahci: {
-        key: 'fez_journal_jcr_ahci',
-        title: 'Clarivate Journal Citation Reports - Arts & Humanities Citation Index',
-        rows: [
-            [
-                {
-                    heading: 'Abbreviated title',
-                    fieldId: 'jnl-jcr-ahci-abbrev-title',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_ahci', 'jnl_jcr_ahci_abbrev_title'],
-                        },
-                    ],
-                },
-            ],
-            [
-                {
-                    heading: 'Impact factor',
-                    fieldId: 'jnl-jcr-ahci-impact-factor',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_ahci', 'jnl_jcr_ahci_impact_factor'],
-                        },
-                    ],
-                },
-            ],
-            [
-                {
-                    heading: '5 year impact factor',
-                    fieldId: 'jnl-jcr-ahci-5yr-impact-factor',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_ahci', 'jnl_jcr_ahci_5yr_impact_factor'],
-                        },
-                    ],
-                },
-            ],
-            [
-                {
-                    heading: 'JCR version',
-                    fieldId: 'jnl-jcr-ahci-source-date',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_ahci', 'jnl_jcr_ahci_source_year'],
-                        },
-                    ],
-                    template: 'DateTimeTemplate',
-                    templateProps: {
-                        format: 'YYYY',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'JCR home page',
-                    fieldId: 'jcr-home-page-ahci',
-                    staticData: true,
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: () => prefixByUrlResolver('https://jcr.clarivate.com'),
-                        text: () => 'Go to JCR website',
-                        title: 'Open JCR website in a new tab',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'JCR more info',
-                    fieldId: 'jcr-more-info-ahci',
-                    staticData: true,
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: () =>
-                            'https://clarivate.com/products/scientific-and-academic-research/research-discovery-and-workflow-solutions/webofscience-platform/web-of-science-core-collection/arts-humanities-citation-index/',
-                        text: () => 'More info about JCR AHCI',
-                        title: 'Open more info in a new tab',
-                    },
-                },
-            ],
-        ],
-        tabs: {
-            tabId: 'fez-journal-jcr-ahci-category',
-            tabKey: 'fez_journal_jcr_ahci_category',
-            tabTitle: 'jnl_jcr_ahci_category_description_lookup',
-            tabContent: {
-                rows: [
-                    [
-                        {
-                            heading: 'Ranking',
-                            fieldId: 'jnl-jcr-ahci-category-ranking',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_ahci_category_ranking'],
-                                },
-                            ],
-                        },
-                    ],
-                    [
-                        {
-                            heading: 'Quartile',
-                            fieldId: 'jnl-jcr-ahci-category-quartile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_ahci_category_quartile'],
-                                },
-                            ],
-                        },
-                    ],
-                    [
-                        {
-                            heading: 'JIF Percentile',
-                            fieldId: 'jnl-jcr-ahci-category-jif-percentile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_ahci_category_jif_percentile'],
-                                },
-                            ],
-                        },
-                    ],
-                ],
-            },
-        },
-    },
-    jesci: {
-        key: 'fez_journal_jcr_esci',
-        title: 'Clarivate Journal Citation Reports - Emerging Sources Citation Index',
-        rows: [
-            [
-                {
-                    heading: 'Abbreviated title',
-                    fieldId: 'jnl-jcr-esci-abbrev-title',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_esci', 'jnl_jcr_esci_abbrev_title'],
-                        },
-                    ],
-                },
-            ],
-            [
-                {
-                    heading: 'Impact factor',
-                    fieldId: 'jnl-jcr-esci-impact-factor',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_esci', 'jnl_jcr_esci_impact_factor'],
-                        },
-                    ],
-                },
-            ],
-            [
-                {
-                    heading: '5 year impact factor',
-                    fieldId: 'jnl-jcr-esci-5yr-impact-factor',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_esci', 'jnl_jcr_esci_5yr_impact_factor'],
-                        },
-                    ],
-                },
-            ],
-            [
-                {
-                    heading: 'JCR version',
-                    fieldId: 'jnl-jcr-esci-source-date',
-                    data: [
-                        {
-                            path: ['fez_journal_jcr_esci', 'jnl_jcr_esci_source_year'],
-                        },
-                    ],
-                    template: 'DateTimeTemplate',
-                    templateProps: {
-                        format: 'YYYY',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'JCR home page',
-                    fieldId: 'jcr-home-page-esci',
-                    staticData: true,
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: () => prefixByUrlResolver('https://jcr.clarivate.com'),
-                        text: () => 'Go to JCR website',
-                        title: 'Open JCR website in a new tab',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'JCR more info',
-                    fieldId: 'jcr-more-info-esci',
-                    staticData: true,
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: () =>
-                            'https://clarivate.com/products/scientific-and-academic-research/research-discovery-and-workflow-solutions/webofscience-platform/web-of-science-core-collection/emerging-sources-citation-index/',
-                        text: () => 'More info about JCR ESCI',
-                        title: 'Open more info in a new tab',
-                    },
-                },
-            ],
-        ],
-        tabs: {
-            tabId: 'fez-journal-jcr-esci-category',
-            tabKey: 'fez_journal_jcr_esci_category',
-            tabTitle: 'jnl_jcr_esci_category_description_lookup',
-            tabContent: {
-                rows: [
-                    [
-                        {
-                            heading: 'Ranking',
-                            fieldId: 'jnl-jcr-esci-category-ranking',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_esci_category_ranking'],
-                                },
-                            ],
-                        },
-                    ],
-                    [
-                        {
-                            heading: 'Quartile',
-                            fieldId: 'jnl-jcr-esci-category-quartile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_esci_category_quartile'],
-                                },
-                            ],
-                        },
-                    ],
-                    [
-                        {
-                            heading: 'JIF Percentile',
-                            fieldId: 'jnl-jcr-esci-category-jif-percentile',
-                            data: [
-                                {
-                                    path: ['jnl_jcr_esci_category_jif_percentile'],
-                                },
-                            ],
-                        },
-                    ],
-                ],
-            },
-        },
-    },
-    'cite-score': {
-        key: 'fez_journal_cite_score',
-        title: 'Elsevier CiteScore',
-        rows: [
-            [
-                {
-                    heading: 'CiteScore version',
-                    fieldId: 'jnl-cite-score-source-year',
-                    data: [
-                        {
-                            path: ['fez_journal_cite_score', 'jnl_cite_score_source_year'],
-                        },
-                    ],
-                    template: 'DateTimeTemplate',
-                    templateProps: {
-                        format: 'YYYY',
-                    },
-                },
                 {
                     heading: 'CiteScore',
                     fieldId: 'jnl-cite-score',
                     data: [
                         {
-                            path: ['fez_journal_cite_score', 'jnl_cite_score'],
-                        },
-                    ],
-                },
-            ],
-
-            [
-                {
-                    heading: 'CiteScore score',
-                    fieldId: 'jnl-cite-score-source-id',
-                    data: [
-                        {
-                            path: ['fez_journal_cite_score', 'jnl_cite_score_source_id'],
+                            path: ['fez_journal_cite_score'],
                         },
                     ],
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: item => prefixByUrlResolver(`https://www.scopus.com/sourceid/${item}`),
+                        href: item =>
+                            prefixByUrlResolver(`https://www.scopus.com/sourceid/${item.jnl_cite_score_source_id}`),
                         title: 'Open CiteScore record in a new tab',
-                        text: () => 'Go to record in CiteScore',
+                        text: item => item.jnl_cite_score,
                     },
                 },
+            ],
+            [
                 {
                     heading: 'SNIP',
                     fieldId: 'jnl-cite-score-snip',
@@ -941,17 +470,6 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'CiteScore more info',
-                    fieldId: 'jnl-cite-score-more-info',
-                    staticData: true,
-                    template: 'LinkTemplate',
-                    templateProps: {
-                        href: () => 'https://service.elsevier.com/app/answers/detail/a_id/14880/supporthub/scopus/',
-                        title: 'View more about CiteScore in a new tab',
-                        text: () => 'More info about CiteScore',
-                    },
-                },
-                {
                     heading: 'SJR',
                     fieldId: 'jnl-cite-score-sjr',
                     data: [
@@ -961,91 +479,11 @@ export const viewJournalConfig = {
                     ],
                 },
             ],
-            [
-                {
-                    heading: 'Percent Cited',
-                    fieldId: 'jnl-cite-score-percent-cited',
-                    data: [
-                        {
-                            path: ['fez_journal_cite_score', 'jnl_cite_score_percent_cited'],
-                        },
-                    ],
-                },
-            ],
         ],
-        tabs: {
-            tabId: 'fez-journal-cite-score-asjc-code',
-            tabKey: 'fez_journal_cite_score_asjc_code',
-            tabTitle: 'jnl_cite_score_asjc_code_lookup',
-            tabContent: {
-                rows: [
-                    [
-                        {
-                            heading: 'Scopus ASJC Code and sub-subject area',
-                            fieldId: 'jnl-cite-score-asjc-code-lookup',
-                            data: [
-                                {
-                                    path: ['jnl_cite_score_asjc_code_lookup'],
-                                },
-                            ],
-                        },
-                    ],
-                    [
-                        {
-                            heading: 'Quartile',
-                            fieldId: 'jnl-cite-score-asjc-code-quartile',
-                            data: [
-                                {
-                                    path: ['jnl_cite_score_asjc_code_quartile'],
-                                },
-                            ],
-                        },
-                    ],
-                    [
-                        {
-                            heading: 'Ranked',
-                            fieldId: 'jnl-cite-score-asjc-code-rank',
-                            mergeData: true,
-                            separator: ' out of ',
-                            data: [
-                                {
-                                    path: ['jnl_cite_score_asjc_code_rank'],
-                                },
-                                {
-                                    path: ['jnl_cite_score_asjc_code_rank_out_of'],
-                                },
-                            ],
-                        },
-                    ],
-                    [
-                        {
-                            heading: 'Top 10% (CiteScore Percentile)',
-                            fieldId: 'jnl-cite-score-asjc-code-top-10-percent',
-                            data: [
-                                {
-                                    path: ['jnl_cite_score_asjc_code_top_10_percent'],
-                                },
-                            ],
-                            template: 'BooleanTemplate',
-                        },
-                    ],
-                    [
-                        {
-                            heading: 'Percentile',
-                            fieldId: 'jnl-cite-score-asjc-code-percentile',
-                            data: [
-                                {
-                                    path: ['jnl_cite_score_asjc_code_percentile'],
-                                },
-                            ],
-                        },
-                    ],
-                ],
-            },
-        },
     },
     listed: {
-        title: 'Listed in',
+        title: viewJournalLocale.viewJournal.listed.title,
+        help: viewJournalLocale.viewJournal.listed.help,
         rows: [
             [
                 {
@@ -1071,54 +509,15 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'ABDC Listed Year',
-                    fieldId: 'jnl-abdc-source-date',
-                    data: [
-                        {
-                            path: ['fez_journal_abdc', 'jnl_abdc_source_date'],
-                        },
-                    ],
-                    template: 'DateTimeTemplate',
-                    templateProps: {
-                        format: 'YYYY',
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'CWTS Leiden Ranking',
-                    fieldId: 'jnl-cwts-source-year',
-                    getData: journalDetails => {
-                        const status =
-                            Array.isArray(journalDetails.fez_journal_wos_category) &&
-                            journalDetails.fez_journal_wos_category.some(
-                                category => category.fez_journal_cwts && category.fez_journal_cwts.jnl_cwts_source_year,
-                            );
-                        const year =
-                            Array.isArray(journalDetails.fez_journal_wos_category) &&
-                            journalDetails.fez_journal_wos_category.reduce(
-                                (firstcwtsSourceYear, category) =>
-                                    firstcwtsSourceYear ||
-                                    (category.fez_journal_cwts && category.fez_journal_cwts.jnl_cwts_source_year),
-                                '',
-                            );
-
-                        return status ? `Yes${year ? `, ${year}` : ''}` : 'No';
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Excellence in Research for Australia (ERA)',
-                    fieldId: 'fez-journal-era',
-                    getData: journalDetails =>
-                        !!journalDetails.fez_journal_era && journalDetails.fez_journal_era.length > 0,
+                    heading: 'Nature Index',
+                    fieldId: 'has-nature-index',
+                    getData: journalDetails => !!journalDetails.fez_journal_nature_index,
                     template: 'BooleanTemplate',
                 },
             ],
             [
                 {
-                    heading: 'ERA Years with Field of Research codes',
+                    heading: 'Excellence in Research for Australia (ERA)',
                     fieldId: 'jnl-era-for-code-lookup',
                     data: [
                         {
@@ -1140,42 +539,13 @@ export const viewJournalConfig = {
             ],
             [
                 {
-                    heading: 'Nature Index',
-                    fieldId: 'jnl-nature-index-source-date',
+                    heading: 'CWTS Leiden Ranking',
+                    fieldId: 'has-cwts',
                     getData: journalDetails =>
-                        `${!!journalDetails.fez_journal_nature_index ? 'Yes' : 'No'}${
-                            !!journalDetails.fez_journal_nature_index
-                                ? ', ' +
-                                  moment(
-                                      journalDetails.fez_journal_nature_index.jnl_nature_index_source_date,
-                                      ' YYYY-MM-DD',
-                                  ).format('YYYY')
-                                : ''
-                        }`,
-                },
-            ],
-            [
-                {
-                    heading: 'Essential Science Indicators Research Fields',
-                    fieldId: 'jnl-esi-subject-lookup',
-                    data: [
-                        {
-                            isArray: true,
-                            primaryKey: 'fez_journal_esi',
-                            path: [],
-                        },
-                    ],
-                    template: 'MultiValueTemplate',
-                    templateProps: {
-                        getData: item => `${item.jnl_esi_subject_lookup} (${item.jnl_esi_issn})`,
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Pubmed',
-                    fieldId: 'has-pubmed',
-                    getData: journalDetails => !!journalDetails.fez_journal_pubmed,
+                        Array.isArray(journalDetails.fez_journal_wos_category) &&
+                        journalDetails.fez_journal_wos_category.some(
+                            category => category.fez_journal_cwts && category.fez_journal_cwts.jnl_cwts_source_year,
+                        ),
                     template: 'BooleanTemplate',
                 },
             ],

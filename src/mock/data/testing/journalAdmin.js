@@ -113,35 +113,7 @@ export const helpersTypicalExpected = {
             readAndPublishPublisher: 'De Gruyter',
             s2o: undefined,
         },
-        doajSection: {
-            jnl_doaj_apc_average_price: '1000',
-            jnl_doaj_apc_currency: 'EUR',
-            jnl_doaj_by: true,
-            jnl_doaj_has_doi: true,
-            jnl_doaj_homepage_url: 'https://www.degruyter.com/journal/key/ans/html',
-            jnl_doaj_issn: '2169-0375',
-            jnl_doaj_last_updated: '2022-08-22 09:57:12',
-            jnl_doaj_nc: true,
-            jnl_doaj_nd: true,
-            jnl_doaj_sa: false,
-            jnl_doaj_seal: false,
-            jnl_doaj_source_id: '340ee43c4c9d4b73ad3f24bb26d98c37',
-            jnl_doaj_title: 'Advanced Nonlinear Studies',
-            openAccess: false,
-        },
         id: 12,
-        listedSection: {
-            esi: [
-                {
-                    jnl_esi_issn: '2169-0375',
-                    jnl_esi_source_date: '2023-01-01',
-                    jnl_esi_subject: 456440,
-                    jnl_esi_subject_lookup: 'Mathematics',
-                    jnl_esi_title: 'ADVANCED NONLINEAR STUDIES',
-                },
-            ],
-            pubmed: false,
-        },
         journal: {
             fez_journal_abdc: null,
             fez_journal_cite_score: {
@@ -877,8 +849,6 @@ export const helpersNonTypicalExpected = {
             jnl_updated_date: '2022-09-08 04:56:28',
             uq_author_id_count: 0,
         },
-        doajSection: {},
-        listedSection: {},
         uqDataSection: {},
     },
 };
