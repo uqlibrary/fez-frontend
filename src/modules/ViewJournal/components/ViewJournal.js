@@ -76,7 +76,7 @@ const shouldShowPublishAsOAButton = (location, data) =>
  */
 const extractHighestQuartile = (data, prop) =>
     Math.min(
-        ...(data.map?.(item =>
+        ...(data?.map?.(item =>
             parseInt(String(item[prop]).toLowerCase().replace('q', ''), 10),
         ) || /* istanbul ignore next */ [0]),
     );
