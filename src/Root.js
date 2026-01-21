@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouterProvider, Outlet } from 'react-router-dom';
+import { RouterProvider, Outlet } from 'react-router';
 import { createRouter } from 'config/router';
 
 // MUI

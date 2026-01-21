@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { render, within } from '@testing-library/react';
-import { createMemoryRouter, RouterProvider, MemoryRouter } from 'react-router-dom';
+import { createMemoryRouter, RouterProvider, MemoryRouter } from 'react-router';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
 import { FormProvider } from 'react-hook-form';

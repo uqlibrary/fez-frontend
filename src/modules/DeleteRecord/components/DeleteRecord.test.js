@@ -23,8 +23,8 @@ const recordWithDataCiteDoi = recordWithRDM;
 const mockUseNavigate = jest.fn();
 let mockParams = { pid: mockRecordToDelete.rek_pid };
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: () => mockUseNavigate,
     useParams: () => mockParams,
 }));

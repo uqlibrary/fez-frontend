@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation, useParams, useHref } from 'react-router-dom';
+import { useLocation, useParams, useHref } from 'react-router';
 
 import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';

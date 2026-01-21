@@ -4,7 +4,7 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { PublicationForm } from 'modules/SharedComponents/PublicationForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 // forms & custom components
 import { pathConfig } from 'config';

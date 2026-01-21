@@ -2,7 +2,7 @@ import React from 'react';
 import Cookies from 'js-cookie';
 
 import * as actions from 'actions';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { FormProvider } from 'react-hook-form';
 import locale from 'locale/pages';
