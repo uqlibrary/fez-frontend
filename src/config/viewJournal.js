@@ -365,22 +365,14 @@ export const viewJournalConfig = {
                                 {
                                     heading: 'Quartile',
                                     fieldId: 'quartile',
-                                    data: [
-                                        {
-                                            path: ['quartile'],
-                                        },
-                                    ],
+                                    getData: jcrDetail => jcrDetail.quartile ?? 'N/A',
                                 },
                             ],
                             [
                                 {
                                     heading: 'Ranking',
                                     fieldId: 'ranking',
-                                    data: [
-                                        {
-                                            path: ['ranking'],
-                                        },
-                                    ],
+                                    getData: jcrDetail => jcrDetail.ranking ?? 'N/A',
                                 },
                             ],
                         ],
