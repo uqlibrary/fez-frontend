@@ -17,7 +17,7 @@ import locale from 'locale/components';
 import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
 import { pathConfig } from 'config/pathConfig';
 import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../hooks';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router';
 import { FAQ } from './partials/FAQ';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import { AddToFavouritesButton } from './partials/AddToFavouritesButton';

@@ -17,7 +17,7 @@ const PublicationListLoadingProgress = React.lazy(
 import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { setClaimPublication, setRedirectPath } from '../../../../actions';
 

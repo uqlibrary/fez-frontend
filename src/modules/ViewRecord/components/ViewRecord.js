@@ -2,7 +2,7 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router';
 
 import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid';
