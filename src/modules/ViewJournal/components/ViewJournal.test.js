@@ -964,47 +964,85 @@ describe('ViewJournal', () => {
                 assertMissingElement('publish-as-oa-button');
             });
 
-            it("should display button for search workflows when OA status = `fee` and it's not embargoed", async () => {
-                window.open = jest.fn();
-                api.mock.journals.get({ id: '.*', data: { ...data } });
-                const { getByTestId } = setup();
+            describe("should display button for search workflows when OA status = `fee` and it's not embargoed", () => {
+                it('With HQ', async () => {
+                    window.open = jest.fn();
+                    api.mock.journals.get({ id: '.*', data: { ...data } });
+                    const { getByTestId } = setup();
 
-                await waitElementToBeInDocument('publish-as-oa-button');
-                await userEvent.click(getByTestId('publish-as-oa-button'));
+                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await userEvent.click(getByTestId('publish-as-oa-button'));
 
-                const expectedSearchParams = {
-                    keywords: {
-                        'Subject-453458': {
-                            cvoId: '453458',
-                            text: '2739 Public Health, Environmental and Occupational Health',
-                            type: 'Subject',
-                            id: 'Subject-453458',
+                    const expectedSearchParams = {
+                        keywords: {
+                            'Subject-453458': {
+                                cvoId: '453458',
+                                text: '2739 Public Health, Environmental and Occupational Health',
+                                type: 'Subject',
+                                id: 'Subject-453458',
+                            },
+                            'Subject-456676': {
+                                cvoId: '456676',
+                                text: 'Public, Environmental & Occupational Health',
+                                type: 'Subject',
+                                id: 'Subject-456676',
+                            },
+                            'Subject-456497': {
+                                cvoId: '456497',
+                                text: 'Computer Science, Software Engineering',
+                                type: 'Subject',
+                                id: 'Subject-456497',
+                            },
                         },
-                        'Subject-456676': {
-                            cvoId: '456676',
-                            text: 'Public, Environmental & Occupational Health',
-                            type: 'Subject',
-                            id: 'Subject-456676',
+                        activeFacets: {
+                            filters: {
+                                ...publishAsOASearchFacetDefaults,
+                                'Highest quartile': ['1'],
+                            },
                         },
-                        'Subject-456497': {
-                            cvoId: '456497',
-                            text: 'Computer Science, Software Engineering',
-                            type: 'Subject',
-                            id: 'Subject-456497',
+                    };
+                    expect(window.open).toHaveBeenCalledWith(
+                        `${pathConfig.journals.search}?${param(expectedSearchParams)}`,
+                        '_blank',
+                        'noopener,noreferrer',
+                    );
+                });
+
+                it('Without HQ', async () => {
+                    window.open = jest.fn();
+                    api.mock.journals.get({
+                        id: '.*',
+                        data: {
+                            ...data,
+                            fez_journal_jcr_scie: null,
                         },
-                    },
-                    activeFacets: {
-                        filters: {
-                            ...publishAsOASearchFacetDefaults,
-                            'Highest quartile': ['1'],
+                    });
+                    const { getByTestId } = setup();
+
+                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await userEvent.click(getByTestId('publish-as-oa-button'));
+
+                    const expectedSearchParams = {
+                        keywords: {
+                            'Subject-453458': {
+                                cvoId: '453458',
+                                text: '2739 Public Health, Environmental and Occupational Health',
+                                type: 'Subject',
+                                id: 'Subject-453458',
+                            },
                         },
-                    },
-                };
-                expect(window.open).toHaveBeenCalledWith(
-                    `${pathConfig.journals.search}?${param(expectedSearchParams)}`,
-                    '_blank',
-                    'noopener,noreferrer',
-                );
+                        activeFacets: {
+                            filters: {
+                                ...publishAsOASearchFacetDefaults,
+                            },
+                        },
+                    };
+                    expect(window.open).toHaveBeenCalledWith(
+                        `${pathConfig.journals.search}?${param(expectedSearchParams)}`,
+                        '_blank',
+                        'noopener,noreferrer',
+                    );
+                });
             });
 
             describe('embargoed', () => {
