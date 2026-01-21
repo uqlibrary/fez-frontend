@@ -2,7 +2,7 @@ import React from 'react';
 import { APP_URL } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
 import { RESOLVER_URL_PREFIX } from 'config/general';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 /*
 

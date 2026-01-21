@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useBlocker, useNavigate } from 'react-router-dom';
+import { useBlocker, useNavigate } from 'react-router';
 
 /**
  * A replacement component for the react-router `Prompt`.

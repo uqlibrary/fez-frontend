@@ -19,7 +19,7 @@ import {
 } from 'config/general';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { Box } from '@mui/material';
 
 /*

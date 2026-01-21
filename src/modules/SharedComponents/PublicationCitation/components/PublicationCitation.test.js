@@ -3,10 +3,10 @@ import { PublicationCitation } from './PublicationCitation';
 import { mockRecordToFix, journalArticle } from 'mock/data/testing/records';
 import { render, WithReduxStore, WithRouter, fireEvent, userEvent } from 'test-utils';
 const mockUseNavigate = jest.fn();
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: () => mockUseNavigate,
     useLocation: jest.fn(() => ({ pathname: '/', search: '', state: {} })),
 }));

@@ -6,10 +6,10 @@ import deparam from 'can-deparam';
 
 import JournalSearchResult, { getSearchResultSortingParams } from './JournalSearchResult';
 import { mockDataEmpty, mockData } from 'mock/data/testing/journals/journalSearchResults';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: jest.fn(() => jest.fn()),
 }));
 
