@@ -787,6 +787,56 @@ describe('ViewJournal', () => {
         );
     });
 
+    it('should display jcr data only', async () => {
+        window.matchMedia = createMatchMedia(590);
+
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_jcr_ahci: null,
+                fez_journal_jcr_esci: null,
+                fez_journal_jcr_ssci: null,
+                fez_journal_jcr_scie: {
+                    fez_journal_jcr_scie_category: [
+                        {
+                            ...journalDetails.data.fez_journal_jcr_scie.fez_journal_jcr_scie_category[0],
+                        },
+                    ],
+                },
+                fez_journal_cite_score: null,
+            },
+        });
+
+        const { queryByTestId, getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('journal-details-qualityByRanking-header')).toBeInTheDocument();
+        expect(getByTestId('journal-details-tab-categories-header')).toBeInTheDocument();
+        expect(queryByTestId('journal-details-tab-fez-journal-cite-score-asjc-code-header')).not.toBeInTheDocument();
+    });
+
+    it('should not display journal by quality ranking card', async () => {
+        window.matchMedia = createMatchMedia(590);
+
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_jcr_ahci: null,
+                fez_journal_jcr_esci: null,
+                fez_journal_jcr_ssci: null,
+                fez_journal_jcr_scie: null,
+                fez_journal_cite_score: null,
+            },
+        });
+
+        const { queryByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(queryByTestId('journal-details-journal-details-qualityByRanking-header')).not.toBeInTheDocument();
+    });
+
     describe('Favouriting', () => {
         it('should display an error message if the journal "favourite" action fails', async () => {
             window.matchMedia = createMatchMedia(1600);
