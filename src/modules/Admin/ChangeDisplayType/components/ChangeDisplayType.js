@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { parseHtmlToJSX } from 'helpers/general';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router';
 import { useConfirmationState, useForm, usePublicationSubtype } from 'hooks';
 
 import Button from '@mui/material/Button';

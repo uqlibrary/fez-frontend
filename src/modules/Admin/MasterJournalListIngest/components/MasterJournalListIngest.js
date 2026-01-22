@@ -15,7 +15,7 @@ import { requestMJLIngest } from 'actions';
 import { validation, pathConfig } from 'config';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 const MasterJournalListIngest = () => {
     const [apiError, setApiError] = React.useState('');

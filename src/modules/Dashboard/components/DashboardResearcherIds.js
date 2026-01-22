@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 import { OrcidSyncContext } from 'context';
 import DashboardOrcidSync from '../containers/DashboardOrcidSync';

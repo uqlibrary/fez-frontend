@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation } from 'react-router';
 import Cookies from 'js-cookie';
 import { styled } from '@mui/material/styles';
 import { pathConfig, routes, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME } from 'config';

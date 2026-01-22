@@ -12,7 +12,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 import { userIsAdmin } from 'hooks';
 import { useQueryStringParams, useCommunityCollectionControls } from './hooks';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config';
@@ -26,7 +26,7 @@ import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsLi
 
 import { CommunityTable } from './components/CommunityTable';
 import queryString from 'query-string';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router';
 import Add from '@mui/icons-material/Add';
 
 import { navigateTo } from './components/functions';

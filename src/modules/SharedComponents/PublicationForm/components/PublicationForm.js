@@ -35,7 +35,7 @@ import { locale } from '../../../../locale';
 import { useDispatch } from 'react-redux';
 import { Field } from '../../Toolbox/ReactHookForm';
 import { useForm } from '../../../../hooks';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { useWatch } from 'react-hook-form';
 import { flattenFormFieldKeys } from '../../../../hooks/useForm';
 import { filterObject, hasAtLeastOneItemSelected, isEmptyObject } from 'helpers/general';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, WithReduxStore, WithRouter, createMatchMedia, waitFor, act, userEvent } from 'test-utils';
 import Cookies from 'js-cookie';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import * as JournalActions from 'actions/journals';
 import { accounts } from 'mock/data/account';
 import { journalDoaj } from 'mock/data';
@@ -26,8 +26,8 @@ jest.mock('react-redux', () => ({
     useDispatch: () => mockDispatch,
 }));
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useParams: jest.fn(),
 }));
 

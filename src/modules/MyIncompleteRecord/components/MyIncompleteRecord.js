@@ -24,7 +24,7 @@ import { default as pagesLocale } from '../locale';
 import { default as formsLocale } from 'locale/forms';
 import { default as viewRecordLocale } from 'locale/viewRecord';
 import { default as alertLocale } from 'locale/publicationForm';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router';
 import { authorAffiliationRequired } from '../../../config/validation';
 import { locale } from '../../../locale';
 import {
