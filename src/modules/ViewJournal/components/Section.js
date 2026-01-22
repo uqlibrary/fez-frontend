@@ -10,12 +10,12 @@ import TabbedFields from './partials/TabbedFields';
 export const Section = ({ sectionKey, sectionConfig, wrapped = true }) => {
     const { journalDetails } = useJournalContext();
     const viewRows = sectionConfig.rows.map((field, index) => {
-        const isTabbedFields = !!field.tabs && !!journalDetails[field.tabs.key][field.tabs.tabKey];
+        const isTabbedFields = !!field.tabs;
         return isTabbedFields ? (
             <TabbedFields
                 {...field.tabs}
                 tabId={`journal-details-tab-${field.tabs.tabId}`}
-                data={journalDetails[field.tabs.key][field.tabs.tabKey]}
+                data={journalDetails[field.tabs.key]?.[field.tabs.tabKey]}
                 title={field.tabs.heading}
             />
         ) : (
