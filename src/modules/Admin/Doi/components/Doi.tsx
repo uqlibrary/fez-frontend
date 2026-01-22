@@ -1,6 +1,6 @@
 import React from 'react';
 import { parseHtmlToJSX } from 'helpers/general';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';

@@ -14,7 +14,7 @@ import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { parseHtmlToJSX } from 'helpers/general';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import {
     CURRENT_LICENCES,
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,

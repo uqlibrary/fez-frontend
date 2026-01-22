@@ -25,7 +25,7 @@ const returnDateField = (date, conf, classes) => {
     );
 };
 
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse }) => {
     const dispatch = useDispatch();

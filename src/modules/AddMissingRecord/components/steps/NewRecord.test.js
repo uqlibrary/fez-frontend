@@ -17,8 +17,8 @@ import {
 import { NEW_RECORD_API } from 'repositories/routes';
 
 const mockUseNavigate = jest.fn();
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: () => mockUseNavigate,
 }));
 

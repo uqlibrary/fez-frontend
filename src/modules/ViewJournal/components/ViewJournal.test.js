@@ -24,8 +24,8 @@ import { pathConfig } from 'config';
 import param from 'can-param';
 
 let mockUseLocation = {};
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useParams: jest.fn(() => ({ id: 1 })),
     useLocation: () => mockUseLocation,
 }));

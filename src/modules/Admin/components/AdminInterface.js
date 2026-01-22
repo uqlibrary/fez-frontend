@@ -6,7 +6,7 @@ import queryString from 'query-string';
 import { styled } from '@mui/material/styles';
 import * as actions from 'actions';
 import { useDispatch } from 'react-redux';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router';
 import { useFormContext } from 'react-hook-form';
 import * as Sentry from '@sentry/react';
 

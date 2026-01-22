@@ -6,7 +6,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { Stepper } from 'modules/SharedComponents/Toolbox/Stepper';
 import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router';
 import { useSelector } from 'react-redux';
 
 export const AddMissingRecord = ({ addRecordStep: AddRecordStep, ...props }) => {

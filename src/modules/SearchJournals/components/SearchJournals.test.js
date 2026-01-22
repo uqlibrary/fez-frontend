@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, within, act } from 'test-utils';
+import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, within } from 'test-utils';
 import { pathConfig } from 'config';
 import * as actions from 'actions/journals.js';
 
@@ -13,8 +13,8 @@ import {
 } from 'mock/data/testing/journals/journalSearchResults';
 
 const mockUseNavigate = jest.fn();
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: () => mockUseNavigate,
 }));
 

@@ -33,8 +33,8 @@ import { pathConfig } from '../../../config';
 const mockUseNavigate = jest.fn();
 let mockParams;
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: () => mockUseNavigate,
     useParams: () => mockParams,
 }));

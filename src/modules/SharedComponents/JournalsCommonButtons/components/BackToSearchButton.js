@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import Button from '@mui/material/Button';
 import { pathConfig } from 'config';
 const BackToSearchButton = props => {
