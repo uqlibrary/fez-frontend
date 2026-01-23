@@ -20,12 +20,14 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data, title 
     const isSmDown = useMediaQuery(theme.breakpoints.down('md'));
     const [currentTabValue, setCurrentTabValue] = React.useState('0');
     const handleTabChange = (event, value) => setCurrentTabValue(value);
-    const multipleData = data.length > 1;
+    const multipleData = data && data.length > 1;
     const tabStyle = isSmDown && {
         // eslint-disable-next-line no-nested-ternary
         maxWidth: multipleData ? 'calc((100vw - 68px) * 0.67)' : isXsDown ? '100%' : '50%',
         width: '100%',
     };
+
+    if (!data) return null;
     return (
         <Grid container style={{ marginBottom: 20 }}>
             {title && (
