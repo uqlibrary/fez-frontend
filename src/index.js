@@ -7,7 +7,7 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import * as Sentry from '@sentry/react';
-import { useLocation, useNavigationType, createRoutesFromChildren, matchRoutes } from 'react-router-dom';
+import { useLocation, useNavigationType, createRoutesFromChildren, matchRoutes } from 'react-router';
 import { setup } from 'mock';
 
 // pick utils

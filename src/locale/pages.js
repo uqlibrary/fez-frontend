@@ -19,7 +19,7 @@ import {
 } from 'config/general';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { Box } from '@mui/material';
 
 /*
@@ -1132,8 +1132,8 @@ export default {
                 uqData: {
                     title: 'UQ eSpace',
                 },
-                doaj: {
-                    title: 'Open Access (Directory of Open Access Journals - DOAJ)',
+                openAccess: {
+                    title: 'Open Access Options',
                 },
                 listed: {
                     title: 'Listed in',

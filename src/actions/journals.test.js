@@ -385,4 +385,76 @@ describe('Search action creators', () => {
             }
         });
     });
+    describe('mergeJcrData', () => {
+        it('should return empty object if no jcr data', () => {
+            expect(journalActions.mergeJcrData(undefined)).toEqual(undefined);
+            expect(journalActions.mergeJcrData(null)).toEqual(null);
+            expect(journalActions.mergeJcrData({})).toEqual({ fez_journal_jcr_merged: null });
+            expect(journalActions.mergeJcrData({ fez_journal_jcr_ahci: null })).toEqual({
+                fez_journal_jcr_merged: null,
+            });
+            expect(
+                journalActions.mergeJcrData({ fez_journal_jcr_ahci: { jnl_jcr_ahci_impact_factor: '1.0' } }),
+            ).toEqual({ fez_journal_jcr_merged: null });
+        });
+
+        it('should merge jcr data', () => {
+            const jcrData = {
+                fez_journal_jcr_ahci: {
+                    jnl_jcr_ahci_impact_factor: '1.0',
+                    fez_journal_jcr_ahci_category: [
+                        {
+                            jnl_jcr_ahci_category_description_lookup: 'math',
+                            jnl_jcr_ahci_category_quartile: 'Q1',
+                            jnl_jcr_ahci_category_ranking: '10/100',
+                        },
+                        {
+                            jnl_jcr_ahci_category_description_lookup: 'science',
+                            jnl_jcr_ahci_category_quartile: 'Q2',
+                            jnl_jcr_ahci_category_ranking: '20/100',
+                        },
+                    ],
+                },
+                fez_journal_jcr_scie: {
+                    jnl_jcr_scie_impact_factor: '1.0',
+                    fez_journal_jcr_scie_category: [
+                        {
+                            jnl_jcr_scie_category_description_lookup: 'math',
+                            jnl_jcr_scie_category_quartile: 'Q1',
+                            jnl_jcr_scie_category_ranking: '10/100',
+                        },
+                        {
+                            jnl_jcr_scie_category_description_lookup: 'bio',
+                            jnl_jcr_scie_category_quartile: 'Q1',
+                            jnl_jcr_scie_category_ranking: '10/100',
+                        },
+                    ],
+                },
+            };
+            const expected = {
+                fez_journal_jcr_merged: {
+                    impact_factor: '1.0',
+                    categories: [
+                        {
+                            category: 'math',
+                            quartile: 'Q1',
+                            ranking: '10/100',
+                        },
+                        {
+                            category: 'science',
+                            quartile: 'Q2',
+                            ranking: '20/100',
+                        },
+                        {
+                            category: 'bio',
+                            quartile: 'Q1',
+                            ranking: '10/100',
+                        },
+                    ],
+                },
+            };
+
+            expect(journalActions.mergeJcrData(jcrData)).toEqual(expected);
+        });
+    });
 });

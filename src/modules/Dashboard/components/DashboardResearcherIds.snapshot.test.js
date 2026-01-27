@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router';
 import { setupStoreForMount } from 'test.setup';
 import DashboardResearcherIds from './DashboardResearcherIds';
 
@@ -12,8 +12,8 @@ jest.mock('../../../context');
 import { OrcidSyncContext } from 'context';
 
 const mockUseNavigate = jest.fn();
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: () => mockUseNavigate,
 }));
 

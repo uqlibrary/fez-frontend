@@ -14,7 +14,7 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import kebabCase from 'lodash/kebabCase';
 
 // Define types for a menu item and locale properties

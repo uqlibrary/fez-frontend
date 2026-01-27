@@ -1,10 +1,158 @@
 import { APP_URL } from 'config/general';
 import React from 'react';
 
-const caulLink = 'https://caul.libguides.com/read-and-publish/home';
+const caulLink = 'https://caul.libguides.com/read-and-publish/reports';
 
 export default {
     viewJournal: {
+        basic: {
+            title: 'Journal Information',
+            help: {
+                text: (
+                    <>
+                        <h3>ISO abbreviated title</h3>
+                        <p>International standard for abbreviation of the journal title.</p>
+
+                        <h3>ISSN(s)</h3>
+                        <p>
+                            International Standard Serial Number (ISSN) is the journal’s unique identifier code. Journal
+                            will have a separate ISSN for print and online format.
+                        </p>
+
+                        <h3>Refereed</h3>
+                        <p>Peer-reviewed journal</p>
+
+                        <h3>Type of journal</h3>
+                        <p>Fully open access journals - all content is immediately free to access. </p>
+                        <p>
+                            Hybrid journals are subscription journals in which some of the articles are open access by
+                            means of an Article Processing Charge (APC).
+                        </p>
+                        <p>Sources: Ulrichs and DOAJ</p>
+                    </>
+                ),
+            },
+        },
+        openAccess: {
+            title: 'Open Access Options',
+            help: {
+                text: (
+                    <>
+                        <p>
+                            Publishing open access increases research visibility by making work freely available to a
+                            global audience.
+                        </p>
+                        <p>Terminology and pathways to make work open access include:</p>
+
+                        <h3>Article Processing Charge (APC)</h3>
+                        <p>
+                            Fee paid to the publisher to make an article immediately available and openly accessible.
+                            Check the journal’s website for the most up-to-date APC.
+                        </p>
+
+                        <h3>Open access with Accepted manuscript</h3>
+                        <p>
+                            You can make your work openly accessible by depositing the Author Accepted Manuscript (AAM)
+                            of your article in UQ eSpace.
+                        </p>
+                        <p>
+                            An Author Accepted Manuscript is the version of an article that has been peer-reviewed and
+                            accepted for publication but before the publisher has applied formatting, typesetting and
+                            branding.
+                        </p>
+                        <p>UQ eSpace will manage the required embargo period.</p>
+                        <h3>UQ Publisher agreement</h3>
+
+                        <p>
+                            UQ Library may have{' '}
+                            <a
+                                href={
+                                    'https://web.library.uq.edu.au/research-and-publish/open-research/open-access-publishing-agreements'
+                                }
+                                target={'blank'}
+                            >
+                                an agreement
+                            </a>{' '}
+                            with the publisher that covers the APC or provides a discount on the APC.
+                        </p>
+                    </>
+                ),
+            },
+        },
+        discoverability: {
+            title: 'Journal Discoverability',
+            help: {
+                text: (
+                    <>
+                        <p>
+                            Having research indexed in major databases increases its visibility and discoverability,
+                            enhancing the work’s credibility.
+                        </p>
+                        <p>Major databases that index journals are:</p>
+                        <ul>
+                            <li>Web of Science citation indexes</li>
+                            <li>Scopus</li>
+                            <li>PubMed</li>
+                        </ul>
+                    </>
+                ),
+            },
+        },
+        qualityByRanking: {
+            title: 'Journal Quality By Ranking',
+            help: {
+                text: (
+                    <>
+                        <p>Journal quality rankings may identify reputable journals within a subject area.</p>
+
+                        <p>
+                            Higher ranked journals may be referred to as Q1 or in the top quartile of their subject
+                            area.
+                        </p>
+
+                        <p>The main ranking journal quality schemas are based on citations and include:</p>
+
+                        <ul>
+                            <li>
+                                Journal Citation Reports which includes journals from the Web of Science Core
+                                Collection.
+                            </li>
+                            <li>CiteScore which calculates rankings using data from Scopus.</li>
+                            <li>
+                                SJR (SCImago Journal Rank) is based on Scopus data and measures the prestige of the
+                                journal based on the reputation of citing journals.
+                            </li>
+                            <li>
+                                SNIP (Source Normalized Impact per Paper) is based on Scopus data and citation potential
+                                according to its specific subject field.
+                            </li>
+                        </ul>
+                    </>
+                ),
+            },
+        },
+        listed: {
+            title: 'Journal Quality By Recognised Listings',
+            help: {
+                text: (
+                    <>
+                        <p>
+                            Journal listings indicate that a journal has met the quality indicators/requirements for a
+                            list compiled by a specific group. They signify credibility of the journal and identify it
+                            as a trustworthy source.
+                        </p>
+
+                        <p>Well known listings include:</p>
+                        <ul>
+                            <li>ABDC (Australian Business Deans Council)</li>
+                            <li>CWTS (Centre of Science and Technology Studies at Leiden University)</li>
+                            <li>ERA (Excellence in Research Australia)</li>
+                            <li>Nature Index</li>
+                        </ul>
+                    </>
+                ),
+            },
+        },
         uqConnections: {
             title: 'UQ Connections',
             authorCount: {
@@ -29,19 +177,20 @@ export default {
         },
         readAndPublish: {
             title: 'Publisher agreements',
-            heading: 'Read and publish agreement',
+            heading: 'UQ publisher agreement',
             ariaLabel: 'Click to view read and publish agreement',
-            prefixText: 'Yes<discount>, via <publisher> ',
-            postfixText: '',
-            linkText: 'Read and Publish Agreement',
-            externalUrl: 'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
+            status: {
+                noAgreement: 'No',
+                exceeded: 'No (exhausted)',
+                discounted: 'Discount',
+                capped: 'Article Processing Charge covered',
+            },
             caulLink: {
                 heading: 'Limited amount available',
                 ariaLabel: 'Click to view CAUL information on number of remaining pre-paid APCs',
                 linkText: 'Check current status',
                 externalUrl: caulLink,
             },
-            lastUpdatedHeading: 'Last updated',
             alert: {
                 title: 'Read and Publish Agreement',
                 approaching: (

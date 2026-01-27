@@ -12,7 +12,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import locale from 'locale/pages';
 import { ORCID_AUTHORIZATION_URL, ORCID_CLIENT_ID, pathConfig } from 'config';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { linkAuthorOrcidId, resetSavingAuthorState } from 'actions';
 

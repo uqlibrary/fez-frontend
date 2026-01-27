@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation, useParams, useHref } from 'react-router-dom';
+import { useLocation, useParams, useHref } from 'react-router';
 
 import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
@@ -76,7 +76,7 @@ const shouldShowPublishAsOAButton = (location, data) =>
  */
 const extractHighestQuartile = (data, prop) =>
     Math.min(
-        ...(data.map?.(item =>
+        ...(data?.map?.(item =>
             parseInt(String(item[prop]).toLowerCase().replace('q', ''), 10),
         ) || /* istanbul ignore next */ [0]),
     );
@@ -310,7 +310,7 @@ export const ViewJournal = () => {
                                               ? journalDetails[key].length > 0
                                               : !!journalDetails[key],
                                       )
-                                    : !!journalDetails[sectionConfig.key];
+                                    : /* istanbul ignore next */ !!journalDetails[sectionConfig.key];
                             }
                             return true;
                         })
