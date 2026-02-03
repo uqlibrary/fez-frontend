@@ -13197,9 +13197,28 @@ exports[`Additional Information Component  should render component with data col
                     data-testid="rek-raid-0"
                   >
                     <a
-                      data-discover="true"
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_raid%5D%5Bvalue%5D=10.1234%2Fxxx&searchMode=advanced"
+                      class="css-1oqhn84"
+                      data-analyticsid="rek-raid-0-link"
+                      data-testid="rek-raid-0-link"
+                      href="https://raid.org/10.1234/xxx"
+                      id="rek-raid-0-link"
+                      rel="noopener noreferrer"
+                      tabindex="0"
+                      target="_blank"
+                      title="Link to https://raid.org/10.1234/xxx will open in a new window."
                     >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                        data-testid="OpenInNewIcon"
+                        focusable="false"
+                        id="rek-raid-0-link-new-window-icon"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                        />
+                      </svg>
                       10.1234/xxx
                     </a>
                   </li>

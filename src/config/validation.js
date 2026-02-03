@@ -132,7 +132,7 @@ export const isValidOrcid = value => {
 };
 
 export const isValidRaid = value => {
-    const isValid = /[^\/]+\/[^\/]+/;
+    const isValid = /^10\d*(?:\.\d+)+\/[a-z0-9]+$/;
     return isValid.test(value.toString().trim());
 };
 

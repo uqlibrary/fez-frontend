@@ -60,6 +60,8 @@ export const DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE = 'dashboard-hide-orcid-syn
 
 export const ROR_BASE_URL = 'https://ror.org';
 
+export const RAID_BASE_URL = 'https://raid.org';
+
 export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js${getKeyValue(
     process.env.GOOGLE_MAPS_API_KEY,
 )}v=3.exp&libraries=geometry,drawing,places`;

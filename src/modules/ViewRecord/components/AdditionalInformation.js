@@ -21,6 +21,7 @@ import {
     PLACEHOLDER_ISO8601_ZULU_DATE,
     PUBLICATION_TYPE_INSTRUMENT,
     ORCID_BASE_URL,
+    RAID_BASE_URL,
     ROR_BASE_URL,
 } from 'config/general';
 import { isValidOrcid, isValidROR } from 'config/validation';
@@ -243,6 +244,30 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         return doi ? <DoiCitationView key="additional-information-doi" doi={doi} /> : null;
     };
 
+    const renderRaid = (objects, subKey) => {
+        if (objects.filter(item => !!item[subKey]).length === 0) return null;
+        return (
+            <Box component={'ul'} key={'rek-raids'} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                {objects.map((item, index) => (
+                    <li key={`rek-raid-${index}`} data-testid={`rek-raid-${index}`}>
+                        {(() => {
+                            const id = item[subKey];
+                            return (
+                                <ExternalLink
+                                    id={`rek-raid-${index}`}
+                                    data-testid={`rek-raid-${index}`}
+                                    href={`${RAID_BASE_URL}/${id}`}
+                                >
+                                    {id}
+                                </ExternalLink>
+                            );
+                        })()}
+                    </li>
+                ))}
+            </Box>
+        );
+    };
+
     // TODO: display original contact email for admin users
     const renderContactEmail = (objects, subKey) => {
         const isInstrument = publication.rek_display_type === PUBLICATION_TYPE_INSTRUMENT;
@@ -437,7 +462,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             case 'rek_geographic_area':
                 return renderMap(objects);
             case 'rek_raid':
-                return renderList(objects, subkey, pathConfig.list.raid);
+                return renderRaid(objects, subkey);
             case 'rek_subject':
                 return renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_related_service':
