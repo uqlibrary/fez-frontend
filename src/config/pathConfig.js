@@ -144,7 +144,6 @@ export const pathConfig = {
                 },
             }),
         herdcStatus: herdcStatus => getSearchUrl({ searchQuery: { all: herdcStatus } }),
-        raid: raid => getSearchUrl({ searchQuery: { rek_raid: { value: raid } } }),
         subject: (subject, subjectLookup) =>
             getSearchUrl({
                 searchQuery: { all: '' },
