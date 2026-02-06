@@ -89,7 +89,7 @@ export const loadJournalLookup = searchText => dispatch => {
     return (
         searchText &&
         searchText.trim().length > 0 &&
-        get(JOURNAL_LOOKUP_API({ query: searchText })).then(
+        get(JOURNAL_LOOKUP_API({ query: searchText.trim().toLowerCase() })).then(
             response => {
                 dispatch({
                     type: actions.JOURNAL_LOOKUP_LOADED,
