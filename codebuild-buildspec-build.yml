@@ -12,10 +12,10 @@ env:
 phases:
   install:
     runtime-versions:
-      java: corretto17
-      nodejs: 20
+      java: corretto21
+      nodejs: 22
     commands:
-      - n 20
+      - n 22
       # - command
   pre_build:
     commands:
