@@ -236,8 +236,8 @@
     "istanbul-lib-coverage": "3.2.2"
   },
   "engines": {
-    "npm": ">=10.8.2",
-    "node": ">=20.11.0"
+    "npm": ">=10.9.4",
+    "node": ">=22.22.0"
   },
   "babel": {
     "presets": [
