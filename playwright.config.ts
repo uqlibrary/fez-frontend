@@ -9,7 +9,7 @@ export default defineConfig({
     expect: {
         timeout: 20_000,
     },
-    fullyParallel: true,
+    fullyParallel: !process.env.CI_BRANCH,
     failOnFlakyTests: !process.env.CI_BRANCH,
     forbidOnly: !!process.env.CI_BRANCH,
     retries: process.env.CI_BRANCH ? 2 : 0,
