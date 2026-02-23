@@ -12,7 +12,6 @@ env:
 phases:
   install:
     runtime-versions:
-      java: corretto21
       nodejs: 22
     commands:
       - n 22
