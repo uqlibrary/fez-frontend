@@ -22,8 +22,7 @@ phases:
       sysctl fs.inotify.max_user_watches &&
       chmod a+x -R bin/* scripts/*.sh &&
       bin/codebuild-git-wrapper.sh $GITHUB_URL $CI_BRANCH &&
-      bin/codebuild-setup.sh &&
-      watch -n 5 free -m &
+      bin/codebuild-setup.sh
   build:
     commands:
       set &&
