@@ -13,7 +13,7 @@ export default defineConfig({
     failOnFlakyTests: !process.env.CI_BRANCH,
     forbidOnly: !!process.env.CI_BRANCH,
     retries: process.env.CI_BRANCH ? 2 : 0,
-    workers: '75%',
+    workers: process.env.CI_BRANCH ? '100%' : '75%',
     reporter: [
         ['list'],
         [
@@ -47,7 +47,7 @@ export default defineConfig({
         },
     ],
     webServer: {
-        command: 'npm run start:mock > server.log 2>&1',
+        command: 'npm run start:mock',
         url: baseURL,
         timeout: 5 * 60 * 1000,
         reuseExistingServer: !process.env.CI_BRANCH,

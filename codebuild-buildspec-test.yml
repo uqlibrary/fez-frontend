@@ -22,14 +22,14 @@ phases:
       sysctl fs.inotify.max_user_watches &&
       chmod a+x -R bin/* scripts/*.sh &&
       bin/codebuild-git-wrapper.sh $GITHUB_URL $CI_BRANCH &&
-      bin/codebuild-setup.sh
+      bin/codebuild-setup.sh &&
+      watch -n 5 free -m &
   build:
     commands:
       set &&
       bin/codebuild-test.sh
   post_build:
     commands:
-      cat server.log
       # - command
       # - command
 reports:
