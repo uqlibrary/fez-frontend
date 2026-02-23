@@ -47,7 +47,7 @@ export default defineConfig({
         },
     ],
     webServer: {
-        command: 'npm run start:mock',
+        command: 'npm run start:mock > server.log 2>&1',
         url: baseURL,
         timeout: 5 * 60 * 1000,
         reuseExistingServer: !process.env.CI_BRANCH,

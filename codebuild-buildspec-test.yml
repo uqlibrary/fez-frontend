@@ -27,8 +27,9 @@ phases:
     commands:
       set &&
       bin/codebuild-test.sh
-  #post_build:
-    #commands:
+  post_build:
+    commands:
+      cat server.log
       # - command
       # - command
 reports:
