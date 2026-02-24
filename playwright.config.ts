@@ -13,7 +13,7 @@ export default defineConfig({
     failOnFlakyTests: !process.env.CI_BRANCH,
     forbidOnly: !!process.env.CI_BRANCH,
     retries: process.env.CI_BRANCH ? 2 : 0,
-    workers: process.env.CI_BRANCH ? '100%' : '75%',
+    workers: '75%',
     reporter: [
         ['list'],
         [
