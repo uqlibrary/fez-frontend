@@ -12,9 +12,9 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 20
+      nodejs: 22
     commands:
-      - n 20
+      - n 22
       # - command
   pre_build:
     commands:
