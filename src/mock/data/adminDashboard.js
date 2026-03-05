@@ -84,6 +84,36 @@ export const adminDashboardToday = {
         current: 256,
         total: 1256,
     },
+    oa_status_counts: [
+        {
+            "key": 453693,
+            "doc_count": 54855
+        },
+        {
+            "key": 453696,
+            "doc_count": 2524
+        },
+        {
+            "key": 453954,
+            "doc_count": 1174
+        },
+        {
+            "key": 453694,
+            "doc_count": 699
+        },
+        {
+            "key": 453695,
+            "doc_count": 471
+        },
+        {
+            "key": 453697,
+            "doc_count": 34
+        },
+        {
+            "key": 454127,
+            "doc_count": 25
+        }
+    ],
 };
 
 export const adminDashboardQuickLinks =  [
