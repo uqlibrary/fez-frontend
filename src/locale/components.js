@@ -64,6 +64,9 @@ export default {
                             },
                         },
                     },
+                    openAccessTypes: {
+                        title: 'OA Status Types',
+                    },
                     quicklinks: {
                         title: 'Quick Links ',
                         addLinkText: '+ add',
