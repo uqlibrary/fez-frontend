@@ -23,6 +23,7 @@ import QuickLinkContainer from '../components/QuickLinkContainer';
 import VisualisationSystemAlerts from '../components/visualisations/VisualisationSystemAlerts';
 import VisualisationWorks from '../components/visualisations/VisualisationWorks';
 import VisualisationOpenAccess from '../components/visualisations/VisualisationOpenAccess';
+import { OA_STATUS } from 'config/general';
 
 const Today = () => {
     const txt = locale.components.adminDashboard.tabs.today;
@@ -35,6 +36,21 @@ const Today = () => {
         message: adminDashboardQuickLinksUpdateFailed,
         hideAction: actions.adminDashboardQuickLinkUpdateClear,
     });
+
+    const calculateTotal = items => items.reduce((acc, item) => acc + item.doc_count, 0);
+
+    React.useEffect(() => {
+        if (adminDashboardTodayData) {
+            const totalCount = calculateTotal(adminDashboardTodayData.oa_status_counts);
+            adminDashboardTodayData.oa_status_counts?.forEach((item, index) => {
+                const status = OA_STATUS.find(s => s.value === String(item.key));
+                const percentage = (item.doc_count / totalCount) * 100;
+                item.id = index;
+                item.value = item.doc_count;
+                item.label = `${status.text} (${percentage.toFixed(1)}%)`;
+            });
+        }
+    }, [adminDashboardTodayData]);
 
     return (
         <StandardCard noHeader>
@@ -117,11 +133,16 @@ const Today = () => {
                                     <VisualisationWorks
                                         id="unprocessed-works"
                                         text={`${adminDashboardTodayData.works.unprocessed}`}
-                                        amount={
-                                            adminDashboardTodayData.works.unprocessed === 0
-                                                ? /* istanbul ignore next */ 100
-                                                : adminDashboardTodayData.works.unprocessed
-                                        }
+                                        data={[
+                                            {
+                                                id: 0,
+                                                value:
+                                                    adminDashboardTodayData.works.unprocessed === 0
+                                                        ? /* istanbul ignore next */ 100
+                                                        : adminDashboardTodayData.works.unprocessed,
+                                                color: '#B60DCE',
+                                            },
+                                        ]}
                                     />
                                 </PieChartContainer>
                             )}
@@ -158,12 +179,16 @@ const Today = () => {
                                     <VisualisationWorks
                                         id="processed-works"
                                         text={`${adminDashboardTodayData.works.processed}`}
-                                        amount={
-                                            adminDashboardTodayData.works.processed === 0
-                                                ? /* istanbul ignore next */ 100
-                                                : adminDashboardTodayData.works.processed
-                                        }
-                                        colour="#35A9A5"
+                                        data={[
+                                            {
+                                                id: 0,
+                                                value:
+                                                    adminDashboardTodayData.works.processed === 0
+                                                        ? /* istanbul ignore next */ 100
+                                                        : adminDashboardTodayData.works.processed,
+                                                color: '#35A9A5',
+                                            },
+                                        ]}
                                     />
                                 </PieChartContainer>
                             )}
@@ -205,6 +230,43 @@ const Today = () => {
                                         maxAmount={adminDashboardTodayData.oa.total}
                                     />
                                 </GaugeChartContainer>
+                            )}
+                        </Grid>
+                    </Grid>
+                    <Grid container rowSpacing={4} spacing={2} sx={{ pt: 2 }}>
+                        <Grid item xs={12} sm={4}>
+                            {!!adminDashboardTodayLoading && (
+                                <Skeleton
+                                    animation="wave"
+                                    height={225}
+                                    width={'100%'}
+                                    id={'admin-dashboard-open-access-types-skeleton'}
+                                    data-testid={'admin-dashboard-open-access-types-skeleton'}
+                                />
+                            )}
+                            {!!adminDashboardTodayData && adminDashboardTodaySuccess && (
+                                <PieChartContainer
+                                    label={txt.openAccessTypes.title}
+                                    subtext={
+                                        <Typography
+                                            variant="span"
+                                            sx={{
+                                                fontSize: '0.875rem',
+                                                fontWeight: 200,
+                                            }}
+                                        >
+                                            {txt.openaccess.researchOutput.subText}
+                                        </Typography>
+                                    }
+                                    id="open-access-types-container"
+                                >
+                                    <VisualisationWorks
+                                        id="open-access-types"
+                                        text={`${calculateTotal(adminDashboardTodayData.oa_status_counts)}`}
+                                        data={adminDashboardTodayData.oa_status_counts}
+                                        showTooltips
+                                    />
+                                </PieChartContainer>
                             )}
                         </Grid>
                     </Grid>
