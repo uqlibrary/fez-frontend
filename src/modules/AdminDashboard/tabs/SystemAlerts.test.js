@@ -132,7 +132,10 @@ describe('SystemAlerts tab', () => {
             .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
             .reply(200, { data: [...adminDashboardSystemAlerts] });
         mockApi
-            .onPut(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl, expectedUpdateRequest)
+            .onPut(
+                repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({ id: expectedUpdateRequest.sat_id }).apiUrl,
+                expectedUpdateRequest,
+            )
             .reply(200, {});
         const loadAdminDashboardSystemAlertsFn = jest.spyOn(DashboardActions, 'loadAdminDashboardSystemAlerts');
         const adminDashboardSystemAlertsFn = jest.spyOn(DashboardActions, 'adminDashboardSystemAlerts');
@@ -148,7 +151,7 @@ describe('SystemAlerts tab', () => {
 
         await userEvent.click(getByTestId('system-alert-detail-action-button'));
 
-        expect(adminDashboardSystemAlertsFn).toHaveBeenCalledWith(expectedUpdateRequest);
+        expect(adminDashboardSystemAlertsFn).toHaveBeenCalledWith(expectedUpdateRequest.sat_id, expectedUpdateRequest);
 
         await waitFor(() => {
             expect(loadAdminDashboardTodayFn).toHaveBeenCalled();

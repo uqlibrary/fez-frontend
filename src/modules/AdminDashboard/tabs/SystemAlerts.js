@@ -65,7 +65,7 @@ const SystemAlerts = () => {
             row,
         });
 
-        dispatch(actions.adminDashboardSystemAlerts(wrappedRequest))
+        dispatch(actions.adminDashboardSystemAlerts(row.sat_id, wrappedRequest))
             .then(() => {
                 /* istanbul ignore else */
                 if (action === SYSTEM_ALERT_ACTION.RESOLVE) {
