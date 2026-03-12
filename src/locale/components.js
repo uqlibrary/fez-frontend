@@ -64,8 +64,8 @@ export default {
                             },
                         },
                     },
-                    openAccessTypes: {
-                        title: 'OA Status Types',
+                    openAccessCategories: {
+                        title: 'OA Status Categories',
                     },
                     quicklinks: {
                         title: 'Quick Links ',

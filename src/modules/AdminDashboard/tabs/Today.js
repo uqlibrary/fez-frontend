@@ -14,7 +14,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { LINK_UNPROCESSED_WORKS, COLOURS } from '../config';
 import { useAlertStatus } from '../hooks';
-import { transformUrlToPlatform } from '../transformers';
+import { transformUrlToPlatform, transformOaCategories } from '../transformers';
 
 import RibbonChartContainer from '../components/RibbonChartContainer';
 import PieChartContainer from '../components/PieChartContainer';
@@ -23,7 +23,7 @@ import QuickLinkContainer from '../components/QuickLinkContainer';
 import VisualisationSystemAlerts from '../components/visualisations/VisualisationSystemAlerts';
 import VisualisationWorks from '../components/visualisations/VisualisationWorks';
 import VisualisationOpenAccess from '../components/visualisations/VisualisationOpenAccess';
-import { OA_STATUS } from 'config/general';
+import { getTotalDocCount } from '../utils';
 
 const Today = () => {
     const txt = locale.components.adminDashboard.tabs.today;
@@ -36,21 +36,6 @@ const Today = () => {
         message: adminDashboardQuickLinksUpdateFailed,
         hideAction: actions.adminDashboardQuickLinkUpdateClear,
     });
-
-    const calculateTotal = items => items.reduce((acc, item) => acc + item.doc_count, 0);
-
-    React.useEffect(() => {
-        if (adminDashboardTodayData) {
-            const totalCount = calculateTotal(adminDashboardTodayData.oa_status_counts);
-            adminDashboardTodayData.oa_status_counts?.forEach((item, index) => {
-                const status = OA_STATUS.find(s => s.value === String(item.key));
-                const percentage = (item.doc_count / totalCount) * 100;
-                item.id = index;
-                item.value = item.doc_count;
-                item.label = `${status.text} (${percentage.toFixed(1)}%)`;
-            });
-        }
-    }, [adminDashboardTodayData]);
 
     return (
         <StandardCard noHeader>
@@ -240,13 +225,13 @@ const Today = () => {
                                     animation="wave"
                                     height={225}
                                     width={'100%'}
-                                    id={'admin-dashboard-open-access-types-skeleton'}
-                                    data-testid={'admin-dashboard-open-access-types-skeleton'}
+                                    id={'admin-dashboard-open-access-categories-skeleton'}
+                                    data-testid={'admin-dashboard-open-access-categories-skeleton'}
                                 />
                             )}
-                            {!!adminDashboardTodayData && adminDashboardTodaySuccess && (
+                            {adminDashboardTodaySuccess && adminDashboardTodayData?.oa_categories && (
                                 <PieChartContainer
-                                    label={txt.openAccessTypes.title}
+                                    label={txt.openAccessCategories.title}
                                     subtext={
                                         <Typography
                                             variant="span"
@@ -258,12 +243,12 @@ const Today = () => {
                                             {txt.openaccess.researchOutput.subText}
                                         </Typography>
                                     }
-                                    id="open-access-types-container"
+                                    id="open-access-categories-container"
                                 >
                                     <VisualisationWorks
-                                        id="open-access-types"
-                                        text={`${calculateTotal(adminDashboardTodayData.oa_status_counts)}`}
-                                        data={adminDashboardTodayData.oa_status_counts}
+                                        id="open-access-categories"
+                                        text={`${getTotalDocCount(adminDashboardTodayData.oa_categories)}`}
+                                        data={transformOaCategories(adminDashboardTodayData.oa_categories)}
                                         showTooltips
                                     />
                                 </PieChartContainer>
