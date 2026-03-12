@@ -266,7 +266,10 @@ export const viewJournalConfig = {
                 {
                     heading: 'Article processing charges',
                     fieldId: 'jnl-doaj-apc-average-price',
-                    getData: journalDetails => journalDetails.fez_journal_doaj,
+                    getData: journalDetails =>
+                        !!journalDetails.fez_journal_doaj?.jnl_doaj_apc_average_price &&
+                        !!journalDetails.fez_journal_doaj?.jnl_doaj_apc_currency &&
+                        journalDetails.fez_journal_doaj,
                     template: 'LinkTemplate',
                     templateProps: {
                         href: doaj => getDoajUrl(doaj.jnl_doaj_issn),

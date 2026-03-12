@@ -24,7 +24,6 @@ const options = {
                 '/data/*',
                 '/assets/*.svg',
                 '/sitemap/*.xml',
-                '/list-by-year/*.html',
                 '/*.js',
                 '/*.css',
             ],
