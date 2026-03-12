@@ -225,13 +225,13 @@ const Today = () => {
                                     animation="wave"
                                     height={225}
                                     width={'100%'}
-                                    id={'admin-dashboard-open-access-types-skeleton'}
-                                    data-testid={'admin-dashboard-open-access-types-skeleton'}
+                                    id={'admin-dashboard-open-access-categories-skeleton'}
+                                    data-testid={'admin-dashboard-open-access-categories-skeleton'}
                                 />
                             )}
                             {adminDashboardTodaySuccess && adminDashboardTodayData?.oa_categories && (
                                 <PieChartContainer
-                                    label={txt.openAccessTypes.title}
+                                    label={txt.openAccessCategories.title}
                                     subtext={
                                         <Typography
                                             variant="span"
@@ -243,10 +243,10 @@ const Today = () => {
                                             {txt.openaccess.researchOutput.subText}
                                         </Typography>
                                     }
-                                    id="open-access-types-container"
+                                    id="open-access-categories-container"
                                 >
                                     <VisualisationWorks
-                                        id="open-access-types"
+                                        id="open-access-categories"
                                         text={`${getTotalDocCount(adminDashboardTodayData.oa_categories)}`}
                                         data={transformOaCategories(adminDashboardTodayData.oa_categories)}
                                         showTooltips
