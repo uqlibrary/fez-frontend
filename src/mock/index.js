@@ -960,9 +960,23 @@ export const setup = () => {
         // .reply(422, { message: 'failed to save quicklink update' })
         .reply(201, {})
 
-        .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)))
-        .reply(201, {})
+        // test unresolve
+        .onPut(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({ id: 1 }).apiUrl))
+        .reply(200, {
+            data: {
+                ...mockData.adminDashboardReportSystemAlertsData[0],
+                resolved_by_full_name: null,
+                sat_resolved_date: null,
+            },
+        })
 
+        .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({ id: '*' }).apiUrl)))
+        .reply(config => {
+            const id = Number(config.url.split('/').pop());
+            const payload = JSON.parse(config.data);
+            const alert = mockData.adminDashboardSystemAlerts.find(a => a.sat_id === id);
+            return [200, { data: { ...Object.assign(alert, payload) } }];
+        })
         .onAny()
         .reply(config => {
             console.log('url not found...', config);
