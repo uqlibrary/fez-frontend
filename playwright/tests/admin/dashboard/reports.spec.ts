@@ -288,17 +288,35 @@ test.describe('Admin Dashboard - Reports tab', () => {
         await page.getByTestId('report-display-export-button').click();
 
         const row = page.getByRole('row').nth(1);
-        await expect(row.getByRole('gridcell').nth(4)).toContainText('Elizabeth Alvey');
-        await expect(row.getByRole('gridcell').nth(5)).toContainText('9th April 2024');
+        await expect(row.locator('[data-field=resolved_by_full_name]')).toContainText('Elizabeth Alvey');
+        await expect(row.locator('[data-field=sat_resolved_date]')).toContainText('9th April 2024');
 
         // Unresolve
         const unresolveButton = page.getByTestId('action-button-1');
         await expect(unresolveButton).toContainText('Unresolve');
         await unresolveButton.click();
 
-        await expect(row.getByRole('gridcell').nth(5)).toContainText('');
-        await expect(row.getByRole('gridcell').nth(6)).toContainText('');
+        await expect(row.locator('[data-field=resolved_by_full_name]')).toBeEmpty();
+        await expect(row.locator('[data-field=sat_resolved_date]')).toBeEmpty();
         await expect(page.getByTestId('action-button-1')).toContainText('Unresolved');
+
+        // nav away
+        const todayTab = page.locator('[role=tab]', { hasText: 'TODAY' });
+        await todayTab.click();
+        await expect(todayTab).toHaveAttribute('aria-selected', 'true');
+
+        // nav back
+        const reportsTab = page.locator('[role=tab]', { hasText: 'REPORTS' });
+        await reportsTab.click();
+        await expect(reportsTab).toHaveAttribute('aria-selected', 'true');
+
+        await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(9);
+        await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(8); // +1 for header
+
+        // Unresolve state should be persisted and the Unresolve button should not exist
+        await expect(row.locator('[data-field=resolved_by_full_name]')).toBeEmpty();
+        await expect(row.locator('[data-field=sat_resolved_date]')).toBeEmpty();
+        await expect(page.getByTestId('action-button-1')).not.toBeVisible();
     });
 
     test('displays a report even if user navs away and back', async ({ page }) => {
