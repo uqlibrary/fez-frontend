@@ -22,7 +22,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -37,15 +37,15 @@ exports[`GrantListEditor should add grant to the list 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -131,7 +131,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -141,7 +141,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -239,7 +239,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -516,7 +516,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -531,15 +531,15 @@ exports[`GrantListEditor should delete all grants 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -625,7 +625,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -635,7 +635,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -733,7 +733,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -1177,7 +1177,7 @@ exports[`GrantListEditor should delete all grants 2`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -1192,15 +1192,15 @@ exports[`GrantListEditor should delete all grants 2`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -1286,7 +1286,7 @@ exports[`GrantListEditor should delete all grants 2`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -1296,7 +1296,7 @@ exports[`GrantListEditor should delete all grants 2`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -1357,7 +1357,7 @@ exports[`GrantListEditor should delete grant 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -1372,15 +1372,15 @@ exports[`GrantListEditor should delete grant 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -1466,7 +1466,7 @@ exports[`GrantListEditor should delete grant 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -1476,7 +1476,7 @@ exports[`GrantListEditor should delete grant 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -1574,7 +1574,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -2020,7 +2020,7 @@ exports[`GrantListEditor should delete grant 2`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -2035,15 +2035,15 @@ exports[`GrantListEditor should delete grant 2`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -2129,7 +2129,7 @@ exports[`GrantListEditor should delete grant 2`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -2139,7 +2139,7 @@ exports[`GrantListEditor should delete grant 2`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -2237,7 +2237,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -2512,7 +2512,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -2527,15 +2527,15 @@ exports[`GrantListEditor should move the grant down 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -2621,7 +2621,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -2631,7 +2631,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -2729,7 +2729,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -3173,7 +3173,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -3188,15 +3188,15 @@ exports[`GrantListEditor should move the grant down 2`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -3282,7 +3282,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -3292,7 +3292,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -3390,7 +3390,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -3834,7 +3834,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -3849,15 +3849,15 @@ exports[`GrantListEditor should move the grant up 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -3943,7 +3943,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -3953,7 +3953,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -4051,7 +4051,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -4495,7 +4495,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -4510,15 +4510,15 @@ exports[`GrantListEditor should move the grant up 2`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -4604,7 +4604,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -4614,7 +4614,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -4712,7 +4712,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -5156,7 +5156,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -5171,15 +5171,15 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -5265,7 +5265,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -5275,7 +5275,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -5373,7 +5373,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -5648,7 +5648,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -5663,15 +5663,15 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -5757,7 +5757,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -5767,7 +5767,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -5865,7 +5865,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -6140,7 +6140,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -6155,15 +6155,15 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -6249,7 +6249,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -6259,7 +6259,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -6357,7 +6357,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -6803,7 +6803,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -6818,15 +6818,15 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -6912,7 +6912,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -6922,7 +6922,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -7020,7 +7020,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -7466,7 +7466,7 @@ exports[`GrantListEditor should render default view 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -7481,15 +7481,15 @@ exports[`GrantListEditor should render default view 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -7575,7 +7575,7 @@ exports[`GrantListEditor should render default view 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -7585,7 +7585,7 @@ exports[`GrantListEditor should render default view 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -7646,7 +7646,7 @@ exports[`GrantListEditor should render error from props 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -7661,15 +7661,15 @@ exports[`GrantListEditor should render error from props 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -7755,7 +7755,7 @@ exports[`GrantListEditor should render error from props 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -7765,7 +7765,7 @@ exports[`GrantListEditor should render error from props 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -7831,7 +7831,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -7846,15 +7846,15 @@ exports[`GrantListEditor should render error from props as children 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -7940,7 +7940,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -7950,7 +7950,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -8021,7 +8021,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -8036,15 +8036,15 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -8130,7 +8130,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -8140,7 +8140,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -8238,7 +8238,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -9020,7 +9020,7 @@ exports[`GrantListEditor should render string error from props 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -9035,15 +9035,15 @@ exports[`GrantListEditor should render string error from props 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -9129,7 +9129,7 @@ exports[`GrantListEditor should render string error from props 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -9139,7 +9139,7 @@ exports[`GrantListEditor should render string error from props 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -9205,7 +9205,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -9220,15 +9220,15 @@ exports[`GrantListEditor should render with default given value 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -9314,7 +9314,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -9324,7 +9324,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -9422,7 +9422,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>
@@ -9697,7 +9697,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
             for="rek-grant-agency-input"
             id="rek-grant-agency-label"
           >
-            Funder/Sponsor name
+            Grant Agency
             <span
               aria-hidden="true"
               class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -9712,15 +9712,15 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
             <input
               aria-describedby="rek-grant-agency-helper-text"
               aria-invalid="true"
-              aria-label="Funder/Sponsor name"
+              aria-label="Grant Agency"
               autocomplete="off"
               class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-grant-agency-input"
               data-testid="rek-grant-agency-input"
               id="rek-grant-agency-input"
-              label="Funder/Sponsor name"
+              label="Grant Agency"
               name="grantAgencyName"
-              placeholder="Funder/sponsor name for this work"
+              placeholder="Grant agency for this work"
               required=""
               type="text"
               value=""
@@ -9806,7 +9806,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
               id="rek-grant-type-select"
               role="combobox"
             >
-              Funder/Sponsor type
+              Grant Agency type
             </div>
             <input
               aria-hidden="true"
@@ -9816,7 +9816,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
               disabled=""
               id="rek-grant-type-input"
               name="grantAgencyType"
-              placeholder="Funder/Sponsor type"
+              placeholder="Grant Agency type"
               required=""
               tabindex="-1"
               value=""
@@ -9914,7 +9914,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Funder/sponsor type
+                        Grant agency type
                       </span>
                     </div>
                   </div>

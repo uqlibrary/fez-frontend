@@ -722,12 +722,12 @@ export default {
             locale: {
                 form: {
                     locale: {
-                        grantAgencyNameLabel: 'Funder/Sponsor name',
-                        grantAgencyNameHint: 'Funder/sponsor name for this work',
+                        grantAgencyNameLabel: 'Grant Agency',
+                        grantAgencyNameHint: 'Grant agency for this work',
                         grantIdLabel: 'Grant ID',
                         grantIdHint: 'Grant number for this work',
-                        grantAgencyTypeLabel: 'Funder/Sponsor type',
-                        grantAgencyTypeHint: 'Select Funder/Sponsor type',
+                        grantAgencyTypeLabel: 'Grant Agency type',
+                        grantAgencyTypeHint: 'Select Grant Agency type',
                         addButton: 'Add grant',
                         editButton: 'Edit grant',
                         description:
@@ -736,9 +736,9 @@ export default {
                 },
                 header: {
                     locale: {
-                        GrantAgencyName: 'Funder/Sponsor name',
+                        GrantAgencyName: 'Grant Agency',
                         GrantID: 'Grant ID',
-                        GrantAgencyType: 'Funder/Sponsor type',
+                        GrantAgencyType: 'Grant Agency type',
                         reorderColumn: 'Reorder entries',
                         deleteAll: 'Remove all entries',
                         deleteAllConfirmation: {

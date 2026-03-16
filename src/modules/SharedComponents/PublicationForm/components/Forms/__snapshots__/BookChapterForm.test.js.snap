@@ -2301,22 +2301,22 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                     for="rek-grant-agency-input"
                     id="rek-grant-agency-label"
                   >
-                    Funder/Sponsor name
+                    Grant Agency
                   </label>
                   <div
                     class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                   >
                     <input
                       aria-invalid="false"
-                      aria-label="Funder/Sponsor name"
+                      aria-label="Grant Agency"
                       autocomplete="off"
                       class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                       data-analyticsid="rek-grant-agency-input"
                       data-testid="rek-grant-agency-input"
                       id="rek-grant-agency-input"
-                      label="Funder/Sponsor name"
+                      label="Grant Agency"
                       name="grantAgencyName"
-                      placeholder="Funder/sponsor name for this work"
+                      placeholder="Grant agency for this work"
                       type="text"
                       value=""
                     />
@@ -2385,7 +2385,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                       id="rek-grant-type-select"
                       role="combobox"
                     >
-                      Funder/Sponsor type
+                      Grant Agency type
                     </div>
                     <input
                       aria-hidden="true"
@@ -2395,7 +2395,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                       disabled=""
                       id="rek-grant-type-input"
                       name="grantAgencyType"
-                      placeholder="Funder/Sponsor type"
+                      placeholder="Grant Agency type"
                       tabindex="-1"
                       value=""
                     />
@@ -4086,22 +4086,22 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                     for="rek-grant-agency-input"
                     id="rek-grant-agency-label"
                   >
-                    Funder/Sponsor name
+                    Grant Agency
                   </label>
                   <div
                     class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                   >
                     <input
                       aria-invalid="false"
-                      aria-label="Funder/Sponsor name"
+                      aria-label="Grant Agency"
                       autocomplete="off"
                       class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                       data-analyticsid="rek-grant-agency-input"
                       data-testid="rek-grant-agency-input"
                       id="rek-grant-agency-input"
-                      label="Funder/Sponsor name"
+                      label="Grant Agency"
                       name="grantAgencyName"
-                      placeholder="Funder/sponsor name for this work"
+                      placeholder="Grant agency for this work"
                       type="text"
                       value=""
                     />
@@ -4170,7 +4170,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                       id="rek-grant-type-select"
                       role="combobox"
                     >
-                      Funder/Sponsor type
+                      Grant Agency type
                     </div>
                     <input
                       aria-hidden="true"
@@ -4180,7 +4180,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                       disabled=""
                       id="rek-grant-type-input"
                       name="grantAgencyType"
-                      placeholder="Funder/Sponsor type"
+                      placeholder="Grant Agency type"
                       tabindex="-1"
                       value=""
                     />

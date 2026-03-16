@@ -69,22 +69,22 @@ exports[`GrantInformationSection should render default view 1`] = `
                         for="rek-grant-agency-input"
                         id="rek-grant-agency-label"
                       >
-                        Funder/Sponsor name
+                        Grant Agency
                       </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
-                          aria-label="Funder/Sponsor name"
+                          aria-label="Grant Agency"
                           autocomplete="off"
                           class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-grant-agency-input"
                           data-testid="rek-grant-agency-input"
                           id="rek-grant-agency-input"
-                          label="Funder/Sponsor name"
+                          label="Grant Agency"
                           name="grantAgencyName"
-                          placeholder="Funder/sponsor name for this work"
+                          placeholder="Grant agency for this work"
                           type="text"
                           value=""
                         />
@@ -153,7 +153,7 @@ exports[`GrantInformationSection should render default view 1`] = `
                           id="rek-grant-type-select"
                           role="combobox"
                         >
-                          Select Funder/Sponsor type
+                          Select Grant Agency type
                         </div>
                         <input
                           aria-hidden="true"
@@ -163,7 +163,7 @@ exports[`GrantInformationSection should render default view 1`] = `
                           disabled=""
                           id="rek-grant-type-input"
                           name="grantAgencyType"
-                          placeholder="Select Funder/Sponsor type"
+                          placeholder="Select Grant Agency type"
                           tabindex="-1"
                           value=""
                         />
@@ -276,23 +276,23 @@ exports[`GrantInformationSection should render disabled view 1`] = `
                         for="rek-grant-agency-input"
                         id="rek-grant-agency-label"
                       >
-                        Funder/Sponsor name
+                        Grant Agency
                       </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
-                          aria-label="Funder/Sponsor name"
+                          aria-label="Grant Agency"
                           autocomplete="off"
                           class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-grant-agency-input"
                           data-testid="rek-grant-agency-input"
                           disabled=""
                           id="rek-grant-agency-input"
-                          label="Funder/Sponsor name"
+                          label="Grant Agency"
                           name="grantAgencyName"
-                          placeholder="Funder/sponsor name for this work"
+                          placeholder="Grant agency for this work"
                           type="text"
                           value=""
                         />
@@ -361,7 +361,7 @@ exports[`GrantInformationSection should render disabled view 1`] = `
                           id="rek-grant-type-select"
                           role="combobox"
                         >
-                          Select Funder/Sponsor type
+                          Select Grant Agency type
                         </div>
                         <input
                           aria-hidden="true"
@@ -371,7 +371,7 @@ exports[`GrantInformationSection should render disabled view 1`] = `
                           disabled=""
                           id="rek-grant-type-input"
                           name="grantAgencyType"
-                          placeholder="Select Funder/Sponsor type"
+                          placeholder="Select Grant Agency type"
                           tabindex="-1"
                           value=""
                         />

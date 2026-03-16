@@ -17,12 +17,12 @@ export const GrantListEditorForm = ({
     hideType = false,
     isPopulated,
     locale = {
-        grantAgencyNameLabel: 'Funder/Sponsor name',
-        grantAgencyNameHint: 'Funder/sponsor name for this work',
+        grantAgencyNameLabel: 'Grant Agency',
+        grantAgencyNameHint: 'Grant agency for this work',
         grantIdLabel: 'Grant ID',
         grantIdHint: 'Grant number for this work',
-        grantAgencyTypeLabel: 'Funder/Sponsor type',
-        grantAgencyTypeHint: 'Funder/Sponsor type',
+        grantAgencyTypeLabel: 'Grant Agency type',
+        grantAgencyTypeHint: 'Grant Agency type',
         addButton: 'Add grant',
         editButton: 'Edit grant',
         description:
