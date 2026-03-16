@@ -138,7 +138,12 @@ describe('Validation method', () => {
 
     it('should validate RAiD', () => {
         expect(validation.raid('sdjflsjdlfjsl')).toEqual(locale.validationErrors.raid);
+        expect(validation.raid('10.71676/uq-project-01')).toEqual(locale.validationErrors.raid);
+        expect(validation.raid('10.54321/research.activity.v2')).toEqual(locale.validationErrors.raid);
         expect(validation.raid('10.1234/suffix')).toEqual(undefined);
+        expect(validation.raid('102.100.100/447187')).toEqual(undefined);
+        expect(validation.raid('10378.1/1700205')).toEqual(undefined);
+        expect(validation.raid('10.26259/4d04eeca')).toEqual(undefined);
     });
 
     it('should validate max length', () => {

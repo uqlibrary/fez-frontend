@@ -69,8 +69,14 @@ if (!IS_TEST && process.env.ENABLE_LOG) {
     });
 }
 
+const onReactError = process.env.ENABLE_LOG && typeof Sentry !== 'undefined' ? Sentry.reactErrorHandler() : () => {};
+
 const render = () => {
-    const root = createRoot(document.getElementById('react-root'));
+    const root = createRoot(document.getElementById('react-root'), {
+        onUncaughtError: onReactError, // errors uncaught by react router error boundary nor AppErrorBoundary component
+        onCaughtError: onReactError, // includes errors caught by react router error boundary, remove if it gets too noisy
+    });
+
     root.render(
         <React.StrictMode>
             <AppErrorBoundary>
