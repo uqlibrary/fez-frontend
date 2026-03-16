@@ -239,7 +239,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -733,7 +733,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -1574,7 +1574,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -2237,7 +2237,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -2729,7 +2729,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -3390,7 +3390,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -4051,7 +4051,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -4712,7 +4712,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -5373,7 +5373,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -5865,7 +5865,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -6357,7 +6357,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -7020,7 +7020,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -8238,7 +8238,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -9422,7 +9422,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
@@ -9914,7 +9914,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
                       <span
                         class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
                       >
-                        Grant agency type
+                        Funder/sponsor type
                       </span>
                     </div>
                   </div>
