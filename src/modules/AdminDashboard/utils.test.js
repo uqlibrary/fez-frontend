@@ -1,5 +1,7 @@
 import * as Utils from './utils';
 import * as General from 'config/general';
+import { DOCUMENT_TYPES_LOOKUP } from 'config/general';
+import { transformBucketsToChartData } from './utils';
 
 describe('utils', () => {
     describe('stringToColour', () => {
@@ -233,6 +235,28 @@ describe('utils', () => {
             expect(Utils.getTotalDocCount({ item_a: { doc_count: 1 } })).toEqual(1);
             expect(Utils.getTotalDocCount({ item_a: { doc_count: 1 }, item_b: { doc_count: 2 } })).toEqual(3);
             expect(Utils.getTotalDocCount({ item_a: { doc_count: 1 }, item_b: { count: 2 } })).toEqual(1);
+        });
+    });
+
+    describe('transformBucketKeyToChartLabel', () => {
+        it('returns transformed data', () => {
+            const docTypes = [
+                { key: 179, doc_count: 123 },
+                { key: 130, doc_count: 456 },
+                { key: 177, doc_count: 789 },
+            ];
+
+            const expected = [
+                { id: 179, label: 'Journal Article (9.0%)', value: 123 },
+                { id: 130, label: 'Conference Paper (33.3%)', value: 456 },
+                { id: 177, label: 'Book Chapter (57.7%)', value: 789 },
+            ];
+            expect(transformBucketsToChartData(docTypes, DOCUMENT_TYPES_LOOKUP)).toEqual(expected);
+
+            const expectedUnknown = [{ id: 333, label: 'Unknown (333) (100.0%)', value: 123 }];
+            expect(transformBucketsToChartData([{ key: 333, doc_count: 123 }], DOCUMENT_TYPES_LOOKUP)).toEqual(
+                expectedUnknown,
+            );
         });
     });
 });
