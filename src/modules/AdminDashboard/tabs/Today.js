@@ -14,7 +14,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { LINK_UNPROCESSED_WORKS, COLOURS } from '../config';
 import { useAlertStatus } from '../hooks';
-import { transformUrlToPlatform, transformOaCategories } from '../transformers';
+import { transformUrlToPlatform, transformOaCategoriesToChartData } from '../transformers';
 
 import RibbonChartContainer from '../components/RibbonChartContainer';
 import PieChartContainer from '../components/PieChartContainer';
@@ -23,7 +23,8 @@ import QuickLinkContainer from '../components/QuickLinkContainer';
 import VisualisationSystemAlerts from '../components/visualisations/VisualisationSystemAlerts';
 import VisualisationWorks from '../components/visualisations/VisualisationWorks';
 import VisualisationOpenAccess from '../components/visualisations/VisualisationOpenAccess';
-import { getTotalDocCount } from '../utils';
+import { getTotalDocCount, transformBucketsToChartData } from '../utils';
+import { DOCUMENT_TYPES_LOOKUP } from 'config/general';
 
 const Today = () => {
     const txt = locale.components.adminDashboard.tabs.today;
@@ -248,7 +249,45 @@ const Today = () => {
                                     <VisualisationWorks
                                         id="open-access-categories"
                                         text={`${getTotalDocCount(adminDashboardTodayData.oa_categories)}`}
-                                        data={transformOaCategories(adminDashboardTodayData.oa_categories)}
+                                        data={transformOaCategoriesToChartData(adminDashboardTodayData.oa_categories)}
+                                        showTooltips
+                                    />
+                                </PieChartContainer>
+                            )}
+                        </Grid>
+                        <Grid item xs={12} sm={4}>
+                            {!!adminDashboardTodayLoading && (
+                                <Skeleton
+                                    animation="wave"
+                                    height={225}
+                                    width={'100%'}
+                                    id={'admin-dashboard-doi-populated-doc-types-skeleton'}
+                                    data-testid={'admin-dashboard-doi-populated-doc-types-skeleton'}
+                                />
+                            )}
+                            {adminDashboardTodaySuccess && adminDashboardTodayData?.doi_populated_doc_type_counts && (
+                                <PieChartContainer
+                                    label={txt.doiPopulateDocTypes.title}
+                                    subtext={
+                                        <Typography
+                                            variant="span"
+                                            sx={{
+                                                fontSize: '0.875rem',
+                                                fontWeight: 200,
+                                            }}
+                                        >
+                                            {txt.doiPopulateDocTypes.subText}
+                                        </Typography>
+                                    }
+                                    id="doi-populated-doc-types-container"
+                                >
+                                    <VisualisationWorks
+                                        id="doi-populated-doc-types"
+                                        text={`${getTotalDocCount(adminDashboardTodayData.doi_populated_doc_type_counts)}`}
+                                        data={transformBucketsToChartData(
+                                            adminDashboardTodayData.doi_populated_doc_type_counts,
+                                            DOCUMENT_TYPES_LOOKUP,
+                                        )}
                                         showTooltips
                                     />
                                 </PieChartContainer>

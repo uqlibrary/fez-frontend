@@ -67,6 +67,10 @@ export default {
                     openAccessCategories: {
                         title: 'OA Status Categories',
                     },
+                    doiPopulateDocTypes: {
+                        title: 'DOI by Doc Type',
+                        subText: 'In Last 12 Months',
+                    },
                     quicklinks: {
                         title: 'Quick Links ',
                         addLinkText: '+ add',
