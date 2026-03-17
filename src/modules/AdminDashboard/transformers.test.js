@@ -6,7 +6,7 @@ import {
     transformExportReportRequest,
     transformDisplayReportRequest,
     transformDisplayReportExportData,
-    transformOaCategories,
+    transformOaCategoriesToChartData,
 } from './transformers';
 
 import { SYSTEM_ALERT_ACTION } from './config';
@@ -319,7 +319,7 @@ describe('transformers', () => {
         });
     });
 
-    describe('transformSystemAlertRequest', () => {
+    describe('transformOaCategoriesToChartData', () => {
         it('returns transformed data', () => {
             const categories = {
                 published_open_access: { doc_count: 123 },
@@ -332,14 +332,14 @@ describe('transformers', () => {
                 { id: 'repository_open_access', label: 'Repository open access (33.3%)', value: 456 },
                 { id: 'to_be_confirmed', label: 'To be confirmed (57.7%)', value: 789 },
             ];
-            expect(transformOaCategories(categories)).toEqual(expected);
+            expect(transformOaCategoriesToChartData(categories)).toEqual(expected);
 
             const expectedZero = [
                 { id: 'published_open_access', label: 'Published open access (0.0%)', value: 0 },
                 { id: 'repository_open_access', label: 'Repository open access (0.0%)', value: 0 },
                 { id: 'to_be_confirmed', label: 'To be confirmed (0.0%)', value: 0 },
             ];
-            expect(transformOaCategories({ published_open_access: { count: 123 } })).toEqual(expectedZero);
+            expect(transformOaCategoriesToChartData({ published_open_access: { count: 123 } })).toEqual(expectedZero);
         });
     });
 });

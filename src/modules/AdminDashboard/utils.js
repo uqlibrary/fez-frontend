@@ -94,3 +94,19 @@ export const trimTrailingSlash = text => text.replace(/\/+$/g, '');
 export const getPlatformUrl = () => trimTrailingSlash(IS_PRODUCTION ? PRODUCTION_URL : STAGING_URL);
 
 export const getTotalDocCount = items => Object.values(items).reduce((total, item) => total + (item.doc_count || 0), 0);
+
+export const buildChartItem = (id, label, count, total) => {
+    const percentage = total ? (count / total) * 100 : 0;
+    return {
+        id,
+        label: `${label} (${percentage.toFixed(1)}%)`,
+        value: count,
+    };
+};
+
+export const transformBucketsToChartData = (buckets, lookup) => {
+    const total = getTotalDocCount(buckets);
+    return buckets.map(({ key, doc_count: docCount }) =>
+        buildChartItem(key, lookup[key] ?? `Unknown (${key})`, docCount, total),
+    );
+};
