@@ -236,7 +236,16 @@ export const viewJournalConfig = {
                             return viewJournalLocale.viewJournal.readAndPublish.status.capped;
                         }
                     },
-                    template: 'DefaultTemplate',
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: data =>
+                            (data === viewJournalLocale.viewJournal.readAndPublish.status.discounted ||
+                                data === viewJournalLocale.viewJournal.readAndPublish.status.capped) &&
+                            viewJournalLocale.viewJournal.readAndPublish.status.externalUrl,
+                        title: viewJournalLocale.viewJournal.readAndPublish.status.ariaLabel,
+                        text: data => data,
+                        ariaLabel: () => viewJournalLocale.viewJournal.readAndPublish.status.ariaLabel,
+                    },
                 },
             ],
             [

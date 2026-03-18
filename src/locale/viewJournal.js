@@ -2,6 +2,8 @@ import { APP_URL } from 'config/general';
 import React from 'react';
 
 const caulLink = 'https://caul.libguides.com/read-and-publish/reports';
+const publisherAgreementLink =
+    'https://web.library.uq.edu.au/research-and-publish/open-research/open-access-publishing-agreements';
 
 export default {
     viewJournal: {
@@ -66,11 +68,7 @@ export default {
 
                         <p>
                             UQ Library may have{' '}
-                            <a
-                                href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access-publishing-agreements"
-                                target="_blank"
-                                rel="noopener"
-                            >
+                            <a href={publisherAgreementLink} target="_blank" rel="noopener">
                                 an agreement
                             </a>{' '}
                             with the publisher that covers the APC or provides a discount on the APC.
@@ -189,6 +187,8 @@ export default {
                 exceeded: 'No (exhausted)',
                 discounted: 'Discount',
                 capped: 'Article Processing Charge covered',
+                externalUrl: publisherAgreementLink,
+                ariaLabel: 'Open UQ open access publishing agreement page in a new tab',
             },
             caulLink: {
                 heading: 'Limited amount available',
