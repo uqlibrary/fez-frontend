@@ -32,7 +32,7 @@ const VisualisationWorks = ({ text, data, id, showTooltips = false }) => {
             ref={_parentRef}
             sx={{
                 '& .MuiPieChart-series': {
-                    transform: `translate(${parentSize.width / 2}px, ${parentSize.height / 2}px)`,
+                    transform: `translate(${parentSize.width / 2}px, ${parentSize.height / 2 - 15}px)`,
                 },
             }}
         >
@@ -41,13 +41,13 @@ const VisualisationWorks = ({ text, data, id, showTooltips = false }) => {
                     {
                         data: data,
                         type: 'pie',
-                        innerRadius: 60,
-                        outerRadius: 80,
+                        innerRadius: 80,
+                        outerRadius: 100,
                         paddingAngle: 1,
                         cornerRadius: 1,
                     },
                 ]}
-                height={160}
+                height={250}
                 disableAxisListener
             >
                 <ChartsSurface>
@@ -55,7 +55,7 @@ const VisualisationWorks = ({ text, data, id, showTooltips = false }) => {
                     {text && (
                         <ChartsText
                             text={text}
-                            y="60%"
+                            y="50%"
                             x={Math.floor(parentSize.width / 2 - (text.length * SINGLE_CHAR_WIDTH) / 2)}
                             fontSize={40}
                             fontWeight={400}
