@@ -82,7 +82,7 @@ const Today = () => {
                                 </RibbonChartContainer>
                             )}
                         </Grid>
-                        <Grid item xs={12} sm={4}>
+                        <Grid item xs={12} sm={6}>
                             {!!adminDashboardTodayLoading && (
                                 <Skeleton
                                     animation="wave"
@@ -132,7 +132,7 @@ const Today = () => {
                                 </PieChartContainer>
                             )}
                         </Grid>
-                        <Grid item xs={12} sm={4}>
+                        <Grid item xs={12} sm={6}>
                             {!!adminDashboardTodayLoading && (
                                 <Skeleton
                                     animation="wave"
@@ -178,7 +178,9 @@ const Today = () => {
                                 </PieChartContainer>
                             )}
                         </Grid>
-                        <Grid item xs={12} sm={4}>
+                    </Grid>
+                    <Grid container rowSpacing={4} spacing={5} sx={{ pt: 2 }}>
+                        <Grid item xs={12} sm={6}>
                             {!!adminDashboardTodayLoading && (
                                 <Skeleton
                                     animation="wave"
@@ -217,9 +219,7 @@ const Today = () => {
                                 </GaugeChartContainer>
                             )}
                         </Grid>
-                    </Grid>
-                    <Grid container rowSpacing={4} spacing={2} sx={{ pt: 2 }}>
-                        <Grid item xs={12} sm={4}>
+                        <Grid item xs={12} sm={6}>
                             {!!adminDashboardTodayLoading && (
                                 <Skeleton
                                     animation="wave"
