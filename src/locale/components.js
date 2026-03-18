@@ -55,7 +55,7 @@ export default {
                     },
                     openaccess: {
                         researchOutput: {
-                            title: 'OA Status',
+                            title: 'OA Records',
                             subText: 'of research output',
                             chart: {
                                 text: (current, total) =>
@@ -65,7 +65,7 @@ export default {
                         },
                     },
                     openAccessCategories: {
-                        title: 'OA Status Categories',
+                        title: 'OA Status by Type',
                     },
                     doiPopulateDocTypes: {
                         title: 'DOI by Doc Type',
