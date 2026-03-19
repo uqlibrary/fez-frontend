@@ -263,19 +263,19 @@ describe('Action creators for admin dashboard', () => {
 
     it('dispatches expected actions while updating system alerts', async () => {
         const request = {};
-        mockApi.onPut(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl).reply(200, {});
+        mockApi.onPut(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({ id: 1 }).apiUrl).reply(200, {});
 
         const expectedActions = [
             actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATING,
             actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_SUCCESS,
         ];
 
-        await mockActionsStore.dispatch(adminActions.adminDashboardSystemAlerts(request));
+        await mockActionsStore.dispatch(adminActions.adminDashboardSystemAlerts(1, request));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
     it('dispatches expected actions while updating system alerts fails', async () => {
         const request = {};
-        mockApi.onPut(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl).reply(500);
+        mockApi.onPut(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({ id: 1 }).apiUrl).reply(500);
 
         const expectedActions = [
             actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATING,
@@ -284,7 +284,7 @@ describe('Action creators for admin dashboard', () => {
         ];
 
         try {
-            await mockActionsStore.dispatch(adminActions.adminDashboardSystemAlerts(request));
+            await mockActionsStore.dispatch(adminActions.adminDashboardSystemAlerts(1, request));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);

@@ -925,6 +925,25 @@ describe('ViewJournal', () => {
         expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
     });
 
+    it('should not display apc link when theres no apc', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_doaj: {
+                    jnl_doaj_apc_average_price: null,
+                    jnl_doaj_apc_currency: null,
+                },
+            },
+        });
+
+        const { queryByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(queryByTestId('jnl-doaj-apc-average-price-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-doaj-apc-average-price-value')).not.toBeInTheDocument();
+    });
+
     it('Should show read and publish section when theres no read and publish agreement', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
