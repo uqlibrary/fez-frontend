@@ -86,7 +86,7 @@ const Today = () => {
                                 loading={adminDashboardTodayLoading}
                                 success={adminDashboardTodaySuccess}
                                 hasData={!!adminDashboardTodayData?.works}
-                                data-testid="admin-dashboard-unprocessed-works"
+                                id="admin-dashboard-unprocessed-works"
                                 render={() => (
                                     <ChartContainer
                                         label={txt.works.unprocessed.title}
