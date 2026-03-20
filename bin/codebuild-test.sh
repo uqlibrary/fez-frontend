@@ -42,6 +42,7 @@ fi
 printf "(Build of branch \"$CI_BRANCH\")\n"
 
 function check_code_style() {
+    printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
     FILES=$(npm run codestyles:files -s)
     if [[ "$?" == 0 ]]; then
         printf "\n\e[92mLooks good! Well done.\e[0m\n\n"
@@ -58,6 +59,10 @@ function check_code_style() {
 }
 
 function fix_coverage_report_paths() {
+    if [[ ! -f "$1" ]]; then
+        return 0
+    fi
+
     sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' "$1"
 }
 
@@ -74,19 +79,20 @@ function install_pw_deps() {
 
 function run_pw_test_shard() {
     set -e
-
     install_pw_deps
+    export PW_SHARD_INDEX="$1"
 
-    local SHARD_INDEX="$1"
-    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #$SHARD_INDEX [STARTING AT $(date)] 2\e[0m ---\n"
+    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #$PW_SHARD_INDEX [STARTING AT $(date)] 2\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        npm run test:e2e:cc -- -- --shard="$SHARD_INDEX/2"
+        npm run test:e2e:cc -- -- --shard="$PW_SHARD_INDEX/2" --shard-weights=36:64
         fix_coverage_report_paths "coverage/playwright/${PW_CC_REPORT_FILENAME}"
     else
-        npm run test:e2e -- --shard="$SHARD_INDEX/2"
+        npm run test:e2e -- --shard="$PW_SHARD_INDEX/2" --shard-weights=36:64
     fi
-    printf "\n--- [ENDED RUNNING E2E TESTS GROUP #$SHARD_INDEX AT $(date)] \n"
+    printf "\n--- [ENDED RUNNING E2E TESTS GROUP #$PW_SHARD_INDEX AT $(date)] \n"
 }
+
+check_code_style
 
 case "$PIPE_NUM" in
 "1")
@@ -96,20 +102,22 @@ case "$PIPE_NUM" in
     run_pw_test_shard "$PIPE_NUM"
 ;;
 "3")
-    export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
+    set -e
+    printf "\n\n--- INSTALL JEST ---\n"
+    npm install -g jest
+    printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
-        check_code_style
-        set -e
-        printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
+        export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
         # Jest tests which are required to run in serial
         npm run test:unit:ci:serial
         fix_coverage_report_paths coverage/jest-serial/coverage-final.json
-
         # All other jest tests
         export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest/jest-html-report.html
         npm run test:unit:ci
         fix_coverage_report_paths coverage/jest/coverage-final.json
+    else
+        npm run test:unit:ci:serial:nocoverage
+        npm run test:unit:ci:nocoverage
     fi
 ;;
 *)
