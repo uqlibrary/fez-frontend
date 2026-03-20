@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Skeleton from '@mui/material/Skeleton';
 
-const ChartBlock = ({ loading, success, hasData = true, height = 225, render, id }) => {
+const ChartBlock = ({ id, render, loading, success, hasData = true, height = 225 }) => {
     if (loading) {
         return <Skeleton animation="wave" height={height} width="100%" data-testid={`${id}-chart-skeleton`} />;
     }
