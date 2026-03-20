@@ -641,8 +641,8 @@ export const ADMIN_DASHBOARD_QUICKLINKS_API = () => ({
     apiUrl: 'dashboard/quicklinks',
 });
 
-export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = () => ({
-    apiUrl: 'dashboard/alerts',
+export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = ({ id } = { id: null }) => ({
+    apiUrl: `dashboard/alerts${id ? `/${id}` : ''}`,
 });
 
 export const simpleQueryEncode = request =>

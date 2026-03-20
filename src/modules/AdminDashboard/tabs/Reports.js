@@ -26,6 +26,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import SectionTitle from '../components/SectionTitle';
 import LegacyReportInterface from '../components/LegacyReportInterface';
 import DisplayReportInterface from '../components/DisplayReportInterface';
+import ReportRowActions from '../components/ReportRowActions';
 
 const reportLegacyId = 'report-export-only';
 const reportDisplayExportId = 'report-display-export';
@@ -56,6 +57,7 @@ const Reports = () => {
             return getDisplayReportColumns({
                 locale: txt,
                 params: adminDashboardDisplayReportDataParams,
+                ReportRowActions,
             });
         }
         return null;
@@ -123,6 +125,7 @@ const Reports = () => {
         const newColumns = getDisplayReportColumns({
             locale: txt,
             actionState,
+            ReportRowActions,
         });
 
         !!newColumns && setColumns(newColumns);

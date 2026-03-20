@@ -263,7 +263,7 @@ test.describe('Admin Dashboard - Reports tab', () => {
         await expect(page.getByRole('option')).toHaveCount(2);
         await page.locator('[role=option]', { hasText: 'System alert log' }).click();
         await page.getByTestId('report-display-export-button').click();
-        await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(8);
+        await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(9);
         await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(8); // +1 for header
         await assertAccessibility(page, 'div.StandardPage', {
             disabledRules: ['color-contrast', 'aria-required-children'],
@@ -274,10 +274,49 @@ test.describe('Admin Dashboard - Reports tab', () => {
         await page.getByTestId('report-display-export-date-to-input').clear();
         await page.getByTestId('report-display-export-system-alert-id-input').fill('1');
         await page.getByTestId('report-display-export-button').click();
-        await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(9); // extra column for content field
+        await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(10); // extra column for content field
         await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(2); // +1 for header
 
         await assertFileDownload(page, [page.getByTestId('report-display-export-export-button').click()]);
+    });
+
+    test('Unresolve a system alert', async ({ page }) => {
+        // system alerts
+        await page.getByTestId('report-display-export-input').click();
+        await expect(page.getByRole('option')).toHaveCount(2);
+        await page.locator('[role=option]', { hasText: 'System alert log' }).click();
+        await page.getByTestId('report-display-export-button').click();
+
+        const row = page.getByRole('row').nth(1);
+        await expect(row.locator('[data-field=resolved_by_full_name]')).toContainText('Elizabeth Alvey');
+        await expect(row.locator('[data-field=sat_resolved_date]')).toContainText('9th April 2024');
+
+        // Unresolve
+        const unresolveButton = page.getByTestId('action-button-1');
+        await expect(unresolveButton).toContainText('Unresolve');
+        await unresolveButton.click();
+
+        await expect(row.locator('[data-field=resolved_by_full_name]')).toBeEmpty();
+        await expect(row.locator('[data-field=sat_resolved_date]')).toBeEmpty();
+        await expect(page.getByTestId('action-button-1')).toContainText('Unresolved');
+
+        // nav away
+        const todayTab = page.locator('[role=tab]', { hasText: 'TODAY' });
+        await todayTab.click();
+        await expect(todayTab).toHaveAttribute('aria-selected', 'true');
+
+        // nav back
+        const reportsTab = page.locator('[role=tab]', { hasText: 'REPORTS' });
+        await reportsTab.click();
+        await expect(reportsTab).toHaveAttribute('aria-selected', 'true');
+
+        await expect(page.getByTestId('report-display-data-grid').getByRole('columnheader')).toHaveCount(9);
+        await expect(page.getByTestId('report-display-data-grid').getByRole('row')).toHaveCount(8); // +1 for header
+
+        // Unresolve state should be persisted and the Unresolve button should not exist
+        await expect(row.locator('[data-field=resolved_by_full_name]')).toBeEmpty();
+        await expect(row.locator('[data-field=sat_resolved_date]')).toBeEmpty();
+        await expect(page.getByTestId('action-button-1')).not.toBeVisible();
     });
 
     test('displays a report even if user navs away and back', async ({ page }) => {

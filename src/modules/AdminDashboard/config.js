@@ -179,7 +179,7 @@ export const getSystemAlertColumns = (locale, users) => {
     ];
 };
 
-export const getDisplayReportColumns = ({ locale, actionState, params }) => {
+export const getDisplayReportColumns = ({ locale, actionState, params, ReportRowActions }) => {
     const report = actionState?.report?.value || getReportTypeFromValue(params.report_type);
 
     const txt = locale.columns[report];
@@ -314,6 +314,19 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     flex: 1,
                     order: 7,
                     exportOrder: 10,
+                });
+            }
+
+            if (report === 'systemalertlog') {
+                cols.push({
+                    field: 'actions',
+                    headerName: 'Actions',
+                    width: 140,
+                    sortable: false,
+                    filterable: false,
+                    order: 999,
+                    exportOnly: false,
+                    renderCell: params => <ReportRowActions row={params.row} gridApi={params.api} />,
                 });
             }
             return cols;
