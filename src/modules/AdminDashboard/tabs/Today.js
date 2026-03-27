@@ -240,7 +240,7 @@ const Today = () => {
                                                 fontWeight: 200,
                                             }}
                                         >
-                                            {txt.openaccess.researchOutput.subText}
+                                            {txt.openAccessCategories.subText}
                                         </Typography>
                                     }
                                     id="open-access-categories-container"

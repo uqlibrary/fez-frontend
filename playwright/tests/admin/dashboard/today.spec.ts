@@ -73,7 +73,7 @@ test.describe('Admin Dashboard - Today tab', () => {
         await expect(openAccessChart.locator('svg circle')).toHaveCount(1);
 
         // Open Access Categories Chart
-        await expect(page.getByTestId('open-access-categories-container-title')).toContainText('OA Status by Type');
+        await expect(page.getByTestId('open-access-categories-container-title')).toContainText('OA Status Categories');
         const openAccessCategoriesChart = page.getByTestId('chart-container-open-access-categories');
         await expect(openAccessCategoriesChart.locator('svg > text').getByText('68686')).toBeVisible();
         await expect(openAccessCategoriesChart.locator('svg path')).toHaveCount(3); // 3 types

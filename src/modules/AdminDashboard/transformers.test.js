@@ -322,20 +322,20 @@ describe('transformers', () => {
     describe('transformSystemAlertRequest', () => {
         it('returns transformed data', () => {
             const categories = {
-                published_open_access: { doc_count: 123 },
+                publisher_open_access: { doc_count: 123 },
                 repository_open_access: { doc_count: 456 },
                 to_be_confirmed: { doc_count: 789 },
             };
 
             const expected = [
-                { id: 'published_open_access', label: 'Published open access (9.0%)', value: 123 },
+                { id: 'publisher_open_access', label: 'Publisher open access (9.0%)', value: 123 },
                 { id: 'repository_open_access', label: 'Repository open access (33.3%)', value: 456 },
                 { id: 'to_be_confirmed', label: 'To be confirmed (57.7%)', value: 789 },
             ];
             expect(transformOaCategories(categories)).toEqual(expected);
 
             const expectedZero = [
-                { id: 'published_open_access', label: 'Published open access (0.0%)', value: 0 },
+                { id: 'publisher_open_access', label: 'Publisher open access (0.0%)', value: 0 },
                 { id: 'repository_open_access', label: 'Repository open access (0.0%)', value: 0 },
                 { id: 'to_be_confirmed', label: 'To be confirmed (0.0%)', value: 0 },
             ];

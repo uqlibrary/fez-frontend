@@ -55,8 +55,8 @@ export default {
                     },
                     openaccess: {
                         researchOutput: {
-                            title: 'OA Records',
-                            subText: 'of research output',
+                            title: 'OA Status',
+                            subText: 'of research doc types',
                             chart: {
                                 text: (current, total) =>
                                     `${current}${total > 0 ? ` (${Math.round((current / total) * 100)}%)` : ''}`,
@@ -65,7 +65,8 @@ export default {
                         },
                     },
                     openAccessCategories: {
-                        title: 'OA Status by Type',
+                        title: 'OA Status Categories',
+                        subText: 'of research subtypes',
                     },
                     quicklinks: {
                         title: 'Quick Links ',
