@@ -56,8 +56,8 @@ export default {
                     },
                     openaccess: {
                         researchOutput: {
-                            title: 'OA Records',
-                            subText: 'of research output',
+                            title: 'OA Status',
+                            subText: 'of research doc types',
                             tooltip: 'OA record counts in the past 365 days',
                             chart: {
                                 text: (current, total) =>
@@ -67,7 +67,8 @@ export default {
                         },
                     },
                     openAccessCategories: {
-                        title: 'OA Status by Type',
+                        title: 'OA Status Categories',
+                        subText: 'of research subtypes',
                         tooltip: 'OA status counts in the past 5 years',
                     },
                     doiPopulateDocTypes: {

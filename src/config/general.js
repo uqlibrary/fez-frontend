@@ -1734,7 +1734,7 @@ export const OA_STATUS = [
 ];
 
 export const OA_STATUS_CATEGORIES = [
-    { value: 'published_open_access', text: 'Published open access' },
+    { value: 'publisher_open_access', text: 'Publisher open access' },
     { value: 'repository_open_access', text: 'Repository open access' },
     { value: 'to_be_confirmed', text: 'To be confirmed' },
 ];
