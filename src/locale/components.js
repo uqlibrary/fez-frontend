@@ -159,6 +159,8 @@ export default {
                     label: {
                         report: 'Report',
                         systemId: 'System alert ID',
+                        requestorId: 'Requestor username',
+                        pid: 'PID',
                         dateFrom: 'From',
                         dateTo: 'To',
                         runReport: 'Run report',
@@ -197,6 +199,7 @@ export default {
                         dateNotBefore: 'Must not be before "from" date',
                         dateNotAfter: 'Must not be after "to" date',
                         recordId: 'Must be a positive whole number',
+                        requestorId: 'Must be alphanumeric',
                     },
                     alert: {
                         noResults: reportName => ({

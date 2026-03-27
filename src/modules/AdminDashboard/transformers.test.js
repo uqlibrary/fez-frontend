@@ -291,6 +291,15 @@ describe('transformers', () => {
             ).toEqual({ report_type: 1, record_id: '123' });
         });
 
+        it('returns object with requestor id and pid when report is system logs', () => {
+            expect(
+                transformDisplayReportRequest({
+                    report: { value: 'systemalertlog' },
+                    filters: { requestor_id: '123', pid: 'uq:1' },
+                }),
+            ).toEqual({ report_type: 1, requestor_id: '123', pid: 'uq:1' });
+        });
+
         it('returns object with report type only when dates and record id provided but report is works history', () => {
             expect(
                 transformDisplayReportRequest({
