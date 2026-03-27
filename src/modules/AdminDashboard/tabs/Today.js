@@ -212,7 +212,7 @@ const Today = () => {
                                                     fontWeight: 200,
                                                 }}
                                             >
-                                                {txt.openaccess.researchOutput.subText}
+                                                {txt.openAccessCategories.subText}
                                             </Typography>
                                         }
                                         tooltip={txt.openAccessCategories.tooltip}
