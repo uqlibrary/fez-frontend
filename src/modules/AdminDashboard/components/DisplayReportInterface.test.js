@@ -180,6 +180,20 @@ describe('DisplayReportInterface', () => {
             expect(getByTestId('testForm-date-to-input').closest('div')).not.toHaveClass('Mui-error');
         });
 
+        it('should render default system alert logs fields', async () => {
+            const accessors = setup();
+            await selectReport('System alert log', accessors);
+            const { getByTestId } = accessors;
+
+            // in default state, all fields are optional
+            expect(getByTestId('testForm-date-from')).toBeInTheDocument();
+            expect(getByTestId('testForm-date-to')).toBeInTheDocument();
+            expect(getByTestId('testForm-requestor-id')).toBeInTheDocument();
+            expect(getByTestId('testForm-pid')).toBeInTheDocument();
+            expect(getByTestId('testForm-requestor-id-input').closest('div')).not.toHaveClass('Mui-error');
+            expect(getByTestId('testForm-pid-input').closest('div')).not.toHaveClass('Mui-error');
+        });
+
         it('should disable dates if system id defined', async () => {
             const accessors = setup();
             await selectReport('System alert log', accessors);
@@ -233,6 +247,26 @@ describe('DisplayReportInterface', () => {
             );
         });
 
+        it('should not disable dates if requestor id is defined', async () => {
+            const accessors = setup();
+            await selectReport('System alert log', accessors);
+            const { getByTestId } = accessors;
+            await userEvent.type(getByTestId('testForm-requestor-id-input'), '123');
+            expect(getByTestId('testForm-requestor-id-input')).not.toHaveAttribute('disabled');
+            expect(getByTestId('testForm-date-to-input')).not.toHaveAttribute('disabled');
+            expect(getByTestId('testForm-date-from-input')).not.toHaveAttribute('disabled');
+        });
+
+        it('should not disable dates if pid is defined', async () => {
+            const accessors = setup();
+            await selectReport('System alert log', accessors);
+            const { getByTestId } = accessors;
+            await userEvent.type(getByTestId('testForm-pid-input'), 'uq:123');
+            expect(getByTestId('testForm-requestor-id-input')).not.toHaveAttribute('disabled');
+            expect(getByTestId('testForm-date-to-input')).not.toHaveAttribute('disabled');
+            expect(getByTestId('testForm-date-from-input')).not.toHaveAttribute('disabled');
+        });
+
         describe('validation', () => {
             it('date to should be required', async () => {
                 const accessors = setup();
@@ -278,7 +312,9 @@ describe('DisplayReportInterface', () => {
             expect(validator({ actionState })).toEqual({
                 fromDateError: '',
                 isValid: false,
+                pidError: '',
                 reportIdError: '',
+                requestorIdError: '',
                 toDateError: '',
             });
         });
@@ -319,6 +355,32 @@ describe('DisplayReportInterface', () => {
             );
         });
 
+        it('should return valid system alert request with valid requestor id', () => {
+            const data = {
+                ...actionState,
+                report: { value: 'systemalertlog' },
+                filters: { record_id: '', requestor_id: 'abc' },
+            };
+            expect(validator({ locale: txt, actionState: data })).toEqual(
+                expect.objectContaining({
+                    isValid: true,
+                }),
+            );
+        });
+
+        it('should return valid system alert request with valid pid', () => {
+            const data = {
+                ...actionState,
+                report: { value: 'systemalertlog' },
+                filters: { record_id: '', pid: 'uq:abc' },
+            };
+            expect(validator({ locale: txt, actionState: data })).toEqual(
+                expect.objectContaining({
+                    isValid: true,
+                }),
+            );
+        });
+
         it('should return invalid system alert request with full input and invalid record id', () => {
             const data = {
                 ...actionState,
@@ -331,6 +393,34 @@ describe('DisplayReportInterface', () => {
                 expect.objectContaining({
                     isValid: false,
                     reportIdError: 'Must be a positive whole number',
+                }),
+            );
+        });
+
+        it('should return invalid system alert request with invalid requestor id', () => {
+            const data = {
+                ...actionState,
+                report: { value: 'systemalertlog' },
+                filters: { requestor_id: 'abc!' },
+            };
+            expect(validator({ locale: txt, actionState: data })).toEqual(
+                expect.objectContaining({
+                    isValid: false,
+                    requestorIdError: 'Must be alphanumeric',
+                }),
+            );
+        });
+
+        it('should return invalid system alert request with invalid pid', () => {
+            const data = {
+                ...actionState,
+                report: { value: 'systemalertlog' },
+                filters: { pid: '123' },
+            };
+            expect(validator({ locale: txt, actionState: data })).toEqual(
+                expect.objectContaining({
+                    isValid: false,
+                    pidError: 'Please provide a valid PID (e.g. UQ:129af6)',
                 }),
             );
         });

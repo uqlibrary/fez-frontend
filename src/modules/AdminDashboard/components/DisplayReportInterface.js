@@ -16,60 +16,75 @@ import locale from 'locale/components';
 import { DEFAULT_DATEPICKER_INPUT_FORMAT, DEFAULT_SERVER_DATE_FORMAT_NO_TIME } from '../config';
 import { isEmptyStr } from '../utils';
 import { emptyReportActionState as emptyActionState, reportActionReducer as actionReducer } from '../reducers';
+import { isValidAlphanumeric, pid as validPid } from 'config/validation';
 
 export const validator = ({ locale, actionState }) => {
     const report = actionState.report?.value;
-    const recordId = actionState.filters.record_id;
-    let fromDateError = '';
-    let toDateError = '';
-    let reportIdError = '';
-    let isValid = false;
+    // eslint-disable-next-line camelcase
+    const { record_id, requestor_id, pid, date_from, date_to } = actionState.filters;
+
+    const errors = {
+        fromDateError: '',
+        toDateError: '',
+        reportIdError: '',
+        requestorIdError: '',
+        pidError: '',
+    };
 
     const isValidNumber = value => {
         const numValue = Number(value);
         return isEmptyStr(`${value}`) || (Number.isFinite(numValue) && numValue > 0 && !`${value}`.includes('.'));
     };
 
-    if (!!report) {
-        fromDateError = '';
-        toDateError = '';
-        reportIdError = '';
+    if (!report) {
+        return { isValid: false, ...errors };
+    }
 
-        if (report === 'systemalertlog') {
-            const validSystemId = isValidNumber(recordId);
+    if (report === 'systemalertlog') {
+        const validSystemId = isValidNumber(record_id);
+        const validRequestorId = isEmptyStr(requestor_id) || isValidAlphanumeric(requestor_id);
+        errors.pidError = validPid(pid);
 
-            if (!!!actionState.filters.date_from && !!!actionState.filters.date_to && validSystemId) {
-                return { isValid: true, fromDateError, toDateError, reportIdError };
-            } else if (!validSystemId) {
-                reportIdError = locale.recordId;
-                isValid = false;
-            }
+        if (!validSystemId) {
+            errors.reportIdError = locale.recordId;
         }
 
-        const mFrom = moment(actionState.filters.date_from);
-        const mTo = moment(actionState.filters.date_to);
-
-        if (report === 'workshistory' && !mFrom.isValid() && !mTo.isValid()) {
-            fromDateError = locale.required;
-            toDateError = locale.required;
-            isValid = false;
+        if (!validRequestorId) {
+            errors.requestorIdError = locale.requestorId;
         }
 
-        if (mFrom.isValid() && !mTo.isValid()) {
-            toDateError = locale.required;
-            isValid = false;
-        } else if (mTo.isValid() && !mFrom.isValid()) {
-            fromDateError = locale.required;
-            isValid = false;
-        } else if (mFrom.isValid() && mTo.isValid()) {
-            if (!mFrom.isSameOrBefore(mTo)) {
-                fromDateError = locale.dateNotAfter;
-                isValid = false;
-            } else isValid = isEmptyStr(reportIdError);
+        // eslint-disable-next-line camelcase
+        if (!date_from && !date_to && validSystemId && validRequestorId && !errors.pidError) {
+            return { isValid: true, ...errors };
         }
     }
 
-    return { isValid, fromDateError, toDateError, reportIdError };
+    const mFrom = moment(date_from);
+    const mTo = moment(date_to);
+
+    if (report === 'workshistory' && !mFrom.isValid() && !mTo.isValid()) {
+        errors.fromDateError = locale.required;
+        errors.toDateError = locale.required;
+    }
+
+    if (mFrom.isValid() && !mTo.isValid()) {
+        errors.toDateError = locale.required;
+    } else if (mTo.isValid() && !mFrom.isValid()) {
+        errors.fromDateError = locale.required;
+    } else if (mFrom.isValid() && mTo.isValid()) {
+        if (!mFrom.isSameOrBefore(mTo)) {
+            errors.fromDateError = locale.dateNotAfter;
+        }
+    }
+
+    const isValid =
+        !errors.fromDateError &&
+        !errors.toDateError &&
+        !errors.reportIdError &&
+        !errors.requestorIdError &&
+        !errors.pidError;
+
+    return { isValid, ...errors };
 };
 
 const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onReportClick, onExportClick }) => {
@@ -88,7 +103,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
         onReportClick?.(actionState);
     };
 
-    const { isValid, fromDateError, toDateError, reportIdError } = React.useMemo(
+    const { isValid, fromDateError, toDateError, reportIdError, requestorIdError, pidError } = React.useMemo(
         () => validator({ locale: txt.error, actionState }),
         [txt.error, actionState],
     );
@@ -225,35 +240,92 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                     </Box>
                 </Grid>
                 {actionState.report?.value === 'systemalertlog' && (
-                    <Grid item xs={12} sm={4}>
-                        <Box data-testid={`${id}-system-alert-id`}>
-                            <TextField
-                                label={txt.label.systemId}
-                                variant="standard"
-                                fullWidth
-                                sx={{ mt: 1 }}
-                                onChange={props =>
-                                    // eslint-disable-next-line react/prop-types
-                                    handleDisplayReportChange({ type: 'record_id', value: props.target.value })
-                                }
-                                value={actionState.filters.record_id}
-                                helperText={reportIdError}
-                                error={!!reportIdError}
-                                slotProps={{
-                                    htmlInput: {
-                                        id: `${id}-system-alert-id-input`,
-                                        'data-analyticsid': `${id}-system-alert-id-input`,
-                                        'data-testid': `${id}-system-alert-id-input`,
-                                    },
-
-                                    inputLabel: {
-                                        'data-testid': `${id}-system-alert-id-label`,
-                                        htmlFor: `${id}-system-alert-id-input`,
-                                    },
-                                }}
-                            />
-                        </Box>
-                    </Grid>
+                    <>
+                        <Grid item xs={12} sm={4}>
+                            <Box data-testid={`${id}-system-alert-id`}>
+                                <TextField
+                                    label={txt.label.systemId}
+                                    variant="standard"
+                                    fullWidth
+                                    sx={{ mt: 1 }}
+                                    onChange={props =>
+                                        // eslint-disable-next-line react/prop-types
+                                        handleDisplayReportChange({ type: 'record_id', value: props.target.value })
+                                    }
+                                    value={actionState.filters.record_id}
+                                    helperText={reportIdError}
+                                    error={!!reportIdError}
+                                    slotProps={{
+                                        htmlInput: {
+                                            id: `${id}-system-alert-id-input`,
+                                            'data-analyticsid': `${id}-system-alert-id-input`,
+                                            'data-testid': `${id}-system-alert-id-input`,
+                                        },
+                                        inputLabel: {
+                                            'data-testid': `${id}-system-alert-id-label`,
+                                            htmlFor: `${id}-system-alert-id-input`,
+                                        },
+                                    }}
+                                />
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} sm={4}>
+                            <Box data-testid={`${id}-requestor-id`}>
+                                <TextField
+                                    label={txt.label.requestorId}
+                                    variant="standard"
+                                    fullWidth
+                                    sx={{ mt: 1 }}
+                                    onChange={props =>
+                                        // eslint-disable-next-line react/prop-types
+                                        handleDisplayReportChange({ type: 'requestor_id', value: props.target.value })
+                                    }
+                                    value={actionState.filters.requestor_id}
+                                    helperText={requestorIdError}
+                                    error={!!requestorIdError}
+                                    slotProps={{
+                                        htmlInput: {
+                                            id: `${id}-requestor-id-input`,
+                                            'data-analyticsid': `${id}-requestor-id-input`,
+                                            'data-testid': `${id}-requestor-id-input`,
+                                        },
+                                        inputLabel: {
+                                            'data-testid': `${id}-requestor-id-label`,
+                                            htmlFor: `${id}-requestor-id-input`,
+                                        },
+                                    }}
+                                />
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} sm={4}>
+                            <Box data-testid={`${id}-pid`}>
+                                <TextField
+                                    label={txt.label.pid}
+                                    variant="standard"
+                                    fullWidth
+                                    sx={{ mt: 1 }}
+                                    onChange={props =>
+                                        // eslint-disable-next-line react/prop-types
+                                        handleDisplayReportChange({ type: 'pid', value: props.target.value })
+                                    }
+                                    value={actionState.filters.pid}
+                                    helperText={pidError}
+                                    error={!!pidError}
+                                    slotProps={{
+                                        htmlInput: {
+                                            id: `${id}-pid-input`,
+                                            'data-analyticsid': `${id}-pid-input`,
+                                            'data-testid': `${id}-pid-input`,
+                                        },
+                                        inputLabel: {
+                                            'data-testid': `${id}-pid-label`,
+                                            htmlFor: `${id}-pid-input`,
+                                        },
+                                    }}
+                                />
+                            </Box>
+                        </Grid>
+                    </>
                 )}
                 <Grid item xs={12}>
                     <Button
