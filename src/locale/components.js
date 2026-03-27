@@ -49,7 +49,7 @@ export default {
                                 const to = getFormattedServerDate(dateTo, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
                                 return {
                                     text: 'this iteration',
-                                    tooltip: `Saves to processed works <${from} to ${to}>`,
+                                    tooltip: `Saves to processed works ${from} to ${to}`,
                                 };
                             },
                         },
