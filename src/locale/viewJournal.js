@@ -2,7 +2,7 @@ import { APP_URL } from 'config/general';
 import React from 'react';
 import { ESPACE_TEAM_CONTACT_US_URL } from '../config/general';
 
-const caulLink = 'https://caul.libguides.com/read-and-publish/reports';
+const caulLink = 'https://caul.libguides.com/read-and-publish/wiley';
 const publisherAgreementLink =
     'https://web.library.uq.edu.au/research-and-publish/open-research/open-access-publishing-agreements';
 
