@@ -2,7 +2,8 @@ import { APP_URL } from 'config/general';
 import React from 'react';
 import { ESPACE_TEAM_CONTACT_US_URL } from '../config/general';
 
-const caulLink = 'https://caul.libguides.com/read-and-publish/wiley';
+const caulHomeLink = 'https://caul.libguides.com/read-and-publish/home';
+const caulReportLink = 'https://caul.libguides.com/read-and-publish/wiley';
 const publisherAgreementLink =
     'https://web.library.uq.edu.au/research-and-publish/open-research/open-access-publishing-agreements';
 
@@ -195,14 +196,19 @@ export default {
                 heading: 'Limited amount available',
                 ariaLabel: 'Click to view CAUL information on number of remaining pre-paid APCs',
                 linkText: 'Check current status',
-                externalUrl: caulLink,
+                externalUrl: caulReportLink,
+            },
+            publisher: {
+                heading: 'Publisher',
+                ariaLabel: 'Click to view read and publish agreement information',
+                externalUrl: caulHomeLink,
             },
             alert: {
                 title: 'Read and Publish Agreement',
                 approaching: (
                     <p>
                         The available cap for this title is projected to run out shortly. Please{' '}
-                        <a href={caulLink} target="_blank" rel="noopener">
+                        <a href={caulReportLink} target="_blank" rel="noopener">
                             check the current status
                         </a>
                         .
