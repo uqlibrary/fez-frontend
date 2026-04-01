@@ -1,5 +1,5 @@
 import React from 'react';
-import { APP_URL } from 'config/general';
+import { APP_URL, ESPACE_TEAM_CONTACT_US_URL } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
 import { RESOLVER_URL_PREFIX } from 'config/general';
 import { Link } from 'react-router';
@@ -115,9 +115,9 @@ export default {
             title: 'You are not registered in UQ eSpace as an author',
             message: (
                 <>
-                    Please contact UQ eSpace{' '}
-                    <a href="mailto:espace@library.uq.edu.au" target="_blank" title="email eSpace administrators">
-                        espace@library.uq.edu.au
+                    Please{' '}
+                    <a href={ESPACE_TEAM_CONTACT_US_URL} target="_blank">
+                        contact the UQ eSpace team.
                     </a>
                 </>
             ),

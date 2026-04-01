@@ -1,5 +1,3 @@
-/* eslint-disable space-before-function-paren */
-/* eslint-disable no-use-before-define */
 import { clearLastRequest } from '../src/config/axios';
 import * as repositories from '../src/repositories';
 import MockAdapter from 'axios-mock-adapter';
