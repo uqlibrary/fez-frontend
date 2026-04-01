@@ -1063,11 +1063,11 @@ exports[`Application component should render alert if user is not fez author 1`]
                     <span
                       data-testid="alert-message"
                     >
-                      Please contact UQ eSpace 
+                      Please contact UQ eSpace
                       <a
                         href="mailto:espace@library.uq.edu.au"
                         target="_blank"
-                        title="Please contact eSpace administrators"
+                        title="email eSpace administrators"
                       >
                         espace@library.uq.edu.au
                       </a>
