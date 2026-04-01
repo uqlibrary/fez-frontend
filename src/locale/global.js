@@ -113,7 +113,14 @@ export default {
         },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',
-            message: 'Please contact the UQ eSpace administrator to resolve this.',
+            message: (
+                <>
+                    Please contact UQ eSpace
+                    <a href="mailto:espace@library.uq.edu.au" target="_blank" title="email eSpace administrators">
+                        espace@library.uq.edu.au
+                    </a>
+                </>
+            ),
             type: 'info_outline',
             alertId: 'not-registered-author',
         },

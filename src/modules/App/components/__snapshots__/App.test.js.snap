@@ -1063,7 +1063,14 @@ exports[`Application component should render alert if user is not fez author 1`]
                     <span
                       data-testid="alert-message"
                     >
-                      Please contact the UQ eSpace administrator to resolve this.
+                      Please contact UQ eSpace 
+                      <a
+                        href="mailto:espace@library.uq.edu.au"
+                        target="_blank"
+                        title="Please contact eSpace administrators"
+                      >
+                        espace@library.uq.edu.au
+                      </a>
                     </span>
                   </div>
                 </div>
