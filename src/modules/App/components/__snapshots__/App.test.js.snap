@@ -1063,7 +1063,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                     <span
                       data-testid="alert-message"
                     >
-                      Please 
+                      Please
                        
                       <a
                         href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
