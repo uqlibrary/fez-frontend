@@ -115,7 +115,7 @@ export default {
             title: 'You are not registered in UQ eSpace as an author',
             message: (
                 <>
-                    Please contact UQ eSpace
+                    Please contact UQ eSpace{' '}
                     <a href="mailto:espace@library.uq.edu.au" target="_blank" title="email eSpace administrators">
                         espace@library.uq.edu.au
                     </a>
