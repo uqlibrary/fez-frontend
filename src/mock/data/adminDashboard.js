@@ -84,6 +84,17 @@ export const adminDashboardToday = {
         current: 256,
         total: 1256,
     },
+    oa_categories: {
+        publisher_open_access: {
+            doc_count: 57390,
+        },
+        repository_open_access: {
+            doc_count: 2532,
+        },
+        to_be_confirmed: {
+            doc_count: 8764,
+        },
+    },
 };
 
 export const adminDashboardQuickLinks =  [

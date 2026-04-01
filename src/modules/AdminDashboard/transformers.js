@@ -7,9 +7,15 @@ import {
     SYSTEM_ALERT_ACTION,
     REPORT_TYPE,
 } from './config';
-import { filterObjectProps, filterObjectPropsByKey, getPlatformUrl, trimTrailingSlash } from './utils';
+import {
+    filterObjectProps,
+    filterObjectPropsByKey,
+    getPlatformUrl,
+    getTotalDocCount,
+    trimTrailingSlash,
+} from './utils';
 
-import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
+import { IS_PRODUCTION, OA_STATUS_CATEGORIES, PRODUCTION_URL, STAGING_URL } from 'config/general';
 
 export const transformSystemAlertRequest = ({ user, action, row }) => {
     const keys =
@@ -107,3 +113,15 @@ export const transformDisplayReportExportData = (columns, data) => {
     });
     return newData;
 };
+
+export const transformOaCategories = categories =>
+    OA_STATUS_CATEGORIES.map(({ value, text }) => {
+        const total = getTotalDocCount(categories);
+        const count = categories[value]?.doc_count ?? 0;
+        const percentage = total ? (count / total) * 100 : 0;
+        return {
+            id: value,
+            label: `${text} (${percentage.toFixed(1)}%)`,
+            value: count,
+        };
+    });

@@ -14,7 +14,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { LINK_UNPROCESSED_WORKS, COLOURS } from '../config';
 import { useAlertStatus } from '../hooks';
-import { transformUrlToPlatform } from '../transformers';
+import { transformUrlToPlatform, transformOaCategories } from '../transformers';
 
 import RibbonChartContainer from '../components/RibbonChartContainer';
 import PieChartContainer from '../components/PieChartContainer';
@@ -23,6 +23,7 @@ import QuickLinkContainer from '../components/QuickLinkContainer';
 import VisualisationSystemAlerts from '../components/visualisations/VisualisationSystemAlerts';
 import VisualisationWorks from '../components/visualisations/VisualisationWorks';
 import VisualisationOpenAccess from '../components/visualisations/VisualisationOpenAccess';
+import { getTotalDocCount } from '../utils';
 
 const Today = () => {
     const txt = locale.components.adminDashboard.tabs.today;
@@ -81,7 +82,7 @@ const Today = () => {
                                 </RibbonChartContainer>
                             )}
                         </Grid>
-                        <Grid item xs={12} sm={4}>
+                        <Grid item xs={12} sm={6}>
                             {!!adminDashboardTodayLoading && (
                                 <Skeleton
                                     animation="wave"
@@ -117,16 +118,21 @@ const Today = () => {
                                     <VisualisationWorks
                                         id="unprocessed-works"
                                         text={`${adminDashboardTodayData.works.unprocessed}`}
-                                        amount={
-                                            adminDashboardTodayData.works.unprocessed === 0
-                                                ? /* istanbul ignore next */ 100
-                                                : adminDashboardTodayData.works.unprocessed
-                                        }
+                                        data={[
+                                            {
+                                                id: 0,
+                                                value:
+                                                    adminDashboardTodayData.works.unprocessed === 0
+                                                        ? /* istanbul ignore next */ 100
+                                                        : adminDashboardTodayData.works.unprocessed,
+                                                color: '#B60DCE',
+                                            },
+                                        ]}
                                     />
                                 </PieChartContainer>
                             )}
                         </Grid>
-                        <Grid item xs={12} sm={4}>
+                        <Grid item xs={12} sm={6}>
                             {!!adminDashboardTodayLoading && (
                                 <Skeleton
                                     animation="wave"
@@ -158,17 +164,23 @@ const Today = () => {
                                     <VisualisationWorks
                                         id="processed-works"
                                         text={`${adminDashboardTodayData.works.processed}`}
-                                        amount={
-                                            adminDashboardTodayData.works.processed === 0
-                                                ? /* istanbul ignore next */ 100
-                                                : adminDashboardTodayData.works.processed
-                                        }
-                                        colour="#35A9A5"
+                                        data={[
+                                            {
+                                                id: 0,
+                                                value:
+                                                    adminDashboardTodayData.works.processed === 0
+                                                        ? /* istanbul ignore next */ 100
+                                                        : adminDashboardTodayData.works.processed,
+                                                color: '#35A9A5',
+                                            },
+                                        ]}
                                     />
                                 </PieChartContainer>
                             )}
                         </Grid>
-                        <Grid item xs={12} sm={4}>
+                    </Grid>
+                    <Grid container rowSpacing={4} spacing={5} sx={{ pt: 2 }}>
+                        <Grid item xs={12} sm={6}>
                             {!!adminDashboardTodayLoading && (
                                 <Skeleton
                                     animation="wave"
@@ -205,6 +217,41 @@ const Today = () => {
                                         maxAmount={adminDashboardTodayData.oa.total}
                                     />
                                 </GaugeChartContainer>
+                            )}
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
+                            {!!adminDashboardTodayLoading && (
+                                <Skeleton
+                                    animation="wave"
+                                    height={225}
+                                    width={'100%'}
+                                    id={'admin-dashboard-open-access-categories-skeleton'}
+                                    data-testid={'admin-dashboard-open-access-categories-skeleton'}
+                                />
+                            )}
+                            {adminDashboardTodaySuccess && adminDashboardTodayData?.oa_categories && (
+                                <PieChartContainer
+                                    label={txt.openAccessCategories.title}
+                                    subtext={
+                                        <Typography
+                                            variant="span"
+                                            sx={{
+                                                fontSize: '0.875rem',
+                                                fontWeight: 200,
+                                            }}
+                                        >
+                                            {txt.openAccessCategories.subText}
+                                        </Typography>
+                                    }
+                                    id="open-access-categories-container"
+                                >
+                                    <VisualisationWorks
+                                        id="open-access-categories"
+                                        text={`${getTotalDocCount(adminDashboardTodayData.oa_categories)}`}
+                                        data={transformOaCategories(adminDashboardTodayData.oa_categories)}
+                                        showTooltips
+                                    />
+                                </PieChartContainer>
                             )}
                         </Grid>
                     </Grid>
