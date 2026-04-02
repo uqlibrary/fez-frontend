@@ -85,7 +85,7 @@ export const adminDashboardToday = {
         total: 1256,
     },
     oa_categories: {
-        published_open_access: {
+        publisher_open_access: {
             doc_count: 57390,
         },
         repository_open_access: {

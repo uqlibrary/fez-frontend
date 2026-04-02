@@ -49,15 +49,15 @@ export default {
                                 const to = getFormattedServerDate(dateTo, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
                                 return {
                                     text: 'this iteration',
-                                    tooltip: `Saves to processed works <${from} to ${to}>`,
+                                    tooltip: `Saves to processed works ${from} to ${to}`,
                                 };
                             },
                         },
                     },
                     openaccess: {
                         researchOutput: {
-                            title: 'OA Records',
-                            subText: 'of research output',
+                            title: 'OA Status',
+                            subText: 'of research doc types',
                             tooltip: 'OA record counts in the past 365 days',
                             chart: {
                                 text: (current, total) =>
@@ -67,7 +67,8 @@ export default {
                         },
                     },
                     openAccessCategories: {
-                        title: 'OA Status by Type',
+                        title: 'OA Status Categories',
+                        subText: 'of research subtypes',
                         tooltip: 'OA status counts in the past 5 years',
                     },
                     doiPopulateDocTypes: {

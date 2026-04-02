@@ -45,6 +45,9 @@ export const IS_PRODUCTION = APP_URL.includes(PRODUCTION_URL) || APP_URL.include
 export const IS_LOCAL_DEV = APP_URL.includes(LOCALHOST_DOMAIN) || APP_URL.includes(LOCALHOST_ALIAS_DOMAIN);
 export const IS_DEVELOPMENT_BRANCH = APP_URL.includes(DEVELOPMENT_BRANCH_URL);
 
+export const ESPACE_TEAM_CONTACT_US_URL =
+    'https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us';
+
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || `${APP_URL}login`;
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
 
@@ -1705,7 +1708,7 @@ export const OA_STATUS = [
 ];
 
 export const OA_STATUS_CATEGORIES = [
-    { value: 'published_open_access', text: 'Published open access' },
+    { value: 'publisher_open_access', text: 'Publisher open access' },
     { value: 'repository_open_access', text: 'Repository open access' },
     { value: 'to_be_confirmed', text: 'To be confirmed' },
 ];
