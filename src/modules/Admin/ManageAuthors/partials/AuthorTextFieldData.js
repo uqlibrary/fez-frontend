@@ -7,19 +7,19 @@ import { AuthorFieldData } from './AuthorFieldData';
 export const AuthorTextFieldData = props => (
     <AuthorFieldData
         {...props}
-        component={componentProps => (
+        component={({ isValidating, authorFieldDataId, ...reset }) => (
             <TextField
-                {...componentProps}
-                label={componentProps.label}
-                textFieldId={componentProps.authorFieldDataId}
+                {...reset}
+                label={reset.label}
+                textFieldId={authorFieldDataId}
                 fullWidth
                 InputProps={{
                     style: {
                         fontSize: 14,
                         fontWeight: 400,
                     },
-                    ...componentProps.InputProps,
-                    ...((componentProps.isValidating && {
+                    ...reset.InputProps,
+                    ...((isValidating && {
                         endAdornment: (
                             <InputAdornment position="end">
                                 <CircularProgress
@@ -36,7 +36,7 @@ export const AuthorTextFieldData = props => (
                 }}
                 InputLabelProps={{
                     style: {
-                        ...(componentProps.error || { color: '#4085C6' }),
+                        ...(reset.error || { color: '#4085C6' }),
                         fontWeight: 400,
                     },
                 }}

@@ -77,7 +77,8 @@ export const NameData = () => {
                         <AuthorFieldData
                             {...props}
                             displayLabelForMobileMode
-                            component={({ value, onChange, ...componentProps }) => (
+                            // eslint-disable-next-line no-unused-vars
+                            component={({ isValidating, authorFieldDataId, value, onChange, ...componentProps }) => (
                                 <FormControlLabel
                                     control={
                                         <Switch
