@@ -204,17 +204,7 @@ const Today = () => {
                                 render={() => (
                                     <ChartContainer
                                         label={txt.openAccessCategories.title}
-                                        subtext={
-                                            <Typography
-                                                variant="span"
-                                                sx={{
-                                                    fontSize: '0.875rem',
-                                                    fontWeight: 200,
-                                                }}
-                                            >
-                                                {txt.openaccess.researchOutput.subText}
-                                            </Typography>
-                                        }
+                                        subtext={txt.openAccessCategories.subText}
                                         tooltip={txt.openAccessCategories.tooltip}
                                         id="open-access-categories-container"
                                     >
@@ -241,17 +231,7 @@ const Today = () => {
                                 render={() => (
                                     <ChartContainer
                                         label={txt.doiPopulateDocTypes.title}
-                                        subtext={
-                                            <Typography
-                                                variant="span"
-                                                sx={{
-                                                    fontSize: '0.875rem',
-                                                    fontWeight: 200,
-                                                }}
-                                            >
-                                                {txt.doiPopulateDocTypes.subText}
-                                            </Typography>
-                                        }
+                                        subtext={txt.doiPopulateDocTypes.subText}
                                         tooltip={txt.doiPopulateDocTypes.tooltip}
                                         id="doi-populated-doc-types-container"
                                     >

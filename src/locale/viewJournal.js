@@ -1,5 +1,6 @@
 import { APP_URL } from 'config/general';
 import React from 'react';
+import { ESPACE_TEAM_CONTACT_US_URL } from '../config/general';
 
 const caulHomeLink = 'https://caul.libguides.com/read-and-publish/home';
 const caulReportLink = 'https://caul.libguides.com/read-and-publish/wiley';
@@ -241,8 +242,8 @@ export default {
                     <p>The journal you are attempting to access does not appear in our system.</p>
                     <p>
                         If you believe this is in error, please{' '}
-                        <a href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us">
-                            contact the eSpace team.
+                        <a href={ESPACE_TEAM_CONTACT_US_URL} target="_blank">
+                            contact the UQ eSpace team.
                         </a>
                     </p>
                 </div>

@@ -14,6 +14,7 @@ import { pathConfig } from 'config/pathConfig';
 import {
     DOI_CROSSREF_PREFIX,
     DOI_DATACITE_PREFIX,
+    ESPACE_TEAM_CONTACT_US_URL,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
@@ -193,8 +194,8 @@ export default {
                     <p>The work you are attempting to access does not appear in our system.</p>
                     <p>
                         If you believe this is in error, please{' '}
-                        <a href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us">
-                            contact the eSpace team.
+                        <a href={ESPACE_TEAM_CONTACT_US_URL} target="_blank">
+                            contact the UQ eSpace team.
                         </a>
                     </p>
                 </div>
