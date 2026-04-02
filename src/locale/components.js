@@ -4015,6 +4015,18 @@ export default {
                     lastName: {
                         label: 'Last name',
                     },
+                    isNameOverride: {
+                        label: (
+                            <>
+                                Prevent automatic updates{' '}
+                                <Tooltip title="Turn on to prevent automatic name updates from HR data.">
+                                    <Typography component="span" color="primary" fontWeight="bold">
+                                        <HelpIcon fontSize="small" />
+                                    </Typography>
+                                </Tooltip>
+                            </>
+                        ),
+                    },
                     email: {
                         label: 'Email',
                     },
@@ -4072,9 +4084,6 @@ export default {
                     },
                     openOrcidProfileInNewWindow: {
                         label: 'Open ORCID profile in new window',
-                    },
-                    isUsernameOverridden: {
-                        label: 'Is username overridden by an admin?',
                     },
                 },
                 validation: {
