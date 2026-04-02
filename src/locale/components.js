@@ -3,9 +3,6 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
 import { prefixByUrlResolver } from 'config/general';
-
-import HelpIcon from '@mui/icons-material/Help';
-import Tooltip from '@mui/material/Tooltip';
 import { DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS, getFormattedServerDate } from 'modules/AdminDashboard/config';
 
 function capitalizeFirstLetter(string) {
@@ -37,32 +34,42 @@ export default {
                         },
                     },
                     works: {
-                        unprocessed: 'Unprocessed Works',
-                        unprocessedSubText: 'view',
-                        processed: 'Processed Works',
-                        processedSubText: (dateFrom, dateTo) => {
-                            const from = getFormattedServerDate(dateFrom, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
-                            const to = getFormattedServerDate(dateTo, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
-                            return (
-                                <>
-                                    this iteration{' '}
-                                    <Tooltip title={`${from} to ${to}`} describeChild arrow>
-                                        <HelpIcon fontSize="small" />
-                                    </Tooltip>
-                                </>
-                            );
+                        unprocessed: {
+                            title: 'Unprocessed Works',
+                            subText: 'view',
+                            tooltip: 'Works currently in unprocessed',
+                        },
+                        processed: {
+                            title: 'Processed Works',
+                            subTextAndTooltip: (dateFrom, dateTo) => {
+                                const from = getFormattedServerDate(
+                                    dateFrom,
+                                    DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS,
+                                );
+                                const to = getFormattedServerDate(dateTo, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
+                                return {
+                                    text: 'this iteration',
+                                    tooltip: `Saves to processed works ${from} to ${to}`,
+                                };
+                            },
                         },
                     },
                     openaccess: {
                         researchOutput: {
                             title: 'OA Status',
-                            subText: 'of research output',
+                            subText: 'of research doc types',
+                            tooltip: 'OA record counts in the past 365 days',
                             chart: {
                                 text: (current, total) =>
                                     `${current}${total > 0 ? ` (${Math.round((current / total) * 100)}%)` : ''}`,
                                 subtext: total => `of ${total} records`,
                             },
                         },
+                    },
+                    openAccessCategories: {
+                        title: 'OA Status Categories',
+                        subText: 'of research subtypes',
+                        tooltip: 'OA status counts in the past 5 years',
                     },
                     quicklinks: {
                         title: 'Quick Links ',

@@ -92,3 +92,5 @@ export const isEmptyStr = str =>
 export const trimTrailingSlash = text => text.replace(/\/+$/g, '');
 
 export const getPlatformUrl = () => trimTrailingSlash(IS_PRODUCTION ? PRODUCTION_URL : STAGING_URL);
+
+export const getTotalDocCount = items => Object.values(items).reduce((total, item) => total + (item.doc_count || 0), 0);
