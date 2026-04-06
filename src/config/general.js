@@ -1707,6 +1707,12 @@ export const OA_STATUS = [
     { value: '454118', text: 'Not yet assessed (Unpaywall)' },
 ];
 
+export const OA_STATUS_CATEGORIES = [
+    { value: 'publisher_open_access', text: 'Publisher open access' },
+    { value: 'repository_open_access', text: 'Repository open access' },
+    { value: 'to_be_confirmed', text: 'To be confirmed' },
+];
+
 export const OA_STATUS_TYPE = [
     { value: 454120, text: 'Green' },
     { value: 454121, text: 'Gold' },

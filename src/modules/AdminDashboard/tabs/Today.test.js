@@ -17,7 +17,12 @@ describe('Today tab', () => {
             { adminDashboardTodayReducer: { adminDashboardTodayLoading: true } },
         );
 
-        expect(getAllByTestId('admin-dashboard-systemalerts-skeleton').length).toBe(3);
+        // loading charts
+        expect(getByTestId('admin-dashboard-unprocessed-works-chart-skeleton')).toBeInTheDocument();
+        expect(getByTestId('admin-dashboard-processed-works-chart-skeleton')).toBeInTheDocument();
+        expect(getByTestId('admin-dashboard-open-access-chart-skeleton')).toBeInTheDocument();
+        expect(getByTestId('admin-dashboard-open-access-categories-chart-skeleton')).toBeInTheDocument();
+
         expect(getAllByTestId('admin-dashboard-quicklinks-skeleton').length).toBe(8);
         expect(getByText('Quick Links')).toBeInTheDocument();
         expect(getByTestId('quick-link-progressor')).toBeInTheDocument();

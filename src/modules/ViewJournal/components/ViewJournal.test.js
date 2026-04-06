@@ -1006,6 +1006,8 @@ describe('ViewJournal', () => {
             expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
             expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('Discount');
             expect(getByTestId('jnl-read-and-publish-lookup-link')).toBeInTheDocument();
+            expect(getByTestId('jnl-read-and-publish-publisher-value')).toHaveTextContent('publisher');
+            expect(getByTestId('jnl-read-and-publish-publisher-lookup-link')).toBeInTheDocument();
         });
 
         it('Should show read and publish link when read and publish agreement is capped', async () => {

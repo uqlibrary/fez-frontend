@@ -290,6 +290,28 @@ export const viewJournalConfig = {
             ],
             [
                 {
+                    heading: viewJournalLocale.viewJournal.readAndPublish.publisher.heading,
+                    fieldId: 'jnl-read-and-publish-publisher',
+                    getData: journalDetails => {
+                        return (
+                            journalDetails.fez_journal_read_and_publish &&
+                            !['y', 'approaching', 'nodeal'].includes(
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped.toLowerCase(),
+                            ) &&
+                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_publisher
+                        );
+                    },
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: () => viewJournalLocale.viewJournal.readAndPublish.publisher.externalUrl,
+                        title: viewJournalLocale.viewJournal.readAndPublish.publisher.ariaLabel,
+                        text: publisher => publisher,
+                        ariaLabel: () => viewJournalLocale.viewJournal.readAndPublish.publisher.ariaLabel,
+                    },
+                },
+            ],
+            [
+                {
                     heading: 'Open access with Accepted manuscript',
                     fieldId: 'srm-journal-link',
                     getData: journalDetails =>
