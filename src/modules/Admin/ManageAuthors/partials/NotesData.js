@@ -4,7 +4,7 @@ import React from 'react';
 import Grid from '@mui/material/GridLegacy';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import AuthorTextFieldData from './AuthorTextFieldData';
+import AuthorFieldData from './AuthorFieldData';
 
 import { default as locale } from 'locale/components';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
@@ -22,7 +22,7 @@ export const NotesData = () => {
             <Grid container spacing={2}>
                 <Field
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-description"
                     name="aut_description"
                     multiline

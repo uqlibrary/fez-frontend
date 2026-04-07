@@ -700,9 +700,7 @@ describe('ManageAuthors', () => {
 
         expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
-        await waitFor(() => getByTestId('aut-name-overridden'));
-
-        fireEvent.click(getByTestId('aut-name-overridden'));
+        await waitFor(() => getByTestId('aut-is-scopus-id-authenticated'));
         fireEvent.click(getByTestId('aut-is-scopus-id-authenticated'));
         fireEvent.click(getByTestId('authors-add-this-author-save'));
 

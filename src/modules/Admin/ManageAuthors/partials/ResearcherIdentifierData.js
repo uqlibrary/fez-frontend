@@ -12,7 +12,7 @@ import YesIcon from '@mui/icons-material/CheckCircle';
 import OpenInNew from '@mui/icons-material/OpenInNew';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import AuthorTextFieldData from './AuthorTextFieldData';
+import AuthorFieldData from './AuthorFieldData';
 
 import { default as locale } from 'locale/components';
 import pageLocale from 'locale/pages';
@@ -55,7 +55,7 @@ export const ResearcherIdentifierData = () => {
             <Grid container spacing={2} alignItems="center">
                 <Field
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-researcher-id"
                     name="aut_researcher_id"
                     validate={[validation.isValidResearcherId]}
@@ -63,7 +63,7 @@ export const ResearcherIdentifierData = () => {
                 />
                 <Field
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-scopus-id"
                     name="aut_scopus_id"
                     validate={[validation.spacelessMaxLength255Validator]}
@@ -106,7 +106,7 @@ export const ResearcherIdentifierData = () => {
                 />
                 <Field
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-google-scholar-id"
                     name="aut_google_scholar_id"
                     validate={[validation.isValidGoogleScholarId]}
@@ -114,7 +114,7 @@ export const ResearcherIdentifierData = () => {
                 />
                 <Field
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-people-australia-id"
                     name="aut_people_australia_id"
                     validate={[validation.spacelessMaxLength255Validator]}
@@ -122,7 +122,7 @@ export const ResearcherIdentifierData = () => {
                 />
                 <Field
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-orcid-id"
                     name="aut_orcid_id"
                     {...orcidId}

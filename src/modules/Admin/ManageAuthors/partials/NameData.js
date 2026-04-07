@@ -6,14 +6,12 @@ import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import Grid from '@mui/material/GridLegacy';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import AuthorFieldData from './AuthorFieldData';
 
 import { validation } from 'config';
 import { default as locale } from 'locale/components';
-import Switch from '@mui/material/Switch';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import { AuthorFieldData } from './AuthorFieldData';
-import { AuthorTextFieldData } from './AuthorTextFieldData';
 import Divider from '@mui/material/Divider';
+import { NameOverride } from './NameOverride';
 
 export const NameData = () => {
     const {
@@ -22,7 +20,7 @@ export const NameData = () => {
             fields: { title, displayName, firstName, middleName, lastName, isNameOverride, position, email },
         },
     } = locale.components.manageAuthors;
-    const { control, isSubmitting } = useFormContext();
+    const { control } = useFormContext();
 
     return (
         <StandardCard subCard title={cardTitle} smallTitle customTitleBgColor="#F7F7F7">
@@ -30,7 +28,7 @@ export const NameData = () => {
                 <Field
                     {...displayName}
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-display-name"
                     name="aut_display_name"
                     autoFocus
@@ -39,7 +37,7 @@ export const NameData = () => {
                 <Field
                     {...title}
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-title"
                     name="aut_title"
                     validate={[validation.spacelessMaxLength255Validator]}
@@ -47,7 +45,7 @@ export const NameData = () => {
                 <Field
                     {...firstName}
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-fname"
                     name="aut_fname"
                     required
@@ -56,7 +54,7 @@ export const NameData = () => {
                 <Field
                     {...middleName}
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-mname"
                     name="aut_mname"
                     validate={[validation.spacelessMaxLength255Validator]}
@@ -64,7 +62,7 @@ export const NameData = () => {
                 <Field
                     {...lastName}
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     name="aut_lname"
                     authorFieldDataId="aut-lname"
                     required
@@ -73,25 +71,7 @@ export const NameData = () => {
                 <Field
                     {...isNameOverride}
                     control={control}
-                    component={props => (
-                        <AuthorFieldData
-                            {...props}
-                            displayLabelForMobileMode
-                            // eslint-disable-next-line no-unused-vars
-                            component={({ isValidating, authorFieldDataId, value, onChange, ...componentProps }) => (
-                                <FormControlLabel
-                                    control={
-                                        <Switch
-                                            {...componentProps}
-                                            checked={value === 1}
-                                            onChange={e => onChange(e.target.checked ? 1 : 0)}
-                                        />
-                                    }
-                                    disabled={isSubmitting}
-                                />
-                            )}
-                        />
-                    )}
+                    component={NameOverride}
                     authorFieldDataId="aut-name-overridden"
                     name="aut_name_overridden"
                 />
@@ -101,7 +81,7 @@ export const NameData = () => {
                 <Field
                     {...position}
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-position"
                     name="aut_position"
                     validate={[validation.spacelessMaxLength255Validator]}
@@ -109,7 +89,7 @@ export const NameData = () => {
                 <Field
                     {...email}
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-email"
                     name="aut_email"
                     validate={[validation.email, validation.spacelessMaxLength255Validator]}

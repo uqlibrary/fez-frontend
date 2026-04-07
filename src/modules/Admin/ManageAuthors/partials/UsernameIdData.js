@@ -5,7 +5,7 @@ import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/GridLegacy';
 
-import AuthorTextFieldData from './AuthorTextFieldData';
+import AuthorFieldData from './AuthorFieldData';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import { default as locale } from 'locale/components';
@@ -25,7 +25,7 @@ export const UsernameIdColumnData = () => {
                 <Field
                     {...orgStaffId}
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-org-staff-id"
                     name="aut_org_staff_id"
                     validate={[validation.spacelessMaxLength12Validator]}
@@ -33,7 +33,7 @@ export const UsernameIdColumnData = () => {
                 <Field
                     {...orgUsername}
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-org-username"
                     name="aut_org_username"
                     validate={[validation.spacelessMaxLength20Validator]}
@@ -41,7 +41,7 @@ export const UsernameIdColumnData = () => {
                 <Field
                     {...orgStudentId}
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-org-student-id"
                     name="aut_org_student_id"
                     validate={[validation.spacelessMaxLength11Validator]}
@@ -49,7 +49,7 @@ export const UsernameIdColumnData = () => {
                 <Field
                     {...studentUsername}
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-student-username"
                     name="aut_student_username"
                     validate={[validation.spacelessMaxLength30Validator]}
@@ -57,7 +57,7 @@ export const UsernameIdColumnData = () => {
                 <Field
                     {...refNum}
                     control={control}
-                    component={AuthorTextFieldData}
+                    component={AuthorFieldData}
                     authorFieldDataId="aut-ref-num"
                     name="aut_ref_num"
                     validate={[validation.spacelessMaxLength50Validator]}
