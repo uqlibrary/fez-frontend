@@ -10,7 +10,7 @@ import { useMediaQuery } from '@mui/system';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-export const NameOverride = ({ value, onChange, ...rest }) => {
+export const NameOverride = ({ value, onChange, name, ['data-testid']: dataTestId, ...rest }) => {
     const {
         formState: { isValidating },
     } = useFormContext();
@@ -36,7 +36,14 @@ export const NameOverride = ({ value, onChange, ...rest }) => {
             )}
             <Grid item xs={12} md={6}>
                 <FormControlLabel
-                    control={<Switch checked={value === 1} onChange={e => onChange(e.target.checked ? 1 : 0)} />}
+                    control={
+                        <Switch
+                            data-testid={dataTestId}
+                            name={name}
+                            checked={value === 1}
+                            onChange={e => onChange(e.target.checked ? 1 : 0)}
+                        />
+                    }
                     disabled={isValidating}
                 />
             </Grid>
@@ -48,6 +55,7 @@ export const NameOverride = ({ value, onChange, ...rest }) => {
 };
 
 NameOverride.propTypes = {
+    name: PropTypes.string,
     value: PropTypes.any,
     onChange: PropTypes.func,
 };

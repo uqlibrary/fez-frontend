@@ -72,7 +72,7 @@ export const NameData = () => {
                     {...isNameOverride}
                     control={control}
                     component={NameOverride}
-                    authorFieldDataId="aut-name-overridden"
+                    data-testid="aut-name-overridden"
                     name="aut_name_overridden"
                 />
                 <Grid xs={12} sx={{ mx: 2 }}>
