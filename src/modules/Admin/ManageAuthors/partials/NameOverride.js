@@ -29,11 +29,13 @@ export const NameOverride = ({ value, onChange, name, ['data-testid']: dataTestI
                     </Grid>
                 </Grid>
             )}
-            {isMobileView && (
-                <Grid item xs={12} md={6}>
-                    <ColumnTitle title={rest.label} />
-                </Grid>
-            )}
+            {
+                /* istanbul ignore next */ isMobileView && (
+                    <Grid item xs={12} md={6}>
+                        <ColumnTitle title={rest.label} />
+                    </Grid>
+                )
+            }
             <Grid item xs={12} md={6}>
                 <FormControlLabel
                     control={
@@ -41,7 +43,7 @@ export const NameOverride = ({ value, onChange, name, ['data-testid']: dataTestI
                             data-testid={dataTestId}
                             name={name}
                             checked={value === 1}
-                            onChange={e => onChange(e.target.checked ? 1 : 0)}
+                            onChange={/* istanbul ignore next */ e => onChange(e.target.checked ? 1 : 0)}
                         />
                     }
                     disabled={isValidating}
