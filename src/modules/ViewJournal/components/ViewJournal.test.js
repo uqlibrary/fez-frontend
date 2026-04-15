@@ -887,44 +887,6 @@ describe('ViewJournal', () => {
         expect(getByText('Test advisory statement')).toBeInTheDocument();
     });
 
-    it('should display read and publish warning banner', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
-            data: {
-                ...journalDetails.data,
-                fez_journal_read_and_publish: {
-                    jnl_read_and_publish_is_capped: 'Approaching',
-                    jnl_read_and_publish_is_discounted: false,
-                },
-            },
-        });
-
-        const { getAllByTestId, getByText } = setup();
-
-        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
-
-        const alerts = getAllByTestId('alert');
-        expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
-    });
-
-    it('should display read and publish ceased info banner', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
-            data: {
-                ...journalDetails.data,
-                fez_journal_read_and_publish: {
-                    jnl_read_and_publish_is_capped: 'NoDeal',
-                    jnl_read_and_publish_is_discounted: false,
-                },
-            },
-        });
-
-        const { getAllByTestId, getByText } = setup();
-
-        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
-
-        const alerts = getAllByTestId('alert');
-        expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
-    });
-
     it('should not display apc link when theres no apc', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
@@ -944,44 +906,131 @@ describe('ViewJournal', () => {
         expect(queryByTestId('jnl-doaj-apc-average-price-value')).not.toBeInTheDocument();
     });
 
-    it('Should show read and publish section when theres no read and publish agreement', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
-            data: {
-                jnl_title: 'test',
-                fez_journal_read_and_publish: null,
-            },
-        });
-
-        const { queryByTestId, getByTestId, getByText } = setup();
-
-        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
-
-        expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
-        expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
-        expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
-    });
-
-    it('Should show read and publish section when read and publish agreement is ceased', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
-            data: {
-                jnl_title: 'test',
-                fez_journal_read_and_publish: {
-                    jnl_read_and_publish_is_capped: 'NoDeal',
-                    jnl_read_and_publish_publisher: 'publisher',
-                    jnl_read_and_publish_source_date: '2025-01-01',
+    describe('Read And Publish', () => {
+        it('should display read and publish warning banner', async () => {
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    ...journalDetails.data,
+                    fez_journal_read_and_publish: {
+                        jnl_read_and_publish_is_capped: 'Approaching',
+                        jnl_read_and_publish_is_discounted: false,
+                    },
                 },
-            },
+            });
+
+            const { getAllByTestId, getByText } = setup();
+
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            const alerts = getAllByTestId('alert');
+            expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
         });
 
-        const { queryByTestId, getByTestId, getByText } = setup();
+        it('should display read and publish ceased info banner', async () => {
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    ...journalDetails.data,
+                    fez_journal_read_and_publish: {
+                        jnl_read_and_publish_is_capped: 'NoDeal',
+                        jnl_read_and_publish_is_discounted: false,
+                    },
+                },
+            });
 
-        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+            const { getAllByTestId, getByText } = setup();
 
-        expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
-        expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
-        expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            const alerts = getAllByTestId('alert');
+            expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
+        });
+
+        it('Should show read and publish section when theres no read and publish agreement', async () => {
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    jnl_title: 'test',
+                    fez_journal_read_and_publish: null,
+                },
+            });
+
+            const { queryByTestId, getByTestId, getByText } = setup();
+
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
+            expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
+            expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
+            expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
+        });
+
+        it('Should show read and publish section when read and publish agreement is ceased', async () => {
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    jnl_title: 'test',
+                    fez_journal_read_and_publish: {
+                        jnl_read_and_publish_is_capped: 'NoDeal',
+                        jnl_read_and_publish_publisher: 'publisher',
+                        jnl_read_and_publish_source_date: '2025-01-01',
+                    },
+                },
+            });
+
+            const { queryByTestId, getByTestId, getByText } = setup();
+
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
+            expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
+            expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
+            expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
+            expect(queryByTestId('jnl-read-and-publish-lookup-link')).not.toBeInTheDocument();
+        });
+
+        it('Should show read and publish link when read and publish agreement is discounted', async () => {
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    jnl_title: 'test',
+                    fez_journal_read_and_publish: {
+                        jnl_read_and_publish_is_capped: 'N',
+                        jnl_read_and_publish_is_discounted: true,
+                        jnl_read_and_publish_publisher: 'publisher',
+                        jnl_read_and_publish_source_date: '2025-01-01',
+                    },
+                },
+            });
+
+            const { getByTestId, getByText } = setup();
+
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
+            expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('Discount');
+            expect(getByTestId('jnl-read-and-publish-lookup-link')).toBeInTheDocument();
+            expect(getByTestId('jnl-read-and-publish-publisher-value')).toHaveTextContent('publisher');
+            expect(getByTestId('jnl-read-and-publish-publisher-lookup-link')).toBeInTheDocument();
+        });
+
+        it('Should show read and publish link when read and publish agreement is capped', async () => {
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    jnl_title: 'test',
+                    fez_journal_read_and_publish: {
+                        jnl_read_and_publish_is_capped: 'Y',
+                        jnl_read_and_publish_is_discounted: false,
+                        jnl_read_and_publish_publisher: 'publisher',
+                        jnl_read_and_publish_source_date: '2025-01-01',
+                    },
+                },
+            });
+
+            const { getByTestId, getByText } = setup();
+
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
+            expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('Article Processing Charge covered');
+            expect(getByTestId('jnl-read-and-publish-lookup-link')).toBeInTheDocument();
+        });
     });
 
     describe('getAdvisoryStatement', () => {

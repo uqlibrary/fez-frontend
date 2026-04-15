@@ -40,8 +40,9 @@ exports[`ViewRecord should render not found 1`] = `
                
               <a
                 href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
+                target="_blank"
               >
-                contact the eSpace team.
+                contact the UQ eSpace team.
               </a>
             </p>
           </div>

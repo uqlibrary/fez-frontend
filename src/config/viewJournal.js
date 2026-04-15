@@ -236,7 +236,16 @@ export const viewJournalConfig = {
                             return viewJournalLocale.viewJournal.readAndPublish.status.capped;
                         }
                     },
-                    template: 'DefaultTemplate',
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: data =>
+                            (data === viewJournalLocale.viewJournal.readAndPublish.status.discounted ||
+                                data === viewJournalLocale.viewJournal.readAndPublish.status.capped) &&
+                            viewJournalLocale.viewJournal.readAndPublish.status.externalUrl,
+                        title: viewJournalLocale.viewJournal.readAndPublish.status.ariaLabel,
+                        text: data => data,
+                        ariaLabel: () => viewJournalLocale.viewJournal.readAndPublish.status.ariaLabel,
+                    },
                 },
             ],
             [
@@ -276,6 +285,28 @@ export const viewJournalConfig = {
                         text: doaj => `${doaj.jnl_doaj_apc_average_price} ${doaj.jnl_doaj_apc_currency}`,
                         ariaLabel: doaj =>
                             `APC ${doaj.jnl_doaj_apc_average_price} ${doaj.jnl_doaj_apc_currency} - Open DOAJ page for APC details in a new tab`,
+                    },
+                },
+            ],
+            [
+                {
+                    heading: viewJournalLocale.viewJournal.readAndPublish.publisher.heading,
+                    fieldId: 'jnl-read-and-publish-publisher',
+                    getData: journalDetails => {
+                        return (
+                            journalDetails.fez_journal_read_and_publish &&
+                            !['y', 'approaching', 'nodeal'].includes(
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped.toLowerCase(),
+                            ) &&
+                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_publisher
+                        );
+                    },
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: () => viewJournalLocale.viewJournal.readAndPublish.publisher.externalUrl,
+                        title: viewJournalLocale.viewJournal.readAndPublish.publisher.ariaLabel,
+                        text: publisher => publisher,
+                        ariaLabel: () => viewJournalLocale.viewJournal.readAndPublish.publisher.ariaLabel,
                     },
                 },
             ],
