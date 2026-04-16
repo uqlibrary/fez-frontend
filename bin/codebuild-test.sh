@@ -7,6 +7,8 @@ export COMMIT_INFO_MESSAGE=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format
 export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend/executions/${CI_BUILD_NUMBER}"
 export TZ='Australia/Brisbane'
 export PW_CC_REPORT_FILENAME="coverage-final-${PIPE_NUM}.json"
+export PWTEST_SHARD_WEIGHTS=15:40:45 # ENV VAR name expected by PW, please don't rename it
+export PW_SHARD_COUNT=3
 
 # Run CC only on these branches
 # NB: These branches will require 3 pipelines to run all tests, branches not in this list require only 2.
@@ -79,17 +81,18 @@ function install_pw_deps() {
 
 function run_pw_test_shard() {
     set -e
+    npm run start:mock &
     install_pw_deps
     export PW_SHARD_INDEX="$1"
 
-    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #$PW_SHARD_INDEX [STARTING AT $(date)] 2\e[0m ---\n"
+    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #${PW_SHARD_INDEX} [STARTING AT $(date)] 2\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        PWTEST_SHARD_WEIGHTS=36:64 npm run test:e2e:cc -- -- --shard="$PW_SHARD_INDEX/2"
+        npm run test:e2e:cc -- -- --shard="${PW_SHARD_INDEX}/${PW_SHARD_COUNT}"
         fix_coverage_report_paths "coverage/playwright/${PW_CC_REPORT_FILENAME}"
     else
-        PWTEST_SHARD_WEIGHTS=36:64 npm run test:e2e -- --shard="$PW_SHARD_INDEX/2"
+        npm run test:e2e -- --shard="${PW_SHARD_INDEX}/${PW_SHARD_COUNT}"
     fi
-    printf "\n--- [ENDED RUNNING E2E TESTS GROUP #$PW_SHARD_INDEX AT $(date)] \n"
+    printf "\n--- [ENDED RUNNING E2E TESTS GROUP #${PW_SHARD_INDEX} AT $(date)] \n"
 }
 
 check_code_style
@@ -119,6 +122,8 @@ case "$PIPE_NUM" in
         npm run test:unit:ci:serial:nocoverage
         npm run test:unit:ci:nocoverage
     fi
+
+    run_pw_test_shard "$PIPE_NUM"
 ;;
 *)
 ;;
