@@ -7,7 +7,7 @@ export COMMIT_INFO_MESSAGE=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format
 export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend/executions/${CI_BUILD_NUMBER}"
 export TZ='Australia/Brisbane'
 export PW_CC_REPORT_FILENAME="coverage-final-${PIPE_NUM}.json"
-export PWTEST_SHARD_WEIGHTS=15:40:45 # ENV VAR name expected by PW, please don't rename it
+export PWTEST_SHARD_WEIGHTS=43:44:13 # ENV VAR name expected by PW, please don't rename it
 export PW_SHARD_COUNT=3
 
 # Run CC only on these branches
