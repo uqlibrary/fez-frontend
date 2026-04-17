@@ -35,7 +35,7 @@ const NavigationPrompt = ({ when, children }) => {
     };
 
     const _onCancel = () => {
-        blocker.reset();
+        blocker?.reset?.();
         setNextLocation(null);
     };
 
