@@ -6,7 +6,6 @@ export COMMIT_INFO_EMAIL=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"
 export COMMIT_INFO_MESSAGE=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"%B")
 export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend/executions/${CI_BUILD_NUMBER}"
 export TZ='Australia/Brisbane'
-export PW_CC_REPORT_FILENAME="coverage-final-${PIPE_NUM}.json"
 export PWTEST_SHARD_WEIGHTS=43:44:13 # ENV VAR name expected by PW, please don't rename it
 export PW_SHARD_COUNT=3
 
@@ -88,7 +87,7 @@ function run_pw_test_shard() {
     printf "\n--- \e[1mRUNNING E2E TESTS GROUP #${PW_SHARD_INDEX} [STARTING AT $(date)] 2\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
         npm run test:e2e:cc -- -- --shard="${PW_SHARD_INDEX}/${PW_SHARD_COUNT}"
-        fix_coverage_report_paths "coverage/playwright/${PW_CC_REPORT_FILENAME}"
+        fix_coverage_report_paths coverage/playwright/coverage-final.json
     else
         npm run test:e2e -- --shard="${PW_SHARD_INDEX}/${PW_SHARD_COUNT}"
     fi
