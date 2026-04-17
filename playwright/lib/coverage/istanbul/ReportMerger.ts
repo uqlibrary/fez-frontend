@@ -20,7 +20,7 @@ export type Config = {
     jsonPartialsDir: string | undefined
 } | undefined;
 
-export default class Reporter implements Base {
+export default class ReportMerger implements Base {
     public baseDir: string;
     public config: Config;
 
